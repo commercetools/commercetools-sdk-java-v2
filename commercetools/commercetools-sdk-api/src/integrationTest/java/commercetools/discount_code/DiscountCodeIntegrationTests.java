@@ -36,7 +36,7 @@ public class DiscountCodeIntegrationTests {
             DiscountCodePagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .discountCodes()
                     .get()
-                    .addWhere("id=" + "\"" + discountCode.getId() + "\"")
+                    .withWhere("id=" + "\"" + discountCode.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

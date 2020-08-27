@@ -52,7 +52,7 @@ public class ExtensionIntegrationTests {
             ExtensionPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .extensions()
                     .get()
-                    .addWhere("id=" + "\"" + extension.getId() + "\"")
+                    .withWhere("id=" + "\"" + extension.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

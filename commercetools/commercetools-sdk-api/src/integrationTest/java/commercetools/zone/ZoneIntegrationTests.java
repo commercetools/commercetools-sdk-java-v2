@@ -53,7 +53,7 @@ public class ZoneIntegrationTests {
             ZonePagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .zones()
                     .get()
-                    .addWhere("id=" + "\"" + zone.getId() + "\"")
+                    .withWhere("id=" + "\"" + zone.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

@@ -50,7 +50,7 @@ public class ShippingMethodIntegrationTests {
             ShippingMethodPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .shippingMethods()
                     .get()
-                    .addWhere("id=" + "\"" + shippingMethod.getId() + "\"")
+                    .withWhere("id=" + "\"" + shippingMethod.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

@@ -37,7 +37,7 @@ public class StateIntegrationTests {
             StatePagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .states()
                     .get()
-                    .addWhere("id=" + "\"" + state.getId() + "\"")
+                    .withWhere("id=" + "\"" + state.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

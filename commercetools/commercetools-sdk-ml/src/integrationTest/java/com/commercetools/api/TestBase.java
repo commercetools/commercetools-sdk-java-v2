@@ -10,8 +10,8 @@ public class TestBase {
     public final String projectKey = requireEnvVar("CTP_PROJECT_KEY");
     public final String clientId = requireEnvVar("CTP_CLIENT_ID");
     public final String clientSecret = requireEnvVar("CTP_CLIENT_SECRET");
-    public final String tokenUrl = requireEnvVar("CTP_AUTH_URL");
-    public final String ml_host = requireEnvVar("CTP_ML_API_URL");
+    public final String tokenUrl = "https://auth.europe-west1.gcp.commercetools.com/oauth/token";
+    public final String ml_host = "https://ml-eu.europe-west1.gcp.commercetools.com";
 
     public final ByProjectKeyRequestBuilder mlApiBuilder = MLApiRootFactory.create(clientId,
             clientSecret,

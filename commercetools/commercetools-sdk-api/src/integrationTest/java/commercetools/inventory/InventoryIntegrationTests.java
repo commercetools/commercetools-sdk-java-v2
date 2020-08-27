@@ -55,7 +55,7 @@ public class InventoryIntegrationTests {
             InventoryPagedQueryResponse inventoryPagedQueryResponse = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .inventory()
                     .get()
-                    .addWhere("id=" + "\"" + inventoryEntry.getId() + "\"")
+                    .withWhere("id=" + "\"" + inventoryEntry.getId() + "\"")
                     .executeBlocking().getBody();
             Assert.assertNotNull(inventoryPagedQueryResponse);
             Assert.assertEquals(inventoryPagedQueryResponse.getResults().get(0).getId(), inventoryEntry.getId());

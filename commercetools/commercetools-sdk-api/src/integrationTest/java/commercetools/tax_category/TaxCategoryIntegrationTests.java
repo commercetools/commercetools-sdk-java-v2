@@ -71,7 +71,7 @@ public class TaxCategoryIntegrationTests {
             TaxCategoryPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .taxCategories()
                     .get()
-                    .addWhere("id=" + "\"" + taxCategory.getId() +"\"")
+                    .withWhere("id=" + "\"" + taxCategory.getId() +"\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

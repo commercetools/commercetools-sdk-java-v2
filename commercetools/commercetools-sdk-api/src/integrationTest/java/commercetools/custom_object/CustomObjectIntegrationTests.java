@@ -61,7 +61,7 @@ public class CustomObjectIntegrationTests {
             CustomObjectPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .customObjects()
                     .get()
-                    .addWhere("id=" + "\"" + customObject.getId() + "\"")
+                    .withWhere("id=" + "\"" + customObject.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

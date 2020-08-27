@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ShoppingListIntegrationTests {
-    
+
     @Test
     public void createAndDeleteById() {
          ShoppingList shoppingList = ShoppingListFixtures.createShoppingList();
          ShoppingListFixtures.deleteShoppingList(shoppingList.getId(), shoppingList.getVersion());
     }
-    
+
     @Test
     public void getById() {
         ShoppingListFixtures.withShoppingList(shoppingList -> {
@@ -43,25 +43,25 @@ public class ShoppingListIntegrationTests {
             Assert.assertEquals(shoppingList.getKey(), queriedShoppingList.getKey());
         });
     }
-    
+
     @Test
     public void query() {
         ShoppingListFixtures.withShoppingList(shoppingList -> {
             ShoppingListPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .shoppingLists()
                     .get()
-                    .addWhere("id=" + "\"" + shoppingList.getId() + "\"")
+                    .withWhere("id=" + "\"" + shoppingList.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);
             Assert.assertEquals(response.getResults().get(0).getId(), shoppingList.getId());
         });
-    }   
-    
+    }
+
     @Test
     public void updateByKey() {
         ShoppingListFixtures.withUpdateableShoppingList(shoppingList -> {
-            
+
             List<ShoppingListUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ShoppingListSetKeyActionBuilder.of().key(newKey).build());
@@ -76,7 +76,7 @@ public class ShoppingListIntegrationTests {
 
             Assert.assertNotNull(updatedShoppingList);
             Assert.assertEquals(updatedShoppingList.getKey(),newKey);
-            
+
             return updatedShoppingList;
         });
     }
@@ -103,7 +103,7 @@ public class ShoppingListIntegrationTests {
             return updatedShoppingList;
         });
     }
-    
+
     @Test
     public void deleteByKey() {
         ShoppingList shoppingList = ShoppingListFixtures.createShoppingList();
@@ -111,5 +111,5 @@ public class ShoppingListIntegrationTests {
         Assert.assertNotNull(deletedShoppingList);
         Assert.assertEquals(shoppingList.getId(), deletedShoppingList.getId());
     }
-    
+
 }

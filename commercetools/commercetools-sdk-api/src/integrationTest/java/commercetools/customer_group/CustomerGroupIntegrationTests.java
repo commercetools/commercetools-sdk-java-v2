@@ -54,7 +54,7 @@ public class CustomerGroupIntegrationTests {
             CustomerGroupPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .customerGroups()
                     .get()
-                    .addWhere("id=" + "\"" + customerGroup.getId() + "\"")
+                    .withWhere("id=" + "\"" + customerGroup.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

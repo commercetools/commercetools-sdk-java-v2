@@ -38,7 +38,7 @@ public class ChannelIntegrationTests {
             ChannelPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .channels()
                     .get()
-                    .addWhere("id=" + "\"" + channel.getId() + "\"")
+                    .withWhere("id=" + "\"" + channel.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

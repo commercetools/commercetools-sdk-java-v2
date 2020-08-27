@@ -75,7 +75,7 @@ public class CategoryIntegrationTests {
         CategoryPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .categories()
                 .get()
-                .addWhere("id=" + "\"" + category.getId() + "\"")
+                .withWhere("id=" + "\"" + category.getId() + "\"")
                 .executeBlocking().getBody();
         Assert.assertEquals(response.getResults().size(), 1);
         Assert.assertEquals(response.getResults().get(0).getId(), category.getId());

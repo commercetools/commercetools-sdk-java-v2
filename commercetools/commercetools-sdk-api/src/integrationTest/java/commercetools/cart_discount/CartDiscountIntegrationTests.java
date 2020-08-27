@@ -86,7 +86,7 @@ public class CartDiscountIntegrationTests {
             CartDiscountPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .cartDiscounts()
                     .get()
-                    .addWhere("id=" + "\"" + cartDiscount.getId() + "\"")
+                    .withWhere("id=" + "\"" + cartDiscount.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

@@ -8,7 +8,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ProductProjectionIntegrationTests {
-    
+
     @Test
     public void getById() {
         ProductFixtures.withProduct(product -> {
@@ -16,7 +16,7 @@ public class ProductProjectionIntegrationTests {
                     .productProjections()
                     .withId(product.getId())
                     .get()
-                    .addStaged(true)
+                    .withStaged(true)
                     .executeBlocking().getBody();
 
             Assert.assertEquals(productProjection.getId(), product.getId());
@@ -30,21 +30,21 @@ public class ProductProjectionIntegrationTests {
                     .productProjections()
                     .withKey(product.getKey())
                     .get()
-                    .addStaged(true)
+                    .withStaged(true)
                     .executeBlocking().getBody();
 
             Assert.assertEquals(productProjection.getKey(), product.getKey());
         });
     }
-    
+
     @Test
     public void query() {
         ProductFixtures.withProduct(product -> {
             ProductProjectionPagedQueryResponse productProjectionPagedQueryResponse = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .productProjections()
                     .get()
-                    .addStaged(true)
-                    .addWhere("id=" + "\"" + product.getId() +  "\"")
+                    .withStaged(true)
+                    .withWhere("id=" + "\"" + product.getId() +  "\"")
                     .executeBlocking().getBody();
 
             Assert.assertEquals(productProjectionPagedQueryResponse.getResults().get(0).getId(), product.getId());

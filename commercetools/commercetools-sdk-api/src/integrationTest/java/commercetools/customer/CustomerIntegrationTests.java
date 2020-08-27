@@ -51,7 +51,7 @@ public class CustomerIntegrationTests {
             CustomerPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .customers()
                     .get()
-                    .addWhere("id=" +  "\"" + customer.getId() + "\"")
+                    .withWhere("id=" +  "\"" + customer.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

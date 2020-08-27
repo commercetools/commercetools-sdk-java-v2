@@ -32,7 +32,7 @@ public class CartDiscountFixtures {
         List<CartDiscount> cartDiscounts = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .cartDiscounts()
                 .get()
-                .addWhere("sortOrder=\"0.41\"")
+                .withWhere("sortOrder=\"0.41\"")
                 .executeBlocking()
                 .getBody()
                 .getResults();

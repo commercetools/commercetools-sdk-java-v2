@@ -79,7 +79,7 @@ public class ProductDiscountIntegrationTests {
             ProductDiscountPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .productDiscounts()
                     .get()
-                    .addWhere("id=" + "\"" + productDiscount.getId() + "\"")
+                    .withWhere("id=" + "\"" + productDiscount.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

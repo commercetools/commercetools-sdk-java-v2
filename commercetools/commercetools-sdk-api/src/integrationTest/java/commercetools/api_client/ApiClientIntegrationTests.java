@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class ApiClientIntegrationTests {
-    
+
     @Test
     public void createAndDeleteById() {
         ApiClient apiClient = ApiClientFixtures.createApiClient();
@@ -15,7 +15,7 @@ public class ApiClientIntegrationTests {
 
         Assert.assertEquals(apiClient.getId(), deletedApiClient.getId());
     }
-    
+
     @Test
     public void getById() {
         ApiClientFixtures.withApiClient(apiClient -> {
@@ -24,19 +24,19 @@ public class ApiClientIntegrationTests {
                     .withId(apiClient.getId())
                     .get()
                     .executeBlocking().getBody();
-            
+
             Assert.assertNotNull(queriedApiClient);
             Assert.assertEquals(queriedApiClient.getId(), apiClient.getId());
         });
     }
-    
+
     @Test
     public void query() {
         ApiClientFixtures.withApiClient(apiClient -> {
             ApiClientPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .apiClients()
                     .get()
-                    .addWhere("id=" + "\"" + apiClient.getId() + "\"")
+                    .withWhere("id=" + "\"" + apiClient.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

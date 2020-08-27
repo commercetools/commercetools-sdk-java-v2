@@ -52,7 +52,7 @@ public class TypeIntegrationTests {
             TypePagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .types()
                     .get()
-                    .addWhere("id=" + "\"" + type.getId() + "\"")
+                    .withWhere("id=" + "\"" + type.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

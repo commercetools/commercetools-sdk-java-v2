@@ -52,7 +52,7 @@ public class ProductTypeIntegrationTests {
             ProductTypePagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .productTypes()
                     .get()
-                    .addWhere("id=" + "\"" + productType.getId() + "\"")
+                    .withWhere("id=" + "\"" + productType.getId() + "\"")
                     .executeBlocking()
                     .getBody();
 

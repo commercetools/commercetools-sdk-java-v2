@@ -53,7 +53,7 @@ public class StoreIntegrationTests {
             StorePagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                     .stores()
                     .get()
-                    .addWhere("id=" + "\"" + store.getId() + "\"")
+                    .withWhere("id=" + "\"" + store.getId() + "\"")
                     .executeBlocking().getBody();
 
             Assert.assertNotNull(response);

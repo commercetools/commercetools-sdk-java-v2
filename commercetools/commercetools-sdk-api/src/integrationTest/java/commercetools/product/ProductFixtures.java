@@ -73,7 +73,7 @@ public class ProductFixtures {
         ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
                 .productDiscounts()
                 .get()
-                .withWhere(Arrays.asList("sortOrder=\"0.3\""))
+                .withWhere("sortOrder=\"0.3\"")
                 .executeBlocking()
                 .getBody();
 

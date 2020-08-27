@@ -66,7 +66,7 @@ public class DiscountCodeFixtures {
                 .discountCodes()
                 .withId(id)
                 .delete()
-                .addExpand("cartDiscounts[*]")
+                .withExpand("cartDiscounts[*]")
                 .withVersion(version)
                 .executeBlocking().getBody();
 

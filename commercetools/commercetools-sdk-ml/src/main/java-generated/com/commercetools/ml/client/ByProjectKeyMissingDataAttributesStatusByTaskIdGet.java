@@ -25,36 +25,29 @@ import io.vrap.rmf.base.client.*;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet {
+public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMethod<ByProjectKeyMissingDataAttributesStatusByTaskIdGet> {
 
-    
-    private ApiHttpHeaders headers = new ApiHttpHeaders();
-    private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient; 
     
     private String projectKey;
     private String taskId;
     
 
     public ByProjectKeyMissingDataAttributesStatusByTaskIdGet(final ApiHttpClient apiHttpClient, String projectKey, String taskId){
-        this.apiHttpClient = apiHttpClient;
+        super(apiHttpClient);
         this.projectKey = projectKey;
         this.taskId = taskId;
     }
 
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
-        List<String> params = new ArrayList<>();
-        
-        params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
-        params.removeIf(String::isEmpty);
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/missing-data/attributes/status/%s", this.projectKey, this.taskId);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
-        httpRequest.setHeaders(headers);
+        httpRequest.setHeaders(getHeaders());
         
         return httpRequest;
     }
@@ -68,7 +61,7 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingDataTaskStatus>> execute(){
-        return apiHttpClient.execute(this.createHttpRequest())
+        return apiHttpClient().execute(this.createHttpRequest())
                 .thenApply(response -> {
                     if(response.getStatusCode() >= 400){
                         throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
@@ -84,43 +77,5 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet {
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
     
     public void setTaskId(final String taskId) {this.taskId = taskId;}
-
-
-    public ByProjectKeyMissingDataAttributesStatusByTaskIdGet addHeader(final String key, final String value) {
-        this.headers.addHeader(key, value);
-        return this;
-    }
-    
-    public ByProjectKeyMissingDataAttributesStatusByTaskIdGet withHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    public ApiHttpHeaders getHeaders() {
-        return this.headers;
-    }
-    
-    public ByProjectKeyMissingDataAttributesStatusByTaskIdGet addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
-        this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
-        return this;
-    }
-    
-    public ByProjectKeyMissingDataAttributesStatusByTaskIdGet setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
-        this.additionalQueryParams = additionalQueryParams;
-        return this;
-    }
-    
-    public Map<String, String> getAdditionalQueryParams() {
-        return this.additionalQueryParams;
-    }
-    
-    private String urlEncode(final String s){
-        try{
-             return URLEncoder.encode(s, "UTF-8");
-         }catch (UnsupportedEncodingException e) {
-             //this will never happen
-             return null;
-         }
-    }
 
 }

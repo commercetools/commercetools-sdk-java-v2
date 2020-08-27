@@ -75,12 +75,6 @@ public interface OperationStates  {
     @NotNull
     @JsonProperty("Skipped")
     public Long getSkipped();
-    /**
-    *  <p>The number of import operations that are in the state <code>Expired</code>.</p>
-    */
-    @NotNull
-    @JsonProperty("Expired")
-    public Long getExpired();
 
     public void setAccepted(final Long accepted);
     
@@ -99,8 +93,6 @@ public interface OperationStates  {
     public void setRejected(final Long rejected);
     
     public void setSkipped(final Long skipped);
-    
-    public void setExpired(final Long expired);
 
     public static OperationStatesImpl of(){
         return new OperationStatesImpl();
@@ -118,7 +110,6 @@ public interface OperationStates  {
         instance.setDeleted(template.getDeleted());
         instance.setRejected(template.getRejected());
         instance.setSkipped(template.getSkipped());
-        instance.setExpired(template.getExpired());
         return instance;
     }
 

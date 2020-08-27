@@ -30,20 +30,16 @@ import io.vrap.rmf.base.client.*;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet {
+public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet> {
 
     
-    private ApiHttpHeaders headers = new ApiHttpHeaders();
-    private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient; 
-    private List<String> expand = new ArrayList<>();
     private String projectKey;
     private String storeKey;
     private String ID;
     
 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String ID){
-        this.apiHttpClient = apiHttpClient;
+        super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.ID = ID;
@@ -51,17 +47,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet {
 
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
-        List<String> params = new ArrayList<>();
-        params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
-        params.removeIf(String::isEmpty);
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/orders/%s", this.projectKey, this.storeKey, this.ID);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
-        httpRequest.setHeaders(headers);
+        httpRequest.setHeaders(getHeaders());
         
         return httpRequest;
     }
@@ -75,7 +68,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(){
-        return apiHttpClient.execute(this.createHttpRequest())
+        return apiHttpClient().execute(this.createHttpRequest())
                 .thenApply(response -> {
                     if(response.getStatusCode() >= 400){
                         throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
@@ -89,7 +82,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet {
     public String getID() {return this.ID;}
 
     public List<String> getExpand() {
-        return this.expand;
+        return this.getQueryParam("expand");
     }
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
@@ -98,51 +91,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet {
     
     public void setID(final String ID) {this.ID = ID;}
 
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet addExpand(final String expand){
-        this.expand.add(expand);
-        return this;
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet withExpand(final String expand){
+        return this.addQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet withExpand(final List<String> expand){
-        this.expand = expand;
-        return this;
-    }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet addHeader(final String key, final String value) {
-        this.headers.addHeader(key, value);
-        return this;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet withHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    public ApiHttpHeaders getHeaders() {
-        return this.headers;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
-        this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
-        return this;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
-        this.additionalQueryParams = additionalQueryParams;
-        return this;
-    }
-    
-    public Map<String, String> getAdditionalQueryParams() {
-        return this.additionalQueryParams;
-    }
-    
-    private String urlEncode(final String s){
-        try{
-             return URLEncoder.encode(s, "UTF-8");
-         }catch (UnsupportedEncodingException e) {
-             //this will never happen
-             return null;
-         }
-    }
-
 }

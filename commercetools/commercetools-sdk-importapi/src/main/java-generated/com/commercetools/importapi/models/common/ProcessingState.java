@@ -76,14 +76,7 @@ public enum ProcessingState {
     	
     */
     @JsonProperty("Skipped")
-    SKIPPED("Skipped"),
-    
-    /**
-    	<p>The import resource contains unresolved references and did not resolve within the expiration timeframe.</p>
-    	
-    */
-    @JsonProperty("Expired")
-    EXPIRED("Expired");
+    SKIPPED("Skipped");
 
     private final String jsonName;
 

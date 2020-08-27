@@ -28,70 +28,27 @@ import io.vrap.rmf.base.client.*;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductProjectionsSearchGet {
+public class ByProjectKeyProductProjectionsSearchGet extends ApiMethod<ByProjectKeyProductProjectionsSearchGet> {
 
     
-    private ApiHttpHeaders headers = new ApiHttpHeaders();
-    private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient; 
-    private List<Boolean> fuzzy = new ArrayList<>();
-    private List<Double> fuzzyLevel = new ArrayList<>();
-    private List<Boolean> markMatchingVariants = new ArrayList<>();
-    private List<Boolean> staged = new ArrayList<>();
-    private List<String> filter = new ArrayList<>();
-    private List<String> filterFacets = new ArrayList<>();
-    private List<String> filterQuery = new ArrayList<>();
-    private List<String> facet = new ArrayList<>();
-    private List<String> sort = new ArrayList<>();
-    private List<Integer> limit = new ArrayList<>();
-    private List<Integer> offset = new ArrayList<>();
-    private List<Boolean> withTotal = new ArrayList<>();
-    private List<String> priceCurrency = new ArrayList<>();
-    private List<String> priceCountry = new ArrayList<>();
-    private List<String> priceCustomerGroup = new ArrayList<>();
-    private List<String> priceChannel = new ArrayList<>();
-    private List<String> localeProjection = new ArrayList<>();
-    private List<String> storeProjection = new ArrayList<>();
-    private List<String> expand = new ArrayList<>();
     private String projectKey;
     
 
     public ByProjectKeyProductProjectionsSearchGet(final ApiHttpClient apiHttpClient, String projectKey){
-        this.apiHttpClient = apiHttpClient;
+        super(apiHttpClient);
         this.projectKey = projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
-        List<String> params = new ArrayList<>();
-        params.add(this.fuzzy.stream().map(s -> "fuzzy=" + s).collect(Collectors.joining("&")));
-        params.add(this.fuzzyLevel.stream().map(s -> "fuzzyLevel=" + s).collect(Collectors.joining("&")));
-        params.add(this.markMatchingVariants.stream().map(s -> "markMatchingVariants=" + s).collect(Collectors.joining("&")));
-        params.add(this.staged.stream().map(s -> "staged=" + s).collect(Collectors.joining("&")));
-        params.add(this.filter.stream().map(s -> "filter=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.filterFacets.stream().map(s -> "filter.facets=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.filterQuery.stream().map(s -> "filter.query=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.facet.stream().map(s -> "facet=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.sort.stream().map(s -> "sort=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.limit.stream().map(s -> "limit=" + s).collect(Collectors.joining("&")));
-        params.add(this.offset.stream().map(s -> "offset=" + s).collect(Collectors.joining("&")));
-        params.add(this.withTotal.stream().map(s -> "withTotal=" + s).collect(Collectors.joining("&")));
-        params.add(this.priceCurrency.stream().map(s -> "priceCurrency=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.priceCountry.stream().map(s -> "priceCountry=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.priceCustomerGroup.stream().map(s -> "priceCustomerGroup=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.priceChannel.stream().map(s -> "priceChannel=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.localeProjection.stream().map(s -> "localeProjection=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.storeProjection.stream().map(s -> "storeProjection=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
-        params.removeIf(String::isEmpty);
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-projections/search", this.projectKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
-        httpRequest.setHeaders(headers);
+        httpRequest.setHeaders(getHeaders());
         
         return httpRequest;
     }
@@ -105,7 +62,7 @@ public class ByProjectKeyProductProjectionsSearchGet {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>> execute(){
-        return apiHttpClient.execute(this.createHttpRequest())
+        return apiHttpClient().execute(this.createHttpRequest())
                 .thenApply(response -> {
                     if(response.getStatusCode() >= 400){
                         throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
@@ -117,308 +74,156 @@ public class ByProjectKeyProductProjectionsSearchGet {
     public String getProjectKey() {return this.projectKey;}
 
     public List<Boolean> getFuzzy() {
-        return this.fuzzy;
+        return this.getQueryParam("fuzzy");
     }
     
     public List<Double> getFuzzyLevel() {
-        return this.fuzzyLevel;
+        return this.getQueryParam("fuzzyLevel");
     }
     
     public List<Boolean> getMarkMatchingVariants() {
-        return this.markMatchingVariants;
+        return this.getQueryParam("markMatchingVariants");
     }
     
     public List<Boolean> getStaged() {
-        return this.staged;
+        return this.getQueryParam("staged");
     }
     
     public List<String> getFilter() {
-        return this.filter;
+        return this.getQueryParam("filter");
     }
     
     public List<String> getFilterFacets() {
-        return this.filterFacets;
+        return this.getQueryParam("filterFacets");
     }
     
     public List<String> getFilterQuery() {
-        return this.filterQuery;
+        return this.getQueryParam("filterQuery");
     }
     
     public List<String> getFacet() {
-        return this.facet;
+        return this.getQueryParam("facet");
     }
     
     public List<String> getSort() {
-        return this.sort;
+        return this.getQueryParam("sort");
     }
     
     public List<Integer> getLimit() {
-        return this.limit;
+        return this.getQueryParam("limit");
     }
     
     public List<Integer> getOffset() {
-        return this.offset;
+        return this.getQueryParam("offset");
     }
     
     public List<Boolean> getWithTotal() {
-        return this.withTotal;
+        return this.getQueryParam("withTotal");
     }
     
     public List<String> getPriceCurrency() {
-        return this.priceCurrency;
+        return this.getQueryParam("priceCurrency");
     }
     
     public List<String> getPriceCountry() {
-        return this.priceCountry;
+        return this.getQueryParam("priceCountry");
     }
     
     public List<String> getPriceCustomerGroup() {
-        return this.priceCustomerGroup;
+        return this.getQueryParam("priceCustomerGroup");
     }
     
     public List<String> getPriceChannel() {
-        return this.priceChannel;
+        return this.getQueryParam("priceChannel");
     }
     
     public List<String> getLocaleProjection() {
-        return this.localeProjection;
+        return this.getQueryParam("localeProjection");
     }
     
     public List<String> getStoreProjection() {
-        return this.storeProjection;
+        return this.getQueryParam("storeProjection");
     }
     
     public List<String> getExpand() {
-        return this.expand;
+        return this.getQueryParam("expand");
     }
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
 
-    public ByProjectKeyProductProjectionsSearchGet addFuzzy(final Boolean fuzzy){
-        this.fuzzy.add(fuzzy);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withFuzzy(final Boolean fuzzy){
+        return this.addQueryParam("fuzzy", fuzzy);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withFuzzy(final List<Boolean> fuzzy){
-        this.fuzzy = fuzzy;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Double fuzzyLevel){
+        return this.addQueryParam("fuzzyLevel", fuzzyLevel);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Double fuzzyLevel){
-        this.fuzzyLevel.add(fuzzyLevel);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final Boolean markMatchingVariants){
+        return this.addQueryParam("markMatchingVariants", markMatchingVariants);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final List<Double> fuzzyLevel){
-        this.fuzzyLevel = fuzzyLevel;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withStaged(final Boolean staged){
+        return this.addQueryParam("staged", staged);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final Boolean markMatchingVariants){
-        this.markMatchingVariants.add(markMatchingVariants);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withFilter(final String filter){
+        return this.addQueryParam("filter", filter);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final List<Boolean> markMatchingVariants){
-        this.markMatchingVariants = markMatchingVariants;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final String filterFacets){
+        return this.addQueryParam("filterFacets", filterFacets);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addStaged(final Boolean staged){
-        this.staged.add(staged);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final String filterQuery){
+        return this.addQueryParam("filterQuery", filterQuery);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withStaged(final List<Boolean> staged){
-        this.staged = staged;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withFacet(final String facet){
+        return this.addQueryParam("facet", facet);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addFilter(final String filter){
-        this.filter.add(filter);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withSort(final String sort){
+        return this.addQueryParam("sort", sort);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withFilter(final List<String> filter){
-        this.filter = filter;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withLimit(final Integer limit){
+        return this.addQueryParam("limit", limit);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addFilterFacets(final String filterFacets){
-        this.filterFacets.add(filterFacets);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withOffset(final Integer offset){
+        return this.addQueryParam("offset", offset);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final List<String> filterFacets){
-        this.filterFacets = filterFacets;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withWithTotal(final Boolean withTotal){
+        return this.addQueryParam("withTotal", withTotal);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final String filterQuery){
-        this.filterQuery.add(filterQuery);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final String priceCurrency){
+        return this.addQueryParam("priceCurrency", priceCurrency);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final List<String> filterQuery){
-        this.filterQuery = filterQuery;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withPriceCountry(final String priceCountry){
+        return this.addQueryParam("priceCountry", priceCountry);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addFacet(final String facet){
-        this.facet.add(facet);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(final String priceCustomerGroup){
+        return this.addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withFacet(final List<String> facet){
-        this.facet = facet;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final String priceChannel){
+        return this.addQueryParam("priceChannel", priceChannel);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addSort(final String sort){
-        this.sort.add(sort);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withLocaleProjection(final String localeProjection){
+        return this.addQueryParam("localeProjection", localeProjection);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet withSort(final List<String> sort){
-        this.sort = sort;
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withStoreProjection(final String storeProjection){
+        return this.addQueryParam("storeProjection", storeProjection);
     }
     
-    public ByProjectKeyProductProjectionsSearchGet addLimit(final Integer limit){
-        this.limit.add(limit);
-        return this;
+    public ByProjectKeyProductProjectionsSearchGet withExpand(final String expand){
+        return this.addQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyProductProjectionsSearchGet withLimit(final List<Integer> limit){
-        this.limit = limit;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addOffset(final Integer offset){
-        this.offset.add(offset);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withOffset(final List<Integer> offset){
-        this.offset = offset;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addWithTotal(final Boolean withTotal){
-        this.withTotal.add(withTotal);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withWithTotal(final List<Boolean> withTotal){
-        this.withTotal = withTotal;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addPriceCurrency(final String priceCurrency){
-        this.priceCurrency.add(priceCurrency);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final List<String> priceCurrency){
-        this.priceCurrency = priceCurrency;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addPriceCountry(final String priceCountry){
-        this.priceCountry.add(priceCountry);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withPriceCountry(final List<String> priceCountry){
-        this.priceCountry = priceCountry;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addPriceCustomerGroup(final String priceCustomerGroup){
-        this.priceCustomerGroup.add(priceCustomerGroup);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(final List<String> priceCustomerGroup){
-        this.priceCustomerGroup = priceCustomerGroup;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addPriceChannel(final String priceChannel){
-        this.priceChannel.add(priceChannel);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final List<String> priceChannel){
-        this.priceChannel = priceChannel;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addLocaleProjection(final String localeProjection){
-        this.localeProjection.add(localeProjection);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withLocaleProjection(final List<String> localeProjection){
-        this.localeProjection = localeProjection;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addStoreProjection(final String storeProjection){
-        this.storeProjection.add(storeProjection);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withStoreProjection(final List<String> storeProjection){
-        this.storeProjection = storeProjection;
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addExpand(final String expand){
-        this.expand.add(expand);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withExpand(final List<String> expand){
-        this.expand = expand;
-        return this;
-    }
-
-    public ByProjectKeyProductProjectionsSearchGet addHeader(final String key, final String value) {
-        this.headers.addHeader(key, value);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet withHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    public ApiHttpHeaders getHeaders() {
-        return this.headers;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
-        this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
-        return this;
-    }
-    
-    public ByProjectKeyProductProjectionsSearchGet setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
-        this.additionalQueryParams = additionalQueryParams;
-        return this;
-    }
-    
-    public Map<String, String> getAdditionalQueryParams() {
-        return this.additionalQueryParams;
-    }
-    
-    private String urlEncode(final String s){
-        try{
-             return URLEncoder.encode(s, "UTF-8");
-         }catch (UnsupportedEncodingException e) {
-             //this will never happen
-             return null;
-         }
-    }
-
 }

@@ -40,9 +40,6 @@ public final class OperationStatesBuilder {
     
     
     private Long Skipped;
-    
-    
-    private Long Expired;
 
     public OperationStatesBuilder Accepted( final Long Accepted) {
         this.Accepted = Accepted;
@@ -86,11 +83,6 @@ public final class OperationStatesBuilder {
     
     public OperationStatesBuilder Skipped( final Long Skipped) {
         this.Skipped = Skipped;
-        return this;
-    }
-    
-    public OperationStatesBuilder Expired( final Long Expired) {
-        this.Expired = Expired;
         return this;
     }
 
@@ -138,14 +130,9 @@ public final class OperationStatesBuilder {
     public Long getSkipped(){
         return this.Skipped;
     }
-    
-    
-    public Long getExpired(){
-        return this.Expired;
-    }
 
     public OperationStates build() {
-        return new OperationStatesImpl(Accepted, ValidationFailed, Unresolved, Resolved, WaitForMasterVariant, Imported, Deleted, Rejected, Skipped, Expired);
+        return new OperationStatesImpl(Accepted, ValidationFailed, Unresolved, Resolved, WaitForMasterVariant, Imported, Deleted, Rejected, Skipped);
     }
 
     public static OperationStatesBuilder of() {
@@ -163,7 +150,6 @@ public final class OperationStatesBuilder {
         builder.Deleted = template.getDeleted();
         builder.Rejected = template.getRejected();
         builder.Skipped = template.getSkipped();
-        builder.Expired = template.getExpired();
         return builder;
     }
 

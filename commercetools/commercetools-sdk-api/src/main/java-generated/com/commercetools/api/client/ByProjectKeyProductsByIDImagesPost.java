@@ -28,23 +28,16 @@ import io.vrap.rmf.base.client.*;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductsByIDImagesPost {
+public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyProductsByIDImagesPost> {
 
     
-    private ApiHttpHeaders headers = new ApiHttpHeaders();
-    private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient; 
-    private List<String> filename = new ArrayList<>();
-    private List<Double> variant = new ArrayList<>();
-    private List<String> sku = new ArrayList<>();
-    private List<Boolean> staged = new ArrayList<>();
     private String projectKey;
     private String ID;
     
     private java.io.File file;
 
     public ByProjectKeyProductsByIDImagesPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, java.io.File file){
-        this.apiHttpClient = apiHttpClient;
+        super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
         this.file = file;
@@ -52,20 +45,14 @@ public class ByProjectKeyProductsByIDImagesPost {
 
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
-        List<String> params = new ArrayList<>();
-        params.add(this.filename.stream().map(s -> "filename=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.variant.stream().map(s -> "variant=" + s).collect(Collectors.joining("&")));
-        params.add(this.sku.stream().map(s -> "sku=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(this.staged.stream().map(s -> "staged=" + s).collect(Collectors.joining("&")));
-        params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
-        params.removeIf(String::isEmpty);
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/products/%s/images", this.projectKey, this.ID);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
-        httpRequest.setHeaders(headers);
+        httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(Files.readAllBytes(file.toPath()));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
@@ -79,7 +66,7 @@ public class ByProjectKeyProductsByIDImagesPost {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> execute(){
-        return apiHttpClient.execute(this.createHttpRequest())
+        return apiHttpClient().execute(this.createHttpRequest())
                 .thenApply(response -> {
                     if(response.getStatusCode() >= 400){
                         throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
@@ -92,100 +79,38 @@ public class ByProjectKeyProductsByIDImagesPost {
     public String getID() {return this.ID;}
 
     public List<String> getFilename() {
-        return this.filename;
+        return this.getQueryParam("filename");
     }
     
     public List<Double> getVariant() {
-        return this.variant;
+        return this.getQueryParam("variant");
     }
     
     public List<String> getSku() {
-        return this.sku;
+        return this.getQueryParam("sku");
     }
     
     public List<Boolean> getStaged() {
-        return this.staged;
+        return this.getQueryParam("staged");
     }
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
     
     public void setID(final String ID) {this.ID = ID;}
 
-    public ByProjectKeyProductsByIDImagesPost addFilename(final String filename){
-        this.filename.add(filename);
-        return this;
+    public ByProjectKeyProductsByIDImagesPost withFilename(final String filename){
+        return this.addQueryParam("filename", filename);
     }
     
-    public ByProjectKeyProductsByIDImagesPost withFilename(final List<String> filename){
-        this.filename = filename;
-        return this;
+    public ByProjectKeyProductsByIDImagesPost withVariant(final Double variant){
+        return this.addQueryParam("variant", variant);
     }
     
-    public ByProjectKeyProductsByIDImagesPost addVariant(final Double variant){
-        this.variant.add(variant);
-        return this;
+    public ByProjectKeyProductsByIDImagesPost withSku(final String sku){
+        return this.addQueryParam("sku", sku);
     }
     
-    public ByProjectKeyProductsByIDImagesPost withVariant(final List<Double> variant){
-        this.variant = variant;
-        return this;
+    public ByProjectKeyProductsByIDImagesPost withStaged(final Boolean staged){
+        return this.addQueryParam("staged", staged);
     }
-    
-    public ByProjectKeyProductsByIDImagesPost addSku(final String sku){
-        this.sku.add(sku);
-        return this;
-    }
-    
-    public ByProjectKeyProductsByIDImagesPost withSku(final List<String> sku){
-        this.sku = sku;
-        return this;
-    }
-    
-    public ByProjectKeyProductsByIDImagesPost addStaged(final Boolean staged){
-        this.staged.add(staged);
-        return this;
-    }
-    
-    public ByProjectKeyProductsByIDImagesPost withStaged(final List<Boolean> staged){
-        this.staged = staged;
-        return this;
-    }
-
-    public ByProjectKeyProductsByIDImagesPost addHeader(final String key, final String value) {
-        this.headers.addHeader(key, value);
-        return this;
-    }
-    
-    public ByProjectKeyProductsByIDImagesPost withHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    public ApiHttpHeaders getHeaders() {
-        return this.headers;
-    }
-    
-    public ByProjectKeyProductsByIDImagesPost addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
-        this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
-        return this;
-    }
-    
-    public ByProjectKeyProductsByIDImagesPost setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
-        this.additionalQueryParams = additionalQueryParams;
-        return this;
-    }
-    
-    public Map<String, String> getAdditionalQueryParams() {
-        return this.additionalQueryParams;
-    }
-    
-    private String urlEncode(final String s){
-        try{
-             return URLEncoder.encode(s, "UTF-8");
-         }catch (UnsupportedEncodingException e) {
-             //this will never happen
-             return null;
-         }
-    }
-
 }

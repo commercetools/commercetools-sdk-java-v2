@@ -28,20 +28,16 @@ import io.vrap.rmf.base.client.*;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet {
+public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet> {
 
     
-    private ApiHttpHeaders headers = new ApiHttpHeaders();
-    private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient; 
-    private List<String> expand = new ArrayList<>();
     private String projectKey;
     private String storeKey;
     private String passwordToken;
     
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String passwordToken){
-        this.apiHttpClient = apiHttpClient;
+        super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.passwordToken = passwordToken;
@@ -49,17 +45,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
 
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
-        List<String> params = new ArrayList<>();
-        params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
-        params.removeIf(String::isEmpty);
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/customers/password-token=%s", this.projectKey, this.storeKey, this.passwordToken);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
-        httpRequest.setHeaders(headers);
+        httpRequest.setHeaders(getHeaders());
         
         return httpRequest;
     }
@@ -73,7 +66,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
-        return apiHttpClient.execute(this.createHttpRequest())
+        return apiHttpClient().execute(this.createHttpRequest())
                 .thenApply(response -> {
                     if(response.getStatusCode() >= 400){
                         throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
@@ -87,7 +80,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
     public String getPasswordToken() {return this.passwordToken;}
 
     public List<String> getExpand() {
-        return this.expand;
+        return this.getQueryParam("expand");
     }
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
@@ -96,51 +89,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
     
     public void setPasswordToken(final String passwordToken) {this.passwordToken = passwordToken;}
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final String expand){
-        this.expand.add(expand);
-        return this;
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final String expand){
+        return this.addQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final List<String> expand){
-        this.expand = expand;
-        return this;
-    }
-
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet addHeader(final String key, final String value) {
-        this.headers.addHeader(key, value);
-        return this;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    public ApiHttpHeaders getHeaders() {
-        return this.headers;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
-        this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
-        return this;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
-        this.additionalQueryParams = additionalQueryParams;
-        return this;
-    }
-    
-    public Map<String, String> getAdditionalQueryParams() {
-        return this.additionalQueryParams;
-    }
-    
-    private String urlEncode(final String s){
-        try{
-             return URLEncoder.encode(s, "UTF-8");
-         }catch (UnsupportedEncodingException e) {
-             //this will never happen
-             return null;
-         }
-    }
-
 }

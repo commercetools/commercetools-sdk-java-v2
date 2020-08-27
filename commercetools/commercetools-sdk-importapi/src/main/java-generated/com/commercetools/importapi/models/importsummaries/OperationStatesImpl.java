@@ -39,11 +39,9 @@ public final class OperationStatesImpl implements OperationStates {
     private Long rejected;
     
     private Long skipped;
-    
-    private Long expired;
 
     @JsonCreator
-    OperationStatesImpl(@JsonProperty("Accepted") final Long accepted, @JsonProperty("ValidationFailed") final Long validationFailed, @JsonProperty("Unresolved") final Long unresolved, @JsonProperty("Resolved") final Long resolved, @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant, @JsonProperty("Imported") final Long imported, @JsonProperty("Deleted") final Long deleted, @JsonProperty("Rejected") final Long rejected, @JsonProperty("Skipped") final Long skipped, @JsonProperty("Expired") final Long expired) {
+    OperationStatesImpl(@JsonProperty("Accepted") final Long accepted, @JsonProperty("ValidationFailed") final Long validationFailed, @JsonProperty("Unresolved") final Long unresolved, @JsonProperty("Resolved") final Long resolved, @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant, @JsonProperty("Imported") final Long imported, @JsonProperty("Deleted") final Long deleted, @JsonProperty("Rejected") final Long rejected, @JsonProperty("Skipped") final Long skipped) {
         this.accepted = accepted;
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
@@ -53,7 +51,6 @@ public final class OperationStatesImpl implements OperationStates {
         this.deleted = deleted;
         this.rejected = rejected;
         this.skipped = skipped;
-        this.expired = expired;
     }
     public OperationStatesImpl() {
        
@@ -121,13 +118,6 @@ public final class OperationStatesImpl implements OperationStates {
     public Long getSkipped(){
         return this.skipped;
     }
-    
-    /**
-    *  <p>The number of import operations that are in the state <code>Expired</code>.</p>
-    */
-    public Long getExpired(){
-        return this.expired;
-    }
 
     public void setAccepted(final Long accepted){
         this.accepted = accepted;
@@ -163,10 +153,6 @@ public final class OperationStatesImpl implements OperationStates {
     
     public void setSkipped(final Long skipped){
         this.skipped = skipped;
-    }
-    
-    public void setExpired(final Long expired){
-        this.expired = expired;
     }
 
 }

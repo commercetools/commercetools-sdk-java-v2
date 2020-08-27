@@ -28,20 +28,16 @@ import io.vrap.rmf.base.client.*;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersOrderNumberByOrderNumberPost {
+public class ByProjectKeyOrdersOrderNumberByOrderNumberPost extends ApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberPost> {
 
     
-    private ApiHttpHeaders headers = new ApiHttpHeaders();
-    private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient; 
-    private List<String> expand = new ArrayList<>();
     private String projectKey;
     private String orderNumber;
     
     private com.commercetools.api.models.order.OrderUpdate orderUpdate;
 
     public ByProjectKeyOrdersOrderNumberByOrderNumberPost(final ApiHttpClient apiHttpClient, String projectKey, String orderNumber, com.commercetools.api.models.order.OrderUpdate orderUpdate){
-        this.apiHttpClient = apiHttpClient;
+        super(apiHttpClient);
         this.projectKey = projectKey;
         this.orderNumber = orderNumber;
         this.orderUpdate = orderUpdate;
@@ -49,17 +45,14 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPost {
 
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
-        List<String> params = new ArrayList<>();
-        params.add(this.expand.stream().map(s -> "expand=" + urlEncode(s)).collect(Collectors.joining("&")));
-        params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
-        params.removeIf(String::isEmpty);
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/order-number=%s", this.projectKey, this.orderNumber);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
-        httpRequest.setHeaders(headers);
+        httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(orderUpdate));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
@@ -73,7 +66,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPost {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(){
-        return apiHttpClient.execute(this.createHttpRequest())
+        return apiHttpClient().execute(this.createHttpRequest())
                 .thenApply(response -> {
                     if(response.getStatusCode() >= 400){
                         throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
@@ -86,58 +79,14 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPost {
     public String getOrderNumber() {return this.orderNumber;}
 
     public List<String> getExpand() {
-        return this.expand;
+        return this.getQueryParam("expand");
     }
 
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
     
     public void setOrderNumber(final String orderNumber) {this.orderNumber = orderNumber;}
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPost addExpand(final String expand){
-        this.expand.add(expand);
-        return this;
+    public ByProjectKeyOrdersOrderNumberByOrderNumberPost withExpand(final String expand){
+        return this.addQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPost withExpand(final List<String> expand){
-        this.expand = expand;
-        return this;
-    }
-
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPost addHeader(final String key, final String value) {
-        this.headers.addHeader(key, value);
-        return this;
-    }
-    
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPost withHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    public ApiHttpHeaders getHeaders() {
-        return this.headers;
-    }
-    
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPost addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
-        this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
-        return this;
-    }
-    
-    public ByProjectKeyOrdersOrderNumberByOrderNumberPost setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
-        this.additionalQueryParams = additionalQueryParams;
-        return this;
-    }
-    
-    public Map<String, String> getAdditionalQueryParams() {
-        return this.additionalQueryParams;
-    }
-    
-    private String urlEncode(final String s){
-        try{
-             return URLEncoder.encode(s, "UTF-8");
-         }catch (UnsupportedEncodingException e) {
-             //this will never happen
-             return null;
-         }
-    }
-
 }

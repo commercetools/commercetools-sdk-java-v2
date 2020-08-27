@@ -29,12 +29,8 @@ import io.vrap.rmf.base.client.*;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost {
+public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost> {
 
-    
-    private ApiHttpHeaders headers = new ApiHttpHeaders();
-    private Map<String, String> additionalQueryParams = new HashMap<>();
-    private final ApiHttpClient apiHttpClient; 
     
     private String projectKey;
     private String storeKey;
@@ -42,7 +38,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost {
     private com.commercetools.api.models.customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken;
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken){
-        this.apiHttpClient = apiHttpClient;
+        super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.customerCreatePasswordResetToken = customerCreatePasswordResetToken;
@@ -50,17 +46,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost {
 
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
-        List<String> params = new ArrayList<>();
-        
-        params.add(additionalQueryParams.entrySet().stream().map(entry -> entry.getKey() + "=" + entry.getValue()).collect(Collectors.joining("&")));
-        params.removeIf(String::isEmpty);
+        List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/customers/password-token", this.projectKey, this.storeKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
-        httpRequest.setHeaders(headers);
+        httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(customerCreatePasswordResetToken));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
@@ -74,7 +67,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken>> execute(){
-        return apiHttpClient.execute(this.createHttpRequest())
+        return apiHttpClient().execute(this.createHttpRequest())
                 .thenApply(response -> {
                     if(response.getStatusCode() >= 400){
                         throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
@@ -90,43 +83,5 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost {
     public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
     
     public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
-
-
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost addHeader(final String key, final String value) {
-        this.headers.addHeader(key, value);
-        return this;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost withHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-        return this;
-    }
-    
-    public ApiHttpHeaders getHeaders() {
-        return this.headers;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost addAdditionalQueryParam(final String additionalQueryParamKey, final String additionalQueryParamValue) {
-        this.additionalQueryParams.put(additionalQueryParamKey, additionalQueryParamValue);
-        return this;
-    }
-    
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost setAdditionalQueryParams(final Map<String, String> additionalQueryParams) {
-        this.additionalQueryParams = additionalQueryParams;
-        return this;
-    }
-    
-    public Map<String, String> getAdditionalQueryParams() {
-        return this.additionalQueryParams;
-    }
-    
-    private String urlEncode(final String s){
-        try{
-             return URLEncoder.encode(s, "UTF-8");
-         }catch (UnsupportedEncodingException e) {
-             //this will never happen
-             return null;
-         }
-    }
 
 }

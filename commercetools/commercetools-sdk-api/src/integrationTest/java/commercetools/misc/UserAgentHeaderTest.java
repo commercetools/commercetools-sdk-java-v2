@@ -34,6 +34,6 @@ public class UserAgentHeaderTest {
                 )
         )
         .next(MiddlewareArg.from(request.createHttpRequest(), null, null, null))
-        .thenApply(middlewareArg -> middlewareArg.getRequest().getHeaders().getHeaders().keySet().stream().anyMatch(s -> s.equalsIgnoreCase("user-agent")));
+        .thenApply(middlewareArg -> middlewareArg.getRequest().getHeaders().getHeaders().stream().anyMatch(s -> s.getKey().equalsIgnoreCase("user-agent")));
     }
 }

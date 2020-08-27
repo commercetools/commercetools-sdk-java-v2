@@ -6,6 +6,7 @@ import com.commercetools.ml.models.general_category_recommendations.GeneralCateg
 import com.commercetools.ml.models.similar_products.SimilarProductSearchRequestBuilder;
 import com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus;
 import io.vrap.rmf.base.client.ApiHttpResponse;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -27,6 +28,7 @@ public class MLAPITest extends TestBase {
         assertThat(response.getStatusCode()).isEqualTo(200);
     }
 
+    @Ignore
     @Test
     public void similaritiesTest() {
         ApiHttpResponse<TaskToken> tokenApiHttpResponse = mlApiBuilder

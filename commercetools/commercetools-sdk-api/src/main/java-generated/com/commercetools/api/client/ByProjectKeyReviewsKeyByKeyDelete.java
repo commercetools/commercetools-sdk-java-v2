@@ -76,11 +76,11 @@ public class ByProjectKeyReviewsKeyByKeyDelete extends ApiMethod<ByProjectKeyRev
     public String getProjectKey() {return this.projectKey;}
     public String getKey() {return this.key;}
 
-    public List<Boolean> getDataErasure() {
+    public List<String> getDataErasure() {
         return this.getQueryParam("dataErasure");
     }
     
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     

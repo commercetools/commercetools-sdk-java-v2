@@ -76,7 +76,7 @@ public class ByProjectKeyCartDiscountsByIDDelete extends ApiMethod<ByProjectKeyC
     public String getProjectKey() {return this.projectKey;}
     public String getID() {return this.ID;}
 
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     

@@ -79,7 +79,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDDelete extends ApiMethod
     public String getStoreKey() {return this.storeKey;}
     public String getID() {return this.ID;}
 
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     

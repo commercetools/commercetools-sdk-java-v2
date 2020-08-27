@@ -75,11 +75,11 @@ public class ByProjectKeyImageSearchPost extends ApiMethod<ByProjectKeyImageSear
 
     public String getProjectKey() {return this.projectKey;}
 
-    public List<Integer> getLimit() {
+    public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
     
-    public List<Integer> getOffset() {
+    public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
 

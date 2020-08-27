@@ -73,7 +73,7 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete> {
 
     public String getProjectKey() {return this.projectKey;}
 
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
 

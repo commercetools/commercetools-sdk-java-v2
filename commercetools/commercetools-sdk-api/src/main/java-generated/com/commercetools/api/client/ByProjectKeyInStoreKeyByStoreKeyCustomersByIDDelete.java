@@ -79,11 +79,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete extends ApiMeth
     public String getStoreKey() {return this.storeKey;}
     public String getID() {return this.ID;}
 
-    public List<Boolean> getDataErasure() {
+    public List<String> getDataErasure() {
         return this.getQueryParam("dataErasure");
     }
     
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     

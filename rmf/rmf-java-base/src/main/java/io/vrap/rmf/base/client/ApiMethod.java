@@ -51,7 +51,7 @@ public class ApiMethod<T extends ApiMethod<T>> {
     }
 
     private ApiHttpHeaders headers = new ApiHttpHeaders();
-    private List<ParamEntry<String, ?>> queryParams = new ArrayList<>();
+    private List<ParamEntry<String, String>> queryParams = new ArrayList<>();
     private final ApiHttpClient apiHttpClient;
 
     protected ApiHttpClient apiHttpClient() {
@@ -77,21 +77,21 @@ public class ApiMethod<T extends ApiMethod<T>> {
     }
 
     public <V> T addQueryParam(final String key, final V value) {
-        this.queryParams.add(new ParamEntry<>(key, value));
+        this.queryParams.add(new ParamEntry<>(key, value.toString()));
         return (T)this;
     }
 
-    public <V> T withQueryParams(final List<ParamEntry<String, ?>> queryParams) {
+    public <V> T withQueryParams(final List<ParamEntry<String, String>> queryParams) {
         this.queryParams = queryParams;
         return (T)this;
     }
 
-    public List<ParamEntry<String, ?>> getQueryParams() {
+    public List<ParamEntry<String, String>> getQueryParams() {
         return this.queryParams;
     }
 
-    public <V> List<V> getQueryParam(String key) {
-        return (List<V>)this.queryParams.stream().filter(e -> e.key.equals(key)).map(e -> e.value).collect(Collectors.toList());
+    public List<String> getQueryParam(String key) {
+        return this.queryParams.stream().filter(e -> e.key.equals(key)).map(e -> e.value).collect(Collectors.toList());
     }
 
     public List<String> getQueryParamUriStrings() {

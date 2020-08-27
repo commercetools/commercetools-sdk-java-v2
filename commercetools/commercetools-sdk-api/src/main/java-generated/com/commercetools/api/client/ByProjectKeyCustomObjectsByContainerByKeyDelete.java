@@ -79,11 +79,11 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends ApiMethod<B
     public String getContainer() {return this.container;}
     public String getKey() {return this.key;}
 
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     
-    public List<Boolean> getDataErasure() {
+    public List<String> getDataErasure() {
         return this.getQueryParam("dataErasure");
     }
     

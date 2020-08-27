@@ -100,7 +100,7 @@ public class ByProjectKeyProductsKeyByKeyDelete extends ApiMethod<ByProjectKeyPr
         return this.getQueryParam("storeProjection");
     }
     
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     

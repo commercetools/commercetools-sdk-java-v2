@@ -81,19 +81,19 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
         return this.getQueryParam("productName");
     }
     
-    public List<Integer> getLimit() {
+    public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
     
-    public List<Integer> getOffset() {
+    public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
     
-    public List<Double> getConfidenceMin() {
+    public List<String> getConfidenceMin() {
         return this.getQueryParam("confidenceMin");
     }
     
-    public List<Double> getConfidenceMax() {
+    public List<String> getConfidenceMax() {
         return this.getQueryParam("confidenceMax");
     }
 

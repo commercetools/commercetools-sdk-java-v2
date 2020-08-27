@@ -75,7 +75,7 @@ public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyPro
 
     public String getProjectKey() {return this.projectKey;}
 
-    public List<Boolean> getStaged() {
+    public List<String> getStaged() {
         return this.getQueryParam("staged");
     }
     
@@ -111,15 +111,15 @@ public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyPro
         return this.getQueryParam("sort");
     }
     
-    public List<Integer> getLimit() {
+    public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
     
-    public List<Integer> getOffset() {
+    public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
     
-    public List<Boolean> getWithTotal() {
+    public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
     }
     

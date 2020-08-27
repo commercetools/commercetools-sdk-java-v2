@@ -78,7 +78,7 @@ public class ByProjectKeyProductProjectionsKeyByKeyGet extends ApiMethod<ByProje
     public String getProjectKey() {return this.projectKey;}
     public String getKey() {return this.key;}
 
-    public List<Boolean> getStaged() {
+    public List<String> getStaged() {
         return this.getQueryParam("staged");
     }
     

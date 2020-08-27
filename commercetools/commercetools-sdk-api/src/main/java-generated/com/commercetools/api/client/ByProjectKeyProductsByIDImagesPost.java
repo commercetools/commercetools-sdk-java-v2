@@ -82,7 +82,7 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
         return this.getQueryParam("filename");
     }
     
-    public List<Double> getVariant() {
+    public List<String> getVariant() {
         return this.getQueryParam("variant");
     }
     
@@ -90,7 +90,7 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
         return this.getQueryParam("sku");
     }
     
-    public List<Boolean> getStaged() {
+    public List<String> getStaged() {
         return this.getQueryParam("staged");
     }
 

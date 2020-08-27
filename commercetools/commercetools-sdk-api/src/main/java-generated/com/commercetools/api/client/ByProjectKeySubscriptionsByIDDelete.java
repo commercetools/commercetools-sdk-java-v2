@@ -76,7 +76,7 @@ public class ByProjectKeySubscriptionsByIDDelete extends ApiMethod<ByProjectKeyS
     public String getProjectKey() {return this.projectKey;}
     public String getID() {return this.ID;}
 
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     

@@ -74,15 +74,15 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet> {
         return this.getQueryParam("sort");
     }
     
-    public List<Integer> getLimit() {
+    public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
     
-    public List<Integer> getOffset() {
+    public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
     
-    public List<Boolean> getWithTotal() {
+    public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
     }
     

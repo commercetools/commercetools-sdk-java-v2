@@ -76,7 +76,7 @@ public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrd
     public String getProjectKey() {return this.projectKey;}
     public String getID() {return this.ID;}
 
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     

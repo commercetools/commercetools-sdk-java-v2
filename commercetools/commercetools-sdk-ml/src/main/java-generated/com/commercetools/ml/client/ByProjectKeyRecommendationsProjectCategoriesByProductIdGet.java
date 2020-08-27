@@ -76,23 +76,23 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
     public String getProjectKey() {return this.projectKey;}
     public String getProductId() {return this.productId;}
 
-    public List<Integer> getLimit() {
+    public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
     
-    public List<Integer> getOffset() {
+    public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
     
-    public List<Boolean> getStaged() {
+    public List<String> getStaged() {
         return this.getQueryParam("staged");
     }
     
-    public List<Double> getConfidenceMin() {
+    public List<String> getConfidenceMin() {
         return this.getQueryParam("confidenceMin");
     }
     
-    public List<Double> getConfidenceMax() {
+    public List<String> getConfidenceMax() {
         return this.getQueryParam("confidenceMax");
     }
 

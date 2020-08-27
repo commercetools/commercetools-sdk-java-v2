@@ -76,7 +76,7 @@ public class ByProjectKeyStoresKeyByKeyDelete extends ApiMethod<ByProjectKeyStor
     public String getProjectKey() {return this.projectKey;}
     public String getKey() {return this.key;}
 
-    public List<Long> getVersion() {
+    public List<String> getVersion() {
         return this.getQueryParam("version");
     }
     

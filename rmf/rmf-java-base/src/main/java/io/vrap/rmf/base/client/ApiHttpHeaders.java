@@ -52,6 +52,9 @@ public class ApiHttpHeaders {
     public ApiHttpHeaders() {
         this.headers = new ArrayList<>();
     }
+    public ApiHttpHeaders(ApiHttpHeaders t) {
+        this.headers = new ArrayList<>(t.headers);
+    }
 
     public void addHeader(String key, String value){
         this.headers.add(new HeaderEntry<>(key, value));

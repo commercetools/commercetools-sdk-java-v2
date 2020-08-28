@@ -23,7 +23,7 @@ public class CustomerGroupIntegrationTests {
     @Test
     public void getById() {
         CustomerGroupFixtures.withCustomerGroup(customerGroup -> {
-            CustomerGroup queriedCustomerGroup = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomerGroup queriedCustomerGroup = CommercetoolsTestUtils.getProjectRoot()
                     .customerGroups()
                     .withId(customerGroup.getId())
                     .get()
@@ -37,7 +37,7 @@ public class CustomerGroupIntegrationTests {
     @Test
     public void getByKey() {
         CustomerGroupFixtures.withCustomerGroup(customerGroup -> {
-            CustomerGroup queriedCustomerGroup = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomerGroup queriedCustomerGroup = CommercetoolsTestUtils.getProjectRoot()
                     .customerGroups()
                     .withKey(customerGroup.getKey())
                     .get()
@@ -51,7 +51,7 @@ public class CustomerGroupIntegrationTests {
     @Test
     public void query() {
         CustomerGroupFixtures.withCustomerGroup(customerGroup -> {
-            CustomerGroupPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomerGroupPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
                     .customerGroups()
                     .get()
                     .withWhere("id=" + "\"" + customerGroup.getId() + "\"")
@@ -68,7 +68,7 @@ public class CustomerGroupIntegrationTests {
             List<CustomerGroupUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CustomerGroupSetKeyActionBuilder.of().key(newKey).build());
-            CustomerGroup updatedCustomerGroup = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomerGroup updatedCustomerGroup = CommercetoolsTestUtils.getProjectRoot()
                     .customerGroups()
                     .withId(customerGroup.getId())
                     .post(CustomerGroupUpdateBuilder.of()
@@ -90,7 +90,7 @@ public class CustomerGroupIntegrationTests {
             List<CustomerGroupUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CustomerGroupSetKeyActionBuilder.of().key(newKey).build());
-            CustomerGroup updatedCustomerGroup = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomerGroup updatedCustomerGroup = CommercetoolsTestUtils.getProjectRoot()
                     .customerGroups()
                     .withKey(customerGroup.getKey())
                     .post(CustomerGroupUpdateBuilder.of()
@@ -109,7 +109,7 @@ public class CustomerGroupIntegrationTests {
     @Test
     public void deleteByKey() {
         CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
-        CustomerGroup deletedCustomerGroup = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        CustomerGroup deletedCustomerGroup = CommercetoolsTestUtils.getProjectRoot()
                 .customerGroups()
                 .withId(customerGroup.getId())
                 .delete()

@@ -27,7 +27,6 @@ import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
@@ -56,7 +55,7 @@ public class ProductFixtures {
                 .description(CommercetoolsTestUtils.randomString())
                 .build();
 
-        ProductType productType = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ProductType productType = CommercetoolsTestUtils.getProjectRoot()
                 .productTypes()
                 .post(productTypeDraft)
                 .executeBlocking().getBody();
@@ -70,7 +69,7 @@ public class ProductFixtures {
         Channel channel = ChannelFixtures.createChannel();
 
 
-        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectRoot()
                 .productDiscounts()
                 .get()
                 .withWhere("sortOrder=\"0.3\"")
@@ -80,7 +79,7 @@ public class ProductFixtures {
         if(existing.getCount() != 0) {
             String productDiscountId = existing.getResults().get(0).getId();
             Long productDiscountVersion = existing.getResults().get(0).getVersion();
-            CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CommercetoolsTestUtils.getProjectRoot()
                     .productDiscounts()
                     .withId(productDiscountId)
                     .delete()
@@ -97,7 +96,7 @@ public class ProductFixtures {
                 .isActive(true)
                 .build();
 
-        ProductDiscount productDiscount = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectRoot()
                 .productDiscounts()
                 .post(productDiscountDraft)
                 .executeBlocking().getBody();
@@ -162,7 +161,7 @@ public class ProductFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 .build();
 
-        State state = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        State state = CommercetoolsTestUtils.getProjectRoot()
                 .states()
                 .post(stateDraft)
                 .executeBlocking().getBody();
@@ -192,7 +191,7 @@ public class ProductFixtures {
                 .publish(false)
                 .build();
 
-        Product product = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Product product = CommercetoolsTestUtils.getProjectRoot()
                 .products()
                 .post(productDraft)
                 .executeBlocking().getBody();
@@ -203,7 +202,7 @@ public class ProductFixtures {
     }
 
     public static Product deleteProductById(final String id, final Long version) {
-        Product product = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Product product = CommercetoolsTestUtils.getProjectRoot()
                 .products()
                 .withId(id)
                 .delete()
@@ -215,7 +214,7 @@ public class ProductFixtures {
     }
 
     public static Product deleteProductByKey(final String key, final Long version) {
-        Product product = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Product product = CommercetoolsTestUtils.getProjectRoot()
                 .products()
                 .withKey(key)
                 .delete()

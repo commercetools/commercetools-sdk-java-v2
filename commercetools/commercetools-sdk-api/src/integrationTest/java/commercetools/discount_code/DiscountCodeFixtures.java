@@ -50,7 +50,7 @@ public class DiscountCodeFixtures {
                 .maxApplicationsPerCustomer(1L)
                 .build();
 
-        DiscountCode discountCode = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        DiscountCode discountCode = CommercetoolsTestUtils.getProjectRoot()
                 .discountCodes()
                 .post(discountCodeDraft)
                 .executeBlocking().getBody();
@@ -62,7 +62,7 @@ public class DiscountCodeFixtures {
     }
 
     public static DiscountCode deleteDiscountCode(final String id, final Long version) {
-        DiscountCode discountCode = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        DiscountCode discountCode = CommercetoolsTestUtils.getProjectRoot()
                 .discountCodes()
                 .withId(id)
                 .delete()

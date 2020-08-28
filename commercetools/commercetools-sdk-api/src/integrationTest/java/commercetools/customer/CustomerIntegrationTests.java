@@ -20,7 +20,7 @@ public class CustomerIntegrationTests {
     @Test
     public void getById() {
         CustomerFixtures.withCustomer(customer -> {
-            Customer queriedCustomer = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Customer queriedCustomer = CommercetoolsTestUtils.getProjectRoot()
                     .customers()
                     .withId(customer.getId())
                     .get()
@@ -34,7 +34,7 @@ public class CustomerIntegrationTests {
     @Test
     public void getByKey() {
         CustomerFixtures.withCustomer(customer -> {
-            Customer queriedCustomer = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Customer queriedCustomer = CommercetoolsTestUtils.getProjectRoot()
                     .customers()
                     .withKey(customer.getKey())
                     .get()
@@ -48,7 +48,7 @@ public class CustomerIntegrationTests {
     @Test
     public void query() {
         CustomerFixtures.withCustomer(customer -> {
-            CustomerPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomerPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
                     .customers()
                     .get()
                     .withWhere("id=" +  "\"" + customer.getId() + "\"")
@@ -66,7 +66,7 @@ public class CustomerIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CustomerSetKeyActionBuilder.of().key(newKey).build());
 
-            Customer updatedCustomer = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Customer updatedCustomer = CommercetoolsTestUtils.getProjectRoot()
                     .customers()
                     .withId(customer.getId())
                     .post(CustomerUpdateBuilder.of().actions(updateActions).version(customer.getVersion()).build())
@@ -86,7 +86,7 @@ public class CustomerIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(CustomerSetKeyActionBuilder.of().key(newKey).build());
 
-            Customer updatedCustomer = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Customer updatedCustomer = CommercetoolsTestUtils.getProjectRoot()
                     .customers()
                     .withKey(customer.getKey())
                     .post(CustomerUpdateBuilder.of().actions(updateActions).version(customer.getVersion()).build())
@@ -102,7 +102,7 @@ public class CustomerIntegrationTests {
     @Test
     public void deleteByKey() {
         Customer customer = CustomerFixtures.createCustomer();
-        Customer deletedCustomer = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Customer deletedCustomer = CommercetoolsTestUtils.getProjectRoot()
                 .customers()
                 .withKey(customer.getKey())
                 .delete()

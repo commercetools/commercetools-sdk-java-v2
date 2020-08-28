@@ -37,7 +37,7 @@ public class TypeFixtures {
                         .build()))
                 .build();
 
-        Type type = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Type type = CommercetoolsTestUtils.getProjectRoot()
                 .types()
                 .post(typeDraft)
                 .executeBlocking().getBody();
@@ -49,7 +49,7 @@ public class TypeFixtures {
     }
 
     public static Type deleteType(final String id, final Long version) {
-        Type type = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Type type = CommercetoolsTestUtils.getProjectRoot()
                 .types()
                 .withId(id)
                 .delete()

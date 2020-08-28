@@ -1,6 +1,5 @@
 package cleanup;
 
-import com.commercetools.api.models.api_client.ApiClientPagedQueryResponse;
 import com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 import com.commercetools.api.models.channel.ChannelPagedQueryResponse;
@@ -21,7 +20,6 @@ import com.commercetools.api.models.store.StorePagedQueryResponse;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.api.models.type.TypePagedQueryResponse;
 import com.commercetools.api.models.zone.ZonePagedQueryResponse;
-import commercetools.api_client.ApiClientFixtures;
 import commercetools.cart_discount.CartDiscountFixtures;
 import commercetools.category.CategoryFixtures;
 import commercetools.channel.ChannelFixtures;
@@ -120,7 +118,7 @@ public class DeleteEverythingIntegrationTest {
         ZonePagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .zones()
                     .get()
                     .executeBlocking().getBody();
@@ -134,7 +132,7 @@ public class DeleteEverythingIntegrationTest {
        TypePagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .types()
                     .get()
                     .executeBlocking().getBody();
@@ -148,7 +146,7 @@ public class DeleteEverythingIntegrationTest {
         StorePagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .stores()
                     .get()
                     .executeBlocking().getBody();
@@ -162,7 +160,7 @@ public class DeleteEverythingIntegrationTest {
         StatePagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .states()
                     .get()
                     .executeBlocking().getBody();
@@ -176,7 +174,7 @@ public class DeleteEverythingIntegrationTest {
         ShoppingListPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .shoppingLists()
                     .get()
                     .executeBlocking().getBody();
@@ -190,7 +188,7 @@ public class DeleteEverythingIntegrationTest {
         ShippingMethodPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .shippingMethods()
                     .get()
                     .executeBlocking().getBody();
@@ -204,7 +202,7 @@ public class DeleteEverythingIntegrationTest {
         ExtensionPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .extensions()
                     .get()
                     .executeBlocking().getBody();
@@ -218,7 +216,7 @@ public class DeleteEverythingIntegrationTest {
         CustomerGroupPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .customerGroups()
                     .get()
                     .executeBlocking().getBody();
@@ -232,7 +230,7 @@ public class DeleteEverythingIntegrationTest {
         CustomerPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .customers()
                     .get()
                     .executeBlocking().getBody();
@@ -246,7 +244,7 @@ public class DeleteEverythingIntegrationTest {
         CustomObjectPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .customObjects()
                     .get()
                     .executeBlocking().getBody();
@@ -260,7 +258,7 @@ public class DeleteEverythingIntegrationTest {
         ChannelPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .channels()
                     .get()
                     .executeBlocking().getBody();
@@ -274,7 +272,7 @@ public class DeleteEverythingIntegrationTest {
         CategoryPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .categories()
                     .get()
                     .executeBlocking().getBody();
@@ -288,7 +286,7 @@ public class DeleteEverythingIntegrationTest {
         CartDiscountPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .cartDiscounts()
                     .get()
                     .executeBlocking().getBody();
@@ -302,7 +300,7 @@ public class DeleteEverythingIntegrationTest {
         InventoryPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .inventory()
                     .get()
                     .executeBlocking().getBody();
@@ -316,7 +314,7 @@ public class DeleteEverythingIntegrationTest {
         ProductPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .products()
                     .get()
                     .executeBlocking().getBody();
@@ -330,7 +328,7 @@ public class DeleteEverythingIntegrationTest {
         ProductDiscountPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .productDiscounts()
                     .get()
                     .executeBlocking().getBody();
@@ -344,7 +342,7 @@ public class DeleteEverythingIntegrationTest {
         ProductTypePagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .productTypes()
                     .get()
                     .executeBlocking().getBody();
@@ -358,7 +356,7 @@ public class DeleteEverythingIntegrationTest {
         ReviewPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .reviews()
                     .get()
                     .executeBlocking().getBody();
@@ -372,7 +370,7 @@ public class DeleteEverythingIntegrationTest {
         TaxCategoryPagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .taxCategories()
                     .get()
                     .executeBlocking().getBody();
@@ -386,7 +384,7 @@ public class DeleteEverythingIntegrationTest {
         DiscountCodePagedQueryResponse response;
 
         do {
-            response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            response = CommercetoolsTestUtils.getProjectRoot()
                     .discountCodes()
                     .get()
                     .executeBlocking().getBody();

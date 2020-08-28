@@ -24,6 +24,17 @@ public class ApiFactory {
         return create(clientId, clientSecret, scopes, tokenEndpoint, apiEndpoint, logLevel).withProjectKey(projectKey);
     }
 
+    public static ByProjectKeyRequestBuilder create(
+            final String projectKey,
+            final String clientId,
+            final String clientSecret,
+            final String scopes,
+            final String tokenEndpoint,
+            final String apiEndpoint
+    ) {
+        return create(clientId, clientSecret, scopes, tokenEndpoint, apiEndpoint).withProjectKey(projectKey);
+    }
+
     public static ApiRoot create(
             final String clientId,
             final String clientSecret,

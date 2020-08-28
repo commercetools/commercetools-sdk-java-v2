@@ -38,7 +38,7 @@ public class InventoryEntryFixtures {
                 .supplyChannel(ChannelResourceIdentifierBuilder.of().id(channel.getId()).build())
                 .build();
 
-        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectRoot()
                 .inventory()
                 .post(inventoryEntryDraft)
                 .executeBlocking().getBody();
@@ -51,7 +51,7 @@ public class InventoryEntryFixtures {
     }
 
     public static InventoryEntry delete(final String id) {
-        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectRoot()
                 .inventory()
                 .withId(id)
                 .delete()

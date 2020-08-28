@@ -17,7 +17,7 @@ public class ReviewIntegrationTests {
                 .title("review-title-1")
                 .build();
 
-        Review review = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Review review = CommercetoolsTestUtils.getProjectRoot()
                 .reviews()
                 .post(reviewDraft)
                 .executeBlocking().getBody();
@@ -25,7 +25,7 @@ public class ReviewIntegrationTests {
         Assert.assertNotNull(review);
         Assert.assertEquals(reviewDraft.getKey(), review.getKey());
 
-        Review deletedReview = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Review deletedReview = CommercetoolsTestUtils.getProjectRoot()
                 .reviews()
                 .withId(review.getId())
                 .delete()
@@ -39,7 +39,7 @@ public class ReviewIntegrationTests {
     @Test
     public void getById() {
         ReviewFixtures.withReview(review -> {
-            Review queriedReview = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Review queriedReview = CommercetoolsTestUtils.getProjectRoot()
                     .reviews()
                     .withId(review.getId())
                     .get()
@@ -52,7 +52,7 @@ public class ReviewIntegrationTests {
     @Test
     public void getByKey(){
         ReviewFixtures.withReview(review -> {
-            Review queriedReview = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Review queriedReview = CommercetoolsTestUtils.getProjectRoot()
                     .reviews()
                     .withKey(review.getKey())
                     .get()
@@ -65,7 +65,7 @@ public class ReviewIntegrationTests {
     @Test
     public void query(){
         ReviewFixtures.withReview(review -> {
-            ReviewPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            ReviewPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
                     .reviews()
                     .get()
                     .withWhere("id=" + "\"" + review.getId() +"\"")
@@ -82,7 +82,7 @@ public class ReviewIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ReviewSetKeyActionBuilder.of().key(newKey).build());
 
-            Review updatedReview = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Review updatedReview = CommercetoolsTestUtils.getProjectRoot()
                     .reviews()
                     .withId(review.getId())
                     .post(ReviewUpdateBuilder.of()
@@ -105,7 +105,7 @@ public class ReviewIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ReviewSetKeyActionBuilder.of().key(newKey).build());
 
-            Review updatedReview = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Review updatedReview = CommercetoolsTestUtils.getProjectRoot()
                     .reviews()
                     .withKey(review.getKey())
                     .post(ReviewUpdateBuilder.of()

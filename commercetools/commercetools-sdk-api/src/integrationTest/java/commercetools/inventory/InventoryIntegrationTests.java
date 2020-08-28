@@ -17,7 +17,7 @@ public class InventoryIntegrationTests {
                 .quantityOnStock(10L)
                 .build();
 
-        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectRoot()
                 .inventory()
                 .post(inventoryEntryDraft)
                 .executeBlocking().getBody();
@@ -26,7 +26,7 @@ public class InventoryIntegrationTests {
         Assert.assertEquals(inventoryEntry.getSku(), inventoryEntryDraft.getSku());
         Assert.assertEquals(inventoryEntry.getQuantityOnStock(), inventoryEntryDraft.getQuantityOnStock());
 
-        InventoryEntry deletedInventoryEntry = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        InventoryEntry deletedInventoryEntry = CommercetoolsTestUtils.getProjectRoot()
                 .inventory()
                 .withId(inventoryEntry.getId())
                 .delete()
@@ -39,7 +39,7 @@ public class InventoryIntegrationTests {
     @Test
     public void getById() {
         InventoryEntryFixtures.withInventoryEntry(inventoryEntry -> {
-            InventoryEntry queriedInventoryEntry = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            InventoryEntry queriedInventoryEntry = CommercetoolsTestUtils.getProjectRoot()
                     .inventory()
                     .withId(inventoryEntry.getId())
                     .get()
@@ -52,7 +52,7 @@ public class InventoryIntegrationTests {
     @Test
     public void query() {
         InventoryEntryFixtures.withInventoryEntry(inventoryEntry -> {
-            InventoryPagedQueryResponse inventoryPagedQueryResponse = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            InventoryPagedQueryResponse inventoryPagedQueryResponse = CommercetoolsTestUtils.getProjectRoot()
                     .inventory()
                     .get()
                     .withWhere("id=" + "\"" + inventoryEntry.getId() + "\"")
@@ -69,7 +69,7 @@ public class InventoryIntegrationTests {
             updateActions.add(InventoryEntrySetRestockableInDaysActionBuilder.of()
                     .restockableInDays(10L).build());
 
-            InventoryEntry updatedInventoryEntry = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            InventoryEntry updatedInventoryEntry = CommercetoolsTestUtils.getProjectRoot()
                     .inventory()
                     .withId(inventoryEntry.getId())
                     .post(InventoryEntryUpdateBuilder.of()

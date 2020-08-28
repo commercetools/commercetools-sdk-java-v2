@@ -29,7 +29,7 @@ public class StoreFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 .build();
 
-        Store store = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Store store = CommercetoolsTestUtils.getProjectRoot()
                 .stores()
                 .post(storeDraft)
                 .executeBlocking().getBody();
@@ -41,7 +41,7 @@ public class StoreFixtures {
     }
 
     public static Store deleteStore(final String id, final Long version) {
-        Store store = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Store store = CommercetoolsTestUtils.getProjectRoot()
                 .stores()
                 .withId(id)
                 .delete()

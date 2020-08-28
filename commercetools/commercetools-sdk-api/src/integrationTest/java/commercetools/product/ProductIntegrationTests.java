@@ -23,7 +23,7 @@ public class ProductIntegrationTests {
     @Test
     public void getById() {
         ProductFixtures.withProduct(product -> {
-            Product queriedProduct = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Product queriedProduct = CommercetoolsTestUtils.getProjectRoot()
                     .products()
                     .withId(product.getId())
                     .get()
@@ -36,7 +36,7 @@ public class ProductIntegrationTests {
     @Test
     public void getByKey() {
         ProductFixtures.withProduct(product -> {
-            Product queriedProduct = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Product queriedProduct = CommercetoolsTestUtils.getProjectRoot()
                     .products()
                     .withKey(product.getKey())
                     .get()
@@ -53,7 +53,7 @@ public class ProductIntegrationTests {
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
 
-            Product updatedProduct = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Product updatedProduct = CommercetoolsTestUtils.getProjectRoot()
                     .products()
                     .withId(product.getId())
                     .post(ProductUpdateBuilder.of()
@@ -75,7 +75,7 @@ public class ProductIntegrationTests {
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
 
-            Product updatedProduct = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Product updatedProduct = CommercetoolsTestUtils.getProjectRoot()
                     .products()
                     .withKey(product.getKey())
                     .post(ProductUpdateBuilder.of()
@@ -93,7 +93,7 @@ public class ProductIntegrationTests {
     @Test
     public void query() {
         ProductFixtures.withProduct(product -> {
-            ProductPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            ProductPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
                     .products()
                     .get()
                     .withWhere("id=" + "\"" + product.getId() + "\"")

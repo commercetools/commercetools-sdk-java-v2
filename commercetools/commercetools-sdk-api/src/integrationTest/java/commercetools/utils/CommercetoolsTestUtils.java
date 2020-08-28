@@ -1,5 +1,6 @@
 package commercetools.utils;
 
+import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.defaultconfig.ApiFactory;
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
@@ -13,18 +14,20 @@ import java.util.UUID;
 public class CommercetoolsTestUtils {
 
     private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
-    private static final ApiRoot apiRoot;
+    private static final ByProjectKeyRequestBuilder projectRoot;
     static{
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if("OFF".equals(logLevel)){
-            apiRoot = ApiFactory.create(
+            projectRoot = ApiFactory.create(
+                    getProjectKey(),
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://api.europe-west1.gcp.commercetools.com");
         }else{
-            apiRoot = ApiFactory.create(
+            projectRoot = ApiFactory.create(
+                    getProjectKey(),
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
@@ -68,7 +71,7 @@ public class CommercetoolsTestUtils {
         return "manage_project:" + getProjectKey() + " manage_api_clients:" + getProjectKey();
     }
 
-    public static ApiRoot getApiRoot() {
-        return apiRoot;
+    public static ByProjectKeyRequestBuilder getProjectRoot() {
+        return projectRoot;
     }
 }

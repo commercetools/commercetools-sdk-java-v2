@@ -16,7 +16,7 @@ public class ImportSinkIntegrationTests {
                 .resourceType(ImportResourceType.PRODUCT_TYPE)
                 .build();
 
-        ImportSink importSink = ImportApiTestUtils.getApiRoot().withProjectKeyValue(ImportApiTestUtils.getProjectKey())
+        ImportSink importSink = ImportApiTestUtils.getProjectRoot()
                 .importSinks()
                 .post(importSinkDraft)
                 .executeBlocking()
@@ -24,7 +24,7 @@ public class ImportSinkIntegrationTests {
 
         Assert.assertNotNull(importSink);
 
-        ImportSink deletedImportSink = ImportApiTestUtils.getApiRoot().withProjectKeyValue(ImportApiTestUtils.getProjectKey())
+        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()
                 .importSinks()
                 .withImportSinkKeyValue(importSink.getKey())
                 .delete()

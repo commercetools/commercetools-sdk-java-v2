@@ -29,7 +29,7 @@ public class StateFixtures {
                 .roles(Arrays.asList(StateRoleEnum.RETURN))
                 .build();
 
-        State state = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        State state = CommercetoolsTestUtils.getProjectRoot()
                 .states()
                 .post(stateDraft)
                 .executeBlocking().getBody();
@@ -41,7 +41,7 @@ public class StateFixtures {
     }
 
     public static State deleteState(final String id, final Long version) {
-        State state =  CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        State state =  CommercetoolsTestUtils.getProjectRoot()
                 .states()
                 .withId(id)
                 .delete()

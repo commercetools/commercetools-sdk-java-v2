@@ -1,6 +1,6 @@
 package com.commerctools.importapi.defaultconfig;
 
-import com.commercetools.importapi.client.ApiRoot;
+import com.commercetools.importapi.client.ByProjectKeyRequestBuilder;
 import com.commercetools.importapi.defaultconfig.ImportApiFactory;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
@@ -13,19 +13,21 @@ import java.util.UUID;
 public class ImportApiTestUtils {
 
     private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
-    private static final ApiRoot apiRoot;
+    private static final ByProjectKeyRequestBuilder projectRoot;
 
     static{
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if("OFF".equals(logLevel)){
-            apiRoot = ImportApiFactory.create(
+            projectRoot = ImportApiFactory.create(
+                    getProjectKey(),
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://import-eu.europe-west1.gcp.commercetools.com");
         }else{
-            apiRoot = ImportApiFactory.create(
+            projectRoot = ImportApiFactory.create(
+                    getProjectKey(),
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
@@ -69,8 +71,8 @@ public class ImportApiTestUtils {
         return "manage_project:" + getProjectKey() + " manage_api_clients:" + getProjectKey();
     }
 
-    public static ApiRoot getApiRoot() {
-        return apiRoot;
+    public static ByProjectKeyRequestBuilder getProjectRoot() {
+        return projectRoot;
     }
 
 }

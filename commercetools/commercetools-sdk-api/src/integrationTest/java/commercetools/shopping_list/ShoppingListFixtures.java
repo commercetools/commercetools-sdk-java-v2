@@ -49,7 +49,7 @@ public class ShoppingListFixtures {
                 .deleteDaysAfterLastModification(2L)
                 .build();
 
-        ShoppingList shoppingList = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ShoppingList shoppingList = CommercetoolsTestUtils.getProjectRoot()
                 .shoppingLists()
                 .post(shoppingListDraft)
                 .executeBlocking().getBody();
@@ -61,7 +61,7 @@ public class ShoppingListFixtures {
     }
 
     public static ShoppingList deleteShoppingList(final String id, final Long version) {
-        ShoppingList shoppingList = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ShoppingList shoppingList = CommercetoolsTestUtils.getProjectRoot()
                 .shoppingLists()
                 .withId(id)
                 .delete()

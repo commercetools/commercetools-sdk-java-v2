@@ -24,7 +24,7 @@ public class ApiClientFixtures {
                 .scope("manage_project:" + CommercetoolsTestUtils.getProjectKey())
                 .build();
 
-        ApiClient apiClient = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot()
                 .apiClients()
                 .post(apiClientDraft)
                 .executeBlocking().getBody();
@@ -35,7 +35,7 @@ public class ApiClientFixtures {
     }
 
     public static ApiClient deleteApiClient(final String id) {
-        ApiClient apiClient = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot()
                 .apiClients()
                 .withId(id)
                 .delete()

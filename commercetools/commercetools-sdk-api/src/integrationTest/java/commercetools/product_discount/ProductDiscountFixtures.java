@@ -6,7 +6,6 @@ import org.junit.Assert;
 
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
-import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -26,7 +25,7 @@ public class ProductDiscountFixtures {
 
     public static ProductDiscount createProductDiscount() {
 
-        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectRoot()
                 .productDiscounts()
                 .get()
                 .withWhere("sortOrder=\"0.3\"")
@@ -36,7 +35,7 @@ public class ProductDiscountFixtures {
         if(existing.getCount() != 0) {
             String productDiscountId = existing.getResults().get(0).getId();
             Long productDiscountVersion = existing.getResults().get(0).getVersion();
-            CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CommercetoolsTestUtils.getProjectRoot()
                     .productDiscounts()
                     .withId(productDiscountId)
                     .delete()
@@ -56,7 +55,7 @@ public class ProductDiscountFixtures {
                 .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
                 .build();
 
-        ProductDiscount productDiscount = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectRoot()
                 .productDiscounts()
                 .post(productDiscountDraft)
                 .executeBlocking().getBody();
@@ -68,7 +67,7 @@ public class ProductDiscountFixtures {
     }
 
     public static ProductDiscount deleteProductDiscount(final String id, final Long version) {
-        ProductDiscount deletedProductDiscount = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ProductDiscount deletedProductDiscount = CommercetoolsTestUtils.getProjectRoot()
                 .productDiscounts()
                 .withId(id)
                 .delete()

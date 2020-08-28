@@ -40,7 +40,7 @@ public class ReviewFixtures {
                 .key(CommercetoolsTestUtils.randomKey())
                 .build();
 
-        State state = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        State state = CommercetoolsTestUtils.getProjectRoot()
                 .states()
                 .post(stateDraft)
                 .executeBlocking().getBody();
@@ -59,7 +59,7 @@ public class ReviewFixtures {
                 .customer(CustomerResourceIdentifierBuilder.of().id(customer.getId()).build())
                 .build();
 
-        Review review = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Review review = CommercetoolsTestUtils.getProjectRoot()
                 .reviews()
                 .post(reviewDraft)
                 .executeBlocking().getBody();
@@ -71,7 +71,7 @@ public class ReviewFixtures {
     }
 
     public static Review delete(final String id, final Long version) {
-        Review deletedReview = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Review deletedReview = CommercetoolsTestUtils.getProjectRoot()
                 .reviews()
                 .withId(id)
                 .delete()

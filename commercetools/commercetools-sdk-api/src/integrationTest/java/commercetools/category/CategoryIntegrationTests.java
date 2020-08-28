@@ -23,7 +23,7 @@ public class CategoryIntegrationTests {
     @Test
     public void getById() {
         CategoryFixtures.withCategory(category -> {
-            Category queriedCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Category queriedCategory = CommercetoolsTestUtils.getProjectRoot()
                     .categories()
                     .withId(category.getId())
                     .get()
@@ -35,7 +35,7 @@ public class CategoryIntegrationTests {
     @Test
     public void getByKey() {
         CategoryFixtures.withCategory(category -> {
-            Category queriedCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Category queriedCategory = CommercetoolsTestUtils.getProjectRoot()
                     .categories()
                     .withKey(category.getKey())
                     .get()
@@ -48,7 +48,7 @@ public class CategoryIntegrationTests {
     @Test
     public void deleteById() {
         Category category = CategoryFixtures.createCategory();
-        Category deletedCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Category deletedCategory = CommercetoolsTestUtils.getProjectRoot()
                 .categories()
                 .withId(category.getId())
                 .delete()
@@ -60,7 +60,7 @@ public class CategoryIntegrationTests {
     @Test
     public void deleteByKey() {
         Category category = CategoryFixtures.createCategory();
-        Category deletedCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Category deletedCategory = CommercetoolsTestUtils.getProjectRoot()
                 .categories()
                 .withKey(category.getKey())
                 .delete()
@@ -72,7 +72,7 @@ public class CategoryIntegrationTests {
     @Test
     public void queryCategories() {
         Category category = CategoryFixtures.createCategory();
-        CategoryPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        CategoryPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
                 .categories()
                 .get()
                 .withWhere("id=" + "\"" + category.getId() + "\"")
@@ -95,7 +95,7 @@ public class CategoryIntegrationTests {
                     .version(category.getVersion())
                     .actions(updateActions)
                     .build();
-            Category updatedCategory = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            Category updatedCategory = CommercetoolsTestUtils.getProjectRoot()
                     .categories()
                     .withId(category.getId())
                     .post(categoryUpdate)

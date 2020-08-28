@@ -4,7 +4,6 @@ import com.commercetools.api.models.custom_object.CustomObject;
 import com.commercetools.api.models.custom_object.CustomObjectDraft;
 import com.commercetools.api.models.custom_object.CustomObjectDraftBuilder;
 import com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse;
-import com.fasterxml.jackson.databind.util.RawValue;
 import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import org.junit.Assert;
@@ -23,7 +22,7 @@ public class CustomObjectIntegrationTests {
     @Test
     public void getById() {
         CustomObjectFixtures.withCustomObject(customObject -> {
-            CustomObject queriedCustomObject = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomObject queriedCustomObject = CommercetoolsTestUtils.getProjectRoot()
                     .customObjects()
                     .withId(customObject.getId())
                     .get()
@@ -43,7 +42,7 @@ public class CustomObjectIntegrationTests {
                     .value(VrapJsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "val"))
                     .build();
 
-            CustomObject updatedCustomObject = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomObject updatedCustomObject = CommercetoolsTestUtils.getProjectRoot()
                     .customObjects()
                     .post(customObjectDraft)
                     .executeBlocking().getBody();
@@ -58,7 +57,7 @@ public class CustomObjectIntegrationTests {
     @Test
     public void query() {
         CustomObjectFixtures.withCustomObject(customObject -> {
-            CustomObjectPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            CustomObjectPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
                     .customObjects()
                     .get()
                     .withWhere("id=" + "\"" + customObject.getId() + "\"")

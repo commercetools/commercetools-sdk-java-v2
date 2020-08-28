@@ -10,7 +10,6 @@ import com.commercetools.api.models.common.AssetSourceBuilder;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.*;
 import commercetools.utils.CommercetoolsTestUtils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
@@ -51,7 +50,7 @@ public class CategoryFixtures {
                         .build()))
                 .build();
 
-        Type type = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Type type = CommercetoolsTestUtils.getProjectRoot()
                 .types()
                 .post(typeDraft)
                 .executeBlocking().getBody();
@@ -78,7 +77,7 @@ public class CategoryFixtures {
                         .build()))
                 .build();
 
-        return CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        return CommercetoolsTestUtils.getProjectRoot()
                 .categories()
                 .post(categoryDraft)
                 .executeBlocking().getBody();
@@ -86,7 +85,7 @@ public class CategoryFixtures {
 
     public static Category deleteCategory(final String id, final Long version){
 
-        return CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        return CommercetoolsTestUtils.getProjectRoot()
                 .categories()
                 .withId(id)
                 .delete()

@@ -19,7 +19,7 @@ public class ApiClientIntegrationTests {
     @Test
     public void getById() {
         ApiClientFixtures.withApiClient(apiClient -> {
-            ApiClient queriedApiClient = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            ApiClient queriedApiClient = CommercetoolsTestUtils.getProjectRoot()
                     .apiClients()
                     .withId(apiClient.getId())
                     .get()
@@ -33,7 +33,7 @@ public class ApiClientIntegrationTests {
     @Test
     public void query() {
         ApiClientFixtures.withApiClient(apiClient -> {
-            ApiClientPagedQueryResponse response = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+            ApiClientPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
                     .apiClients()
                     .get()
                     .withWhere("id=" + "\"" + apiClient.getId() + "\"")

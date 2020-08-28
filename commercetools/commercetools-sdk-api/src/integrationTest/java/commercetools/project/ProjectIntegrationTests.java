@@ -13,27 +13,27 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ProjectIntegrationTests {
-    
+
     @Test
     public void byKeyGet() throws Exception {
         String projectKey = CommercetoolsTestUtils.getProjectKey();
-        Project project = CommercetoolsTestUtils.getApiRoot().withProjectKey(projectKey)
+        Project project = CommercetoolsTestUtils.getProjectRoot()
                 .get()
                 .executeBlocking().getBody();
         Assert.assertNotNull(project);
         Assert.assertEquals(projectKey, project.getKey());
     }
-    
+
     @Test
     public void updateProject() throws Exception {
         List<String> countries = Arrays.asList("DE");
         List<ProjectUpdateAction> updateActions = new ArrayList<>();
         updateActions.add(ProjectChangeCountriesActionBuilder.of().countries(countries).build());
-        Project project = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Project project = CommercetoolsTestUtils.getProjectRoot()
                 .get()
                 .executeBlocking()
                 .getBody();
-        Project updatedProject = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Project updatedProject = CommercetoolsTestUtils.getProjectRoot()
                 .post(ProjectUpdateBuilder.of().actions(updateActions).version(project.getVersion()).build())
                 .executeBlocking().getBody();
         Assert.assertNotNull(updatedProject);

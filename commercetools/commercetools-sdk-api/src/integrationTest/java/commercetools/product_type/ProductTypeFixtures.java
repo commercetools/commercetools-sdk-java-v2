@@ -42,7 +42,7 @@ public class ProductTypeFixtures {
                 .attributes(Arrays.asList(attributeDefinitionDraft))
                 .build();
 
-        ProductType productType = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ProductType productType = CommercetoolsTestUtils.getProjectRoot()
                 .productTypes()
                 .post(productTypeDraft)
                 .executeBlocking().getBody();
@@ -55,7 +55,7 @@ public class ProductTypeFixtures {
     }
 
     public static ProductType deleteProductType(final String id, final Long version) {
-        ProductType deletedProductType = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ProductType deletedProductType = CommercetoolsTestUtils.getProjectRoot()
                 .productTypes()
                 .withId(id)
                 .delete()

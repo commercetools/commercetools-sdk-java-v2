@@ -16,7 +16,7 @@ public class UserAgentHeaderTest {
 
     @Test
     public void execute() {
-        ByProjectKeyCategoriesGet request = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        ByProjectKeyCategoriesGet request = CommercetoolsTestUtils.getProjectRoot()
                 .categories()
                 .get();
 

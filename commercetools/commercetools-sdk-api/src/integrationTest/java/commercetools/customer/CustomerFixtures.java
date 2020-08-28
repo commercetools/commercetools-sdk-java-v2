@@ -44,7 +44,7 @@ public class CustomerFixtures {
                 .addresses(Arrays.asList(AddressBuilder.of().country("DEU").build()))
                 .build();
 
-        Customer customer = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Customer customer = CommercetoolsTestUtils.getProjectRoot()
                 .customers()
                 .post(customerDraft)
                 .executeBlocking()
@@ -58,7 +58,7 @@ public class CustomerFixtures {
     }
 
     public static Customer deleteCustomer(final String id, final Long version) {
-        Customer customer = CommercetoolsTestUtils.getApiRoot().withProjectKey(CommercetoolsTestUtils.getProjectKey())
+        Customer customer = CommercetoolsTestUtils.getProjectRoot()
                 .customers()
                 .withId(id)
                 .delete()

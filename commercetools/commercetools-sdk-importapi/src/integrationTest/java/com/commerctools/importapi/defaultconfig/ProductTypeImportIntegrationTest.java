@@ -4,7 +4,6 @@ import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.importoperations.ImportOperation;
 import com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse;
-import com.commercetools.importapi.models.importrequests.ImportResponse;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequest;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder;
 import com.commercetools.importapi.models.importsinks.ImportSink;
@@ -14,8 +13,6 @@ import com.commercetools.importapi.models.producttypes.ProductTypeImportBuilder;
 import org.junit.Assert;
 import org.junit.Test;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
@@ -32,7 +29,7 @@ public class ProductTypeImportIntegrationTest {
                 .resourceType(ImportResourceType.PRODUCT_TYPE)
                 .build();
 
-        ImportSink importSink = ImportApiTestUtils.getApiRoot().withProjectKeyValue(ImportApiTestUtils.getProjectKey())
+        ImportSink importSink = ImportApiTestUtils.getProjectRoot()
                 .importSinks()
                 .post(importSinkDraft)
                 .executeBlocking()
@@ -47,7 +44,7 @@ public class ProductTypeImportIntegrationTest {
                         .description("some type")
                         .build()))
                 .build();
-        ImportApiTestUtils.getApiRoot().withProjectKeyValue(ImportApiTestUtils.getProjectKey()).productTypes()
+        ImportApiTestUtils.getProjectRoot().productTypes()
                 .importSinkKeyWithImportSinkKeyValue(importSinkKey)
                 .post(importRequest)
                 .executeBlocking()
@@ -55,7 +52,7 @@ public class ProductTypeImportIntegrationTest {
 
         Thread.sleep(Duration.ofSeconds(30).toMillis());
 
-        ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getApiRoot().withProjectKeyValue(ImportApiTestUtils.getProjectKey()).productTypes()
+        ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot().productTypes()
                 .importSinkKeyWithImportSinkKeyValue(importSinkKey)
                 .importOperations()
                 .get().executeBlocking().getBody();
@@ -66,7 +63,7 @@ public class ProductTypeImportIntegrationTest {
         assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
 
 
-        ImportSink deletedImportSink = ImportApiTestUtils.getApiRoot().withProjectKeyValue(ImportApiTestUtils.getProjectKey())
+        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()
                 .importSinks()
                 .withImportSinkKeyValue(importSink.getKey())
                 .delete()

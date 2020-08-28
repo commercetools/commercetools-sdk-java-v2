@@ -36,11 +36,18 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
     
     private java.io.File file;
 
-    public ByProjectKeyProductsByIDImagesPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, java.io.File file){
+    public ByProjectKeyProductsByIDImagesPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, java.io.File file) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
         this.file = file;
+    }
+
+    public ByProjectKeyProductsByIDImagesPost(ByProjectKeyProductsByIDImagesPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
+        this.file = t.file;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -94,23 +101,23 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
         return this.getQueryParam("staged");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductsByIDImagesPost withFilename(final String filename){
-        return this.addQueryParam("filename", filename);
+        return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("filename", filename);
     }
     
     public ByProjectKeyProductsByIDImagesPost withVariant(final Double variant){
-        return this.addQueryParam("variant", variant);
+        return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("variant", variant);
     }
     
     public ByProjectKeyProductsByIDImagesPost withSku(final String sku){
-        return this.addQueryParam("sku", sku);
+        return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("sku", sku);
     }
     
     public ByProjectKeyProductsByIDImagesPost withStaged(final Boolean staged){
-        return this.addQueryParam("staged", staged);
+        return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("staged", staged);
     }
 }

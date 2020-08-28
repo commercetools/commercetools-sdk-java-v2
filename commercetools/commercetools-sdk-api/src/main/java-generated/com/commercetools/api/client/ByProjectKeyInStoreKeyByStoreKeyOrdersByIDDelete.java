@@ -36,11 +36,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete extends ApiMethod<
     private String ID;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String ID){
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete(ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -91,21 +98,21 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete extends ApiMethod<
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete withDataErasure(final Boolean dataErasure){
-        return this.addQueryParam("dataErasure", dataErasure);
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete(this).addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete(this).addQueryParam("expand", expand);
     }
 }

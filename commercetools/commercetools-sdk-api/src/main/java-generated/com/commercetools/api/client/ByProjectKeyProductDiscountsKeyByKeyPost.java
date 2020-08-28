@@ -36,11 +36,18 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends ApiMethod<ByProjec
     
     private com.commercetools.api.models.product_discount.ProductDiscountUpdate productDiscountUpdate;
 
-    public ByProjectKeyProductDiscountsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.product_discount.ProductDiscountUpdate productDiscountUpdate){
+    public ByProjectKeyProductDiscountsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.product_discount.ProductDiscountUpdate productDiscountUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
         this.productDiscountUpdate = productDiscountUpdate;
+    }
+
+    public ByProjectKeyProductDiscountsKeyByKeyPost(ByProjectKeyProductDiscountsKeyByKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
+        this.productDiscountUpdate = t.productDiscountUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends ApiMethod<ByProjec
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductDiscountsKeyByKeyPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductDiscountsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
 }

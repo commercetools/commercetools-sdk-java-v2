@@ -34,9 +34,14 @@ public class ByProjectKeyMePaymentsGet extends ApiMethod<ByProjectKeyMePaymentsG
     private String projectKey;
     
 
-    public ByProjectKeyMePaymentsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyMePaymentsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMePaymentsGet(ByProjectKeyMePaymentsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyMePaymentsGet extends ApiMethod<ByProjectKeyMePaymentsG
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMePaymentsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMePaymentsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyMePaymentsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyMePaymentsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyMePaymentsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyMePaymentsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyMePaymentsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyMePaymentsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyMePaymentsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyMePaymentsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyMePaymentsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyMePaymentsGet(this).addQueryParam("where", where);
     }
 }

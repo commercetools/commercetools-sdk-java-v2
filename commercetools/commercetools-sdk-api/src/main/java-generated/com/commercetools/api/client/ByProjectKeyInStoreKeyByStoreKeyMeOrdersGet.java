@@ -35,10 +35,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet extends ApiMethod<ByPro
     private String storeKey;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey){
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -100,31 +106,31 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet extends ApiMethod<ByPro
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet(this).addQueryParam("where", where);
     }
 }

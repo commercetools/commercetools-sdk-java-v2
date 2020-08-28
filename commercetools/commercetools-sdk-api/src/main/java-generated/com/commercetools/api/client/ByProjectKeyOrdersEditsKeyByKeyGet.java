@@ -35,10 +35,16 @@ public class ByProjectKeyOrdersEditsKeyByKeyGet extends ApiMethod<ByProjectKeyOr
     private String key;
     
 
-    public ByProjectKeyOrdersEditsKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeyOrdersEditsKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeyOrdersEditsKeyByKeyGet(ByProjectKeyOrdersEditsKeyByKeyGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,11 +86,11 @@ public class ByProjectKeyOrdersEditsKeyByKeyGet extends ApiMethod<ByProjectKeyOr
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyOrdersEditsKeyByKeyGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyOrdersEditsKeyByKeyGet(this).addQueryParam("expand", expand);
     }
 }

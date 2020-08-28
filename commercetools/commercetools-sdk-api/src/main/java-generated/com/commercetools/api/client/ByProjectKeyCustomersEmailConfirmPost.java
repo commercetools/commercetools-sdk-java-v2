@@ -35,10 +35,16 @@ public class ByProjectKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKe
     
     private com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify;
 
-    public ByProjectKeyCustomersEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify){
+    public ByProjectKeyCustomersEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.customerEmailVerify = customerEmailVerify;
+    }
+
+    public ByProjectKeyCustomersEmailConfirmPost(ByProjectKeyCustomersEmailConfirmPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.customerEmailVerify = t.customerEmailVerify;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,6 +82,6 @@ public class ByProjectKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKe
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

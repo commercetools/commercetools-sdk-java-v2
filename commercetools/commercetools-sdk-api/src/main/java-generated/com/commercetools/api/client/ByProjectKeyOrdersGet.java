@@ -34,9 +34,14 @@ public class ByProjectKeyOrdersGet extends ApiMethod<ByProjectKeyOrdersGet> {
     private String projectKey;
     
 
-    public ByProjectKeyOrdersGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyOrdersGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyOrdersGet(ByProjectKeyOrdersGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyOrdersGet extends ApiMethod<ByProjectKeyOrdersGet> {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyOrdersGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyOrdersGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyOrdersGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyOrdersGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyOrdersGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyOrdersGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyOrdersGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyOrdersGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyOrdersGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyOrdersGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyOrdersGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyOrdersGet(this).addQueryParam("where", where);
     }
 }

@@ -36,11 +36,18 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost extends ApiM
     
     private com.commercetools.importapi.models.importrequests.CategoryImportRequest categoryImportRequest;
 
-    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, com.commercetools.importapi.models.importrequests.CategoryImportRequest categoryImportRequest){
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, com.commercetools.importapi.models.importrequests.CategoryImportRequest categoryImportRequest) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.importSinkKey = importSinkKey;
         this.categoryImportRequest = categoryImportRequest;
+    }
+
+    public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost(ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.importSinkKey = t.importSinkKey;
+        this.categoryImportRequest = t.categoryImportRequest;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,8 +86,8 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost extends ApiM
     public String getImportSinkKey() {return this.importSinkKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
+    public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
 }

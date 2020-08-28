@@ -36,11 +36,18 @@ public class ByProjectKeyShippingMethodsKeyByKeyPost extends ApiMethod<ByProject
     
     private com.commercetools.api.models.shipping_method.ShippingMethodUpdate shippingMethodUpdate;
 
-    public ByProjectKeyShippingMethodsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.shipping_method.ShippingMethodUpdate shippingMethodUpdate){
+    public ByProjectKeyShippingMethodsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.shipping_method.ShippingMethodUpdate shippingMethodUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
         this.shippingMethodUpdate = shippingMethodUpdate;
+    }
+
+    public ByProjectKeyShippingMethodsKeyByKeyPost(ByProjectKeyShippingMethodsKeyByKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
+        this.shippingMethodUpdate = t.shippingMethodUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyShippingMethodsKeyByKeyPost extends ApiMethod<ByProject
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyShippingMethodsKeyByKeyPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyShippingMethodsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
 }

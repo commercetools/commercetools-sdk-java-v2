@@ -35,10 +35,16 @@ public class ByProjectKeyProductsKeyByKeyGet extends ApiMethod<ByProjectKeyProdu
     private String key;
     
 
-    public ByProjectKeyProductsKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeyProductsKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeyProductsKeyByKeyGet(ByProjectKeyProductsKeyByKeyGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -104,35 +110,35 @@ public class ByProjectKeyProductsKeyByKeyGet extends ApiMethod<ByProjectKeyProdu
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductsKeyByKeyGet withPriceCurrency(final String priceCurrency){
-        return this.addQueryParam("priceCurrency", priceCurrency);
+        return new ByProjectKeyProductsKeyByKeyGet(this).addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsKeyByKeyGet withPriceCountry(final String priceCountry){
-        return this.addQueryParam("priceCountry", priceCountry);
+        return new ByProjectKeyProductsKeyByKeyGet(this).addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsKeyByKeyGet withPriceCustomerGroup(final String priceCustomerGroup){
-        return this.addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return new ByProjectKeyProductsKeyByKeyGet(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsKeyByKeyGet withPriceChannel(final String priceChannel){
-        return this.addQueryParam("priceChannel", priceChannel);
+        return new ByProjectKeyProductsKeyByKeyGet(this).addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsKeyByKeyGet withLocaleProjection(final String localeProjection){
-        return this.addQueryParam("localeProjection", localeProjection);
+        return new ByProjectKeyProductsKeyByKeyGet(this).addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsKeyByKeyGet withStoreProjection(final String storeProjection){
-        return this.addQueryParam("storeProjection", storeProjection);
+        return new ByProjectKeyProductsKeyByKeyGet(this).addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsKeyByKeyGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductsKeyByKeyGet(this).addQueryParam("expand", expand);
     }
 }

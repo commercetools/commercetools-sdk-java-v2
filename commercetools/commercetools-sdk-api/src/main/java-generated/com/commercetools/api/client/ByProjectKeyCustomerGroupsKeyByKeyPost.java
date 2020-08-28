@@ -36,11 +36,18 @@ public class ByProjectKeyCustomerGroupsKeyByKeyPost extends ApiMethod<ByProjectK
     
     private com.commercetools.api.models.customer_group.CustomerGroupUpdate customerGroupUpdate;
 
-    public ByProjectKeyCustomerGroupsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.customer_group.CustomerGroupUpdate customerGroupUpdate){
+    public ByProjectKeyCustomerGroupsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.customer_group.CustomerGroupUpdate customerGroupUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
         this.customerGroupUpdate = customerGroupUpdate;
+    }
+
+    public ByProjectKeyCustomerGroupsKeyByKeyPost(ByProjectKeyCustomerGroupsKeyByKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
+        this.customerGroupUpdate = t.customerGroupUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyCustomerGroupsKeyByKeyPost extends ApiMethod<ByProjectK
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCustomerGroupsKeyByKeyPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCustomerGroupsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
 }

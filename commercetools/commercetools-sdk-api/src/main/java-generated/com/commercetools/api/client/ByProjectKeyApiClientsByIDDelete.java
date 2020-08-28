@@ -35,10 +35,16 @@ public class ByProjectKeyApiClientsByIDDelete extends ApiMethod<ByProjectKeyApiC
     private String ID;
     
 
-    public ByProjectKeyApiClientsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyApiClientsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyApiClientsByIDDelete(ByProjectKeyApiClientsByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -77,8 +83,8 @@ public class ByProjectKeyApiClientsByIDDelete extends ApiMethod<ByProjectKeyApiC
     public String getID() {return this.ID;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
 }

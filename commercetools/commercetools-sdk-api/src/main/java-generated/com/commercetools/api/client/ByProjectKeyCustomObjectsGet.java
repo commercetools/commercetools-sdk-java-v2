@@ -36,9 +36,14 @@ public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomOb
     private String projectKey;
     
 
-    public ByProjectKeyCustomObjectsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyCustomObjectsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyCustomObjectsGet(ByProjectKeyCustomObjectsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -99,29 +104,29 @@ public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomOb
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomObjectsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyCustomObjectsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyCustomObjectsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyCustomObjectsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyCustomObjectsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyCustomObjectsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("where", where);
     }
 }

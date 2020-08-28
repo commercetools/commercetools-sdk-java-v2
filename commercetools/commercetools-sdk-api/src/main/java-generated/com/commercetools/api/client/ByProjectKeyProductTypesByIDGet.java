@@ -35,10 +35,16 @@ public class ByProjectKeyProductTypesByIDGet extends ApiMethod<ByProjectKeyProdu
     private String ID;
     
 
-    public ByProjectKeyProductTypesByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyProductTypesByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyProductTypesByIDGet(ByProjectKeyProductTypesByIDGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,11 +86,11 @@ public class ByProjectKeyProductTypesByIDGet extends ApiMethod<ByProjectKeyProdu
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductTypesByIDGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductTypesByIDGet(this).addQueryParam("expand", expand);
     }
 }

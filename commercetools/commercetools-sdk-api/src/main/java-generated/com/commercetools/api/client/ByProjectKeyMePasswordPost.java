@@ -32,10 +32,16 @@ public class ByProjectKeyMePasswordPost extends ApiMethod<ByProjectKeyMePassword
     
     private com.fasterxml.jackson.databind.JsonNode jsonNode;
 
-    public ByProjectKeyMePasswordPost(final ApiHttpClient apiHttpClient, String projectKey, com.fasterxml.jackson.databind.JsonNode jsonNode){
+    public ByProjectKeyMePasswordPost(final ApiHttpClient apiHttpClient, String projectKey, com.fasterxml.jackson.databind.JsonNode jsonNode) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.jsonNode = jsonNode;
+    }
+
+    public ByProjectKeyMePasswordPost(ByProjectKeyMePasswordPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.jsonNode = t.jsonNode;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -73,6 +79,6 @@ public class ByProjectKeyMePasswordPost extends ApiMethod<ByProjectKeyMePassword
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

@@ -39,11 +39,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsPost extends ApiMethod<ByProje
     
     private com.commercetools.api.models.cart.CartDraft cartDraft;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCartsPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.cart.CartDraft cartDraft){
+    public ByProjectKeyInStoreKeyByStoreKeyCartsPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.cart.CartDraft cartDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.cartDraft = cartDraft;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartsPost(ByProjectKeyInStoreKeyByStoreKeyCartsPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.cartDraft = t.cartDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -85,11 +92,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsPost extends ApiMethod<ByProje
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCartsPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsPost(this).addQueryParam("expand", expand);
     }
 }

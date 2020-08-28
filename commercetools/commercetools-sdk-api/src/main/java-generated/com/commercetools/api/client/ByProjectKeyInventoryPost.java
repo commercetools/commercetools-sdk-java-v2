@@ -35,10 +35,16 @@ public class ByProjectKeyInventoryPost extends ApiMethod<ByProjectKeyInventoryPo
     
     private com.commercetools.api.models.inventory.InventoryEntryDraft inventoryEntryDraft;
 
-    public ByProjectKeyInventoryPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.inventory.InventoryEntryDraft inventoryEntryDraft){
+    public ByProjectKeyInventoryPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.inventory.InventoryEntryDraft inventoryEntryDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.inventoryEntryDraft = inventoryEntryDraft;
+    }
+
+    public ByProjectKeyInventoryPost(ByProjectKeyInventoryPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.inventoryEntryDraft = t.inventoryEntryDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,9 +85,9 @@ public class ByProjectKeyInventoryPost extends ApiMethod<ByProjectKeyInventoryPo
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyInventoryPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInventoryPost(this).addQueryParam("expand", expand);
     }
 }

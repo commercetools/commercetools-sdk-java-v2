@@ -35,10 +35,16 @@ public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsB
     private String ID;
     
 
-    public ByProjectKeyProductsByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyProductsByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyProductsByIDGet(ByProjectKeyProductsByIDGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -104,35 +110,35 @@ public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsB
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductsByIDGet withPriceCurrency(final String priceCurrency){
-        return this.addQueryParam("priceCurrency", priceCurrency);
+        return new ByProjectKeyProductsByIDGet(this).addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsByIDGet withPriceCountry(final String priceCountry){
-        return this.addQueryParam("priceCountry", priceCountry);
+        return new ByProjectKeyProductsByIDGet(this).addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsByIDGet withPriceCustomerGroup(final String priceCustomerGroup){
-        return this.addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return new ByProjectKeyProductsByIDGet(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsByIDGet withPriceChannel(final String priceChannel){
-        return this.addQueryParam("priceChannel", priceChannel);
+        return new ByProjectKeyProductsByIDGet(this).addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsByIDGet withLocaleProjection(final String localeProjection){
-        return this.addQueryParam("localeProjection", localeProjection);
+        return new ByProjectKeyProductsByIDGet(this).addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsByIDGet withStoreProjection(final String storeProjection){
-        return this.addQueryParam("storeProjection", storeProjection);
+        return new ByProjectKeyProductsByIDGet(this).addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsByIDGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductsByIDGet(this).addQueryParam("expand", expand);
     }
 }

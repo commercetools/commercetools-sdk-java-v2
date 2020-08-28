@@ -36,11 +36,18 @@ public class ByProjectKeyReviewsKeyByKeyPost extends ApiMethod<ByProjectKeyRevie
     
     private com.commercetools.api.models.review.ReviewUpdate reviewUpdate;
 
-    public ByProjectKeyReviewsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.review.ReviewUpdate reviewUpdate){
+    public ByProjectKeyReviewsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.review.ReviewUpdate reviewUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
         this.reviewUpdate = reviewUpdate;
+    }
+
+    public ByProjectKeyReviewsKeyByKeyPost(ByProjectKeyReviewsKeyByKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
+        this.reviewUpdate = t.reviewUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyReviewsKeyByKeyPost extends ApiMethod<ByProjectKeyRevie
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyReviewsKeyByKeyPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyReviewsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
 }

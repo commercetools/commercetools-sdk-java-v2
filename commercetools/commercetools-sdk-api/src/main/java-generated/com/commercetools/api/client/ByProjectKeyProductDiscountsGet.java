@@ -34,9 +34,14 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
     private String projectKey;
     
 
-    public ByProjectKeyProductDiscountsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyProductDiscountsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyProductDiscountsGet(ByProjectKeyProductDiscountsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductDiscountsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyProductDiscountsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductDiscountsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductDiscountsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductDiscountsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductDiscountsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("where", where);
     }
 }

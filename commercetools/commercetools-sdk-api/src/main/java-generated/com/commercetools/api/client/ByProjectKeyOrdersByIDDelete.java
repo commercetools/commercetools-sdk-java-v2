@@ -35,10 +35,16 @@ public class ByProjectKeyOrdersByIDDelete extends ApiMethod<ByProjectKeyOrdersBy
     private String ID;
     
 
-    public ByProjectKeyOrdersByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyOrdersByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyOrdersByIDDelete(ByProjectKeyOrdersByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -88,19 +94,19 @@ public class ByProjectKeyOrdersByIDDelete extends ApiMethod<ByProjectKeyOrdersBy
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyOrdersByIDDelete withDataErasure(final Boolean dataErasure){
-        return this.addQueryParam("dataErasure", dataErasure);
+        return new ByProjectKeyOrdersByIDDelete(this).addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyOrdersByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyOrdersByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyOrdersByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyOrdersByIDDelete(this).addQueryParam("expand", expand);
     }
 }

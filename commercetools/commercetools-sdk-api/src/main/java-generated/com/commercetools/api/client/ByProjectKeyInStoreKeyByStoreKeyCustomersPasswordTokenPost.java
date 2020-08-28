@@ -37,11 +37,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost extends 
     
     private com.commercetools.api.models.customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken){
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerCreatePasswordResetToken customerCreatePasswordResetToken) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.customerCreatePasswordResetToken = customerCreatePasswordResetToken;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost(ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.customerCreatePasswordResetToken = t.customerCreatePasswordResetToken;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,8 +87,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost extends 
     public String getStoreKey() {return this.storeKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
 }

@@ -35,10 +35,16 @@ public class ByProjectKeyShoppingListsPost extends ApiMethod<ByProjectKeyShoppin
     
     private com.commercetools.api.models.shopping_list.ShoppingListDraft shoppingListDraft;
 
-    public ByProjectKeyShoppingListsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.shopping_list.ShoppingListDraft shoppingListDraft){
+    public ByProjectKeyShoppingListsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.shopping_list.ShoppingListDraft shoppingListDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.shoppingListDraft = shoppingListDraft;
+    }
+
+    public ByProjectKeyShoppingListsPost(ByProjectKeyShoppingListsPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.shoppingListDraft = t.shoppingListDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,9 +85,9 @@ public class ByProjectKeyShoppingListsPost extends ApiMethod<ByProjectKeyShoppin
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShoppingListsPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyShoppingListsPost(this).addQueryParam("expand", expand);
     }
 }

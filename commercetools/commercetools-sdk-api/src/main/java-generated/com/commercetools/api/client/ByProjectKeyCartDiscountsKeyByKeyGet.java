@@ -35,10 +35,16 @@ public class ByProjectKeyCartDiscountsKeyByKeyGet extends ApiMethod<ByProjectKey
     private String key;
     
 
-    public ByProjectKeyCartDiscountsKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeyCartDiscountsKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeyCartDiscountsKeyByKeyGet(ByProjectKeyCartDiscountsKeyByKeyGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,11 +86,11 @@ public class ByProjectKeyCartDiscountsKeyByKeyGet extends ApiMethod<ByProjectKey
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCartDiscountsKeyByKeyGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCartDiscountsKeyByKeyGet(this).addQueryParam("expand", expand);
     }
 }

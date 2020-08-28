@@ -35,10 +35,16 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete extends ApiMethod<ByProject
     private String key;
     
 
-    public ByProjectKeySubscriptionsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeySubscriptionsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeySubscriptionsKeyByKeyDelete(ByProjectKeySubscriptionsKeyByKeyDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -84,15 +90,15 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete extends ApiMethod<ByProject
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeySubscriptionsKeyByKeyDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeySubscriptionsKeyByKeyDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeySubscriptionsKeyByKeyDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeySubscriptionsKeyByKeyDelete(this).addQueryParam("expand", expand);
     }
 }

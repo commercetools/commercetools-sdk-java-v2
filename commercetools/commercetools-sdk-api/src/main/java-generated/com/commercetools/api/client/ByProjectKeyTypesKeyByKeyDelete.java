@@ -35,10 +35,16 @@ public class ByProjectKeyTypesKeyByKeyDelete extends ApiMethod<ByProjectKeyTypes
     private String key;
     
 
-    public ByProjectKeyTypesKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeyTypesKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeyTypesKeyByKeyDelete(ByProjectKeyTypesKeyByKeyDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -84,15 +90,15 @@ public class ByProjectKeyTypesKeyByKeyDelete extends ApiMethod<ByProjectKeyTypes
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyTypesKeyByKeyDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyTypesKeyByKeyDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyTypesKeyByKeyDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyTypesKeyByKeyDelete(this).addQueryParam("expand", expand);
     }
 }

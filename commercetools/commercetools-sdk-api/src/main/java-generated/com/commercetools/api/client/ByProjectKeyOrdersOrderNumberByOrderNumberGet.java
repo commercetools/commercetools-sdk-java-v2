@@ -36,10 +36,16 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByP
     private String orderNumber;
     
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberGet(final ApiHttpClient apiHttpClient, String projectKey, String orderNumber){
+    public ByProjectKeyOrdersOrderNumberByOrderNumberGet(final ApiHttpClient apiHttpClient, String projectKey, String orderNumber) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.orderNumber = orderNumber;
+    }
+
+    public ByProjectKeyOrdersOrderNumberByOrderNumberGet(ByProjectKeyOrdersOrderNumberByOrderNumberGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.orderNumber = t.orderNumber;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -81,11 +87,11 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByP
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setOrderNumber(final String orderNumber) {this.orderNumber = orderNumber;}
+    public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyOrdersOrderNumberByOrderNumberGet(this).addQueryParam("expand", expand);
     }
 }

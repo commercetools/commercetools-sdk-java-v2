@@ -35,10 +35,16 @@ public class ByProjectKeyDiscountCodesByIDDelete extends ApiMethod<ByProjectKeyD
     private String ID;
     
 
-    public ByProjectKeyDiscountCodesByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyDiscountCodesByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyDiscountCodesByIDDelete(ByProjectKeyDiscountCodesByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -88,19 +94,19 @@ public class ByProjectKeyDiscountCodesByIDDelete extends ApiMethod<ByProjectKeyD
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyDiscountCodesByIDDelete withDataErasure(final Boolean dataErasure){
-        return this.addQueryParam("dataErasure", dataErasure);
+        return new ByProjectKeyDiscountCodesByIDDelete(this).addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyDiscountCodesByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyDiscountCodesByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyDiscountCodesByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyDiscountCodesByIDDelete(this).addQueryParam("expand", expand);
     }
 }

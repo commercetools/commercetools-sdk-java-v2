@@ -35,10 +35,16 @@ public class ByProjectKeyPaymentsKeyByKeyDelete extends ApiMethod<ByProjectKeyPa
     private String key;
     
 
-    public ByProjectKeyPaymentsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeyPaymentsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeyPaymentsKeyByKeyDelete(ByProjectKeyPaymentsKeyByKeyDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -88,19 +94,19 @@ public class ByProjectKeyPaymentsKeyByKeyDelete extends ApiMethod<ByProjectKeyPa
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyPaymentsKeyByKeyDelete withDataErasure(final Boolean dataErasure){
-        return this.addQueryParam("dataErasure", dataErasure);
+        return new ByProjectKeyPaymentsKeyByKeyDelete(this).addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyPaymentsKeyByKeyDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyPaymentsKeyByKeyDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyPaymentsKeyByKeyDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyPaymentsKeyByKeyDelete(this).addQueryParam("expand", expand);
     }
 }

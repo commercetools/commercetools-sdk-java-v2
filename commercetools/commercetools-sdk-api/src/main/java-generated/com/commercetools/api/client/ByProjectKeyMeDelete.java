@@ -34,9 +34,14 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete> {
     private String projectKey;
     
 
-    public ByProjectKeyMeDelete(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyMeDelete(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMeDelete(ByProjectKeyMeDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -77,9 +82,9 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete> {
         return this.getQueryParam("version");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMeDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyMeDelete(this).addQueryParam("version", version);
     }
 }

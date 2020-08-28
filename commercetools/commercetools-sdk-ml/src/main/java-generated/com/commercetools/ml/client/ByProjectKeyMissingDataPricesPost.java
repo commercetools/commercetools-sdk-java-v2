@@ -32,10 +32,16 @@ public class ByProjectKeyMissingDataPricesPost extends ApiMethod<ByProjectKeyMis
     
     private com.commercetools.ml.models.missing_data.MissingPricesSearchRequest missingPricesSearchRequest;
 
-    public ByProjectKeyMissingDataPricesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.ml.models.missing_data.MissingPricesSearchRequest missingPricesSearchRequest){
+    public ByProjectKeyMissingDataPricesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.ml.models.missing_data.MissingPricesSearchRequest missingPricesSearchRequest) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.missingPricesSearchRequest = missingPricesSearchRequest;
+    }
+
+    public ByProjectKeyMissingDataPricesPost(ByProjectKeyMissingDataPricesPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.missingPricesSearchRequest = t.missingPricesSearchRequest;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -73,6 +79,6 @@ public class ByProjectKeyMissingDataPricesPost extends ApiMethod<ByProjectKeyMis
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

@@ -35,10 +35,16 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
     private String productId;
     
 
-    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(final ApiHttpClient apiHttpClient, String projectKey, String productId){
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(final ApiHttpClient apiHttpClient, String projectKey, String productId) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.productId = productId;
+    }
+
+    public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(ByProjectKeyRecommendationsProjectCategoriesByProductIdGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.productId = t.productId;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -96,27 +102,27 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
         return this.getQueryParam("confidenceMax");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setProductId(final String productId) {this.productId = productId;}
+    public void setProductId(final String productId) { this.productId = productId; }
 
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final Boolean staged){
-        return this.addQueryParam("staged", staged);
+        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("staged", staged);
     }
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(final Double confidenceMin){
-        return this.addQueryParam("confidenceMin", confidenceMin);
+        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("confidenceMin", confidenceMin);
     }
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(final Double confidenceMax){
-        return this.addQueryParam("confidenceMax", confidenceMax);
+        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("confidenceMax", confidenceMax);
     }
 }

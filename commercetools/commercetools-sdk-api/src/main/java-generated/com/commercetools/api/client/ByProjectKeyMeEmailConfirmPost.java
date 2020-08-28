@@ -31,9 +31,14 @@ public class ByProjectKeyMeEmailConfirmPost extends ApiMethod<ByProjectKeyMeEmai
     private String projectKey;
     
 
-    public ByProjectKeyMeEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyMeEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMeEmailConfirmPost(ByProjectKeyMeEmailConfirmPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -71,6 +76,6 @@ public class ByProjectKeyMeEmailConfirmPost extends ApiMethod<ByProjectKeyMeEmai
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

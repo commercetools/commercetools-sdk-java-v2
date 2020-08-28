@@ -32,10 +32,16 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMetho
     private String taskId;
     
 
-    public ByProjectKeyMissingDataAttributesStatusByTaskIdGet(final ApiHttpClient apiHttpClient, String projectKey, String taskId){
+    public ByProjectKeyMissingDataAttributesStatusByTaskIdGet(final ApiHttpClient apiHttpClient, String projectKey, String taskId) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.taskId = taskId;
+    }
+
+    public ByProjectKeyMissingDataAttributesStatusByTaskIdGet(ByProjectKeyMissingDataAttributesStatusByTaskIdGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.taskId = t.taskId;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -74,8 +80,8 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMetho
     public String getTaskId() {return this.taskId;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setTaskId(final String taskId) {this.taskId = taskId;}
+    public void setTaskId(final String taskId) { this.taskId = taskId; }
 
 }

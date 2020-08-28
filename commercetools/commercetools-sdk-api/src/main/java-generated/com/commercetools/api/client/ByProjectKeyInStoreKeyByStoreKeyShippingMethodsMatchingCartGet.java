@@ -32,10 +32,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     private String storeKey;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey){
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -81,15 +87,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final String cartId){
-        return this.addQueryParam("cartId", cartId);
+        return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(this).addQueryParam("cartId", cartId);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(this).addQueryParam("expand", expand);
     }
 }

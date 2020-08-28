@@ -36,11 +36,18 @@ public class ByProjectKeyOrdersEditsByIDPost extends ApiMethod<ByProjectKeyOrder
     
     private com.commercetools.api.models.order_edit.OrderEditUpdate orderEditUpdate;
 
-    public ByProjectKeyOrdersEditsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.order_edit.OrderEditUpdate orderEditUpdate){
+    public ByProjectKeyOrdersEditsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.order_edit.OrderEditUpdate orderEditUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
         this.orderEditUpdate = orderEditUpdate;
+    }
+
+    public ByProjectKeyOrdersEditsByIDPost(ByProjectKeyOrdersEditsByIDPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
+        this.orderEditUpdate = t.orderEditUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyOrdersEditsByIDPost extends ApiMethod<ByProjectKeyOrder
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyOrdersEditsByIDPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyOrdersEditsByIDPost(this).addQueryParam("expand", expand);
     }
 }

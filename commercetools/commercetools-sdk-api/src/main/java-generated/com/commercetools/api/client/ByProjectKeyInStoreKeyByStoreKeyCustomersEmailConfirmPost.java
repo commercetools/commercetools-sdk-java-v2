@@ -36,11 +36,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends A
     
     private com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify){
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerEmailVerify customerEmailVerify) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.customerEmailVerify = customerEmailVerify;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost(ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.customerEmailVerify = t.customerEmailVerify;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,8 +86,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends A
     public String getStoreKey() {return this.storeKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
 }

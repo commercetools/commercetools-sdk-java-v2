@@ -32,10 +32,16 @@ public class ByProjectKeySimilaritiesProductsPost extends ApiMethod<ByProjectKey
     
     private com.commercetools.ml.models.similar_products.SimilarProductSearchRequest similarProductSearchRequest;
 
-    public ByProjectKeySimilaritiesProductsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.ml.models.similar_products.SimilarProductSearchRequest similarProductSearchRequest){
+    public ByProjectKeySimilaritiesProductsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.ml.models.similar_products.SimilarProductSearchRequest similarProductSearchRequest) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.similarProductSearchRequest = similarProductSearchRequest;
+    }
+
+    public ByProjectKeySimilaritiesProductsPost(ByProjectKeySimilaritiesProductsPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.similarProductSearchRequest = t.similarProductSearchRequest;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -73,6 +79,6 @@ public class ByProjectKeySimilaritiesProductsPost extends ApiMethod<ByProjectKey
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

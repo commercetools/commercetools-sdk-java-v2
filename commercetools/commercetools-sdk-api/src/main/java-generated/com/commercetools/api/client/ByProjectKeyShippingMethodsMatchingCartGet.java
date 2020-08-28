@@ -31,9 +31,14 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends ApiMethod<ByProj
     private String projectKey;
     
 
-    public ByProjectKeyShippingMethodsMatchingCartGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyShippingMethodsMatchingCartGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyShippingMethodsMatchingCartGet(ByProjectKeyShippingMethodsMatchingCartGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -78,13 +83,13 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends ApiMethod<ByProj
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsMatchingCartGet withCartId(final String cartId){
-        return this.addQueryParam("cartId", cartId);
+        return new ByProjectKeyShippingMethodsMatchingCartGet(this).addQueryParam("cartId", cartId);
     }
     
     public ByProjectKeyShippingMethodsMatchingCartGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyShippingMethodsMatchingCartGet(this).addQueryParam("expand", expand);
     }
 }

@@ -36,11 +36,18 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost extends ApiMethod<ByProject
     
     private com.commercetools.api.models.me.MyShoppingListUpdate myShoppingListUpdate;
 
-    public ByProjectKeyMeShoppingListsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.me.MyShoppingListUpdate myShoppingListUpdate){
+    public ByProjectKeyMeShoppingListsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.me.MyShoppingListUpdate myShoppingListUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
         this.myShoppingListUpdate = myShoppingListUpdate;
+    }
+
+    public ByProjectKeyMeShoppingListsKeyByKeyPost(ByProjectKeyMeShoppingListsKeyByKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
+        this.myShoppingListUpdate = t.myShoppingListUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost extends ApiMethod<ByProject
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyMeShoppingListsKeyByKeyPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMeShoppingListsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
 }

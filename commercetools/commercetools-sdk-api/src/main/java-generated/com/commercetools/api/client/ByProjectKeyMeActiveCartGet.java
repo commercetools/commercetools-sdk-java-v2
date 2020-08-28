@@ -31,9 +31,14 @@ public class ByProjectKeyMeActiveCartGet extends ApiMethod<ByProjectKeyMeActiveC
     private String projectKey;
     
 
-    public ByProjectKeyMeActiveCartGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyMeActiveCartGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMeActiveCartGet(ByProjectKeyMeActiveCartGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -71,6 +76,6 @@ public class ByProjectKeyMeActiveCartGet extends ApiMethod<ByProjectKeyMeActiveC
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

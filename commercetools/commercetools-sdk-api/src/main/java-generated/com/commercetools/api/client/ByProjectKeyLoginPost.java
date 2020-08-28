@@ -41,10 +41,16 @@ public class ByProjectKeyLoginPost extends ApiMethod<ByProjectKeyLoginPost> {
     
     private com.commercetools.api.models.customer.CustomerSignin customerSignin;
 
-    public ByProjectKeyLoginPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.customer.CustomerSignin customerSignin){
+    public ByProjectKeyLoginPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.customer.CustomerSignin customerSignin) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.customerSignin = customerSignin;
+    }
+
+    public ByProjectKeyLoginPost(ByProjectKeyLoginPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.customerSignin = t.customerSignin;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,6 +88,6 @@ public class ByProjectKeyLoginPost extends ApiMethod<ByProjectKeyLoginPost> {
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

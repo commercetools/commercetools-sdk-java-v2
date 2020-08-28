@@ -36,9 +36,14 @@ public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet> 
     private String projectKey;
     
 
-    public ByProjectKeyProductsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyProductsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyProductsGet(ByProjectKeyProductsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -123,53 +128,53 @@ public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet> 
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductsGet withPriceCurrency(final String priceCurrency){
-        return this.addQueryParam("priceCurrency", priceCurrency);
+        return new ByProjectKeyProductsGet(this).addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsGet withPriceCountry(final String priceCountry){
-        return this.addQueryParam("priceCountry", priceCountry);
+        return new ByProjectKeyProductsGet(this).addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsGet withPriceCustomerGroup(final String priceCustomerGroup){
-        return this.addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return new ByProjectKeyProductsGet(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsGet withPriceChannel(final String priceChannel){
-        return this.addQueryParam("priceChannel", priceChannel);
+        return new ByProjectKeyProductsGet(this).addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsGet withLocaleProjection(final String localeProjection){
-        return this.addQueryParam("localeProjection", localeProjection);
+        return new ByProjectKeyProductsGet(this).addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsGet withStoreProjection(final String storeProjection){
-        return this.addQueryParam("storeProjection", storeProjection);
+        return new ByProjectKeyProductsGet(this).addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyProductsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyProductsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyProductsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyProductsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyProductsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyProductsGet(this).addQueryParam("where", where);
     }
 }

@@ -41,12 +41,20 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost 
     
     private com.commercetools.api.models.order.OrderUpdate orderUpdate;
 
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String orderNumber, com.commercetools.api.models.order.OrderUpdate orderUpdate){
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String orderNumber, com.commercetools.api.models.order.OrderUpdate orderUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.orderNumber = orderNumber;
         this.orderUpdate = orderUpdate;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.orderNumber = t.orderNumber;
+        this.orderUpdate = t.orderUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -89,13 +97,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost 
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
     
-    public void setOrderNumber(final String orderNumber) {this.orderNumber = orderNumber;}
+    public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(this).addQueryParam("expand", expand);
     }
 }

@@ -36,11 +36,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet 
     private String emailToken;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String emailToken){
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String emailToken) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.emailToken = emailToken;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet(ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.emailToken = t.emailToken;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -83,13 +90,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet 
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
     
-    public void setEmailToken(final String emailToken) {this.emailToken = emailToken;}
+    public void setEmailToken(final String emailToken) { this.emailToken = emailToken; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet(this).addQueryParam("expand", expand);
     }
 }

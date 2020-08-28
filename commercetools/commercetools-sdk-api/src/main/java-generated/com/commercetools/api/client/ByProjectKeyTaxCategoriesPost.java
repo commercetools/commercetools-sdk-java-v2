@@ -35,10 +35,16 @@ public class ByProjectKeyTaxCategoriesPost extends ApiMethod<ByProjectKeyTaxCate
     
     private com.commercetools.api.models.tax_category.TaxCategoryDraft taxCategoryDraft;
 
-    public ByProjectKeyTaxCategoriesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.tax_category.TaxCategoryDraft taxCategoryDraft){
+    public ByProjectKeyTaxCategoriesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.tax_category.TaxCategoryDraft taxCategoryDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.taxCategoryDraft = taxCategoryDraft;
+    }
+
+    public ByProjectKeyTaxCategoriesPost(ByProjectKeyTaxCategoriesPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.taxCategoryDraft = t.taxCategoryDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,9 +85,9 @@ public class ByProjectKeyTaxCategoriesPost extends ApiMethod<ByProjectKeyTaxCate
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyTaxCategoriesPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyTaxCategoriesPost(this).addQueryParam("expand", expand);
     }
 }

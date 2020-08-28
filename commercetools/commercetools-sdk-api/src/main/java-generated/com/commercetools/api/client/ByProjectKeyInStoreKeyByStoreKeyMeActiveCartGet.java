@@ -32,10 +32,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet extends ApiMethod<B
     private String storeKey;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey){
+    public ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet(ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -74,8 +80,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet extends ApiMethod<B
     public String getStoreKey() {return this.storeKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
 }

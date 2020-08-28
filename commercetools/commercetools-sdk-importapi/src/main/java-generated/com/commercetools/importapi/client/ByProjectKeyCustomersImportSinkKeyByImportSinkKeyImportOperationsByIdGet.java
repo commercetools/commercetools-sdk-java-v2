@@ -36,11 +36,18 @@ public class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsBy
     private String id;
     
 
-    public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, String id){
+    public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, String id) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.importSinkKey = importSinkKey;
         this.id = id;
+    }
+
+    public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet(ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsByIdGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.importSinkKey = t.importSinkKey;
+        this.id = t.id;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,10 +87,10 @@ public class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsBy
     public String getId() {return this.id;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
+    public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
     
-    public void setId(final String id) {this.id = id;}
+    public void setId(final String id) { this.id = id; }
 
 }

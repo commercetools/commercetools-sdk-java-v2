@@ -32,10 +32,16 @@ public class ByProjectKeyMissingDataImagesPost extends ApiMethod<ByProjectKeyMis
     
     private com.commercetools.ml.models.missing_data.MissingImagesSearchRequest missingImagesSearchRequest;
 
-    public ByProjectKeyMissingDataImagesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.ml.models.missing_data.MissingImagesSearchRequest missingImagesSearchRequest){
+    public ByProjectKeyMissingDataImagesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.ml.models.missing_data.MissingImagesSearchRequest missingImagesSearchRequest) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.missingImagesSearchRequest = missingImagesSearchRequest;
+    }
+
+    public ByProjectKeyMissingDataImagesPost(ByProjectKeyMissingDataImagesPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.missingImagesSearchRequest = t.missingImagesSearchRequest;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -73,6 +79,6 @@ public class ByProjectKeyMissingDataImagesPost extends ApiMethod<ByProjectKeyMis
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

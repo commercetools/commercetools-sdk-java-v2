@@ -36,11 +36,18 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResource
     private String resourceKey;
     
 
-    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, String resourceKey){
+    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey, String resourceKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.importSinkKey = importSinkKey;
         this.resourceKey = resourceKey;
+    }
+
+    public ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete(ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.importSinkKey = t.importSinkKey;
+        this.resourceKey = t.resourceKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,10 +87,10 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyResourceKeyByResource
     public String getResourceKey() {return this.resourceKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
+    public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
     
-    public void setResourceKey(final String resourceKey) {this.resourceKey = resourceKey;}
+    public void setResourceKey(final String resourceKey) { this.resourceKey = resourceKey; }
 
 }

@@ -36,11 +36,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost extends Api
     
     private com.commercetools.api.models.customer.CustomerCreateEmailToken customerCreateEmailToken;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerCreateEmailToken customerCreateEmailToken){
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerCreateEmailToken customerCreateEmailToken) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.customerCreateEmailToken = customerCreateEmailToken;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost(ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.customerCreateEmailToken = t.customerCreateEmailToken;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,8 +86,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenPost extends Api
     public String getStoreKey() {return this.storeKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
 }

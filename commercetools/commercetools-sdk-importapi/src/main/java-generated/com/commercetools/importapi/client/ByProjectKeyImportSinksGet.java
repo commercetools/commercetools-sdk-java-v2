@@ -34,9 +34,14 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
     private String projectKey;
     
 
-    public ByProjectKeyImportSinksGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyImportSinksGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyImportSinksGet(ByProjectKeyImportSinksGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -81,13 +86,13 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
         return this.getQueryParam("offset");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyImportSinksGet withLimit(final Double limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyImportSinksGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyImportSinksGet withOffset(final Double offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyImportSinksGet(this).addQueryParam("offset", offset);
     }
 }

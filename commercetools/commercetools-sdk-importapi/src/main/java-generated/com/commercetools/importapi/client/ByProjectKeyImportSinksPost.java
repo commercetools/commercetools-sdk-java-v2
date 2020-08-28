@@ -35,10 +35,16 @@ public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSin
     
     private com.commercetools.importapi.models.importsinks.ImportSinkDraft importSinkDraft;
 
-    public ByProjectKeyImportSinksPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.importapi.models.importsinks.ImportSinkDraft importSinkDraft){
+    public ByProjectKeyImportSinksPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.importapi.models.importsinks.ImportSinkDraft importSinkDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.importSinkDraft = importSinkDraft;
+    }
+
+    public ByProjectKeyImportSinksPost(ByProjectKeyImportSinksPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.importSinkDraft = t.importSinkDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,6 +82,6 @@ public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSin
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

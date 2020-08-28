@@ -35,10 +35,16 @@ public class ByProjectKeyTaxCategoriesByIDDelete extends ApiMethod<ByProjectKeyT
     private String ID;
     
 
-    public ByProjectKeyTaxCategoriesByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyTaxCategoriesByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyTaxCategoriesByIDDelete(ByProjectKeyTaxCategoriesByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -84,15 +90,15 @@ public class ByProjectKeyTaxCategoriesByIDDelete extends ApiMethod<ByProjectKeyT
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyTaxCategoriesByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyTaxCategoriesByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyTaxCategoriesByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyTaxCategoriesByIDDelete(this).addQueryParam("expand", expand);
     }
 }

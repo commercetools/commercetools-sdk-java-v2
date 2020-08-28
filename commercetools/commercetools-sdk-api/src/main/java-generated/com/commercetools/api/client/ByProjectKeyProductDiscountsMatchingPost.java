@@ -32,10 +32,16 @@ public class ByProjectKeyProductDiscountsMatchingPost extends ApiMethod<ByProjec
     
     private com.commercetools.api.models.product_discount.ProductDiscountMatchQuery productDiscountMatchQuery;
 
-    public ByProjectKeyProductDiscountsMatchingPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.product_discount.ProductDiscountMatchQuery productDiscountMatchQuery){
+    public ByProjectKeyProductDiscountsMatchingPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.product_discount.ProductDiscountMatchQuery productDiscountMatchQuery) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.productDiscountMatchQuery = productDiscountMatchQuery;
+    }
+
+    public ByProjectKeyProductDiscountsMatchingPost(ByProjectKeyProductDiscountsMatchingPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.productDiscountMatchQuery = t.productDiscountMatchQuery;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -73,6 +79,6 @@ public class ByProjectKeyProductDiscountsMatchingPost extends ApiMethod<ByProjec
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

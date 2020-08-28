@@ -36,11 +36,18 @@ public class ByProjectKeyChannelsByIDPost extends ApiMethod<ByProjectKeyChannels
     
     private com.commercetools.api.models.channel.ChannelUpdate channelUpdate;
 
-    public ByProjectKeyChannelsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.channel.ChannelUpdate channelUpdate){
+    public ByProjectKeyChannelsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.channel.ChannelUpdate channelUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
         this.channelUpdate = channelUpdate;
+    }
+
+    public ByProjectKeyChannelsByIDPost(ByProjectKeyChannelsByIDPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
+        this.channelUpdate = t.channelUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyChannelsByIDPost extends ApiMethod<ByProjectKeyChannels
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyChannelsByIDPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyChannelsByIDPost(this).addQueryParam("expand", expand);
     }
 }

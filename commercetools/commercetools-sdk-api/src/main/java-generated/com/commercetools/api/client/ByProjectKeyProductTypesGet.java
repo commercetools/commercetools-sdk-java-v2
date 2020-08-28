@@ -34,9 +34,14 @@ public class ByProjectKeyProductTypesGet extends ApiMethod<ByProjectKeyProductTy
     private String projectKey;
     
 
-    public ByProjectKeyProductTypesGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyProductTypesGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyProductTypesGet(ByProjectKeyProductTypesGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyProductTypesGet extends ApiMethod<ByProjectKeyProductTy
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductTypesGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductTypesGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyProductTypesGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyProductTypesGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductTypesGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyProductTypesGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductTypesGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyProductTypesGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductTypesGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyProductTypesGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductTypesGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyProductTypesGet(this).addQueryParam("where", where);
     }
 }

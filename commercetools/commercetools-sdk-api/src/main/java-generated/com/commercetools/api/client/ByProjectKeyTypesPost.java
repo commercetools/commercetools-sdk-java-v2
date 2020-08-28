@@ -35,10 +35,16 @@ public class ByProjectKeyTypesPost extends ApiMethod<ByProjectKeyTypesPost> {
     
     private com.commercetools.api.models.type.TypeDraft typeDraft;
 
-    public ByProjectKeyTypesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.type.TypeDraft typeDraft){
+    public ByProjectKeyTypesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.type.TypeDraft typeDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.typeDraft = typeDraft;
+    }
+
+    public ByProjectKeyTypesPost(ByProjectKeyTypesPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.typeDraft = t.typeDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,9 +85,9 @@ public class ByProjectKeyTypesPost extends ApiMethod<ByProjectKeyTypesPost> {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyTypesPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyTypesPost(this).addQueryParam("expand", expand);
     }
 }

@@ -35,10 +35,16 @@ public class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGe
     private String importSinkKey;
     
 
-    public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey){
+    public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.importSinkKey = importSinkKey;
+    }
+
+    public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet(ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.importSinkKey = t.importSinkKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -92,23 +98,23 @@ public class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGe
         return this.getQueryParam("state");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
+    public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
     public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){
-        return this.addQueryParam("resourceKey", resourceKey);
+        return new ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("resourceKey", resourceKey);
     }
     
     public ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
-        return this.addQueryParam("state", state);
+        return new ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("state", state);
     }
 }

@@ -35,10 +35,16 @@ public class ByProjectKeyPaymentsPost extends ApiMethod<ByProjectKeyPaymentsPost
     
     private com.commercetools.api.models.payment.PaymentDraft paymentDraft;
 
-    public ByProjectKeyPaymentsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.payment.PaymentDraft paymentDraft){
+    public ByProjectKeyPaymentsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.payment.PaymentDraft paymentDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.paymentDraft = paymentDraft;
+    }
+
+    public ByProjectKeyPaymentsPost(ByProjectKeyPaymentsPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.paymentDraft = t.paymentDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,9 +85,9 @@ public class ByProjectKeyPaymentsPost extends ApiMethod<ByProjectKeyPaymentsPost
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyPaymentsPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyPaymentsPost(this).addQueryParam("expand", expand);
     }
 }

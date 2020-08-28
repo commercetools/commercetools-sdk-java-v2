@@ -36,11 +36,18 @@ public class ByProjectKeyPaymentsKeyByKeyPost extends ApiMethod<ByProjectKeyPaym
     
     private com.commercetools.api.models.payment.PaymentUpdate paymentUpdate;
 
-    public ByProjectKeyPaymentsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.payment.PaymentUpdate paymentUpdate){
+    public ByProjectKeyPaymentsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.payment.PaymentUpdate paymentUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
         this.paymentUpdate = paymentUpdate;
+    }
+
+    public ByProjectKeyPaymentsKeyByKeyPost(ByProjectKeyPaymentsKeyByKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
+        this.paymentUpdate = t.paymentUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyPaymentsKeyByKeyPost extends ApiMethod<ByProjectKeyPaym
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyPaymentsKeyByKeyPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyPaymentsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
 }

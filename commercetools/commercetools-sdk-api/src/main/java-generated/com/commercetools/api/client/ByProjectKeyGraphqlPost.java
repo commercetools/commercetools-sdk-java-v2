@@ -35,10 +35,16 @@ public class ByProjectKeyGraphqlPost extends ApiMethod<ByProjectKeyGraphqlPost> 
     
     private com.commercetools.api.models.graph_ql.GraphQLRequest graphQLRequest;
 
-    public ByProjectKeyGraphqlPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.graph_ql.GraphQLRequest graphQLRequest){
+    public ByProjectKeyGraphqlPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.graph_ql.GraphQLRequest graphQLRequest) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.graphQLRequest = graphQLRequest;
+    }
+
+    public ByProjectKeyGraphqlPost(ByProjectKeyGraphqlPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.graphQLRequest = t.graphQLRequest;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,6 +82,6 @@ public class ByProjectKeyGraphqlPost extends ApiMethod<ByProjectKeyGraphqlPost> 
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

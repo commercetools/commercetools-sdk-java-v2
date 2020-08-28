@@ -34,9 +34,14 @@ public class ByProjectKeyShoppingListsGet extends ApiMethod<ByProjectKeyShopping
     private String projectKey;
     
 
-    public ByProjectKeyShoppingListsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyShoppingListsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyShoppingListsGet(ByProjectKeyShoppingListsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyShoppingListsGet extends ApiMethod<ByProjectKeyShopping
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShoppingListsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyShoppingListsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyShoppingListsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyShoppingListsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyShoppingListsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyShoppingListsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyShoppingListsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyShoppingListsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyShoppingListsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyShoppingListsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyShoppingListsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyShoppingListsGet(this).addQueryParam("where", where);
     }
 }

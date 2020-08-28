@@ -36,11 +36,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet extends ApiMethod<B
     private String ID;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String ID){
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet(ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -83,13 +90,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet extends ApiMethod<B
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet(this).addQueryParam("expand", expand);
     }
 }

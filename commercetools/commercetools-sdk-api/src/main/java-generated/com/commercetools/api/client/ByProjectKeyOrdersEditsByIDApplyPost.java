@@ -33,11 +33,18 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKey
     
     private com.commercetools.api.models.order_edit.OrderEditApply orderEditApply;
 
-    public ByProjectKeyOrdersEditsByIDApplyPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.order_edit.OrderEditApply orderEditApply){
+    public ByProjectKeyOrdersEditsByIDApplyPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.order_edit.OrderEditApply orderEditApply) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
         this.orderEditApply = orderEditApply;
+    }
+
+    public ByProjectKeyOrdersEditsByIDApplyPost(ByProjectKeyOrdersEditsByIDApplyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
+        this.orderEditApply = t.orderEditApply;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,8 +83,8 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKey
     public String getID() {return this.ID;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
 }

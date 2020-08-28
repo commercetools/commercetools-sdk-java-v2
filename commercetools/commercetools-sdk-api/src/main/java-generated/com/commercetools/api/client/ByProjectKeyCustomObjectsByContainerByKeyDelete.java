@@ -36,11 +36,18 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends ApiMethod<B
     private String key;
     
 
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String container, String key){
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String container, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.container = container;
         this.key = key;
+    }
+
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete(ByProjectKeyCustomObjectsByContainerByKeyDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.container = t.container;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -91,21 +98,21 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends ApiMethod<B
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setContainer(final String container) {this.container = container;}
+    public void setContainer(final String container) { this.container = container; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyCustomObjectsByContainerByKeyDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withDataErasure(final Boolean dataErasure){
-        return this.addQueryParam("dataErasure", dataErasure);
+        return new ByProjectKeyCustomObjectsByContainerByKeyDelete(this).addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCustomObjectsByContainerByKeyDelete(this).addQueryParam("expand", expand);
     }
 }

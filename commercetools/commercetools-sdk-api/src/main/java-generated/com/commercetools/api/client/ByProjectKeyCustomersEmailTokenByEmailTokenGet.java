@@ -35,10 +35,16 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<By
     private String emailToken;
     
 
-    public ByProjectKeyCustomersEmailTokenByEmailTokenGet(final ApiHttpClient apiHttpClient, String projectKey, String emailToken){
+    public ByProjectKeyCustomersEmailTokenByEmailTokenGet(final ApiHttpClient apiHttpClient, String projectKey, String emailToken) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.emailToken = emailToken;
+    }
+
+    public ByProjectKeyCustomersEmailTokenByEmailTokenGet(ByProjectKeyCustomersEmailTokenByEmailTokenGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.emailToken = t.emailToken;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,11 +86,11 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<By
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setEmailToken(final String emailToken) {this.emailToken = emailToken;}
+    public void setEmailToken(final String emailToken) { this.emailToken = emailToken; }
 
     public ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCustomersEmailTokenByEmailTokenGet(this).addQueryParam("expand", expand);
     }
 }

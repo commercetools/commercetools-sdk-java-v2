@@ -34,9 +34,14 @@ public class ByProjectKeySubscriptionsGet extends ApiMethod<ByProjectKeySubscrip
     private String projectKey;
     
 
-    public ByProjectKeySubscriptionsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeySubscriptionsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeySubscriptionsGet(ByProjectKeySubscriptionsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeySubscriptionsGet extends ApiMethod<ByProjectKeySubscrip
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeySubscriptionsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeySubscriptionsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeySubscriptionsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeySubscriptionsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeySubscriptionsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeySubscriptionsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeySubscriptionsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeySubscriptionsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeySubscriptionsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeySubscriptionsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeySubscriptionsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeySubscriptionsGet(this).addQueryParam("where", where);
     }
 }

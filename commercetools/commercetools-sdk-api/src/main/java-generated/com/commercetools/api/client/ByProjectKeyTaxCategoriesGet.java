@@ -34,9 +34,14 @@ public class ByProjectKeyTaxCategoriesGet extends ApiMethod<ByProjectKeyTaxCateg
     private String projectKey;
     
 
-    public ByProjectKeyTaxCategoriesGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyTaxCategoriesGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyTaxCategoriesGet(ByProjectKeyTaxCategoriesGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyTaxCategoriesGet extends ApiMethod<ByProjectKeyTaxCateg
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyTaxCategoriesGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyTaxCategoriesGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyTaxCategoriesGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyTaxCategoriesGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyTaxCategoriesGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyTaxCategoriesGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyTaxCategoriesGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyTaxCategoriesGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyTaxCategoriesGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyTaxCategoriesGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyTaxCategoriesGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyTaxCategoriesGet(this).addQueryParam("where", where);
     }
 }

@@ -31,9 +31,14 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<B
     private String projectKey;
     
 
-    public ByProjectKeyShippingMethodsMatchingOrdereditGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet(ByProjectKeyShippingMethodsMatchingOrdereditGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,17 +87,17 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<B
         return this.getQueryParam("state");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final String orderEditId){
-        return this.addQueryParam("orderEditId", orderEditId);
+        return new ByProjectKeyShippingMethodsMatchingOrdereditGet(this).addQueryParam("orderEditId", orderEditId);
     }
     
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final String country){
-        return this.addQueryParam("country", country);
+        return new ByProjectKeyShippingMethodsMatchingOrdereditGet(this).addQueryParam("country", country);
     }
     
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final String state){
-        return this.addQueryParam("state", state);
+        return new ByProjectKeyShippingMethodsMatchingOrdereditGet(this).addQueryParam("state", state);
     }
 }

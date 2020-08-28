@@ -34,9 +34,14 @@ public class ByProjectKeyImageSearchConfigGet extends ApiMethod<ByProjectKeyImag
     private String projectKey;
     
 
-    public ByProjectKeyImageSearchConfigGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyImageSearchConfigGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyImageSearchConfigGet(ByProjectKeyImageSearchConfigGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -74,6 +79,6 @@ public class ByProjectKeyImageSearchConfigGet extends ApiMethod<ByProjectKeyImag
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

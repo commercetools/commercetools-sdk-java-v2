@@ -34,9 +34,14 @@ public class ByProjectKeyCartsGet extends ApiMethod<ByProjectKeyCartsGet> {
     private String projectKey;
     
 
-    public ByProjectKeyCartsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyCartsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyCartsGet(ByProjectKeyCartsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -101,33 +106,33 @@ public class ByProjectKeyCartsGet extends ApiMethod<ByProjectKeyCartsGet> {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCartsGet withCustomerId(final String customerId){
-        return this.addQueryParam("customerId", customerId);
+        return new ByProjectKeyCartsGet(this).addQueryParam("customerId", customerId);
     }
     
     public ByProjectKeyCartsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCartsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyCartsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyCartsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyCartsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyCartsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyCartsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyCartsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyCartsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyCartsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyCartsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyCartsGet(this).addQueryParam("where", where);
     }
 }

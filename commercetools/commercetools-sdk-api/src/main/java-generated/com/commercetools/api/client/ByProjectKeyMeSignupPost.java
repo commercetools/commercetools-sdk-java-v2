@@ -32,10 +32,16 @@ public class ByProjectKeyMeSignupPost extends ApiMethod<ByProjectKeyMeSignupPost
     
     private com.commercetools.api.models.me.MyCustomerDraft myCustomerDraft;
 
-    public ByProjectKeyMeSignupPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.me.MyCustomerDraft myCustomerDraft){
+    public ByProjectKeyMeSignupPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.me.MyCustomerDraft myCustomerDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.myCustomerDraft = myCustomerDraft;
+    }
+
+    public ByProjectKeyMeSignupPost(ByProjectKeyMeSignupPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.myCustomerDraft = t.myCustomerDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -73,6 +79,6 @@ public class ByProjectKeyMeSignupPost extends ApiMethod<ByProjectKeyMeSignupPost
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

@@ -35,10 +35,16 @@ public class ByProjectKeyOrdersImportPost extends ApiMethod<ByProjectKeyOrdersIm
     
     private com.commercetools.api.models.order.OrderImportDraft orderImportDraft;
 
-    public ByProjectKeyOrdersImportPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.order.OrderImportDraft orderImportDraft){
+    public ByProjectKeyOrdersImportPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.order.OrderImportDraft orderImportDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.orderImportDraft = orderImportDraft;
+    }
+
+    public ByProjectKeyOrdersImportPost(ByProjectKeyOrdersImportPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.orderImportDraft = t.orderImportDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,6 +82,6 @@ public class ByProjectKeyOrdersImportPost extends ApiMethod<ByProjectKeyOrdersIm
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

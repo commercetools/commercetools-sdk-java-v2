@@ -34,9 +34,14 @@ public class ByProjectKeyMeShoppingListsGet extends ApiMethod<ByProjectKeyMeShop
     private String projectKey;
     
 
-    public ByProjectKeyMeShoppingListsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyMeShoppingListsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMeShoppingListsGet(ByProjectKeyMeShoppingListsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyMeShoppingListsGet extends ApiMethod<ByProjectKeyMeShop
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMeShoppingListsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMeShoppingListsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyMeShoppingListsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyMeShoppingListsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyMeShoppingListsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyMeShoppingListsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyMeShoppingListsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyMeShoppingListsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyMeShoppingListsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyMeShoppingListsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyMeShoppingListsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyMeShoppingListsGet(this).addQueryParam("where", where);
     }
 }

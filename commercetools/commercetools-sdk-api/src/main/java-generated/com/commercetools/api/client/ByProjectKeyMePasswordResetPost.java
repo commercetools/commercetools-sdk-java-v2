@@ -31,9 +31,14 @@ public class ByProjectKeyMePasswordResetPost extends ApiMethod<ByProjectKeyMePas
     private String projectKey;
     
 
-    public ByProjectKeyMePasswordResetPost(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyMePasswordResetPost(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMePasswordResetPost(ByProjectKeyMePasswordResetPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -71,6 +76,6 @@ public class ByProjectKeyMePasswordResetPost extends ApiMethod<ByProjectKeyMePas
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

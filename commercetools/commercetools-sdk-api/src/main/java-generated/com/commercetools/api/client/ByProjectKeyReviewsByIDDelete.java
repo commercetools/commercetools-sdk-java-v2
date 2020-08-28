@@ -35,10 +35,16 @@ public class ByProjectKeyReviewsByIDDelete extends ApiMethod<ByProjectKeyReviews
     private String ID;
     
 
-    public ByProjectKeyReviewsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyReviewsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyReviewsByIDDelete(ByProjectKeyReviewsByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -88,19 +94,19 @@ public class ByProjectKeyReviewsByIDDelete extends ApiMethod<ByProjectKeyReviews
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyReviewsByIDDelete withDataErasure(final Boolean dataErasure){
-        return this.addQueryParam("dataErasure", dataErasure);
+        return new ByProjectKeyReviewsByIDDelete(this).addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyReviewsByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyReviewsByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyReviewsByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyReviewsByIDDelete(this).addQueryParam("expand", expand);
     }
 }

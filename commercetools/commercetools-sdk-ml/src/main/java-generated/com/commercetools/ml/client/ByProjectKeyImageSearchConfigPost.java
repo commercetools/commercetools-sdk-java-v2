@@ -35,10 +35,16 @@ public class ByProjectKeyImageSearchConfigPost extends ApiMethod<ByProjectKeyIma
     
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest imageSearchConfigRequest;
 
-    public ByProjectKeyImageSearchConfigPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest imageSearchConfigRequest){
+    public ByProjectKeyImageSearchConfigPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.ml.models.image_search_config.ImageSearchConfigRequest imageSearchConfigRequest) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.imageSearchConfigRequest = imageSearchConfigRequest;
+    }
+
+    public ByProjectKeyImageSearchConfigPost(ByProjectKeyImageSearchConfigPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.imageSearchConfigRequest = t.imageSearchConfigRequest;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,6 +82,6 @@ public class ByProjectKeyImageSearchConfigPost extends ApiMethod<ByProjectKeyIma
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

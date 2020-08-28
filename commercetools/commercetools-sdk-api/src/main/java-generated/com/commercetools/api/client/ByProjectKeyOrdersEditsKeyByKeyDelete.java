@@ -35,10 +35,16 @@ public class ByProjectKeyOrdersEditsKeyByKeyDelete extends ApiMethod<ByProjectKe
     private String key;
     
 
-    public ByProjectKeyOrdersEditsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeyOrdersEditsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeyOrdersEditsKeyByKeyDelete(ByProjectKeyOrdersEditsKeyByKeyDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -84,15 +90,15 @@ public class ByProjectKeyOrdersEditsKeyByKeyDelete extends ApiMethod<ByProjectKe
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyOrdersEditsKeyByKeyDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyOrdersEditsKeyByKeyDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyOrdersEditsKeyByKeyDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyOrdersEditsKeyByKeyDelete(this).addQueryParam("expand", expand);
     }
 }

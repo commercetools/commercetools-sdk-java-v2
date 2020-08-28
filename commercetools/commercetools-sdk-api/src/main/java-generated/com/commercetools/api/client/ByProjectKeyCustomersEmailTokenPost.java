@@ -35,10 +35,16 @@ public class ByProjectKeyCustomersEmailTokenPost extends ApiMethod<ByProjectKeyC
     
     private com.commercetools.api.models.customer.CustomerCreateEmailToken customerCreateEmailToken;
 
-    public ByProjectKeyCustomersEmailTokenPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.customer.CustomerCreateEmailToken customerCreateEmailToken){
+    public ByProjectKeyCustomersEmailTokenPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.customer.CustomerCreateEmailToken customerCreateEmailToken) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.customerCreateEmailToken = customerCreateEmailToken;
+    }
+
+    public ByProjectKeyCustomersEmailTokenPost(ByProjectKeyCustomersEmailTokenPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.customerCreateEmailToken = t.customerCreateEmailToken;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,6 +82,6 @@ public class ByProjectKeyCustomersEmailTokenPost extends ApiMethod<ByProjectKeyC
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

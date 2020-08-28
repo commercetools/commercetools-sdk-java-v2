@@ -35,10 +35,16 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete extends ApiMethod<
     private String orderNumber;
     
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete(final ApiHttpClient apiHttpClient, String projectKey, String orderNumber){
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete(final ApiHttpClient apiHttpClient, String projectKey, String orderNumber) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.orderNumber = orderNumber;
+    }
+
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete(ByProjectKeyOrdersOrderNumberByOrderNumberDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.orderNumber = t.orderNumber;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -88,19 +94,19 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete extends ApiMethod<
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setOrderNumber(final String orderNumber) {this.orderNumber = orderNumber;}
+    public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withDataErasure(final Boolean dataErasure){
-        return this.addQueryParam("dataErasure", dataErasure);
+        return new ByProjectKeyOrdersOrderNumberByOrderNumberDelete(this).addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyOrdersOrderNumberByOrderNumberDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyOrdersOrderNumberByOrderNumberDelete(this).addQueryParam("expand", expand);
     }
 }

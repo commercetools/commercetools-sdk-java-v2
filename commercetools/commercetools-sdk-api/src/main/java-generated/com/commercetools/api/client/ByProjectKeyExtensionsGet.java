@@ -34,9 +34,14 @@ public class ByProjectKeyExtensionsGet extends ApiMethod<ByProjectKeyExtensionsG
     private String projectKey;
     
 
-    public ByProjectKeyExtensionsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyExtensionsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyExtensionsGet(ByProjectKeyExtensionsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyExtensionsGet extends ApiMethod<ByProjectKeyExtensionsG
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyExtensionsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyExtensionsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyExtensionsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyExtensionsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyExtensionsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyExtensionsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyExtensionsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyExtensionsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyExtensionsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyExtensionsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyExtensionsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyExtensionsGet(this).addQueryParam("where", where);
     }
 }

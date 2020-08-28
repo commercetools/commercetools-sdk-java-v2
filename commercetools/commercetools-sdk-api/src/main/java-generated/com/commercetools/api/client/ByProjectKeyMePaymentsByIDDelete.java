@@ -35,10 +35,16 @@ public class ByProjectKeyMePaymentsByIDDelete extends ApiMethod<ByProjectKeyMePa
     private String ID;
     
 
-    public ByProjectKeyMePaymentsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyMePaymentsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyMePaymentsByIDDelete(ByProjectKeyMePaymentsByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -84,15 +90,15 @@ public class ByProjectKeyMePaymentsByIDDelete extends ApiMethod<ByProjectKeyMePa
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMePaymentsByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyMePaymentsByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyMePaymentsByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMePaymentsByIDDelete(this).addQueryParam("expand", expand);
     }
 }

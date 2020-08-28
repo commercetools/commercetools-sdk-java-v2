@@ -34,9 +34,14 @@ public class ByProjectKeyCategoriesGet extends ApiMethod<ByProjectKeyCategoriesG
     private String projectKey;
     
 
-    public ByProjectKeyCategoriesGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyCategoriesGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyCategoriesGet(ByProjectKeyCategoriesGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyCategoriesGet extends ApiMethod<ByProjectKeyCategoriesG
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCategoriesGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCategoriesGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyCategoriesGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyCategoriesGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyCategoriesGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyCategoriesGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyCategoriesGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyCategoriesGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyCategoriesGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyCategoriesGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyCategoriesGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyCategoriesGet(this).addQueryParam("where", where);
     }
 }

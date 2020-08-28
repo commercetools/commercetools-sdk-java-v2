@@ -35,10 +35,16 @@ public class ByProjectKeyShippingMethodsByIDDelete extends ApiMethod<ByProjectKe
     private String ID;
     
 
-    public ByProjectKeyShippingMethodsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyShippingMethodsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyShippingMethodsByIDDelete(ByProjectKeyShippingMethodsByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -84,15 +90,15 @@ public class ByProjectKeyShippingMethodsByIDDelete extends ApiMethod<ByProjectKe
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyShippingMethodsByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyShippingMethodsByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyShippingMethodsByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyShippingMethodsByIDDelete(this).addQueryParam("expand", expand);
     }
 }

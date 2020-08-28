@@ -34,9 +34,14 @@ public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustome
     private String projectKey;
     
 
-    public ByProjectKeyCustomerGroupsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyCustomerGroupsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyCustomerGroupsGet(ByProjectKeyCustomerGroupsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustome
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomerGroupsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyCustomerGroupsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyCustomerGroupsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyCustomerGroupsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyCustomerGroupsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyCustomerGroupsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("where", where);
     }
 }

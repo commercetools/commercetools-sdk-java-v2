@@ -36,11 +36,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
     
     private com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword){
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.customerChangePassword = customerChangePassword;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.customerChangePassword = t.customerChangePassword;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,8 +86,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
     public String getStoreKey() {return this.storeKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
 }

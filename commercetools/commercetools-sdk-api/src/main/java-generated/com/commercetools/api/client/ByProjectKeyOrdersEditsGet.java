@@ -34,9 +34,14 @@ public class ByProjectKeyOrdersEditsGet extends ApiMethod<ByProjectKeyOrdersEdit
     private String projectKey;
     
 
-    public ByProjectKeyOrdersEditsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyOrdersEditsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyOrdersEditsGet(ByProjectKeyOrdersEditsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyOrdersEditsGet extends ApiMethod<ByProjectKeyOrdersEdit
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyOrdersEditsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyOrdersEditsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyOrdersEditsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyOrdersEditsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyOrdersEditsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyOrdersEditsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("where", where);
     }
 }

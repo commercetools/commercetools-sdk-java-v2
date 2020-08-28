@@ -41,11 +41,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet e
     private String orderNumber;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String orderNumber){
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String orderNumber) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.orderNumber = orderNumber;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.orderNumber = t.orderNumber;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -88,13 +95,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet e
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
     
-    public void setOrderNumber(final String orderNumber) {this.orderNumber = orderNumber;}
+    public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(this).addQueryParam("expand", expand);
     }
 }

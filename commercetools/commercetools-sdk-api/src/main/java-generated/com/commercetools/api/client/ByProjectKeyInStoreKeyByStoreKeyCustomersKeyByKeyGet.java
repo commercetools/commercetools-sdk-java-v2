@@ -39,11 +39,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet extends ApiMet
     private String key;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String key){
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.key = key;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet(ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -86,13 +93,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet extends ApiMet
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet(this).addQueryParam("expand", expand);
     }
 }

@@ -36,11 +36,18 @@ public class ByProjectKeyCustomObjectsByContainerByKeyGet extends ApiMethod<ByPr
     private String key;
     
 
-    public ByProjectKeyCustomObjectsByContainerByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String container, String key){
+    public ByProjectKeyCustomObjectsByContainerByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String container, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.container = container;
         this.key = key;
+    }
+
+    public ByProjectKeyCustomObjectsByContainerByKeyGet(ByProjectKeyCustomObjectsByContainerByKeyGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.container = t.container;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -83,13 +90,13 @@ public class ByProjectKeyCustomObjectsByContainerByKeyGet extends ApiMethod<ByPr
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setContainer(final String container) {this.container = container;}
+    public void setContainer(final String container) { this.container = container; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCustomObjectsByContainerByKeyGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCustomObjectsByContainerByKeyGet(this).addQueryParam("expand", expand);
     }
 }

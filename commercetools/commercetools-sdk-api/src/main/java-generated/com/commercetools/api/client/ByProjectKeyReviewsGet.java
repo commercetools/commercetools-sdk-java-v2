@@ -34,9 +34,14 @@ public class ByProjectKeyReviewsGet extends ApiMethod<ByProjectKeyReviewsGet> {
     private String projectKey;
     
 
-    public ByProjectKeyReviewsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyReviewsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyReviewsGet(ByProjectKeyReviewsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyReviewsGet extends ApiMethod<ByProjectKeyReviewsGet> {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyReviewsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyReviewsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyReviewsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyReviewsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyReviewsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyReviewsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyReviewsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyReviewsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyReviewsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyReviewsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyReviewsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyReviewsGet(this).addQueryParam("where", where);
     }
 }

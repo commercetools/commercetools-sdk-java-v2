@@ -35,10 +35,16 @@ public class ByProjectKeyImportSinksByImportSinkKeyDelete extends ApiMethod<ByPr
     private String importSinkKey;
     
 
-    public ByProjectKeyImportSinksByImportSinkKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey){
+    public ByProjectKeyImportSinksByImportSinkKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String importSinkKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.importSinkKey = importSinkKey;
+    }
+
+    public ByProjectKeyImportSinksByImportSinkKeyDelete(ByProjectKeyImportSinksByImportSinkKeyDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.importSinkKey = t.importSinkKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -77,8 +83,8 @@ public class ByProjectKeyImportSinksByImportSinkKeyDelete extends ApiMethod<ByPr
     public String getImportSinkKey() {return this.importSinkKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setImportSinkKey(final String importSinkKey) {this.importSinkKey = importSinkKey;}
+    public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
 }

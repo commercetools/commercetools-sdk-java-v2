@@ -35,10 +35,16 @@ public class ByProjectKeyMeOrdersPost extends ApiMethod<ByProjectKeyMeOrdersPost
     
     private com.commercetools.api.models.me.MyOrderFromCartDraft myOrderFromCartDraft;
 
-    public ByProjectKeyMeOrdersPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.me.MyOrderFromCartDraft myOrderFromCartDraft){
+    public ByProjectKeyMeOrdersPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.me.MyOrderFromCartDraft myOrderFromCartDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.myOrderFromCartDraft = myOrderFromCartDraft;
+    }
+
+    public ByProjectKeyMeOrdersPost(ByProjectKeyMeOrdersPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.myOrderFromCartDraft = t.myOrderFromCartDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,9 +85,9 @@ public class ByProjectKeyMeOrdersPost extends ApiMethod<ByProjectKeyMeOrdersPost
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMeOrdersPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMeOrdersPost(this).addQueryParam("expand", expand);
     }
 }

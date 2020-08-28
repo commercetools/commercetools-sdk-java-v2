@@ -41,11 +41,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
     private String customerId;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String customerId){
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String customerId) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.customerId = customerId;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.customerId = t.customerId;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -88,13 +95,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
     
-    public void setCustomerId(final String customerId) {this.customerId = customerId;}
+    public void setCustomerId(final String customerId) { this.customerId = customerId; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(this).addQueryParam("expand", expand);
     }
 }

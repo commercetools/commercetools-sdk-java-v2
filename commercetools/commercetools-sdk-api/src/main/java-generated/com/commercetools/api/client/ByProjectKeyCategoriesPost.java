@@ -35,10 +35,16 @@ public class ByProjectKeyCategoriesPost extends ApiMethod<ByProjectKeyCategories
     
     private com.commercetools.api.models.category.CategoryDraft categoryDraft;
 
-    public ByProjectKeyCategoriesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.category.CategoryDraft categoryDraft){
+    public ByProjectKeyCategoriesPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.category.CategoryDraft categoryDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.categoryDraft = categoryDraft;
+    }
+
+    public ByProjectKeyCategoriesPost(ByProjectKeyCategoriesPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.categoryDraft = t.categoryDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,9 +85,9 @@ public class ByProjectKeyCategoriesPost extends ApiMethod<ByProjectKeyCategories
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCategoriesPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCategoriesPost(this).addQueryParam("expand", expand);
     }
 }

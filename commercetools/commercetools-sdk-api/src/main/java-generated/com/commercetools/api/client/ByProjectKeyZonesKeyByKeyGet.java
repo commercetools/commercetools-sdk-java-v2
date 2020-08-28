@@ -35,10 +35,16 @@ public class ByProjectKeyZonesKeyByKeyGet extends ApiMethod<ByProjectKeyZonesKey
     private String key;
     
 
-    public ByProjectKeyZonesKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeyZonesKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeyZonesKeyByKeyGet(ByProjectKeyZonesKeyByKeyGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,11 +86,11 @@ public class ByProjectKeyZonesKeyByKeyGet extends ApiMethod<ByProjectKeyZonesKey
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyZonesKeyByKeyGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyZonesKeyByKeyGet(this).addQueryParam("expand", expand);
     }
 }

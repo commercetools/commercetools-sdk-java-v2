@@ -31,9 +31,14 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<By
     private String projectKey;
     
 
-    public ByProjectKeyShippingMethodsMatchingLocationGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyShippingMethodsMatchingLocationGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyShippingMethodsMatchingLocationGet(ByProjectKeyShippingMethodsMatchingLocationGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -86,21 +91,21 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<By
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final String country){
-        return this.addQueryParam("country", country);
+        return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("country", country);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withState(final String state){
-        return this.addQueryParam("state", state);
+        return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("state", state);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final String currency){
-        return this.addQueryParam("currency", currency);
+        return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("currency", currency);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("expand", expand);
     }
 }

@@ -34,9 +34,14 @@ public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet
     private String projectKey;
     
 
-    public ByProjectKeyInventoryGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyInventoryGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyInventoryGet(ByProjectKeyInventoryGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyInventoryGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInventoryGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyInventoryGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyInventoryGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyInventoryGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyInventoryGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyInventoryGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyInventoryGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyInventoryGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyInventoryGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyInventoryGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyInventoryGet(this).addQueryParam("where", where);
     }
 }

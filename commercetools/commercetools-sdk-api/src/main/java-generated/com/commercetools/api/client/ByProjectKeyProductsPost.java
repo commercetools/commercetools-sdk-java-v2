@@ -37,10 +37,16 @@ public class ByProjectKeyProductsPost extends ApiMethod<ByProjectKeyProductsPost
     
     private com.commercetools.api.models.product.ProductDraft productDraft;
 
-    public ByProjectKeyProductsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.product.ProductDraft productDraft){
+    public ByProjectKeyProductsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.product.ProductDraft productDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.productDraft = productDraft;
+    }
+
+    public ByProjectKeyProductsPost(ByProjectKeyProductsPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.productDraft = t.productDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -105,33 +111,33 @@ public class ByProjectKeyProductsPost extends ApiMethod<ByProjectKeyProductsPost
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductsPost withPriceCurrency(final String priceCurrency){
-        return this.addQueryParam("priceCurrency", priceCurrency);
+        return new ByProjectKeyProductsPost(this).addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsPost withPriceCountry(final String priceCountry){
-        return this.addQueryParam("priceCountry", priceCountry);
+        return new ByProjectKeyProductsPost(this).addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsPost withPriceCustomerGroup(final String priceCustomerGroup){
-        return this.addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return new ByProjectKeyProductsPost(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsPost withPriceChannel(final String priceChannel){
-        return this.addQueryParam("priceChannel", priceChannel);
+        return new ByProjectKeyProductsPost(this).addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsPost withLocaleProjection(final String localeProjection){
-        return this.addQueryParam("localeProjection", localeProjection);
+        return new ByProjectKeyProductsPost(this).addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsPost withStoreProjection(final String storeProjection){
-        return this.addQueryParam("storeProjection", storeProjection);
+        return new ByProjectKeyProductsPost(this).addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductsPost(this).addQueryParam("expand", expand);
     }
 }

@@ -34,9 +34,14 @@ public class ByProjectKeyTypesGet extends ApiMethod<ByProjectKeyTypesGet> {
     private String projectKey;
     
 
-    public ByProjectKeyTypesGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyTypesGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyTypesGet(ByProjectKeyTypesGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyTypesGet extends ApiMethod<ByProjectKeyTypesGet> {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyTypesGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyTypesGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyTypesGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyTypesGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyTypesGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyTypesGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyTypesGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyTypesGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyTypesGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyTypesGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyTypesGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyTypesGet(this).addQueryParam("where", where);
     }
 }

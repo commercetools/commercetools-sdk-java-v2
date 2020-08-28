@@ -35,10 +35,16 @@ public class ByProjectKeyProductsByIDDelete extends ApiMethod<ByProjectKeyProduc
     private String ID;
     
 
-    public ByProjectKeyProductsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyProductsByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyProductsByIDDelete(ByProjectKeyProductsByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -108,39 +114,39 @@ public class ByProjectKeyProductsByIDDelete extends ApiMethod<ByProjectKeyProduc
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductsByIDDelete withPriceCurrency(final String priceCurrency){
-        return this.addQueryParam("priceCurrency", priceCurrency);
+        return new ByProjectKeyProductsByIDDelete(this).addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsByIDDelete withPriceCountry(final String priceCountry){
-        return this.addQueryParam("priceCountry", priceCountry);
+        return new ByProjectKeyProductsByIDDelete(this).addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsByIDDelete withPriceCustomerGroup(final String priceCustomerGroup){
-        return this.addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return new ByProjectKeyProductsByIDDelete(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsByIDDelete withPriceChannel(final String priceChannel){
-        return this.addQueryParam("priceChannel", priceChannel);
+        return new ByProjectKeyProductsByIDDelete(this).addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsByIDDelete withLocaleProjection(final String localeProjection){
-        return this.addQueryParam("localeProjection", localeProjection);
+        return new ByProjectKeyProductsByIDDelete(this).addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsByIDDelete withStoreProjection(final String storeProjection){
-        return this.addQueryParam("storeProjection", storeProjection);
+        return new ByProjectKeyProductsByIDDelete(this).addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyProductsByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyProductsByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductsByIDDelete(this).addQueryParam("expand", expand);
     }
 }

@@ -34,9 +34,14 @@ public class ByProjectKeyZonesGet extends ApiMethod<ByProjectKeyZonesGet> {
     private String projectKey;
     
 
-    public ByProjectKeyZonesGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyZonesGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyZonesGet(ByProjectKeyZonesGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyZonesGet extends ApiMethod<ByProjectKeyZonesGet> {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyZonesGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyZonesGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyZonesGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyZonesGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyZonesGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyZonesGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyZonesGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyZonesGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyZonesGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyZonesGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyZonesGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyZonesGet(this).addQueryParam("where", where);
     }
 }

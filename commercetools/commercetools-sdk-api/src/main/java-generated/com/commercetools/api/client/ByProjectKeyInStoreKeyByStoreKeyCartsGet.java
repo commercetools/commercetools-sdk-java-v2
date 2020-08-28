@@ -35,10 +35,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjec
     private String storeKey;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyCartsGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey){
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet(ByProjectKeyInStoreKeyByStoreKeyCartsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -104,35 +110,35 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjec
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withCustomerId(final String customerId){
-        return this.addQueryParam("customerId", customerId);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("customerId", customerId);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("where", where);
     }
 }

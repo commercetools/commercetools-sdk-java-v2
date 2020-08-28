@@ -38,10 +38,16 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdGet extends ApiMethod<ByProj
     private String customerId;
     
 
-    public ByProjectKeyCartsCustomerIdByCustomerIdGet(final ApiHttpClient apiHttpClient, String projectKey, String customerId){
+    public ByProjectKeyCartsCustomerIdByCustomerIdGet(final ApiHttpClient apiHttpClient, String projectKey, String customerId) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.customerId = customerId;
+    }
+
+    public ByProjectKeyCartsCustomerIdByCustomerIdGet(ByProjectKeyCartsCustomerIdByCustomerIdGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.customerId = t.customerId;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -83,11 +89,11 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdGet extends ApiMethod<ByProj
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setCustomerId(final String customerId) {this.customerId = customerId;}
+    public void setCustomerId(final String customerId) { this.customerId = customerId; }
 
     public ByProjectKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCartsCustomerIdByCustomerIdGet(this).addQueryParam("expand", expand);
     }
 }

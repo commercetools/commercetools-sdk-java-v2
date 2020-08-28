@@ -34,9 +34,14 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet> 
     private String projectKey;
     
 
-    public ByProjectKeyChannelsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyChannelsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyChannelsGet(ByProjectKeyChannelsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet> 
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyChannelsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyChannelsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyChannelsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyChannelsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyChannelsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyChannelsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyChannelsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyChannelsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyChannelsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyChannelsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyChannelsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyChannelsGet(this).addQueryParam("where", where);
     }
 }

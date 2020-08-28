@@ -35,10 +35,16 @@ public class ByProjectKeyMePost extends ApiMethod<ByProjectKeyMePost> {
     
     private com.commercetools.api.models.common.Update update;
 
-    public ByProjectKeyMePost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.common.Update update){
+    public ByProjectKeyMePost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.common.Update update) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.update = update;
+    }
+
+    public ByProjectKeyMePost(ByProjectKeyMePost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.update = t.update;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,6 +82,6 @@ public class ByProjectKeyMePost extends ApiMethod<ByProjectKeyMePost> {
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

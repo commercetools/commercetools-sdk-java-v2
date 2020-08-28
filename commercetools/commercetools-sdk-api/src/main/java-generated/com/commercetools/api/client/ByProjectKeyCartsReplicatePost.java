@@ -32,10 +32,16 @@ public class ByProjectKeyCartsReplicatePost extends ApiMethod<ByProjectKeyCartsR
     
     private com.commercetools.api.models.cart.ReplicaCartDraft replicaCartDraft;
 
-    public ByProjectKeyCartsReplicatePost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.cart.ReplicaCartDraft replicaCartDraft){
+    public ByProjectKeyCartsReplicatePost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.cart.ReplicaCartDraft replicaCartDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.replicaCartDraft = replicaCartDraft;
+    }
+
+    public ByProjectKeyCartsReplicatePost(ByProjectKeyCartsReplicatePost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.replicaCartDraft = t.replicaCartDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -73,6 +79,6 @@ public class ByProjectKeyCartsReplicatePost extends ApiMethod<ByProjectKeyCartsR
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

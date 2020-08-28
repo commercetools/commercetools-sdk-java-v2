@@ -34,9 +34,14 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
     private String projectKey;
     
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyRecommendationsGeneralCategoriesGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet(ByProjectKeyRecommendationsGeneralCategoriesGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
         return this.getQueryParam("confidenceMax");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final String productImageUrl){
-        return this.addQueryParam("productImageUrl", productImageUrl);
+        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("productImageUrl", productImageUrl);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final String productName){
-        return this.addQueryParam("productName", productName);
+        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("productName", productName);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final Double confidenceMin){
-        return this.addQueryParam("confidenceMin", confidenceMin);
+        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("confidenceMin", confidenceMin);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Double confidenceMax){
-        return this.addQueryParam("confidenceMax", confidenceMax);
+        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("confidenceMax", confidenceMax);
     }
 }

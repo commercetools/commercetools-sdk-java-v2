@@ -31,9 +31,14 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet> {
     private String projectKey;
     
 
-    public ByProjectKeyMeGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyMeGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMeGet(ByProjectKeyMeGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -94,29 +99,29 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet> {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMeGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyMeGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyMeGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyMeGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyMeGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyMeGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyMeGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyMeGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyMeGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMeGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyMeGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyMeGet(this).addQueryParam("where", where);
     }
 }

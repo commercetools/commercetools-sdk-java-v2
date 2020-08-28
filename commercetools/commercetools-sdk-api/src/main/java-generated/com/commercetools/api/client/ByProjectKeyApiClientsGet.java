@@ -34,9 +34,14 @@ public class ByProjectKeyApiClientsGet extends ApiMethod<ByProjectKeyApiClientsG
     private String projectKey;
     
 
-    public ByProjectKeyApiClientsGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyApiClientsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyApiClientsGet(ByProjectKeyApiClientsGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyApiClientsGet extends ApiMethod<ByProjectKeyApiClientsG
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyApiClientsGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyApiClientsGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyApiClientsGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyApiClientsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyApiClientsGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyApiClientsGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyApiClientsGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyApiClientsGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyApiClientsGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyApiClientsGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyApiClientsGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyApiClientsGet(this).addQueryParam("where", where);
     }
 }

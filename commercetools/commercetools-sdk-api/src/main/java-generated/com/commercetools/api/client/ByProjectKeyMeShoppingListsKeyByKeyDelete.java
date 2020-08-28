@@ -35,10 +35,16 @@ public class ByProjectKeyMeShoppingListsKeyByKeyDelete extends ApiMethod<ByProje
     private String key;
     
 
-    public ByProjectKeyMeShoppingListsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key){
+    public ByProjectKeyMeShoppingListsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
+    }
+
+    public ByProjectKeyMeShoppingListsKeyByKeyDelete(ByProjectKeyMeShoppingListsKeyByKeyDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -84,15 +90,15 @@ public class ByProjectKeyMeShoppingListsKeyByKeyDelete extends ApiMethod<ByProje
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyMeShoppingListsKeyByKeyDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyMeShoppingListsKeyByKeyDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyMeShoppingListsKeyByKeyDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMeShoppingListsKeyByKeyDelete(this).addQueryParam("expand", expand);
     }
 }

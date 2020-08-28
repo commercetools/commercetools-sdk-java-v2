@@ -36,11 +36,18 @@ public class ByProjectKeyCartDiscountsByIDPost extends ApiMethod<ByProjectKeyCar
     
     private com.commercetools.api.models.cart_discount.CartDiscountUpdate cartDiscountUpdate;
 
-    public ByProjectKeyCartDiscountsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.cart_discount.CartDiscountUpdate cartDiscountUpdate){
+    public ByProjectKeyCartDiscountsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.cart_discount.CartDiscountUpdate cartDiscountUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
         this.cartDiscountUpdate = cartDiscountUpdate;
+    }
+
+    public ByProjectKeyCartDiscountsByIDPost(ByProjectKeyCartDiscountsByIDPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
+        this.cartDiscountUpdate = t.cartDiscountUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyCartDiscountsByIDPost extends ApiMethod<ByProjectKeyCar
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCartDiscountsByIDPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCartDiscountsByIDPost(this).addQueryParam("expand", expand);
     }
 }

@@ -34,9 +34,14 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet> 
     private String projectKey;
     
 
-    public ByProjectKeyMessagesGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyMessagesGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyMessagesGet(ByProjectKeyMessagesGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -97,29 +102,29 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet> 
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMessagesGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMessagesGet(this).addQueryParam("expand", expand);
     }
     
     public ByProjectKeyMessagesGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyMessagesGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyMessagesGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyMessagesGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyMessagesGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyMessagesGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyMessagesGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyMessagesGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyMessagesGet withWhere(final String where){
-        return this.addQueryParam("where", where);
+        return new ByProjectKeyMessagesGet(this).addQueryParam("where", where);
     }
 }

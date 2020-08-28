@@ -35,10 +35,16 @@ public class ByProjectKeyStoresByIDDelete extends ApiMethod<ByProjectKeyStoresBy
     private String ID;
     
 
-    public ByProjectKeyStoresByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyStoresByIDDelete(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyStoresByIDDelete(ByProjectKeyStoresByIDDelete t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -84,15 +90,15 @@ public class ByProjectKeyStoresByIDDelete extends ApiMethod<ByProjectKeyStoresBy
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyStoresByIDDelete withVersion(final Long version){
-        return this.addQueryParam("version", version);
+        return new ByProjectKeyStoresByIDDelete(this).addQueryParam("version", version);
     }
     
     public ByProjectKeyStoresByIDDelete withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyStoresByIDDelete(this).addQueryParam("expand", expand);
     }
 }

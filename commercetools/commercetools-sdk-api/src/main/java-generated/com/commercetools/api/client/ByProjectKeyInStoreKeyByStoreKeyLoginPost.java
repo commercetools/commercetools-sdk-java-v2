@@ -36,11 +36,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginPost extends ApiMethod<ByProje
     
     private com.commercetools.api.models.customer.CustomerSignin customerSignin;
 
-    public ByProjectKeyInStoreKeyByStoreKeyLoginPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerSignin customerSignin){
+    public ByProjectKeyInStoreKeyByStoreKeyLoginPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerSignin customerSignin) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.customerSignin = customerSignin;
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyLoginPost(ByProjectKeyInStoreKeyByStoreKeyLoginPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.storeKey = t.storeKey;
+        this.customerSignin = t.customerSignin;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -79,8 +86,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginPost extends ApiMethod<ByProje
     public String getStoreKey() {return this.storeKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setStoreKey(final String storeKey) {this.storeKey = storeKey;}
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
 }

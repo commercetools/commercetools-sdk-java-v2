@@ -32,10 +32,16 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends ApiMethod
     private String taskId;
     
 
-    public ByProjectKeySimilaritiesProductsStatusByTaskIdGet(final ApiHttpClient apiHttpClient, String projectKey, String taskId){
+    public ByProjectKeySimilaritiesProductsStatusByTaskIdGet(final ApiHttpClient apiHttpClient, String projectKey, String taskId) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.taskId = taskId;
+    }
+
+    public ByProjectKeySimilaritiesProductsStatusByTaskIdGet(ByProjectKeySimilaritiesProductsStatusByTaskIdGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.taskId = t.taskId;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -74,8 +80,8 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends ApiMethod
     public String getTaskId() {return this.taskId;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setTaskId(final String taskId) {this.taskId = taskId;}
+    public void setTaskId(final String taskId) { this.taskId = taskId; }
 
 }

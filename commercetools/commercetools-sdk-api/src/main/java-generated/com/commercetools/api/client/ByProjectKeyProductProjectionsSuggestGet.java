@@ -31,9 +31,14 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
     private String projectKey;
     
 
-    public ByProjectKeyProductProjectionsSuggestGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyProductProjectionsSuggestGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyProductProjectionsSuggestGet(ByProjectKeyProductProjectionsSuggestGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -94,29 +99,29 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
         return this.getQueryParam("withTotal");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final Boolean fuzzy){
-        return this.addQueryParam("fuzzy", fuzzy);
+        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("fuzzy", fuzzy);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withStaged(final Boolean staged){
-        return this.addQueryParam("staged", staged);
+        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("staged", staged);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("withTotal", withTotal);
     }
 }

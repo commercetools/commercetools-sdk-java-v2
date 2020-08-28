@@ -34,9 +34,14 @@ public class ByProjectKeyProductProjectionsSearchGet extends ApiMethod<ByProject
     private String projectKey;
     
 
-    public ByProjectKeyProductProjectionsSearchGet(final ApiHttpClient apiHttpClient, String projectKey){
+    public ByProjectKeyProductProjectionsSearchGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
+    }
+
+    public ByProjectKeyProductProjectionsSearchGet(ByProjectKeyProductProjectionsSearchGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -149,81 +154,81 @@ public class ByProjectKeyProductProjectionsSearchGet extends ApiMethod<ByProject
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductProjectionsSearchGet withFuzzy(final Boolean fuzzy){
-        return this.addQueryParam("fuzzy", fuzzy);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("fuzzy", fuzzy);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Double fuzzyLevel){
-        return this.addQueryParam("fuzzyLevel", fuzzyLevel);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("fuzzyLevel", fuzzyLevel);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final Boolean markMatchingVariants){
-        return this.addQueryParam("markMatchingVariants", markMatchingVariants);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("markMatchingVariants", markMatchingVariants);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withStaged(final Boolean staged){
-        return this.addQueryParam("staged", staged);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("staged", staged);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFilter(final String filter){
-        return this.addQueryParam("filter", filter);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("filter", filter);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final String filterFacets){
-        return this.addQueryParam("filterFacets", filterFacets);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("filterFacets", filterFacets);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final String filterQuery){
-        return this.addQueryParam("filterQuery", filterQuery);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("filterQuery", filterQuery);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFacet(final String facet){
-        return this.addQueryParam("facet", facet);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("facet", facet);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withSort(final String sort){
-        return this.addQueryParam("sort", sort);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withWithTotal(final Boolean withTotal){
-        return this.addQueryParam("withTotal", withTotal);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final String priceCurrency){
-        return this.addQueryParam("priceCurrency", priceCurrency);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withPriceCountry(final String priceCountry){
-        return this.addQueryParam("priceCountry", priceCountry);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(final String priceCustomerGroup){
-        return this.addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final String priceChannel){
-        return this.addQueryParam("priceChannel", priceChannel);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withLocaleProjection(final String localeProjection){
-        return this.addQueryParam("localeProjection", localeProjection);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withStoreProjection(final String storeProjection){
-        return this.addQueryParam("storeProjection", storeProjection);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductProjectionsSearchGet(this).addQueryParam("expand", expand);
     }
 }

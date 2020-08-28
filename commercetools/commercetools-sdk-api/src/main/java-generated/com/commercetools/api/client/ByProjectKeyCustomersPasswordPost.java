@@ -35,10 +35,16 @@ public class ByProjectKeyCustomersPasswordPost extends ApiMethod<ByProjectKeyCus
     
     private com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword;
 
-    public ByProjectKeyCustomersPasswordPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword){
+    public ByProjectKeyCustomersPasswordPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.customerChangePassword = customerChangePassword;
+    }
+
+    public ByProjectKeyCustomersPasswordPost(ByProjectKeyCustomersPasswordPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.customerChangePassword = t.customerChangePassword;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -76,6 +82,6 @@ public class ByProjectKeyCustomersPasswordPost extends ApiMethod<ByProjectKeyCus
     public String getProjectKey() {return this.projectKey;}
 
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
 }

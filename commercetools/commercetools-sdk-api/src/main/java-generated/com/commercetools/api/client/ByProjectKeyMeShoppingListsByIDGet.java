@@ -35,10 +35,16 @@ public class ByProjectKeyMeShoppingListsByIDGet extends ApiMethod<ByProjectKeyMe
     private String ID;
     
 
-    public ByProjectKeyMeShoppingListsByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID){
+    public ByProjectKeyMeShoppingListsByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
+    }
+
+    public ByProjectKeyMeShoppingListsByIDGet(ByProjectKeyMeShoppingListsByIDGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.ID = t.ID;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,11 +86,11 @@ public class ByProjectKeyMeShoppingListsByIDGet extends ApiMethod<ByProjectKeyMe
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) {this.ID = ID;}
+    public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeShoppingListsByIDGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyMeShoppingListsByIDGet(this).addQueryParam("expand", expand);
     }
 }

@@ -35,10 +35,16 @@ public class ByProjectKeyImageSearchPost extends ApiMethod<ByProjectKeyImageSear
     
     private java.io.File file;
 
-    public ByProjectKeyImageSearchPost(final ApiHttpClient apiHttpClient, String projectKey, java.io.File file){
+    public ByProjectKeyImageSearchPost(final ApiHttpClient apiHttpClient, String projectKey, java.io.File file) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.file = file;
+    }
+
+    public ByProjectKeyImageSearchPost(ByProjectKeyImageSearchPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.file = t.file;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -83,13 +89,13 @@ public class ByProjectKeyImageSearchPost extends ApiMethod<ByProjectKeyImageSear
         return this.getQueryParam("offset");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyImageSearchPost withLimit(final Integer limit){
-        return this.addQueryParam("limit", limit);
+        return new ByProjectKeyImageSearchPost(this).addQueryParam("limit", limit);
     }
     
     public ByProjectKeyImageSearchPost withOffset(final Integer offset){
-        return this.addQueryParam("offset", offset);
+        return new ByProjectKeyImageSearchPost(this).addQueryParam("offset", offset);
     }
 }

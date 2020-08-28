@@ -36,11 +36,18 @@ public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKey
     
     private com.commercetools.api.models.product_type.ProductTypeUpdate productTypeUpdate;
 
-    public ByProjectKeyProductTypesKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.product_type.ProductTypeUpdate productTypeUpdate){
+    public ByProjectKeyProductTypesKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.product_type.ProductTypeUpdate productTypeUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
         this.productTypeUpdate = productTypeUpdate;
+    }
+
+    public ByProjectKeyProductTypesKeyByKeyPost(ByProjectKeyProductTypesKeyByKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
+        this.productTypeUpdate = t.productTypeUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKey
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductTypesKeyByKeyPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyProductTypesKeyByKeyPost(this).addQueryParam("expand", expand);
     }
 }

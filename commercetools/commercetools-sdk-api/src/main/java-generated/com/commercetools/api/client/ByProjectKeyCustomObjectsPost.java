@@ -41,10 +41,16 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
     
     private com.commercetools.api.models.custom_object.CustomObjectDraft customObjectDraft;
 
-    public ByProjectKeyCustomObjectsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.custom_object.CustomObjectDraft customObjectDraft){
+    public ByProjectKeyCustomObjectsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.custom_object.CustomObjectDraft customObjectDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.customObjectDraft = customObjectDraft;
+    }
+
+    public ByProjectKeyCustomObjectsPost(ByProjectKeyCustomObjectsPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.customObjectDraft = t.customObjectDraft;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -85,9 +91,9 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomObjectsPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCustomObjectsPost(this).addQueryParam("expand", expand);
     }
 }

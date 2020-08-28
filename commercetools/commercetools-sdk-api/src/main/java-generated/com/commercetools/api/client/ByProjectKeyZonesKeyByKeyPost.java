@@ -36,11 +36,18 @@ public class ByProjectKeyZonesKeyByKeyPost extends ApiMethod<ByProjectKeyZonesKe
     
     private com.commercetools.api.models.zone.ZoneUpdate zoneUpdate;
 
-    public ByProjectKeyZonesKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.zone.ZoneUpdate zoneUpdate){
+    public ByProjectKeyZonesKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.zone.ZoneUpdate zoneUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
         this.zoneUpdate = zoneUpdate;
+    }
+
+    public ByProjectKeyZonesKeyByKeyPost(ByProjectKeyZonesKeyByKeyPost t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.key = t.key;
+        this.zoneUpdate = t.zoneUpdate;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -82,11 +89,11 @@ public class ByProjectKeyZonesKeyByKeyPost extends ApiMethod<ByProjectKeyZonesKe
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setKey(final String key) {this.key = key;}
+    public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyZonesKeyByKeyPost withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyZonesKeyByKeyPost(this).addQueryParam("expand", expand);
     }
 }

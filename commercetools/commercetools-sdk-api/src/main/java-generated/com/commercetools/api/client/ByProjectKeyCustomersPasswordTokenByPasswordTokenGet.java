@@ -35,10 +35,16 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends ApiMet
     private String passwordToken;
     
 
-    public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet(final ApiHttpClient apiHttpClient, String projectKey, String passwordToken){
+    public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet(final ApiHttpClient apiHttpClient, String projectKey, String passwordToken) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.passwordToken = passwordToken;
+    }
+
+    public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet(ByProjectKeyCustomersPasswordTokenByPasswordTokenGet t) {
+        super(t);
+        this.projectKey = t.projectKey;
+        this.passwordToken = t.passwordToken;
     }
 
     public ApiHttpRequest createHttpRequest() {
@@ -80,11 +86,11 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends ApiMet
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {this.projectKey = projectKey;}
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setPasswordToken(final String passwordToken) {this.passwordToken = passwordToken;}
+    public void setPasswordToken(final String passwordToken) { this.passwordToken = passwordToken; }
 
     public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final String expand){
-        return this.addQueryParam("expand", expand);
+        return new ByProjectKeyCustomersPasswordTokenByPasswordTokenGet(this).addQueryParam("expand", expand);
     }
 }

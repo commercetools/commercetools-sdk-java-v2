@@ -8,6 +8,7 @@ import com.commercetools.importapi.models.common.PriceTier;
 import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import com.commercetools.importapi.models.prices.PriceImportImpl;
 
@@ -95,6 +96,12 @@ public interface PriceImport extends ImportResource {
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
     /**
+    *  <p>The custom fields for this price.</p>
+    */
+    @Valid
+    @JsonProperty("custom")
+    public Custom getCustom();
+    /**
     *  <p>The product variant in which this price is contained.</p>
     *  <p>The product variant referenced
     *  must already exist in the commercetools project, or the
@@ -133,6 +140,8 @@ public interface PriceImport extends ImportResource {
     
     public void setTiers(final List<PriceTier> tiers);
     
+    public void setCustom(final Custom custom);
+    
     public void setProductVariant(final ProductVariantKeyReference productVariant);
     
     public void setProduct(final ProductKeyReference product);
@@ -154,6 +163,7 @@ public interface PriceImport extends ImportResource {
         instance.setDiscounted(template.getDiscounted());
         instance.setPublish(template.getPublish());
         instance.setTiers(template.getTiers());
+        instance.setCustom(template.getCustom());
         instance.setProductVariant(template.getProductVariant());
         instance.setProduct(template.getProduct());
         return instance;

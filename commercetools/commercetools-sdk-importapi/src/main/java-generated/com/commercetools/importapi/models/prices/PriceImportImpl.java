@@ -8,6 +8,7 @@ import com.commercetools.importapi.models.common.PriceTier;
 import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
+import com.commercetools.importapi.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -53,12 +54,14 @@ public final class PriceImportImpl implements PriceImport {
     
     private java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers;
     
+    private com.commercetools.importapi.models.customfields.Custom custom;
+    
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
     
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     @JsonCreator
-    PriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value, @JsonProperty("country") final String country, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("customerGroup") final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importapi.models.common.ChannelKeyReference channel, @JsonProperty("discounted") final com.commercetools.importapi.models.common.DiscountedPrice discounted, @JsonProperty("publish") final Boolean publish, @JsonProperty("tiers") final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers, @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant, @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product) {
+    PriceImportImpl(@JsonProperty("key") final String key, @JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value, @JsonProperty("country") final String country, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("customerGroup") final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup, @JsonProperty("channel") final com.commercetools.importapi.models.common.ChannelKeyReference channel, @JsonProperty("discounted") final com.commercetools.importapi.models.common.DiscountedPrice discounted, @JsonProperty("publish") final Boolean publish, @JsonProperty("tiers") final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers, @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom, @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant, @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product) {
         this.key = key;
         this.value = value;
         this.country = country;
@@ -69,6 +72,7 @@ public final class PriceImportImpl implements PriceImport {
         this.discounted = discounted;
         this.publish = publish;
         this.tiers = tiers;
+        this.custom = custom;
         this.productVariant = productVariant;
         this.product = product;
     }
@@ -152,6 +156,13 @@ public final class PriceImportImpl implements PriceImport {
     }
     
     /**
+    *  <p>The custom fields for this price.</p>
+    */
+    public com.commercetools.importapi.models.customfields.Custom getCustom(){
+        return this.custom;
+    }
+    
+    /**
     *  <p>The product variant in which this price is contained.</p>
     *  <p>The product variant referenced
     *  must already exist in the commercetools project, or the
@@ -209,6 +220,10 @@ public final class PriceImportImpl implements PriceImport {
     
     public void setTiers(final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers){
         this.tiers = tiers;
+    }
+    
+    public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){
+        this.custom = custom;
     }
     
     public void setProductVariant(final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant){

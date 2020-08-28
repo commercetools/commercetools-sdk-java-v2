@@ -79,10 +79,3 @@ jobs:
           release_name: ${{ github.ref }}
           draft: true
           prerelease: false
-
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "TASK: Updating version in README"
-          commit_user_name: Auto Mation
-          commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>

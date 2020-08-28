@@ -1,5 +1,4 @@
 rootProject.name = 'commercetools-java-sdks'
-include 'commercetools'
 include 'rmf:rmf-java-base'
 include 'rmf:okhttp-client'
 include 'commercetools:commercetools-sdk-api'

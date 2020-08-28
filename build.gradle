@@ -67,6 +67,33 @@ tasks.register("writeVersionToReadme") {
     }
 }
 
+ext {
+    scmProjectName = rootProject.name
+    scmRepo = 'github.com'
+    scmProjectPath = "commercetools/commercetools-sdk-java-v2.git"  // github relative path with .git extension
+    scmProjectUrl = "https://$scmRepo/$scmProjectPath"      // just as web-page
+    scmHttpsUrl = "https://$scmRepo/$scmProjectPath"        // common VCS read access
+    scmSshUrl = "git@$scmRepo:$scmProjectPath"              // developers VCS read-write repo
+    SNAPSHOT_SUFFIX = "-SNAPSHOT"
+    versionWIP = "development$SNAPSHOT_SUFFIX"
+}
+
+// maven-specific publishing settings
+def pomConfig = {
+    licenses {
+        license {
+            name "The Apache Software License, Version 2.0"
+            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            distribution "repo"
+        }
+    }
+    scm {
+        connection "scm:git:$scmHttpsUrl"
+        developerConnection "scm:git:$scmSshUrl"
+        url "$scmProjectUrl"
+    }
+}
+
 subprojects { project ->
     repositories {
         mavenCentral()
@@ -97,10 +124,13 @@ subprojects { project ->
 
         pkg {
             repo = 'maven'
-            name = 'commercetools-java-sdks'
+            name = rootProject.name
+            desc = rootProject.description
             userOrg = 'commercetools'
-            licenses = ['MIT']
-            vcsUrl = 'https://github.com/commercetools/commercetools-java-sdks'
+            licenses = ['Apache-2.0']
+
+            vcsUrl = scmHttpsUrl
+            publicDownloadNumbers = true
         }
     }
 
@@ -133,6 +163,30 @@ subprojects { project ->
     ext {
         buildInfoPath = "build/generated/src/main/java/io/vrap/rmf/base/client/"
         buildInfoPackage = "io.vrap.rmf.base.client"
+    }
+
+    if (project.file("build.gradle").exists()) {
+        publishing {
+            publications {
+                Maven(MavenPublication) {
+                    from components.java
+                    artifact sourcesJar
+                    artifact javadocJar
+                    groupId group
+                    artifactId project.name
+                    version version
+
+                    pom.withXml {
+                        def root = asNode()
+                        root.appendNode('description', project.description)
+                        root.appendNode('name', project.name)
+                        root.appendNode('url', scmHttpsUrl)
+                        root.children().last() + pomConfig
+                    }
+                }
+            }
+        }
+
     }
 
     sourceCompatibility = 1.8

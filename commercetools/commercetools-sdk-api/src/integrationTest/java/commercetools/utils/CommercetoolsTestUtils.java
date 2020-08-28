@@ -1,6 +1,6 @@
 package commercetools.utils;
 
-import com.commercetools.api.defaultconfig.DefaultApiRoot;
+import com.commercetools.api.defaultconfig.ApiFactory;
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
@@ -17,14 +17,14 @@ public class CommercetoolsTestUtils {
     static{
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if("OFF".equals(logLevel)){
-            apiRoot = DefaultApiRoot.create(
+            apiRoot = ApiFactory.create(
                     getClientId(),
                     getClientSecret(),
                     getScopes(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://api.europe-west1.gcp.commercetools.com");
         }else{
-            apiRoot = DefaultApiRoot.create(
+            apiRoot = ApiFactory.create(
                     getClientId(),
                     getClientSecret(),
                     getScopes(),

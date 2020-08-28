@@ -4,7 +4,6 @@ This project is currently in the internal alpha phase.
 
 <img src="http://dev.commercetools.com/assets/img/CT-logo.svg" width="550px" alt="CT-logo"></img>
 
-[![][travis img]][travis]
 
 ## Introduction
 
@@ -16,7 +15,7 @@ Creating http requests starts from the ApiRoot which  holds information specific
 
 ```java
 // ApiRoot config for Europe projects
-ApiRoot apiRoot = DefaultApiRoot.create(
+ApiRoot apiRoot = ApiFactory.create(
             "your-client-id",
             "your-client-secret",
             "your-scopes",
@@ -24,7 +23,7 @@ ApiRoot apiRoot = DefaultApiRoot.create(
             "https://api.europe-west1.gcp.commercetools.com");
             
 // ApiRoot config for United States projects
-ApiRoot apiRoot = DefaultApiRoot.create(
+ApiRoot apiRoot = ApiFactory.create(
             "your-client-id",
             "your-client-secret",
             "your-scopes",
@@ -161,10 +160,4 @@ dependencies {
     </repository>
 </repositories>
 ```
-
-
-[](definitions for the top badges)
-
-[travis]:https://travis-ci.com/commercetools/commercetools-sdk-java-v2?branch=master
-[travis img]:https://api.travis-ci.com/commercetools/commercetools-sdk-java-v2.svg?branch=master
 

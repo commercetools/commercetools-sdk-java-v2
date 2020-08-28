@@ -61,6 +61,11 @@ public class ApiMethod<T extends ApiMethod<T>> {
     public ApiMethod(final ApiHttpClient apiHttpClient){
         this.apiHttpClient = apiHttpClient;
     }
+    public ApiMethod(final ApiMethod<T> apiMethod){
+        this.apiHttpClient = apiMethod.apiHttpClient;
+        this.headers = apiMethod.headers;
+        this.queryParams =  new ArrayList<>(apiMethod.queryParams);
+    }
 
     public T addHeader(final String key, final String value) {
         this.headers.addHeader(key, value);

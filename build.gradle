@@ -84,7 +84,7 @@ subprojects { project ->
 
     apply plugin: 'com.softeq.gradle.itest'
 
-    group='com.commercetools.sdk'
+    group='com.commercetools'
 
     version = globalVersion
 

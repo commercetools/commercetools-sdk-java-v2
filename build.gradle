@@ -67,8 +67,6 @@ tasks.register("writeVersionToReadme") {
     }
 }
 
-description = 'The e-commerce SDK from commercetools for Java'
-
 ext {
     scmProjectName = rootProject.name
     scmRepo = 'github.com'

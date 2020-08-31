@@ -59,6 +59,8 @@ class Version {
     }
 }
 
+description "The e-commerce SDK from commercetools for Java"
+
 tasks.register("writeVersionToReadme") {
     doLast {
         ant.replaceregexp(match: 'sdkVersion = \"[^\\s]+\"', replace: "sdkVersion = \"${globalVersion}\"", flags:'g', byline:true) {

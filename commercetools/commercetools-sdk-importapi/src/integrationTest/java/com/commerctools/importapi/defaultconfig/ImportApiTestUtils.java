@@ -6,6 +6,7 @@ import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 
 import java.util.UUID;
@@ -18,19 +19,21 @@ public class ImportApiTestUtils {
     static{
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if("OFF".equals(logLevel)){
-            projectRoot = ImportApiFactory.create(
+            projectRoot = ImportApiFactory.createForProject(
                     getProjectKey(),
-                    getClientId(),
-                    getClientSecret(),
-                    getScopes(),
+                    ClientCredentials.of().withClientId(getClientId())
+                            .withClientSecret(getClientSecret())
+                            .withScopes(getScopes())
+                            .build(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://import-eu.europe-west1.gcp.commercetools.com");
         }else{
-            projectRoot = ImportApiFactory.create(
+            projectRoot = ImportApiFactory.createForProject(
                     getProjectKey(),
-                    getClientId(),
-                    getClientSecret(),
-                    getScopes(),
+                    ClientCredentials.of().withClientId(getClientId())
+                            .withClientSecret(getClientSecret())
+                            .withScopes(getScopes())
+                            .build(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://import-eu.europe-west1.gcp.commercetools.com",
                     LoggerMiddleware.LogLevel.INFO);

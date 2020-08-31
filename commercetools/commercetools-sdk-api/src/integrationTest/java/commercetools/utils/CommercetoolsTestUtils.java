@@ -2,11 +2,12 @@ package commercetools.utils;
 
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.defaultconfig.ApiFactory;
-import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import io.vrap.rmf.base.client.oauth2.ClientCredentialsImpl;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 
 import java.util.UUID;
@@ -18,19 +19,21 @@ public class CommercetoolsTestUtils {
     static{
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if("OFF".equals(logLevel)){
-            projectRoot = ApiFactory.create(
+            projectRoot = ApiFactory.createForProject(
                     getProjectKey(),
-                    getClientId(),
-                    getClientSecret(),
-                    getScopes(),
+                    ClientCredentials.of().withClientId(getClientId())
+                        .withClientSecret(getClientSecret())
+                        .withScopes(getScopes())
+                        .build(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://api.europe-west1.gcp.commercetools.com");
         }else{
-            projectRoot = ApiFactory.create(
+            projectRoot = ApiFactory.createForProject(
                     getProjectKey(),
-                    getClientId(),
-                    getClientSecret(),
-                    getScopes(),
+                    ClientCredentials.of().withClientId(getClientId())
+                            .withClientSecret(getClientSecret())
+                            .withScopes(getScopes())
+                            .build(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
                     "https://api.europe-west1.gcp.commercetools.com",
                     LoggerMiddleware.LogLevel.INFO);

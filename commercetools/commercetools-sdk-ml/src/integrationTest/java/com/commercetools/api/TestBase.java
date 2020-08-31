@@ -2,6 +2,7 @@ package com.commercetools.api;
 
 import com.commercetools.ml.defaultconfig.MLApiRootFactory;
 import com.commercetools.ml.client.ByProjectKeyRequestBuilder;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import java.util.Optional;
 
@@ -13,9 +14,11 @@ public class TestBase {
     public final String tokenUrl = "https://auth.europe-west1.gcp.commercetools.com/oauth/token";
     public final String ml_host = "https://ml-eu.europe-west1.gcp.commercetools.com";
 
-    public final ByProjectKeyRequestBuilder mlApiBuilder = MLApiRootFactory.create(clientId,
-            clientSecret,
-            "",
+    public final ByProjectKeyRequestBuilder mlApiBuilder = MLApiRootFactory.create(
+            ClientCredentials.of().withClientId(clientId)
+                .withClientSecret(clientSecret)
+                .withScopes("")
+                .build(),
             tokenUrl,
             ml_host)
             .withProjectKey(projectKey);

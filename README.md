@@ -16,28 +16,31 @@ Creating http requests starts from the ApiRoot which  holds information specific
 ```java
 // ApiRoot config for Europe projects
 ApiRoot apiRoot = ApiFactory.create(
-            "your-client-id",
-            "your-client-secret",
-            "your-scopes",
+            ClientCredentials.of().withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .withScopes("your-scopes")
+                .build(),
             "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
             "https://api.europe-west1.gcp.commercetools.com");
             
 // ApiRoot config for United States projects
 ApiRoot apiRoot = ApiFactory.create(
-            "your-client-id",
-            "your-client-secret",
-            "your-scopes",
+            ClientCredentials.of().withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .withScopes("your-scopes")
+                .build(),
             "https://auth.us-central1.gcp.commercetools.com/oauth/token",
             "https://api.us-central1.gcp.commercetools.com");
             
 //ApiRoot config for ImportAPI
 ApiRoot apiRoot = ImportApiFactory.create(
-                    getClientId(),
-                    getClientSecret(),
-                    getScopes(),
-                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-                    "https://import-eu.europe-west1.gcp.commercetools.com",
-                    LoggerMiddleware.LogLevel.INFO);
+            ClientCredentials.of().withClientId("your-client-id")
+                .withClientSecret("your-client-secret")
+                .withScopes("your-scopes")
+                .build(),
+            "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
+            "https://import-eu.europe-west1.gcp.commercetools.com",
+            LoggerMiddleware.LogLevel.INFO);
 
 ```
 
@@ -139,9 +142,7 @@ ext {
 sourceCompatibility = 1.8
 
 repositories {
-    maven {
-        url "https://dl.bintray.com/commercetools/maven"
-    }
+    jcenter()
 }
 
 dependencies {
@@ -151,12 +152,8 @@ dependencies {
 ```maven
 <repositories>
     <repository>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-        <id>bintray-commercetools-maven</id>
-        <name>bintray</name>
-        <url>https://dl.bintray.com/commercetools/maven</url>
+      <id>jcenter</id>
+      <url>https://jcenter.bintray.com/</url>
     </repository>
 </repositories>
 ```

@@ -145,7 +145,7 @@ repositories {
 }
 
 dependencies {
-    compile "com.commercetools.sdk:commercetools-sdk-api:${sdkVersion}"
+    compile "com.commercetools.sdks:commercetools-sdk-api:${sdkVersion}"
 }
 ```
 ```maven

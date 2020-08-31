@@ -111,28 +111,9 @@ subprojects { project ->
 
     apply plugin: 'com.softeq.gradle.itest'
 
-    group='com.commercetools.sdks'
+    group='com.commercetools.sdk'
 
     version = globalVersion
-
-    bintray {
-        user = System.getenv('CTP_BINTRAY_USER')
-        key = System.getenv('CTP_BINTRAY_KEY')
-        publications = [ 'Maven' ]
-
-        publish = true
-
-        pkg {
-            repo = 'maven'
-            name = rootProject.name
-            desc = rootProject.description
-            userOrg = 'commercetools'
-            licenses = ['Apache-2.0']
-
-            vcsUrl = scmHttpsUrl
-            publicDownloadNumbers = true
-        }
-    }
 
     itestSourceSet {
         name = "integrationTest"
@@ -166,6 +147,27 @@ subprojects { project ->
     }
 
     if (project.file("build.gradle").exists()) {
+
+        bintray {
+            user = System.getenv('CTP_BINTRAY_USER')
+            key = System.getenv('CTP_BINTRAY_KEY')
+            publications = [ 'Maven' ]
+
+            publish = true
+
+            pkg {
+                repo = 'maven'
+                name = project.name
+                desc = rootProject.description
+                userOrg = 'commercetools'
+                licenses = ['Apache-2.0']
+
+                vcsUrl = scmHttpsUrl
+                publicDownloadNumbers = true
+
+            }
+        }
+
         publishing {
             publications {
                 Maven(MavenPublication) {

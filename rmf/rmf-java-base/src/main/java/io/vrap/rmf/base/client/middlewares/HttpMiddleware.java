@@ -16,6 +16,7 @@ public class HttpMiddleware implements Middleware {
     private final String apiBaseUrl;
     private CompletableFuture<AuthenticationToken> authenticationToken;
     private final VrapHttpClient httpClient;
+    private final String userAgent;
 
     public HttpMiddleware(
             final String apiBaseUrl,
@@ -25,6 +26,7 @@ public class HttpMiddleware implements Middleware {
         this.apiBaseUrl = removeTrailingSlash(apiBaseUrl);
         this.tokenSupplier = tokenSupplier;
         this.httpClient = httpClient;
+        this.userAgent = buildUserAgent();
     }
 
     @Override
@@ -33,7 +35,7 @@ public class HttpMiddleware implements Middleware {
             return arg.getNext().next(arg);
         }
         ApiHttpRequest request = arg.getRequest();
-        request.addHeader(USER_AGENT, getUserAgent());
+        request.addHeader(USER_AGENT, userAgent);
         request.setBaseUrl(apiBaseUrl);
         return execute(request, null, 0)
                 .thenApply(response ->
@@ -91,7 +93,7 @@ public class HttpMiddleware implements Middleware {
         return url;
     }
 
-    private String getUserAgent() {
+    private String buildUserAgent() {
         String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;
         String osName = SystemUtils.OS_NAME;
         String osArch = SystemUtils.OS_ARCH;

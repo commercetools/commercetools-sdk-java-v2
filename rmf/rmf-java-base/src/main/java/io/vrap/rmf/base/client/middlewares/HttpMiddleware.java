@@ -3,6 +3,7 @@ package io.vrap.rmf.base.client.middlewares;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 import io.vrap.rmf.base.client.utils.Utils;
+import org.apache.commons.lang3.SystemUtils;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
@@ -91,9 +92,9 @@ public class HttpMiddleware implements Middleware {
     }
 
     private String getUserAgent() {
-        String runtimeVersion = System.getenv("java.runtime.version");
-        String osName =  System.getenv("os.name");
-        String osArch = System.getenv("os.arch");
+        String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;
+        String osName = SystemUtils.OS_NAME;
+        String osArch = SystemUtils.OS_ARCH;
         String sdkVersion = BuildInfo.VERSION;
         return "commercetools-java-sdks/" + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
     }

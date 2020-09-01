@@ -4,6 +4,8 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
@@ -51,17 +53,21 @@ public class ClientCredentialsTokenSupplier implements TokenSupplier {
             final String tokenEndpoint
     ) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
-        final ApiHttpRequest apiHttpRequest = new ApiHttpRequest();
+        final ApiHttpHeaders headers = new ApiHttpHeaders();
+        headers.addHeader(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth);
+        headers.addHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
+
+        String body = "";
         if (scope == null || scope.isEmpty()) {
-            apiHttpRequest.setBaseUrl(tokenEndpoint + "?grant_type=client_credentials");
+            body = "grant_type=client_credentials";
 
         } else {
-            apiHttpRequest.setBaseUrl(tokenEndpoint + "?grant_type=client_credentials&scope=" + scope);
+            try {
+                body = "grant_type=client_credentials&scope=" + URLEncoder.encode(scope, StandardCharsets.UTF_8.toString());
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
         }
-        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
-        apiHttpHeaders.addHeader("Authorization", "Basic " + auth);
-        apiHttpRequest.setHeaders(apiHttpHeaders);
-        apiHttpRequest.setMethod(ApiHttpMethod.POST);
-        return apiHttpRequest;
+        return new ApiHttpRequest(ApiHttpMethod.POST, "", tokenEndpoint, headers, body.getBytes(StandardCharsets.UTF_8));
     }
 }

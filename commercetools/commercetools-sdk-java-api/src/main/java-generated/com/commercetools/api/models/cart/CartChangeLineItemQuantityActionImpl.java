@@ -28,14 +28,14 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
     
     private String lineItemId;
     
-    private Double quantity;
+    private Long quantity;
     
     private com.commercetools.api.models.common.Money externalPrice;
     
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
 
     @JsonCreator
-    CartChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Double quantity, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+    CartChangeLineItemQuantityActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Long quantity, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.lineItemId = lineItemId;
         this.quantity = quantity;
         this.externalPrice = externalPrice;
@@ -57,7 +57,7 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
     }
     
     
-    public Double getQuantity(){
+    public Long getQuantity(){
         return this.quantity;
     }
     
@@ -75,7 +75,7 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
         this.lineItemId = lineItemId;
     }
     
-    public void setQuantity(final Double quantity){
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
     

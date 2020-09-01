@@ -41,7 +41,7 @@ public final class CustomLineItemBuilder {
     private String slug;
     
     
-    private Double quantity;
+    private Long quantity;
     
     
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
@@ -91,7 +91,7 @@ public final class CustomLineItemBuilder {
         return this;
     }
     
-    public CustomLineItemBuilder quantity( final Double quantity) {
+    public CustomLineItemBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -157,7 +157,7 @@ public final class CustomLineItemBuilder {
     }
     
     
-    public Double getQuantity(){
+    public Long getQuantity(){
         return this.quantity;
     }
     

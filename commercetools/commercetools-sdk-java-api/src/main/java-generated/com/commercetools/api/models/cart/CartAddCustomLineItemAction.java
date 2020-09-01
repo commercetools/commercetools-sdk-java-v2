@@ -39,7 +39,7 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
     
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
     
     @NotNull
     @JsonProperty("slug")
@@ -61,7 +61,7 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
     
     public void setName(final LocalizedString name);
     
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
     
     public void setSlug(final String slug);
     

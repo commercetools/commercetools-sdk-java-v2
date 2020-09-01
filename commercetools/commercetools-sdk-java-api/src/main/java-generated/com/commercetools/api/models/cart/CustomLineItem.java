@@ -78,7 +78,7 @@ public interface CustomLineItem  {
     */
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
     
     @NotNull
     @Valid
@@ -125,7 +125,7 @@ public interface CustomLineItem  {
     
     public void setSlug(final String slug);
     
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
     
     public void setState(final List<ItemState> state);
     

@@ -39,7 +39,7 @@ public final class CartAddLineItemActionBuilder {
     private String sku;
     
     @Nullable
-    private Double quantity;
+    private Long quantity;
     
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
@@ -83,7 +83,7 @@ public final class CartAddLineItemActionBuilder {
         return this;
     }
     
-    public CartAddLineItemActionBuilder quantity(@Nullable final Double quantity) {
+    public CartAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -139,7 +139,7 @@ public final class CartAddLineItemActionBuilder {
     }
     
     @Nullable
-    public Double getQuantity(){
+    public Long getQuantity(){
         return this.quantity;
     }
     

@@ -29,7 +29,7 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
 
     private com.commercetools.api.models.common.LocalizedString name;
     
-    private Double quantity;
+    private Long quantity;
     
     private com.commercetools.api.models.common.Money money;
     
@@ -44,7 +44,7 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @JsonCreator
-    CustomLineItemDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("quantity") final Double quantity, @JsonProperty("money") final com.commercetools.api.models.common.Money money, @JsonProperty("slug") final String slug, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    CustomLineItemDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("quantity") final Long quantity, @JsonProperty("money") final com.commercetools.api.models.common.Money money, @JsonProperty("slug") final String slug, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.name = name;
         this.quantity = quantity;
         this.money = money;
@@ -67,7 +67,7 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
     *  <p>The amount of a CustomLineItemin the cart.
     *  Must be a positive integer.</p>
     */
-    public Double getQuantity(){
+    public Long getQuantity(){
         return this.quantity;
     }
     
@@ -113,7 +113,7 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
         this.name = name;
     }
     
-    public void setQuantity(final Double quantity){
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
     

@@ -42,7 +42,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
     
     private String slug;
     
-    private Double quantity;
+    private Long quantity;
     
     private java.util.List<com.commercetools.api.models.order.ItemState> state;
     
@@ -57,7 +57,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
 
     @JsonCreator
-    CustomLineItemImpl(@JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("money") final com.commercetools.api.models.common.TypedMoney money, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Double quantity, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
+    CustomLineItemImpl(@JsonProperty("id") final String id, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("money") final com.commercetools.api.models.common.TypedMoney money, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("slug") final String slug, @JsonProperty("quantity") final Long quantity, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
         this.id = id;
         this.name = name;
         this.money = money;
@@ -126,7 +126,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
     *  <p>The amount of a CustomLineItem in the cart.
     *  Must be a positive integer.</p>
     */
-    public Double getQuantity(){
+    public Long getQuantity(){
         return this.quantity;
     }
     
@@ -191,7 +191,7 @@ public final class CustomLineItemImpl implements CustomLineItem {
         this.slug = slug;
     }
     
-    public void setQuantity(final Double quantity){
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
     

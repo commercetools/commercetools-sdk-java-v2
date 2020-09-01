@@ -23,7 +23,7 @@ public final class CustomLineItemDraftBuilder {
     private com.commercetools.api.models.common.LocalizedString name;
     
     
-    private Double quantity;
+    private Long quantity;
     
     
     private com.commercetools.api.models.common.Money money;
@@ -48,7 +48,7 @@ public final class CustomLineItemDraftBuilder {
         return this;
     }
     
-    public CustomLineItemDraftBuilder quantity( final Double quantity) {
+    public CustomLineItemDraftBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -89,7 +89,7 @@ public final class CustomLineItemDraftBuilder {
     }
     
     
-    public Double getQuantity(){
+    public Long getQuantity(){
         return this.quantity;
     }
     

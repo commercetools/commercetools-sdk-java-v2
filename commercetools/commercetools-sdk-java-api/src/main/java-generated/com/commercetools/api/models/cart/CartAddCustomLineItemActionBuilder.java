@@ -26,7 +26,7 @@ public final class CartAddCustomLineItemActionBuilder {
     private com.commercetools.api.models.common.LocalizedString name;
     
     
-    private Double quantity;
+    private Long quantity;
     
     
     private String slug;
@@ -50,7 +50,7 @@ public final class CartAddCustomLineItemActionBuilder {
         return this;
     }
     
-    public CartAddCustomLineItemActionBuilder quantity( final Double quantity) {
+    public CartAddCustomLineItemActionBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -86,7 +86,7 @@ public final class CartAddCustomLineItemActionBuilder {
     }
     
     
-    public Double getQuantity(){
+    public Long getQuantity(){
         return this.quantity;
     }
     

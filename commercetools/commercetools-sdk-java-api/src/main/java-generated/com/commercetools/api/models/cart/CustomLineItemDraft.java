@@ -37,7 +37,7 @@ public interface CustomLineItemDraft  {
     */
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
     
     @NotNull
     @Valid
@@ -74,7 +74,7 @@ public interface CustomLineItemDraft  {
 
     public void setName(final LocalizedString name);
     
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
     
     public void setMoney(final Money money);
     

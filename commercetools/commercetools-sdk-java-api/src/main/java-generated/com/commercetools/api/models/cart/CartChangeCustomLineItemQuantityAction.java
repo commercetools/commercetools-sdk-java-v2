@@ -28,11 +28,11 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
     
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     public void setCustomLineItemId(final String customLineItemId);
     
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public static CartChangeCustomLineItemQuantityActionImpl of(){
         return new CartChangeCustomLineItemQuantityActionImpl();

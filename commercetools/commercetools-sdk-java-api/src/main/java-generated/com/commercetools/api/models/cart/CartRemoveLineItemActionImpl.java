@@ -29,7 +29,7 @@ public final class CartRemoveLineItemActionImpl implements CartRemoveLineItemAct
     
     private String lineItemId;
     
-    private Double quantity;
+    private Long quantity;
     
     private com.commercetools.api.models.common.Money externalPrice;
     
@@ -38,7 +38,7 @@ public final class CartRemoveLineItemActionImpl implements CartRemoveLineItemAct
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove;
 
     @JsonCreator
-    CartRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Double quantity, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetailsToRemove") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
+    CartRemoveLineItemActionImpl(@JsonProperty("lineItemId") final String lineItemId, @JsonProperty("quantity") final Long quantity, @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice, @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice, @JsonProperty("shippingDetailsToRemove") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetailsToRemove) {
         this.lineItemId = lineItemId;
         this.quantity = quantity;
         this.externalPrice = externalPrice;
@@ -61,7 +61,7 @@ public final class CartRemoveLineItemActionImpl implements CartRemoveLineItemAct
     }
     
     
-    public Double getQuantity(){
+    public Long getQuantity(){
         return this.quantity;
     }
     
@@ -84,7 +84,7 @@ public final class CartRemoveLineItemActionImpl implements CartRemoveLineItemAct
         this.lineItemId = lineItemId;
     }
     
-    public void setQuantity(final Double quantity){
+    public void setQuantity(final Long quantity){
         this.quantity = quantity;
     }
     

@@ -52,6 +52,7 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
         httpRequest.setHeaders(getHeaders());
         

@@ -96,6 +96,10 @@ public class ApiHttpRequest {
         return uri;
     }
 
+    public void setUri(String uri) {
+        this.uri = URI.create(uri);
+    }
+
     public void setUri(URI uri) {
         this.uri = uri;
     }

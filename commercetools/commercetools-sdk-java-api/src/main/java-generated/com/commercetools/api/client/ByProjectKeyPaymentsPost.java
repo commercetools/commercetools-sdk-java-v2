@@ -54,7 +54,6 @@ public class ByProjectKeyPaymentsPost extends ApiMethod<ByProjectKeyPaymentsPost
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());

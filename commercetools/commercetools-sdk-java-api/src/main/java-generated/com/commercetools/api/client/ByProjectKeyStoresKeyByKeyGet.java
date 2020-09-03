@@ -54,7 +54,6 @@ public class ByProjectKeyStoresKeyByKeyGet extends ApiMethod<ByProjectKeyStoresK
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
         httpRequest.setHeaders(getHeaders());

@@ -60,7 +60,6 @@ public class ByProjectKeyLoginPost extends ApiMethod<ByProjectKeyLoginPost> {
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());

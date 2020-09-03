@@ -60,7 +60,6 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());

@@ -54,7 +54,6 @@ public class ByProjectKeyProductTypesByIDDelete extends ApiMethod<ByProjectKeyPr
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.DELETE);
         httpRequest.setHeaders(getHeaders());

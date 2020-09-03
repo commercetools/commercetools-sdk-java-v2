@@ -57,7 +57,6 @@ public class ByProjectKeyCustomerGroupsKeyByKeyPost extends ApiMethod<ByProjectK
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());

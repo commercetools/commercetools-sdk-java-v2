@@ -57,7 +57,6 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends ApiMethod<B
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.DELETE);
         httpRequest.setHeaders(getHeaders());

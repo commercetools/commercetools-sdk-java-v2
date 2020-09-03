@@ -59,7 +59,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet extends ApiMethod<ByP
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath); 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
         httpRequest.setHeaders(getHeaders());

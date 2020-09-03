@@ -27,14 +27,6 @@ public class ApiRoot {
         return fromClient(new ApiHttpClient(Arrays.asList(middlewares)));
     }
 
-    private ApiRoot(final ApiHttpClient client) {
-        this.apiHttpClient = client;
-    }
-
-    public static ApiRoot fromClient(final ApiHttpClient client) {
-        return new ApiRoot(client);
-    }
-
     public ByProjectKeyRequestBuilder withProjectKeyValue(String projectKey) {
         return new ByProjectKeyRequestBuilder(this.apiHttpClient, projectKey);
     }

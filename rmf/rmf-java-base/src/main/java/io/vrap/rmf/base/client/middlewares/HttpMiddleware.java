@@ -40,7 +40,7 @@ public class HttpMiddleware implements Middleware {
         }
         ApiHttpRequest request = arg.getRequest();
         request.addHeader(USER_AGENT, userAgent);
-        request.setUri(apiBaseUri.resolve(request.getRelativeUrl()));
+        request.setUri(apiBaseUri.resolve(request.getUri()));
         return execute(request, null, 0)
                 .thenApply(response ->
                         MiddlewareArg.from(arg.getRequest(), response, null, arg.getNext())

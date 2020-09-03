@@ -33,7 +33,7 @@ public final class LoggerMiddleware implements Middleware {
                 arg.getError().printStackTrace();
             }
             LoggerMessage loggerMessage = new LoggerMessage();
-            loggerMessage.setUrl(arg.getRequest().getBaseUrl() + arg.getRequest().getRelativeUrl());
+            loggerMessage.setUrl(arg.getRequest().getUrl().toString());
             loggerMessage.setMethod(arg.getRequest().getMethod().name());
             loggerMessage.setRequestHeaders(arg.getRequest().getHeaders());
             if(arg.getRequest().getBody() != null){

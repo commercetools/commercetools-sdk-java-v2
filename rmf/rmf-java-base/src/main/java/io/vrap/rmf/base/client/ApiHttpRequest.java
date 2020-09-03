@@ -8,9 +8,9 @@ public class ApiHttpRequest {
 
     private ApiHttpMethod method;
     private URI uri;
-//    @Deprecated
+    @Deprecated
     private String relativeUrl;
-//    @Deprecated
+    @Deprecated
     private String baseUrl;
     private ApiHttpHeaders headers;
     private byte[] body;
@@ -99,12 +99,12 @@ public class ApiHttpRequest {
         setBody(body.getBytes());
     }
 
-//    @Deprecated
+    @Deprecated
     public String getRelativeUrl() {
         return relativeUrl;
     }
 
-//    @Deprecated
+    @Deprecated
     public void setRelativeUrl(String relativeUrl) {
         this.relativeUrl = relativeUrl;
         setUri(relativeUrl);
@@ -130,16 +130,17 @@ public class ApiHttpRequest {
         this.uri = uri;
     }
 
-//    @Deprecated
+    @Deprecated
     public String getBaseUrl() {
         return baseUrl;
     }
 
-//    @Deprecated
+    @Deprecated
     public void setBaseUrl(String baseUrl) {
         this.baseUrl = baseUrl;
     }
 
+    @Deprecated
     public String fullUrl() {
         if (uri != null) {
             try {

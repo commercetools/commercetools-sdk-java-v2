@@ -4,6 +4,7 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
+import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
@@ -44,7 +45,7 @@ public class GlobalCustomerPasswordTokenSupplier implements TokenSupplier {
                                                           final String tokenEndpoint) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
         ApiHttpRequest apiHttpRequest = new ApiHttpRequest();
-        apiHttpRequest.setBaseUrl(tokenEndpoint);
+        apiHttpRequest.setUri(URI.create(tokenEndpoint));
         if (scope == null || scope.isEmpty()) {
             apiHttpRequest.setBody("grant_type=password&username=" + email + "&password=" + password);
         } else {

@@ -52,6 +52,18 @@ public class ApiFactory {
                 )
         );
         return ApiRoot.fromClient(client);
+
+//        return ApiRoot.fromMiddlewares(new HttpMiddleware(
+//                apiEndpoint,
+//                vrapHttpClient,
+//                new ClientCredentialsTokenSupplier(
+//                        credentials.getClientId(),
+//                        credentials.getClientSecret(),
+//                        credentials.getScopes(),
+//                        tokenEndpoint,
+//                        vrapHttpClient
+//                )
+//        ), new LoggerMiddleware(logLevel));
     }
 
     public static ApiRoot create(

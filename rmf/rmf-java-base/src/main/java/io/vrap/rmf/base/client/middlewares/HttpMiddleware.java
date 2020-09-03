@@ -5,6 +5,7 @@ import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 import io.vrap.rmf.base.client.utils.Utils;
 import org.apache.commons.lang3.SystemUtils;
 
+import java.net.URI;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
@@ -15,6 +16,7 @@ public class HttpMiddleware implements Middleware {
 
     private final TokenSupplier tokenSupplier;
     private final String apiBaseUrl;
+    private final URI apiBaseUri;
     private CompletableFuture<AuthenticationToken> authenticationToken;
     private final VrapHttpClient httpClient;
     private final String userAgent;
@@ -25,6 +27,7 @@ public class HttpMiddleware implements Middleware {
             final TokenSupplier tokenSupplier
     ) {
         this.apiBaseUrl = removeTrailingSlash(apiBaseUrl);
+        this.apiBaseUri = URI.create(apiBaseUrl);
         this.tokenSupplier = tokenSupplier;
         this.httpClient = httpClient;
         this.userAgent = buildUserAgent();
@@ -37,7 +40,7 @@ public class HttpMiddleware implements Middleware {
         }
         ApiHttpRequest request = arg.getRequest();
         request.addHeader(USER_AGENT, userAgent);
-        request.setBaseUrl(apiBaseUrl);
+        request.setUri(apiBaseUri.resolve(request.getRelativeUrl()));
         return execute(request, null, 0)
                 .thenApply(response ->
                         MiddlewareArg.from(arg.getRequest(), response, null, arg.getNext())

@@ -53,7 +53,7 @@ public class VrapOkhttpClient implements VrapHttpClient {
     private static Request toRequest(final ApiHttpRequest apiHttpRequest) {
 
         Request.Builder httpRequestBuilder = new Request.Builder()
-                .url(apiHttpRequest.fullUrl());
+                .url(apiHttpRequest.getUrl());
 
         //set headers
         for (Map.Entry<String, String> entry : apiHttpRequest.getHeaders().getHeaders()) {

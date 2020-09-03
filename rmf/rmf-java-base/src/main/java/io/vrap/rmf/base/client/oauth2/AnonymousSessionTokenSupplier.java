@@ -4,6 +4,7 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
+import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
@@ -51,7 +52,7 @@ public class AnonymousSessionTokenSupplier implements TokenSupplier {
     ) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
         final ApiHttpRequest apiHttpRequest = new ApiHttpRequest();
-        apiHttpRequest.setBaseUrl(tokenEndpoint);
+        apiHttpRequest.setUri(URI.create(tokenEndpoint));
         if (scope == null || scope.isEmpty()) {
             apiHttpRequest.setBody("grant_type=client_credentials");
         } else {
@@ -64,5 +65,5 @@ public class AnonymousSessionTokenSupplier implements TokenSupplier {
         apiHttpRequest.setMethod(ApiHttpMethod.POST);
         return apiHttpRequest;
     }
-    
+
 }

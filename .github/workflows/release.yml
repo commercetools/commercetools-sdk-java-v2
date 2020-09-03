@@ -50,6 +50,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          path: sdk
 
       - name: Setup Java
         uses: actions/setup-java@v1
@@ -64,6 +66,7 @@ jobs:
           echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
 
       - run: ./gradlew -Pversion=$SOURCE_TAG clean test bintrayUpload writeVersionToReadme --info --stacktrace
+        working-directory: sdk
         env:
           CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
           CTP_BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
@@ -83,6 +86,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
+          ref: master
           path: build_master
 
       - run: ./gradlew -Pversion=$SOURCE_TAG writeVersionToReadme

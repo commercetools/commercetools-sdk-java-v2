@@ -1,6 +1,8 @@
 package io.vrap.rmf.base.client;
 
+import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URL;
 
 public class ApiHttpRequest {
 
@@ -52,18 +54,33 @@ public class ApiHttpRequest {
     }
 
     public ApiHttpHeaders getHeaders() {
+        if (headers == null) {
+            this.headers = new ApiHttpHeaders();
+        }
         return headers;
     }
+
 
     public void setHeaders(ApiHttpHeaders headers) {
         this.headers = headers;
     }
 
-    public void addHeader(String key, String value) {
-        if (this.headers == null) {
-            this.headers = new ApiHttpHeaders();
-        }
-        this.headers.addHeader(key, value);
+    public ApiHttpRequest addHeader(String key, String value) {
+        this.headers = getHeaders().addHeader(key, value);
+
+        return this;
+    }
+
+    public ApiHttpRequest withHeader(String key, String value) {
+        this.headers = getHeaders().addHeader(key, value);
+
+        return this;
+    }
+
+    public ApiHttpRequest withoutHeader(String key) {
+        this.headers = getHeaders().withoutHeader(key);
+
+        return this;
     }
 
     public byte[] getBody() {
@@ -90,10 +107,19 @@ public class ApiHttpRequest {
 //    @Deprecated
     public void setRelativeUrl(String relativeUrl) {
         this.relativeUrl = relativeUrl;
+        setUri(relativeUrl);
     }
 
     public URI getUri() {
         return uri;
+    }
+
+    public URL getUrl() {
+        try {
+            return uri.toURL();
+        } catch (MalformedURLException e) {
+            throw new IllegalStateException("Malformed URI", e);
+        }
     }
 
     public void setUri(String uri) {
@@ -115,6 +141,13 @@ public class ApiHttpRequest {
     }
 
     public String fullUrl() {
+        if (uri != null) {
+            try {
+                return uri.toURL().toString();
+            } catch (MalformedURLException e) {
+                throw new IllegalStateException("Malformed URI", e);
+            }
+        }
         if (getBaseUrl() == null) {
             throw new IllegalStateException("base url should be set");
         }

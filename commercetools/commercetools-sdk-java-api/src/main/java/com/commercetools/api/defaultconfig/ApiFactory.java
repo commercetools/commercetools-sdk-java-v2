@@ -2,6 +2,8 @@ package com.commercetools.api.defaultconfig;
 
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ClientFactory;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.HttpMiddleware;
 import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
@@ -38,17 +40,18 @@ public class ApiFactory {
             final String apiEndpoint,
             final LoggerMiddleware.LogLevel logLevel
     ) {
-        return ApiRoot.fromMiddlewares(new HttpMiddleware(
+        final ApiHttpClient client = ClientFactory.create(
                 apiEndpoint,
                 vrapHttpClient,
                 new ClientCredentialsTokenSupplier(
                         credentials.getClientId(),
                         credentials.getClientSecret(),
                         credentials.getScopes(),
-                        tokenEndpoint
-                        , vrapHttpClient
+                        tokenEndpoint,
+                        vrapHttpClient
                 )
-        ), new LoggerMiddleware(logLevel));
+        );
+        return ApiRoot.fromClient(client);
     }
 
     public static ApiRoot create(
@@ -68,17 +71,18 @@ public class ApiFactory {
             final String apiEndpoint,
             final LoggerMiddleware.LogLevel logLevel
     ) {
-        return ApiRoot.fromMiddlewares(new HttpMiddleware(
+        final ApiHttpClient client = ClientFactory.create(
                 apiEndpoint,
                 vrapHttpClient,
                 new ClientCredentialsTokenSupplier(
                         clientId,
                         clientSecret,
                         scopes,
-                        tokenEndpoint
-                        , vrapHttpClient
+                        tokenEndpoint,
+                        vrapHttpClient
                 )
-        ), new LoggerMiddleware(logLevel));
+        );
+        return ApiRoot.fromClient(client);
     }
 
     @Deprecated

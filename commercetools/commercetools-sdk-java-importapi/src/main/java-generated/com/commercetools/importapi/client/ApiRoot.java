@@ -23,6 +23,14 @@ public class ApiRoot {
         return new ApiRoot(middlewares);
     }
 
+    private ApiRoot(final ApiHttpClient client) {
+        this.apiHttpClient = client;
+    }
+
+    public static ApiRoot fromClient(final ApiHttpClient client) {
+        return new ApiRoot(client);
+    }
+
     public ByProjectKeyRequestBuilder withProjectKeyValue(String projectKey) {
         return new ByProjectKeyRequestBuilder(this.apiHttpClient, projectKey);
     }

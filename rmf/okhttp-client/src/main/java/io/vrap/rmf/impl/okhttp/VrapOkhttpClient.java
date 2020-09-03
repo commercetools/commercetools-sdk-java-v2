@@ -2,6 +2,7 @@ package io.vrap.rmf.impl.okhttp;
 
 
 import io.vrap.rmf.base.client.ApiHttpHeaders;
+import io.vrap.rmf.base.client.ApiHttpHeaders.HeaderEntry;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
@@ -9,12 +10,12 @@ import io.vrap.rmf.base.client.utils.Utils;
 import okhttp3.*;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 
 public class VrapOkhttpClient implements VrapHttpClient {
 
@@ -36,10 +37,12 @@ public class VrapOkhttpClient implements VrapHttpClient {
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final Response response) {
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
-        for (Map.Entry<String, List<String>> entry : response.headers().toMultimap().entrySet()) {
-            apiHttpHeaders.addHeader(entry.getKey(), entry.getValue().get(0));
-        }
+        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
+                response.headers().toMultimap().entrySet().stream()
+                        .flatMap(e -> e.getValue().stream()
+                                .map(value -> new HeaderEntry<>(e.getKey(), value))
+                        ).collect(Collectors.toList())
+        );
         return new ApiHttpResponse<>(
                 response.code(),
                 apiHttpHeaders,
@@ -50,14 +53,14 @@ public class VrapOkhttpClient implements VrapHttpClient {
     private static Request toRequest(final ApiHttpRequest apiHttpRequest) {
 
         Request.Builder httpRequestBuilder = new Request.Builder()
-                .url(apiHttpRequest.fullUrl());
+                .url(apiHttpRequest.getUrl());
 
         //set headers
         for (Map.Entry<String, String> entry : apiHttpRequest.getHeaders().getHeaders()) {
             httpRequestBuilder = httpRequestBuilder.header(entry.getKey(), entry.getValue());
         }
 
-        if(apiHttpRequest.getMethod() == null){
+        if(apiHttpRequest.getMethod() == null) {
             throw new IllegalStateException("apiHttpRequest method should be non null");
         }
 

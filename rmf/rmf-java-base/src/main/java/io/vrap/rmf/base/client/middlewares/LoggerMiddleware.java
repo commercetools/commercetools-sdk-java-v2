@@ -7,8 +7,9 @@ import java.util.concurrent.CompletableFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+@Deprecated
 public final class LoggerMiddleware implements Middleware {
-    
+
     private final Logger logger;
 
     public LoggerMiddleware(final LogLevel logLevel) {
@@ -24,7 +25,7 @@ public final class LoggerMiddleware implements Middleware {
             }
         }
     }
-    
+
     @Override
     public CompletableFuture<MiddlewareArg> next(MiddlewareArg arg) {
         try{
@@ -41,17 +42,17 @@ public final class LoggerMiddleware implements Middleware {
             loggerMessage.setResponseStatusCode(arg.getResponse().getStatusCode());
             loggerMessage.setResponseHeaders(arg.getResponse().getHeaders());
             loggerMessage.setResponseBody(new String(arg.getResponse().getBody()));
-            
+
             String loggerMessageString = VrapJsonUtils.getConfiguredObjectMapper().writeValueAsString(loggerMessage);
             logger.log(Level.INFO, loggerMessageString);
-            
+
         }catch (JsonProcessingException error){
             MiddlewareArg args = MiddlewareArg.from(arg.getRequest(), arg.getResponse(), error, arg.getNext());
             return arg.getNext().next(args);
         }
         return arg.getNext().next(arg);
     }
-    
+
     public enum LogLevel {
         NONE,
         INFO

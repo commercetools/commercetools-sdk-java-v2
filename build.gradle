@@ -59,7 +59,9 @@ class Version {
     }
 }
 
-description "The e-commerce SDK from commercetools for Java"
+allprojects {
+    description = "The e-commerce SDK from commercetools for Java"
+}
 
 tasks.register("writeVersionToReadme") {
     doLast {

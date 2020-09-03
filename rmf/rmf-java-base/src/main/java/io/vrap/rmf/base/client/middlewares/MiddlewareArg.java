@@ -3,6 +3,7 @@ package io.vrap.rmf.base.client.middlewares;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
+@Deprecated
 public final class MiddlewareArg {
 
     private final ApiHttpRequest request;

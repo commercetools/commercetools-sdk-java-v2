@@ -1,9 +1,13 @@
 package io.vrap.rmf.base.client;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.time.ZonedDateTime;
+import java.util.Optional;
+
 public class AuthenticationToken {
-    
+
     @JsonProperty("access_token")
     private String accessToken;
 
@@ -11,16 +15,19 @@ public class AuthenticationToken {
     private String tokenType;
 
     @JsonProperty("expires_in")
-    private String expiresIn;
+    private Long expiresIn;
 
     @JsonProperty("scope")
     private String scope;
 
     @JsonProperty("refresh_token")
     private String refresherToken;
-    
+
+    @JsonIgnore
+    private ZonedDateTime expiresInZonedDateTime;
+
     public AuthenticationToken() {
-        
+
     }
 
     public String getAccessToken() {
@@ -39,11 +46,12 @@ public class AuthenticationToken {
         this.tokenType = tokenType;
     }
 
-    public String getExpiresIn() {
+    public Long getExpiresIn() {
         return expiresIn;
     }
 
-    public void setExpiresIn(String expiresIn) {
+    public void setExpiresIn(Long expiresIn) {
+        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn).map(seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5)).orElse(null);
         this.expiresIn = expiresIn;
     }
 
@@ -61,5 +69,9 @@ public class AuthenticationToken {
 
     public void setRefresherToken(String refresherToken) {
         this.refresherToken = refresherToken;
+    }
+
+    public ZonedDateTime getExpiresInZonedDateTime() {
+        return expiresInZonedDateTime;
     }
 }

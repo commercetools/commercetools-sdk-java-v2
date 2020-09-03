@@ -1,14 +1,16 @@
 package io.vrap.rmf.base.client;
 
+import java.net.MalformedURLException;
 import java.net.URI;
+import java.net.URL;
 
 public class ApiHttpRequest {
 
     private ApiHttpMethod method;
     private URI uri;
-//    @Deprecated
+    @Deprecated
     private String relativeUrl;
-//    @Deprecated
+    @Deprecated
     private String baseUrl;
     private ApiHttpHeaders headers;
     private byte[] body;
@@ -52,18 +54,33 @@ public class ApiHttpRequest {
     }
 
     public ApiHttpHeaders getHeaders() {
+        if (headers == null) {
+            this.headers = new ApiHttpHeaders();
+        }
         return headers;
     }
+
 
     public void setHeaders(ApiHttpHeaders headers) {
         this.headers = headers;
     }
 
-    public void addHeader(String key, String value) {
-        if (this.headers == null) {
-            this.headers = new ApiHttpHeaders();
-        }
-        this.headers.addHeader(key, value);
+    public ApiHttpRequest addHeader(String key, String value) {
+        this.headers = getHeaders().addHeader(key, value);
+
+        return this;
+    }
+
+    public ApiHttpRequest withHeader(String key, String value) {
+        this.headers = getHeaders().withHeader(key, value);
+
+        return this;
+    }
+
+    public ApiHttpRequest withoutHeader(String key) {
+        this.headers = getHeaders().withoutHeader(key);
+
+        return this;
     }
 
     public byte[] getBody() {
@@ -82,18 +99,27 @@ public class ApiHttpRequest {
         setBody(body.getBytes());
     }
 
-//    @Deprecated
+    @Deprecated
     public String getRelativeUrl() {
         return relativeUrl;
     }
 
-//    @Deprecated
+    @Deprecated
     public void setRelativeUrl(String relativeUrl) {
         this.relativeUrl = relativeUrl;
+        setUri(relativeUrl);
     }
 
     public URI getUri() {
         return uri;
+    }
+
+    public URL getUrl() {
+        try {
+            return uri.toURL();
+        } catch (MalformedURLException e) {
+            throw new IllegalStateException("Malformed URI", e);
+        }
     }
 
     public void setUri(String uri) {
@@ -104,17 +130,25 @@ public class ApiHttpRequest {
         this.uri = uri;
     }
 
-//    @Deprecated
+    @Deprecated
     public String getBaseUrl() {
         return baseUrl;
     }
 
-//    @Deprecated
+    @Deprecated
     public void setBaseUrl(String baseUrl) {
         this.baseUrl = baseUrl;
     }
 
+    @Deprecated
     public String fullUrl() {
+        if (uri != null) {
+            try {
+                return uri.toURL().toString();
+            } catch (MalformedURLException e) {
+                throw new IllegalStateException("Malformed URI", e);
+            }
+        }
         if (getBaseUrl() == null) {
             throw new IllegalStateException("base url should be set");
         }

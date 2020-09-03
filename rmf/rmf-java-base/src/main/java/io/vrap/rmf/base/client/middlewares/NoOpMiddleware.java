@@ -5,6 +5,7 @@ import io.vrap.rmf.base.client.middlewares.MiddlewareArg;
 
 import java.util.concurrent.CompletableFuture;
 
+@Deprecated
 public enum NoOpMiddleware implements Middleware {
 
     INSTANCE;

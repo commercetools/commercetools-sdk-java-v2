@@ -5,6 +5,7 @@ import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
@@ -68,6 +69,6 @@ public class ClientCredentialsTokenSupplier implements TokenSupplier {
                 e.printStackTrace();
             }
         }
-        return new ApiHttpRequest(ApiHttpMethod.POST, "", tokenEndpoint, headers, body.getBytes(StandardCharsets.UTF_8));
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), headers, body.getBytes(StandardCharsets.UTF_8));
     }
 }

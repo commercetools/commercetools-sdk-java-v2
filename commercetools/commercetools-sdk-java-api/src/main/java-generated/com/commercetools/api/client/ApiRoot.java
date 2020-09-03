@@ -1,6 +1,7 @@
 package com.commercetools.api.client;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.middlewares.Middleware;
 
 import java.util.List;
@@ -21,6 +22,14 @@ public class ApiRoot {
 
     public static ApiRoot fromMiddlewares(final Middleware... middlewares) {
         return new ApiRoot(middlewares);
+    }
+
+    private ApiRoot(final ApiHttpClient client) {
+        this.apiHttpClient = client;
+    }
+
+    public static ApiRoot fromClient(final ApiHttpClient client) {
+        return new ApiRoot(client);
     }
 
     public ByProjectKeyRequestBuilder withProjectKey(String projectKey) {

@@ -55,6 +55,7 @@ public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSin
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(importSinkDraft));}catch(Exception e){e.printStackTrace();}

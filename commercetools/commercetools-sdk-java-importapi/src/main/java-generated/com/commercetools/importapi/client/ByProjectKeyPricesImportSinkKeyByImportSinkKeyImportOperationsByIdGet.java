@@ -58,6 +58,7 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyImportOperationsByIdG
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
         httpRequest.setHeaders(getHeaders());
         

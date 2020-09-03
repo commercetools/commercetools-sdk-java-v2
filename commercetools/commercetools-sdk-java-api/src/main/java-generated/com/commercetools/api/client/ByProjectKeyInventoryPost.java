@@ -55,6 +55,7 @@ public class ByProjectKeyInventoryPost extends ApiMethod<ByProjectKeyInventoryPo
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(inventoryEntryDraft));}catch(Exception e){e.printStackTrace();}

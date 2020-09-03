@@ -30,10 +30,10 @@ import io.vrap.rmf.base.client.*;
 )
 public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategoriesByIDGet> {
 
-
+    
     private String projectKey;
     private String ID;
-
+    
 
     public ByProjectKeyCategoriesByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
@@ -54,11 +54,11 @@ public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategor
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setRelativeUrl(httpRequestPath);
-        httpRequest.setUri(httpRequestPath);
+        httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
         httpRequest.setHeaders(getHeaders());
-
+        
         return httpRequest;
     }
 
@@ -88,7 +88,7 @@ public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategor
     }
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
-
+    
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCategoriesByIDGet withExpand(final String expand){

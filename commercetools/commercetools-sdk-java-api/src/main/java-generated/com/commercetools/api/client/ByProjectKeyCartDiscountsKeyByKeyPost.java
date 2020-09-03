@@ -58,6 +58,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyPost extends ApiMethod<ByProjectKe
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(cartDiscountUpdate));}catch(Exception e){e.printStackTrace();}

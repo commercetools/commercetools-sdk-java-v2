@@ -55,6 +55,7 @@ public class ByProjectKeyTypesKeyByKeyDelete extends ApiMethod<ByProjectKeyTypes
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.DELETE);
         httpRequest.setHeaders(getHeaders());
         

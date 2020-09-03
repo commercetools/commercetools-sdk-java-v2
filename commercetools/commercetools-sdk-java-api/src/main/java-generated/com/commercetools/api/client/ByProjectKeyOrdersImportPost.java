@@ -55,6 +55,7 @@ public class ByProjectKeyOrdersImportPost extends ApiMethod<ByProjectKeyOrdersIm
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(orderImportDraft));}catch(Exception e){e.printStackTrace();}

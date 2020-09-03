@@ -52,6 +52,7 @@ public class ByProjectKeyMeSignupPost extends ApiMethod<ByProjectKeyMeSignupPost
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(myCustomerDraft));}catch(Exception e){e.printStackTrace();}

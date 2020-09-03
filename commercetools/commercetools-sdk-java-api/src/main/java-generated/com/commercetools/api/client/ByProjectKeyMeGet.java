@@ -49,6 +49,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet> {
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.GET);
         httpRequest.setHeaders(getHeaders());
         

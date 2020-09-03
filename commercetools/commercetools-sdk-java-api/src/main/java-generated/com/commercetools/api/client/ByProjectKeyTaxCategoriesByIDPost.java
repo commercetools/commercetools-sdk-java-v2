@@ -58,6 +58,7 @@ public class ByProjectKeyTaxCategoriesByIDPost extends ApiMethod<ByProjectKeyTax
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(taxCategoryUpdate));}catch(Exception e){e.printStackTrace();}

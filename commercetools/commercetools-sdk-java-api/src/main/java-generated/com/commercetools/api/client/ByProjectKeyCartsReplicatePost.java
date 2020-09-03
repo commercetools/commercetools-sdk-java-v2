@@ -52,6 +52,7 @@ public class ByProjectKeyCartsReplicatePost extends ApiMethod<ByProjectKeyCartsR
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(replicaCartDraft));}catch(Exception e){e.printStackTrace();}

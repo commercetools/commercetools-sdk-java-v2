@@ -55,6 +55,7 @@ public class ByProjectKeyCustomersPasswordPost extends ApiMethod<ByProjectKeyCus
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(customerChangePassword));}catch(Exception e){e.printStackTrace();}

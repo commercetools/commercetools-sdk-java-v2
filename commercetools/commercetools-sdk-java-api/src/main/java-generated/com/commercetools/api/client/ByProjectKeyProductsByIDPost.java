@@ -58,6 +58,7 @@ public class ByProjectKeyProductsByIDPost extends ApiMethod<ByProjectKeyProducts
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(productUpdate));}catch(Exception e){e.printStackTrace();}

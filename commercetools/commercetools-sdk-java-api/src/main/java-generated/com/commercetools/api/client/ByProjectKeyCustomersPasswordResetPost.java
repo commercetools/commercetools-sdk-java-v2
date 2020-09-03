@@ -55,6 +55,7 @@ public class ByProjectKeyCustomersPasswordResetPost extends ApiMethod<ByProjectK
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(customerResetPassword));}catch(Exception e){e.printStackTrace();}

@@ -59,6 +59,7 @@ public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscri
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(subscriptionDraft));}catch(Exception e){e.printStackTrace();}

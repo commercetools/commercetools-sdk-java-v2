@@ -61,6 +61,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost extends ApiMethod<ByProj
             httpRequestPath += "?" + String.join("&", params);
         }
         httpRequest.setRelativeUrl(httpRequestPath); 
+        httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
         try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(orderFromCartDraft));}catch(Exception e){e.printStackTrace();}

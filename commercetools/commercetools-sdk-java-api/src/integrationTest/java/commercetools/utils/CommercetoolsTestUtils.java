@@ -4,12 +4,8 @@ import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.defaultconfig.ApiFactory;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
-import io.vrap.rmf.base.client.ClientFactory;
 import io.vrap.rmf.base.client.VrapHttpClient;
-import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.oauth2.ClientCredentialsImpl;
-import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 
 import java.util.UUID;
@@ -38,8 +34,7 @@ public class CommercetoolsTestUtils {
                             .withScopes(getScopes())
                             .build(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-                    "https://api.europe-west1.gcp.commercetools.com",
-                    LoggerMiddleware.LogLevel.INFO);
+                    "https://api.europe-west1.gcp.commercetools.com");
         }
     }
 

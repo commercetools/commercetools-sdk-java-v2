@@ -9,37 +9,37 @@ on:
 name: AutoRelease
 
 jobs:
-  release:
-    name: Build and release
-
-    runs-on: ubuntu-latest
-
-    if: startsWith( github.ref, 'refs/tags/') == false
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - name: Setup Java
-        uses: actions/setup-java@v1
-        with:
-          java-version: '8'
-
-      - name: Build and Test
-        run: ./gradlew --build-cache clean test
-
-      - name: Release
-        run: ./gradlew --build-cache bintrayUpload writeVersionToReadme --info --stacktrace
-        env:
-          CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
-          CTP_BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
-
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "TASK: Updating version in README"
-          commit_user_name: Auto Mation
-          commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>
+#  release:
+#    name: Build and release
+#
+#    runs-on: ubuntu-latest
+#
+#    if: startsWith( github.ref, 'refs/tags/') == false
+#
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v2
+#
+#      - name: Setup Java
+#        uses: actions/setup-java@v1
+#        with:
+#          java-version: '8'
+#
+#      - name: Build and Test
+#        run: ./gradlew --build-cache clean test
+#
+#      - name: Release
+#        run: ./gradlew --build-cache bintrayUpload writeVersionToReadme --info --stacktrace
+#        env:
+#          CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
+#          CTP_BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}
+#
+#      - uses: stefanzweifel/git-auto-commit-action@v4
+#        with:
+#          commit_message: "TASK: Updating version in README"
+#          commit_user_name: Auto Mation
+#          commit_user_email: automation@commercetools.com
+#          commit_author: Auto Mation <automation@commercetools.com>
 
   release_tag:
     name: Build and release tag
@@ -80,9 +80,20 @@ jobs:
           draft: true
           prerelease: false
 
-#      - uses: stefanzweifel/git-auto-commit-action@v4
-#        with:
-#          commit_message: "TASK: Updating version in README"
-#          commit_user_name: Auto Mation
-#          commit_user_email: automation@commercetools.com
-#          commit_author: Auto Mation <automation@commercetools.com>
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: build_master
+
+      - run: ./gradlew -Pversion=$SOURCE_TAG writeVersionToReadme
+        working-directory: build_master
+        env:
+          SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: build_master
+          commit_message: "TASK: Updating version in README"
+          commit_user_name: Auto Mation
+          commit_user_email: automation@commercetools.com
+          commit_author: Auto Mation <automation@commercetools.com>

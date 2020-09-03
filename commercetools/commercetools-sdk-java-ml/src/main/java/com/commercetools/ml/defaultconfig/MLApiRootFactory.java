@@ -13,6 +13,7 @@ public class MLApiRootFactory {
 
     private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
 
+    @Deprecated
     public static ByProjectKeyRequestBuilder createForProject(
             final String projectKey,
             final ClientCredentials credentials,
@@ -22,6 +23,7 @@ public class MLApiRootFactory {
         return create(credentials, tokenEndpoint, apiEndpoint).withProjectKey(projectKey);
     }
 
+    @Deprecated
     public static ApiRoot create(
             final ClientCredentials credentials,
             final String tokenEndpoint,

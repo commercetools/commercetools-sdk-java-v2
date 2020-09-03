@@ -20,7 +20,7 @@ public class ApiHttpRequest {
 
     }
 
-//    @Deprecated
+    @Deprecated
     public ApiHttpRequest(ApiHttpMethod method, String relativeUrl, String baseUrl, ApiHttpHeaders headers, byte[] body) {
         this.method = method;
         this.relativeUrl = relativeUrl;

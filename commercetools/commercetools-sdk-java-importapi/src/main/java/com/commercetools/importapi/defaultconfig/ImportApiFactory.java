@@ -13,7 +13,6 @@ public class ImportApiFactory {
 
     private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
 
-    @Deprecated
     public static ByProjectKeyRequestBuilder createForProject(
             final String projectKey,
             final ClientCredentials credentials,
@@ -23,7 +22,6 @@ public class ImportApiFactory {
         return create(credentials, tokenEndpoint, apiEndpoint).withProjectKeyValue(projectKey);
     }
 
-    @Deprecated
     public static ApiRoot create(
             final ClientCredentials credentials,
             final String tokenEndpoint,

@@ -13,7 +13,6 @@ public class ApiFactory {
 
     private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
 
-    @Deprecated
     public static ByProjectKeyRequestBuilder createForProject(
             final String projectKey,
             final ClientCredentials credentials,
@@ -23,7 +22,6 @@ public class ApiFactory {
         return create(credentials, tokenEndpoint, apiEndpoint).withProjectKey(projectKey);
     }
 
-    @Deprecated
     public static ApiRoot create(
             final ClientCredentials credentials,
             final String tokenEndpoint,

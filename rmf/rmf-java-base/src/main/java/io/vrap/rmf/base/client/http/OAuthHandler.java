@@ -1,13 +1,9 @@
-package io.vrap.rmf.base.client.middlewares;
+package io.vrap.rmf.base.client.http;
 
-import io.vrap.rmf.base.client.ApiHttpHeaders;
-import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
-import java.util.concurrent.CompletableFuture;
-
-public class OAuthHandler implements Middleware {
+public class OAuthHandler {
     private final TokenSupplier supplier;
     private AuthenticationToken token;
 
@@ -15,8 +11,8 @@ public class OAuthHandler implements Middleware {
         this.supplier = supplier;
     }
 
-    private String authHeader() {
-        return "Bearer " + getToken().getAccessToken();
+    static String authHeader(AuthenticationToken token) {
+        return "Bearer " + token.getAccessToken();
     }
 
     public AuthenticationToken getToken() {
@@ -31,11 +27,5 @@ public class OAuthHandler implements Middleware {
     public AuthenticationToken refreshToken() {
         token = null;
         return getToken();
-    }
-
-    @Override
-    public CompletableFuture<MiddlewareArg> next(MiddlewareArg arg) {
-
-        return null;
     }
 }

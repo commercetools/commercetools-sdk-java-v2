@@ -19,11 +19,7 @@ public class HttpHandler {
         return new HttpHandler(httpClient);
     }
 
-    public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest apiHttpRequest, Map<String, Object> options) {
+    public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest apiHttpRequest) {
         return httpClient.execute(apiHttpRequest);
-    }
-
-    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest arg) {
-        return execute(arg, null);
     }
 }

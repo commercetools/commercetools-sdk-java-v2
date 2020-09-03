@@ -72,7 +72,7 @@ public class ApiHttpRequest {
     }
 
     public ApiHttpRequest withHeader(String key, String value) {
-        this.headers = getHeaders().addHeader(key, value);
+        this.headers = getHeaders().withHeader(key, value);
 
         return this;
     }

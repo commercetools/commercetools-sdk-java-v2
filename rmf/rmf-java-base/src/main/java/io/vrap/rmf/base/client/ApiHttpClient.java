@@ -38,10 +38,10 @@ public class ApiHttpClient {
     }
 
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {
-        return execute(request, new HashMap<>());
-    }
+        if (stack != null) {
+            return stack.invoke(request.resolve(baseUri));
+        }
 
-    public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request, final Map<String, Object> options) {
         return reducedMiddleware
                 .next(MiddlewareArg.from(request))
                 .thenApply(middlewareArg -> {

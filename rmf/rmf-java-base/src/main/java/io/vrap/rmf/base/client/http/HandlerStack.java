@@ -5,10 +5,7 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.middlewares.HttpMiddleware;
 import io.vrap.rmf.base.client.middlewares.MiddlewareArg;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -16,35 +13,52 @@ import java.util.function.Function;
 public class HandlerStack {
     private final HttpHandler handler;
 
-    private final List<Function<BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>>, BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>>>> middlewares;
+    private final List<Middleware> middlewares;
 
-    private BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>> cached;
+    private Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> cached;
 
-    public HandlerStack(final HttpHandler handler) {
+    private HandlerStack(final HttpHandler handler, final List<Middleware> middlewares) {
         this.handler = handler;
-        this.middlewares = new ArrayList<>();
+        this.middlewares = middlewares;
+        this.cached = null;
+    }
+
+    public static HandlerStack create(final HttpHandler handler, List<Middleware> middlewares)
+    {
+        return new HandlerStack(handler, middlewares);
     }
 
     public static HandlerStack create(final HttpHandler handler)
     {
-        final HandlerStack stack = new HandlerStack(handler);
-        return stack;
+        return create(handler, new ArrayList<>());
     }
 
-    public void addMiddleware(Function<BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>>, BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>>> middleware) {
+    public void addMiddleware(Middleware middleware) {
         this.middlewares.add(middleware);
+        this.cached = null;
     }
 
-    BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>> resolve() {
+    public void addMiddlewares(List<Middleware> middlewares) {
+        this.middlewares.addAll(middlewares);
+        this.cached = null;
+    }
+
+    public void addMiddlewares(Middleware... middlewares) {
+        this.middlewares.addAll(Arrays.asList(middlewares));
+        this.cached = null;
+    }
+
+    Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> resolve() {
         if (cached == null) {
-            List<Function<BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>>, BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>>>> stack = new ArrayList<>(middlewares);
+            List<Middleware> stack = new ArrayList<>(middlewares);
+
             Collections.reverse(stack);
 
-            BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>> prev = handler::execute;
+            Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> prev = handler::execute;
 
-            for (Function<BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>>, BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>>> middleware : stack) {
-                BiFunction<ApiHttpRequest, Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>> finalPrev = prev;
-                prev = middleware.apply(finalPrev);
+            for (Middleware middleware : stack) {
+                Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> finalPrev = prev;
+                prev = (request) -> middleware.invoke(request, finalPrev);
             }
 
             cached = prev;
@@ -53,9 +67,9 @@ public class HandlerStack {
         return cached;
     }
 
-    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request, final Map<String, Object> options) {
-        BiFunction<ApiHttpRequest,  Map<String, Object>, CompletableFuture<ApiHttpResponse<byte[]>>> handler = resolve();
+    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request) {
+        Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> handler = resolve();
 
-        return handler.apply(request, options);
+        return handler.apply(request);
     }
 }

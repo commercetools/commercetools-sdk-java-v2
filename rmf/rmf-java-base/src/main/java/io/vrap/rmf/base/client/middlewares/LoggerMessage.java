@@ -2,6 +2,7 @@ package io.vrap.rmf.base.client.middlewares;
 
 import io.vrap.rmf.base.client.ApiHttpHeaders;
 
+@Deprecated
 public class LoggerMessage {
 
     private String url;
@@ -27,7 +28,7 @@ public class LoggerMessage {
     public void setMethod(String method) {
         this.method = method;
     }
-    
+
     public String getRequestBody() {
         return requestBody;
     }

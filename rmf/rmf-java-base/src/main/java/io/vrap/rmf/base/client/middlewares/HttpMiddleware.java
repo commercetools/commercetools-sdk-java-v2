@@ -8,6 +8,7 @@ import org.apache.commons.lang3.SystemUtils;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
+@Deprecated
 public class HttpMiddleware implements Middleware {
 
     private static final String USER_AGENT = "User-Agent";

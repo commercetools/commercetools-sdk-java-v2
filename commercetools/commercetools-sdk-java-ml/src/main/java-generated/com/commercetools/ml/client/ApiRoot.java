@@ -23,6 +23,7 @@ public class ApiRoot {
         return new ApiRoot(apiHttpClient);
     }
 
+    @Deprecated
     public static ApiRoot fromMiddlewares(final Middleware... middlewares) {
         return fromClient(new ApiHttpClient(Arrays.asList(middlewares)));
     }

@@ -19,6 +19,7 @@ public class ApiHttpClient {
     private final HandlerStack stack;
     private final URI baseUri;
 
+    @Deprecated
     public ApiHttpClient(final List<Middleware> middlewares) {
         final List<Middleware> middlewareList = new ArrayList<>(middlewares);
         middlewareList.add(NoOpMiddleware.INSTANCE);

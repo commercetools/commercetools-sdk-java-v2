@@ -23,7 +23,7 @@ public final class LoggerMiddleware implements Middleware {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request, Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         return next.apply(request).whenComplete(
                 (response, ex) -> {
-                    String msg = String.format("%s %s %s", request.getMethod().name(), request.fullUrl(), response.getStatusCode());
+                    String msg = String.format("%s %s %s", request.getMethod().name(), request.getUrl(), response.getStatusCode());
                     LogRecord r = new LogRecord((ex != null) ? Level.SEVERE : logLevel, msg);
                     logger.log(r);
                 }

@@ -3,13 +3,11 @@ package io.vrap.rmf.base.client;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 import org.apache.commons.lang3.SystemUtils;
+import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class MiddlewareFactory {
     private final static String userAgent = buildUserAgent();
@@ -24,7 +22,7 @@ public class MiddlewareFactory {
                     request.addHeader(ApiHttpHeaders.USER_AGENT, userAgent);
                     return next.apply(request);
                 },
-                new LoggerMiddleware(logger, Level.INFO)
+                new LoggerMiddleware(logger)
         ));
     }
 

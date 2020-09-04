@@ -5,18 +5,14 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
-import java.util.logging.Logger;
+import org.slf4j.Logger;
 
 public final class LoggerMiddleware implements Middleware {
 
     private final Logger logger;
-    private final Level logLevel;
 
-    public LoggerMiddleware(final Logger logger, final Level logLevel) {
+    public LoggerMiddleware(final Logger logger) {
         this.logger = logger;
-        this.logLevel = logLevel;
     }
 
     @Override
@@ -24,8 +20,11 @@ public final class LoggerMiddleware implements Middleware {
         return next.apply(request).whenComplete(
                 (response, ex) -> {
                     String msg = String.format("%s %s %s", request.getMethod().name(), request.getUrl(), response.getStatusCode());
-                    LogRecord r = new LogRecord((ex != null) ? Level.SEVERE : logLevel, msg);
-                    logger.log(r);
+                    if (ex != null) {
+                        logger.error(msg);
+                    } else {
+                        logger.info(msg);
+                    }
                 }
         );
     }

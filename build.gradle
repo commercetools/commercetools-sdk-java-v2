@@ -59,10 +59,6 @@ class Version {
     }
 }
 
-allprojects {
-    description = "The e-commerce SDK from commercetools for Java"
-}
-
 tasks.register("writeVersionToReadme") {
     doLast {
         ant.replaceregexp(match: 'sdkVersion = \"[^\\s]+\"', replace: "sdkVersion = \"${globalVersion}\"", flags:'g', byline:true) {
@@ -75,6 +71,25 @@ tasks.register("writeVersionToReadme") {
 }
 
 ext {
+    versions = [
+            slf4j: "1.7.21",
+            logback: "1.1.7",
+            findbugs: "3.0.2",
+            jackson: "2.10.1",
+            junit: "4.12",
+            validation: "2.0.1.Final",
+            assertJ: "3.8.0",
+            gson: "2.8.6",
+            awaitility: "4.0.2"
+    ]
+
+    commons = [
+            lang3: 'org.apache.commons:commons-lang3:3.10',
+            cli: 'commons-cli:commons-cli:1.4',
+            io: 'commons-io:commons-io:2.6',
+
+    ]
+
     scmProjectName = rootProject.name
     scmRepo = 'github.com'
     scmProjectPath = "commercetools/commercetools-sdk-java-v2.git"  // github relative path with .git extension

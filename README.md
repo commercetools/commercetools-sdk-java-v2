@@ -14,34 +14,61 @@ This repository contains the commercetools platform and import-api java sdks gen
 Creating http requests starts from the ApiRoot which  holds information specific to the project. Easiest way to configure it is to use the following method:
 
 ```java
-// ApiRoot config for Europe projects
-ApiRoot apiRoot = ApiFactory.create(
+import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.client.ApiRoot;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+
+class Main {
+    public void main() {
+        // ApiRoot config for Europe projects
+        ApiRoot apiRoot = ApiFactory.create(
             ClientCredentials.of().withClientId("your-client-id")
                 .withClientSecret("your-client-secret")
                 .withScopes("your-scopes")
                 .build(),
             "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
             "https://api.europe-west1.gcp.commercetools.com");
-            
-// ApiRoot config for United States projects
-ApiRoot apiRoot = ApiFactory.create(
+    }
+}
+```
+
+```java
+import com.commercetools.importapi.defaultconfig.ImportApiFactory;
+import com.commercetools.importapi.client.ApiRoot;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+
+class Main {
+    public void main() {
+        // ApiRoot config for United States projects
+        ApiRoot apiRoot = ImportApiFactory.create(
             ClientCredentials.of().withClientId("your-client-id")
                 .withClientSecret("your-client-secret")
                 .withScopes("your-scopes")
                 .build(),
             "https://auth.us-central1.gcp.commercetools.com/oauth/token",
             "https://api.us-central1.gcp.commercetools.com");
-            
-//ApiRoot config for ImportAPI
-ApiRoot apiRoot = ImportApiFactory.create(
+    }
+}
+```
+
+```java
+import com.commercetools.importapi.defaultconfig.ImportApiFactory;
+import com.commercetools.importapi.client.ApiRoot;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+
+class Main {
+    public void main() {
+        //ApiRoot config for ImportAPI
+        ApiRoot apiRoot = ImportApiFactory.create(
             ClientCredentials.of().withClientId("your-client-id")
                 .withClientSecret("your-client-secret")
                 .withScopes("your-scopes")
                 .build(),
             "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-            "https://import-eu.europe-west1.gcp.commercetools.com",
-            LoggerMiddleware.LogLevel.INFO);
+            "https://import-eu.europe-west1.gcp.commercetools.com");
 
+    }
+}
 ```
 
 ## Using SDK
@@ -49,9 +76,10 @@ ApiRoot apiRoot = ImportApiFactory.create(
 SDK follows a builder pattern when creating requests and model entities. Category resource will be used to demonstrate how to use the SDK. This behaviour is the same for all resources.
 
 ```java
-
-// Create CategoryDraft using builder pattern
-CategoryDraft categoryDraft = CategoryDraftBuilder.of()
+class Main {
+    public void main() {
+        // Create CategoryDraft using builder pattern
+        CategoryDraft categoryDraft = CategoryDraftBuilder.of()
                 .name("name")
                 .slug("slug")
                 .description("description")
@@ -61,38 +89,38 @@ CategoryDraft categoryDraft = CategoryDraftBuilder.of()
                 .orderHint("hint")
                 .build();
 
-// Use in the previous step configured ApiRoot instance to send and receive a newly created Category
-Category category = apiRoot.withProjectKey("project-key")
+        // Use in the previous step configured ApiRoot instance to send and receive a newly created Category
+        Category category = apiRoot.withProjectKey("project-key")
                 .categories()
                 .post(categoryDraft)
                 .executeBlocking()
                 .getBody();
 
-// Get Category by id
-Category queriedCategory = apiRoot.withProjectKey("project-key")
+        // Get Category by id
+        Category queriedCategory = apiRoot.withProjectKey("project-key")
                     .categories()
                     .withId(category.getId())
                     .get()
                     .executeBlocking()
                     .getBody();
                     
-// Get Category by key
-Category queriedCategory = apiRoot.withProjectKey("project-key")
+        // Get Category by key
+        Category queriedCategory = apiRoot.withProjectKey("project-key")
                     .categories()
                     .withKey(category.getKey())
                     .get()
                     .executeBlocking()
                     .getBody();
 
-// Query Categories
-CategoryPagedQueryResponse response = apiRoot.withProjectKey("project-key")
+        // Query Categories
+        CategoryPagedQueryResponse response = apiRoot.withProjectKey("project-key")
                 .categories()
                 .get()
                 .addWhere("id=" + "\"" + category.getId() + "\"")
                 .executeBlocking().getBody();
 
-// Delete Category by id
-Category deletedCategory = apiRoot.withProjectKey("project-key")
+        // Delete Category by id
+        Category deletedCategory = apiRoot.withProjectKey("project-key")
                 .categories()
                 .withId(category.getId())
                 .delete()
@@ -100,39 +128,41 @@ Category deletedCategory = apiRoot.withProjectKey("project-key")
                 .executeBlocking()
                 .getBody();
 
-// Update Category
-List<CategoryUpdateAction> updateActions = new ArrayList<>();
-LocalizedString newName = LocalizedString.of();
-newName.setValue("key-Temp", "value-Temp");
-updateActions.add(CategoryChangeNameActionBuilder.of()
-        .name(newName)
-        .build());
+        // Update Category
+        List<CategoryUpdateAction> updateActions = new ArrayList<>();
+        LocalizedString newName = LocalizedString.of();
+        newName.setValue("key-Temp", "value-Temp");
+        updateActions.add(CategoryChangeNameActionBuilder.of()
+                .name(newName)
+                .build());
         
-CategoryUpdate categoryUpdate = CategoryUpdateBuilder.of()
-        .version(category.getVersion())
-        .actions(updateActions)
-        .build();
+        CategoryUpdate categoryUpdate = CategoryUpdateBuilder.of()
+                .version(category.getVersion())
+                .actions(updateActions)
+                .build();
         
-Category updatedCategory = apiRoot.withProjectKey("project-key")
-                    .categories()
-                    .withId(category.getId())
-                    .post(categoryUpdate)
-                    .executeBlocking()
-                    .getBody();
+        Category updatedCategory = apiRoot.withProjectKey("project-key")
+                .categories()
+                .withId(category.getId())
+                .post(categoryUpdate)
+                .executeBlocking()
+                .getBody();
 
-// Delete Category by key
-Category deletedCategory = apiRoot.withProjectKey("project-key")
+        // Delete Category by key
+        Category deletedCategory = apiRoot.withProjectKey("project-key")
                 .categories()
                 .withKey(category.getKey())
                 .delete()
                 .withVersion(category.getVersion())
-                .executeBlocking().getBody();
+                .executeBlocking().getBody();        
+    }
+}
                 
 ```
                 
 ## Using the generated commercetools-api SDK in your project
 
-The latest stable SDK release can be retrieved from [jcenter](https://bintray.com/commercetools/maven/commercetools-java-sdks) with:
+The latest stable SDK release can be retrieved from [jcenter](https://bintray.com/bintray/jcenter?filterByPkgName=commercetools-sdk-java) with:
 
 ```gradle
 ext {
@@ -146,15 +176,59 @@ repositories {
 }
 
 dependencies {
-    compile "com.commercetools.sdk:commercetools-sdk-java-api:${sdkVersion}"
+    implementation 'com.commercetools.sdk:commercetools-sdk-java-api:${sdkVersion}'
+    implementation 'com.commercetools.sdk:commercetools-sdk-java-importapi:${sdkVersion}'
+    implementation 'com.commercetools.sdk:commercetools-sdk-java-ml:${sdkVersion}'
 }
 ```
 ```maven
-<repositories>
-    <repository>
-      <id>jcenter</id>
-      <url>https://jcenter.bintray.com/</url>
-    </repository>
-</repositories>
+<properties>
+    <commercetools.version>0.3.1</commercetools.version>
+<properties
+<dependencies>
+    <dependency>
+      <groupId>com.commercetools.sdk</groupId>
+      <artifactId>commercetools-sdk-java-api</artifactId>
+      <version>${commercetools.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.commercetools.sdk</groupId>
+      <artifactId>commercetools-sdk-java-importapi</artifactId>
+      <version>${commercetools.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>com.commercetools.sdk</groupId>
+      <artifactId>commercetools-sdk-java-ml</artifactId>
+      <version>${commercetools.version}</version>
+      <type>pom</type>
+    </dependency>
+<dependencies>
+<profiles>
+    <profile>
+        <repositories>
+            <repository>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <id>central</id>
+                <name>bintray</name>
+                <url>https://jcenter.bintray.com</url>
+            </repository>
+        </repositories>
+        <pluginRepositories>
+            <pluginRepository>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <id>central</id>
+                <name>bintray-plugins</name>
+                <url>https://jcenter.bintray.com</url>
+            </pluginRepository>
+        </pluginRepositories>
+        <id>bintray</id>
+    </profile>
+</profiles>
 ```
 

@@ -1,7 +1,6 @@
 package com.commercetools.importapi.client;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.middlewares.Middleware;
 
 import java.util.List;
 import java.util.Arrays;
@@ -21,11 +20,6 @@ public class ApiRoot {
 
     public static ApiRoot fromClient(final ApiHttpClient apiHttpClient) {
         return new ApiRoot(apiHttpClient);
-    }
-
-    @Deprecated
-    public static ApiRoot fromMiddlewares(final Middleware... middlewares) {
-        return fromClient(new ApiHttpClient(Arrays.asList(middlewares)));
     }
 
     public ByProjectKeyRequestBuilder withProjectKeyValue(String projectKey) {

@@ -1,15 +1,18 @@
 dependencies {
-    compile project(':rmf:okhttp-client')
-    compile 'com.google.code.findbugs:jsr305:3.0.2'
-    compile 'javax.validation:validation-api:2.0.1.Final'
+    implementation project(':rmf:okhttp-client')
+    implementation project(':rmf:rmf-java-base')
+    implementation "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
+    implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"
+    implementation "javax.validation:validation-api:${versions.validation}"
 
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.assertj:assertj-core:3.8.0'
-    testCompile 'org.awaitility:awaitility:4.0.2'
+    testImplementation "junit:junit:${versions.junit}"
+    testImplementation "org.assertj:assertj-core:${versions.assertJ}"
+    testImplementation "org.awaitility:awaitility:${versions.awaitility}"
 
-    itestImplementation 'junit:junit:4.12'
-    itestImplementation 'org.assertj:assertj-core:3.8.0'
-    itestImplementation 'org.awaitility:awaitility:4.0.2'
+    itestImplementation "junit:junit:${versions.junit}"
+    itestImplementation "org.assertj:assertj-core:${versions.assertJ}"
+    itestImplementation "org.awaitility:awaitility:${versions.awaitility}"
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"

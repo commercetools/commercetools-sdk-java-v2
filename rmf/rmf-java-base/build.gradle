@@ -1,11 +1,13 @@
 
 dependencies {
-    testCompile 'junit:junit:4.12'
-    compile 'com.google.code.findbugs:jsr305:3.0.2'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.9'
-    compile 'com.fasterxml.jackson.core:jackson-core:2.9.9'
-    compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8'
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
+    testImplementation "junit:junit:${versions.junit}"
+
+    implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
+    implementation "com.fasterxml.jackson.core:jackson-core:${versions.jackson}"
+    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${versions.jackson}"
+    implementation commons.lang3
+    implementation "org.slf4j:slf4j-api:${versions.slf4j}"
 }
 
 

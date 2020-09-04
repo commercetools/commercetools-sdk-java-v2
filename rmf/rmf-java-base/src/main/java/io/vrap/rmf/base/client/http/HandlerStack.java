@@ -2,12 +2,9 @@ package io.vrap.rmf.base.client.http;
 
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.middlewares.HttpMiddleware;
-import io.vrap.rmf.base.client.middlewares.MiddlewareArg;
 
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
-import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class HandlerStack {

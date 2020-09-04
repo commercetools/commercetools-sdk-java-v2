@@ -5,7 +5,6 @@ import com.commercetools.importapi.defaultconfig.ImportApiFactory;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
-import io.vrap.rmf.base.client.middlewares.LoggerMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
 
@@ -35,8 +34,7 @@ public class ImportApiTestUtils {
                             .withScopes(getScopes())
                             .build(),
                     "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-                    "https://import-eu.europe-west1.gcp.commercetools.com",
-                    LoggerMiddleware.LogLevel.INFO);
+                    "https://import-eu.europe-west1.gcp.commercetools.com");
         }
     }
 

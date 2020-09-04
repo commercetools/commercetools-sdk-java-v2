@@ -55,8 +55,8 @@ public class ClientCredentialsTokenSupplier implements TokenSupplier {
     ) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
         final ApiHttpHeaders headers = new ApiHttpHeaders();
-        headers.addHeader(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth);
-        headers.addHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
+        headers.withHeader(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth);
+        headers.withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 
         String body = "";
         if (scope == null || scope.isEmpty()) {

@@ -59,8 +59,8 @@ public class AnonymousSessionTokenSupplier implements TokenSupplier {
             apiHttpRequest.setBody("grant_type=client_credentials&scope=" + scope);
         }
         final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
-        apiHttpHeaders.addHeader("Authorization", "Basic " + auth);
-        apiHttpHeaders.addHeader("Content-Type", "application/x-www-form-urlencoded");
+        apiHttpHeaders.withHeader("Authorization", "Basic " + auth);
+        apiHttpHeaders.withHeader("Content-Type", "application/x-www-form-urlencoded");
         apiHttpRequest.setHeaders(apiHttpHeaders);
         apiHttpRequest.setMethod(ApiHttpMethod.POST);
         return apiHttpRequest;

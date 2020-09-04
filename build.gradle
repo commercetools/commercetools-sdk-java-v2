@@ -68,6 +68,9 @@ tasks.register("writeVersionToReadme") {
         ant.replaceregexp(match: 'sdkVersion = \"[^\\s]+\"', replace: "sdkVersion = \"${globalVersion}\"", flags:'g', byline:true) {
             fileset(dir: projectDir, includes: 'README.md')
         }
+        ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {
+            fileset(dir: projectDir, includes: 'README.md')
+        }
     }
 }
 

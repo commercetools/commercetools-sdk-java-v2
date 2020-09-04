@@ -166,7 +166,9 @@ The latest stable SDK release can be retrieved from [jcenter](https://bintray.co
 
 ```gradle
 ext {
-    sdkVersion = "0.3.1"
+    versions = [
+        commercetools: "0.3.1"
+    ]
 }
 
 sourceCompatibility = 1.8
@@ -176,9 +178,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.commercetools.sdk:commercetools-sdk-java-api:${sdkVersion}'
-    implementation 'com.commercetools.sdk:commercetools-sdk-java-importapi:${sdkVersion}'
-    implementation 'com.commercetools.sdk:commercetools-sdk-java-ml:${sdkVersion}'
+    implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-sdk-java-importapi:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-sdk-java-ml:${versions.commercetools}"
 }
 ```
 ```maven

@@ -2,6 +2,7 @@ package com.commerctools.importapi.defaultconfig;
 
 import com.commercetools.importapi.client.ByProjectKeyRequestBuilder;
 import com.commercetools.importapi.defaultconfig.ImportApiFactory;
+import com.commercetools.importapi.defaultconfig.ServiceHosts;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
@@ -24,8 +25,8 @@ public class ImportApiTestUtils {
                             .withClientSecret(getClientSecret())
                             .withScopes(getScopes())
                             .build(),
-                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-                    "https://import-eu.europe-west1.gcp.commercetools.com");
+                    ServiceHosts.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
+                    ServiceHosts.GCP_EUROPE_WEST1.getApiUrl());
         }else{
             projectRoot = ImportApiFactory.createForProject(
                     getProjectKey(),
@@ -33,8 +34,8 @@ public class ImportApiTestUtils {
                             .withClientSecret(getClientSecret())
                             .withScopes(getScopes())
                             .build(),
-                    "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-                    "https://import-eu.europe-west1.gcp.commercetools.com");
+                    ServiceHosts.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
+                    ServiceHosts.GCP_EUROPE_WEST1.getApiUrl());
         }
     }
 

@@ -4,7 +4,7 @@ public enum ServiceRegion {
 
     GCP_EUROPE(new RegionHosts(
             "https://ml-eu.europe-west1.gcp.commercetools.com",
-            "https://auth.eu_west1.gcp.commercetools.com"
+            "https://auth.europe-west1.gcp.commercetools.com"
     )),
     GCP_US(new RegionHosts(
             "https://ml-us.europe-west1.gcp.commercetools.com",

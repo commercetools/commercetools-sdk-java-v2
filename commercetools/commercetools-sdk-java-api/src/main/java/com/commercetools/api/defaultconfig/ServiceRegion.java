@@ -3,8 +3,8 @@ package com.commercetools.api.defaultconfig;
 public enum ServiceRegion {
 
     GCP_EUROPE_WEST1(new RegionHosts(
-            "https://api.eu_west1.gcp.commercetools.com",
-            "https://auth.eu_west1.gcp.commercetools.com"
+            "https://api.europe-west1.gcp.commercetools.com",
+            "https://auth.europe-west1.gcp.commercetools.com"
     )),
     GCP_US_CENTRAL1(new RegionHosts(
             "https://api.us-central1.gcp.commercetools.com",

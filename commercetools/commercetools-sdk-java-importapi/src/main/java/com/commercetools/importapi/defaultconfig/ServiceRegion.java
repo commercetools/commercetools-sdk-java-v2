@@ -1,46 +1,46 @@
 package com.commercetools.importapi.defaultconfig;
 
-public enum ServiceHosts {
+public enum ServiceRegion {
 
-    GCP_EUROPE_WEST1(new ServiceHost(
+    GCP_EUROPE_WEST1(new RegionHosts(
             "https://import.eu_west1.gcp.commercetools.com",
             "https://auth.eu_west1.gcp.commercetools.com"
     )),
-    GCP_US_CENTRAL1(new ServiceHost(
+    GCP_US_CENTRAL1(new RegionHosts(
             "https://import.us-central1.gcp.commercetools.com",
             "https://auth.us-central1.gcp.commercetools.com"
     )),
-    GCP_AUSTRALIA_SOUTHEAST1(new ServiceHost(
+    GCP_AUSTRALIA_SOUTHEAST1(new RegionHosts(
             "https://import.australia-southeast1.gcp.commercetools.com",
             "https://auth.australia-southeast1.gcp.commercetools.com"
     )),
     ;
 
-    public static class ServiceHost {
+    public static class RegionHosts {
         private final String apiUrl;
         private final String authUrl;
 
-        private ServiceHost(String apiUrl, String authUrl) {
+        private RegionHosts(String apiUrl, String authUrl) {
             this.apiUrl = apiUrl;
             this.authUrl = authUrl;
         }
     }
 
-    private final ServiceHost serviceHost;
+    private final RegionHosts regionHosts;
 
-    ServiceHosts(ServiceHost serviceHost) {
-        this.serviceHost = serviceHost;
+    ServiceRegion(RegionHosts regionHosts) {
+        this.regionHosts = regionHosts;
     }
 
     public String getApiUrl() {
-        return serviceHost.apiUrl;
+        return regionHosts.apiUrl;
     }
 
     public String getAuthUrl() {
-        return serviceHost.authUrl;
+        return regionHosts.authUrl;
     }
 
     public String getOAuthTokenUrl() {
-        return serviceHost.authUrl + "/oauth/token";
+        return regionHosts.authUrl + "/oauth/token";
     }
 }

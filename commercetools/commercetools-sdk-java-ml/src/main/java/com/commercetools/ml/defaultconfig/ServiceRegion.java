@@ -1,43 +1,43 @@
 package com.commercetools.ml.defaultconfig;
 
-public enum ServiceHosts {
+public enum ServiceRegion {
 
-    GCP_EUROPE(new ServiceHost(
+    GCP_EUROPE(new RegionHosts(
             "https://ml-eu.europe-west1.gcp.commercetools.com",
             "https://auth.eu_west1.gcp.commercetools.com"
     )),
-    GCP_US(new ServiceHost(
+    GCP_US(new RegionHosts(
             "https://ml-us.europe-west1.gcp.commercetools.com",
             "https://auth.us-central1.gcp.commercetools.com"
     )),
 
     ;
 
-    public static class ServiceHost {
+    public static class RegionHosts {
         private final String apiUrl;
         private final String authUrl;
 
-        private ServiceHost(String apiUrl, String authUrl) {
+        private RegionHosts(String apiUrl, String authUrl) {
             this.apiUrl = apiUrl;
             this.authUrl = authUrl;
         }
     }
 
-    private final ServiceHost serviceHost;
+    private final RegionHosts regionHosts;
 
-    ServiceHosts(ServiceHost serviceHost) {
-        this.serviceHost = serviceHost;
+    ServiceRegion(RegionHosts regionHosts) {
+        this.regionHosts = regionHosts;
     }
 
     public String getApiUrl() {
-        return serviceHost.apiUrl;
+        return regionHosts.apiUrl;
     }
 
     public String getAuthUrl() {
-        return serviceHost.authUrl;
+        return regionHosts.authUrl;
     }
 
     public String getOAuthTokenUrl() {
-        return serviceHost.authUrl + "/oauth/token";
+        return regionHosts.authUrl + "/oauth/token";
     }
 }

@@ -70,23 +70,8 @@ public class VrapOkhttpClient implements VrapHttpClient {
             mediaType = MediaType.get(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
         }
 
-        //set method and body
-        switch (apiHttpRequest.getMethod()) {
-            case GET:
-                httpRequestBuilder = httpRequestBuilder.get();
-                break;
-            case DELETE:
-                httpRequestBuilder = httpRequestBuilder.delete();
-                break;
-            case POST:
-                httpRequestBuilder = httpRequestBuilder.post(RequestBody.create(Optional.ofNullable(apiHttpRequest.getBody()).orElse(emptyBody), mediaType));
-                break;
-            case PUT:
-                httpRequestBuilder = httpRequestBuilder.put(RequestBody.create(Optional.ofNullable(apiHttpRequest.getBody()).orElse(emptyBody), mediaType));
-                break;
-            default:
-                throw new RuntimeException("Non supported HTTP Method : " + apiHttpRequest.getMethod().toString());
-        }
+        final RequestBody body = apiHttpRequest.getBody() == null ? null: RequestBody.create(apiHttpRequest.getBody(), mediaType);
+        httpRequestBuilder.method(apiHttpRequest.getMethod().name(), body);
         return httpRequestBuilder.build();
     }
 

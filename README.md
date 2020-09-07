@@ -17,6 +17,7 @@ Creating http requests starts from the ApiRoot which  holds information specific
 import com.commercetools.api.defaultconfig.ApiFactory;
 import com.commercetools.api.client.ApiRoot;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import com.commercetools.api.defaultconfig.ServiceRegion;
 
 class Main {
     public void main() {
@@ -26,8 +27,8 @@ class Main {
                 .withClientSecret("your-client-secret")
                 .withScopes("your-scopes")
                 .build(),
-            "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-            "https://api.europe-west1.gcp.commercetools.com");
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
+            ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
     }
 }
 ```
@@ -45,8 +46,8 @@ class Main {
                 .withClientSecret("your-client-secret")
                 .withScopes("your-scopes")
                 .build(),
-            "https://auth.us-central1.gcp.commercetools.com/oauth/token",
-            "https://api.us-central1.gcp.commercetools.com");
+            ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(),
+            ServiceRegion.GCP_US_CENTRAL1.getApiUrl());
     }
 }
 ```
@@ -55,6 +56,7 @@ class Main {
 import com.commercetools.importapi.defaultconfig.ImportApiFactory;
 import com.commercetools.importapi.client.ApiRoot;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import com.commercetools.importapi.defaultconfig.ServiceRegion;
 
 class Main {
     public void main() {
@@ -64,8 +66,8 @@ class Main {
                 .withClientSecret("your-client-secret")
                 .withScopes("your-scopes")
                 .build(),
-            "https://auth.europe-west1.gcp.commercetools.com/oauth/token",
-            "https://import-eu.europe-west1.gcp.commercetools.com");
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
+            ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
 
     }
 }

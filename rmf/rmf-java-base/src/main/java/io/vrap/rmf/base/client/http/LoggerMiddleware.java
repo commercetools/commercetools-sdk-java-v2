@@ -2,10 +2,10 @@ package io.vrap.rmf.base.client.http;
 
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
+import org.slf4j.Logger;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import org.slf4j.Logger;
 
 public final class LoggerMiddleware implements Middleware {
 

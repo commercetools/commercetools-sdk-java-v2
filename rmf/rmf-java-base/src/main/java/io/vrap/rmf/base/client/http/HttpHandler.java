@@ -4,7 +4,6 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class HttpHandler {

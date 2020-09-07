@@ -11,7 +11,6 @@ import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModu
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Scanner;
 
 public final class VrapJsonUtils {
 
@@ -26,7 +25,7 @@ public final class VrapJsonUtils {
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
     }
-    
+
     public static byte[] toJsonByteArray(Object value) throws JsonProcessingException {
         return OBJECT_MAPPER.writeValueAsBytes(value);
     }
@@ -46,7 +45,7 @@ public final class VrapJsonUtils {
     public static <T> T fromInputStream(InputStream content, Class<T> clazz) throws IOException {
         return OBJECT_MAPPER.readValue(content, clazz);
     }
-    
+
     public static ObjectMapper getConfiguredObjectMapper() {
         return OBJECT_MAPPER;
     }

@@ -2,12 +2,12 @@ package com.commercetools.api;
 
 import com.commercetools.ml.models.image_search.ImageSearchResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.File;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UploadImageTest extends TestBase {

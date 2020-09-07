@@ -3,9 +3,7 @@ package io.vrap.rmf.base.client;
 import io.vrap.rmf.base.client.http.HandlerStack;
 
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionException;
 
 public class ApiHttpClient {
 

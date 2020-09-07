@@ -1,10 +1,10 @@
 package io.vrap.rmf.base.client;
 
+import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import javax.annotation.Nullable;
 
 
 public class ApiHttpHeaders {

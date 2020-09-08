@@ -22,8 +22,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class OperationStatesImpl implements OperationStates {
 
-    private Long accepted;
-    
     private Long validationFailed;
     
     private Long unresolved;
@@ -34,6 +32,8 @@ public final class OperationStatesImpl implements OperationStates {
     
     private Long imported;
     
+    private Long delete;
+    
     private Long deleted;
     
     private Long rejected;
@@ -41,13 +41,13 @@ public final class OperationStatesImpl implements OperationStates {
     private Long skipped;
 
     @JsonCreator
-    OperationStatesImpl(@JsonProperty("Accepted") final Long accepted, @JsonProperty("ValidationFailed") final Long validationFailed, @JsonProperty("Unresolved") final Long unresolved, @JsonProperty("Resolved") final Long resolved, @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant, @JsonProperty("Imported") final Long imported, @JsonProperty("Deleted") final Long deleted, @JsonProperty("Rejected") final Long rejected, @JsonProperty("Skipped") final Long skipped) {
-        this.accepted = accepted;
+    OperationStatesImpl(@JsonProperty("ValidationFailed") final Long validationFailed, @JsonProperty("Unresolved") final Long unresolved, @JsonProperty("Resolved") final Long resolved, @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant, @JsonProperty("Imported") final Long imported, @JsonProperty("Delete") final Long delete, @JsonProperty("Deleted") final Long deleted, @JsonProperty("Rejected") final Long rejected, @JsonProperty("Skipped") final Long skipped) {
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
         this.resolved = resolved;
         this.waitForMasterVariant = waitForMasterVariant;
         this.imported = imported;
+        this.delete = delete;
         this.deleted = deleted;
         this.rejected = rejected;
         this.skipped = skipped;
@@ -56,13 +56,6 @@ public final class OperationStatesImpl implements OperationStates {
        
     }
 
-    /**
-    *  <p>The number of import operations that are in the state <code>Accepted</code>.</p>
-    */
-    public Long getAccepted(){
-        return this.accepted;
-    }
-    
     /**
     *  <p>The number of import operations that are in the state <code>ValidationFailed</code>.</p>
     */
@@ -99,6 +92,13 @@ public final class OperationStatesImpl implements OperationStates {
     }
     
     /**
+    *  <p>The number of import operations that are in the state <code>Delete</code>.</p>
+    */
+    public Long getDelete(){
+        return this.delete;
+    }
+    
+    /**
     *  <p>The number of import operations that are in the state <code>Deleted</code>.</p>
     */
     public Long getDeleted(){
@@ -119,10 +119,6 @@ public final class OperationStatesImpl implements OperationStates {
         return this.skipped;
     }
 
-    public void setAccepted(final Long accepted){
-        this.accepted = accepted;
-    }
-    
     public void setValidationFailed(final Long validationFailed){
         this.validationFailed = validationFailed;
     }
@@ -141,6 +137,10 @@ public final class OperationStatesImpl implements OperationStates {
     
     public void setImported(final Long imported){
         this.imported = imported;
+    }
+    
+    public void setDelete(final Long delete){
+        this.delete = delete;
     }
     
     public void setDeleted(final Long deleted){

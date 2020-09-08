@@ -15,9 +15,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OperationStatesBuilder {
 
     
-    private Long Accepted;
-    
-    
     private Long ValidationFailed;
     
     
@@ -33,6 +30,9 @@ public final class OperationStatesBuilder {
     private Long Imported;
     
     
+    private Long Delete;
+    
+    
     private Long Deleted;
     
     
@@ -41,11 +41,6 @@ public final class OperationStatesBuilder {
     
     private Long Skipped;
 
-    public OperationStatesBuilder Accepted( final Long Accepted) {
-        this.Accepted = Accepted;
-        return this;
-    }
-    
     public OperationStatesBuilder ValidationFailed( final Long ValidationFailed) {
         this.ValidationFailed = ValidationFailed;
         return this;
@@ -71,6 +66,11 @@ public final class OperationStatesBuilder {
         return this;
     }
     
+    public OperationStatesBuilder Delete( final Long Delete) {
+        this.Delete = Delete;
+        return this;
+    }
+    
     public OperationStatesBuilder Deleted( final Long Deleted) {
         this.Deleted = Deleted;
         return this;
@@ -86,11 +86,6 @@ public final class OperationStatesBuilder {
         return this;
     }
 
-    
-    public Long getAccepted(){
-        return this.Accepted;
-    }
-    
     
     public Long getValidationFailed(){
         return this.ValidationFailed;
@@ -117,6 +112,11 @@ public final class OperationStatesBuilder {
     }
     
     
+    public Long getDelete(){
+        return this.Delete;
+    }
+    
+    
     public Long getDeleted(){
         return this.Deleted;
     }
@@ -132,7 +132,7 @@ public final class OperationStatesBuilder {
     }
 
     public OperationStates build() {
-        return new OperationStatesImpl(Accepted, ValidationFailed, Unresolved, Resolved, WaitForMasterVariant, Imported, Deleted, Rejected, Skipped);
+        return new OperationStatesImpl(ValidationFailed, Unresolved, Resolved, WaitForMasterVariant, Imported, Delete, Deleted, Rejected, Skipped);
     }
 
     public static OperationStatesBuilder of() {
@@ -141,12 +141,12 @@ public final class OperationStatesBuilder {
 
     public static OperationStatesBuilder of(final OperationStates template) {
         OperationStatesBuilder builder = new OperationStatesBuilder();
-        builder.Accepted = template.getAccepted();
         builder.ValidationFailed = template.getValidationFailed();
         builder.Unresolved = template.getUnresolved();
         builder.Resolved = template.getResolved();
         builder.WaitForMasterVariant = template.getWaitForMasterVariant();
         builder.Imported = template.getImported();
+        builder.Delete = template.getDelete();
         builder.Deleted = template.getDeleted();
         builder.Rejected = template.getRejected();
         builder.Skipped = template.getSkipped();

@@ -16,13 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 public enum ProcessingState {
 
     /**
-    	<p>The import resource was accepted.</p>
-    	
-    */
-    @JsonProperty("Accepted")
-    ACCEPTED("Accepted"),
-    
-    /**
     	<p>The validation of the import resource failed.</p>
     	
     */
@@ -30,7 +23,7 @@ public enum ProcessingState {
     VALIDATION_FAILED("ValidationFailed"),
     
     /**
-    	<p>The import resource contains unresolved references and needs to be resolved further.</p>
+    	<p>This is an initial state of the import resource, it might contain unresolved references and needs to be resolved further.</p>
     	
     */
     @JsonProperty("Unresolved")
@@ -56,6 +49,13 @@ public enum ProcessingState {
     */
     @JsonProperty("Imported")
     IMPORTED("Imported"),
+    
+    /**
+    	<p>The import resource is being deleted.</p>
+    	
+    */
+    @JsonProperty("Delete")
+    DELETE("Delete"),
     
     /**
     	<p>The import resource was deleted successfully.</p>

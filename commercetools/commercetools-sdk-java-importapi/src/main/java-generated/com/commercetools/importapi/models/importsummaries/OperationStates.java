@@ -22,12 +22,6 @@ import java.io.IOException;
 public interface OperationStates  {
 
     /**
-    *  <p>The number of import operations that are in the state <code>Accepted</code>.</p>
-    */
-    @NotNull
-    @JsonProperty("Accepted")
-    public Long getAccepted();
-    /**
     *  <p>The number of import operations that are in the state <code>ValidationFailed</code>.</p>
     */
     @NotNull
@@ -58,6 +52,12 @@ public interface OperationStates  {
     @JsonProperty("Imported")
     public Long getImported();
     /**
+    *  <p>The number of import operations that are in the state <code>Delete</code>.</p>
+    */
+    @NotNull
+    @JsonProperty("Delete")
+    public Long getDelete();
+    /**
     *  <p>The number of import operations that are in the state <code>Deleted</code>.</p>
     */
     @NotNull
@@ -76,8 +76,6 @@ public interface OperationStates  {
     @JsonProperty("Skipped")
     public Long getSkipped();
 
-    public void setAccepted(final Long accepted);
-    
     public void setValidationFailed(final Long validationFailed);
     
     public void setUnresolved(final Long unresolved);
@@ -87,6 +85,8 @@ public interface OperationStates  {
     public void setWaitForMasterVariant(final Long waitForMasterVariant);
     
     public void setImported(final Long imported);
+    
+    public void setDelete(final Long delete);
     
     public void setDeleted(final Long deleted);
     
@@ -101,12 +101,12 @@ public interface OperationStates  {
 
     public static OperationStatesImpl of(final OperationStates template) {
         OperationStatesImpl instance = new OperationStatesImpl();
-        instance.setAccepted(template.getAccepted());
         instance.setValidationFailed(template.getValidationFailed());
         instance.setUnresolved(template.getUnresolved());
         instance.setResolved(template.getResolved());
         instance.setWaitForMasterVariant(template.getWaitForMasterVariant());
         instance.setImported(template.getImported());
+        instance.setDelete(template.getDelete());
         instance.setDeleted(template.getDeleted());
         instance.setRejected(template.getRejected());
         instance.setSkipped(template.getSkipped());

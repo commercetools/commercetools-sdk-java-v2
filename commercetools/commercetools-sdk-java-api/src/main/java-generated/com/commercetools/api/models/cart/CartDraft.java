@@ -173,6 +173,12 @@ public interface CartDraft  {
     @Valid
     @JsonProperty("itemShippingAddresses")
     public List<Address> getItemShippingAddresses();
+    /**
+    *  <p>The code of existing DiscountCodes.</p>
+    */
+    
+    @JsonProperty("discountCodes")
+    public List<String> getDiscountCodes();
 
     public void setCurrency(final String currency);
     
@@ -219,6 +225,8 @@ public interface CartDraft  {
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
     
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+    
+    public void setDiscountCodes(final List<String> discountCodes);
 
     public static CartDraftImpl of(){
         return new CartDraftImpl();
@@ -250,6 +258,7 @@ public interface CartDraft  {
         instance.setOrigin(template.getOrigin());
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
+        instance.setDiscountCodes(template.getDiscountCodes());
         return instance;
     }
 

@@ -95,6 +95,9 @@ public final class CartDraftBuilder {
     
     @Nullable
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+    
+    @Nullable
+    private java.util.List<String> discountCodes;
 
     public CartDraftBuilder currency( final String currency) {
         this.currency = currency;
@@ -208,6 +211,11 @@ public final class CartDraftBuilder {
     
     public CartDraftBuilder itemShippingAddresses(@Nullable final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
         this.itemShippingAddresses = itemShippingAddresses;
+        return this;
+    }
+    
+    public CartDraftBuilder discountCodes(@Nullable final java.util.List<String> discountCodes) {
+        this.discountCodes = discountCodes;
         return this;
     }
 
@@ -325,9 +333,14 @@ public final class CartDraftBuilder {
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses(){
         return this.itemShippingAddresses;
     }
+    
+    @Nullable
+    public java.util.List<String> getDiscountCodes(){
+        return this.discountCodes;
+    }
 
     public CartDraft build() {
-        return new CartDraftImpl(currency, customerId, customerEmail, customerGroup, anonymousId, store, country, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress, billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale, deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses);
+        return new CartDraftImpl(currency, customerId, customerEmail, customerGroup, anonymousId, store, country, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress, billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale, deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses, discountCodes);
     }
 
     public static CartDraftBuilder of() {
@@ -359,6 +372,7 @@ public final class CartDraftBuilder {
         builder.origin = template.getOrigin();
         builder.shippingRateInput = template.getShippingRateInput();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
+        builder.discountCodes = template.getDiscountCodes();
         return builder;
     }
 

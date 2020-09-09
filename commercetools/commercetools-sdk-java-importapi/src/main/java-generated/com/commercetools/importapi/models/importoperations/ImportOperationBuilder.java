@@ -46,7 +46,7 @@ public final class ImportOperationBuilder {
     
     private java.time.ZonedDateTime lastModifiedAt;
     
-    @Nullable
+    
     private java.time.ZonedDateTime expiresAt;
 
     public ImportOperationBuilder version( final Long version) {
@@ -99,7 +99,7 @@ public final class ImportOperationBuilder {
         return this;
     }
     
-    public ImportOperationBuilder expiresAt(@Nullable final java.time.ZonedDateTime expiresAt) {
+    public ImportOperationBuilder expiresAt( final java.time.ZonedDateTime expiresAt) {
         this.expiresAt = expiresAt;
         return this;
     }
@@ -154,7 +154,7 @@ public final class ImportOperationBuilder {
         return this.lastModifiedAt;
     }
     
-    @Nullable
+    
     public java.time.ZonedDateTime getExpiresAt(){
         return this.expiresAt;
     }

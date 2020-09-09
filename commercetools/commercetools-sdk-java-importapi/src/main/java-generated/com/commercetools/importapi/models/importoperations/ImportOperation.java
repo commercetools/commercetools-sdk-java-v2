@@ -90,7 +90,7 @@ public interface ImportOperation  {
     /**
     *  <p>When the import operation expires.</p>
     */
-    
+    @NotNull
     @JsonProperty("expiresAt")
     public ZonedDateTime getExpiresAt();
 

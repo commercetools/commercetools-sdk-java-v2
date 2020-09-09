@@ -1,6 +1,6 @@
 
 dependencies {
-    implementation project(":rmf:rmf-java-base")
+    api project(":rmf:rmf-java-base")
     implementation("com.squareup.okhttp3:okhttp:4.0.1")
 
     testImplementation "junit:junit:${versions.junit}"

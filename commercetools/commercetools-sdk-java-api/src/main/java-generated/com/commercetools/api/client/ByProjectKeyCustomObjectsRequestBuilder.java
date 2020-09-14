@@ -28,7 +28,7 @@ public class ByProjectKeyCustomObjectsRequestBuilder {
     public ByProjectKeyCustomObjectsByContainerByKeyRequestBuilder withContainerAndKey(String container ,String key) {
         return new ByProjectKeyCustomObjectsByContainerByKeyRequestBuilder(apiHttpClient, projectKey, container, key);
     }
-    public ByProjectKeyCustomObjectsByIDRequestBuilder withId(String ID) {
-        return new ByProjectKeyCustomObjectsByIDRequestBuilder(apiHttpClient, projectKey, ID);
+    public ByProjectKeyCustomObjectsByContainerRequestBuilder withContainer(String container) {
+        return new ByProjectKeyCustomObjectsByContainerRequestBuilder(apiHttpClient, projectKey, container);
     }
 }

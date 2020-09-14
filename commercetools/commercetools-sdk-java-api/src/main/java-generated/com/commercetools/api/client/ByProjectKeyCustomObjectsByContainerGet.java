@@ -22,35 +22,35 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Get CustomObject by ID</p>
+*  <p>Get CustomObject by container</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomObjectsByIDGet extends ApiMethod<ByProjectKeyCustomObjectsByIDGet> {
+public class ByProjectKeyCustomObjectsByContainerGet extends ApiMethod<ByProjectKeyCustomObjectsByContainerGet> {
 
     
     private String projectKey;
-    private String ID;
+    private String container;
     
 
-    public ByProjectKeyCustomObjectsByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
+    public ByProjectKeyCustomObjectsByContainerGet(final ApiHttpClient apiHttpClient, String projectKey, String container) {
         super(apiHttpClient);
         this.projectKey = projectKey;
-        this.ID = ID;
+        this.container = container;
     }
 
-    public ByProjectKeyCustomObjectsByIDGet(ByProjectKeyCustomObjectsByIDGet t) {
+    public ByProjectKeyCustomObjectsByContainerGet(ByProjectKeyCustomObjectsByContainerGet t) {
         super(t);
         this.projectKey = t.projectKey;
-        this.ID = t.ID;
+        this.container = t.container;
     }
 
     public ApiHttpRequest createHttpRequest() {
         ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/custom-objects/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("/%s/custom-objects/%s", this.projectKey, this.container);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
@@ -80,7 +80,7 @@ public class ByProjectKeyCustomObjectsByIDGet extends ApiMethod<ByProjectKeyCust
     }
 
     public String getProjectKey() {return this.projectKey;}
-    public String getID() {return this.ID;}
+    public String getContainer() {return this.container;}
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
@@ -88,9 +88,9 @@ public class ByProjectKeyCustomObjectsByIDGet extends ApiMethod<ByProjectKeyCust
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) { this.ID = ID; }
+    public void setContainer(final String container) { this.container = container; }
 
-    public ByProjectKeyCustomObjectsByIDGet withExpand(final String expand){
-        return new ByProjectKeyCustomObjectsByIDGet(this).addQueryParam("expand", expand);
+    public ByProjectKeyCustomObjectsByContainerGet withExpand(final String expand){
+        return new ByProjectKeyCustomObjectsByContainerGet(this).addQueryParam("expand", expand);
     }
 }

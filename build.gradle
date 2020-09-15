@@ -192,8 +192,6 @@ subprojects { project ->
                 publicDownloadNumbers = true
 
                 version {
-                    name = version.toString()
-                    vcsTag = version.toString()
                     gpg {
                         sign = true
                     }

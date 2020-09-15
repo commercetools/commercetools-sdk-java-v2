@@ -191,6 +191,18 @@ subprojects { project ->
                 vcsUrl = scmHttpsUrl
                 publicDownloadNumbers = true
 
+                version {
+                    name = version
+                    vcsTag = version
+                    gpg {
+                        sign = true
+                    }
+                    mavenCentralSync {
+                        sync = true
+                        user = System.getenv('CTP_OSS_USER')
+                        password = System.getenv('CTP_OSS_SECRET')
+                    }
+                }
             }
         }
 

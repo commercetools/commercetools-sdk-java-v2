@@ -198,7 +198,7 @@ subprojects { project ->
                         sign = true
                     }
                     mavenCentralSync {
-                        sync = true
+                        sync = System.getenv("MAVEN_SYNC") == "true"
                         user = System.getenv('CTP_OSS_USER')
                         password = System.getenv('CTP_OSS_SECRET')
                     }

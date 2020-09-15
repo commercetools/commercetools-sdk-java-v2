@@ -15,13 +15,13 @@ public class CustomObjectFixtures {
     public static void withCustomObject(final Consumer<CustomObject> consumer) {
         CustomObject customObject = createCustomObject();
         consumer.accept(customObject);
-        deleteCustomObject(customObject.getId(), customObject.getVersion());
+        deleteCustomObject(customObject.getContainer(), customObject.getKey(), customObject.getVersion());
     }
 
     public static void withUpdateableCustomObject(final UnaryOperator<CustomObject> operator) {
         CustomObject customObject = createCustomObject();
         customObject = operator.apply(customObject);
-        deleteCustomObject(customObject.getId(), customObject.getVersion());
+        deleteCustomObject(customObject.getContainer(), customObject.getKey(), customObject.getVersion());
     }
 
     public static CustomObject createCustomObject() {
@@ -41,10 +41,10 @@ public class CustomObjectFixtures {
         return customObject;
     }
 
-    public static CustomObject deleteCustomObject(final String id, final Long version) {
+    public static CustomObject deleteCustomObject(final String container, final String key, final Long version) {
         CustomObject customObject = CommercetoolsTestUtils.getProjectRoot()
                 .customObjects()
-                .withId(id)
+                .withContainerAndKey(container, key)
                 .delete()
                 .withVersion(version)
                 .executeBlocking().getBody();

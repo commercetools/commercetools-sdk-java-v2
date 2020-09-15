@@ -14,17 +14,17 @@ public class CustomObjectIntegrationTests {
     @Test
     public void createAndDeleteById() {
         CustomObject customObject = CustomObjectFixtures.createCustomObject();
-        CustomObject deletedCustomObject = CustomObjectFixtures.deleteCustomObject(customObject.getId(), customObject.getVersion());
+        CustomObject deletedCustomObject = CustomObjectFixtures.deleteCustomObject(customObject.getContainer(), customObject.getKey(), customObject.getVersion());
 
         Assert.assertEquals(customObject.getId(), deletedCustomObject.getId());
     }
 
     @Test
-    public void getById() {
+    public void getByContainerKey() {
         CustomObjectFixtures.withCustomObject(customObject -> {
             CustomObject queriedCustomObject = CommercetoolsTestUtils.getProjectRoot()
                     .customObjects()
-                    .withId(customObject.getId())
+                    .withContainerAndKey(customObject.getContainer(), customObject.getKey())
                     .get()
                     .executeBlocking().getBody();
 

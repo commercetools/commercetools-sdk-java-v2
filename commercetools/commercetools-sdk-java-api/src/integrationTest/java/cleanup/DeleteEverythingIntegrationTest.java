@@ -249,7 +249,7 @@ public class DeleteEverythingIntegrationTest {
                     .get()
                     .executeBlocking().getBody();
             response.getResults().forEach(customObject -> {
-                CustomObjectFixtures.deleteCustomObject(customObject.getId(), customObject.getVersion());
+                CustomObjectFixtures.deleteCustomObject(customObject.getContainer(), customObject.getKey(), customObject.getVersion());
             });
         } while (response.getResults().size() != 0);
     }

@@ -195,11 +195,6 @@ subprojects { project ->
                     gpg {
                         sign = true
                     }
-                    mavenCentralSync {
-                        sync = System.getenv("MAVEN_SYNC") == "true"
-                        user = System.getenv('CTP_OSS_USER')
-                        password = System.getenv('CTP_OSS_SECRET')
-                    }
                 }
             }
         }
@@ -234,7 +229,91 @@ subprojects { project ->
             }
         }
 
+        task bintrayMavenSync(type: MavenCentralSync) {
+            mustRunAfter bintrayPublish
+            dryRun = System.getenv("MAVEN_SYNC") != "true"
+            repo = 'maven'
+            pkgName = project.name
+            subject = 'commercetools'
+            bintrayUser = System.getenv('CTP_BINTRAY_USER') ?: ''
+            bintrayApiKey = System.getenv('CTP_BINTRAY_KEY') ?: ''
+            ossUser = System.getenv('CTP_OSS_USER') ?: ''
+            ossPassword = System.getenv('CTP_OSS_SECRET') ?: ''
+            versionName = version.toString()
+        }
     }
 
     sourceCompatibility = 1.8
+}
+
+import com.jfrog.bintray.gradle.Utils
+import com.jfrog.bintray.gradle.BintrayHttpClientFactory
+import static groovyx.net.http.ContentType.JSON
+import static groovyx.net.http.Method.POST
+
+class MavenCentralSync extends DefaultTask {
+    static final String TASK_NAME = "bintrayMavenSync"
+
+    @Input
+    Boolean dryRun = true
+
+    @Input
+    String repo
+
+    @Input
+    String pkgName
+
+    @Input
+    String subject
+
+    @Input
+    String versionName
+
+    @Input
+    String apiUrl = 'https://api.bintray.com'
+
+    @Input
+    String bintrayUser
+
+    @Input
+    String bintrayApiKey
+
+    @Input
+    String ossUser
+
+    @Input
+    String ossPassword
+
+    @Input
+    String ossCloseRepo = true
+
+
+    @TaskAction
+    void taskAction() throws IOException {
+        mavenCentralSync()
+    }
+
+
+    private void mavenCentralSync() {
+        def httpBuilder = BintrayHttpClientFactory.create(apiUrl, bintrayUser, bintrayApiKey)
+        def pkgPath = "$subject/$repo/$pkgName"
+        if (dryRun) {
+            logger.info("(Dry run) Sync to Maven Central performed for '$pkgPath/$versionName'.")
+            return
+        }
+        httpBuilder.request(POST, JSON) {
+            Utils.addHeaders(headers)
+            uri.path = "/maven_central_sync/$pkgPath/versions/$versionName"
+            body = [username: ossUser, password: ossPassword]
+            if (ossCloseRepo != null) {
+                body << [close: ossCloseRepo]
+            }
+            response.success = { resp ->
+                logger.info("Sync to Maven Central performed for '$pkgPath/$versionName'.")
+            }
+            response.failure = { resp, reader ->
+                throw new GradleException("Could not sync '$pkgPath/$versionName' to Maven Central: $resp.statusLine $reader")
+            }
+        }
+    }
 }

@@ -1,6 +1,5 @@
 # commercetools java sdks
 
-This project is currently in the internal alpha phase.
 
 <img src="http://dev.commercetools.com/assets/img/CT-logo.svg" width="550px" alt="CT-logo"></img>
 

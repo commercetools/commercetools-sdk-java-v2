@@ -39,17 +39,23 @@ public final class TaxedPriceImpl implements TaxedPrice {
        
     }
 
-    
+    /**
+    *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+    */
     public com.commercetools.importapi.models.common.Money getTotalNet(){
         return this.totalNet;
     }
     
-    
+    /**
+    *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+    */
     public com.commercetools.importapi.models.common.Money getTotalGross(){
         return this.totalGross;
     }
     
-    
+    /**
+    *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+    */
     public java.util.List<com.commercetools.importapi.models.orders.TaxPortion> getTaxPortions(){
         return this.taxPortions;
     }

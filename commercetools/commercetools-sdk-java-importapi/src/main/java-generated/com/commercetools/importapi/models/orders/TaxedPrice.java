@@ -22,17 +22,23 @@ import java.io.IOException;
 @JsonDeserialize(as = TaxedPriceImpl.class)
 public interface TaxedPrice  {
 
-    
+    /**
+    *  <p>Maps to <code>TaxedPrice.totalNet</code>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("totalNet")
     public Money getTotalNet();
-    
+    /**
+    *  <p>Maps to <code>TaxedPrice.totalGross</code>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("totalGross")
     public Money getTotalGross();
-    
+    /**
+    *  <p>Maps to <code>TaxedPrice.taxPortions</code>.</p>
+    */
     @NotNull
     @Valid
     @JsonProperty("taxPortions")

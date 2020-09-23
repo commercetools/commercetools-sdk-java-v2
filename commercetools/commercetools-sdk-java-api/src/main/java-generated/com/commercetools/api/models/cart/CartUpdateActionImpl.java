@@ -38,6 +38,7 @@ import com.commercetools.api.models.cart.CartSetCustomerIdAction;
 import com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction;
 import com.commercetools.api.models.cart.CartSetLineItemCustomFieldAction;
 import com.commercetools.api.models.cart.CartSetLineItemCustomTypeAction;
+import com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction;
 import com.commercetools.api.models.cart.CartSetLineItemPriceAction;
 import com.commercetools.api.models.cart.CartSetLineItemShippingDetailsAction;
 import com.commercetools.api.models.cart.CartSetLineItemTaxAmountAction;

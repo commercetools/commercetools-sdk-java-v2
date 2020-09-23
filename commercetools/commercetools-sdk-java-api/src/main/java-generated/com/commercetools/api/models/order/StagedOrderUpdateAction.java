@@ -44,6 +44,7 @@ import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressActi
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomTypeAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetLineItemDistributionChannelAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemPriceAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemShippingDetailsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxAmountAction;
@@ -127,6 +128,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsActionImpl.class, name = "setDeliveryItems"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldActionImpl.class, name = "setLineItemCustomField"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomTypeActionImpl.class, name = "setLineItemCustomType"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetLineItemDistributionChannelActionImpl.class, name = "setLineItemDistributionChannel"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetLineItemPriceActionImpl.class, name = "setLineItemPrice"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetLineItemShippingDetailsActionImpl.class, name = "setLineItemShippingDetails"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxAmountActionImpl.class, name = "setLineItemTaxAmount"),

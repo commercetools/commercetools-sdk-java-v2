@@ -38,6 +38,7 @@ import com.commercetools.api.models.cart.CartSetCustomerIdAction;
 import com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction;
 import com.commercetools.api.models.cart.CartSetLineItemCustomFieldAction;
 import com.commercetools.api.models.cart.CartSetLineItemCustomTypeAction;
+import com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction;
 import com.commercetools.api.models.cart.CartSetLineItemPriceAction;
 import com.commercetools.api.models.cart.CartSetLineItemShippingDetailsAction;
 import com.commercetools.api.models.cart.CartSetLineItemTaxAmountAction;
@@ -102,6 +103,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationActionImpl.class, name = "setDeleteDaysAfterLastModification"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemCustomFieldActionImpl.class, name = "setLineItemCustomField"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemCustomTypeActionImpl.class, name = "setLineItemCustomType"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemDistributionChannelActionImpl.class, name = "setLineItemDistributionChannel"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemPriceActionImpl.class, name = "setLineItemPrice"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemShippingDetailsActionImpl.class, name = "setLineItemShippingDetails"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartSetLineItemTaxAmountActionImpl.class, name = "setLineItemTaxAmount"),

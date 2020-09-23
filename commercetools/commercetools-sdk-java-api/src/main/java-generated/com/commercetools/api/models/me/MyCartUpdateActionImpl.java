@@ -20,6 +20,7 @@ import com.commercetools.api.models.me.MyCartSetCustomTypeAction;
 import com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationAction;
 import com.commercetools.api.models.me.MyCartSetLineItemCustomFieldAction;
 import com.commercetools.api.models.me.MyCartSetLineItemCustomTypeAction;
+import com.commercetools.api.models.me.MyCartSetLineItemDistributionChannelAction;
 import com.commercetools.api.models.me.MyCartSetLineItemShippingDetailsAction;
 import com.commercetools.api.models.me.MyCartSetLocaleAction;
 import com.commercetools.api.models.me.MyCartSetShippingAddressAction;

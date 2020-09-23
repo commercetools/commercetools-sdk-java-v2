@@ -44,6 +44,7 @@ import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryAddressActi
 import com.commercetools.api.models.order_edit.StagedOrderSetDeliveryItemsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemCustomTypeAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetLineItemDistributionChannelAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemPriceAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemShippingDetailsAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLineItemTaxAmountAction;

@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.*;
 
 
 /**
-*  <p>Creates a new import request for a category</p>
+*  <p>Creates import request for creating new categories or updating existing ones.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

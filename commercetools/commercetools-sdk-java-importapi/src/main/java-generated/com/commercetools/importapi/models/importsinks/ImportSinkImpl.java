@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
 *  <p>An import sink is the entry point for import resources from other systems.</p>
 *  <p>It has an unique key and is specific to an import resource type.</p>
-*  <p>If needed you can specify a skip predicate, which allows you skip the import of
-*  operations which meet the conditions of the predicate.</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

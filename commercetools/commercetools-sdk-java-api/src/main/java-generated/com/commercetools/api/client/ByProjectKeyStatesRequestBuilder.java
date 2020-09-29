@@ -25,6 +25,9 @@ public class ByProjectKeyStatesRequestBuilder {
         return new ByProjectKeyStatesPost(apiHttpClient, projectKey, stateDraft);
     }
 
+    public ByProjectKeyStatesKeyByKeyRequestBuilder withKey(String key) {
+        return new ByProjectKeyStatesKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
+    }
     public ByProjectKeyStatesByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyStatesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }

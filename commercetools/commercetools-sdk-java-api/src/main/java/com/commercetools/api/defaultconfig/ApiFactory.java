@@ -27,15 +27,24 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
+        return create(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint);
+    }
+
+    public static ApiRoot create(
+            final VrapHttpClient httpClient,
+            final ClientCredentials credentials,
+            final String tokenEndpoint,
+            final String apiEndpoint
+    ) {
         final ApiHttpClient client = ClientFactory.create(
                 apiEndpoint,
-                vrapHttpClient,
+                httpClient,
                 new ClientCredentialsTokenSupplier(
                         credentials.getClientId(),
                         credentials.getClientSecret(),
                         credentials.getScopes(),
                         tokenEndpoint,
-                        vrapHttpClient
+                        httpClient
                 )
         );
         return ApiRoot.fromClient(client);

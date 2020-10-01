@@ -4,7 +4,7 @@ package commercetools.misc;
 import com.commercetools.api.client.ByProjectKeyCategoriesGet;
 import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.VrapHttpClient;
-import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
+import io.vrap.rmf.okhttp.VrapOkHttpClient;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -17,7 +17,7 @@ public class UserAgentHeaderTest {
                 .categories()
                 .get();
 
-        VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
+        VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
 
 //        new HttpMiddleware(
 //                "https://api.europe-west1.gcp.commercetools.com",

@@ -7,13 +7,13 @@ import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
+import io.vrap.rmf.okhttp.VrapOkHttpClient;
 
 import java.util.UUID;
 
 public class ImportApiTestUtils {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
+    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
     private static final ByProjectKeyRequestBuilder projectRoot;
 
     static{

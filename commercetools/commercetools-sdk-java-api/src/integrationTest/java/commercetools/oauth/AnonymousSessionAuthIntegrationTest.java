@@ -2,7 +2,7 @@ package commercetools.oauth;
 
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.AnonymousSessionTokenSupplier;
-import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
+import io.vrap.rmf.okhttp.VrapOkHttpClient;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,8 +12,8 @@ import static commercetools.utils.CommercetoolsTestUtils.*;
 
 public class AnonymousSessionAuthIntegrationTest {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
-    
+    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
+
     @Test
     public void execute() {
         AnonymousSessionTokenSupplier anonymousSessionTokenSupplier = new AnonymousSessionTokenSupplier(
@@ -23,7 +23,7 @@ public class AnonymousSessionAuthIntegrationTest {
                 "https://auth.europe-west1.gcp.commercetools.com/oauth/" + getProjectKey() + "/anonymous/token",
                 vrapHttpClient
         );
-        
+
         try{
             String accessToken = anonymousSessionTokenSupplier.getToken().get().getAccessToken();
             Assert.assertNotNull(accessToken);
@@ -45,5 +45,5 @@ public class AnonymousSessionAuthIntegrationTest {
 
         anonymousSessionTokenSupplier.getToken().get();
     }
-    
+
 }

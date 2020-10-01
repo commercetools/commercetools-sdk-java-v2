@@ -7,11 +7,11 @@ import io.vrap.rmf.base.client.ClientFactory;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
-import io.vrap.rmf.impl.okhttp.VrapOkhttpClient;
+import io.vrap.rmf.okhttp.VrapOkHttpClient;
 
 public class MLApiRootFactory {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkhttpClient();
+    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
 
     public static ByProjectKeyRequestBuilder createForProject(
             final String projectKey,

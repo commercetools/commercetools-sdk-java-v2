@@ -1,8 +1,10 @@
-# commercetools java sdks
+# <img src="build/theme/resources/CT_cube_200px.png" width="40" align="center"></img> commercetools JAVA SDK
 
 
-<img src="http://dev.commercetools.com/assets/img/CT-logo.svg" width="550px" alt="CT-logo"></img>
-
+[![][travis img]][travis]
+[![][maven img]][maven]
+[![][snyk img]][snyk]
+[![][license img]][license]
 
 ## Introduction
 
@@ -235,3 +237,19 @@ dependencies {
 </profiles>
 ```
 
+[](definitions for the top badges)
+
+[travis]:https://travis-ci.com/github/commercetools/commercetools-sdk-java-v2
+[travis img]:https://travis-ci.com/commercetools/commercetools-sdk-java-v2.svg?branch=master
+
+[snyk]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2
+[snyk img]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2/badge.svg
+
+[maven]:https://search.maven.org/search?q=g:com.commercetools.sdk%20AND%20a:commercetools-sdk-java-api
+[maven img]:https://maven-badges.herokuapp.com/maven-central/com.commercetools.sdk/commercetools-sdk-java-api/badge.svg
+
+[mavenimportapi]:https://search.maven.org/search?q=g:com.commercetools.sdk%20AND%20a:commercetools-sdk-java-importapi
+[mavenimportapi img]:https://maven-badges.herokuapp.com/maven-central/com.commercetools.sdk/commercetools-sdk-java-importapi/badge.svg
+
+[license]:LICENSE.md
+[license img]:https://img.shields.io/badge/License-Apache%202-blue.svg

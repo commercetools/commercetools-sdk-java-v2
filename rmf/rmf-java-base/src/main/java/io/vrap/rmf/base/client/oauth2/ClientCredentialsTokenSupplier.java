@@ -35,7 +35,14 @@ public class ClientCredentialsTokenSupplier implements TokenSupplier {
                 .execute(apiHttpRequest)
                 .thenApply(apiHttpResponse -> {
                     if(apiHttpResponse.getStatusCode() < 200 || apiHttpResponse.getStatusCode() > 299) {
-                        throw new CompletionException(new Throwable(new String(apiHttpResponse.getBody())));
+                        throw new CompletionException(
+                                new AuthException(
+                                        apiHttpResponse.getStatusCode(),
+                                        new String(apiHttpResponse.getBody()),
+                                        apiHttpRequest.getHeaders(),
+                                        apiHttpResponse.getMessage()
+                                )
+                        );
                     }
                     return apiHttpResponse;
                 })

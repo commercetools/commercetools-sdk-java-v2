@@ -46,7 +46,8 @@ public class VrapOkHttpClient implements VrapHttpClient {
         return new ApiHttpResponse<>(
                 response.code(),
                 apiHttpHeaders,
-                Optional.ofNullable(response.body()).map(Utils.wrapToCompletionException(ResponseBody::bytes)).orElse(null)
+                Optional.ofNullable(response.body()).map(Utils.wrapToCompletionException(ResponseBody::bytes)).orElse(null),
+                response.message()
         );
     }
 

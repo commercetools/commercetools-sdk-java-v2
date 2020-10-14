@@ -70,7 +70,7 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
         return apiHttpClient().execute(this.createHttpRequest())
                 .thenApply(response -> {
                     if(response.getStatusCode() >= 400){
-                        throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
+                        throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders(), response.getMessage());
                     }
                     return Utils.convertResponse(response,com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse.class);
                 });

@@ -76,6 +76,10 @@ public interface PriceDraftImport  {
     @Valid
     @JsonProperty("tiers")
     public List<PriceTier> getTiers();
+    
+    
+    @JsonProperty("key")
+    public String getKey();
 
     public void setValue(final TypedMoney value);
     
@@ -94,6 +98,8 @@ public interface PriceDraftImport  {
     public void setDiscounted(final DiscountedPrice discounted);
     
     public void setTiers(final List<PriceTier> tiers);
+    
+    public void setKey(final String key);
 
     public static PriceDraftImportImpl of(){
         return new PriceDraftImportImpl();
@@ -111,6 +117,7 @@ public interface PriceDraftImport  {
         instance.setCustom(template.getCustom());
         instance.setDiscounted(template.getDiscounted());
         instance.setTiers(template.getTiers());
+        instance.setKey(template.getKey());
         return instance;
     }
 

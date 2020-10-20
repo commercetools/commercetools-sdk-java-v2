@@ -46,6 +46,9 @@ public final class PriceDraftImportBuilder {
     
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers;
+    
+    @Nullable
+    private String key;
 
     public PriceDraftImportBuilder value( final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
@@ -89,6 +92,11 @@ public final class PriceDraftImportBuilder {
     
     public PriceDraftImportBuilder tiers(@Nullable final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers) {
         this.tiers = tiers;
+        return this;
+    }
+    
+    public PriceDraftImportBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -136,9 +144,14 @@ public final class PriceDraftImportBuilder {
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers(){
         return this.tiers;
     }
+    
+    @Nullable
+    public String getKey(){
+        return this.key;
+    }
 
     public PriceDraftImport build() {
-        return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom, discounted, tiers);
+        return new PriceDraftImportImpl(value, country, customerGroup, channel, validFrom, validUntil, custom, discounted, tiers, key);
     }
 
     public static PriceDraftImportBuilder of() {
@@ -156,6 +169,7 @@ public final class PriceDraftImportBuilder {
         builder.custom = template.getCustom();
         builder.discounted = template.getDiscounted();
         builder.tiers = template.getTiers();
+        builder.key = template.getKey();
         return builder;
     }
 

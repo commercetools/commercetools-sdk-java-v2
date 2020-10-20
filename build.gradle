@@ -84,7 +84,8 @@ ext {
             validation: "2.0.1.Final",
             assertJ: "3.8.0",
             gson: "2.8.6",
-            awaitility: "4.0.2"
+            awaitility: "4.0.2",
+            failsafe: "2.4.0"
     ]
 
     commons = [

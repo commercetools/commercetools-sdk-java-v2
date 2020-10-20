@@ -5,9 +5,9 @@ import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 import org.apache.commons.lang3.SystemUtils;
 import org.slf4j.Logger;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+
+import static java.util.Arrays.asList;
 
 public class MiddlewareFactory {
     private final static String userAgent = buildUserAgent();
@@ -15,7 +15,7 @@ public class MiddlewareFactory {
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier, final Logger logger)
     {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
-        return new ArrayList<>(Arrays.asList(
+        return asList(
                 new OAuthMiddleware(oAuthHandler),
                 new ReAuthMiddleware(oAuthHandler, 1),
                 (request, next) -> {
@@ -23,7 +23,7 @@ public class MiddlewareFactory {
                     return next.apply(request);
                 },
                 new LoggerMiddleware(logger)
-        ));
+        );
     }
 
     private static String buildUserAgent() {

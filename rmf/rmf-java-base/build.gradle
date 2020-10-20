@@ -8,6 +8,7 @@ dependencies {
     implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${versions.jackson}"
     implementation commons.lang3
     implementation "org.slf4j:slf4j-api:${versions.slf4j}"
+    implementation "net.jodah:failsafe:${versions.failsafe}"
 }
 
 

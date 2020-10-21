@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import java.nio.file.Files;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>The query endpoint allows to retrieve custom objects in a specific container or all custom objects.
@@ -61,21 +64,16 @@ public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomOb
     }
 
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse> executeBlocking(){
-        try {
-            return execute().get();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        return executeBlocking(Duration.ofSeconds(60));
+    }
+    
+    public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse> executeBlocking(Duration timeout){
+        return blockingWait(execute(), timeout);
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> {
-                    if(response.getStatusCode() >= 400){
-                        throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
-                    }
-                    return Utils.convertResponse(response,com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class);
-                });
+                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class));
     }
 
     public String getProjectKey() {return this.projectKey;}

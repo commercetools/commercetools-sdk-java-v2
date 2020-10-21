@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import java.nio.file.Files;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Delete Extension by key</p>
@@ -62,21 +65,16 @@ public class ByProjectKeyExtensionsKeyByKeyDelete extends ApiMethod<ByProjectKey
     }
 
     public ApiHttpResponse<com.commercetools.api.models.extension.Extension> executeBlocking(){
-        try {
-            return execute().get();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        return executeBlocking(Duration.ofSeconds(60));
+    }
+    
+    public ApiHttpResponse<com.commercetools.api.models.extension.Extension> executeBlocking(Duration timeout){
+        return blockingWait(execute(), timeout);
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.extension.Extension>> execute(){
         return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> {
-                    if(response.getStatusCode() >= 400){
-                        throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders());
-                    }
-                    return Utils.convertResponse(response,com.commercetools.api.models.extension.Extension.class);
-                });
+                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.extension.Extension.class));
     }
 
     public String getProjectKey() {return this.projectKey;}

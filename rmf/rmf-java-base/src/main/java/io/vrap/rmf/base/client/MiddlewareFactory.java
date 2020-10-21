@@ -22,7 +22,8 @@ public class MiddlewareFactory {
                     request.addHeader(ApiHttpHeaders.USER_AGENT, userAgent);
                     return next.apply(request);
                 },
-                new LoggerMiddleware(logger)
+                new LoggerMiddleware(logger),
+                new ErrorMiddleware()
         );
     }
 

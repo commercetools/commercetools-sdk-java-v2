@@ -5,13 +5,11 @@ import com.commercetools.api.defaultconfig.ApiFactory;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.Category;
 import commercetools.utils.CommercetoolsTestUtils;
-import io.vrap.rmf.base.client.ApiHttpException;
+import io.vrap.rmf.base.client.error.NotFoundException;
 import io.vrap.rmf.base.client.http.RetryMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import org.assertj.core.api.Assertions;
-import org.assertj.core.api.ThrowableAssertAlternative;
 import org.assertj.core.util.Lists;
-import org.junit.Assert;
 import org.junit.Test;
 
 import static java.util.Collections.singletonList;
@@ -34,7 +32,7 @@ public class MiddlewareTest {
         );
 
 
-        Assertions.assertThatExceptionOfType(RuntimeException.class).isThrownBy(
+        Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(
                 () -> {
                     Category category = b
                             .categories()

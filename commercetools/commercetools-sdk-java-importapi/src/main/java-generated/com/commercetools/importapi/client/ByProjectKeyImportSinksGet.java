@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import java.nio.file.Files;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Retrieves all import sinks of a project key.</p>
@@ -59,21 +62,16 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
     }
 
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse> executeBlocking(){
-        try {
-            return execute().get();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        return executeBlocking(Duration.ofSeconds(60));
+    }
+    
+    public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse> executeBlocking(Duration timeout){
+        return blockingWait(execute(), timeout);
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> {
-                    if(response.getStatusCode() >= 400){
-                        throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders(), response.getMessage());
-                    }
-                    return Utils.convertResponse(response,com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse.class);
-                });
+                .thenApply(response -> Utils.convertResponse(response,com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse.class));
     }
 
     public String getProjectKey() {return this.projectKey;}

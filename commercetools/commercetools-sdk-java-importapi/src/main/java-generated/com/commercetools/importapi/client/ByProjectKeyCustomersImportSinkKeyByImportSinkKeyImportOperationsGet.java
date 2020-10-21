@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import java.nio.file.Files;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 import com.commercetools.importapi.models.common.ProcessingState;
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Retrieves all customer import operations of an import sink key.</p>
@@ -62,21 +65,16 @@ public class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyImportOperationsGe
     }
 
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(){
-        try {
-            return execute().get();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        return executeBlocking(Duration.ofSeconds(60));
+    }
+    
+    public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(Duration timeout){
+        return blockingWait(execute(), timeout);
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> {
-                    if(response.getStatusCode() >= 400){
-                        throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders(), response.getMessage());
-                    }
-                    return Utils.convertResponse(response,com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class);
-                });
+                .thenApply(response -> Utils.convertResponse(response,com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class));
     }
 
     public String getProjectKey() {return this.projectKey;}

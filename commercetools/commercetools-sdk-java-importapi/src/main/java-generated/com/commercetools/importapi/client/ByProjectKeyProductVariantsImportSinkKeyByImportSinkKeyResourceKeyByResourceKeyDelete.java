@@ -8,6 +8,7 @@ import java.io.IOException;
 
 import java.nio.file.Files;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,8 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
 
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Deletes the product variant given by the resource key.</p>
@@ -65,21 +68,16 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyResourceKeyB
     }
 
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationStatus> executeBlocking(){
-        try {
-            return execute().get();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+        return executeBlocking(Duration.ofSeconds(60));
+    }
+    
+    public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationStatus> executeBlocking(Duration timeout){
+        return blockingWait(execute(), timeout);
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationStatus>> execute(){
         return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> {
-                    if(response.getStatusCode() >= 400){
-                        throw new ApiHttpException(response.getStatusCode(), new String(response.getBody()), response.getHeaders(), response.getMessage());
-                    }
-                    return Utils.convertResponse(response,com.commercetools.importapi.models.importoperations.ImportOperationStatus.class);
-                });
+                .thenApply(response -> Utils.convertResponse(response,com.commercetools.importapi.models.importoperations.ImportOperationStatus.class));
     }
 
     public String getProjectKey() {return this.projectKey;}

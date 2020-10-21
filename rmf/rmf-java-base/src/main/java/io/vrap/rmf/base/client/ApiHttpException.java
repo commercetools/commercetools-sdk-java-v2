@@ -1,8 +1,9 @@
 package io.vrap.rmf.base.client;
 
+import io.vrap.rmf.base.client.error.BaseException;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
-public class ApiHttpException extends RuntimeException {
+public class ApiHttpException extends BaseException {
 
     private final int statusCode;
     private final String body;

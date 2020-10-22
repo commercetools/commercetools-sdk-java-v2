@@ -1,7 +1,6 @@
 package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
@@ -82,7 +81,7 @@ public interface Store extends BaseResource {
     */
     @Valid
     @JsonProperty("supplyChannels")
-    public List<ChannelResourceIdentifier> getSupplyChannels();
+    public List<ChannelReference> getSupplyChannels();
 
     public void setId(final String id);
     
@@ -104,7 +103,7 @@ public interface Store extends BaseResource {
     
     public void setDistributionChannels(final List<ChannelReference> distributionChannels);
     
-    public void setSupplyChannels(final List<ChannelResourceIdentifier> supplyChannels);
+    public void setSupplyChannels(final List<ChannelReference> supplyChannels);
 
     public static StoreImpl of(){
         return new StoreImpl();

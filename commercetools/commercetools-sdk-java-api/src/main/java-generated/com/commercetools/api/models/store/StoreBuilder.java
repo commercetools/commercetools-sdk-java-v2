@@ -1,7 +1,6 @@
 package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
@@ -51,7 +50,7 @@ public final class StoreBuilder {
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
     
     @Nullable
-    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
+    private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
 
     public StoreBuilder id( final String id) {
         this.id = id;
@@ -103,7 +102,7 @@ public final class StoreBuilder {
         return this;
     }
     
-    public StoreBuilder supplyChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
+    public StoreBuilder supplyChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
         this.supplyChannels = supplyChannels;
         return this;
     }
@@ -159,7 +158,7 @@ public final class StoreBuilder {
     }
     
     @Nullable
-    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
+    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels(){
         return this.supplyChannels;
     }
 

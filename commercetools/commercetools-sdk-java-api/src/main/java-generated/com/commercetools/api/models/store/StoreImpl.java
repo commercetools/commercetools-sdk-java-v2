@@ -1,7 +1,6 @@
 package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
@@ -48,10 +47,10 @@ public final class StoreImpl implements Store {
     
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
     
-    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
+    private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
 
     @JsonCreator
-    StoreImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels, @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
+    StoreImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels, @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -129,7 +128,7 @@ public final class StoreImpl implements Store {
     /**
     *  <p>Set of ResourceIdentifiers of Channels with <code>InventorySupply</code> role</p>
     */
-    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
+    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels(){
         return this.supplyChannels;
     }
 
@@ -173,7 +172,7 @@ public final class StoreImpl implements Store {
         this.distributionChannels = distributionChannels;
     }
     
-    public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
+    public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels){
         this.supplyChannels = supplyChannels;
     }
 

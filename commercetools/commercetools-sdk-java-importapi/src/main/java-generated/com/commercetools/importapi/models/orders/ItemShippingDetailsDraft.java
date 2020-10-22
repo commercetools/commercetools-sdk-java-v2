@@ -6,12 +6,13 @@ import com.commercetools.importapi.models.orders.ItemShippingDetailsDraftImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Map;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -42,4 +43,7 @@ public interface ItemShippingDetailsDraft  {
         return instance;
     }
 
+    default <T extends Accessor<ItemShippingDetailsDraft>> T withItemShippingDetailsDraft(Function<ItemShippingDetailsDraft, T> helper) {
+        return helper.apply(this);
+    }
 }

@@ -7,12 +7,13 @@ import com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldAc
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Map;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -47,4 +48,7 @@ public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAc
         return instance;
     }
 
+    default <T extends Accessor<CustomerGroupSetCustomFieldAction>> T withCustomerGroupSetCustomFieldAction(Function<CustomerGroupSetCustomFieldAction, T> helper) {
+        return helper.apply(this);
+    }
 }

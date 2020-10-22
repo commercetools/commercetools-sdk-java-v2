@@ -8,12 +8,13 @@ import com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxAction
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 import java.util.Map;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -49,4 +50,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
         return instance;
     }
 
+    default <T extends Accessor<StagedOrderSetOrderTotalTaxAction>> T withStagedOrderSetOrderTotalTaxAction(Function<StagedOrderSetOrderTotalTaxAction, T> helper) {
+        return helper.apply(this);
+    }
 }

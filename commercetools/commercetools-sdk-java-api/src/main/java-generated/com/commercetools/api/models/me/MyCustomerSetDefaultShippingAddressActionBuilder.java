@@ -16,9 +16,17 @@ public final class MyCustomerSetDefaultShippingAddressActionBuilder {
 
     @Nullable
     private String addressId;
+    
+    @Nullable
+    private String addressKey;
 
     public MyCustomerSetDefaultShippingAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
+        return this;
+    }
+    
+    public MyCustomerSetDefaultShippingAddressActionBuilder addressKey(@Nullable final String addressKey) {
+        this.addressKey = addressKey;
         return this;
     }
 
@@ -26,9 +34,14 @@ public final class MyCustomerSetDefaultShippingAddressActionBuilder {
     public String getAddressId(){
         return this.addressId;
     }
+    
+    @Nullable
+    public String getAddressKey(){
+        return this.addressKey;
+    }
 
     public MyCustomerSetDefaultShippingAddressAction build() {
-        return new MyCustomerSetDefaultShippingAddressActionImpl(addressId);
+        return new MyCustomerSetDefaultShippingAddressActionImpl(addressId, addressKey);
     }
 
     public static MyCustomerSetDefaultShippingAddressActionBuilder of() {
@@ -38,6 +51,7 @@ public final class MyCustomerSetDefaultShippingAddressActionBuilder {
     public static MyCustomerSetDefaultShippingAddressActionBuilder of(final MyCustomerSetDefaultShippingAddressAction template) {
         MyCustomerSetDefaultShippingAddressActionBuilder builder = new MyCustomerSetDefaultShippingAddressActionBuilder();
         builder.addressId = template.getAddressId();
+        builder.addressKey = template.getAddressKey();
         return builder;
     }
 

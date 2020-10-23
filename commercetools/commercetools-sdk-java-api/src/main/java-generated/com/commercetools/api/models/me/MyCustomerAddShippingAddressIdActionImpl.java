@@ -25,10 +25,13 @@ public final class MyCustomerAddShippingAddressIdActionImpl implements MyCustome
     private String action;
     
     private String addressId;
+    
+    private String addressKey;
 
     @JsonCreator
-    MyCustomerAddShippingAddressIdActionImpl(@JsonProperty("addressId") final String addressId) {
+    MyCustomerAddShippingAddressIdActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey) {
         this.addressId = addressId;
+        this.addressKey = addressKey;
         this.action = "addShippingAddressId";
     }
     public MyCustomerAddShippingAddressIdActionImpl() {
@@ -44,9 +47,18 @@ public final class MyCustomerAddShippingAddressIdActionImpl implements MyCustome
     public String getAddressId(){
         return this.addressId;
     }
+    
+    
+    public String getAddressKey(){
+        return this.addressKey;
+    }
 
     public void setAddressId(final String addressId){
         this.addressId = addressId;
+    }
+    
+    public void setAddressKey(final String addressKey){
+        this.addressKey = addressKey;
     }
 
 }

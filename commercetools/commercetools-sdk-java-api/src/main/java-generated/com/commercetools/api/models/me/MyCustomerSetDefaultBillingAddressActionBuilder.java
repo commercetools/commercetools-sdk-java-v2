@@ -16,9 +16,17 @@ public final class MyCustomerSetDefaultBillingAddressActionBuilder {
 
     @Nullable
     private String addressId;
+    
+    @Nullable
+    private String addressKey;
 
     public MyCustomerSetDefaultBillingAddressActionBuilder addressId(@Nullable final String addressId) {
         this.addressId = addressId;
+        return this;
+    }
+    
+    public MyCustomerSetDefaultBillingAddressActionBuilder addressKey(@Nullable final String addressKey) {
+        this.addressKey = addressKey;
         return this;
     }
 
@@ -26,9 +34,14 @@ public final class MyCustomerSetDefaultBillingAddressActionBuilder {
     public String getAddressId(){
         return this.addressId;
     }
+    
+    @Nullable
+    public String getAddressKey(){
+        return this.addressKey;
+    }
 
     public MyCustomerSetDefaultBillingAddressAction build() {
-        return new MyCustomerSetDefaultBillingAddressActionImpl(addressId);
+        return new MyCustomerSetDefaultBillingAddressActionImpl(addressId, addressKey);
     }
 
     public static MyCustomerSetDefaultBillingAddressActionBuilder of() {
@@ -38,6 +51,7 @@ public final class MyCustomerSetDefaultBillingAddressActionBuilder {
     public static MyCustomerSetDefaultBillingAddressActionBuilder of(final MyCustomerSetDefaultBillingAddressAction template) {
         MyCustomerSetDefaultBillingAddressActionBuilder builder = new MyCustomerSetDefaultBillingAddressActionBuilder();
         builder.addressId = template.getAddressId();
+        builder.addressKey = template.getAddressKey();
         return builder;
     }
 

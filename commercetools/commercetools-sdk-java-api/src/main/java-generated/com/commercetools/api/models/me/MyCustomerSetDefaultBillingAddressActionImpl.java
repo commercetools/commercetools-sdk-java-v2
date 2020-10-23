@@ -25,10 +25,13 @@ public final class MyCustomerSetDefaultBillingAddressActionImpl implements MyCus
     private String action;
     
     private String addressId;
+    
+    private String addressKey;
 
     @JsonCreator
-    MyCustomerSetDefaultBillingAddressActionImpl(@JsonProperty("addressId") final String addressId) {
+    MyCustomerSetDefaultBillingAddressActionImpl(@JsonProperty("addressId") final String addressId, @JsonProperty("addressKey") final String addressKey) {
         this.addressId = addressId;
+        this.addressKey = addressKey;
         this.action = "setDefaultBillingAddress";
     }
     public MyCustomerSetDefaultBillingAddressActionImpl() {
@@ -44,9 +47,18 @@ public final class MyCustomerSetDefaultBillingAddressActionImpl implements MyCus
     public String getAddressId(){
         return this.addressId;
     }
+    
+    
+    public String getAddressKey(){
+        return this.addressKey;
+    }
 
     public void setAddressId(final String addressId){
         this.addressId = addressId;
+    }
+    
+    public void setAddressKey(final String addressKey){
+        this.addressKey = addressKey;
     }
 
 }

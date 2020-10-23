@@ -26,8 +26,14 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     
     @JsonProperty("addressId")
     public String getAddressId();
+    
+    
+    @JsonProperty("addressKey")
+    public String getAddressKey();
 
     public void setAddressId(final String addressId);
+    
+    public void setAddressKey(final String addressKey);
 
     public static MyCustomerSetDefaultBillingAddressActionImpl of(){
         return new MyCustomerSetDefaultBillingAddressActionImpl();
@@ -37,6 +43,7 @@ public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpda
     public static MyCustomerSetDefaultBillingAddressActionImpl of(final MyCustomerSetDefaultBillingAddressAction template) {
         MyCustomerSetDefaultBillingAddressActionImpl instance = new MyCustomerSetDefaultBillingAddressActionImpl();
         instance.setAddressId(template.getAddressId());
+        instance.setAddressKey(template.getAddressKey());
         return instance;
     }
 

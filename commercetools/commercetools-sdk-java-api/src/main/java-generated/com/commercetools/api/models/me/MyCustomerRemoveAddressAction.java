@@ -23,11 +23,17 @@ import java.io.IOException;
 public interface MyCustomerRemoveAddressAction extends MyCustomerUpdateAction {
 
     
-    @NotNull
+    
     @JsonProperty("addressId")
     public String getAddressId();
+    
+    
+    @JsonProperty("addressKey")
+    public String getAddressKey();
 
     public void setAddressId(final String addressId);
+    
+    public void setAddressKey(final String addressKey);
 
     public static MyCustomerRemoveAddressActionImpl of(){
         return new MyCustomerRemoveAddressActionImpl();
@@ -37,6 +43,7 @@ public interface MyCustomerRemoveAddressAction extends MyCustomerUpdateAction {
     public static MyCustomerRemoveAddressActionImpl of(final MyCustomerRemoveAddressAction template) {
         MyCustomerRemoveAddressActionImpl instance = new MyCustomerRemoveAddressActionImpl();
         instance.setAddressId(template.getAddressId());
+        instance.setAddressKey(template.getAddressKey());
         return instance;
     }
 

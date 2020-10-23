@@ -46,7 +46,7 @@ public interface ReferenceSetAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<ReferenceSetAttribute>> T withReferenceSetAttribute(Function<ReferenceSetAttribute, T> helper) {
+    default <T> T withReferenceSetAttribute(Function<ReferenceSetAttribute, T> helper) {
         return helper.apply(this);
     }
 }

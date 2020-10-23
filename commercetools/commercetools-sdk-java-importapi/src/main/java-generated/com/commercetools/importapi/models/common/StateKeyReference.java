@@ -39,7 +39,7 @@ public interface StateKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<StateKeyReference>> T withStateKeyReference(Function<StateKeyReference, T> helper) {
+    default <T> T withStateKeyReference(Function<StateKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

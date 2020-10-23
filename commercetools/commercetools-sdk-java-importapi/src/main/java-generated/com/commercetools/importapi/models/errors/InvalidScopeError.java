@@ -38,7 +38,7 @@ public interface InvalidScopeError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidScopeError>> T withInvalidScopeError(Function<InvalidScopeError, T> helper) {
+    default <T> T withInvalidScopeError(Function<InvalidScopeError, T> helper) {
         return helper.apply(this);
     }
 }

@@ -35,7 +35,7 @@ public interface ContentionError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ContentionError>> T withContentionError(Function<ContentionError, T> helper) {
+    default <T> T withContentionError(Function<ContentionError, T> helper) {
         return helper.apply(this);
     }
 }

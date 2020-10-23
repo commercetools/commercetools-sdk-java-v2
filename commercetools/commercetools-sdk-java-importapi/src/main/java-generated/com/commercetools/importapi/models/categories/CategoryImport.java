@@ -144,7 +144,7 @@ public interface CategoryImport extends ImportResource {
         return instance;
     }
 
-    default <T extends Accessor<CategoryImport>> T withCategoryImport(Function<CategoryImport, T> helper) {
+    default <T> T withCategoryImport(Function<CategoryImport, T> helper) {
         return helper.apply(this);
     }
 }

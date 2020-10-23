@@ -67,7 +67,7 @@ public interface ConcurrentModificationError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ConcurrentModificationError>> T withConcurrentModificationError(Function<ConcurrentModificationError, T> helper) {
+    default <T> T withConcurrentModificationError(Function<ConcurrentModificationError, T> helper) {
         return helper.apply(this);
     }
 }

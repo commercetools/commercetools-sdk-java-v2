@@ -56,7 +56,7 @@ public interface TypedMoney  {
 
 
 
-    default <T extends Accessor<TypedMoney>> T withTypedMoney(Function<TypedMoney, T> helper) {
+    default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
     }
 }

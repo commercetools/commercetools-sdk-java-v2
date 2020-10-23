@@ -39,7 +39,7 @@ public interface CategoryKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<CategoryKeyReference>> T withCategoryKeyReference(Function<CategoryKeyReference, T> helper) {
+    default <T> T withCategoryKeyReference(Function<CategoryKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

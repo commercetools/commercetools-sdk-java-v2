@@ -45,7 +45,7 @@ public interface ImportResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ImportResponse>> T withImportResponse(Function<ImportResponse, T> helper) {
+    default <T> T withImportResponse(Function<ImportResponse, T> helper) {
         return helper.apply(this);
     }
 }

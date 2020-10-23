@@ -65,7 +65,7 @@ public interface ProductTypeImport extends ImportResource {
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeImport>> T withProductTypeImport(Function<ProductTypeImport, T> helper) {
+    default <T> T withProductTypeImport(Function<ProductTypeImport, T> helper) {
         return helper.apply(this);
     }
 }

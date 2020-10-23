@@ -81,7 +81,7 @@ public interface LineItemProductVariantImportDraft  {
         return instance;
     }
 
-    default <T extends Accessor<LineItemProductVariantImportDraft>> T withLineItemProductVariantImportDraft(Function<LineItemProductVariantImportDraft, T> helper) {
+    default <T> T withLineItemProductVariantImportDraft(Function<LineItemProductVariantImportDraft, T> helper) {
         return helper.apply(this);
     }
 }

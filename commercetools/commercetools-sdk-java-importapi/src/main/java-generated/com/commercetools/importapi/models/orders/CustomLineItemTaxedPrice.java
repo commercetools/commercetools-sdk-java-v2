@@ -49,7 +49,7 @@ public interface CustomLineItemTaxedPrice  {
         return instance;
     }
 
-    default <T extends Accessor<CustomLineItemTaxedPrice>> T withCustomLineItemTaxedPrice(Function<CustomLineItemTaxedPrice, T> helper) {
+    default <T> T withCustomLineItemTaxedPrice(Function<CustomLineItemTaxedPrice, T> helper) {
         return helper.apply(this);
     }
 }

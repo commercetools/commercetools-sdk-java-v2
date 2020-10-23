@@ -48,7 +48,7 @@ public interface ProductImportRequest extends ImportRequest {
         return instance;
     }
 
-    default <T extends Accessor<ProductImportRequest>> T withProductImportRequest(Function<ProductImportRequest, T> helper) {
+    default <T> T withProductImportRequest(Function<ProductImportRequest, T> helper) {
         return helper.apply(this);
     }
 }

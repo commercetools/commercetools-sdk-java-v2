@@ -75,7 +75,7 @@ public interface ExternalTaxRateDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ExternalTaxRateDraft>> T withExternalTaxRateDraft(Function<ExternalTaxRateDraft, T> helper) {
+    default <T> T withExternalTaxRateDraft(Function<ExternalTaxRateDraft, T> helper) {
         return helper.apply(this);
     }
 }

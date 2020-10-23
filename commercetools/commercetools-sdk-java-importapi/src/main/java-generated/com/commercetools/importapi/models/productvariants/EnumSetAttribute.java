@@ -45,7 +45,7 @@ public interface EnumSetAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<EnumSetAttribute>> T withEnumSetAttribute(Function<EnumSetAttribute, T> helper) {
+    default <T> T withEnumSetAttribute(Function<EnumSetAttribute, T> helper) {
         return helper.apply(this);
     }
 }

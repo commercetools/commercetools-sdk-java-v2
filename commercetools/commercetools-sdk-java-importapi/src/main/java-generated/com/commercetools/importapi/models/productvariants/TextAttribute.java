@@ -44,7 +44,7 @@ public interface TextAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<TextAttribute>> T withTextAttribute(Function<TextAttribute, T> helper) {
+    default <T> T withTextAttribute(Function<TextAttribute, T> helper) {
         return helper.apply(this);
     }
 }

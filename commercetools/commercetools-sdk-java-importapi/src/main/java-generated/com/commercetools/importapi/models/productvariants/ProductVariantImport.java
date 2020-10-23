@@ -112,7 +112,7 @@ public interface ProductVariantImport extends ImportResource {
         return instance;
     }
 
-    default <T extends Accessor<ProductVariantImport>> T withProductVariantImport(Function<ProductVariantImport, T> helper) {
+    default <T> T withProductVariantImport(Function<ProductVariantImport, T> helper) {
         return helper.apply(this);
     }
 }

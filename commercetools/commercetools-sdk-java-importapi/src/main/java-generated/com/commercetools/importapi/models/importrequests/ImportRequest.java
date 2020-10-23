@@ -54,7 +54,7 @@ public interface ImportRequest  {
 
 
 
-    default <T extends Accessor<ImportRequest>> T withImportRequest(Function<ImportRequest, T> helper) {
+    default <T> T withImportRequest(Function<ImportRequest, T> helper) {
         return helper.apply(this);
     }
 }

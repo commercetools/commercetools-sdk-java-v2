@@ -43,7 +43,7 @@ public interface LocalizedEnumField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<LocalizedEnumField>> T withLocalizedEnumField(Function<LocalizedEnumField, T> helper) {
+    default <T> T withLocalizedEnumField(Function<LocalizedEnumField, T> helper) {
         return helper.apply(this);
     }
 }

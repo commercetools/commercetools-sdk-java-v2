@@ -39,7 +39,7 @@ public interface ProductVariantKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<ProductVariantKeyReference>> T withProductVariantKeyReference(Function<ProductVariantKeyReference, T> helper) {
+    default <T> T withProductVariantKeyReference(Function<ProductVariantKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

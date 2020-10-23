@@ -174,7 +174,7 @@ public interface ProductDraftImport extends ImportResource {
         return instance;
     }
 
-    default <T extends Accessor<ProductDraftImport>> T withProductDraftImport(Function<ProductDraftImport, T> helper) {
+    default <T> T withProductDraftImport(Function<ProductDraftImport, T> helper) {
         return helper.apply(this);
     }
 }

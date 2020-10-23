@@ -46,7 +46,7 @@ public interface MoneyAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<MoneyAttribute>> T withMoneyAttribute(Function<MoneyAttribute, T> helper) {
+    default <T> T withMoneyAttribute(Function<MoneyAttribute, T> helper) {
         return helper.apply(this);
     }
 }

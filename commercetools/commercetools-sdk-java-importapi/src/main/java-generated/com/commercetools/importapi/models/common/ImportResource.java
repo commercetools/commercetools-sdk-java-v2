@@ -53,7 +53,7 @@ public interface ImportResource  {
         return instance;
     }
 
-    default <T extends Accessor<ImportResource>> T withImportResource(Function<ImportResource, T> helper) {
+    default <T> T withImportResource(Function<ImportResource, T> helper) {
         return helper.apply(this);
     }
 }

@@ -58,7 +58,7 @@ public interface AttributeType  {
 
 
 
-    default <T extends Accessor<AttributeType>> T withAttributeType(Function<AttributeType, T> helper) {
+    default <T> T withAttributeType(Function<AttributeType, T> helper) {
         return helper.apply(this);
     }
 }

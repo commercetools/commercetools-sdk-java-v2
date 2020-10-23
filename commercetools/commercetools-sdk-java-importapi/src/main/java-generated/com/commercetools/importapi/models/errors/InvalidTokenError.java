@@ -35,7 +35,7 @@ public interface InvalidTokenError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidTokenError>> T withInvalidTokenError(Function<InvalidTokenError, T> helper) {
+    default <T> T withInvalidTokenError(Function<InvalidTokenError, T> helper) {
         return helper.apply(this);
     }
 }

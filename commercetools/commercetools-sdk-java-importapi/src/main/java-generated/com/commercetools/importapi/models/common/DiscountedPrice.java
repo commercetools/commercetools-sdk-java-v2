@@ -52,7 +52,7 @@ public interface DiscountedPrice  {
         return instance;
     }
 
-    default <T extends Accessor<DiscountedPrice>> T withDiscountedPrice(Function<DiscountedPrice, T> helper) {
+    default <T> T withDiscountedPrice(Function<DiscountedPrice, T> helper) {
         return helper.apply(this);
     }
 }

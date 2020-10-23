@@ -48,7 +48,7 @@ public interface CustomerImportRequest extends ImportRequest {
         return instance;
     }
 
-    default <T extends Accessor<CustomerImportRequest>> T withCustomerImportRequest(Function<CustomerImportRequest, T> helper) {
+    default <T> T withCustomerImportRequest(Function<CustomerImportRequest, T> helper) {
         return helper.apply(this);
     }
 }

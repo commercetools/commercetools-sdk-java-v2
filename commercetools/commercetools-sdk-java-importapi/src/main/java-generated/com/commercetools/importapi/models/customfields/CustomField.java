@@ -79,7 +79,7 @@ public interface CustomField  {
 
 
 
-    default <T extends Accessor<CustomField>> T withCustomField(Function<CustomField, T> helper) {
+    default <T> T withCustomField(Function<CustomField, T> helper) {
         return helper.apply(this);
     }
 }

@@ -46,7 +46,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<LocalizableTextSetAttribute>> T withLocalizableTextSetAttribute(Function<LocalizableTextSetAttribute, T> helper) {
+    default <T> T withLocalizableTextSetAttribute(Function<LocalizableTextSetAttribute, T> helper) {
         return helper.apply(this);
     }
 }

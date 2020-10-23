@@ -233,7 +233,7 @@ public interface CustomerImport extends ImportResource {
         return instance;
     }
 
-    default <T extends Accessor<CustomerImport>> T withCustomerImport(Function<CustomerImport, T> helper) {
+    default <T> T withCustomerImport(Function<CustomerImport, T> helper) {
         return helper.apply(this);
     }
 }

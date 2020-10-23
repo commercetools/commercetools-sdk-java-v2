@@ -45,7 +45,7 @@ public interface EnumAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<EnumAttribute>> T withEnumAttribute(Function<EnumAttribute, T> helper) {
+    default <T> T withEnumAttribute(Function<EnumAttribute, T> helper) {
         return helper.apply(this);
     }
 }

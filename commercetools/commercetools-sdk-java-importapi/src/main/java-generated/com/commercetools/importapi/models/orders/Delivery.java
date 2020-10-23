@@ -73,7 +73,7 @@ public interface Delivery  {
         return instance;
     }
 
-    default <T extends Accessor<Delivery>> T withDelivery(Function<Delivery, T> helper) {
+    default <T> T withDelivery(Function<Delivery, T> helper) {
         return helper.apply(this);
     }
 }

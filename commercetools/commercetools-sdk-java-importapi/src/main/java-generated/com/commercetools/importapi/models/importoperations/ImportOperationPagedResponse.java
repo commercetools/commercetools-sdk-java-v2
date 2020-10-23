@@ -73,7 +73,7 @@ public interface ImportOperationPagedResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ImportOperationPagedResponse>> T withImportOperationPagedResponse(Function<ImportOperationPagedResponse, T> helper) {
+    default <T> T withImportOperationPagedResponse(Function<ImportOperationPagedResponse, T> helper) {
         return helper.apply(this);
     }
 }

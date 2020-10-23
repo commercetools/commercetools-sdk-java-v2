@@ -63,7 +63,7 @@ public interface ImportSinkDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ImportSinkDraft>> T withImportSinkDraft(Function<ImportSinkDraft, T> helper) {
+    default <T> T withImportSinkDraft(Function<ImportSinkDraft, T> helper) {
         return helper.apply(this);
     }
 }

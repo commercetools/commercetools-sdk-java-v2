@@ -84,7 +84,7 @@ public interface ImportSink  {
         return instance;
     }
 
-    default <T extends Accessor<ImportSink>> T withImportSink(Function<ImportSink, T> helper) {
+    default <T> T withImportSink(Function<ImportSink, T> helper) {
         return helper.apply(this);
     }
 }

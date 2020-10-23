@@ -48,7 +48,7 @@ public interface ReferenceAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<ReferenceAttribute>> T withReferenceAttribute(Function<ReferenceAttribute, T> helper) {
+    default <T> T withReferenceAttribute(Function<ReferenceAttribute, T> helper) {
         return helper.apply(this);
     }
 }

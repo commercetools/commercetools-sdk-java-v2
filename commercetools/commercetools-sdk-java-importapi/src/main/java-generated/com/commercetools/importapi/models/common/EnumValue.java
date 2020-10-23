@@ -47,7 +47,7 @@ public interface EnumValue  {
         return instance;
     }
 
-    default <T extends Accessor<EnumValue>> T withEnumValue(Function<EnumValue, T> helper) {
+    default <T> T withEnumValue(Function<EnumValue, T> helper) {
         return helper.apply(this);
     }
 }

@@ -113,7 +113,7 @@ public interface ShippingInfoImportDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ShippingInfoImportDraft>> T withShippingInfoImportDraft(Function<ShippingInfoImportDraft, T> helper) {
+    default <T> T withShippingInfoImportDraft(Function<ShippingInfoImportDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -43,7 +43,7 @@ public interface StringSetField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<StringSetField>> T withStringSetField(Function<StringSetField, T> helper) {
+    default <T> T withStringSetField(Function<StringSetField, T> helper) {
         return helper.apply(this);
     }
 }

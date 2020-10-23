@@ -34,7 +34,7 @@ public interface AttributeDateTimeType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeDateTimeType>> T withAttributeDateTimeType(Function<AttributeDateTimeType, T> helper) {
+    default <T> T withAttributeDateTimeType(Function<AttributeDateTimeType, T> helper) {
         return helper.apply(this);
     }
 }

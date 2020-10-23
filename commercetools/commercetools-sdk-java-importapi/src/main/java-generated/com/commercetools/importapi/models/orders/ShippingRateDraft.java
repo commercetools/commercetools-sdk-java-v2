@@ -56,7 +56,7 @@ public interface ShippingRateDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ShippingRateDraft>> T withShippingRateDraft(Function<ShippingRateDraft, T> helper) {
+    default <T> T withShippingRateDraft(Function<ShippingRateDraft, T> helper) {
         return helper.apply(this);
     }
 }

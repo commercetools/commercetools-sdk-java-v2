@@ -40,7 +40,7 @@ public interface LocalizedString  {
         return instance;
     }
 
-    default <T extends Accessor<LocalizedString>> T withLocalizedString(Function<LocalizedString, T> helper) {
+    default <T> T withLocalizedString(Function<LocalizedString, T> helper) {
         return helper.apply(this);
     }
 }

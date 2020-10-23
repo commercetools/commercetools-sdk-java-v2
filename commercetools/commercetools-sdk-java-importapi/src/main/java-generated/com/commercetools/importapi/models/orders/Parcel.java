@@ -71,7 +71,7 @@ public interface Parcel  {
         return instance;
     }
 
-    default <T extends Accessor<Parcel>> T withParcel(Function<Parcel, T> helper) {
+    default <T> T withParcel(Function<Parcel, T> helper) {
         return helper.apply(this);
     }
 }

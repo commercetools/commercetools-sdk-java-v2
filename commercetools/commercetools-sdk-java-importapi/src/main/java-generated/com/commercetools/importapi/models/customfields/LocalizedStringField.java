@@ -45,7 +45,7 @@ public interface LocalizedStringField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<LocalizedStringField>> T withLocalizedStringField(Function<LocalizedStringField, T> helper) {
+    default <T> T withLocalizedStringField(Function<LocalizedStringField, T> helper) {
         return helper.apply(this);
     }
 }

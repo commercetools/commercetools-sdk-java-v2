@@ -43,7 +43,7 @@ public interface AttributeReferenceType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeReferenceType>> T withAttributeReferenceType(Function<AttributeReferenceType, T> helper) {
+    default <T> T withAttributeReferenceType(Function<AttributeReferenceType, T> helper) {
         return helper.apply(this);
     }
 }

@@ -56,7 +56,7 @@ public interface Custom  {
         return instance;
     }
 
-    default <T extends Accessor<Custom>> T withCustom(Function<Custom, T> helper) {
+    default <T> T withCustom(Function<Custom, T> helper) {
         return helper.apply(this);
     }
 }

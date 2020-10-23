@@ -42,7 +42,7 @@ public interface ResourceUpdateError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ResourceUpdateError>> T withResourceUpdateError(Function<ResourceUpdateError, T> helper) {
+    default <T> T withResourceUpdateError(Function<ResourceUpdateError, T> helper) {
         return helper.apply(this);
     }
 }

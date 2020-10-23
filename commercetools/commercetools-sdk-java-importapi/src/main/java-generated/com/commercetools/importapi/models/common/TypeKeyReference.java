@@ -39,7 +39,7 @@ public interface TypeKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<TypeKeyReference>> T withTypeKeyReference(Function<TypeKeyReference, T> helper) {
+    default <T> T withTypeKeyReference(Function<TypeKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

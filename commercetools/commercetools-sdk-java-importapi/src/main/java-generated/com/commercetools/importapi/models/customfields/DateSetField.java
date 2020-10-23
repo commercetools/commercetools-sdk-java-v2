@@ -44,7 +44,7 @@ public interface DateSetField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<DateSetField>> T withDateSetField(Function<DateSetField, T> helper) {
+    default <T> T withDateSetField(Function<DateSetField, T> helper) {
         return helper.apply(this);
     }
 }

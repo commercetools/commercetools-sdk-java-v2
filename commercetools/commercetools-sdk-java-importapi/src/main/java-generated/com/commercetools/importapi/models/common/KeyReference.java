@@ -71,7 +71,7 @@ public interface KeyReference  {
 
 
 
-    default <T extends Accessor<KeyReference>> T withKeyReference(Function<KeyReference, T> helper) {
+    default <T> T withKeyReference(Function<KeyReference, T> helper) {
         return helper.apply(this);
     }
 }

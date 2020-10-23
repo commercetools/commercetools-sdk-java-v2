@@ -64,7 +64,7 @@ public interface TaxedPrice  {
         return instance;
     }
 
-    default <T extends Accessor<TaxedPrice>> T withTaxedPrice(Function<TaxedPrice, T> helper) {
+    default <T> T withTaxedPrice(Function<TaxedPrice, T> helper) {
         return helper.apply(this);
     }
 }

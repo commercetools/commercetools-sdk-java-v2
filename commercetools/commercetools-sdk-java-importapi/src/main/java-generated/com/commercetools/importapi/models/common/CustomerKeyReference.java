@@ -39,7 +39,7 @@ public interface CustomerKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<CustomerKeyReference>> T withCustomerKeyReference(Function<CustomerKeyReference, T> helper) {
+    default <T> T withCustomerKeyReference(Function<CustomerKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

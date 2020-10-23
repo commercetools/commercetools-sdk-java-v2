@@ -44,7 +44,7 @@ public interface NumberSetAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<NumberSetAttribute>> T withNumberSetAttribute(Function<NumberSetAttribute, T> helper) {
+    default <T> T withNumberSetAttribute(Function<NumberSetAttribute, T> helper) {
         return helper.apply(this);
     }
 }

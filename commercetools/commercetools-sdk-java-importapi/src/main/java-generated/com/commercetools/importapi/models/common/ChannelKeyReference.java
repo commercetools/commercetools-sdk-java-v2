@@ -39,7 +39,7 @@ public interface ChannelKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<ChannelKeyReference>> T withChannelKeyReference(Function<ChannelKeyReference, T> helper) {
+    default <T> T withChannelKeyReference(Function<ChannelKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

@@ -48,7 +48,7 @@ public interface ProductVariantPatchRequest extends ImportRequest {
         return instance;
     }
 
-    default <T extends Accessor<ProductVariantPatchRequest>> T withProductVariantPatchRequest(Function<ProductVariantPatchRequest, T> helper) {
+    default <T> T withProductVariantPatchRequest(Function<ProductVariantPatchRequest, T> helper) {
         return helper.apply(this);
     }
 }

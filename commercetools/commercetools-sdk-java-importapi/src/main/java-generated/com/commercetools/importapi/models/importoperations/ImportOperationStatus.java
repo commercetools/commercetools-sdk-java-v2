@@ -64,7 +64,7 @@ public interface ImportOperationStatus  {
         return instance;
     }
 
-    default <T extends Accessor<ImportOperationStatus>> T withImportOperationStatus(Function<ImportOperationStatus, T> helper) {
+    default <T> T withImportOperationStatus(Function<ImportOperationStatus, T> helper) {
         return helper.apply(this);
     }
 }

@@ -121,7 +121,7 @@ public interface LineItemPrice  {
         return instance;
     }
 
-    default <T extends Accessor<LineItemPrice>> T withLineItemPrice(Function<LineItemPrice, T> helper) {
+    default <T> T withLineItemPrice(Function<LineItemPrice, T> helper) {
         return helper.apply(this);
     }
 }

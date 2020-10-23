@@ -122,7 +122,7 @@ public interface PriceDraftImport  {
         return instance;
     }
 
-    default <T extends Accessor<PriceDraftImport>> T withPriceDraftImport(Function<PriceDraftImport, T> helper) {
+    default <T> T withPriceDraftImport(Function<PriceDraftImport, T> helper) {
         return helper.apply(this);
     }
 }

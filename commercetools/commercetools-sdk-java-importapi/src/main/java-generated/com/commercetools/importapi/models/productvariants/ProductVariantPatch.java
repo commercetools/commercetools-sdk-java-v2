@@ -77,7 +77,7 @@ public interface ProductVariantPatch  {
         return instance;
     }
 
-    default <T extends Accessor<ProductVariantPatch>> T withProductVariantPatch(Function<ProductVariantPatch, T> helper) {
+    default <T> T withProductVariantPatch(Function<ProductVariantPatch, T> helper) {
         return helper.apply(this);
     }
 }

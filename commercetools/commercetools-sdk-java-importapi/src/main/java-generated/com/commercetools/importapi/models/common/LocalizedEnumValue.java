@@ -48,7 +48,7 @@ public interface LocalizedEnumValue  {
         return instance;
     }
 
-    default <T extends Accessor<LocalizedEnumValue>> T withLocalizedEnumValue(Function<LocalizedEnumValue, T> helper) {
+    default <T> T withLocalizedEnumValue(Function<LocalizedEnumValue, T> helper) {
         return helper.apply(this);
     }
 }

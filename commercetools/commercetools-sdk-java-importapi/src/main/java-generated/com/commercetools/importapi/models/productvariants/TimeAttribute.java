@@ -45,7 +45,7 @@ public interface TimeAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<TimeAttribute>> T withTimeAttribute(Function<TimeAttribute, T> helper) {
+    default <T> T withTimeAttribute(Function<TimeAttribute, T> helper) {
         return helper.apply(this);
     }
 }

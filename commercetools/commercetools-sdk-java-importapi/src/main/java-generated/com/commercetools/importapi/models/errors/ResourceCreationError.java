@@ -42,7 +42,7 @@ public interface ResourceCreationError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ResourceCreationError>> T withResourceCreationError(Function<ResourceCreationError, T> helper) {
+    default <T> T withResourceCreationError(Function<ResourceCreationError, T> helper) {
         return helper.apply(this);
     }
 }

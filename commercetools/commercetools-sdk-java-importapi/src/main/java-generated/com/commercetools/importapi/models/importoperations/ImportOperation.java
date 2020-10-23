@@ -138,7 +138,7 @@ public interface ImportOperation  {
         return instance;
     }
 
-    default <T extends Accessor<ImportOperation>> T withImportOperation(Function<ImportOperation, T> helper) {
+    default <T> T withImportOperation(Function<ImportOperation, T> helper) {
         return helper.apply(this);
     }
 }

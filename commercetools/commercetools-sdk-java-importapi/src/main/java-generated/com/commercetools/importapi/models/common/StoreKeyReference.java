@@ -39,7 +39,7 @@ public interface StoreKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<StoreKeyReference>> T withStoreKeyReference(Function<StoreKeyReference, T> helper) {
+    default <T> T withStoreKeyReference(Function<StoreKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

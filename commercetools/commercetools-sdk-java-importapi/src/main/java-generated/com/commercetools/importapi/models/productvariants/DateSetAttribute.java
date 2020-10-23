@@ -45,7 +45,7 @@ public interface DateSetAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<DateSetAttribute>> T withDateSetAttribute(Function<DateSetAttribute, T> helper) {
+    default <T> T withDateSetAttribute(Function<DateSetAttribute, T> helper) {
         return helper.apply(this);
     }
 }

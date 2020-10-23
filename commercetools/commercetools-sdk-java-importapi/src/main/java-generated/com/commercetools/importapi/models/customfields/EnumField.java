@@ -43,7 +43,7 @@ public interface EnumField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<EnumField>> T withEnumField(Function<EnumField, T> helper) {
+    default <T> T withEnumField(Function<EnumField, T> helper) {
         return helper.apply(this);
     }
 }

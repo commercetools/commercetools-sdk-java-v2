@@ -47,7 +47,7 @@ public interface ReferenceField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<ReferenceField>> T withReferenceField(Function<ReferenceField, T> helper) {
+    default <T> T withReferenceField(Function<ReferenceField, T> helper) {
         return helper.apply(this);
     }
 }

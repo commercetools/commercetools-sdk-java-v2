@@ -44,7 +44,7 @@ public interface BooleanSetAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<BooleanSetAttribute>> T withBooleanSetAttribute(Function<BooleanSetAttribute, T> helper) {
+    default <T> T withBooleanSetAttribute(Function<BooleanSetAttribute, T> helper) {
         return helper.apply(this);
     }
 }

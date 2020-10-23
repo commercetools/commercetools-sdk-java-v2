@@ -45,7 +45,7 @@ public interface LocalizableEnumAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<LocalizableEnumAttribute>> T withLocalizableEnumAttribute(Function<LocalizableEnumAttribute, T> helper) {
+    default <T> T withLocalizableEnumAttribute(Function<LocalizableEnumAttribute, T> helper) {
         return helper.apply(this);
     }
 }

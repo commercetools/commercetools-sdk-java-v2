@@ -73,7 +73,7 @@ public interface ImportSinkPagedResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ImportSinkPagedResponse>> T withImportSinkPagedResponse(Function<ImportSinkPagedResponse, T> helper) {
+    default <T> T withImportSinkPagedResponse(Function<ImportSinkPagedResponse, T> helper) {
         return helper.apply(this);
     }
 }

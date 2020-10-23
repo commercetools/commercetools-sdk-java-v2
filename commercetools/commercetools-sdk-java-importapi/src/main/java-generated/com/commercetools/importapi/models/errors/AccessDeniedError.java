@@ -35,7 +35,7 @@ public interface AccessDeniedError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<AccessDeniedError>> T withAccessDeniedError(Function<AccessDeniedError, T> helper) {
+    default <T> T withAccessDeniedError(Function<AccessDeniedError, T> helper) {
         return helper.apply(this);
     }
 }

@@ -46,7 +46,7 @@ public interface RequiredFieldError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<RequiredFieldError>> T withRequiredFieldError(Function<RequiredFieldError, T> helper) {
+    default <T> T withRequiredFieldError(Function<RequiredFieldError, T> helper) {
         return helper.apply(this);
     }
 }

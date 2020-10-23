@@ -39,7 +39,7 @@ public interface ShippingMethodKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodKeyReference>> T withShippingMethodKeyReference(Function<ShippingMethodKeyReference, T> helper) {
+    default <T> T withShippingMethodKeyReference(Function<ShippingMethodKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

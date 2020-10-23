@@ -39,7 +39,7 @@ public interface TaxCategoryKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryKeyReference>> T withTaxCategoryKeyReference(Function<TaxCategoryKeyReference, T> helper) {
+    default <T> T withTaxCategoryKeyReference(Function<TaxCategoryKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

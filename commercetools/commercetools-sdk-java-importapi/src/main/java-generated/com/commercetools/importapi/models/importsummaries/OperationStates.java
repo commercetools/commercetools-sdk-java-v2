@@ -114,7 +114,7 @@ public interface OperationStates  {
         return instance;
     }
 
-    default <T extends Accessor<OperationStates>> T withOperationStates(Function<OperationStates, T> helper) {
+    default <T> T withOperationStates(Function<OperationStates, T> helper) {
         return helper.apply(this);
     }
 }

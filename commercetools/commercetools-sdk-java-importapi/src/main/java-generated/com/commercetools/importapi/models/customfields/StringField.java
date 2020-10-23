@@ -43,7 +43,7 @@ public interface StringField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<StringField>> T withStringField(Function<StringField, T> helper) {
+    default <T> T withStringField(Function<StringField, T> helper) {
         return helper.apply(this);
     }
 }

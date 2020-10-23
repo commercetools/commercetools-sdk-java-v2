@@ -40,7 +40,7 @@ public interface CustomTokenizer extends SuggestTokenizer {
         return instance;
     }
 
-    default <T extends Accessor<CustomTokenizer>> T withCustomTokenizer(Function<CustomTokenizer, T> helper) {
+    default <T> T withCustomTokenizer(Function<CustomTokenizer, T> helper) {
         return helper.apply(this);
     }
 }

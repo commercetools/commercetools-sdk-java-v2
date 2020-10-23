@@ -41,7 +41,7 @@ public interface AttributeSetType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeSetType>> T withAttributeSetType(Function<AttributeSetType, T> helper) {
+    default <T> T withAttributeSetType(Function<AttributeSetType, T> helper) {
         return helper.apply(this);
     }
 }

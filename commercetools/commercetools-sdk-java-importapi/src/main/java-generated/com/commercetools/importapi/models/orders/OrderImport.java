@@ -257,7 +257,7 @@ public interface OrderImport extends ImportResource {
         return instance;
     }
 
-    default <T extends Accessor<OrderImport>> T withOrderImport(Function<OrderImport, T> helper) {
+    default <T> T withOrderImport(Function<OrderImport, T> helper) {
         return helper.apply(this);
     }
 }

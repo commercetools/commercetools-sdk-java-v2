@@ -38,7 +38,7 @@ public interface Money extends TypedMoney {
         return instance;
     }
 
-    default <T extends Accessor<Money>> T withMoney(Function<Money, T> helper) {
+    default <T> T withMoney(Function<Money, T> helper) {
         return helper.apply(this);
     }
 }

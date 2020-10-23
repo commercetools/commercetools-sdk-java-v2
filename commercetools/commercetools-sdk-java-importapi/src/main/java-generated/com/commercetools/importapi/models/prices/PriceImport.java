@@ -170,7 +170,7 @@ public interface PriceImport extends ImportResource {
         return instance;
     }
 
-    default <T extends Accessor<PriceImport>> T withPriceImport(Function<PriceImport, T> helper) {
+    default <T> T withPriceImport(Function<PriceImport, T> helper) {
         return helper.apply(this);
     }
 }

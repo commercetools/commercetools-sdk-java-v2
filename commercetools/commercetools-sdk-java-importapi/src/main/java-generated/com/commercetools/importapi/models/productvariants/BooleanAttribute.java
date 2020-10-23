@@ -44,7 +44,7 @@ public interface BooleanAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<BooleanAttribute>> T withBooleanAttribute(Function<BooleanAttribute, T> helper) {
+    default <T> T withBooleanAttribute(Function<BooleanAttribute, T> helper) {
         return helper.apply(this);
     }
 }

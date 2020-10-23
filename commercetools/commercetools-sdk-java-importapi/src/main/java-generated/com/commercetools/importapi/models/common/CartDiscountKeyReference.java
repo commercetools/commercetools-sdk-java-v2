@@ -39,7 +39,7 @@ public interface CartDiscountKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountKeyReference>> T withCartDiscountKeyReference(Function<CartDiscountKeyReference, T> helper) {
+    default <T> T withCartDiscountKeyReference(Function<CartDiscountKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

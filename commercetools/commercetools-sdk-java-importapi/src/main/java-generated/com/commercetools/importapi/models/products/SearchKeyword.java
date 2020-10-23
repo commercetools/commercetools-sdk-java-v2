@@ -47,7 +47,7 @@ public interface SearchKeyword  {
         return instance;
     }
 
-    default <T extends Accessor<SearchKeyword>> T withSearchKeyword(Function<SearchKeyword, T> helper) {
+    default <T> T withSearchKeyword(Function<SearchKeyword, T> helper) {
         return helper.apply(this);
     }
 }

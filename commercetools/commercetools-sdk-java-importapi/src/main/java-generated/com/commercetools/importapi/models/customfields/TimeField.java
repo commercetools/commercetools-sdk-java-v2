@@ -44,7 +44,7 @@ public interface TimeField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<TimeField>> T withTimeField(Function<TimeField, T> helper) {
+    default <T> T withTimeField(Function<TimeField, T> helper) {
         return helper.apply(this);
     }
 }

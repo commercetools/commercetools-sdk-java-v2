@@ -43,7 +43,7 @@ public interface BooleanSetField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<BooleanSetField>> T withBooleanSetField(Function<BooleanSetField, T> helper) {
+    default <T> T withBooleanSetField(Function<BooleanSetField, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ResourceDeletionError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ResourceDeletionError>> T withResourceDeletionError(Function<ResourceDeletionError, T> helper) {
+    default <T> T withResourceDeletionError(Function<ResourceDeletionError, T> helper) {
         return helper.apply(this);
     }
 }

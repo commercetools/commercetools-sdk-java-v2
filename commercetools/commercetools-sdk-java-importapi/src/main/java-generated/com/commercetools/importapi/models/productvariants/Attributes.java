@@ -44,7 +44,7 @@ public interface Attributes  {
         return instance;
     }
 
-    default <T extends Accessor<Attributes>> T withAttributes(Function<Attributes, T> helper) {
+    default <T> T withAttributes(Function<Attributes, T> helper) {
         return helper.apply(this);
     }
 }

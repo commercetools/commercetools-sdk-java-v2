@@ -44,7 +44,7 @@ public interface NumberAttribute extends Attribute {
         return instance;
     }
 
-    default <T extends Accessor<NumberAttribute>> T withNumberAttribute(Function<NumberAttribute, T> helper) {
+    default <T> T withNumberAttribute(Function<NumberAttribute, T> helper) {
         return helper.apply(this);
     }
 }

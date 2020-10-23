@@ -43,7 +43,7 @@ public interface NumberField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<NumberField>> T withNumberField(Function<NumberField, T> helper) {
+    default <T> T withNumberField(Function<NumberField, T> helper) {
         return helper.apply(this);
     }
 }

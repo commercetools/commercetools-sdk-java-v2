@@ -48,7 +48,7 @@ public interface CategoryImportRequest extends ImportRequest {
         return instance;
     }
 
-    default <T extends Accessor<CategoryImportRequest>> T withCategoryImportRequest(Function<CategoryImportRequest, T> helper) {
+    default <T> T withCategoryImportRequest(Function<CategoryImportRequest, T> helper) {
         return helper.apply(this);
     }
 }

@@ -86,7 +86,7 @@ public interface ErrorObject  {
 
 
 
-    default <T extends Accessor<ErrorObject>> T withErrorObject(Function<ErrorObject, T> helper) {
+    default <T> T withErrorObject(Function<ErrorObject, T> helper) {
         return helper.apply(this);
     }
 }

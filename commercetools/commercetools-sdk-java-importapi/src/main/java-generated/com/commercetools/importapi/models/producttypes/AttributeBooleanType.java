@@ -34,7 +34,7 @@ public interface AttributeBooleanType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeBooleanType>> T withAttributeBooleanType(Function<AttributeBooleanType, T> helper) {
+    default <T> T withAttributeBooleanType(Function<AttributeBooleanType, T> helper) {
         return helper.apply(this);
     }
 }

@@ -35,7 +35,7 @@ public interface GenericError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<GenericError>> T withGenericError(Function<GenericError, T> helper) {
+    default <T> T withGenericError(Function<GenericError, T> helper) {
         return helper.apply(this);
     }
 }

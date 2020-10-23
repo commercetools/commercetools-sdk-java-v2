@@ -89,7 +89,7 @@ public interface Attribute  {
 
 
 
-    default <T extends Accessor<Attribute>> T withAttribute(Function<Attribute, T> helper) {
+    default <T> T withAttribute(Function<Attribute, T> helper) {
         return helper.apply(this);
     }
 }

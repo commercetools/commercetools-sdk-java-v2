@@ -53,7 +53,7 @@ public interface InvalidStateTransitionError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidStateTransitionError>> T withInvalidStateTransitionError(Function<InvalidStateTransitionError, T> helper) {
+    default <T> T withInvalidStateTransitionError(Function<InvalidStateTransitionError, T> helper) {
         return helper.apply(this);
     }
 }

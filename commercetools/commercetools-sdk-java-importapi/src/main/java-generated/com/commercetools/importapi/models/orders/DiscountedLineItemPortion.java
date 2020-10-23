@@ -52,7 +52,7 @@ public interface DiscountedLineItemPortion  {
         return instance;
     }
 
-    default <T extends Accessor<DiscountedLineItemPortion>> T withDiscountedLineItemPortion(Function<DiscountedLineItemPortion, T> helper) {
+    default <T> T withDiscountedLineItemPortion(Function<DiscountedLineItemPortion, T> helper) {
         return helper.apply(this);
     }
 }

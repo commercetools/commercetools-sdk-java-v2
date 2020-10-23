@@ -55,7 +55,7 @@ public interface PriceTier  {
         return instance;
     }
 
-    default <T extends Accessor<PriceTier>> T withPriceTier(Function<PriceTier, T> helper) {
+    default <T> T withPriceTier(Function<PriceTier, T> helper) {
         return helper.apply(this);
     }
 }

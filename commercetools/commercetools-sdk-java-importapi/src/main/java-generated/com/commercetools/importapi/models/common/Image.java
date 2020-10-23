@@ -55,7 +55,7 @@ public interface Image  {
         return instance;
     }
 
-    default <T extends Accessor<Image>> T withImage(Function<Image, T> helper) {
+    default <T> T withImage(Function<Image, T> helper) {
         return helper.apply(this);
     }
 }

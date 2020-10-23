@@ -39,7 +39,7 @@ public interface PriceKeyReference extends KeyReference {
         return instance;
     }
 
-    default <T extends Accessor<PriceKeyReference>> T withPriceKeyReference(Function<PriceKeyReference, T> helper) {
+    default <T> T withPriceKeyReference(Function<PriceKeyReference, T> helper) {
         return helper.apply(this);
     }
 }

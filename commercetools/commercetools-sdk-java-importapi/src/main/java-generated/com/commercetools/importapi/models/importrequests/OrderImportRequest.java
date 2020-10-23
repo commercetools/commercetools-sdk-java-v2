@@ -48,7 +48,7 @@ public interface OrderImportRequest extends ImportRequest {
         return instance;
     }
 
-    default <T extends Accessor<OrderImportRequest>> T withOrderImportRequest(Function<OrderImportRequest, T> helper) {
+    default <T> T withOrderImportRequest(Function<OrderImportRequest, T> helper) {
         return helper.apply(this);
     }
 }

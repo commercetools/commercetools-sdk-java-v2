@@ -39,7 +39,7 @@ public interface InvalidInput extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidInput>> T withInvalidInput(Function<InvalidInput, T> helper) {
+    default <T> T withInvalidInput(Function<InvalidInput, T> helper) {
         return helper.apply(this);
     }
 }

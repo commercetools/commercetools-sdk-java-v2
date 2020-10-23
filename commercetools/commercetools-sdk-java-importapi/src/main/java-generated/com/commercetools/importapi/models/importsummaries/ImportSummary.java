@@ -56,7 +56,7 @@ public interface ImportSummary  {
         return instance;
     }
 
-    default <T extends Accessor<ImportSummary>> T withImportSummary(Function<ImportSummary, T> helper) {
+    default <T> T withImportSummary(Function<ImportSummary, T> helper) {
         return helper.apply(this);
     }
 }

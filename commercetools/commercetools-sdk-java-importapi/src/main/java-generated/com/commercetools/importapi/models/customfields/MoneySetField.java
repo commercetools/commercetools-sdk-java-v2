@@ -45,7 +45,7 @@ public interface MoneySetField extends CustomField {
         return instance;
     }
 
-    default <T extends Accessor<MoneySetField>> T withMoneySetField(Function<MoneySetField, T> helper) {
+    default <T> T withMoneySetField(Function<MoneySetField, T> helper) {
         return helper.apply(this);
     }
 }

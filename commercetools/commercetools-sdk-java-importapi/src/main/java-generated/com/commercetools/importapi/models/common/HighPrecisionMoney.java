@@ -44,7 +44,7 @@ public interface HighPrecisionMoney extends TypedMoney {
         return instance;
     }
 
-    default <T extends Accessor<HighPrecisionMoney>> T withHighPrecisionMoney(Function<HighPrecisionMoney, T> helper) {
+    default <T> T withHighPrecisionMoney(Function<HighPrecisionMoney, T> helper) {
         return helper.apply(this);
     }
 }

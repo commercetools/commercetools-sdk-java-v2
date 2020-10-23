@@ -26,7 +26,7 @@ public class ApiHttpClient {
 
     public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, Class<O> outputType)
     {
-        return execute(request).thenApply(response1 -> serializer.convertResponse(response1, outputType));
+        return execute(request).thenApply(response -> serializer.convertResponse(response, outputType));
     }
 
     public ResponseSerializer getSerializerService() {

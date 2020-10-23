@@ -60,7 +60,7 @@ public class ByProjectKeyPost extends ApiMethod<ByProjectKeyPost> {
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(projectUpdate));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(projectUpdate));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -73,8 +73,7 @@ public class ByProjectKeyPost extends ApiMethod<ByProjectKeyPost> {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.project.Project>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.project.Project.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.project.Project.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

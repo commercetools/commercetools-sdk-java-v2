@@ -73,8 +73,7 @@ public class ByProjectKeyTaxCategoriesKeyByKeyDelete extends ApiMethod<ByProject
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.tax_category.TaxCategory>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.tax_category.TaxCategory.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.tax_category.TaxCategory.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

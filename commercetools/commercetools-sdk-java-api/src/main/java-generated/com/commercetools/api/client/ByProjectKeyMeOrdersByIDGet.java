@@ -73,8 +73,7 @@ public class ByProjectKeyMeOrdersByIDGet extends ApiMethod<ByProjectKeyMeOrdersB
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyOrder>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.me.MyOrder.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyOrder.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

@@ -73,8 +73,7 @@ public class ByProjectKeyReviewsByIDGet extends ApiMethod<ByProjectKeyReviewsByI
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.review.Review>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.review.Review.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.review.Review.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

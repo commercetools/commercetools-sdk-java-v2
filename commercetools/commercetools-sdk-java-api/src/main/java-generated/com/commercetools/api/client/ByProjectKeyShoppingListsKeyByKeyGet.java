@@ -73,8 +73,7 @@ public class ByProjectKeyShoppingListsKeyByKeyGet extends ApiMethod<ByProjectKey
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.shopping_list.ShoppingList.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.ShoppingList.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

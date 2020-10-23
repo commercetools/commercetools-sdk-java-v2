@@ -70,8 +70,7 @@ public class ByProjectKeySubscriptionsGet extends ApiMethod<ByProjectKeySubscrip
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

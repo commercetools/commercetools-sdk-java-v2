@@ -70,8 +70,7 @@ public class ByProjectKeyReviewsGet extends ApiMethod<ByProjectKeyReviewsGet> {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.review.ReviewPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.review.ReviewPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.review.ReviewPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

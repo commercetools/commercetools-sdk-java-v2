@@ -73,8 +73,7 @@ public class ByProjectKeyPaymentsKeyByKeyDelete extends ApiMethod<ByProjectKeyPa
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.payment.Payment.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.payment.Payment.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

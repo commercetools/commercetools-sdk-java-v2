@@ -70,8 +70,7 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet> 
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.channel.ChannelPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.channel.ChannelPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.channel.ChannelPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

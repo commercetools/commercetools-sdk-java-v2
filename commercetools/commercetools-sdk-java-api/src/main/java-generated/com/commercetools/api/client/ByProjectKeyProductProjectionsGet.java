@@ -72,8 +72,7 @@ public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyPro
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.product.ProductProjectionPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product.ProductProjectionPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

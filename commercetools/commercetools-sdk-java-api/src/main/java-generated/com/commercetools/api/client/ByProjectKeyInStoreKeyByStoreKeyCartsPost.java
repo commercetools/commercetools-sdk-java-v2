@@ -66,7 +66,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsPost extends ApiMethod<ByProje
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(cartDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(cartDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -79,8 +79,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsPost extends ApiMethod<ByProje
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.cart.Cart.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.cart.Cart.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

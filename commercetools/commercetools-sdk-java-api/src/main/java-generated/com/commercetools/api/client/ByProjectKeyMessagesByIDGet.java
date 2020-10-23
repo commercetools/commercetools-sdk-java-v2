@@ -73,8 +73,7 @@ public class ByProjectKeyMessagesByIDGet extends ApiMethod<ByProjectKeyMessagesB
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.message.Message>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.message.Message.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.message.Message.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

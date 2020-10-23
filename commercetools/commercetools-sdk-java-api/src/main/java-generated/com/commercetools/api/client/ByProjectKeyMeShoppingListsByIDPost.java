@@ -63,7 +63,7 @@ public class ByProjectKeyMeShoppingListsByIDPost extends ApiMethod<ByProjectKeyM
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(myShoppingListUpdate));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(myShoppingListUpdate));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -76,8 +76,7 @@ public class ByProjectKeyMeShoppingListsByIDPost extends ApiMethod<ByProjectKeyM
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.shopping_list.MyShoppingList.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.MyShoppingList.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

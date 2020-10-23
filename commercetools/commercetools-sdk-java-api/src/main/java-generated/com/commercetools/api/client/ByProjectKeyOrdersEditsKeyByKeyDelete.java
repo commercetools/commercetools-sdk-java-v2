@@ -73,8 +73,7 @@ public class ByProjectKeyOrdersEditsKeyByKeyDelete extends ApiMethod<ByProjectKe
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.order_edit.OrderEdit.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order_edit.OrderEdit.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

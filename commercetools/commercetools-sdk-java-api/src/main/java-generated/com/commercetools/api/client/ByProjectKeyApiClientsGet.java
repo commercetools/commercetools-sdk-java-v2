@@ -70,8 +70,7 @@ public class ByProjectKeyApiClientsGet extends ApiMethod<ByProjectKeyApiClientsG
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.api_client.ApiClientPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.api_client.ApiClientPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.api_client.ApiClientPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

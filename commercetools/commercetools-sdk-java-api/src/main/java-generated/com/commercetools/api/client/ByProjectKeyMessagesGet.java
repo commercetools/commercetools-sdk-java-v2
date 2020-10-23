@@ -70,8 +70,7 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet> 
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.message.MessagePagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.message.MessagePagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.message.MessagePagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

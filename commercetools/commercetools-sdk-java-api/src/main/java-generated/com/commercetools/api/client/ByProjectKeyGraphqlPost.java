@@ -60,7 +60,7 @@ public class ByProjectKeyGraphqlPost extends ApiMethod<ByProjectKeyGraphqlPost> 
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(graphQLRequest));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(graphQLRequest));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -73,8 +73,7 @@ public class ByProjectKeyGraphqlPost extends ApiMethod<ByProjectKeyGraphqlPost> 
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.graph_ql.GraphQLResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.graph_ql.GraphQLResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.graph_ql.GraphQLResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

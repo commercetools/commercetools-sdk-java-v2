@@ -73,8 +73,7 @@ public class ByProjectKeyStatesByIDDelete extends ApiMethod<ByProjectKeyStatesBy
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.State>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.state.State.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.state.State.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

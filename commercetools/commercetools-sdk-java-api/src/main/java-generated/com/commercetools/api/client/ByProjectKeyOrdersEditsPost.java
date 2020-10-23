@@ -60,7 +60,7 @@ public class ByProjectKeyOrdersEditsPost extends ApiMethod<ByProjectKeyOrdersEdi
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(orderEditDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(orderEditDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -73,8 +73,7 @@ public class ByProjectKeyOrdersEditsPost extends ApiMethod<ByProjectKeyOrdersEdi
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.order_edit.OrderEdit.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order_edit.OrderEdit.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

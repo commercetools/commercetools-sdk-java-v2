@@ -73,8 +73,7 @@ public class ByProjectKeyShippingMethodsByIDGet extends ApiMethod<ByProjectKeySh
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.shipping_method.ShippingMethod.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shipping_method.ShippingMethod.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

@@ -70,8 +70,7 @@ public class ByProjectKeyCartDiscountsGet extends ApiMethod<ByProjectKeyCartDisc
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

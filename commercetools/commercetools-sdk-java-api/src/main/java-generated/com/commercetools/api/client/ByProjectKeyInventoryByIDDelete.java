@@ -73,8 +73,7 @@ public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInven
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.inventory.InventoryEntry.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.inventory.InventoryEntry.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

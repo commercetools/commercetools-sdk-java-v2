@@ -70,8 +70,7 @@ public class ByProjectKeyShippingMethodsGet extends ApiMethod<ByProjectKeyShippi
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

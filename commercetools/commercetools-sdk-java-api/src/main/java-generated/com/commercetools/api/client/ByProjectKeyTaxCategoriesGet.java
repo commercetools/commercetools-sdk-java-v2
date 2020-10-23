@@ -70,8 +70,7 @@ public class ByProjectKeyTaxCategoriesGet extends ApiMethod<ByProjectKeyTaxCateg
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

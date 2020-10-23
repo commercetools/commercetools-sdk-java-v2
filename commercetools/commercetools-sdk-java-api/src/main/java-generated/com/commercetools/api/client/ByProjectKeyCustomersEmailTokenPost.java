@@ -60,7 +60,7 @@ public class ByProjectKeyCustomersEmailTokenPost extends ApiMethod<ByProjectKeyC
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(customerCreateEmailToken));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(customerCreateEmailToken));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -73,8 +73,7 @@ public class ByProjectKeyCustomersEmailTokenPost extends ApiMethod<ByProjectKeyC
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.customer.CustomerToken.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.CustomerToken.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

@@ -60,7 +60,7 @@ public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost> {
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(zoneDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(zoneDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -73,8 +73,7 @@ public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost> {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.Zone>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.zone.Zone.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.zone.Zone.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

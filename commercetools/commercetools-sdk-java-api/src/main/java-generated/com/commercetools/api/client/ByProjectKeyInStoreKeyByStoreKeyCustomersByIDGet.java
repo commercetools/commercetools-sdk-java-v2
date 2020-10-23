@@ -79,8 +79,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet extends ApiMethod<
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.customer.Customer.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

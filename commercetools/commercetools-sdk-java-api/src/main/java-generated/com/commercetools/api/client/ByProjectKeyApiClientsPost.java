@@ -60,7 +60,7 @@ public class ByProjectKeyApiClientsPost extends ApiMethod<ByProjectKeyApiClients
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(apiClientDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(apiClientDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -73,8 +73,7 @@ public class ByProjectKeyApiClientsPost extends ApiMethod<ByProjectKeyApiClients
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.api_client.ApiClient>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.api_client.ApiClient.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.api_client.ApiClient.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

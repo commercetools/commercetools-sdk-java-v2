@@ -70,7 +70,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends ApiMethod<ByP
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(customerDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(customerDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -83,8 +83,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends ApiMethod<ByP
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.customer.CustomerSignInResult.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.CustomerSignInResult.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

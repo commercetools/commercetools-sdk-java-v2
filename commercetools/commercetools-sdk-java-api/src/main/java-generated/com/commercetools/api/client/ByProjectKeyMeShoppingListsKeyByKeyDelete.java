@@ -73,8 +73,7 @@ public class ByProjectKeyMeShoppingListsKeyByKeyDelete extends ApiMethod<ByProje
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.shopping_list.MyShoppingList.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.MyShoppingList.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

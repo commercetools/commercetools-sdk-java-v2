@@ -60,7 +60,7 @@ public class ByProjectKeyExtensionsPost extends ApiMethod<ByProjectKeyExtensions
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(extensionDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(extensionDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -73,8 +73,7 @@ public class ByProjectKeyExtensionsPost extends ApiMethod<ByProjectKeyExtensions
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.extension.Extension>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.extension.Extension.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.extension.Extension.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

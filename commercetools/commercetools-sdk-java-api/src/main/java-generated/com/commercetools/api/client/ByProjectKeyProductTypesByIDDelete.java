@@ -73,8 +73,7 @@ public class ByProjectKeyProductTypesByIDDelete extends ApiMethod<ByProjectKeyPr
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_type.ProductType>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.product_type.ProductType.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product_type.ProductType.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

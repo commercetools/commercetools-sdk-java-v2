@@ -63,7 +63,7 @@ public class ByProjectKeyInventoryByIDPost extends ApiMethod<ByProjectKeyInvento
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(inventoryEntryUpdate));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(inventoryEntryUpdate));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -76,8 +76,7 @@ public class ByProjectKeyInventoryByIDPost extends ApiMethod<ByProjectKeyInvento
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.inventory.InventoryEntry.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.inventory.InventoryEntry.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

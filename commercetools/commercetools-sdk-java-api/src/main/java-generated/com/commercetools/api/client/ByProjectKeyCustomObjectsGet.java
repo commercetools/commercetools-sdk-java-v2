@@ -72,8 +72,7 @@ public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomOb
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

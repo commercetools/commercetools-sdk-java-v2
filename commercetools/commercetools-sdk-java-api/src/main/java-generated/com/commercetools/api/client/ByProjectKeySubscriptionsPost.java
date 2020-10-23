@@ -64,7 +64,7 @@ public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscri
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(subscriptionDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(subscriptionDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -77,8 +77,7 @@ public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscri
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.subscription.Subscription.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.subscription.Subscription.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

@@ -70,8 +70,7 @@ public class ByProjectKeyZonesGet extends ApiMethod<ByProjectKeyZonesGet> {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.ZonePagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.zone.ZonePagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.zone.ZonePagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

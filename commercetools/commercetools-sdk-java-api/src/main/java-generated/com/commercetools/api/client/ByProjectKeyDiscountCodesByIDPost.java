@@ -63,7 +63,7 @@ public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDis
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(discountCodeUpdate));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(discountCodeUpdate));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -76,8 +76,7 @@ public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDis
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.discount_code.DiscountCode.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.discount_code.DiscountCode.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

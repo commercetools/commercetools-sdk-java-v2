@@ -57,7 +57,7 @@ public class ByProjectKeyMePasswordPost extends ApiMethod<ByProjectKeyMePassword
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(jsonNode));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(jsonNode));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -70,8 +70,7 @@ public class ByProjectKeyMePasswordPost extends ApiMethod<ByProjectKeyMePassword
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.me.MyCustomer.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

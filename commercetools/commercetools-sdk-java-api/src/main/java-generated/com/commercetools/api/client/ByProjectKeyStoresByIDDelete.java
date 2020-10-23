@@ -73,8 +73,7 @@ public class ByProjectKeyStoresByIDDelete extends ApiMethod<ByProjectKeyStoresBy
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.Store>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.store.Store.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.store.Store.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

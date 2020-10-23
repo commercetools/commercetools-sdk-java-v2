@@ -73,8 +73,7 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete extends ApiMethod<ByProject
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.subscription.Subscription.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.subscription.Subscription.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

@@ -66,7 +66,7 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(customObjectDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(customObjectDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -79,8 +79,7 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.custom_object.CustomObject.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.custom_object.CustomObject.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

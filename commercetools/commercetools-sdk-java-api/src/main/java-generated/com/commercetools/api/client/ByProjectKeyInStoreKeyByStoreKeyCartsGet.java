@@ -73,8 +73,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjec
     }
 
     public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.fasterxml.jackson.databind.JsonNode.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

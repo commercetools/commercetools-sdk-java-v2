@@ -60,7 +60,7 @@ public class ByProjectKeyPaymentsPost extends ApiMethod<ByProjectKeyPaymentsPost
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(paymentDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(paymentDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -73,8 +73,7 @@ public class ByProjectKeyPaymentsPost extends ApiMethod<ByProjectKeyPaymentsPost
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.payment.Payment.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.payment.Payment.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

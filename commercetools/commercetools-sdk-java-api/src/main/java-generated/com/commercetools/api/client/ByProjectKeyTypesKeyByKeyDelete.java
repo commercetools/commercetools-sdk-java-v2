@@ -73,8 +73,7 @@ public class ByProjectKeyTypesKeyByKeyDelete extends ApiMethod<ByProjectKeyTypes
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.type.Type>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.type.Type.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.type.Type.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

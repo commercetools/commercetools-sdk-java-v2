@@ -70,8 +70,7 @@ public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.inventory.InventoryPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.inventory.InventoryPagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.inventory.InventoryPagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

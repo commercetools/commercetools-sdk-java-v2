@@ -73,8 +73,7 @@ public class ByProjectKeyMeCartsByIDGet extends ApiMethod<ByProjectKeyMeCartsByI
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCart>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.me.MyCart.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCart.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

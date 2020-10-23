@@ -70,8 +70,7 @@ public class ByProjectKeyTypesGet extends ApiMethod<ByProjectKeyTypesGet> {
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.type.TypePagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.api.models.type.TypePagedQueryResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.type.TypePagedQueryResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

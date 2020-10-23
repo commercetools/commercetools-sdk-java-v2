@@ -63,7 +63,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost extends ApiMet
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.POST);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(productImportRequest));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(productImportRequest));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -76,8 +76,7 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost extends ApiMet
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.importapi.models.importrequests.ImportResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importrequests.ImportResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

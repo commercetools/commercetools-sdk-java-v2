@@ -76,8 +76,7 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsB
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.importapi.models.importoperations.ImportOperation.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importoperations.ImportOperation.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

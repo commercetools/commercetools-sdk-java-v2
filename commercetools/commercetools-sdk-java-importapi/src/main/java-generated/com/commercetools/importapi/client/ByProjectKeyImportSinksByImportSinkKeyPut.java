@@ -63,7 +63,7 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends ApiMethod<ByProje
         httpRequest.setUri(httpRequestPath); 
         httpRequest.setMethod(ApiHttpMethod.PUT);
         httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(VrapJsonUtils.toJsonByteArray(importSinkDraft));}catch(Exception e){e.printStackTrace();}
+        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(importSinkDraft));}catch(Exception e){e.printStackTrace();}
         return httpRequest;
     }
 
@@ -76,8 +76,7 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends ApiMethod<ByProje
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.importapi.models.importsinks.ImportSink.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importsinks.ImportSink.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

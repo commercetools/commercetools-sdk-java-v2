@@ -70,8 +70,7 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
     }
 
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest())
-                .thenApply(response -> Utils.convertResponse(response,com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse.class));
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse.class);
     }
 
     public String getProjectKey() {return this.projectKey;}

@@ -9,15 +9,20 @@ public class ApiHttpClient {
 
     private final HandlerStack stack;
     private final URI baseUri;
-    private final ResponseSerializer serializer = new ResponseSerializer();
+    private final ResponseSerializer serializer;
 
     public ApiHttpClient(final String baseUri, final HandlerStack stack) {
         this(URI.create(baseUri), stack);
     }
 
     public ApiHttpClient(final URI baseUri, final HandlerStack stack) {
+        this(baseUri, stack, ResponseSerializer.of());
+    }
+
+    public ApiHttpClient(final URI baseUri, final HandlerStack stack, ResponseSerializer serializer) {
         this.stack = stack;
         this.baseUri = baseUri;
+        this.serializer = serializer;
     }
 
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {

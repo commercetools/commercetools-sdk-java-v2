@@ -9,6 +9,7 @@ public class ApiHttpClient {
 
     private final HandlerStack stack;
     private final URI baseUri;
+    private final ResponseSerializer serializer = new ResponseSerializer();
 
     public ApiHttpClient(final String baseUri, final HandlerStack stack) {
         this(URI.create(baseUri), stack);
@@ -21,5 +22,14 @@ public class ApiHttpClient {
 
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {
         return stack.invoke(request.resolve(baseUri));
+    }
+
+    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, Class<O> outputType)
+    {
+        return execute(request).thenApply(response1 -> serializer.convertResponse(response1, outputType));
+    }
+
+    public ResponseSerializer getSerializerService() {
+        return serializer;
     }
 }

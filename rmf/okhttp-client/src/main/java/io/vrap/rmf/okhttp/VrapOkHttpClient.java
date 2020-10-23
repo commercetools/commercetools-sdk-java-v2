@@ -43,12 +43,17 @@ public class VrapOkHttpClient implements VrapHttpClient {
                                 .map(value -> new HeaderEntry<>(e.getKey(), value))
                         ).collect(Collectors.toList())
         );
-        return new ApiHttpResponse<>(
+
+        ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(
                 response.code(),
                 apiHttpHeaders,
                 Optional.ofNullable(response.body()).map(Utils.wrapToCompletionException(ResponseBody::bytes)).orElse(null),
                 response.message()
         );
+        if (apiHttpResponse.getBody() != null) {
+            response.close();
+        }
+        return apiHttpResponse;
     }
 
     private static Request toRequest(final ApiHttpRequest apiHttpRequest) {

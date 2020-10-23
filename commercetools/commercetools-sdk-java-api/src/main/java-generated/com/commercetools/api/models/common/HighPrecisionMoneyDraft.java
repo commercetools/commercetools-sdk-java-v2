@@ -39,11 +39,12 @@ public interface HighPrecisionMoneyDraft extends TypedMoneyDraft {
         HighPrecisionMoneyDraftImpl instance = new HighPrecisionMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFractionDigits(template.getFractionDigits());
         instance.setPreciseAmount(template.getPreciseAmount());
         return instance;
     }
 
-    default <T extends Accessor<HighPrecisionMoneyDraft>> T withHighPrecisionMoneyDraft(Function<HighPrecisionMoneyDraft, T> helper) {
+    default <T> T withHighPrecisionMoneyDraft(Function<HighPrecisionMoneyDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -48,7 +48,7 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<PaymentChangeTransactionTimestampAction>> T withPaymentChangeTransactionTimestampAction(Function<PaymentChangeTransactionTimestampAction, T> helper) {
+    default <T> T withPaymentChangeTransactionTimestampAction(Function<PaymentChangeTransactionTimestampAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface OrderDeletedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderDeletedMessagePayload>> T withOrderDeletedMessagePayload(Function<OrderDeletedMessagePayload, T> helper) {
+    default <T> T withOrderDeletedMessagePayload(Function<OrderDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

@@ -52,7 +52,7 @@ public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpda
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetValidFromAndUntilAction>> T withDiscountCodeSetValidFromAndUntilAction(Function<DiscountCodeSetValidFromAndUntilAction, T> helper) {
+    default <T> T withDiscountCodeSetValidFromAndUntilAction(Function<DiscountCodeSetValidFromAndUntilAction, T> helper) {
         return helper.apply(this);
     }
 }

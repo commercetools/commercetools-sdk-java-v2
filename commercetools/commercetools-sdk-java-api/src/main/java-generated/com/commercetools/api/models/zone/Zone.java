@@ -116,7 +116,7 @@ public interface Zone extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Zone>> T withZone(Function<Zone, T> helper) {
+    default <T> T withZone(Function<Zone, T> helper) {
         return helper.apply(this);
     }
 }

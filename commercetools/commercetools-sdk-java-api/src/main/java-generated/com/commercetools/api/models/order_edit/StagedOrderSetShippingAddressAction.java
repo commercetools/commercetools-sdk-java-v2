@@ -41,7 +41,7 @@ public interface StagedOrderSetShippingAddressAction extends StagedOrderUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetShippingAddressAction>> T withStagedOrderSetShippingAddressAction(Function<StagedOrderSetShippingAddressAction, T> helper) {
+    default <T> T withStagedOrderSetShippingAddressAction(Function<StagedOrderSetShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

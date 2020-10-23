@@ -68,7 +68,7 @@ public interface ErrorResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ErrorResponse>> T withErrorResponse(Function<ErrorResponse, T> helper) {
+    default <T> T withErrorResponse(Function<ErrorResponse, T> helper) {
         return helper.apply(this);
     }
 }

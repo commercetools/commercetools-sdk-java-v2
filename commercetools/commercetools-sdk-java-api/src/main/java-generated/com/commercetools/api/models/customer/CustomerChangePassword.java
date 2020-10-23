@@ -61,7 +61,7 @@ public interface CustomerChangePassword  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerChangePassword>> T withCustomerChangePassword(Function<CustomerChangePassword, T> helper) {
+    default <T> T withCustomerChangePassword(Function<CustomerChangePassword, T> helper) {
         return helper.apply(this);
     }
 }

@@ -67,7 +67,7 @@ public interface DeliveryItemsUpdatedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<DeliveryItemsUpdatedMessage>> T withDeliveryItemsUpdatedMessage(Function<DeliveryItemsUpdatedMessage, T> helper) {
+    default <T> T withDeliveryItemsUpdatedMessage(Function<DeliveryItemsUpdatedMessage, T> helper) {
         return helper.apply(this);
     }
 }

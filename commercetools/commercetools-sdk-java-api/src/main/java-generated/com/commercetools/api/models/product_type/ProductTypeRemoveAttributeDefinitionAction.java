@@ -42,7 +42,7 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeRemoveAttributeDefinitionAction>> T withProductTypeRemoveAttributeDefinitionAction(Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
+    default <T> T withProductTypeRemoveAttributeDefinitionAction(Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
         return helper.apply(this);
     }
 }

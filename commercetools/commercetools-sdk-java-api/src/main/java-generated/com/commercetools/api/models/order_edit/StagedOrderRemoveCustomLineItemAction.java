@@ -40,7 +40,7 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderRemoveCustomLineItemAction>> T withStagedOrderRemoveCustomLineItemAction(Function<StagedOrderRemoveCustomLineItemAction, T> helper) {
+    default <T> T withStagedOrderRemoveCustomLineItemAction(Function<StagedOrderRemoveCustomLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

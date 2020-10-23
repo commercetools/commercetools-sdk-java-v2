@@ -41,7 +41,7 @@ public interface StateAddRolesAction extends StateUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StateAddRolesAction>> T withStateAddRolesAction(Function<StateAddRolesAction, T> helper) {
+    default <T> T withStateAddRolesAction(Function<StateAddRolesAction, T> helper) {
         return helper.apply(this);
     }
 }

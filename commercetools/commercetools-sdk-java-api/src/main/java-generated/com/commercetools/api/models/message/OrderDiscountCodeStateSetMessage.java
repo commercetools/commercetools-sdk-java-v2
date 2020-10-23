@@ -67,7 +67,7 @@ public interface OrderDiscountCodeStateSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderDiscountCodeStateSetMessage>> T withOrderDiscountCodeStateSetMessage(Function<OrderDiscountCodeStateSetMessage, T> helper) {
+    default <T> T withOrderDiscountCodeStateSetMessage(Function<OrderDiscountCodeStateSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

@@ -72,7 +72,7 @@ public interface TermFacetResult extends FacetResult {
         return instance;
     }
 
-    default <T extends Accessor<TermFacetResult>> T withTermFacetResult(Function<TermFacetResult, T> helper) {
+    default <T> T withTermFacetResult(Function<TermFacetResult, T> helper) {
         return helper.apply(this);
     }
 }

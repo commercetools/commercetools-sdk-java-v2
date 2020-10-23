@@ -34,7 +34,7 @@ public interface ProductDiscountValueExternal extends ProductDiscountValue {
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountValueExternal>> T withProductDiscountValueExternal(Function<ProductDiscountValueExternal, T> helper) {
+    default <T> T withProductDiscountValueExternal(Function<ProductDiscountValueExternal, T> helper) {
         return helper.apply(this);
     }
 }

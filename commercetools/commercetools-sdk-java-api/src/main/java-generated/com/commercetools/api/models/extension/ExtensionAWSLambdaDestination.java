@@ -54,7 +54,7 @@ public interface ExtensionAWSLambdaDestination extends ExtensionDestination {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionAWSLambdaDestination>> T withExtensionAWSLambdaDestination(Function<ExtensionAWSLambdaDestination, T> helper) {
+    default <T> T withExtensionAWSLambdaDestination(Function<ExtensionAWSLambdaDestination, T> helper) {
         return helper.apply(this);
     }
 }

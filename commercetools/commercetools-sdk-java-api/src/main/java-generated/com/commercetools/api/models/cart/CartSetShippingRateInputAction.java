@@ -46,7 +46,7 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetShippingRateInputAction>> T withCartSetShippingRateInputAction(Function<CartSetShippingRateInputAction, T> helper) {
+    default <T> T withCartSetShippingRateInputAction(Function<CartSetShippingRateInputAction, T> helper) {
         return helper.apply(this);
     }
 }

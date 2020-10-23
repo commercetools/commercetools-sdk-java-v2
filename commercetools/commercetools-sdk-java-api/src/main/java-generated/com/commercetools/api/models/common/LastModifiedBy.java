@@ -38,7 +38,7 @@ public interface LastModifiedBy extends ClientLogging {
         return instance;
     }
 
-    default <T extends Accessor<LastModifiedBy>> T withLastModifiedBy(Function<LastModifiedBy, T> helper) {
+    default <T> T withLastModifiedBy(Function<LastModifiedBy, T> helper) {
         return helper.apply(this);
     }
 }

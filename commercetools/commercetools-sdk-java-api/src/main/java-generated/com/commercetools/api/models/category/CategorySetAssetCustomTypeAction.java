@@ -68,7 +68,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetAssetCustomTypeAction>> T withCategorySetAssetCustomTypeAction(Function<CategorySetAssetCustomTypeAction, T> helper) {
+    default <T> T withCategorySetAssetCustomTypeAction(Function<CategorySetAssetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

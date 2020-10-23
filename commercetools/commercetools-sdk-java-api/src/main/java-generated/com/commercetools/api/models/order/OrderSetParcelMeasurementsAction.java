@@ -48,7 +48,7 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetParcelMeasurementsAction>> T withOrderSetParcelMeasurementsAction(Function<OrderSetParcelMeasurementsAction, T> helper) {
+    default <T> T withOrderSetParcelMeasurementsAction(Function<OrderSetParcelMeasurementsAction, T> helper) {
         return helper.apply(this);
     }
 }

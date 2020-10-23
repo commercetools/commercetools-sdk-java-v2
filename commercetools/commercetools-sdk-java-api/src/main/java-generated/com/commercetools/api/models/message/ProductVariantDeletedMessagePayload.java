@@ -49,7 +49,7 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ProductVariantDeletedMessagePayload>> T withProductVariantDeletedMessagePayload(Function<ProductVariantDeletedMessagePayload, T> helper) {
+    default <T> T withProductVariantDeletedMessagePayload(Function<ProductVariantDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

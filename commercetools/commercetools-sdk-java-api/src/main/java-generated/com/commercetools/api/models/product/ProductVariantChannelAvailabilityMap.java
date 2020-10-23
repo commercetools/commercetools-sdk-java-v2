@@ -41,7 +41,7 @@ public interface ProductVariantChannelAvailabilityMap  {
         return instance;
     }
 
-    default <T extends Accessor<ProductVariantChannelAvailabilityMap>> T withProductVariantChannelAvailabilityMap(Function<ProductVariantChannelAvailabilityMap, T> helper) {
+    default <T> T withProductVariantChannelAvailabilityMap(Function<ProductVariantChannelAvailabilityMap, T> helper) {
         return helper.apply(this);
     }
 }

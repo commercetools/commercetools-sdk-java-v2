@@ -41,7 +41,7 @@ public interface StateChangeTypeAction extends StateUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StateChangeTypeAction>> T withStateChangeTypeAction(Function<StateChangeTypeAction, T> helper) {
+    default <T> T withStateChangeTypeAction(Function<StateChangeTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

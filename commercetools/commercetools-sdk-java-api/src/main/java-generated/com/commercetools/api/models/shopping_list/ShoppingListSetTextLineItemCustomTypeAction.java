@@ -56,7 +56,7 @@ public interface ShoppingListSetTextLineItemCustomTypeAction extends ShoppingLis
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListSetTextLineItemCustomTypeAction>> T withShoppingListSetTextLineItemCustomTypeAction(Function<ShoppingListSetTextLineItemCustomTypeAction, T> helper) {
+    default <T> T withShoppingListSetTextLineItemCustomTypeAction(Function<ShoppingListSetTextLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

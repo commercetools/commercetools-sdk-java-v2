@@ -48,7 +48,7 @@ public interface StagedOrderSetDeliveryAddressAction extends StagedOrderUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetDeliveryAddressAction>> T withStagedOrderSetDeliveryAddressAction(Function<StagedOrderSetDeliveryAddressAction, T> helper) {
+    default <T> T withStagedOrderSetDeliveryAddressAction(Function<StagedOrderSetDeliveryAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

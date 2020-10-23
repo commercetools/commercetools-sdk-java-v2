@@ -52,7 +52,7 @@ public interface OrderReturnInfoAddedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderReturnInfoAddedMessage>> T withOrderReturnInfoAddedMessage(Function<OrderReturnInfoAddedMessage, T> helper) {
+    default <T> T withOrderReturnInfoAddedMessage(Function<OrderReturnInfoAddedMessage, T> helper) {
         return helper.apply(this);
     }
 }

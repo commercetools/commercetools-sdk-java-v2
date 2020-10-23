@@ -47,7 +47,7 @@ public interface CustomerAddShippingAddressIdAction extends CustomerUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<CustomerAddShippingAddressIdAction>> T withCustomerAddShippingAddressIdAction(Function<CustomerAddShippingAddressIdAction, T> helper) {
+    default <T> T withCustomerAddShippingAddressIdAction(Function<CustomerAddShippingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
 }

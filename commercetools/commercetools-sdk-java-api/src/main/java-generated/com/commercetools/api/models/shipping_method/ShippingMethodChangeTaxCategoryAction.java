@@ -42,7 +42,7 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodChangeTaxCategoryAction>> T withShippingMethodChangeTaxCategoryAction(Function<ShippingMethodChangeTaxCategoryAction, T> helper) {
+    default <T> T withShippingMethodChangeTaxCategoryAction(Function<ShippingMethodChangeTaxCategoryAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -41,7 +41,7 @@ public interface SuggestionResult  {
         return instance;
     }
 
-    default <T extends Accessor<SuggestionResult>> T withSuggestionResult(Function<SuggestionResult, T> helper) {
+    default <T> T withSuggestionResult(Function<SuggestionResult, T> helper) {
         return helper.apply(this);
     }
 }

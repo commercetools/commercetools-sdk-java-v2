@@ -72,7 +72,7 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductAddAssetAction>> T withProductAddAssetAction(Function<ProductAddAssetAction, T> helper) {
+    default <T> T withProductAddAssetAction(Function<ProductAddAssetAction, T> helper) {
         return helper.apply(this);
     }
 }

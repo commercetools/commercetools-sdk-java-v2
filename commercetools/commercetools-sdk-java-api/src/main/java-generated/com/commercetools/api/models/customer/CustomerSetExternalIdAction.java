@@ -42,7 +42,7 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetExternalIdAction>> T withCustomerSetExternalIdAction(Function<CustomerSetExternalIdAction, T> helper) {
+    default <T> T withCustomerSetExternalIdAction(Function<CustomerSetExternalIdAction, T> helper) {
         return helper.apply(this);
     }
 }

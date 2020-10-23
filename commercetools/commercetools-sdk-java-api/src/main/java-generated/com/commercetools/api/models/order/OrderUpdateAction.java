@@ -114,7 +114,7 @@ public interface OrderUpdateAction  {
 
 
 
-    default <T extends Accessor<OrderUpdateAction>> T withOrderUpdateAction(Function<OrderUpdateAction, T> helper) {
+    default <T> T withOrderUpdateAction(Function<OrderUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

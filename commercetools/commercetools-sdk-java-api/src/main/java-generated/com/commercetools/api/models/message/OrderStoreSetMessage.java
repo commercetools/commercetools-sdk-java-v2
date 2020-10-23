@@ -52,7 +52,7 @@ public interface OrderStoreSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderStoreSetMessage>> T withOrderStoreSetMessage(Function<OrderStoreSetMessage, T> helper) {
+    default <T> T withOrderStoreSetMessage(Function<OrderStoreSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

@@ -76,7 +76,7 @@ public interface CategoryUpdateAction  {
 
 
 
-    default <T extends Accessor<CategoryUpdateAction>> T withCategoryUpdateAction(Function<CategoryUpdateAction, T> helper) {
+    default <T> T withCategoryUpdateAction(Function<CategoryUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

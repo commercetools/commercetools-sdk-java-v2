@@ -40,7 +40,7 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<OrderRemoveItemShippingAddressAction>> T withOrderRemoveItemShippingAddressAction(Function<OrderRemoveItemShippingAddressAction, T> helper) {
+    default <T> T withOrderRemoveItemShippingAddressAction(Function<OrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

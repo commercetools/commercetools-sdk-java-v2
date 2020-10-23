@@ -40,7 +40,7 @@ public interface MyShoppingListSetDeleteDaysAfterLastModificationAction extends 
         return instance;
     }
 
-    default <T extends Accessor<MyShoppingListSetDeleteDaysAfterLastModificationAction>> T withMyShoppingListSetDeleteDaysAfterLastModificationAction(Function<MyShoppingListSetDeleteDaysAfterLastModificationAction, T> helper) {
+    default <T> T withMyShoppingListSetDeleteDaysAfterLastModificationAction(Function<MyShoppingListSetDeleteDaysAfterLastModificationAction, T> helper) {
         return helper.apply(this);
     }
 }

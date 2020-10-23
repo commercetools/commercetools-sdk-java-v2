@@ -35,7 +35,7 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidCurrentPasswordError>> T withInvalidCurrentPasswordError(Function<InvalidCurrentPasswordError, T> helper) {
+    default <T> T withInvalidCurrentPasswordError(Function<InvalidCurrentPasswordError, T> helper) {
         return helper.apply(this);
     }
 }

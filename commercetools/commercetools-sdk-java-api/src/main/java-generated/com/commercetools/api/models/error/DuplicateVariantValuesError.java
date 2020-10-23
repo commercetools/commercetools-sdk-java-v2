@@ -43,7 +43,7 @@ public interface DuplicateVariantValuesError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<DuplicateVariantValuesError>> T withDuplicateVariantValuesError(Function<DuplicateVariantValuesError, T> helper) {
+    default <T> T withDuplicateVariantValuesError(Function<DuplicateVariantValuesError, T> helper) {
         return helper.apply(this);
     }
 }

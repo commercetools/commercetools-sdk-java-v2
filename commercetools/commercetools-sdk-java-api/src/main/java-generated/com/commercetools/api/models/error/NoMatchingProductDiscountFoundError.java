@@ -35,7 +35,7 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<NoMatchingProductDiscountFoundError>> T withNoMatchingProductDiscountFoundError(Function<NoMatchingProductDiscountFoundError, T> helper) {
+    default <T> T withNoMatchingProductDiscountFoundError(Function<NoMatchingProductDiscountFoundError, T> helper) {
         return helper.apply(this);
     }
 }

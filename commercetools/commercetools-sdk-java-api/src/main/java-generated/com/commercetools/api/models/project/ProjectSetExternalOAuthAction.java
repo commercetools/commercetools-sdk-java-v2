@@ -44,7 +44,7 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProjectSetExternalOAuthAction>> T withProjectSetExternalOAuthAction(Function<ProjectSetExternalOAuthAction, T> helper) {
+    default <T> T withProjectSetExternalOAuthAction(Function<ProjectSetExternalOAuthAction, T> helper) {
         return helper.apply(this);
     }
 }

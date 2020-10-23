@@ -42,7 +42,7 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetAnonymousIdAction>> T withCartSetAnonymousIdAction(Function<CartSetAnonymousIdAction, T> helper) {
+    default <T> T withCartSetAnonymousIdAction(Function<CartSetAnonymousIdAction, T> helper) {
         return helper.apply(this);
     }
 }

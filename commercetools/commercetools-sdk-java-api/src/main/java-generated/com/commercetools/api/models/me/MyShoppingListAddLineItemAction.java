@@ -77,7 +77,7 @@ public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAct
         return instance;
     }
 
-    default <T extends Accessor<MyShoppingListAddLineItemAction>> T withMyShoppingListAddLineItemAction(Function<MyShoppingListAddLineItemAction, T> helper) {
+    default <T> T withMyShoppingListAddLineItemAction(Function<MyShoppingListAddLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

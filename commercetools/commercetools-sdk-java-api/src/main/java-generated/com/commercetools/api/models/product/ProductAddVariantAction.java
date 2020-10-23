@@ -86,7 +86,7 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductAddVariantAction>> T withProductAddVariantAction(Function<ProductAddVariantAction, T> helper) {
+    default <T> T withProductAddVariantAction(Function<ProductAddVariantAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -45,7 +45,7 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ReviewSetTargetAction>> T withReviewSetTargetAction(Function<ReviewSetTargetAction, T> helper) {
+    default <T> T withReviewSetTargetAction(Function<ReviewSetTargetAction, T> helper) {
         return helper.apply(this);
     }
 }

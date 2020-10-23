@@ -49,7 +49,7 @@ public interface ProductTypeAddLocalizedEnumValueAction extends ProductTypeUpdat
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeAddLocalizedEnumValueAction>> T withProductTypeAddLocalizedEnumValueAction(Function<ProductTypeAddLocalizedEnumValueAction, T> helper) {
+    default <T> T withProductTypeAddLocalizedEnumValueAction(Function<ProductTypeAddLocalizedEnumValueAction, T> helper) {
         return helper.apply(this);
     }
 }

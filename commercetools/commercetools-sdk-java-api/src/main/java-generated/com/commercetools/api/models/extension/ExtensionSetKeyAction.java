@@ -42,7 +42,7 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionSetKeyAction>> T withExtensionSetKeyAction(Function<ExtensionSetKeyAction, T> helper) {
+    default <T> T withExtensionSetKeyAction(Function<ExtensionSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

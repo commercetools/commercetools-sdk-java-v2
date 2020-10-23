@@ -42,7 +42,7 @@ public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupSetKeyAction>> T withCustomerGroupSetKeyAction(Function<CustomerGroupSetKeyAction, T> helper) {
+    default <T> T withCustomerGroupSetKeyAction(Function<CustomerGroupSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -54,7 +54,7 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntrySetCustomTypeAction>> T withInventoryEntrySetCustomTypeAction(Function<InventoryEntrySetCustomTypeAction, T> helper) {
+    default <T> T withInventoryEntrySetCustomTypeAction(Function<InventoryEntrySetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

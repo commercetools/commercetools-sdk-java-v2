@@ -40,7 +40,7 @@ public interface GraphQLVariablesMap  {
         return instance;
     }
 
-    default <T extends Accessor<GraphQLVariablesMap>> T withGraphQLVariablesMap(Function<GraphQLVariablesMap, T> helper) {
+    default <T> T withGraphQLVariablesMap(Function<GraphQLVariablesMap, T> helper) {
         return helper.apply(this);
     }
 }

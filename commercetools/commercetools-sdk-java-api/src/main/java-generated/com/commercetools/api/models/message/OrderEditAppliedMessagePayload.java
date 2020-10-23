@@ -51,7 +51,7 @@ public interface OrderEditAppliedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditAppliedMessagePayload>> T withOrderEditAppliedMessagePayload(Function<OrderEditAppliedMessagePayload, T> helper) {
+    default <T> T withOrderEditAppliedMessagePayload(Function<OrderEditAppliedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

@@ -51,7 +51,7 @@ public interface ResourceDeletedDelivery extends SubscriptionDelivery {
         return instance;
     }
 
-    default <T extends Accessor<ResourceDeletedDelivery>> T withResourceDeletedDelivery(Function<ResourceDeletedDelivery, T> helper) {
+    default <T> T withResourceDeletedDelivery(Function<ResourceDeletedDelivery, T> helper) {
         return helper.apply(this);
     }
 }

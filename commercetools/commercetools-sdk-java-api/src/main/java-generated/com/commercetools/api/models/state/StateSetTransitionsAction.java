@@ -41,7 +41,7 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StateSetTransitionsAction>> T withStateSetTransitionsAction(Function<StateSetTransitionsAction, T> helper) {
+    default <T> T withStateSetTransitionsAction(Function<StateSetTransitionsAction, T> helper) {
         return helper.apply(this);
     }
 }

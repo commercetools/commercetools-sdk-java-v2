@@ -54,7 +54,7 @@ public interface CustomerCreateEmailToken  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerCreateEmailToken>> T withCustomerCreateEmailToken(Function<CustomerCreateEmailToken, T> helper) {
+    default <T> T withCustomerCreateEmailToken(Function<CustomerCreateEmailToken, T> helper) {
         return helper.apply(this);
     }
 }

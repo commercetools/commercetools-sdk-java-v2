@@ -49,7 +49,7 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ReviewTransitionStateAction>> T withReviewTransitionStateAction(Function<ReviewTransitionStateAction, T> helper) {
+    default <T> T withReviewTransitionStateAction(Function<ReviewTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
 }

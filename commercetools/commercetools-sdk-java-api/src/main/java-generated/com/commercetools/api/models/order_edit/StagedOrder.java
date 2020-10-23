@@ -75,7 +75,7 @@ public interface StagedOrder extends Order {
         return instance;
     }
 
-    default <T extends Accessor<StagedOrder>> T withStagedOrder(Function<StagedOrder, T> helper) {
+    default <T> T withStagedOrder(Function<StagedOrder, T> helper) {
         return helper.apply(this);
     }
 }

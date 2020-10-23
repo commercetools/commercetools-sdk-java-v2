@@ -54,7 +54,7 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetCustomTypeAction>> T withDiscountCodeSetCustomTypeAction(Function<DiscountCodeSetCustomTypeAction, T> helper) {
+    default <T> T withDiscountCodeSetCustomTypeAction(Function<DiscountCodeSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

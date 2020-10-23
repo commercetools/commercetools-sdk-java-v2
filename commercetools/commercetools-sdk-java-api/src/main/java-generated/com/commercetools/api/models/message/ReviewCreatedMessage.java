@@ -52,7 +52,7 @@ public interface ReviewCreatedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ReviewCreatedMessage>> T withReviewCreatedMessage(Function<ReviewCreatedMessage, T> helper) {
+    default <T> T withReviewCreatedMessage(Function<ReviewCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 }

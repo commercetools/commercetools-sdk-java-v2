@@ -48,7 +48,7 @@ public interface OrderUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<OrderUpdate>> T withOrderUpdate(Function<OrderUpdate, T> helper) {
+    default <T> T withOrderUpdate(Function<OrderUpdate, T> helper) {
         return helper.apply(this);
     }
 }

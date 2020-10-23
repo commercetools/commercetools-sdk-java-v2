@@ -52,7 +52,7 @@ public interface ProductPriceDiscountsSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductPriceDiscountsSetMessage>> T withProductPriceDiscountsSetMessage(Function<ProductPriceDiscountsSetMessage, T> helper) {
+    default <T> T withProductPriceDiscountsSetMessage(Function<ProductPriceDiscountsSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

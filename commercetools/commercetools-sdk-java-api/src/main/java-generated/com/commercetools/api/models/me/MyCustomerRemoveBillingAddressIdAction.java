@@ -40,7 +40,7 @@ public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdate
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerRemoveBillingAddressIdAction>> T withMyCustomerRemoveBillingAddressIdAction(Function<MyCustomerRemoveBillingAddressIdAction, T> helper) {
+    default <T> T withMyCustomerRemoveBillingAddressIdAction(Function<MyCustomerRemoveBillingAddressIdAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -58,7 +58,7 @@ public interface OrderStateChangedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderStateChangedMessage>> T withOrderStateChangedMessage(Function<OrderStateChangedMessage, T> helper) {
+    default <T> T withOrderStateChangedMessage(Function<OrderStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
 }

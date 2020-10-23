@@ -42,7 +42,7 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetExternalIdAction>> T withCategorySetExternalIdAction(Function<CategorySetExternalIdAction, T> helper) {
+    default <T> T withCategorySetExternalIdAction(Function<CategorySetExternalIdAction, T> helper) {
         return helper.apply(this);
     }
 }

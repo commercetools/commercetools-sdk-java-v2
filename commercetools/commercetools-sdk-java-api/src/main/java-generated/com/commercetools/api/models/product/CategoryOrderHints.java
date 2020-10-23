@@ -40,7 +40,7 @@ public interface CategoryOrderHints  {
         return instance;
     }
 
-    default <T extends Accessor<CategoryOrderHints>> T withCategoryOrderHints(Function<CategoryOrderHints, T> helper) {
+    default <T> T withCategoryOrderHints(Function<CategoryOrderHints, T> helper) {
         return helper.apply(this);
     }
 }

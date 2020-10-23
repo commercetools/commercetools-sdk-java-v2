@@ -49,7 +49,7 @@ public interface MyCustomerSetCustomTypeAction extends MyCustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerSetCustomTypeAction>> T withMyCustomerSetCustomTypeAction(Function<MyCustomerSetCustomTypeAction, T> helper) {
+    default <T> T withMyCustomerSetCustomTypeAction(Function<MyCustomerSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

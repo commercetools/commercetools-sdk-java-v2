@@ -59,7 +59,7 @@ public interface OrderLineItemAddedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderLineItemAddedMessage>> T withOrderLineItemAddedMessage(Function<OrderLineItemAddedMessage, T> helper) {
+    default <T> T withOrderLineItemAddedMessage(Function<OrderLineItemAddedMessage, T> helper) {
         return helper.apply(this);
     }
 }

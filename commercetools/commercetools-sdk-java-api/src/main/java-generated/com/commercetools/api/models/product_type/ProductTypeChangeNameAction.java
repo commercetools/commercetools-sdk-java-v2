@@ -40,7 +40,7 @@ public interface ProductTypeChangeNameAction extends ProductTypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeNameAction>> T withProductTypeChangeNameAction(Function<ProductTypeChangeNameAction, T> helper) {
+    default <T> T withProductTypeChangeNameAction(Function<ProductTypeChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

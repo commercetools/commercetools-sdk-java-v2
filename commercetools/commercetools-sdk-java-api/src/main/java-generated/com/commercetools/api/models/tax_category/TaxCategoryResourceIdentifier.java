@@ -37,7 +37,7 @@ public interface TaxCategoryResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryResourceIdentifier>> T withTaxCategoryResourceIdentifier(Function<TaxCategoryResourceIdentifier, T> helper) {
+    default <T> T withTaxCategoryResourceIdentifier(Function<TaxCategoryResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

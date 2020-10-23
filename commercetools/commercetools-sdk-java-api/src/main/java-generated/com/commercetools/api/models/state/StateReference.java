@@ -43,7 +43,7 @@ public interface StateReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<StateReference>> T withStateReference(Function<StateReference, T> helper) {
+    default <T> T withStateReference(Function<StateReference, T> helper) {
         return helper.apply(this);
     }
 }

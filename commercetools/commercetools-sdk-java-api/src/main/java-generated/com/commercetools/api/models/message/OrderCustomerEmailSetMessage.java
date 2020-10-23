@@ -57,7 +57,7 @@ public interface OrderCustomerEmailSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderCustomerEmailSetMessage>> T withOrderCustomerEmailSetMessage(Function<OrderCustomerEmailSetMessage, T> helper) {
+    default <T> T withOrderCustomerEmailSetMessage(Function<OrderCustomerEmailSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

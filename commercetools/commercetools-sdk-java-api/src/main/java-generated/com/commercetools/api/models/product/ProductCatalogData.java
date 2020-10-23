@@ -63,7 +63,7 @@ public interface ProductCatalogData  {
         return instance;
     }
 
-    default <T extends Accessor<ProductCatalogData>> T withProductCatalogData(Function<ProductCatalogData, T> helper) {
+    default <T> T withProductCatalogData(Function<ProductCatalogData, T> helper) {
         return helper.apply(this);
     }
 }

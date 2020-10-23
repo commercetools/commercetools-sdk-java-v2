@@ -40,7 +40,7 @@ public interface MyCartSetDeleteDaysAfterLastModificationAction extends MyCartUp
         return instance;
     }
 
-    default <T extends Accessor<MyCartSetDeleteDaysAfterLastModificationAction>> T withMyCartSetDeleteDaysAfterLastModificationAction(Function<MyCartSetDeleteDaysAfterLastModificationAction, T> helper) {
+    default <T> T withMyCartSetDeleteDaysAfterLastModificationAction(Function<MyCartSetDeleteDaysAfterLastModificationAction, T> helper) {
         return helper.apply(this);
     }
 }

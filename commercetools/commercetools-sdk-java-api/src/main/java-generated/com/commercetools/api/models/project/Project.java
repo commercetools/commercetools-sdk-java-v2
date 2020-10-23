@@ -135,7 +135,7 @@ public interface Project  {
         return instance;
     }
 
-    default <T extends Accessor<Project>> T withProject(Function<Project, T> helper) {
+    default <T> T withProject(Function<Project, T> helper) {
         return helper.apply(this);
     }
 }

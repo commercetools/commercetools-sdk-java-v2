@@ -41,7 +41,7 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountSetDescriptionAction>> T withProductDiscountSetDescriptionAction(Function<ProductDiscountSetDescriptionAction, T> helper) {
+    default <T> T withProductDiscountSetDescriptionAction(Function<ProductDiscountSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

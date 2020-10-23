@@ -43,7 +43,7 @@ public interface CategoryReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<CategoryReference>> T withCategoryReference(Function<CategoryReference, T> helper) {
+    default <T> T withCategoryReference(Function<CategoryReference, T> helper) {
         return helper.apply(this);
     }
 }

@@ -40,7 +40,7 @@ public interface FieldContainer  {
         return instance;
     }
 
-    default <T extends Accessor<FieldContainer>> T withFieldContainer(Function<FieldContainer, T> helper) {
+    default <T> T withFieldContainer(Function<FieldContainer, T> helper) {
         return helper.apply(this);
     }
 }

@@ -41,7 +41,7 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderChangeOrderStateAction>> T withStagedOrderChangeOrderStateAction(Function<StagedOrderChangeOrderStateAction, T> helper) {
+    default <T> T withStagedOrderChangeOrderStateAction(Function<StagedOrderChangeOrderStateAction, T> helper) {
         return helper.apply(this);
     }
 }

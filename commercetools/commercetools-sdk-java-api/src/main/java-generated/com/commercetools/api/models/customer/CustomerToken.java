@@ -75,7 +75,7 @@ public interface CustomerToken  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerToken>> T withCustomerToken(Function<CustomerToken, T> helper) {
+    default <T> T withCustomerToken(Function<CustomerToken, T> helper) {
         return helper.apply(this);
     }
 }

@@ -58,7 +58,7 @@ public interface DiscountCodeUpdateAction  {
 
 
 
-    default <T extends Accessor<DiscountCodeUpdateAction>> T withDiscountCodeUpdateAction(Function<DiscountCodeUpdateAction, T> helper) {
+    default <T> T withDiscountCodeUpdateAction(Function<DiscountCodeUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

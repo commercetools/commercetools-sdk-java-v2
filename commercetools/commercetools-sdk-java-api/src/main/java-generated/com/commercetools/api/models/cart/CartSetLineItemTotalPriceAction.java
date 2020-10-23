@@ -48,7 +48,7 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetLineItemTotalPriceAction>> T withCartSetLineItemTotalPriceAction(Function<CartSetLineItemTotalPriceAction, T> helper) {
+    default <T> T withCartSetLineItemTotalPriceAction(Function<CartSetLineItemTotalPriceAction, T> helper) {
         return helper.apply(this);
     }
 }

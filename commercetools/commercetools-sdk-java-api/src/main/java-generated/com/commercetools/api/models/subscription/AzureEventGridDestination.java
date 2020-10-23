@@ -47,7 +47,7 @@ public interface AzureEventGridDestination extends Destination {
         return instance;
     }
 
-    default <T extends Accessor<AzureEventGridDestination>> T withAzureEventGridDestination(Function<AzureEventGridDestination, T> helper) {
+    default <T> T withAzureEventGridDestination(Function<AzureEventGridDestination, T> helper) {
         return helper.apply(this);
     }
 }

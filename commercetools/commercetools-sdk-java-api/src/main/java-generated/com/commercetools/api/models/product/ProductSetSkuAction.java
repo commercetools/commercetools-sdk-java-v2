@@ -57,7 +57,7 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetSkuAction>> T withProductSetSkuAction(Function<ProductSetSkuAction, T> helper) {
+    default <T> T withProductSetSkuAction(Function<ProductSetSkuAction, T> helper) {
         return helper.apply(this);
     }
 }

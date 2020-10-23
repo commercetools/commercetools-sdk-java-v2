@@ -40,7 +40,7 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderRemoveDeliveryAction>> T withStagedOrderRemoveDeliveryAction(Function<StagedOrderRemoveDeliveryAction, T> helper) {
+    default <T> T withStagedOrderRemoveDeliveryAction(Function<StagedOrderRemoveDeliveryAction, T> helper) {
         return helper.apply(this);
     }
 }

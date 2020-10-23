@@ -73,7 +73,7 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetImageLabelAction>> T withProductSetImageLabelAction(Function<ProductSetImageLabelAction, T> helper) {
+    default <T> T withProductSetImageLabelAction(Function<ProductSetImageLabelAction, T> helper) {
         return helper.apply(this);
     }
 }

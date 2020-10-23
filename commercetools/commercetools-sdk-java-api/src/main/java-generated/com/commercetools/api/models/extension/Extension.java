@@ -117,7 +117,7 @@ public interface Extension extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Extension>> T withExtension(Function<Extension, T> helper) {
+    default <T> T withExtension(Function<Extension, T> helper) {
         return helper.apply(this);
     }
 }

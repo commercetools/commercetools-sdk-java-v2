@@ -48,7 +48,7 @@ public interface ShoppingListSetCustomFieldAction extends ShoppingListUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListSetCustomFieldAction>> T withShoppingListSetCustomFieldAction(Function<ShoppingListSetCustomFieldAction, T> helper) {
+    default <T> T withShoppingListSetCustomFieldAction(Function<ShoppingListSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

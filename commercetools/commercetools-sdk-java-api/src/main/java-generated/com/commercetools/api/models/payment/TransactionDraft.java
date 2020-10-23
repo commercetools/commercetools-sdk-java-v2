@@ -82,7 +82,7 @@ public interface TransactionDraft  {
         return instance;
     }
 
-    default <T extends Accessor<TransactionDraft>> T withTransactionDraft(Function<TransactionDraft, T> helper) {
+    default <T> T withTransactionDraft(Function<TransactionDraft, T> helper) {
         return helper.apply(this);
     }
 }

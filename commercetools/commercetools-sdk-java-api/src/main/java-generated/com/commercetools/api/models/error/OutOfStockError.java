@@ -48,7 +48,7 @@ public interface OutOfStockError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<OutOfStockError>> T withOutOfStockError(Function<OutOfStockError, T> helper) {
+    default <T> T withOutOfStockError(Function<OutOfStockError, T> helper) {
         return helper.apply(this);
     }
 }

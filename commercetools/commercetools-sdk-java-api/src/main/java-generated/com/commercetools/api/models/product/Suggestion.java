@@ -42,7 +42,7 @@ public interface Suggestion  {
         return instance;
     }
 
-    default <T extends Accessor<Suggestion>> T withSuggestion(Function<Suggestion, T> helper) {
+    default <T> T withSuggestion(Function<Suggestion, T> helper) {
         return helper.apply(this);
     }
 }

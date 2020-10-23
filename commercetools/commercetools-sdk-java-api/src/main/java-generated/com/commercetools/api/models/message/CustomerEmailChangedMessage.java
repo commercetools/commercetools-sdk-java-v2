@@ -50,7 +50,7 @@ public interface CustomerEmailChangedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<CustomerEmailChangedMessage>> T withCustomerEmailChangedMessage(Function<CustomerEmailChangedMessage, T> helper) {
+    default <T> T withCustomerEmailChangedMessage(Function<CustomerEmailChangedMessage, T> helper) {
         return helper.apply(this);
     }
 }

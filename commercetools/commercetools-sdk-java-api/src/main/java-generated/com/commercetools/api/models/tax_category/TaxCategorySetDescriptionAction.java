@@ -40,7 +40,7 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<TaxCategorySetDescriptionAction>> T withTaxCategorySetDescriptionAction(Function<TaxCategorySetDescriptionAction, T> helper) {
+    default <T> T withTaxCategorySetDescriptionAction(Function<TaxCategorySetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

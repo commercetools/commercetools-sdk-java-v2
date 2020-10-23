@@ -42,7 +42,7 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetMaxApplicationsPerCustomerAction>> T withDiscountCodeSetMaxApplicationsPerCustomerAction(Function<DiscountCodeSetMaxApplicationsPerCustomerAction, T> helper) {
+    default <T> T withDiscountCodeSetMaxApplicationsPerCustomerAction(Function<DiscountCodeSetMaxApplicationsPerCustomerAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -52,7 +52,7 @@ public interface CustomerAddressRemovedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<CustomerAddressRemovedMessage>> T withCustomerAddressRemovedMessage(Function<CustomerAddressRemovedMessage, T> helper) {
+    default <T> T withCustomerAddressRemovedMessage(Function<CustomerAddressRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 }

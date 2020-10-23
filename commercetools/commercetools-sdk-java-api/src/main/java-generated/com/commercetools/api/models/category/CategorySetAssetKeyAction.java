@@ -50,7 +50,7 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetAssetKeyAction>> T withCategorySetAssetKeyAction(Function<CategorySetAssetKeyAction, T> helper) {
+    default <T> T withCategorySetAssetKeyAction(Function<CategorySetAssetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

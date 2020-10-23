@@ -40,7 +40,7 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeChangeFieldDefinitionOrderAction>> T withTypeChangeFieldDefinitionOrderAction(Function<TypeChangeFieldDefinitionOrderAction, T> helper) {
+    default <T> T withTypeChangeFieldDefinitionOrderAction(Function<TypeChangeFieldDefinitionOrderAction, T> helper) {
         return helper.apply(this);
     }
 }

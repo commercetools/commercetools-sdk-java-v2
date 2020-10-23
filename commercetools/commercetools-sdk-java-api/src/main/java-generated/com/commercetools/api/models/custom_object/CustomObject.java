@@ -102,7 +102,7 @@ public interface CustomObject extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<CustomObject>> T withCustomObject(Function<CustomObject, T> helper) {
+    default <T> T withCustomObject(Function<CustomObject, T> helper) {
         return helper.apply(this);
     }
 }

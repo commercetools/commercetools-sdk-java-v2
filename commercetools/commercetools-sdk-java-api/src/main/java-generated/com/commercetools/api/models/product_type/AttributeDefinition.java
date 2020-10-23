@@ -120,7 +120,7 @@ public interface AttributeDefinition  {
         return instance;
     }
 
-    default <T extends Accessor<AttributeDefinition>> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
+    default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);
     }
 }

@@ -65,7 +65,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetCustomShippingMethodAction>> T withCartSetCustomShippingMethodAction(Function<CartSetCustomShippingMethodAction, T> helper) {
+    default <T> T withCartSetCustomShippingMethodAction(Function<CartSetCustomShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 }

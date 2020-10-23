@@ -48,7 +48,7 @@ public interface ProductSetDescriptionAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetDescriptionAction>> T withProductSetDescriptionAction(Function<ProductSetDescriptionAction, T> helper) {
+    default <T> T withProductSetDescriptionAction(Function<ProductSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

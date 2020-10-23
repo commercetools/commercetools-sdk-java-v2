@@ -48,7 +48,7 @@ public interface DiscountCodeSetCustomFieldAction extends DiscountCodeUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetCustomFieldAction>> T withDiscountCodeSetCustomFieldAction(Function<DiscountCodeSetCustomFieldAction, T> helper) {
+    default <T> T withDiscountCodeSetCustomFieldAction(Function<DiscountCodeSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

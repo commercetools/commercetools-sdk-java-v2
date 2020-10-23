@@ -182,7 +182,7 @@ public interface ProductDiscount extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscount>> T withProductDiscount(Function<ProductDiscount, T> helper) {
+    default <T> T withProductDiscount(Function<ProductDiscount, T> helper) {
         return helper.apply(this);
     }
 }

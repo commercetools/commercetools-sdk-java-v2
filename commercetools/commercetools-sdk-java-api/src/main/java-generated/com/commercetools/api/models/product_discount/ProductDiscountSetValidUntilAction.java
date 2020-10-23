@@ -44,7 +44,7 @@ public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdat
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountSetValidUntilAction>> T withProductDiscountSetValidUntilAction(Function<ProductDiscountSetValidUntilAction, T> helper) {
+    default <T> T withProductDiscountSetValidUntilAction(Function<ProductDiscountSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
 }

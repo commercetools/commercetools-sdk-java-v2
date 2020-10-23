@@ -72,7 +72,7 @@ public interface ShippingRate  {
         return instance;
     }
 
-    default <T extends Accessor<ShippingRate>> T withShippingRate(Function<ShippingRate, T> helper) {
+    default <T> T withShippingRate(Function<ShippingRate, T> helper) {
         return helper.apply(this);
     }
 }

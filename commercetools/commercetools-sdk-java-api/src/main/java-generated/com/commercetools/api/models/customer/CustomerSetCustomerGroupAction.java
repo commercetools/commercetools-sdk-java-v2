@@ -43,7 +43,7 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetCustomerGroupAction>> T withCustomerSetCustomerGroupAction(Function<CustomerSetCustomerGroupAction, T> helper) {
+    default <T> T withCustomerSetCustomerGroupAction(Function<CustomerSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
 }

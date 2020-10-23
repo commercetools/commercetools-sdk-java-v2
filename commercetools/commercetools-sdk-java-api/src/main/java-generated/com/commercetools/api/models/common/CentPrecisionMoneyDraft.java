@@ -34,10 +34,11 @@ public interface CentPrecisionMoneyDraft extends TypedMoneyDraft {
         CentPrecisionMoneyDraftImpl instance = new CentPrecisionMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
+        instance.setFractionDigits(template.getFractionDigits());
         return instance;
     }
 
-    default <T extends Accessor<CentPrecisionMoneyDraft>> T withCentPrecisionMoneyDraft(Function<CentPrecisionMoneyDraft, T> helper) {
+    default <T> T withCentPrecisionMoneyDraft(Function<CentPrecisionMoneyDraft, T> helper) {
         return helper.apply(this);
     }
 }

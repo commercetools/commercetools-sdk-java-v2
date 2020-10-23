@@ -40,7 +40,7 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodSetDescriptionAction>> T withShippingMethodSetDescriptionAction(Function<ShippingMethodSetDescriptionAction, T> helper) {
+    default <T> T withShippingMethodSetDescriptionAction(Function<ShippingMethodSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -71,7 +71,7 @@ public interface ProductProjectionPagedSearchResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ProductProjectionPagedSearchResponse>> T withProductProjectionPagedSearchResponse(Function<ProductProjectionPagedSearchResponse, T> helper) {
+    default <T> T withProductProjectionPagedSearchResponse(Function<ProductProjectionPagedSearchResponse, T> helper) {
         return helper.apply(this);
     }
 }

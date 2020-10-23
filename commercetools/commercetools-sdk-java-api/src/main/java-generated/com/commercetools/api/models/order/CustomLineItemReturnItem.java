@@ -47,7 +47,7 @@ public interface CustomLineItemReturnItem extends ReturnItem {
         return instance;
     }
 
-    default <T extends Accessor<CustomLineItemReturnItem>> T withCustomLineItemReturnItem(Function<CustomLineItemReturnItem, T> helper) {
+    default <T> T withCustomLineItemReturnItem(Function<CustomLineItemReturnItem, T> helper) {
         return helper.apply(this);
     }
 }

@@ -40,7 +40,7 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerSetVatIdAction>> T withMyCustomerSetVatIdAction(Function<MyCustomerSetVatIdAction, T> helper) {
+    default <T> T withMyCustomerSetVatIdAction(Function<MyCustomerSetVatIdAction, T> helper) {
         return helper.apply(this);
     }
 }

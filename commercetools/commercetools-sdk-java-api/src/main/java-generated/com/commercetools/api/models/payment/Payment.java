@@ -219,7 +219,7 @@ public interface Payment extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Payment>> T withPayment(Function<Payment, T> helper) {
+    default <T> T withPayment(Function<Payment, T> helper) {
         return helper.apply(this);
     }
 }

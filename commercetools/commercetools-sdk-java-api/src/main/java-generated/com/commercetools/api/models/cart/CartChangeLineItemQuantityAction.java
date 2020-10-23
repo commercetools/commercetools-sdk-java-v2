@@ -63,7 +63,7 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartChangeLineItemQuantityAction>> T withCartChangeLineItemQuantityAction(Function<CartChangeLineItemQuantityAction, T> helper) {
+    default <T> T withCartChangeLineItemQuantityAction(Function<CartChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
 }

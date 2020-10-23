@@ -48,7 +48,7 @@ public interface OrderShipmentStateChangedMessagePayload extends MessagePayload 
         return instance;
     }
 
-    default <T extends Accessor<OrderShipmentStateChangedMessagePayload>> T withOrderShipmentStateChangedMessagePayload(Function<OrderShipmentStateChangedMessagePayload, T> helper) {
+    default <T> T withOrderShipmentStateChangedMessagePayload(Function<OrderShipmentStateChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

@@ -34,7 +34,7 @@ public interface ProductDiscountValueExternalDraft extends ProductDiscountValueD
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountValueExternalDraft>> T withProductDiscountValueExternalDraft(Function<ProductDiscountValueExternalDraft, T> helper) {
+    default <T> T withProductDiscountValueExternalDraft(Function<ProductDiscountValueExternalDraft, T> helper) {
         return helper.apply(this);
     }
 }

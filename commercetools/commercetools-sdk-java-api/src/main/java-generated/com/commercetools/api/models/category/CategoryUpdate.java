@@ -48,7 +48,7 @@ public interface CategoryUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<CategoryUpdate>> T withCategoryUpdate(Function<CategoryUpdate, T> helper) {
+    default <T> T withCategoryUpdate(Function<CategoryUpdate, T> helper) {
         return helper.apply(this);
     }
 }

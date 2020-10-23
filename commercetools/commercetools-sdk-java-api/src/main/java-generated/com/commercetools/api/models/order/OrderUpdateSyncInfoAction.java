@@ -57,7 +57,7 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderUpdateSyncInfoAction>> T withOrderUpdateSyncInfoAction(Function<OrderUpdateSyncInfoAction, T> helper) {
+    default <T> T withOrderUpdateSyncInfoAction(Function<OrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);
     }
 }

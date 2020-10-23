@@ -34,7 +34,7 @@ public interface CustomFieldTimeType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldTimeType>> T withCustomFieldTimeType(Function<CustomFieldTimeType, T> helper) {
+    default <T> T withCustomFieldTimeType(Function<CustomFieldTimeType, T> helper) {
         return helper.apply(this);
     }
 }

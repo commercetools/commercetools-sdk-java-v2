@@ -75,7 +75,7 @@ public interface UserProvidedIdentifiers  {
         return instance;
     }
 
-    default <T extends Accessor<UserProvidedIdentifiers>> T withUserProvidedIdentifiers(Function<UserProvidedIdentifiers, T> helper) {
+    default <T> T withUserProvidedIdentifiers(Function<UserProvidedIdentifiers, T> helper) {
         return helper.apply(this);
     }
 }

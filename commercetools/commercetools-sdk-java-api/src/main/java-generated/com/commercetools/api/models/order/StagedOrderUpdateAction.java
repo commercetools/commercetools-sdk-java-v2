@@ -172,7 +172,7 @@ public interface StagedOrderUpdateAction  {
 
 
 
-    default <T extends Accessor<StagedOrderUpdateAction>> T withStagedOrderUpdateAction(Function<StagedOrderUpdateAction, T> helper) {
+    default <T> T withStagedOrderUpdateAction(Function<StagedOrderUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -36,7 +36,7 @@ public interface ExtensionDestination  {
 
 
 
-    default <T extends Accessor<ExtensionDestination>> T withExtensionDestination(Function<ExtensionDestination, T> helper) {
+    default <T> T withExtensionDestination(Function<ExtensionDestination, T> helper) {
         return helper.apply(this);
     }
 }

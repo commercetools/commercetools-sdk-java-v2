@@ -42,7 +42,7 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountChangeValueAction>> T withCartDiscountChangeValueAction(Function<CartDiscountChangeValueAction, T> helper) {
+    default <T> T withCartDiscountChangeValueAction(Function<CartDiscountChangeValueAction, T> helper) {
         return helper.apply(this);
     }
 }

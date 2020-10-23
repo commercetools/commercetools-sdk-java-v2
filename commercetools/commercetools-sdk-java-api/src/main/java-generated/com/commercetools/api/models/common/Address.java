@@ -210,7 +210,7 @@ public interface Address  {
         return instance;
     }
 
-    default <T extends Accessor<Address>> T withAddress(Function<Address, T> helper) {
+    default <T> T withAddress(Function<Address, T> helper) {
         return helper.apply(this);
     }
 }

@@ -215,7 +215,7 @@ public interface CartDiscount extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscount>> T withCartDiscount(Function<CartDiscount, T> helper) {
+    default <T> T withCartDiscount(Function<CartDiscount, T> helper) {
         return helper.apply(this);
     }
 }

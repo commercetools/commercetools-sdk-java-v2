@@ -49,7 +49,7 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
         return instance;
     }
 
-    default <T extends Accessor<MyShoppingListSetCustomTypeAction>> T withMyShoppingListSetCustomTypeAction(Function<MyShoppingListSetCustomTypeAction, T> helper) {
+    default <T> T withMyShoppingListSetCustomTypeAction(Function<MyShoppingListSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

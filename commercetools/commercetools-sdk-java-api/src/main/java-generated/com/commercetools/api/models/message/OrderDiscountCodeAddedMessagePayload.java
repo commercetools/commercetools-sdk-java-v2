@@ -42,7 +42,7 @@ public interface OrderDiscountCodeAddedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderDiscountCodeAddedMessagePayload>> T withOrderDiscountCodeAddedMessagePayload(Function<OrderDiscountCodeAddedMessagePayload, T> helper) {
+    default <T> T withOrderDiscountCodeAddedMessagePayload(Function<OrderDiscountCodeAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

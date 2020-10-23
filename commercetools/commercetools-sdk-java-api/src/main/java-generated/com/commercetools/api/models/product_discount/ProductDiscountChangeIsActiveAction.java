@@ -40,7 +40,7 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountChangeIsActiveAction>> T withProductDiscountChangeIsActiveAction(Function<ProductDiscountChangeIsActiveAction, T> helper) {
+    default <T> T withProductDiscountChangeIsActiveAction(Function<ProductDiscountChangeIsActiveAction, T> helper) {
         return helper.apply(this);
     }
 }

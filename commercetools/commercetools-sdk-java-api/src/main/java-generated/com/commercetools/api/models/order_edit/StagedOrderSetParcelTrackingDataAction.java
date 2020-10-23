@@ -48,7 +48,7 @@ public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdat
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetParcelTrackingDataAction>> T withStagedOrderSetParcelTrackingDataAction(Function<StagedOrderSetParcelTrackingDataAction, T> helper) {
+    default <T> T withStagedOrderSetParcelTrackingDataAction(Function<StagedOrderSetParcelTrackingDataAction, T> helper) {
         return helper.apply(this);
     }
 }

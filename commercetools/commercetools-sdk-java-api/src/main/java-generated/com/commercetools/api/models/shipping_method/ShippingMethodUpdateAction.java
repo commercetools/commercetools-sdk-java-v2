@@ -54,7 +54,7 @@ public interface ShippingMethodUpdateAction  {
 
 
 
-    default <T extends Accessor<ShippingMethodUpdateAction>> T withShippingMethodUpdateAction(Function<ShippingMethodUpdateAction, T> helper) {
+    default <T> T withShippingMethodUpdateAction(Function<ShippingMethodUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

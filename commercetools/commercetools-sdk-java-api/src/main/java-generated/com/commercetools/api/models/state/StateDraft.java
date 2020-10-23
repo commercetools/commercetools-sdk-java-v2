@@ -85,7 +85,7 @@ public interface StateDraft  {
         return instance;
     }
 
-    default <T extends Accessor<StateDraft>> T withStateDraft(Function<StateDraft, T> helper) {
+    default <T> T withStateDraft(Function<StateDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -58,7 +58,7 @@ public interface OrderCustomerGroupSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderCustomerGroupSetMessage>> T withOrderCustomerGroupSetMessage(Function<OrderCustomerGroupSetMessage, T> helper) {
+    default <T> T withOrderCustomerGroupSetMessage(Function<OrderCustomerGroupSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

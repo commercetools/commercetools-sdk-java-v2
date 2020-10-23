@@ -61,7 +61,7 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductChangeAssetOrderAction>> T withProductChangeAssetOrderAction(Function<ProductChangeAssetOrderAction, T> helper) {
+    default <T> T withProductChangeAssetOrderAction(Function<ProductChangeAssetOrderAction, T> helper) {
         return helper.apply(this);
     }
 }

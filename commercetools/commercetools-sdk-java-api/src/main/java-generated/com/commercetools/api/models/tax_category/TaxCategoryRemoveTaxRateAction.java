@@ -40,7 +40,7 @@ public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryRemoveTaxRateAction>> T withTaxCategoryRemoveTaxRateAction(Function<TaxCategoryRemoveTaxRateAction, T> helper) {
+    default <T> T withTaxCategoryRemoveTaxRateAction(Function<TaxCategoryRemoveTaxRateAction, T> helper) {
         return helper.apply(this);
     }
 }

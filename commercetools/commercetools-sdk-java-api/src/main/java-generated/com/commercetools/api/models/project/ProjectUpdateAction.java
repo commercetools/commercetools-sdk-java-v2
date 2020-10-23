@@ -50,7 +50,7 @@ public interface ProjectUpdateAction  {
 
 
 
-    default <T extends Accessor<ProjectUpdateAction>> T withProjectUpdateAction(Function<ProjectUpdateAction, T> helper) {
+    default <T> T withProjectUpdateAction(Function<ProjectUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

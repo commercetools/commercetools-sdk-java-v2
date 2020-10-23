@@ -48,7 +48,7 @@ public interface PriceTierDraft  {
         return instance;
     }
 
-    default <T extends Accessor<PriceTierDraft>> T withPriceTierDraft(Function<PriceTierDraft, T> helper) {
+    default <T> T withPriceTierDraft(Function<PriceTierDraft, T> helper) {
         return helper.apply(this);
     }
 }

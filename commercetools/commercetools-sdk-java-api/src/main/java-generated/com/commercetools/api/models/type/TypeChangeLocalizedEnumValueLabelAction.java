@@ -49,7 +49,7 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<TypeChangeLocalizedEnumValueLabelAction>> T withTypeChangeLocalizedEnumValueLabelAction(Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
+    default <T> T withTypeChangeLocalizedEnumValueLabelAction(Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
 }

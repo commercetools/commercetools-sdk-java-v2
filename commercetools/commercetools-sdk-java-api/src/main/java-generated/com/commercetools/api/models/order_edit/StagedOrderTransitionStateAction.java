@@ -49,7 +49,7 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderTransitionStateAction>> T withStagedOrderTransitionStateAction(Function<StagedOrderTransitionStateAction, T> helper) {
+    default <T> T withStagedOrderTransitionStateAction(Function<StagedOrderTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
 }

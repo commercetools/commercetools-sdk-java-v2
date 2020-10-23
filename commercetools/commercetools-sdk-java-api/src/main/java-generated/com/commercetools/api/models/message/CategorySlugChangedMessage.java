@@ -52,7 +52,7 @@ public interface CategorySlugChangedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<CategorySlugChangedMessage>> T withCategorySlugChangedMessage(Function<CategorySlugChangedMessage, T> helper) {
+    default <T> T withCategorySlugChangedMessage(Function<CategorySlugChangedMessage, T> helper) {
         return helper.apply(this);
     }
 }

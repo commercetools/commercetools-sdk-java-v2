@@ -34,7 +34,7 @@ public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountShippingCostTarget>> T withCartDiscountShippingCostTarget(Function<CartDiscountShippingCostTarget, T> helper) {
+    default <T> T withCartDiscountShippingCostTarget(Function<CartDiscountShippingCostTarget, T> helper) {
         return helper.apply(this);
     }
 }

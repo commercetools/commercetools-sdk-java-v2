@@ -40,7 +40,7 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerSetLocaleAction>> T withMyCustomerSetLocaleAction(Function<MyCustomerSetLocaleAction, T> helper) {
+    default <T> T withMyCustomerSetLocaleAction(Function<MyCustomerSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
 }

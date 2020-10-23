@@ -61,7 +61,7 @@ public interface OrderEditAppliedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditAppliedMessage>> T withOrderEditAppliedMessage(Function<OrderEditAppliedMessage, T> helper) {
+    default <T> T withOrderEditAppliedMessage(Function<OrderEditAppliedMessage, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface OrderReturnInfoAddedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderReturnInfoAddedMessagePayload>> T withOrderReturnInfoAddedMessagePayload(Function<OrderReturnInfoAddedMessagePayload, T> helper) {
+    default <T> T withOrderReturnInfoAddedMessagePayload(Function<OrderReturnInfoAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

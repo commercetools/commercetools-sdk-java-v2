@@ -49,7 +49,7 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetDeliveryItemsAction>> T withStagedOrderSetDeliveryItemsAction(Function<StagedOrderSetDeliveryItemsAction, T> helper) {
+    default <T> T withStagedOrderSetDeliveryItemsAction(Function<StagedOrderSetDeliveryItemsAction, T> helper) {
         return helper.apply(this);
     }
 }

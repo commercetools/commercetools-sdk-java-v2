@@ -43,7 +43,7 @@ public interface RangeFacetResult extends FacetResult {
         return instance;
     }
 
-    default <T extends Accessor<RangeFacetResult>> T withRangeFacetResult(Function<RangeFacetResult, T> helper) {
+    default <T> T withRangeFacetResult(Function<RangeFacetResult, T> helper) {
         return helper.apply(this);
     }
 }

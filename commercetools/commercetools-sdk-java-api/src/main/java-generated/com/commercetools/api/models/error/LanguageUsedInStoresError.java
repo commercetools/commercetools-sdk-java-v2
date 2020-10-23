@@ -35,7 +35,7 @@ public interface LanguageUsedInStoresError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<LanguageUsedInStoresError>> T withLanguageUsedInStoresError(Function<LanguageUsedInStoresError, T> helper) {
+    default <T> T withLanguageUsedInStoresError(Function<LanguageUsedInStoresError, T> helper) {
         return helper.apply(this);
     }
 }

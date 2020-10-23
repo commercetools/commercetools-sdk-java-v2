@@ -68,7 +68,7 @@ public interface ProductPublishedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductPublishedMessage>> T withProductPublishedMessage(Function<ProductPublishedMessage, T> helper) {
+    default <T> T withProductPublishedMessage(Function<ProductPublishedMessage, T> helper) {
         return helper.apply(this);
     }
 }

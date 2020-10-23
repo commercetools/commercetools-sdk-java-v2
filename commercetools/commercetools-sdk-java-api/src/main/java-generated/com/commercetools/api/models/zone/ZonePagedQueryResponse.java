@@ -69,7 +69,7 @@ public interface ZonePagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ZonePagedQueryResponse>> T withZonePagedQueryResponse(Function<ZonePagedQueryResponse, T> helper) {
+    default <T> T withZonePagedQueryResponse(Function<ZonePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

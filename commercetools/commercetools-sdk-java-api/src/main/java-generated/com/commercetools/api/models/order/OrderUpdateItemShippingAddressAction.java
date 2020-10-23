@@ -42,7 +42,7 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<OrderUpdateItemShippingAddressAction>> T withOrderUpdateItemShippingAddressAction(Function<OrderUpdateItemShippingAddressAction, T> helper) {
+    default <T> T withOrderUpdateItemShippingAddressAction(Function<OrderUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

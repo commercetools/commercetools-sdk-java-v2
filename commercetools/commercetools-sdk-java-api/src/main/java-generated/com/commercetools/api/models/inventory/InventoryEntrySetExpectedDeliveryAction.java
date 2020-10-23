@@ -41,7 +41,7 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntrySetExpectedDeliveryAction>> T withInventoryEntrySetExpectedDeliveryAction(Function<InventoryEntrySetExpectedDeliveryAction, T> helper) {
+    default <T> T withInventoryEntrySetExpectedDeliveryAction(Function<InventoryEntrySetExpectedDeliveryAction, T> helper) {
         return helper.apply(this);
     }
 }

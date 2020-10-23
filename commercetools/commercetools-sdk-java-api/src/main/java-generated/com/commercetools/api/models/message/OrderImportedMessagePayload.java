@@ -42,7 +42,7 @@ public interface OrderImportedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderImportedMessagePayload>> T withOrderImportedMessagePayload(Function<OrderImportedMessagePayload, T> helper) {
+    default <T> T withOrderImportedMessagePayload(Function<OrderImportedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

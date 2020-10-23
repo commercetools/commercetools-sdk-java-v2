@@ -49,7 +49,7 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ProductStateTransitionMessagePayload>> T withProductStateTransitionMessagePayload(Function<ProductStateTransitionMessagePayload, T> helper) {
+    default <T> T withProductStateTransitionMessagePayload(Function<ProductStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

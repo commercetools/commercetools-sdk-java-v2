@@ -43,7 +43,7 @@ public interface TypeReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<TypeReference>> T withTypeReference(Function<TypeReference, T> helper) {
+    default <T> T withTypeReference(Function<TypeReference, T> helper) {
         return helper.apply(this);
     }
 }

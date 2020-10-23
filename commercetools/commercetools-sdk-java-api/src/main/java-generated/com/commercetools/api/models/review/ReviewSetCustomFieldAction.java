@@ -48,7 +48,7 @@ public interface ReviewSetCustomFieldAction extends ReviewUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ReviewSetCustomFieldAction>> T withReviewSetCustomFieldAction(Function<ReviewSetCustomFieldAction, T> helper) {
+    default <T> T withReviewSetCustomFieldAction(Function<ReviewSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

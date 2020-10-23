@@ -58,7 +58,7 @@ public interface ReturnInfo  {
         return instance;
     }
 
-    default <T extends Accessor<ReturnInfo>> T withReturnInfo(Function<ReturnInfo, T> helper) {
+    default <T> T withReturnInfo(Function<ReturnInfo, T> helper) {
         return helper.apply(this);
     }
 }

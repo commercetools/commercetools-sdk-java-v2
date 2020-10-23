@@ -43,7 +43,7 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountSetValidUntilAction>> T withCartDiscountSetValidUntilAction(Function<CartDiscountSetValidUntilAction, T> helper) {
+    default <T> T withCartDiscountSetValidUntilAction(Function<CartDiscountSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
 }

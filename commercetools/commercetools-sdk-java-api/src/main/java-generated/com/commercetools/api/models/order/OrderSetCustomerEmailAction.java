@@ -40,7 +40,7 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetCustomerEmailAction>> T withOrderSetCustomerEmailAction(Function<OrderSetCustomerEmailAction, T> helper) {
+    default <T> T withOrderSetCustomerEmailAction(Function<OrderSetCustomerEmailAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -48,7 +48,7 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetReturnShipmentStateAction>> T withStagedOrderSetReturnShipmentStateAction(Function<StagedOrderSetReturnShipmentStateAction, T> helper) {
+    default <T> T withStagedOrderSetReturnShipmentStateAction(Function<StagedOrderSetReturnShipmentStateAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -43,7 +43,7 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetValidFromAction>> T withDiscountCodeSetValidFromAction(Function<DiscountCodeSetValidFromAction, T> helper) {
+    default <T> T withDiscountCodeSetValidFromAction(Function<DiscountCodeSetValidFromAction, T> helper) {
         return helper.apply(this);
     }
 }

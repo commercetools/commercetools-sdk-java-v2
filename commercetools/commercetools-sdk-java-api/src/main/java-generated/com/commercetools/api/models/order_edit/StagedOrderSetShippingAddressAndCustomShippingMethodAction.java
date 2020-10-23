@@ -74,7 +74,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetShippingAddressAndCustomShippingMethodAction>> T withStagedOrderSetShippingAddressAndCustomShippingMethodAction(Function<StagedOrderSetShippingAddressAndCustomShippingMethodAction, T> helper) {
+    default <T> T withStagedOrderSetShippingAddressAndCustomShippingMethodAction(Function<StagedOrderSetShippingAddressAndCustomShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 }

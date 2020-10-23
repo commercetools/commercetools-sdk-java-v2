@@ -42,7 +42,7 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodChangeIsDefaultAction>> T withShippingMethodChangeIsDefaultAction(Function<ShippingMethodChangeIsDefaultAction, T> helper) {
+    default <T> T withShippingMethodChangeIsDefaultAction(Function<ShippingMethodChangeIsDefaultAction, T> helper) {
         return helper.apply(this);
     }
 }

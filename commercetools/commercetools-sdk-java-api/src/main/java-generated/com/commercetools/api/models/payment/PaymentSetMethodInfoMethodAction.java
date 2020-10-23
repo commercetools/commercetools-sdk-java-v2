@@ -42,7 +42,7 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<PaymentSetMethodInfoMethodAction>> T withPaymentSetMethodInfoMethodAction(Function<PaymentSetMethodInfoMethodAction, T> helper) {
+    default <T> T withPaymentSetMethodInfoMethodAction(Function<PaymentSetMethodInfoMethodAction, T> helper) {
         return helper.apply(this);
     }
 }

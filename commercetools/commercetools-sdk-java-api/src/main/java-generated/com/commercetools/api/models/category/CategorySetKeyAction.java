@@ -44,7 +44,7 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetKeyAction>> T withCategorySetKeyAction(Function<CategorySetKeyAction, T> helper) {
+    default <T> T withCategorySetKeyAction(Function<CategorySetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

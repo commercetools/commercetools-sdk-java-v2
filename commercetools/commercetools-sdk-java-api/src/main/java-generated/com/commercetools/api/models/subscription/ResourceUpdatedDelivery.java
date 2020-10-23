@@ -58,7 +58,7 @@ public interface ResourceUpdatedDelivery extends SubscriptionDelivery {
         return instance;
     }
 
-    default <T extends Accessor<ResourceUpdatedDelivery>> T withResourceUpdatedDelivery(Function<ResourceUpdatedDelivery, T> helper) {
+    default <T> T withResourceUpdatedDelivery(Function<ResourceUpdatedDelivery, T> helper) {
         return helper.apply(this);
     }
 }

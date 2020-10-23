@@ -41,7 +41,7 @@ public interface OrderChangeOrderStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderChangeOrderStateAction>> T withOrderChangeOrderStateAction(Function<OrderChangeOrderStateAction, T> helper) {
+    default <T> T withOrderChangeOrderStateAction(Function<OrderChangeOrderStateAction, T> helper) {
         return helper.apply(this);
     }
 }

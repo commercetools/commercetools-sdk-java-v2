@@ -43,7 +43,7 @@ public interface CartClassificationType extends ShippingRateInputType {
         return instance;
     }
 
-    default <T extends Accessor<CartClassificationType>> T withCartClassificationType(Function<CartClassificationType, T> helper) {
+    default <T> T withCartClassificationType(Function<CartClassificationType, T> helper) {
         return helper.apply(this);
     }
 }

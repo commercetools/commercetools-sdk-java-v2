@@ -40,7 +40,7 @@ public interface StateChangeInitialAction extends StateUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StateChangeInitialAction>> T withStateChangeInitialAction(Function<StateChangeInitialAction, T> helper) {
+    default <T> T withStateChangeInitialAction(Function<StateChangeInitialAction, T> helper) {
         return helper.apply(this);
     }
 }

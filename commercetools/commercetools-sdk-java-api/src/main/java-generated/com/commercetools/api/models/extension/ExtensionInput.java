@@ -49,7 +49,7 @@ public interface ExtensionInput  {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionInput>> T withExtensionInput(Function<ExtensionInput, T> helper) {
+    default <T> T withExtensionInput(Function<ExtensionInput, T> helper) {
         return helper.apply(this);
     }
 }

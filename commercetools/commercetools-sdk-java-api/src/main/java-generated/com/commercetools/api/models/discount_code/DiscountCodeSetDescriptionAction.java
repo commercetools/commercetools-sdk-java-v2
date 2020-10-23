@@ -43,7 +43,7 @@ public interface DiscountCodeSetDescriptionAction extends DiscountCodeUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetDescriptionAction>> T withDiscountCodeSetDescriptionAction(Function<DiscountCodeSetDescriptionAction, T> helper) {
+    default <T> T withDiscountCodeSetDescriptionAction(Function<DiscountCodeSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

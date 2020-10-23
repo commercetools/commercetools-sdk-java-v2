@@ -77,7 +77,7 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductChangeAssetNameAction>> T withProductChangeAssetNameAction(Function<ProductChangeAssetNameAction, T> helper) {
+    default <T> T withProductChangeAssetNameAction(Function<ProductChangeAssetNameAction, T> helper) {
         return helper.apply(this);
     }
 }

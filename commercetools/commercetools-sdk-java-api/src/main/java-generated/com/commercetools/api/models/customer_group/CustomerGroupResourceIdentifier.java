@@ -37,7 +37,7 @@ public interface CustomerGroupResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupResourceIdentifier>> T withCustomerGroupResourceIdentifier(Function<CustomerGroupResourceIdentifier, T> helper) {
+    default <T> T withCustomerGroupResourceIdentifier(Function<CustomerGroupResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

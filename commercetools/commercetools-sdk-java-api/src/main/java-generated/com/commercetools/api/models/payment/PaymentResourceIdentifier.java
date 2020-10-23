@@ -37,7 +37,7 @@ public interface PaymentResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<PaymentResourceIdentifier>> T withPaymentResourceIdentifier(Function<PaymentResourceIdentifier, T> helper) {
+    default <T> T withPaymentResourceIdentifier(Function<PaymentResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

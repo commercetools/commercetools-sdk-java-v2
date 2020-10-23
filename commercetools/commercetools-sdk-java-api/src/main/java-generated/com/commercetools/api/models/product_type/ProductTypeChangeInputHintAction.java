@@ -48,7 +48,7 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeInputHintAction>> T withProductTypeChangeInputHintAction(Function<ProductTypeChangeInputHintAction, T> helper) {
+    default <T> T withProductTypeChangeInputHintAction(Function<ProductTypeChangeInputHintAction, T> helper) {
         return helper.apply(this);
     }
 }

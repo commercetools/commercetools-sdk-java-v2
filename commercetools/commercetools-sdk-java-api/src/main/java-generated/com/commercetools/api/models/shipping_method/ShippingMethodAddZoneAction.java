@@ -42,7 +42,7 @@ public interface ShippingMethodAddZoneAction extends ShippingMethodUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodAddZoneAction>> T withShippingMethodAddZoneAction(Function<ShippingMethodAddZoneAction, T> helper) {
+    default <T> T withShippingMethodAddZoneAction(Function<ShippingMethodAddZoneAction, T> helper) {
         return helper.apply(this);
     }
 }

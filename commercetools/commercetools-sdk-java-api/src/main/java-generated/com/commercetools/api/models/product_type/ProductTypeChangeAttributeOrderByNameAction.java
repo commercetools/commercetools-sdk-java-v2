@@ -40,7 +40,7 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeAttributeOrderByNameAction>> T withProductTypeChangeAttributeOrderByNameAction(Function<ProductTypeChangeAttributeOrderByNameAction, T> helper) {
+    default <T> T withProductTypeChangeAttributeOrderByNameAction(Function<ProductTypeChangeAttributeOrderByNameAction, T> helper) {
         return helper.apply(this);
     }
 }

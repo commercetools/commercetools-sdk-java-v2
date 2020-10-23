@@ -43,7 +43,7 @@ public interface CustomerReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<CustomerReference>> T withCustomerReference(Function<CustomerReference, T> helper) {
+    default <T> T withCustomerReference(Function<CustomerReference, T> helper) {
         return helper.apply(this);
     }
 }

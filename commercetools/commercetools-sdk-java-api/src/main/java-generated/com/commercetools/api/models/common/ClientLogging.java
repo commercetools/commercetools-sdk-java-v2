@@ -63,7 +63,7 @@ public interface ClientLogging  {
         return instance;
     }
 
-    default <T extends Accessor<ClientLogging>> T withClientLogging(Function<ClientLogging, T> helper) {
+    default <T> T withClientLogging(Function<ClientLogging, T> helper) {
         return helper.apply(this);
     }
 }

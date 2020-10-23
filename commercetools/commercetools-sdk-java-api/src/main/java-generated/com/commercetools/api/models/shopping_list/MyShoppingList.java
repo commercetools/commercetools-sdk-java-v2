@@ -154,7 +154,7 @@ public interface MyShoppingList extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<MyShoppingList>> T withMyShoppingList(Function<MyShoppingList, T> helper) {
+    default <T> T withMyShoppingList(Function<MyShoppingList, T> helper) {
         return helper.apply(this);
     }
 }

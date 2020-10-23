@@ -50,7 +50,7 @@ public interface StateUpdateAction  {
 
 
 
-    default <T extends Accessor<StateUpdateAction>> T withStateUpdateAction(Function<StateUpdateAction, T> helper) {
+    default <T> T withStateUpdateAction(Function<StateUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -48,7 +48,7 @@ public interface CartUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<CartUpdate>> T withCartUpdate(Function<CartUpdate, T> helper) {
+    default <T> T withCartUpdate(Function<CartUpdate, T> helper) {
         return helper.apply(this);
     }
 }

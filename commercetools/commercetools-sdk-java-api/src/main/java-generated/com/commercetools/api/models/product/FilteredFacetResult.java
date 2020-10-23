@@ -48,7 +48,7 @@ public interface FilteredFacetResult extends FacetResult {
         return instance;
     }
 
-    default <T extends Accessor<FilteredFacetResult>> T withFilteredFacetResult(Function<FilteredFacetResult, T> helper) {
+    default <T> T withFilteredFacetResult(Function<FilteredFacetResult, T> helper) {
         return helper.apply(this);
     }
 }

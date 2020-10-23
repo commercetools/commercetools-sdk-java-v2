@@ -44,7 +44,7 @@ public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditSetStagedActionsAction>> T withOrderEditSetStagedActionsAction(Function<OrderEditSetStagedActionsAction, T> helper) {
+    default <T> T withOrderEditSetStagedActionsAction(Function<OrderEditSetStagedActionsAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -36,7 +36,7 @@ public interface SuggestTokenizer  {
 
 
 
-    default <T extends Accessor<SuggestTokenizer>> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
+    default <T> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
         return helper.apply(this);
     }
 }

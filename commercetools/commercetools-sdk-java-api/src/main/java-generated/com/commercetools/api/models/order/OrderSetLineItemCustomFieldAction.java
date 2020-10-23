@@ -55,7 +55,7 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetLineItemCustomFieldAction>> T withOrderSetLineItemCustomFieldAction(Function<OrderSetLineItemCustomFieldAction, T> helper) {
+    default <T> T withOrderSetLineItemCustomFieldAction(Function<OrderSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

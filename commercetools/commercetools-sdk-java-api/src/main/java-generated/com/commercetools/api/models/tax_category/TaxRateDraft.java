@@ -88,7 +88,7 @@ public interface TaxRateDraft  {
         return instance;
     }
 
-    default <T extends Accessor<TaxRateDraft>> T withTaxRateDraft(Function<TaxRateDraft, T> helper) {
+    default <T> T withTaxRateDraft(Function<TaxRateDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -38,7 +38,7 @@ public interface ProductDiscountValue  {
 
 
 
-    default <T extends Accessor<ProductDiscountValue>> T withProductDiscountValue(Function<ProductDiscountValue, T> helper) {
+    default <T> T withProductDiscountValue(Function<ProductDiscountValue, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface CustomerSetCompanyNameAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetCompanyNameAction>> T withCustomerSetCompanyNameAction(Function<CustomerSetCompanyNameAction, T> helper) {
+    default <T> T withCustomerSetCompanyNameAction(Function<CustomerSetCompanyNameAction, T> helper) {
         return helper.apply(this);
     }
 }

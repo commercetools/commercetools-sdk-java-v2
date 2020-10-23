@@ -52,7 +52,7 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetCartTotalTaxAction>> T withCartSetCartTotalTaxAction(Function<CartSetCartTotalTaxAction, T> helper) {
+    default <T> T withCartSetCartTotalTaxAction(Function<CartSetCartTotalTaxAction, T> helper) {
         return helper.apply(this);
     }
 }

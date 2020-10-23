@@ -35,7 +35,7 @@ public interface EnumValueIsUsedError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<EnumValueIsUsedError>> T withEnumValueIsUsedError(Function<EnumValueIsUsedError, T> helper) {
+    default <T> T withEnumValueIsUsedError(Function<EnumValueIsUsedError, T> helper) {
         return helper.apply(this);
     }
 }

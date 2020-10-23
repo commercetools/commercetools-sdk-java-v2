@@ -56,7 +56,7 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategoryChangeAssetNameAction>> T withCategoryChangeAssetNameAction(Function<CategoryChangeAssetNameAction, T> helper) {
+    default <T> T withCategoryChangeAssetNameAction(Function<CategoryChangeAssetNameAction, T> helper) {
         return helper.apply(this);
     }
 }

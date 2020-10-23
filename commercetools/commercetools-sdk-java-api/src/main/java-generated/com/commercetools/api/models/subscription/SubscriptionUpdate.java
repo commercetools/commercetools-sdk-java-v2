@@ -48,7 +48,7 @@ public interface SubscriptionUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<SubscriptionUpdate>> T withSubscriptionUpdate(Function<SubscriptionUpdate, T> helper) {
+    default <T> T withSubscriptionUpdate(Function<SubscriptionUpdate, T> helper) {
         return helper.apply(this);
     }
 }

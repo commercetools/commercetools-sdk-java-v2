@@ -64,7 +64,7 @@ public interface CartScoreTier extends ShippingRatePriceTier {
         return instance;
     }
 
-    default <T extends Accessor<CartScoreTier>> T withCartScoreTier(Function<CartScoreTier, T> helper) {
+    default <T> T withCartScoreTier(Function<CartScoreTier, T> helper) {
         return helper.apply(this);
     }
 }

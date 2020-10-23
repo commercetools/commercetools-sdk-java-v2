@@ -57,7 +57,7 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderUpdateSyncInfoAction>> T withStagedOrderUpdateSyncInfoAction(Function<StagedOrderUpdateSyncInfoAction, T> helper) {
+    default <T> T withStagedOrderUpdateSyncInfoAction(Function<StagedOrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -37,7 +37,7 @@ public interface InventoryEntryResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryResourceIdentifier>> T withInventoryEntryResourceIdentifier(Function<InventoryEntryResourceIdentifier, T> helper) {
+    default <T> T withInventoryEntryResourceIdentifier(Function<InventoryEntryResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

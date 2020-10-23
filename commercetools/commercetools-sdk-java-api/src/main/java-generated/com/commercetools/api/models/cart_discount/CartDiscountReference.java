@@ -43,7 +43,7 @@ public interface CartDiscountReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountReference>> T withCartDiscountReference(Function<CartDiscountReference, T> helper) {
+    default <T> T withCartDiscountReference(Function<CartDiscountReference, T> helper) {
         return helper.apply(this);
     }
 }

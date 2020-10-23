@@ -55,7 +55,7 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends MessagePayload 
         return instance;
     }
 
-    default <T extends Accessor<ParcelTrackingDataUpdatedMessagePayload>> T withParcelTrackingDataUpdatedMessagePayload(Function<ParcelTrackingDataUpdatedMessagePayload, T> helper) {
+    default <T> T withParcelTrackingDataUpdatedMessagePayload(Function<ParcelTrackingDataUpdatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

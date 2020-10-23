@@ -48,7 +48,7 @@ public interface ChannelSetCustomFieldAction extends ChannelUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ChannelSetCustomFieldAction>> T withChannelSetCustomFieldAction(Function<ChannelSetCustomFieldAction, T> helper) {
+    default <T> T withChannelSetCustomFieldAction(Function<ChannelSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

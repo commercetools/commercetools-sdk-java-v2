@@ -48,7 +48,7 @@ public interface DiscountCodeUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeUpdate>> T withDiscountCodeUpdate(Function<DiscountCodeUpdate, T> helper) {
+    default <T> T withDiscountCodeUpdate(Function<DiscountCodeUpdate, T> helper) {
         return helper.apply(this);
     }
 }

@@ -73,7 +73,7 @@ public interface TypeDraft  {
         return instance;
     }
 
-    default <T extends Accessor<TypeDraft>> T withTypeDraft(Function<TypeDraft, T> helper) {
+    default <T> T withTypeDraft(Function<TypeDraft, T> helper) {
         return helper.apply(this);
     }
 }

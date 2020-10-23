@@ -90,7 +90,7 @@ public interface OrderEditDraft  {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditDraft>> T withOrderEditDraft(Function<OrderEditDraft, T> helper) {
+    default <T> T withOrderEditDraft(Function<OrderEditDraft, T> helper) {
         return helper.apply(this);
     }
 }

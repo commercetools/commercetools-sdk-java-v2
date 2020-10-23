@@ -61,7 +61,7 @@ public interface AssetSource  {
         return instance;
     }
 
-    default <T extends Accessor<AssetSource>> T withAssetSource(Function<AssetSource, T> helper) {
+    default <T> T withAssetSource(Function<AssetSource, T> helper) {
         return helper.apply(this);
     }
 }

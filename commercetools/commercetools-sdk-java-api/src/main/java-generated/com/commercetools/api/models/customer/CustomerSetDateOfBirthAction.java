@@ -43,7 +43,7 @@ public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetDateOfBirthAction>> T withCustomerSetDateOfBirthAction(Function<CustomerSetDateOfBirthAction, T> helper) {
+    default <T> T withCustomerSetDateOfBirthAction(Function<CustomerSetDateOfBirthAction, T> helper) {
         return helper.apply(this);
     }
 }

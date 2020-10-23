@@ -53,7 +53,7 @@ public interface CustomFieldsDraft  {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldsDraft>> T withCustomFieldsDraft(Function<CustomFieldsDraft, T> helper) {
+    default <T> T withCustomFieldsDraft(Function<CustomFieldsDraft, T> helper) {
         return helper.apply(this);
     }
 }

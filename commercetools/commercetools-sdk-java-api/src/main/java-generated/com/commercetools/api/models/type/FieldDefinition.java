@@ -86,7 +86,7 @@ public interface FieldDefinition  {
         return instance;
     }
 
-    default <T extends Accessor<FieldDefinition>> T withFieldDefinition(Function<FieldDefinition, T> helper) {
+    default <T> T withFieldDefinition(Function<FieldDefinition, T> helper) {
         return helper.apply(this);
     }
 }

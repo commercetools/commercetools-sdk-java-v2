@@ -40,7 +40,7 @@ public interface CartDiscountLineItemsTarget extends CartDiscountTarget {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountLineItemsTarget>> T withCartDiscountLineItemsTarget(Function<CartDiscountLineItemsTarget, T> helper) {
+    default <T> T withCartDiscountLineItemsTarget(Function<CartDiscountLineItemsTarget, T> helper) {
         return helper.apply(this);
     }
 }

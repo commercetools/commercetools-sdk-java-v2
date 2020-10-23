@@ -55,7 +55,7 @@ public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<CategorySetAssetDescriptionAction>> T withCategorySetAssetDescriptionAction(Function<CategorySetAssetDescriptionAction, T> helper) {
+    default <T> T withCategorySetAssetDescriptionAction(Function<CategorySetAssetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -54,7 +54,7 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<PaymentSetCustomTypeAction>> T withPaymentSetCustomTypeAction(Function<PaymentSetCustomTypeAction, T> helper) {
+    default <T> T withPaymentSetCustomTypeAction(Function<PaymentSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

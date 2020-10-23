@@ -73,7 +73,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetAttributeAction>> T withProductSetAttributeAction(Function<ProductSetAttributeAction, T> helper) {
+    default <T> T withProductSetAttributeAction(Function<ProductSetAttributeAction, T> helper) {
         return helper.apply(this);
     }
 }

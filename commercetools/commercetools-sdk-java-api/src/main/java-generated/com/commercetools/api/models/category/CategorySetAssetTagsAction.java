@@ -54,7 +54,7 @@ public interface CategorySetAssetTagsAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetAssetTagsAction>> T withCategorySetAssetTagsAction(Function<CategorySetAssetTagsAction, T> helper) {
+    default <T> T withCategorySetAssetTagsAction(Function<CategorySetAssetTagsAction, T> helper) {
         return helper.apply(this);
     }
 }

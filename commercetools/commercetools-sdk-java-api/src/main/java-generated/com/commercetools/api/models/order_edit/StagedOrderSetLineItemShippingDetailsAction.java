@@ -48,7 +48,7 @@ public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrder
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetLineItemShippingDetailsAction>> T withStagedOrderSetLineItemShippingDetailsAction(Function<StagedOrderSetLineItemShippingDetailsAction, T> helper) {
+    default <T> T withStagedOrderSetLineItemShippingDetailsAction(Function<StagedOrderSetLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
 }

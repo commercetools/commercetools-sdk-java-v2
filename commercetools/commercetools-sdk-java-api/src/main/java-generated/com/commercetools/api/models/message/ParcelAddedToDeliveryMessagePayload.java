@@ -51,7 +51,7 @@ public interface ParcelAddedToDeliveryMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ParcelAddedToDeliveryMessagePayload>> T withParcelAddedToDeliveryMessagePayload(Function<ParcelAddedToDeliveryMessagePayload, T> helper) {
+    default <T> T withParcelAddedToDeliveryMessagePayload(Function<ParcelAddedToDeliveryMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

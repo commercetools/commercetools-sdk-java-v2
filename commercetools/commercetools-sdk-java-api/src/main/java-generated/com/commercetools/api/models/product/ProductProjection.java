@@ -200,7 +200,7 @@ public interface ProductProjection extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<ProductProjection>> T withProductProjection(Function<ProductProjection, T> helper) {
+    default <T> T withProductProjection(Function<ProductProjection, T> helper) {
         return helper.apply(this);
     }
 }

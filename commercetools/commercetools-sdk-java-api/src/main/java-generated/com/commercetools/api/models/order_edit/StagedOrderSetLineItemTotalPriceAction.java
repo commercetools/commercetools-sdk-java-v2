@@ -48,7 +48,7 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetLineItemTotalPriceAction>> T withStagedOrderSetLineItemTotalPriceAction(Function<StagedOrderSetLineItemTotalPriceAction, T> helper) {
+    default <T> T withStagedOrderSetLineItemTotalPriceAction(Function<StagedOrderSetLineItemTotalPriceAction, T> helper) {
         return helper.apply(this);
     }
 }

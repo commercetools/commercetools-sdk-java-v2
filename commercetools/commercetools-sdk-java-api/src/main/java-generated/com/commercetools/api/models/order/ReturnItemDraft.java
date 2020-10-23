@@ -68,7 +68,7 @@ public interface ReturnItemDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ReturnItemDraft>> T withReturnItemDraft(Function<ReturnItemDraft, T> helper) {
+    default <T> T withReturnItemDraft(Function<ReturnItemDraft, T> helper) {
         return helper.apply(this);
     }
 }

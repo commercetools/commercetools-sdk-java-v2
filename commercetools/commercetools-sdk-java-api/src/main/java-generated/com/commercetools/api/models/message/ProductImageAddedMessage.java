@@ -66,7 +66,7 @@ public interface ProductImageAddedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductImageAddedMessage>> T withProductImageAddedMessage(Function<ProductImageAddedMessage, T> helper) {
+    default <T> T withProductImageAddedMessage(Function<ProductImageAddedMessage, T> helper) {
         return helper.apply(this);
     }
 }

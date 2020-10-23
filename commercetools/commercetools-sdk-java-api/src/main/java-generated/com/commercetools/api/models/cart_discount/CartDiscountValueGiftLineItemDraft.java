@@ -64,7 +64,7 @@ public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDra
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountValueGiftLineItemDraft>> T withCartDiscountValueGiftLineItemDraft(Function<CartDiscountValueGiftLineItemDraft, T> helper) {
+    default <T> T withCartDiscountValueGiftLineItemDraft(Function<CartDiscountValueGiftLineItemDraft, T> helper) {
         return helper.apply(this);
     }
 }

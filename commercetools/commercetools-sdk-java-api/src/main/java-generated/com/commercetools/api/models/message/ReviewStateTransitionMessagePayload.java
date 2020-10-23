@@ -80,7 +80,7 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ReviewStateTransitionMessagePayload>> T withReviewStateTransitionMessagePayload(Function<ReviewStateTransitionMessagePayload, T> helper) {
+    default <T> T withReviewStateTransitionMessagePayload(Function<ReviewStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

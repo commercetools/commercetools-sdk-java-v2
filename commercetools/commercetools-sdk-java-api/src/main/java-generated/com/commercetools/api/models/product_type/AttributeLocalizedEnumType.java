@@ -42,7 +42,7 @@ public interface AttributeLocalizedEnumType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeLocalizedEnumType>> T withAttributeLocalizedEnumType(Function<AttributeLocalizedEnumType, T> helper) {
+    default <T> T withAttributeLocalizedEnumType(Function<AttributeLocalizedEnumType, T> helper) {
         return helper.apply(this);
     }
 }

@@ -234,7 +234,7 @@ public interface LineItem  {
         return instance;
     }
 
-    default <T extends Accessor<LineItem>> T withLineItem(Function<LineItem, T> helper) {
+    default <T> T withLineItem(Function<LineItem, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
         return instance;
     }
 
-    default <T extends Accessor<ProjectChangeCountryTaxRateFallbackEnabledAction>> T withProjectChangeCountryTaxRateFallbackEnabledAction(Function<ProjectChangeCountryTaxRateFallbackEnabledAction, T> helper) {
+    default <T> T withProjectChangeCountryTaxRateFallbackEnabledAction(Function<ProjectChangeCountryTaxRateFallbackEnabledAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -40,7 +40,7 @@ public interface ExtensionAzureFunctionsAuthentication extends ExtensionHttpDest
         return instance;
     }
 
-    default <T extends Accessor<ExtensionAzureFunctionsAuthentication>> T withExtensionAzureFunctionsAuthentication(Function<ExtensionAzureFunctionsAuthentication, T> helper) {
+    default <T> T withExtensionAzureFunctionsAuthentication(Function<ExtensionAzureFunctionsAuthentication, T> helper) {
         return helper.apply(this);
     }
 }

@@ -41,7 +41,7 @@ public interface CartSetBillingAddressAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetBillingAddressAction>> T withCartSetBillingAddressAction(Function<CartSetBillingAddressAction, T> helper) {
+    default <T> T withCartSetBillingAddressAction(Function<CartSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

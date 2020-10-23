@@ -75,7 +75,7 @@ public interface CustomerSignin  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSignin>> T withCustomerSignin(Function<CustomerSignin, T> helper) {
+    default <T> T withCustomerSignin(Function<CustomerSignin, T> helper) {
         return helper.apply(this);
     }
 }

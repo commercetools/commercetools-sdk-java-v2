@@ -90,7 +90,7 @@ public interface ChannelDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ChannelDraft>> T withChannelDraft(Function<ChannelDraft, T> helper) {
+    default <T> T withChannelDraft(Function<ChannelDraft, T> helper) {
         return helper.apply(this);
     }
 }

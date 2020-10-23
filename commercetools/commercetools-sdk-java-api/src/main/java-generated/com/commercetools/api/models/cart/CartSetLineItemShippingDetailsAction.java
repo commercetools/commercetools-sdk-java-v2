@@ -48,7 +48,7 @@ public interface CartSetLineItemShippingDetailsAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetLineItemShippingDetailsAction>> T withCartSetLineItemShippingDetailsAction(Function<CartSetLineItemShippingDetailsAction, T> helper) {
+    default <T> T withCartSetLineItemShippingDetailsAction(Function<CartSetLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -41,7 +41,7 @@ public interface CustomFieldSetType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldSetType>> T withCustomFieldSetType(Function<CustomFieldSetType, T> helper) {
+    default <T> T withCustomFieldSetType(Function<CustomFieldSetType, T> helper) {
         return helper.apply(this);
     }
 }

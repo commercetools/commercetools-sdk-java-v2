@@ -43,7 +43,7 @@ public interface StoreReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<StoreReference>> T withStoreReference(Function<StoreReference, T> helper) {
+    default <T> T withStoreReference(Function<StoreReference, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ChannelChangeDescriptionAction>> T withChannelChangeDescriptionAction(Function<ChannelChangeDescriptionAction, T> helper) {
+    default <T> T withChannelChangeDescriptionAction(Function<ChannelChangeDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

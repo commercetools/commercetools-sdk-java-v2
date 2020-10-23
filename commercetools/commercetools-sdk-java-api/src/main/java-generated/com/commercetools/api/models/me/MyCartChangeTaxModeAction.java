@@ -41,7 +41,7 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartChangeTaxModeAction>> T withMyCartChangeTaxModeAction(Function<MyCartChangeTaxModeAction, T> helper) {
+    default <T> T withMyCartChangeTaxModeAction(Function<MyCartChangeTaxModeAction, T> helper) {
         return helper.apply(this);
     }
 }

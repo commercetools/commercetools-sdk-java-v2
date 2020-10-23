@@ -40,7 +40,7 @@ public interface CustomerSetTitleAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetTitleAction>> T withCustomerSetTitleAction(Function<CustomerSetTitleAction, T> helper) {
+    default <T> T withCustomerSetTitleAction(Function<CustomerSetTitleAction, T> helper) {
         return helper.apply(this);
     }
 }

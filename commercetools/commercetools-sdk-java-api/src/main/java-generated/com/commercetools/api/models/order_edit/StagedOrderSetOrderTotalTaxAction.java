@@ -50,7 +50,7 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetOrderTotalTaxAction>> T withStagedOrderSetOrderTotalTaxAction(Function<StagedOrderSetOrderTotalTaxAction, T> helper) {
+    default <T> T withStagedOrderSetOrderTotalTaxAction(Function<StagedOrderSetOrderTotalTaxAction, T> helper) {
         return helper.apply(this);
     }
 }

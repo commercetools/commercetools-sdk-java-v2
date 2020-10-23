@@ -75,7 +75,7 @@ public interface MyTransactionDraft  {
         return instance;
     }
 
-    default <T extends Accessor<MyTransactionDraft>> T withMyTransactionDraft(Function<MyTransactionDraft, T> helper) {
+    default <T> T withMyTransactionDraft(Function<MyTransactionDraft, T> helper) {
         return helper.apply(this);
     }
 }

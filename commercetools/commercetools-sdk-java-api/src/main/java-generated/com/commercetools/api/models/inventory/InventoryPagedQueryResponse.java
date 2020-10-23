@@ -69,7 +69,7 @@ public interface InventoryPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<InventoryPagedQueryResponse>> T withInventoryPagedQueryResponse(Function<InventoryPagedQueryResponse, T> helper) {
+    default <T> T withInventoryPagedQueryResponse(Function<InventoryPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

@@ -41,7 +41,7 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ChannelRemoveRolesAction>> T withChannelRemoveRolesAction(Function<ChannelRemoveRolesAction, T> helper) {
+    default <T> T withChannelRemoveRolesAction(Function<ChannelRemoveRolesAction, T> helper) {
         return helper.apply(this);
     }
 }

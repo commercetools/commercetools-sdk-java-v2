@@ -37,7 +37,7 @@ public interface ShippingMethodResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodResourceIdentifier>> T withShippingMethodResourceIdentifier(Function<ShippingMethodResourceIdentifier, T> helper) {
+    default <T> T withShippingMethodResourceIdentifier(Function<ShippingMethodResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

@@ -44,7 +44,7 @@ public interface MyPaymentUpdateAction  {
 
 
 
-    default <T extends Accessor<MyPaymentUpdateAction>> T withMyPaymentUpdateAction(Function<MyPaymentUpdateAction, T> helper) {
+    default <T> T withMyPaymentUpdateAction(Function<MyPaymentUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

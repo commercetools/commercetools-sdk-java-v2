@@ -42,7 +42,7 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionChangeTriggersAction>> T withExtensionChangeTriggersAction(Function<ExtensionChangeTriggersAction, T> helper) {
+    default <T> T withExtensionChangeTriggersAction(Function<ExtensionChangeTriggersAction, T> helper) {
         return helper.apply(this);
     }
 }

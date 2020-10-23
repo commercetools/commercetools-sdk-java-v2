@@ -41,7 +41,7 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetBillingAddressAction>> T withOrderSetBillingAddressAction(Function<OrderSetBillingAddressAction, T> helper) {
+    default <T> T withOrderSetBillingAddressAction(Function<OrderSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

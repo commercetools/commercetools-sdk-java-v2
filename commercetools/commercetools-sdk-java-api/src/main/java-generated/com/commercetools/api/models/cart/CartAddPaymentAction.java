@@ -42,7 +42,7 @@ public interface CartAddPaymentAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartAddPaymentAction>> T withCartAddPaymentAction(Function<CartAddPaymentAction, T> helper) {
+    default <T> T withCartAddPaymentAction(Function<CartAddPaymentAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -34,7 +34,7 @@ public interface GeoJson  {
 
 
 
-    default <T extends Accessor<GeoJson>> T withGeoJson(Function<GeoJson, T> helper) {
+    default <T> T withGeoJson(Function<GeoJson, T> helper) {
         return helper.apply(this);
     }
 }

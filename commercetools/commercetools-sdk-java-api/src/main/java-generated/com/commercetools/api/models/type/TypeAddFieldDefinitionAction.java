@@ -42,7 +42,7 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeAddFieldDefinitionAction>> T withTypeAddFieldDefinitionAction(Function<TypeAddFieldDefinitionAction, T> helper) {
+    default <T> T withTypeAddFieldDefinitionAction(Function<TypeAddFieldDefinitionAction, T> helper) {
         return helper.apply(this);
     }
 }

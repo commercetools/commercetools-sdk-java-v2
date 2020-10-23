@@ -43,7 +43,7 @@ public interface StoreSetNameAction extends StoreUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StoreSetNameAction>> T withStoreSetNameAction(Function<StoreSetNameAction, T> helper) {
+    default <T> T withStoreSetNameAction(Function<StoreSetNameAction, T> helper) {
         return helper.apply(this);
     }
 }

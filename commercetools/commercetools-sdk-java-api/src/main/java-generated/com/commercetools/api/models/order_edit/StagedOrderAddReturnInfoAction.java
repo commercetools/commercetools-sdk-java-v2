@@ -57,7 +57,7 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderAddReturnInfoAction>> T withStagedOrderAddReturnInfoAction(Function<StagedOrderAddReturnInfoAction, T> helper) {
+    default <T> T withStagedOrderAddReturnInfoAction(Function<StagedOrderAddReturnInfoAction, T> helper) {
         return helper.apply(this);
     }
 }

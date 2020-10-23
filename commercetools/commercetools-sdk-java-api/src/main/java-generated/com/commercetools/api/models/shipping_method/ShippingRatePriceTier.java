@@ -39,7 +39,7 @@ public interface ShippingRatePriceTier  {
 
 
 
-    default <T extends Accessor<ShippingRatePriceTier>> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
+    default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
     }
 }

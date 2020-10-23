@@ -133,7 +133,7 @@ public interface Subscription extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Subscription>> T withSubscription(Function<Subscription, T> helper) {
+    default <T> T withSubscription(Function<Subscription, T> helper) {
         return helper.apply(this);
     }
 }

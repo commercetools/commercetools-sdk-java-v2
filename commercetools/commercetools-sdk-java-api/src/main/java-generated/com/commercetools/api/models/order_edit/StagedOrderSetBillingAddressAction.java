@@ -41,7 +41,7 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetBillingAddressAction>> T withStagedOrderSetBillingAddressAction(Function<StagedOrderSetBillingAddressAction, T> helper) {
+    default <T> T withStagedOrderSetBillingAddressAction(Function<StagedOrderSetBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface AttributeNestedType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeNestedType>> T withAttributeNestedType(Function<AttributeNestedType, T> helper) {
+    default <T> T withAttributeNestedType(Function<AttributeNestedType, T> helper) {
         return helper.apply(this);
     }
 }

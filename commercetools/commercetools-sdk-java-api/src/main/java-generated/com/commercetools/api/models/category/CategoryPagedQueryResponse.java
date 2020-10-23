@@ -69,7 +69,7 @@ public interface CategoryPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<CategoryPagedQueryResponse>> T withCategoryPagedQueryResponse(Function<CategoryPagedQueryResponse, T> helper) {
+    default <T> T withCategoryPagedQueryResponse(Function<CategoryPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

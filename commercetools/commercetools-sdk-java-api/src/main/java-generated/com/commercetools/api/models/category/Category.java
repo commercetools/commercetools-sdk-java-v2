@@ -197,7 +197,7 @@ public interface Category extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Category>> T withCategory(Function<Category, T> helper) {
+    default <T> T withCategory(Function<Category, T> helper) {
         return helper.apply(this);
     }
 }

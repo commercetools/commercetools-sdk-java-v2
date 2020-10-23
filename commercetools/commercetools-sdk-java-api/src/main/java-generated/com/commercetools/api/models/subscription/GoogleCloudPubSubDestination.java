@@ -47,7 +47,7 @@ public interface GoogleCloudPubSubDestination extends Destination {
         return instance;
     }
 
-    default <T extends Accessor<GoogleCloudPubSubDestination>> T withGoogleCloudPubSubDestination(Function<GoogleCloudPubSubDestination, T> helper) {
+    default <T> T withGoogleCloudPubSubDestination(Function<GoogleCloudPubSubDestination, T> helper) {
         return helper.apply(this);
     }
 }

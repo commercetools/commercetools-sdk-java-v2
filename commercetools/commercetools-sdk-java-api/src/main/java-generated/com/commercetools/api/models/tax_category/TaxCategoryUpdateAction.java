@@ -44,7 +44,7 @@ public interface TaxCategoryUpdateAction  {
 
 
 
-    default <T extends Accessor<TaxCategoryUpdateAction>> T withTaxCategoryUpdateAction(Function<TaxCategoryUpdateAction, T> helper) {
+    default <T> T withTaxCategoryUpdateAction(Function<TaxCategoryUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

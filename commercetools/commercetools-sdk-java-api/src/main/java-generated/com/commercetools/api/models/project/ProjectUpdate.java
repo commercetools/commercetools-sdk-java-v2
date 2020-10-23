@@ -48,7 +48,7 @@ public interface ProjectUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<ProjectUpdate>> T withProjectUpdate(Function<ProjectUpdate, T> helper) {
+    default <T> T withProjectUpdate(Function<ProjectUpdate, T> helper) {
         return helper.apply(this);
     }
 }

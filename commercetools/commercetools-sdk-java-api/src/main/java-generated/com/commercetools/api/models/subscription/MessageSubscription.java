@@ -47,7 +47,7 @@ public interface MessageSubscription  {
         return instance;
     }
 
-    default <T extends Accessor<MessageSubscription>> T withMessageSubscription(Function<MessageSubscription, T> helper) {
+    default <T> T withMessageSubscription(Function<MessageSubscription, T> helper) {
         return helper.apply(this);
     }
 }

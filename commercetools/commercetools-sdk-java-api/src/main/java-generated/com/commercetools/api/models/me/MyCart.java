@@ -292,7 +292,7 @@ public interface MyCart extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<MyCart>> T withMyCart(Function<MyCart, T> helper) {
+    default <T> T withMyCart(Function<MyCart, T> helper) {
         return helper.apply(this);
     }
 }

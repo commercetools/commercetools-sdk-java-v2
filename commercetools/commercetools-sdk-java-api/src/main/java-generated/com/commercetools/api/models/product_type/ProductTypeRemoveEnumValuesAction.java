@@ -47,7 +47,7 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeRemoveEnumValuesAction>> T withProductTypeRemoveEnumValuesAction(Function<ProductTypeRemoveEnumValuesAction, T> helper) {
+    default <T> T withProductTypeRemoveEnumValuesAction(Function<ProductTypeRemoveEnumValuesAction, T> helper) {
         return helper.apply(this);
     }
 }

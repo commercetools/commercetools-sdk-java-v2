@@ -174,7 +174,7 @@ public interface MessagePayload  {
 
 
 
-    default <T extends Accessor<MessagePayload>> T withMessagePayload(Function<MessagePayload, T> helper) {
+    default <T> T withMessagePayload(Function<MessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

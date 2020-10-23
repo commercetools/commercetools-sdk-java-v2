@@ -56,7 +56,7 @@ public interface CustomerGroupDraft  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupDraft>> T withCustomerGroupDraft(Function<CustomerGroupDraft, T> helper) {
+    default <T> T withCustomerGroupDraft(Function<CustomerGroupDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -48,7 +48,7 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductTransitionStateAction>> T withProductTransitionStateAction(Function<ProductTransitionStateAction, T> helper) {
+    default <T> T withProductTransitionStateAction(Function<ProductTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
 }

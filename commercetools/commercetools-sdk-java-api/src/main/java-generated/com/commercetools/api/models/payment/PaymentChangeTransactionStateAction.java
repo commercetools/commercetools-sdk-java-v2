@@ -48,7 +48,7 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<PaymentChangeTransactionStateAction>> T withPaymentChangeTransactionStateAction(Function<PaymentChangeTransactionStateAction, T> helper) {
+    default <T> T withPaymentChangeTransactionStateAction(Function<PaymentChangeTransactionStateAction, T> helper) {
         return helper.apply(this);
     }
 }

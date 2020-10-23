@@ -49,7 +49,7 @@ public interface ProductTypeChangeLabelAction extends ProductTypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeLabelAction>> T withProductTypeChangeLabelAction(Function<ProductTypeChangeLabelAction, T> helper) {
+    default <T> T withProductTypeChangeLabelAction(Function<ProductTypeChangeLabelAction, T> helper) {
         return helper.apply(this);
     }
 }

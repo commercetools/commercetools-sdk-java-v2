@@ -52,7 +52,7 @@ public interface ProductCreatedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductCreatedMessage>> T withProductCreatedMessage(Function<ProductCreatedMessage, T> helper) {
+    default <T> T withProductCreatedMessage(Function<ProductCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 }

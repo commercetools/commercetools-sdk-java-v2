@@ -63,7 +63,7 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductRemoveImageAction>> T withProductRemoveImageAction(Function<ProductRemoveImageAction, T> helper) {
+    default <T> T withProductRemoveImageAction(Function<ProductRemoveImageAction, T> helper) {
         return helper.apply(this);
     }
 }

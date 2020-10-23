@@ -40,7 +40,7 @@ public interface CustomerSetSalutationAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetSalutationAction>> T withCustomerSetSalutationAction(Function<CustomerSetSalutationAction, T> helper) {
+    default <T> T withCustomerSetSalutationAction(Function<CustomerSetSalutationAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -41,7 +41,7 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetShippingRateInputAction>> T withStagedOrderSetShippingRateInputAction(Function<StagedOrderSetShippingRateInputAction, T> helper) {
+    default <T> T withStagedOrderSetShippingRateInputAction(Function<StagedOrderSetShippingRateInputAction, T> helper) {
         return helper.apply(this);
     }
 }

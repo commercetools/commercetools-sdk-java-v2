@@ -62,7 +62,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<ProductSetProductPriceCustomFieldAction>> T withProductSetProductPriceCustomFieldAction(Function<ProductSetProductPriceCustomFieldAction, T> helper) {
+    default <T> T withProductSetProductPriceCustomFieldAction(Function<ProductSetProductPriceCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

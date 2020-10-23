@@ -57,7 +57,7 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderAddReturnInfoAction>> T withOrderAddReturnInfoAction(Function<OrderAddReturnInfoAction, T> helper) {
+    default <T> T withOrderAddReturnInfoAction(Function<OrderAddReturnInfoAction, T> helper) {
         return helper.apply(this);
     }
 }

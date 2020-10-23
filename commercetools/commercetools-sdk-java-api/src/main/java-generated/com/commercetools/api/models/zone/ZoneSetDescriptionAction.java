@@ -40,7 +40,7 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ZoneSetDescriptionAction>> T withZoneSetDescriptionAction(Function<ZoneSetDescriptionAction, T> helper) {
+    default <T> T withZoneSetDescriptionAction(Function<ZoneSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

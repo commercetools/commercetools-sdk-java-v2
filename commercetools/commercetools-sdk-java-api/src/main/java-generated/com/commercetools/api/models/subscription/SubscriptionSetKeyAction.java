@@ -42,7 +42,7 @@ public interface SubscriptionSetKeyAction extends SubscriptionUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<SubscriptionSetKeyAction>> T withSubscriptionSetKeyAction(Function<SubscriptionSetKeyAction, T> helper) {
+    default <T> T withSubscriptionSetKeyAction(Function<SubscriptionSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

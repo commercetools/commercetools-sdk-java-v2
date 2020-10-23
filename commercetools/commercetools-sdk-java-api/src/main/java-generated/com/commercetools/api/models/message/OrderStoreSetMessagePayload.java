@@ -42,7 +42,7 @@ public interface OrderStoreSetMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderStoreSetMessagePayload>> T withOrderStoreSetMessagePayload(Function<OrderStoreSetMessagePayload, T> helper) {
+    default <T> T withOrderStoreSetMessagePayload(Function<OrderStoreSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

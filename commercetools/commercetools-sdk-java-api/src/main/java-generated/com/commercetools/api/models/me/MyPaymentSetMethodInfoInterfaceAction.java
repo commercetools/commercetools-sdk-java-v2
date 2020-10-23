@@ -40,7 +40,7 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<MyPaymentSetMethodInfoInterfaceAction>> T withMyPaymentSetMethodInfoInterfaceAction(Function<MyPaymentSetMethodInfoInterfaceAction, T> helper) {
+    default <T> T withMyPaymentSetMethodInfoInterfaceAction(Function<MyPaymentSetMethodInfoInterfaceAction, T> helper) {
         return helper.apply(this);
     }
 }

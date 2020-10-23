@@ -42,7 +42,7 @@ public interface ProductTypeSetKeyAction extends ProductTypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeSetKeyAction>> T withProductTypeSetKeyAction(Function<ProductTypeSetKeyAction, T> helper) {
+    default <T> T withProductTypeSetKeyAction(Function<ProductTypeSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

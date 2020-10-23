@@ -54,7 +54,7 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductRemoveVariantAction>> T withProductRemoveVariantAction(Function<ProductRemoveVariantAction, T> helper) {
+    default <T> T withProductRemoveVariantAction(Function<ProductRemoveVariantAction, T> helper) {
         return helper.apply(this);
     }
 }

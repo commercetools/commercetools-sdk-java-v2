@@ -42,7 +42,7 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProjectChangeCountriesAction>> T withProjectChangeCountriesAction(Function<ProjectChangeCountriesAction, T> helper) {
+    default <T> T withProjectChangeCountriesAction(Function<ProjectChangeCountriesAction, T> helper) {
         return helper.apply(this);
     }
 }

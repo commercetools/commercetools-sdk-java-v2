@@ -56,7 +56,7 @@ public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetAssetSourcesAction>> T withCategorySetAssetSourcesAction(Function<CategorySetAssetSourcesAction, T> helper) {
+    default <T> T withCategorySetAssetSourcesAction(Function<CategorySetAssetSourcesAction, T> helper) {
         return helper.apply(this);
     }
 }

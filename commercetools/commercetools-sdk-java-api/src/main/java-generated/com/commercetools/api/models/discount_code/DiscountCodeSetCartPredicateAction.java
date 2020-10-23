@@ -42,7 +42,7 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetCartPredicateAction>> T withDiscountCodeSetCartPredicateAction(Function<DiscountCodeSetCartPredicateAction, T> helper) {
+    default <T> T withDiscountCodeSetCartPredicateAction(Function<DiscountCodeSetCartPredicateAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -69,7 +69,7 @@ public interface ChannelPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ChannelPagedQueryResponse>> T withChannelPagedQueryResponse(Function<ChannelPagedQueryResponse, T> helper) {
+    default <T> T withChannelPagedQueryResponse(Function<ChannelPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

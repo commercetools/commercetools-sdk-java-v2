@@ -59,7 +59,7 @@ public interface OrderStateTransitionMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderStateTransitionMessage>> T withOrderStateTransitionMessage(Function<OrderStateTransitionMessage, T> helper) {
+    default <T> T withOrderStateTransitionMessage(Function<OrderStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 }

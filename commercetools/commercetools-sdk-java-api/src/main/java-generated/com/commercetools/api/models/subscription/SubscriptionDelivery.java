@@ -60,7 +60,7 @@ public interface SubscriptionDelivery  {
 
 
 
-    default <T extends Accessor<SubscriptionDelivery>> T withSubscriptionDelivery(Function<SubscriptionDelivery, T> helper) {
+    default <T> T withSubscriptionDelivery(Function<SubscriptionDelivery, T> helper) {
         return helper.apply(this);
     }
 }

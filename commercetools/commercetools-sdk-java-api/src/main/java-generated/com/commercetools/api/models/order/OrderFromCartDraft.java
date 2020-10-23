@@ -95,7 +95,7 @@ public interface OrderFromCartDraft  {
         return instance;
     }
 
-    default <T extends Accessor<OrderFromCartDraft>> T withOrderFromCartDraft(Function<OrderFromCartDraft, T> helper) {
+    default <T> T withOrderFromCartDraft(Function<OrderFromCartDraft, T> helper) {
         return helper.apply(this);
     }
 }

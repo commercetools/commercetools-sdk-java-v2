@@ -41,7 +41,7 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ChannelSetGeoLocationAction>> T withChannelSetGeoLocationAction(Function<ChannelSetGeoLocationAction, T> helper) {
+    default <T> T withChannelSetGeoLocationAction(Function<ChannelSetGeoLocationAction, T> helper) {
         return helper.apply(this);
     }
 }

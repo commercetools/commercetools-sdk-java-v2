@@ -49,7 +49,7 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends MessagePayload 
         return instance;
     }
 
-    default <T extends Accessor<ParcelRemovedFromDeliveryMessagePayload>> T withParcelRemovedFromDeliveryMessagePayload(Function<ParcelRemovedFromDeliveryMessagePayload, T> helper) {
+    default <T> T withParcelRemovedFromDeliveryMessagePayload(Function<ParcelRemovedFromDeliveryMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

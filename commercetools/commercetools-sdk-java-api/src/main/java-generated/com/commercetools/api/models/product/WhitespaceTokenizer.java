@@ -34,7 +34,7 @@ public interface WhitespaceTokenizer extends SuggestTokenizer {
         return instance;
     }
 
-    default <T extends Accessor<WhitespaceTokenizer>> T withWhitespaceTokenizer(Function<WhitespaceTokenizer, T> helper) {
+    default <T> T withWhitespaceTokenizer(Function<WhitespaceTokenizer, T> helper) {
         return helper.apply(this);
     }
 }

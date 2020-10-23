@@ -52,7 +52,7 @@ public interface CustomFields  {
         return instance;
     }
 
-    default <T extends Accessor<CustomFields>> T withCustomFields(Function<CustomFields, T> helper) {
+    default <T> T withCustomFields(Function<CustomFields, T> helper) {
         return helper.apply(this);
     }
 }

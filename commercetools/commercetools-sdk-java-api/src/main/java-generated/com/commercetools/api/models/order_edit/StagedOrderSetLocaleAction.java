@@ -40,7 +40,7 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetLocaleAction>> T withStagedOrderSetLocaleAction(Function<StagedOrderSetLocaleAction, T> helper) {
+    default <T> T withStagedOrderSetLocaleAction(Function<StagedOrderSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
 }

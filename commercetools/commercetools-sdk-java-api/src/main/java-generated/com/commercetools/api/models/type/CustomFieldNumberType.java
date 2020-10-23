@@ -34,7 +34,7 @@ public interface CustomFieldNumberType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldNumberType>> T withCustomFieldNumberType(Function<CustomFieldNumberType, T> helper) {
+    default <T> T withCustomFieldNumberType(Function<CustomFieldNumberType, T> helper) {
         return helper.apply(this);
     }
 }

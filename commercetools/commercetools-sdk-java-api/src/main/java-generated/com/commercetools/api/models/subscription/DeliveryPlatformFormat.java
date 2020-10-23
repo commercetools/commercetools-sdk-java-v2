@@ -34,7 +34,7 @@ public interface DeliveryPlatformFormat extends DeliveryFormat {
         return instance;
     }
 
-    default <T extends Accessor<DeliveryPlatformFormat>> T withDeliveryPlatformFormat(Function<DeliveryPlatformFormat, T> helper) {
+    default <T> T withDeliveryPlatformFormat(Function<DeliveryPlatformFormat, T> helper) {
         return helper.apply(this);
     }
 }

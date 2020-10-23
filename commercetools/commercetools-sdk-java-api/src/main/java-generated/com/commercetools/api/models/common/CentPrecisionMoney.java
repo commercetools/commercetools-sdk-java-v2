@@ -38,7 +38,7 @@ public interface CentPrecisionMoney extends TypedMoney {
         return instance;
     }
 
-    default <T extends Accessor<CentPrecisionMoney>> T withCentPrecisionMoney(Function<CentPrecisionMoney, T> helper) {
+    default <T> T withCentPrecisionMoney(Function<CentPrecisionMoney, T> helper) {
         return helper.apply(this);
     }
 }

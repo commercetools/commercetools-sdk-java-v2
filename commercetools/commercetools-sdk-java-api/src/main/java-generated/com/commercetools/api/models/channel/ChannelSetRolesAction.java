@@ -41,7 +41,7 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ChannelSetRolesAction>> T withChannelSetRolesAction(Function<ChannelSetRolesAction, T> helper) {
+    default <T> T withChannelSetRolesAction(Function<ChannelSetRolesAction, T> helper) {
         return helper.apply(this);
     }
 }

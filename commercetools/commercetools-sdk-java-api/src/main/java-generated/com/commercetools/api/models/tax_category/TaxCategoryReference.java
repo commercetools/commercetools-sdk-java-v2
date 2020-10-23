@@ -43,7 +43,7 @@ public interface TaxCategoryReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryReference>> T withTaxCategoryReference(Function<TaxCategoryReference, T> helper) {
+    default <T> T withTaxCategoryReference(Function<TaxCategoryReference, T> helper) {
         return helper.apply(this);
     }
 }

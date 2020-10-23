@@ -40,7 +40,7 @@ public interface IronMqDestination extends Destination {
         return instance;
     }
 
-    default <T extends Accessor<IronMqDestination>> T withIronMqDestination(Function<IronMqDestination, T> helper) {
+    default <T> T withIronMqDestination(Function<IronMqDestination, T> helper) {
         return helper.apply(this);
     }
 }

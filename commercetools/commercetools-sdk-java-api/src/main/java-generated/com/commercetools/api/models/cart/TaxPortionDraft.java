@@ -55,7 +55,7 @@ public interface TaxPortionDraft  {
         return instance;
     }
 
-    default <T extends Accessor<TaxPortionDraft>> T withTaxPortionDraft(Function<TaxPortionDraft, T> helper) {
+    default <T> T withTaxPortionDraft(Function<TaxPortionDraft, T> helper) {
         return helper.apply(this);
     }
 }

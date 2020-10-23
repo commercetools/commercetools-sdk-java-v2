@@ -40,7 +40,7 @@ public interface ExtensionUpdateAction  {
 
 
 
-    default <T extends Accessor<ExtensionUpdateAction>> T withExtensionUpdateAction(Function<ExtensionUpdateAction, T> helper) {
+    default <T> T withExtensionUpdateAction(Function<ExtensionUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

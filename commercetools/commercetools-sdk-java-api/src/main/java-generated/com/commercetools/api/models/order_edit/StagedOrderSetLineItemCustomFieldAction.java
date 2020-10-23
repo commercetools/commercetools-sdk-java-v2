@@ -55,7 +55,7 @@ public interface StagedOrderSetLineItemCustomFieldAction extends StagedOrderUpda
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetLineItemCustomFieldAction>> T withStagedOrderSetLineItemCustomFieldAction(Function<StagedOrderSetLineItemCustomFieldAction, T> helper) {
+    default <T> T withStagedOrderSetLineItemCustomFieldAction(Function<StagedOrderSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

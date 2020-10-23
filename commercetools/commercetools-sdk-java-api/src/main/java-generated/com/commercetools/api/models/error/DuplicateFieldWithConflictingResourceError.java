@@ -58,7 +58,7 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
         return instance;
     }
 
-    default <T extends Accessor<DuplicateFieldWithConflictingResourceError>> T withDuplicateFieldWithConflictingResourceError(Function<DuplicateFieldWithConflictingResourceError, T> helper) {
+    default <T> T withDuplicateFieldWithConflictingResourceError(Function<DuplicateFieldWithConflictingResourceError, T> helper) {
         return helper.apply(this);
     }
 }

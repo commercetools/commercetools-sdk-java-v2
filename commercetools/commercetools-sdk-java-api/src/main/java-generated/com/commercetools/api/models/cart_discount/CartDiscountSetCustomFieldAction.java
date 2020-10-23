@@ -53,7 +53,7 @@ public interface CartDiscountSetCustomFieldAction extends CartDiscountUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountSetCustomFieldAction>> T withCartDiscountSetCustomFieldAction(Function<CartDiscountSetCustomFieldAction, T> helper) {
+    default <T> T withCartDiscountSetCustomFieldAction(Function<CartDiscountSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

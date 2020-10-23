@@ -49,7 +49,7 @@ public interface PaymentSetAuthorizationAction extends PaymentUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<PaymentSetAuthorizationAction>> T withPaymentSetAuthorizationAction(Function<PaymentSetAuthorizationAction, T> helper) {
+    default <T> T withPaymentSetAuthorizationAction(Function<PaymentSetAuthorizationAction, T> helper) {
         return helper.apply(this);
     }
 }

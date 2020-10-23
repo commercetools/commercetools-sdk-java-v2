@@ -48,7 +48,7 @@ public interface ShoppingListUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListUpdate>> T withShoppingListUpdate(Function<ShoppingListUpdate, T> helper) {
+    default <T> T withShoppingListUpdate(Function<ShoppingListUpdate, T> helper) {
         return helper.apply(this);
     }
 }

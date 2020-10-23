@@ -42,7 +42,7 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ZoneSetKeyAction>> T withZoneSetKeyAction(Function<ZoneSetKeyAction, T> helper) {
+    default <T> T withZoneSetKeyAction(Function<ZoneSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

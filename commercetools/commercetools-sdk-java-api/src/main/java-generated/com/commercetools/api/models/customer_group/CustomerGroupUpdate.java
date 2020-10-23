@@ -48,7 +48,7 @@ public interface CustomerGroupUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupUpdate>> T withCustomerGroupUpdate(Function<CustomerGroupUpdate, T> helper) {
+    default <T> T withCustomerGroupUpdate(Function<CustomerGroupUpdate, T> helper) {
         return helper.apply(this);
     }
 }

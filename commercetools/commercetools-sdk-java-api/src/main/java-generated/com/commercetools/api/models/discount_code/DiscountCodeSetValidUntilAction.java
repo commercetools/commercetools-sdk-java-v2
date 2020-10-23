@@ -43,7 +43,7 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetValidUntilAction>> T withDiscountCodeSetValidUntilAction(Function<DiscountCodeSetValidUntilAction, T> helper) {
+    default <T> T withDiscountCodeSetValidUntilAction(Function<DiscountCodeSetValidUntilAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -142,7 +142,7 @@ public interface Product extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Product>> T withProduct(Function<Product, T> helper) {
+    default <T> T withProduct(Function<Product, T> helper) {
         return helper.apply(this);
     }
 }

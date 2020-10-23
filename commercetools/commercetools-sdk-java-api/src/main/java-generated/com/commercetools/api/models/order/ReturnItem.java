@@ -80,7 +80,7 @@ public interface ReturnItem  {
 
 
 
-    default <T extends Accessor<ReturnItem>> T withReturnItem(Function<ReturnItem, T> helper) {
+    default <T> T withReturnItem(Function<ReturnItem, T> helper) {
         return helper.apply(this);
     }
 }

@@ -43,7 +43,7 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeChangeGroupsAction>> T withDiscountCodeChangeGroupsAction(Function<DiscountCodeChangeGroupsAction, T> helper) {
+    default <T> T withDiscountCodeChangeGroupsAction(Function<DiscountCodeChangeGroupsAction, T> helper) {
         return helper.apply(this);
     }
 }

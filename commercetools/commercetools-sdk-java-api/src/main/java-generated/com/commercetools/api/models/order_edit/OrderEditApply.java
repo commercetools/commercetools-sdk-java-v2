@@ -47,7 +47,7 @@ public interface OrderEditApply  {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditApply>> T withOrderEditApply(Function<OrderEditApply, T> helper) {
+    default <T> T withOrderEditApply(Function<OrderEditApply, T> helper) {
         return helper.apply(this);
     }
 }

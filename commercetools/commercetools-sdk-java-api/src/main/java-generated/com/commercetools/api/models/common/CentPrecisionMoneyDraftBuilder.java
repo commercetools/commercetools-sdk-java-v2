@@ -20,6 +20,9 @@ public final class CentPrecisionMoneyDraftBuilder {
     
     
     private String currencyCode;
+    
+    @Nullable
+    private Integer fractionDigits;
 
     public CentPrecisionMoneyDraftBuilder centAmount( final Long centAmount) {
         this.centAmount = centAmount;
@@ -28,6 +31,11 @@ public final class CentPrecisionMoneyDraftBuilder {
     
     public CentPrecisionMoneyDraftBuilder currencyCode( final String currencyCode) {
         this.currencyCode = currencyCode;
+        return this;
+    }
+    
+    public CentPrecisionMoneyDraftBuilder fractionDigits(@Nullable final Integer fractionDigits) {
+        this.fractionDigits = fractionDigits;
         return this;
     }
 
@@ -40,9 +48,14 @@ public final class CentPrecisionMoneyDraftBuilder {
     public String getCurrencyCode(){
         return this.currencyCode;
     }
+    
+    @Nullable
+    public Integer getFractionDigits(){
+        return this.fractionDigits;
+    }
 
     public CentPrecisionMoneyDraft build() {
-        return new CentPrecisionMoneyDraftImpl(centAmount, currencyCode);
+        return new CentPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits);
     }
 
     public static CentPrecisionMoneyDraftBuilder of() {
@@ -53,6 +66,7 @@ public final class CentPrecisionMoneyDraftBuilder {
         CentPrecisionMoneyDraftBuilder builder = new CentPrecisionMoneyDraftBuilder();
         builder.centAmount = template.getCentAmount();
         builder.currencyCode = template.getCurrencyCode();
+        builder.fractionDigits = template.getFractionDigits();
         return builder;
     }
 

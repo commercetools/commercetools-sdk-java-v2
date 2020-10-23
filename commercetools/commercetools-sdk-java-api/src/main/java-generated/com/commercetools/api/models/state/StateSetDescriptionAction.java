@@ -42,7 +42,7 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StateSetDescriptionAction>> T withStateSetDescriptionAction(Function<StateSetDescriptionAction, T> helper) {
+    default <T> T withStateSetDescriptionAction(Function<StateSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

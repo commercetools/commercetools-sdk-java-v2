@@ -42,7 +42,7 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountChangeCartPredicateAction>> T withCartDiscountChangeCartPredicateAction(Function<CartDiscountChangeCartPredicateAction, T> helper) {
+    default <T> T withCartDiscountChangeCartPredicateAction(Function<CartDiscountChangeCartPredicateAction, T> helper) {
         return helper.apply(this);
     }
 }

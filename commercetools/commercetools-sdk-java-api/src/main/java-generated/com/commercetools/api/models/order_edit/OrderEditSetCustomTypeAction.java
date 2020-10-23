@@ -54,7 +54,7 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditSetCustomTypeAction>> T withOrderEditSetCustomTypeAction(Function<OrderEditSetCustomTypeAction, T> helper) {
+    default <T> T withOrderEditSetCustomTypeAction(Function<OrderEditSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

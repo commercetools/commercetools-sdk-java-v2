@@ -42,7 +42,7 @@ public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListChangeNameAction>> T withShoppingListChangeNameAction(Function<ShoppingListChangeNameAction, T> helper) {
+    default <T> T withShoppingListChangeNameAction(Function<ShoppingListChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

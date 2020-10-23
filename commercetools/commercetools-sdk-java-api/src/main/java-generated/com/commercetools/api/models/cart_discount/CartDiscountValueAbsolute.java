@@ -42,7 +42,7 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountValueAbsolute>> T withCartDiscountValueAbsolute(Function<CartDiscountValueAbsolute, T> helper) {
+    default <T> T withCartDiscountValueAbsolute(Function<CartDiscountValueAbsolute, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ProductDiscountChangeValueAction extends ProductDiscountUpdateA
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountChangeValueAction>> T withProductDiscountChangeValueAction(Function<ProductDiscountChangeValueAction, T> helper) {
+    default <T> T withProductDiscountChangeValueAction(Function<ProductDiscountChangeValueAction, T> helper) {
         return helper.apply(this);
     }
 }

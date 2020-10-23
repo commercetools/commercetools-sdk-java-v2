@@ -62,7 +62,7 @@ public interface TaxCategoryDraft  {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryDraft>> T withTaxCategoryDraft(Function<TaxCategoryDraft, T> helper) {
+    default <T> T withTaxCategoryDraft(Function<TaxCategoryDraft, T> helper) {
         return helper.apply(this);
     }
 }

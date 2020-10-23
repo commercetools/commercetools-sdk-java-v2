@@ -34,7 +34,7 @@ public interface CustomFieldBooleanType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldBooleanType>> T withCustomFieldBooleanType(Function<CustomFieldBooleanType, T> helper) {
+    default <T> T withCustomFieldBooleanType(Function<CustomFieldBooleanType, T> helper) {
         return helper.apply(this);
     }
 }

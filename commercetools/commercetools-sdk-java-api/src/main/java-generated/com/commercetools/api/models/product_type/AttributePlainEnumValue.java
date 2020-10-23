@@ -47,7 +47,7 @@ public interface AttributePlainEnumValue  {
         return instance;
     }
 
-    default <T extends Accessor<AttributePlainEnumValue>> T withAttributePlainEnumValue(Function<AttributePlainEnumValue, T> helper) {
+    default <T> T withAttributePlainEnumValue(Function<AttributePlainEnumValue, T> helper) {
         return helper.apply(this);
     }
 }

@@ -49,7 +49,7 @@ public interface OrderLineItemAddedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderLineItemAddedMessagePayload>> T withOrderLineItemAddedMessagePayload(Function<OrderLineItemAddedMessagePayload, T> helper) {
+    default <T> T withOrderLineItemAddedMessagePayload(Function<OrderLineItemAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

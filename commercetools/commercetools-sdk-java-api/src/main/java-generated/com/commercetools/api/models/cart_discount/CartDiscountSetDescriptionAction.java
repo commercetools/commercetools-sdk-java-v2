@@ -43,7 +43,7 @@ public interface CartDiscountSetDescriptionAction extends CartDiscountUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountSetDescriptionAction>> T withCartDiscountSetDescriptionAction(Function<CartDiscountSetDescriptionAction, T> helper) {
+    default <T> T withCartDiscountSetDescriptionAction(Function<CartDiscountSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

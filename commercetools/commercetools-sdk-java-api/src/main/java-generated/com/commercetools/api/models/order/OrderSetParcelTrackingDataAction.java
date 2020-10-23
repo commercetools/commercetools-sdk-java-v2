@@ -48,7 +48,7 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetParcelTrackingDataAction>> T withOrderSetParcelTrackingDataAction(Function<OrderSetParcelTrackingDataAction, T> helper) {
+    default <T> T withOrderSetParcelTrackingDataAction(Function<OrderSetParcelTrackingDataAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -43,7 +43,7 @@ public interface ShoppingListReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListReference>> T withShoppingListReference(Function<ShoppingListReference, T> helper) {
+    default <T> T withShoppingListReference(Function<ShoppingListReference, T> helper) {
         return helper.apply(this);
     }
 }

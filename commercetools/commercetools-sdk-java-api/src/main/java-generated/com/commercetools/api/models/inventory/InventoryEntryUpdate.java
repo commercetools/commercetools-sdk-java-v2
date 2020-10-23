@@ -48,7 +48,7 @@ public interface InventoryEntryUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryUpdate>> T withInventoryEntryUpdate(Function<InventoryEntryUpdate, T> helper) {
+    default <T> T withInventoryEntryUpdate(Function<InventoryEntryUpdate, T> helper) {
         return helper.apply(this);
     }
 }

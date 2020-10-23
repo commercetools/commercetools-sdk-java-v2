@@ -43,7 +43,7 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodSetPredicateAction>> T withShippingMethodSetPredicateAction(Function<ShippingMethodSetPredicateAction, T> helper) {
+    default <T> T withShippingMethodSetPredicateAction(Function<ShippingMethodSetPredicateAction, T> helper) {
         return helper.apply(this);
     }
 }

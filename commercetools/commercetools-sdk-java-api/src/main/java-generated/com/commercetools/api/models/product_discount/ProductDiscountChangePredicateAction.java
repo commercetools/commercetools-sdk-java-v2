@@ -42,7 +42,7 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountChangePredicateAction>> T withProductDiscountChangePredicateAction(Function<ProductDiscountChangePredicateAction, T> helper) {
+    default <T> T withProductDiscountChangePredicateAction(Function<ProductDiscountChangePredicateAction, T> helper) {
         return helper.apply(this);
     }
 }

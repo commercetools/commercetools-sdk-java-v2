@@ -43,7 +43,7 @@ public interface CustomerGroupReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupReference>> T withCustomerGroupReference(Function<CustomerGroupReference, T> helper) {
+    default <T> T withCustomerGroupReference(Function<CustomerGroupReference, T> helper) {
         return helper.apply(this);
     }
 }

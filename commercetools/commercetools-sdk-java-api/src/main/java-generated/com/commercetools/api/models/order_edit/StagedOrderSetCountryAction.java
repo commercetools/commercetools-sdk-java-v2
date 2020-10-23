@@ -40,7 +40,7 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetCountryAction>> T withStagedOrderSetCountryAction(Function<StagedOrderSetCountryAction, T> helper) {
+    default <T> T withStagedOrderSetCountryAction(Function<StagedOrderSetCountryAction, T> helper) {
         return helper.apply(this);
     }
 }

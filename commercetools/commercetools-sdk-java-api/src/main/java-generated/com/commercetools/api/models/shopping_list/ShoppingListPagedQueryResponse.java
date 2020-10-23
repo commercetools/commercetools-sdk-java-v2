@@ -69,7 +69,7 @@ public interface ShoppingListPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListPagedQueryResponse>> T withShoppingListPagedQueryResponse(Function<ShoppingListPagedQueryResponse, T> helper) {
+    default <T> T withShoppingListPagedQueryResponse(Function<ShoppingListPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

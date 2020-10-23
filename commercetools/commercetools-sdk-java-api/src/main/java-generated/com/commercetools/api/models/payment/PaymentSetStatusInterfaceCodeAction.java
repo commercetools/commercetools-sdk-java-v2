@@ -40,7 +40,7 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<PaymentSetStatusInterfaceCodeAction>> T withPaymentSetStatusInterfaceCodeAction(Function<PaymentSetStatusInterfaceCodeAction, T> helper) {
+    default <T> T withPaymentSetStatusInterfaceCodeAction(Function<PaymentSetStatusInterfaceCodeAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -49,7 +49,7 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerChangeAddressAction>> T withMyCustomerChangeAddressAction(Function<MyCustomerChangeAddressAction, T> helper) {
+    default <T> T withMyCustomerChangeAddressAction(Function<MyCustomerChangeAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

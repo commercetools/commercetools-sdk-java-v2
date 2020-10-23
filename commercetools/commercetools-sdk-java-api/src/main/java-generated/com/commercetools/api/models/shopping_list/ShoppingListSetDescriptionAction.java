@@ -41,7 +41,7 @@ public interface ShoppingListSetDescriptionAction extends ShoppingListUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListSetDescriptionAction>> T withShoppingListSetDescriptionAction(Function<ShoppingListSetDescriptionAction, T> helper) {
+    default <T> T withShoppingListSetDescriptionAction(Function<ShoppingListSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

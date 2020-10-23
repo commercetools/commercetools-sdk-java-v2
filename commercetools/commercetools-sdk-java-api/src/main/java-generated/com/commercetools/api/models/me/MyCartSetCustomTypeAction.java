@@ -49,7 +49,7 @@ public interface MyCartSetCustomTypeAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartSetCustomTypeAction>> T withMyCartSetCustomTypeAction(Function<MyCartSetCustomTypeAction, T> helper) {
+    default <T> T withMyCartSetCustomTypeAction(Function<MyCartSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

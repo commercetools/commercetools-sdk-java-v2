@@ -56,7 +56,7 @@ public interface OrderSetCustomLineItemCustomTypeAction extends OrderUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<OrderSetCustomLineItemCustomTypeAction>> T withOrderSetCustomLineItemCustomTypeAction(Function<OrderSetCustomLineItemCustomTypeAction, T> helper) {
+    default <T> T withOrderSetCustomLineItemCustomTypeAction(Function<OrderSetCustomLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

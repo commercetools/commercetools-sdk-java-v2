@@ -41,7 +41,7 @@ public interface CustomFieldReferenceType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldReferenceType>> T withCustomFieldReferenceType(Function<CustomFieldReferenceType, T> helper) {
+    default <T> T withCustomFieldReferenceType(Function<CustomFieldReferenceType, T> helper) {
         return helper.apply(this);
     }
 }

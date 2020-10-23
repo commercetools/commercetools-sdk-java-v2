@@ -40,7 +40,7 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartRemoveCustomLineItemAction>> T withCartRemoveCustomLineItemAction(Function<CartRemoveCustomLineItemAction, T> helper) {
+    default <T> T withCartRemoveCustomLineItemAction(Function<CartRemoveCustomLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

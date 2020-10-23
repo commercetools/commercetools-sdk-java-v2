@@ -97,7 +97,7 @@ public interface ShippingMethodDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodDraft>> T withShippingMethodDraft(Function<ShippingMethodDraft, T> helper) {
+    default <T> T withShippingMethodDraft(Function<ShippingMethodDraft, T> helper) {
         return helper.apply(this);
     }
 }

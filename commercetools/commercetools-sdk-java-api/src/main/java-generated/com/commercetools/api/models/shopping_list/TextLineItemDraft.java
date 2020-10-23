@@ -77,7 +77,7 @@ public interface TextLineItemDraft  {
         return instance;
     }
 
-    default <T extends Accessor<TextLineItemDraft>> T withTextLineItemDraft(Function<TextLineItemDraft, T> helper) {
+    default <T> T withTextLineItemDraft(Function<TextLineItemDraft, T> helper) {
         return helper.apply(this);
     }
 }

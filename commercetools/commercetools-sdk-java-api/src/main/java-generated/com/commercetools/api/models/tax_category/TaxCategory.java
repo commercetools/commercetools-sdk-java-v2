@@ -120,7 +120,7 @@ public interface TaxCategory extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategory>> T withTaxCategory(Function<TaxCategory, T> helper) {
+    default <T> T withTaxCategory(Function<TaxCategory, T> helper) {
         return helper.apply(this);
     }
 }

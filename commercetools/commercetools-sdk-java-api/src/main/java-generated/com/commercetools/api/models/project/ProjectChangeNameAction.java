@@ -40,7 +40,7 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProjectChangeNameAction>> T withProjectChangeNameAction(Function<ProjectChangeNameAction, T> helper) {
+    default <T> T withProjectChangeNameAction(Function<ProjectChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

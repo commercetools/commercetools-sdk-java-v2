@@ -204,7 +204,7 @@ public interface DiscountCode extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<DiscountCode>> T withDiscountCode(Function<DiscountCode, T> helper) {
+    default <T> T withDiscountCode(Function<DiscountCode, T> helper) {
         return helper.apply(this);
     }
 }

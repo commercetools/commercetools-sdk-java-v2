@@ -59,7 +59,7 @@ public interface ProductRemovedFromCategoryMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductRemovedFromCategoryMessage>> T withProductRemovedFromCategoryMessage(Function<ProductRemovedFromCategoryMessage, T> helper) {
+    default <T> T withProductRemovedFromCategoryMessage(Function<ProductRemovedFromCategoryMessage, T> helper) {
         return helper.apply(this);
     }
 }

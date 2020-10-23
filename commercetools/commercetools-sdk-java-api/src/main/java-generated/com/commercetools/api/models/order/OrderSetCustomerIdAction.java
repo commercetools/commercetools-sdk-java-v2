@@ -40,7 +40,7 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetCustomerIdAction>> T withOrderSetCustomerIdAction(Function<OrderSetCustomerIdAction, T> helper) {
+    default <T> T withOrderSetCustomerIdAction(Function<OrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
 }

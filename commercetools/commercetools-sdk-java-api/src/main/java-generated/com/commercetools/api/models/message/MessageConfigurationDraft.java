@@ -47,7 +47,7 @@ public interface MessageConfigurationDraft  {
         return instance;
     }
 
-    default <T extends Accessor<MessageConfigurationDraft>> T withMessageConfigurationDraft(Function<MessageConfigurationDraft, T> helper) {
+    default <T> T withMessageConfigurationDraft(Function<MessageConfigurationDraft, T> helper) {
         return helper.apply(this);
     }
 }

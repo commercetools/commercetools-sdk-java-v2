@@ -42,7 +42,7 @@ public interface DeliveryAddedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<DeliveryAddedMessagePayload>> T withDeliveryAddedMessagePayload(Function<DeliveryAddedMessagePayload, T> helper) {
+    default <T> T withDeliveryAddedMessagePayload(Function<DeliveryAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodRemoveZoneAction>> T withShippingMethodRemoveZoneAction(Function<ShippingMethodRemoveZoneAction, T> helper) {
+    default <T> T withShippingMethodRemoveZoneAction(Function<ShippingMethodRemoveZoneAction, T> helper) {
         return helper.apply(this);
     }
 }

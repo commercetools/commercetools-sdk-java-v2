@@ -38,7 +38,7 @@ public interface CartDiscountValueDraft  {
 
 
 
-    default <T extends Accessor<CartDiscountValueDraft>> T withCartDiscountValueDraft(Function<CartDiscountValueDraft, T> helper) {
+    default <T> T withCartDiscountValueDraft(Function<CartDiscountValueDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -82,7 +82,7 @@ public interface CustomLineItemStateTransitionMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<CustomLineItemStateTransitionMessage>> T withCustomLineItemStateTransitionMessage(Function<CustomLineItemStateTransitionMessage, T> helper) {
+    default <T> T withCustomLineItemStateTransitionMessage(Function<CustomLineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 }

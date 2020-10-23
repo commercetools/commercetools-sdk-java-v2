@@ -48,7 +48,7 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetParcelMeasurementsAction>> T withStagedOrderSetParcelMeasurementsAction(Function<StagedOrderSetParcelMeasurementsAction, T> helper) {
+    default <T> T withStagedOrderSetParcelMeasurementsAction(Function<StagedOrderSetParcelMeasurementsAction, T> helper) {
         return helper.apply(this);
     }
 }

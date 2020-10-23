@@ -49,7 +49,7 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderImportCustomLineItemStateAction>> T withStagedOrderImportCustomLineItemStateAction(Function<StagedOrderImportCustomLineItemStateAction, T> helper) {
+    default <T> T withStagedOrderImportCustomLineItemStateAction(Function<StagedOrderImportCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -88,7 +88,7 @@ public interface CustomerUpdateAction  {
 
 
 
-    default <T extends Accessor<CustomerUpdateAction>> T withCustomerUpdateAction(Function<CustomerUpdateAction, T> helper) {
+    default <T> T withCustomerUpdateAction(Function<CustomerUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

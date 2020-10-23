@@ -77,7 +77,7 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeNonApplicableError>> T withDiscountCodeNonApplicableError(Function<DiscountCodeNonApplicableError, T> helper) {
+    default <T> T withDiscountCodeNonApplicableError(Function<DiscountCodeNonApplicableError, T> helper) {
         return helper.apply(this);
     }
 }

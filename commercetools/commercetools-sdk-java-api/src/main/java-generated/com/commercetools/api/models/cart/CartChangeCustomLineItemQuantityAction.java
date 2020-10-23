@@ -47,7 +47,7 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<CartChangeCustomLineItemQuantityAction>> T withCartChangeCustomLineItemQuantityAction(Function<CartChangeCustomLineItemQuantityAction, T> helper) {
+    default <T> T withCartChangeCustomLineItemQuantityAction(Function<CartChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
 }

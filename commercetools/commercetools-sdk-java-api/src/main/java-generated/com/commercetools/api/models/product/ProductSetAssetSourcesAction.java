@@ -77,7 +77,7 @@ public interface ProductSetAssetSourcesAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetAssetSourcesAction>> T withProductSetAssetSourcesAction(Function<ProductSetAssetSourcesAction, T> helper) {
+    default <T> T withProductSetAssetSourcesAction(Function<ProductSetAssetSourcesAction, T> helper) {
         return helper.apply(this);
     }
 }

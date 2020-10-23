@@ -128,7 +128,7 @@ public interface ShippingInfo  {
         return instance;
     }
 
-    default <T extends Accessor<ShippingInfo>> T withShippingInfo(Function<ShippingInfo, T> helper) {
+    default <T> T withShippingInfo(Function<ShippingInfo, T> helper) {
         return helper.apply(this);
     }
 }

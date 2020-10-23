@@ -48,7 +48,7 @@ public interface ZoneUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<ZoneUpdate>> T withZoneUpdate(Function<ZoneUpdate, T> helper) {
+    default <T> T withZoneUpdate(Function<ZoneUpdate, T> helper) {
         return helper.apply(this);
     }
 }

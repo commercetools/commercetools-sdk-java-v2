@@ -42,7 +42,7 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeChangeNameAction>> T withTypeChangeNameAction(Function<TypeChangeNameAction, T> helper) {
+    default <T> T withTypeChangeNameAction(Function<TypeChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

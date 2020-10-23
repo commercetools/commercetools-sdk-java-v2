@@ -48,7 +48,7 @@ public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupSetCustomFieldAction>> T withCustomerGroupSetCustomFieldAction(Function<CustomerGroupSetCustomFieldAction, T> helper) {
+    default <T> T withCustomerGroupSetCustomFieldAction(Function<CustomerGroupSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

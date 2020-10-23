@@ -40,7 +40,7 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryRemoveQuantityAction>> T withInventoryEntryRemoveQuantityAction(Function<InventoryEntryRemoveQuantityAction, T> helper) {
+    default <T> T withInventoryEntryRemoveQuantityAction(Function<InventoryEntryRemoveQuantityAction, T> helper) {
         return helper.apply(this);
     }
 }

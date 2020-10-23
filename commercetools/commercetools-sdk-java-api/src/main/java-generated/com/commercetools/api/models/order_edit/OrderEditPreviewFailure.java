@@ -42,7 +42,7 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditPreviewFailure>> T withOrderEditPreviewFailure(Function<OrderEditPreviewFailure, T> helper) {
+    default <T> T withOrderEditPreviewFailure(Function<OrderEditPreviewFailure, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ProductDiscountValueAbsoluteDraft extends ProductDiscountValueD
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountValueAbsoluteDraft>> T withProductDiscountValueAbsoluteDraft(Function<ProductDiscountValueAbsoluteDraft, T> helper) {
+    default <T> T withProductDiscountValueAbsoluteDraft(Function<ProductDiscountValueAbsoluteDraft, T> helper) {
         return helper.apply(this);
     }
 }

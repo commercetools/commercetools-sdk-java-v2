@@ -41,7 +41,7 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderChangePaymentStateAction>> T withOrderChangePaymentStateAction(Function<OrderChangePaymentStateAction, T> helper) {
+    default <T> T withOrderChangePaymentStateAction(Function<OrderChangePaymentStateAction, T> helper) {
         return helper.apply(this);
     }
 }

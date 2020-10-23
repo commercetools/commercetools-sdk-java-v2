@@ -49,7 +49,7 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetDefaultBillingAddressAction>> T withCustomerSetDefaultBillingAddressAction(Function<CustomerSetDefaultBillingAddressAction, T> helper) {
+    default <T> T withCustomerSetDefaultBillingAddressAction(Function<CustomerSetDefaultBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

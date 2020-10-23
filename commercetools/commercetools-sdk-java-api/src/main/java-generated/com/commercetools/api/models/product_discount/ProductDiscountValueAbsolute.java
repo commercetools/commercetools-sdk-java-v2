@@ -42,7 +42,7 @@ public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountValueAbsolute>> T withProductDiscountValueAbsolute(Function<ProductDiscountValueAbsolute, T> helper) {
+    default <T> T withProductDiscountValueAbsolute(Function<ProductDiscountValueAbsolute, T> helper) {
         return helper.apply(this);
     }
 }

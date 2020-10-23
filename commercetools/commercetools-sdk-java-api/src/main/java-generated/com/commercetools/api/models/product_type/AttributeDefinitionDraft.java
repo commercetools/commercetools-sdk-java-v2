@@ -115,7 +115,7 @@ public interface AttributeDefinitionDraft  {
         return instance;
     }
 
-    default <T extends Accessor<AttributeDefinitionDraft>> T withAttributeDefinitionDraft(Function<AttributeDefinitionDraft, T> helper) {
+    default <T> T withAttributeDefinitionDraft(Function<AttributeDefinitionDraft, T> helper) {
         return helper.apply(this);
     }
 }

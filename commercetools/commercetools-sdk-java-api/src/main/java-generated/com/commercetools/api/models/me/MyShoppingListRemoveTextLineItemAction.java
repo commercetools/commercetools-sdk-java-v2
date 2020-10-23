@@ -47,7 +47,7 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
         return instance;
     }
 
-    default <T extends Accessor<MyShoppingListRemoveTextLineItemAction>> T withMyShoppingListRemoveTextLineItemAction(Function<MyShoppingListRemoveTextLineItemAction, T> helper) {
+    default <T> T withMyShoppingListRemoveTextLineItemAction(Function<MyShoppingListRemoveTextLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

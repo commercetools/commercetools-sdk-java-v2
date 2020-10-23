@@ -41,7 +41,7 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ChannelSetAddressAction>> T withChannelSetAddressAction(Function<ChannelSetAddressAction, T> helper) {
+    default <T> T withChannelSetAddressAction(Function<ChannelSetAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

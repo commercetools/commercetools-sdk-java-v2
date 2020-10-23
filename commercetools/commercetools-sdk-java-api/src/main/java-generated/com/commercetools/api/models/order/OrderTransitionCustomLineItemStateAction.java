@@ -72,7 +72,7 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
         return instance;
     }
 
-    default <T extends Accessor<OrderTransitionCustomLineItemStateAction>> T withOrderTransitionCustomLineItemStateAction(Function<OrderTransitionCustomLineItemStateAction, T> helper) {
+    default <T> T withOrderTransitionCustomLineItemStateAction(Function<OrderTransitionCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 }

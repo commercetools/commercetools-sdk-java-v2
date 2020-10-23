@@ -40,7 +40,7 @@ public interface CustomerEmailChangedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<CustomerEmailChangedMessagePayload>> T withCustomerEmailChangedMessagePayload(Function<CustomerEmailChangedMessagePayload, T> helper) {
+    default <T> T withCustomerEmailChangedMessagePayload(Function<CustomerEmailChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

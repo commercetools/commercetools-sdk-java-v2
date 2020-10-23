@@ -47,7 +47,7 @@ public interface MessageConfiguration  {
         return instance;
     }
 
-    default <T extends Accessor<MessageConfiguration>> T withMessageConfiguration(Function<MessageConfiguration, T> helper) {
+    default <T> T withMessageConfiguration(Function<MessageConfiguration, T> helper) {
         return helper.apply(this);
     }
 }

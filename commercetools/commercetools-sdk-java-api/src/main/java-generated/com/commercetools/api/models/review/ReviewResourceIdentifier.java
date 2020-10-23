@@ -37,7 +37,7 @@ public interface ReviewResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<ReviewResourceIdentifier>> T withReviewResourceIdentifier(Function<ReviewResourceIdentifier, T> helper) {
+    default <T> T withReviewResourceIdentifier(Function<ReviewResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

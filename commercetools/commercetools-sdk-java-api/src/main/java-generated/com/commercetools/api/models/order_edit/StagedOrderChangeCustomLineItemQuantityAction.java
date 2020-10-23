@@ -47,7 +47,7 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderChangeCustomLineItemQuantityAction>> T withStagedOrderChangeCustomLineItemQuantityAction(Function<StagedOrderChangeCustomLineItemQuantityAction, T> helper) {
+    default <T> T withStagedOrderChangeCustomLineItemQuantityAction(Function<StagedOrderChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
 }

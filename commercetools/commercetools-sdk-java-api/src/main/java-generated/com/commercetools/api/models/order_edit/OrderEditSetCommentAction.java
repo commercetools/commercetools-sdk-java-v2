@@ -40,7 +40,7 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditSetCommentAction>> T withOrderEditSetCommentAction(Function<OrderEditSetCommentAction, T> helper) {
+    default <T> T withOrderEditSetCommentAction(Function<OrderEditSetCommentAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -48,7 +48,7 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetMetaTitleAction>> T withProductSetMetaTitleAction(Function<ProductSetMetaTitleAction, T> helper) {
+    default <T> T withProductSetMetaTitleAction(Function<ProductSetMetaTitleAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -74,7 +74,7 @@ public interface ProductTypeUpdateAction  {
 
 
 
-    default <T extends Accessor<ProductTypeUpdateAction>> T withProductTypeUpdateAction(Function<ProductTypeUpdateAction, T> helper) {
+    default <T> T withProductTypeUpdateAction(Function<ProductTypeUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -50,7 +50,7 @@ public interface CustomerCompanyNameSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<CustomerCompanyNameSetMessage>> T withCustomerCompanyNameSetMessage(Function<CustomerCompanyNameSetMessage, T> helper) {
+    default <T> T withCustomerCompanyNameSetMessage(Function<CustomerCompanyNameSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

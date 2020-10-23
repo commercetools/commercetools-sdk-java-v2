@@ -69,7 +69,7 @@ public interface ApiClientPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ApiClientPagedQueryResponse>> T withApiClientPagedQueryResponse(Function<ApiClientPagedQueryResponse, T> helper) {
+    default <T> T withApiClientPagedQueryResponse(Function<ApiClientPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

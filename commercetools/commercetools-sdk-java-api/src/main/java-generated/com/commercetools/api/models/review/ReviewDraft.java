@@ -128,7 +128,7 @@ public interface ReviewDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ReviewDraft>> T withReviewDraft(Function<ReviewDraft, T> helper) {
+    default <T> T withReviewDraft(Function<ReviewDraft, T> helper) {
         return helper.apply(this);
     }
 }

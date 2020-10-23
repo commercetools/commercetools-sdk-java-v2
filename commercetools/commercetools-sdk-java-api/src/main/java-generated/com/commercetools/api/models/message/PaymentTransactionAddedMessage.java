@@ -52,7 +52,7 @@ public interface PaymentTransactionAddedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<PaymentTransactionAddedMessage>> T withPaymentTransactionAddedMessage(Function<PaymentTransactionAddedMessage, T> helper) {
+    default <T> T withPaymentTransactionAddedMessage(Function<PaymentTransactionAddedMessage, T> helper) {
         return helper.apply(this);
     }
 }

@@ -52,7 +52,7 @@ public interface ChannelUpdateAction  {
 
 
 
-    default <T extends Accessor<ChannelUpdateAction>> T withChannelUpdateAction(Function<ChannelUpdateAction, T> helper) {
+    default <T> T withChannelUpdateAction(Function<ChannelUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

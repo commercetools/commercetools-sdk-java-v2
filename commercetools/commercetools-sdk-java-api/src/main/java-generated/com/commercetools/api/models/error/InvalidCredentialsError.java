@@ -35,7 +35,7 @@ public interface InvalidCredentialsError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidCredentialsError>> T withInvalidCredentialsError(Function<InvalidCredentialsError, T> helper) {
+    default <T> T withInvalidCredentialsError(Function<InvalidCredentialsError, T> helper) {
         return helper.apply(this);
     }
 }

@@ -41,7 +41,7 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<CustomerDateOfBirthSetMessagePayload>> T withCustomerDateOfBirthSetMessagePayload(Function<CustomerDateOfBirthSetMessagePayload, T> helper) {
+    default <T> T withCustomerDateOfBirthSetMessagePayload(Function<CustomerDateOfBirthSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

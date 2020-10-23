@@ -54,7 +54,7 @@ public interface SnsDestination extends Destination {
         return instance;
     }
 
-    default <T extends Accessor<SnsDestination>> T withSnsDestination(Function<SnsDestination, T> helper) {
+    default <T> T withSnsDestination(Function<SnsDestination, T> helper) {
         return helper.apply(this);
     }
 }

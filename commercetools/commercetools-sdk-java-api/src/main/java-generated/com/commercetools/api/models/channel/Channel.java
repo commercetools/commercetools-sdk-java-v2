@@ -162,7 +162,7 @@ public interface Channel extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Channel>> T withChannel(Function<Channel, T> helper) {
+    default <T> T withChannel(Function<Channel, T> helper) {
         return helper.apply(this);
     }
 }

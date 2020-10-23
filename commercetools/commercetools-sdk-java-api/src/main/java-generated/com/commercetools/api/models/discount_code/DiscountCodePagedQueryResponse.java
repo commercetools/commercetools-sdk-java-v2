@@ -69,7 +69,7 @@ public interface DiscountCodePagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodePagedQueryResponse>> T withDiscountCodePagedQueryResponse(Function<DiscountCodePagedQueryResponse, T> helper) {
+    default <T> T withDiscountCodePagedQueryResponse(Function<DiscountCodePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

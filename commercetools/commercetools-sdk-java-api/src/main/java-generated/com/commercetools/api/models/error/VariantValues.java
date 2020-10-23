@@ -57,7 +57,7 @@ public interface VariantValues  {
         return instance;
     }
 
-    default <T extends Accessor<VariantValues>> T withVariantValues(Function<VariantValues, T> helper) {
+    default <T> T withVariantValues(Function<VariantValues, T> helper) {
         return helper.apply(this);
     }
 }

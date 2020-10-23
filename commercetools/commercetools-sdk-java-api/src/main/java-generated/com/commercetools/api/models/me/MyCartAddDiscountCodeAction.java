@@ -40,7 +40,7 @@ public interface MyCartAddDiscountCodeAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartAddDiscountCodeAction>> T withMyCartAddDiscountCodeAction(Function<MyCartAddDiscountCodeAction, T> helper) {
+    default <T> T withMyCartAddDiscountCodeAction(Function<MyCartAddDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
 }

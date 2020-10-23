@@ -112,7 +112,7 @@ public interface QueryPrice  {
         return instance;
     }
 
-    default <T extends Accessor<QueryPrice>> T withQueryPrice(Function<QueryPrice, T> helper) {
+    default <T> T withQueryPrice(Function<QueryPrice, T> helper) {
         return helper.apply(this);
     }
 }

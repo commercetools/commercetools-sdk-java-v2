@@ -59,7 +59,7 @@ public interface ExtensionNoResponseError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionNoResponseError>> T withExtensionNoResponseError(Function<ExtensionNoResponseError, T> helper) {
+    default <T> T withExtensionNoResponseError(Function<ExtensionNoResponseError, T> helper) {
         return helper.apply(this);
     }
 }

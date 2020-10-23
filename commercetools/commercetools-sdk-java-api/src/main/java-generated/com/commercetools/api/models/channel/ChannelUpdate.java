@@ -48,7 +48,7 @@ public interface ChannelUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<ChannelUpdate>> T withChannelUpdate(Function<ChannelUpdate, T> helper) {
+    default <T> T withChannelUpdate(Function<ChannelUpdate, T> helper) {
         return helper.apply(this);
     }
 }

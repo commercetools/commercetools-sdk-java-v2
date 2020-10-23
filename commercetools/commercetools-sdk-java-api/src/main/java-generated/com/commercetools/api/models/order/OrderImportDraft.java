@@ -238,7 +238,7 @@ public interface OrderImportDraft  {
         return instance;
     }
 
-    default <T extends Accessor<OrderImportDraft>> T withOrderImportDraft(Function<OrderImportDraft, T> helper) {
+    default <T> T withOrderImportDraft(Function<OrderImportDraft, T> helper) {
         return helper.apply(this);
     }
 }

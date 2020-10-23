@@ -85,7 +85,7 @@ public interface PagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<PagedQueryResponse>> T withPagedQueryResponse(Function<PagedQueryResponse, T> helper) {
+    default <T> T withPagedQueryResponse(Function<PagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

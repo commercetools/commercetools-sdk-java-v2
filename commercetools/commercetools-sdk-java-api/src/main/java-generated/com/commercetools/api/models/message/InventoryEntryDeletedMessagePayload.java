@@ -49,7 +49,7 @@ public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryDeletedMessagePayload>> T withInventoryEntryDeletedMessagePayload(Function<InventoryEntryDeletedMessagePayload, T> helper) {
+    default <T> T withInventoryEntryDeletedMessagePayload(Function<InventoryEntryDeletedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

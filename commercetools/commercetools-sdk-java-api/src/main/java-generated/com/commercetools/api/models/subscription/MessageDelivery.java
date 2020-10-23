@@ -88,7 +88,7 @@ public interface MessageDelivery extends SubscriptionDelivery {
         return instance;
     }
 
-    default <T extends Accessor<MessageDelivery>> T withMessageDelivery(Function<MessageDelivery, T> helper) {
+    default <T> T withMessageDelivery(Function<MessageDelivery, T> helper) {
         return helper.apply(this);
     }
 }

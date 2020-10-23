@@ -61,7 +61,7 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryQuantitySetMessagePayload>> T withInventoryEntryQuantitySetMessagePayload(Function<InventoryEntryQuantitySetMessagePayload, T> helper) {
+    default <T> T withInventoryEntryQuantitySetMessagePayload(Function<InventoryEntryQuantitySetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

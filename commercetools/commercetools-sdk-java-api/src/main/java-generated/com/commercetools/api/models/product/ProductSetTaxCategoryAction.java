@@ -43,7 +43,7 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetTaxCategoryAction>> T withProductSetTaxCategoryAction(Function<ProductSetTaxCategoryAction, T> helper) {
+    default <T> T withProductSetTaxCategoryAction(Function<ProductSetTaxCategoryAction, T> helper) {
         return helper.apply(this);
     }
 }

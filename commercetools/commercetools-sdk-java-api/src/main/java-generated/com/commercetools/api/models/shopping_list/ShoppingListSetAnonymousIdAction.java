@@ -43,7 +43,7 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListSetAnonymousIdAction>> T withShoppingListSetAnonymousIdAction(Function<ShoppingListSetAnonymousIdAction, T> helper) {
+    default <T> T withShoppingListSetAnonymousIdAction(Function<ShoppingListSetAnonymousIdAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -49,7 +49,7 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ProductAddedToCategoryMessagePayload>> T withProductAddedToCategoryMessagePayload(Function<ProductAddedToCategoryMessagePayload, T> helper) {
+    default <T> T withProductAddedToCategoryMessagePayload(Function<ProductAddedToCategoryMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

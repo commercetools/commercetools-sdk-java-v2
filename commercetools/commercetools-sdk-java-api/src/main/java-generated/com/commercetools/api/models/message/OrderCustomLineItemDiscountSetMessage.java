@@ -67,7 +67,7 @@ public interface OrderCustomLineItemDiscountSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderCustomLineItemDiscountSetMessage>> T withOrderCustomLineItemDiscountSetMessage(Function<OrderCustomLineItemDiscountSetMessage, T> helper) {
+    default <T> T withOrderCustomLineItemDiscountSetMessage(Function<OrderCustomLineItemDiscountSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

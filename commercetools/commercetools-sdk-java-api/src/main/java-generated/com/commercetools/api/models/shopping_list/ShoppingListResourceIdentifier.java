@@ -37,7 +37,7 @@ public interface ShoppingListResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListResourceIdentifier>> T withShoppingListResourceIdentifier(Function<ShoppingListResourceIdentifier, T> helper) {
+    default <T> T withShoppingListResourceIdentifier(Function<ShoppingListResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

@@ -49,7 +49,7 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangePlainEnumValueLabelAction>> T withProductTypeChangePlainEnumValueLabelAction(Function<ProductTypeChangePlainEnumValueLabelAction, T> helper) {
+    default <T> T withProductTypeChangePlainEnumValueLabelAction(Function<ProductTypeChangePlainEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
 }

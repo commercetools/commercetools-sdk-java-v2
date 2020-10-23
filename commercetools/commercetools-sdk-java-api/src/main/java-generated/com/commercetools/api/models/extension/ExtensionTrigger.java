@@ -48,7 +48,7 @@ public interface ExtensionTrigger  {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionTrigger>> T withExtensionTrigger(Function<ExtensionTrigger, T> helper) {
+    default <T> T withExtensionTrigger(Function<ExtensionTrigger, T> helper) {
         return helper.apply(this);
     }
 }

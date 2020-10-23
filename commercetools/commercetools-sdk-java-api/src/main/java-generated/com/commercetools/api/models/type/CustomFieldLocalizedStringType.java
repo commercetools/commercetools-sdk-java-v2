@@ -34,7 +34,7 @@ public interface CustomFieldLocalizedStringType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldLocalizedStringType>> T withCustomFieldLocalizedStringType(Function<CustomFieldLocalizedStringType, T> helper) {
+    default <T> T withCustomFieldLocalizedStringType(Function<CustomFieldLocalizedStringType, T> helper) {
         return helper.apply(this);
     }
 }

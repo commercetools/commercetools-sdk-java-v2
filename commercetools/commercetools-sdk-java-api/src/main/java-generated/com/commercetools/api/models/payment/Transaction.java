@@ -90,7 +90,7 @@ public interface Transaction  {
         return instance;
     }
 
-    default <T extends Accessor<Transaction>> T withTransaction(Function<Transaction, T> helper) {
+    default <T> T withTransaction(Function<Transaction, T> helper) {
         return helper.apply(this);
     }
 }

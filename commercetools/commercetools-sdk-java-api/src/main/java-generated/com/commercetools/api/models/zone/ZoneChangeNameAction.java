@@ -40,7 +40,7 @@ public interface ZoneChangeNameAction extends ZoneUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ZoneChangeNameAction>> T withZoneChangeNameAction(Function<ZoneChangeNameAction, T> helper) {
+    default <T> T withZoneChangeNameAction(Function<ZoneChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

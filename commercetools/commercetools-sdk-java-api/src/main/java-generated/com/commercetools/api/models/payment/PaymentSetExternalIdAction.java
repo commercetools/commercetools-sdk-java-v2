@@ -40,7 +40,7 @@ public interface PaymentSetExternalIdAction extends PaymentUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<PaymentSetExternalIdAction>> T withPaymentSetExternalIdAction(Function<PaymentSetExternalIdAction, T> helper) {
+    default <T> T withPaymentSetExternalIdAction(Function<PaymentSetExternalIdAction, T> helper) {
         return helper.apply(this);
     }
 }

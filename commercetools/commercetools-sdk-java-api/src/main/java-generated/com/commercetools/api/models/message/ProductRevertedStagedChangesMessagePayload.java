@@ -40,7 +40,7 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
         return instance;
     }
 
-    default <T extends Accessor<ProductRevertedStagedChangesMessagePayload>> T withProductRevertedStagedChangesMessagePayload(Function<ProductRevertedStagedChangesMessagePayload, T> helper) {
+    default <T> T withProductRevertedStagedChangesMessagePayload(Function<ProductRevertedStagedChangesMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

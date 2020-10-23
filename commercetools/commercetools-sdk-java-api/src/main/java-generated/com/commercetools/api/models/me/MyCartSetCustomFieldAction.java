@@ -48,7 +48,7 @@ public interface MyCartSetCustomFieldAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartSetCustomFieldAction>> T withMyCartSetCustomFieldAction(Function<MyCartSetCustomFieldAction, T> helper) {
+    default <T> T withMyCartSetCustomFieldAction(Function<MyCartSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

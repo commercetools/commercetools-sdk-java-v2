@@ -44,7 +44,7 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ReviewSetCustomerAction>> T withReviewSetCustomerAction(Function<ReviewSetCustomerAction, T> helper) {
+    default <T> T withReviewSetCustomerAction(Function<ReviewSetCustomerAction, T> helper) {
         return helper.apply(this);
     }
 }

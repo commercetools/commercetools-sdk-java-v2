@@ -54,7 +54,7 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeEnumKeyAction>> T withProductTypeChangeEnumKeyAction(Function<ProductTypeChangeEnumKeyAction, T> helper) {
+    default <T> T withProductTypeChangeEnumKeyAction(Function<ProductTypeChangeEnumKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

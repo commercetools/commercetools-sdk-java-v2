@@ -69,7 +69,7 @@ public interface TypePagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<TypePagedQueryResponse>> T withTypePagedQueryResponse(Function<TypePagedQueryResponse, T> helper) {
+    default <T> T withTypePagedQueryResponse(Function<TypePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

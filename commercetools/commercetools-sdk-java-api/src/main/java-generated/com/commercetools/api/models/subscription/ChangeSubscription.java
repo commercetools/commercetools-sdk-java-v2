@@ -40,7 +40,7 @@ public interface ChangeSubscription  {
         return instance;
     }
 
-    default <T extends Accessor<ChangeSubscription>> T withChangeSubscription(Function<ChangeSubscription, T> helper) {
+    default <T> T withChangeSubscription(Function<ChangeSubscription, T> helper) {
         return helper.apply(this);
     }
 }

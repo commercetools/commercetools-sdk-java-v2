@@ -48,7 +48,7 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetReturnShipmentStateAction>> T withOrderSetReturnShipmentStateAction(Function<OrderSetReturnShipmentStateAction, T> helper) {
+    default <T> T withOrderSetReturnShipmentStateAction(Function<OrderSetReturnShipmentStateAction, T> helper) {
         return helper.apply(this);
     }
 }

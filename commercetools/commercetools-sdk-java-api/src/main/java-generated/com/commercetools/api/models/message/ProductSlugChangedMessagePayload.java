@@ -42,7 +42,7 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ProductSlugChangedMessagePayload>> T withProductSlugChangedMessagePayload(Function<ProductSlugChangedMessagePayload, T> helper) {
+    default <T> T withProductSlugChangedMessagePayload(Function<ProductSlugChangedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

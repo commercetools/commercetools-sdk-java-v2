@@ -56,7 +56,7 @@ public interface FieldType  {
 
 
 
-    default <T extends Accessor<FieldType>> T withFieldType(Function<FieldType, T> helper) {
+    default <T> T withFieldType(Function<FieldType, T> helper) {
         return helper.apply(this);
     }
 }

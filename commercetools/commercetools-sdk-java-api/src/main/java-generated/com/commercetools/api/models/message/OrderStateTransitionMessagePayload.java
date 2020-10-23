@@ -49,7 +49,7 @@ public interface OrderStateTransitionMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderStateTransitionMessagePayload>> T withOrderStateTransitionMessagePayload(Function<OrderStateTransitionMessagePayload, T> helper) {
+    default <T> T withOrderStateTransitionMessagePayload(Function<OrderStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

@@ -76,7 +76,7 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
         return instance;
     }
 
-    default <T extends Accessor<ProductPriceExternalDiscountSetMessagePayload>> T withProductPriceExternalDiscountSetMessagePayload(Function<ProductPriceExternalDiscountSetMessagePayload, T> helper) {
+    default <T> T withProductPriceExternalDiscountSetMessagePayload(Function<ProductPriceExternalDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

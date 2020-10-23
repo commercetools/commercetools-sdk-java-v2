@@ -42,7 +42,7 @@ public interface MyCartSetCountryAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartSetCountryAction>> T withMyCartSetCountryAction(Function<MyCartSetCountryAction, T> helper) {
+    default <T> T withMyCartSetCountryAction(Function<MyCartSetCountryAction, T> helper) {
         return helper.apply(this);
     }
 }

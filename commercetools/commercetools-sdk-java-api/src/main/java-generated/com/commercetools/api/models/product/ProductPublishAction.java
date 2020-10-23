@@ -41,7 +41,7 @@ public interface ProductPublishAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductPublishAction>> T withProductPublishAction(Function<ProductPublishAction, T> helper) {
+    default <T> T withProductPublishAction(Function<ProductPublishAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -57,7 +57,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
         return instance;
     }
 
-    default <T extends Accessor<ProductSetAttributeInAllVariantsAction>> T withProductSetAttributeInAllVariantsAction(Function<ProductSetAttributeInAllVariantsAction, T> helper) {
+    default <T> T withProductSetAttributeInAllVariantsAction(Function<ProductSetAttributeInAllVariantsAction, T> helper) {
         return helper.apply(this);
     }
 }

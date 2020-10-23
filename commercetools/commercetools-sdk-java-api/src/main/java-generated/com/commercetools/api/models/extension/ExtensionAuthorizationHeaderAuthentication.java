@@ -40,7 +40,7 @@ public interface ExtensionAuthorizationHeaderAuthentication extends ExtensionHtt
         return instance;
     }
 
-    default <T extends Accessor<ExtensionAuthorizationHeaderAuthentication>> T withExtensionAuthorizationHeaderAuthentication(Function<ExtensionAuthorizationHeaderAuthentication, T> helper) {
+    default <T> T withExtensionAuthorizationHeaderAuthentication(Function<ExtensionAuthorizationHeaderAuthentication, T> helper) {
         return helper.apply(this);
     }
 }

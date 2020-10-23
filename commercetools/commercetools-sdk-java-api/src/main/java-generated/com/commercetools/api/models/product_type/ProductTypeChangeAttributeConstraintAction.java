@@ -48,7 +48,7 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeAttributeConstraintAction>> T withProductTypeChangeAttributeConstraintAction(Function<ProductTypeChangeAttributeConstraintAction, T> helper) {
+    default <T> T withProductTypeChangeAttributeConstraintAction(Function<ProductTypeChangeAttributeConstraintAction, T> helper) {
         return helper.apply(this);
     }
 }

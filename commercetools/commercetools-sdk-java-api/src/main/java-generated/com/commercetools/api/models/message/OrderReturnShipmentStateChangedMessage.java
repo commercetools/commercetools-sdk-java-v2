@@ -58,7 +58,7 @@ public interface OrderReturnShipmentStateChangedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderReturnShipmentStateChangedMessage>> T withOrderReturnShipmentStateChangedMessage(Function<OrderReturnShipmentStateChangedMessage, T> helper) {
+    default <T> T withOrderReturnShipmentStateChangedMessage(Function<OrderReturnShipmentStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
 }

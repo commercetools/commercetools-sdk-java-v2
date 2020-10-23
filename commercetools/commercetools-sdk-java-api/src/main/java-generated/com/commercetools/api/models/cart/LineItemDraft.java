@@ -147,7 +147,7 @@ public interface LineItemDraft  {
         return instance;
     }
 
-    default <T extends Accessor<LineItemDraft>> T withLineItemDraft(Function<LineItemDraft, T> helper) {
+    default <T> T withLineItemDraft(Function<LineItemDraft, T> helper) {
         return helper.apply(this);
     }
 }

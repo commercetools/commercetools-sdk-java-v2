@@ -43,7 +43,7 @@ public interface CustomObjectReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<CustomObjectReference>> T withCustomObjectReference(Function<CustomObjectReference, T> helper) {
+    default <T> T withCustomObjectReference(Function<CustomObjectReference, T> helper) {
         return helper.apply(this);
     }
 }

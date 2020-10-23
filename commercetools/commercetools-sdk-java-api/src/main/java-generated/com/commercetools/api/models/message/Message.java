@@ -240,7 +240,7 @@ public interface Message extends BaseResource {
 
 
 
-    default <T extends Accessor<Message>> T withMessage(Function<Message, T> helper) {
+    default <T> T withMessage(Function<Message, T> helper) {
         return helper.apply(this);
     }
 }

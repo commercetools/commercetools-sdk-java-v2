@@ -52,7 +52,7 @@ public interface ProductDiscountUpdateAction  {
 
 
 
-    default <T extends Accessor<ProductDiscountUpdateAction>> T withProductDiscountUpdateAction(Function<ProductDiscountUpdateAction, T> helper) {
+    default <T> T withProductDiscountUpdateAction(Function<ProductDiscountUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

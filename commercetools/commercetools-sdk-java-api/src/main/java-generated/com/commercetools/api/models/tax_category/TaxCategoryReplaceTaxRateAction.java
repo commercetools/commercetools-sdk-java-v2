@@ -49,7 +49,7 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryReplaceTaxRateAction>> T withTaxCategoryReplaceTaxRateAction(Function<TaxCategoryReplaceTaxRateAction, T> helper) {
+    default <T> T withTaxCategoryReplaceTaxRateAction(Function<TaxCategoryReplaceTaxRateAction, T> helper) {
         return helper.apply(this);
     }
 }

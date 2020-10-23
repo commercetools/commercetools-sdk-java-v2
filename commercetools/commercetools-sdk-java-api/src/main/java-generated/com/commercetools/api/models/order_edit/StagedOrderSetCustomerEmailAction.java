@@ -40,7 +40,7 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetCustomerEmailAction>> T withStagedOrderSetCustomerEmailAction(Function<StagedOrderSetCustomerEmailAction, T> helper) {
+    default <T> T withStagedOrderSetCustomerEmailAction(Function<StagedOrderSetCustomerEmailAction, T> helper) {
         return helper.apply(this);
     }
 }

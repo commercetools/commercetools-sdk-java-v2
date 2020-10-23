@@ -58,7 +58,7 @@ public interface OrderEditApplied extends OrderEditResult {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditApplied>> T withOrderEditApplied(Function<OrderEditApplied, T> helper) {
+    default <T> T withOrderEditApplied(Function<OrderEditApplied, T> helper) {
         return helper.apply(this);
     }
 }

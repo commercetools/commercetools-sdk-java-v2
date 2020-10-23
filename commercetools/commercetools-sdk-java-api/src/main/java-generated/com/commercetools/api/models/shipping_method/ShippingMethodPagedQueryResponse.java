@@ -69,7 +69,7 @@ public interface ShippingMethodPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodPagedQueryResponse>> T withShippingMethodPagedQueryResponse(Function<ShippingMethodPagedQueryResponse, T> helper) {
+    default <T> T withShippingMethodPagedQueryResponse(Function<ShippingMethodPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

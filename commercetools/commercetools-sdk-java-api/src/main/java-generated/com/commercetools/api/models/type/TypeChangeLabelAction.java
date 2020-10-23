@@ -49,7 +49,7 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeChangeLabelAction>> T withTypeChangeLabelAction(Function<TypeChangeLabelAction, T> helper) {
+    default <T> T withTypeChangeLabelAction(Function<TypeChangeLabelAction, T> helper) {
         return helper.apply(this);
     }
 }

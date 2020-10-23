@@ -38,7 +38,7 @@ public interface CreatedBy extends ClientLogging {
         return instance;
     }
 
-    default <T extends Accessor<CreatedBy>> T withCreatedBy(Function<CreatedBy, T> helper) {
+    default <T> T withCreatedBy(Function<CreatedBy, T> helper) {
         return helper.apply(this);
     }
 }

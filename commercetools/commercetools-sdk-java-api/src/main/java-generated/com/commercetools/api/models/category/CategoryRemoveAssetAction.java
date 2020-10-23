@@ -47,7 +47,7 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategoryRemoveAssetAction>> T withCategoryRemoveAssetAction(Function<CategoryRemoveAssetAction, T> helper) {
+    default <T> T withCategoryRemoveAssetAction(Function<CategoryRemoveAssetAction, T> helper) {
         return helper.apply(this);
     }
 }

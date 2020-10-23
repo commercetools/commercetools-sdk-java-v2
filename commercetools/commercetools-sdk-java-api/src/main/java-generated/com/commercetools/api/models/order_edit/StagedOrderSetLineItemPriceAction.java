@@ -48,7 +48,7 @@ public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetLineItemPriceAction>> T withStagedOrderSetLineItemPriceAction(Function<StagedOrderSetLineItemPriceAction, T> helper) {
+    default <T> T withStagedOrderSetLineItemPriceAction(Function<StagedOrderSetLineItemPriceAction, T> helper) {
         return helper.apply(this);
     }
 }

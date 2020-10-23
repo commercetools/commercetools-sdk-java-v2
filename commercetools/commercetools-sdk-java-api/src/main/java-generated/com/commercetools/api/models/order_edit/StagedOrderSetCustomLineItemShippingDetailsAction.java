@@ -48,7 +48,7 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetCustomLineItemShippingDetailsAction>> T withStagedOrderSetCustomLineItemShippingDetailsAction(Function<StagedOrderSetCustomLineItemShippingDetailsAction, T> helper) {
+    default <T> T withStagedOrderSetCustomLineItemShippingDetailsAction(Function<StagedOrderSetCustomLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
 }

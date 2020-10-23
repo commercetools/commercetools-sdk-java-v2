@@ -49,7 +49,7 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetParcelItemsAction>> T withOrderSetParcelItemsAction(Function<OrderSetParcelItemsAction, T> helper) {
+    default <T> T withOrderSetParcelItemsAction(Function<OrderSetParcelItemsAction, T> helper) {
         return helper.apply(this);
     }
 }

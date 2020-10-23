@@ -70,7 +70,7 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductMoveImageToPositionAction>> T withProductMoveImageToPositionAction(Function<ProductMoveImageToPositionAction, T> helper) {
+    default <T> T withProductMoveImageToPositionAction(Function<ProductMoveImageToPositionAction, T> helper) {
         return helper.apply(this);
     }
 }

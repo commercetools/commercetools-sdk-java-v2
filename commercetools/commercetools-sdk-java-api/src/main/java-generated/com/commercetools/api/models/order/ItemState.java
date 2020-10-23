@@ -48,7 +48,7 @@ public interface ItemState  {
         return instance;
     }
 
-    default <T extends Accessor<ItemState>> T withItemState(Function<ItemState, T> helper) {
+    default <T> T withItemState(Function<ItemState, T> helper) {
         return helper.apply(this);
     }
 }

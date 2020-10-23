@@ -35,7 +35,7 @@ public interface InvalidJsonInputError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidJsonInputError>> T withInvalidJsonInputError(Function<InvalidJsonInputError, T> helper) {
+    default <T> T withInvalidJsonInputError(Function<InvalidJsonInputError, T> helper) {
         return helper.apply(this);
     }
 }

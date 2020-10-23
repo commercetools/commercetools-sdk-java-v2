@@ -52,7 +52,7 @@ public interface DeliveryRemovedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<DeliveryRemovedMessage>> T withDeliveryRemovedMessage(Function<DeliveryRemovedMessage, T> helper) {
+    default <T> T withDeliveryRemovedMessage(Function<DeliveryRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 }

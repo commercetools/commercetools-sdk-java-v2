@@ -89,7 +89,7 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetAssetCustomTypeAction>> T withProductSetAssetCustomTypeAction(Function<ProductSetAssetCustomTypeAction, T> helper) {
+    default <T> T withProductSetAssetCustomTypeAction(Function<ProductSetAssetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

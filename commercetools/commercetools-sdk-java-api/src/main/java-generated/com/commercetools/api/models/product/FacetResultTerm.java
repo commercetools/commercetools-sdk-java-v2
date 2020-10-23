@@ -54,7 +54,7 @@ public interface FacetResultTerm  {
         return instance;
     }
 
-    default <T extends Accessor<FacetResultTerm>> T withFacetResultTerm(Function<FacetResultTerm, T> helper) {
+    default <T> T withFacetResultTerm(Function<FacetResultTerm, T> helper) {
         return helper.apply(this);
     }
 }

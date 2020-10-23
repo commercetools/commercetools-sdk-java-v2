@@ -49,7 +49,7 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangePlainEnumValueOrderAction>> T withProductTypeChangePlainEnumValueOrderAction(Function<ProductTypeChangePlainEnumValueOrderAction, T> helper) {
+    default <T> T withProductTypeChangePlainEnumValueOrderAction(Function<ProductTypeChangePlainEnumValueOrderAction, T> helper) {
         return helper.apply(this);
     }
 }

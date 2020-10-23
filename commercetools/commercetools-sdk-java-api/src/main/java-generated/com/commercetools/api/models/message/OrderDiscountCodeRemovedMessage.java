@@ -52,7 +52,7 @@ public interface OrderDiscountCodeRemovedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderDiscountCodeRemovedMessage>> T withOrderDiscountCodeRemovedMessage(Function<OrderDiscountCodeRemovedMessage, T> helper) {
+    default <T> T withOrderDiscountCodeRemovedMessage(Function<OrderDiscountCodeRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 }

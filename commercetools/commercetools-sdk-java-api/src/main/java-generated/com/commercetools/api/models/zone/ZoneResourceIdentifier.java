@@ -37,7 +37,7 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<ZoneResourceIdentifier>> T withZoneResourceIdentifier(Function<ZoneResourceIdentifier, T> helper) {
+    default <T> T withZoneResourceIdentifier(Function<ZoneResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

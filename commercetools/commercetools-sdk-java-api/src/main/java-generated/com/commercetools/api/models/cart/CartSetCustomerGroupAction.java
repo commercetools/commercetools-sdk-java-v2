@@ -41,7 +41,7 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetCustomerGroupAction>> T withCartSetCustomerGroupAction(Function<CartSetCustomerGroupAction, T> helper) {
+    default <T> T withCartSetCustomerGroupAction(Function<CartSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
 }

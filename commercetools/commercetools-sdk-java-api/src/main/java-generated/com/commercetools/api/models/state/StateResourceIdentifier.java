@@ -37,7 +37,7 @@ public interface StateResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<StateResourceIdentifier>> T withStateResourceIdentifier(Function<StateResourceIdentifier, T> helper) {
+    default <T> T withStateResourceIdentifier(Function<StateResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

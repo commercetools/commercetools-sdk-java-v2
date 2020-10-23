@@ -34,7 +34,7 @@ public interface ProductUnpublishedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ProductUnpublishedMessagePayload>> T withProductUnpublishedMessagePayload(Function<ProductUnpublishedMessagePayload, T> helper) {
+    default <T> T withProductUnpublishedMessagePayload(Function<ProductUnpublishedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

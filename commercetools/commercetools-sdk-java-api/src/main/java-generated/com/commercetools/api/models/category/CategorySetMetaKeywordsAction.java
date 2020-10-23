@@ -41,7 +41,7 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetMetaKeywordsAction>> T withCategorySetMetaKeywordsAction(Function<CategorySetMetaKeywordsAction, T> helper) {
+    default <T> T withCategorySetMetaKeywordsAction(Function<CategorySetMetaKeywordsAction, T> helper) {
         return helper.apply(this);
     }
 }

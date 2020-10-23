@@ -62,7 +62,7 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ReviewRatingSetMessagePayload>> T withReviewRatingSetMessagePayload(Function<ReviewRatingSetMessagePayload, T> helper) {
+    default <T> T withReviewRatingSetMessagePayload(Function<ReviewRatingSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

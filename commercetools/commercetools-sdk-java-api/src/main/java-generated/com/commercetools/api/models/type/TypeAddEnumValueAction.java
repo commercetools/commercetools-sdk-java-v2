@@ -49,7 +49,7 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeAddEnumValueAction>> T withTypeAddEnumValueAction(Function<TypeAddEnumValueAction, T> helper) {
+    default <T> T withTypeAddEnumValueAction(Function<TypeAddEnumValueAction, T> helper) {
         return helper.apply(this);
     }
 }

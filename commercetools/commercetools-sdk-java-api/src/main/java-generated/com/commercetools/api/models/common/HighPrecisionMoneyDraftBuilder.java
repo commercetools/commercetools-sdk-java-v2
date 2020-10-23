@@ -21,6 +21,9 @@ public final class HighPrecisionMoneyDraftBuilder {
     
     private String currencyCode;
     
+    @Nullable
+    private Integer fractionDigits;
+    
     
     private Long preciseAmount;
 
@@ -31,6 +34,11 @@ public final class HighPrecisionMoneyDraftBuilder {
     
     public HighPrecisionMoneyDraftBuilder currencyCode( final String currencyCode) {
         this.currencyCode = currencyCode;
+        return this;
+    }
+    
+    public HighPrecisionMoneyDraftBuilder fractionDigits(@Nullable final Integer fractionDigits) {
+        this.fractionDigits = fractionDigits;
         return this;
     }
     
@@ -49,13 +57,18 @@ public final class HighPrecisionMoneyDraftBuilder {
         return this.currencyCode;
     }
     
+    @Nullable
+    public Integer getFractionDigits(){
+        return this.fractionDigits;
+    }
+    
     
     public Long getPreciseAmount(){
         return this.preciseAmount;
     }
 
     public HighPrecisionMoneyDraft build() {
-        return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, preciseAmount);
+        return new HighPrecisionMoneyDraftImpl(centAmount, currencyCode, fractionDigits, preciseAmount);
     }
 
     public static HighPrecisionMoneyDraftBuilder of() {
@@ -66,6 +79,7 @@ public final class HighPrecisionMoneyDraftBuilder {
         HighPrecisionMoneyDraftBuilder builder = new HighPrecisionMoneyDraftBuilder();
         builder.centAmount = template.getCentAmount();
         builder.currencyCode = template.getCurrencyCode();
+        builder.fractionDigits = template.getFractionDigits();
         builder.preciseAmount = template.getPreciseAmount();
         return builder;
     }

@@ -69,7 +69,7 @@ public interface MessagePagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<MessagePagedQueryResponse>> T withMessagePagedQueryResponse(Function<MessagePagedQueryResponse, T> helper) {
+    default <T> T withMessagePagedQueryResponse(Function<MessagePagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

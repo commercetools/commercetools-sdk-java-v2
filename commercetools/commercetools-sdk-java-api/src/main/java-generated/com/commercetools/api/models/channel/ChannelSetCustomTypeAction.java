@@ -49,7 +49,7 @@ public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ChannelSetCustomTypeAction>> T withChannelSetCustomTypeAction(Function<ChannelSetCustomTypeAction, T> helper) {
+    default <T> T withChannelSetCustomTypeAction(Function<ChannelSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

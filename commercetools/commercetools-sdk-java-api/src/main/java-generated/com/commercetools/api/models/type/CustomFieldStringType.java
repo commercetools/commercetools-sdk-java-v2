@@ -34,7 +34,7 @@ public interface CustomFieldStringType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldStringType>> T withCustomFieldStringType(Function<CustomFieldStringType, T> helper) {
+    default <T> T withCustomFieldStringType(Function<CustomFieldStringType, T> helper) {
         return helper.apply(this);
     }
 }

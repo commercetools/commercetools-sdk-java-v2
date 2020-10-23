@@ -35,7 +35,7 @@ public interface InvalidOperationError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidOperationError>> T withInvalidOperationError(Function<InvalidOperationError, T> helper) {
+    default <T> T withInvalidOperationError(Function<InvalidOperationError, T> helper) {
         return helper.apply(this);
     }
 }

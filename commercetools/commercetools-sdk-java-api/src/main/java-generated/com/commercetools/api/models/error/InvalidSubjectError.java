@@ -35,7 +35,7 @@ public interface InvalidSubjectError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidSubjectError>> T withInvalidSubjectError(Function<InvalidSubjectError, T> helper) {
+    default <T> T withInvalidSubjectError(Function<InvalidSubjectError, T> helper) {
         return helper.apply(this);
     }
 }

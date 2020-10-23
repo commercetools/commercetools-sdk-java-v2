@@ -58,7 +58,7 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetShippingAddressAndShippingMethodAction>> T withStagedOrderSetShippingAddressAndShippingMethodAction(Function<StagedOrderSetShippingAddressAndShippingMethodAction, T> helper) {
+    default <T> T withStagedOrderSetShippingAddressAndShippingMethodAction(Function<StagedOrderSetShippingAddressAndShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 }

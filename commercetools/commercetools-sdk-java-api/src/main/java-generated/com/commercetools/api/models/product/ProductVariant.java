@@ -122,7 +122,7 @@ public interface ProductVariant  {
         return instance;
     }
 
-    default <T extends Accessor<ProductVariant>> T withProductVariant(Function<ProductVariant, T> helper) {
+    default <T> T withProductVariant(Function<ProductVariant, T> helper) {
         return helper.apply(this);
     }
 }

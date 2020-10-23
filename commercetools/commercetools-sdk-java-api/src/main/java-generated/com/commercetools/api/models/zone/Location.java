@@ -49,7 +49,7 @@ public interface Location  {
         return instance;
     }
 
-    default <T extends Accessor<Location>> T withLocation(Function<Location, T> helper) {
+    default <T> T withLocation(Function<Location, T> helper) {
         return helper.apply(this);
     }
 }

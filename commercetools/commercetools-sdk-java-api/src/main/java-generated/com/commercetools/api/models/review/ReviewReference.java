@@ -43,7 +43,7 @@ public interface ReviewReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<ReviewReference>> T withReviewReference(Function<ReviewReference, T> helper) {
+    default <T> T withReviewReference(Function<ReviewReference, T> helper) {
         return helper.apply(this);
     }
 }

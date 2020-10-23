@@ -50,7 +50,7 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<PaymentAddInterfaceInteractionAction>> T withPaymentAddInterfaceInteractionAction(Function<PaymentAddInterfaceInteractionAction, T> helper) {
+    default <T> T withPaymentAddInterfaceInteractionAction(Function<PaymentAddInterfaceInteractionAction, T> helper) {
         return helper.apply(this);
     }
 }

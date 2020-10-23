@@ -401,7 +401,7 @@ public interface Order extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Order>> T withOrder(Function<Order, T> helper) {
+    default <T> T withOrder(Function<Order, T> helper) {
         return helper.apply(this);
     }
 }

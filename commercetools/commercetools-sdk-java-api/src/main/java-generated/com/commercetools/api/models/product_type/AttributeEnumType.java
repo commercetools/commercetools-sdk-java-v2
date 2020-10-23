@@ -42,7 +42,7 @@ public interface AttributeEnumType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeEnumType>> T withAttributeEnumType(Function<AttributeEnumType, T> helper) {
+    default <T> T withAttributeEnumType(Function<AttributeEnumType, T> helper) {
         return helper.apply(this);
     }
 }

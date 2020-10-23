@@ -40,7 +40,7 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<CustomerCompanyNameSetMessagePayload>> T withCustomerCompanyNameSetMessagePayload(Function<CustomerCompanyNameSetMessagePayload, T> helper) {
+    default <T> T withCustomerCompanyNameSetMessagePayload(Function<CustomerCompanyNameSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

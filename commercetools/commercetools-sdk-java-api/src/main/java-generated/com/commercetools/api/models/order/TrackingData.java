@@ -74,7 +74,7 @@ public interface TrackingData  {
         return instance;
     }
 
-    default <T extends Accessor<TrackingData>> T withTrackingData(Function<TrackingData, T> helper) {
+    default <T> T withTrackingData(Function<TrackingData, T> helper) {
         return helper.apply(this);
     }
 }

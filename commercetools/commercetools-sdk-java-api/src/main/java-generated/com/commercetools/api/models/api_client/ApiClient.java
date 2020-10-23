@@ -96,7 +96,7 @@ public interface ApiClient  {
         return instance;
     }
 
-    default <T extends Accessor<ApiClient>> T withApiClient(Function<ApiClient, T> helper) {
+    default <T> T withApiClient(Function<ApiClient, T> helper) {
         return helper.apply(this);
     }
 }

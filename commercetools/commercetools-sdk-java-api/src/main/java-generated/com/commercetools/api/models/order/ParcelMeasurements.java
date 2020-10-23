@@ -61,7 +61,7 @@ public interface ParcelMeasurements  {
         return instance;
     }
 
-    default <T extends Accessor<ParcelMeasurements>> T withParcelMeasurements(Function<ParcelMeasurements, T> helper) {
+    default <T> T withParcelMeasurements(Function<ParcelMeasurements, T> helper) {
         return helper.apply(this);
     }
 }

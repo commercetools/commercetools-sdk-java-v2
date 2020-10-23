@@ -131,7 +131,7 @@ public interface Type extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Type>> T withType(Function<Type, T> helper) {
+    default <T> T withType(Function<Type, T> helper) {
         return helper.apply(this);
     }
 }

@@ -48,7 +48,7 @@ public interface OrderSetCustomLineItemShippingDetailsAction extends OrderUpdate
         return instance;
     }
 
-    default <T extends Accessor<OrderSetCustomLineItemShippingDetailsAction>> T withOrderSetCustomLineItemShippingDetailsAction(Function<OrderSetCustomLineItemShippingDetailsAction, T> helper) {
+    default <T> T withOrderSetCustomLineItemShippingDetailsAction(Function<OrderSetCustomLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);
     }
 }

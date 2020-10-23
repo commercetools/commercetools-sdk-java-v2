@@ -36,7 +36,7 @@ public interface ShippingRateInputDraft  {
 
 
 
-    default <T extends Accessor<ShippingRateInputDraft>> T withShippingRateInputDraft(Function<ShippingRateInputDraft, T> helper) {
+    default <T> T withShippingRateInputDraft(Function<ShippingRateInputDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -49,7 +49,7 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderChangeCustomLineItemMoneyAction>> T withStagedOrderChangeCustomLineItemMoneyAction(Function<StagedOrderChangeCustomLineItemMoneyAction, T> helper) {
+    default <T> T withStagedOrderChangeCustomLineItemMoneyAction(Function<StagedOrderChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
     }
 }

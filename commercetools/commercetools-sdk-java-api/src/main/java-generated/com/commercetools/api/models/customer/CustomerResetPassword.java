@@ -54,7 +54,7 @@ public interface CustomerResetPassword  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerResetPassword>> T withCustomerResetPassword(Function<CustomerResetPassword, T> helper) {
+    default <T> T withCustomerResetPassword(Function<CustomerResetPassword, T> helper) {
         return helper.apply(this);
     }
 }

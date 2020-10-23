@@ -37,7 +37,7 @@ public interface ProductDiscountResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountResourceIdentifier>> T withProductDiscountResourceIdentifier(Function<ProductDiscountResourceIdentifier, T> helper) {
+    default <T> T withProductDiscountResourceIdentifier(Function<ProductDiscountResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

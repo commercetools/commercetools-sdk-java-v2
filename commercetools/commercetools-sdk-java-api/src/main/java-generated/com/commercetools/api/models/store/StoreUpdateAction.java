@@ -48,7 +48,7 @@ public interface StoreUpdateAction  {
 
 
 
-    default <T extends Accessor<StoreUpdateAction>> T withStoreUpdateAction(Function<StoreUpdateAction, T> helper) {
+    default <T> T withStoreUpdateAction(Function<StoreUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

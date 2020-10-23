@@ -52,7 +52,7 @@ public interface CustomerGroupSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupSetMessage>> T withCustomerGroupSetMessage(Function<CustomerGroupSetMessage, T> helper) {
+    default <T> T withCustomerGroupSetMessage(Function<CustomerGroupSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

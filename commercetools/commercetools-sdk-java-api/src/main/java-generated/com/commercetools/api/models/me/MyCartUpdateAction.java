@@ -84,7 +84,7 @@ public interface MyCartUpdateAction  {
 
 
 
-    default <T extends Accessor<MyCartUpdateAction>> T withMyCartUpdateAction(Function<MyCartUpdateAction, T> helper) {
+    default <T> T withMyCartUpdateAction(Function<MyCartUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

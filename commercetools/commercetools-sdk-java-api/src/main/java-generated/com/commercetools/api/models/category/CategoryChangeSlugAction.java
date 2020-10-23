@@ -45,7 +45,7 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategoryChangeSlugAction>> T withCategoryChangeSlugAction(Function<CategoryChangeSlugAction, T> helper) {
+    default <T> T withCategoryChangeSlugAction(Function<CategoryChangeSlugAction, T> helper) {
         return helper.apply(this);
     }
 }

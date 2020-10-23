@@ -40,7 +40,7 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeRemoveFieldDefinitionAction>> T withTypeRemoveFieldDefinitionAction(Function<TypeRemoveFieldDefinitionAction, T> helper) {
+    default <T> T withTypeRemoveFieldDefinitionAction(Function<TypeRemoveFieldDefinitionAction, T> helper) {
         return helper.apply(this);
     }
 }

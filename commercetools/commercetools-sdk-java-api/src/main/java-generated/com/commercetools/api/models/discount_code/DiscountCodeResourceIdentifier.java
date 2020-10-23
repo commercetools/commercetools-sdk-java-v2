@@ -37,7 +37,7 @@ public interface DiscountCodeResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeResourceIdentifier>> T withDiscountCodeResourceIdentifier(Function<DiscountCodeResourceIdentifier, T> helper) {
+    default <T> T withDiscountCodeResourceIdentifier(Function<DiscountCodeResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

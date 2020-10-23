@@ -37,7 +37,7 @@ public interface CartResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<CartResourceIdentifier>> T withCartResourceIdentifier(Function<CartResourceIdentifier, T> helper) {
+    default <T> T withCartResourceIdentifier(Function<CartResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

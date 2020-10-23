@@ -36,7 +36,7 @@ public interface DeliveryFormat  {
 
 
 
-    default <T extends Accessor<DeliveryFormat>> T withDeliveryFormat(Function<DeliveryFormat, T> helper) {
+    default <T> T withDeliveryFormat(Function<DeliveryFormat, T> helper) {
         return helper.apply(this);
     }
 }

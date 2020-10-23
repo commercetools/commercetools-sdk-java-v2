@@ -48,7 +48,7 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetCustomLineItemTaxRateAction>> T withStagedOrderSetCustomLineItemTaxRateAction(Function<StagedOrderSetCustomLineItemTaxRateAction, T> helper) {
+    default <T> T withStagedOrderSetCustomLineItemTaxRateAction(Function<StagedOrderSetCustomLineItemTaxRateAction, T> helper) {
         return helper.apply(this);
     }
 }

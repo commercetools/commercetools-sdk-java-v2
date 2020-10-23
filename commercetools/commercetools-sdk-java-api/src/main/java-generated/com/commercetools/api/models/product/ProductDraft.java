@@ -174,7 +174,7 @@ public interface ProductDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ProductDraft>> T withProductDraft(Function<ProductDraft, T> helper) {
+    default <T> T withProductDraft(Function<ProductDraft, T> helper) {
         return helper.apply(this);
     }
 }

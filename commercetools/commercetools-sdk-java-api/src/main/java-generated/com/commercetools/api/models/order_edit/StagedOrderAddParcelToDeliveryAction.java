@@ -64,7 +64,7 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderAddParcelToDeliveryAction>> T withStagedOrderAddParcelToDeliveryAction(Function<StagedOrderAddParcelToDeliveryAction, T> helper) {
+    default <T> T withStagedOrderAddParcelToDeliveryAction(Function<StagedOrderAddParcelToDeliveryAction, T> helper) {
         return helper.apply(this);
     }
 }

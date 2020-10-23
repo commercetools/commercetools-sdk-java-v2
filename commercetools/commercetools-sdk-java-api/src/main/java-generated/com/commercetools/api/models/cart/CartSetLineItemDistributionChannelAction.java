@@ -48,7 +48,7 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<CartSetLineItemDistributionChannelAction>> T withCartSetLineItemDistributionChannelAction(Function<CartSetLineItemDistributionChannelAction, T> helper) {
+    default <T> T withCartSetLineItemDistributionChannelAction(Function<CartSetLineItemDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
 }

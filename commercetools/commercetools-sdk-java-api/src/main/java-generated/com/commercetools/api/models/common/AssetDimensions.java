@@ -47,7 +47,7 @@ public interface AssetDimensions  {
         return instance;
     }
 
-    default <T extends Accessor<AssetDimensions>> T withAssetDimensions(Function<AssetDimensions, T> helper) {
+    default <T> T withAssetDimensions(Function<AssetDimensions, T> helper) {
         return helper.apply(this);
     }
 }

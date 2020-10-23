@@ -52,7 +52,7 @@ public interface ZoneRate  {
         return instance;
     }
 
-    default <T extends Accessor<ZoneRate>> T withZoneRate(Function<ZoneRate, T> helper) {
+    default <T> T withZoneRate(Function<ZoneRate, T> helper) {
         return helper.apply(this);
     }
 }

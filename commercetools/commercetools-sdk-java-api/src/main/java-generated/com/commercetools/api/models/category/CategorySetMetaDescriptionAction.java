@@ -41,7 +41,7 @@ public interface CategorySetMetaDescriptionAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetMetaDescriptionAction>> T withCategorySetMetaDescriptionAction(Function<CategorySetMetaDescriptionAction, T> helper) {
+    default <T> T withCategorySetMetaDescriptionAction(Function<CategorySetMetaDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

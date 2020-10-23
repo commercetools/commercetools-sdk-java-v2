@@ -57,7 +57,7 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderAddShoppingListAction>> T withStagedOrderAddShoppingListAction(Function<StagedOrderAddShoppingListAction, T> helper) {
+    default <T> T withStagedOrderAddShoppingListAction(Function<StagedOrderAddShoppingListAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -61,7 +61,7 @@ public interface SqsDestination extends Destination {
         return instance;
     }
 
-    default <T extends Accessor<SqsDestination>> T withSqsDestination(Function<SqsDestination, T> helper) {
+    default <T> T withSqsDestination(Function<SqsDestination, T> helper) {
         return helper.apply(this);
     }
 }

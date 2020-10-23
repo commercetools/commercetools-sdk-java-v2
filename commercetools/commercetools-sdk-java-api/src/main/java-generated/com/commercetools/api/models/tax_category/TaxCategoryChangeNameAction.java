@@ -40,7 +40,7 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryChangeNameAction>> T withTaxCategoryChangeNameAction(Function<TaxCategoryChangeNameAction, T> helper) {
+    default <T> T withTaxCategoryChangeNameAction(Function<TaxCategoryChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

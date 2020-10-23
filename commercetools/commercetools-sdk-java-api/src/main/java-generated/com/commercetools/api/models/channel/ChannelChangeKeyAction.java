@@ -40,7 +40,7 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ChannelChangeKeyAction>> T withChannelChangeKeyAction(Function<ChannelChangeKeyAction, T> helper) {
+    default <T> T withChannelChangeKeyAction(Function<ChannelChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

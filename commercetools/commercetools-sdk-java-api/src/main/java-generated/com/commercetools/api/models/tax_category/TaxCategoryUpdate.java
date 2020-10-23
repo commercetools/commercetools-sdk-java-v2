@@ -48,7 +48,7 @@ public interface TaxCategoryUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryUpdate>> T withTaxCategoryUpdate(Function<TaxCategoryUpdate, T> helper) {
+    default <T> T withTaxCategoryUpdate(Function<TaxCategoryUpdate, T> helper) {
         return helper.apply(this);
     }
 }

@@ -187,7 +187,7 @@ public interface Review extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Review>> T withReview(Function<Review, T> helper) {
+    default <T> T withReview(Function<Review, T> helper) {
         return helper.apply(this);
     }
 }

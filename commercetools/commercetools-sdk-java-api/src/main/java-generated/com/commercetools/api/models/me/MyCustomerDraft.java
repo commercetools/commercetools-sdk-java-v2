@@ -151,7 +151,7 @@ public interface MyCustomerDraft  {
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerDraft>> T withMyCustomerDraft(Function<MyCustomerDraft, T> helper) {
+    default <T> T withMyCustomerDraft(Function<MyCustomerDraft, T> helper) {
         return helper.apply(this);
     }
 }

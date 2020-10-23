@@ -107,7 +107,7 @@ public interface CustomLineItemDraft  {
         return instance;
     }
 
-    default <T extends Accessor<CustomLineItemDraft>> T withCustomLineItemDraft(Function<CustomLineItemDraft, T> helper) {
+    default <T> T withCustomLineItemDraft(Function<CustomLineItemDraft, T> helper) {
         return helper.apply(this);
     }
 }

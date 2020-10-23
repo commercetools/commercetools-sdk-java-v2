@@ -56,7 +56,7 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerChangeAddressAction>> T withCustomerChangeAddressAction(Function<CustomerChangeAddressAction, T> helper) {
+    default <T> T withCustomerChangeAddressAction(Function<CustomerChangeAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

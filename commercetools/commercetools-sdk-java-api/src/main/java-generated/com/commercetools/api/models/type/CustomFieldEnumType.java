@@ -42,7 +42,7 @@ public interface CustomFieldEnumType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldEnumType>> T withCustomFieldEnumType(Function<CustomFieldEnumType, T> helper) {
+    default <T> T withCustomFieldEnumType(Function<CustomFieldEnumType, T> helper) {
         return helper.apply(this);
     }
 }

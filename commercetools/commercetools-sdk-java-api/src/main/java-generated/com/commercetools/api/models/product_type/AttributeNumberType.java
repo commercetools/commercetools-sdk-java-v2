@@ -34,7 +34,7 @@ public interface AttributeNumberType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeNumberType>> T withAttributeNumberType(Function<AttributeNumberType, T> helper) {
+    default <T> T withAttributeNumberType(Function<AttributeNumberType, T> helper) {
         return helper.apply(this);
     }
 }

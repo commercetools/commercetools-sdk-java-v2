@@ -42,7 +42,7 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderRemoveDiscountCodeAction>> T withStagedOrderRemoveDiscountCodeAction(Function<StagedOrderRemoveDiscountCodeAction, T> helper) {
+    default <T> T withStagedOrderRemoveDiscountCodeAction(Function<StagedOrderRemoveDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
 }

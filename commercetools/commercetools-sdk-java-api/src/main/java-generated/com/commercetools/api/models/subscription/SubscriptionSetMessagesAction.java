@@ -41,7 +41,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<SubscriptionSetMessagesAction>> T withSubscriptionSetMessagesAction(Function<SubscriptionSetMessagesAction, T> helper) {
+    default <T> T withSubscriptionSetMessagesAction(Function<SubscriptionSetMessagesAction, T> helper) {
         return helper.apply(this);
     }
 }

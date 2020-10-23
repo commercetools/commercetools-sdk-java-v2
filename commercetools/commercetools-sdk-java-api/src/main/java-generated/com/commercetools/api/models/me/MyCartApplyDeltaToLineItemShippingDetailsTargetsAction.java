@@ -49,7 +49,7 @@ public interface MyCartApplyDeltaToLineItemShippingDetailsTargetsAction extends 
         return instance;
     }
 
-    default <T extends Accessor<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction>> T withMyCartApplyDeltaToLineItemShippingDetailsTargetsAction(Function<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction, T> helper) {
+    default <T> T withMyCartApplyDeltaToLineItemShippingDetailsTargetsAction(Function<MyCartApplyDeltaToLineItemShippingDetailsTargetsAction, T> helper) {
         return helper.apply(this);
     }
 }

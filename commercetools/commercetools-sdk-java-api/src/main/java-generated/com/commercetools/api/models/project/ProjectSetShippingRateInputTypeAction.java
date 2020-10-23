@@ -43,7 +43,7 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<ProjectSetShippingRateInputTypeAction>> T withProjectSetShippingRateInputTypeAction(Function<ProjectSetShippingRateInputTypeAction, T> helper) {
+    default <T> T withProjectSetShippingRateInputTypeAction(Function<ProjectSetShippingRateInputTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

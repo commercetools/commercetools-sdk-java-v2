@@ -48,7 +48,7 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetLineItemDistributionChannelAction>> T withStagedOrderSetLineItemDistributionChannelAction(Function<StagedOrderSetLineItemDistributionChannelAction, T> helper) {
+    default <T> T withStagedOrderSetLineItemDistributionChannelAction(Function<StagedOrderSetLineItemDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
 }

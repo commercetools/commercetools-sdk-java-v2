@@ -63,7 +63,7 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductAddExternalImageAction>> T withProductAddExternalImageAction(Function<ProductAddExternalImageAction, T> helper) {
+    default <T> T withProductAddExternalImageAction(Function<ProductAddExternalImageAction, T> helper) {
         return helper.apply(this);
     }
 }

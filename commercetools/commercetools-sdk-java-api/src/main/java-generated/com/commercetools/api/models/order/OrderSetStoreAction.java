@@ -41,7 +41,7 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetStoreAction>> T withOrderSetStoreAction(Function<OrderSetStoreAction, T> helper) {
+    default <T> T withOrderSetStoreAction(Function<OrderSetStoreAction, T> helper) {
         return helper.apply(this);
     }
 }

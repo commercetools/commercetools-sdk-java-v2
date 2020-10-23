@@ -40,7 +40,7 @@ public interface MyCustomerChangeEmailAction extends MyCustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerChangeEmailAction>> T withMyCustomerChangeEmailAction(Function<MyCustomerChangeEmailAction, T> helper) {
+    default <T> T withMyCustomerChangeEmailAction(Function<MyCustomerChangeEmailAction, T> helper) {
         return helper.apply(this);
     }
 }

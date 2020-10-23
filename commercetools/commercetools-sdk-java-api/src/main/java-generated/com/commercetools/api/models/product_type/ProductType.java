@@ -118,7 +118,7 @@ public interface ProductType extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<ProductType>> T withProductType(Function<ProductType, T> helper) {
+    default <T> T withProductType(Function<ProductType, T> helper) {
         return helper.apply(this);
     }
 }

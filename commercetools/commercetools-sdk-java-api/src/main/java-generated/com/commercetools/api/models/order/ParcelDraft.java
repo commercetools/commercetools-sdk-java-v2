@@ -58,7 +58,7 @@ public interface ParcelDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ParcelDraft>> T withParcelDraft(Function<ParcelDraft, T> helper) {
+    default <T> T withParcelDraft(Function<ParcelDraft, T> helper) {
         return helper.apply(this);
     }
 }

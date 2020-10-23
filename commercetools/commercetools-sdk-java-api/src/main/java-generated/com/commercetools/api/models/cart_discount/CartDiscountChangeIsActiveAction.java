@@ -40,7 +40,7 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountChangeIsActiveAction>> T withCartDiscountChangeIsActiveAction(Function<CartDiscountChangeIsActiveAction, T> helper) {
+    default <T> T withCartDiscountChangeIsActiveAction(Function<CartDiscountChangeIsActiveAction, T> helper) {
         return helper.apply(this);
     }
 }

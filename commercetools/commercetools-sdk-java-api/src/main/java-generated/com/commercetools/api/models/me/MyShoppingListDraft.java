@@ -83,7 +83,7 @@ public interface MyShoppingListDraft  {
         return instance;
     }
 
-    default <T extends Accessor<MyShoppingListDraft>> T withMyShoppingListDraft(Function<MyShoppingListDraft, T> helper) {
+    default <T> T withMyShoppingListDraft(Function<MyShoppingListDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetCustomerIdAction>> T withCartSetCustomerIdAction(Function<CartSetCustomerIdAction, T> helper) {
+    default <T> T withCartSetCustomerIdAction(Function<CartSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
 }

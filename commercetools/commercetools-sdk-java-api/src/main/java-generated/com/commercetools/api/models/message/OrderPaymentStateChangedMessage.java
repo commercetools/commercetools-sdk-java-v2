@@ -58,7 +58,7 @@ public interface OrderPaymentStateChangedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderPaymentStateChangedMessage>> T withOrderPaymentStateChangedMessage(Function<OrderPaymentStateChangedMessage, T> helper) {
+    default <T> T withOrderPaymentStateChangedMessage(Function<OrderPaymentStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
 }

@@ -44,7 +44,7 @@ public interface Destination  {
 
 
 
-    default <T extends Accessor<Destination>> T withDestination(Function<Destination, T> helper) {
+    default <T> T withDestination(Function<Destination, T> helper) {
         return helper.apply(this);
     }
 }

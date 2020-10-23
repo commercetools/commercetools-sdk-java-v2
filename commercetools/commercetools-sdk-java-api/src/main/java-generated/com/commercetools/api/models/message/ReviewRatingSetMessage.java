@@ -72,7 +72,7 @@ public interface ReviewRatingSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ReviewRatingSetMessage>> T withReviewRatingSetMessage(Function<ReviewRatingSetMessage, T> helper) {
+    default <T> T withReviewRatingSetMessage(Function<ReviewRatingSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

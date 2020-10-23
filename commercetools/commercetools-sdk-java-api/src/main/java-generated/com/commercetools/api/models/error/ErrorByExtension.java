@@ -47,7 +47,7 @@ public interface ErrorByExtension  {
         return instance;
     }
 
-    default <T extends Accessor<ErrorByExtension>> T withErrorByExtension(Function<ErrorByExtension, T> helper) {
+    default <T> T withErrorByExtension(Function<ErrorByExtension, T> helper) {
         return helper.apply(this);
     }
 }

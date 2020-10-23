@@ -48,7 +48,7 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeSetInputTipAction>> T withProductTypeSetInputTipAction(Function<ProductTypeSetInputTipAction, T> helper) {
+    default <T> T withProductTypeSetInputTipAction(Function<ProductTypeSetInputTipAction, T> helper) {
         return helper.apply(this);
     }
 }

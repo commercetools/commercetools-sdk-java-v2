@@ -152,7 +152,7 @@ public interface CartDiscountDraft  {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountDraft>> T withCartDiscountDraft(Function<CartDiscountDraft, T> helper) {
+    default <T> T withCartDiscountDraft(Function<CartDiscountDraft, T> helper) {
         return helper.apply(this);
     }
 }

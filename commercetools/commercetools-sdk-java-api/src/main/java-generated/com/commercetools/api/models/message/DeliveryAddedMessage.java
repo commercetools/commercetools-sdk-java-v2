@@ -52,7 +52,7 @@ public interface DeliveryAddedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<DeliveryAddedMessage>> T withDeliveryAddedMessage(Function<DeliveryAddedMessage, T> helper) {
+    default <T> T withDeliveryAddedMessage(Function<DeliveryAddedMessage, T> helper) {
         return helper.apply(this);
     }
 }

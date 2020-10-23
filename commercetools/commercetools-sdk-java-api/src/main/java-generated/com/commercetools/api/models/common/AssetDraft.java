@@ -79,7 +79,7 @@ public interface AssetDraft  {
         return instance;
     }
 
-    default <T extends Accessor<AssetDraft>> T withAssetDraft(Function<AssetDraft, T> helper) {
+    default <T> T withAssetDraft(Function<AssetDraft, T> helper) {
         return helper.apply(this);
     }
 }

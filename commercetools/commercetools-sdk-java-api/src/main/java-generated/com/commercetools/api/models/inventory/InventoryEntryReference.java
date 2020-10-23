@@ -43,7 +43,7 @@ public interface InventoryEntryReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryReference>> T withInventoryEntryReference(Function<InventoryEntryReference, T> helper) {
+    default <T> T withInventoryEntryReference(Function<InventoryEntryReference, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProjectChangeLanguagesAction>> T withProjectChangeLanguagesAction(Function<ProjectChangeLanguagesAction, T> helper) {
+    default <T> T withProjectChangeLanguagesAction(Function<ProjectChangeLanguagesAction, T> helper) {
         return helper.apply(this);
     }
 }

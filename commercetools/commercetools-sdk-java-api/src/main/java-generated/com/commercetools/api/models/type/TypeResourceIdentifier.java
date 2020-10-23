@@ -37,7 +37,7 @@ public interface TypeResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<TypeResourceIdentifier>> T withTypeResourceIdentifier(Function<TypeResourceIdentifier, T> helper) {
+    default <T> T withTypeResourceIdentifier(Function<TypeResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

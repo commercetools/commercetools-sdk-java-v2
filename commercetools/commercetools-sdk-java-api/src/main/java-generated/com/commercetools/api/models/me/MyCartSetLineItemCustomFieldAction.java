@@ -55,7 +55,7 @@ public interface MyCartSetLineItemCustomFieldAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartSetLineItemCustomFieldAction>> T withMyCartSetLineItemCustomFieldAction(Function<MyCartSetLineItemCustomFieldAction, T> helper) {
+    default <T> T withMyCartSetLineItemCustomFieldAction(Function<MyCartSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

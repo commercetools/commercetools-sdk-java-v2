@@ -49,7 +49,7 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeLocalizedEnumValueLabelAction>> T withProductTypeChangeLocalizedEnumValueLabelAction(Function<ProductTypeChangeLocalizedEnumValueLabelAction, T> helper) {
+    default <T> T withProductTypeChangeLocalizedEnumValueLabelAction(Function<ProductTypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);
     }
 }

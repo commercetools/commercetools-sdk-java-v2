@@ -48,7 +48,7 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeChangeInputHintAction>> T withTypeChangeInputHintAction(Function<TypeChangeInputHintAction, T> helper) {
+    default <T> T withTypeChangeInputHintAction(Function<TypeChangeInputHintAction, T> helper) {
         return helper.apply(this);
     }
 }

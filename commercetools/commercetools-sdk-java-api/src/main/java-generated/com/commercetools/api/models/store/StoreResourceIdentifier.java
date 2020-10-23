@@ -37,7 +37,7 @@ public interface StoreResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<StoreResourceIdentifier>> T withStoreResourceIdentifier(Function<StoreResourceIdentifier, T> helper) {
+    default <T> T withStoreResourceIdentifier(Function<StoreResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

@@ -51,7 +51,7 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategoryAddAssetAction>> T withCategoryAddAssetAction(Function<CategoryAddAssetAction, T> helper) {
+    default <T> T withCategoryAddAssetAction(Function<CategoryAddAssetAction, T> helper) {
         return helper.apply(this);
     }
 }

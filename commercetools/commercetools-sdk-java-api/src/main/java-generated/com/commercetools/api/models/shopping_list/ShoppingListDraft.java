@@ -120,7 +120,7 @@ public interface ShoppingListDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListDraft>> T withShoppingListDraft(Function<ShoppingListDraft, T> helper) {
+    default <T> T withShoppingListDraft(Function<ShoppingListDraft, T> helper) {
         return helper.apply(this);
     }
 }

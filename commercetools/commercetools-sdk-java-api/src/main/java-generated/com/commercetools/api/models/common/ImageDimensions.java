@@ -47,7 +47,7 @@ public interface ImageDimensions  {
         return instance;
     }
 
-    default <T extends Accessor<ImageDimensions>> T withImageDimensions(Function<ImageDimensions, T> helper) {
+    default <T> T withImageDimensions(Function<ImageDimensions, T> helper) {
         return helper.apply(this);
     }
 }

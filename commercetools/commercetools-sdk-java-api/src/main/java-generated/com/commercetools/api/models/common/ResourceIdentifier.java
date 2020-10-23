@@ -88,7 +88,7 @@ public interface ResourceIdentifier  {
 
 
 
-    default <T extends Accessor<ResourceIdentifier>> T withResourceIdentifier(Function<ResourceIdentifier, T> helper) {
+    default <T> T withResourceIdentifier(Function<ResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

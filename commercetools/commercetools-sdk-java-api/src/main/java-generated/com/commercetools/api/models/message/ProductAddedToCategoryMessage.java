@@ -59,7 +59,7 @@ public interface ProductAddedToCategoryMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductAddedToCategoryMessage>> T withProductAddedToCategoryMessage(Function<ProductAddedToCategoryMessage, T> helper) {
+    default <T> T withProductAddedToCategoryMessage(Function<ProductAddedToCategoryMessage, T> helper) {
         return helper.apply(this);
     }
 }

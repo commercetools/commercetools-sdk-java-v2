@@ -40,7 +40,7 @@ public interface ProductDiscountValueRelative extends ProductDiscountValue {
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountValueRelative>> T withProductDiscountValueRelative(Function<ProductDiscountValueRelative, T> helper) {
+    default <T> T withProductDiscountValueRelative(Function<ProductDiscountValueRelative, T> helper) {
         return helper.apply(this);
     }
 }

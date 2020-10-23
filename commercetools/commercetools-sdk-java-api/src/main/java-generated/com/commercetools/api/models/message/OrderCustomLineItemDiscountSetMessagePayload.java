@@ -57,7 +57,7 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends MessagePay
         return instance;
     }
 
-    default <T extends Accessor<OrderCustomLineItemDiscountSetMessagePayload>> T withOrderCustomLineItemDiscountSetMessagePayload(Function<OrderCustomLineItemDiscountSetMessagePayload, T> helper) {
+    default <T> T withOrderCustomLineItemDiscountSetMessagePayload(Function<OrderCustomLineItemDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

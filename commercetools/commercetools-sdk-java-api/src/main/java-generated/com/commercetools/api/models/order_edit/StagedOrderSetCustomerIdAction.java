@@ -40,7 +40,7 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetCustomerIdAction>> T withStagedOrderSetCustomerIdAction(Function<StagedOrderSetCustomerIdAction, T> helper) {
+    default <T> T withStagedOrderSetCustomerIdAction(Function<StagedOrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);
     }
 }

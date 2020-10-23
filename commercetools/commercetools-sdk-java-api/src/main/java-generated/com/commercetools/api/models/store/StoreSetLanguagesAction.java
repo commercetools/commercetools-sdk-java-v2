@@ -40,7 +40,7 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StoreSetLanguagesAction>> T withStoreSetLanguagesAction(Function<StoreSetLanguagesAction, T> helper) {
+    default <T> T withStoreSetLanguagesAction(Function<StoreSetLanguagesAction, T> helper) {
         return helper.apply(this);
     }
 }

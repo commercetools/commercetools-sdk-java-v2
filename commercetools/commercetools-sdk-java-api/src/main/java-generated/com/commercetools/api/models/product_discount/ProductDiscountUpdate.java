@@ -48,7 +48,7 @@ public interface ProductDiscountUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountUpdate>> T withProductDiscountUpdate(Function<ProductDiscountUpdate, T> helper) {
+    default <T> T withProductDiscountUpdate(Function<ProductDiscountUpdate, T> helper) {
         return helper.apply(this);
     }
 }

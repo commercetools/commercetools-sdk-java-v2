@@ -40,7 +40,7 @@ public interface CartDiscountValueRelativeDraft extends CartDiscountValueDraft {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountValueRelativeDraft>> T withCartDiscountValueRelativeDraft(Function<CartDiscountValueRelativeDraft, T> helper) {
+    default <T> T withCartDiscountValueRelativeDraft(Function<CartDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);
     }
 }

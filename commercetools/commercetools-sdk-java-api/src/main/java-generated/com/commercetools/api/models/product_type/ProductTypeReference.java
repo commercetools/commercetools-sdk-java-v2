@@ -43,7 +43,7 @@ public interface ProductTypeReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeReference>> T withProductTypeReference(Function<ProductTypeReference, T> helper) {
+    default <T> T withProductTypeReference(Function<ProductTypeReference, T> helper) {
         return helper.apply(this);
     }
 }

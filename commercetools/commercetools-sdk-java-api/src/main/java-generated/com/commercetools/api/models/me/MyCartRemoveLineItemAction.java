@@ -71,7 +71,7 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartRemoveLineItemAction>> T withMyCartRemoveLineItemAction(Function<MyCartRemoveLineItemAction, T> helper) {
+    default <T> T withMyCartRemoveLineItemAction(Function<MyCartRemoveLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

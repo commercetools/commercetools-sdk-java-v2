@@ -42,7 +42,7 @@ public interface StoresRemoveSupplyChannelsAction extends StoreUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StoresRemoveSupplyChannelsAction>> T withStoresRemoveSupplyChannelsAction(Function<StoresRemoveSupplyChannelsAction, T> helper) {
+    default <T> T withStoresRemoveSupplyChannelsAction(Function<StoresRemoveSupplyChannelsAction, T> helper) {
         return helper.apply(this);
     }
 }

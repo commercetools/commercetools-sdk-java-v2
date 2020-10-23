@@ -78,7 +78,7 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<MatchingPriceNotFoundError>> T withMatchingPriceNotFoundError(Function<MatchingPriceNotFoundError, T> helper) {
+    default <T> T withMatchingPriceNotFoundError(Function<MatchingPriceNotFoundError, T> helper) {
         return helper.apply(this);
     }
 }

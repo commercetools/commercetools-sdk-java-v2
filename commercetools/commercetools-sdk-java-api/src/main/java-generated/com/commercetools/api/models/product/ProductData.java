@@ -120,7 +120,7 @@ public interface ProductData  {
         return instance;
     }
 
-    default <T extends Accessor<ProductData>> T withProductData(Function<ProductData, T> helper) {
+    default <T> T withProductData(Function<ProductData, T> helper) {
         return helper.apply(this);
     }
 }

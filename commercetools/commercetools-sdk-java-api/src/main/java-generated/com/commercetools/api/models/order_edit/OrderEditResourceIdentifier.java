@@ -37,7 +37,7 @@ public interface OrderEditResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditResourceIdentifier>> T withOrderEditResourceIdentifier(Function<OrderEditResourceIdentifier, T> helper) {
+    default <T> T withOrderEditResourceIdentifier(Function<OrderEditResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

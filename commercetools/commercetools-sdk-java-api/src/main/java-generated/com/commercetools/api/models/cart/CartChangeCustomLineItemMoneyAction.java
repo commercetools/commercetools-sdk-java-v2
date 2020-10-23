@@ -49,7 +49,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartChangeCustomLineItemMoneyAction>> T withCartChangeCustomLineItemMoneyAction(Function<CartChangeCustomLineItemMoneyAction, T> helper) {
+    default <T> T withCartChangeCustomLineItemMoneyAction(Function<CartChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -54,7 +54,7 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductChangeMasterVariantAction>> T withProductChangeMasterVariantAction(Function<ProductChangeMasterVariantAction, T> helper) {
+    default <T> T withProductChangeMasterVariantAction(Function<ProductChangeMasterVariantAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ReviewCreatedMessagePayload>> T withReviewCreatedMessagePayload(Function<ReviewCreatedMessagePayload, T> helper) {
+    default <T> T withReviewCreatedMessagePayload(Function<ReviewCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

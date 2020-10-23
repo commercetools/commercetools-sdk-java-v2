@@ -47,7 +47,7 @@ public interface ShoppingListChangeLineItemQuantityAction extends ShoppingListUp
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListChangeLineItemQuantityAction>> T withShoppingListChangeLineItemQuantityAction(Function<ShoppingListChangeLineItemQuantityAction, T> helper) {
+    default <T> T withShoppingListChangeLineItemQuantityAction(Function<ShoppingListChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);
     }
 }

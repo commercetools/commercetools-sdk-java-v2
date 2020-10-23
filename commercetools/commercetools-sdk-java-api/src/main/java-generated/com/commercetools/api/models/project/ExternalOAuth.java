@@ -47,7 +47,7 @@ public interface ExternalOAuth  {
         return instance;
     }
 
-    default <T extends Accessor<ExternalOAuth>> T withExternalOAuth(Function<ExternalOAuth, T> helper) {
+    default <T> T withExternalOAuth(Function<ExternalOAuth, T> helper) {
         return helper.apply(this);
     }
 }

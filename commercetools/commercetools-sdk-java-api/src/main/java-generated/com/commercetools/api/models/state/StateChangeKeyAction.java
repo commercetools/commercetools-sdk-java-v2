@@ -40,7 +40,7 @@ public interface StateChangeKeyAction extends StateUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StateChangeKeyAction>> T withStateChangeKeyAction(Function<StateChangeKeyAction, T> helper) {
+    default <T> T withStateChangeKeyAction(Function<StateChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

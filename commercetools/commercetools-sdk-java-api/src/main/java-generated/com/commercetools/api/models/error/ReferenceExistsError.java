@@ -42,7 +42,7 @@ public interface ReferenceExistsError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ReferenceExistsError>> T withReferenceExistsError(Function<ReferenceExistsError, T> helper) {
+    default <T> T withReferenceExistsError(Function<ReferenceExistsError, T> helper) {
         return helper.apply(this);
     }
 }

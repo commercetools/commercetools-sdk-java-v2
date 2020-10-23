@@ -63,7 +63,7 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetProductVariantKeyAction>> T withProductSetProductVariantKeyAction(Function<ProductSetProductVariantKeyAction, T> helper) {
+    default <T> T withProductSetProductVariantKeyAction(Function<ProductSetProductVariantKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

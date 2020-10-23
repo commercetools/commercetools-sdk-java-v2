@@ -51,7 +51,7 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodRemoveShippingRateAction>> T withShippingMethodRemoveShippingRateAction(Function<ShippingMethodRemoveShippingRateAction, T> helper) {
+    default <T> T withShippingMethodRemoveShippingRateAction(Function<ShippingMethodRemoveShippingRateAction, T> helper) {
         return helper.apply(this);
     }
 }

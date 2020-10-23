@@ -40,7 +40,7 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountChangeRequiresDiscountCodeAction>> T withCartDiscountChangeRequiresDiscountCodeAction(Function<CartDiscountChangeRequiresDiscountCodeAction, T> helper) {
+    default <T> T withCartDiscountChangeRequiresDiscountCodeAction(Function<CartDiscountChangeRequiresDiscountCodeAction, T> helper) {
         return helper.apply(this);
     }
 }

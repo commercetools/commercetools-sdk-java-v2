@@ -47,7 +47,7 @@ public interface CustomerCreatePasswordResetToken  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerCreatePasswordResetToken>> T withCustomerCreatePasswordResetToken(Function<CustomerCreatePasswordResetToken, T> helper) {
+    default <T> T withCustomerCreatePasswordResetToken(Function<CustomerCreatePasswordResetToken, T> helper) {
         return helper.apply(this);
     }
 }

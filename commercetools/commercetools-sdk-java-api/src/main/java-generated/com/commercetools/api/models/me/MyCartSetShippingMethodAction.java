@@ -49,7 +49,7 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartSetShippingMethodAction>> T withMyCartSetShippingMethodAction(Function<MyCartSetShippingMethodAction, T> helper) {
+    default <T> T withMyCartSetShippingMethodAction(Function<MyCartSetShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 }

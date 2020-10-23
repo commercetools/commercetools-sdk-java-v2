@@ -42,7 +42,7 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListSetKeyAction>> T withShoppingListSetKeyAction(Function<ShoppingListSetKeyAction, T> helper) {
+    default <T> T withShoppingListSetKeyAction(Function<ShoppingListSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

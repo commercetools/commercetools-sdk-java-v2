@@ -48,7 +48,7 @@ public interface PriceChangedError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<PriceChangedError>> T withPriceChangedError(Function<PriceChangedError, T> helper) {
+    default <T> T withPriceChangedError(Function<PriceChangedError, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryAddTaxRateAction>> T withTaxCategoryAddTaxRateAction(Function<TaxCategoryAddTaxRateAction, T> helper) {
+    default <T> T withTaxCategoryAddTaxRateAction(Function<TaxCategoryAddTaxRateAction, T> helper) {
         return helper.apply(this);
     }
 }

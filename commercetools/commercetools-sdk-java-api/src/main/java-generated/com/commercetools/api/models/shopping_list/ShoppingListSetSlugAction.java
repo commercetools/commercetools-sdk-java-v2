@@ -41,7 +41,7 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListSetSlugAction>> T withShoppingListSetSlugAction(Function<ShoppingListSetSlugAction, T> helper) {
+    default <T> T withShoppingListSetSlugAction(Function<ShoppingListSetSlugAction, T> helper) {
         return helper.apply(this);
     }
 }

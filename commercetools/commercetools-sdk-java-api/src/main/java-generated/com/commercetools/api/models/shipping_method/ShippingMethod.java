@@ -149,7 +149,7 @@ public interface ShippingMethod extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethod>> T withShippingMethod(Function<ShippingMethod, T> helper) {
+    default <T> T withShippingMethod(Function<ShippingMethod, T> helper) {
         return helper.apply(this);
     }
 }

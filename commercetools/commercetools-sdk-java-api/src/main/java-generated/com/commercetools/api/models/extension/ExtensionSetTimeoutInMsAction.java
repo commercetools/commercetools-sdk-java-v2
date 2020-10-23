@@ -45,7 +45,7 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionSetTimeoutInMsAction>> T withExtensionSetTimeoutInMsAction(Function<ExtensionSetTimeoutInMsAction, T> helper) {
+    default <T> T withExtensionSetTimeoutInMsAction(Function<ExtensionSetTimeoutInMsAction, T> helper) {
         return helper.apply(this);
     }
 }

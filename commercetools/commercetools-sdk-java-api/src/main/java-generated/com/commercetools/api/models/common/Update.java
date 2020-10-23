@@ -48,7 +48,7 @@ public interface Update  {
         return instance;
     }
 
-    default <T extends Accessor<Update>> T withUpdate(Function<Update, T> helper) {
+    default <T> T withUpdate(Function<Update, T> helper) {
         return helper.apply(this);
     }
 }

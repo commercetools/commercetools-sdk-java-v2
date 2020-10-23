@@ -62,7 +62,7 @@ public interface TypeUpdateAction  {
 
 
 
-    default <T extends Accessor<TypeUpdateAction>> T withTypeUpdateAction(Function<TypeUpdateAction, T> helper) {
+    default <T> T withTypeUpdateAction(Function<TypeUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -40,7 +40,7 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderRemoveDeliveryAction>> T withOrderRemoveDeliveryAction(Function<OrderRemoveDeliveryAction, T> helper) {
+    default <T> T withOrderRemoveDeliveryAction(Function<OrderRemoveDeliveryAction, T> helper) {
         return helper.apply(this);
     }
 }

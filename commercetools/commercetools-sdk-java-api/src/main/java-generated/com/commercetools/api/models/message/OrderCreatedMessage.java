@@ -52,7 +52,7 @@ public interface OrderCreatedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderCreatedMessage>> T withOrderCreatedMessage(Function<OrderCreatedMessage, T> helper) {
+    default <T> T withOrderCreatedMessage(Function<OrderCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 }

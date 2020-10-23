@@ -47,7 +47,7 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeIsSearchableAction>> T withProductTypeChangeIsSearchableAction(Function<ProductTypeChangeIsSearchableAction, T> helper) {
+    default <T> T withProductTypeChangeIsSearchableAction(Function<ProductTypeChangeIsSearchableAction, T> helper) {
         return helper.apply(this);
     }
 }

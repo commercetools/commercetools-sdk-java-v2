@@ -55,7 +55,7 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<MissingTaxRateForCountryError>> T withMissingTaxRateForCountryError(Function<MissingTaxRateForCountryError, T> helper) {
+    default <T> T withMissingTaxRateForCountryError(Function<MissingTaxRateForCountryError, T> helper) {
         return helper.apply(this);
     }
 }

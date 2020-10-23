@@ -46,7 +46,7 @@ public interface ItemShippingDetailsDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ItemShippingDetailsDraft>> T withItemShippingDetailsDraft(Function<ItemShippingDetailsDraft, T> helper) {
+    default <T> T withItemShippingDetailsDraft(Function<ItemShippingDetailsDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -40,7 +40,7 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountValueRelative>> T withCartDiscountValueRelative(Function<CartDiscountValueRelative, T> helper) {
+    default <T> T withCartDiscountValueRelative(Function<CartDiscountValueRelative, T> helper) {
         return helper.apply(this);
     }
 }

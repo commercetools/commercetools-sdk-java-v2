@@ -56,7 +56,7 @@ public interface InvalidFieldError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidFieldError>> T withInvalidFieldError(Function<InvalidFieldError, T> helper) {
+    default <T> T withInvalidFieldError(Function<InvalidFieldError, T> helper) {
         return helper.apply(this);
     }
 }

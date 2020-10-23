@@ -124,7 +124,7 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartAddLineItemAction>> T withMyCartAddLineItemAction(Function<MyCartAddLineItemAction, T> helper) {
+    default <T> T withMyCartAddLineItemAction(Function<MyCartAddLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

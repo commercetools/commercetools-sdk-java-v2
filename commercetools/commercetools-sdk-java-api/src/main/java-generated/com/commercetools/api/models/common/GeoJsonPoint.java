@@ -40,7 +40,7 @@ public interface GeoJsonPoint extends GeoJson {
         return instance;
     }
 
-    default <T extends Accessor<GeoJsonPoint>> T withGeoJsonPoint(Function<GeoJsonPoint, T> helper) {
+    default <T> T withGeoJsonPoint(Function<GeoJsonPoint, T> helper) {
         return helper.apply(this);
     }
 }

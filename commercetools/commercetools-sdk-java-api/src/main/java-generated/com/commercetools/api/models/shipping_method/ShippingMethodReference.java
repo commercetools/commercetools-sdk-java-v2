@@ -43,7 +43,7 @@ public interface ShippingMethodReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodReference>> T withShippingMethodReference(Function<ShippingMethodReference, T> helper) {
+    default <T> T withShippingMethodReference(Function<ShippingMethodReference, T> helper) {
         return helper.apply(this);
     }
 }

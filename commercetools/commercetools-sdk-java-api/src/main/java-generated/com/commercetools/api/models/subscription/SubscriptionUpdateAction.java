@@ -40,7 +40,7 @@ public interface SubscriptionUpdateAction  {
 
 
 
-    default <T extends Accessor<SubscriptionUpdateAction>> T withSubscriptionUpdateAction(Function<SubscriptionUpdateAction, T> helper) {
+    default <T> T withSubscriptionUpdateAction(Function<SubscriptionUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

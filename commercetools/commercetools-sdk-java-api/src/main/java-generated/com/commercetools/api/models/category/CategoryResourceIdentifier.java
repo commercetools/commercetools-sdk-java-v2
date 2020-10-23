@@ -37,7 +37,7 @@ public interface CategoryResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<CategoryResourceIdentifier>> T withCategoryResourceIdentifier(Function<CategoryResourceIdentifier, T> helper) {
+    default <T> T withCategoryResourceIdentifier(Function<CategoryResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

@@ -69,7 +69,7 @@ public interface CustomerGroupPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupPagedQueryResponse>> T withCustomerGroupPagedQueryResponse(Function<CustomerGroupPagedQueryResponse, T> helper) {
+    default <T> T withCustomerGroupPagedQueryResponse(Function<CustomerGroupPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

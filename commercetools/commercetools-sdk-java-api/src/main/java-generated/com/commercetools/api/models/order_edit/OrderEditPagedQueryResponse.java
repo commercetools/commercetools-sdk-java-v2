@@ -69,7 +69,7 @@ public interface OrderEditPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditPagedQueryResponse>> T withOrderEditPagedQueryResponse(Function<OrderEditPagedQueryResponse, T> helper) {
+    default <T> T withOrderEditPagedQueryResponse(Function<OrderEditPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

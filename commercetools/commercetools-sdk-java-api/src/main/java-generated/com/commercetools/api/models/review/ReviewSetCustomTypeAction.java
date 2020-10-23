@@ -54,7 +54,7 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ReviewSetCustomTypeAction>> T withReviewSetCustomTypeAction(Function<ReviewSetCustomTypeAction, T> helper) {
+    default <T> T withReviewSetCustomTypeAction(Function<ReviewSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

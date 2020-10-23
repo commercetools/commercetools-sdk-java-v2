@@ -47,7 +47,7 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeChangeAttributeNameAction>> T withProductTypeChangeAttributeNameAction(Function<ProductTypeChangeAttributeNameAction, T> helper) {
+    default <T> T withProductTypeChangeAttributeNameAction(Function<ProductTypeChangeAttributeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

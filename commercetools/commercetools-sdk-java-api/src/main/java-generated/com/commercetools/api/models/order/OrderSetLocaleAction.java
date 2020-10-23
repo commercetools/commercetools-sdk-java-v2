@@ -40,7 +40,7 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetLocaleAction>> T withOrderSetLocaleAction(Function<OrderSetLocaleAction, T> helper) {
+    default <T> T withOrderSetLocaleAction(Function<OrderSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
 }

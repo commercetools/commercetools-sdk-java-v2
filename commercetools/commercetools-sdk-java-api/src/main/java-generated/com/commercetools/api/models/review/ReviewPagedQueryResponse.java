@@ -69,7 +69,7 @@ public interface ReviewPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ReviewPagedQueryResponse>> T withReviewPagedQueryResponse(Function<ReviewPagedQueryResponse, T> helper) {
+    default <T> T withReviewPagedQueryResponse(Function<ReviewPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

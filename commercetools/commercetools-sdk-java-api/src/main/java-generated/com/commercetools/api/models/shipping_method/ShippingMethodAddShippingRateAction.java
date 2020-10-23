@@ -51,7 +51,7 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodAddShippingRateAction>> T withShippingMethodAddShippingRateAction(Function<ShippingMethodAddShippingRateAction, T> helper) {
+    default <T> T withShippingMethodAddShippingRateAction(Function<ShippingMethodAddShippingRateAction, T> helper) {
         return helper.apply(this);
     }
 }

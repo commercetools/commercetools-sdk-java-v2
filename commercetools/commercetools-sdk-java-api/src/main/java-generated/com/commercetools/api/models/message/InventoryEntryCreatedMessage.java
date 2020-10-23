@@ -52,7 +52,7 @@ public interface InventoryEntryCreatedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryCreatedMessage>> T withInventoryEntryCreatedMessage(Function<InventoryEntryCreatedMessage, T> helper) {
+    default <T> T withInventoryEntryCreatedMessage(Function<InventoryEntryCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 }

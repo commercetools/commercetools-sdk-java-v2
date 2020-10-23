@@ -51,7 +51,7 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditPreviewSuccess>> T withOrderEditPreviewSuccess(Function<OrderEditPreviewSuccess, T> helper) {
+    default <T> T withOrderEditPreviewSuccess(Function<OrderEditPreviewSuccess, T> helper) {
         return helper.apply(this);
     }
 }

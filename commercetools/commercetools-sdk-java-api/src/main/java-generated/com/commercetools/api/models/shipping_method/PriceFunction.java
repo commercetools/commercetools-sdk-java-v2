@@ -49,7 +49,7 @@ public interface PriceFunction  {
         return instance;
     }
 
-    default <T extends Accessor<PriceFunction>> T withPriceFunction(Function<PriceFunction, T> helper) {
+    default <T> T withPriceFunction(Function<PriceFunction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -69,7 +69,7 @@ public interface SubscriptionPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<SubscriptionPagedQueryResponse>> T withSubscriptionPagedQueryResponse(Function<SubscriptionPagedQueryResponse, T> helper) {
+    default <T> T withSubscriptionPagedQueryResponse(Function<SubscriptionPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface TaxCategorySetKeyAction extends TaxCategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategorySetKeyAction>> T withTaxCategorySetKeyAction(Function<TaxCategorySetKeyAction, T> helper) {
+    default <T> T withTaxCategorySetKeyAction(Function<TaxCategorySetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetKeyAction>> T withCustomerSetKeyAction(Function<CustomerSetKeyAction, T> helper) {
+    default <T> T withCustomerSetKeyAction(Function<CustomerSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

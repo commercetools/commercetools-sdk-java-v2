@@ -43,7 +43,7 @@ public interface CartDiscountChangeSortOrderAction extends CartDiscountUpdateAct
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountChangeSortOrderAction>> T withCartDiscountChangeSortOrderAction(Function<CartDiscountChangeSortOrderAction, T> helper) {
+    default <T> T withCartDiscountChangeSortOrderAction(Function<CartDiscountChangeSortOrderAction, T> helper) {
         return helper.apply(this);
     }
 }

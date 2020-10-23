@@ -40,7 +40,7 @@ public interface ShoppingListChangeTextLineItemsOrderAction extends ShoppingList
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListChangeTextLineItemsOrderAction>> T withShoppingListChangeTextLineItemsOrderAction(Function<ShoppingListChangeTextLineItemsOrderAction, T> helper) {
+    default <T> T withShoppingListChangeTextLineItemsOrderAction(Function<ShoppingListChangeTextLineItemsOrderAction, T> helper) {
         return helper.apply(this);
     }
 }

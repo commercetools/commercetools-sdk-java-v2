@@ -47,7 +47,7 @@ public interface SubRate  {
         return instance;
     }
 
-    default <T extends Accessor<SubRate>> T withSubRate(Function<SubRate, T> helper) {
+    default <T> T withSubRate(Function<SubRate, T> helper) {
         return helper.apply(this);
     }
 }

@@ -56,7 +56,7 @@ public interface MyShoppingListSetTextLineItemCustomTypeAction extends MyShoppin
         return instance;
     }
 
-    default <T extends Accessor<MyShoppingListSetTextLineItemCustomTypeAction>> T withMyShoppingListSetTextLineItemCustomTypeAction(Function<MyShoppingListSetTextLineItemCustomTypeAction, T> helper) {
+    default <T> T withMyShoppingListSetTextLineItemCustomTypeAction(Function<MyShoppingListSetTextLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

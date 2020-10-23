@@ -126,7 +126,7 @@ public interface Store extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Store>> T withStore(Function<Store, T> helper) {
+    default <T> T withStore(Function<Store, T> helper) {
         return helper.apply(this);
     }
 }

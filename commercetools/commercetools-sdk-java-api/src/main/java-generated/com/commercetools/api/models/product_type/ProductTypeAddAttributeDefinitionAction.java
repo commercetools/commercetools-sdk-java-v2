@@ -42,7 +42,7 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
         return instance;
     }
 
-    default <T extends Accessor<ProductTypeAddAttributeDefinitionAction>> T withProductTypeAddAttributeDefinitionAction(Function<ProductTypeAddAttributeDefinitionAction, T> helper) {
+    default <T> T withProductTypeAddAttributeDefinitionAction(Function<ProductTypeAddAttributeDefinitionAction, T> helper) {
         return helper.apply(this);
     }
 }

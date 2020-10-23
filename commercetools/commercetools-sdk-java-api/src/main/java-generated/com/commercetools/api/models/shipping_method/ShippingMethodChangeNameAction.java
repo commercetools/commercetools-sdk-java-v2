@@ -40,7 +40,7 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodChangeNameAction>> T withShippingMethodChangeNameAction(Function<ShippingMethodChangeNameAction, T> helper) {
+    default <T> T withShippingMethodChangeNameAction(Function<ShippingMethodChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -43,7 +43,7 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetNameAction>> T withDiscountCodeSetNameAction(Function<DiscountCodeSetNameAction, T> helper) {
+    default <T> T withDiscountCodeSetNameAction(Function<DiscountCodeSetNameAction, T> helper) {
         return helper.apply(this);
     }
 }

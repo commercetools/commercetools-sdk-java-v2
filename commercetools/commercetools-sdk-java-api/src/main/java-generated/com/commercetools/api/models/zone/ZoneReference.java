@@ -43,7 +43,7 @@ public interface ZoneReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<ZoneReference>> T withZoneReference(Function<ZoneReference, T> helper) {
+    default <T> T withZoneReference(Function<ZoneReference, T> helper) {
         return helper.apply(this);
     }
 }

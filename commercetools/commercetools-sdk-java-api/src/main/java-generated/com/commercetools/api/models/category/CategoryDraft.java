@@ -138,7 +138,7 @@ public interface CategoryDraft  {
         return instance;
     }
 
-    default <T extends Accessor<CategoryDraft>> T withCategoryDraft(Function<CategoryDraft, T> helper) {
+    default <T> T withCategoryDraft(Function<CategoryDraft, T> helper) {
         return helper.apply(this);
     }
 }

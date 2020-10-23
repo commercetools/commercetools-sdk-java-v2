@@ -56,7 +56,7 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ProductImageAddedMessagePayload>> T withProductImageAddedMessagePayload(Function<ProductImageAddedMessagePayload, T> helper) {
+    default <T> T withProductImageAddedMessagePayload(Function<ProductImageAddedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

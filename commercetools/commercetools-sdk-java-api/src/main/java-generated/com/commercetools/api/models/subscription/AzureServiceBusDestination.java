@@ -40,7 +40,7 @@ public interface AzureServiceBusDestination extends Destination {
         return instance;
     }
 
-    default <T extends Accessor<AzureServiceBusDestination>> T withAzureServiceBusDestination(Function<AzureServiceBusDestination, T> helper) {
+    default <T> T withAzureServiceBusDestination(Function<AzureServiceBusDestination, T> helper) {
         return helper.apply(this);
     }
 }

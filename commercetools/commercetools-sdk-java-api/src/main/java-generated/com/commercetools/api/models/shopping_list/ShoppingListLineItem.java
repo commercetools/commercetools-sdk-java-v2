@@ -116,7 +116,7 @@ public interface ShoppingListLineItem  {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListLineItem>> T withShoppingListLineItem(Function<ShoppingListLineItem, T> helper) {
+    default <T> T withShoppingListLineItem(Function<ShoppingListLineItem, T> helper) {
         return helper.apply(this);
     }
 }

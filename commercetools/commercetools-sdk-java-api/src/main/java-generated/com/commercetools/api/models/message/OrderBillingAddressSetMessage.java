@@ -58,7 +58,7 @@ public interface OrderBillingAddressSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderBillingAddressSetMessage>> T withOrderBillingAddressSetMessage(Function<OrderBillingAddressSetMessage, T> helper) {
+    default <T> T withOrderBillingAddressSetMessage(Function<OrderBillingAddressSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

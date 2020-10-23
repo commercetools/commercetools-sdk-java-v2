@@ -54,7 +54,7 @@ public interface GraphQLRequest  {
         return instance;
     }
 
-    default <T extends Accessor<GraphQLRequest>> T withGraphQLRequest(Function<GraphQLRequest, T> helper) {
+    default <T> T withGraphQLRequest(Function<GraphQLRequest, T> helper) {
         return helper.apply(this);
     }
 }

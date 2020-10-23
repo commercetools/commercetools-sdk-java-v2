@@ -49,7 +49,7 @@ public interface TaxedItemPriceDraft  {
         return instance;
     }
 
-    default <T extends Accessor<TaxedItemPriceDraft>> T withTaxedItemPriceDraft(Function<TaxedItemPriceDraft, T> helper) {
+    default <T> T withTaxedItemPriceDraft(Function<TaxedItemPriceDraft, T> helper) {
         return helper.apply(this);
     }
 }

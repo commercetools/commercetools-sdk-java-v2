@@ -72,7 +72,7 @@ public interface CustomLineItemStateTransitionMessagePayload extends MessagePayl
         return instance;
     }
 
-    default <T extends Accessor<CustomLineItemStateTransitionMessagePayload>> T withCustomLineItemStateTransitionMessagePayload(Function<CustomLineItemStateTransitionMessagePayload, T> helper) {
+    default <T> T withCustomLineItemStateTransitionMessagePayload(Function<CustomLineItemStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

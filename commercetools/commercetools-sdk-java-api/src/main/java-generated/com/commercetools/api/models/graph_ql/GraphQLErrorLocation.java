@@ -47,7 +47,7 @@ public interface GraphQLErrorLocation  {
         return instance;
     }
 
-    default <T extends Accessor<GraphQLErrorLocation>> T withGraphQLErrorLocation(Function<GraphQLErrorLocation, T> helper) {
+    default <T> T withGraphQLErrorLocation(Function<GraphQLErrorLocation, T> helper) {
         return helper.apply(this);
     }
 }

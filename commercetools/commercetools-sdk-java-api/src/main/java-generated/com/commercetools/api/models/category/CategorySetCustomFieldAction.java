@@ -48,7 +48,7 @@ public interface CategorySetCustomFieldAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetCustomFieldAction>> T withCategorySetCustomFieldAction(Function<CategorySetCustomFieldAction, T> helper) {
+    default <T> T withCategorySetCustomFieldAction(Function<CategorySetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

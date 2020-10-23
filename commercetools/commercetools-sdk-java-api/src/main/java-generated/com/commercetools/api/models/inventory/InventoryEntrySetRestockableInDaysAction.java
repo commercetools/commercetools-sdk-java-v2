@@ -40,7 +40,7 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntrySetRestockableInDaysAction>> T withInventoryEntrySetRestockableInDaysAction(Function<InventoryEntrySetRestockableInDaysAction, T> helper) {
+    default <T> T withInventoryEntrySetRestockableInDaysAction(Function<InventoryEntrySetRestockableInDaysAction, T> helper) {
         return helper.apply(this);
     }
 }

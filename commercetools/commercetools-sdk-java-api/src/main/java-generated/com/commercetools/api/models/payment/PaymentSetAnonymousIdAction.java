@@ -43,7 +43,7 @@ public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<PaymentSetAnonymousIdAction>> T withPaymentSetAnonymousIdAction(Function<PaymentSetAnonymousIdAction, T> helper) {
+    default <T> T withPaymentSetAnonymousIdAction(Function<PaymentSetAnonymousIdAction, T> helper) {
         return helper.apply(this);
     }
 }

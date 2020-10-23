@@ -59,7 +59,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionUpdateActionsFailedError>> T withExtensionUpdateActionsFailedError(Function<ExtensionUpdateActionsFailedError, T> helper) {
+    default <T> T withExtensionUpdateActionsFailedError(Function<ExtensionUpdateActionsFailedError, T> helper) {
         return helper.apply(this);
     }
 }

@@ -40,7 +40,7 @@ public interface ProductDiscountValueRelativeDraft extends ProductDiscountValueD
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountValueRelativeDraft>> T withProductDiscountValueRelativeDraft(Function<ProductDiscountValueRelativeDraft, T> helper) {
+    default <T> T withProductDiscountValueRelativeDraft(Function<ProductDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);
     }
 }

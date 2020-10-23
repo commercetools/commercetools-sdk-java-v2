@@ -42,7 +42,7 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodSetKeyAction>> T withShippingMethodSetKeyAction(Function<ShippingMethodSetKeyAction, T> helper) {
+    default <T> T withShippingMethodSetKeyAction(Function<ShippingMethodSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

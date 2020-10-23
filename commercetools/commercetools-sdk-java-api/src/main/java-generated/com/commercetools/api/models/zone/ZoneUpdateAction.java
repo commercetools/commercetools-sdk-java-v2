@@ -42,7 +42,7 @@ public interface ZoneUpdateAction  {
 
 
 
-    default <T extends Accessor<ZoneUpdateAction>> T withZoneUpdateAction(Function<ZoneUpdateAction, T> helper) {
+    default <T> T withZoneUpdateAction(Function<ZoneUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

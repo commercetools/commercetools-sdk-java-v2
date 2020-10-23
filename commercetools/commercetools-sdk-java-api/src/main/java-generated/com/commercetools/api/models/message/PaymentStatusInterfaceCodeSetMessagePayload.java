@@ -47,7 +47,7 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
         return instance;
     }
 
-    default <T extends Accessor<PaymentStatusInterfaceCodeSetMessagePayload>> T withPaymentStatusInterfaceCodeSetMessagePayload(Function<PaymentStatusInterfaceCodeSetMessagePayload, T> helper) {
+    default <T> T withPaymentStatusInterfaceCodeSetMessagePayload(Function<PaymentStatusInterfaceCodeSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

@@ -75,7 +75,7 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetAssetTagsAction>> T withProductSetAssetTagsAction(Function<ProductSetAssetTagsAction, T> helper) {
+    default <T> T withProductSetAssetTagsAction(Function<ProductSetAssetTagsAction, T> helper) {
         return helper.apply(this);
     }
 }

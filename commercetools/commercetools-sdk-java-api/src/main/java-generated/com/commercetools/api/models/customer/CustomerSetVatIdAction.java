@@ -42,7 +42,7 @@ public interface CustomerSetVatIdAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetVatIdAction>> T withCustomerSetVatIdAction(Function<CustomerSetVatIdAction, T> helper) {
+    default <T> T withCustomerSetVatIdAction(Function<CustomerSetVatIdAction, T> helper) {
         return helper.apply(this);
     }
 }

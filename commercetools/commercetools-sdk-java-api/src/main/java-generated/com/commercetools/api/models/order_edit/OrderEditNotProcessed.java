@@ -34,7 +34,7 @@ public interface OrderEditNotProcessed extends OrderEditResult {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditNotProcessed>> T withOrderEditNotProcessed(Function<OrderEditNotProcessed, T> helper) {
+    default <T> T withOrderEditNotProcessed(Function<OrderEditNotProcessed, T> helper) {
         return helper.apply(this);
     }
 }

@@ -75,7 +75,7 @@ public interface ExtensionDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionDraft>> T withExtensionDraft(Function<ExtensionDraft, T> helper) {
+    default <T> T withExtensionDraft(Function<ExtensionDraft, T> helper) {
         return helper.apply(this);
     }
 }

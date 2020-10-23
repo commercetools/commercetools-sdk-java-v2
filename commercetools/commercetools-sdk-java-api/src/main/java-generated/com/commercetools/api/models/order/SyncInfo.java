@@ -60,7 +60,7 @@ public interface SyncInfo  {
         return instance;
     }
 
-    default <T extends Accessor<SyncInfo>> T withSyncInfo(Function<SyncInfo, T> helper) {
+    default <T> T withSyncInfo(Function<SyncInfo, T> helper) {
         return helper.apply(this);
     }
 }

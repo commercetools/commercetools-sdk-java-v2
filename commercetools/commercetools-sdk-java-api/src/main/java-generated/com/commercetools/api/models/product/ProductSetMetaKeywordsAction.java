@@ -48,7 +48,7 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetMetaKeywordsAction>> T withProductSetMetaKeywordsAction(Function<ProductSetMetaKeywordsAction, T> helper) {
+    default <T> T withProductSetMetaKeywordsAction(Function<ProductSetMetaKeywordsAction, T> helper) {
         return helper.apply(this);
     }
 }

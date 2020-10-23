@@ -43,7 +43,7 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountSetKeyAction>> T withProductDiscountSetKeyAction(Function<ProductDiscountSetKeyAction, T> helper) {
+    default <T> T withProductDiscountSetKeyAction(Function<ProductDiscountSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

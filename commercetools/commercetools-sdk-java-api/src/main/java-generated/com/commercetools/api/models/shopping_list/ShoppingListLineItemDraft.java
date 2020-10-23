@@ -76,7 +76,7 @@ public interface ShoppingListLineItemDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListLineItemDraft>> T withShoppingListLineItemDraft(Function<ShoppingListLineItemDraft, T> helper) {
+    default <T> T withShoppingListLineItemDraft(Function<ShoppingListLineItemDraft, T> helper) {
         return helper.apply(this);
     }
 }

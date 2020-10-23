@@ -52,7 +52,7 @@ public interface ExternalTaxAmountDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ExternalTaxAmountDraft>> T withExternalTaxAmountDraft(Function<ExternalTaxAmountDraft, T> helper) {
+    default <T> T withExternalTaxAmountDraft(Function<ExternalTaxAmountDraft, T> helper) {
         return helper.apply(this);
     }
 }

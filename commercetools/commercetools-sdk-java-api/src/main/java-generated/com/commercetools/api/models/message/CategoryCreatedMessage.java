@@ -52,7 +52,7 @@ public interface CategoryCreatedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<CategoryCreatedMessage>> T withCategoryCreatedMessage(Function<CategoryCreatedMessage, T> helper) {
+    default <T> T withCategoryCreatedMessage(Function<CategoryCreatedMessage, T> helper) {
         return helper.apply(this);
     }
 }

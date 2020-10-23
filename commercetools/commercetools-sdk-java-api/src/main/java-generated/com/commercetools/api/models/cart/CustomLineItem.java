@@ -163,7 +163,7 @@ public interface CustomLineItem  {
         return instance;
     }
 
-    default <T extends Accessor<CustomLineItem>> T withCustomLineItem(Function<CustomLineItem, T> helper) {
+    default <T> T withCustomLineItem(Function<CustomLineItem, T> helper) {
         return helper.apply(this);
     }
 }

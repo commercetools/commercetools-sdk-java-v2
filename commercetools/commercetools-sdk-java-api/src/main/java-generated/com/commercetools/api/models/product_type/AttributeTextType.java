@@ -34,7 +34,7 @@ public interface AttributeTextType extends AttributeType {
         return instance;
     }
 
-    default <T extends Accessor<AttributeTextType>> T withAttributeTextType(Function<AttributeTextType, T> helper) {
+    default <T> T withAttributeTextType(Function<AttributeTextType, T> helper) {
         return helper.apply(this);
     }
 }

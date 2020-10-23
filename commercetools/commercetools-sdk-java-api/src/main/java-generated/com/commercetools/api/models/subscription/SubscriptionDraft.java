@@ -72,7 +72,7 @@ public interface SubscriptionDraft  {
         return instance;
     }
 
-    default <T extends Accessor<SubscriptionDraft>> T withSubscriptionDraft(Function<SubscriptionDraft, T> helper) {
+    default <T> T withSubscriptionDraft(Function<SubscriptionDraft, T> helper) {
         return helper.apply(this);
     }
 }

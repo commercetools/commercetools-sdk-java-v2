@@ -34,11 +34,16 @@ import java.io.IOException;
 )
 public interface TypedMoneyDraft extends Money {
 
+    
+    
+    @JsonProperty("fractionDigits")
+    public Integer getFractionDigits();
+
+    public void setFractionDigits(final Integer fractionDigits);
 
 
 
-
-    default <T extends Accessor<TypedMoneyDraft>> T withTypedMoneyDraft(Function<TypedMoneyDraft, T> helper) {
+    default <T> T withTypedMoneyDraft(Function<TypedMoneyDraft, T> helper) {
         return helper.apply(this);
     }
 }

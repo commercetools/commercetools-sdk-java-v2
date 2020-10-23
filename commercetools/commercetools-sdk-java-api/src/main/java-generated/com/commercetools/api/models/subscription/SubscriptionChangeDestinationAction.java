@@ -42,7 +42,7 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
         return instance;
     }
 
-    default <T extends Accessor<SubscriptionChangeDestinationAction>> T withSubscriptionChangeDestinationAction(Function<SubscriptionChangeDestinationAction, T> helper) {
+    default <T> T withSubscriptionChangeDestinationAction(Function<SubscriptionChangeDestinationAction, T> helper) {
         return helper.apply(this);
     }
 }

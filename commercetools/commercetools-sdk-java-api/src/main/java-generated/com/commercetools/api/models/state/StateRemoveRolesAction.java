@@ -41,7 +41,7 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StateRemoveRolesAction>> T withStateRemoveRolesAction(Function<StateRemoveRolesAction, T> helper) {
+    default <T> T withStateRemoveRolesAction(Function<StateRemoveRolesAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -57,7 +57,7 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
         return instance;
     }
 
-    default <T extends Accessor<CartClassificationTier>> T withCartClassificationTier(Function<CartClassificationTier, T> helper) {
+    default <T> T withCartClassificationTier(Function<CartClassificationTier, T> helper) {
         return helper.apply(this);
     }
 }

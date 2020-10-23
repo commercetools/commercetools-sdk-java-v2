@@ -40,7 +40,7 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerSetDefaultShippingAddressAction>> T withMyCustomerSetDefaultShippingAddressAction(Function<MyCustomerSetDefaultShippingAddressAction, T> helper) {
+    default <T> T withMyCustomerSetDefaultShippingAddressAction(Function<MyCustomerSetDefaultShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

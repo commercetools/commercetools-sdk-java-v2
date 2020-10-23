@@ -80,7 +80,7 @@ public interface StoreDraft  {
         return instance;
     }
 
-    default <T extends Accessor<StoreDraft>> T withStoreDraft(Function<StoreDraft, T> helper) {
+    default <T> T withStoreDraft(Function<StoreDraft, T> helper) {
         return helper.apply(this);
     }
 }

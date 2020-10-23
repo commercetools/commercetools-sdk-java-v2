@@ -50,7 +50,7 @@ public interface ProductRevertedStagedChangesMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductRevertedStagedChangesMessage>> T withProductRevertedStagedChangesMessage(Function<ProductRevertedStagedChangesMessage, T> helper) {
+    default <T> T withProductRevertedStagedChangesMessage(Function<ProductRevertedStagedChangesMessage, T> helper) {
         return helper.apply(this);
     }
 }

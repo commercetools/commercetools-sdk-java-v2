@@ -40,7 +40,7 @@ public interface MyCartSetLocaleAction extends MyCartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCartSetLocaleAction>> T withMyCartSetLocaleAction(Function<MyCartSetLocaleAction, T> helper) {
+    default <T> T withMyCartSetLocaleAction(Function<MyCartSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
 }

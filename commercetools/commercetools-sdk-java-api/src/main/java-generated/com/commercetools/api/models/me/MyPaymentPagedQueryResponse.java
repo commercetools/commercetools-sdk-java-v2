@@ -69,7 +69,7 @@ public interface MyPaymentPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<MyPaymentPagedQueryResponse>> T withMyPaymentPagedQueryResponse(Function<MyPaymentPagedQueryResponse, T> helper) {
+    default <T> T withMyPaymentPagedQueryResponse(Function<MyPaymentPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

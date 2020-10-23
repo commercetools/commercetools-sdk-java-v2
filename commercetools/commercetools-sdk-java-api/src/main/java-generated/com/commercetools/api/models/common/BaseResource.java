@@ -79,7 +79,7 @@ public interface BaseResource  {
 
 
 
-    default <T extends Accessor<BaseResource>> T withBaseResource(Function<BaseResource, T> helper) {
+    default <T> T withBaseResource(Function<BaseResource, T> helper) {
         return helper.apply(this);
     }
 }

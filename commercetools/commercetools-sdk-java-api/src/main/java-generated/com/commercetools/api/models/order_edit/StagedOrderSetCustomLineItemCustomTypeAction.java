@@ -56,7 +56,7 @@ public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrde
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetCustomLineItemCustomTypeAction>> T withStagedOrderSetCustomLineItemCustomTypeAction(Function<StagedOrderSetCustomLineItemCustomTypeAction, T> helper) {
+    default <T> T withStagedOrderSetCustomLineItemCustomTypeAction(Function<StagedOrderSetCustomLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

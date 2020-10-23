@@ -56,7 +56,7 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ReferencedResourceNotFoundError>> T withReferencedResourceNotFoundError(Function<ReferencedResourceNotFoundError, T> helper) {
+    default <T> T withReferencedResourceNotFoundError(Function<ReferencedResourceNotFoundError, T> helper) {
         return helper.apply(this);
     }
 }

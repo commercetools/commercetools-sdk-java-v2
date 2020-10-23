@@ -37,7 +37,7 @@ public interface ProductResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<ProductResourceIdentifier>> T withProductResourceIdentifier(Function<ProductResourceIdentifier, T> helper) {
+    default <T> T withProductResourceIdentifier(Function<ProductResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

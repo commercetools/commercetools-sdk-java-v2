@@ -44,7 +44,7 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<PaymentSetKeyAction>> T withPaymentSetKeyAction(Function<PaymentSetKeyAction, T> helper) {
+    default <T> T withPaymentSetKeyAction(Function<PaymentSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

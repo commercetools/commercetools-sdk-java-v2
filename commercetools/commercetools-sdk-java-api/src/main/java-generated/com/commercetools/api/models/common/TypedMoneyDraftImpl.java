@@ -30,11 +30,14 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
     private String currencyCode;
     
     private com.commercetools.api.models.common.MoneyType type;
+    
+    private Integer fractionDigits;
 
     @JsonCreator
-    TypedMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
+    TypedMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("fractionDigits") final Integer fractionDigits) {
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
+        this.fractionDigits = fractionDigits;
         this.type = MoneyType.findEnumViaJsonName("null").get();
     }
     public TypedMoneyDraftImpl() {
@@ -57,6 +60,11 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
     public com.commercetools.api.models.common.MoneyType getType(){
         return this.type;
     }
+    
+    
+    public Integer getFractionDigits(){
+        return this.fractionDigits;
+    }
 
     public void setCentAmount(final Long centAmount){
         this.centAmount = centAmount;
@@ -64,6 +72,10 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
     
     public void setCurrencyCode(final String currencyCode){
         this.currencyCode = currencyCode;
+    }
+    
+    public void setFractionDigits(final Integer fractionDigits){
+        this.fractionDigits = fractionDigits;
     }
 
 }

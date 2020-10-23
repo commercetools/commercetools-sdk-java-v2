@@ -49,7 +49,7 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetCustomTypeAction>> T withOrderSetCustomTypeAction(Function<OrderSetCustomTypeAction, T> helper) {
+    default <T> T withOrderSetCustomTypeAction(Function<OrderSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

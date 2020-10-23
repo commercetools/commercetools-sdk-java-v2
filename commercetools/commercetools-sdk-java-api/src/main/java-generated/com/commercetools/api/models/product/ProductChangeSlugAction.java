@@ -53,7 +53,7 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductChangeSlugAction>> T withProductChangeSlugAction(Function<ProductChangeSlugAction, T> helper) {
+    default <T> T withProductChangeSlugAction(Function<ProductChangeSlugAction, T> helper) {
         return helper.apply(this);
     }
 }

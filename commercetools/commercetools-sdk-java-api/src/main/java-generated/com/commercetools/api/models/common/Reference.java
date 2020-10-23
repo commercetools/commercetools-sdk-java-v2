@@ -84,7 +84,7 @@ public interface Reference  {
 
 
 
-    default <T extends Accessor<Reference>> T withReference(Function<Reference, T> helper) {
+    default <T> T withReference(Function<Reference, T> helper) {
         return helper.apply(this);
     }
 }

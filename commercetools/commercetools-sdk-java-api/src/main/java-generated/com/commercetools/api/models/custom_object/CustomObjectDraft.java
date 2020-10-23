@@ -65,7 +65,7 @@ public interface CustomObjectDraft  {
         return instance;
     }
 
-    default <T extends Accessor<CustomObjectDraft>> T withCustomObjectDraft(Function<CustomObjectDraft, T> helper) {
+    default <T> T withCustomObjectDraft(Function<CustomObjectDraft, T> helper) {
         return helper.apply(this);
     }
 }

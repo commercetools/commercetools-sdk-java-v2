@@ -40,7 +40,7 @@ public interface MyCustomerSetLastNameAction extends MyCustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyCustomerSetLastNameAction>> T withMyCustomerSetLastNameAction(Function<MyCustomerSetLastNameAction, T> helper) {
+    default <T> T withMyCustomerSetLastNameAction(Function<MyCustomerSetLastNameAction, T> helper) {
         return helper.apply(this);
     }
 }

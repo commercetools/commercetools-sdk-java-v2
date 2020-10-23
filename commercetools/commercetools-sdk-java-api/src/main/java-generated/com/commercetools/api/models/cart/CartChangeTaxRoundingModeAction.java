@@ -41,7 +41,7 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartChangeTaxRoundingModeAction>> T withCartChangeTaxRoundingModeAction(Function<CartChangeTaxRoundingModeAction, T> helper) {
+    default <T> T withCartChangeTaxRoundingModeAction(Function<CartChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -40,7 +40,7 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategoryChangeOrderHintAction>> T withCategoryChangeOrderHintAction(Function<CategoryChangeOrderHintAction, T> helper) {
+    default <T> T withCategoryChangeOrderHintAction(Function<CategoryChangeOrderHintAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -47,7 +47,7 @@ public interface PayloadNotIncluded  {
         return instance;
     }
 
-    default <T extends Accessor<PayloadNotIncluded>> T withPayloadNotIncluded(Function<PayloadNotIncluded, T> helper) {
+    default <T> T withPayloadNotIncluded(Function<PayloadNotIncluded, T> helper) {
         return helper.apply(this);
     }
 }

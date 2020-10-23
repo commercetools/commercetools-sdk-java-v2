@@ -71,7 +71,7 @@ public interface InventoryEntryQuantitySetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryQuantitySetMessage>> T withInventoryEntryQuantitySetMessage(Function<InventoryEntryQuantitySetMessage, T> helper) {
+    default <T> T withInventoryEntryQuantitySetMessage(Function<InventoryEntryQuantitySetMessage, T> helper) {
         return helper.apply(this);
     }
 }

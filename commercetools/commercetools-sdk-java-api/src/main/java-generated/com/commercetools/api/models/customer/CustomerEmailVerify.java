@@ -47,7 +47,7 @@ public interface CustomerEmailVerify  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerEmailVerify>> T withCustomerEmailVerify(Function<CustomerEmailVerify, T> helper) {
+    default <T> T withCustomerEmailVerify(Function<CustomerEmailVerify, T> helper) {
         return helper.apply(this);
     }
 }

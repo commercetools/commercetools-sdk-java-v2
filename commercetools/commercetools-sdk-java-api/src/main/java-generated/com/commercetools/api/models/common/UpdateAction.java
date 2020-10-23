@@ -40,7 +40,7 @@ public interface UpdateAction  {
         return instance;
     }
 
-    default <T extends Accessor<UpdateAction>> T withUpdateAction(Function<UpdateAction, T> helper) {
+    default <T> T withUpdateAction(Function<UpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

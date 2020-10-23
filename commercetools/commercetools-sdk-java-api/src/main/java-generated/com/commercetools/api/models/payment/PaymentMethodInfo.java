@@ -65,7 +65,7 @@ public interface PaymentMethodInfo  {
         return instance;
     }
 
-    default <T extends Accessor<PaymentMethodInfo>> T withPaymentMethodInfo(Function<PaymentMethodInfo, T> helper) {
+    default <T> T withPaymentMethodInfo(Function<PaymentMethodInfo, T> helper) {
         return helper.apply(this);
     }
 }

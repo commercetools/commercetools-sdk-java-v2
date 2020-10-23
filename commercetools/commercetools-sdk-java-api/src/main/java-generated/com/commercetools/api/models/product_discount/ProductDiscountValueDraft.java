@@ -38,7 +38,7 @@ public interface ProductDiscountValueDraft  {
 
 
 
-    default <T extends Accessor<ProductDiscountValueDraft>> T withProductDiscountValueDraft(Function<ProductDiscountValueDraft, T> helper) {
+    default <T> T withProductDiscountValueDraft(Function<ProductDiscountValueDraft, T> helper) {
         return helper.apply(this);
     }
 }

@@ -53,7 +53,7 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategorySetCustomTypeAction>> T withCategorySetCustomTypeAction(Function<CategorySetCustomTypeAction, T> helper) {
+    default <T> T withCategorySetCustomTypeAction(Function<CategorySetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

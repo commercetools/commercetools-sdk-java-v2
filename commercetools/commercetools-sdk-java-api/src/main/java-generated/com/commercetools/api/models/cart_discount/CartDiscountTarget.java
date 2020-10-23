@@ -42,7 +42,7 @@ public interface CartDiscountTarget  {
 
 
 
-    default <T extends Accessor<CartDiscountTarget>> T withCartDiscountTarget(Function<CartDiscountTarget, T> helper) {
+    default <T> T withCartDiscountTarget(Function<CartDiscountTarget, T> helper) {
         return helper.apply(this);
     }
 }

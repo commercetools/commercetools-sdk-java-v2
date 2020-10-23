@@ -165,7 +165,7 @@ public interface PaymentDraft  {
         return instance;
     }
 
-    default <T extends Accessor<PaymentDraft>> T withPaymentDraft(Function<PaymentDraft, T> helper) {
+    default <T> T withPaymentDraft(Function<PaymentDraft, T> helper) {
         return helper.apply(this);
     }
 }

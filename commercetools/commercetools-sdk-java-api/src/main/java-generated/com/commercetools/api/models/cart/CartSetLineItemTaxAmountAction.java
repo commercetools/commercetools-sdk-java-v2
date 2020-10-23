@@ -48,7 +48,7 @@ public interface CartSetLineItemTaxAmountAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetLineItemTaxAmountAction>> T withCartSetLineItemTaxAmountAction(Function<CartSetLineItemTaxAmountAction, T> helper) {
+    default <T> T withCartSetLineItemTaxAmountAction(Function<CartSetLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
 }

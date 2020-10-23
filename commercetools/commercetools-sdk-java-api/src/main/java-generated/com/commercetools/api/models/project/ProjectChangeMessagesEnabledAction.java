@@ -40,7 +40,7 @@ public interface ProjectChangeMessagesEnabledAction extends ProjectUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<ProjectChangeMessagesEnabledAction>> T withProjectChangeMessagesEnabledAction(Function<ProjectChangeMessagesEnabledAction, T> helper) {
+    default <T> T withProjectChangeMessagesEnabledAction(Function<ProjectChangeMessagesEnabledAction, T> helper) {
         return helper.apply(this);
     }
 }

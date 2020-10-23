@@ -40,7 +40,7 @@ public interface TypeChangeKeyAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeChangeKeyAction>> T withTypeChangeKeyAction(Function<TypeChangeKeyAction, T> helper) {
+    default <T> T withTypeChangeKeyAction(Function<TypeChangeKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -48,7 +48,7 @@ public interface ReviewUpdate  {
         return instance;
     }
 
-    default <T extends Accessor<ReviewUpdate>> T withReviewUpdate(Function<ReviewUpdate, T> helper) {
+    default <T> T withReviewUpdate(Function<ReviewUpdate, T> helper) {
         return helper.apply(this);
     }
 }

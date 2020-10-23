@@ -49,7 +49,7 @@ public interface OrderImportCustomLineItemStateAction extends OrderUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<OrderImportCustomLineItemStateAction>> T withOrderImportCustomLineItemStateAction(Function<OrderImportCustomLineItemStateAction, T> helper) {
+    default <T> T withOrderImportCustomLineItemStateAction(Function<OrderImportCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 }

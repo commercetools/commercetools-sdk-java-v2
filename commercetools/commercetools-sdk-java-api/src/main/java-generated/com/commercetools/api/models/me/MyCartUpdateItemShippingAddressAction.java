@@ -42,7 +42,7 @@ public interface MyCartUpdateItemShippingAddressAction extends MyCartUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<MyCartUpdateItemShippingAddressAction>> T withMyCartUpdateItemShippingAddressAction(Function<MyCartUpdateItemShippingAddressAction, T> helper) {
+    default <T> T withMyCartUpdateItemShippingAddressAction(Function<MyCartUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

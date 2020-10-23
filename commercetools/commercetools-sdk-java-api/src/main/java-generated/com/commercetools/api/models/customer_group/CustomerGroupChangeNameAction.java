@@ -40,7 +40,7 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroupChangeNameAction>> T withCustomerGroupChangeNameAction(Function<CustomerGroupChangeNameAction, T> helper) {
+    default <T> T withCustomerGroupChangeNameAction(Function<CustomerGroupChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

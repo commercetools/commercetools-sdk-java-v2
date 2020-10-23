@@ -59,7 +59,7 @@ public interface ProductStateTransitionMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductStateTransitionMessage>> T withProductStateTransitionMessage(Function<ProductStateTransitionMessage, T> helper) {
+    default <T> T withProductStateTransitionMessage(Function<ProductStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 }

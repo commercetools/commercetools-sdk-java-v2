@@ -40,7 +40,7 @@ public interface CartRemoveItemShippingAddressAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartRemoveItemShippingAddressAction>> T withCartRemoveItemShippingAddressAction(Function<CartRemoveItemShippingAddressAction, T> helper) {
+    default <T> T withCartRemoveItemShippingAddressAction(Function<CartRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

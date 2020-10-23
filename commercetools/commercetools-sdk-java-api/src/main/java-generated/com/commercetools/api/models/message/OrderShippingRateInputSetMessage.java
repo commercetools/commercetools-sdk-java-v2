@@ -58,7 +58,7 @@ public interface OrderShippingRateInputSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderShippingRateInputSetMessage>> T withOrderShippingRateInputSetMessage(Function<OrderShippingRateInputSetMessage, T> helper) {
+    default <T> T withOrderShippingRateInputSetMessage(Function<OrderShippingRateInputSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

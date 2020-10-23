@@ -58,7 +58,7 @@ public interface OrderShippingAddressSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderShippingAddressSetMessage>> T withOrderShippingAddressSetMessage(Function<OrderShippingAddressSetMessage, T> helper) {
+    default <T> T withOrderShippingAddressSetMessage(Function<OrderShippingAddressSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

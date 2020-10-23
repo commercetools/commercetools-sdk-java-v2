@@ -90,7 +90,7 @@ public interface ReviewStateTransitionMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ReviewStateTransitionMessage>> T withReviewStateTransitionMessage(Function<ReviewStateTransitionMessage, T> helper) {
+    default <T> T withReviewStateTransitionMessage(Function<ReviewStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 }

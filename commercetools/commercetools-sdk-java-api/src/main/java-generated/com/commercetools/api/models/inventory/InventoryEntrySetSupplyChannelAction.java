@@ -44,7 +44,7 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntrySetSupplyChannelAction>> T withInventoryEntrySetSupplyChannelAction(Function<InventoryEntrySetSupplyChannelAction, T> helper) {
+    default <T> T withInventoryEntrySetSupplyChannelAction(Function<InventoryEntrySetSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
 }

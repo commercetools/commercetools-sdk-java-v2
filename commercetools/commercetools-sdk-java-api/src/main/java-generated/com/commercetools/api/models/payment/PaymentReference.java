@@ -43,7 +43,7 @@ public interface PaymentReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<PaymentReference>> T withPaymentReference(Function<PaymentReference, T> helper) {
+    default <T> T withPaymentReference(Function<PaymentReference, T> helper) {
         return helper.apply(this);
     }
 }

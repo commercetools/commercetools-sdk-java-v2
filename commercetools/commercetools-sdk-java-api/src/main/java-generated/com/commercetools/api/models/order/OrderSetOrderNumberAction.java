@@ -40,7 +40,7 @@ public interface OrderSetOrderNumberAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetOrderNumberAction>> T withOrderSetOrderNumberAction(Function<OrderSetOrderNumberAction, T> helper) {
+    default <T> T withOrderSetOrderNumberAction(Function<OrderSetOrderNumberAction, T> helper) {
         return helper.apply(this);
     }
 }

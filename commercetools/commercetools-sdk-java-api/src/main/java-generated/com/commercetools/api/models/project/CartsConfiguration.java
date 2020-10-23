@@ -42,7 +42,7 @@ public interface CartsConfiguration  {
         return instance;
     }
 
-    default <T extends Accessor<CartsConfiguration>> T withCartsConfiguration(Function<CartsConfiguration, T> helper) {
+    default <T> T withCartsConfiguration(Function<CartsConfiguration, T> helper) {
         return helper.apply(this);
     }
 }

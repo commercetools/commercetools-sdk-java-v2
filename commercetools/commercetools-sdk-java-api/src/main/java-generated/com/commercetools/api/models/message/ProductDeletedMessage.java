@@ -59,7 +59,7 @@ public interface ProductDeletedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductDeletedMessage>> T withProductDeletedMessage(Function<ProductDeletedMessage, T> helper) {
+    default <T> T withProductDeletedMessage(Function<ProductDeletedMessage, T> helper) {
         return helper.apply(this);
     }
 }

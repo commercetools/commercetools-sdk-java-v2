@@ -52,7 +52,7 @@ public interface OrderDeletedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderDeletedMessage>> T withOrderDeletedMessage(Function<OrderDeletedMessage, T> helper) {
+    default <T> T withOrderDeletedMessage(Function<OrderDeletedMessage, T> helper) {
         return helper.apply(this);
     }
 }

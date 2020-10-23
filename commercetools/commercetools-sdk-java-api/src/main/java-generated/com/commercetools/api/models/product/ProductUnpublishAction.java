@@ -34,7 +34,7 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductUnpublishAction>> T withProductUnpublishAction(Function<ProductUnpublishAction, T> helper) {
+    default <T> T withProductUnpublishAction(Function<ProductUnpublishAction, T> helper) {
         return helper.apply(this);
     }
 }

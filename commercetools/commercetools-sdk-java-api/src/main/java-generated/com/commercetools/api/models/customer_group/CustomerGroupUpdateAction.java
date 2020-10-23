@@ -40,7 +40,7 @@ public interface CustomerGroupUpdateAction  {
 
 
 
-    default <T extends Accessor<CustomerGroupUpdateAction>> T withCustomerGroupUpdateAction(Function<CustomerGroupUpdateAction, T> helper) {
+    default <T> T withCustomerGroupUpdateAction(Function<CustomerGroupUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

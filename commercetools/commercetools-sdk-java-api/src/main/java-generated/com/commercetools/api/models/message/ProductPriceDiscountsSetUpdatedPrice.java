@@ -75,7 +75,7 @@ public interface ProductPriceDiscountsSetUpdatedPrice  {
         return instance;
     }
 
-    default <T extends Accessor<ProductPriceDiscountsSetUpdatedPrice>> T withProductPriceDiscountsSetUpdatedPrice(Function<ProductPriceDiscountsSetUpdatedPrice, T> helper) {
+    default <T> T withProductPriceDiscountsSetUpdatedPrice(Function<ProductPriceDiscountsSetUpdatedPrice, T> helper) {
         return helper.apply(this);
     }
 }

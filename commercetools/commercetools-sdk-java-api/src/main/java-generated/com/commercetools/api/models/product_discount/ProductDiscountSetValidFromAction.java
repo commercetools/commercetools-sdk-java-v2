@@ -44,7 +44,7 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountSetValidFromAction>> T withProductDiscountSetValidFromAction(Function<ProductDiscountSetValidFromAction, T> helper) {
+    default <T> T withProductDiscountSetValidFromAction(Function<ProductDiscountSetValidFromAction, T> helper) {
         return helper.apply(this);
     }
 }

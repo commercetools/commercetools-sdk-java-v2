@@ -73,7 +73,7 @@ public interface OrderCustomerSetMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<OrderCustomerSetMessage>> T withOrderCustomerSetMessage(Function<OrderCustomerSetMessage, T> helper) {
+    default <T> T withOrderCustomerSetMessage(Function<OrderCustomerSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

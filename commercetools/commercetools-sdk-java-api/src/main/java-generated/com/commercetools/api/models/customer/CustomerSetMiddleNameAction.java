@@ -40,7 +40,7 @@ public interface CustomerSetMiddleNameAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSetMiddleNameAction>> T withCustomerSetMiddleNameAction(Function<CustomerSetMiddleNameAction, T> helper) {
+    default <T> T withCustomerSetMiddleNameAction(Function<CustomerSetMiddleNameAction, T> helper) {
         return helper.apply(this);
     }
 }

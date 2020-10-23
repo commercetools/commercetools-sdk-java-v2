@@ -49,7 +49,7 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetShippingMethodAction>> T withStagedOrderSetShippingMethodAction(Function<StagedOrderSetShippingMethodAction, T> helper) {
+    default <T> T withStagedOrderSetShippingMethodAction(Function<StagedOrderSetShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 }

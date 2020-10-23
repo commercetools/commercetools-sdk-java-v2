@@ -49,7 +49,7 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderImportLineItemStateAction>> T withOrderImportLineItemStateAction(Function<OrderImportLineItemStateAction, T> helper) {
+    default <T> T withOrderImportLineItemStateAction(Function<OrderImportLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 }

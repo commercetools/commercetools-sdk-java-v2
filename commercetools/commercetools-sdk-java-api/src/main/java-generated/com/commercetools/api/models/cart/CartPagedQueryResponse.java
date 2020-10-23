@@ -69,7 +69,7 @@ public interface CartPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<CartPagedQueryResponse>> T withCartPagedQueryResponse(Function<CartPagedQueryResponse, T> helper) {
+    default <T> T withCartPagedQueryResponse(Function<CartPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

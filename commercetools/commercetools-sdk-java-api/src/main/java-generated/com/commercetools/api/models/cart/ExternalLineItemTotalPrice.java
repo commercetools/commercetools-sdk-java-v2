@@ -49,7 +49,7 @@ public interface ExternalLineItemTotalPrice  {
         return instance;
     }
 
-    default <T extends Accessor<ExternalLineItemTotalPrice>> T withExternalLineItemTotalPrice(Function<ExternalLineItemTotalPrice, T> helper) {
+    default <T> T withExternalLineItemTotalPrice(Function<ExternalLineItemTotalPrice, T> helper) {
         return helper.apply(this);
     }
 }

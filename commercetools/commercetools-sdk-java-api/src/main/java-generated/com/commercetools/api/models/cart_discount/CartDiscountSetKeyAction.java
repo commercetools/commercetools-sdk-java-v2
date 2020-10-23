@@ -42,7 +42,7 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountSetKeyAction>> T withCartDiscountSetKeyAction(Function<CartDiscountSetKeyAction, T> helper) {
+    default <T> T withCartDiscountSetKeyAction(Function<CartDiscountSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

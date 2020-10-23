@@ -49,7 +49,7 @@ public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetSearchKeywordsAction>> T withProductSetSearchKeywordsAction(Function<ProductSetSearchKeywordsAction, T> helper) {
+    default <T> T withProductSetSearchKeywordsAction(Function<ProductSetSearchKeywordsAction, T> helper) {
         return helper.apply(this);
     }
 }

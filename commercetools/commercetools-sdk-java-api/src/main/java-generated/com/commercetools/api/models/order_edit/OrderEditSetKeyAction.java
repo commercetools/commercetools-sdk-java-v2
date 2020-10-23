@@ -42,7 +42,7 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditSetKeyAction>> T withOrderEditSetKeyAction(Function<OrderEditSetKeyAction, T> helper) {
+    default <T> T withOrderEditSetKeyAction(Function<OrderEditSetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

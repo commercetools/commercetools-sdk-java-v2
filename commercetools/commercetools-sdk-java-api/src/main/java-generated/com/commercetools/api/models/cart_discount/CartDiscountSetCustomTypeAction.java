@@ -54,7 +54,7 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountSetCustomTypeAction>> T withCartDiscountSetCustomTypeAction(Function<CartDiscountSetCustomTypeAction, T> helper) {
+    default <T> T withCartDiscountSetCustomTypeAction(Function<CartDiscountSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

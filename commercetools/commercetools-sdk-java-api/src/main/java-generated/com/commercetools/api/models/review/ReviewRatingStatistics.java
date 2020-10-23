@@ -82,7 +82,7 @@ public interface ReviewRatingStatistics  {
         return instance;
     }
 
-    default <T extends Accessor<ReviewRatingStatistics>> T withReviewRatingStatistics(Function<ReviewRatingStatistics, T> helper) {
+    default <T> T withReviewRatingStatistics(Function<ReviewRatingStatistics, T> helper) {
         return helper.apply(this);
     }
 }

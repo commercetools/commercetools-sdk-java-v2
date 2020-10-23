@@ -103,7 +103,7 @@ public interface FacetResultRange  {
         return instance;
     }
 
-    default <T extends Accessor<FacetResultRange>> T withFacetResultRange(Function<FacetResultRange, T> helper) {
+    default <T> T withFacetResultRange(Function<FacetResultRange, T> helper) {
         return helper.apply(this);
     }
 }

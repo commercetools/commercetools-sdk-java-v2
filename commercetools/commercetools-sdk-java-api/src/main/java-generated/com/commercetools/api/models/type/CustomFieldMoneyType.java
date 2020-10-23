@@ -34,7 +34,7 @@ public interface CustomFieldMoneyType extends FieldType {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldMoneyType>> T withCustomFieldMoneyType(Function<CustomFieldMoneyType, T> helper) {
+    default <T> T withCustomFieldMoneyType(Function<CustomFieldMoneyType, T> helper) {
         return helper.apply(this);
     }
 }

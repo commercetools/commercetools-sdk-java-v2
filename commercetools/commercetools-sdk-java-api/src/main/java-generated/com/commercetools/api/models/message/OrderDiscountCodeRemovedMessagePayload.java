@@ -42,7 +42,7 @@ public interface OrderDiscountCodeRemovedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderDiscountCodeRemovedMessagePayload>> T withOrderDiscountCodeRemovedMessagePayload(Function<OrderDiscountCodeRemovedMessagePayload, T> helper) {
+    default <T> T withOrderDiscountCodeRemovedMessagePayload(Function<OrderDiscountCodeRemovedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

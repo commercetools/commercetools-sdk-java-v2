@@ -61,7 +61,7 @@ public interface ProductVariantAvailability  {
         return instance;
     }
 
-    default <T extends Accessor<ProductVariantAvailability>> T withProductVariantAvailability(Function<ProductVariantAvailability, T> helper) {
+    default <T> T withProductVariantAvailability(Function<ProductVariantAvailability, T> helper) {
         return helper.apply(this);
     }
 }

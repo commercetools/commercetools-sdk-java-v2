@@ -47,7 +47,7 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
         return instance;
     }
 
-    default <T extends Accessor<TypeChangeLocalizedEnumValueOrderAction>> T withTypeChangeLocalizedEnumValueOrderAction(Function<TypeChangeLocalizedEnumValueOrderAction, T> helper) {
+    default <T> T withTypeChangeLocalizedEnumValueOrderAction(Function<TypeChangeLocalizedEnumValueOrderAction, T> helper) {
         return helper.apply(this);
     }
 }

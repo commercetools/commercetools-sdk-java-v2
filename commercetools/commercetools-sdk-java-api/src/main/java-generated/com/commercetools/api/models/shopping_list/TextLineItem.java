@@ -82,7 +82,7 @@ public interface TextLineItem  {
         return instance;
     }
 
-    default <T extends Accessor<TextLineItem>> T withTextLineItem(Function<TextLineItem, T> helper) {
+    default <T> T withTextLineItem(Function<TextLineItem, T> helper) {
         return helper.apply(this);
     }
 }

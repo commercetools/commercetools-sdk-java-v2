@@ -279,7 +279,7 @@ public interface Customer extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<Customer>> T withCustomer(Function<Customer, T> helper) {
+    default <T> T withCustomer(Function<Customer, T> helper) {
         return helper.apply(this);
     }
 }

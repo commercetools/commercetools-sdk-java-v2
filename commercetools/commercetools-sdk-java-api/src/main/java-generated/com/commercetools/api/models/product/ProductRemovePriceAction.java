@@ -49,7 +49,7 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductRemovePriceAction>> T withProductRemovePriceAction(Function<ProductRemovePriceAction, T> helper) {
+    default <T> T withProductRemovePriceAction(Function<ProductRemovePriceAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ZoneAddLocationAction>> T withZoneAddLocationAction(Function<ZoneAddLocationAction, T> helper) {
+    default <T> T withZoneAddLocationAction(Function<ZoneAddLocationAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -55,7 +55,7 @@ public interface DeliveryAddressSetMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<DeliveryAddressSetMessagePayload>> T withDeliveryAddressSetMessagePayload(Function<DeliveryAddressSetMessagePayload, T> helper) {
+    default <T> T withDeliveryAddressSetMessagePayload(Function<DeliveryAddressSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

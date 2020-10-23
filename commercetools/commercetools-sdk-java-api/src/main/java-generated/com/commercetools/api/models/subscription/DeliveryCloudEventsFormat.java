@@ -40,7 +40,7 @@ public interface DeliveryCloudEventsFormat extends DeliveryFormat {
         return instance;
     }
 
-    default <T extends Accessor<DeliveryCloudEventsFormat>> T withDeliveryCloudEventsFormat(Function<DeliveryCloudEventsFormat, T> helper) {
+    default <T> T withDeliveryCloudEventsFormat(Function<DeliveryCloudEventsFormat, T> helper) {
         return helper.apply(this);
     }
 }

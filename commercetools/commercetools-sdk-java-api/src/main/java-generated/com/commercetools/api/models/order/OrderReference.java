@@ -43,7 +43,7 @@ public interface OrderReference extends Reference {
         return instance;
     }
 
-    default <T extends Accessor<OrderReference>> T withOrderReference(Function<OrderReference, T> helper) {
+    default <T> T withOrderReference(Function<OrderReference, T> helper) {
         return helper.apply(this);
     }
 }

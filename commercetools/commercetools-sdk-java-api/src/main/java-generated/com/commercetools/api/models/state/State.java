@@ -159,7 +159,7 @@ public interface State extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<State>> T withState(Function<State, T> helper) {
+    default <T> T withState(Function<State, T> helper) {
         return helper.apply(this);
     }
 }

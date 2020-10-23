@@ -41,7 +41,7 @@ public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderChangeTaxModeAction>> T withStagedOrderChangeTaxModeAction(Function<StagedOrderChangeTaxModeAction, T> helper) {
+    default <T> T withStagedOrderChangeTaxModeAction(Function<StagedOrderChangeTaxModeAction, T> helper) {
         return helper.apply(this);
     }
 }

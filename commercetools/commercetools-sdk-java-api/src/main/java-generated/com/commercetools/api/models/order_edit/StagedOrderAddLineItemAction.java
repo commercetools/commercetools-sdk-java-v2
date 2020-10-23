@@ -124,7 +124,7 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderAddLineItemAction>> T withStagedOrderAddLineItemAction(Function<StagedOrderAddLineItemAction, T> helper) {
+    default <T> T withStagedOrderAddLineItemAction(Function<StagedOrderAddLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -72,7 +72,7 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderTransitionCustomLineItemStateAction>> T withStagedOrderTransitionCustomLineItemStateAction(Function<StagedOrderTransitionCustomLineItemStateAction, T> helper) {
+    default <T> T withStagedOrderTransitionCustomLineItemStateAction(Function<StagedOrderTransitionCustomLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 }

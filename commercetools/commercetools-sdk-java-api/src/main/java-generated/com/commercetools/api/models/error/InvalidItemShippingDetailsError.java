@@ -48,7 +48,7 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<InvalidItemShippingDetailsError>> T withInvalidItemShippingDetailsError(Function<InvalidItemShippingDetailsError, T> helper) {
+    default <T> T withInvalidItemShippingDetailsError(Function<InvalidItemShippingDetailsError, T> helper) {
         return helper.apply(this);
     }
 }

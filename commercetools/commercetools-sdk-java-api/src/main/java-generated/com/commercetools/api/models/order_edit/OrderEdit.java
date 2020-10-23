@@ -147,7 +147,7 @@ public interface OrderEdit extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<OrderEdit>> T withOrderEdit(Function<OrderEdit, T> helper) {
+    default <T> T withOrderEdit(Function<OrderEdit, T> helper) {
         return helper.apply(this);
     }
 }

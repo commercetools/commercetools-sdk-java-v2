@@ -40,7 +40,7 @@ public interface ReplicaCartDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ReplicaCartDraft>> T withReplicaCartDraft(Function<ReplicaCartDraft, T> helper) {
+    default <T> T withReplicaCartDraft(Function<ReplicaCartDraft, T> helper) {
         return helper.apply(this);
     }
 }

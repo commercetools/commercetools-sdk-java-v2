@@ -43,7 +43,7 @@ public interface DuplicatePriceScopeError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<DuplicatePriceScopeError>> T withDuplicatePriceScopeError(Function<DuplicatePriceScopeError, T> helper) {
+    default <T> T withDuplicatePriceScopeError(Function<DuplicatePriceScopeError, T> helper) {
         return helper.apply(this);
     }
 }

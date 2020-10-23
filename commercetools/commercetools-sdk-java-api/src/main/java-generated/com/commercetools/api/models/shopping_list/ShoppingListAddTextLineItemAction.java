@@ -72,7 +72,7 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
         return instance;
     }
 
-    default <T extends Accessor<ShoppingListAddTextLineItemAction>> T withShoppingListAddTextLineItemAction(Function<ShoppingListAddTextLineItemAction, T> helper) {
+    default <T> T withShoppingListAddTextLineItemAction(Function<ShoppingListAddTextLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

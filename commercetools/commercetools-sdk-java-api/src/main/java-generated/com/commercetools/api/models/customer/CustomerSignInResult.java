@@ -52,7 +52,7 @@ public interface CustomerSignInResult  {
         return instance;
     }
 
-    default <T extends Accessor<CustomerSignInResult>> T withCustomerSignInResult(Function<CustomerSignInResult, T> helper) {
+    default <T> T withCustomerSignInResult(Function<CustomerSignInResult, T> helper) {
         return helper.apply(this);
     }
 }

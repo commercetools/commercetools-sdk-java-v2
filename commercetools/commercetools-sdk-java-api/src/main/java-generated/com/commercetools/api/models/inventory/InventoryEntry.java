@@ -147,7 +147,7 @@ public interface InventoryEntry extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntry>> T withInventoryEntry(Function<InventoryEntry, T> helper) {
+    default <T> T withInventoryEntry(Function<InventoryEntry, T> helper) {
         return helper.apply(this);
     }
 }

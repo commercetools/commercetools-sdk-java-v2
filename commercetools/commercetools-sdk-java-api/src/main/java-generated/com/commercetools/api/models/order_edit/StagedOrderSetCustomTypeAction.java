@@ -49,7 +49,7 @@ public interface StagedOrderSetCustomTypeAction extends StagedOrderUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetCustomTypeAction>> T withStagedOrderSetCustomTypeAction(Function<StagedOrderSetCustomTypeAction, T> helper) {
+    default <T> T withStagedOrderSetCustomTypeAction(Function<StagedOrderSetCustomTypeAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -89,7 +89,7 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartAddCustomLineItemAction>> T withCartAddCustomLineItemAction(Function<CartAddCustomLineItemAction, T> helper) {
+    default <T> T withCartAddCustomLineItemAction(Function<CartAddCustomLineItemAction, T> helper) {
         return helper.apply(this);
     }
 }

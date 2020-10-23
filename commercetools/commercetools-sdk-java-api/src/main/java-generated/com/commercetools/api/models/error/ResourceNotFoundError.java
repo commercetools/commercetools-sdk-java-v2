@@ -35,7 +35,7 @@ public interface ResourceNotFoundError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ResourceNotFoundError>> T withResourceNotFoundError(Function<ResourceNotFoundError, T> helper) {
+    default <T> T withResourceNotFoundError(Function<ResourceNotFoundError, T> helper) {
         return helper.apply(this);
     }
 }

@@ -40,7 +40,7 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartSetCustomerEmailAction>> T withCartSetCustomerEmailAction(Function<CartSetCustomerEmailAction, T> helper) {
+    default <T> T withCartSetCustomerEmailAction(Function<CartSetCustomerEmailAction, T> helper) {
         return helper.apply(this);
     }
 }

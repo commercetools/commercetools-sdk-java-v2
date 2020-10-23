@@ -40,7 +40,7 @@ public interface OrderEditResult  {
 
 
 
-    default <T extends Accessor<OrderEditResult>> T withOrderEditResult(Function<OrderEditResult, T> helper) {
+    default <T> T withOrderEditResult(Function<OrderEditResult, T> helper) {
         return helper.apply(this);
     }
 }

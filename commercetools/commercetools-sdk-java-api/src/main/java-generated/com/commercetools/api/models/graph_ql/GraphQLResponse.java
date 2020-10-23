@@ -48,7 +48,7 @@ public interface GraphQLResponse  {
         return instance;
     }
 
-    default <T extends Accessor<GraphQLResponse>> T withGraphQLResponse(Function<GraphQLResponse, T> helper) {
+    default <T> T withGraphQLResponse(Function<GraphQLResponse, T> helper) {
         return helper.apply(this);
     }
 }

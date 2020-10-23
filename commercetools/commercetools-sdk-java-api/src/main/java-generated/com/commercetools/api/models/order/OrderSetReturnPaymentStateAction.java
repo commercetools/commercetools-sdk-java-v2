@@ -48,7 +48,7 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderSetReturnPaymentStateAction>> T withOrderSetReturnPaymentStateAction(Function<OrderSetReturnPaymentStateAction, T> helper) {
+    default <T> T withOrderSetReturnPaymentStateAction(Function<OrderSetReturnPaymentStateAction, T> helper) {
         return helper.apply(this);
     }
 }

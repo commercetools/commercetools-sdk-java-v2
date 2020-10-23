@@ -69,7 +69,7 @@ public interface ExtensionPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionPagedQueryResponse>> T withExtensionPagedQueryResponse(Function<ExtensionPagedQueryResponse, T> helper) {
+    default <T> T withExtensionPagedQueryResponse(Function<ExtensionPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

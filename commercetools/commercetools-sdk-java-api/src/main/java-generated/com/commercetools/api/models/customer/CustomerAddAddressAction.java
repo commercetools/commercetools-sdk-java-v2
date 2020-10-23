@@ -42,7 +42,7 @@ public interface CustomerAddAddressAction extends CustomerUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CustomerAddAddressAction>> T withCustomerAddAddressAction(Function<CustomerAddAddressAction, T> helper) {
+    default <T> T withCustomerAddAddressAction(Function<CustomerAddAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

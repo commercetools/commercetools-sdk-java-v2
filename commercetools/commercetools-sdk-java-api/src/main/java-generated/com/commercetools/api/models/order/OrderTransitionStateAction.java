@@ -49,7 +49,7 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderTransitionStateAction>> T withOrderTransitionStateAction(Function<OrderTransitionStateAction, T> helper) {
+    default <T> T withOrderTransitionStateAction(Function<OrderTransitionStateAction, T> helper) {
         return helper.apply(this);
     }
 }

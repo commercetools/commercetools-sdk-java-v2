@@ -66,7 +66,7 @@ public interface OrderLineItemDiscountSetMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderLineItemDiscountSetMessagePayload>> T withOrderLineItemDiscountSetMessagePayload(Function<OrderLineItemDiscountSetMessagePayload, T> helper) {
+    default <T> T withOrderLineItemDiscountSetMessagePayload(Function<OrderLineItemDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

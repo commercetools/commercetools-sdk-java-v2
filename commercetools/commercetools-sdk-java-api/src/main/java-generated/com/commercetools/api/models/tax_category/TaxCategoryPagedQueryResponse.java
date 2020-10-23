@@ -69,7 +69,7 @@ public interface TaxCategoryPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<TaxCategoryPagedQueryResponse>> T withTaxCategoryPagedQueryResponse(Function<TaxCategoryPagedQueryResponse, T> helper) {
+    default <T> T withTaxCategoryPagedQueryResponse(Function<TaxCategoryPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

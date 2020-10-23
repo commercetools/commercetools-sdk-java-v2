@@ -34,7 +34,7 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductRevertStagedChangesAction>> T withProductRevertStagedChangesAction(Function<ProductRevertStagedChangesAction, T> helper) {
+    default <T> T withProductRevertStagedChangesAction(Function<ProductRevertStagedChangesAction, T> helper) {
         return helper.apply(this);
     }
 }

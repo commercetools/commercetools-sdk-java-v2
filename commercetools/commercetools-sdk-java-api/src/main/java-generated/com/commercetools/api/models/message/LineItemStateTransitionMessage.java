@@ -82,7 +82,7 @@ public interface LineItemStateTransitionMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<LineItemStateTransitionMessage>> T withLineItemStateTransitionMessage(Function<LineItemStateTransitionMessage, T> helper) {
+    default <T> T withLineItemStateTransitionMessage(Function<LineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 }

@@ -62,7 +62,7 @@ public interface ProductDiscountMatchQuery  {
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountMatchQuery>> T withProductDiscountMatchQuery(Function<ProductDiscountMatchQuery, T> helper) {
+    default <T> T withProductDiscountMatchQuery(Function<ProductDiscountMatchQuery, T> helper) {
         return helper.apply(this);
     }
 }

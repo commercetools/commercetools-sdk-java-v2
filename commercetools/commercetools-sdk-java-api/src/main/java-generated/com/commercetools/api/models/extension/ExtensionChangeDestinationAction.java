@@ -42,7 +42,7 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
         return instance;
     }
 
-    default <T extends Accessor<ExtensionChangeDestinationAction>> T withExtensionChangeDestinationAction(Function<ExtensionChangeDestinationAction, T> helper) {
+    default <T> T withExtensionChangeDestinationAction(Function<ExtensionChangeDestinationAction, T> helper) {
         return helper.apply(this);
     }
 }

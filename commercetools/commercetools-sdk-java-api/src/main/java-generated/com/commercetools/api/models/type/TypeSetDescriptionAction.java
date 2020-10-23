@@ -41,7 +41,7 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<TypeSetDescriptionAction>> T withTypeSetDescriptionAction(Function<TypeSetDescriptionAction, T> helper) {
+    default <T> T withTypeSetDescriptionAction(Function<TypeSetDescriptionAction, T> helper) {
         return helper.apply(this);
     }
 }

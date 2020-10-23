@@ -35,7 +35,7 @@ public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<ShippingMethodDoesNotMatchCartError>> T withShippingMethodDoesNotMatchCartError(Function<ShippingMethodDoesNotMatchCartError, T> helper) {
+    default <T> T withShippingMethodDoesNotMatchCartError(Function<ShippingMethodDoesNotMatchCartError, T> helper) {
         return helper.apply(this);
     }
 }

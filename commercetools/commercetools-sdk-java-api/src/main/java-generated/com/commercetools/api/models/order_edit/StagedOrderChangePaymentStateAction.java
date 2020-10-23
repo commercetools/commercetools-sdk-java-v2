@@ -41,7 +41,7 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderChangePaymentStateAction>> T withStagedOrderChangePaymentStateAction(Function<StagedOrderChangePaymentStateAction, T> helper) {
+    default <T> T withStagedOrderChangePaymentStateAction(Function<StagedOrderChangePaymentStateAction, T> helper) {
         return helper.apply(this);
     }
 }

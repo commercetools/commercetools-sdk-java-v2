@@ -52,7 +52,7 @@ public interface ProductSlugChangedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<ProductSlugChangedMessage>> T withProductSlugChangedMessage(Function<ProductSlugChangedMessage, T> helper) {
+    default <T> T withProductSlugChangedMessage(Function<ProductSlugChangedMessage, T> helper) {
         return helper.apply(this);
     }
 }

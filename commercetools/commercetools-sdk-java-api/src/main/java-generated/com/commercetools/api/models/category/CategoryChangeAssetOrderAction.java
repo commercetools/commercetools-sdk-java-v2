@@ -40,7 +40,7 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategoryChangeAssetOrderAction>> T withCategoryChangeAssetOrderAction(Function<CategoryChangeAssetOrderAction, T> helper) {
+    default <T> T withCategoryChangeAssetOrderAction(Function<CategoryChangeAssetOrderAction, T> helper) {
         return helper.apply(this);
     }
 }

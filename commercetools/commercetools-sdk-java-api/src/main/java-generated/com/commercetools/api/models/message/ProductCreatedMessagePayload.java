@@ -42,7 +42,7 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<ProductCreatedMessagePayload>> T withProductCreatedMessagePayload(Function<ProductCreatedMessagePayload, T> helper) {
+    default <T> T withProductCreatedMessagePayload(Function<ProductCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

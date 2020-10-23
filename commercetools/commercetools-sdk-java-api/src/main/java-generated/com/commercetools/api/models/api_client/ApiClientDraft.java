@@ -56,7 +56,7 @@ public interface ApiClientDraft  {
         return instance;
     }
 
-    default <T extends Accessor<ApiClientDraft>> T withApiClientDraft(Function<ApiClientDraft, T> helper) {
+    default <T> T withApiClientDraft(Function<ApiClientDraft, T> helper) {
         return helper.apply(this);
     }
 }

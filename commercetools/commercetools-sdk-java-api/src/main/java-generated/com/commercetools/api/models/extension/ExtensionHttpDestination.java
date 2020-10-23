@@ -48,7 +48,7 @@ public interface ExtensionHttpDestination extends ExtensionDestination {
         return instance;
     }
 
-    default <T extends Accessor<ExtensionHttpDestination>> T withExtensionHttpDestination(Function<ExtensionHttpDestination, T> helper) {
+    default <T> T withExtensionHttpDestination(Function<ExtensionHttpDestination, T> helper) {
         return helper.apply(this);
     }
 }

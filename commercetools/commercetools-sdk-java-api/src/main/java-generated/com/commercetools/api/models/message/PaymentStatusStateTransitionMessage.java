@@ -59,7 +59,7 @@ public interface PaymentStatusStateTransitionMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<PaymentStatusStateTransitionMessage>> T withPaymentStatusStateTransitionMessage(Function<PaymentStatusStateTransitionMessage, T> helper) {
+    default <T> T withPaymentStatusStateTransitionMessage(Function<PaymentStatusStateTransitionMessage, T> helper) {
         return helper.apply(this);
     }
 }

@@ -43,7 +43,7 @@ public interface DuplicateAttributeValuesError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<DuplicateAttributeValuesError>> T withDuplicateAttributeValuesError(Function<DuplicateAttributeValuesError, T> helper) {
+    default <T> T withDuplicateAttributeValuesError(Function<DuplicateAttributeValuesError, T> helper) {
         return helper.apply(this);
     }
 }

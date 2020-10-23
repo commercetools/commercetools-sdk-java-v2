@@ -48,7 +48,7 @@ public interface OrderEditSetCustomFieldAction extends OrderEditUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderEditSetCustomFieldAction>> T withOrderEditSetCustomFieldAction(Function<OrderEditSetCustomFieldAction, T> helper) {
+    default <T> T withOrderEditSetCustomFieldAction(Function<OrderEditSetCustomFieldAction, T> helper) {
         return helper.apply(this);
     }
 }

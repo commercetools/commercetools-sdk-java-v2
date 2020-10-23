@@ -78,7 +78,7 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
         return instance;
     }
 
-    default <T extends Accessor<MultiBuyCustomLineItemsTarget>> T withMultiBuyCustomLineItemsTarget(Function<MultiBuyCustomLineItemsTarget, T> helper) {
+    default <T> T withMultiBuyCustomLineItemsTarget(Function<MultiBuyCustomLineItemsTarget, T> helper) {
         return helper.apply(this);
     }
 }

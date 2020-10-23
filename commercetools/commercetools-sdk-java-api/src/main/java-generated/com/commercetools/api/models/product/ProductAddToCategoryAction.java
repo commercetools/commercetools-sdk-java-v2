@@ -56,7 +56,7 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductAddToCategoryAction>> T withProductAddToCategoryAction(Function<ProductAddToCategoryAction, T> helper) {
+    default <T> T withProductAddToCategoryAction(Function<ProductAddToCategoryAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -49,7 +49,7 @@ public interface DiscountCodeInfo  {
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeInfo>> T withDiscountCodeInfo(Function<DiscountCodeInfo, T> helper) {
+    default <T> T withDiscountCodeInfo(Function<DiscountCodeInfo, T> helper) {
         return helper.apply(this);
     }
 }

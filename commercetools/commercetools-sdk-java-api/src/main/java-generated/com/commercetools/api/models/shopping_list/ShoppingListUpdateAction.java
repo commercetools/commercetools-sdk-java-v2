@@ -78,7 +78,7 @@ public interface ShoppingListUpdateAction  {
 
 
 
-    default <T extends Accessor<ShoppingListUpdateAction>> T withShoppingListUpdateAction(Function<ShoppingListUpdateAction, T> helper) {
+    default <T> T withShoppingListUpdateAction(Function<ShoppingListUpdateAction, T> helper) {
         return helper.apply(this);
     }
 }

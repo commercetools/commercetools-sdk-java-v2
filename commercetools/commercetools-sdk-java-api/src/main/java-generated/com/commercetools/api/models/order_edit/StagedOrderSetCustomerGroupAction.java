@@ -41,7 +41,7 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetCustomerGroupAction>> T withStagedOrderSetCustomerGroupAction(Function<StagedOrderSetCustomerGroupAction, T> helper) {
+    default <T> T withStagedOrderSetCustomerGroupAction(Function<StagedOrderSetCustomerGroupAction, T> helper) {
         return helper.apply(this);
     }
 }

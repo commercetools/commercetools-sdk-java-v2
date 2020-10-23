@@ -48,7 +48,7 @@ public interface OrderShippingInfoSetMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<OrderShippingInfoSetMessagePayload>> T withOrderShippingInfoSetMessagePayload(Function<OrderShippingInfoSetMessagePayload, T> helper) {
+    default <T> T withOrderShippingInfoSetMessagePayload(Function<OrderShippingInfoSetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

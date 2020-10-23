@@ -41,7 +41,7 @@ public interface OrderChangeShipmentStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<OrderChangeShipmentStateAction>> T withOrderChangeShipmentStateAction(Function<OrderChangeShipmentStateAction, T> helper) {
+    default <T> T withOrderChangeShipmentStateAction(Function<OrderChangeShipmentStateAction, T> helper) {
         return helper.apply(this);
     }
 }

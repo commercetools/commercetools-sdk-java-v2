@@ -40,7 +40,7 @@ public interface ClassificationShippingRateInputDraft extends ShippingRateInputD
         return instance;
     }
 
-    default <T extends Accessor<ClassificationShippingRateInputDraft>> T withClassificationShippingRateInputDraft(Function<ClassificationShippingRateInputDraft, T> helper) {
+    default <T> T withClassificationShippingRateInputDraft(Function<ClassificationShippingRateInputDraft, T> helper) {
         return helper.apply(this);
     }
 }

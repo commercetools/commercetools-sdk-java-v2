@@ -42,7 +42,7 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ReviewSetAuthorNameAction>> T withReviewSetAuthorNameAction(Function<ReviewSetAuthorNameAction, T> helper) {
+    default <T> T withReviewSetAuthorNameAction(Function<ReviewSetAuthorNameAction, T> helper) {
         return helper.apply(this);
     }
 }

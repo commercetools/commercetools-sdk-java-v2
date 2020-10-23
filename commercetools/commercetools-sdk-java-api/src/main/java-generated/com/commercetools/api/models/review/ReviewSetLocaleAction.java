@@ -42,7 +42,7 @@ public interface ReviewSetLocaleAction extends ReviewUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ReviewSetLocaleAction>> T withReviewSetLocaleAction(Function<ReviewSetLocaleAction, T> helper) {
+    default <T> T withReviewSetLocaleAction(Function<ReviewSetLocaleAction, T> helper) {
         return helper.apply(this);
     }
 }

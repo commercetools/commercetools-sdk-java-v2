@@ -41,7 +41,7 @@ public interface StagedOrderSetShippingMethodTaxAmountAction extends StagedOrder
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderSetShippingMethodTaxAmountAction>> T withStagedOrderSetShippingMethodTaxAmountAction(Function<StagedOrderSetShippingMethodTaxAmountAction, T> helper) {
+    default <T> T withStagedOrderSetShippingMethodTaxAmountAction(Function<StagedOrderSetShippingMethodTaxAmountAction, T> helper) {
         return helper.apply(this);
     }
 }

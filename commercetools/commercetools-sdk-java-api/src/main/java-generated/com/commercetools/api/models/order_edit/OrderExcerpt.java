@@ -56,7 +56,7 @@ public interface OrderExcerpt  {
         return instance;
     }
 
-    default <T extends Accessor<OrderExcerpt>> T withOrderExcerpt(Function<OrderExcerpt, T> helper) {
+    default <T> T withOrderExcerpt(Function<OrderExcerpt, T> helper) {
         return helper.apply(this);
     }
 }

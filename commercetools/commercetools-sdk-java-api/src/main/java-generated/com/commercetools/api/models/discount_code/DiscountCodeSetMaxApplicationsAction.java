@@ -42,7 +42,7 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
         return instance;
     }
 
-    default <T extends Accessor<DiscountCodeSetMaxApplicationsAction>> T withDiscountCodeSetMaxApplicationsAction(Function<DiscountCodeSetMaxApplicationsAction, T> helper) {
+    default <T> T withDiscountCodeSetMaxApplicationsAction(Function<DiscountCodeSetMaxApplicationsAction, T> helper) {
         return helper.apply(this);
     }
 }

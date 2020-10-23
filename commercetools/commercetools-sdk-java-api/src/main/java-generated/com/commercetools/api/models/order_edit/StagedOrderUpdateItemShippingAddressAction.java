@@ -42,7 +42,7 @@ public interface StagedOrderUpdateItemShippingAddressAction extends StagedOrderU
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderUpdateItemShippingAddressAction>> T withStagedOrderUpdateItemShippingAddressAction(Function<StagedOrderUpdateItemShippingAddressAction, T> helper) {
+    default <T> T withStagedOrderUpdateItemShippingAddressAction(Function<StagedOrderUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

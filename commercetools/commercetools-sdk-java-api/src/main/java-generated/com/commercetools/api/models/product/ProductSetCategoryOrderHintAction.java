@@ -54,7 +54,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetCategoryOrderHintAction>> T withProductSetCategoryOrderHintAction(Function<ProductSetCategoryOrderHintAction, T> helper) {
+    default <T> T withProductSetCategoryOrderHintAction(Function<ProductSetCategoryOrderHintAction, T> helper) {
         return helper.apply(this);
     }
 }

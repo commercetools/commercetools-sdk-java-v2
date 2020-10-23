@@ -71,7 +71,7 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetAssetKeyAction>> T withProductSetAssetKeyAction(Function<ProductSetAssetKeyAction, T> helper) {
+    default <T> T withProductSetAssetKeyAction(Function<ProductSetAssetKeyAction, T> helper) {
         return helper.apply(this);
     }
 }

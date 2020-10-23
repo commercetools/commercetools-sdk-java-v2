@@ -79,7 +79,7 @@ public interface InventoryEntryDraft  {
         return instance;
     }
 
-    default <T extends Accessor<InventoryEntryDraft>> T withInventoryEntryDraft(Function<InventoryEntryDraft, T> helper) {
+    default <T> T withInventoryEntryDraft(Function<InventoryEntryDraft, T> helper) {
         return helper.apply(this);
     }
 }

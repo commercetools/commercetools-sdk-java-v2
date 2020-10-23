@@ -40,7 +40,7 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
         return instance;
     }
 
-    default <T extends Accessor<StagedOrderRemoveItemShippingAddressAction>> T withStagedOrderRemoveItemShippingAddressAction(Function<StagedOrderRemoveItemShippingAddressAction, T> helper) {
+    default <T> T withStagedOrderRemoveItemShippingAddressAction(Function<StagedOrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

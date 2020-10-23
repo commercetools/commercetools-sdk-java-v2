@@ -56,7 +56,7 @@ public interface GraphQLError  {
         return instance;
     }
 
-    default <T extends Accessor<GraphQLError>> T withGraphQLError(Function<GraphQLError, T> helper) {
+    default <T> T withGraphQLError(Function<GraphQLError, T> helper) {
         return helper.apply(this);
     }
 }

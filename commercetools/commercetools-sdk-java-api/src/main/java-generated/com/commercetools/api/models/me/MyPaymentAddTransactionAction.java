@@ -42,7 +42,7 @@ public interface MyPaymentAddTransactionAction extends MyPaymentUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<MyPaymentAddTransactionAction>> T withMyPaymentAddTransactionAction(Function<MyPaymentAddTransactionAction, T> helper) {
+    default <T> T withMyPaymentAddTransactionAction(Function<MyPaymentAddTransactionAction, T> helper) {
         return helper.apply(this);
     }
 }

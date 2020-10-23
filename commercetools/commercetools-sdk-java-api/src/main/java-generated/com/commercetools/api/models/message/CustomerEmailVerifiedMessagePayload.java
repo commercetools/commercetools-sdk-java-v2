@@ -34,7 +34,7 @@ public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<CustomerEmailVerifiedMessagePayload>> T withCustomerEmailVerifiedMessagePayload(Function<CustomerEmailVerifiedMessagePayload, T> helper) {
+    default <T> T withCustomerEmailVerifiedMessagePayload(Function<CustomerEmailVerifiedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

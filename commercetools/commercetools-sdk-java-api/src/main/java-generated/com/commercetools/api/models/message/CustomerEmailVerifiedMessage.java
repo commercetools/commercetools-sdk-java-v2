@@ -44,7 +44,7 @@ public interface CustomerEmailVerifiedMessage extends Message {
         return instance;
     }
 
-    default <T extends Accessor<CustomerEmailVerifiedMessage>> T withCustomerEmailVerifiedMessage(Function<CustomerEmailVerifiedMessage, T> helper) {
+    default <T> T withCustomerEmailVerifiedMessage(Function<CustomerEmailVerifiedMessage, T> helper) {
         return helper.apply(this);
     }
 }

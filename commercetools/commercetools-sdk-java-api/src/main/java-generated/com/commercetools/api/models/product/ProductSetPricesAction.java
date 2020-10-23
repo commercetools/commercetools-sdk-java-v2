@@ -63,7 +63,7 @@ public interface ProductSetPricesAction extends ProductUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<ProductSetPricesAction>> T withProductSetPricesAction(Function<ProductSetPricesAction, T> helper) {
+    default <T> T withProductSetPricesAction(Function<ProductSetPricesAction, T> helper) {
         return helper.apply(this);
     }
 }

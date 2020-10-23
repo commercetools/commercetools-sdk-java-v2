@@ -50,7 +50,7 @@ public interface DiscountedLineItemPrice  {
         return instance;
     }
 
-    default <T extends Accessor<DiscountedLineItemPrice>> T withDiscountedLineItemPrice(Function<DiscountedLineItemPrice, T> helper) {
+    default <T> T withDiscountedLineItemPrice(Function<DiscountedLineItemPrice, T> helper) {
         return helper.apply(this);
     }
 }

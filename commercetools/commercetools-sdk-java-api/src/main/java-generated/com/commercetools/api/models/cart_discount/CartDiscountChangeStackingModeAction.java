@@ -41,7 +41,7 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
         return instance;
     }
 
-    default <T extends Accessor<CartDiscountChangeStackingModeAction>> T withCartDiscountChangeStackingModeAction(Function<CartDiscountChangeStackingModeAction, T> helper) {
+    default <T> T withCartDiscountChangeStackingModeAction(Function<CartDiscountChangeStackingModeAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -37,7 +37,7 @@ public interface ChannelResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    default <T extends Accessor<ChannelResourceIdentifier>> T withChannelResourceIdentifier(Function<ChannelResourceIdentifier, T> helper) {
+    default <T> T withChannelResourceIdentifier(Function<ChannelResourceIdentifier, T> helper) {
         return helper.apply(this);
     }
 }

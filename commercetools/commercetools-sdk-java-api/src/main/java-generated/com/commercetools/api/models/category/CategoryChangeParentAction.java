@@ -42,7 +42,7 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CategoryChangeParentAction>> T withCategoryChangeParentAction(Function<CategoryChangeParentAction, T> helper) {
+    default <T> T withCategoryChangeParentAction(Function<CategoryChangeParentAction, T> helper) {
         return helper.apply(this);
     }
 }

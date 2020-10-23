@@ -57,7 +57,7 @@ public interface DuplicateFieldError extends ErrorObject {
         return instance;
     }
 
-    default <T extends Accessor<DuplicateFieldError>> T withDuplicateFieldError(Function<DuplicateFieldError, T> helper) {
+    default <T> T withDuplicateFieldError(Function<DuplicateFieldError, T> helper) {
         return helper.apply(this);
     }
 }

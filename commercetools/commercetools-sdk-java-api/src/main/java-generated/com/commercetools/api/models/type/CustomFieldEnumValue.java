@@ -47,7 +47,7 @@ public interface CustomFieldEnumValue  {
         return instance;
     }
 
-    default <T extends Accessor<CustomFieldEnumValue>> T withCustomFieldEnumValue(Function<CustomFieldEnumValue, T> helper) {
+    default <T> T withCustomFieldEnumValue(Function<CustomFieldEnumValue, T> helper) {
         return helper.apply(this);
     }
 }

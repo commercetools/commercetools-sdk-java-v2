@@ -42,7 +42,7 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountChangeNameAction>> T withProductDiscountChangeNameAction(Function<ProductDiscountChangeNameAction, T> helper) {
+    default <T> T withProductDiscountChangeNameAction(Function<ProductDiscountChangeNameAction, T> helper) {
         return helper.apply(this);
     }
 }

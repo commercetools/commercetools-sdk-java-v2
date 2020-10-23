@@ -39,7 +39,7 @@ public interface FacetResult  {
 
 
 
-    default <T extends Accessor<FacetResult>> T withFacetResult(Function<FacetResult, T> helper) {
+    default <T> T withFacetResult(Function<FacetResult, T> helper) {
         return helper.apply(this);
     }
 }

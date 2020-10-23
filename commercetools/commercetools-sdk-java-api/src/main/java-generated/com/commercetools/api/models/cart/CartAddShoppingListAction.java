@@ -57,7 +57,7 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
         return instance;
     }
 
-    default <T extends Accessor<CartAddShoppingListAction>> T withCartAddShoppingListAction(Function<CartAddShoppingListAction, T> helper) {
+    default <T> T withCartAddShoppingListAction(Function<CartAddShoppingListAction, T> helper) {
         return helper.apply(this);
     }
 }

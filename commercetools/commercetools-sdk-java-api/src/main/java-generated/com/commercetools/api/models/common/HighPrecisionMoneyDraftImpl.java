@@ -29,12 +29,15 @@ public final class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraf
     
     private com.commercetools.api.models.common.MoneyType type;
     
+    private Integer fractionDigits;
+    
     private Long preciseAmount;
 
     @JsonCreator
-    HighPrecisionMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("preciseAmount") final Long preciseAmount) {
+    HighPrecisionMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("preciseAmount") final Long preciseAmount) {
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
+        this.fractionDigits = fractionDigits;
         this.preciseAmount = preciseAmount;
         this.type = MoneyType.findEnumViaJsonName("highPrecision").get();
     }
@@ -60,6 +63,11 @@ public final class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraf
     }
     
     
+    public Integer getFractionDigits(){
+        return this.fractionDigits;
+    }
+    
+    
     public Long getPreciseAmount(){
         return this.preciseAmount;
     }
@@ -70,6 +78,10 @@ public final class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraf
     
     public void setCurrencyCode(final String currencyCode){
         this.currencyCode = currencyCode;
+    }
+    
+    public void setFractionDigits(final Integer fractionDigits){
+        this.fractionDigits = fractionDigits;
     }
     
     public void setPreciseAmount(final Long preciseAmount){

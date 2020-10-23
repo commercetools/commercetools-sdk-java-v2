@@ -69,7 +69,7 @@ public interface CustomObjectPagedQueryResponse  {
         return instance;
     }
 
-    default <T extends Accessor<CustomObjectPagedQueryResponse>> T withCustomObjectPagedQueryResponse(Function<CustomObjectPagedQueryResponse, T> helper) {
+    default <T> T withCustomObjectPagedQueryResponse(Function<CustomObjectPagedQueryResponse, T> helper) {
         return helper.apply(this);
     }
 }

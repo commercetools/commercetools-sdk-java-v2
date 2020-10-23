@@ -263,7 +263,7 @@ public interface CartDraft  {
         return instance;
     }
 
-    default <T extends Accessor<CartDraft>> T withCartDraft(Function<CartDraft, T> helper) {
+    default <T> T withCartDraft(Function<CartDraft, T> helper) {
         return helper.apply(this);
     }
 }

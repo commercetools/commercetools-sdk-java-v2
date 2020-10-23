@@ -353,7 +353,7 @@ public interface MyOrder extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<MyOrder>> T withMyOrder(Function<MyOrder, T> helper) {
+    default <T> T withMyOrder(Function<MyOrder, T> helper) {
         return helper.apply(this);
     }
 }

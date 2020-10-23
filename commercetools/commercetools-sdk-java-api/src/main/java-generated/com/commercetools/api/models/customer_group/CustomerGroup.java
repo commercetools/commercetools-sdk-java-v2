@@ -110,7 +110,7 @@ public interface CustomerGroup extends BaseResource {
         return instance;
     }
 
-    default <T extends Accessor<CustomerGroup>> T withCustomerGroup(Function<CustomerGroup, T> helper) {
+    default <T> T withCustomerGroup(Function<CustomerGroup, T> helper) {
         return helper.apply(this);
     }
 }

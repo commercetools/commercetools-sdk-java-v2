@@ -40,7 +40,7 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
         return instance;
     }
 
-    default <T extends Accessor<ScoreShippingRateInput>> T withScoreShippingRateInput(Function<ScoreShippingRateInput, T> helper) {
+    default <T> T withScoreShippingRateInput(Function<ScoreShippingRateInput, T> helper) {
         return helper.apply(this);
     }
 }

@@ -42,7 +42,7 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    default <T extends Accessor<CategoryCreatedMessagePayload>> T withCategoryCreatedMessagePayload(Function<CategoryCreatedMessagePayload, T> helper) {
+    default <T> T withCategoryCreatedMessagePayload(Function<CategoryCreatedMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

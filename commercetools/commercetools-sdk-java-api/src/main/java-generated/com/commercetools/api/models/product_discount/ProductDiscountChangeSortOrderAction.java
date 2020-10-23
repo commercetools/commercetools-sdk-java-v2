@@ -43,7 +43,7 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
         return instance;
     }
 
-    default <T extends Accessor<ProductDiscountChangeSortOrderAction>> T withProductDiscountChangeSortOrderAction(Function<ProductDiscountChangeSortOrderAction, T> helper) {
+    default <T> T withProductDiscountChangeSortOrderAction(Function<ProductDiscountChangeSortOrderAction, T> helper) {
         return helper.apply(this);
     }
 }

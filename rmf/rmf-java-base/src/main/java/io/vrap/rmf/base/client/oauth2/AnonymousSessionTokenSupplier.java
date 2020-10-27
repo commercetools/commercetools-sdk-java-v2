@@ -1,6 +1,7 @@
 package io.vrap.rmf.base.client.oauth2;
 
 import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.Utils;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
@@ -11,6 +12,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
 public class AnonymousSessionTokenSupplier implements TokenSupplier {
+    private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
 
     private final VrapHttpClient vrapHttpClient;
     private final ApiHttpRequest apiHttpRequest;
@@ -30,6 +32,13 @@ public class AnonymousSessionTokenSupplier implements TokenSupplier {
     public CompletableFuture<AuthenticationToken> getToken() {
         return vrapHttpClient
                 .execute(apiHttpRequest)
+                .whenComplete((response, throwable) -> {
+                    if (throwable != null) {
+                        logger.error(() -> response, throwable);
+                    } else {
+                        logger.debug(() -> response);
+                    }
+                })
                 .thenApply(apiHttpResponse -> {
                     if(apiHttpResponse.getStatusCode() < 200 || apiHttpResponse.getStatusCode() > 299) {
                         throw new CompletionException(new Throwable(new String(apiHttpResponse.getBody())));

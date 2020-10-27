@@ -16,14 +16,13 @@ public class MiddlewareFactory {
     {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
         return asList(
-                new ErrorMiddleware(),
-                new LoggerMiddleware(logger),
-                new OAuthMiddleware(oAuthHandler),
-                new ReAuthMiddleware(oAuthHandler, 1),
                 (request, next) -> {
                     request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent);
                     return next.apply(request);
-                }
+                },
+                new ErrorMiddleware(),
+                new LoggerMiddleware(logger),
+                new OAuthMiddleware(oAuthHandler)
         );
     }
 

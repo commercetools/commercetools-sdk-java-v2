@@ -9,6 +9,10 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.function.Function;
 
+/**
+ * @deprecated use io.vrap.rmf.base.client.http.OAuthMiddleware instead
+ */
+@Deprecated
 public class ReAuthMiddleware implements Middleware {
     private final OAuthHandler oAuthHandler;
     private final Integer maxRetries;

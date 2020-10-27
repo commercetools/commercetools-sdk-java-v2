@@ -12,6 +12,8 @@ import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
+import java.util.List;
+
 import static java.util.Collections.singletonList;
 
 
@@ -36,7 +38,7 @@ public class MiddlewareTest {
                 () -> {
                     Category category = b
                             .categories()
-                            .withId("1234")
+                            .withId("fdbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")
                             .get()
                             .executeBlocking().getBody();
                 }

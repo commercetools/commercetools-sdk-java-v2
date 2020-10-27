@@ -133,6 +133,6 @@ public class ApiHttpRequest extends Base  {
     }
 
     static String tryToFilter(final String input) {
-        return input.replaceAll("(\"\\w*([Pp]ass|access_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
+        return input.replaceAll("(\"\\w*([Pp]ass|access_token|refresh_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
     }
 }

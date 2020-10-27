@@ -30,9 +30,10 @@ public class ClientFactory {
             List<Middleware> middlewares
     ) {
 
-        middlewares.addAll(MiddlewareFactory.createDefault(tokenSupplier, LoggerFactory.getLogger(COMMERCETOOLS)));
+        List<Middleware> middlewareStack = new ArrayList<>(MiddlewareFactory.createDefault(tokenSupplier, LoggerFactory.getLogger(COMMERCETOOLS)));
+        middlewareStack.addAll(middlewares);
 
-        final HandlerStack stack = HandlerStack.create(HttpHandler.create(httpClient), middlewares);
+        final HandlerStack stack = HandlerStack.create(HttpHandler.create(httpClient), middlewareStack);
 
         return new ApiHttpClient(
                 apiBaseUrl,

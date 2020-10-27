@@ -6,6 +6,7 @@ dependencies {
     implementation "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
     implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"
     implementation "javax.validation:validation-api:${versions.validation}"
+    implementation "org.slf4j:slf4j-api:${versions.slf4j}"
 
     testImplementation "junit:junit:${versions.junit}"
     testImplementation "org.assertj:assertj-core:${versions.assertJ}"

@@ -1,7 +1,9 @@
 package com.commercetools.api.defaultconfig;
 
+import com.commercetools.api.client.ApiInternalLogger;
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import io.vrap.rmf.base.client.http.InternalLoggerMiddleware;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ClientFactory;
 import io.vrap.rmf.base.client.VrapHttpClient;
@@ -11,7 +13,6 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.okhttp.VrapOkHttpClient;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class ApiFactory {
@@ -70,6 +71,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ) {
+        middlewares.add(new InternalLoggerMiddleware(ApiInternalLogger::getLogger));
         final ApiHttpClient client = ClientFactory.create(
                 apiEndpoint,
                 httpClient,

@@ -1,10 +1,14 @@
 package io.vrap.rmf.base.client;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.Optional;
 
-public class ApiHttpRequest {
+public class ApiHttpRequest extends Base  {
 
     private ApiHttpMethod method;
     private URI uri;
@@ -109,5 +113,26 @@ public class ApiHttpRequest {
         ApiHttpRequest request = new ApiHttpRequest(this);
         request.setUri(baseUri.resolve(this.uri));
         return request;
+    }
+
+    @Override
+    public String toString() {
+        String textInterpretedBody = "";
+        try {
+            textInterpretedBody = Optional.ofNullable(body).map(b -> tryToFilter(new String(b, StandardCharsets.UTF_8))).orElse("empty body");
+        } catch (final Exception e) {
+            textInterpretedBody = "not parseable: " + e;
+        }
+
+        return new ToStringBuilder(this)
+                .append("method", method)
+                .append("uri", "\"" + uri + "\"")
+                .append("headers", headers)
+                .append("textInterpretedBody", textInterpretedBody)
+                .toString();
+    }
+
+    static String tryToFilter(final String input) {
+        return input.replaceAll("(\"\\w*([Pp]ass|access_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
     }
 }

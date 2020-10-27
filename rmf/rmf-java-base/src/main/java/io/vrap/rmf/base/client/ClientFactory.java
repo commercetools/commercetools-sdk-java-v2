@@ -12,6 +12,9 @@ import java.util.List;
 
 
 public class ClientFactory {
+
+    public static final String COMMERCETOOLS = "commercetools";
+
     public static ApiHttpClient create(
             final String apiBaseUrl,
             final VrapHttpClient httpClient,
@@ -27,7 +30,7 @@ public class ClientFactory {
             List<Middleware> middlewares
     ) {
 
-        middlewares.addAll(MiddlewareFactory.createDefault(tokenSupplier, LoggerFactory.getLogger("commercetools")));
+        middlewares.addAll(MiddlewareFactory.createDefault(tokenSupplier, LoggerFactory.getLogger(COMMERCETOOLS)));
 
         final HandlerStack stack = HandlerStack.create(HttpHandler.create(httpClient), middlewares);
 

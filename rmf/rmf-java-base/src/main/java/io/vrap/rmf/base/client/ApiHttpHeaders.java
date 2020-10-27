@@ -7,9 +7,9 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 
-public class ApiHttpHeaders {
+public class ApiHttpHeaders extends Base {
 
-    public static class HeaderEntry<K, V> implements Map.Entry<K, V> {
+    public static class HeaderEntry<K, V> extends Base implements Map.Entry<K, V> {
         protected final K key;
         protected V value;
 
@@ -38,7 +38,16 @@ public class ApiHttpHeaders {
             this.value = value;
             return oldValue;
         }
+
+        @Override
+        public String toString() {
+            return "{" +
+                    "key=" + key +
+                    ", value=" + value +
+                    '}';
+        }
     }
+
     public static final String ACCEPT_ENCODING = "Accept-Encoding";
     public static final String AUTHORIZATION = "Authorization";
     public static final String USER_AGENT = "User-Agent";
@@ -90,6 +99,11 @@ public class ApiHttpHeaders {
         this.headers = headers.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
 
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return headers.toString();
     }
 }
 

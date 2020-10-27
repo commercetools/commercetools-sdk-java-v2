@@ -1,6 +1,11 @@
 package io.vrap.rmf.base.client;
 
-public class ApiHttpResponse<U> {
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+import java.nio.charset.StandardCharsets;
+import java.util.Optional;
+
+public class ApiHttpResponse<U> extends Base {
 
     private int statusCode;
     private ApiHttpHeaders headers;
@@ -48,5 +53,29 @@ public class ApiHttpResponse<U> {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    @Override
+    public String toString() {
+        String textInterpretedBody = "";
+        try {
+            if (body instanceof byte[]) {
+                textInterpretedBody = Optional.of(body).map(b -> tryToFilter(new String((byte[])b, StandardCharsets.UTF_8))).orElse("empty body");
+            } else {
+                textInterpretedBody = Optional.ofNullable(body.toString()).orElse("empty body");
+            }
+        } catch (final Exception e) {
+            textInterpretedBody = "not parseable: " + e;
+        }
+
+        return new ToStringBuilder(this)
+                .append("statusCode", statusCode)
+                .append("headers", headers)
+                .append("textInterpretedBody", textInterpretedBody)
+                .toString();
+    }
+
+    static String tryToFilter(final String input) {
+        return input.replaceAll("(\"\\w*([Pp]ass|access_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
     }
 }

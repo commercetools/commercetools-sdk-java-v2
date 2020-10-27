@@ -13,11 +13,11 @@ public class ApiMethod<T extends ApiMethod<T>> {
         protected final K key;
         protected V value;
 
-        public ParamEntry(K key) {
+        public ParamEntry(final K key) {
             this.key = key;
         }
 
-        public ParamEntry(K key, V value) {
+        public ParamEntry(final K key, final V value) {
             this.key = key;
             this.value = value;
         }
@@ -33,7 +33,7 @@ public class ApiMethod<T extends ApiMethod<T>> {
         }
 
         @Override
-        public V setValue(V value) {
+        public V setValue(final V value) {
             V oldValue = this.value;
             this.value = value;
             return oldValue;
@@ -72,6 +72,16 @@ public class ApiMethod<T extends ApiMethod<T>> {
         return (T)this;
     }
 
+    public T withoutHeader(final String key) {
+        this.headers.withoutHeader(key);
+        return (T)this;
+    }
+
+    public T withHeader(final String key, final String value) {
+        this.headers.withHeader(key, value);
+        return (T)this;
+    }
+
     public T withHeaders(final ApiHttpHeaders headers) {
         this.headers = headers;
         return (T)this;
@@ -86,6 +96,15 @@ public class ApiMethod<T extends ApiMethod<T>> {
         return (T)this;
     }
 
+    public <V> T withQueryParam(final String key, final V value) {
+        return withoutQueryParam(key).addQueryParam(key, value);
+    }
+
+    public T withoutQueryParam(final String key) {
+        this.queryParams = queryParams.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
+        return (T)this;
+    }
+
     public <V> T withQueryParams(final List<ParamEntry<String, String>> queryParams) {
         this.queryParams = queryParams;
         return (T)this;
@@ -95,7 +114,7 @@ public class ApiMethod<T extends ApiMethod<T>> {
         return this.queryParams;
     }
 
-    public List<String> getQueryParam(String key) {
+    public List<String> getQueryParam(final String key) {
         return this.queryParams.stream().filter(e -> e.key.equals(key)).map(e -> e.value).collect(Collectors.toList());
     }
 

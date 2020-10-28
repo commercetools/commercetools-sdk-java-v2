@@ -14,10 +14,11 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 
-public class OAuthMiddleware implements Middleware {
+public class OAuthMiddleware  implements Middleware, AutoCloseable {
     private final OAuthHandler authHandler;
     private final Logger logger = LoggerFactory.getLogger(TokenSupplier.LOGGER_AUTH);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
+    private final ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
     public OAuthMiddleware(final OAuthHandler oAuthHandler)
     {
@@ -36,7 +37,6 @@ public class OAuthMiddleware implements Middleware {
                     oauthHandler.refreshToken();
                 })
                 .withMaxRetries(maxRetries);
-        ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
         this.authHandler = oauthHandler;
         this.failsafeExecutor = Failsafe.with(retry).with(executor);
     }
@@ -50,4 +50,9 @@ public class OAuthMiddleware implements Middleware {
         });
     }
 
+    @Override
+    public void close() {
+        executor.shutdown();
+        authHandler.close();
+    }
 }

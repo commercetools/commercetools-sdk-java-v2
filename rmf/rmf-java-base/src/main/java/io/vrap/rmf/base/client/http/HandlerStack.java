@@ -2,6 +2,7 @@ package io.vrap.rmf.base.client.http;
 
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.AutoCloseableService;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +11,7 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-public class HandlerStack {
+public class HandlerStack extends AutoCloseableService {
     private final HttpHandler handler;
 
     private final List<Middleware> middlewares;
@@ -71,5 +72,15 @@ public class HandlerStack {
         Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> handler = resolve();
 
         return handler.apply(request);
+    }
+
+    @Override
+    protected void internalClose() {
+        handler.close();
+        middlewares.forEach(middleware -> {
+            if (middleware instanceof AutoCloseable) {
+                closeQuietly((AutoCloseable) middleware);
+            }
+        });
     }
 }

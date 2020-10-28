@@ -1,9 +1,10 @@
 package io.vrap.rmf.base.client.http;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
+import io.vrap.rmf.base.client.AutoCloseableService;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
-public class OAuthHandler {
+public class OAuthHandler extends AutoCloseableService {
     private final TokenSupplier supplier;
     private AuthenticationToken token;
 
@@ -27,5 +28,11 @@ public class OAuthHandler {
     public AuthenticationToken refreshToken() {
         token = null;
         return getToken();
+    }
+
+    @Override
+    protected void internalClose() {
+        if (supplier instanceof AutoCloseable)
+            closeQuietly((AutoCloseable) supplier);
     }
 }

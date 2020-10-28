@@ -13,7 +13,7 @@ import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
-public class ClientCredentialsTokenSupplier implements TokenSupplier {
+public class ClientCredentialsTokenSupplier extends AutoCloseableService implements TokenSupplier {
 
     private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
     private final VrapHttpClient vrapHttpClient;
@@ -86,5 +86,11 @@ public class ClientCredentialsTokenSupplier implements TokenSupplier {
             }
         }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), headers, body.getBytes(StandardCharsets.UTF_8));
+    }
+
+    @Override
+    protected void internalClose() {
+        if (vrapHttpClient instanceof AutoCloseable)
+            closeQuietly((AutoCloseable) vrapHttpClient);
     }
 }

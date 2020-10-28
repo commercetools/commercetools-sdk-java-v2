@@ -17,9 +17,10 @@ import java.util.function.Function;
 
 import static java.util.Collections.singletonList;
 
-public class RetryMiddleware implements Middleware {
+public class RetryMiddleware implements Middleware, AutoCloseable {
     Logger logger = LoggerFactory.getLogger("commercetools");
 
+    private final ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
     public RetryMiddleware(final int maxRetries) {
@@ -40,12 +41,16 @@ public class RetryMiddleware implements Middleware {
                 .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
                 .onRetry(event -> logger.info("Retry #" + event.getAttemptCount()))
                 .withMaxRetries(maxRetries);
-        ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
         this.failsafeExecutor = Failsafe.with(retryPolicy).with(executor);
     }
 
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request, final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         return failsafeExecutor.getStageAsync(() -> next.apply(request));
+    }
+
+    @Override
+    public void close() {
+        executor.shutdown();
     }
 }

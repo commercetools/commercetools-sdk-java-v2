@@ -17,7 +17,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
-public class VrapOkHttpClient implements VrapHttpClient {
+public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
     private final OkHttpClient okHttpClient = new OkHttpClient.Builder()
             .connectTimeout(120,TimeUnit.SECONDS)
@@ -103,5 +103,12 @@ public class VrapOkHttpClient implements VrapHttpClient {
         public void onResponse(Call call, Response response) throws IOException {
             future.complete(response);
         }
+    }
+
+    @Override
+    public void close() throws IOException {
+        okHttpClient.dispatcher().executorService().shutdown();
+        okHttpClient.connectionPool().evictAll();
+        if (okHttpClient.cache() != null) Objects.requireNonNull(okHttpClient.cache()).close();
     }
 }

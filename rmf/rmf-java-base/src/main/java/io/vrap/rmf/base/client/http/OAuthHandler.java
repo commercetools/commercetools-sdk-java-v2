@@ -1,10 +1,10 @@
 package io.vrap.rmf.base.client.http;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
-import io.vrap.rmf.base.client.CloseableService;
+import io.vrap.rmf.base.client.AutoCloseableService;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
-public class OAuthHandler extends CloseableService {
+public class OAuthHandler extends AutoCloseableService {
     private final TokenSupplier supplier;
     private AuthenticationToken token;
 

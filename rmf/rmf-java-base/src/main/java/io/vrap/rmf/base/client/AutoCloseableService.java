@@ -2,13 +2,12 @@ package io.vrap.rmf.base.client;
 
 import io.vrap.rmf.base.client.http.InternalLogger;
 
-import java.io.Closeable;
 import java.util.function.Supplier;
 
-public abstract class CloseableService extends Base implements AutoCloseable {
+public abstract class AutoCloseableService extends Base implements AutoCloseable {
     private boolean closed = false;
 
-    protected CloseableService() {
+    protected AutoCloseableService() {
         log(() -> "Creating " + getLogName());
     }
 
@@ -48,7 +47,7 @@ public abstract class CloseableService extends Base implements AutoCloseable {
                 closeable.close();
             }
         } catch (final Exception e) {
-            InternalLogger.getLogger(CloseableService.class).error(() -> "Error on closing resource.", e);
+            InternalLogger.getLogger(AutoCloseableService.class).error(() -> "Error on closing resource.", e);
         }
     }
 }

@@ -11,7 +11,7 @@ import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
-public class AnonymousSessionTokenSupplier extends CloseableService implements TokenSupplier {
+public class AnonymousSessionTokenSupplier extends AutoCloseableService implements TokenSupplier {
     private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
 
     private final VrapHttpClient vrapHttpClient;

@@ -2,12 +2,12 @@ package io.vrap.rmf.base.client.http;
 
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.CloseableService;
+import io.vrap.rmf.base.client.AutoCloseableService;
 import io.vrap.rmf.base.client.VrapHttpClient;
 
 import java.util.concurrent.CompletableFuture;
 
-public class HttpHandler extends CloseableService {
+public class HttpHandler extends AutoCloseableService {
     private final VrapHttpClient httpClient;
 
     public HttpHandler(final VrapHttpClient httpClient) {

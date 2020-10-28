@@ -5,7 +5,7 @@ import io.vrap.rmf.base.client.http.HandlerStack;
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
 
-public class ApiHttpClient extends CloseableService {
+public class ApiHttpClient extends AutoCloseableService {
 
     public static final String CLOSED_MESSAGE = "Client is already closed.";
     private final HandlerStack stack;

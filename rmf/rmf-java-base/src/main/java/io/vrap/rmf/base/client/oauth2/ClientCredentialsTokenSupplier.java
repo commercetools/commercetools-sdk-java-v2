@@ -13,7 +13,7 @@ import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
-public class ClientCredentialsTokenSupplier extends CloseableService implements TokenSupplier {
+public class ClientCredentialsTokenSupplier extends AutoCloseableService implements TokenSupplier {
 
     private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
     private final VrapHttpClient vrapHttpClient;

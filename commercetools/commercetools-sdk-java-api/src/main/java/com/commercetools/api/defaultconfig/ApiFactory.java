@@ -14,6 +14,7 @@ import io.vrap.rmf.okhttp.VrapOkHttpClient;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class ApiFactory {
 
@@ -25,7 +26,7 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        return create(credentials, tokenEndpoint, apiEndpoint, new ArrayList<>()).withProjectKey(projectKey);
+        return createForProject(projectKey, () -> defaultClient(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>()));
     }
 
     public static ByProjectKeyRequestBuilder createForProject(
@@ -35,7 +36,25 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ) {
-        return create(credentials, tokenEndpoint, apiEndpoint, middlewares).withProjectKey(projectKey);
+        return createForProject(projectKey, () -> defaultClient(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint, middlewares));
+    }
+
+    public static ByProjectKeyRequestBuilder createForProject(
+            final VrapHttpClient httpClient,
+            final String projectKey,
+            final ClientCredentials credentials,
+            final String tokenEndpoint,
+            final String apiEndpoint,
+            final List<Middleware> middlewares
+    ) {
+        return createForProject(projectKey, () -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares));
+    }
+
+    public static ByProjectKeyRequestBuilder createForProject(
+            final String projectKey,
+            final Supplier<ApiHttpClient> clientSupplier
+    ) {
+        return create(clientSupplier).withProjectKey(projectKey);
     }
 
     public static ApiRoot create(
@@ -43,7 +62,7 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        return create(credentials, tokenEndpoint, apiEndpoint, new ArrayList<>());
+        return create(() -> defaultClient(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>()));
     }
 
     public static ApiRoot create(
@@ -52,7 +71,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ) {
-        return create(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint, middlewares);
+        return create(() -> defaultClient(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint, middlewares));
     }
 
     public static ApiRoot create(
@@ -61,10 +80,24 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        return create(httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>());
+        return create(() -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>()));
     }
 
     public static ApiRoot create(
+            final VrapHttpClient httpClient,
+            final ClientCredentials credentials,
+            final String tokenEndpoint,
+            final String apiEndpoint,
+            final List<Middleware> middlewares
+    ) {
+        return create(() -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares));
+    }
+
+    public static ApiRoot create(final Supplier<ApiHttpClient> clientSupplier) {
+        return ApiRoot.fromClient(clientSupplier.get());
+    }
+
+    public static ApiHttpClient defaultClient(
             final VrapHttpClient httpClient,
             final ClientCredentials credentials,
             final String tokenEndpoint,
@@ -72,7 +105,7 @@ public class ApiFactory {
             final List<Middleware> middlewares
     ) {
         middlewares.add(new InternalLoggerMiddleware(ApiInternalLogger::getLogger));
-        final ApiHttpClient client = ClientFactory.create(
+        return ClientFactory.create(
                 apiEndpoint,
                 httpClient,
                 new ClientCredentialsTokenSupplier(
@@ -84,6 +117,5 @@ public class ApiFactory {
                 ),
                 middlewares
         );
-        return ApiRoot.fromClient(client);
     }
 }

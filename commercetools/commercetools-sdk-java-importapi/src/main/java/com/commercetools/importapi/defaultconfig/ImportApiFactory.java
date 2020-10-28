@@ -5,9 +5,14 @@ import com.commercetools.importapi.client.ByProjectKeyRequestBuilder;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ClientFactory;
 import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.http.Middleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.okhttp.VrapOkHttpClient;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Supplier;
 
 public class ImportApiFactory {
 
@@ -19,7 +24,14 @@ public class ImportApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        return create(credentials, tokenEndpoint, apiEndpoint).withProjectKeyValue(projectKey);
+        return createForProject(projectKey, () -> defaultClient(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>()));
+    }
+
+    public static ByProjectKeyRequestBuilder createForProject(
+            final String projectKey,
+            final Supplier<ApiHttpClient> clientSupplier
+    ) {
+        return create(clientSupplier).withProjectKeyValue(projectKey);
     }
 
     public static ApiRoot create(
@@ -27,7 +39,7 @@ public class ImportApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        return create(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint);
+        return create(() -> defaultClient(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>()));
     }
 
     public static ApiRoot create(
@@ -36,7 +48,31 @@ public class ImportApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        final ApiHttpClient client = ClientFactory.create(
+        return create(() -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>()));
+    }
+
+    public static ApiRoot create(
+            final VrapHttpClient httpClient,
+            final ClientCredentials credentials,
+            final String tokenEndpoint,
+            final String apiEndpoint,
+            final List<Middleware> middlewares
+    ) {
+        return create(() -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares));
+    }
+
+    public static ApiRoot create(final Supplier<ApiHttpClient> clientSupplier) {
+        return ApiRoot.fromClient(clientSupplier.get());
+    }
+
+    public static ApiHttpClient defaultClient(
+            final VrapHttpClient httpClient,
+            final ClientCredentials credentials,
+            final String tokenEndpoint,
+            final String apiEndpoint,
+            final List<Middleware> middlewares
+    ) {
+        return ClientFactory.create(
                 apiEndpoint,
                 httpClient,
                 new ClientCredentialsTokenSupplier(
@@ -45,8 +81,8 @@ public class ImportApiFactory {
                         credentials.getScopes(),
                         tokenEndpoint,
                         httpClient
-                )
+                ),
+                middlewares
         );
-        return ApiRoot.fromClient(client);
     }
 }

@@ -18,8 +18,6 @@ import java.util.function.Supplier;
 
 public class ApiFactory {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
-
     public static ByProjectKeyRequestBuilder createForProject(
             final String projectKey,
             final ClientCredentials credentials,
@@ -102,7 +100,7 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ){
-        return defaultClient(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint);
+        return defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint);
     }
 
     public static ApiHttpClient defaultClient(
@@ -111,7 +109,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ){
-        return defaultClient(vrapHttpClient, credentials, tokenEndpoint, apiEndpoint, middlewares);
+        return defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint, middlewares);
     }
 
     public static ApiHttpClient defaultClient(

@@ -14,16 +14,41 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
-    private final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+    private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
             .connectTimeout(120,TimeUnit.SECONDS)
             .writeTimeout(120, TimeUnit.SECONDS)
-            .readTimeout(120, TimeUnit.SECONDS)
-            .build();
+            .readTimeout(120, TimeUnit.SECONDS);
+
+    private final OkHttpClient okHttpClient;
+
+    public VrapOkHttpClient() {
+        okHttpClient = clientBuilder.get().build();
+    }
+
+    public VrapOkHttpClient(int maxRequests, int maxRequestsPerHost) {
+        Dispatcher dispatcher = new Dispatcher();
+        dispatcher.setMaxRequests(maxRequests);
+        dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
+        okHttpClient = clientBuilder.get()
+                .dispatcher(dispatcher)
+                .build();
+    }
+
+    public VrapOkHttpClient(ExecutorService executor, int maxRequests, int maxRequestsPerHost) {
+        Dispatcher dispatcher = new Dispatcher(executor);
+        dispatcher.setMaxRequests(maxRequests);
+        dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
+        okHttpClient = clientBuilder.get()
+                .dispatcher(dispatcher)
+                .build();
+    }
 
     private static final String CONTENT_TYPE =  "Content-Type";
     private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");

@@ -29,6 +29,7 @@ import com.commercetools.api.models.error.MissingTaxRateForCountryError;
 import com.commercetools.api.models.error.NoMatchingProductDiscountFoundError;
 import com.commercetools.api.models.error.OutOfStockError;
 import com.commercetools.api.models.error.PriceChangedError;
+import com.commercetools.api.models.error.QueryTimedOutError;
 import com.commercetools.api.models.error.ReferenceExistsError;
 import com.commercetools.api.models.error.ReferencedResourceNotFoundError;
 import com.commercetools.api.models.error.RequiredFieldError;

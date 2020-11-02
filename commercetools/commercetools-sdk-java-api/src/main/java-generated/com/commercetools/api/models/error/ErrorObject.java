@@ -29,6 +29,7 @@ import com.commercetools.api.models.error.MissingTaxRateForCountryError;
 import com.commercetools.api.models.error.NoMatchingProductDiscountFoundError;
 import com.commercetools.api.models.error.OutOfStockError;
 import com.commercetools.api.models.error.PriceChangedError;
+import com.commercetools.api.models.error.QueryTimedOutError;
 import com.commercetools.api.models.error.ReferenceExistsError;
 import com.commercetools.api.models.error.ReferencedResourceNotFoundError;
 import com.commercetools.api.models.error.RequiredFieldError;
@@ -68,21 +69,22 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.NoMatchingProductDiscountFoundErrorImpl.class, name = "NoMatchingProductDiscountFound"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.OutOfStockErrorImpl.class, name = "OutOfStock"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.PriceChangedErrorImpl.class, name = "PriceChanged"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.QueryTimedOutErrorImpl.class, name = "QueryTimedOut"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferenceExistsErrorImpl.class, name = "ReferenceExists"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.ReferencedResourceNotFoundErrorImpl.class, name = "ReferencedResourceNotFound"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.RequiredFieldErrorImpl.class, name = "RequiredField"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.ResourceNotFoundErrorImpl.class, name = "ResourceNotFound"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = "ShippingMethodDoesNotMatchCart"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = "DuplicatePriceScope"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = "EnumValueIsUsed"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldWithConflictingResourceErrorImpl.class, name = "DuplicateFieldWithConflictingResource"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = "DuplicateAttributeValues"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateVariantValuesErrorImpl.class, name = "DuplicateVariantValues"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateFieldErrorImpl.class, name = "DuplicateField"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValueErrorImpl.class, name = "DuplicateAttributeValue"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = "ConcurrentModification"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateVariantValuesErrorImpl.class, name = "DuplicateVariantValues"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicateAttributeValuesErrorImpl.class, name = "DuplicateAttributeValues"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = "DiscountCodeNonApplicable"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.error.AccessDeniedErrorImpl.class, name = "access_denied"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DiscountCodeNonApplicableErrorImpl.class, name = "DiscountCodeNonApplicable")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.DuplicatePriceScopeErrorImpl.class, name = "DuplicatePriceScope"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.EnumValueIsUsedErrorImpl.class, name = "EnumValueIsUsed"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.error.ConcurrentModificationErrorImpl.class, name = "ConcurrentModification")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

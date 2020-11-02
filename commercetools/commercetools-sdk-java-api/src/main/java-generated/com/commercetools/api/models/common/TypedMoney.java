@@ -18,8 +18,8 @@ import java.util.function.Function;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = "centPrecision"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = "highPrecision")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyImpl.class, name = "highPrecision"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyImpl.class, name = "centPrecision")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

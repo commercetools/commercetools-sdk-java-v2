@@ -41,6 +41,9 @@ public class ApiHttpHeaders extends Base {
 
         @Override
         public String toString() {
+            if (key.toString().equalsIgnoreCase(AUTHORIZATION)) {
+                return "{key=" + key + ", value=**removed from output**}";
+            }
             return "{" +
                     "key=" + key +
                     ", value=" + value +

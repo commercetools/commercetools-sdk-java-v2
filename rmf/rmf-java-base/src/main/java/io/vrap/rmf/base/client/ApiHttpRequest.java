@@ -117,19 +117,17 @@ public class ApiHttpRequest extends Base  {
 
     @Override
     public String toString() {
-        String textInterpretedBody = "";
-        try {
-            textInterpretedBody = Optional.ofNullable(body).map(b -> tryToFilter(new String(b, StandardCharsets.UTF_8))).orElse("empty body");
-        } catch (final Exception e) {
-            textInterpretedBody = "not parseable: " + e;
-        }
-
         return new ToStringBuilder(this)
                 .append("method", method)
                 .append("uri", "\"" + uri + "\"")
                 .append("headers", headers)
-                .append("textInterpretedBody", textInterpretedBody)
+                .append("textInterpretedBody", getSecuredBody())
                 .toString();
+    }
+
+    public String getSecuredBody()
+    {
+        return Optional.ofNullable(body).map(b -> tryToFilter(new String(b, StandardCharsets.UTF_8))).orElse("empty body");
     }
 
     static String tryToFilter(final String input) {

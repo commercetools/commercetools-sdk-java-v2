@@ -2,15 +2,17 @@ package io.vrap.rmf.base.client.utils.json;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Iterator;
+import java.util.Map;
 
 public final class VrapJsonUtils {
 
@@ -48,5 +50,63 @@ public final class VrapJsonUtils {
 
     public static ObjectMapper getConfiguredObjectMapper() {
         return OBJECT_MAPPER;
+    }
+
+    /**
+     * Very simple way to "erase" passwords -
+     * replaces all field values whose names contains {@code 'pass'} by {@code '**removed from output**'}.
+     */
+    private static JsonNode secure(JsonNode node) {
+        if (node.isObject()) {
+            ObjectNode objectNode = (ObjectNode) node;
+            Iterator<Map.Entry<String, JsonNode>> fields = node.fields();
+            while (fields.hasNext()) {
+                Map.Entry<String, JsonNode> field = fields.next();
+                if (field.getValue().isTextual() && (field.getKey().toLowerCase().contains("pass") || field.getKey().toLowerCase().contains("access_token"))) {
+                    objectNode.put(field.getKey(), "**removed from output**");
+                } else {
+                    secure(field.getValue());
+                }
+            }
+            return objectNode;
+        } else if (node.isArray()) {
+            ArrayNode arrayNode = (ArrayNode) node;
+            Iterator<JsonNode> elements = arrayNode.elements();
+            while (elements.hasNext()) {
+                secure(elements.next());
+            }
+            return arrayNode;
+        } else {
+            return node;
+        }
+    }
+
+    /**
+     * Pretty prints a given JSON string.
+     *
+     * @param json JSON code as String which should be formatted
+     * @return <code>json</code> formatted
+     */
+    public static String prettyPrint(final String json) {
+        return executing(() -> {
+            final ObjectMapper jsonParser = new ObjectMapper();
+            final JsonNode jsonTree = jsonParser.readValue(json, JsonNode.class);
+            secure(jsonTree);
+            final ObjectWriter writer = jsonParser.writerWithDefaultPrettyPrinter();
+            return writer.writeValueAsString(jsonTree);
+        });
+    }
+
+    private static <T> T executing(final SupplierThrowingIOException<T> supplier) {
+        try {
+            return supplier.get();
+        } catch (final IOException e) {
+            throw new JsonException(e);
+        }
+    }
+
+    @FunctionalInterface
+    private interface SupplierThrowingIOException<T> {
+        T get() throws IOException;
     }
 }

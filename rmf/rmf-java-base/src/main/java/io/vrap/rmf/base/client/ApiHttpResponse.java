@@ -57,25 +57,28 @@ public class ApiHttpResponse<U> extends Base {
 
     @Override
     public String toString() {
-        String textInterpretedBody = "";
-        try {
-            if (body instanceof byte[]) {
-                textInterpretedBody = Optional.of(body).map(b -> tryToFilter(new String((byte[])b, StandardCharsets.UTF_8))).orElse("empty body");
-            } else {
-                textInterpretedBody = Optional.ofNullable(body.toString()).orElse("empty body");
-            }
-        } catch (final Exception e) {
-            textInterpretedBody = "not parseable: " + e;
-        }
-
         return new ToStringBuilder(this)
                 .append("statusCode", statusCode)
                 .append("headers", headers)
-                .append("textInterpretedBody", textInterpretedBody)
+                .append("textInterpretedBody", getSecuredBody())
                 .toString();
     }
 
     static String tryToFilter(final String input) {
-        return input.replaceAll("(\"\\w*([Pp]ass|access_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
+        return input.replaceAll("(\"\\w*([Pp]ass|access_token|refresh_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
+    }
+
+    public Optional<String> getBodyAsString()
+    {
+        if (body instanceof byte[]) {
+            return Optional.of(body).map(b -> tryToFilter(new String((byte[])b, StandardCharsets.UTF_8)));
+        } else {
+            return Optional.ofNullable(body.toString());
+        }
+    }
+
+    public String getSecuredBody()
+    {
+        return getBodyAsString().orElse("empty body");
     }
 }

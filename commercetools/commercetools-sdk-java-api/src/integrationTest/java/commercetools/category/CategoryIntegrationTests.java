@@ -89,15 +89,14 @@ public class CategoryIntegrationTests {
     @Test
     public void updateCategory() {
         CategoryFixtures.withUpdateableCategory(category -> {
-            List<CategoryUpdateAction> updateActions = new ArrayList<>();
             LocalizedString newName = LocalizedString.of();
             newName.setValue("key-Temp", "value-Temp");
-            updateActions.add(CategoryChangeNameActionBuilder.of()
-                    .name(newName)
-                    .build());
+
             CategoryUpdate categoryUpdate = CategoryUpdateBuilder.of()
                     .version(category.getVersion())
-                    .actions(updateActions)
+                    .actions(CategoryChangeNameActionBuilder.of()
+                            .name(newName)
+                            .build())
                     .build();
             Category updatedCategory = CommercetoolsTestUtils.getProjectRoot()
                     .categories()

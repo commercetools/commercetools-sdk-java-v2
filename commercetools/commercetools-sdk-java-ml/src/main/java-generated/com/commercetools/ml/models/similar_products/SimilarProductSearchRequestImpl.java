@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -122,8 +120,12 @@ public final class SimilarProductSearchRequestImpl implements SimilarProductSear
         this.similarityMeasures = similarityMeasures;
     }
     
+    public void setProductSetSelectors(final com.commercetools.ml.models.similar_products.ProductSetSelector ...productSetSelectors){
+       this.productSetSelectors = new ArrayList<>(Arrays.asList(productSetSelectors));
+    }
+    
     public void setProductSetSelectors(final java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors){
-        this.productSetSelectors = productSetSelectors;
+       this.productSetSelectors = productSetSelectors;
     }
     
     public void setConfidenceMin(final Double confidenceMin){

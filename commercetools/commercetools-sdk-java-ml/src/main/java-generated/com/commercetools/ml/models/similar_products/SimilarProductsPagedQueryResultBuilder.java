@@ -4,8 +4,7 @@ import com.commercetools.ml.models.similar_products.SimilarProductPair;
 import com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta;
 import com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,6 +41,11 @@ public final class SimilarProductsPagedQueryResultBuilder {
     
     public SimilarProductsPagedQueryResultBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public SimilarProductsPagedQueryResultBuilder results( final com.commercetools.ml.models.similar_products.SimilarProductPair ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

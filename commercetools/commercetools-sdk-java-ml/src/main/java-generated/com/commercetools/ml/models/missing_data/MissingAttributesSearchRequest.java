@@ -6,12 +6,12 @@ import com.commercetools.ml.models.missing_data.MissingAttributesSearchRequestIm
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -112,8 +112,12 @@ public interface MissingAttributesSearchRequest  {
     
     public void setShowMissingAttributeNames(final Boolean showMissingAttributeNames);
     
+    @JsonIgnore
+    public void setProductIds(final String ...productIds);
     public void setProductIds(final List<String> productIds);
     
+    @JsonIgnore
+    public void setProductTypeIds(final String ...productTypeIds);
     public void setProductTypeIds(final List<String> productTypeIds);
     
     public void setAttributeName(final String attributeName);
@@ -140,4 +144,7 @@ public interface MissingAttributesSearchRequest  {
         return instance;
     }
 
+    default <T> T withMissingAttributesSearchRequest(Function<MissingAttributesSearchRequest, T> helper) {
+        return helper.apply(this);
+    }
 }

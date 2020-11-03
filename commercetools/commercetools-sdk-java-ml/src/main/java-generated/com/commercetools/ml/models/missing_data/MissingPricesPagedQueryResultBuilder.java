@@ -4,8 +4,7 @@ import com.commercetools.ml.models.missing_data.MissingPrices;
 import com.commercetools.ml.models.missing_data.MissingPricesMeta;
 import com.commercetools.ml.models.missing_data.MissingPricesPagedQueryResult;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,6 +41,11 @@ public final class MissingPricesPagedQueryResultBuilder {
     
     public MissingPricesPagedQueryResultBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public MissingPricesPagedQueryResultBuilder results( final com.commercetools.ml.models.missing_data.MissingPrices ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

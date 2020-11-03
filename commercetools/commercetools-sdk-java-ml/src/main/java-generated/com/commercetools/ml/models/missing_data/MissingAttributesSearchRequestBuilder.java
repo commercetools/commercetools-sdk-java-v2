@@ -3,8 +3,7 @@ package com.commercetools.ml.models.missing_data;
 
 import com.commercetools.ml.models.missing_data.MissingAttributesSearchRequest;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -95,8 +94,18 @@ public final class MissingAttributesSearchRequestBuilder {
         return this;
     }
     
+    public MissingAttributesSearchRequestBuilder productIds(@Nullable final String ...productIds) {
+        this.productIds = new ArrayList<>(Arrays.asList(productIds));
+        return this;
+    }
+    
     public MissingAttributesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
         this.productIds = productIds;
+        return this;
+    }
+    
+    public MissingAttributesSearchRequestBuilder productTypeIds(@Nullable final String ...productTypeIds) {
+        this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
     

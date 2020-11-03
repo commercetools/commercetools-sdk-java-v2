@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -67,8 +65,12 @@ public final class ProjectCategoryRecommendationMetaImpl implements ProjectCateg
         this.productImageUrl = productImageUrl;
     }
     
+    public void setGeneralCategoryNames(final String ...generalCategoryNames){
+       this.generalCategoryNames = new ArrayList<>(Arrays.asList(generalCategoryNames));
+    }
+    
     public void setGeneralCategoryNames(final java.util.List<String> generalCategoryNames){
-        this.generalCategoryNames = generalCategoryNames;
+       this.generalCategoryNames = generalCategoryNames;
     }
 
 }

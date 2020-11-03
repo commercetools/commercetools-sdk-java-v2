@@ -6,12 +6,12 @@ import com.commercetools.ml.models.image_search_config.ImageSearchConfigRequestI
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -29,6 +29,8 @@ public interface ImageSearchConfigRequest  {
     @JsonProperty("actions")
     public List<ImageSearchConfigUpdateAction> getActions();
 
+    @JsonIgnore
+    public void setActions(final ImageSearchConfigUpdateAction ...actions);
     public void setActions(final List<ImageSearchConfigUpdateAction> actions);
 
     public static ImageSearchConfigRequestImpl of(){
@@ -42,4 +44,7 @@ public interface ImageSearchConfigRequest  {
         return instance;
     }
 
+    default <T> T withImageSearchConfigRequest(Function<ImageSearchConfigRequest, T> helper) {
+        return helper.apply(this);
+    }
 }

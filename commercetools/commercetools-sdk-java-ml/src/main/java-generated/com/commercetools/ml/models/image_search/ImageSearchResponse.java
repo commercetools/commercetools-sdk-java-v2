@@ -6,12 +6,12 @@ import com.commercetools.ml.models.image_search.ImageSearchResponseImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 /**
@@ -56,6 +56,8 @@ public interface ImageSearchResponse  {
     
     public void setTotal(final Integer total);
     
+    @JsonIgnore
+    public void setResults(final ResultItem ...results);
     public void setResults(final List<ResultItem> results);
 
     public static ImageSearchResponseImpl of(){
@@ -72,4 +74,7 @@ public interface ImageSearchResponse  {
         return instance;
     }
 
+    default <T> T withImageSearchResponse(Function<ImageSearchResponse, T> helper) {
+        return helper.apply(this);
+    }
 }

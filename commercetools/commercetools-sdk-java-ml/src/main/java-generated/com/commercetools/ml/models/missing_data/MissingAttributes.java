@@ -9,12 +9,12 @@ import com.commercetools.ml.models.missing_data.MissingAttributesImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -67,8 +67,12 @@ public interface MissingAttributes  {
     
     public void setVariantId(final Integer variantId);
     
+    @JsonIgnore
+    public void setMissingAttributeValues(final String ...missingAttributeValues);
     public void setMissingAttributeValues(final List<String> missingAttributeValues);
     
+    @JsonIgnore
+    public void setMissingAttributeNames(final String ...missingAttributeNames);
     public void setMissingAttributeNames(final List<String> missingAttributeNames);
     
     public void setAttributeCount(final AttributeCount attributeCount);
@@ -92,4 +96,7 @@ public interface MissingAttributes  {
         return instance;
     }
 
+    default <T> T withMissingAttributes(Function<MissingAttributes, T> helper) {
+        return helper.apply(this);
+    }
 }

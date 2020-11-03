@@ -3,8 +3,7 @@ package com.commercetools.ml.models.missing_data;
 
 import com.commercetools.ml.models.missing_data.AttributeCount;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

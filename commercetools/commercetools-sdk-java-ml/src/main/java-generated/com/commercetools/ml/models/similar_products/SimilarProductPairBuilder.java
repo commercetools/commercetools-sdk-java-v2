@@ -3,8 +3,7 @@ package com.commercetools.ml.models.similar_products;
 import com.commercetools.ml.models.similar_products.SimilarProduct;
 import com.commercetools.ml.models.similar_products.SimilarProductPair;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class SimilarProductPairBuilder {
 
     public SimilarProductPairBuilder confidence( final Double confidence) {
         this.confidence = confidence;
+        return this;
+    }
+    
+    public SimilarProductPairBuilder products( final com.commercetools.ml.models.similar_products.SimilarProduct ...products) {
+        this.products = new ArrayList<>(Arrays.asList(products));
         return this;
     }
     

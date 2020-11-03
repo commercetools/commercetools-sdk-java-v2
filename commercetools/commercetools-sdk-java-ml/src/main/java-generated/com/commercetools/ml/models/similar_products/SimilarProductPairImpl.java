@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -54,8 +52,12 @@ public final class SimilarProductPairImpl implements SimilarProductPair {
         this.confidence = confidence;
     }
     
+    public void setProducts(final com.commercetools.ml.models.similar_products.SimilarProduct ...products){
+       this.products = new ArrayList<>(Arrays.asList(products));
+    }
+    
     public void setProducts(final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products){
-        this.products = products;
+       this.products = products;
     }
 
 }

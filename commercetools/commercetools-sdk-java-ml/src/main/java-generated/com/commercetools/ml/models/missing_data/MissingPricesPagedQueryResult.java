@@ -7,12 +7,12 @@ import com.commercetools.ml.models.missing_data.MissingPricesPagedQueryResultImp
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -51,6 +51,8 @@ public interface MissingPricesPagedQueryResult  {
     
     public void setOffset(final Long offset);
     
+    @JsonIgnore
+    public void setResults(final MissingPrices ...results);
     public void setResults(final List<MissingPrices> results);
     
     public void setMeta(final MissingPricesMeta meta);
@@ -70,4 +72,7 @@ public interface MissingPricesPagedQueryResult  {
         return instance;
     }
 
+    default <T> T withMissingPricesPagedQueryResult(Function<MissingPricesPagedQueryResult, T> helper) {
+        return helper.apply(this);
+    }
 }

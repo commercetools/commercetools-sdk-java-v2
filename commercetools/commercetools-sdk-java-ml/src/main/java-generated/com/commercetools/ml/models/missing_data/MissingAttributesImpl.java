@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -106,12 +104,20 @@ public final class MissingAttributesImpl implements MissingAttributes {
         this.variantId = variantId;
     }
     
+    public void setMissingAttributeValues(final String ...missingAttributeValues){
+       this.missingAttributeValues = new ArrayList<>(Arrays.asList(missingAttributeValues));
+    }
+    
     public void setMissingAttributeValues(final java.util.List<String> missingAttributeValues){
-        this.missingAttributeValues = missingAttributeValues;
+       this.missingAttributeValues = missingAttributeValues;
+    }
+    
+    public void setMissingAttributeNames(final String ...missingAttributeNames){
+       this.missingAttributeNames = new ArrayList<>(Arrays.asList(missingAttributeNames));
     }
     
     public void setMissingAttributeNames(final java.util.List<String> missingAttributeNames){
-        this.missingAttributeNames = missingAttributeNames;
+       this.missingAttributeNames = missingAttributeNames;
     }
     
     public void setAttributeCount(final com.commercetools.ml.models.missing_data.AttributeCount attributeCount){

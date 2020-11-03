@@ -6,8 +6,7 @@ import com.commercetools.ml.models.missing_data.AttributeCount;
 import com.commercetools.ml.models.missing_data.AttributeCoverage;
 import com.commercetools.ml.models.missing_data.MissingAttributes;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -53,8 +52,18 @@ public final class MissingAttributesBuilder {
         return this;
     }
     
+    public MissingAttributesBuilder missingAttributeValues( final String ...missingAttributeValues) {
+        this.missingAttributeValues = new ArrayList<>(Arrays.asList(missingAttributeValues));
+        return this;
+    }
+    
     public MissingAttributesBuilder missingAttributeValues( final java.util.List<String> missingAttributeValues) {
         this.missingAttributeValues = missingAttributeValues;
+        return this;
+    }
+    
+    public MissingAttributesBuilder missingAttributeNames(@Nullable final String ...missingAttributeNames) {
+        this.missingAttributeNames = new ArrayList<>(Arrays.asList(missingAttributeNames));
         return this;
     }
     

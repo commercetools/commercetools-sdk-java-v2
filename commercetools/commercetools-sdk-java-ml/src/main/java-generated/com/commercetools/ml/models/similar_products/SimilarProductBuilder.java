@@ -4,8 +4,7 @@ import com.commercetools.ml.models.common.ProductReference;
 import com.commercetools.ml.models.similar_products.SimilarProductMeta;
 import com.commercetools.ml.models.similar_products.SimilarProduct;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

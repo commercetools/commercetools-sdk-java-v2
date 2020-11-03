@@ -3,8 +3,7 @@ package com.commercetools.ml.models.category_recommendations;
 
 import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -30,6 +29,11 @@ public final class ProjectCategoryRecommendationMetaBuilder {
     
     public ProjectCategoryRecommendationMetaBuilder productImageUrl(@Nullable final String productImageUrl) {
         this.productImageUrl = productImageUrl;
+        return this;
+    }
+    
+    public ProjectCategoryRecommendationMetaBuilder generalCategoryNames( final String ...generalCategoryNames) {
+        this.generalCategoryNames = new ArrayList<>(Arrays.asList(generalCategoryNames));
         return this;
     }
     

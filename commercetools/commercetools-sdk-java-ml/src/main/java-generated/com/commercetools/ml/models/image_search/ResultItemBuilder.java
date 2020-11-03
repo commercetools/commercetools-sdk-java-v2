@@ -3,8 +3,7 @@ package com.commercetools.ml.models.image_search;
 import com.commercetools.ml.models.common.ProductVariant;
 import com.commercetools.ml.models.image_search.ResultItem;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class ResultItemBuilder {
 
     public ResultItemBuilder imageUrl( final String imageUrl) {
         this.imageUrl = imageUrl;
+        return this;
+    }
+    
+    public ResultItemBuilder productVariants( final com.commercetools.ml.models.common.ProductVariant ...productVariants) {
+        this.productVariants = new ArrayList<>(Arrays.asList(productVariants));
         return this;
     }
     

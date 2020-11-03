@@ -4,8 +4,7 @@ import com.commercetools.ml.models.missing_data.MissingAttributes;
 import com.commercetools.ml.models.missing_data.MissingAttributesMeta;
 import com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResult;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,6 +41,11 @@ public final class MissingAttributesPagedQueryResultBuilder {
     
     public MissingAttributesPagedQueryResultBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public MissingAttributesPagedQueryResultBuilder results( final com.commercetools.ml.models.missing_data.MissingAttributes ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

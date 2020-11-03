@@ -4,8 +4,7 @@ import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecom
 import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta;
 import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,6 +41,11 @@ public final class ProjectCategoryRecommendationPagedQueryResponseBuilder {
     
     public ProjectCategoryRecommendationPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public ProjectCategoryRecommendationPagedQueryResponseBuilder results( final com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

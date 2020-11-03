@@ -6,12 +6,12 @@ import com.commercetools.ml.models.missing_data.MissingAttributesMetaImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -42,6 +42,8 @@ public interface MissingAttributesMeta  {
     
     public void setVariantLevel(final MissingAttributesDetails variantLevel);
     
+    @JsonIgnore
+    public void setProductTypeIds(final String ...productTypeIds);
     public void setProductTypeIds(final List<String> productTypeIds);
 
     public static MissingAttributesMetaImpl of(){
@@ -57,4 +59,7 @@ public interface MissingAttributesMeta  {
         return instance;
     }
 
+    default <T> T withMissingAttributesMeta(Function<MissingAttributesMeta, T> helper) {
+        return helper.apply(this);
+    }
 }

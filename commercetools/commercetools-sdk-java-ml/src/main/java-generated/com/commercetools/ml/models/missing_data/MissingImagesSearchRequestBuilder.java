@@ -3,8 +3,7 @@ package com.commercetools.ml.models.missing_data;
 
 import com.commercetools.ml.models.missing_data.MissingImagesSearchRequest;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -76,8 +75,18 @@ public final class MissingImagesSearchRequestBuilder {
         return this;
     }
     
+    public MissingImagesSearchRequestBuilder productIds(@Nullable final String ...productIds) {
+        this.productIds = new ArrayList<>(Arrays.asList(productIds));
+        return this;
+    }
+    
     public MissingImagesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
         this.productIds = productIds;
+        return this;
+    }
+    
+    public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final String ...productTypeIds) {
+        this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
     

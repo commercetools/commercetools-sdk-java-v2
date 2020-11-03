@@ -3,8 +3,7 @@ package com.commercetools.ml.models.similar_products;
 
 import com.commercetools.ml.models.similar_products.ProductSetSelector;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -37,8 +36,18 @@ public final class ProductSetSelectorBuilder {
         return this;
     }
     
+    public ProductSetSelectorBuilder productIds(@Nullable final String ...productIds) {
+        this.productIds = new ArrayList<>(Arrays.asList(productIds));
+        return this;
+    }
+    
     public ProductSetSelectorBuilder productIds(@Nullable final java.util.List<String> productIds) {
         this.productIds = productIds;
+        return this;
+    }
+    
+    public ProductSetSelectorBuilder productTypeIds(@Nullable final String ...productTypeIds) {
+        this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
     

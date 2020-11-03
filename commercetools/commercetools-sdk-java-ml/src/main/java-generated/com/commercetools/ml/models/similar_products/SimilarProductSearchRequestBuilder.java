@@ -4,8 +4,7 @@ import com.commercetools.ml.models.similar_products.ProductSetSelector;
 import com.commercetools.ml.models.similar_products.SimilarityMeasures;
 import com.commercetools.ml.models.similar_products.SimilarProductSearchRequest;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -61,6 +60,11 @@ public final class SimilarProductSearchRequestBuilder {
     
     public SimilarProductSearchRequestBuilder similarityMeasures(@Nullable final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
         this.similarityMeasures = similarityMeasures;
+        return this;
+    }
+    
+    public SimilarProductSearchRequestBuilder productSetSelectors(@Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector ...productSetSelectors) {
+        this.productSetSelectors = new ArrayList<>(Arrays.asList(productSetSelectors));
         return this;
     }
     

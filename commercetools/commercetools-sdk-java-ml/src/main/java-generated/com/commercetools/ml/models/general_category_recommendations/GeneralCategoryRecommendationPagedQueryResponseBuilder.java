@@ -3,8 +3,7 @@ package com.commercetools.ml.models.general_category_recommendations;
 import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation;
 import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +37,11 @@ public final class GeneralCategoryRecommendationPagedQueryResponseBuilder {
     
     public GeneralCategoryRecommendationPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public GeneralCategoryRecommendationPagedQueryResponseBuilder results( final com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

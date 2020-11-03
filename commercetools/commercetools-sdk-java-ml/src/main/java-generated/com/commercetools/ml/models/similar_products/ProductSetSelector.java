@@ -6,12 +6,12 @@ import com.commercetools.ml.models.similar_products.ProductSetSelectorImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 /**
@@ -63,8 +63,12 @@ public interface ProductSetSelector  {
 
     public void setProjectKey(final String projectKey);
     
+    @JsonIgnore
+    public void setProductIds(final String ...productIds);
     public void setProductIds(final List<String> productIds);
     
+    @JsonIgnore
+    public void setProductTypeIds(final String ...productTypeIds);
     public void setProductTypeIds(final List<String> productTypeIds);
     
     public void setStaged(final Boolean staged);
@@ -89,4 +93,7 @@ public interface ProductSetSelector  {
         return instance;
     }
 
+    default <T> T withProductSetSelector(Function<ProductSetSelector, T> helper) {
+        return helper.apply(this);
+    }
 }

@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -63,8 +61,12 @@ public final class MissingAttributesMetaImpl implements MissingAttributesMeta {
         this.variantLevel = variantLevel;
     }
     
+    public void setProductTypeIds(final String ...productTypeIds){
+       this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
+    }
+    
     public void setProductTypeIds(final java.util.List<String> productTypeIds){
-        this.productTypeIds = productTypeIds;
+       this.productTypeIds = productTypeIds;
     }
 
 }

@@ -7,12 +7,12 @@ import com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryRes
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
-
+import java.util.function.Function;
 import java.io.IOException;
 
 @Generated(
@@ -51,6 +51,8 @@ public interface SimilarProductsPagedQueryResult  {
     
     public void setOffset(final Long offset);
     
+    @JsonIgnore
+    public void setResults(final SimilarProductPair ...results);
     public void setResults(final List<SimilarProductPair> results);
     
     public void setMeta(final SimilarProductSearchRequestMeta meta);
@@ -70,4 +72,7 @@ public interface SimilarProductsPagedQueryResult  {
         return instance;
     }
 
+    default <T> T withSimilarProductsPagedQueryResult(Function<SimilarProductsPagedQueryResult, T> helper) {
+        return helper.apply(this);
+    }
 }

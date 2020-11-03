@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -185,12 +183,20 @@ public final class MissingAttributesSearchRequestImpl implements MissingAttribut
         this.showMissingAttributeNames = showMissingAttributeNames;
     }
     
+    public void setProductIds(final String ...productIds){
+       this.productIds = new ArrayList<>(Arrays.asList(productIds));
+    }
+    
     public void setProductIds(final java.util.List<String> productIds){
-        this.productIds = productIds;
+       this.productIds = productIds;
+    }
+    
+    public void setProductTypeIds(final String ...productTypeIds){
+       this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
     }
     
     public void setProductTypeIds(final java.util.List<String> productTypeIds){
-        this.productTypeIds = productTypeIds;
+       this.productTypeIds = productTypeIds;
     }
     
     public void setAttributeName(final String attributeName){

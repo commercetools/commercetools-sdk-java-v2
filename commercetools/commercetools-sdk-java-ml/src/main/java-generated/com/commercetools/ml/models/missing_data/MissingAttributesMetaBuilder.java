@@ -3,8 +3,7 @@ package com.commercetools.ml.models.missing_data;
 import com.commercetools.ml.models.missing_data.MissingAttributesDetails;
 import com.commercetools.ml.models.missing_data.MissingAttributesMeta;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -30,6 +29,11 @@ public final class MissingAttributesMetaBuilder {
     
     public MissingAttributesMetaBuilder variantLevel( final com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel) {
         this.variantLevel = variantLevel;
+        return this;
+    }
+    
+    public MissingAttributesMetaBuilder productTypeIds(@Nullable final String ...productTypeIds) {
+        this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
     

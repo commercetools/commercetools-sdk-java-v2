@@ -3,8 +3,7 @@ package com.commercetools.ml.models.image_search;
 import com.commercetools.ml.models.image_search.ResultItem;
 import com.commercetools.ml.models.image_search.ImageSearchResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +37,11 @@ public final class ImageSearchResponseBuilder {
     
     public ImageSearchResponseBuilder total( final Integer total) {
         this.total = total;
+        return this;
+    }
+    
+    public ImageSearchResponseBuilder results( final com.commercetools.ml.models.image_search.ResultItem ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

@@ -10,8 +10,7 @@ import com.commercetools.importapi.models.orders.ShippingRateDraft;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.commercetools.importapi.models.orders.ShippingInfoImportDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -75,6 +74,11 @@ public final class ShippingInfoImportDraftBuilder {
     
     public ShippingInfoImportDraftBuilder shippingMethod(@Nullable final com.commercetools.importapi.models.common.ShippingMethodKeyReference shippingMethod) {
         this.shippingMethod = shippingMethod;
+        return this;
+    }
+    
+    public ShippingInfoImportDraftBuilder deliveries(@Nullable final com.commercetools.importapi.models.orders.Delivery ...deliveries) {
+        this.deliveries = new ArrayList<>(Arrays.asList(deliveries));
         return this;
     }
     

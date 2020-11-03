@@ -12,8 +12,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -159,8 +157,12 @@ public final class PriceDraftImportImpl implements PriceDraftImport {
         this.discounted = discounted;
     }
     
+    public void setTiers(final com.commercetools.importapi.models.common.PriceTier ...tiers){
+       this.tiers = new ArrayList<>(Arrays.asList(tiers));
+    }
+    
     public void setTiers(final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers){
-        this.tiers = tiers;
+       this.tiers = tiers;
     }
     
     public void setKey(final String key){

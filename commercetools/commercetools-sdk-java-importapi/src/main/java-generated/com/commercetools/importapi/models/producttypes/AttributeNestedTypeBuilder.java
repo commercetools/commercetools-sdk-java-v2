@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.common.ProductTypeKeyReference;
 import com.commercetools.importapi.models.producttypes.AttributeType;
 import com.commercetools.importapi.models.producttypes.AttributeNestedType;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

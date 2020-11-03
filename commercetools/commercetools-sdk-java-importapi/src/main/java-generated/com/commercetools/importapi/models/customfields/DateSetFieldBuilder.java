@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.customfields.CustomField;
 import java.time.LocalDate;
 import com.commercetools.importapi.models.customfields.DateSetField;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class DateSetFieldBuilder {
     
     private java.util.List<java.time.LocalDate> value;
 
+    public DateSetFieldBuilder value( final java.time.LocalDate ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
+        return this;
+    }
+    
     public DateSetFieldBuilder value( final java.util.List<java.time.LocalDate> value) {
         this.value = value;
         return this;

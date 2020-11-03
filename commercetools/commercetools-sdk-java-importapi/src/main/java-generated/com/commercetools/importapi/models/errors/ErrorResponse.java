@@ -9,8 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -67,6 +66,8 @@ public interface ErrorResponse  {
     
     public void setErrorDescription(final String errorDescription);
     
+    @JsonIgnore
+    public void setErrors(final ErrorObject ...errors);
     public void setErrors(final List<ErrorObject> errors);
 
     public static ErrorResponseImpl of(){

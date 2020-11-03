@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.importsinks;
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importsinks.ImportSinkDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

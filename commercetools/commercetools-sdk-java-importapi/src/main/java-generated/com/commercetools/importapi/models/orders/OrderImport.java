@@ -26,8 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -186,8 +185,12 @@ public interface OrderImport extends ImportResource {
     
     public void setCustomerEmail(final String customerEmail);
     
+    @JsonIgnore
+    public void setLineItems(final LineItemImportDraft ...lineItems);
     public void setLineItems(final List<LineItemImportDraft> lineItems);
     
+    @JsonIgnore
+    public void setCustomLineItems(final CustomLineItemDraft ...customLineItems);
     public void setCustomLineItems(final List<CustomLineItemDraft> customLineItems);
     
     public void setTotalPrice(final TypedMoney totalPrice);
@@ -222,6 +225,8 @@ public interface OrderImport extends ImportResource {
     
     public void setOrigin(final CartOrigin origin);
     
+    @JsonIgnore
+    public void setItemShippingAddresses(final Address ...itemShippingAddresses);
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
     public static OrderImportImpl of(){

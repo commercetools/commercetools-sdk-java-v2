@@ -9,8 +9,7 @@ import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.products.SearchKeywords;
 import com.commercetools.importapi.models.products.ProductImport;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -81,6 +80,11 @@ public final class ProductImportBuilder {
     
     public ProductImportBuilder description(@Nullable final com.commercetools.importapi.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+    
+    public ProductImportBuilder categories(@Nullable final com.commercetools.importapi.models.common.CategoryKeyReference ...categories) {
+        this.categories = new ArrayList<>(Arrays.asList(categories));
         return this;
     }
     

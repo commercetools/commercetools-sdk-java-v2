@@ -13,8 +13,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -208,8 +206,12 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
         this.description = description;
     }
     
+    public void setCategories(final com.commercetools.importapi.models.common.CategoryKeyReference ...categories){
+       this.categories = new ArrayList<>(Arrays.asList(categories));
+    }
+    
     public void setCategories(final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories){
-        this.categories = categories;
+       this.categories = categories;
     }
     
     public void setMetaTitle(final com.commercetools.importapi.models.common.LocalizedString metaTitle){
@@ -228,8 +230,12 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
         this.masterVariant = masterVariant;
     }
     
+    public void setVariants(final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport ...variants){
+       this.variants = new ArrayList<>(Arrays.asList(variants));
+    }
+    
     public void setVariants(final java.util.List<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> variants){
-        this.variants = variants;
+       this.variants = variants;
     }
     
     public void setTaxCategory(final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory){

@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -101,8 +99,12 @@ public final class ErrorResponseImpl implements ErrorResponse {
         this.errorDescription = errorDescription;
     }
     
+    public void setErrors(final com.commercetools.importapi.models.errors.ErrorObject ...errors){
+       this.errors = new ArrayList<>(Arrays.asList(errors));
+    }
+    
     public void setErrors(final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors){
-        this.errors = errors;
+       this.errors = errors;
     }
 
 }

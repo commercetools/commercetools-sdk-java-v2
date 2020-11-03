@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.errors;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.commercetools.importapi.models.errors.ErrorResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class ErrorResponseBuilder {
     
     public ErrorResponseBuilder error_description(@Nullable final String error_description) {
         this.error_description = error_description;
+        return this;
+    }
+    
+    public ErrorResponseBuilder errors(@Nullable final com.commercetools.importapi.models.errors.ErrorObject ...errors) {
+        this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
     

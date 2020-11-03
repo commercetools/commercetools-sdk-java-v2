@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.customfields.CustomField;
 import java.time.LocalTime;
 import com.commercetools.importapi.models.customfields.TimeSetField;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class TimeSetFieldBuilder {
     
     private java.util.List<java.time.LocalTime> value;
 
+    public TimeSetFieldBuilder value( final java.time.LocalTime ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
+        return this;
+    }
+    
     public TimeSetFieldBuilder value( final java.util.List<java.time.LocalTime> value) {
         this.value = value;
         return this;

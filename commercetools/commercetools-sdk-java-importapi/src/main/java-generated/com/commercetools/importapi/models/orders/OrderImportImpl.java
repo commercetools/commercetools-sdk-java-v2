@@ -23,8 +23,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -297,12 +295,20 @@ public final class OrderImportImpl implements OrderImport {
         this.customerEmail = customerEmail;
     }
     
+    public void setLineItems(final com.commercetools.importapi.models.orders.LineItemImportDraft ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    }
+    
     public void setLineItems(final java.util.List<com.commercetools.importapi.models.orders.LineItemImportDraft> lineItems){
-        this.lineItems = lineItems;
+       this.lineItems = lineItems;
+    }
+    
+    public void setCustomLineItems(final com.commercetools.importapi.models.orders.CustomLineItemDraft ...customLineItems){
+       this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
     }
     
     public void setCustomLineItems(final java.util.List<com.commercetools.importapi.models.orders.CustomLineItemDraft> customLineItems){
-        this.customLineItems = customLineItems;
+       this.customLineItems = customLineItems;
     }
     
     public void setTotalPrice(final com.commercetools.importapi.models.common.TypedMoney totalPrice){
@@ -369,8 +375,12 @@ public final class OrderImportImpl implements OrderImport {
         this.origin = origin;
     }
     
+    public void setItemShippingAddresses(final com.commercetools.importapi.models.common.Address ...itemShippingAddresses){
+       this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+    }
+    
     public void setItemShippingAddresses(final java.util.List<com.commercetools.importapi.models.common.Address> itemShippingAddresses){
-        this.itemShippingAddresses = itemShippingAddresses;
+       this.itemShippingAddresses = itemShippingAddresses;
     }
 
 }

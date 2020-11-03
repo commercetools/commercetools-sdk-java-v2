@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.prices.PriceImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.errors.VariantValues;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -29,8 +28,18 @@ public final class VariantValuesBuilder {
         return this;
     }
     
+    public VariantValuesBuilder prices( final com.commercetools.importapi.models.prices.PriceImport ...prices) {
+        this.prices = new ArrayList<>(Arrays.asList(prices));
+        return this;
+    }
+    
     public VariantValuesBuilder prices( final java.util.List<com.commercetools.importapi.models.prices.PriceImport> prices) {
         this.prices = prices;
+        return this;
+    }
+    
+    public VariantValuesBuilder attributes( final com.commercetools.importapi.models.productvariants.Attribute ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
     

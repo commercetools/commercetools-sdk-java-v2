@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -88,8 +86,12 @@ public final class AssetImpl implements Asset {
         this.key = key;
     }
     
+    public void setSources(final com.commercetools.importapi.models.common.AssetSource ...sources){
+       this.sources = new ArrayList<>(Arrays.asList(sources));
+    }
+    
     public void setSources(final java.util.List<com.commercetools.importapi.models.common.AssetSource> sources){
-        this.sources = sources;
+       this.sources = sources;
     }
     
     public void setName(final com.commercetools.importapi.models.common.LocalizedString name){
@@ -100,8 +102,12 @@ public final class AssetImpl implements Asset {
         this.description = description;
     }
     
+    public void setTags(final String ...tags){
+       this.tags = new ArrayList<>(Arrays.asList(tags));
+    }
+    
     public void setTags(final java.util.List<String> tags){
-        this.tags = tags;
+       this.tags = tags;
     }
     
     public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){

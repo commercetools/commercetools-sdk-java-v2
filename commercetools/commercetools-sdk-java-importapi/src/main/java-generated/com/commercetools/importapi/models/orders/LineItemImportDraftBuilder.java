@@ -10,8 +10,7 @@ import com.commercetools.importapi.models.orders.LineItemProductVariantImportDra
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.commercetools.importapi.models.orders.LineItemImportDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -73,6 +72,11 @@ public final class LineItemImportDraftBuilder {
     
     public LineItemImportDraftBuilder quantity( final Double quantity) {
         this.quantity = quantity;
+        return this;
+    }
+    
+    public LineItemImportDraftBuilder state(@Nullable final com.commercetools.importapi.models.orders.ItemState ...state) {
+        this.state = new ArrayList<>(Arrays.asList(state));
         return this;
     }
     

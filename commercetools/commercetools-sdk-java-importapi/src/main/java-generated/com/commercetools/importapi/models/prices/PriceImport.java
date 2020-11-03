@@ -18,8 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -139,6 +138,8 @@ public interface PriceImport extends ImportResource {
     
     public void setPublish(final Boolean publish);
     
+    @JsonIgnore
+    public void setTiers(final PriceTier ...tiers);
     public void setTiers(final List<PriceTier> tiers);
     
     public void setCustom(final Custom custom);

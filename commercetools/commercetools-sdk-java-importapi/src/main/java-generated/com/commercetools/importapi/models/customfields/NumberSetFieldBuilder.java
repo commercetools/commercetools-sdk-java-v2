@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.customfields;
 import com.commercetools.importapi.models.customfields.CustomField;
 import com.commercetools.importapi.models.customfields.NumberSetField;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class NumberSetFieldBuilder {
     
     private java.util.List<Double> value;
 
+    public NumberSetFieldBuilder value( final Double ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
+        return this;
+    }
+    
     public NumberSetFieldBuilder value( final java.util.List<Double> value) {
         this.value = value;
         return this;

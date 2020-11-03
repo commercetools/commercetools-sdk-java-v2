@@ -6,8 +6,7 @@ import com.commercetools.importapi.models.orders.TrackingData;
 import java.time.ZonedDateTime;
 import com.commercetools.importapi.models.orders.Parcel;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -49,6 +48,11 @@ public final class ParcelBuilder {
     
     public ParcelBuilder trackingData(@Nullable final com.commercetools.importapi.models.orders.TrackingData trackingData) {
         this.trackingData = trackingData;
+        return this;
+    }
+    
+    public ParcelBuilder items(@Nullable final com.commercetools.importapi.models.orders.DeliveryItem ...items) {
+        this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
     

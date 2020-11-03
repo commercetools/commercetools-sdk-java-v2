@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.products;
 import com.commercetools.importapi.models.products.SuggestTokenizer;
 import com.commercetools.importapi.models.products.CustomTokenizer;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class CustomTokenizerBuilder {
     
     private java.util.List<String> inputs;
 
+    public CustomTokenizerBuilder inputs( final String ...inputs) {
+        this.inputs = new ArrayList<>(Arrays.asList(inputs));
+        return this;
+    }
+    
     public CustomTokenizerBuilder inputs( final java.util.List<String> inputs) {
         this.inputs = inputs;
         return this;

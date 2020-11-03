@@ -12,8 +12,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -193,8 +191,12 @@ public final class ProductImportImpl implements ProductImport {
         this.description = description;
     }
     
+    public void setCategories(final com.commercetools.importapi.models.common.CategoryKeyReference ...categories){
+       this.categories = new ArrayList<>(Arrays.asList(categories));
+    }
+    
     public void setCategories(final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories){
-        this.categories = categories;
+       this.categories = categories;
     }
     
     public void setMetaTitle(final com.commercetools.importapi.models.common.LocalizedString metaTitle){

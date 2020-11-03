@@ -13,8 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -187,6 +186,8 @@ public interface CustomerImport extends ImportResource {
     
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
     
+    @JsonIgnore
+    public void setAddresses(final Address ...addresses);
     public void setAddresses(final List<Address> addresses);
     
     public void setDefaultBillingAddress(final Address defaultBillingAddress);

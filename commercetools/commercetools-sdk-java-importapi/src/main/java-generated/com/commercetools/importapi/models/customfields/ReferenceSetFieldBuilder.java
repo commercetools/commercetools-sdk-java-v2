@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.common.KeyReference;
 import com.commercetools.importapi.models.customfields.CustomField;
 import com.commercetools.importapi.models.customfields.ReferenceSetField;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class ReferenceSetFieldBuilder {
     
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
+    public ReferenceSetFieldBuilder value( final com.commercetools.importapi.models.common.KeyReference ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
+        return this;
+    }
+    
     public ReferenceSetFieldBuilder value( final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
         this.value = value;
         return this;

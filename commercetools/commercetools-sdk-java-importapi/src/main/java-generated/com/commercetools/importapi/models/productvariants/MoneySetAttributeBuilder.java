@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.MoneySetAttribute;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class MoneySetAttributeBuilder {
 
     public MoneySetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
+        return this;
+    }
+    
+    public MoneySetAttributeBuilder value( final com.commercetools.importapi.models.common.TypedMoney ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
     

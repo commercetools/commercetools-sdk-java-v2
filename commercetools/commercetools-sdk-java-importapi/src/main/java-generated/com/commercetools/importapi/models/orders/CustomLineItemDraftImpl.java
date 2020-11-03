@@ -14,8 +14,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -159,8 +157,12 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
         this.quantity = quantity;
     }
     
+    public void setState(final com.commercetools.importapi.models.orders.ItemState ...state){
+       this.state = new ArrayList<>(Arrays.asList(state));
+    }
+    
     public void setState(final java.util.List<com.commercetools.importapi.models.orders.ItemState> state){
-        this.state = state;
+       this.state = state;
     }
     
     public void setTaxCategory(final com.commercetools.importapi.models.common.TaxCategoryKeyReference taxCategory){
@@ -175,8 +177,12 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
         this.externalTaxRate = externalTaxRate;
     }
     
+    public void setDiscountedPricePerQuantity(final com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft ...discountedPricePerQuantity){
+       this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
+    }
+    
     public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft> discountedPricePerQuantity){
-        this.discountedPricePerQuantity = discountedPricePerQuantity;
+       this.discountedPricePerQuantity = discountedPricePerQuantity;
     }
     
     public void setShippingDetails(final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails){

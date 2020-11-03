@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.products;
 import com.commercetools.importapi.models.products.SearchKeyword;
 import com.commercetools.importapi.models.products.SearchKeywords;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

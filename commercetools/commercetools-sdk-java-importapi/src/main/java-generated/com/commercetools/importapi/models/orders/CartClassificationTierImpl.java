@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -79,8 +77,12 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
         this.price = price;
     }
     
+    public void setTiers(final com.commercetools.importapi.models.orders.ShippingRatePriceTier ...tiers){
+       this.tiers = new ArrayList<>(Arrays.asList(tiers));
+    }
+    
     public void setTiers(final java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers){
-        this.tiers = tiers;
+       this.tiers = tiers;
     }
     
     public void setIsMatching(final Boolean isMatching){

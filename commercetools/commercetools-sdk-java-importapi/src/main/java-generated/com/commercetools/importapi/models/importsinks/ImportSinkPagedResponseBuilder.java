@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.importsinks;
 import com.commercetools.importapi.models.importsinks.ImportSink;
 import com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +37,11 @@ public final class ImportSinkPagedResponseBuilder {
     
     public ImportSinkPagedResponseBuilder count( final Long count) {
         this.count = count;
+        return this;
+    }
+    
+    public ImportSinkPagedResponseBuilder results( final com.commercetools.importapi.models.importsinks.ImportSink ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

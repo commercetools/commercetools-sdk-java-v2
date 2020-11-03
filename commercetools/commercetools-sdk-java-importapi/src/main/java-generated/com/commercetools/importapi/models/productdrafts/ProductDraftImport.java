@@ -16,8 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -129,6 +128,8 @@ public interface ProductDraftImport extends ImportResource {
     
     public void setDescription(final LocalizedString description);
     
+    @JsonIgnore
+    public void setCategories(final CategoryKeyReference ...categories);
     public void setCategories(final List<CategoryKeyReference> categories);
     
     public void setMetaTitle(final LocalizedString metaTitle);
@@ -139,6 +140,8 @@ public interface ProductDraftImport extends ImportResource {
     
     public void setMasterVariant(final ProductVariantDraftImport masterVariant);
     
+    @JsonIgnore
+    public void setVariants(final ProductVariantDraftImport ...variants);
     public void setVariants(final List<ProductVariantDraftImport> variants);
     
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);

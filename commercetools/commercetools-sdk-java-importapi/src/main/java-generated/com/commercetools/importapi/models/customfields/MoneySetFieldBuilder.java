@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.common.Money;
 import com.commercetools.importapi.models.customfields.CustomField;
 import com.commercetools.importapi.models.customfields.MoneySetField;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class MoneySetFieldBuilder {
     
     private java.util.List<com.commercetools.importapi.models.common.Money> value;
 
+    public MoneySetFieldBuilder value( final com.commercetools.importapi.models.common.Money ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
+        return this;
+    }
+    
     public MoneySetFieldBuilder value( final java.util.List<com.commercetools.importapi.models.common.Money> value) {
         this.value = value;
         return this;

@@ -11,8 +11,7 @@ import com.commercetools.importapi.models.orders.ItemState;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.commercetools.importapi.models.orders.CustomLineItemDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -88,6 +87,11 @@ public final class CustomLineItemDraftBuilder {
         return this;
     }
     
+    public CustomLineItemDraftBuilder state(@Nullable final com.commercetools.importapi.models.orders.ItemState ...state) {
+        this.state = new ArrayList<>(Arrays.asList(state));
+        return this;
+    }
+    
     public CustomLineItemDraftBuilder state(@Nullable final java.util.List<com.commercetools.importapi.models.orders.ItemState> state) {
         this.state = state;
         return this;
@@ -105,6 +109,11 @@ public final class CustomLineItemDraftBuilder {
     
     public CustomLineItemDraftBuilder externalTaxRate(@Nullable final com.commercetools.importapi.models.orders.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
+        return this;
+    }
+    
+    public CustomLineItemDraftBuilder discountedPricePerQuantity(@Nullable final com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft ...discountedPricePerQuantity) {
+        this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
     

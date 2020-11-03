@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.productvariants;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.EnumSetAttribute;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class EnumSetAttributeBuilder {
 
     public EnumSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
+        return this;
+    }
+    
+    public EnumSetAttributeBuilder value( final String ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
     

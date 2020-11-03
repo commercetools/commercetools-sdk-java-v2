@@ -9,8 +9,7 @@ import com.commercetools.importapi.models.customfields.Custom;
 import java.time.ZonedDateTime;
 import com.commercetools.importapi.models.orders.LineItemPrice;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -79,6 +78,11 @@ public final class LineItemPriceBuilder {
     
     public LineItemPriceBuilder discounted(@Nullable final com.commercetools.importapi.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
+        return this;
+    }
+    
+    public LineItemPriceBuilder tiers(@Nullable final com.commercetools.importapi.models.common.PriceTier ...tiers) {
+        this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
     

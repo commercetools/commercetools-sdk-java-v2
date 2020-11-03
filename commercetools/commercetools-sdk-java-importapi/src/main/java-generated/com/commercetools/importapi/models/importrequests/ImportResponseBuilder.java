@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.importrequests;
 import com.commercetools.importapi.models.importoperations.ImportOperationStatus;
 import com.commercetools.importapi.models.importrequests.ImportResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class ImportResponseBuilder {
     
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
 
+    public ImportResponseBuilder operationStatus( final com.commercetools.importapi.models.importoperations.ImportOperationStatus ...operationStatus) {
+        this.operationStatus = new ArrayList<>(Arrays.asList(operationStatus));
+        return this;
+    }
+    
     public ImportResponseBuilder operationStatus( final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus) {
         this.operationStatus = operationStatus;
         return this;

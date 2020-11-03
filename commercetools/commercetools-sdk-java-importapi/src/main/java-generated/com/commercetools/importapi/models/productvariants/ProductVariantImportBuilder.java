@@ -7,8 +7,7 @@ import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.ProductVariantImport;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -57,13 +56,28 @@ public final class ProductVariantImportBuilder {
         return this;
     }
     
+    public ProductVariantImportBuilder attributes(@Nullable final com.commercetools.importapi.models.productvariants.Attribute ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+    
     public ProductVariantImportBuilder attributes(@Nullable final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
     
+    public ProductVariantImportBuilder images(@Nullable final com.commercetools.importapi.models.common.Image ...images) {
+        this.images = new ArrayList<>(Arrays.asList(images));
+        return this;
+    }
+    
     public ProductVariantImportBuilder images(@Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
         this.images = images;
+        return this;
+    }
+    
+    public ProductVariantImportBuilder assets(@Nullable final com.commercetools.importapi.models.common.Asset ...assets) {
+        this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
     

@@ -9,8 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -57,6 +56,8 @@ public interface ImportOperationPagedResponse  {
     
     public void setCount(final Long count);
     
+    @JsonIgnore
+    public void setResults(final ImportOperation ...results);
     public void setResults(final List<ImportOperation> results);
 
     public static ImportOperationPagedResponseImpl of(){

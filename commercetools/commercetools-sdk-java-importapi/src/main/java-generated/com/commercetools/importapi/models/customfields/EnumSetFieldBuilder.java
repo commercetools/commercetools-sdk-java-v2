@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.customfields;
 import com.commercetools.importapi.models.customfields.CustomField;
 import com.commercetools.importapi.models.customfields.EnumSetField;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class EnumSetFieldBuilder {
     
     private java.util.List<String> value;
 
+    public EnumSetFieldBuilder value( final String ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
+        return this;
+    }
+    
     public EnumSetFieldBuilder value( final java.util.List<String> value) {
         this.value = value;
         return this;

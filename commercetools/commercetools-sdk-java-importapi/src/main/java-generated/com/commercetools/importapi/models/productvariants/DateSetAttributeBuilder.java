@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.productvariants.Attribute;
 import java.time.LocalDate;
 import com.commercetools.importapi.models.productvariants.DateSetAttribute;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class DateSetAttributeBuilder {
 
     public DateSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
+        return this;
+    }
+    
+    public DateSetAttributeBuilder value( final java.time.LocalDate ...value) {
+        this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
     

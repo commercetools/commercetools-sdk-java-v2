@@ -11,8 +11,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -35,6 +34,8 @@ public interface ProductImportRequest extends ImportRequest {
     @JsonProperty("resources")
     public List<ProductImport> getResources();
 
+    @JsonIgnore
+    public void setResources(final ProductImport ...resources);
     public void setResources(final List<ProductImport> resources);
 
     public static ProductImportRequestImpl of(){

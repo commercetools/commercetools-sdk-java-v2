@@ -3,8 +3,7 @@ package com.commercetools.importapi.models.importoperations;
 import com.commercetools.importapi.models.importoperations.ImportOperation;
 import com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +37,11 @@ public final class ImportOperationPagedResponseBuilder {
     
     public ImportOperationPagedResponseBuilder count( final Long count) {
         this.count = count;
+        return this;
+    }
+    
+    public ImportOperationPagedResponseBuilder results( final com.commercetools.importapi.models.importoperations.ImportOperation ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

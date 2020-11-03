@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.producttypes.AttributeDefinition;
 import com.commercetools.importapi.models.producttypes.ProductTypeImport;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -39,6 +38,11 @@ public final class ProductTypeImportBuilder {
     
     public ProductTypeImportBuilder description( final String description) {
         this.description = description;
+        return this;
+    }
+    
+    public ProductTypeImportBuilder attributes(@Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
     

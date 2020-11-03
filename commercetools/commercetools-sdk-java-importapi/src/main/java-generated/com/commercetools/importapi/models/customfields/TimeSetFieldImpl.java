@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -51,8 +49,12 @@ public final class TimeSetFieldImpl implements TimeSetField {
         return this.value;
     }
 
+    public void setValue(final java.time.LocalTime ...value){
+       this.value = new ArrayList<>(Arrays.asList(value));
+    }
+    
     public void setValue(final java.util.List<java.time.LocalTime> value){
-        this.value = value;
+       this.value = value;
     }
 
 }

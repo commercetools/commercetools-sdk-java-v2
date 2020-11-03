@@ -5,8 +5,7 @@ import com.commercetools.importapi.models.orders.ShippingRatePriceTier;
 import com.commercetools.importapi.models.orders.ShippingRateTierType;
 import com.commercetools.importapi.models.orders.CartClassificationTier;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,6 +34,11 @@ public final class CartClassificationTierBuilder {
     
     public CartClassificationTierBuilder price( final com.commercetools.importapi.models.common.Money price) {
         this.price = price;
+        return this;
+    }
+    
+    public CartClassificationTierBuilder tiers( final com.commercetools.importapi.models.orders.ShippingRatePriceTier ...tiers) {
+        this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
     

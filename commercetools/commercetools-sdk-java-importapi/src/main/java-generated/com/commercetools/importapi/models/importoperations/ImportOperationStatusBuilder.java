@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.errors.ErrorObject;
 import com.commercetools.importapi.models.importoperations.ImportOperationState;
 import com.commercetools.importapi.models.importoperations.ImportOperationStatus;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -31,6 +30,11 @@ public final class ImportOperationStatusBuilder {
     
     public ImportOperationStatusBuilder state( final com.commercetools.importapi.models.importoperations.ImportOperationState state) {
         this.state = state;
+        return this;
+    }
+    
+    public ImportOperationStatusBuilder errors(@Nullable final com.commercetools.importapi.models.errors.ErrorObject ...errors) {
+        this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
     

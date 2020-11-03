@@ -10,8 +10,7 @@ import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImpor
 import com.commercetools.importapi.models.products.SearchKeywords;
 import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -91,6 +90,11 @@ public final class ProductDraftImportBuilder {
         return this;
     }
     
+    public ProductDraftImportBuilder categories(@Nullable final com.commercetools.importapi.models.common.CategoryKeyReference ...categories) {
+        this.categories = new ArrayList<>(Arrays.asList(categories));
+        return this;
+    }
+    
     public ProductDraftImportBuilder categories(@Nullable final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories) {
         this.categories = categories;
         return this;
@@ -113,6 +117,11 @@ public final class ProductDraftImportBuilder {
     
     public ProductDraftImportBuilder masterVariant(@Nullable final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport masterVariant) {
         this.masterVariant = masterVariant;
+        return this;
+    }
+    
+    public ProductDraftImportBuilder variants(@Nullable final com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport ...variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
         return this;
     }
     

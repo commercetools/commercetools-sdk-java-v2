@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -54,8 +52,12 @@ public final class CategoryImportRequestImpl implements CategoryImportRequest {
         return this.resources;
     }
 
+    public void setResources(final com.commercetools.importapi.models.categories.CategoryImport ...resources){
+       this.resources = new ArrayList<>(Arrays.asList(resources));
+    }
+    
     public void setResources(final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources){
-        this.resources = resources;
+       this.resources = resources;
     }
 
 }

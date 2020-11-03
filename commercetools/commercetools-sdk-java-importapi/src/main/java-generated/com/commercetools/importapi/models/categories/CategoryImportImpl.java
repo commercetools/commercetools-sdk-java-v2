@@ -10,8 +10,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -196,8 +194,12 @@ public final class CategoryImportImpl implements CategoryImport {
         this.metaKeywords = metaKeywords;
     }
     
+    public void setAssets(final com.commercetools.importapi.models.common.Asset ...assets){
+       this.assets = new ArrayList<>(Arrays.asList(assets));
+    }
+    
     public void setAssets(final java.util.List<com.commercetools.importapi.models.common.Asset> assets){
-        this.assets = assets;
+       this.assets = assets;
     }
     
     public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){

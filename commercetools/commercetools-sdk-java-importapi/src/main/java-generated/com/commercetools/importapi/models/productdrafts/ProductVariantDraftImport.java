@@ -12,8 +12,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -54,12 +53,20 @@ public interface ProductVariantDraftImport  {
     
     public void setKey(final String key);
     
+    @JsonIgnore
+    public void setPrices(final PriceDraftImport ...prices);
     public void setPrices(final List<PriceDraftImport> prices);
     
+    @JsonIgnore
+    public void setAttributes(final Attribute ...attributes);
     public void setAttributes(final List<Attribute> attributes);
     
+    @JsonIgnore
+    public void setImages(final Image ...images);
     public void setImages(final List<Image> images);
     
+    @JsonIgnore
+    public void setAssets(final Asset ...assets);
     public void setAssets(final List<Asset> assets);
 
     public static ProductVariantDraftImportImpl of(){

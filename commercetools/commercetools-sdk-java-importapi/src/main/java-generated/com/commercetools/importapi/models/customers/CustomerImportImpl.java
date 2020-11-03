@@ -10,8 +10,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -317,8 +315,12 @@ public final class CustomerImportImpl implements CustomerImport {
         this.customerGroup = customerGroup;
     }
     
+    public void setAddresses(final com.commercetools.importapi.models.common.Address ...addresses){
+       this.addresses = new ArrayList<>(Arrays.asList(addresses));
+    }
+    
     public void setAddresses(final java.util.List<com.commercetools.importapi.models.common.Address> addresses){
-        this.addresses = addresses;
+       this.addresses = addresses;
     }
     
     public void setDefaultBillingAddress(final com.commercetools.importapi.models.common.Address defaultBillingAddress){

@@ -5,8 +5,7 @@ import com.commercetools.importapi.models.importrequests.ImportRequest;
 import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
 import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequest;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,6 +18,11 @@ public final class ProductVariantPatchRequestBuilder {
     
     private java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches;
 
+    public ProductVariantPatchRequestBuilder patches( final com.commercetools.importapi.models.productvariants.ProductVariantPatch ...patches) {
+        this.patches = new ArrayList<>(Arrays.asList(patches));
+        return this;
+    }
+    
     public ProductVariantPatchRequestBuilder patches( final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
         this.patches = patches;
         return this;

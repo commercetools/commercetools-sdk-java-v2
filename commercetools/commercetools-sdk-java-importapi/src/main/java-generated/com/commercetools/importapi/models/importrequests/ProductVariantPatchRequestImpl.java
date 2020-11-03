@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -54,8 +52,12 @@ public final class ProductVariantPatchRequestImpl implements ProductVariantPatch
         return this.patches;
     }
 
+    public void setPatches(final com.commercetools.importapi.models.productvariants.ProductVariantPatch ...patches){
+       this.patches = new ArrayList<>(Arrays.asList(patches));
+    }
+    
     public void setPatches(final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches){
-        this.patches = patches;
+       this.patches = patches;
     }
 
 }

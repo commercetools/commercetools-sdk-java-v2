@@ -7,8 +7,7 @@ import com.commercetools.importapi.models.customfields.Custom;
 import java.time.LocalDate;
 import com.commercetools.importapi.models.customers.CustomerImport;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -156,6 +155,11 @@ public final class CustomerImportBuilder {
     
     public CustomerImportBuilder customerGroup(@Nullable final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup) {
         this.customerGroup = customerGroup;
+        return this;
+    }
+    
+    public CustomerImportBuilder addresses(@Nullable final com.commercetools.importapi.models.common.Address ...addresses) {
+        this.addresses = new ArrayList<>(Arrays.asList(addresses));
         return this;
     }
     

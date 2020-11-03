@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -65,8 +63,12 @@ public final class ReferenceSetAttributeImpl implements ReferenceSetAttribute {
         this.name = name;
     }
     
+    public void setValue(final com.commercetools.importapi.models.common.KeyReference ...value){
+       this.value = new ArrayList<>(Arrays.asList(value));
+    }
+    
     public void setValue(final java.util.List<com.commercetools.importapi.models.common.KeyReference> value){
-        this.value = value;
+       this.value = value;
     }
 
 }

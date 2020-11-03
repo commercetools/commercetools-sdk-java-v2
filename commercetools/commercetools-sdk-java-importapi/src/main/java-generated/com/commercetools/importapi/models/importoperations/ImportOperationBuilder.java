@@ -5,8 +5,7 @@ import com.commercetools.importapi.models.errors.ErrorObject;
 import java.time.ZonedDateTime;
 import com.commercetools.importapi.models.importoperations.ImportOperation;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -81,6 +80,11 @@ public final class ImportOperationBuilder {
     
     public ImportOperationBuilder retryCount( final Integer retryCount) {
         this.retryCount = retryCount;
+        return this;
+    }
+    
+    public ImportOperationBuilder errors(@Nullable final com.commercetools.importapi.models.errors.ErrorObject ...errors) {
+        this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
     

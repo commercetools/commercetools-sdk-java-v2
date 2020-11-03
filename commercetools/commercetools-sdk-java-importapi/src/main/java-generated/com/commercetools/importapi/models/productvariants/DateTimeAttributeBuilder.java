@@ -4,8 +4,7 @@ import com.commercetools.importapi.models.productvariants.Attribute;
 import java.time.ZonedDateTime;
 import com.commercetools.importapi.models.productvariants.DateTimeAttribute;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

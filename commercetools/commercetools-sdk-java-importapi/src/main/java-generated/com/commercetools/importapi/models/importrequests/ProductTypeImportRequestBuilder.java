@@ -5,8 +5,7 @@ import com.commercetools.importapi.models.importrequests.ImportRequest;
 import com.commercetools.importapi.models.producttypes.ProductTypeImport;
 import com.commercetools.importapi.models.importrequests.ProductTypeImportRequest;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,6 +18,11 @@ public final class ProductTypeImportRequestBuilder {
     
     private java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources;
 
+    public ProductTypeImportRequestBuilder resources( final com.commercetools.importapi.models.producttypes.ProductTypeImport ...resources) {
+        this.resources = new ArrayList<>(Arrays.asList(resources));
+        return this;
+    }
+    
     public ProductTypeImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.producttypes.ProductTypeImport> resources) {
         this.resources = resources;
         return this;

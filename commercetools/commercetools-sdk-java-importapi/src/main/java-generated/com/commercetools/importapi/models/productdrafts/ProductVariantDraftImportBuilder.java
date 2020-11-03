@@ -6,8 +6,7 @@ import com.commercetools.importapi.models.productdrafts.PriceDraftImport;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -45,8 +44,18 @@ public final class ProductVariantDraftImportBuilder {
         return this;
     }
     
+    public ProductVariantDraftImportBuilder prices(@Nullable final com.commercetools.importapi.models.productdrafts.PriceDraftImport ...prices) {
+        this.prices = new ArrayList<>(Arrays.asList(prices));
+        return this;
+    }
+    
     public ProductVariantDraftImportBuilder prices(@Nullable final java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> prices) {
         this.prices = prices;
+        return this;
+    }
+    
+    public ProductVariantDraftImportBuilder attributes(@Nullable final com.commercetools.importapi.models.productvariants.Attribute ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
     
@@ -55,8 +64,18 @@ public final class ProductVariantDraftImportBuilder {
         return this;
     }
     
+    public ProductVariantDraftImportBuilder images(@Nullable final com.commercetools.importapi.models.common.Image ...images) {
+        this.images = new ArrayList<>(Arrays.asList(images));
+        return this;
+    }
+    
     public ProductVariantDraftImportBuilder images(@Nullable final java.util.List<com.commercetools.importapi.models.common.Image> images) {
         this.images = images;
+        return this;
+    }
+    
+    public ProductVariantDraftImportBuilder assets(@Nullable final com.commercetools.importapi.models.common.Asset ...assets) {
+        this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
     

@@ -58,7 +58,7 @@ public class ClientFactory {
             List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider
         ) {
-        List<Middleware> middlewareStack = new ArrayList<>(MiddlewareFactory.createDefault(tokenSupplier, LoggerFactory.getLogger(COMMERCETOOLS)));
+        List<Middleware> middlewareStack = new ArrayList<>(MiddlewareFactory.createDefault(tokenSupplier, internalLoggerFactory));
         if (correlationIdProvider != null) {
             middlewares.add((request, next) -> {
                 request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId());
@@ -66,7 +66,6 @@ public class ClientFactory {
             });
         }
         middlewareStack.addAll(middlewares);
-        middlewareStack.add(new InternalLoggerMiddleware(internalLoggerFactory));
         final HandlerStack stack = HandlerStack.create(HttpHandler.create(httpClient), middlewareStack);
 
         return new ApiHttpClient(

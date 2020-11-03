@@ -12,7 +12,13 @@ import static java.util.Arrays.asList;
 public class MiddlewareFactory {
     private final static String userAgent = buildUserAgent();
 
+    @Deprecated
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier, final Logger logger)
+    {
+        return createDefault(tokenSupplier, request -> InternalLogger.getLogger(ClientFactory.COMMERCETOOLS));
+    }
+
+    public static List<Middleware> createDefault(final TokenSupplier tokenSupplier, final InternalLoggerFactory internalLoggerFactory)
     {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
         return asList(
@@ -21,7 +27,7 @@ public class MiddlewareFactory {
                     return next.apply(request);
                 },
                 new ErrorMiddleware(),
-                new LoggerMiddleware(logger),
+                new InternalLoggerMiddleware(internalLoggerFactory),
                 new OAuthMiddleware(oAuthHandler)
         );
     }

@@ -31,6 +31,20 @@ public class InternalLogger {
         return this;
     }
 
+    public InternalLogger debug(final Supplier<Object> message, final Throwable throwable) {
+        if (underlyingLogger.isDebugEnabled()) {
+            underlyingLogger.debug(message.get().toString(), throwable);
+        }
+        return this;
+    }
+
+    public InternalLogger info(final Supplier<Object> message) {
+        if (underlyingLogger.isInfoEnabled()) {
+            underlyingLogger.info(message.get().toString());
+        }
+        return this;
+    }
+
     public InternalLogger trace(final Supplier<Object> message) {
         if (isTraceEnabled()) {
             underlyingLogger.trace(message.get().toString());
@@ -41,6 +55,13 @@ public class InternalLogger {
     public InternalLogger warn(final Supplier<Object> message) {
         if (underlyingLogger.isWarnEnabled()) {
             underlyingLogger.warn(message.get().toString());
+        }
+        return this;
+    }
+
+    public InternalLogger error(final Supplier<Object> message) {
+        if (underlyingLogger.isErrorEnabled()) {
+            underlyingLogger.error(message.get().toString());
         }
         return this;
     }

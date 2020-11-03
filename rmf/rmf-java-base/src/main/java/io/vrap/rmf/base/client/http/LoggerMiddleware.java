@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
+@Deprecated
 public final class LoggerMiddleware implements Middleware {
 
     private final Logger logger;

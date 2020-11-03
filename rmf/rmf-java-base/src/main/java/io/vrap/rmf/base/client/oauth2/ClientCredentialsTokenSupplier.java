@@ -49,7 +49,8 @@ public class ClientCredentialsTokenSupplier extends AutoCloseableService impleme
                                         apiHttpResponse.getStatusCode(),
                                         new String(apiHttpResponse.getBody()),
                                         apiHttpRequest.getHeaders(),
-                                        apiHttpResponse.getMessage()
+                                        apiHttpResponse.getMessage(),
+                                        apiHttpResponse
                                 )
                         );
                     }

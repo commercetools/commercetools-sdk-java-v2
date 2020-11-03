@@ -19,15 +19,15 @@ public class ExceptionFactory {
 
         switch (response.getStatusCode()) {
             case 500:
-                return new InternalServerErrorException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new InternalServerErrorException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
             case 502:
-                return new BadGatewayException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new BadGatewayException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
             case 503:
-                return new ServiceUnavailableException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new ServiceUnavailableException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
             case 504:
-                return new GatewayTimeoutException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new GatewayTimeoutException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
         }
-        return new ApiServerException(response.getStatusCode(), new String(response.getBody()), response.getHeaders(), message);
+        return new ApiServerException(response.getStatusCode(), new String(response.getBody()), response.getHeaders(), message, response);
     }
 
     public static ApiHttpException createClientException(ApiHttpRequest request, ApiHttpResponse<byte[]> response) {
@@ -37,16 +37,16 @@ public class ExceptionFactory {
 
         switch (response.getStatusCode()) {
             case 400:
-                return new BadRequestException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new BadRequestException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
             case 401:
-                return new UnauthorizedException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new UnauthorizedException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
             case 403:
-                return new ForbiddenException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new ForbiddenException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
             case 404:
-                return new NotFoundException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new NotFoundException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
             case 409:
-                return new ConcurrentModificationException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message);
+                return new ConcurrentModificationException(response.getStatusCode(), new String(response.getBody()), request.getHeaders(), message, response);
         }
-        return new ApiClientException(response.getStatusCode(), new String(response.getBody()), response.getHeaders(), message);
+        return new ApiClientException(response.getStatusCode(), new String(response.getBody()), response.getHeaders(), message, response);
     }
 }

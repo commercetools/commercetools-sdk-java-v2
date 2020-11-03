@@ -1,5 +1,6 @@
 package io.vrap.rmf.base.client.http;
 
+import io.vrap.rmf.base.client.ApiHttpException;
 import io.vrap.rmf.base.client.ApiHttpHeaders;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
@@ -51,8 +52,16 @@ public class InternalLoggerMiddleware implements Middleware {
         return next.apply(request).whenComplete(
             (response, throwable) -> {
                 if (throwable != null) {
-                    logger.error(() -> response, throwable);
+                    if (throwable.getCause() instanceof ApiHttpException) {
+                        final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException)throwable.getCause()).getResponse();
+                        logger.error(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(), errorResponse.getStatusCode()));
+                        logger.debug(() -> errorResponse, throwable);
+                        logger.trace(() -> errorResponse.getStatusCode() + "\n" + Optional.ofNullable(errorResponse.getBody()).map(body -> VrapJsonUtils.prettyPrint(errorResponse.getBodyAsString().orElse(""))).orElse("<no body>"));
+                    } else {
+                        logger.error(throwable::getCause, throwable);
+                    }
                 } else {
+                    logger.info(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(), response.getStatusCode()));
                     logger.debug(() -> response);
                     logger.trace(() -> response.getStatusCode() + "\n" + Optional.ofNullable(response.getBody()).map(body -> VrapJsonUtils.prettyPrint(response.getBodyAsString().orElse(""))).orElse("<no body>"));
                 }

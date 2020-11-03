@@ -53,8 +53,6 @@ public class HandlerStack extends AutoCloseableService {
         if (cached == null) {
             List<Middleware> stack = new ArrayList<>(middlewares);
 
-            Collections.reverse(stack);
-
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> prev = handler::execute;
 
             for (Middleware middleware : stack) {

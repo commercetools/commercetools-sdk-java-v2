@@ -18,7 +18,7 @@ public class ClientFactory {
             final VrapHttpClient httpClient,
             final TokenSupplier tokenSupplier
     ) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, new ArrayList<>());
+        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), new ArrayList<>(), null);
     }
 
     public static ApiHttpClient create(
@@ -27,7 +27,17 @@ public class ClientFactory {
             final TokenSupplier tokenSupplier,
             List<Middleware> middlewares
     ) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), middlewares);
+        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), middlewares, null);
+    }
+
+    public static ApiHttpClient create(
+            final String apiBaseUrl,
+            final VrapHttpClient httpClient,
+            final TokenSupplier tokenSupplier,
+            List<Middleware> middlewares,
+            CorrelationIdProvider correlationIdProvider
+    ) {
+        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), middlewares, correlationIdProvider);
     }
 
     public static ApiHttpClient create(

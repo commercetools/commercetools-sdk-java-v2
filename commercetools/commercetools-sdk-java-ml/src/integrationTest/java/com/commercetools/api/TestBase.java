@@ -15,14 +15,15 @@ public class TestBase {
     public final String tokenUrl = ServiceRegion.GCP_EUROPE.getOAuthTokenUrl();
     public final String ml_host = ServiceRegion.GCP_EUROPE.getApiUrl();
 
-    public final ByProjectKeyRequestBuilder mlApiBuilder = MLApiRootFactory.create(
+    public final ByProjectKeyRequestBuilder mlApiBuilder = MLApiRootFactory.createForProject(
+            projectKey,
             ClientCredentials.of().withClientId(clientId)
                 .withClientSecret(clientSecret)
                 .withScopes("")
                 .build(),
             tokenUrl,
-            ml_host)
-            .withProjectKey(projectKey);
+            ml_host
+    );
 
     public static String requireEnvVar(String varName) {
         return Optional.ofNullable(System.getenv(varName)).orElseThrow(() -> new RuntimeException("Cannot find environment variable '" + varName + "'"));

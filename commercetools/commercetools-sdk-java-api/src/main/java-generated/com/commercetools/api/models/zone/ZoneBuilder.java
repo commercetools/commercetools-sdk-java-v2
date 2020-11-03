@@ -7,8 +7,7 @@ import com.commercetools.api.models.zone.Location;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.zone.Zone;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -90,6 +89,11 @@ public final class ZoneBuilder {
     
     public ZoneBuilder description(@Nullable final String description) {
         this.description = description;
+        return this;
+    }
+    
+    public ZoneBuilder locations( final com.commercetools.api.models.zone.Location ...locations) {
+        this.locations = new ArrayList<>(Arrays.asList(locations));
         return this;
     }
     

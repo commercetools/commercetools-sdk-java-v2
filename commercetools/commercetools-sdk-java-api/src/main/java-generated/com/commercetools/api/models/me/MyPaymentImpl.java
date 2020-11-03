@@ -10,8 +10,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -131,8 +129,12 @@ public final class MyPaymentImpl implements MyPayment {
         this.paymentMethodInfo = paymentMethodInfo;
     }
     
+    public void setTransactions(final com.commercetools.api.models.payment.Transaction ...transactions){
+       this.transactions = new ArrayList<>(Arrays.asList(transactions));
+    }
+    
     public void setTransactions(final java.util.List<com.commercetools.api.models.payment.Transaction> transactions){
-        this.transactions = transactions;
+       this.transactions = transactions;
     }
     
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom){

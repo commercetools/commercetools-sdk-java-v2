@@ -4,8 +4,7 @@ import com.commercetools.api.models.graph_ql.GraphQLError;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.graph_ql.GraphQLResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class GraphQLResponseBuilder {
 
     public GraphQLResponseBuilder data(@Nullable final com.fasterxml.jackson.databind.JsonNode data) {
         this.data = data;
+        return this;
+    }
+    
+    public GraphQLResponseBuilder errors(@Nullable final com.commercetools.api.models.graph_ql.GraphQLError ...errors) {
+        this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
     

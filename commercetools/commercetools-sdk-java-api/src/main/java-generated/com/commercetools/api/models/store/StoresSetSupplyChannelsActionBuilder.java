@@ -4,8 +4,7 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.store.StoreUpdateAction;
 import com.commercetools.api.models.store.StoresSetSupplyChannelsAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class StoresSetSupplyChannelsActionBuilder {
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
+    public StoresSetSupplyChannelsActionBuilder supplyChannels(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier ...supplyChannels) {
+        this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
+        return this;
+    }
+    
     public StoresSetSupplyChannelsActionBuilder supplyChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
         this.supplyChannels = supplyChannels;
         return this;

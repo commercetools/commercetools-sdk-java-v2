@@ -17,8 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -99,12 +98,16 @@ public interface Subscription extends BaseResource {
     
     public void setCreatedBy(final CreatedBy createdBy);
     
+    @JsonIgnore
+    public void setChanges(final ChangeSubscription ...changes);
     public void setChanges(final List<ChangeSubscription> changes);
     
     public void setDestination(final Destination destination);
     
     public void setKey(final String key);
     
+    @JsonIgnore
+    public void setMessages(final MessageSubscription ...messages);
     public void setMessages(final List<MessageSubscription> messages);
     
     public void setFormat(final DeliveryFormat format);

@@ -4,8 +4,7 @@ import com.commercetools.api.models.order.ReturnItem;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.order.ReturnInfo;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,6 +23,11 @@ public final class ReturnInfoBuilder {
     @Nullable
     private java.time.ZonedDateTime returnDate;
 
+    public ReturnInfoBuilder items( final com.commercetools.api.models.order.ReturnItem ...items) {
+        this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+    
     public ReturnInfoBuilder items( final java.util.List<com.commercetools.api.models.order.ReturnItem> items) {
         this.items = items;
         return this;

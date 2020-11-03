@@ -11,8 +11,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -36,6 +35,8 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
 
     public void setExternalTotalGross(final Money externalTotalGross);
     
+    @JsonIgnore
+    public void setExternalTaxPortions(final TaxPortionDraft ...externalTaxPortions);
     public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
 
     public static StagedOrderSetOrderTotalTaxActionImpl of(){

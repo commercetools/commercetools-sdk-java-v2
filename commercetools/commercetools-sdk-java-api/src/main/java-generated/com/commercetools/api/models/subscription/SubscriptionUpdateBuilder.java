@@ -3,8 +3,7 @@ package com.commercetools.api.models.subscription;
 import com.commercetools.api.models.subscription.SubscriptionUpdateAction;
 import com.commercetools.api.models.subscription.SubscriptionUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class SubscriptionUpdateBuilder {
 
     public SubscriptionUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public SubscriptionUpdateBuilder actions( final com.commercetools.api.models.subscription.SubscriptionUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

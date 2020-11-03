@@ -4,8 +4,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
 import com.commercetools.api.models.shopping_list.ShoppingListChangeNameAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

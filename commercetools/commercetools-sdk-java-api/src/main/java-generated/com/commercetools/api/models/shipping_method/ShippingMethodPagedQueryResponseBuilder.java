@@ -3,8 +3,7 @@ package com.commercetools.api.models.shipping_method;
 import com.commercetools.api.models.shipping_method.ShippingMethod;
 import com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class ShippingMethodPagedQueryResponseBuilder {
     
     public ShippingMethodPagedQueryResponseBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public ShippingMethodPagedQueryResponseBuilder results( final com.commercetools.api.models.shipping_method.ShippingMethod ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

@@ -4,8 +4,7 @@ import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerSetStoresAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class CustomerSetStoresActionBuilder {
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
+    public CustomerSetStoresActionBuilder stores(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier ...stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+    
     public CustomerSetStoresActionBuilder stores(@Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.stores = stores;
         return this;

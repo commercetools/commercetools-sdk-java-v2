@@ -3,8 +3,7 @@ package com.commercetools.api.models.category;
 import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.category.CategorySetAssetTagsAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -30,6 +29,11 @@ public final class CategorySetAssetTagsActionBuilder {
     
     public CategorySetAssetTagsActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
+        return this;
+    }
+    
+    public CategorySetAssetTagsActionBuilder tags(@Nullable final String ...tags) {
+        this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
     

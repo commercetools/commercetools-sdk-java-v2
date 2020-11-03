@@ -3,8 +3,7 @@ package com.commercetools.api.models.project;
 import com.commercetools.api.models.project.ProjectUpdateAction;
 import com.commercetools.api.models.project.ProjectChangeCurrenciesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class ProjectChangeCurrenciesActionBuilder {
     
     private java.util.List<String> currencies;
 
+    public ProjectChangeCurrenciesActionBuilder currencies( final String ...currencies) {
+        this.currencies = new ArrayList<>(Arrays.asList(currencies));
+        return this;
+    }
+    
     public ProjectChangeCurrenciesActionBuilder currencies( final java.util.List<String> currencies) {
         this.currencies = currencies;
         return this;

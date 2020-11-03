@@ -17,8 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -214,14 +213,20 @@ public interface Customer extends BaseResource {
     
     public void setVatId(final String vatId);
     
+    @JsonIgnore
+    public void setAddresses(final Address ...addresses);
     public void setAddresses(final List<Address> addresses);
     
     public void setDefaultShippingAddressId(final String defaultShippingAddressId);
     
+    @JsonIgnore
+    public void setShippingAddressIds(final String ...shippingAddressIds);
     public void setShippingAddressIds(final List<String> shippingAddressIds);
     
     public void setDefaultBillingAddressId(final String defaultBillingAddressId);
     
+    @JsonIgnore
+    public void setBillingAddressIds(final String ...billingAddressIds);
     public void setBillingAddressIds(final List<String> billingAddressIds);
     
     public void setIsEmailVerified(final Boolean isEmailVerified);
@@ -238,6 +243,8 @@ public interface Customer extends BaseResource {
     
     public void setKey(final String key);
     
+    @JsonIgnore
+    public void setStores(final StoreKeyReference ...stores);
     public void setStores(final List<StoreKeyReference> stores);
 
     public static CustomerImpl of(){

@@ -3,8 +3,7 @@ package com.commercetools.api.models.custom_object;
 import com.commercetools.api.models.custom_object.CustomObject;
 import com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class CustomObjectPagedQueryResponseBuilder {
     
     public CustomObjectPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public CustomObjectPagedQueryResponseBuilder results( final com.commercetools.api.models.custom_object.CustomObject ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

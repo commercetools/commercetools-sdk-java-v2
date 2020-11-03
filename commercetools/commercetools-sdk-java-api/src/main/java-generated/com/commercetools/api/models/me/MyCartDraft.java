@@ -14,8 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -104,6 +103,8 @@ public interface MyCartDraft  {
     
     public void setInventoryMode(final InventoryMode inventoryMode);
     
+    @JsonIgnore
+    public void setLineItems(final MyLineItemDraft ...lineItems);
     public void setLineItems(final List<MyLineItemDraft> lineItems);
     
     public void setShippingAddress(final Address shippingAddress);
@@ -120,6 +121,8 @@ public interface MyCartDraft  {
     
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
     
+    @JsonIgnore
+    public void setItemShippingAddresses(final Address ...itemShippingAddresses);
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
     public static MyCartDraftImpl of(){

@@ -3,8 +3,7 @@ package com.commercetools.api.models.product_type;
 import com.commercetools.api.models.product_type.AttributeDefinitionDraft;
 import com.commercetools.api.models.product_type.ProductTypeDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +37,11 @@ public final class ProductTypeDraftBuilder {
     
     public ProductTypeDraftBuilder description( final String description) {
         this.description = description;
+        return this;
+    }
+    
+    public ProductTypeDraftBuilder attributes(@Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
     

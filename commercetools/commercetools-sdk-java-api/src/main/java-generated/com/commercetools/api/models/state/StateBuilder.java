@@ -10,8 +10,7 @@ import com.commercetools.api.models.state.StateTypeEnum;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.state.State;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -123,8 +122,18 @@ public final class StateBuilder {
         return this;
     }
     
+    public StateBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum ...roles) {
+        this.roles = new ArrayList<>(Arrays.asList(roles));
+        return this;
+    }
+    
     public StateBuilder roles(@Nullable final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
+        return this;
+    }
+    
+    public StateBuilder transitions(@Nullable final com.commercetools.api.models.state.StateReference ...transitions) {
+        this.transitions = new ArrayList<>(Arrays.asList(transitions));
         return this;
     }
     

@@ -11,8 +11,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -54,8 +53,12 @@ public interface TypeDraft  {
     
     public void setDescription(final LocalizedString description);
     
+    @JsonIgnore
+    public void setResourceTypeIds(final ResourceTypeId ...resourceTypeIds);
     public void setResourceTypeIds(final List<ResourceTypeId> resourceTypeIds);
     
+    @JsonIgnore
+    public void setFieldDefinitions(final FieldDefinition ...fieldDefinitions);
     public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
     public static TypeDraftImpl of(){

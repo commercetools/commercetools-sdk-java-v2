@@ -3,8 +3,7 @@ package com.commercetools.api.models.review;
 import com.commercetools.api.models.review.Review;
 import com.commercetools.api.models.review.ReviewPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class ReviewPagedQueryResponseBuilder {
     
     public ReviewPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public ReviewPagedQueryResponseBuilder results( final com.commercetools.api.models.review.Review ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

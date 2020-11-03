@@ -15,8 +15,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -260,8 +258,12 @@ public final class ProductProjectionImpl implements ProductProjection {
         this.slug = slug;
     }
     
+    public void setCategories(final com.commercetools.api.models.category.CategoryReference ...categories){
+       this.categories = new ArrayList<>(Arrays.asList(categories));
+    }
+    
     public void setCategories(final java.util.List<com.commercetools.api.models.category.CategoryReference> categories){
-        this.categories = categories;
+       this.categories = categories;
     }
     
     public void setCategoryOrderHints(final com.commercetools.api.models.product.CategoryOrderHints categoryOrderHints){
@@ -296,8 +298,12 @@ public final class ProductProjectionImpl implements ProductProjection {
         this.masterVariant = masterVariant;
     }
     
+    public void setVariants(final com.commercetools.api.models.product.ProductVariant ...variants){
+       this.variants = new ArrayList<>(Arrays.asList(variants));
+    }
+    
     public void setVariants(final java.util.List<com.commercetools.api.models.product.ProductVariant> variants){
-        this.variants = variants;
+       this.variants = variants;
     }
     
     public void setTaxCategory(final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory){

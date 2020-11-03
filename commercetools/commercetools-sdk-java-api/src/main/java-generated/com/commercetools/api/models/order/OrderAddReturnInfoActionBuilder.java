@@ -5,8 +5,7 @@ import com.commercetools.api.models.order.ReturnItemDraft;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.order.OrderAddReturnInfoAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,6 +26,11 @@ public final class OrderAddReturnInfoActionBuilder {
 
     public OrderAddReturnInfoActionBuilder returnTrackingId(@Nullable final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
+        return this;
+    }
+    
+    public OrderAddReturnInfoActionBuilder items( final com.commercetools.api.models.order.ReturnItemDraft ...items) {
+        this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
     

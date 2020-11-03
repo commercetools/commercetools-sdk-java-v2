@@ -3,8 +3,7 @@ package com.commercetools.api.models.zone;
 import com.commercetools.api.models.zone.ZoneUpdateAction;
 import com.commercetools.api.models.zone.ZoneUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class ZoneUpdateBuilder {
 
     public ZoneUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public ZoneUpdateBuilder actions( final com.commercetools.api.models.zone.ZoneUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

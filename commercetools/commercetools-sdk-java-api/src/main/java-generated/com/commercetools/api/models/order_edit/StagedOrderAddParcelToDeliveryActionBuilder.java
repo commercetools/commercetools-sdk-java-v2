@@ -6,8 +6,7 @@ import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.order.TrackingData;
 import com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -41,6 +40,11 @@ public final class StagedOrderAddParcelToDeliveryActionBuilder {
     
     public StagedOrderAddParcelToDeliveryActionBuilder trackingData(@Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
         this.trackingData = trackingData;
+        return this;
+    }
+    
+    public StagedOrderAddParcelToDeliveryActionBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem ...items) {
+        this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
     

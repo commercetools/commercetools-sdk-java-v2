@@ -4,8 +4,7 @@ import com.commercetools.api.models.extension.ExtensionTrigger;
 import com.commercetools.api.models.extension.ExtensionUpdateAction;
 import com.commercetools.api.models.extension.ExtensionChangeTriggersAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class ExtensionChangeTriggersActionBuilder {
     
     private java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers;
 
+    public ExtensionChangeTriggersActionBuilder triggers( final com.commercetools.api.models.extension.ExtensionTrigger ...triggers) {
+        this.triggers = new ArrayList<>(Arrays.asList(triggers));
+        return this;
+    }
+    
     public ExtensionChangeTriggersActionBuilder triggers( final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
         this.triggers = triggers;
         return this;

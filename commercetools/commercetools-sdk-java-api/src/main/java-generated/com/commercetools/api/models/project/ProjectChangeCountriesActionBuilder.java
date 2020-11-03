@@ -3,8 +3,7 @@ package com.commercetools.api.models.project;
 import com.commercetools.api.models.project.ProjectUpdateAction;
 import com.commercetools.api.models.project.ProjectChangeCountriesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class ProjectChangeCountriesActionBuilder {
     
     private java.util.List<String> countries;
 
+    public ProjectChangeCountriesActionBuilder countries( final String ...countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+        return this;
+    }
+    
     public ProjectChangeCountriesActionBuilder countries( final java.util.List<String> countries) {
         this.countries = countries;
         return this;

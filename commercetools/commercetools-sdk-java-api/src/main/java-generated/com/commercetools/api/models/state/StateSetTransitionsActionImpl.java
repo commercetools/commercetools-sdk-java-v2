@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -46,8 +44,12 @@ public final class StateSetTransitionsActionImpl implements StateSetTransitionsA
         return this.transitions;
     }
 
+    public void setTransitions(final com.commercetools.api.models.state.StateResourceIdentifier ...transitions){
+       this.transitions = new ArrayList<>(Arrays.asList(transitions));
+    }
+    
     public void setTransitions(final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions){
-        this.transitions = transitions;
+       this.transitions = transitions;
     }
 
 }

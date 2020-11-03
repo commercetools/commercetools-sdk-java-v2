@@ -6,8 +6,7 @@ import com.commercetools.api.models.product.ProductProjection;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.message.ProductPublishedMessagePayload;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,6 +25,11 @@ public final class ProductPublishedMessagePayloadBuilder {
     
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
+    public ProductPublishedMessagePayloadBuilder removedImageUrls( final com.fasterxml.jackson.databind.JsonNode ...removedImageUrls) {
+        this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
+        return this;
+    }
+    
     public ProductPublishedMessagePayloadBuilder removedImageUrls( final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;

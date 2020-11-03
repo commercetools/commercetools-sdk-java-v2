@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -69,8 +67,12 @@ public final class TaxCategoryDraftImpl implements TaxCategoryDraft {
         this.description = description;
     }
     
+    public void setRates(final com.commercetools.api.models.tax_category.TaxRateDraft ...rates){
+       this.rates = new ArrayList<>(Arrays.asList(rates));
+    }
+    
     public void setRates(final java.util.List<com.commercetools.api.models.tax_category.TaxRateDraft> rates){
-        this.rates = rates;
+       this.rates = rates;
     }
     
     public void setKey(final String key){

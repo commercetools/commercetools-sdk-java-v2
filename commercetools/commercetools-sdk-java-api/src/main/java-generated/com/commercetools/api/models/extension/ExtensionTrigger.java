@@ -10,8 +10,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -34,6 +33,8 @@ public interface ExtensionTrigger  {
 
     public void setResourceTypeId(final ExtensionResourceTypeId resourceTypeId);
     
+    @JsonIgnore
+    public void setActions(final ExtensionAction ...actions);
     public void setActions(final List<ExtensionAction> actions);
 
     public static ExtensionTriggerImpl of(){

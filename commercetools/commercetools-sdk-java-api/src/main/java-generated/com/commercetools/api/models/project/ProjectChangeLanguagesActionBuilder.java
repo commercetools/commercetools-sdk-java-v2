@@ -3,8 +3,7 @@ package com.commercetools.api.models.project;
 import com.commercetools.api.models.project.ProjectUpdateAction;
 import com.commercetools.api.models.project.ProjectChangeLanguagesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class ProjectChangeLanguagesActionBuilder {
     
     private java.util.List<String> languages;
 
+    public ProjectChangeLanguagesActionBuilder languages( final String ...languages) {
+        this.languages = new ArrayList<>(Arrays.asList(languages));
+        return this;
+    }
+    
     public ProjectChangeLanguagesActionBuilder languages( final java.util.List<String> languages) {
         this.languages = languages;
         return this;

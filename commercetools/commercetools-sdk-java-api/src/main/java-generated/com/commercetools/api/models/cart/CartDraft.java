@@ -22,8 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -203,8 +202,12 @@ public interface CartDraft  {
     
     public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
     
+    @JsonIgnore
+    public void setLineItems(final LineItemDraft ...lineItems);
     public void setLineItems(final List<LineItemDraft> lineItems);
     
+    @JsonIgnore
+    public void setCustomLineItems(final CustomLineItemDraft ...customLineItems);
     public void setCustomLineItems(final List<CustomLineItemDraft> customLineItems);
     
     public void setShippingAddress(final Address shippingAddress);
@@ -225,8 +228,12 @@ public interface CartDraft  {
     
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
     
+    @JsonIgnore
+    public void setItemShippingAddresses(final Address ...itemShippingAddresses);
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
     
+    @JsonIgnore
+    public void setDiscountCodes(final String ...discountCodes);
     public void setDiscountCodes(final List<String> discountCodes);
 
     public static CartDraftImpl of(){

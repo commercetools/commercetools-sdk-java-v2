@@ -12,8 +12,7 @@ import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.product.ProductProjection;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -134,6 +133,11 @@ public final class ProductProjectionBuilder {
         return this;
     }
     
+    public ProductProjectionBuilder categories( final com.commercetools.api.models.category.CategoryReference ...categories) {
+        this.categories = new ArrayList<>(Arrays.asList(categories));
+        return this;
+    }
+    
     public ProductProjectionBuilder categories( final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
         this.categories = categories;
         return this;
@@ -176,6 +180,11 @@ public final class ProductProjectionBuilder {
     
     public ProductProjectionBuilder masterVariant( final com.commercetools.api.models.product.ProductVariant masterVariant) {
         this.masterVariant = masterVariant;
+        return this;
+    }
+    
+    public ProductProjectionBuilder variants( final com.commercetools.api.models.product.ProductVariant ...variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
         return this;
     }
     

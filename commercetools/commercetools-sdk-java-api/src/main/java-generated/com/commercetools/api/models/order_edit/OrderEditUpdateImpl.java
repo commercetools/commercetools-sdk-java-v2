@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -57,8 +55,12 @@ public final class OrderEditUpdateImpl implements OrderEditUpdate {
         this.version = version;
     }
     
+    public void setActions(final com.commercetools.api.models.order_edit.OrderEditUpdateAction ...actions){
+       this.actions = new ArrayList<>(Arrays.asList(actions));
+    }
+    
     public void setActions(final java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions){
-        this.actions = actions;
+       this.actions = actions;
     }
     
     public void setDryRun(final Boolean dryRun){

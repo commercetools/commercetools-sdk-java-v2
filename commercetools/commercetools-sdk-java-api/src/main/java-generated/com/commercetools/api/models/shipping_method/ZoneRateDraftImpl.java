@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -52,8 +50,12 @@ public final class ZoneRateDraftImpl implements ZoneRateDraft {
         this.zone = zone;
     }
     
+    public void setShippingRates(final com.commercetools.api.models.shipping_method.ShippingRateDraft ...shippingRates){
+       this.shippingRates = new ArrayList<>(Arrays.asList(shippingRates));
+    }
+    
     public void setShippingRates(final java.util.List<com.commercetools.api.models.shipping_method.ShippingRateDraft> shippingRates){
-        this.shippingRates = shippingRates;
+       this.shippingRates = shippingRates;
     }
 
 }

@@ -3,8 +3,7 @@ package com.commercetools.api.models.discount_code;
 import com.commercetools.api.models.discount_code.DiscountCode;
 import com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class DiscountCodePagedQueryResponseBuilder {
     
     public DiscountCodePagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public DiscountCodePagedQueryResponseBuilder results( final com.commercetools.api.models.discount_code.DiscountCode ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

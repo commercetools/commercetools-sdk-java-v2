@@ -9,8 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -33,6 +32,8 @@ public interface MessageSubscription  {
 
     public void setResourceTypeId(final String resourceTypeId);
     
+    @JsonIgnore
+    public void setTypes(final String ...types);
     public void setTypes(final List<String> types);
 
     public static MessageSubscriptionImpl of(){

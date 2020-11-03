@@ -6,8 +6,7 @@ import com.commercetools.api.models.common.PriceDraft;
 import com.commercetools.api.models.product.Attribute;
 import com.commercetools.api.models.product.ProductVariantDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -45,8 +44,18 @@ public final class ProductVariantDraftBuilder {
         return this;
     }
     
+    public ProductVariantDraftBuilder prices(@Nullable final com.commercetools.api.models.common.PriceDraft ...prices) {
+        this.prices = new ArrayList<>(Arrays.asList(prices));
+        return this;
+    }
+    
     public ProductVariantDraftBuilder prices(@Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
+        return this;
+    }
+    
+    public ProductVariantDraftBuilder attributes(@Nullable final com.commercetools.api.models.product.Attribute ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
     
@@ -55,8 +64,18 @@ public final class ProductVariantDraftBuilder {
         return this;
     }
     
+    public ProductVariantDraftBuilder images(@Nullable final com.commercetools.api.models.common.Image ...images) {
+        this.images = new ArrayList<>(Arrays.asList(images));
+        return this;
+    }
+    
     public ProductVariantDraftBuilder images(@Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
         this.images = images;
+        return this;
+    }
+    
+    public ProductVariantDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft ...assets) {
+        this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
     

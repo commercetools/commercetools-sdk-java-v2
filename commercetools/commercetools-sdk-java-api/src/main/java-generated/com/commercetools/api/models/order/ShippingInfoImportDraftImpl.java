@@ -13,8 +13,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -140,8 +138,12 @@ public final class ShippingInfoImportDraftImpl implements ShippingInfoImportDraf
         this.shippingMethod = shippingMethod;
     }
     
+    public void setDeliveries(final com.commercetools.api.models.order.Delivery ...deliveries){
+       this.deliveries = new ArrayList<>(Arrays.asList(deliveries));
+    }
+    
     public void setDeliveries(final java.util.List<com.commercetools.api.models.order.Delivery> deliveries){
-        this.deliveries = deliveries;
+       this.deliveries = deliveries;
     }
     
     public void setDiscountedPrice(final com.commercetools.api.models.order.DiscountedLineItemPriceDraft discountedPrice){

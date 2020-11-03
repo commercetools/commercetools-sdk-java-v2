@@ -6,8 +6,7 @@ import com.commercetools.api.models.state.StateRoleEnum;
 import com.commercetools.api.models.state.StateTypeEnum;
 import com.commercetools.api.models.state.StateDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -63,8 +62,18 @@ public final class StateDraftBuilder {
         return this;
     }
     
+    public StateDraftBuilder roles(@Nullable final com.commercetools.api.models.state.StateRoleEnum ...roles) {
+        this.roles = new ArrayList<>(Arrays.asList(roles));
+        return this;
+    }
+    
     public StateDraftBuilder roles(@Nullable final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
+        return this;
+    }
+    
+    public StateDraftBuilder transitions(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier ...transitions) {
+        this.transitions = new ArrayList<>(Arrays.asList(transitions));
         return this;
     }
     

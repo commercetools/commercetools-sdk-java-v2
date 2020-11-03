@@ -6,8 +6,7 @@ import com.commercetools.api.models.product.FacetTypes;
 import com.commercetools.api.models.product.TermFacetResultType;
 import com.commercetools.api.models.product.TermFacetResult;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -49,6 +48,11 @@ public final class TermFacetResultBuilder {
     
     public TermFacetResultBuilder other( final Long other) {
         this.other = other;
+        return this;
+    }
+    
+    public TermFacetResultBuilder terms( final com.commercetools.api.models.product.FacetResultTerm ...terms) {
+        this.terms = new ArrayList<>(Arrays.asList(terms));
         return this;
     }
     

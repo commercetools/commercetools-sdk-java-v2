@@ -10,8 +10,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -153,16 +151,28 @@ public final class ProjectImpl implements Project {
         this.name = name;
     }
     
+    public void setCountries(final String ...countries){
+       this.countries = new ArrayList<>(Arrays.asList(countries));
+    }
+    
     public void setCountries(final java.util.List<String> countries){
-        this.countries = countries;
+       this.countries = countries;
+    }
+    
+    public void setCurrencies(final String ...currencies){
+       this.currencies = new ArrayList<>(Arrays.asList(currencies));
     }
     
     public void setCurrencies(final java.util.List<String> currencies){
-        this.currencies = currencies;
+       this.currencies = currencies;
+    }
+    
+    public void setLanguages(final String ...languages){
+       this.languages = new ArrayList<>(Arrays.asList(languages));
     }
     
     public void setLanguages(final java.util.List<String> languages){
-        this.languages = languages;
+       this.languages = languages;
     }
     
     public void setCreatedAt(final java.time.ZonedDateTime createdAt){

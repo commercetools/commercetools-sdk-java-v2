@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -45,8 +43,12 @@ public final class ShoppingListChangeTextLineItemsOrderActionImpl implements Sho
         return this.textLineItemOrder;
     }
 
+    public void setTextLineItemOrder(final String ...textLineItemOrder){
+       this.textLineItemOrder = new ArrayList<>(Arrays.asList(textLineItemOrder));
+    }
+    
     public void setTextLineItemOrder(final java.util.List<String> textLineItemOrder){
-        this.textLineItemOrder = textLineItemOrder;
+       this.textLineItemOrder = textLineItemOrder;
     }
 
 }

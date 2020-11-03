@@ -4,8 +4,7 @@ import com.commercetools.api.models.type.CustomFieldEnumValue;
 import com.commercetools.api.models.type.FieldType;
 import com.commercetools.api.models.type.CustomFieldEnumType;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class CustomFieldEnumTypeBuilder {
     
     private java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values;
 
+    public CustomFieldEnumTypeBuilder values( final com.commercetools.api.models.type.CustomFieldEnumValue ...values) {
+        this.values = new ArrayList<>(Arrays.asList(values));
+        return this;
+    }
+    
     public CustomFieldEnumTypeBuilder values( final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
         this.values = values;
         return this;

@@ -4,8 +4,7 @@ import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.state.StateUpdateAction;
 import com.commercetools.api.models.state.StateSetTransitionsAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class StateSetTransitionsActionBuilder {
     @Nullable
     private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
 
+    public StateSetTransitionsActionBuilder transitions(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier ...transitions) {
+        this.transitions = new ArrayList<>(Arrays.asList(transitions));
+        return this;
+    }
+    
     public StateSetTransitionsActionBuilder transitions(@Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
         this.transitions = transitions;
         return this;

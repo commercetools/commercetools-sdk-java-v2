@@ -5,8 +5,7 @@ import com.commercetools.api.models.payment.TransactionType;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.me.MyTransactionDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

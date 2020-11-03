@@ -14,8 +14,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -209,8 +207,12 @@ public final class MyShoppingListImpl implements MyShoppingList {
         this.key = key;
     }
     
+    public void setLineItems(final com.commercetools.api.models.shopping_list.ShoppingListLineItem ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    }
+    
     public void setLineItems(final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems){
-        this.lineItems = lineItems;
+       this.lineItems = lineItems;
     }
     
     public void setName(final com.commercetools.api.models.common.LocalizedString name){
@@ -221,8 +223,12 @@ public final class MyShoppingListImpl implements MyShoppingList {
         this.slug = slug;
     }
     
+    public void setTextLineItems(final com.commercetools.api.models.shopping_list.TextLineItem ...textLineItems){
+       this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
+    }
+    
     public void setTextLineItems(final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems){
-        this.textLineItems = textLineItems;
+       this.textLineItems = textLineItems;
     }
     
     public void setAnonymousId(final String anonymousId){

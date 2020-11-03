@@ -3,8 +3,7 @@ package com.commercetools.api.models.error;
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.PriceChangedError;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,6 +24,11 @@ public final class PriceChangedErrorBuilder {
 
     public PriceChangedErrorBuilder message( final String message) {
         this.message = message;
+        return this;
+    }
+    
+    public PriceChangedErrorBuilder lineItems( final String ...lineItems) {
+        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
         return this;
     }
     

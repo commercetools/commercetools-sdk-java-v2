@@ -4,8 +4,7 @@ import com.commercetools.api.models.extension.ExtensionAction;
 import com.commercetools.api.models.extension.ExtensionResourceTypeId;
 import com.commercetools.api.models.extension.ExtensionTrigger;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class ExtensionTriggerBuilder {
 
     public ExtensionTriggerBuilder resourceTypeId( final com.commercetools.api.models.extension.ExtensionResourceTypeId resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
+        return this;
+    }
+    
+    public ExtensionTriggerBuilder actions( final com.commercetools.api.models.extension.ExtensionAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

@@ -3,8 +3,7 @@ package com.commercetools.api.models.order;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.order.OrderPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class OrderPagedQueryResponseBuilder {
     
     public OrderPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public OrderPagedQueryResponseBuilder results( final com.commercetools.api.models.order.Order ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

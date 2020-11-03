@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -72,8 +70,12 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
         return this.format;
     }
 
+    public void setChanges(final com.commercetools.api.models.subscription.ChangeSubscription ...changes){
+       this.changes = new ArrayList<>(Arrays.asList(changes));
+    }
+    
     public void setChanges(final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes){
-        this.changes = changes;
+       this.changes = changes;
     }
     
     public void setDestination(final com.commercetools.api.models.subscription.Destination destination){
@@ -84,8 +86,12 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
         this.key = key;
     }
     
+    public void setMessages(final com.commercetools.api.models.subscription.MessageSubscription ...messages){
+       this.messages = new ArrayList<>(Arrays.asList(messages));
+    }
+    
     public void setMessages(final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages){
-        this.messages = messages;
+       this.messages = messages;
     }
     
     public void setFormat(final com.commercetools.api.models.subscription.DeliveryFormat format){

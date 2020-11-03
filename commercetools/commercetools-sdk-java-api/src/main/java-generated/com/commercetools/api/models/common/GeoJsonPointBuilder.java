@@ -3,8 +3,7 @@ package com.commercetools.api.models.common;
 import com.commercetools.api.models.common.GeoJson;
 import com.commercetools.api.models.common.GeoJsonPoint;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class GeoJsonPointBuilder {
     
     private java.util.List<Double> coordinates;
 
+    public GeoJsonPointBuilder coordinates( final Double ...coordinates) {
+        this.coordinates = new ArrayList<>(Arrays.asList(coordinates));
+        return this;
+    }
+    
     public GeoJsonPointBuilder coordinates( final java.util.List<Double> coordinates) {
         this.coordinates = coordinates;
         return this;

@@ -4,8 +4,7 @@ import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
 import com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionBuilder {
 
     public ProductTypeChangeLocalizedEnumValueOrderActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+    
+    public ProductTypeChangeLocalizedEnumValueOrderActionBuilder values( final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue ...values) {
+        this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
     

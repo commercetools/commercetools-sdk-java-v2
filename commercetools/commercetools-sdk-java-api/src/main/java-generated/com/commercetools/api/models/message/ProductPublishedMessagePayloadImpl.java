@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -64,8 +62,12 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
         return this.scope;
     }
 
+    public void setRemovedImageUrls(final com.fasterxml.jackson.databind.JsonNode ...removedImageUrls){
+       this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
+    }
+    
     public void setRemovedImageUrls(final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls){
-        this.removedImageUrls = removedImageUrls;
+       this.removedImageUrls = removedImageUrls;
     }
     
     public void setProductProjection(final com.commercetools.api.models.product.ProductProjection productProjection){

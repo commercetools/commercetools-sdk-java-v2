@@ -9,8 +9,7 @@ import com.commercetools.api.models.type.CustomFieldsDraft;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.common.PriceDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -79,6 +78,11 @@ public final class PriceDraftBuilder {
     
     public PriceDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+    
+    public PriceDraftBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTierDraft ...tiers) {
+        this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
     

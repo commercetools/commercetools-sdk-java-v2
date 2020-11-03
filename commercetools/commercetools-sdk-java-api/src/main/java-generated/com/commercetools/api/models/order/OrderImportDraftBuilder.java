@@ -18,8 +18,7 @@ import com.commercetools.api.models.type.CustomFieldsDraft;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.order.OrderImportDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -110,8 +109,18 @@ public final class OrderImportDraftBuilder {
         return this;
     }
     
+    public OrderImportDraftBuilder lineItems(@Nullable final com.commercetools.api.models.order.LineItemImportDraft ...lineItems) {
+        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+        return this;
+    }
+    
     public OrderImportDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.order.LineItemImportDraft> lineItems) {
         this.lineItems = lineItems;
+        return this;
+    }
+    
+    public OrderImportDraftBuilder customLineItems(@Nullable final com.commercetools.api.models.cart.CustomLineItemDraft ...customLineItems) {
+        this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
         return this;
     }
     
@@ -187,6 +196,11 @@ public final class OrderImportDraftBuilder {
     
     public OrderImportDraftBuilder taxRoundingMode(@Nullable final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
+        return this;
+    }
+    
+    public OrderImportDraftBuilder itemShippingAddresses(@Nullable final com.commercetools.api.models.common.Address ...itemShippingAddresses) {
+        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
         return this;
     }
     

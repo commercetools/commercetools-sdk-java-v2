@@ -3,8 +3,7 @@ package com.commercetools.api.models.payment;
 import com.commercetools.api.models.payment.PaymentUpdateAction;
 import com.commercetools.api.models.payment.PaymentUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class PaymentUpdateBuilder {
 
     public PaymentUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public PaymentUpdateBuilder actions( final com.commercetools.api.models.payment.PaymentUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

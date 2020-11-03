@@ -7,8 +7,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.custom_object.CustomObject;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

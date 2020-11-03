@@ -4,8 +4,7 @@ import com.commercetools.api.models.cart.LineItem;
 import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.message.OrderLineItemAddedMessage;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -3,8 +3,7 @@ package com.commercetools.api.models.subscription;
 import com.commercetools.api.models.subscription.Subscription;
 import com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class SubscriptionPagedQueryResponseBuilder {
     
     public SubscriptionPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public SubscriptionPagedQueryResponseBuilder results( final com.commercetools.api.models.subscription.Subscription ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

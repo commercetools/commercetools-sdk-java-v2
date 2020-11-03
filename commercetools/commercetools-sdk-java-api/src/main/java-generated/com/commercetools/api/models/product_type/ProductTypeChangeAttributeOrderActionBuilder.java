@@ -4,8 +4,7 @@ import com.commercetools.api.models.product_type.AttributeDefinition;
 import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
 import com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class ProductTypeChangeAttributeOrderActionBuilder {
     
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes;
 
+    public ProductTypeChangeAttributeOrderActionBuilder attributes( final com.commercetools.api.models.product_type.AttributeDefinition ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+    
     public ProductTypeChangeAttributeOrderActionBuilder attributes( final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
         this.attributes = attributes;
         return this;

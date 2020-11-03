@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -58,12 +56,20 @@ public final class GraphQLErrorImpl implements GraphQLError {
         this.message = message;
     }
     
+    public void setLocations(final com.commercetools.api.models.graph_ql.GraphQLErrorLocation ...locations){
+       this.locations = new ArrayList<>(Arrays.asList(locations));
+    }
+    
     public void setLocations(final java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations){
-        this.locations = locations;
+       this.locations = locations;
+    }
+    
+    public void setPath(final com.fasterxml.jackson.databind.JsonNode ...path){
+       this.path = new ArrayList<>(Arrays.asList(path));
     }
     
     public void setPath(final java.util.List<com.fasterxml.jackson.databind.JsonNode> path){
-        this.path = path;
+       this.path = path;
     }
 
 }

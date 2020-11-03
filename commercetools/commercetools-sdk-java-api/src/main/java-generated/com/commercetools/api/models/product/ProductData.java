@@ -13,8 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -79,6 +78,8 @@ public interface ProductData  {
 
     public void setName(final LocalizedString name);
     
+    @JsonIgnore
+    public void setCategories(final CategoryReference ...categories);
     public void setCategories(final List<CategoryReference> categories);
     
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
@@ -95,6 +96,8 @@ public interface ProductData  {
     
     public void setMasterVariant(final ProductVariant masterVariant);
     
+    @JsonIgnore
+    public void setVariants(final ProductVariant ...variants);
     public void setVariants(final List<ProductVariant> variants);
     
     public void setSearchKeywords(final SearchKeywords searchKeywords);

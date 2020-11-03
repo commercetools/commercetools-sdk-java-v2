@@ -6,8 +6,7 @@ import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.message.OrderLineItemDiscountSetMessage;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -111,6 +110,11 @@ public final class OrderLineItemDiscountSetMessageBuilder {
     
     public OrderLineItemDiscountSetMessageBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+    
+    public OrderLineItemDiscountSetMessageBuilder discountedPricePerQuantity( final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity) {
+        this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
     

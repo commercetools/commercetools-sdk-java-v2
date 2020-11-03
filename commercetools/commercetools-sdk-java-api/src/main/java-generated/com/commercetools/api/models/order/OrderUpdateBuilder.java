@@ -3,8 +3,7 @@ package com.commercetools.api.models.order;
 import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.order.OrderUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class OrderUpdateBuilder {
 
     public OrderUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public OrderUpdateBuilder actions( final com.commercetools.api.models.order.OrderUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

@@ -10,8 +10,7 @@ import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.discount_code.DiscountCode;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -123,6 +122,11 @@ public final class DiscountCodeBuilder {
         return this;
     }
     
+    public DiscountCodeBuilder cartDiscounts( final com.commercetools.api.models.cart_discount.CartDiscountReference ...cartDiscounts) {
+        this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
+        return this;
+    }
+    
     public DiscountCodeBuilder cartDiscounts( final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> cartDiscounts) {
         this.cartDiscounts = cartDiscounts;
         return this;
@@ -135,6 +139,11 @@ public final class DiscountCodeBuilder {
     
     public DiscountCodeBuilder isActive( final Boolean isActive) {
         this.isActive = isActive;
+        return this;
+    }
+    
+    public DiscountCodeBuilder references( final com.commercetools.api.models.common.Reference ...references) {
+        this.references = new ArrayList<>(Arrays.asList(references));
         return this;
     }
     
@@ -155,6 +164,11 @@ public final class DiscountCodeBuilder {
     
     public DiscountCodeBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+    
+    public DiscountCodeBuilder groups( final String ...groups) {
+        this.groups = new ArrayList<>(Arrays.asList(groups));
         return this;
     }
     

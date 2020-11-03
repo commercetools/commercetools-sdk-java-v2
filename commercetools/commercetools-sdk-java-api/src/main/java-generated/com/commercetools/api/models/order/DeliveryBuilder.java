@@ -6,8 +6,7 @@ import com.commercetools.api.models.order.Parcel;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.order.Delivery;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,8 +41,18 @@ public final class DeliveryBuilder {
         return this;
     }
     
+    public DeliveryBuilder items( final com.commercetools.api.models.order.DeliveryItem ...items) {
+        this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+    
     public DeliveryBuilder items( final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
+        return this;
+    }
+    
+    public DeliveryBuilder parcels( final com.commercetools.api.models.order.Parcel ...parcels) {
+        this.parcels = new ArrayList<>(Arrays.asList(parcels));
         return this;
     }
     

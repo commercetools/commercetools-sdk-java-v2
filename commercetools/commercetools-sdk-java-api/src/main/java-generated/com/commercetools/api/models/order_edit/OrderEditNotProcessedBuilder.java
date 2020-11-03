@@ -3,8 +3,7 @@ package com.commercetools.api.models.order_edit;
 import com.commercetools.api.models.order_edit.OrderEditResult;
 import com.commercetools.api.models.order_edit.OrderEditNotProcessed;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

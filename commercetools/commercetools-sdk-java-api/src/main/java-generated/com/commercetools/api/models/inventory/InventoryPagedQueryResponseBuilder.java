@@ -3,8 +3,7 @@ package com.commercetools.api.models.inventory;
 import com.commercetools.api.models.inventory.InventoryEntry;
 import com.commercetools.api.models.inventory.InventoryPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class InventoryPagedQueryResponseBuilder {
     
     public InventoryPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public InventoryPagedQueryResponseBuilder results( final com.commercetools.api.models.inventory.InventoryEntry ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

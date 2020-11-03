@@ -4,8 +4,7 @@ import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -29,8 +28,18 @@ public final class DeliveryItemsUpdatedMessagePayloadBuilder {
         return this;
     }
     
+    public DeliveryItemsUpdatedMessagePayloadBuilder items( final com.commercetools.api.models.order.DeliveryItem ...items) {
+        this.items = new ArrayList<>(Arrays.asList(items));
+        return this;
+    }
+    
     public DeliveryItemsUpdatedMessagePayloadBuilder items( final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
+        return this;
+    }
+    
+    public DeliveryItemsUpdatedMessagePayloadBuilder oldItems( final com.commercetools.api.models.order.DeliveryItem ...oldItems) {
+        this.oldItems = new ArrayList<>(Arrays.asList(oldItems));
         return this;
     }
     

@@ -4,8 +4,7 @@ import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.zone.ZoneResourceIdentifier;
 import com.commercetools.api.models.shipping_method.ZoneRateDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class ZoneRateDraftBuilder {
 
     public ZoneRateDraftBuilder zone( final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
+        return this;
+    }
+    
+    public ZoneRateDraftBuilder shippingRates( final com.commercetools.api.models.shipping_method.ShippingRateDraft ...shippingRates) {
+        this.shippingRates = new ArrayList<>(Arrays.asList(shippingRates));
         return this;
     }
     

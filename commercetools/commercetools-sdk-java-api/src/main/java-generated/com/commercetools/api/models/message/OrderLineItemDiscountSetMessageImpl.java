@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -196,8 +194,12 @@ public final class OrderLineItemDiscountSetMessageImpl implements OrderLineItemD
         this.lineItemId = lineItemId;
     }
     
+    public void setDiscountedPricePerQuantity(final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity){
+       this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
+    }
+    
     public void setDiscountedPricePerQuantity(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity){
-        this.discountedPricePerQuantity = discountedPricePerQuantity;
+       this.discountedPricePerQuantity = discountedPricePerQuantity;
     }
     
     public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){

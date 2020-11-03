@@ -4,8 +4,7 @@ import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.payment.Transaction;
 import com.commercetools.api.models.message.PaymentTransactionAddedMessagePayload;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

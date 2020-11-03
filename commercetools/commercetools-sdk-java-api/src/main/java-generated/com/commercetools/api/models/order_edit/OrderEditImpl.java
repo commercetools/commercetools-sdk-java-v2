@@ -13,8 +13,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -184,8 +182,12 @@ public final class OrderEditImpl implements OrderEdit {
         this.resource = resource;
     }
     
+    public void setStagedActions(final com.commercetools.api.models.order.StagedOrderUpdateAction ...stagedActions){
+       this.stagedActions = new ArrayList<>(Arrays.asList(stagedActions));
+    }
+    
     public void setStagedActions(final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions){
-        this.stagedActions = stagedActions;
+       this.stagedActions = stagedActions;
     }
     
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom){

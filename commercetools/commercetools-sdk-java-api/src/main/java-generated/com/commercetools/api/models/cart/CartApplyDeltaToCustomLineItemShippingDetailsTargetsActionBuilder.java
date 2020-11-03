@@ -4,8 +4,7 @@ import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.cart.ItemShippingTarget;
 import com.commercetools.api.models.cart.CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBui
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+    
+    public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder targetsDelta( final com.commercetools.api.models.cart.ItemShippingTarget ...targetsDelta) {
+        this.targetsDelta = new ArrayList<>(Arrays.asList(targetsDelta));
         return this;
     }
     

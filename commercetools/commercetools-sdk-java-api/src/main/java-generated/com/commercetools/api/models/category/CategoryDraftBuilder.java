@@ -6,8 +6,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.category.CategoryDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -100,6 +99,11 @@ public final class CategoryDraftBuilder {
     
     public CategoryDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+    
+    public CategoryDraftBuilder assets(@Nullable final com.commercetools.api.models.common.AssetDraft ...assets) {
+        this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
     

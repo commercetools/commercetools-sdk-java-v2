@@ -3,8 +3,7 @@ package com.commercetools.api.models.customer;
 import com.commercetools.api.models.customer.AnonymousCartSignInMode;
 import com.commercetools.api.models.customer.CustomerSignin;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

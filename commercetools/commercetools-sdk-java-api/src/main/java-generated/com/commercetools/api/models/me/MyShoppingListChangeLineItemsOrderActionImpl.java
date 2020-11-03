@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -45,8 +43,12 @@ public final class MyShoppingListChangeLineItemsOrderActionImpl implements MySho
         return this.lineItemOrder;
     }
 
+    public void setLineItemOrder(final String ...lineItemOrder){
+       this.lineItemOrder = new ArrayList<>(Arrays.asList(lineItemOrder));
+    }
+    
     public void setLineItemOrder(final java.util.List<String> lineItemOrder){
-        this.lineItemOrder = lineItemOrder;
+       this.lineItemOrder = lineItemOrder;
     }
 
 }

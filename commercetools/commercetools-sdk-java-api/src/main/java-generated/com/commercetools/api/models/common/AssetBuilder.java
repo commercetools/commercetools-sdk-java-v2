@@ -5,8 +5,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFields;
 import com.commercetools.api.models.common.Asset;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -42,6 +41,11 @@ public final class AssetBuilder {
         return this;
     }
     
+    public AssetBuilder sources( final com.commercetools.api.models.common.AssetSource ...sources) {
+        this.sources = new ArrayList<>(Arrays.asList(sources));
+        return this;
+    }
+    
     public AssetBuilder sources( final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
@@ -54,6 +58,11 @@ public final class AssetBuilder {
     
     public AssetBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+    
+    public AssetBuilder tags(@Nullable final String ...tags) {
+        this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
     

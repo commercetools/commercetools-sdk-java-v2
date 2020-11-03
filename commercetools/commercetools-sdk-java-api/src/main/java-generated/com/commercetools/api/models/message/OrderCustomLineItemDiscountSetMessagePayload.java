@@ -11,8 +11,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -40,6 +39,8 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends MessagePay
 
     public void setCustomLineItemId(final String customLineItemId);
     
+    @JsonIgnore
+    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity);
     public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
     
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);

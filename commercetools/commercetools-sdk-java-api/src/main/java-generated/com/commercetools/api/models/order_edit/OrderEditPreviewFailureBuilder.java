@@ -4,8 +4,7 @@ import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.order_edit.OrderEditResult;
 import com.commercetools.api.models.order_edit.OrderEditPreviewFailure;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class OrderEditPreviewFailureBuilder {
     
     private java.util.List<com.commercetools.api.models.error.ErrorObject> errors;
 
+    public OrderEditPreviewFailureBuilder errors( final com.commercetools.api.models.error.ErrorObject ...errors) {
+        this.errors = new ArrayList<>(Arrays.asList(errors));
+        return this;
+    }
+    
     public OrderEditPreviewFailureBuilder errors( final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.errors = errors;
         return this;

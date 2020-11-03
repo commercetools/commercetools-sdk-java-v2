@@ -4,8 +4,7 @@ import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.order.OrderSetDeliveryItemsAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class OrderSetDeliveryItemsActionBuilder {
 
     public OrderSetDeliveryItemsActionBuilder deliveryId( final String deliveryId) {
         this.deliveryId = deliveryId;
+        return this;
+    }
+    
+    public OrderSetDeliveryItemsActionBuilder items( final com.commercetools.api.models.order.DeliveryItem ...items) {
+        this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
     

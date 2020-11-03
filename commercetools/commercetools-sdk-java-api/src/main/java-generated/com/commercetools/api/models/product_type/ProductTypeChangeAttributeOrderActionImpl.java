@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -46,8 +44,12 @@ public final class ProductTypeChangeAttributeOrderActionImpl implements ProductT
         return this.attributes;
     }
 
+    public void setAttributes(final com.commercetools.api.models.product_type.AttributeDefinition ...attributes){
+       this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+    
     public void setAttributes(final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes){
-        this.attributes = attributes;
+       this.attributes = attributes;
     }
 
 }

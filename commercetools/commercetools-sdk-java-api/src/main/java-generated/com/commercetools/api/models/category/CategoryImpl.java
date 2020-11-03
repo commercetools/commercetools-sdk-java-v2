@@ -13,8 +13,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -245,8 +243,12 @@ public final class CategoryImpl implements Category {
         this.description = description;
     }
     
+    public void setAncestors(final com.commercetools.api.models.category.CategoryReference ...ancestors){
+       this.ancestors = new ArrayList<>(Arrays.asList(ancestors));
+    }
+    
     public void setAncestors(final java.util.List<com.commercetools.api.models.category.CategoryReference> ancestors){
-        this.ancestors = ancestors;
+       this.ancestors = ancestors;
     }
     
     public void setParent(final com.commercetools.api.models.category.CategoryReference parent){
@@ -277,8 +279,12 @@ public final class CategoryImpl implements Category {
         this.custom = custom;
     }
     
+    public void setAssets(final com.commercetools.api.models.common.Asset ...assets){
+       this.assets = new ArrayList<>(Arrays.asList(assets));
+    }
+    
     public void setAssets(final java.util.List<com.commercetools.api.models.common.Asset> assets){
-        this.assets = assets;
+       this.assets = assets;
     }
     
     public void setKey(final String key){

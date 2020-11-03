@@ -4,8 +4,7 @@ import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributeType;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumType;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class AttributeLocalizedEnumTypeBuilder {
     
     private java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values;
 
+    public AttributeLocalizedEnumTypeBuilder values( final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue ...values) {
+        this.values = new ArrayList<>(Arrays.asList(values));
+        return this;
+    }
+    
     public AttributeLocalizedEnumTypeBuilder values( final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
         this.values = values;
         return this;

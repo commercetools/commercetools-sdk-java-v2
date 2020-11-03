@@ -4,8 +4,7 @@ import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.message.ProductVariantDeletedMessage;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -103,6 +102,11 @@ public final class ProductVariantDeletedMessageBuilder {
     
     public ProductVariantDeletedMessageBuilder variant( final com.commercetools.api.models.product.ProductVariant variant) {
         this.variant = variant;
+        return this;
+    }
+    
+    public ProductVariantDeletedMessageBuilder removedImageUrls( final String ...removedImageUrls) {
+        this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
         return this;
     }
     

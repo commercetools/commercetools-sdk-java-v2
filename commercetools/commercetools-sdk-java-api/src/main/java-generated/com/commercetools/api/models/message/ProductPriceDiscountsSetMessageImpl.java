@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -166,8 +164,12 @@ public final class ProductPriceDiscountsSetMessageImpl implements ProductPriceDi
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
     
+    public void setUpdatedPrices(final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice ...updatedPrices){
+       this.updatedPrices = new ArrayList<>(Arrays.asList(updatedPrices));
+    }
+    
     public void setUpdatedPrices(final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices){
-        this.updatedPrices = updatedPrices;
+       this.updatedPrices = updatedPrices;
     }
 
 }

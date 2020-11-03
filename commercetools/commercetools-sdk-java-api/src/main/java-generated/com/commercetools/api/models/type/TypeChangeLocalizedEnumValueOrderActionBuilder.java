@@ -3,8 +3,7 @@ package com.commercetools.api.models.type;
 import com.commercetools.api.models.type.TypeUpdateAction;
 import com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class TypeChangeLocalizedEnumValueOrderActionBuilder {
 
     public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
+        return this;
+    }
+    
+    public TypeChangeLocalizedEnumValueOrderActionBuilder keys( final String ...keys) {
+        this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
     

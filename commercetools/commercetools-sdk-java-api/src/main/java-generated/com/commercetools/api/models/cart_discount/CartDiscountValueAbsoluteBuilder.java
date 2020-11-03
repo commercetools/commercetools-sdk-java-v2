@@ -4,8 +4,7 @@ import com.commercetools.api.models.cart_discount.CartDiscountValue;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class CartDiscountValueAbsoluteBuilder {
     
     private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
 
+    public CartDiscountValueAbsoluteBuilder money( final com.commercetools.api.models.common.TypedMoney ...money) {
+        this.money = new ArrayList<>(Arrays.asList(money));
+        return this;
+    }
+    
     public CartDiscountValueAbsoluteBuilder money( final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
         return this;

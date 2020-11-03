@@ -4,8 +4,7 @@ import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.order.ShipmentState;
 import com.commercetools.api.models.order.OrderChangeShipmentStateAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

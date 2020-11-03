@@ -5,8 +5,7 @@ import com.commercetools.api.models.shipping_method.ShippingRateTierType;
 import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
 import com.commercetools.api.models.project.CartClassificationType;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,6 +18,11 @@ public final class CartClassificationTypeBuilder {
     
     private java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values;
 
+    public CartClassificationTypeBuilder values( final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue ...values) {
+        this.values = new ArrayList<>(Arrays.asList(values));
+        return this;
+    }
+    
     public CartClassificationTypeBuilder values( final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
         this.values = values;
         return this;

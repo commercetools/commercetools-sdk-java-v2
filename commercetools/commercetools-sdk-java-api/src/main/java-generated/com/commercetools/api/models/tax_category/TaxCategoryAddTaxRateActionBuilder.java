@@ -4,8 +4,7 @@ import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
 import com.commercetools.api.models.tax_category.TaxRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

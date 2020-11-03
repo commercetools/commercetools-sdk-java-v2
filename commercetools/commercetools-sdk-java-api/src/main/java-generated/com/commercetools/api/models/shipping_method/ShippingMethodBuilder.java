@@ -9,8 +9,7 @@ import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.shipping_method.ShippingMethod;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -114,6 +113,11 @@ public final class ShippingMethodBuilder {
     
     public ShippingMethodBuilder taxCategory( final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
+        return this;
+    }
+    
+    public ShippingMethodBuilder zoneRates( final com.commercetools.api.models.shipping_method.ZoneRate ...zoneRates) {
+        this.zoneRates = new ArrayList<>(Arrays.asList(zoneRates));
         return this;
     }
     

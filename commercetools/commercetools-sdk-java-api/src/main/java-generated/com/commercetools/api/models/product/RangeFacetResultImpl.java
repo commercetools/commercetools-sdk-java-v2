@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -47,8 +45,12 @@ public final class RangeFacetResultImpl implements RangeFacetResult {
         return this.ranges;
     }
 
+    public void setRanges(final com.commercetools.api.models.product.FacetResultRange ...ranges){
+       this.ranges = new ArrayList<>(Arrays.asList(ranges));
+    }
+    
     public void setRanges(final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges){
-        this.ranges = ranges;
+       this.ranges = ranges;
     }
 
 }

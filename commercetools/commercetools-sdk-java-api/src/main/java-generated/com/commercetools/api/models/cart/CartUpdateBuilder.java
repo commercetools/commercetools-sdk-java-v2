@@ -3,8 +3,7 @@ package com.commercetools.api.models.cart;
 import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.cart.CartUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class CartUpdateBuilder {
 
     public CartUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public CartUpdateBuilder actions( final com.commercetools.api.models.cart.CartUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

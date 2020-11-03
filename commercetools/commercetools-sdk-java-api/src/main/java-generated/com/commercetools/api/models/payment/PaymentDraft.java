@@ -14,8 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -132,8 +131,12 @@ public interface PaymentDraft  {
     
     public void setPaymentStatus(final PaymentStatusDraft paymentStatus);
     
+    @JsonIgnore
+    public void setTransactions(final TransactionDraft ...transactions);
     public void setTransactions(final List<TransactionDraft> transactions);
     
+    @JsonIgnore
+    public void setInterfaceInteractions(final CustomFieldsDraft ...interfaceInteractions);
     public void setInterfaceInteractions(final List<CustomFieldsDraft> interfaceInteractions);
     
     public void setCustom(final CustomFieldsDraft custom);

@@ -5,8 +5,7 @@ import com.commercetools.api.models.type.FieldType;
 import com.commercetools.api.models.type.TypeTextInputHint;
 import com.commercetools.api.models.type.FieldDefinition;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

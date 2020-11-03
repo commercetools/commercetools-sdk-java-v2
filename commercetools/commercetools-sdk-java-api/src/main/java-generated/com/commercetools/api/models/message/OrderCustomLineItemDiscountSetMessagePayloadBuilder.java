@@ -5,8 +5,7 @@ import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.message.OrderCustomLineItemDiscountSetMessagePayload;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -27,6 +26,11 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadBuilder {
 
     public OrderCustomLineItemDiscountSetMessagePayloadBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
+        return this;
+    }
+    
+    public OrderCustomLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity( final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity) {
+        this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
     

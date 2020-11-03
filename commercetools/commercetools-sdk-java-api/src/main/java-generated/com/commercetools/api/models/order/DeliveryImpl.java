@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -83,12 +81,20 @@ public final class DeliveryImpl implements Delivery {
         this.createdAt = createdAt;
     }
     
+    public void setItems(final com.commercetools.api.models.order.DeliveryItem ...items){
+       this.items = new ArrayList<>(Arrays.asList(items));
+    }
+    
     public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
-        this.items = items;
+       this.items = items;
+    }
+    
+    public void setParcels(final com.commercetools.api.models.order.Parcel ...parcels){
+       this.parcels = new ArrayList<>(Arrays.asList(parcels));
     }
     
     public void setParcels(final java.util.List<com.commercetools.api.models.order.Parcel> parcels){
-        this.parcels = parcels;
+       this.parcels = parcels;
     }
     
     public void setAddress(final com.commercetools.api.models.common.Address address){

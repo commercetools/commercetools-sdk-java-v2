@@ -10,8 +10,7 @@ import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.category.Category;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -123,6 +122,11 @@ public final class CategoryBuilder {
         return this;
     }
     
+    public CategoryBuilder ancestors( final com.commercetools.api.models.category.CategoryReference ...ancestors) {
+        this.ancestors = new ArrayList<>(Arrays.asList(ancestors));
+        return this;
+    }
+    
     public CategoryBuilder ancestors( final java.util.List<com.commercetools.api.models.category.CategoryReference> ancestors) {
         this.ancestors = ancestors;
         return this;
@@ -160,6 +164,11 @@ public final class CategoryBuilder {
     
     public CategoryBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
+        return this;
+    }
+    
+    public CategoryBuilder assets(@Nullable final com.commercetools.api.models.common.Asset ...assets) {
+        this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
     

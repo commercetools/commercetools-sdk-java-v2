@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -45,8 +43,12 @@ public final class GeoJsonPointImpl implements GeoJsonPoint {
         return this.coordinates;
     }
 
+    public void setCoordinates(final Double ...coordinates){
+       this.coordinates = new ArrayList<>(Arrays.asList(coordinates));
+    }
+    
     public void setCoordinates(final java.util.List<Double> coordinates){
-        this.coordinates = coordinates;
+       this.coordinates = coordinates;
     }
 
 }

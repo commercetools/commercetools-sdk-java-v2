@@ -11,8 +11,7 @@ import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.cart.ShippingInfo;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -84,6 +83,11 @@ public final class ShippingInfoBuilder {
     
     public ShippingInfoBuilder shippingMethod(@Nullable final com.commercetools.api.models.shipping_method.ShippingMethodReference shippingMethod) {
         this.shippingMethod = shippingMethod;
+        return this;
+    }
+    
+    public ShippingInfoBuilder deliveries(@Nullable final com.commercetools.api.models.order.Delivery ...deliveries) {
+        this.deliveries = new ArrayList<>(Arrays.asList(deliveries));
         return this;
     }
     

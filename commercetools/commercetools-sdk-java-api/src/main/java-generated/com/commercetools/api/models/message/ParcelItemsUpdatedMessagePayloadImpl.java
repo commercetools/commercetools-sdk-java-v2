@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -78,12 +76,20 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
         this.deliveryId = deliveryId;
     }
     
+    public void setItems(final com.commercetools.api.models.order.DeliveryItem ...items){
+       this.items = new ArrayList<>(Arrays.asList(items));
+    }
+    
     public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
-        this.items = items;
+       this.items = items;
+    }
+    
+    public void setOldItems(final com.commercetools.api.models.order.DeliveryItem ...oldItems){
+       this.oldItems = new ArrayList<>(Arrays.asList(oldItems));
     }
     
     public void setOldItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> oldItems){
-        this.oldItems = oldItems;
+       this.oldItems = oldItems;
     }
 
 }

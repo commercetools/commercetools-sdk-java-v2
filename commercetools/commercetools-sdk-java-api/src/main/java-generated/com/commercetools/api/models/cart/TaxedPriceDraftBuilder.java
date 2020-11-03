@@ -4,8 +4,7 @@ import com.commercetools.api.models.cart.TaxPortionDraft;
 import com.commercetools.api.models.common.TypedMoneyDraft;
 import com.commercetools.api.models.cart.TaxedPriceDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -31,6 +30,11 @@ public final class TaxedPriceDraftBuilder {
     
     public TaxedPriceDraftBuilder totalGross( final com.commercetools.api.models.common.TypedMoneyDraft totalGross) {
         this.totalGross = totalGross;
+        return this;
+    }
+    
+    public TaxedPriceDraftBuilder taxPortions( final com.commercetools.api.models.cart.TaxPortionDraft ...taxPortions) {
+        this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
         return this;
     }
     

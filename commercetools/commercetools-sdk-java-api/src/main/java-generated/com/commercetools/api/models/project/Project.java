@@ -13,8 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -95,10 +94,16 @@ public interface Project  {
     
     public void setName(final String name);
     
+    @JsonIgnore
+    public void setCountries(final String ...countries);
     public void setCountries(final List<String> countries);
     
+    @JsonIgnore
+    public void setCurrencies(final String ...currencies);
     public void setCurrencies(final List<String> currencies);
     
+    @JsonIgnore
+    public void setLanguages(final String ...languages);
     public void setLanguages(final List<String> languages);
     
     public void setCreatedAt(final ZonedDateTime createdAt);

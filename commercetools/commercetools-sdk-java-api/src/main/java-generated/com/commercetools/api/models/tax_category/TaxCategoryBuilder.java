@@ -7,8 +7,7 @@ import com.commercetools.api.models.tax_category.TaxRate;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.tax_category.TaxCategory;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -85,6 +84,11 @@ public final class TaxCategoryBuilder {
     
     public TaxCategoryBuilder description(@Nullable final String description) {
         this.description = description;
+        return this;
+    }
+    
+    public TaxCategoryBuilder rates( final com.commercetools.api.models.tax_category.TaxRate ...rates) {
+        this.rates = new ArrayList<>(Arrays.asList(rates));
         return this;
     }
     

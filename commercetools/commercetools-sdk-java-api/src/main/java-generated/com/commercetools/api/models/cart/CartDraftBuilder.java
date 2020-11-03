@@ -16,8 +16,7 @@ import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.cart.CartDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -154,8 +153,18 @@ public final class CartDraftBuilder {
         return this;
     }
     
+    public CartDraftBuilder lineItems(@Nullable final com.commercetools.api.models.cart.LineItemDraft ...lineItems) {
+        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+        return this;
+    }
+    
     public CartDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems) {
         this.lineItems = lineItems;
+        return this;
+    }
+    
+    public CartDraftBuilder customLineItems(@Nullable final com.commercetools.api.models.cart.CustomLineItemDraft ...customLineItems) {
+        this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
         return this;
     }
     
@@ -209,8 +218,18 @@ public final class CartDraftBuilder {
         return this;
     }
     
+    public CartDraftBuilder itemShippingAddresses(@Nullable final com.commercetools.api.models.common.Address ...itemShippingAddresses) {
+        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+        return this;
+    }
+    
     public CartDraftBuilder itemShippingAddresses(@Nullable final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
         this.itemShippingAddresses = itemShippingAddresses;
+        return this;
+    }
+    
+    public CartDraftBuilder discountCodes(@Nullable final String ...discountCodes) {
+        this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
         return this;
     }
     

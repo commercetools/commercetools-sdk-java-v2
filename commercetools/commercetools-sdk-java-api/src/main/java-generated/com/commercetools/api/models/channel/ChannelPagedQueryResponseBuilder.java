@@ -3,8 +3,7 @@ package com.commercetools.api.models.channel;
 import com.commercetools.api.models.channel.Channel;
 import com.commercetools.api.models.channel.ChannelPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class ChannelPagedQueryResponseBuilder {
     
     public ChannelPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public ChannelPagedQueryResponseBuilder results( final com.commercetools.api.models.channel.Channel ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

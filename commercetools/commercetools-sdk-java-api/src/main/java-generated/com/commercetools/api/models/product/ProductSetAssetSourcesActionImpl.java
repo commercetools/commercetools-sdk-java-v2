@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -106,8 +104,12 @@ public final class ProductSetAssetSourcesActionImpl implements ProductSetAssetSo
         this.assetKey = assetKey;
     }
     
+    public void setSources(final com.commercetools.api.models.common.AssetSource ...sources){
+       this.sources = new ArrayList<>(Arrays.asList(sources));
+    }
+    
     public void setSources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources){
-        this.sources = sources;
+       this.sources = sources;
     }
 
 }

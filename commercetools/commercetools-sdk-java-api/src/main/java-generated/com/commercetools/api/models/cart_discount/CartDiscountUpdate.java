@@ -9,8 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -34,6 +33,8 @@ public interface CartDiscountUpdate  {
 
     public void setVersion(final Long version);
     
+    @JsonIgnore
+    public void setActions(final CartDiscountUpdateAction ...actions);
     public void setActions(final List<CartDiscountUpdateAction> actions);
 
     public static CartDiscountUpdateImpl of(){

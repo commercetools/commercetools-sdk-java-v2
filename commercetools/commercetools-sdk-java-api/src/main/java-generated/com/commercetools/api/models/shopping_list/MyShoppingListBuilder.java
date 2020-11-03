@@ -11,8 +11,7 @@ import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.shopping_list.MyShoppingList;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -125,6 +124,11 @@ public final class MyShoppingListBuilder {
         return this;
     }
     
+    public MyShoppingListBuilder lineItems(@Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItem ...lineItems) {
+        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+        return this;
+    }
+    
     public MyShoppingListBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems) {
         this.lineItems = lineItems;
         return this;
@@ -137,6 +141,11 @@ public final class MyShoppingListBuilder {
     
     public MyShoppingListBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
+        return this;
+    }
+    
+    public MyShoppingListBuilder textLineItems(@Nullable final com.commercetools.api.models.shopping_list.TextLineItem ...textLineItems) {
+        this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
         return this;
     }
     

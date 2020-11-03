@@ -3,8 +3,7 @@ package com.commercetools.api.models.category;
 import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.category.CategoryChangeAssetOrderAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class CategoryChangeAssetOrderActionBuilder {
     
     private java.util.List<String> assetOrder;
 
+    public CategoryChangeAssetOrderActionBuilder assetOrder( final String ...assetOrder) {
+        this.assetOrder = new ArrayList<>(Arrays.asList(assetOrder));
+        return this;
+    }
+    
     public CategoryChangeAssetOrderActionBuilder assetOrder( final java.util.List<String> assetOrder) {
         this.assetOrder = assetOrder;
         return this;

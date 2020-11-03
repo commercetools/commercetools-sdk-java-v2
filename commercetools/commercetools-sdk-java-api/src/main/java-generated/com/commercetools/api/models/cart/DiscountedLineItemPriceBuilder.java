@@ -4,8 +4,7 @@ import com.commercetools.api.models.cart.DiscountedLineItemPortion;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.cart.DiscountedLineItemPrice;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class DiscountedLineItemPriceBuilder {
 
     public DiscountedLineItemPriceBuilder value( final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
+        return this;
+    }
+    
+    public DiscountedLineItemPriceBuilder includedDiscounts( final com.commercetools.api.models.cart.DiscountedLineItemPortion ...includedDiscounts) {
+        this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
         return this;
     }
     

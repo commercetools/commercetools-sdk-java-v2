@@ -4,8 +4,7 @@ import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -31,6 +30,11 @@ public final class ShippingRateDraftBuilder {
     
     public ShippingRateDraftBuilder freeAbove(@Nullable final com.commercetools.api.models.common.Money freeAbove) {
         this.freeAbove = freeAbove;
+        return this;
+    }
+    
+    public ShippingRateDraftBuilder tiers(@Nullable final com.commercetools.api.models.shipping_method.ShippingRatePriceTier ...tiers) {
+        this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
     

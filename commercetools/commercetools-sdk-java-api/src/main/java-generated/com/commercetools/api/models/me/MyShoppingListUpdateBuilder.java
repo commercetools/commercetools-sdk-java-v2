@@ -3,8 +3,7 @@ package com.commercetools.api.models.me;
 import com.commercetools.api.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.models.me.MyShoppingListUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class MyShoppingListUpdateBuilder {
 
     public MyShoppingListUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public MyShoppingListUpdateBuilder actions( final com.commercetools.api.models.me.MyShoppingListUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

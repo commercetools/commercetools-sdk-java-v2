@@ -21,8 +21,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -267,12 +265,20 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
         this.customerEmail = customerEmail;
     }
     
+    public void setLineItems(final com.commercetools.api.models.order.LineItemImportDraft ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    }
+    
     public void setLineItems(final java.util.List<com.commercetools.api.models.order.LineItemImportDraft> lineItems){
-        this.lineItems = lineItems;
+       this.lineItems = lineItems;
+    }
+    
+    public void setCustomLineItems(final com.commercetools.api.models.cart.CustomLineItemDraft ...customLineItems){
+       this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
     }
     
     public void setCustomLineItems(final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems){
-        this.customLineItems = customLineItems;
+       this.customLineItems = customLineItems;
     }
     
     public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice){
@@ -331,8 +337,12 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
         this.taxRoundingMode = taxRoundingMode;
     }
     
+    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address ...itemShippingAddresses){
+       this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+    }
+    
     public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses){
-        this.itemShippingAddresses = itemShippingAddresses;
+       this.itemShippingAddresses = itemShippingAddresses;
     }
     
     public void setStore(final com.commercetools.api.models.store.StoreResourceIdentifier store){

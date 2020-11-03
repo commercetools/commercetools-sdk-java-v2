@@ -4,8 +4,7 @@ import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice;
 import com.commercetools.api.models.message.ProductPriceDiscountsSetMessage;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -95,6 +94,11 @@ public final class ProductPriceDiscountsSetMessageBuilder {
     
     public ProductPriceDiscountsSetMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+    
+    public ProductPriceDiscountsSetMessageBuilder updatedPrices( final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice ...updatedPrices) {
+        this.updatedPrices = new ArrayList<>(Arrays.asList(updatedPrices));
         return this;
     }
     

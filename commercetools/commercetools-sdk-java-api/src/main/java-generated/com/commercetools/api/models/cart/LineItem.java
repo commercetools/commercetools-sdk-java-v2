@@ -23,8 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -186,6 +185,8 @@ public interface LineItem  {
     
     public void setAddedAt(final ZonedDateTime addedAt);
     
+    @JsonIgnore
+    public void setState(final ItemState ...state);
     public void setState(final List<ItemState> state);
     
     public void setTaxRate(final TaxRate taxRate);
@@ -194,6 +195,8 @@ public interface LineItem  {
     
     public void setDistributionChannel(final ChannelReference distributionChannel);
     
+    @JsonIgnore
+    public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity);
     public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceForQuantity> discountedPricePerQuantity);
     
     public void setPriceMode(final LineItemPriceMode priceMode);

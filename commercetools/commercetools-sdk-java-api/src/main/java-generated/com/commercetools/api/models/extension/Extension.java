@@ -14,8 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -93,6 +92,8 @@ public interface Extension extends BaseResource {
     
     public void setDestination(final ExtensionDestination destination);
     
+    @JsonIgnore
+    public void setTriggers(final ExtensionTrigger ...triggers);
     public void setTriggers(final List<ExtensionTrigger> triggers);
     
     public void setTimeoutInMs(final Integer timeoutInMs);

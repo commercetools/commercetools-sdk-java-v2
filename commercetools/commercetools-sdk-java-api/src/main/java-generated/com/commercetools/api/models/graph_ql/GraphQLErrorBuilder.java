@@ -4,8 +4,7 @@ import com.commercetools.api.models.graph_ql.GraphQLErrorLocation;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.graph_ql.GraphQLError;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -29,8 +28,18 @@ public final class GraphQLErrorBuilder {
         return this;
     }
     
+    public GraphQLErrorBuilder locations( final com.commercetools.api.models.graph_ql.GraphQLErrorLocation ...locations) {
+        this.locations = new ArrayList<>(Arrays.asList(locations));
+        return this;
+    }
+    
     public GraphQLErrorBuilder locations( final java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations) {
         this.locations = locations;
+        return this;
+    }
+    
+    public GraphQLErrorBuilder path( final com.fasterxml.jackson.databind.JsonNode ...path) {
+        this.path = new ArrayList<>(Arrays.asList(path));
         return this;
     }
     

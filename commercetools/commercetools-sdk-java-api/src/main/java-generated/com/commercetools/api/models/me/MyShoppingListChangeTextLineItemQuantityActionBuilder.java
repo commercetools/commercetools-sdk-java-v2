@@ -3,8 +3,7 @@ package com.commercetools.api.models.me;
 import com.commercetools.api.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.models.me.MyShoppingListChangeTextLineItemQuantityAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

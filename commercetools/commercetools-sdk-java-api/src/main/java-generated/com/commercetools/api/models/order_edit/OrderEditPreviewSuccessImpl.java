@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -59,8 +57,12 @@ public final class OrderEditPreviewSuccessImpl implements OrderEditPreviewSucces
         this.preview = preview;
     }
     
+    public void setMessagePayloads(final com.commercetools.api.models.message.MessagePayload ...messagePayloads){
+       this.messagePayloads = new ArrayList<>(Arrays.asList(messagePayloads));
+    }
+    
     public void setMessagePayloads(final java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads){
-        this.messagePayloads = messagePayloads;
+       this.messagePayloads = messagePayloads;
     }
 
 }

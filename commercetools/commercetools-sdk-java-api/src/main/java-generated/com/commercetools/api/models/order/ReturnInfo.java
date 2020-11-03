@@ -10,8 +10,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -39,6 +38,8 @@ public interface ReturnInfo  {
     @JsonProperty("returnDate")
     public ZonedDateTime getReturnDate();
 
+    @JsonIgnore
+    public void setItems(final ReturnItem ...items);
     public void setItems(final List<ReturnItem> items);
     
     public void setReturnTrackingId(final String returnTrackingId);

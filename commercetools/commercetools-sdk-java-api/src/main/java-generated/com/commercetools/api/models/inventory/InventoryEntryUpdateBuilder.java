@@ -3,8 +3,7 @@ package com.commercetools.api.models.inventory;
 import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
 import com.commercetools.api.models.inventory.InventoryEntryUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class InventoryEntryUpdateBuilder {
 
     public InventoryEntryUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public InventoryEntryUpdateBuilder actions( final com.commercetools.api.models.inventory.InventoryEntryUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

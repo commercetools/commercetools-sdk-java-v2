@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -184,8 +182,12 @@ public final class CategoryDraftImpl implements CategoryDraft {
         this.custom = custom;
     }
     
+    public void setAssets(final com.commercetools.api.models.common.AssetDraft ...assets){
+       this.assets = new ArrayList<>(Arrays.asList(assets));
+    }
+    
     public void setAssets(final java.util.List<com.commercetools.api.models.common.AssetDraft> assets){
-        this.assets = assets;
+       this.assets = assets;
     }
     
     public void setKey(final String key){

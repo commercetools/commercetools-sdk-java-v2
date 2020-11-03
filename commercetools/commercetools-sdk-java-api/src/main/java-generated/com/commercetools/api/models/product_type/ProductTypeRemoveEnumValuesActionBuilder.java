@@ -3,8 +3,7 @@ package com.commercetools.api.models.product_type;
 import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
 import com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class ProductTypeRemoveEnumValuesActionBuilder {
 
     public ProductTypeRemoveEnumValuesActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
+        return this;
+    }
+    
+    public ProductTypeRemoveEnumValuesActionBuilder keys( final String ...keys) {
+        this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
     

@@ -5,8 +5,7 @@ import com.commercetools.api.models.product.FacetResultRange;
 import com.commercetools.api.models.product.FacetTypes;
 import com.commercetools.api.models.product.RangeFacetResult;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,6 +18,11 @@ public final class RangeFacetResultBuilder {
     
     private java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges;
 
+    public RangeFacetResultBuilder ranges( final com.commercetools.api.models.product.FacetResultRange ...ranges) {
+        this.ranges = new ArrayList<>(Arrays.asList(ranges));
+        return this;
+    }
+    
     public RangeFacetResultBuilder ranges( final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
         this.ranges = ranges;
         return this;

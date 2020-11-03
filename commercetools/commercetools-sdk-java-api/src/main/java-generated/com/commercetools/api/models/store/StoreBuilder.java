@@ -8,8 +8,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.store.Store;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -92,13 +91,28 @@ public final class StoreBuilder {
         return this;
     }
     
+    public StoreBuilder languages(@Nullable final String ...languages) {
+        this.languages = new ArrayList<>(Arrays.asList(languages));
+        return this;
+    }
+    
     public StoreBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
     
+    public StoreBuilder distributionChannels( final com.commercetools.api.models.channel.ChannelReference ...distributionChannels) {
+        this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
+        return this;
+    }
+    
     public StoreBuilder distributionChannels( final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
         this.distributionChannels = distributionChannels;
+        return this;
+    }
+    
+    public StoreBuilder supplyChannels(@Nullable final com.commercetools.api.models.channel.ChannelReference ...supplyChannels) {
+        this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
         return this;
     }
     

@@ -3,8 +3,7 @@ package com.commercetools.api.models.zone;
 import com.commercetools.api.models.zone.Location;
 import com.commercetools.api.models.zone.ZoneDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +37,11 @@ public final class ZoneDraftBuilder {
     
     public ZoneDraftBuilder description(@Nullable final String description) {
         this.description = description;
+        return this;
+    }
+    
+    public ZoneDraftBuilder locations( final com.commercetools.api.models.zone.Location ...locations) {
+        this.locations = new ArrayList<>(Arrays.asList(locations));
         return this;
     }
     

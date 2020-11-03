@@ -3,8 +3,7 @@ package com.commercetools.api.models.shipping_method;
 import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class ShippingMethodUpdateBuilder {
 
     public ShippingMethodUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public ShippingMethodUpdateBuilder actions( final com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

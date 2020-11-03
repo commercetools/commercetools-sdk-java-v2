@@ -11,8 +11,7 @@ import com.commercetools.api.models.subscription.SubscriptionHealthStatus;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.subscription.Subscription;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -88,6 +87,11 @@ public final class SubscriptionBuilder {
         return this;
     }
     
+    public SubscriptionBuilder changes( final com.commercetools.api.models.subscription.ChangeSubscription ...changes) {
+        this.changes = new ArrayList<>(Arrays.asList(changes));
+        return this;
+    }
+    
     public SubscriptionBuilder changes( final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
         return this;
@@ -100,6 +104,11 @@ public final class SubscriptionBuilder {
     
     public SubscriptionBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+    
+    public SubscriptionBuilder messages( final com.commercetools.api.models.subscription.MessageSubscription ...messages) {
+        this.messages = new ArrayList<>(Arrays.asList(messages));
         return this;
     }
     

@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -64,8 +62,12 @@ public final class TaxedPriceImpl implements TaxedPrice {
         this.totalGross = totalGross;
     }
     
+    public void setTaxPortions(final com.commercetools.api.models.cart.TaxPortion ...taxPortions){
+       this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
+    }
+    
     public void setTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions){
-        this.taxPortions = taxPortions;
+       this.taxPortions = taxPortions;
     }
 
 }

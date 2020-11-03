@@ -6,8 +6,7 @@ import com.commercetools.api.models.type.CustomFieldsDraft;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.discount_code.DiscountCodeDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -68,6 +67,11 @@ public final class DiscountCodeDraftBuilder {
         return this;
     }
     
+    public DiscountCodeDraftBuilder cartDiscounts( final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier ...cartDiscounts) {
+        this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
+        return this;
+    }
+    
     public DiscountCodeDraftBuilder cartDiscounts( final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
         this.cartDiscounts = cartDiscounts;
         return this;
@@ -95,6 +99,11 @@ public final class DiscountCodeDraftBuilder {
     
     public DiscountCodeDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
+        return this;
+    }
+    
+    public DiscountCodeDraftBuilder groups(@Nullable final String ...groups) {
+        this.groups = new ArrayList<>(Arrays.asList(groups));
         return this;
     }
     

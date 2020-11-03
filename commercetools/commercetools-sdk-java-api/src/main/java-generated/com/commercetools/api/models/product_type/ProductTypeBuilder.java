@@ -7,8 +7,7 @@ import com.commercetools.api.models.product_type.AttributeDefinition;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.product_type.ProductType;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -90,6 +89,11 @@ public final class ProductTypeBuilder {
     
     public ProductTypeBuilder description( final String description) {
         this.description = description;
+        return this;
+    }
+    
+    public ProductTypeBuilder attributes(@Nullable final com.commercetools.api.models.product_type.AttributeDefinition ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
     

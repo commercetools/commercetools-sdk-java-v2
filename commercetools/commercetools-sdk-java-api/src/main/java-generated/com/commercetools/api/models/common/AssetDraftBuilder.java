@@ -5,8 +5,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.common.AssetDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,6 +33,11 @@ public final class AssetDraftBuilder {
     @Nullable
     private String key;
 
+    public AssetDraftBuilder sources( final com.commercetools.api.models.common.AssetSource ...sources) {
+        this.sources = new ArrayList<>(Arrays.asList(sources));
+        return this;
+    }
+    
     public AssetDraftBuilder sources( final java.util.List<com.commercetools.api.models.common.AssetSource> sources) {
         this.sources = sources;
         return this;
@@ -46,6 +50,11 @@ public final class AssetDraftBuilder {
     
     public AssetDraftBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
+        return this;
+    }
+    
+    public AssetDraftBuilder tags(@Nullable final String ...tags) {
+        this.tags = new ArrayList<>(Arrays.asList(tags));
         return this;
     }
     

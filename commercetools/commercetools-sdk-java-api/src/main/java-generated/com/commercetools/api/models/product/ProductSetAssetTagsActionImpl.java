@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -105,8 +103,12 @@ public final class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsA
         this.assetKey = assetKey;
     }
     
+    public void setTags(final String ...tags){
+       this.tags = new ArrayList<>(Arrays.asList(tags));
+    }
+    
     public void setTags(final java.util.List<String> tags){
-        this.tags = tags;
+       this.tags = tags;
     }
 
 }

@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -45,8 +43,12 @@ public final class TypeChangeFieldDefinitionOrderActionImpl implements TypeChang
         return this.fieldNames;
     }
 
+    public void setFieldNames(final String ...fieldNames){
+       this.fieldNames = new ArrayList<>(Arrays.asList(fieldNames));
+    }
+    
     public void setFieldNames(final java.util.List<String> fieldNames){
-        this.fieldNames = fieldNames;
+       this.fieldNames = fieldNames;
     }
 
 }

@@ -4,8 +4,7 @@ import com.commercetools.api.models.subscription.ChangeSubscription;
 import com.commercetools.api.models.subscription.SubscriptionUpdateAction;
 import com.commercetools.api.models.subscription.SubscriptionSetChangesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class SubscriptionSetChangesActionBuilder {
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
 
+    public SubscriptionSetChangesActionBuilder changes(@Nullable final com.commercetools.api.models.subscription.ChangeSubscription ...changes) {
+        this.changes = new ArrayList<>(Arrays.asList(changes));
+        return this;
+    }
+    
     public SubscriptionSetChangesActionBuilder changes(@Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
         return this;

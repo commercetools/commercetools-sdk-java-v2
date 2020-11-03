@@ -16,8 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -126,6 +125,8 @@ public interface ProductDraft  {
     
     public void setDescription(final LocalizedString description);
     
+    @JsonIgnore
+    public void setCategories(final CategoryResourceIdentifier ...categories);
     public void setCategories(final List<CategoryResourceIdentifier> categories);
     
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
@@ -138,6 +139,8 @@ public interface ProductDraft  {
     
     public void setMasterVariant(final ProductVariantDraft masterVariant);
     
+    @JsonIgnore
+    public void setVariants(final ProductVariantDraft ...variants);
     public void setVariants(final List<ProductVariantDraft> variants);
     
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);

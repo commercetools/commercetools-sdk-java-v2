@@ -12,8 +12,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -114,6 +113,8 @@ public interface MyCustomerDraft  {
     
     public void setVatId(final String vatId);
     
+    @JsonIgnore
+    public void setAddresses(final Address ...addresses);
     public void setAddresses(final List<Address> addresses);
     
     public void setDefaultShippingAddress(final Long defaultShippingAddress);
@@ -124,6 +125,8 @@ public interface MyCustomerDraft  {
     
     public void setLocale(final String locale);
     
+    @JsonIgnore
+    public void setStores(final StoreResourceIdentifier ...stores);
     public void setStores(final List<StoreResourceIdentifier> stores);
 
     public static MyCustomerDraftImpl of(){

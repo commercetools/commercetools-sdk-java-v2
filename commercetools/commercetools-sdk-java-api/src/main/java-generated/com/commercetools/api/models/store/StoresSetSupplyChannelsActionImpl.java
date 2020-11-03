@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -46,8 +44,12 @@ public final class StoresSetSupplyChannelsActionImpl implements StoresSetSupplyC
         return this.supplyChannels;
     }
 
+    public void setSupplyChannels(final com.commercetools.api.models.channel.ChannelResourceIdentifier ...supplyChannels){
+       this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
+    }
+    
     public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
-        this.supplyChannels = supplyChannels;
+       this.supplyChannels = supplyChannels;
     }
 
 }

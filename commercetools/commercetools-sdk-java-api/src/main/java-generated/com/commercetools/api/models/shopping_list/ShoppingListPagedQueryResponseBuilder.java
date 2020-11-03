@@ -3,8 +3,7 @@ package com.commercetools.api.models.shopping_list;
 import com.commercetools.api.models.shopping_list.ShoppingList;
 import com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class ShoppingListPagedQueryResponseBuilder {
     
     public ShoppingListPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public ShoppingListPagedQueryResponseBuilder results( final com.commercetools.api.models.shopping_list.ShoppingList ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

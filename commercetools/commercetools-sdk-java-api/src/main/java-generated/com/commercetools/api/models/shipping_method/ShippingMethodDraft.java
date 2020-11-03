@@ -11,8 +11,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -73,6 +72,8 @@ public interface ShippingMethodDraft  {
     
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
     
+    @JsonIgnore
+    public void setZoneRates(final ZoneRateDraft ...zoneRates);
     public void setZoneRates(final List<ZoneRateDraft> zoneRates);
     
     public void setIsDefault(final Boolean isDefault);

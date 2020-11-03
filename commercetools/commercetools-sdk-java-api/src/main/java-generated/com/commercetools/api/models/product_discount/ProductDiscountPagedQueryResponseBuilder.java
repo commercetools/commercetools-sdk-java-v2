@@ -3,8 +3,7 @@ package com.commercetools.api.models.product_discount;
 import com.commercetools.api.models.product_discount.ProductDiscount;
 import com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class ProductDiscountPagedQueryResponseBuilder {
     
     public ProductDiscountPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public ProductDiscountPagedQueryResponseBuilder results( final com.commercetools.api.models.product_discount.ProductDiscount ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

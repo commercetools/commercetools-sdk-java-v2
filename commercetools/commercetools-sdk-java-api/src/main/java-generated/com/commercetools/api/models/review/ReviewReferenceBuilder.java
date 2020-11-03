@@ -5,8 +5,7 @@ import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.review.Review;
 import com.commercetools.api.models.review.ReviewReference;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

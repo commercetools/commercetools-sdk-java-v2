@@ -3,8 +3,7 @@ package com.commercetools.api.models.me;
 import com.commercetools.api.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.models.me.MyShoppingListChangeLineItemsOrderAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class MyShoppingListChangeLineItemsOrderActionBuilder {
     
     private java.util.List<String> lineItemOrder;
 
+    public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder( final String ...lineItemOrder) {
+        this.lineItemOrder = new ArrayList<>(Arrays.asList(lineItemOrder));
+        return this;
+    }
+    
     public MyShoppingListChangeLineItemsOrderActionBuilder lineItemOrder( final java.util.List<String> lineItemOrder) {
         this.lineItemOrder = lineItemOrder;
         return this;

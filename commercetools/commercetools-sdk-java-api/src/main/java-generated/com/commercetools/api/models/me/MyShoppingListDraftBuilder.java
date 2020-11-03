@@ -6,8 +6,7 @@ import com.commercetools.api.models.shopping_list.TextLineItemDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.me.MyShoppingListDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -45,8 +44,18 @@ public final class MyShoppingListDraftBuilder {
         return this;
     }
     
+    public MyShoppingListDraftBuilder lineItems(@Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft ...lineItems) {
+        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+        return this;
+    }
+    
     public MyShoppingListDraftBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems) {
         this.lineItems = lineItems;
+        return this;
+    }
+    
+    public MyShoppingListDraftBuilder textLineItems(@Nullable final com.commercetools.api.models.shopping_list.TextLineItemDraft ...textLineItems) {
+        this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
         return this;
     }
     

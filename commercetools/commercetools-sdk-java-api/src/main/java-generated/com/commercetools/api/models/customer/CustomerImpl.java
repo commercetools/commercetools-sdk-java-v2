@@ -14,8 +14,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -367,24 +365,36 @@ public final class CustomerImpl implements Customer {
         this.vatId = vatId;
     }
     
+    public void setAddresses(final com.commercetools.api.models.common.Address ...addresses){
+       this.addresses = new ArrayList<>(Arrays.asList(addresses));
+    }
+    
     public void setAddresses(final java.util.List<com.commercetools.api.models.common.Address> addresses){
-        this.addresses = addresses;
+       this.addresses = addresses;
     }
     
     public void setDefaultShippingAddressId(final String defaultShippingAddressId){
         this.defaultShippingAddressId = defaultShippingAddressId;
     }
     
+    public void setShippingAddressIds(final String ...shippingAddressIds){
+       this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
+    }
+    
     public void setShippingAddressIds(final java.util.List<String> shippingAddressIds){
-        this.shippingAddressIds = shippingAddressIds;
+       this.shippingAddressIds = shippingAddressIds;
     }
     
     public void setDefaultBillingAddressId(final String defaultBillingAddressId){
         this.defaultBillingAddressId = defaultBillingAddressId;
     }
     
+    public void setBillingAddressIds(final String ...billingAddressIds){
+       this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
+    }
+    
     public void setBillingAddressIds(final java.util.List<String> billingAddressIds){
-        this.billingAddressIds = billingAddressIds;
+       this.billingAddressIds = billingAddressIds;
     }
     
     public void setIsEmailVerified(final Boolean isEmailVerified){
@@ -415,8 +425,12 @@ public final class CustomerImpl implements Customer {
         this.key = key;
     }
     
+    public void setStores(final com.commercetools.api.models.store.StoreKeyReference ...stores){
+       this.stores = new ArrayList<>(Arrays.asList(stores));
+    }
+    
     public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores){
-        this.stores = stores;
+       this.stores = stores;
     }
 
 }

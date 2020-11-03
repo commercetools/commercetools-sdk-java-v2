@@ -6,8 +6,7 @@ import com.commercetools.api.models.type.CustomFields;
 import java.time.LocalDate;
 import com.commercetools.api.models.me.MyCustomerDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -107,6 +106,11 @@ public final class MyCustomerDraftBuilder {
         return this;
     }
     
+    public MyCustomerDraftBuilder addresses(@Nullable final com.commercetools.api.models.common.Address ...addresses) {
+        this.addresses = new ArrayList<>(Arrays.asList(addresses));
+        return this;
+    }
+    
     public MyCustomerDraftBuilder addresses(@Nullable final java.util.List<com.commercetools.api.models.common.Address> addresses) {
         this.addresses = addresses;
         return this;
@@ -129,6 +133,11 @@ public final class MyCustomerDraftBuilder {
     
     public MyCustomerDraftBuilder locale(@Nullable final String locale) {
         this.locale = locale;
+        return this;
+    }
+    
+    public MyCustomerDraftBuilder stores(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier ...stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
     

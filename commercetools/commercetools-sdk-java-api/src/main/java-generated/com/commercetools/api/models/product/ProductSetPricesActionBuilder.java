@@ -4,8 +4,7 @@ import com.commercetools.api.models.common.PriceDraft;
 import com.commercetools.api.models.product.ProductUpdateAction;
 import com.commercetools.api.models.product.ProductSetPricesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,6 +33,11 @@ public final class ProductSetPricesActionBuilder {
     
     public ProductSetPricesActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
+        return this;
+    }
+    
+    public ProductSetPricesActionBuilder prices( final com.commercetools.api.models.common.PriceDraft ...prices) {
+        this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
     

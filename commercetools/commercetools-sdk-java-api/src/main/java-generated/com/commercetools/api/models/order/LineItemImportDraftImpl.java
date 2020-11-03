@@ -13,8 +13,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -160,8 +158,12 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
         this.quantity = quantity;
     }
     
+    public void setState(final com.commercetools.api.models.order.ItemState ...state){
+       this.state = new ArrayList<>(Arrays.asList(state));
+    }
+    
     public void setState(final java.util.List<com.commercetools.api.models.order.ItemState> state){
-        this.state = state;
+       this.state = state;
     }
     
     public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){

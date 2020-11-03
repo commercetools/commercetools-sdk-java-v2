@@ -7,8 +7,7 @@ import com.commercetools.api.models.payment.Transaction;
 import com.commercetools.api.models.type.CustomFields;
 import com.commercetools.api.models.me.MyPayment;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -69,6 +68,11 @@ public final class MyPaymentBuilder {
     
     public MyPaymentBuilder paymentMethodInfo( final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
+        return this;
+    }
+    
+    public MyPaymentBuilder transactions( final com.commercetools.api.models.payment.Transaction ...transactions) {
+        this.transactions = new ArrayList<>(Arrays.asList(transactions));
         return this;
     }
     

@@ -13,8 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -90,12 +89,16 @@ public interface ShoppingListDraft  {
     
     public void setKey(final String key);
     
+    @JsonIgnore
+    public void setLineItems(final ShoppingListLineItemDraft ...lineItems);
     public void setLineItems(final List<ShoppingListLineItemDraft> lineItems);
     
     public void setName(final LocalizedString name);
     
     public void setSlug(final LocalizedString slug);
     
+    @JsonIgnore
+    public void setTextLineItems(final TextLineItemDraft ...textLineItems);
     public void setTextLineItems(final List<TextLineItemDraft> textLineItems);
     
     public void setAnonymousId(final String anonymousId);

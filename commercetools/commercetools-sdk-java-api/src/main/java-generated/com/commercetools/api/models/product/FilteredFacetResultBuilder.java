@@ -4,8 +4,7 @@ import com.commercetools.api.models.product.FacetResult;
 import com.commercetools.api.models.product.FacetTypes;
 import com.commercetools.api.models.product.FilteredFacetResult;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

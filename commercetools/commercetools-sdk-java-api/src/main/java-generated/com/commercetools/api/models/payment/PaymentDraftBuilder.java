@@ -8,8 +8,7 @@ import com.commercetools.api.models.payment.TransactionDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.payment.PaymentDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -119,8 +118,18 @@ public final class PaymentDraftBuilder {
         return this;
     }
     
+    public PaymentDraftBuilder transactions(@Nullable final com.commercetools.api.models.payment.TransactionDraft ...transactions) {
+        this.transactions = new ArrayList<>(Arrays.asList(transactions));
+        return this;
+    }
+    
     public PaymentDraftBuilder transactions(@Nullable final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions) {
         this.transactions = transactions;
+        return this;
+    }
+    
+    public PaymentDraftBuilder interfaceInteractions(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft ...interfaceInteractions) {
+        this.interfaceInteractions = new ArrayList<>(Arrays.asList(interfaceInteractions));
         return this;
     }
     

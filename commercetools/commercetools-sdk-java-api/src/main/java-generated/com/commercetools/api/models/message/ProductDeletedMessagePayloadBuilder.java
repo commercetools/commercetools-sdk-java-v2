@@ -4,8 +4,7 @@ import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.message.ProductDeletedMessagePayload;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -21,6 +20,11 @@ public final class ProductDeletedMessagePayloadBuilder {
     
     private com.commercetools.api.models.product.ProductProjection currentProjection;
 
+    public ProductDeletedMessagePayloadBuilder removedImageUrls( final String ...removedImageUrls) {
+        this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
+        return this;
+    }
+    
     public ProductDeletedMessagePayloadBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;

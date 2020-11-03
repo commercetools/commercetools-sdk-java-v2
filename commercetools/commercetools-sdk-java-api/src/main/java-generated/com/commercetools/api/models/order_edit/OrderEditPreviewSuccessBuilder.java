@@ -5,8 +5,7 @@ import com.commercetools.api.models.order_edit.OrderEditResult;
 import com.commercetools.api.models.order_edit.StagedOrder;
 import com.commercetools.api.models.order_edit.OrderEditPreviewSuccess;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,6 +23,11 @@ public final class OrderEditPreviewSuccessBuilder {
 
     public OrderEditPreviewSuccessBuilder preview( final com.commercetools.api.models.order_edit.StagedOrder preview) {
         this.preview = preview;
+        return this;
+    }
+    
+    public OrderEditPreviewSuccessBuilder messagePayloads( final com.commercetools.api.models.message.MessagePayload ...messagePayloads) {
+        this.messagePayloads = new ArrayList<>(Arrays.asList(messagePayloads));
         return this;
     }
     

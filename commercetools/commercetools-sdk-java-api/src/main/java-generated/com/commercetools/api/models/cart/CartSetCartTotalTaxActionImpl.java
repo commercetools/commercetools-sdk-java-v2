@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -61,8 +59,12 @@ public final class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxA
         this.externalTotalGross = externalTotalGross;
     }
     
+    public void setExternalTaxPortions(final com.commercetools.api.models.cart.TaxPortionDraft ...externalTaxPortions){
+       this.externalTaxPortions = new ArrayList<>(Arrays.asList(externalTaxPortions));
+    }
+    
     public void setExternalTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions){
-        this.externalTaxPortions = externalTaxPortions;
+       this.externalTaxPortions = externalTaxPortions;
     }
 
 }

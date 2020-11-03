@@ -4,8 +4,7 @@ import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.common.AssetSource;
 import com.commercetools.api.models.category.CategorySetAssetSourcesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -31,6 +30,11 @@ public final class CategorySetAssetSourcesActionBuilder {
     
     public CategorySetAssetSourcesActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
+        return this;
+    }
+    
+    public CategorySetAssetSourcesActionBuilder sources( final com.commercetools.api.models.common.AssetSource ...sources) {
+        this.sources = new ArrayList<>(Arrays.asList(sources));
         return this;
     }
     

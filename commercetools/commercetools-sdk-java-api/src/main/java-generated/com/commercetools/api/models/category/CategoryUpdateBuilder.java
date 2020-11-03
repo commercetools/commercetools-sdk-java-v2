@@ -3,8 +3,7 @@ package com.commercetools.api.models.category;
 import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.category.CategoryUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class CategoryUpdateBuilder {
 
     public CategoryUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public CategoryUpdateBuilder actions( final com.commercetools.api.models.category.CategoryUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

@@ -9,8 +9,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -31,8 +30,12 @@ public interface OutOfStockError extends ErrorObject {
     @JsonProperty("skus")
     public List<String> getSkus();
 
+    @JsonIgnore
+    public void setLineItems(final String ...lineItems);
     public void setLineItems(final List<String> lineItems);
     
+    @JsonIgnore
+    public void setSkus(final String ...skus);
     public void setSkus(final List<String> skus);
 
     public static OutOfStockErrorImpl of(){

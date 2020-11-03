@@ -12,8 +12,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -55,6 +54,8 @@ public interface TermFacetResult extends FacetResult {
     
     public void setOther(final Long other);
     
+    @JsonIgnore
+    public void setTerms(final FacetResultTerm ...terms);
     public void setTerms(final List<FacetResultTerm> terms);
 
     public static TermFacetResultImpl of(){

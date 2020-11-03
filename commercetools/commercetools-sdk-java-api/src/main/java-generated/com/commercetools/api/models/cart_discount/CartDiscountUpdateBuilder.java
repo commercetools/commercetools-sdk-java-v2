@@ -3,8 +3,7 @@ package com.commercetools.api.models.cart_discount;
 import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
 import com.commercetools.api.models.cart_discount.CartDiscountUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class CartDiscountUpdateBuilder {
 
     public CartDiscountUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public CartDiscountUpdateBuilder actions( final com.commercetools.api.models.cart_discount.CartDiscountUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

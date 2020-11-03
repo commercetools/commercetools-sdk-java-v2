@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -88,20 +86,36 @@ public final class ProductVariantDraftImpl implements ProductVariantDraft {
         this.key = key;
     }
     
+    public void setPrices(final com.commercetools.api.models.common.PriceDraft ...prices){
+       this.prices = new ArrayList<>(Arrays.asList(prices));
+    }
+    
     public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices){
-        this.prices = prices;
+       this.prices = prices;
+    }
+    
+    public void setAttributes(final com.commercetools.api.models.product.Attribute ...attributes){
+       this.attributes = new ArrayList<>(Arrays.asList(attributes));
     }
     
     public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes){
-        this.attributes = attributes;
+       this.attributes = attributes;
+    }
+    
+    public void setImages(final com.commercetools.api.models.common.Image ...images){
+       this.images = new ArrayList<>(Arrays.asList(images));
     }
     
     public void setImages(final java.util.List<com.commercetools.api.models.common.Image> images){
-        this.images = images;
+       this.images = images;
+    }
+    
+    public void setAssets(final com.commercetools.api.models.common.AssetDraft ...assets){
+       this.assets = new ArrayList<>(Arrays.asList(assets));
     }
     
     public void setAssets(final java.util.List<com.commercetools.api.models.common.AssetDraft> assets){
-        this.assets = assets;
+       this.assets = assets;
     }
 
 }

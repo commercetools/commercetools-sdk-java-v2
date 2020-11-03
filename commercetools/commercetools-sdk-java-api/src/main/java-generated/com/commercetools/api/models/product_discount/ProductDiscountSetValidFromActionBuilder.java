@@ -4,8 +4,7 @@ import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.product_discount.ProductDiscountSetValidFromAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

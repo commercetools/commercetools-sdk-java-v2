@@ -25,8 +25,7 @@ import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.cart.Cart;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -185,8 +184,18 @@ public final class CartBuilder {
         return this;
     }
     
+    public CartBuilder lineItems( final com.commercetools.api.models.cart.LineItem ...lineItems) {
+        this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+        return this;
+    }
+    
     public CartBuilder lineItems( final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems) {
         this.lineItems = lineItems;
+        return this;
+    }
+    
+    public CartBuilder customLineItems( final com.commercetools.api.models.cart.CustomLineItem ...customLineItems) {
+        this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
         return this;
     }
     
@@ -255,6 +264,11 @@ public final class CartBuilder {
         return this;
     }
     
+    public CartBuilder discountCodes(@Nullable final com.commercetools.api.models.cart.DiscountCodeInfo ...discountCodes) {
+        this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
+        return this;
+    }
+    
     public CartBuilder discountCodes(@Nullable final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
         this.discountCodes = discountCodes;
         return this;
@@ -280,6 +294,11 @@ public final class CartBuilder {
         return this;
     }
     
+    public CartBuilder refusedGifts( final com.commercetools.api.models.cart_discount.CartDiscountReference ...refusedGifts) {
+        this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
+        return this;
+    }
+    
     public CartBuilder refusedGifts( final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts) {
         this.refusedGifts = refusedGifts;
         return this;
@@ -292,6 +311,11 @@ public final class CartBuilder {
     
     public CartBuilder shippingRateInput(@Nullable final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
+        return this;
+    }
+    
+    public CartBuilder itemShippingAddresses(@Nullable final com.commercetools.api.models.common.Address ...itemShippingAddresses) {
+        this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
         return this;
     }
     

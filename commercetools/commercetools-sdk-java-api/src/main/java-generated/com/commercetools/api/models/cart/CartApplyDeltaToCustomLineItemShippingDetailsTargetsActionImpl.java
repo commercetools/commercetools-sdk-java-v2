@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -58,8 +56,12 @@ public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImp
         this.customLineItemId = customLineItemId;
     }
     
+    public void setTargetsDelta(final com.commercetools.api.models.cart.ItemShippingTarget ...targetsDelta){
+       this.targetsDelta = new ArrayList<>(Arrays.asList(targetsDelta));
+    }
+    
     public void setTargetsDelta(final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta){
-        this.targetsDelta = targetsDelta;
+       this.targetsDelta = targetsDelta;
     }
 
 }

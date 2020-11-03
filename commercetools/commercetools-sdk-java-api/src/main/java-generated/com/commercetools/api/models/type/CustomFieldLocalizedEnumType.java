@@ -10,8 +10,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -29,6 +28,8 @@ public interface CustomFieldLocalizedEnumType extends FieldType {
     @JsonProperty("values")
     public List<CustomFieldLocalizedEnumValue> getValues();
 
+    @JsonIgnore
+    public void setValues(final CustomFieldLocalizedEnumValue ...values);
     public void setValues(final List<CustomFieldLocalizedEnumValue> values);
 
     public static CustomFieldLocalizedEnumTypeImpl of(){

@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -58,8 +56,12 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
         this.variant = variant;
     }
     
+    public void setRemovedImageUrls(final String ...removedImageUrls){
+       this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
+    }
+    
     public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
-        this.removedImageUrls = removedImageUrls;
+       this.removedImageUrls = removedImageUrls;
     }
 
 }

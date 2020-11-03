@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -46,8 +44,12 @@ public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeT
         return this.triggers;
     }
 
+    public void setTriggers(final com.commercetools.api.models.extension.ExtensionTrigger ...triggers){
+       this.triggers = new ArrayList<>(Arrays.asList(triggers));
+    }
+    
     public void setTriggers(final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers){
-        this.triggers = triggers;
+       this.triggers = triggers;
     }
 
 }

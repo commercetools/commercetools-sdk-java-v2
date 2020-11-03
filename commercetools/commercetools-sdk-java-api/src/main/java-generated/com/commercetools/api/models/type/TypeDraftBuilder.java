@@ -5,8 +5,7 @@ import com.commercetools.api.models.type.FieldDefinition;
 import com.commercetools.api.models.type.ResourceTypeId;
 import com.commercetools.api.models.type.TypeDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,8 +45,18 @@ public final class TypeDraftBuilder {
         return this;
     }
     
+    public TypeDraftBuilder resourceTypeIds( final com.commercetools.api.models.type.ResourceTypeId ...resourceTypeIds) {
+        this.resourceTypeIds = new ArrayList<>(Arrays.asList(resourceTypeIds));
+        return this;
+    }
+    
     public TypeDraftBuilder resourceTypeIds( final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds) {
         this.resourceTypeIds = resourceTypeIds;
+        return this;
+    }
+    
+    public TypeDraftBuilder fieldDefinitions(@Nullable final com.commercetools.api.models.type.FieldDefinition ...fieldDefinitions) {
+        this.fieldDefinitions = new ArrayList<>(Arrays.asList(fieldDefinitions));
         return this;
     }
     

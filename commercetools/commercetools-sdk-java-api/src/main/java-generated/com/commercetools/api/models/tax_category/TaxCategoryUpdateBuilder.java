@@ -3,8 +3,7 @@ package com.commercetools.api.models.tax_category;
 import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
 import com.commercetools.api.models.tax_category.TaxCategoryUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class TaxCategoryUpdateBuilder {
 
     public TaxCategoryUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public TaxCategoryUpdateBuilder actions( final com.commercetools.api.models.tax_category.TaxCategoryUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

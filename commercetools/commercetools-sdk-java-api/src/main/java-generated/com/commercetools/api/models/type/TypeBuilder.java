@@ -9,8 +9,7 @@ import com.commercetools.api.models.type.ResourceTypeId;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.type.Type;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -98,8 +97,18 @@ public final class TypeBuilder {
         return this;
     }
     
+    public TypeBuilder resourceTypeIds( final com.commercetools.api.models.type.ResourceTypeId ...resourceTypeIds) {
+        this.resourceTypeIds = new ArrayList<>(Arrays.asList(resourceTypeIds));
+        return this;
+    }
+    
     public TypeBuilder resourceTypeIds( final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds) {
         this.resourceTypeIds = resourceTypeIds;
+        return this;
+    }
+    
+    public TypeBuilder fieldDefinitions( final com.commercetools.api.models.type.FieldDefinition ...fieldDefinitions) {
+        this.fieldDefinitions = new ArrayList<>(Arrays.asList(fieldDefinitions));
         return this;
     }
     

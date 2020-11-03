@@ -4,8 +4,7 @@ import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice;
 import com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayload;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class ProductPriceDiscountsSetMessagePayloadBuilder {
     
     private java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices;
 
+    public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices( final com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice ...updatedPrices) {
+        this.updatedPrices = new ArrayList<>(Arrays.asList(updatedPrices));
+        return this;
+    }
+    
     public ProductPriceDiscountsSetMessagePayloadBuilder updatedPrices( final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
         this.updatedPrices = updatedPrices;
         return this;

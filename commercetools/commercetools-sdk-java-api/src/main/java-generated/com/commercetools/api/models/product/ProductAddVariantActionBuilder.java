@@ -7,8 +7,7 @@ import com.commercetools.api.models.product.Attribute;
 import com.commercetools.api.models.product.ProductUpdateAction;
 import com.commercetools.api.models.product.ProductAddVariantAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -49,13 +48,28 @@ public final class ProductAddVariantActionBuilder {
         return this;
     }
     
+    public ProductAddVariantActionBuilder prices(@Nullable final com.commercetools.api.models.common.PriceDraft ...prices) {
+        this.prices = new ArrayList<>(Arrays.asList(prices));
+        return this;
+    }
+    
     public ProductAddVariantActionBuilder prices(@Nullable final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
         return this;
     }
     
+    public ProductAddVariantActionBuilder images(@Nullable final com.commercetools.api.models.common.Image ...images) {
+        this.images = new ArrayList<>(Arrays.asList(images));
+        return this;
+    }
+    
     public ProductAddVariantActionBuilder images(@Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
         this.images = images;
+        return this;
+    }
+    
+    public ProductAddVariantActionBuilder attributes(@Nullable final com.commercetools.api.models.product.Attribute ...attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
     
@@ -66,6 +80,11 @@ public final class ProductAddVariantActionBuilder {
     
     public ProductAddVariantActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
+        return this;
+    }
+    
+    public ProductAddVariantActionBuilder assets(@Nullable final com.commercetools.api.models.common.Asset ...assets) {
+        this.assets = new ArrayList<>(Arrays.asList(assets));
         return this;
     }
     

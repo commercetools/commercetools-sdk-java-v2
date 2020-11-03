@@ -10,8 +10,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -97,8 +95,12 @@ public final class ChannelDraftImpl implements ChannelDraft {
         this.key = key;
     }
     
+    public void setRoles(final com.commercetools.api.models.channel.ChannelRoleEnum ...roles){
+       this.roles = new ArrayList<>(Arrays.asList(roles));
+    }
+    
     public void setRoles(final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles){
-        this.roles = roles;
+       this.roles = roles;
     }
     
     public void setName(final com.commercetools.api.models.common.LocalizedString name){

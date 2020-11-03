@@ -4,8 +4,7 @@ import com.commercetools.api.models.subscription.MessageSubscription;
 import com.commercetools.api.models.subscription.SubscriptionUpdateAction;
 import com.commercetools.api.models.subscription.SubscriptionSetMessagesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class SubscriptionSetMessagesActionBuilder {
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
 
+    public SubscriptionSetMessagesActionBuilder messages(@Nullable final com.commercetools.api.models.subscription.MessageSubscription ...messages) {
+        this.messages = new ArrayList<>(Arrays.asList(messages));
+        return this;
+    }
+    
     public SubscriptionSetMessagesActionBuilder messages(@Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
         this.messages = messages;
         return this;

@@ -4,8 +4,7 @@ import com.commercetools.api.models.extension.ExtensionDestination;
 import com.commercetools.api.models.extension.ExtensionTrigger;
 import com.commercetools.api.models.extension.ExtensionDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -34,6 +33,11 @@ public final class ExtensionDraftBuilder {
     
     public ExtensionDraftBuilder destination( final com.commercetools.api.models.extension.ExtensionDestination destination) {
         this.destination = destination;
+        return this;
+    }
+    
+    public ExtensionDraftBuilder triggers( final com.commercetools.api.models.extension.ExtensionTrigger ...triggers) {
+        this.triggers = new ArrayList<>(Arrays.asList(triggers));
         return this;
     }
     

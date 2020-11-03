@@ -12,8 +12,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -98,6 +97,8 @@ public interface DiscountCodeDraft  {
     
     public void setCode(final String code);
     
+    @JsonIgnore
+    public void setCartDiscounts(final CartDiscountResourceIdentifier ...cartDiscounts);
     public void setCartDiscounts(final List<CartDiscountResourceIdentifier> cartDiscounts);
     
     public void setCartPredicate(final String cartPredicate);
@@ -110,6 +111,8 @@ public interface DiscountCodeDraft  {
     
     public void setCustom(final CustomFieldsDraft custom);
     
+    @JsonIgnore
+    public void setGroups(final String ...groups);
     public void setGroups(final List<String> groups);
     
     public void setValidFrom(final ZonedDateTime validFrom);

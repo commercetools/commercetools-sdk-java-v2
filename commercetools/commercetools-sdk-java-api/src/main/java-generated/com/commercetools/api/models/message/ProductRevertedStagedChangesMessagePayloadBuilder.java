@@ -3,8 +3,7 @@ package com.commercetools.api.models.message;
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayload;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class ProductRevertedStagedChangesMessagePayloadBuilder {
     
     private java.util.List<String> removedImageUrls;
 
+    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls( final String ...removedImageUrls) {
+        this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
+        return this;
+    }
+    
     public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;

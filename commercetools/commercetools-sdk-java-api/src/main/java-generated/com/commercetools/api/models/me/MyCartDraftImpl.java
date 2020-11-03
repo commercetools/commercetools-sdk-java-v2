@@ -11,8 +11,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -170,8 +168,12 @@ public final class MyCartDraftImpl implements MyCartDraft {
         this.inventoryMode = inventoryMode;
     }
     
+    public void setLineItems(final com.commercetools.api.models.me.MyLineItemDraft ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    }
+    
     public void setLineItems(final java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems){
-        this.lineItems = lineItems;
+       this.lineItems = lineItems;
     }
     
     public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress){
@@ -202,8 +204,12 @@ public final class MyCartDraftImpl implements MyCartDraft {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
     
+    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address ...itemShippingAddresses){
+       this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+    }
+    
     public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses){
-        this.itemShippingAddresses = itemShippingAddresses;
+       this.itemShippingAddresses = itemShippingAddresses;
     }
 
 }

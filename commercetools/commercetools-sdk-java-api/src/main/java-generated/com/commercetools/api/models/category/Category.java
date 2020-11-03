@@ -16,8 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -148,6 +147,8 @@ public interface Category extends BaseResource {
     
     public void setDescription(final LocalizedString description);
     
+    @JsonIgnore
+    public void setAncestors(final CategoryReference ...ancestors);
     public void setAncestors(final List<CategoryReference> ancestors);
     
     public void setParent(final CategoryReference parent);
@@ -164,6 +165,8 @@ public interface Category extends BaseResource {
     
     public void setCustom(final CustomFields custom);
     
+    @JsonIgnore
+    public void setAssets(final Asset ...assets);
     public void setAssets(final List<Asset> assets);
     
     public void setKey(final String key);

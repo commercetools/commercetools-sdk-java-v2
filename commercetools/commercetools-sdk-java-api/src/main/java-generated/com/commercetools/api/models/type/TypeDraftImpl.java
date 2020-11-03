@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -85,12 +83,20 @@ public final class TypeDraftImpl implements TypeDraft {
         this.description = description;
     }
     
+    public void setResourceTypeIds(final com.commercetools.api.models.type.ResourceTypeId ...resourceTypeIds){
+       this.resourceTypeIds = new ArrayList<>(Arrays.asList(resourceTypeIds));
+    }
+    
     public void setResourceTypeIds(final java.util.List<com.commercetools.api.models.type.ResourceTypeId> resourceTypeIds){
-        this.resourceTypeIds = resourceTypeIds;
+       this.resourceTypeIds = resourceTypeIds;
+    }
+    
+    public void setFieldDefinitions(final com.commercetools.api.models.type.FieldDefinition ...fieldDefinitions){
+       this.fieldDefinitions = new ArrayList<>(Arrays.asList(fieldDefinitions));
     }
     
     public void setFieldDefinitions(final java.util.List<com.commercetools.api.models.type.FieldDefinition> fieldDefinitions){
-        this.fieldDefinitions = fieldDefinitions;
+       this.fieldDefinitions = fieldDefinitions;
     }
 
 }

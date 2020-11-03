@@ -8,8 +8,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -67,8 +65,12 @@ public final class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddR
         this.returnTrackingId = returnTrackingId;
     }
     
+    public void setItems(final com.commercetools.api.models.order.ReturnItemDraft ...items){
+       this.items = new ArrayList<>(Arrays.asList(items));
+    }
+    
     public void setItems(final java.util.List<com.commercetools.api.models.order.ReturnItemDraft> items){
-        this.items = items;
+       this.items = items;
     }
     
     public void setReturnDate(final java.time.ZonedDateTime returnDate){

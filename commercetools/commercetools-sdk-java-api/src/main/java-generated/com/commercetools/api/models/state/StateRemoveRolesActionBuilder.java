@@ -4,8 +4,7 @@ import com.commercetools.api.models.state.StateRoleEnum;
 import com.commercetools.api.models.state.StateUpdateAction;
 import com.commercetools.api.models.state.StateRemoveRolesAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class StateRemoveRolesActionBuilder {
     
     private java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles;
 
+    public StateRemoveRolesActionBuilder roles( final com.commercetools.api.models.state.StateRoleEnum ...roles) {
+        this.roles = new ArrayList<>(Arrays.asList(roles));
+        return this;
+    }
+    
     public StateRemoveRolesActionBuilder roles( final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
         return this;

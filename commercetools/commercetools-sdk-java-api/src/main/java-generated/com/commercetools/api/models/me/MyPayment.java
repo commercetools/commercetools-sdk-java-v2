@@ -13,8 +13,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -84,6 +83,8 @@ public interface MyPayment  {
     
     public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
     
+    @JsonIgnore
+    public void setTransactions(final Transaction ...transactions);
     public void setTransactions(final List<Transaction> transactions);
     
     public void setCustom(final CustomFields custom);

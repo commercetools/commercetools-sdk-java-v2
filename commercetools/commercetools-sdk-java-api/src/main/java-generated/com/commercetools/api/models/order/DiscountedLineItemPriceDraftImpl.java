@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -50,8 +48,12 @@ public final class DiscountedLineItemPriceDraftImpl implements DiscountedLineIte
         this.value = value;
     }
     
+    public void setIncludedDiscounts(final com.commercetools.api.models.cart.DiscountedLineItemPortion ...includedDiscounts){
+       this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
+    }
+    
     public void setIncludedDiscounts(final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts){
-        this.includedDiscounts = includedDiscounts;
+       this.includedDiscounts = includedDiscounts;
     }
 
 }

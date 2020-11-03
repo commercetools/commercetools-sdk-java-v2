@@ -10,8 +10,7 @@ import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.product.ProductDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -94,6 +93,11 @@ public final class ProductDraftBuilder {
         return this;
     }
     
+    public ProductDraftBuilder categories(@Nullable final com.commercetools.api.models.category.CategoryResourceIdentifier ...categories) {
+        this.categories = new ArrayList<>(Arrays.asList(categories));
+        return this;
+    }
+    
     public ProductDraftBuilder categories(@Nullable final java.util.List<com.commercetools.api.models.category.CategoryResourceIdentifier> categories) {
         this.categories = categories;
         return this;
@@ -121,6 +125,11 @@ public final class ProductDraftBuilder {
     
     public ProductDraftBuilder masterVariant(@Nullable final com.commercetools.api.models.product.ProductVariantDraft masterVariant) {
         this.masterVariant = masterVariant;
+        return this;
+    }
+    
+    public ProductDraftBuilder variants(@Nullable final com.commercetools.api.models.product.ProductVariantDraft ...variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
         return this;
     }
     

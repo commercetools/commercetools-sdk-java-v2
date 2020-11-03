@@ -3,8 +3,7 @@ package com.commercetools.api.models.type;
 import com.commercetools.api.models.type.TypeUpdateAction;
 import com.commercetools.api.models.type.TypeUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class TypeUpdateBuilder {
 
     public TypeUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public TypeUpdateBuilder actions( final com.commercetools.api.models.type.TypeUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

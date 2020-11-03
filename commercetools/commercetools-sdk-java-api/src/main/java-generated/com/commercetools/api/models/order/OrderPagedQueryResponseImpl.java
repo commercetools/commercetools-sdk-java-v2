@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -85,8 +83,12 @@ public final class OrderPagedQueryResponseImpl implements OrderPagedQueryRespons
         this.offset = offset;
     }
     
+    public void setResults(final com.commercetools.api.models.order.Order ...results){
+       this.results = new ArrayList<>(Arrays.asList(results));
+    }
+    
     public void setResults(final java.util.List<com.commercetools.api.models.order.Order> results){
-        this.results = results;
+       this.results = results;
     }
 
 }

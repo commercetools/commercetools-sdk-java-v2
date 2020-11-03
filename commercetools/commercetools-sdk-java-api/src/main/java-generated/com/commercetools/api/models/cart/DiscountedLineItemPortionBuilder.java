@@ -4,8 +4,7 @@ import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.cart.DiscountedLineItemPortion;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

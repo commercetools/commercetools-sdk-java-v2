@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -45,8 +43,12 @@ public final class StoreSetLanguagesActionImpl implements StoreSetLanguagesActio
         return this.languages;
     }
 
+    public void setLanguages(final String ...languages){
+       this.languages = new ArrayList<>(Arrays.asList(languages));
+    }
+    
     public void setLanguages(final java.util.List<String> languages){
-        this.languages = languages;
+       this.languages = languages;
     }
 
 }

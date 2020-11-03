@@ -12,8 +12,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -243,8 +241,12 @@ public final class ProductDiscountImpl implements ProductDiscount {
         this.isActive = isActive;
     }
     
+    public void setReferences(final com.commercetools.api.models.common.Reference ...references){
+       this.references = new ArrayList<>(Arrays.asList(references));
+    }
+    
     public void setReferences(final java.util.List<com.commercetools.api.models.common.Reference> references){
-        this.references = references;
+       this.references = references;
     }
     
     public void setValidFrom(final java.time.ZonedDateTime validFrom){

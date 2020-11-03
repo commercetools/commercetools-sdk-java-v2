@@ -9,8 +9,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -84,8 +82,12 @@ public final class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrd
         this.trackingData = trackingData;
     }
     
+    public void setItems(final com.commercetools.api.models.order.DeliveryItem ...items){
+       this.items = new ArrayList<>(Arrays.asList(items));
+    }
+    
     public void setItems(final java.util.List<com.commercetools.api.models.order.DeliveryItem> items){
-        this.items = items;
+       this.items = items;
     }
 
 }

@@ -10,8 +10,7 @@ import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.order_edit.OrderEdit;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -94,6 +93,11 @@ public final class OrderEditBuilder {
     
     public OrderEditBuilder resource( final com.commercetools.api.models.order.OrderReference resource) {
         this.resource = resource;
+        return this;
+    }
+    
+    public OrderEditBuilder stagedActions( final com.commercetools.api.models.order.StagedOrderUpdateAction ...stagedActions) {
+        this.stagedActions = new ArrayList<>(Arrays.asList(stagedActions));
         return this;
     }
     

@@ -11,8 +11,7 @@ import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.customer.Customer;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -189,6 +188,11 @@ public final class CustomerBuilder {
         return this;
     }
     
+    public CustomerBuilder addresses( final com.commercetools.api.models.common.Address ...addresses) {
+        this.addresses = new ArrayList<>(Arrays.asList(addresses));
+        return this;
+    }
+    
     public CustomerBuilder addresses( final java.util.List<com.commercetools.api.models.common.Address> addresses) {
         this.addresses = addresses;
         return this;
@@ -199,6 +203,11 @@ public final class CustomerBuilder {
         return this;
     }
     
+    public CustomerBuilder shippingAddressIds(@Nullable final String ...shippingAddressIds) {
+        this.shippingAddressIds = new ArrayList<>(Arrays.asList(shippingAddressIds));
+        return this;
+    }
+    
     public CustomerBuilder shippingAddressIds(@Nullable final java.util.List<String> shippingAddressIds) {
         this.shippingAddressIds = shippingAddressIds;
         return this;
@@ -206,6 +215,11 @@ public final class CustomerBuilder {
     
     public CustomerBuilder defaultBillingAddressId(@Nullable final String defaultBillingAddressId) {
         this.defaultBillingAddressId = defaultBillingAddressId;
+        return this;
+    }
+    
+    public CustomerBuilder billingAddressIds(@Nullable final String ...billingAddressIds) {
+        this.billingAddressIds = new ArrayList<>(Arrays.asList(billingAddressIds));
         return this;
     }
     
@@ -246,6 +260,11 @@ public final class CustomerBuilder {
     
     public CustomerBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+    
+    public CustomerBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference ...stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
     

@@ -3,8 +3,7 @@ package com.commercetools.api.models.subscription;
 
 import com.commercetools.api.models.subscription.MessageSubscription;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class MessageSubscriptionBuilder {
 
     public MessageSubscriptionBuilder resourceTypeId( final String resourceTypeId) {
         this.resourceTypeId = resourceTypeId;
+        return this;
+    }
+    
+    public MessageSubscriptionBuilder types(@Nullable final String ...types) {
+        this.types = new ArrayList<>(Arrays.asList(types));
         return this;
     }
     

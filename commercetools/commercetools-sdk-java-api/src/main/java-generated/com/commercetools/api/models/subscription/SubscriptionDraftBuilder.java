@@ -6,8 +6,7 @@ import com.commercetools.api.models.subscription.Destination;
 import com.commercetools.api.models.subscription.MessageSubscription;
 import com.commercetools.api.models.subscription.SubscriptionDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -32,6 +31,11 @@ public final class SubscriptionDraftBuilder {
     @Nullable
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
+    public SubscriptionDraftBuilder changes(@Nullable final com.commercetools.api.models.subscription.ChangeSubscription ...changes) {
+        this.changes = new ArrayList<>(Arrays.asList(changes));
+        return this;
+    }
+    
     public SubscriptionDraftBuilder changes(@Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
         return this;
@@ -44,6 +48,11 @@ public final class SubscriptionDraftBuilder {
     
     public SubscriptionDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+    
+    public SubscriptionDraftBuilder messages(@Nullable final com.commercetools.api.models.subscription.MessageSubscription ...messages) {
+        this.messages = new ArrayList<>(Arrays.asList(messages));
         return this;
     }
     

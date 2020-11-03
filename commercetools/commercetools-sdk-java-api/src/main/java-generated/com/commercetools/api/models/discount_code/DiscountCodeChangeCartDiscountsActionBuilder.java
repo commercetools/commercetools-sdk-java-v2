@@ -4,8 +4,7 @@ import com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier
 import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
 import com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,6 +17,11 @@ public final class DiscountCodeChangeCartDiscountsActionBuilder {
     
     private java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts;
 
+    public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts( final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier ...cartDiscounts) {
+        this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
+        return this;
+    }
+    
     public DiscountCodeChangeCartDiscountsActionBuilder cartDiscounts( final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
         this.cartDiscounts = cartDiscounts;
         return this;

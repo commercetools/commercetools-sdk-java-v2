@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -45,8 +43,12 @@ public final class CategoryChangeAssetOrderActionImpl implements CategoryChangeA
         return this.assetOrder;
     }
 
+    public void setAssetOrder(final String ...assetOrder){
+       this.assetOrder = new ArrayList<>(Arrays.asList(assetOrder));
+    }
+    
     public void setAssetOrder(final java.util.List<String> assetOrder){
-        this.assetOrder = assetOrder;
+       this.assetOrder = assetOrder;
     }
 
 }

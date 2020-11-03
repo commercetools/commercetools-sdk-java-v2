@@ -4,8 +4,7 @@ import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.api.models.shipping_method.ShippingRate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -39,6 +38,11 @@ public final class ShippingRateBuilder {
     
     public ShippingRateBuilder isMatching(@Nullable final Boolean isMatching) {
         this.isMatching = isMatching;
+        return this;
+    }
+    
+    public ShippingRateBuilder tiers( final com.commercetools.api.models.shipping_method.ShippingRatePriceTier ...tiers) {
+        this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
     

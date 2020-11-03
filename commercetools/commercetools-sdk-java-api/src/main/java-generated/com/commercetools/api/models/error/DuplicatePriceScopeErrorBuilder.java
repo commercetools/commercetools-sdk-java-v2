@@ -4,8 +4,7 @@ import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.DuplicatePriceScopeError;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class DuplicatePriceScopeErrorBuilder {
 
     public DuplicatePriceScopeErrorBuilder message( final String message) {
         this.message = message;
+        return this;
+    }
+    
+    public DuplicatePriceScopeErrorBuilder conflictingPrices( final com.commercetools.api.models.common.Price ...conflictingPrices) {
+        this.conflictingPrices = new ArrayList<>(Arrays.asList(conflictingPrices));
         return this;
     }
     

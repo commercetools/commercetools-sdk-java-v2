@@ -3,8 +3,7 @@ package com.commercetools.api.models.extension;
 import com.commercetools.api.models.extension.ExtensionDestination;
 import com.commercetools.api.models.extension.ExtensionAWSLambdaDestination;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

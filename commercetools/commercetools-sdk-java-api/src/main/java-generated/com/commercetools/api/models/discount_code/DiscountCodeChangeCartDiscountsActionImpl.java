@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -46,8 +44,12 @@ public final class DiscountCodeChangeCartDiscountsActionImpl implements Discount
         return this.cartDiscounts;
     }
 
+    public void setCartDiscounts(final com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier ...cartDiscounts){
+       this.cartDiscounts = new ArrayList<>(Arrays.asList(cartDiscounts));
+    }
+    
     public void setCartDiscounts(final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts){
-        this.cartDiscounts = cartDiscounts;
+       this.cartDiscounts = cartDiscounts;
     }
 
 }

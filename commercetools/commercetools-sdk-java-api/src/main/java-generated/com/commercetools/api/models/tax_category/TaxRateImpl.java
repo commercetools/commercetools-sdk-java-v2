@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -124,8 +122,12 @@ public final class TaxRateImpl implements TaxRate {
         this.state = state;
     }
     
+    public void setSubRates(final com.commercetools.api.models.tax_category.SubRate ...subRates){
+       this.subRates = new ArrayList<>(Arrays.asList(subRates));
+    }
+    
     public void setSubRates(final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates){
-        this.subRates = subRates;
+       this.subRates = subRates;
     }
 
 }

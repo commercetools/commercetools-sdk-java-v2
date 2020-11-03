@@ -3,8 +3,7 @@ package com.commercetools.api.models.customer_group;
 import com.commercetools.api.models.customer_group.CustomerGroup;
 import com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class CustomerGroupPagedQueryResponseBuilder {
     
     public CustomerGroupPagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public CustomerGroupPagedQueryResponseBuilder results( final com.commercetools.api.models.customer_group.CustomerGroup ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

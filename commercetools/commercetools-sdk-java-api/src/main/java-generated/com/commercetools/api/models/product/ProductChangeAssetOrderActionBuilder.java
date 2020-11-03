@@ -3,8 +3,7 @@ package com.commercetools.api.models.product;
 import com.commercetools.api.models.product.ProductUpdateAction;
 import com.commercetools.api.models.product.ProductChangeAssetOrderAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -38,6 +37,11 @@ public final class ProductChangeAssetOrderActionBuilder {
     
     public ProductChangeAssetOrderActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
+        return this;
+    }
+    
+    public ProductChangeAssetOrderActionBuilder assetOrder( final String ...assetOrder) {
+        this.assetOrder = new ArrayList<>(Arrays.asList(assetOrder));
         return this;
     }
     

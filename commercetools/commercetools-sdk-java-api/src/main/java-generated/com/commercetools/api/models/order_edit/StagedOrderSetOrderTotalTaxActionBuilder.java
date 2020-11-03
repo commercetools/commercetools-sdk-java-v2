@@ -5,8 +5,7 @@ import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetOrderTotalTaxAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,6 +23,11 @@ public final class StagedOrderSetOrderTotalTaxActionBuilder {
 
     public StagedOrderSetOrderTotalTaxActionBuilder externalTotalGross( final com.commercetools.api.models.common.Money externalTotalGross) {
         this.externalTotalGross = externalTotalGross;
+        return this;
+    }
+    
+    public StagedOrderSetOrderTotalTaxActionBuilder externalTaxPortions(@Nullable final com.commercetools.api.models.cart.TaxPortionDraft ...externalTaxPortions) {
+        this.externalTaxPortions = new ArrayList<>(Arrays.asList(externalTaxPortions));
         return this;
     }
     

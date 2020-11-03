@@ -19,8 +19,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -327,12 +325,20 @@ public final class CartDraftImpl implements CartDraft {
         this.taxCalculationMode = taxCalculationMode;
     }
     
+    public void setLineItems(final com.commercetools.api.models.cart.LineItemDraft ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    }
+    
     public void setLineItems(final java.util.List<com.commercetools.api.models.cart.LineItemDraft> lineItems){
-        this.lineItems = lineItems;
+       this.lineItems = lineItems;
+    }
+    
+    public void setCustomLineItems(final com.commercetools.api.models.cart.CustomLineItemDraft ...customLineItems){
+       this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
     }
     
     public void setCustomLineItems(final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems){
-        this.customLineItems = customLineItems;
+       this.customLineItems = customLineItems;
     }
     
     public void setShippingAddress(final com.commercetools.api.models.common.Address shippingAddress){
@@ -371,12 +377,20 @@ public final class CartDraftImpl implements CartDraft {
         this.shippingRateInput = shippingRateInput;
     }
     
+    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address ...itemShippingAddresses){
+       this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+    }
+    
     public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses){
-        this.itemShippingAddresses = itemShippingAddresses;
+       this.itemShippingAddresses = itemShippingAddresses;
+    }
+    
+    public void setDiscountCodes(final String ...discountCodes){
+       this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
     }
     
     public void setDiscountCodes(final java.util.List<String> discountCodes){
-        this.discountCodes = discountCodes;
+       this.discountCodes = discountCodes;
     }
 
 }

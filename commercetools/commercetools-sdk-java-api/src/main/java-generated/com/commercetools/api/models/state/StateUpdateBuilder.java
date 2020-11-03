@@ -3,8 +3,7 @@ package com.commercetools.api.models.state;
 import com.commercetools.api.models.state.StateUpdateAction;
 import com.commercetools.api.models.state.StateUpdate;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,6 +21,11 @@ public final class StateUpdateBuilder {
 
     public StateUpdateBuilder version( final Long version) {
         this.version = version;
+        return this;
+    }
+    
+    public StateUpdateBuilder actions( final com.commercetools.api.models.state.StateUpdateAction ...actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
     

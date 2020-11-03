@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -46,8 +44,12 @@ public final class ProductDiscountValueAbsoluteImpl implements ProductDiscountVa
         return this.money;
     }
 
+    public void setMoney(final com.commercetools.api.models.common.TypedMoney ...money){
+       this.money = new ArrayList<>(Arrays.asList(money));
+    }
+    
     public void setMoney(final java.util.List<com.commercetools.api.models.common.TypedMoney> money){
-        this.money = money;
+       this.money = money;
     }
 
 }

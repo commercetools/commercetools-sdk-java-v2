@@ -3,8 +3,7 @@ package com.commercetools.api.models.product_type;
 import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
 import com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,6 +16,11 @@ public final class ProductTypeChangeAttributeOrderByNameActionBuilder {
     
     private java.util.List<String> attributeNames;
 
+    public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames( final String ...attributeNames) {
+        this.attributeNames = new ArrayList<>(Arrays.asList(attributeNames));
+        return this;
+    }
+    
     public ProductTypeChangeAttributeOrderByNameActionBuilder attributeNames( final java.util.List<String> attributeNames) {
         this.attributeNames = attributeNames;
         return this;

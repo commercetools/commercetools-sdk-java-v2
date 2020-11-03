@@ -6,8 +6,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -65,8 +63,12 @@ public final class PriceChangedErrorImpl implements PriceChangedError {
         this.message = message;
     }
     
+    public void setLineItems(final String ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    }
+    
     public void setLineItems(final java.util.List<String> lineItems){
-        this.lineItems = lineItems;
+       this.lineItems = lineItems;
     }
     
     public void setShipping(final Boolean shipping){

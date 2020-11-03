@@ -4,8 +4,7 @@ import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.store.StoreDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -40,13 +39,28 @@ public final class StoreDraftBuilder {
         return this;
     }
     
+    public StoreDraftBuilder languages(@Nullable final String ...languages) {
+        this.languages = new ArrayList<>(Arrays.asList(languages));
+        return this;
+    }
+    
     public StoreDraftBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
     
+    public StoreDraftBuilder distributionChannels(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier ...distributionChannels) {
+        this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
+        return this;
+    }
+    
     public StoreDraftBuilder distributionChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
         this.distributionChannels = distributionChannels;
+        return this;
+    }
+    
+    public StoreDraftBuilder supplyChannels(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier ...supplyChannels) {
+        this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
         return this;
     }
     

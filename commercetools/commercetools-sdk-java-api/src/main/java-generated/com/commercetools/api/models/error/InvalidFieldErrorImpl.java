@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -82,8 +80,12 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
         this.invalidValue = invalidValue;
     }
     
+    public void setAllowedValues(final com.fasterxml.jackson.databind.JsonNode ...allowedValues){
+       this.allowedValues = new ArrayList<>(Arrays.asList(allowedValues));
+    }
+    
     public void setAllowedValues(final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues){
-        this.allowedValues = allowedValues;
+       this.allowedValues = allowedValues;
     }
 
 }

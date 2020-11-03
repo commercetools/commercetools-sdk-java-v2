@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -78,8 +76,12 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
         this.sku = sku;
     }
     
+    public void setPrices(final com.commercetools.api.models.common.PriceDraft ...prices){
+       this.prices = new ArrayList<>(Arrays.asList(prices));
+    }
+    
     public void setPrices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices){
-        this.prices = prices;
+       this.prices = prices;
     }
     
     public void setStaged(final Boolean staged){

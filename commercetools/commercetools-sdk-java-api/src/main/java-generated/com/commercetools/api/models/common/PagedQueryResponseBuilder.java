@@ -5,8 +5,7 @@ import com.commercetools.api.models.product.FacetResults;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.common.PagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -54,6 +53,11 @@ public final class PagedQueryResponseBuilder {
     
     public PagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public PagedQueryResponseBuilder results( final com.commercetools.api.models.common.BaseResource ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

@@ -31,8 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -247,8 +246,12 @@ public interface Cart extends BaseResource {
     
     public void setStore(final StoreKeyReference store);
     
+    @JsonIgnore
+    public void setLineItems(final LineItem ...lineItems);
     public void setLineItems(final List<LineItem> lineItems);
     
+    @JsonIgnore
+    public void setCustomLineItems(final CustomLineItem ...customLineItems);
     public void setCustomLineItems(final List<CustomLineItem> customLineItems);
     
     public void setTotalPrice(final TypedMoney totalPrice);
@@ -275,6 +278,8 @@ public interface Cart extends BaseResource {
     
     public void setShippingInfo(final ShippingInfo shippingInfo);
     
+    @JsonIgnore
+    public void setDiscountCodes(final DiscountCodeInfo ...discountCodes);
     public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
     
     public void setCustom(final CustomFields custom);
@@ -285,12 +290,16 @@ public interface Cart extends BaseResource {
     
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
     
+    @JsonIgnore
+    public void setRefusedGifts(final CartDiscountReference ...refusedGifts);
     public void setRefusedGifts(final List<CartDiscountReference> refusedGifts);
     
     public void setOrigin(final CartOrigin origin);
     
     public void setShippingRateInput(final ShippingRateInput shippingRateInput);
     
+    @JsonIgnore
+    public void setItemShippingAddresses(final Address ...itemShippingAddresses);
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
     public static CartImpl of(){

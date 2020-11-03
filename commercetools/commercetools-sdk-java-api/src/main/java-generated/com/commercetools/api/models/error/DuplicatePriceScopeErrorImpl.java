@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -58,8 +56,12 @@ public final class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeEr
         this.message = message;
     }
     
+    public void setConflictingPrices(final com.commercetools.api.models.common.Price ...conflictingPrices){
+       this.conflictingPrices = new ArrayList<>(Arrays.asList(conflictingPrices));
+    }
+    
     public void setConflictingPrices(final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices){
-        this.conflictingPrices = conflictingPrices;
+       this.conflictingPrices = conflictingPrices;
     }
 
 }

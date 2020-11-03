@@ -10,8 +10,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.*;
 import java.util.function.Function;
 import java.io.IOException;
@@ -34,6 +33,8 @@ public interface GraphQLResponse  {
 
     public void setData(final JsonNode data);
     
+    @JsonIgnore
+    public void setErrors(final GraphQLError ...errors);
     public void setErrors(final List<GraphQLError> errors);
 
     public static GraphQLResponseImpl of(){

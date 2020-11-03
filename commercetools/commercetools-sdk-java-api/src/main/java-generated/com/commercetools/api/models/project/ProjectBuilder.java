@@ -7,8 +7,7 @@ import com.commercetools.api.models.project.ShippingRateInputType;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.project.Project;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -69,13 +68,28 @@ public final class ProjectBuilder {
         return this;
     }
     
+    public ProjectBuilder countries( final String ...countries) {
+        this.countries = new ArrayList<>(Arrays.asList(countries));
+        return this;
+    }
+    
     public ProjectBuilder countries( final java.util.List<String> countries) {
         this.countries = countries;
         return this;
     }
     
+    public ProjectBuilder currencies( final String ...currencies) {
+        this.currencies = new ArrayList<>(Arrays.asList(currencies));
+        return this;
+    }
+    
     public ProjectBuilder currencies( final java.util.List<String> currencies) {
         this.currencies = currencies;
+        return this;
+    }
+    
+    public ProjectBuilder languages( final String ...languages) {
+        this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
     

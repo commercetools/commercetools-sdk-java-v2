@@ -7,8 +7,7 @@ import com.commercetools.api.models.type.CustomFieldsDraft;
 import java.time.LocalDate;
 import com.commercetools.api.models.customer.CustomerDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -153,6 +152,11 @@ public final class CustomerDraftBuilder {
         return this;
     }
     
+    public CustomerDraftBuilder addresses(@Nullable final com.commercetools.api.models.common.Address ...addresses) {
+        this.addresses = new ArrayList<>(Arrays.asList(addresses));
+        return this;
+    }
+    
     public CustomerDraftBuilder addresses(@Nullable final java.util.List<com.commercetools.api.models.common.Address> addresses) {
         this.addresses = addresses;
         return this;
@@ -163,6 +167,11 @@ public final class CustomerDraftBuilder {
         return this;
     }
     
+    public CustomerDraftBuilder shippingAddresses(@Nullable final Integer ...shippingAddresses) {
+        this.shippingAddresses = new ArrayList<>(Arrays.asList(shippingAddresses));
+        return this;
+    }
+    
     public CustomerDraftBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
         this.shippingAddresses = shippingAddresses;
         return this;
@@ -170,6 +179,11 @@ public final class CustomerDraftBuilder {
     
     public CustomerDraftBuilder defaultBillingAddress(@Nullable final Long defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
+        return this;
+    }
+    
+    public CustomerDraftBuilder billingAddresses(@Nullable final Integer ...billingAddresses) {
+        this.billingAddresses = new ArrayList<>(Arrays.asList(billingAddresses));
         return this;
     }
     
@@ -210,6 +224,11 @@ public final class CustomerDraftBuilder {
     
     public CustomerDraftBuilder key(@Nullable final String key) {
         this.key = key;
+        return this;
+    }
+    
+    public CustomerDraftBuilder stores(@Nullable final com.commercetools.api.models.store.StoreResourceIdentifier ...stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
     

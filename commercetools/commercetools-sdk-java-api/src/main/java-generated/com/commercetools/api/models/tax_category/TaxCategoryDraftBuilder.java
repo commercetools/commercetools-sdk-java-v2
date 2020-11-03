@@ -3,8 +3,7 @@ package com.commercetools.api.models.tax_category;
 import com.commercetools.api.models.tax_category.TaxRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,6 +32,11 @@ public final class TaxCategoryDraftBuilder {
     
     public TaxCategoryDraftBuilder description(@Nullable final String description) {
         this.description = description;
+        return this;
+    }
+    
+    public TaxCategoryDraftBuilder rates( final com.commercetools.api.models.tax_category.TaxRateDraft ...rates) {
+        this.rates = new ArrayList<>(Arrays.asList(rates));
         return this;
     }
     

@@ -4,8 +4,7 @@ import com.commercetools.api.models.error.ErrorObject;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.error.InvalidFieldError;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -39,6 +38,11 @@ public final class InvalidFieldErrorBuilder {
     
     public InvalidFieldErrorBuilder invalidValue( final com.fasterxml.jackson.databind.JsonNode invalidValue) {
         this.invalidValue = invalidValue;
+        return this;
+    }
+    
+    public InvalidFieldErrorBuilder allowedValues(@Nullable final com.fasterxml.jackson.databind.JsonNode ...allowedValues) {
+        this.allowedValues = new ArrayList<>(Arrays.asList(allowedValues));
         return this;
     }
     

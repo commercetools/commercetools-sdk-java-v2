@@ -34,8 +34,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -433,12 +431,20 @@ public final class MyOrderImpl implements MyOrder {
         this.store = store;
     }
     
+    public void setLineItems(final com.commercetools.api.models.cart.LineItem ...lineItems){
+       this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
+    }
+    
     public void setLineItems(final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems){
-        this.lineItems = lineItems;
+       this.lineItems = lineItems;
+    }
+    
+    public void setCustomLineItems(final com.commercetools.api.models.cart.CustomLineItem ...customLineItems){
+       this.customLineItems = new ArrayList<>(Arrays.asList(customLineItems));
     }
     
     public void setCustomLineItems(final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems){
-        this.customLineItems = customLineItems;
+       this.customLineItems = customLineItems;
     }
     
     public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice){
@@ -493,16 +499,28 @@ public final class MyOrderImpl implements MyOrder {
         this.shippingInfo = shippingInfo;
     }
     
+    public void setSyncInfo(final com.commercetools.api.models.order.SyncInfo ...syncInfo){
+       this.syncInfo = new ArrayList<>(Arrays.asList(syncInfo));
+    }
+    
     public void setSyncInfo(final java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo){
-        this.syncInfo = syncInfo;
+       this.syncInfo = syncInfo;
+    }
+    
+    public void setReturnInfo(final com.commercetools.api.models.order.ReturnInfo ...returnInfo){
+       this.returnInfo = new ArrayList<>(Arrays.asList(returnInfo));
     }
     
     public void setReturnInfo(final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo){
-        this.returnInfo = returnInfo;
+       this.returnInfo = returnInfo;
+    }
+    
+    public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo ...discountCodes){
+       this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
     }
     
     public void setDiscountCodes(final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes){
-        this.discountCodes = discountCodes;
+       this.discountCodes = discountCodes;
     }
     
     public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber){
@@ -541,12 +559,20 @@ public final class MyOrderImpl implements MyOrder {
         this.shippingRateInput = shippingRateInput;
     }
     
+    public void setItemShippingAddresses(final com.commercetools.api.models.common.Address ...itemShippingAddresses){
+       this.itemShippingAddresses = new ArrayList<>(Arrays.asList(itemShippingAddresses));
+    }
+    
     public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses){
-        this.itemShippingAddresses = itemShippingAddresses;
+       this.itemShippingAddresses = itemShippingAddresses;
+    }
+    
+    public void setRefusedGifts(final com.commercetools.api.models.cart_discount.CartDiscountReference ...refusedGifts){
+       this.refusedGifts = new ArrayList<>(Arrays.asList(refusedGifts));
     }
     
     public void setRefusedGifts(final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts){
-        this.refusedGifts = refusedGifts;
+       this.refusedGifts = refusedGifts;
     }
 
 }

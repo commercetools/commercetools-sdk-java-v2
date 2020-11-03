@@ -7,8 +7,7 @@ import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product.SearchKeywords;
 import com.commercetools.api.models.product.ProductData;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -56,6 +55,11 @@ public final class ProductDataBuilder {
         return this;
     }
     
+    public ProductDataBuilder categories( final com.commercetools.api.models.category.CategoryReference ...categories) {
+        this.categories = new ArrayList<>(Arrays.asList(categories));
+        return this;
+    }
+    
     public ProductDataBuilder categories( final java.util.List<com.commercetools.api.models.category.CategoryReference> categories) {
         this.categories = categories;
         return this;
@@ -93,6 +97,11 @@ public final class ProductDataBuilder {
     
     public ProductDataBuilder masterVariant( final com.commercetools.api.models.product.ProductVariant masterVariant) {
         this.masterVariant = masterVariant;
+        return this;
+    }
+    
+    public ProductDataBuilder variants( final com.commercetools.api.models.product.ProductVariant ...variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
         return this;
     }
     

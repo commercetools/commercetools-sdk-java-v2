@@ -7,8 +7,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
-import java.util.List;
-import java.util.Map;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -46,8 +44,12 @@ public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
         return this.values;
     }
 
+    public void setValues(final com.commercetools.api.models.type.CustomFieldEnumValue ...values){
+       this.values = new ArrayList<>(Arrays.asList(values));
+    }
+    
     public void setValues(final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values){
-        this.values = values;
+       this.values = values;
     }
 
 }

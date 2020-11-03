@@ -3,8 +3,7 @@ package com.commercetools.api.models.tax_category;
 import com.commercetools.api.models.tax_category.SubRate;
 import com.commercetools.api.models.tax_category.TaxRateDraft;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -54,6 +53,11 @@ public final class TaxRateDraftBuilder {
     
     public TaxRateDraftBuilder state(@Nullable final String state) {
         this.state = state;
+        return this;
+    }
+    
+    public TaxRateDraftBuilder subRates(@Nullable final com.commercetools.api.models.tax_category.SubRate ...subRates) {
+        this.subRates = new ArrayList<>(Arrays.asList(subRates));
         return this;
     }
     

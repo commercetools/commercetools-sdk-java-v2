@@ -4,8 +4,7 @@ import com.commercetools.api.models.order.ItemState;
 import com.commercetools.api.models.order.OrderUpdateAction;
 import com.commercetools.api.models.order.OrderImportLineItemStateAction;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +22,11 @@ public final class OrderImportLineItemStateActionBuilder {
 
     public OrderImportLineItemStateActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
+        return this;
+    }
+    
+    public OrderImportLineItemStateActionBuilder state( final com.commercetools.api.models.order.ItemState ...state) {
+        this.state = new ArrayList<>(Arrays.asList(state));
         return this;
     }
     

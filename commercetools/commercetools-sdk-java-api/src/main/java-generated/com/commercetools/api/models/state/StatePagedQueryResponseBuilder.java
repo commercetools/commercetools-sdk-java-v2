@@ -3,8 +3,7 @@ package com.commercetools.api.models.state;
 import com.commercetools.api.models.state.State;
 import com.commercetools.api.models.state.StatePagedQueryResponse;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -46,6 +45,11 @@ public final class StatePagedQueryResponseBuilder {
     
     public StatePagedQueryResponseBuilder offset( final Long offset) {
         this.offset = offset;
+        return this;
+    }
+    
+    public StatePagedQueryResponseBuilder results( final com.commercetools.api.models.state.State ...results) {
+        this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
     

@@ -6,8 +6,7 @@ import com.commercetools.api.models.error.ErrorObject;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.error.ExtensionBadResponseError;
 import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 

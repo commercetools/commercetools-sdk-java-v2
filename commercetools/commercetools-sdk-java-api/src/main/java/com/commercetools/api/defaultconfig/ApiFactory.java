@@ -1,5 +1,6 @@
 package com.commercetools.api.defaultconfig;
 
+import com.commercetools.api.client.ApiCorrelationIdProvider;
 import com.commercetools.api.client.ApiInternalLoggerFactory;
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;

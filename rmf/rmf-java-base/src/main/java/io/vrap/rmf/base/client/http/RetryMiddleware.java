@@ -1,7 +1,9 @@
 package io.vrap.rmf.base.client.http;
 
+import io.vrap.rmf.base.client.ApiHttpException;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.ClientFactory;
 import net.jodah.failsafe.Failsafe;
 import net.jodah.failsafe.FailsafeExecutor;
 import net.jodah.failsafe.RetryPolicy;
@@ -18,7 +20,7 @@ import java.util.function.Function;
 import static java.util.Collections.singletonList;
 
 public class RetryMiddleware implements Middleware, AutoCloseable {
-    Logger logger = LoggerFactory.getLogger("commercetools");
+    Logger logger = LoggerFactory.getLogger(ClientFactory.COMMERCETOOLS);
 
     private final ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
@@ -37,7 +39,12 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
 
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, List<Integer> statusCodes) {
         RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = new RetryPolicy<ApiHttpResponse<byte[]>>()
-                .handleResultIf(o -> statusCodes.contains(o.getStatusCode()))
+                .handleIf((response, throwable) -> {
+                    if (throwable instanceof ApiHttpException) {
+                       return statusCodes.contains(((ApiHttpException)throwable).getStatusCode());
+                    }
+                    return statusCodes.contains(response.getStatusCode());
+                })
                 .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
                 .onRetry(event -> logger.info("Retry #" + event.getAttemptCount()))
                 .withMaxRetries(maxRetries);

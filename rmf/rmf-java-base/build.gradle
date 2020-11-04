@@ -1,6 +1,9 @@
 
 dependencies {
     testImplementation "junit:junit:${versions.junit}"
+    testImplementation "org.assertj:assertj-core:${versions.assertJ}"
+    testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.6"
+    testImplementation "ch.qos.logback:logback-classic:${versions.logback}"
 
     implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"
     implementation "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"

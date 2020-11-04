@@ -12,7 +12,7 @@ import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
 
-import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.Collections.singletonList;
 
@@ -23,6 +23,7 @@ public class MiddlewareTest {
     public void execute() {
         String projectKey = CommercetoolsTestUtils.getProjectKey();
 
+        AtomicInteger count = new AtomicInteger();
         ByProjectKeyRequestBuilder b = ApiFactory.createForProject(
                 projectKey,
                 ClientCredentials.of().withClientId(CommercetoolsTestUtils.getClientId())
@@ -30,7 +31,13 @@ public class MiddlewareTest {
                         .build(),
                 ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
                 ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
-                Lists.newArrayList(new RetryMiddleware(3, singletonList(404)))
+                Lists.newArrayList(
+                        (request, next) -> {
+                            count.getAndIncrement();
+                            return next.apply(request);
+                        },
+                        new RetryMiddleware(3, singletonList(404))
+                )
         );
 
 
@@ -43,5 +50,6 @@ public class MiddlewareTest {
                             .executeBlocking().getBody();
                 }
         );
+        Assertions.assertThat(count.get()).isEqualTo(4);
     }
 }

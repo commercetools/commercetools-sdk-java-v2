@@ -30,13 +30,6 @@ public enum ProcessingState {
     UNRESOLVED("Unresolved"),
     
     /**
-    	<p>The import resource is resolved and doesn't contain any unresolved references.</p>
-    	
-    */
-    @JsonProperty("Resolved")
-    RESOLVED("Resolved"),
-    
-    /**
     	<p>Wait for a master variant to arrive. The product import has required attributes and thus requires a master variant that provides those.</p>
     	
     */
@@ -69,14 +62,7 @@ public enum ProcessingState {
     	
     */
     @JsonProperty("Rejected")
-    REJECTED("Rejected"),
-    
-    /**
-    	<p>The import resource was skipped because the skip predicate was evaluated to true.</p>
-    	
-    */
-    @JsonProperty("Skipped")
-    SKIPPED("Skipped");
+    REJECTED("Rejected");
 
     private final String jsonName;
 

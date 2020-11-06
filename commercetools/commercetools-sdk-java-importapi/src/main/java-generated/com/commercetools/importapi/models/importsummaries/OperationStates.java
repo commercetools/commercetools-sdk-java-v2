@@ -34,12 +34,6 @@ public interface OperationStates  {
     @JsonProperty("Unresolved")
     public Long getUnresolved();
     /**
-    *  <p>The number of import operations that are in the state <code>Resolved</code>.</p>
-    */
-    @NotNull
-    @JsonProperty("Resolved")
-    public Long getResolved();
-    /**
     *  <p>The number of import operations that are in the state <code>WaitForMasterVariant</code>.</p>
     */
     @NotNull
@@ -69,18 +63,10 @@ public interface OperationStates  {
     @NotNull
     @JsonProperty("Rejected")
     public Long getRejected();
-    /**
-    *  <p>The number of import operations that are in the state <code>Skipped</code>.</p>
-    */
-    @NotNull
-    @JsonProperty("Skipped")
-    public Long getSkipped();
 
     public void setValidationFailed(final Long validationFailed);
     
     public void setUnresolved(final Long unresolved);
-    
-    public void setResolved(final Long resolved);
     
     public void setWaitForMasterVariant(final Long waitForMasterVariant);
     
@@ -91,8 +77,6 @@ public interface OperationStates  {
     public void setDeleted(final Long deleted);
     
     public void setRejected(final Long rejected);
-    
-    public void setSkipped(final Long skipped);
 
     public static OperationStatesImpl of(){
         return new OperationStatesImpl();
@@ -103,13 +87,11 @@ public interface OperationStates  {
         OperationStatesImpl instance = new OperationStatesImpl();
         instance.setValidationFailed(template.getValidationFailed());
         instance.setUnresolved(template.getUnresolved());
-        instance.setResolved(template.getResolved());
         instance.setWaitForMasterVariant(template.getWaitForMasterVariant());
         instance.setImported(template.getImported());
         instance.setDelete(template.getDelete());
         instance.setDeleted(template.getDeleted());
         instance.setRejected(template.getRejected());
-        instance.setSkipped(template.getSkipped());
         return instance;
     }
 

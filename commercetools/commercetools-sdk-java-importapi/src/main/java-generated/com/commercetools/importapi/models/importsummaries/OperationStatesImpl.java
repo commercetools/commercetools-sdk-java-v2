@@ -24,8 +24,6 @@ public final class OperationStatesImpl implements OperationStates {
     
     private Long unresolved;
     
-    private Long resolved;
-    
     private Long waitForMasterVariant;
     
     private Long imported;
@@ -35,20 +33,16 @@ public final class OperationStatesImpl implements OperationStates {
     private Long deleted;
     
     private Long rejected;
-    
-    private Long skipped;
 
     @JsonCreator
-    OperationStatesImpl(@JsonProperty("ValidationFailed") final Long validationFailed, @JsonProperty("Unresolved") final Long unresolved, @JsonProperty("Resolved") final Long resolved, @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant, @JsonProperty("Imported") final Long imported, @JsonProperty("Delete") final Long delete, @JsonProperty("Deleted") final Long deleted, @JsonProperty("Rejected") final Long rejected, @JsonProperty("Skipped") final Long skipped) {
+    OperationStatesImpl(@JsonProperty("ValidationFailed") final Long validationFailed, @JsonProperty("Unresolved") final Long unresolved, @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant, @JsonProperty("Imported") final Long imported, @JsonProperty("Delete") final Long delete, @JsonProperty("Deleted") final Long deleted, @JsonProperty("Rejected") final Long rejected) {
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
-        this.resolved = resolved;
         this.waitForMasterVariant = waitForMasterVariant;
         this.imported = imported;
         this.delete = delete;
         this.deleted = deleted;
         this.rejected = rejected;
-        this.skipped = skipped;
     }
     public OperationStatesImpl() {
        
@@ -66,13 +60,6 @@ public final class OperationStatesImpl implements OperationStates {
     */
     public Long getUnresolved(){
         return this.unresolved;
-    }
-    
-    /**
-    *  <p>The number of import operations that are in the state <code>Resolved</code>.</p>
-    */
-    public Long getResolved(){
-        return this.resolved;
     }
     
     /**
@@ -109,13 +96,6 @@ public final class OperationStatesImpl implements OperationStates {
     public Long getRejected(){
         return this.rejected;
     }
-    
-    /**
-    *  <p>The number of import operations that are in the state <code>Skipped</code>.</p>
-    */
-    public Long getSkipped(){
-        return this.skipped;
-    }
 
     public void setValidationFailed(final Long validationFailed){
         this.validationFailed = validationFailed;
@@ -123,10 +103,6 @@ public final class OperationStatesImpl implements OperationStates {
     
     public void setUnresolved(final Long unresolved){
         this.unresolved = unresolved;
-    }
-    
-    public void setResolved(final Long resolved){
-        this.resolved = resolved;
     }
     
     public void setWaitForMasterVariant(final Long waitForMasterVariant){
@@ -147,10 +123,6 @@ public final class OperationStatesImpl implements OperationStates {
     
     public void setRejected(final Long rejected){
         this.rejected = rejected;
-    }
-    
-    public void setSkipped(final Long skipped){
-        this.skipped = skipped;
     }
 
 }

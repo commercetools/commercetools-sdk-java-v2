@@ -37,7 +37,7 @@ public final class HighPrecisionMoneyImpl implements HighPrecisionMoney {
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
         this.preciseAmount = preciseAmount;
-        this.type = MoneyType.findEnumViaJsonName("highPrecision").get();
+        this.type = MoneyType.findEnum("highPrecision");
     }
     public HighPrecisionMoneyImpl() {
        

@@ -1,6 +1,7 @@
 package com.commercetools.importapi.models.orders;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -11,27 +12,51 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum ShippingMethodState {
+public interface ShippingMethodState {
 
     
-    @JsonProperty("DoesNotMatchCart")
-    DOES_NOT_MATCH_CART("DoesNotMatchCart"),
+    ShippingMethodState DOES_NOT_MATCH_CART = ShippingMethodStateEnum.DOES_NOT_MATCH_CART;
     
+    ShippingMethodState MATCHES_CART = ShippingMethodStateEnum.MATCHES_CART;
     
-    @JsonProperty("MatchesCart")
-    MATCHES_CART("MatchesCart");
+    enum ShippingMethodStateEnum implements ShippingMethodState {
+        DOES_NOT_MATCH_CART("DoesNotMatchCart"),
+        
+        MATCHES_CART("MatchesCart");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private ShippingMethodState(final String jsonName) {
-        this.jsonName = jsonName;
+        private ShippingMethodStateEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static ShippingMethodState findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new ShippingMethodState() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<ShippingMethodState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static ShippingMethodState[] values() {
+        return ShippingMethodStateEnum.values();
     }
 }

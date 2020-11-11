@@ -31,7 +31,7 @@ public final class PriceKeyReferenceImpl implements PriceKeyReference {
     @JsonCreator
     PriceKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("price").get();
+        this.typeId = ReferenceType.findEnum("price");
     }
     public PriceKeyReferenceImpl() {
        

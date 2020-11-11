@@ -32,7 +32,7 @@ public final class CategoryImportRequestImpl implements CategoryImportRequest {
     @JsonCreator
     CategoryImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.categories.CategoryImport> resources) {
         this.resources = resources;
-        this.type = ImportResourceType.findEnumViaJsonName("category").get();
+        this.type = ImportResourceType.findEnum("category");
     }
     public CategoryImportRequestImpl() {
        

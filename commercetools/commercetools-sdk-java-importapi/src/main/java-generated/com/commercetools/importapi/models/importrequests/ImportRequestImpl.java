@@ -35,10 +35,12 @@ public final class ImportRequestImpl implements ImportRequest {
     private com.commercetools.importapi.models.common.ImportResourceType type;
 
     @JsonCreator
-    ImportRequestImpl() {
-        this.type = ImportResourceType.findEnumViaJsonName("null").get();
+    ImportRequestImpl(@JsonProperty("type") final com.commercetools.importapi.models.common.ImportResourceType type) {
+        this.type = type;
     }
-    
+    public ImportRequestImpl() {
+       
+    }
 
     /**
     *  <p>The type of the import resource.</p>

@@ -24,10 +24,12 @@ public final class SuggestTokenizerImpl implements SuggestTokenizer {
     private String type;
 
     @JsonCreator
-    SuggestTokenizerImpl() {
-        this.type = "null";
+    SuggestTokenizerImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public SuggestTokenizerImpl() {
+       
+    }
 
     
     public String getType(){

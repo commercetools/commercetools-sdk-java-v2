@@ -31,7 +31,7 @@ public final class TypeKeyReferenceImpl implements TypeKeyReference {
     @JsonCreator
     TypeKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("type").get();
+        this.typeId = ReferenceType.findEnum("type");
     }
     public TypeKeyReferenceImpl() {
        

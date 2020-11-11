@@ -1,6 +1,7 @@
 package com.commercetools.importapi.models.common;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -13,68 +14,92 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum ProcessingState {
+public interface ProcessingState {
 
     /**
     	<p>The validation of the import resource failed.</p>
     	
     */
-    @JsonProperty("ValidationFailed")
-    VALIDATION_FAILED("ValidationFailed"),
-    
+    ProcessingState VALIDATION_FAILED = ProcessingStateEnum.VALIDATION_FAILED;
     /**
     	<p>This is an initial state of the import resource, it might contain unresolved references and needs to be resolved further.</p>
     	
     */
-    @JsonProperty("Unresolved")
-    UNRESOLVED("Unresolved"),
-    
+    ProcessingState UNRESOLVED = ProcessingStateEnum.UNRESOLVED;
     /**
     	<p>Wait for a master variant to arrive. The product import has required attributes and thus requires a master variant that provides those.</p>
     	
     */
-    @JsonProperty("WaitForMasterVariant")
-    WAIT_FOR_MASTER_VARIANT("WaitForMasterVariant"),
-    
+    ProcessingState WAIT_FOR_MASTER_VARIANT = ProcessingStateEnum.WAIT_FOR_MASTER_VARIANT;
     /**
     	<p>The import resource was imported successfully.</p>
     	
     */
-    @JsonProperty("Imported")
-    IMPORTED("Imported"),
-    
+    ProcessingState IMPORTED = ProcessingStateEnum.IMPORTED;
     /**
     	<p>The import resource is being deleted.</p>
     	
     */
-    @JsonProperty("Delete")
-    DELETE("Delete"),
-    
+    ProcessingState DELETE = ProcessingStateEnum.DELETE;
     /**
     	<p>The import resource was deleted successfully.</p>
     	
     */
-    @JsonProperty("Deleted")
-    DELETED("Deleted"),
-    
+    ProcessingState DELETED = ProcessingStateEnum.DELETED;
     /**
     	<p>The import resource couldn't be imported or deleted after several retries.</p>
     	
     */
-    @JsonProperty("Rejected")
-    REJECTED("Rejected");
+    ProcessingState REJECTED = ProcessingStateEnum.REJECTED;
+    
+    enum ProcessingStateEnum implements ProcessingState {
+        VALIDATION_FAILED("ValidationFailed"),
+        
+        UNRESOLVED("Unresolved"),
+        
+        WAIT_FOR_MASTER_VARIANT("WaitForMasterVariant"),
+        
+        IMPORTED("Imported"),
+        
+        DELETE("Delete"),
+        
+        DELETED("Deleted"),
+        
+        REJECTED("Rejected");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private ProcessingState(final String jsonName) {
-        this.jsonName = jsonName;
+        private ProcessingStateEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static ProcessingState findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new ProcessingState() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<ProcessingState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static ProcessingState[] values() {
+        return ProcessingStateEnum.values();
     }
 }

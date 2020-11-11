@@ -1,6 +1,7 @@
 package com.commercetools.importapi.models.common;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -13,79 +14,103 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum ImportResourceType {
+public interface ImportResourceType {
 
     /**
     	<p>The category import resource type.</p>
     	
     */
-    @JsonProperty("category")
-    CATEGORY("category"),
-    
+    ImportResourceType CATEGORY = ImportResourceTypeEnum.CATEGORY;
     /**
     	<p>The order import resource type.</p>
     	
     */
-    @JsonProperty("order")
-    ORDER("order"),
-    
+    ImportResourceType ORDER = ImportResourceTypeEnum.ORDER;
     /**
     	<p>The price import resource type.</p>
     	
     */
-    @JsonProperty("price")
-    PRICE("price"),
-    
+    ImportResourceType PRICE = ImportResourceTypeEnum.PRICE;
     /**
     	<p>The product import resource type.</p>
     	
     */
-    @JsonProperty("product")
-    PRODUCT("product"),
+    ImportResourceType PRODUCT = ImportResourceTypeEnum.PRODUCT;
     
-    
-    @JsonProperty("product-draft")
-    PRODUCT_DRAFT("product-draft"),
-    
+    ImportResourceType PRODUCT_DRAFT = ImportResourceTypeEnum.PRODUCT_DRAFT;
     /**
     	<p>The product type import resource type.</p>
     	
     */
-    @JsonProperty("product-type")
-    PRODUCT_TYPE("product-type"),
-    
+    ImportResourceType PRODUCT_TYPE = ImportResourceTypeEnum.PRODUCT_TYPE;
     /**
     	<p>The product variant import resource type.</p>
     	
     */
-    @JsonProperty("product-variant")
-    PRODUCT_VARIANT("product-variant"),
-    
+    ImportResourceType PRODUCT_VARIANT = ImportResourceTypeEnum.PRODUCT_VARIANT;
     /**
     	<p>The product variant patch import resource type.</p>
     	
     */
-    @JsonProperty("product-variant-patch")
-    PRODUCT_VARIANT_PATCH("product-variant-patch"),
-    
+    ImportResourceType PRODUCT_VARIANT_PATCH = ImportResourceTypeEnum.PRODUCT_VARIANT_PATCH;
     /**
     	<p>The customer import resource type.</p>
     	
     */
-    @JsonProperty("customer")
-    CUSTOMER("customer");
+    ImportResourceType CUSTOMER = ImportResourceTypeEnum.CUSTOMER;
+    
+    enum ImportResourceTypeEnum implements ImportResourceType {
+        CATEGORY("category"),
+        
+        ORDER("order"),
+        
+        PRICE("price"),
+        
+        PRODUCT("product"),
+        
+        PRODUCT_DRAFT("product-draft"),
+        
+        PRODUCT_TYPE("product-type"),
+        
+        PRODUCT_VARIANT("product-variant"),
+        
+        PRODUCT_VARIANT_PATCH("product-variant-patch"),
+        
+        CUSTOMER("customer");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private ImportResourceType(final String jsonName) {
-        this.jsonName = jsonName;
+        private ImportResourceTypeEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static ImportResourceType findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new ImportResourceType() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<ImportResourceType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static ImportResourceType[] values() {
+        return ImportResourceTypeEnum.values();
     }
 }

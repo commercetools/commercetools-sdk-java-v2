@@ -31,7 +31,7 @@ public final class StateKeyReferenceImpl implements StateKeyReference {
     @JsonCreator
     StateKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("state").get();
+        this.typeId = ReferenceType.findEnum("state");
     }
     public StateKeyReferenceImpl() {
        

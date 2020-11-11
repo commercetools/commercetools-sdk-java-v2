@@ -31,11 +31,11 @@ public final class TypedMoneyImpl implements TypedMoney {
     private String currencyCode;
 
     @JsonCreator
-    TypedMoneyImpl(@JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
+    TypedMoneyImpl(@JsonProperty("type") final com.commercetools.importapi.models.common.MoneyType type, @JsonProperty("fractionDigits") final Integer fractionDigits, @JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode) {
+        this.type = type;
         this.fractionDigits = fractionDigits;
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
-        this.type = MoneyType.findEnumViaJsonName("null").get();
     }
     public TypedMoneyImpl() {
        

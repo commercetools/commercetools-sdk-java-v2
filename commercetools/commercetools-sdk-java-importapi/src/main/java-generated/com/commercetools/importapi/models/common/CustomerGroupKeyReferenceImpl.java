@@ -31,7 +31,7 @@ public final class CustomerGroupKeyReferenceImpl implements CustomerGroupKeyRefe
     @JsonCreator
     CustomerGroupKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("customer-group").get();
+        this.typeId = ReferenceType.findEnum("customer-group");
     }
     public CustomerGroupKeyReferenceImpl() {
        

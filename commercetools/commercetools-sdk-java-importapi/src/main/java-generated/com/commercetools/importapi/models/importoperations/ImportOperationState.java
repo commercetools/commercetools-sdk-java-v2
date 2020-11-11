@@ -1,6 +1,7 @@
 package com.commercetools.importapi.models.importoperations;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -13,40 +14,64 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum ImportOperationState {
+public interface ImportOperationState {
 
     /**
     	<p>This is an initial state of import resource and is currently unresolved.</p>
     	
     */
-    @JsonProperty("Unresolved")
-    UNRESOLVED("Unresolved"),
-    
+    ImportOperationState UNRESOLVED = ImportOperationStateEnum.UNRESOLVED;
     /**
     	<p>The validation of the import resource failed.</p>
     	
     */
-    @JsonProperty("ValidationFailed")
-    VALIDATION_FAILED("ValidationFailed"),
-    
+    ImportOperationState VALIDATION_FAILED = ImportOperationStateEnum.VALIDATION_FAILED;
     /**
     	<p>The import resource is being deleted.</p>
     	
     */
-    @JsonProperty("Delete")
-    DELETE("Delete");
+    ImportOperationState DELETE = ImportOperationStateEnum.DELETE;
+    
+    enum ImportOperationStateEnum implements ImportOperationState {
+        UNRESOLVED("Unresolved"),
+        
+        VALIDATION_FAILED("ValidationFailed"),
+        
+        DELETE("Delete");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private ImportOperationState(final String jsonName) {
-        this.jsonName = jsonName;
+        private ImportOperationStateEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static ImportOperationState findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new ImportOperationState() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<ImportOperationState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static ImportOperationState[] values() {
+        return ImportOperationStateEnum.values();
     }
 }

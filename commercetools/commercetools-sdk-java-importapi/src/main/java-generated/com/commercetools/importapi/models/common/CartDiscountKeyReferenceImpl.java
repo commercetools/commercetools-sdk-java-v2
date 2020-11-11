@@ -31,7 +31,7 @@ public final class CartDiscountKeyReferenceImpl implements CartDiscountKeyRefere
     @JsonCreator
     CartDiscountKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("cart-discount").get();
+        this.typeId = ReferenceType.findEnum("cart-discount");
     }
     public CartDiscountKeyReferenceImpl() {
        

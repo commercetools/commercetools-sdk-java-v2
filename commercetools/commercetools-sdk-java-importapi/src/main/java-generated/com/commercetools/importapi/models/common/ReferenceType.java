@@ -1,6 +1,7 @@
 package com.commercetools.importapi.models.common;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -13,121 +14,145 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum ReferenceType {
+public interface ReferenceType {
 
     /**
     	<p>References a cart discount.</p>
     	
     */
-    @JsonProperty("cart-discount")
-    CART_DISCOUNT("cart-discount"),
-    
+    ReferenceType CART_DISCOUNT = ReferenceTypeEnum.CART_DISCOUNT;
     /**
     	<p>References a category.</p>
     	
     */
-    @JsonProperty("category")
-    CATEGORY("category"),
-    
+    ReferenceType CATEGORY = ReferenceTypeEnum.CATEGORY;
     /**
     	<p>References a channel.</p>
     	
     */
-    @JsonProperty("channel")
-    CHANNEL("channel"),
-    
+    ReferenceType CHANNEL = ReferenceTypeEnum.CHANNEL;
     /**
     	<p>References a customer.</p>
     	
     */
-    @JsonProperty("customer")
-    CUSTOMER("customer"),
-    
+    ReferenceType CUSTOMER = ReferenceTypeEnum.CUSTOMER;
     /**
     	<p>References a customer group.</p>
     	
     */
-    @JsonProperty("customer-group")
-    CUSTOMER_GROUP("customer-group"),
-    
+    ReferenceType CUSTOMER_GROUP = ReferenceTypeEnum.CUSTOMER_GROUP;
     /**
     	<p>References a price.</p>
     	
     */
-    @JsonProperty("price")
-    PRICE("price"),
-    
+    ReferenceType PRICE = ReferenceTypeEnum.PRICE;
     /**
     	<p>References a product.</p>
     	
     */
-    @JsonProperty("product")
-    PRODUCT("product"),
+    ReferenceType PRODUCT = ReferenceTypeEnum.PRODUCT;
     
-    
-    @JsonProperty("product-discount")
-    PRODUCT_DISCOUNT("product-discount"),
-    
+    ReferenceType PRODUCT_DISCOUNT = ReferenceTypeEnum.PRODUCT_DISCOUNT;
     /**
     	<p>References a product type.</p>
     	
     */
-    @JsonProperty("product-type")
-    PRODUCT_TYPE("product-type"),
-    
+    ReferenceType PRODUCT_TYPE = ReferenceTypeEnum.PRODUCT_TYPE;
     /**
     	<p>References a product variant.</p>
     	
     */
-    @JsonProperty("product-variant")
-    PRODUCT_VARIANT("product-variant"),
-    
+    ReferenceType PRODUCT_VARIANT = ReferenceTypeEnum.PRODUCT_VARIANT;
     /**
     	<p>References a shipping method.</p>
     	
     */
-    @JsonProperty("shipping-method")
-    SHIPPING_METHOD("shipping-method"),
-    
+    ReferenceType SHIPPING_METHOD = ReferenceTypeEnum.SHIPPING_METHOD;
     /**
     	<p>References a state.</p>
     	
     */
-    @JsonProperty("state")
-    STATE("state"),
-    
+    ReferenceType STATE = ReferenceTypeEnum.STATE;
     /**
     	<p>References a store.</p>
     	
     */
-    @JsonProperty("store")
-    STORE("store"),
-    
+    ReferenceType STORE = ReferenceTypeEnum.STORE;
     /**
     	<p>References a tax-category.</p>
     	
     */
-    @JsonProperty("tax-category")
-    TAX_CATEGORY("tax-category"),
-    
+    ReferenceType TAX_CATEGORY = ReferenceTypeEnum.TAX_CATEGORY;
     /**
     	<p>References a type.</p>
     	
     */
-    @JsonProperty("type")
-    TYPE("type");
+    ReferenceType TYPE = ReferenceTypeEnum.TYPE;
+    
+    enum ReferenceTypeEnum implements ReferenceType {
+        CART_DISCOUNT("cart-discount"),
+        
+        CATEGORY("category"),
+        
+        CHANNEL("channel"),
+        
+        CUSTOMER("customer"),
+        
+        CUSTOMER_GROUP("customer-group"),
+        
+        PRICE("price"),
+        
+        PRODUCT("product"),
+        
+        PRODUCT_DISCOUNT("product-discount"),
+        
+        PRODUCT_TYPE("product-type"),
+        
+        PRODUCT_VARIANT("product-variant"),
+        
+        SHIPPING_METHOD("shipping-method"),
+        
+        STATE("state"),
+        
+        STORE("store"),
+        
+        TAX_CATEGORY("tax-category"),
+        
+        TYPE("type");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private ReferenceType(final String jsonName) {
-        this.jsonName = jsonName;
+        private ReferenceTypeEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static ReferenceType findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new ReferenceType() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<ReferenceType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static ReferenceType[] values() {
+        return ReferenceTypeEnum.values();
     }
 }

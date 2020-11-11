@@ -31,7 +31,7 @@ public final class ChannelKeyReferenceImpl implements ChannelKeyReference {
     @JsonCreator
     ChannelKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("channel").get();
+        this.typeId = ReferenceType.findEnum("channel");
     }
     public ChannelKeyReferenceImpl() {
        

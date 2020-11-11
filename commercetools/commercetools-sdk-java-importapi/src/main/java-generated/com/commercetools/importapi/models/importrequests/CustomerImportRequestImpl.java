@@ -32,7 +32,7 @@ public final class CustomerImportRequestImpl implements CustomerImportRequest {
     @JsonCreator
     CustomerImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.customers.CustomerImport> resources) {
         this.resources = resources;
-        this.type = ImportResourceType.findEnumViaJsonName("customer").get();
+        this.type = ImportResourceType.findEnum("customer");
     }
     public CustomerImportRequestImpl() {
        

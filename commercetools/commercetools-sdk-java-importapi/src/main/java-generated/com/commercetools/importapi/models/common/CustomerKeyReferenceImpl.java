@@ -31,7 +31,7 @@ public final class CustomerKeyReferenceImpl implements CustomerKeyReference {
     @JsonCreator
     CustomerKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("customer").get();
+        this.typeId = ReferenceType.findEnum("customer");
     }
     public CustomerKeyReferenceImpl() {
        

@@ -31,7 +31,7 @@ public final class ProductVariantKeyReferenceImpl implements ProductVariantKeyRe
     @JsonCreator
     ProductVariantKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("product-variant").get();
+        this.typeId = ReferenceType.findEnum("product-variant");
     }
     public ProductVariantKeyReferenceImpl() {
        

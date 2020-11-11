@@ -35,10 +35,12 @@ public final class AttributeTypeImpl implements AttributeType {
     private String name;
 
     @JsonCreator
-    AttributeTypeImpl() {
-        this.name = "null";
+    AttributeTypeImpl(@JsonProperty("name") final String name) {
+        this.name = name;
     }
-    
+    public AttributeTypeImpl() {
+       
+    }
 
     
     public String getName(){

@@ -32,7 +32,7 @@ public final class ProductVariantImportRequestImpl implements ProductVariantImpo
     @JsonCreator
     ProductVariantImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantImport> resources) {
         this.resources = resources;
-        this.type = ImportResourceType.findEnumViaJsonName("product-variant").get();
+        this.type = ImportResourceType.findEnum("product-variant");
     }
     public ProductVariantImportRequestImpl() {
        

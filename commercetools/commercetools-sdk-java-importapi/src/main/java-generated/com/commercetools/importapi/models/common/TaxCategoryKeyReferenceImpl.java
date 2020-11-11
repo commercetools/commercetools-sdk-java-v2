@@ -31,7 +31,7 @@ public final class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReferenc
     @JsonCreator
     TaxCategoryKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("tax-category").get();
+        this.typeId = ReferenceType.findEnum("tax-category");
     }
     public TaxCategoryKeyReferenceImpl() {
        

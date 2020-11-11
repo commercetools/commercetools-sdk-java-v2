@@ -50,9 +50,9 @@ public final class AttributeImpl implements Attribute {
     private String type;
 
     @JsonCreator
-    AttributeImpl(@JsonProperty("name") final String name) {
+    AttributeImpl(@JsonProperty("name") final String name, @JsonProperty("type") final String type) {
         this.name = name;
-        this.type = "null";
+        this.type = type;
     }
     public AttributeImpl() {
        

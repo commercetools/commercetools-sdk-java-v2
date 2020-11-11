@@ -32,7 +32,7 @@ public final class OrderImportRequestImpl implements OrderImportRequest {
     @JsonCreator
     OrderImportRequestImpl(@JsonProperty("resources") final java.util.List<com.commercetools.importapi.models.orders.OrderImport> resources) {
         this.resources = resources;
-        this.type = ImportResourceType.findEnumViaJsonName("order").get();
+        this.type = ImportResourceType.findEnum("order");
     }
     public OrderImportRequestImpl() {
        

@@ -31,7 +31,7 @@ public final class ProductTypeKeyReferenceImpl implements ProductTypeKeyReferenc
     @JsonCreator
     ProductTypeKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("product-type").get();
+        this.typeId = ReferenceType.findEnum("product-type");
     }
     public ProductTypeKeyReferenceImpl() {
        

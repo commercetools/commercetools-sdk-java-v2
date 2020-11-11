@@ -32,7 +32,7 @@ public final class ProductVariantPatchRequestImpl implements ProductVariantPatch
     @JsonCreator
     ProductVariantPatchRequestImpl(@JsonProperty("patches") final java.util.List<com.commercetools.importapi.models.productvariants.ProductVariantPatch> patches) {
         this.patches = patches;
-        this.type = ImportResourceType.findEnumViaJsonName("product-variant-patch").get();
+        this.type = ImportResourceType.findEnum("product-variant-patch");
     }
     public ProductVariantPatchRequestImpl() {
        

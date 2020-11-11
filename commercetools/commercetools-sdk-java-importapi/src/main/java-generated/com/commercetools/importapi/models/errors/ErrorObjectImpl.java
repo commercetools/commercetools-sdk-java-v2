@@ -49,9 +49,9 @@ public final class ErrorObjectImpl implements ErrorObject {
     private String message;
 
     @JsonCreator
-    ErrorObjectImpl(@JsonProperty("message") final String message) {
+    ErrorObjectImpl(@JsonProperty("code") final String code, @JsonProperty("message") final String message) {
+        this.code = code;
         this.message = message;
-        this.code = "null";
     }
     public ErrorObjectImpl() {
        

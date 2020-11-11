@@ -43,9 +43,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "name",
-    defaultImpl = AttributeTypeImpl.class
+    defaultImpl = AttributeTypeImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -53,6 +54,10 @@ import java.io.IOException;
 )
 public interface AttributeType  {
 
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
 
 
 

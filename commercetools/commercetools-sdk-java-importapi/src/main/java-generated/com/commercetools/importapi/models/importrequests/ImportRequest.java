@@ -39,9 +39,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
-    defaultImpl = ImportRequestImpl.class
+    defaultImpl = ImportRequestImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -49,6 +50,12 @@ import java.io.IOException;
 )
 public interface ImportRequest  {
 
+    /**
+    *  <p>The type of the import resource.</p>
+    */
+    @NotNull
+    @JsonProperty("type")
+    public ImportResourceType getType();
 
 
 

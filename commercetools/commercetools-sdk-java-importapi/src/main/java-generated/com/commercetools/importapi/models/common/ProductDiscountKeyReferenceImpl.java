@@ -31,7 +31,7 @@ public final class ProductDiscountKeyReferenceImpl implements ProductDiscountKey
     @JsonCreator
     ProductDiscountKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("product-discount").get();
+        this.typeId = ReferenceType.findEnum("product-discount");
     }
     public ProductDiscountKeyReferenceImpl() {
        

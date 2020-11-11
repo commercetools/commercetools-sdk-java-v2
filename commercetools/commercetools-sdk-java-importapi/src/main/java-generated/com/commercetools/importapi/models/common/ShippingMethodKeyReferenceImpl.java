@@ -31,7 +31,7 @@ public final class ShippingMethodKeyReferenceImpl implements ShippingMethodKeyRe
     @JsonCreator
     ShippingMethodKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceType.findEnumViaJsonName("shipping-method").get();
+        this.typeId = ReferenceType.findEnum("shipping-method");
     }
     public ShippingMethodKeyReferenceImpl() {
        

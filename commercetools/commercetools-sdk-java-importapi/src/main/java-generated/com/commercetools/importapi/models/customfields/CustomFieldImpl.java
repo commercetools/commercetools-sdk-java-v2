@@ -47,10 +47,12 @@ public final class CustomFieldImpl implements CustomField {
     private String type;
 
     @JsonCreator
-    CustomFieldImpl() {
-        this.type = "null";
+    CustomFieldImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public CustomFieldImpl() {
+       
+    }
 
     /**
     *  <p>The type of this field.</p>

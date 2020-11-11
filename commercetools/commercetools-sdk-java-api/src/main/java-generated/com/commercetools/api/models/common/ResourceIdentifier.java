@@ -62,9 +62,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "typeId",
-    defaultImpl = ResourceIdentifierImpl.class
+    defaultImpl = ResourceIdentifierImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -72,6 +73,10 @@ import java.io.IOException;
 )
 public interface ResourceIdentifier  {
 
+    
+    
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
     
     
     @JsonProperty("id")

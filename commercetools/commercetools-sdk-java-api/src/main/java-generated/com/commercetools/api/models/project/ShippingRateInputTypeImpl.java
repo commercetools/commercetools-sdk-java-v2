@@ -26,10 +26,12 @@ public final class ShippingRateInputTypeImpl implements ShippingRateInputType {
     private com.commercetools.api.models.shipping_method.ShippingRateTierType type;
 
     @JsonCreator
-    ShippingRateInputTypeImpl() {
-        this.type = ShippingRateTierType.findEnumViaJsonName("null").get();
+    ShippingRateInputTypeImpl(@JsonProperty("type") final com.commercetools.api.models.shipping_method.ShippingRateTierType type) {
+        this.type = type;
     }
-    
+    public ShippingRateInputTypeImpl() {
+       
+    }
 
     
     public com.commercetools.api.models.shipping_method.ShippingRateTierType getType(){

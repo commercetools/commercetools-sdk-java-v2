@@ -32,7 +32,7 @@ public final class CategoryReferenceImpl implements CategoryReference {
     CategoryReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.category.Category obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("category").get();
+        this.typeId = ReferenceTypeId.findEnum("category");
     }
     public CategoryReferenceImpl() {
        

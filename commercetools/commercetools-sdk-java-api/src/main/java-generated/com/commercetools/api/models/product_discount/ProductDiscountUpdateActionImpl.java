@@ -32,10 +32,12 @@ public final class ProductDiscountUpdateActionImpl implements ProductDiscountUpd
     private String action;
 
     @JsonCreator
-    ProductDiscountUpdateActionImpl() {
-        this.action = "null";
+    ProductDiscountUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public ProductDiscountUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

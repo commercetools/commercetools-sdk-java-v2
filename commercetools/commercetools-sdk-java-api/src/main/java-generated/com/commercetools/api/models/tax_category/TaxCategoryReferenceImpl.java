@@ -32,7 +32,7 @@ public final class TaxCategoryReferenceImpl implements TaxCategoryReference {
     TaxCategoryReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.tax_category.TaxCategory obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("tax-category").get();
+        this.typeId = ReferenceTypeId.findEnum("tax-category");
     }
     public TaxCategoryReferenceImpl() {
        

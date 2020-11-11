@@ -141,9 +141,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "code",
-    defaultImpl = ErrorObjectImpl.class
+    defaultImpl = ErrorObjectImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -151,6 +152,10 @@ import java.io.IOException;
 )
 public interface ErrorObject  {
 
+    
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
     
     @NotNull
     @JsonProperty("message")

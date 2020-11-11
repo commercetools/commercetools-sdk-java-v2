@@ -48,9 +48,9 @@ public final class ReferenceImpl implements Reference {
     private String id;
 
     @JsonCreator
-    ReferenceImpl(@JsonProperty("id") final String id) {
+    ReferenceImpl(@JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId, @JsonProperty("id") final String id) {
+        this.typeId = typeId;
         this.id = id;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("null").get();
     }
     public ReferenceImpl() {
        

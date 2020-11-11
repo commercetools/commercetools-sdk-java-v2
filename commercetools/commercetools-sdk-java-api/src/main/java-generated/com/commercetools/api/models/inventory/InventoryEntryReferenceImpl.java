@@ -32,7 +32,7 @@ public final class InventoryEntryReferenceImpl implements InventoryEntryReferenc
     InventoryEntryReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.inventory.InventoryEntry obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("inventory-entry").get();
+        this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }
     public InventoryEntryReferenceImpl() {
        

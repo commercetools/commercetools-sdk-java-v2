@@ -31,7 +31,7 @@ public final class ReviewResourceIdentifierImpl implements ReviewResourceIdentif
     ReviewResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("review").get();
+        this.typeId = ReferenceTypeId.findEnum("review");
     }
     public ReviewResourceIdentifierImpl() {
        

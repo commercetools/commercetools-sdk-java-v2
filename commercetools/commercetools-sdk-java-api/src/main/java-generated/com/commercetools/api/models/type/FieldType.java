@@ -41,9 +41,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "name",
-    defaultImpl = FieldTypeImpl.class
+    defaultImpl = FieldTypeImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -51,6 +52,10 @@ import java.io.IOException;
 )
 public interface FieldType  {
 
+    
+    @NotNull
+    @JsonProperty("name")
+    public String getName();
 
 
 

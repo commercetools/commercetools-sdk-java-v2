@@ -41,15 +41,15 @@ public final class ReturnItemImpl implements ReturnItem {
     private java.time.ZonedDateTime createdAt;
 
     @JsonCreator
-    ReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity, @JsonProperty("comment") final String comment, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState, @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {
+    ReturnItemImpl(@JsonProperty("id") final String id, @JsonProperty("quantity") final Long quantity, @JsonProperty("type") final String type, @JsonProperty("comment") final String comment, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState, @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt) {
         this.id = id;
         this.quantity = quantity;
+        this.type = type;
         this.comment = comment;
         this.shipmentState = shipmentState;
         this.paymentState = paymentState;
         this.lastModifiedAt = lastModifiedAt;
         this.createdAt = createdAt;
-        this.type = "null";
     }
     public ReturnItemImpl() {
        

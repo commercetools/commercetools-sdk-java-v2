@@ -41,10 +41,12 @@ public final class MyShoppingListUpdateActionImpl implements MyShoppingListUpdat
     private String action;
 
     @JsonCreator
-    MyShoppingListUpdateActionImpl() {
-        this.action = "null";
+    MyShoppingListUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public MyShoppingListUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

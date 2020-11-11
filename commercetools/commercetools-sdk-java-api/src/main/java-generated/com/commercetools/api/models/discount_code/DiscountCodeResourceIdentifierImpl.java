@@ -31,7 +31,7 @@ public final class DiscountCodeResourceIdentifierImpl implements DiscountCodeRes
     DiscountCodeResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("discount-code").get();
+        this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
     public DiscountCodeResourceIdentifierImpl() {
        

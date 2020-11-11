@@ -35,9 +35,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "action",
-    defaultImpl = ProjectUpdateActionImpl.class
+    defaultImpl = ProjectUpdateActionImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -45,6 +46,10 @@ import java.io.IOException;
 )
 public interface ProjectUpdateAction  {
 
+    
+    @NotNull
+    @JsonProperty("action")
+    public String getAction();
 
 
 

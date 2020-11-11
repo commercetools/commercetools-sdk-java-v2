@@ -35,7 +35,7 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
         this.value = value;
         this.price = price;
         this.isMatching = isMatching;
-        this.type = ShippingRateTierType.findEnumViaJsonName("CartClassification").get();
+        this.type = ShippingRateTierType.findEnum("CartClassification");
     }
     public CartClassificationTierImpl() {
        

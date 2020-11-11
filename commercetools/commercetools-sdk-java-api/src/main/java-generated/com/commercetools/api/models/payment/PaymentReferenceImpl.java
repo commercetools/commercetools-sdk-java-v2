@@ -32,7 +32,7 @@ public final class PaymentReferenceImpl implements PaymentReference {
     PaymentReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.payment.Payment obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("payment").get();
+        this.typeId = ReferenceTypeId.findEnum("payment");
     }
     public PaymentReferenceImpl() {
        

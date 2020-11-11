@@ -32,7 +32,7 @@ public final class CartDiscountReferenceImpl implements CartDiscountReference {
     CartDiscountReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.cart_discount.CartDiscount obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("cart-discount").get();
+        this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }
     public CartDiscountReferenceImpl() {
        

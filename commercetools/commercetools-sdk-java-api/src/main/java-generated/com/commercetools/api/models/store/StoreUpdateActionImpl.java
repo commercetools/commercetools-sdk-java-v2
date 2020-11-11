@@ -30,10 +30,12 @@ public final class StoreUpdateActionImpl implements StoreUpdateAction {
     private String action;
 
     @JsonCreator
-    StoreUpdateActionImpl() {
-        this.action = "null";
+    StoreUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public StoreUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

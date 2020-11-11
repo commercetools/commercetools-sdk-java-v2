@@ -99,9 +99,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "action",
-    defaultImpl = OrderUpdateActionImpl.class
+    defaultImpl = OrderUpdateActionImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -109,6 +110,10 @@ import java.io.IOException;
 )
 public interface OrderUpdateAction  {
 
+    
+    @NotNull
+    @JsonProperty("action")
+    public String getAction();
 
 
 

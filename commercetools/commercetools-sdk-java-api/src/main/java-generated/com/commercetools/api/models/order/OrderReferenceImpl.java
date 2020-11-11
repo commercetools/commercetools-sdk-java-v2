@@ -32,7 +32,7 @@ public final class OrderReferenceImpl implements OrderReference {
     OrderReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.order.Order obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("order").get();
+        this.typeId = ReferenceTypeId.findEnum("order");
     }
     public OrderReferenceImpl() {
        

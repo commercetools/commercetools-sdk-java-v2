@@ -42,7 +42,7 @@ public final class TermFacetResultImpl implements TermFacetResult {
         this.total = total;
         this.other = other;
         this.terms = terms;
-        this.type = FacetTypes.findEnumViaJsonName("terms").get();
+        this.type = FacetTypes.findEnum("terms");
     }
     public TermFacetResultImpl() {
        

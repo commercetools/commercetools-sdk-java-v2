@@ -34,10 +34,12 @@ public final class FieldTypeImpl implements FieldType {
     private String name;
 
     @JsonCreator
-    FieldTypeImpl() {
-        this.name = "null";
+    FieldTypeImpl(@JsonProperty("name") final String name) {
+        this.name = name;
     }
-    
+    public FieldTypeImpl() {
+       
+    }
 
     
     public String getName(){

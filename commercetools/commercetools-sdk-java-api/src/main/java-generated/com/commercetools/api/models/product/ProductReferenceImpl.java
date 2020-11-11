@@ -32,7 +32,7 @@ public final class ProductReferenceImpl implements ProductReference {
     ProductReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.product.Product obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("product").get();
+        this.typeId = ReferenceTypeId.findEnum("product");
     }
     public ProductReferenceImpl() {
        

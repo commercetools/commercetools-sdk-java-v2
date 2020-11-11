@@ -37,7 +37,7 @@ public final class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraf
         this.currencyCode = currencyCode;
         this.fractionDigits = fractionDigits;
         this.preciseAmount = preciseAmount;
-        this.type = MoneyType.findEnumViaJsonName("highPrecision").get();
+        this.type = MoneyType.findEnum("highPrecision");
     }
     public HighPrecisionMoneyDraftImpl() {
        

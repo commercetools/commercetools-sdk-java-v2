@@ -26,10 +26,12 @@ public final class ExtensionUpdateActionImpl implements ExtensionUpdateAction {
     private String action;
 
     @JsonCreator
-    ExtensionUpdateActionImpl() {
-        this.action = "null";
+    ExtensionUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public ExtensionUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

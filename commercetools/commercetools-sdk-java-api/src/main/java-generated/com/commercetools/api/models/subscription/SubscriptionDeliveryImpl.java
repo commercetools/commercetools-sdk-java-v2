@@ -34,11 +34,11 @@ public final class SubscriptionDeliveryImpl implements SubscriptionDelivery {
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
     @JsonCreator
-    SubscriptionDeliveryImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+    SubscriptionDeliveryImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("notificationType") final String notificationType, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.projectKey = projectKey;
+        this.notificationType = notificationType;
         this.resource = resource;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.notificationType = "null";
     }
     public SubscriptionDeliveryImpl() {
        

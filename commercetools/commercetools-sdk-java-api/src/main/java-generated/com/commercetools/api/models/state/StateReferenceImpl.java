@@ -32,7 +32,7 @@ public final class StateReferenceImpl implements StateReference {
     StateReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.state.State obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("state").get();
+        this.typeId = ReferenceTypeId.findEnum("state");
     }
     public StateReferenceImpl() {
        

@@ -31,7 +31,7 @@ public final class ProductResourceIdentifierImpl implements ProductResourceIdent
     ProductResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("product").get();
+        this.typeId = ReferenceTypeId.findEnum("product");
     }
     public ProductResourceIdentifierImpl() {
        

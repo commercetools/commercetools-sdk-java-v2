@@ -26,10 +26,12 @@ public final class CustomerGroupUpdateActionImpl implements CustomerGroupUpdateA
     private String action;
 
     @JsonCreator
-    CustomerGroupUpdateActionImpl() {
-        this.action = "null";
+    CustomerGroupUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public CustomerGroupUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

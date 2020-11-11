@@ -25,7 +25,7 @@ public final class CartScoreTypeImpl implements CartScoreType {
 
     @JsonCreator
     CartScoreTypeImpl() {
-        this.type = ShippingRateTierType.findEnumViaJsonName("CartScore").get();
+        this.type = ShippingRateTierType.findEnum("CartScore");
     }
     
 

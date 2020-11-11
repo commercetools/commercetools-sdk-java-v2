@@ -31,10 +31,12 @@ public final class StateUpdateActionImpl implements StateUpdateAction {
     private String action;
 
     @JsonCreator
-    StateUpdateActionImpl() {
-        this.action = "null";
+    StateUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public StateUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

@@ -23,9 +23,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
-    defaultImpl = CartDiscountValueDraftImpl.class
+    defaultImpl = CartDiscountValueDraftImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -33,6 +34,10 @@ import java.io.IOException;
 )
 public interface CartDiscountValueDraft  {
 
+    
+    @NotNull
+    @JsonProperty("type")
+    public String getType();
 
 
 

@@ -35,7 +35,7 @@ public final class CartValueTierImpl implements CartValueTier {
         this.minimumCentAmount = minimumCentAmount;
         this.price = price;
         this.isMatching = isMatching;
-        this.type = ShippingRateTierType.findEnumViaJsonName("CartValue").get();
+        this.type = ShippingRateTierType.findEnum("CartValue");
     }
     public CartValueTierImpl() {
        

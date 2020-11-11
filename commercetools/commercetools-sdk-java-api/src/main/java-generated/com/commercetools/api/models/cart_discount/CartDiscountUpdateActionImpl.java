@@ -37,10 +37,12 @@ public final class CartDiscountUpdateActionImpl implements CartDiscountUpdateAct
     private String action;
 
     @JsonCreator
-    CartDiscountUpdateActionImpl() {
-        this.action = "null";
+    CartDiscountUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public CartDiscountUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

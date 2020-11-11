@@ -32,7 +32,7 @@ public final class ShoppingListReferenceImpl implements ShoppingListReference {
     ShoppingListReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.shopping_list.ShoppingList obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("shopping-list").get();
+        this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
     public ShoppingListReferenceImpl() {
        

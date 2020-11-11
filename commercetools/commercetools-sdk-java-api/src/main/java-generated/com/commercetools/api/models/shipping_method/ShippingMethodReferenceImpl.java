@@ -32,7 +32,7 @@ public final class ShippingMethodReferenceImpl implements ShippingMethodReferenc
     ShippingMethodReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.shipping_method.ShippingMethod obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("shipping-method").get();
+        this.typeId = ReferenceTypeId.findEnum("shipping-method");
     }
     public ShippingMethodReferenceImpl() {
        

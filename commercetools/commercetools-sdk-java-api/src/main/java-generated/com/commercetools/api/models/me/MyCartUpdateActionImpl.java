@@ -48,10 +48,12 @@ public final class MyCartUpdateActionImpl implements MyCartUpdateAction {
     private String action;
 
     @JsonCreator
-    MyCartUpdateActionImpl() {
-        this.action = "null";
+    MyCartUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public MyCartUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

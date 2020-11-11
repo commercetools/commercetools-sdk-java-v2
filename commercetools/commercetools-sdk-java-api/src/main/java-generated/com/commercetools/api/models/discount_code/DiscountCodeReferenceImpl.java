@@ -32,7 +32,7 @@ public final class DiscountCodeReferenceImpl implements DiscountCodeReference {
     DiscountCodeReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.discount_code.DiscountCode obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("discount-code").get();
+        this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
     public DiscountCodeReferenceImpl() {
        

@@ -31,7 +31,7 @@ public final class PaymentResourceIdentifierImpl implements PaymentResourceIdent
     PaymentResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("payment").get();
+        this.typeId = ReferenceTypeId.findEnum("payment");
     }
     public PaymentResourceIdentifierImpl() {
        

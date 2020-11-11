@@ -31,7 +31,7 @@ public final class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier 
     ZoneResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("zone").get();
+        this.typeId = ReferenceTypeId.findEnum("zone");
     }
     public ZoneResourceIdentifierImpl() {
        

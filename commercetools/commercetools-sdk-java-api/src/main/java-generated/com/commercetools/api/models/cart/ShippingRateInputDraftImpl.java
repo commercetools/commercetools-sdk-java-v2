@@ -24,10 +24,12 @@ public final class ShippingRateInputDraftImpl implements ShippingRateInputDraft 
     private String type;
 
     @JsonCreator
-    ShippingRateInputDraftImpl() {
-        this.type = "null";
+    ShippingRateInputDraftImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public ShippingRateInputDraftImpl() {
+       
+    }
 
     
     public String getType(){

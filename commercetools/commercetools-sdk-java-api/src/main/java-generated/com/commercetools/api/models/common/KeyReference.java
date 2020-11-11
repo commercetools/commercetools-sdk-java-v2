@@ -20,9 +20,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "typeId",
-    defaultImpl = KeyReferenceImpl.class
+    defaultImpl = KeyReferenceImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -30,6 +31,10 @@ import java.io.IOException;
 )
 public interface KeyReference  {
 
+    
+    @NotNull
+    @JsonProperty("typeId")
+    public ReferenceTypeId getTypeId();
     
     @NotNull
     @JsonProperty("key")

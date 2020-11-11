@@ -33,10 +33,12 @@ public final class ShippingMethodUpdateActionImpl implements ShippingMethodUpdat
     private String action;
 
     @JsonCreator
-    ShippingMethodUpdateActionImpl() {
-        this.action = "null";
+    ShippingMethodUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public ShippingMethodUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

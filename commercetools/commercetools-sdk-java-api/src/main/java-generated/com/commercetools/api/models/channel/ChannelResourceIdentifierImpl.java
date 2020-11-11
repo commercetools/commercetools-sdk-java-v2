@@ -31,7 +31,7 @@ public final class ChannelResourceIdentifierImpl implements ChannelResourceIdent
     ChannelResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("channel").get();
+        this.typeId = ReferenceTypeId.findEnum("channel");
     }
     public ChannelResourceIdentifierImpl() {
        

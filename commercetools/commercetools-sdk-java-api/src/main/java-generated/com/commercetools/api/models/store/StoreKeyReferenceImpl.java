@@ -28,7 +28,7 @@ public final class StoreKeyReferenceImpl implements StoreKeyReference {
     @JsonCreator
     StoreKeyReferenceImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("store").get();
+        this.typeId = ReferenceTypeId.findEnum("store");
     }
     public StoreKeyReferenceImpl() {
        

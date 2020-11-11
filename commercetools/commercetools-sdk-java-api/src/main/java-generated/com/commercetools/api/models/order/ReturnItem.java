@@ -24,9 +24,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
-    defaultImpl = ReturnItemImpl.class
+    defaultImpl = ReturnItemImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -42,6 +43,10 @@ public interface ReturnItem  {
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
+    
+    @NotNull
+    @JsonProperty("type")
+    public String getType();
     
     
     @JsonProperty("comment")

@@ -26,10 +26,12 @@ public final class SubscriptionUpdateActionImpl implements SubscriptionUpdateAct
     private String action;
 
     @JsonCreator
-    SubscriptionUpdateActionImpl() {
-        this.action = "null";
+    SubscriptionUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public SubscriptionUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

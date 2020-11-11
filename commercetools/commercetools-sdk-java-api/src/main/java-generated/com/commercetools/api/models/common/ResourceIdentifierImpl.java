@@ -49,10 +49,10 @@ public final class ResourceIdentifierImpl implements ResourceIdentifier {
     private String key;
 
     @JsonCreator
-    ResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
+    ResourceIdentifierImpl(@JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId, @JsonProperty("id") final String id, @JsonProperty("key") final String key) {
+        this.typeId = typeId;
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("null").get();
     }
     public ResourceIdentifierImpl() {
        

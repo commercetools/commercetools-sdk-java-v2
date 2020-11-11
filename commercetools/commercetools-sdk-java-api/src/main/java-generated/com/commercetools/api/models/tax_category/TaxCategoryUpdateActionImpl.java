@@ -28,10 +28,12 @@ public final class TaxCategoryUpdateActionImpl implements TaxCategoryUpdateActio
     private String action;
 
     @JsonCreator
-    TaxCategoryUpdateActionImpl() {
-        this.action = "null";
+    TaxCategoryUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public TaxCategoryUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

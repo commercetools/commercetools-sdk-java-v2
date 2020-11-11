@@ -26,10 +26,12 @@ public final class FacetResultImpl implements FacetResult {
     private com.commercetools.api.models.product.FacetTypes type;
 
     @JsonCreator
-    FacetResultImpl() {
-        this.type = FacetTypes.findEnumViaJsonName("null").get();
+    FacetResultImpl(@JsonProperty("type") final com.commercetools.api.models.product.FacetTypes type) {
+        this.type = type;
     }
-    
+    public FacetResultImpl() {
+       
+    }
 
     
     public com.commercetools.api.models.product.FacetTypes getType(){

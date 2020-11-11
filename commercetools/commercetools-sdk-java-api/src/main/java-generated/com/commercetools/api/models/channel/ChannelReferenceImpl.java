@@ -32,7 +32,7 @@ public final class ChannelReferenceImpl implements ChannelReference {
     ChannelReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.channel.Channel obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("channel").get();
+        this.typeId = ReferenceTypeId.findEnum("channel");
     }
     public ChannelReferenceImpl() {
        

@@ -1,6 +1,7 @@
 package com.commercetools.api.models.type;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -11,91 +12,115 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum ResourceTypeId {
+public interface ResourceTypeId {
 
     
-    @JsonProperty("asset")
-    ASSET("asset"),
+    ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
     
+    ResourceTypeId CATEGORY = ResourceTypeIdEnum.CATEGORY;
     
-    @JsonProperty("category")
-    CATEGORY("category"),
+    ResourceTypeId CHANNEL = ResourceTypeIdEnum.CHANNEL;
     
+    ResourceTypeId CUSTOMER = ResourceTypeIdEnum.CUSTOMER;
     
-    @JsonProperty("channel")
-    CHANNEL("channel"),
+    ResourceTypeId ORDER = ResourceTypeIdEnum.ORDER;
     
+    ResourceTypeId ORDER_EDIT = ResourceTypeIdEnum.ORDER_EDIT;
     
-    @JsonProperty("customer")
-    CUSTOMER("customer"),
+    ResourceTypeId INVENTORY_ENTRY = ResourceTypeIdEnum.INVENTORY_ENTRY;
     
+    ResourceTypeId LINE_ITEM = ResourceTypeIdEnum.LINE_ITEM;
     
-    @JsonProperty("order")
-    ORDER("order"),
+    ResourceTypeId CUSTOM_LINE_ITEM = ResourceTypeIdEnum.CUSTOM_LINE_ITEM;
     
+    ResourceTypeId PRODUCT_PRICE = ResourceTypeIdEnum.PRODUCT_PRICE;
     
-    @JsonProperty("order-edit")
-    ORDER_EDIT("order-edit"),
+    ResourceTypeId PAYMENT = ResourceTypeIdEnum.PAYMENT;
     
+    ResourceTypeId PAYMENT_INTERFACE_INTERACTION = ResourceTypeIdEnum.PAYMENT_INTERFACE_INTERACTION;
     
-    @JsonProperty("inventory-entry")
-    INVENTORY_ENTRY("inventory-entry"),
+    ResourceTypeId REVIEW = ResourceTypeIdEnum.REVIEW;
     
+    ResourceTypeId SHOPPING_LIST = ResourceTypeIdEnum.SHOPPING_LIST;
     
-    @JsonProperty("line-item")
-    LINE_ITEM("line-item"),
+    ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
     
+    ResourceTypeId DISCOUNT_CODE = ResourceTypeIdEnum.DISCOUNT_CODE;
     
-    @JsonProperty("custom-line-item")
-    CUSTOM_LINE_ITEM("custom-line-item"),
+    ResourceTypeId CART_DISCOUNT = ResourceTypeIdEnum.CART_DISCOUNT;
     
+    ResourceTypeId CUSTOMER_GROUP = ResourceTypeIdEnum.CUSTOMER_GROUP;
     
-    @JsonProperty("product-price")
-    PRODUCT_PRICE("product-price"),
-    
-    
-    @JsonProperty("payment")
-    PAYMENT("payment"),
-    
-    
-    @JsonProperty("payment-interface-interaction")
-    PAYMENT_INTERFACE_INTERACTION("payment-interface-interaction"),
-    
-    
-    @JsonProperty("review")
-    REVIEW("review"),
-    
-    
-    @JsonProperty("shopping-list")
-    SHOPPING_LIST("shopping-list"),
-    
-    
-    @JsonProperty("shopping-list-text-line-item")
-    SHOPPING_LIST_TEXT_LINE_ITEM("shopping-list-text-line-item"),
-    
-    
-    @JsonProperty("discount-code")
-    DISCOUNT_CODE("discount-code"),
-    
-    
-    @JsonProperty("cart-discount")
-    CART_DISCOUNT("cart-discount"),
-    
-    
-    @JsonProperty("customer-group")
-    CUSTOMER_GROUP("customer-group");
+    enum ResourceTypeIdEnum implements ResourceTypeId {
+        ASSET("asset"),
+        
+        CATEGORY("category"),
+        
+        CHANNEL("channel"),
+        
+        CUSTOMER("customer"),
+        
+        ORDER("order"),
+        
+        ORDER_EDIT("order-edit"),
+        
+        INVENTORY_ENTRY("inventory-entry"),
+        
+        LINE_ITEM("line-item"),
+        
+        CUSTOM_LINE_ITEM("custom-line-item"),
+        
+        PRODUCT_PRICE("product-price"),
+        
+        PAYMENT("payment"),
+        
+        PAYMENT_INTERFACE_INTERACTION("payment-interface-interaction"),
+        
+        REVIEW("review"),
+        
+        SHOPPING_LIST("shopping-list"),
+        
+        SHOPPING_LIST_TEXT_LINE_ITEM("shopping-list-text-line-item"),
+        
+        DISCOUNT_CODE("discount-code"),
+        
+        CART_DISCOUNT("cart-discount"),
+        
+        CUSTOMER_GROUP("customer-group");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private ResourceTypeId(final String jsonName) {
-        this.jsonName = jsonName;
+        private ResourceTypeIdEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static ResourceTypeId findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new ResourceTypeId() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<ResourceTypeId> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static ResourceTypeId[] values() {
+        return ResourceTypeIdEnum.values();
     }
 }

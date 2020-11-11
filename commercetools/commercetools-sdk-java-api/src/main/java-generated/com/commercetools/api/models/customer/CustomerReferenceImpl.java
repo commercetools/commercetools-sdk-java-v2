@@ -32,7 +32,7 @@ public final class CustomerReferenceImpl implements CustomerReference {
     CustomerReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.customer.Customer obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("customer").get();
+        this.typeId = ReferenceTypeId.findEnum("customer");
     }
     public CustomerReferenceImpl() {
        

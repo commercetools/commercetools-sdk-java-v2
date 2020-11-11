@@ -28,10 +28,12 @@ public final class DestinationImpl implements Destination {
     private String type;
 
     @JsonCreator
-    DestinationImpl() {
-        this.type = "null";
+    DestinationImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public DestinationImpl() {
+       
+    }
 
     
     public String getType(){

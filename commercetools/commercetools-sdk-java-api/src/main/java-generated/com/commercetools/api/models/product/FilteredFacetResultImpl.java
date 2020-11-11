@@ -31,7 +31,7 @@ public final class FilteredFacetResultImpl implements FilteredFacetResult {
     FilteredFacetResultImpl(@JsonProperty("count") final Long count, @JsonProperty("productCount") final Long productCount) {
         this.count = count;
         this.productCount = productCount;
-        this.type = FacetTypes.findEnumViaJsonName("filter").get();
+        this.type = FacetTypes.findEnum("filter");
     }
     public FilteredFacetResultImpl() {
        

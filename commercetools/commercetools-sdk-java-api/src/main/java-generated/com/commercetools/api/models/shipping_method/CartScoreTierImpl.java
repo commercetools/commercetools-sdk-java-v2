@@ -39,7 +39,7 @@ public final class CartScoreTierImpl implements CartScoreTier {
         this.price = price;
         this.priceFunction = priceFunction;
         this.isMatching = isMatching;
-        this.type = ShippingRateTierType.findEnumViaJsonName("CartScore").get();
+        this.type = ShippingRateTierType.findEnum("CartScore");
     }
     public CartScoreTierImpl() {
        

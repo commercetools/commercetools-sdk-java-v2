@@ -27,10 +27,12 @@ public final class CartDiscountTargetImpl implements CartDiscountTarget {
     private String type;
 
     @JsonCreator
-    CartDiscountTargetImpl() {
-        this.type = "null";
+    CartDiscountTargetImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public CartDiscountTargetImpl() {
+       
+    }
 
     
     public String getType(){

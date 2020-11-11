@@ -32,7 +32,7 @@ public final class CustomerGroupReferenceImpl implements CustomerGroupReference 
     CustomerGroupReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.customer_group.CustomerGroup obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("customer-group").get();
+        this.typeId = ReferenceTypeId.findEnum("customer-group");
     }
     public CustomerGroupReferenceImpl() {
        

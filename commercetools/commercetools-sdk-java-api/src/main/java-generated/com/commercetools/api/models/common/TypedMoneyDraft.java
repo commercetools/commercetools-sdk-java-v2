@@ -23,9 +23,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
-    defaultImpl = TypedMoneyDraftImpl.class
+    defaultImpl = TypedMoneyDraftImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -33,6 +34,10 @@ import java.io.IOException;
 )
 public interface TypedMoneyDraft extends Money {
 
+    
+    @NotNull
+    @JsonProperty("type")
+    public MoneyType getType();
     
     
     @JsonProperty("fractionDigits")

@@ -19,9 +19,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
-    defaultImpl = GeoJsonImpl.class
+    defaultImpl = GeoJsonImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -29,6 +30,10 @@ import java.io.IOException;
 )
 public interface GeoJson  {
 
+    
+    @NotNull
+    @JsonProperty("type")
+    public String getType();
 
 
 

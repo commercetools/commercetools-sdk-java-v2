@@ -26,9 +26,9 @@ public final class KeyReferenceImpl implements KeyReference {
     private String key;
 
     @JsonCreator
-    KeyReferenceImpl(@JsonProperty("key") final String key) {
+    KeyReferenceImpl(@JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId, @JsonProperty("key") final String key) {
+        this.typeId = typeId;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("null").get();
     }
     public KeyReferenceImpl() {
        

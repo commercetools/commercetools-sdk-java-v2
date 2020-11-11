@@ -31,7 +31,7 @@ public final class CustomerResourceIdentifierImpl implements CustomerResourceIde
     CustomerResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("customer").get();
+        this.typeId = ReferenceTypeId.findEnum("customer");
     }
     public CustomerResourceIdentifierImpl() {
        

@@ -31,7 +31,7 @@ public final class StateResourceIdentifierImpl implements StateResourceIdentifie
     StateResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("state").get();
+        this.typeId = ReferenceTypeId.findEnum("state");
     }
     public StateResourceIdentifierImpl() {
        

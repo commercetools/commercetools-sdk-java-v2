@@ -31,7 +31,7 @@ public final class ProductDiscountResourceIdentifierImpl implements ProductDisco
     ProductDiscountResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("product-discount").get();
+        this.typeId = ReferenceTypeId.findEnum("product-discount");
     }
     public ProductDiscountResourceIdentifierImpl() {
        

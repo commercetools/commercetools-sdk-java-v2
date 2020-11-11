@@ -32,7 +32,7 @@ public final class CartReferenceImpl implements CartReference {
     CartReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.cart.Cart obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("cart").get();
+        this.typeId = ReferenceTypeId.findEnum("cart");
     }
     public CartReferenceImpl() {
        

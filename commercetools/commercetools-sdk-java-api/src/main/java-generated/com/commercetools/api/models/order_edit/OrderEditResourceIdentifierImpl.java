@@ -31,7 +31,7 @@ public final class OrderEditResourceIdentifierImpl implements OrderEditResourceI
     OrderEditResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("order-edit").get();
+        this.typeId = ReferenceTypeId.findEnum("order-edit");
     }
     public OrderEditResourceIdentifierImpl() {
        

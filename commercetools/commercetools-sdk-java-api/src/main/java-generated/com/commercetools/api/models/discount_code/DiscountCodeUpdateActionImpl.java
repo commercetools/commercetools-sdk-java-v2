@@ -35,10 +35,12 @@ public final class DiscountCodeUpdateActionImpl implements DiscountCodeUpdateAct
     private String action;
 
     @JsonCreator
-    DiscountCodeUpdateActionImpl() {
-        this.action = "null";
+    DiscountCodeUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public DiscountCodeUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

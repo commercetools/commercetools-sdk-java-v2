@@ -31,7 +31,7 @@ public final class ShoppingListResourceIdentifierImpl implements ShoppingListRes
     ShoppingListResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("shopping-list").get();
+        this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
     public ShoppingListResourceIdentifierImpl() {
        

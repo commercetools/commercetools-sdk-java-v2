@@ -31,7 +31,7 @@ public final class TypeResourceIdentifierImpl implements TypeResourceIdentifier 
     TypeResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("type").get();
+        this.typeId = ReferenceTypeId.findEnum("type");
     }
     public TypeResourceIdentifierImpl() {
        

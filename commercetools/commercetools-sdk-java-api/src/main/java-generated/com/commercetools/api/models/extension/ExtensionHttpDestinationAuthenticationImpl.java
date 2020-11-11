@@ -24,10 +24,12 @@ public final class ExtensionHttpDestinationAuthenticationImpl implements Extensi
     private String type;
 
     @JsonCreator
-    ExtensionHttpDestinationAuthenticationImpl() {
-        this.type = "null";
+    ExtensionHttpDestinationAuthenticationImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public ExtensionHttpDestinationAuthenticationImpl() {
+       
+    }
 
     
     public String getType(){

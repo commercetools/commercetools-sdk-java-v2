@@ -25,10 +25,12 @@ public final class ProductDiscountValueDraftImpl implements ProductDiscountValue
     private String type;
 
     @JsonCreator
-    ProductDiscountValueDraftImpl() {
-        this.type = "null";
+    ProductDiscountValueDraftImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public ProductDiscountValueDraftImpl() {
+       
+    }
 
     
     public String getType(){

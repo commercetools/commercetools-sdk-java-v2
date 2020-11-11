@@ -31,10 +31,12 @@ public final class ProjectUpdateActionImpl implements ProjectUpdateAction {
     private String action;
 
     @JsonCreator
-    ProjectUpdateActionImpl() {
-        this.action = "null";
+    ProjectUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public ProjectUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

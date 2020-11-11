@@ -44,10 +44,12 @@ public final class CategoryUpdateActionImpl implements CategoryUpdateAction {
     private String action;
 
     @JsonCreator
-    CategoryUpdateActionImpl() {
-        this.action = "null";
+    CategoryUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public CategoryUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

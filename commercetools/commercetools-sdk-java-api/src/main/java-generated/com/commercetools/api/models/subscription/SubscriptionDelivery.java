@@ -27,9 +27,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "notificationType",
-    defaultImpl = SubscriptionDeliveryImpl.class
+    defaultImpl = SubscriptionDeliveryImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -41,6 +42,10 @@ public interface SubscriptionDelivery  {
     @NotNull
     @JsonProperty("projectKey")
     public String getProjectKey();
+    
+    @NotNull
+    @JsonProperty("notificationType")
+    public String getNotificationType();
     
     @NotNull
     @Valid

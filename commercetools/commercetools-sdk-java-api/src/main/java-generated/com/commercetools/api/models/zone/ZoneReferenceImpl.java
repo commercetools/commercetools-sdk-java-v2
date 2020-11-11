@@ -32,7 +32,7 @@ public final class ZoneReferenceImpl implements ZoneReference {
     ZoneReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.zone.Zone obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("zone").get();
+        this.typeId = ReferenceTypeId.findEnum("zone");
     }
     public ZoneReferenceImpl() {
        

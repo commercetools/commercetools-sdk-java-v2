@@ -63,10 +63,12 @@ public final class OrderUpdateActionImpl implements OrderUpdateAction {
     private String action;
 
     @JsonCreator
-    OrderUpdateActionImpl() {
-        this.action = "null";
+    OrderUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public OrderUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

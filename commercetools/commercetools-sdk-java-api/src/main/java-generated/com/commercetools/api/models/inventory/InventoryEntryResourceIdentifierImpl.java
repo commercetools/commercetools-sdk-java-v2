@@ -31,7 +31,7 @@ public final class InventoryEntryResourceIdentifierImpl implements InventoryEntr
     InventoryEntryResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("inventory-entry").get();
+        this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }
     public InventoryEntryResourceIdentifierImpl() {
        

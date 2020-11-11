@@ -23,10 +23,12 @@ public final class GeoJsonImpl implements GeoJson {
     private String type;
 
     @JsonCreator
-    GeoJsonImpl() {
-        this.type = "null";
+    GeoJsonImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public GeoJsonImpl() {
+       
+    }
 
     
     public String getType(){

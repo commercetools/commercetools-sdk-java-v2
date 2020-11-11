@@ -31,7 +31,7 @@ public final class CategoryResourceIdentifierImpl implements CategoryResourceIde
     CategoryResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("category").get();
+        this.typeId = ReferenceTypeId.findEnum("category");
     }
     public CategoryResourceIdentifierImpl() {
        

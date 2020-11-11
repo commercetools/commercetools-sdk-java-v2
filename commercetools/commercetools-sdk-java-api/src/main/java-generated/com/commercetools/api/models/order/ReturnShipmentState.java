@@ -1,6 +1,7 @@
 package com.commercetools.api.models.order;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -11,35 +12,59 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum ReturnShipmentState {
+public interface ReturnShipmentState {
 
     
-    @JsonProperty("Advised")
-    ADVISED("Advised"),
+    ReturnShipmentState ADVISED = ReturnShipmentStateEnum.ADVISED;
     
+    ReturnShipmentState RETURNED = ReturnShipmentStateEnum.RETURNED;
     
-    @JsonProperty("Returned")
-    RETURNED("Returned"),
+    ReturnShipmentState BACK_IN_STOCK = ReturnShipmentStateEnum.BACK_IN_STOCK;
     
+    ReturnShipmentState UNUSABLE = ReturnShipmentStateEnum.UNUSABLE;
     
-    @JsonProperty("BackInStock")
-    BACK_IN_STOCK("BackInStock"),
-    
-    
-    @JsonProperty("Unusable")
-    UNUSABLE("Unusable");
+    enum ReturnShipmentStateEnum implements ReturnShipmentState {
+        ADVISED("Advised"),
+        
+        RETURNED("Returned"),
+        
+        BACK_IN_STOCK("BackInStock"),
+        
+        UNUSABLE("Unusable");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private ReturnShipmentState(final String jsonName) {
-        this.jsonName = jsonName;
+        private ReturnShipmentStateEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static ReturnShipmentState findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new ReturnShipmentState() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<ReturnShipmentState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static ReturnShipmentState[] values() {
+        return ReturnShipmentStateEnum.values();
     }
 }

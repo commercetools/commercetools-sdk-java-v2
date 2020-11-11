@@ -31,7 +31,7 @@ public final class CartResourceIdentifierImpl implements CartResourceIdentifier 
     CartResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("cart").get();
+        this.typeId = ReferenceTypeId.findEnum("cart");
     }
     public CartResourceIdentifierImpl() {
        

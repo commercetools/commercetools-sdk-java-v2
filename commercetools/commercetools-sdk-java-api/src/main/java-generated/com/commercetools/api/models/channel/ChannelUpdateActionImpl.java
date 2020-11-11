@@ -32,10 +32,12 @@ public final class ChannelUpdateActionImpl implements ChannelUpdateAction {
     private String action;
 
     @JsonCreator
-    ChannelUpdateActionImpl() {
-        this.action = "null";
+    ChannelUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public ChannelUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

@@ -32,7 +32,7 @@ public final class ReviewReferenceImpl implements ReviewReference {
     ReviewReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.review.Review obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("review").get();
+        this.typeId = ReferenceTypeId.findEnum("review");
     }
     public ReviewReferenceImpl() {
        

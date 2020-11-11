@@ -32,7 +32,7 @@ public final class CustomObjectReferenceImpl implements CustomObjectReference {
     CustomObjectReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.custom_object.CustomObject obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("key-value-document").get();
+        this.typeId = ReferenceTypeId.findEnum("key-value-document");
     }
     public CustomObjectReferenceImpl() {
        

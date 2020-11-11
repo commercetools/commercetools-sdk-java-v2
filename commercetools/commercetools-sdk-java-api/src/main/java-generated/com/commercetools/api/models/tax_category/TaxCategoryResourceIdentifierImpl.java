@@ -31,7 +31,7 @@ public final class TaxCategoryResourceIdentifierImpl implements TaxCategoryResou
     TaxCategoryResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("tax-category").get();
+        this.typeId = ReferenceTypeId.findEnum("tax-category");
     }
     public TaxCategoryResourceIdentifierImpl() {
        

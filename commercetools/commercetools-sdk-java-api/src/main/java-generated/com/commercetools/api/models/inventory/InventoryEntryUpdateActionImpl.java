@@ -30,10 +30,12 @@ public final class InventoryEntryUpdateActionImpl implements InventoryEntryUpdat
     private String action;
 
     @JsonCreator
-    InventoryEntryUpdateActionImpl() {
-        this.action = "null";
+    InventoryEntryUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public InventoryEntryUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

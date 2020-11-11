@@ -1,6 +1,7 @@
 package com.commercetools.api.models.customer;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -11,27 +12,51 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum AnonymousCartSignInMode {
+public interface AnonymousCartSignInMode {
 
     
-    @JsonProperty("MergeWithExistingCustomerCart")
-    MERGE_WITH_EXISTING_CUSTOMER_CART("MergeWithExistingCustomerCart"),
+    AnonymousCartSignInMode MERGE_WITH_EXISTING_CUSTOMER_CART = AnonymousCartSignInModeEnum.MERGE_WITH_EXISTING_CUSTOMER_CART;
     
+    AnonymousCartSignInMode USE_AS_NEW_ACTIVE_CUSTOMER_CART = AnonymousCartSignInModeEnum.USE_AS_NEW_ACTIVE_CUSTOMER_CART;
     
-    @JsonProperty("UseAsNewActiveCustomerCart")
-    USE_AS_NEW_ACTIVE_CUSTOMER_CART("UseAsNewActiveCustomerCart");
+    enum AnonymousCartSignInModeEnum implements AnonymousCartSignInMode {
+        MERGE_WITH_EXISTING_CUSTOMER_CART("MergeWithExistingCustomerCart"),
+        
+        USE_AS_NEW_ACTIVE_CUSTOMER_CART("UseAsNewActiveCustomerCart");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private AnonymousCartSignInMode(final String jsonName) {
-        this.jsonName = jsonName;
+        private AnonymousCartSignInModeEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static AnonymousCartSignInMode findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new AnonymousCartSignInMode() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<AnonymousCartSignInMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static AnonymousCartSignInMode[] values() {
+        return AnonymousCartSignInModeEnum.values();
     }
 }

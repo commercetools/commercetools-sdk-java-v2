@@ -33,10 +33,12 @@ public final class ReviewUpdateActionImpl implements ReviewUpdateAction {
     private String action;
 
     @JsonCreator
-    ReviewUpdateActionImpl() {
-        this.action = "null";
+    ReviewUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public ReviewUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

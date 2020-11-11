@@ -32,7 +32,7 @@ public final class TypeReferenceImpl implements TypeReference {
     TypeReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.type.Type obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("type").get();
+        this.typeId = ReferenceTypeId.findEnum("type");
     }
     public TypeReferenceImpl() {
        

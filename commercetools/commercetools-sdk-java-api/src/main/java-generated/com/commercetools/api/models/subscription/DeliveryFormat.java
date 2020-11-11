@@ -21,9 +21,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
-    defaultImpl = DeliveryFormatImpl.class
+    defaultImpl = DeliveryFormatImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -31,6 +32,10 @@ import java.io.IOException;
 )
 public interface DeliveryFormat  {
 
+    
+    @NotNull
+    @JsonProperty("type")
+    public String getType();
 
 
 

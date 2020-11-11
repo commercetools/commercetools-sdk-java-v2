@@ -1,6 +1,7 @@
 package com.commercetools.api.models.product;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
@@ -11,43 +12,67 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public enum TermFacetResultType {
+public interface TermFacetResultType {
 
     
-    @JsonProperty("text")
-    TEXT("text"),
+    TermFacetResultType TEXT = TermFacetResultTypeEnum.TEXT;
     
+    TermFacetResultType DATE = TermFacetResultTypeEnum.DATE;
     
-    @JsonProperty("date")
-    DATE("date"),
+    TermFacetResultType TIME = TermFacetResultTypeEnum.TIME;
     
+    TermFacetResultType DATETIME = TermFacetResultTypeEnum.DATETIME;
     
-    @JsonProperty("time")
-    TIME("time"),
+    TermFacetResultType BOOLEAN = TermFacetResultTypeEnum.BOOLEAN;
     
+    TermFacetResultType NUMBER = TermFacetResultTypeEnum.NUMBER;
     
-    @JsonProperty("datetime")
-    DATETIME("datetime"),
-    
-    
-    @JsonProperty("boolean")
-    BOOLEAN("boolean"),
-    
-    
-    @JsonProperty("number")
-    NUMBER("number");
+    enum TermFacetResultTypeEnum implements TermFacetResultType {
+        TEXT("text"),
+        
+        DATE("date"),
+        
+        TIME("time"),
+        
+        DATETIME("datetime"),
+        
+        BOOLEAN("boolean"),
+        
+        NUMBER("number");
+        private final String jsonName;
 
-    private final String jsonName;
-
-    private TermFacetResultType(final String jsonName) {
-        this.jsonName = jsonName;
+        private TermFacetResultTypeEnum(final String jsonName) {
+            this.jsonName = jsonName;
+        }
+        public String getJsonName() {
+            return jsonName;
+        }
     }
 
-    public String getJsonName() {
-        return jsonName;
+    @JsonValue
+    String getJsonName();
+    String name();
+
+    @JsonCreator
+    public static TermFacetResultType findEnum(String value) {
+        return findEnumViaJsonName(value).orElse(new TermFacetResultType() {
+            @Override
+            public String getJsonName() {
+                return value;
+            }
+
+            @Override
+            public String name() {
+                return value.toUpperCase();
+            }
+        });
     }
 
     public static Optional<TermFacetResultType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
+    }
+    
+    public static TermFacetResultType[] values() {
+        return TermFacetResultTypeEnum.values();
     }
 }

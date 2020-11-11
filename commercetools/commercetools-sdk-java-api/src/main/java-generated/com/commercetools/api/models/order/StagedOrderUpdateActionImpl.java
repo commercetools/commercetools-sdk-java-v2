@@ -92,10 +92,12 @@ public final class StagedOrderUpdateActionImpl implements StagedOrderUpdateActio
     private String action;
 
     @JsonCreator
-    StagedOrderUpdateActionImpl() {
-        this.action = "null";
+    StagedOrderUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public StagedOrderUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

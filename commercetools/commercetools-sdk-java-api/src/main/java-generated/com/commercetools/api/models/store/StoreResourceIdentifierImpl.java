@@ -31,7 +31,7 @@ public final class StoreResourceIdentifierImpl implements StoreResourceIdentifie
     StoreResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("store").get();
+        this.typeId = ReferenceTypeId.findEnum("store");
     }
     public StoreResourceIdentifierImpl() {
        

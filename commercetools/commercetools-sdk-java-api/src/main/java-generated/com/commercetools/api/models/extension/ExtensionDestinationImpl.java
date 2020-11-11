@@ -24,10 +24,12 @@ public final class ExtensionDestinationImpl implements ExtensionDestination {
     private String type;
 
     @JsonCreator
-    ExtensionDestinationImpl() {
-        this.type = "null";
+    ExtensionDestinationImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public ExtensionDestinationImpl() {
+       
+    }
 
     
     public String getType(){

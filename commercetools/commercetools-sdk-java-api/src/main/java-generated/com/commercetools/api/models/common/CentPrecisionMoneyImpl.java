@@ -34,7 +34,7 @@ public final class CentPrecisionMoneyImpl implements CentPrecisionMoney {
         this.fractionDigits = fractionDigits;
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
-        this.type = MoneyType.findEnumViaJsonName("centPrecision").get();
+        this.type = MoneyType.findEnum("centPrecision");
     }
     public CentPrecisionMoneyImpl() {
        

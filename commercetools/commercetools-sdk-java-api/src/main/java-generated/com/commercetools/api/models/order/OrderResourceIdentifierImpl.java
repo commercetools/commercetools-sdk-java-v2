@@ -31,7 +31,7 @@ public final class OrderResourceIdentifierImpl implements OrderResourceIdentifie
     OrderResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("order").get();
+        this.typeId = ReferenceTypeId.findEnum("order");
     }
     public OrderResourceIdentifierImpl() {
        

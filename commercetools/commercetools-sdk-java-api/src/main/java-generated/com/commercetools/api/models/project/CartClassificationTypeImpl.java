@@ -29,7 +29,7 @@ public final class CartClassificationTypeImpl implements CartClassificationType 
     @JsonCreator
     CartClassificationTypeImpl(@JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
         this.values = values;
-        this.type = ShippingRateTierType.findEnumViaJsonName("CartClassification").get();
+        this.type = ShippingRateTierType.findEnum("CartClassification");
     }
     public CartClassificationTypeImpl() {
        

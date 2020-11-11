@@ -28,10 +28,12 @@ public final class MyPaymentUpdateActionImpl implements MyPaymentUpdateAction {
     private String action;
 
     @JsonCreator
-    MyPaymentUpdateActionImpl() {
-        this.action = "null";
+    MyPaymentUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public MyPaymentUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

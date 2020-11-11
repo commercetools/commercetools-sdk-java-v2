@@ -44,10 +44,12 @@ public final class PaymentUpdateActionImpl implements PaymentUpdateAction {
     private String action;
 
     @JsonCreator
-    PaymentUpdateActionImpl() {
-        this.action = "null";
+    PaymentUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public PaymentUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

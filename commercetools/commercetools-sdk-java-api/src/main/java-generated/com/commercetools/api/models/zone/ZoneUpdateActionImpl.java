@@ -27,10 +27,12 @@ public final class ZoneUpdateActionImpl implements ZoneUpdateAction {
     private String action;
 
     @JsonCreator
-    ZoneUpdateActionImpl() {
-        this.action = "null";
+    ZoneUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public ZoneUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

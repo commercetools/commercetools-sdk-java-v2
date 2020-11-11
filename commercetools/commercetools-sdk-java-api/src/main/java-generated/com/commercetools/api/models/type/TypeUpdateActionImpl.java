@@ -37,10 +37,12 @@ public final class TypeUpdateActionImpl implements TypeUpdateAction {
     private String action;
 
     @JsonCreator
-    TypeUpdateActionImpl() {
-        this.action = "null";
+    TypeUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public TypeUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

@@ -165,9 +165,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
-    defaultImpl = MessageImpl.class
+    defaultImpl = MessageImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -212,6 +213,10 @@ public interface Message extends BaseResource {
     @NotNull
     @JsonProperty("resourceVersion")
     public Long getResourceVersion();
+    
+    @NotNull
+    @JsonProperty("type")
+    public String getType();
     
     @Valid
     @JsonProperty("resourceUserProvidedIdentifiers")

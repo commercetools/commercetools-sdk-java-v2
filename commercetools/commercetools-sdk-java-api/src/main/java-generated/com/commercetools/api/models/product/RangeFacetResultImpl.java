@@ -29,7 +29,7 @@ public final class RangeFacetResultImpl implements RangeFacetResult {
     @JsonCreator
     RangeFacetResultImpl(@JsonProperty("ranges") final java.util.List<com.commercetools.api.models.product.FacetResultRange> ranges) {
         this.ranges = ranges;
-        this.type = FacetTypes.findEnumViaJsonName("range").get();
+        this.type = FacetTypes.findEnum("range");
     }
     public RangeFacetResultImpl() {
        

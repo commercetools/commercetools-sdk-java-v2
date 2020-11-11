@@ -31,7 +31,7 @@ public final class CustomerGroupResourceIdentifierImpl implements CustomerGroupR
     CustomerGroupResourceIdentifierImpl(@JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.id = id;
         this.key = key;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("customer-group").get();
+        this.typeId = ReferenceTypeId.findEnum("customer-group");
     }
     public CustomerGroupResourceIdentifierImpl() {
        

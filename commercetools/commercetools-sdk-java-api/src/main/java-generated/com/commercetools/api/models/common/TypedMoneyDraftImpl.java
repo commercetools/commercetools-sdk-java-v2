@@ -32,11 +32,11 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
     private Integer fractionDigits;
 
     @JsonCreator
-    TypedMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("fractionDigits") final Integer fractionDigits) {
+    TypedMoneyDraftImpl(@JsonProperty("centAmount") final Long centAmount, @JsonProperty("currencyCode") final String currencyCode, @JsonProperty("type") final com.commercetools.api.models.common.MoneyType type, @JsonProperty("fractionDigits") final Integer fractionDigits) {
         this.centAmount = centAmount;
         this.currencyCode = currencyCode;
+        this.type = type;
         this.fractionDigits = fractionDigits;
-        this.type = MoneyType.findEnumViaJsonName("null").get();
     }
     public TypedMoneyDraftImpl() {
        

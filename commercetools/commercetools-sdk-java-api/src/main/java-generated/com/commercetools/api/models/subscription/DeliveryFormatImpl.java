@@ -24,10 +24,12 @@ public final class DeliveryFormatImpl implements DeliveryFormat {
     private String type;
 
     @JsonCreator
-    DeliveryFormatImpl() {
-        this.type = "null";
+    DeliveryFormatImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public DeliveryFormatImpl() {
+       
+    }
 
     
     public String getType(){

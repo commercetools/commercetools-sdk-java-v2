@@ -24,9 +24,10 @@ import java.io.IOException;
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
     property = "type",
-    defaultImpl = FacetResultImpl.class
+    defaultImpl = FacetResultImpl.class,
+    visible = true
 )
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -34,6 +35,10 @@ import java.io.IOException;
 )
 public interface FacetResult  {
 
+    
+    @NotNull
+    @JsonProperty("type")
+    public FacetTypes getType();
 
 
 

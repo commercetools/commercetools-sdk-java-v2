@@ -93,10 +93,12 @@ public final class MessagePayloadImpl implements MessagePayload {
     private String type;
 
     @JsonCreator
-    MessagePayloadImpl() {
-        this.type = "null";
+    MessagePayloadImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public MessagePayloadImpl() {
+       
+    }
 
     
     public String getType(){

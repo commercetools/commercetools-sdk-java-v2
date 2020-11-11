@@ -26,10 +26,12 @@ public final class OrderEditResultImpl implements OrderEditResult {
     private String type;
 
     @JsonCreator
-    OrderEditResultImpl() {
-        this.type = "null";
+    OrderEditResultImpl(@JsonProperty("type") final String type) {
+        this.type = type;
     }
-    
+    public OrderEditResultImpl() {
+       
+    }
 
     
     public String getType(){

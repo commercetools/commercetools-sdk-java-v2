@@ -32,7 +32,7 @@ public final class StoreReferenceImpl implements StoreReference {
     StoreReferenceImpl(@JsonProperty("id") final String id, @JsonProperty("obj") final com.commercetools.api.models.store.Store obj) {
         this.id = id;
         this.obj = obj;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("store").get();
+        this.typeId = ReferenceTypeId.findEnum("store");
     }
     public StoreReferenceImpl() {
        

@@ -1,5 +1,6 @@
 package cleanup;
 
+import com.commercetools.api.models.cart.CartPagedQueryResponse;
 import com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse;
 import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 import com.commercetools.api.models.channel.ChannelPagedQueryResponse;
@@ -9,6 +10,8 @@ import com.commercetools.api.models.customer_group.CustomerGroupPagedQueryRespon
 import com.commercetools.api.models.discount_code.DiscountCodePagedQueryResponse;
 import com.commercetools.api.models.extension.ExtensionPagedQueryResponse;
 import com.commercetools.api.models.inventory.InventoryPagedQueryResponse;
+import com.commercetools.api.models.order.OrderPagedQueryResponse;
+import com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse;
 import com.commercetools.api.models.product.ProductPagedQueryResponse;
 import com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse;
 import com.commercetools.api.models.product_type.ProductTypePagedQueryResponse;
@@ -20,6 +23,7 @@ import com.commercetools.api.models.store.StorePagedQueryResponse;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.api.models.type.TypePagedQueryResponse;
 import com.commercetools.api.models.zone.ZonePagedQueryResponse;
+import commercetools.cart.CartsFixtures;
 import commercetools.cart_discount.CartDiscountFixtures;
 import commercetools.category.CategoryFixtures;
 import commercetools.channel.ChannelFixtures;
@@ -29,6 +33,7 @@ import commercetools.customer_group.CustomerGroupFixtures;
 import commercetools.discount_code.DiscountCodeFixtures;
 import commercetools.extension.ExtensionFixtures;
 import commercetools.inventory.InventoryEntryFixtures;
+import commercetools.order.OrdersFixtures;
 import commercetools.product.ProductFixtures;
 import commercetools.product_discount.ProductDiscountFixtures;
 import commercetools.product_type.ProductTypeFixtures;
@@ -50,7 +55,30 @@ public class DeleteEverythingIntegrationTest {
 
     @Test
     public void execute() {
-        for(int i = 0; i < 10; i++){
+            try{
+                deleteAllExtensions();
+            }catch (Exception e){}
+            try{
+                deleteAllOrderEdits();
+            }catch (Exception e){}
+            try{
+                deleteAllOrders();
+            }catch (Exception e){}
+            try{
+                deleteAllCarts();
+            }catch (Exception e){}
+            try{
+                deleteAllShoppingLists();
+            }catch (Exception e){}
+            try{
+                deleteAllReviews();
+            }catch (Exception e){}
+            try{
+                deleteAllProductDiscounts();
+            }catch (Exception e){}
+            try{
+                deleteAllProducts();
+            }catch (Exception e){}
             try{
                 deleteAllCategories();
             }catch (Exception e){}
@@ -61,25 +89,13 @@ public class DeleteEverythingIntegrationTest {
                 deleteAllInventories();
             }catch (Exception e){}
             try{
-                deleteAllProducts();
-            }catch (Exception e){}
-            try{
-                deleteAllProductDiscounts();
-            }catch (Exception e){}
-            try{
                 deleteAllProductTypes();
-            }catch (Exception e){}
-            try{
-                deleteAllReviews();
             }catch (Exception e){}
             try{
                 deleteAllTaxCategories();
             }catch (Exception e){}
             try{
                 deleteAllDiscountCodes();
-            }catch (Exception e){}
-            try{
-                deleteAllChannels();
             }catch (Exception e){}
             try{
                 deleteAllCustomObjects();
@@ -91,13 +107,7 @@ public class DeleteEverythingIntegrationTest {
                 deleteAllCustomerGroups();
             }catch (Exception e){}
             try{
-                deleteAllExtensions();
-            }catch (Exception e){}
-            try{
                 deleteAllShippingMethods();
-            }catch (Exception e){}
-            try{
-                deleteAllShoppingLists();
             }catch (Exception e){}
             try{
                 deleteAllStates();
@@ -106,12 +116,14 @@ public class DeleteEverythingIntegrationTest {
                 deleteAllStores();
             }catch (Exception e){}
             try{
+                deleteAllChannels();
+            }catch (Exception e){}
+            try{
                 deleteAllTypes();
             }catch (Exception e){}
             try{
                 deleteAllZones();
             }catch (Exception e){}
-        }
     }
 
     private void deleteAllZones() {
@@ -124,6 +136,49 @@ public class DeleteEverythingIntegrationTest {
                     .executeBlocking().getBody();
             response.getResults().forEach(zone -> {
                 ZoneFixtures.deleteZone(zone.getId(), zone.getVersion());
+            });
+        } while (response.getResults().size() != 0);
+    }
+
+    private void deleteAllOrderEdits() {
+        OrderEditPagedQueryResponse response;
+
+        do {
+            response = CommercetoolsTestUtils.getProjectRoot()
+                    .orders()
+                    .edits()
+                    .get()
+                    .executeBlocking().getBody();
+            response.getResults().forEach(orderEdit -> {
+                OrdersFixtures.deleteOrderEdit(orderEdit.getId(), orderEdit.getVersion());
+            });
+        } while (response.getResults().size() != 0);
+    }
+
+    private void deleteAllOrders() {
+        OrderPagedQueryResponse response;
+
+        do {
+            response = CommercetoolsTestUtils.getProjectRoot()
+                    .orders()
+                    .get()
+                    .executeBlocking().getBody();
+            response.getResults().forEach(orderEdit -> {
+                OrdersFixtures.deleteOrder(orderEdit.getId(), orderEdit.getVersion());
+            });
+        } while (response.getResults().size() != 0);
+    }
+
+    private void deleteAllCarts() {
+        CartPagedQueryResponse response;
+
+        do {
+            response = CommercetoolsTestUtils.getProjectRoot()
+                    .carts()
+                    .get()
+                    .executeBlocking().getBody();
+            response.getResults().forEach(cart -> {
+                CartsFixtures.deleteCart(cart.getId(), cart.getVersion());
             });
         } while (response.getResults().size() != 0);
     }
@@ -165,9 +220,10 @@ public class DeleteEverythingIntegrationTest {
                     .get()
                     .executeBlocking().getBody();
             response.getResults().forEach(state -> {
-                StateFixtures.deleteState(state.getId(), state.getVersion());
+                if (!state.getBuiltIn())
+                    StateFixtures.deleteState(state.getId(), state.getVersion());
             });
-        } while (response.getResults().size() != 0);
+        } while (response.getResults().size() > 1);
     }
 
     private void deleteAllShoppingLists() {
@@ -318,9 +374,7 @@ public class DeleteEverythingIntegrationTest {
                     .products()
                     .get()
                     .executeBlocking().getBody();
-            response.getResults().forEach(product -> {
-                ProductFixtures.deleteProductById(product.getId(), product.getVersion());
-            });
+            response.getResults().forEach(ProductFixtures::deleteProduct);
         } while (response.getResults().size() != 0);
     }
 

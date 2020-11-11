@@ -21,6 +21,7 @@ import commercetools.channel.ChannelFixtures;
 import commercetools.customer_group.CustomerGroupFixtures;
 import commercetools.tax_category.TaxCategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
+import io.vrap.rmf.base.client.ApiHttpResponse;
 import org.junit.Assert;
 
 import java.time.ZonedDateTime;
@@ -28,6 +29,8 @@ import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
@@ -201,13 +204,59 @@ public class ProductFixtures {
         return product;
     }
 
+    public static Product deleteProduct(Product product)
+    {
+        Product rProduct = null;
+        try {
+            rProduct = CompletableFuture.completedFuture(product)
+                    .thenComposeAsync(
+                            product1 -> {
+                                if (product1.getMasterData().getPublished()) {
+                                    return CommercetoolsTestUtils.getProjectRoot().products().withId(product1.getId()).post(
+                                            ProductUpdateBuilder.of().version(product1.getVersion()).actions(ProductUnpublishAction.of()).build()
+                                    ).execute().thenApply(ApiHttpResponse::getBody);
+                                }
+                                return CompletableFuture.completedFuture(product1);
+                            }
+                    ).thenComposeAsync(
+                    product1 -> CommercetoolsTestUtils.getProjectRoot()
+                            .products()
+                            .withId(product1.getId())
+                            .delete()
+                            .withVersion(product1.getVersion())
+                            .execute()
+            ).get().getBody();
+        } catch (Exception e) {}
+
+        Assert.assertNotNull(rProduct);
+        Assert.assertEquals(rProduct.getId(), product.getId());
+        return rProduct;
+    }
+
     public static Product deleteProductById(final String id, final Long version) {
-        Product product = CommercetoolsTestUtils.getProjectRoot()
-                .products()
-                .withId(id)
-                .delete()
-                .withVersion(version)
-                .executeBlocking().getBody();
+        Product product = null;
+        try {
+            product = CommercetoolsTestUtils.getProjectRoot().products().withId(id).get().execute()
+                    .thenComposeAsync(
+                            productApiHttpResponse -> {
+                                Product product1 = productApiHttpResponse.getBody();
+                                if (product1.getMasterData().getPublished()) {
+                                    return CommercetoolsTestUtils.getProjectRoot().products().withId(product1.getId()).post(
+                                            ProductUpdateBuilder.of().version(product1.getVersion()).actions(ProductUnpublishAction.of()).build()
+                                    ).execute();
+                                }
+                                return CompletableFuture.completedFuture(productApiHttpResponse);
+                            }
+                    ).thenComposeAsync(
+                            productApiHttpResponse -> CommercetoolsTestUtils.getProjectRoot()
+                                    .products()
+                                    .withId(productApiHttpResponse.getBody().getId())
+                                    .delete()
+                                    .withVersion(productApiHttpResponse.getBody().getVersion())
+                                    .execute()
+                    ).get().getBody();
+        } catch (Exception e) {}
+
         Assert.assertNotNull(product);
         Assert.assertEquals(product.getId(), id);
         return product;

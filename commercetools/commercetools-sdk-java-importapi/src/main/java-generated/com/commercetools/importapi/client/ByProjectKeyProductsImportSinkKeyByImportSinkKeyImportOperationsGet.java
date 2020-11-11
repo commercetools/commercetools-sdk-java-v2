@@ -87,6 +87,10 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
         return this.getQueryParam("offset");
     }
     
+    public List<String> getSort() {
+        return this.getQueryParam("sort");
+    }
+    
     public List<String> getResourceKey() {
         return this.getQueryParam("resourceKey");
     }
@@ -105,6 +109,10 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
         return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort){
+        return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){

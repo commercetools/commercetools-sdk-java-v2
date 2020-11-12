@@ -3,7 +3,6 @@ package com.commercetools.api.models.message;
 import com.commercetools.api.models.cart.ProductPublishScope;
 import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductProjection;
-import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -45,14 +44,14 @@ public final class ProductPublishedMessageImpl implements ProductPublishedMessag
     
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
     
-    private java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls;
+    private java.util.List<String> removedImageUrls;
     
     private com.commercetools.api.models.product.ProductProjection productProjection;
     
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
     @JsonCreator
-    ProductPublishedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("removedImageUrls") final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
+    ProductPublishedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -128,7 +127,7 @@ public final class ProductPublishedMessageImpl implements ProductPublishedMessag
     }
     
     
-    public java.util.List<com.fasterxml.jackson.databind.JsonNode> getRemovedImageUrls(){
+    public java.util.List<String> getRemovedImageUrls(){
         return this.removedImageUrls;
     }
     
@@ -182,11 +181,11 @@ public final class ProductPublishedMessageImpl implements ProductPublishedMessag
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
     
-    public void setRemovedImageUrls(final com.fasterxml.jackson.databind.JsonNode ...removedImageUrls){
+    public void setRemovedImageUrls(final String ...removedImageUrls){
        this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
     }
     
-    public void setRemovedImageUrls(final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls){
+    public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
        this.removedImageUrls = removedImageUrls;
     }
     

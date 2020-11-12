@@ -3,7 +3,6 @@ package com.commercetools.api.models.message;
 import com.commercetools.api.models.cart.ProductPublishScope;
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.product.ProductProjection;
-import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -25,14 +24,14 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
 
     private String type;
     
-    private java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls;
+    private java.util.List<String> removedImageUrls;
     
     private com.commercetools.api.models.product.ProductProjection productProjection;
     
     private com.commercetools.api.models.cart.ProductPublishScope scope;
 
     @JsonCreator
-    ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
+    ProductPublishedMessagePayloadImpl(@JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls, @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection, @JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
         this.removedImageUrls = removedImageUrls;
         this.productProjection = productProjection;
         this.scope = scope;
@@ -48,7 +47,7 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
     }
     
     
-    public java.util.List<com.fasterxml.jackson.databind.JsonNode> getRemovedImageUrls(){
+    public java.util.List<String> getRemovedImageUrls(){
         return this.removedImageUrls;
     }
     
@@ -62,11 +61,11 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
         return this.scope;
     }
 
-    public void setRemovedImageUrls(final com.fasterxml.jackson.databind.JsonNode ...removedImageUrls){
+    public void setRemovedImageUrls(final String ...removedImageUrls){
        this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
     }
     
-    public void setRemovedImageUrls(final java.util.List<com.fasterxml.jackson.databind.JsonNode> removedImageUrls){
+    public void setRemovedImageUrls(final java.util.List<String> removedImageUrls){
        this.removedImageUrls = removedImageUrls;
     }
     

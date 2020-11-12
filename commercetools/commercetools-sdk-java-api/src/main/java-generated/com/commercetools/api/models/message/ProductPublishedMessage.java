@@ -3,7 +3,6 @@ package com.commercetools.api.models.message;
 import com.commercetools.api.models.cart.ProductPublishScope;
 import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.product.ProductProjection;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.message.ProductPublishedMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -27,7 +26,7 @@ public interface ProductPublishedMessage extends Message {
     
     @NotNull
     @JsonProperty("removedImageUrls")
-    public List<JsonNode> getRemovedImageUrls();
+    public List<String> getRemovedImageUrls();
     
     @NotNull
     @Valid
@@ -39,8 +38,8 @@ public interface ProductPublishedMessage extends Message {
     public ProductPublishScope getScope();
 
     @JsonIgnore
-    public void setRemovedImageUrls(final JsonNode ...removedImageUrls);
-    public void setRemovedImageUrls(final List<JsonNode> removedImageUrls);
+    public void setRemovedImageUrls(final String ...removedImageUrls);
+    public void setRemovedImageUrls(final List<String> removedImageUrls);
     
     public void setProductProjection(final ProductProjection productProjection);
     

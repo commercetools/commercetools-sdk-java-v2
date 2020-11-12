@@ -25,7 +25,7 @@ import io.vrap.rmf.base.client.*;
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
-*  <p>Authenticate Customer (Sign In)</p>
+*  <p>Authenticate Customer (Sign In) in store</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

@@ -25,7 +25,7 @@ import io.vrap.rmf.base.client.*;
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
-*  <p>Delete a Customer</p>
+*  <p>Delete my Customer</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

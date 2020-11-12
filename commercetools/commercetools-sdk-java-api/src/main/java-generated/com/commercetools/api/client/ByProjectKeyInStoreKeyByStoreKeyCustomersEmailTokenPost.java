@@ -25,7 +25,7 @@ import io.vrap.rmf.base.client.*;
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
-*  <p>Create a Token for verifying the Customer's Email</p>
+*  <p>Create a Token for verifying the Customer's Email in store</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",

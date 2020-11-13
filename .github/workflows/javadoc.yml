@@ -1,6 +1,7 @@
 on:
-  push:
-    - master
+  - push
+#  push:
+#    - master
 
 name: JavaDoc
 

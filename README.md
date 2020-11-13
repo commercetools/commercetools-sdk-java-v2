@@ -10,6 +10,8 @@
 
 This repository contains the commercetools platform and import-api java sdks generated from our api reference.
 
+* [<strong>Javadoc</strong>](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/index.html)
+
 ## Configuration
 
 Creating http requests starts from the ApiRoot which  holds information specific to the project. Easiest way to configure it is to use the following method:

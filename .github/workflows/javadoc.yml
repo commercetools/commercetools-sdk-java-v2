@@ -1,0 +1,39 @@
+on:
+  push:
+    - master
+
+name: JavaDoc
+
+jobs:
+  docs:
+    name: Build and release docs
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: sdk
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          path: doc
+          ref: gh_pages
+
+      - name: Setup Java
+        uses: actions/setup-java@v1
+        with:
+          java-version: '8'
+
+      - run: ./gradlew alljavadoc
+        working_dir: sdk
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          repository: doc
+          commit_message: "Update javadoc"
+          commit_user_name: Auto Mation
+          commit_user_email: automation@commercetools.com
+          commit_author: Auto Mation <automation@commercetools.com>

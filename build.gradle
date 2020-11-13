@@ -247,6 +247,19 @@ subprojects { project ->
     sourceCompatibility = 1.8
 }
 
+def exportedProjects= [
+        ":commercetools:commercetools-sdk-java-api",
+        ":commercetools:commercetools-sdk-java-importapi",
+        ":commercetools:commercetools-sdk-java-ml",
+        ":rmf:rmf-java-base",
+        ":rmf:okhttp-client"
+]
+task alljavadoc(type: Javadoc) {
+    source exportedProjects.collect { project(it).sourceSets.main.allJava }
+    classpath = files(exportedProjects.collect { project(it).sourceSets.main.compileClasspath })
+    destinationDir = file("${buildDir}/docs/javadoc")
+}
+
 import com.jfrog.bintray.gradle.Utils
 import com.jfrog.bintray.gradle.BintrayHttpClientFactory
 import static groovyx.net.http.ContentType.JSON

@@ -45,8 +45,9 @@ public class OAuthMiddleware  implements Middleware, AutoCloseable {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request, final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         return failsafeExecutor.getStageAsync(() -> {
             AuthenticationToken token = authHandler.getToken();
-            request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token));
-            return next.apply(request);
+            return next.apply(
+                request.addHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token))
+            );
         });
     }
 

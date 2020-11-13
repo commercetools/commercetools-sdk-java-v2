@@ -11,6 +11,8 @@ import java.util.Base64;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
+import static io.vrap.rmf.base.client.ApiHttpHeaders.headerEntry;
+
 public class AnonymousSessionTokenSupplier extends AutoCloseableService implements TokenSupplier {
     private final InternalLogger logger = InternalLogger.getLogger(LOGGER_AUTH);
 
@@ -18,11 +20,11 @@ public class AnonymousSessionTokenSupplier extends AutoCloseableService implemen
     private final ApiHttpRequest apiHttpRequest;
 
     public AnonymousSessionTokenSupplier (
-            String clientId,
-            String clientSecret,
-            String scope,
-            String tokenEndpoint,
-            VrapHttpClient vrapHttpClient
+            final String clientId,
+            final String clientSecret,
+            final String scope,
+            final String tokenEndpoint,
+            final VrapHttpClient vrapHttpClient
     ) {
         this.vrapHttpClient = vrapHttpClient;
         this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint);
@@ -60,19 +62,17 @@ public class AnonymousSessionTokenSupplier extends AutoCloseableService implemen
             final String tokenEndpoint
     ) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
-        final ApiHttpRequest apiHttpRequest = new ApiHttpRequest();
-        apiHttpRequest.setUri(URI.create(tokenEndpoint));
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
+                headerEntry(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth),
+                headerEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded")
+        );
+        final String body;
         if (scope == null || scope.isEmpty()) {
-            apiHttpRequest.setBody("grant_type=client_credentials");
+            body = "grant_type=client_credentials";
         } else {
-            apiHttpRequest.setBody("grant_type=client_credentials&scope=" + scope);
+            body = "grant_type=client_credentials&scope=" + scope;
         }
-        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
-        apiHttpHeaders.withHeader("Authorization", "Basic " + auth);
-        apiHttpHeaders.withHeader("Content-Type", "application/x-www-form-urlencoded");
-        apiHttpRequest.setHeaders(apiHttpHeaders);
-        apiHttpRequest.setMethod(ApiHttpMethod.POST);
-        return apiHttpRequest;
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders, body.getBytes(StandardCharsets.UTF_8));
     }
 
     @Override

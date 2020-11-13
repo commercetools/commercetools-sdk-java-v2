@@ -15,19 +15,17 @@ public class ApiHttpRequest extends Base  {
     private ApiHttpHeaders headers;
     private byte[] body;
 
-
     public ApiHttpRequest() {
-
     }
 
-    public ApiHttpRequest(ApiHttpMethod method, URI uri, ApiHttpHeaders headers, byte[] body) {
+    public ApiHttpRequest(final ApiHttpMethod method, final URI uri, final ApiHttpHeaders headers, final byte[] body) {
         this.method = method;
         this.uri = uri;
         this.headers = headers;
         this.body = body;
     }
 
-    public ApiHttpRequest(ApiHttpRequest r) {
+    public ApiHttpRequest(final ApiHttpRequest r) {
         this.method = r.method;
         this.uri = r.uri;
         this.headers = r.headers;
@@ -38,7 +36,15 @@ public class ApiHttpRequest extends Base  {
         return method;
     }
 
-    public void setMethod(ApiHttpMethod method) {
+    public ApiHttpRequest withMethod(final ApiHttpMethod method) {
+        ApiHttpRequest request = copy();
+        request.method = method;
+
+        return request;
+    }
+
+    @Deprecated
+    public void setMethod(final ApiHttpMethod method) {
         this.method = method;
     }
 
@@ -49,43 +55,73 @@ public class ApiHttpRequest extends Base  {
         return headers;
     }
 
+    public ApiHttpRequest addHeader(final String key, final String value) {
+        ApiHttpRequest request = copy();
+        request.headers = getHeaders().addHeader(key, value);
 
-    public void setHeaders(ApiHttpHeaders headers) {
+        return request;
+    }
+
+    public ApiHttpRequest withHeaders(final ApiHttpHeaders headers) {
+        ApiHttpRequest request = copy();
+        request.headers = headers;
+        return request;
+    }
+
+    public ApiHttpRequest withHeader(final String key, final String value) {
+        ApiHttpRequest request = copy();
+        request.headers = getHeaders().withHeader(key, value);
+
+        return request;
+    }
+
+    public ApiHttpRequest withoutHeader(final String key) {
+        ApiHttpRequest request = copy();
+        request.headers = getHeaders().withoutHeader(key);
+
+        return request;
+    }
+
+    @Deprecated
+    public void setHeaders(final ApiHttpHeaders headers) {
         this.headers = headers;
-    }
-
-    public ApiHttpRequest addHeader(String key, String value) {
-        this.headers = getHeaders().addHeader(key, value);
-
-        return this;
-    }
-
-    public ApiHttpRequest withHeader(String key, String value) {
-        this.headers = getHeaders().withHeader(key, value);
-
-        return this;
-    }
-
-    public ApiHttpRequest withoutHeader(String key) {
-        this.headers = getHeaders().withoutHeader(key);
-
-        return this;
     }
 
     public byte[] getBody() {
         return body;
     }
 
-    public void setBody(byte[] body) {
+    public ApiHttpRequest withBody(final byte[] body)
+    {
+        ApiHttpRequest request = copy();
+        request.body = body;
+        return request;
+    }
+
+    public ApiHttpRequest withBody(final String body)
+    {
+        ApiHttpRequest request = copy();
+        if (body == null) {
+            request.body = null;
+        } else {
+            request.body = body.getBytes(StandardCharsets.UTF_8);
+        }
+
+        return request;
+    }
+
+    @Deprecated
+    public void setBody(final byte[] body) {
         this.body = body;
     }
 
-    public void setBody(String body) {
+    @Deprecated
+    public void setBody(final String body) {
         if (body == null) {
             this.body = null;
             return;
         }
-        setBody(body.getBytes());
+        setBody(body.getBytes(StandardCharsets.UTF_8));
     }
 
     public URI getUri() {
@@ -100,19 +136,32 @@ public class ApiHttpRequest extends Base  {
         }
     }
 
-    public void setUri(String uri) {
+    @Deprecated
+    public void setUri(final String uri) {
         this.uri = URI.create(uri);
     }
 
-    public void setUri(URI uri) {
+    @Deprecated
+    public void setUri(final URI uri) {
         this.uri = uri;
     }
 
-    public ApiHttpRequest resolve(URI baseUri)
-    {
-        ApiHttpRequest request = new ApiHttpRequest(this);
-        request.setUri(baseUri.resolve(this.uri));
+    public ApiHttpRequest withUri(final String uri) {
+        ApiHttpRequest request = copy();
+        request.uri = URI.create(uri);
         return request;
+    }
+
+    public ApiHttpRequest withUri(final URI uri) {
+        ApiHttpRequest request = copy();
+        request.uri = uri;
+
+        return request;
+    }
+
+    public ApiHttpRequest resolve(final URI baseUri)
+    {
+        return withUri(baseUri.resolve(this.uri));
     }
 
     @Override
@@ -132,5 +181,10 @@ public class ApiHttpRequest extends Base  {
 
     static String tryToFilter(final String input) {
         return input.replaceAll("(\"\\w*([Pp]ass|access_token|refresh_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
+    }
+
+    private ApiHttpRequest copy()
+    {
+        return new ApiHttpRequest(this);
     }
 }

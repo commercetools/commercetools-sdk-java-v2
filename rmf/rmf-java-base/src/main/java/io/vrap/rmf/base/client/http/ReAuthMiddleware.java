@@ -37,9 +37,9 @@ public class ReAuthMiddleware implements Middleware {
             }
 
             AuthenticationToken token = oAuthHandler.refreshToken();
-            request.withHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token));
+            final ApiHttpRequest reauthRequest = request.withHeader(ApiHttpHeaders.AUTHORIZATION, OAuthHandler.authHeader(token));
 
-            return next.apply(request).thenCompose((response -> execute(request, response, next, retries)));
+            return next.apply(reauthRequest).thenCompose((response -> execute(reauthRequest, response, next, retries)));
         }
         return CompletableFuture.completedFuture(apiResponse);
     }

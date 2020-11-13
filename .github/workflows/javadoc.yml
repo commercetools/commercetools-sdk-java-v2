@@ -1,7 +1,8 @@
 on:
   - push
 #  push:
-#    - master
+#    branches:
+#      - master
 
 name: JavaDoc
 
@@ -29,7 +30,7 @@ jobs:
           java-version: '8'
 
       - run: ./gradlew alljavadoc
-        working_dir: sdk
+        working-directory: sdk
 
       - run: mv sdk/build/docs/javadoc doc
 

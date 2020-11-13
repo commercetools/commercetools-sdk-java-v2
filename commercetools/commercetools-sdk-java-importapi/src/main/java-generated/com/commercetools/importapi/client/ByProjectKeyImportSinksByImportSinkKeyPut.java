@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -54,17 +55,19 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends ApiMethod<ByProje
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-sinks/%s", this.projectKey, this.importSinkKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.PUT);
-        httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(importSinkDraft));}catch(Exception e){e.printStackTrace();}
-        return httpRequest;
+        try {
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(importSinkDraft);
+        return new ApiHttpRequest(ApiHttpMethod.PUT, URI.create(httpRequestPath), getHeaders(), body);
+    } catch(Exception e) {
+        e.printStackTrace();
+    }
+    
+        return new ApiHttpRequest(ApiHttpMethod.PUT, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(){

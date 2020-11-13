@@ -12,22 +12,37 @@ public class ApiHttpResponse<U> extends Base {
     private U body;
     private String message;
 
-    public ApiHttpResponse(int statusCode, ApiHttpHeaders headers, U body) {
+    public ApiHttpResponse(final int statusCode, final ApiHttpHeaders headers, final U body) {
         this(statusCode, headers, body, null);
     }
 
-    public ApiHttpResponse(int statusCode, ApiHttpHeaders headers, U body, String message) {
+    public ApiHttpResponse(final int statusCode, final ApiHttpHeaders headers, final U body, final String message) {
         this.statusCode = statusCode;
         this.headers = headers;
         this.body = body;
         this.message = message;
     }
 
+    public ApiHttpResponse(final ApiHttpResponse<U> response) {
+        this.statusCode = response.statusCode;
+        this.headers = response.headers;
+        this.body = response.body;
+        this.message = response.message;
+    }
+
     public int getStatusCode() {
         return statusCode;
     }
 
-    public void setStatusCode(int statusCode) {
+    public ApiHttpResponse<U> withStatusCode(final int statusCode) {
+        ApiHttpResponse<U> response = copy();
+        response.statusCode = statusCode;
+
+        return response;
+    }
+
+    @Deprecated
+    public void setStatusCode(final int statusCode) {
         this.statusCode = statusCode;
     }
 
@@ -35,7 +50,15 @@ public class ApiHttpResponse<U> extends Base {
         return headers;
     }
 
-    public void setHeaders(ApiHttpHeaders headers) {
+    public ApiHttpResponse<U> withHeaders(final ApiHttpHeaders headers) {
+        ApiHttpResponse<U> response = copy();
+        response.headers = headers;
+
+        return response;
+    }
+
+    @Deprecated
+    public void setHeaders(final ApiHttpHeaders headers) {
         this.headers = headers;
     }
 
@@ -43,7 +66,15 @@ public class ApiHttpResponse<U> extends Base {
         return body;
     }
 
-    public void setBody(U body) {
+    public ApiHttpResponse<U> withBody(final U body) {
+        ApiHttpResponse<U> response = copy();
+        response.body = body;
+
+        return response;
+    }
+
+    @Deprecated
+    public void setBody(final U body) {
         this.body = body;
     }
 
@@ -51,7 +82,15 @@ public class ApiHttpResponse<U> extends Base {
         return message;
     }
 
-    public void setMessage(String message) {
+    public ApiHttpResponse<U> withMessage(final String message) {
+        ApiHttpResponse<U> response = copy();
+        response.message = message;
+
+        return response;
+    }
+
+    @Deprecated
+    public void setMessage(final String message) {
         this.message = message;
     }
 
@@ -80,5 +119,10 @@ public class ApiHttpResponse<U> extends Base {
     public String getSecuredBody()
     {
         return getBodyAsString().orElse("empty body");
+    }
+
+    private ApiHttpResponse<U> copy()
+    {
+        return new ApiHttpResponse<>(this);
     }
 }

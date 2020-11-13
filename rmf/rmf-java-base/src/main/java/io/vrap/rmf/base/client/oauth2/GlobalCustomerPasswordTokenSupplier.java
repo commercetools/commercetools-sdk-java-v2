@@ -53,19 +53,17 @@ public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService im
                                                           final String scope,
                                                           final String tokenEndpoint) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
-        ApiHttpRequest apiHttpRequest = new ApiHttpRequest();
-        apiHttpRequest.setUri(URI.create(tokenEndpoint));
+
+        final String body;
         if (scope == null || scope.isEmpty()) {
-            apiHttpRequest.setBody("grant_type=password&username=" + email + "&password=" + password);
+            body = "grant_type=password&username=" + email + "&password=" + password;
         } else {
-            apiHttpRequest.setBody("grant_type=password&username=" + email + "&password=" + password + "&scope=" + scope);
+            body = "grant_type=password&username=" + email + "&password=" + password + "&scope=" + scope;
         }
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders();
-        apiHttpHeaders.withHeader("Authorization", "Basic " + auth);
-        apiHttpHeaders.withHeader("Content-Type", "application/x-www-form-urlencoded");
-        apiHttpRequest.setHeaders(apiHttpHeaders);
-        apiHttpRequest.setMethod(ApiHttpMethod.POST);
-        return apiHttpRequest;
+        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders()
+                .withHeader("Authorization", "Basic " + auth)
+                .withHeader("Content-Type", "application/x-www-form-urlencoded");
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders, body.getBytes(StandardCharsets.UTF_8));
     }
 
     @Override

@@ -68,17 +68,17 @@ public class ApiMethod<T extends ApiMethod<T>> {
     }
 
     public T addHeader(final String key, final String value) {
-        this.headers.addHeader(key, value);
+        this.headers = this.headers.addHeader(key, value);
         return (T)this;
     }
 
     public T withoutHeader(final String key) {
-        this.headers.withoutHeader(key);
+        this.headers = this.headers.withoutHeader(key);
         return (T)this;
     }
 
     public T withHeader(final String key, final String value) {
-        this.headers.withHeader(key, value);
+        this.headers = this.headers.withHeader(key, value);
         return (T)this;
     }
 

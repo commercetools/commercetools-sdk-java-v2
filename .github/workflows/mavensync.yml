@@ -9,6 +9,7 @@ name: MavenSync
 jobs:
   mavensync:
     name: Sync to Maven
+    timeout-minutes: 30
 
     runs-on: ubuntu-latest
 

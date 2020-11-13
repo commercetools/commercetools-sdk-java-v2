@@ -22,10 +22,7 @@ public class MiddlewareFactory {
     {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
         return asList(
-                (request, next) -> {
-                    request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent);
-                    return next.apply(request);
-                },
+                (request, next) -> next.apply(request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent)),
                 new ErrorMiddleware(),
                 new InternalLoggerMiddleware(internalLoggerFactory),
                 new OAuthMiddleware(oAuthHandler)

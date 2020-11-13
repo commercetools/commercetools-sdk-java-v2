@@ -65,7 +65,7 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
         ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
                 response.headers().toMultimap().entrySet().stream()
                         .flatMap(e -> e.getValue().stream()
-                                .map(value -> new HeaderEntry<>(e.getKey(), value))
+                                .map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value))
                         ).collect(Collectors.toList())
         );
 

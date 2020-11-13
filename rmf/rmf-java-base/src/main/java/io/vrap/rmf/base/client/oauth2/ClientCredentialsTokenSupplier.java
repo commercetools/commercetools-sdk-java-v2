@@ -71,9 +71,10 @@ public class ClientCredentialsTokenSupplier extends AutoCloseableService impleme
             final String tokenEndpoint
     ) {
         String auth = Base64.getEncoder().encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
-        final ApiHttpHeaders headers = new ApiHttpHeaders();
-        headers.withHeader(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth);
-        headers.withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
+
+        final ApiHttpHeaders headers = new ApiHttpHeaders()
+                .withHeader(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth)
+                .withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 
         String body = "";
         if (scope == null || scope.isEmpty()) {

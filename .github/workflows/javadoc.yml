@@ -30,6 +30,8 @@ jobs:
       - run: ./gradlew alljavadoc
         working_dir: sdk
 
+      - run: mv sdk/build/docs/javadoc doc
+
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           repository: doc

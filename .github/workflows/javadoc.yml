@@ -1,8 +1,7 @@
 on:
-  - push
-#  push:
-#    branches:
-#      - master
+  push:
+    branches:
+      - master
 
 name: JavaDoc
 

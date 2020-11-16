@@ -37,6 +37,10 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
         okHttpClient = options.plus(clientBuilder.get()).build();
     }
 
+    public VrapOkHttpClient(Supplier<OkHttpClient.Builder> builderSupplier) {
+        okHttpClient = builderSupplier.get().build();
+    }
+
     public VrapOkHttpClient(int maxRequests, int maxRequestsPerHost) {
         Dispatcher dispatcher = new Dispatcher();
         dispatcher.setMaxRequests(maxRequests);

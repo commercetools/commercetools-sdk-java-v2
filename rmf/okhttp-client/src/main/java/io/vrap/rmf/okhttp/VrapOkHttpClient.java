@@ -16,6 +16,7 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -30,6 +31,10 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
     public VrapOkHttpClient() {
         okHttpClient = clientBuilder.get().build();
+    }
+
+    public VrapOkHttpClient(BuilderOptions options) {
+        okHttpClient = options.plus(clientBuilder.get()).build();
     }
 
     public VrapOkHttpClient(int maxRequests, int maxRequestsPerHost) {

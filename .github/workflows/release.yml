@@ -65,7 +65,7 @@ jobs:
           echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
           echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
 
-      - run: ./gradlew -Pversion=$SOURCE_TAG clean test bintrayUpload writeVersionToReadme --info --stacktrace
+      - run: ./gradlew -Pversion=$SOURCE_TAG clean test javadoc bintrayUpload writeVersionToReadme --info --stacktrace
         working-directory: sdk
         env:
           CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}

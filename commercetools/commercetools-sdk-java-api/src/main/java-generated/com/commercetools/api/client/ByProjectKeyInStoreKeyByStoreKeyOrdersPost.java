@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -57,17 +58,19 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersPost extends ApiMethod<ByProj
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/orders", this.projectKey, this.storeKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.POST);
-        httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(orderFromCartDraft));}catch(Exception e){e.printStackTrace();}
-        return httpRequest;
+        try {
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(orderFromCartDraft);
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+    } catch(Exception e) {
+        e.printStackTrace();
+    }
+    
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(){

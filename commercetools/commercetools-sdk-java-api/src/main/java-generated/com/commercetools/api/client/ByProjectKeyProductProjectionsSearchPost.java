@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -48,17 +49,13 @@ public class ByProjectKeyProductProjectionsSearchPost extends ApiMethod<ByProjec
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-projections/search", this.projectKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.POST);
-        httpRequest.setHeaders(getHeaders());
         
-        return httpRequest;
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){

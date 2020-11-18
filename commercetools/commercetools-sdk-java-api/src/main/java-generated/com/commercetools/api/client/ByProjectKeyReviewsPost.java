@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -51,17 +52,19 @@ public class ByProjectKeyReviewsPost extends ApiMethod<ByProjectKeyReviewsPost> 
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/reviews", this.projectKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.POST);
-        httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(reviewDraft));}catch(Exception e){e.printStackTrace();}
-        return httpRequest;
+        try {
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(reviewDraft);
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+    } catch(Exception e) {
+        e.printStackTrace();
+    }
+    
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(){

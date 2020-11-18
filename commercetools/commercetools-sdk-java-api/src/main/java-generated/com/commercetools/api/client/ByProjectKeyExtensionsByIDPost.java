@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -54,17 +55,19 @@ public class ByProjectKeyExtensionsByIDPost extends ApiMethod<ByProjectKeyExtens
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/extensions/%s", this.projectKey, this.ID);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.POST);
-        httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(apiHttpClient().getSerializerService().toJsonByteArray(extensionUpdate));}catch(Exception e){e.printStackTrace();}
-        return httpRequest;
+        try {
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(extensionUpdate);
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+    } catch(Exception e) {
+        e.printStackTrace();
+    }
+    
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.commercetools.api.models.extension.Extension> executeBlocking(){

@@ -27,40 +27,40 @@ public interface ReviewDraft  {
     /**
     *  <p>User-specific unique identifier for the review.</p>
     */
-
+    
     @JsonProperty("key")
     public String getKey();
     /**
     *  <p>If set, this value must be unique among reviews.
-    *  For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> <code>product's id</code>.</p>
+    *  For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> + <code>product's id</code>.</p>
     */
-
+    
     @JsonProperty("uniquenessValue")
     public String getUniquenessValue();
-
-
+    
+    
     @JsonProperty("locale")
     public String getLocale();
-
-
+    
+    
     @JsonProperty("authorName")
     public String getAuthorName();
-
-
+    
+    
     @JsonProperty("title")
     public String getTitle();
-
-
+    
+    
     @JsonProperty("text")
     public String getText();
     /**
     *  <p>Identifies the target of the review.
     *  Can be a Product or a Channel</p>
     */
-
+    
     @JsonProperty("target")
     public JsonNode getTarget();
-
+    
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
@@ -70,7 +70,7 @@ public interface ReviewDraft  {
     *  This rating can represent the number of stars, or a percentage, or a like (+1)/dislike (-1)
     *  A rating is used in the ratings statistics of the targeted object, unless the review is in a state that does not have the role <code>ReviewIncludedInStatistics</code>.</p>
     */
-
+    
     @JsonProperty("rating")
     public Integer getRating();
     /**
@@ -79,37 +79,37 @@ public interface ReviewDraft  {
     @Valid
     @JsonProperty("customer")
     public CustomerResourceIdentifier getCustomer();
-
+    
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();
 
     public void setKey(final String key);
-
+    
     public void setUniquenessValue(final String uniquenessValue);
-
+    
     public void setLocale(final String locale);
-
+    
     public void setAuthorName(final String authorName);
-
+    
     public void setTitle(final String title);
-
+    
     public void setText(final String text);
-
+    
     public void setTarget(final JsonNode target);
-
+    
     public void setState(final StateResourceIdentifier state);
-
+    
     public void setRating(final Integer rating);
-
+    
     public void setCustomer(final CustomerResourceIdentifier customer);
-
+    
     public void setCustom(final CustomFieldsDraft custom);
 
     public static ReviewDraftImpl of(){
         return new ReviewDraftImpl();
     }
-
+    
 
     public static ReviewDraftImpl of(final ReviewDraft template) {
         ReviewDraftImpl instance = new ReviewDraftImpl();

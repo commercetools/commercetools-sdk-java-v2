@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -54,17 +55,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDDelete extends ApiMethod
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/me/carts/%s", this.projectKey, this.storeKey, this.ID);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.DELETE);
-        httpRequest.setHeaders(getHeaders());
         
-        return httpRequest;
+        return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(){

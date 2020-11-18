@@ -191,27 +191,24 @@ dependencies {
 ```maven
 <properties>
     <commercetools.version>1.5.2</commercetools.version>
-<properties
+</properties>
 <dependencies>
     <dependency>
       <groupId>com.commercetools.sdk</groupId>
       <artifactId>commercetools-sdk-java-api</artifactId>
       <version>${commercetools.version}</version>
-      <type>pom</type>
     </dependency>
     <dependency>
       <groupId>com.commercetools.sdk</groupId>
       <artifactId>commercetools-sdk-java-importapi</artifactId>
       <version>${commercetools.version}</version>
-      <type>pom</type>
     </dependency>
     <dependency>
       <groupId>com.commercetools.sdk</groupId>
       <artifactId>commercetools-sdk-java-ml</artifactId>
       <version>${commercetools.version}</version>
-      <type>pom</type>
     </dependency>
-<dependencies>
+</dependencies>
 <profiles>
     <profile>
         <repositories>

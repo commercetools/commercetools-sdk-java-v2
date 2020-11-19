@@ -1,6 +1,5 @@
 package com.commercetools.importapi.models.productvariants;
 
-import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.productvariants.Attributes;
 import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
@@ -18,19 +17,11 @@ public final class ProductVariantPatchBuilder {
     
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
     
-    
-    private com.commercetools.importapi.models.common.ProductKeyReference product;
-    
     @Nullable
     private com.commercetools.importapi.models.productvariants.Attributes attributes;
 
     public ProductVariantPatchBuilder productVariant( final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant) {
         this.productVariant = productVariant;
-        return this;
-    }
-    
-    public ProductVariantPatchBuilder product( final com.commercetools.importapi.models.common.ProductKeyReference product) {
-        this.product = product;
         return this;
     }
     
@@ -44,18 +35,13 @@ public final class ProductVariantPatchBuilder {
         return this.productVariant;
     }
     
-    
-    public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
-        return this.product;
-    }
-    
     @Nullable
     public com.commercetools.importapi.models.productvariants.Attributes getAttributes(){
         return this.attributes;
     }
 
     public ProductVariantPatch build() {
-        return new ProductVariantPatchImpl(productVariant, product, attributes);
+        return new ProductVariantPatchImpl(productVariant, attributes);
     }
 
     public static ProductVariantPatchBuilder of() {
@@ -65,7 +51,6 @@ public final class ProductVariantPatchBuilder {
     public static ProductVariantPatchBuilder of(final ProductVariantPatch template) {
         ProductVariantPatchBuilder builder = new ProductVariantPatchBuilder();
         builder.productVariant = template.getProductVariant();
-        builder.product = template.getProduct();
         builder.attributes = template.getAttributes();
         return builder;
     }

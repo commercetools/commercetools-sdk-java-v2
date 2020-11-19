@@ -1,6 +1,5 @@
 package com.commercetools.importapi.models.productvariants;
 
-import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.productvariants.Attributes;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -28,14 +27,11 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
 
     private com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant;
     
-    private com.commercetools.importapi.models.common.ProductKeyReference product;
-    
     private com.commercetools.importapi.models.productvariants.Attributes attributes;
 
     @JsonCreator
-    ProductVariantPatchImpl(@JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant, @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product, @JsonProperty("attributes") final com.commercetools.importapi.models.productvariants.Attributes attributes) {
+    ProductVariantPatchImpl(@JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant, @JsonProperty("attributes") final com.commercetools.importapi.models.productvariants.Attributes attributes) {
         this.productVariant = productVariant;
-        this.product = product;
         this.attributes = attributes;
     }
     public ProductVariantPatchImpl() {
@@ -53,16 +49,6 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
     }
     
     /**
-    *  <p>The product in which the patched product variant resides. Maps to <code>ProductVariant.product</code>.</p>
-    *  <p>The product referenced
-    *  must already exist in the commercetools project, or the
-    *  import operation state is set to <code>Unresolved</code>.</p>
-    */
-    public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
-        return this.product;
-    }
-    
-    /**
     *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
     *  <p>Each attribute referenced must be defined
     *  in an already existing product type in the commercetools project, or the import
@@ -74,10 +60,6 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
 
     public void setProductVariant(final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant){
         this.productVariant = productVariant;
-    }
-    
-    public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product){
-        this.product = product;
     }
     
     public void setAttributes(final com.commercetools.importapi.models.productvariants.Attributes attributes){

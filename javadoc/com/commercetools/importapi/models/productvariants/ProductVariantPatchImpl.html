@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -158,26 +158,16 @@ implements <a href="../../../../../com/commercetools/importapi/models/productvar
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatchImpl.html#getProduct--">getProduct</a></span>()</code>
-<div class="block">The product in which the patched product variant resides.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatchImpl.html#getProductVariant--">getProductVariant</a></span>()</code>
 <div class="block">The product variant to which this patch is applied.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatchImpl.html#setAttributes-com.commercetools.importapi.models.productvariants.Attributes-">setAttributes</a></span>(<a href="../../../../../com/commercetools/importapi/models/productvariants/Attributes.html" title="interface in com.commercetools.importapi.models.productvariants">Attributes</a>&nbsp;attributes)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatchImpl.html#setProduct-com.commercetools.importapi.models.common.ProductKeyReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatchImpl.html#setProductVariant-com.commercetools.importapi.models.common.ProductVariantKeyReference-">setProductVariant</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a>&nbsp;productVariant)</code>&nbsp;</td>
 </tr>
@@ -244,23 +234,6 @@ implements <a href="../../../../../com/commercetools/importapi/models/productvar
 </dl>
 </li>
 </ul>
-<a name="getProduct--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getProduct</h4>
-<pre>public&nbsp;<a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;getProduct()</pre>
-<div class="block"><p>The product in which the patched product variant resides. Maps to <code>ProductVariant.product</code>.</p>
-  <p>The product referenced
-  must already exist in the commercetools project, or the
-  import operation state is set to <code>Unresolved</code>.</p></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html#getProduct--">getProduct</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a></code></dd>
-</dl>
-</li>
-</ul>
 <a name="getAttributes--">
 <!--   -->
 </a>
@@ -288,19 +261,6 @@ implements <a href="../../../../../com/commercetools/importapi/models/productvar
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html#setProductVariant-com.commercetools.importapi.models.common.ProductVariantKeyReference-">setProductVariant</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setProduct-com.commercetools.importapi.models.common.ProductKeyReference-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setProduct</h4>
-<pre>public&nbsp;void&nbsp;setProduct(<a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html#setProduct-com.commercetools.importapi.models.common.ProductKeyReference-">setProduct</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantPatch.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantPatch</a></code></dd>
 </dl>
 </li>
 </ul>

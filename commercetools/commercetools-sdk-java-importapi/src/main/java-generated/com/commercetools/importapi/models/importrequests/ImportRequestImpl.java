@@ -3,6 +3,7 @@ package com.commercetools.importapi.models.importrequests;
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importrequests.CategoryImportRequest;
 import com.commercetools.importapi.models.importrequests.CustomerImportRequest;
+import com.commercetools.importapi.models.importrequests.InventoryImportRequest;
 import com.commercetools.importapi.models.importrequests.OrderImportRequest;
 import com.commercetools.importapi.models.importrequests.PriceImportRequest;
 import com.commercetools.importapi.models.importrequests.ProductDraftImportRequest;

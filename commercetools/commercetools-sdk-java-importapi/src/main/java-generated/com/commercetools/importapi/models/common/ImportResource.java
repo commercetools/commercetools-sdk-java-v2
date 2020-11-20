@@ -2,6 +2,7 @@ package com.commercetools.importapi.models.common;
 
 import com.commercetools.importapi.models.categories.CategoryImport;
 import com.commercetools.importapi.models.customers.CustomerImport;
+import com.commercetools.importapi.models.inventories.InventoryImport;
 import com.commercetools.importapi.models.orders.OrderImport;
 import com.commercetools.importapi.models.prices.PriceImport;
 import com.commercetools.importapi.models.productdrafts.ProductDraftImport;

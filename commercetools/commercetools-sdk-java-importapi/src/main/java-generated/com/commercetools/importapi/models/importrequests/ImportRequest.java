@@ -3,6 +3,7 @@ package com.commercetools.importapi.models.importrequests;
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importrequests.CategoryImportRequest;
 import com.commercetools.importapi.models.importrequests.CustomerImportRequest;
+import com.commercetools.importapi.models.importrequests.InventoryImportRequest;
 import com.commercetools.importapi.models.importrequests.OrderImportRequest;
 import com.commercetools.importapi.models.importrequests.PriceImportRequest;
 import com.commercetools.importapi.models.importrequests.ProductDraftImportRequest;
@@ -35,7 +36,8 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.PriceImportRequestImpl.class, name = "price"),
    @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.OrderImportRequestImpl.class, name = "order"),
    @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestImpl.class, name = "product-variant-patch"),
-   @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.CustomerImportRequestImpl.class, name = "customer")
+   @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.CustomerImportRequestImpl.class, name = "customer"),
+   @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.InventoryImportRequestImpl.class, name = "inventory")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

@@ -71,6 +71,7 @@ import com.commercetools.api.models.message.ProductRevertedStagedChangesMessage;
 import com.commercetools.api.models.message.ProductSlugChangedMessage;
 import com.commercetools.api.models.message.ProductStateTransitionMessage;
 import com.commercetools.api.models.message.ProductUnpublishedMessage;
+import com.commercetools.api.models.message.ProductVariantAddedMessage;
 import com.commercetools.api.models.message.ProductVariantDeletedMessage;
 import com.commercetools.api.models.message.ReviewCreatedMessage;
 import com.commercetools.api.models.message.ReviewRatingSetMessage;

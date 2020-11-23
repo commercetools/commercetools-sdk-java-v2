@@ -49,6 +49,7 @@ public final class ImportSinkImpl implements ImportSink {
 
     /**
     *  <p>The unique key of the import sink.</p>
+    *  <p>Valid characters are: alphabetic characters (A-Z, a-z), numeric characters (0-9), underscores (_) and hyphens (-).</p>
     */
     public String getKey(){
         return this.key;

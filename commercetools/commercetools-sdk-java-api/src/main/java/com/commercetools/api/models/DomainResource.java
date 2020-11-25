@@ -5,7 +5,7 @@ public interface DomainResource<T extends DomainResource<T>> {
 
     public Long getVersion();
 
-    default T upcast() {
+    default T get() {
         return (T) this;
     }
 }

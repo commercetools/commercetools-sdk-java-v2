@@ -1,5 +1,6 @@
 package io.vrap.rmf.base.client;
 
+import javax.annotation.Nullable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -68,23 +69,27 @@ public class ApiMethod<T extends ApiMethod<T>> {
     }
 
     public T addHeader(final String key, final String value) {
-        this.headers = this.headers.addHeader(key, value);
-        return (T)this;
+        ApiMethod<T> c = copy();
+        c.headers = c.headers.addHeader(key, value);
+        return (T)c;
     }
 
     public T withoutHeader(final String key) {
-        this.headers = this.headers.withoutHeader(key);
-        return (T)this;
+        ApiMethod<T> c = copy();
+        c.headers = c.headers.withoutHeader(key);
+        return (T)c;
     }
 
     public T withHeader(final String key, final String value) {
-        this.headers = this.headers.withHeader(key, value);
-        return (T)this;
+        ApiMethod<T> c = copy();
+        c.headers = c.headers.withHeader(key, value);
+        return (T)c;
     }
 
     public T withHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-        return (T)this;
+        ApiMethod<T> c = copy();
+        c.headers = headers;
+        return (T)c;
     }
 
     public ApiHttpHeaders getHeaders() {
@@ -92,8 +97,9 @@ public class ApiMethod<T extends ApiMethod<T>> {
     }
 
     public <V> T addQueryParam(final String key, final V value) {
-        this.queryParams.add(new ParamEntry<>(key, value.toString()));
-        return (T)this;
+        ApiMethod<T> c = copy();
+        c.queryParams.add(new ParamEntry<>(key, value.toString()));
+        return (T)c;
     }
 
     public <V> T withQueryParam(final String key, final V value) {
@@ -101,17 +107,19 @@ public class ApiMethod<T extends ApiMethod<T>> {
     }
 
     public T withoutQueryParam(final String key) {
-        this.queryParams = queryParams.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
-        return (T)this;
+        ApiMethod<T> c = copy();
+        c.queryParams = c.queryParams.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
+        return (T)c;
     }
 
     public <V> T withQueryParams(final List<ParamEntry<String, String>> queryParams) {
-        this.queryParams = queryParams;
-        return (T)this;
+        ApiMethod<T> c = copy();
+        c.queryParams = queryParams;
+        return (T)c;
     }
 
     public List<ParamEntry<String, String>> getQueryParams() {
-        return this.queryParams;
+        return new ArrayList<>(this.queryParams);
     }
 
     public List<String> getQueryParam(final String key) {
@@ -121,4 +129,13 @@ public class ApiMethod<T extends ApiMethod<T>> {
     public List<String> getQueryParamUriStrings() {
         return this.queryParams.stream().map(ParamEntry::toUriString).collect(Collectors.toList());
     }
+
+    @Nullable
+    public String getFirstQueryParam(final String key){
+        return this.queryParams.stream().filter(e -> e.getKey().equals(key)).map(Map.Entry::getValue).findFirst().orElse(null);
+    }
+
+    protected ApiMethod<T> copy() {
+        return new ApiMethod<>(this);
+    };
 }

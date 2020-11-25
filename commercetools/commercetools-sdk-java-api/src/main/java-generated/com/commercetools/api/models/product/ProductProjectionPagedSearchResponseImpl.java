@@ -21,6 +21,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class ProductProjectionPagedSearchResponseImpl implements ProductProjectionPagedSearchResponse {
 
+    private Long limit;
+    
     private Long count;
     
     private Long total;
@@ -32,7 +34,8 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
     private com.commercetools.api.models.product.FacetResults facets;
 
     @JsonCreator
-    ProductProjectionPagedSearchResponseImpl(@JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.models.product.ProductProjection> results, @JsonProperty("facets") final com.commercetools.api.models.product.FacetResults facets) {
+    ProductProjectionPagedSearchResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count, @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset, @JsonProperty("results") final java.util.List<com.commercetools.api.models.product.ProductProjection> results, @JsonProperty("facets") final com.commercetools.api.models.product.FacetResults facets) {
+        this.limit = limit;
         this.count = count;
         this.total = total;
         this.offset = offset;
@@ -43,6 +46,11 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
        
     }
 
+    
+    public Long getLimit(){
+        return this.limit;
+    }
+    
     
     public Long getCount(){
         return this.count;
@@ -68,6 +76,10 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
         return this.facets;
     }
 
+    public void setLimit(final Long limit){
+        this.limit = limit;
+    }
+    
     public void setCount(final Long count){
         this.count = count;
     }

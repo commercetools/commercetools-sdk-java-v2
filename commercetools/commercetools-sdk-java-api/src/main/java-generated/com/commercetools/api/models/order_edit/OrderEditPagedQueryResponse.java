@@ -19,7 +19,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = OrderEditPagedQueryResponseImpl.class)
-public interface OrderEditPagedQueryResponse  {
+public interface OrderEditPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<OrderEdit> {
 
     
     @NotNull

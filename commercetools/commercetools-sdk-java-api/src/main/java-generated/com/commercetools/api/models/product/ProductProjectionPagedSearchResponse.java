@@ -20,8 +20,12 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ProductProjectionPagedSearchResponseImpl.class)
-public interface ProductProjectionPagedSearchResponse  {
+public interface ProductProjectionPagedSearchResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection> {
 
+    
+    @NotNull
+    @JsonProperty("limit")
+    public Long getLimit();
     
     @NotNull
     @JsonProperty("count")
@@ -45,6 +49,8 @@ public interface ProductProjectionPagedSearchResponse  {
     @JsonProperty("facets")
     public FacetResults getFacets();
 
+    public void setLimit(final Long limit);
+    
     public void setCount(final Long count);
     
     public void setTotal(final Long total);
@@ -64,6 +70,7 @@ public interface ProductProjectionPagedSearchResponse  {
 
     public static ProductProjectionPagedSearchResponseImpl of(final ProductProjectionPagedSearchResponse template) {
         ProductProjectionPagedSearchResponseImpl instance = new ProductProjectionPagedSearchResponseImpl();
+        instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
         instance.setOffset(template.getOffset());

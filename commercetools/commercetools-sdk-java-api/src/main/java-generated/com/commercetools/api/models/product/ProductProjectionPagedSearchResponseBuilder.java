@@ -15,6 +15,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ProductProjectionPagedSearchResponseBuilder {
 
     
+    private Long limit;
+    
+    
     private Long count;
     
     @Nullable
@@ -29,6 +32,11 @@ public final class ProductProjectionPagedSearchResponseBuilder {
     
     private com.commercetools.api.models.product.FacetResults facets;
 
+    public ProductProjectionPagedSearchResponseBuilder limit( final Long limit) {
+        this.limit = limit;
+        return this;
+    }
+    
     public ProductProjectionPagedSearchResponseBuilder count( final Long count) {
         this.count = count;
         return this;
@@ -60,6 +68,11 @@ public final class ProductProjectionPagedSearchResponseBuilder {
     }
 
     
+    public Long getLimit(){
+        return this.limit;
+    }
+    
+    
     public Long getCount(){
         return this.count;
     }
@@ -85,7 +98,7 @@ public final class ProductProjectionPagedSearchResponseBuilder {
     }
 
     public ProductProjectionPagedSearchResponse build() {
-        return new ProductProjectionPagedSearchResponseImpl(count, total, offset, results, facets);
+        return new ProductProjectionPagedSearchResponseImpl(limit, count, total, offset, results, facets);
     }
 
     public static ProductProjectionPagedSearchResponseBuilder of() {
@@ -94,6 +107,7 @@ public final class ProductProjectionPagedSearchResponseBuilder {
 
     public static ProductProjectionPagedSearchResponseBuilder of(final ProductProjectionPagedSearchResponse template) {
         ProductProjectionPagedSearchResponseBuilder builder = new ProductProjectionPagedSearchResponseBuilder();
+        builder.limit = template.getLimit();
         builder.count = template.getCount();
         builder.total = template.getTotal();
         builder.offset = template.getOffset();

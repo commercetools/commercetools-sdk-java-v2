@@ -19,7 +19,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = TaxCategoryPagedQueryResponseImpl.class)
-public interface TaxCategoryPagedQueryResponse  {
+public interface TaxCategoryPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<TaxCategory> {
 
     
     @NotNull

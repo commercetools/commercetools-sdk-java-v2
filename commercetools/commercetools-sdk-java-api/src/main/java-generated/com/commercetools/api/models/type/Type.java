@@ -25,7 +25,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = TypeImpl.class)
-public interface Type extends BaseResource {
+public interface Type extends BaseResource, com.commercetools.api.models.DomainResource<Type> {
 
     /**
     *  <p>The unique ID of the type.</p>

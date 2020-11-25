@@ -26,7 +26,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = CategoryImpl.class)
-public interface Category extends BaseResource {
+public interface Category extends BaseResource, com.commercetools.api.models.DomainResource<Category> {
 
     /**
     *  <p>The unique ID of the category.</p>

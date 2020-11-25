@@ -27,7 +27,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = CustomerImpl.class)
-public interface Customer extends BaseResource {
+public interface Customer extends BaseResource, com.commercetools.api.models.DomainResource<Customer> {
 
     /**
     *  <p>The unique ID of the customer.</p>

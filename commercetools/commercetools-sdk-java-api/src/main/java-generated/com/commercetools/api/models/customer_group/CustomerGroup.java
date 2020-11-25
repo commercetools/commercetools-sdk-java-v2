@@ -23,7 +23,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = CustomerGroupImpl.class)
-public interface CustomerGroup extends BaseResource {
+public interface CustomerGroup extends BaseResource, com.commercetools.api.models.DomainResource<CustomerGroup> {
 
     /**
     *  <p>The unique ID of the customer group.</p>

@@ -24,7 +24,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = InventoryEntryImpl.class)
-public interface InventoryEntry extends BaseResource {
+public interface InventoryEntry extends BaseResource, com.commercetools.api.models.DomainResource<InventoryEntry> {
 
     /**
     *  <p>The unique ID of the inventory entry.</p>

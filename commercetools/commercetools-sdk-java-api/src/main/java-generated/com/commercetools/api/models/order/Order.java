@@ -48,7 +48,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = OrderImpl.class)
-public interface Order extends BaseResource {
+public interface Order extends BaseResource, com.commercetools.api.models.DomainResource<Order> {
 
     /**
     *  <p>The unique ID of the order.</p>

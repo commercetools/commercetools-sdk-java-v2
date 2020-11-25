@@ -176,7 +176,7 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public interface Message extends BaseResource {
+public interface Message extends BaseResource, com.commercetools.api.models.DomainResource<Message> {
 
     
     @NotNull

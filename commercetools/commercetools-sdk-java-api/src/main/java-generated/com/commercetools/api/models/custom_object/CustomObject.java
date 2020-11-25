@@ -23,7 +23,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = CustomObjectImpl.class)
-public interface CustomObject extends BaseResource {
+public interface CustomObject extends BaseResource, com.commercetools.api.models.DomainResource<CustomObject> {
 
     
     @NotNull

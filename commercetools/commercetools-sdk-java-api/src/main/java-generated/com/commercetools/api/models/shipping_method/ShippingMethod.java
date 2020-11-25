@@ -25,7 +25,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ShippingMethodImpl.class)
-public interface ShippingMethod extends BaseResource {
+public interface ShippingMethod extends BaseResource, com.commercetools.api.models.DomainResource<ShippingMethod> {
 
     /**
     *  <p>The unique ID of the shipping method.</p>

@@ -28,7 +28,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = CartDiscountImpl.class)
-public interface CartDiscount extends BaseResource {
+public interface CartDiscount extends BaseResource, com.commercetools.api.models.DomainResource<CartDiscount> {
 
     /**
     *  <p>The unique ID of the cart discount.</p>

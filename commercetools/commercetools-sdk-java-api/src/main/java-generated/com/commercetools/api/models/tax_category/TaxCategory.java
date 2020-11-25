@@ -23,7 +23,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = TaxCategoryImpl.class)
-public interface TaxCategory extends BaseResource {
+public interface TaxCategory extends BaseResource, com.commercetools.api.models.DomainResource<TaxCategory> {
 
     /**
     *  <p>The unique ID of the category.</p>

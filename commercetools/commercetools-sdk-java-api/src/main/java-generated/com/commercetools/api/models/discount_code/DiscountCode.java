@@ -26,7 +26,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = DiscountCodeImpl.class)
-public interface DiscountCode extends BaseResource {
+public interface DiscountCode extends BaseResource, com.commercetools.api.models.DomainResource<DiscountCode> {
 
     /**
     *  <p>The unique ID of the discount code.</p>

@@ -23,7 +23,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ZoneImpl.class)
-public interface Zone extends BaseResource {
+public interface Zone extends BaseResource, com.commercetools.api.models.DomainResource<Zone> {
 
     /**
     *  <p>The unique ID of the zone.</p>

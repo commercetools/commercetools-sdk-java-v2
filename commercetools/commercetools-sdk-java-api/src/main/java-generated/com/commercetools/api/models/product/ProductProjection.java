@@ -28,7 +28,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ProductProjectionImpl.class)
-public interface ProductProjection extends BaseResource {
+public interface ProductProjection extends BaseResource, com.commercetools.api.models.DomainResource<ProductProjection> {
 
     /**
     *  <p>The unique ID of the Product.</p>

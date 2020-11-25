@@ -26,7 +26,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = StateImpl.class)
-public interface State extends BaseResource {
+public interface State extends BaseResource, com.commercetools.api.models.DomainResource<State> {
 
     
     @NotNull

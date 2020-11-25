@@ -28,7 +28,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ChannelImpl.class)
-public interface Channel extends BaseResource {
+public interface Channel extends BaseResource, com.commercetools.api.models.DomainResource<Channel> {
 
     /**
     *  <p>The unique ID of the channel.</p>

@@ -27,7 +27,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = SubscriptionImpl.class)
-public interface Subscription extends BaseResource {
+public interface Subscription extends BaseResource, com.commercetools.api.models.DomainResource<Subscription> {
 
     
     @NotNull

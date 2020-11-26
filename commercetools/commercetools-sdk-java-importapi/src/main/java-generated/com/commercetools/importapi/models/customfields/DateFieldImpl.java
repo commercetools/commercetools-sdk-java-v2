@@ -34,7 +34,7 @@ public final class DateFieldImpl implements DateField {
         this.type = "Date";
     }
     public DateFieldImpl() {
-       
+        this.type = "Date";
     }
 
     /**

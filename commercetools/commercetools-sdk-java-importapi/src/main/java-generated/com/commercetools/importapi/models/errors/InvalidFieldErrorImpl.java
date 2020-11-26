@@ -43,7 +43,7 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
         this.code = "InvalidField";
     }
     public InvalidFieldErrorImpl() {
-       
+        this.code = "InvalidField";
     }
 
     

@@ -35,7 +35,7 @@ public final class CategoryImportRequestImpl implements CategoryImportRequest {
         this.type = ImportResourceType.findEnum("category");
     }
     public CategoryImportRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("category");
     }
 
     /**

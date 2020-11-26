@@ -37,7 +37,7 @@ public final class DateSetAttributeImpl implements DateSetAttribute {
         this.type = "date-set";
     }
     public DateSetAttributeImpl() {
-       
+        this.type = "date-set";
     }
 
     /**

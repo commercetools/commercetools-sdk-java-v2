@@ -35,7 +35,7 @@ public final class PriceImportRequestImpl implements PriceImportRequest {
         this.type = ImportResourceType.findEnum("price");
     }
     public PriceImportRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("price");
     }
 
     /**

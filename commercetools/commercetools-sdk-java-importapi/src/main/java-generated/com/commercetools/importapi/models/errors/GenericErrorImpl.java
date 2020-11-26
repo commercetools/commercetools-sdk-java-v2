@@ -30,7 +30,7 @@ public final class GenericErrorImpl implements GenericError {
         this.code = "Generic";
     }
     public GenericErrorImpl() {
-       
+        this.code = "Generic";
     }
 
     

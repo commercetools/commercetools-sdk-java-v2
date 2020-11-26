@@ -34,7 +34,7 @@ public final class ResourceUpdateErrorImpl implements ResourceUpdateError {
         this.code = "ResourceUpdate";
     }
     public ResourceUpdateErrorImpl() {
-       
+        this.code = "ResourceUpdate";
     }
 
     

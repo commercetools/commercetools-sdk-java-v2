@@ -34,7 +34,7 @@ public final class TypeKeyReferenceImpl implements TypeKeyReference {
         this.typeId = ReferenceType.findEnum("type");
     }
     public TypeKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("type");
     }
 
     

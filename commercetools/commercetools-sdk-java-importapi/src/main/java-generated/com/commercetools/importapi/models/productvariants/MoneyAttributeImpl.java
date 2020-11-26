@@ -37,7 +37,7 @@ public final class MoneyAttributeImpl implements MoneyAttribute {
         this.type = "money";
     }
     public MoneyAttributeImpl() {
-       
+        this.type = "money";
     }
 
     /**

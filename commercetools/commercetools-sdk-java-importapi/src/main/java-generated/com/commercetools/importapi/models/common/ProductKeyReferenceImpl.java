@@ -34,7 +34,7 @@ public final class ProductKeyReferenceImpl implements ProductKeyReference {
         this.typeId = ReferenceType.findEnum("product");
     }
     public ProductKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("product");
     }
 
     

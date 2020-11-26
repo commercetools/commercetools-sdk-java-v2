@@ -33,7 +33,6 @@ public final class ItemShippingTargetImpl implements ItemShippingTarget {
         this.quantity = quantity;
     }
     public ItemShippingTargetImpl() {
-       
     }
 
     /**

@@ -30,7 +30,6 @@ public final class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPr
         this.totalGross = totalGross;
     }
     public CustomLineItemTaxedPriceImpl() {
-       
     }
 
     

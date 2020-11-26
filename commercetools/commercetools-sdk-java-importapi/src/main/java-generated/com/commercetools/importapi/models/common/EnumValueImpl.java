@@ -30,7 +30,6 @@ public final class EnumValueImpl implements EnumValue {
         this.label = label;
     }
     public EnumValueImpl() {
-       
     }
 
     

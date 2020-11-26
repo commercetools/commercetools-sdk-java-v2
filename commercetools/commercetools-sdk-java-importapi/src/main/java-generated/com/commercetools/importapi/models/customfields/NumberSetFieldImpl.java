@@ -33,7 +33,7 @@ public final class NumberSetFieldImpl implements NumberSetField {
         this.type = "NumberSet";
     }
     public NumberSetFieldImpl() {
-       
+        this.type = "NumberSet";
     }
 
     /**

@@ -30,7 +30,7 @@ public final class ContentionErrorImpl implements ContentionError {
         this.code = "Contention";
     }
     public ContentionErrorImpl() {
-       
+        this.code = "Contention";
     }
 
     

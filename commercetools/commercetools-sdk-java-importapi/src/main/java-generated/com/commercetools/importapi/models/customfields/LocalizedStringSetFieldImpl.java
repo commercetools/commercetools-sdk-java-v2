@@ -34,7 +34,7 @@ public final class LocalizedStringSetFieldImpl implements LocalizedStringSetFiel
         this.type = "LocalizedStringSet";
     }
     public LocalizedStringSetFieldImpl() {
-       
+        this.type = "LocalizedStringSet";
     }
 
     /**

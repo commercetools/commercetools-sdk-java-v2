@@ -30,7 +30,7 @@ public final class InvalidCredentialsErrorImpl implements InvalidCredentialsErro
         this.code = "InvalidCredentials";
     }
     public InvalidCredentialsErrorImpl() {
-       
+        this.code = "InvalidCredentials";
     }
 
     

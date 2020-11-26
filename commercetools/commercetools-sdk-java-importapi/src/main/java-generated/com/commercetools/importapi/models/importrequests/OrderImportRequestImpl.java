@@ -35,7 +35,7 @@ public final class OrderImportRequestImpl implements OrderImportRequest {
         this.type = ImportResourceType.findEnum("order");
     }
     public OrderImportRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("order");
     }
 
     /**

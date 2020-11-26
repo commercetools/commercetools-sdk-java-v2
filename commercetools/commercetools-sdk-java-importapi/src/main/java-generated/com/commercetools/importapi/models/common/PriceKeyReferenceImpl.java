@@ -34,7 +34,7 @@ public final class PriceKeyReferenceImpl implements PriceKeyReference {
         this.typeId = ReferenceType.findEnum("price");
     }
     public PriceKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("price");
     }
 
     

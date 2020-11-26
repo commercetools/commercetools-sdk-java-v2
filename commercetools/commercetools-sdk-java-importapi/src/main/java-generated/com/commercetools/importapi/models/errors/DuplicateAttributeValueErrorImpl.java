@@ -37,7 +37,7 @@ public final class DuplicateAttributeValueErrorImpl implements DuplicateAttribut
         this.code = "DuplicateAttributeValue";
     }
     public DuplicateAttributeValueErrorImpl() {
-       
+        this.code = "DuplicateAttributeValue";
     }
 
     

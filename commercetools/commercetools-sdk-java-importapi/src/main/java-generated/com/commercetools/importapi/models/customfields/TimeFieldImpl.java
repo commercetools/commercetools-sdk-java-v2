@@ -34,7 +34,7 @@ public final class TimeFieldImpl implements TimeField {
         this.type = "Time";
     }
     public TimeFieldImpl() {
-       
+        this.type = "Time";
     }
 
     /**

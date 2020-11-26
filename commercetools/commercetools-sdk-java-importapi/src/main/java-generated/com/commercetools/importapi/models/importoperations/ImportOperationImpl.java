@@ -62,7 +62,6 @@ public final class ImportOperationImpl implements ImportOperation {
         this.expiresAt = expiresAt;
     }
     public ImportOperationImpl() {
-       
     }
 
     /**

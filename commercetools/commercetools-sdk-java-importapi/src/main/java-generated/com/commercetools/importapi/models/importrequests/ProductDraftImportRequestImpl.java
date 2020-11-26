@@ -35,7 +35,7 @@ public final class ProductDraftImportRequestImpl implements ProductDraftImportRe
         this.type = ImportResourceType.findEnum("product-draft");
     }
     public ProductDraftImportRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("product-draft");
     }
 
     /**

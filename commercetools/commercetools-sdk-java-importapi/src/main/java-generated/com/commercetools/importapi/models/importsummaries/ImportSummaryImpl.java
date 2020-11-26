@@ -34,7 +34,6 @@ public final class ImportSummaryImpl implements ImportSummary {
         this.total = total;
     }
     public ImportSummaryImpl() {
-       
     }
 
     /**

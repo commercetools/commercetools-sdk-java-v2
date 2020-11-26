@@ -76,7 +76,6 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
         this.publish = publish;
     }
     public ProductDraftImportImpl() {
-       
     }
 
     

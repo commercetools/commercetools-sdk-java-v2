@@ -99,7 +99,6 @@ public final class AddressImpl implements Address {
         this.externalId = externalId;
     }
     public AddressImpl() {
-       
     }
 
     

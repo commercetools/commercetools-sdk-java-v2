@@ -54,7 +54,6 @@ public final class ErrorObjectImpl implements ErrorObject {
         this.message = message;
     }
     public ErrorObjectImpl() {
-       
     }
 
     

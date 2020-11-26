@@ -31,7 +31,7 @@ public final class AttributeReferenceTypeImpl implements AttributeReferenceType 
         this.name = "reference";
     }
     public AttributeReferenceTypeImpl() {
-       
+        this.name = "reference";
     }
 
     

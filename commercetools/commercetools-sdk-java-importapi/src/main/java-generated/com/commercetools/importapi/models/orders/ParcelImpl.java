@@ -42,7 +42,6 @@ public final class ParcelImpl implements Parcel {
         this.items = items;
     }
     public ParcelImpl() {
-       
     }
 
     

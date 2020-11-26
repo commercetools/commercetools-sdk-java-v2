@@ -34,7 +34,7 @@ public final class CustomerGroupKeyReferenceImpl implements CustomerGroupKeyRefe
         this.typeId = ReferenceType.findEnum("customer-group");
     }
     public CustomerGroupKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("customer-group");
     }
 
     

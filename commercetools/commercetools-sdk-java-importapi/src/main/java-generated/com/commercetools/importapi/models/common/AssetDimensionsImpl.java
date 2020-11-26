@@ -30,7 +30,6 @@ public final class AssetDimensionsImpl implements AssetDimensions {
         this.h = h;
     }
     public AssetDimensionsImpl() {
-       
     }
 
     

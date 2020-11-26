@@ -36,7 +36,7 @@ public final class TextSetAttributeImpl implements TextSetAttribute {
         this.type = "text-set";
     }
     public TextSetAttributeImpl() {
-       
+        this.type = "text-set";
     }
 
     /**

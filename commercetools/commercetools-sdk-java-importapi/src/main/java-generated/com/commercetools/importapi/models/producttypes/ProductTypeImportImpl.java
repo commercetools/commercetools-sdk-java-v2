@@ -40,7 +40,6 @@ public final class ProductTypeImportImpl implements ProductTypeImport {
         this.attributes = attributes;
     }
     public ProductTypeImportImpl() {
-       
     }
 
     

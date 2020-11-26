@@ -75,7 +75,6 @@ public final class PriceImportImpl implements PriceImport {
         this.product = product;
     }
     public PriceImportImpl() {
-       
     }
 
     

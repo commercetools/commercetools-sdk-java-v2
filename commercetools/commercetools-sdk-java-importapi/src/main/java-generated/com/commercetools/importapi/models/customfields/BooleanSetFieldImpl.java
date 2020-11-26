@@ -33,7 +33,7 @@ public final class BooleanSetFieldImpl implements BooleanSetField {
         this.type = "BooleanSet";
     }
     public BooleanSetFieldImpl() {
-       
+        this.type = "BooleanSet";
     }
 
     /**

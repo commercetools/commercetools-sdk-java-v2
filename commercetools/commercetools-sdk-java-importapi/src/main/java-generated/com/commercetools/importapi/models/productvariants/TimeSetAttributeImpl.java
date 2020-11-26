@@ -37,7 +37,7 @@ public final class TimeSetAttributeImpl implements TimeSetAttribute {
         this.type = "time-set";
     }
     public TimeSetAttributeImpl() {
-       
+        this.type = "time-set";
     }
 
     /**

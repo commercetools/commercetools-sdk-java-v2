@@ -34,7 +34,7 @@ public final class DateTimeSetFieldImpl implements DateTimeSetField {
         this.type = "DateTimeSet";
     }
     public DateTimeSetFieldImpl() {
-       
+        this.type = "DateTimeSet";
     }
 
     /**

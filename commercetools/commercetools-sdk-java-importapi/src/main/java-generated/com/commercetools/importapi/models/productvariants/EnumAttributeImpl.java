@@ -37,7 +37,7 @@ public final class EnumAttributeImpl implements EnumAttribute {
         this.type = "enum";
     }
     public EnumAttributeImpl() {
-       
+        this.type = "enum";
     }
 
     /**

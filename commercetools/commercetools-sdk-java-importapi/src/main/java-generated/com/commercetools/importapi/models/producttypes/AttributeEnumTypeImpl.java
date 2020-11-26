@@ -31,7 +31,7 @@ public final class AttributeEnumTypeImpl implements AttributeEnumType {
         this.name = "enum";
     }
     public AttributeEnumTypeImpl() {
-       
+        this.name = "enum";
     }
 
     

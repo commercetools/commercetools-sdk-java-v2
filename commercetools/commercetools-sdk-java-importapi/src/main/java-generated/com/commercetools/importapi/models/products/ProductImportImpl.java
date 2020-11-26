@@ -74,7 +74,6 @@ public final class ProductImportImpl implements ProductImport {
         this.publish = publish;
     }
     public ProductImportImpl() {
-       
     }
 
     

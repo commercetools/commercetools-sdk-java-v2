@@ -35,7 +35,7 @@ public final class InventoryImportRequestImpl implements InventoryImportRequest 
         this.type = ImportResourceType.findEnum("inventory");
     }
     public InventoryImportRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("inventory");
     }
 
     /**

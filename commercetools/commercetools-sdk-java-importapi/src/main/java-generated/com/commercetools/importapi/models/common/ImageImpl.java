@@ -33,7 +33,6 @@ public final class ImageImpl implements Image {
         this.label = label;
     }
     public ImageImpl() {
-       
     }
 
     

@@ -35,7 +35,7 @@ public final class ProductTypeImportRequestImpl implements ProductTypeImportRequ
         this.type = ImportResourceType.findEnum("product-type");
     }
     public ProductTypeImportRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("product-type");
     }
 
     /**

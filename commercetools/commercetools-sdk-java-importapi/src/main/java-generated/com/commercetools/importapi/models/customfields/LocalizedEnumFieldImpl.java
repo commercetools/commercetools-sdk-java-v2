@@ -33,7 +33,7 @@ public final class LocalizedEnumFieldImpl implements LocalizedEnumField {
         this.type = "LocalizedEnum";
     }
     public LocalizedEnumFieldImpl() {
-       
+        this.type = "LocalizedEnum";
     }
 
     /**

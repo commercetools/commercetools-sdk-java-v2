@@ -36,7 +36,7 @@ public final class NumberSetAttributeImpl implements NumberSetAttribute {
         this.type = "number-set";
     }
     public NumberSetAttributeImpl() {
-       
+        this.type = "number-set";
     }
 
     /**

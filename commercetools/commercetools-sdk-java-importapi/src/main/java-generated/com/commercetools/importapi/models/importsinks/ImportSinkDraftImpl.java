@@ -36,7 +36,6 @@ public final class ImportSinkDraftImpl implements ImportSinkDraft {
         this.resourceType = resourceType;
     }
     public ImportSinkDraftImpl() {
-       
     }
 
     /**

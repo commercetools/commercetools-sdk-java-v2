@@ -37,7 +37,7 @@ public final class TimeAttributeImpl implements TimeAttribute {
         this.type = "time";
     }
     public TimeAttributeImpl() {
-       
+        this.type = "time";
     }
 
     /**

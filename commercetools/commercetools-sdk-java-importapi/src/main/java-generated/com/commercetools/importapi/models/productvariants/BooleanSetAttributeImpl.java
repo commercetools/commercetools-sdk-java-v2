@@ -36,7 +36,7 @@ public final class BooleanSetAttributeImpl implements BooleanSetAttribute {
         this.type = "boolean-set";
     }
     public BooleanSetAttributeImpl() {
-       
+        this.type = "boolean-set";
     }
 
     /**

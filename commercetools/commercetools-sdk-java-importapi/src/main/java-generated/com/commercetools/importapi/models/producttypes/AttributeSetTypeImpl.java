@@ -30,7 +30,7 @@ public final class AttributeSetTypeImpl implements AttributeSetType {
         this.name = "set";
     }
     public AttributeSetTypeImpl() {
-       
+        this.name = "set";
     }
 
     

@@ -34,7 +34,7 @@ public final class ProductVariantKeyReferenceImpl implements ProductVariantKeyRe
         this.typeId = ReferenceType.findEnum("product-variant");
     }
     public ProductVariantKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("product-variant");
     }
 
     

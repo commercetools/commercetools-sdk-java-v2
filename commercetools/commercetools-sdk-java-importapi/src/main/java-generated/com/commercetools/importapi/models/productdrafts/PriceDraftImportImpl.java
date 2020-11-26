@@ -60,7 +60,6 @@ public final class PriceDraftImportImpl implements PriceDraftImport {
         this.key = key;
     }
     public PriceDraftImportImpl() {
-       
     }
 
     

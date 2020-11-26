@@ -34,7 +34,7 @@ public final class InvalidOperationImpl implements InvalidOperation {
         this.code = "InvalidOperation";
     }
     public InvalidOperationImpl() {
-       
+        this.code = "InvalidOperation";
     }
 
     

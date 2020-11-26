@@ -39,7 +39,6 @@ public final class ImportOperationPagedResponseImpl implements ImportOperationPa
         this.results = results;
     }
     public ImportOperationPagedResponseImpl() {
-       
     }
 
     /**

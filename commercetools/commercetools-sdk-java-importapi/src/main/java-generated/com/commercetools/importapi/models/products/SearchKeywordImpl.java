@@ -30,7 +30,6 @@ public final class SearchKeywordImpl implements SearchKeyword {
         this.suggestTokenizer = suggestTokenizer;
     }
     public SearchKeywordImpl() {
-       
     }
 
     

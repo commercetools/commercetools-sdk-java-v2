@@ -30,7 +30,6 @@ public final class LocalizedEnumValueImpl implements LocalizedEnumValue {
         this.label = label;
     }
     public LocalizedEnumValueImpl() {
-       
     }
 
     

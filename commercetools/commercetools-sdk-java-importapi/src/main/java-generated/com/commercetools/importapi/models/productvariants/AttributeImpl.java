@@ -55,7 +55,6 @@ public final class AttributeImpl implements Attribute {
         this.type = type;
     }
     public AttributeImpl() {
-       
     }
 
     /**

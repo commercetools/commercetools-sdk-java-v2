@@ -34,7 +34,7 @@ public final class InvalidInputImpl implements InvalidInput {
         this.code = "InvalidInput";
     }
     public InvalidInputImpl() {
-       
+        this.code = "InvalidInput";
     }
 
     

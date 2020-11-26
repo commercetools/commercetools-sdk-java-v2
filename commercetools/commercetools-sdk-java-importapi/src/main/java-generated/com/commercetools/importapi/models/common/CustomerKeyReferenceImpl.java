@@ -34,7 +34,7 @@ public final class CustomerKeyReferenceImpl implements CustomerKeyReference {
         this.typeId = ReferenceType.findEnum("customer");
     }
     public CustomerKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("customer");
     }
 
     

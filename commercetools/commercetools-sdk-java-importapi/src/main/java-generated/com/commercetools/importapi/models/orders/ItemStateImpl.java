@@ -33,7 +33,6 @@ public final class ItemStateImpl implements ItemState {
         this.state = state;
     }
     public ItemStateImpl() {
-       
     }
 
     

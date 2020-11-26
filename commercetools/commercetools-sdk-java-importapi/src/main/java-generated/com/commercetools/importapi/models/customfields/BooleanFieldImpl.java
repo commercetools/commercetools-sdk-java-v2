@@ -33,7 +33,7 @@ public final class BooleanFieldImpl implements BooleanField {
         this.type = "Boolean";
     }
     public BooleanFieldImpl() {
-       
+        this.type = "Boolean";
     }
 
     /**

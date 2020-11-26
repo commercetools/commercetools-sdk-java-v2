@@ -30,7 +30,7 @@ public final class InvalidTokenErrorImpl implements InvalidTokenError {
         this.code = "invalid_token";
     }
     public InvalidTokenErrorImpl() {
-       
+        this.code = "invalid_token";
     }
 
     

@@ -35,7 +35,7 @@ public final class CustomerImportRequestImpl implements CustomerImportRequest {
         this.type = ImportResourceType.findEnum("customer");
     }
     public CustomerImportRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("customer");
     }
 
     /**

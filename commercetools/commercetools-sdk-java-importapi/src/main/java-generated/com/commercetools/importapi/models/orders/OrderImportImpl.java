@@ -117,7 +117,6 @@ public final class OrderImportImpl implements OrderImport {
         this.itemShippingAddresses = itemShippingAddresses;
     }
     public OrderImportImpl() {
-       
     }
 
     

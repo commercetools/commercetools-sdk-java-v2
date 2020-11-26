@@ -27,7 +27,6 @@ public final class SearchKeywordsImpl implements SearchKeywords {
         this.values = values;
     }
     public SearchKeywordsImpl() {
-       
     }
 
     

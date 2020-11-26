@@ -37,7 +37,7 @@ public final class InvalidStateTransitionErrorImpl implements InvalidStateTransi
         this.code = "InvalidTransition";
     }
     public InvalidStateTransitionErrorImpl() {
-       
+        this.code = "InvalidTransition";
     }
 
     

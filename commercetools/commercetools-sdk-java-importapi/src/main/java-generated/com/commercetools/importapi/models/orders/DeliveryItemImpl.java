@@ -30,7 +30,6 @@ public final class DeliveryItemImpl implements DeliveryItem {
         this.quantity = quantity;
     }
     public DeliveryItemImpl() {
-       
     }
 
     

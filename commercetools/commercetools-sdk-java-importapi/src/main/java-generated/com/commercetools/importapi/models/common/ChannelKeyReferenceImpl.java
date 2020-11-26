@@ -34,7 +34,7 @@ public final class ChannelKeyReferenceImpl implements ChannelKeyReference {
         this.typeId = ReferenceType.findEnum("channel");
     }
     public ChannelKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("channel");
     }
 
     

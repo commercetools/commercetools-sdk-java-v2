@@ -36,7 +36,7 @@ public final class BooleanAttributeImpl implements BooleanAttribute {
         this.type = "boolean";
     }
     public BooleanAttributeImpl() {
-       
+        this.type = "boolean";
     }
 
     /**

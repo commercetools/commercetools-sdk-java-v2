@@ -1,5 +1,6 @@
 com.commercetools.api.client
 com.commercetools.api.defaultconfig
+com.commercetools.api.models
 com.commercetools.api.models.api_client
 com.commercetools.api.models.cart
 com.commercetools.api.models.cart_discount

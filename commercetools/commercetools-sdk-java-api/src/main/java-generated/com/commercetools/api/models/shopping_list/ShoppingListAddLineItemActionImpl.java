@@ -47,7 +47,7 @@ public final class ShoppingListAddLineItemActionImpl implements ShoppingListAddL
         this.action = "addLineItem";
     }
     public ShoppingListAddLineItemActionImpl() {
-       
+        this.action = "addLineItem";
     }
 
     

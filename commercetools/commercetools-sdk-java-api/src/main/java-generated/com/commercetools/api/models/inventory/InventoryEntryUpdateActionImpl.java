@@ -34,7 +34,6 @@ public final class InventoryEntryUpdateActionImpl implements InventoryEntryUpdat
         this.action = action;
     }
     public InventoryEntryUpdateActionImpl() {
-       
     }
 
     

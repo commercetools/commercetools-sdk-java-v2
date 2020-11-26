@@ -61,7 +61,7 @@ public final class OrderImportedMessageImpl implements OrderImportedMessage {
         this.type = "OrderImported";
     }
     public OrderImportedMessageImpl() {
-       
+        this.type = "OrderImported";
     }
 
     

@@ -41,7 +41,7 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
         this.action = "changeLineItemQuantity";
     }
     public CartChangeLineItemQuantityActionImpl() {
-       
+        this.action = "changeLineItemQuantity";
     }
 
     

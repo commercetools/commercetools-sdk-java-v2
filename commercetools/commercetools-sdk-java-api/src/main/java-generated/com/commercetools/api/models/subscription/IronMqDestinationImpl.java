@@ -30,7 +30,7 @@ public final class IronMqDestinationImpl implements IronMqDestination {
         this.type = "IronMQ";
     }
     public IronMqDestinationImpl() {
-       
+        this.type = "IronMQ";
     }
 
     

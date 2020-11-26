@@ -30,7 +30,6 @@ public final class OrderEditApplyImpl implements OrderEditApply {
         this.resourceVersion = resourceVersion;
     }
     public OrderEditApplyImpl() {
-       
     }
 
     

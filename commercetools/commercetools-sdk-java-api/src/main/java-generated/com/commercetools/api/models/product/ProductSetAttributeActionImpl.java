@@ -43,7 +43,7 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
         this.action = "setAttribute";
     }
     public ProductSetAttributeActionImpl() {
-       
+        this.action = "setAttribute";
     }
 
     

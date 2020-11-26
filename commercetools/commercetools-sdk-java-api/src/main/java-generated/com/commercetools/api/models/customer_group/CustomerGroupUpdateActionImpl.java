@@ -30,7 +30,6 @@ public final class CustomerGroupUpdateActionImpl implements CustomerGroupUpdateA
         this.action = action;
     }
     public CustomerGroupUpdateActionImpl() {
-       
     }
 
     

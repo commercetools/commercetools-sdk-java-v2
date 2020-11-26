@@ -48,7 +48,6 @@ public final class PaymentUpdateActionImpl implements PaymentUpdateAction {
         this.action = action;
     }
     public PaymentUpdateActionImpl() {
-       
     }
 
     

@@ -37,7 +37,7 @@ public final class ParcelTrackingDataUpdatedMessagePayloadImpl implements Parcel
         this.type = "ParcelTrackingDataUpdated";
     }
     public ParcelTrackingDataUpdatedMessagePayloadImpl() {
-       
+        this.type = "ParcelTrackingDataUpdated";
     }
 
     

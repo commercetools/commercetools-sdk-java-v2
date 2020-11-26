@@ -30,7 +30,7 @@ public final class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocal
         this.action = "setLocale";
     }
     public StagedOrderSetLocaleActionImpl() {
-       
+        this.action = "setLocale";
     }
 
     

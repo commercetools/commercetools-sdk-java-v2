@@ -31,7 +31,7 @@ public final class MyPaymentAddTransactionActionImpl implements MyPaymentAddTran
         this.action = "addTransaction";
     }
     public MyPaymentAddTransactionActionImpl() {
-       
+        this.action = "addTransaction";
     }
 
     

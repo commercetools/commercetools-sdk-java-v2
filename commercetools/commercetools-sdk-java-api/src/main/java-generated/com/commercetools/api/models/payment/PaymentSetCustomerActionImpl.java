@@ -31,7 +31,7 @@ public final class PaymentSetCustomerActionImpl implements PaymentSetCustomerAct
         this.action = "setCustomer";
     }
     public PaymentSetCustomerActionImpl() {
-       
+        this.action = "setCustomer";
     }
 
     

@@ -60,7 +60,6 @@ public final class ReviewDraftImpl implements ReviewDraft {
         this.custom = custom;
     }
     public ReviewDraftImpl() {
-       
     }
 
     /**

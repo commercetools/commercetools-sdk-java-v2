@@ -34,7 +34,7 @@ public final class ProductRemovedFromCategoryMessagePayloadImpl implements Produ
         this.type = "ProductRemovedFromCategory";
     }
     public ProductRemovedFromCategoryMessagePayloadImpl() {
-       
+        this.type = "ProductRemovedFromCategory";
     }
 
     

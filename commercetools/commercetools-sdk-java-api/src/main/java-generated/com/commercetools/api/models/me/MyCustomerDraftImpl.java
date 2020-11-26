@@ -72,7 +72,6 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
         this.stores = stores;
     }
     public MyCustomerDraftImpl() {
-       
     }
 
     

@@ -31,7 +31,7 @@ public final class DiscountCodeSetDescriptionActionImpl implements DiscountCodeS
         this.action = "setDescription";
     }
     public DiscountCodeSetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

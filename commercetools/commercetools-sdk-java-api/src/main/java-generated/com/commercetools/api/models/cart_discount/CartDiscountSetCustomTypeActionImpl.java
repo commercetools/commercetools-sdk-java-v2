@@ -35,7 +35,7 @@ public final class CartDiscountSetCustomTypeActionImpl implements CartDiscountSe
         this.action = "setCustomType";
     }
     public CartDiscountSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

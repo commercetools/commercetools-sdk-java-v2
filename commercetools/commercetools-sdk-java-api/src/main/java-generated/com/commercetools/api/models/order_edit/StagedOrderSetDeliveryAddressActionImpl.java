@@ -34,7 +34,7 @@ public final class StagedOrderSetDeliveryAddressActionImpl implements StagedOrde
         this.action = "setDeliveryAddress";
     }
     public StagedOrderSetDeliveryAddressActionImpl() {
-       
+        this.action = "setDeliveryAddress";
     }
 
     

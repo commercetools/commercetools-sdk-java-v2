@@ -66,7 +66,6 @@ public final class LineItemDraftImpl implements LineItemDraft {
         this.shippingDetails = shippingDetails;
     }
     public LineItemDraftImpl() {
-       
     }
 
     

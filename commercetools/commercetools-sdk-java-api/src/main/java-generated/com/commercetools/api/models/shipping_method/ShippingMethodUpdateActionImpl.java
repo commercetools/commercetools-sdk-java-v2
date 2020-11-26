@@ -37,7 +37,6 @@ public final class ShippingMethodUpdateActionImpl implements ShippingMethodUpdat
         this.action = action;
     }
     public ShippingMethodUpdateActionImpl() {
-       
     }
 
     

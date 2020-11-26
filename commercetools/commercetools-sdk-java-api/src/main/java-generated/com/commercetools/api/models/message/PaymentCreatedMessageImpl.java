@@ -61,7 +61,7 @@ public final class PaymentCreatedMessageImpl implements PaymentCreatedMessage {
         this.type = "PaymentCreated";
     }
     public PaymentCreatedMessageImpl() {
-       
+        this.type = "PaymentCreated";
     }
 
     

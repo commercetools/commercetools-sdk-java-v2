@@ -39,7 +39,7 @@ public final class InventoryEntryQuantitySetMessagePayloadImpl implements Invent
         this.type = "InventoryEntryQuantitySet";
     }
     public InventoryEntryQuantitySetMessagePayloadImpl() {
-       
+        this.type = "InventoryEntryQuantitySet";
     }
 
     

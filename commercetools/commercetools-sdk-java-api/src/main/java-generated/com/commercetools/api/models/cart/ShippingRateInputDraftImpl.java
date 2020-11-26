@@ -28,7 +28,6 @@ public final class ShippingRateInputDraftImpl implements ShippingRateInputDraft 
         this.type = type;
     }
     public ShippingRateInputDraftImpl() {
-       
     }
 
     

@@ -37,7 +37,6 @@ public final class ShippingRateImpl implements ShippingRate {
         this.tiers = tiers;
     }
     public ShippingRateImpl() {
-       
     }
 
     

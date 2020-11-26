@@ -35,7 +35,7 @@ public final class StagedOrderSetCustomTypeActionImpl implements StagedOrderSetC
         this.action = "setCustomType";
     }
     public StagedOrderSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

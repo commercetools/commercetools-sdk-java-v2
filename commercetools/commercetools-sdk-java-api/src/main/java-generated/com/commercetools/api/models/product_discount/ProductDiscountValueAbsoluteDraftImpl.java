@@ -31,7 +31,7 @@ public final class ProductDiscountValueAbsoluteDraftImpl implements ProductDisco
         this.type = "absolute";
     }
     public ProductDiscountValueAbsoluteDraftImpl() {
-       
+        this.type = "absolute";
     }
 
     

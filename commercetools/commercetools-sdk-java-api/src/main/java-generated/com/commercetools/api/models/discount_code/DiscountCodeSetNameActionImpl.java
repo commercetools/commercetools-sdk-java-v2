@@ -31,7 +31,7 @@ public final class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameA
         this.action = "setName";
     }
     public DiscountCodeSetNameActionImpl() {
-       
+        this.action = "setName";
     }
 
     

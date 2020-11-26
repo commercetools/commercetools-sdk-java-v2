@@ -98,7 +98,6 @@ public final class MessagePayloadImpl implements MessagePayload {
         this.type = type;
     }
     public MessagePayloadImpl() {
-       
     }
 
     

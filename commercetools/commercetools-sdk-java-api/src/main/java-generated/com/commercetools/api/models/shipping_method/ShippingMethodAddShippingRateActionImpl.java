@@ -35,7 +35,7 @@ public final class ShippingMethodAddShippingRateActionImpl implements ShippingMe
         this.action = "addShippingRate";
     }
     public ShippingMethodAddShippingRateActionImpl() {
-       
+        this.action = "addShippingRate";
     }
 
     

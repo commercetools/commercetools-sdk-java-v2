@@ -34,7 +34,7 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
         this.action = "addAsset";
     }
     public CategoryAddAssetActionImpl() {
-       
+        this.action = "addAsset";
     }
 
     

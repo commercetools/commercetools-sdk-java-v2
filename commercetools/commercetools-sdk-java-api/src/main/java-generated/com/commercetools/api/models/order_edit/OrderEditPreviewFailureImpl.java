@@ -31,7 +31,7 @@ public final class OrderEditPreviewFailureImpl implements OrderEditPreviewFailur
         this.type = "PreviewFailure";
     }
     public OrderEditPreviewFailureImpl() {
-       
+        this.type = "PreviewFailure";
     }
 
     

@@ -33,7 +33,6 @@ public final class OrderEditUpdateImpl implements OrderEditUpdate {
         this.dryRun = dryRun;
     }
     public OrderEditUpdateImpl() {
-       
     }
 
     

@@ -31,7 +31,7 @@ public final class CartSetCustomerGroupActionImpl implements CartSetCustomerGrou
         this.action = "setCustomerGroup";
     }
     public CartSetCustomerGroupActionImpl() {
-       
+        this.action = "setCustomerGroup";
     }
 
     

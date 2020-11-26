@@ -39,7 +39,6 @@ public final class InventoryPagedQueryResponseImpl implements InventoryPagedQuer
         this.results = results;
     }
     public InventoryPagedQueryResponseImpl() {
-       
     }
 
     

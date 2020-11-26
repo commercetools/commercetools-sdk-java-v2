@@ -36,7 +36,7 @@ public final class ProductSetSkuActionImpl implements ProductSetSkuAction {
         this.action = "setSku";
     }
     public ProductSetSkuActionImpl() {
-       
+        this.action = "setSku";
     }
 
     

@@ -31,7 +31,7 @@ public final class ProductTypeAddAttributeDefinitionActionImpl implements Produc
         this.action = "addAttributeDefinition";
     }
     public ProductTypeAddAttributeDefinitionActionImpl() {
-       
+        this.action = "addAttributeDefinition";
     }
 
     

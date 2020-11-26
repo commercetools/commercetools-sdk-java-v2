@@ -36,7 +36,7 @@ public final class ProductSetCategoryOrderHintActionImpl implements ProductSetCa
         this.action = "setCategoryOrderHint";
     }
     public ProductSetCategoryOrderHintActionImpl() {
-       
+        this.action = "setCategoryOrderHint";
     }
 
     

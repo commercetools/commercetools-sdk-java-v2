@@ -64,7 +64,7 @@ public final class PaymentStatusStateTransitionMessageImpl implements PaymentSta
         this.type = "PaymentStatusStateTransition";
     }
     public PaymentStatusStateTransitionMessageImpl() {
-       
+        this.type = "PaymentStatusStateTransition";
     }
 
     

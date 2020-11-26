@@ -34,7 +34,7 @@ public final class StagedOrderSetReturnPaymentStateActionImpl implements StagedO
         this.action = "setReturnPaymentState";
     }
     public StagedOrderSetReturnPaymentStateActionImpl() {
-       
+        this.action = "setReturnPaymentState";
     }
 
     

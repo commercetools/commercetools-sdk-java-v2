@@ -34,7 +34,7 @@ public final class OrderImportLineItemStateActionImpl implements OrderImportLine
         this.action = "importLineItemState";
     }
     public OrderImportLineItemStateActionImpl() {
-       
+        this.action = "importLineItemState";
     }
 
     

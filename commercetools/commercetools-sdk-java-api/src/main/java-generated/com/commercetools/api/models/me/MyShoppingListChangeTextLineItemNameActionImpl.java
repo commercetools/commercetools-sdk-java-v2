@@ -34,7 +34,7 @@ public final class MyShoppingListChangeTextLineItemNameActionImpl implements MyS
         this.action = "changeTextLineItemName";
     }
     public MyShoppingListChangeTextLineItemNameActionImpl() {
-       
+        this.action = "changeTextLineItemName";
     }
 
     

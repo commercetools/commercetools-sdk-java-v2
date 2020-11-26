@@ -31,7 +31,7 @@ public final class CategorySetDescriptionActionImpl implements CategorySetDescri
         this.action = "setDescription";
     }
     public CategorySetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

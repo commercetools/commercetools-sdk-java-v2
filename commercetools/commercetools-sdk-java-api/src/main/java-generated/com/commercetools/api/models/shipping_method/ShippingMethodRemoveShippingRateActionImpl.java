@@ -35,7 +35,7 @@ public final class ShippingMethodRemoveShippingRateActionImpl implements Shippin
         this.action = "removeShippingRate";
     }
     public ShippingMethodRemoveShippingRateActionImpl() {
-       
+        this.action = "removeShippingRate";
     }
 
     

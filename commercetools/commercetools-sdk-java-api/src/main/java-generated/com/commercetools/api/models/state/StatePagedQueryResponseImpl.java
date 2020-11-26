@@ -39,7 +39,6 @@ public final class StatePagedQueryResponseImpl implements StatePagedQueryRespons
         this.results = results;
     }
     public StatePagedQueryResponseImpl() {
-       
     }
 
     

@@ -61,7 +61,7 @@ public final class CategorySlugChangedMessageImpl implements CategorySlugChanged
         this.type = "CategorySlugChanged";
     }
     public CategorySlugChangedMessageImpl() {
-       
+        this.type = "CategorySlugChanged";
     }
 
     

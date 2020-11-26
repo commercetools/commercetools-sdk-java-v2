@@ -59,7 +59,6 @@ public final class ScopedPriceImpl implements ScopedPrice {
         this.custom = custom;
     }
     public ScopedPriceImpl() {
-       
     }
 
     

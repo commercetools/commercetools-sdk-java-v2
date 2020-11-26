@@ -44,7 +44,6 @@ public final class AssetDraftImpl implements AssetDraft {
         this.key = key;
     }
     public AssetDraftImpl() {
-       
     }
 
     

@@ -33,7 +33,7 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
         this.code = "ConcurrentModification";
     }
     public ConcurrentModificationErrorImpl() {
-       
+        this.code = "ConcurrentModification";
     }
 
     

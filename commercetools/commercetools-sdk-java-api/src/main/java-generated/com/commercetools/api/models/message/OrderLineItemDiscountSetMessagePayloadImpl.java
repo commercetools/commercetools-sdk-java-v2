@@ -42,7 +42,7 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
         this.type = "OrderLineItemDiscountSet";
     }
     public OrderLineItemDiscountSetMessagePayloadImpl() {
-       
+        this.type = "OrderLineItemDiscountSet";
     }
 
     

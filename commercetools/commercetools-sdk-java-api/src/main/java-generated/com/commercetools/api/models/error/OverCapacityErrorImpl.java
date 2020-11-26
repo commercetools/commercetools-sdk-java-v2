@@ -30,7 +30,7 @@ public final class OverCapacityErrorImpl implements OverCapacityError {
         this.code = "OverCapacity";
     }
     public OverCapacityErrorImpl() {
-       
+        this.code = "OverCapacity";
     }
 
     

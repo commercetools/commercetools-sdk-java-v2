@@ -40,7 +40,6 @@ public final class StoreDraftImpl implements StoreDraft {
         this.supplyChannels = supplyChannels;
     }
     public StoreDraftImpl() {
-       
     }
 
     /**

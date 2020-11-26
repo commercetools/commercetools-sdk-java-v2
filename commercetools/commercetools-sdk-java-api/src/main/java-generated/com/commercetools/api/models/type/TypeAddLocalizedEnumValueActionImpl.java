@@ -34,7 +34,7 @@ public final class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocaliz
         this.action = "addLocalizedEnumValue";
     }
     public TypeAddLocalizedEnumValueActionImpl() {
-       
+        this.action = "addLocalizedEnumValue";
     }
 
     

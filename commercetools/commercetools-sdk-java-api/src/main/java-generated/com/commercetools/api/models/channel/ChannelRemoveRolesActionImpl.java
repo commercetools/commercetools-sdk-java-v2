@@ -31,7 +31,7 @@ public final class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAct
         this.action = "removeRoles";
     }
     public ChannelRemoveRolesActionImpl() {
-       
+        this.action = "removeRoles";
     }
 
     

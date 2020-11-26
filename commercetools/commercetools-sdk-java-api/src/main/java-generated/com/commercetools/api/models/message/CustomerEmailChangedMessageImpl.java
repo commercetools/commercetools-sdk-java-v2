@@ -60,7 +60,7 @@ public final class CustomerEmailChangedMessageImpl implements CustomerEmailChang
         this.type = "CustomerEmailChanged";
     }
     public CustomerEmailChangedMessageImpl() {
-       
+        this.type = "CustomerEmailChanged";
     }
 
     

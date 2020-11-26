@@ -42,7 +42,7 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
         this.code = "ExtensionNoResponse";
     }
     public ExtensionNoResponseErrorImpl() {
-       
+        this.code = "ExtensionNoResponse";
     }
 
     

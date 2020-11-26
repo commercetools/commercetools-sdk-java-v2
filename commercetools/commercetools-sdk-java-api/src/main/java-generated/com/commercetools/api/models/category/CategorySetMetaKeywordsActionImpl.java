@@ -31,7 +31,7 @@ public final class CategorySetMetaKeywordsActionImpl implements CategorySetMetaK
         this.action = "setMetaKeywords";
     }
     public CategorySetMetaKeywordsActionImpl() {
-       
+        this.action = "setMetaKeywords";
     }
 
     

@@ -32,7 +32,6 @@ public final class DestinationImpl implements Destination {
         this.type = type;
     }
     public DestinationImpl() {
-       
     }
 
     

@@ -27,7 +27,6 @@ public final class FieldContainerImpl implements FieldContainer {
         this.values = values;
     }
     public FieldContainerImpl() {
-       
     }
 
     

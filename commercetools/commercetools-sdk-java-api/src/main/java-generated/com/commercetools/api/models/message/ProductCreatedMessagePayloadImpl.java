@@ -31,7 +31,7 @@ public final class ProductCreatedMessagePayloadImpl implements ProductCreatedMes
         this.type = "ProductCreated";
     }
     public ProductCreatedMessagePayloadImpl() {
-       
+        this.type = "ProductCreated";
     }
 
     

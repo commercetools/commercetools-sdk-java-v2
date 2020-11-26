@@ -39,7 +39,6 @@ public final class DiscountCodePagedQueryResponseImpl implements DiscountCodePag
         this.results = results;
     }
     public DiscountCodePagedQueryResponseImpl() {
-       
     }
 
     

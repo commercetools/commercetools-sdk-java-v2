@@ -109,7 +109,6 @@ public final class CartDraftImpl implements CartDraft {
         this.discountCodes = discountCodes;
     }
     public CartDraftImpl() {
-       
     }
 
     /**

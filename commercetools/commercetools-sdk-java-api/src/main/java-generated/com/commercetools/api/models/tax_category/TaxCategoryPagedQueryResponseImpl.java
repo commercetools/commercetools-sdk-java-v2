@@ -39,7 +39,6 @@ public final class TaxCategoryPagedQueryResponseImpl implements TaxCategoryPaged
         this.results = results;
     }
     public TaxCategoryPagedQueryResponseImpl() {
-       
     }
 
     

@@ -30,7 +30,6 @@ public final class ErrorByExtensionImpl implements ErrorByExtension {
         this.key = key;
     }
     public ErrorByExtensionImpl() {
-       
     }
 
     

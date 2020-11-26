@@ -31,7 +31,6 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
         this.cart = cart;
     }
     public CustomerSignInResultImpl() {
-       
     }
 
     

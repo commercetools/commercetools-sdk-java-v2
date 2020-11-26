@@ -34,7 +34,7 @@ public final class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCu
         this.action = "setCustomField";
     }
     public MyCustomerSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

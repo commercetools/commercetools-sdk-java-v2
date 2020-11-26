@@ -30,7 +30,6 @@ public final class ExternalLineItemTotalPriceImpl implements ExternalLineItemTot
         this.totalPrice = totalPrice;
     }
     public ExternalLineItemTotalPriceImpl() {
-       
     }
 
     

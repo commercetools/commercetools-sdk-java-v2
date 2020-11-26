@@ -30,7 +30,7 @@ public final class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError {
         this.code = "EnumValueIsUsed";
     }
     public EnumValueIsUsedErrorImpl() {
-       
+        this.code = "EnumValueIsUsed";
     }
 
     

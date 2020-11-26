@@ -34,7 +34,7 @@ public final class ReviewSetCustomFieldActionImpl implements ReviewSetCustomFiel
         this.action = "setCustomField";
     }
     public ReviewSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

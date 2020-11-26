@@ -46,7 +46,7 @@ public final class ProductChangeAssetNameActionImpl implements ProductChangeAsse
         this.action = "changeAssetName";
     }
     public ProductChangeAssetNameActionImpl() {
-       
+        this.action = "changeAssetName";
     }
 
     

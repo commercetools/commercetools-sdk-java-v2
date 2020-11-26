@@ -34,7 +34,7 @@ public final class StagedOrderSetParcelTrackingDataActionImpl implements StagedO
         this.action = "setParcelTrackingData";
     }
     public StagedOrderSetParcelTrackingDataActionImpl() {
-       
+        this.action = "setParcelTrackingData";
     }
 
     

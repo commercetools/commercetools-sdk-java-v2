@@ -30,7 +30,7 @@ public final class ShoppingListChangeLineItemsOrderActionImpl implements Shoppin
         this.action = "changeLineItemsOrder";
     }
     public ShoppingListChangeLineItemsOrderActionImpl() {
-       
+        this.action = "changeLineItemsOrder";
     }
 
     

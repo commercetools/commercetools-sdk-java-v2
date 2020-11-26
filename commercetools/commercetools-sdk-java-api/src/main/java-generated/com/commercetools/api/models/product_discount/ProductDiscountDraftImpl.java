@@ -53,7 +53,6 @@ public final class ProductDiscountDraftImpl implements ProductDiscountDraft {
         this.validUntil = validUntil;
     }
     public ProductDiscountDraftImpl() {
-       
     }
 
     

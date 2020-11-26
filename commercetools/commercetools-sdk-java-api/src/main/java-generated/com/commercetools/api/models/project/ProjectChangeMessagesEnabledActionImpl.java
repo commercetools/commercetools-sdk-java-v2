@@ -30,7 +30,7 @@ public final class ProjectChangeMessagesEnabledActionImpl implements ProjectChan
         this.action = "changeMessagesEnabled";
     }
     public ProjectChangeMessagesEnabledActionImpl() {
-       
+        this.action = "changeMessagesEnabled";
     }
 
     

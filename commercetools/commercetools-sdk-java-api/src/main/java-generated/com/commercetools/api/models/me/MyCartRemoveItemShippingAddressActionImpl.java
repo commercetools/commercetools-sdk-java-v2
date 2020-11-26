@@ -30,7 +30,7 @@ public final class MyCartRemoveItemShippingAddressActionImpl implements MyCartRe
         this.action = "removeItemShippingAddress";
     }
     public MyCartRemoveItemShippingAddressActionImpl() {
-       
+        this.action = "removeItemShippingAddress";
     }
 
     

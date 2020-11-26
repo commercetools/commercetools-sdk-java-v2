@@ -33,7 +33,6 @@ public final class ProductVariantChannelAvailabilityImpl implements ProductVaria
         this.availableQuantity = availableQuantity;
     }
     public ProductVariantChannelAvailabilityImpl() {
-       
     }
 
     

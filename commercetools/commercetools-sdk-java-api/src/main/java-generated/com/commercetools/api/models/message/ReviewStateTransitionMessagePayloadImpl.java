@@ -47,7 +47,7 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
         this.type = "ReviewStateTransition";
     }
     public ReviewStateTransitionMessagePayloadImpl() {
-       
+        this.type = "ReviewStateTransition";
     }
 
     

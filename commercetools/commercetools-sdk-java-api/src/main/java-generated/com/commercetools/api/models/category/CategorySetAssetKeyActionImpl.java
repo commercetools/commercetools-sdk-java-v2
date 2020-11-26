@@ -33,7 +33,7 @@ public final class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyA
         this.action = "setAssetKey";
     }
     public CategorySetAssetKeyActionImpl() {
-       
+        this.action = "setAssetKey";
     }
 
     

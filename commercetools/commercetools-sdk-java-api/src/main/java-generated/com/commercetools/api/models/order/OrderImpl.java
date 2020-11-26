@@ -176,7 +176,6 @@ public final class OrderImpl implements Order {
         this.refusedGifts = refusedGifts;
     }
     public OrderImpl() {
-       
     }
 
     /**

@@ -38,7 +38,7 @@ public final class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddR
         this.action = "addReturnInfo";
     }
     public StagedOrderAddReturnInfoActionImpl() {
-       
+        this.action = "addReturnInfo";
     }
 
     

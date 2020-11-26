@@ -43,7 +43,7 @@ public final class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLi
         this.type = "multiBuyCustomLineItems";
     }
     public MultiBuyCustomLineItemsTargetImpl() {
-       
+        this.type = "multiBuyCustomLineItems";
     }
 
     

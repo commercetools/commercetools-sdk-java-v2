@@ -64,7 +64,7 @@ public final class OrderCustomerGroupSetMessageImpl implements OrderCustomerGrou
         this.type = "OrderCustomerGroupSet";
     }
     public OrderCustomerGroupSetMessageImpl() {
-       
+        this.type = "OrderCustomerGroupSet";
     }
 
     

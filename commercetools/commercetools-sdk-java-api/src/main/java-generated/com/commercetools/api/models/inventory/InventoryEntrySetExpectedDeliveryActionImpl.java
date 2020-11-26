@@ -31,7 +31,7 @@ public final class InventoryEntrySetExpectedDeliveryActionImpl implements Invent
         this.action = "setExpectedDelivery";
     }
     public InventoryEntrySetExpectedDeliveryActionImpl() {
-       
+        this.action = "setExpectedDelivery";
     }
 
     

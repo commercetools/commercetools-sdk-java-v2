@@ -34,7 +34,7 @@ public final class ProductTypeChangeLocalizedEnumValueLabelActionImpl implements
         this.action = "changeLocalizedEnumValueLabel";
     }
     public ProductTypeChangeLocalizedEnumValueLabelActionImpl() {
-       
+        this.action = "changeLocalizedEnumValueLabel";
     }
 
     

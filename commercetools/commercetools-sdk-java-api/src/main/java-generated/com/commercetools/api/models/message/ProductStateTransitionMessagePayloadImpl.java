@@ -34,7 +34,7 @@ public final class ProductStateTransitionMessagePayloadImpl implements ProductSt
         this.type = "ProductStateTransition";
     }
     public ProductStateTransitionMessagePayloadImpl() {
-       
+        this.type = "ProductStateTransition";
     }
 
     

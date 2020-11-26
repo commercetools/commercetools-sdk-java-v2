@@ -30,7 +30,7 @@ public final class ExtensionSetTimeoutInMsActionImpl implements ExtensionSetTime
         this.action = "setTimeoutInMs";
     }
     public ExtensionSetTimeoutInMsActionImpl() {
-       
+        this.action = "setTimeoutInMs";
     }
 
     

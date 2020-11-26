@@ -34,7 +34,7 @@ public final class StagedOrderSetLineItemShippingDetailsActionImpl implements St
         this.action = "setLineItemShippingDetails";
     }
     public StagedOrderSetLineItemShippingDetailsActionImpl() {
-       
+        this.action = "setLineItemShippingDetails";
     }
 
     

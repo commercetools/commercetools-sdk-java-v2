@@ -34,7 +34,7 @@ public final class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsA
         this.action = "setParcelItems";
     }
     public OrderSetParcelItemsActionImpl() {
-       
+        this.action = "setParcelItems";
     }
 
     

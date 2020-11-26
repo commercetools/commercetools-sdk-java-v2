@@ -77,7 +77,7 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
         this.type = "ReviewStateTransition";
     }
     public ReviewStateTransitionMessageImpl() {
-       
+        this.type = "ReviewStateTransition";
     }
 
     

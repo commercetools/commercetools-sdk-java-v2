@@ -31,7 +31,7 @@ public final class OrderImportedMessagePayloadImpl implements OrderImportedMessa
         this.type = "OrderImported";
     }
     public OrderImportedMessagePayloadImpl() {
-       
+        this.type = "OrderImported";
     }
 
     

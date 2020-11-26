@@ -35,7 +35,7 @@ public final class OrderEditPreviewSuccessImpl implements OrderEditPreviewSucces
         this.type = "PreviewSuccess";
     }
     public OrderEditPreviewSuccessImpl() {
-       
+        this.type = "PreviewSuccess";
     }
 
     

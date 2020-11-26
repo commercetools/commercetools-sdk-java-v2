@@ -39,7 +39,6 @@ public final class OrderPagedQueryResponseImpl implements OrderPagedQueryRespons
         this.results = results;
     }
     public OrderPagedQueryResponseImpl() {
-       
     }
 
     

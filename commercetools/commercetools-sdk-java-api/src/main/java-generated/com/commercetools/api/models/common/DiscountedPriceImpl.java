@@ -31,7 +31,6 @@ public final class DiscountedPriceImpl implements DiscountedPrice {
         this.discount = discount;
     }
     public DiscountedPriceImpl() {
-       
     }
 
     

@@ -39,7 +39,6 @@ public final class SubscriptionPagedQueryResponseImpl implements SubscriptionPag
         this.results = results;
     }
     public SubscriptionPagedQueryResponseImpl() {
-       
     }
 
     

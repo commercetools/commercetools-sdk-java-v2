@@ -34,7 +34,7 @@ public final class ProductTypeChangeInputHintActionImpl implements ProductTypeCh
         this.action = "changeInputHint";
     }
     public ProductTypeChangeInputHintActionImpl() {
-       
+        this.action = "changeInputHint";
     }
 
     

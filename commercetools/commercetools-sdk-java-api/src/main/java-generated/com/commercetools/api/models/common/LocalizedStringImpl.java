@@ -27,7 +27,6 @@ public final class LocalizedStringImpl implements LocalizedString {
         this.values = values;
     }
     public LocalizedStringImpl() {
-       
     }
 
     

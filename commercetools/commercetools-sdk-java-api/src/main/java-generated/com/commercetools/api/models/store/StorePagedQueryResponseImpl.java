@@ -39,7 +39,6 @@ public final class StorePagedQueryResponseImpl implements StorePagedQueryRespons
         this.results = results;
     }
     public StorePagedQueryResponseImpl() {
-       
     }
 
     

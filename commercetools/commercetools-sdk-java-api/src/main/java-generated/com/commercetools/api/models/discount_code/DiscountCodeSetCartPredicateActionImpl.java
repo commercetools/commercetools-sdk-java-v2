@@ -30,7 +30,7 @@ public final class DiscountCodeSetCartPredicateActionImpl implements DiscountCod
         this.action = "setCartPredicate";
     }
     public DiscountCodeSetCartPredicateActionImpl() {
-       
+        this.action = "setCartPredicate";
     }
 
     

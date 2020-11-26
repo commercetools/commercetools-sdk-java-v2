@@ -31,7 +31,7 @@ public final class SubscriptionChangeDestinationActionImpl implements Subscripti
         this.action = "changeDestination";
     }
     public SubscriptionChangeDestinationActionImpl() {
-       
+        this.action = "changeDestination";
     }
 
     

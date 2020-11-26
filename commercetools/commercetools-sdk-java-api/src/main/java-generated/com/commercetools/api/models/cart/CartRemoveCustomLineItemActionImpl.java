@@ -30,7 +30,7 @@ public final class CartRemoveCustomLineItemActionImpl implements CartRemoveCusto
         this.action = "removeCustomLineItem";
     }
     public CartRemoveCustomLineItemActionImpl() {
-       
+        this.action = "removeCustomLineItem";
     }
 
     

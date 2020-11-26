@@ -42,7 +42,7 @@ public final class CartScoreTierImpl implements CartScoreTier {
         this.type = ShippingRateTierType.findEnum("CartScore");
     }
     public CartScoreTierImpl() {
-       
+        this.type = ShippingRateTierType.findEnum("CartScore");
     }
 
     

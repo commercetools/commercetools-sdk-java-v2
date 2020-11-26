@@ -43,7 +43,7 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
         this.action = "addAsset";
     }
     public ProductAddAssetActionImpl() {
-       
+        this.action = "addAsset";
     }
 
     

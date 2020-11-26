@@ -34,7 +34,7 @@ public final class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOr
         this.action = "setLineItemTaxAmount";
     }
     public StagedOrderSetLineItemTaxAmountActionImpl() {
-       
+        this.action = "setLineItemTaxAmount";
     }
 
     

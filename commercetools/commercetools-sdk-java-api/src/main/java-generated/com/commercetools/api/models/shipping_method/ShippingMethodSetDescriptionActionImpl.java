@@ -30,7 +30,7 @@ public final class ShippingMethodSetDescriptionActionImpl implements ShippingMet
         this.action = "setDescription";
     }
     public ShippingMethodSetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

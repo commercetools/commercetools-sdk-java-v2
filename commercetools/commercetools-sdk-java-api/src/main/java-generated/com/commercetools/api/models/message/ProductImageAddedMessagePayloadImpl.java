@@ -37,7 +37,7 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
         this.type = "ProductImageAdded";
     }
     public ProductImageAddedMessagePayloadImpl() {
-       
+        this.type = "ProductImageAdded";
     }
 
     

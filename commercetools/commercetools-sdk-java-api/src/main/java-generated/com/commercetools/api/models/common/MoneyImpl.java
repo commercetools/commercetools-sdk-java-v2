@@ -30,7 +30,6 @@ public final class MoneyImpl implements Money {
         this.currencyCode = currencyCode;
     }
     public MoneyImpl() {
-       
     }
 
     

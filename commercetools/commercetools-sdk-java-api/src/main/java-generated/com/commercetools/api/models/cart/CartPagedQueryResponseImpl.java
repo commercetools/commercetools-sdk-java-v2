@@ -39,7 +39,6 @@ public final class CartPagedQueryResponseImpl implements CartPagedQueryResponse 
         this.results = results;
     }
     public CartPagedQueryResponseImpl() {
-       
     }
 
     

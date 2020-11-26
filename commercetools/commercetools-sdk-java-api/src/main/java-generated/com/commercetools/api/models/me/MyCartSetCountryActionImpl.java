@@ -30,7 +30,7 @@ public final class MyCartSetCountryActionImpl implements MyCartSetCountryAction 
         this.action = "setCountry";
     }
     public MyCartSetCountryActionImpl() {
-       
+        this.action = "setCountry";
     }
 
     

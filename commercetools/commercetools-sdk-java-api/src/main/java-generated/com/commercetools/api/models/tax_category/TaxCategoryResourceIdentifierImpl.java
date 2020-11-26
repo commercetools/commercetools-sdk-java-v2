@@ -34,7 +34,7 @@ public final class TaxCategoryResourceIdentifierImpl implements TaxCategoryResou
         this.typeId = ReferenceTypeId.findEnum("tax-category");
     }
     public TaxCategoryResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("tax-category");
     }
 
     

@@ -63,7 +63,6 @@ public final class TypeImpl implements Type {
         this.fieldDefinitions = fieldDefinitions;
     }
     public TypeImpl() {
-       
     }
 
     /**

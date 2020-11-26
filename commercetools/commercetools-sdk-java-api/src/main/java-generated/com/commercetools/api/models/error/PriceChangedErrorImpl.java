@@ -36,7 +36,7 @@ public final class PriceChangedErrorImpl implements PriceChangedError {
         this.code = "PriceChanged";
     }
     public PriceChangedErrorImpl() {
-       
+        this.code = "PriceChanged";
     }
 
     

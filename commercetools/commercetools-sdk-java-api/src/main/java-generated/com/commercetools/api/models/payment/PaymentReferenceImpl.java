@@ -35,7 +35,7 @@ public final class PaymentReferenceImpl implements PaymentReference {
         this.typeId = ReferenceTypeId.findEnum("payment");
     }
     public PaymentReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("payment");
     }
 
     

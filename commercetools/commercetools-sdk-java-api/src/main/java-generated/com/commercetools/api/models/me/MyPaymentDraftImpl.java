@@ -39,7 +39,6 @@ public final class MyPaymentDraftImpl implements MyPaymentDraft {
         this.transaction = transaction;
     }
     public MyPaymentDraftImpl() {
-       
     }
 
     /**

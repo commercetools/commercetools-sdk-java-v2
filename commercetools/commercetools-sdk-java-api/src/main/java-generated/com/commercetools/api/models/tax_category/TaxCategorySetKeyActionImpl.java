@@ -30,7 +30,7 @@ public final class TaxCategorySetKeyActionImpl implements TaxCategorySetKeyActio
         this.action = "setKey";
     }
     public TaxCategorySetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

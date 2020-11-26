@@ -30,7 +30,7 @@ public final class CustomerSetCompanyNameActionImpl implements CustomerSetCompan
         this.action = "setCompanyName";
     }
     public CustomerSetCompanyNameActionImpl() {
-       
+        this.action = "setCompanyName";
     }
 
     

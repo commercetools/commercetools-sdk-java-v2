@@ -31,7 +31,7 @@ public final class OrderDeletedMessagePayloadImpl implements OrderDeletedMessage
         this.type = "OrderDeleted";
     }
     public OrderDeletedMessagePayloadImpl() {
-       
+        this.type = "OrderDeleted";
     }
 
     

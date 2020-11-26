@@ -30,7 +30,6 @@ public final class FacetResultImpl implements FacetResult {
         this.type = type;
     }
     public FacetResultImpl() {
-       
     }
 
     

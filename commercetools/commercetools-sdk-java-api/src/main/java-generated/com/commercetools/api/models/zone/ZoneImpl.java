@@ -58,7 +58,6 @@ public final class ZoneImpl implements Zone {
         this.locations = locations;
     }
     public ZoneImpl() {
-       
     }
 
     /**

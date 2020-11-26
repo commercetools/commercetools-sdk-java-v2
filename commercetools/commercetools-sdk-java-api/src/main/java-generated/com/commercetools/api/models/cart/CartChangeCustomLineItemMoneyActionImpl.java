@@ -34,7 +34,7 @@ public final class CartChangeCustomLineItemMoneyActionImpl implements CartChange
         this.action = "changeCustomLineItemMoney";
     }
     public CartChangeCustomLineItemMoneyActionImpl() {
-       
+        this.action = "changeCustomLineItemMoney";
     }
 
     

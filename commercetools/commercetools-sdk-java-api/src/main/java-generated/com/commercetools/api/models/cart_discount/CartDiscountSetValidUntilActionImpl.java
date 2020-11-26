@@ -31,7 +31,7 @@ public final class CartDiscountSetValidUntilActionImpl implements CartDiscountSe
         this.action = "setValidUntil";
     }
     public CartDiscountSetValidUntilActionImpl() {
-       
+        this.action = "setValidUntil";
     }
 
     

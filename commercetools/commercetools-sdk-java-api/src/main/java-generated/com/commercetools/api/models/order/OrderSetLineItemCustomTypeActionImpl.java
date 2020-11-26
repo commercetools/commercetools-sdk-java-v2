@@ -38,7 +38,7 @@ public final class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineI
         this.action = "setLineItemCustomType";
     }
     public OrderSetLineItemCustomTypeActionImpl() {
-       
+        this.action = "setLineItemCustomType";
     }
 
     

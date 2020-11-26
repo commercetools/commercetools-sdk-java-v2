@@ -31,7 +31,6 @@ public final class ZoneUpdateActionImpl implements ZoneUpdateAction {
         this.action = action;
     }
     public ZoneUpdateActionImpl() {
-       
     }
 
     

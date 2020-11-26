@@ -30,7 +30,6 @@ public final class ShippingMethodUpdateImpl implements ShippingMethodUpdate {
         this.actions = actions;
     }
     public ShippingMethodUpdateImpl() {
-       
     }
 
     

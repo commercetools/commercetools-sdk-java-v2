@@ -31,7 +31,7 @@ public final class CategoryChangeSlugActionImpl implements CategoryChangeSlugAct
         this.action = "changeSlug";
     }
     public CategoryChangeSlugActionImpl() {
-       
+        this.action = "changeSlug";
     }
 
     

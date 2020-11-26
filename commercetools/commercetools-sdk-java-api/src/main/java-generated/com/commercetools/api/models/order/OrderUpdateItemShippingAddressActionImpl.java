@@ -31,7 +31,7 @@ public final class OrderUpdateItemShippingAddressActionImpl implements OrderUpda
         this.action = "updateItemShippingAddress";
     }
     public OrderUpdateItemShippingAddressActionImpl() {
-       
+        this.action = "updateItemShippingAddress";
     }
 
     

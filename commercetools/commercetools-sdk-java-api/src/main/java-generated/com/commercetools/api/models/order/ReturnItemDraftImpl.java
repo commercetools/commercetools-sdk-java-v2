@@ -39,7 +39,6 @@ public final class ReturnItemDraftImpl implements ReturnItemDraft {
         this.shipmentState = shipmentState;
     }
     public ReturnItemDraftImpl() {
-       
     }
 
     

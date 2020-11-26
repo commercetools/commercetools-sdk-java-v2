@@ -30,7 +30,7 @@ public final class ProductTypeChangeDescriptionActionImpl implements ProductType
         this.action = "changeDescription";
     }
     public ProductTypeChangeDescriptionActionImpl() {
-       
+        this.action = "changeDescription";
     }
 
     

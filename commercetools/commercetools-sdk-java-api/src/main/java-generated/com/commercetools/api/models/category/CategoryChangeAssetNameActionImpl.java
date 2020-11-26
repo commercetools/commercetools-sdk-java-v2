@@ -37,7 +37,7 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
         this.action = "changeAssetName";
     }
     public CategoryChangeAssetNameActionImpl() {
-       
+        this.action = "changeAssetName";
     }
 
     

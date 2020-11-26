@@ -34,7 +34,7 @@ public final class CustomerGroupSetCustomFieldActionImpl implements CustomerGrou
         this.action = "setCustomField";
     }
     public CustomerGroupSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

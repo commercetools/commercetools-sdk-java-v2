@@ -30,7 +30,6 @@ public final class CustomFieldEnumValueImpl implements CustomFieldEnumValue {
         this.label = label;
     }
     public CustomFieldEnumValueImpl() {
-       
     }
 
     

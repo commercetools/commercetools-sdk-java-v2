@@ -42,7 +42,7 @@ public final class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpd
         this.code = "ExtensionUpdateActionsFailed";
     }
     public ExtensionUpdateActionsFailedErrorImpl() {
-       
+        this.code = "ExtensionUpdateActionsFailed";
     }
 
     

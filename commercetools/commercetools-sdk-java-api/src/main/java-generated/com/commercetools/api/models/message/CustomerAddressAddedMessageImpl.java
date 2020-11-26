@@ -61,7 +61,7 @@ public final class CustomerAddressAddedMessageImpl implements CustomerAddressAdd
         this.type = "CustomerAddressAdded";
     }
     public CustomerAddressAddedMessageImpl() {
-       
+        this.type = "CustomerAddressAdded";
     }
 
     

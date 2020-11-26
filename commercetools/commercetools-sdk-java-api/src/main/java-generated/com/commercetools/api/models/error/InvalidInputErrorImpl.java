@@ -30,7 +30,7 @@ public final class InvalidInputErrorImpl implements InvalidInputError {
         this.code = "InvalidInput";
     }
     public InvalidInputErrorImpl() {
-       
+        this.code = "InvalidInput";
     }
 
     

@@ -30,7 +30,7 @@ public final class ReviewSetLocaleActionImpl implements ReviewSetLocaleAction {
         this.action = "setLocale";
     }
     public ReviewSetLocaleActionImpl() {
-       
+        this.action = "setLocale";
     }
 
     

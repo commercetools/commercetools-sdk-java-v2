@@ -41,7 +41,7 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl implements Dup
         this.code = "DuplicateFieldWithConflictingResource";
     }
     public DuplicateFieldWithConflictingResourceErrorImpl() {
-       
+        this.code = "DuplicateFieldWithConflictingResource";
     }
 
     

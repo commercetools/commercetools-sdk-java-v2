@@ -31,7 +31,7 @@ public final class DiscountCodeSetValidFromActionImpl implements DiscountCodeSet
         this.action = "setValidFrom";
     }
     public DiscountCodeSetValidFromActionImpl() {
-       
+        this.action = "setValidFrom";
     }
 
     

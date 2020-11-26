@@ -37,7 +37,7 @@ public final class CategorySetAssetSourcesActionImpl implements CategorySetAsset
         this.action = "setAssetSources";
     }
     public CategorySetAssetSourcesActionImpl() {
-       
+        this.action = "setAssetSources";
     }
 
     

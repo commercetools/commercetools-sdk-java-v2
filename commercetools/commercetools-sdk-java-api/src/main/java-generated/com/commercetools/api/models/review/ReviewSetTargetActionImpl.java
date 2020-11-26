@@ -31,7 +31,7 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
         this.action = "setTarget";
     }
     public ReviewSetTargetActionImpl() {
-       
+        this.action = "setTarget";
     }
 
     

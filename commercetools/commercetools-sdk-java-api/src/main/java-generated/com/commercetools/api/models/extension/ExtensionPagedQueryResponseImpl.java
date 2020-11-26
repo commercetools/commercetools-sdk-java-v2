@@ -39,7 +39,6 @@ public final class ExtensionPagedQueryResponseImpl implements ExtensionPagedQuer
         this.results = results;
     }
     public ExtensionPagedQueryResponseImpl() {
-       
     }
 
     

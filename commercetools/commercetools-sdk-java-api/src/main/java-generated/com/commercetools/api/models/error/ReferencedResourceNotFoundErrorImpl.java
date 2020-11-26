@@ -40,7 +40,7 @@ public final class ReferencedResourceNotFoundErrorImpl implements ReferencedReso
         this.code = "ReferencedResourceNotFound";
     }
     public ReferencedResourceNotFoundErrorImpl() {
-       
+        this.code = "ReferencedResourceNotFound";
     }
 
     

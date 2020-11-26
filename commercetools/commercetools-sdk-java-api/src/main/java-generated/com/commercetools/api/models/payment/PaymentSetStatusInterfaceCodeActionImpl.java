@@ -30,7 +30,7 @@ public final class PaymentSetStatusInterfaceCodeActionImpl implements PaymentSet
         this.action = "setStatusInterfaceCode";
     }
     public PaymentSetStatusInterfaceCodeActionImpl() {
-       
+        this.action = "setStatusInterfaceCode";
     }
 
     

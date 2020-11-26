@@ -31,7 +31,7 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
         this.action = "setShippingRateInput";
     }
     public CartSetShippingRateInputActionImpl() {
-       
+        this.action = "setShippingRateInput";
     }
 
     

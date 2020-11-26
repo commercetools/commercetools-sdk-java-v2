@@ -28,7 +28,6 @@ public final class ExtensionHttpDestinationAuthenticationImpl implements Extensi
         this.type = type;
     }
     public ExtensionHttpDestinationAuthenticationImpl() {
-       
     }
 
     

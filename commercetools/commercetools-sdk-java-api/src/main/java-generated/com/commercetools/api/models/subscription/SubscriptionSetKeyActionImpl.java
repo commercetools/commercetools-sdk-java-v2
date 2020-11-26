@@ -30,7 +30,7 @@ public final class SubscriptionSetKeyActionImpl implements SubscriptionSetKeyAct
         this.action = "setKey";
     }
     public SubscriptionSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

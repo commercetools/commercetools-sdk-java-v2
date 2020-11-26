@@ -41,7 +41,6 @@ public final class TextLineItemDraftImpl implements TextLineItemDraft {
         this.quantity = quantity;
     }
     public TextLineItemDraftImpl() {
-       
     }
 
     /**

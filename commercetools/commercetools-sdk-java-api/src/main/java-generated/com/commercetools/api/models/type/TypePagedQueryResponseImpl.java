@@ -39,7 +39,6 @@ public final class TypePagedQueryResponseImpl implements TypePagedQueryResponse 
         this.results = results;
     }
     public TypePagedQueryResponseImpl() {
-       
     }
 
     

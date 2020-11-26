@@ -34,7 +34,7 @@ public final class DiscountCodeSetValidFromAndUntilActionImpl implements Discoun
         this.action = "setValidFromAndUntil";
     }
     public DiscountCodeSetValidFromAndUntilActionImpl() {
-       
+        this.action = "setValidFromAndUntil";
     }
 
     

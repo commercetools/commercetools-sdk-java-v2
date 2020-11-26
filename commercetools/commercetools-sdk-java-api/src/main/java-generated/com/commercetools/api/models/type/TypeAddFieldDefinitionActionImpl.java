@@ -31,7 +31,7 @@ public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefin
         this.action = "addFieldDefinition";
     }
     public TypeAddFieldDefinitionActionImpl() {
-       
+        this.action = "addFieldDefinition";
     }
 
     

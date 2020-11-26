@@ -39,7 +39,6 @@ public final class ShippingMethodPagedQueryResponseImpl implements ShippingMetho
         this.results = results;
     }
     public ShippingMethodPagedQueryResponseImpl() {
-       
     }
 
     

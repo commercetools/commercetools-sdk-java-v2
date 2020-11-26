@@ -47,7 +47,6 @@ public final class MyCustomerUpdateActionImpl implements MyCustomerUpdateAction 
         this.action = action;
     }
     public MyCustomerUpdateActionImpl() {
-       
     }
 
     

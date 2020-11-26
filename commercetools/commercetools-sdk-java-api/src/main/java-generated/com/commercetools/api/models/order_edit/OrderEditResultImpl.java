@@ -30,7 +30,6 @@ public final class OrderEditResultImpl implements OrderEditResult {
         this.type = type;
     }
     public OrderEditResultImpl() {
-       
     }
 
     

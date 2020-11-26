@@ -35,7 +35,7 @@ public final class StoreReferenceImpl implements StoreReference {
         this.typeId = ReferenceTypeId.findEnum("store");
     }
     public StoreReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("store");
     }
 
     

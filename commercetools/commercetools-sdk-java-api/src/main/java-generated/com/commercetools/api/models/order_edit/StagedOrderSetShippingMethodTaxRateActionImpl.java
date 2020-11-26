@@ -31,7 +31,7 @@ public final class StagedOrderSetShippingMethodTaxRateActionImpl implements Stag
         this.action = "setShippingMethodTaxRate";
     }
     public StagedOrderSetShippingMethodTaxRateActionImpl() {
-       
+        this.action = "setShippingMethodTaxRate";
     }
 
     

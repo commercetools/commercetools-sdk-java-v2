@@ -62,7 +62,6 @@ public final class ShippingInfoImpl implements ShippingInfo {
         this.shippingMethodState = shippingMethodState;
     }
     public ShippingInfoImpl() {
-       
     }
 
     

@@ -29,7 +29,6 @@ public final class CartDiscountValueDraftImpl implements CartDiscountValueDraft 
         this.type = type;
     }
     public CartDiscountValueDraftImpl() {
-       
     }
 
     

@@ -30,7 +30,7 @@ public final class ProjectChangeNameActionImpl implements ProjectChangeNameActio
         this.action = "changeName";
     }
     public ProjectChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

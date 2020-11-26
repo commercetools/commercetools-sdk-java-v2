@@ -31,7 +31,7 @@ public final class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessa
         this.type = "DeliveryAdded";
     }
     public DeliveryAddedMessagePayloadImpl() {
-       
+        this.type = "DeliveryAdded";
     }
 
     

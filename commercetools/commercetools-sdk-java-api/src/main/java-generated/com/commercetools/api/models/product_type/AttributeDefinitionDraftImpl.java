@@ -51,7 +51,6 @@ public final class AttributeDefinitionDraftImpl implements AttributeDefinitionDr
         this.isSearchable = isSearchable;
     }
     public AttributeDefinitionDraftImpl() {
-       
     }
 
     /**

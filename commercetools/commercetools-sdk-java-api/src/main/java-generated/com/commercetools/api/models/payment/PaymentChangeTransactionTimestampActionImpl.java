@@ -34,7 +34,7 @@ public final class PaymentChangeTransactionTimestampActionImpl implements Paymen
         this.action = "changeTransactionTimestamp";
     }
     public PaymentChangeTransactionTimestampActionImpl() {
-       
+        this.action = "changeTransactionTimestamp";
     }
 
     

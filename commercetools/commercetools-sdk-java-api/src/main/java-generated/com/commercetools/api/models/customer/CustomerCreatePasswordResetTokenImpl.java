@@ -30,7 +30,6 @@ public final class CustomerCreatePasswordResetTokenImpl implements CustomerCreat
         this.ttlMinutes = ttlMinutes;
     }
     public CustomerCreatePasswordResetTokenImpl() {
-       
     }
 
     

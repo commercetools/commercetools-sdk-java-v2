@@ -35,7 +35,7 @@ public final class OrderEditAppliedMessagePayloadImpl implements OrderEditApplie
         this.type = "OrderEditApplied";
     }
     public OrderEditAppliedMessagePayloadImpl() {
-       
+        this.type = "OrderEditApplied";
     }
 
     

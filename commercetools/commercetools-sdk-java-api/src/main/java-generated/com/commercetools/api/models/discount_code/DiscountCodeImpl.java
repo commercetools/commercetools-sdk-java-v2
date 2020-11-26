@@ -88,7 +88,6 @@ public final class DiscountCodeImpl implements DiscountCode {
         this.validUntil = validUntil;
     }
     public DiscountCodeImpl() {
-       
     }
 
     /**

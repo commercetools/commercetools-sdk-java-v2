@@ -30,7 +30,7 @@ public final class SemanticErrorErrorImpl implements SemanticErrorError {
         this.code = "SemanticError";
     }
     public SemanticErrorErrorImpl() {
-       
+        this.code = "SemanticError";
     }
 
     

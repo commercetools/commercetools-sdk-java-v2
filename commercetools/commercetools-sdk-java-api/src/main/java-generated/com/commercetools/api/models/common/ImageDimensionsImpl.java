@@ -30,7 +30,6 @@ public final class ImageDimensionsImpl implements ImageDimensions {
         this.h = h;
     }
     public ImageDimensionsImpl() {
-       
     }
 
     

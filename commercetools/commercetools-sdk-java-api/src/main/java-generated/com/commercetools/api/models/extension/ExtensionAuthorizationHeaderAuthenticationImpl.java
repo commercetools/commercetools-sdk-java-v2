@@ -30,7 +30,7 @@ public final class ExtensionAuthorizationHeaderAuthenticationImpl implements Ext
         this.type = "AuthorizationHeader";
     }
     public ExtensionAuthorizationHeaderAuthenticationImpl() {
-       
+        this.type = "AuthorizationHeader";
     }
 
     

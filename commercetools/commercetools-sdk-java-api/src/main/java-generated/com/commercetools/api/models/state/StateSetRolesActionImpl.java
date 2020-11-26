@@ -31,7 +31,7 @@ public final class StateSetRolesActionImpl implements StateSetRolesAction {
         this.action = "setRoles";
     }
     public StateSetRolesActionImpl() {
-       
+        this.action = "setRoles";
     }
 
     

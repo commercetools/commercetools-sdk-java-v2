@@ -33,7 +33,7 @@ public final class CustomerSetDefaultBillingAddressActionImpl implements Custome
         this.action = "setDefaultBillingAddress";
     }
     public CustomerSetDefaultBillingAddressActionImpl() {
-       
+        this.action = "setDefaultBillingAddress";
     }
 
     

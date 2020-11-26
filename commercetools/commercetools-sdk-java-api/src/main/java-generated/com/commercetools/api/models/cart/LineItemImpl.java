@@ -98,7 +98,6 @@ public final class LineItemImpl implements LineItem {
         this.shippingDetails = shippingDetails;
     }
     public LineItemImpl() {
-       
     }
 
     /**

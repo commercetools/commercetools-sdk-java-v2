@@ -30,7 +30,6 @@ public final class UpdateImpl implements Update {
         this.actions = actions;
     }
     public UpdateImpl() {
-       
     }
 
     

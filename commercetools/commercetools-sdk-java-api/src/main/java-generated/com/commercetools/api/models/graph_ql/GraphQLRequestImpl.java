@@ -33,7 +33,6 @@ public final class GraphQLRequestImpl implements GraphQLRequest {
         this.variables = variables;
     }
     public GraphQLRequestImpl() {
-       
     }
 
     

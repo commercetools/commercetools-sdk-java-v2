@@ -44,7 +44,7 @@ public final class LineItemStateTransitionMessagePayloadImpl implements LineItem
         this.type = "LineItemStateTransition";
     }
     public LineItemStateTransitionMessagePayloadImpl() {
-       
+        this.type = "LineItemStateTransition";
     }
 
     

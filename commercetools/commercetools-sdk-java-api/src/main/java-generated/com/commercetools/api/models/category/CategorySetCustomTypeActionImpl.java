@@ -35,7 +35,7 @@ public final class CategorySetCustomTypeActionImpl implements CategorySetCustomT
         this.action = "setCustomType";
     }
     public CategorySetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

@@ -35,7 +35,7 @@ public final class PaymentAddInterfaceInteractionActionImpl implements PaymentAd
         this.action = "addInterfaceInteraction";
     }
     public PaymentAddInterfaceInteractionActionImpl() {
-       
+        this.action = "addInterfaceInteraction";
     }
 
     

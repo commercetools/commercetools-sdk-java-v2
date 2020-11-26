@@ -32,7 +32,7 @@ public final class CartClassificationTypeImpl implements CartClassificationType 
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }
     public CartClassificationTypeImpl() {
-       
+        this.type = ShippingRateTierType.findEnum("CartClassification");
     }
 
     

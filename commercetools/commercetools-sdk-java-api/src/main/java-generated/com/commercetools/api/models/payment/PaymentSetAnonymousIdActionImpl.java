@@ -30,7 +30,7 @@ public final class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymou
         this.action = "setAnonymousId";
     }
     public PaymentSetAnonymousIdActionImpl() {
-       
+        this.action = "setAnonymousId";
     }
 
     

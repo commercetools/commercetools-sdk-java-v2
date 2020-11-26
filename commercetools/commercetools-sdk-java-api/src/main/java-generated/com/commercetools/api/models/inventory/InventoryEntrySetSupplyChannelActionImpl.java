@@ -31,7 +31,7 @@ public final class InventoryEntrySetSupplyChannelActionImpl implements Inventory
         this.action = "setSupplyChannel";
     }
     public InventoryEntrySetSupplyChannelActionImpl() {
-       
+        this.action = "setSupplyChannel";
     }
 
     

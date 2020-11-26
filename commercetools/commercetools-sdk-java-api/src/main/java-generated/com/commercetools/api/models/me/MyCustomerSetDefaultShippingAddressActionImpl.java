@@ -33,7 +33,7 @@ public final class MyCustomerSetDefaultShippingAddressActionImpl implements MyCu
         this.action = "setDefaultShippingAddress";
     }
     public MyCustomerSetDefaultShippingAddressActionImpl() {
-       
+        this.action = "setDefaultShippingAddress";
     }
 
     

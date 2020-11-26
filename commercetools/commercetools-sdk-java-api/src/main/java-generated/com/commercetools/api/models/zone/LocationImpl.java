@@ -30,7 +30,6 @@ public final class LocationImpl implements Location {
         this.state = state;
     }
     public LocationImpl() {
-       
     }
 
     /**

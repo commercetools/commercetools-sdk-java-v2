@@ -33,7 +33,7 @@ public final class MyCustomerSetDefaultBillingAddressActionImpl implements MyCus
         this.action = "setDefaultBillingAddress";
     }
     public MyCustomerSetDefaultBillingAddressActionImpl() {
-       
+        this.action = "setDefaultBillingAddress";
     }
 
     

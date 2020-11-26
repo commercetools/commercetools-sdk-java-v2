@@ -33,7 +33,7 @@ public final class ProductTypeChangeAttributeNameActionImpl implements ProductTy
         this.action = "changeAttributeName";
     }
     public ProductTypeChangeAttributeNameActionImpl() {
-       
+        this.action = "changeAttributeName";
     }
 
     

@@ -27,7 +27,6 @@ public final class GeoJsonImpl implements GeoJson {
         this.type = type;
     }
     public GeoJsonImpl() {
-       
     }
 
     

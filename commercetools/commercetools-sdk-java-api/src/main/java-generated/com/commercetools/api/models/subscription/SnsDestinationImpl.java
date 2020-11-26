@@ -36,7 +36,7 @@ public final class SnsDestinationImpl implements SnsDestination {
         this.type = "SNS";
     }
     public SnsDestinationImpl() {
-       
+        this.type = "SNS";
     }
 
     

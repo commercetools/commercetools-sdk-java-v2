@@ -30,7 +30,7 @@ public final class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountC
         this.action = "addDiscountCode";
     }
     public MyCartAddDiscountCodeActionImpl() {
-       
+        this.action = "addDiscountCode";
     }
 
     

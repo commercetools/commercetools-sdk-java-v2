@@ -53,7 +53,7 @@ public final class StagedOrderAddCustomLineItemActionImpl implements StagedOrder
         this.action = "addCustomLineItem";
     }
     public StagedOrderAddCustomLineItemActionImpl() {
-       
+        this.action = "addCustomLineItem";
     }
 
     

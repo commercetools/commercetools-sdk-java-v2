@@ -42,7 +42,7 @@ public final class ProductMoveImageToPositionActionImpl implements ProductMoveIm
         this.action = "moveImageToPosition";
     }
     public ProductMoveImageToPositionActionImpl() {
-       
+        this.action = "moveImageToPosition";
     }
 
     

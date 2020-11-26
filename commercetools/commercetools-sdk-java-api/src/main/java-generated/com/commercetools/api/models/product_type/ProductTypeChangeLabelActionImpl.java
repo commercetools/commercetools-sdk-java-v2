@@ -34,7 +34,7 @@ public final class ProductTypeChangeLabelActionImpl implements ProductTypeChange
         this.action = "changeLabel";
     }
     public ProductTypeChangeLabelActionImpl() {
-       
+        this.action = "changeLabel";
     }
 
     

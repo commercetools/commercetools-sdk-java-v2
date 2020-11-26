@@ -31,7 +31,7 @@ public final class StoresSetSupplyChannelsActionImpl implements StoresSetSupplyC
         this.action = "setSupplyChannels";
     }
     public StoresSetSupplyChannelsActionImpl() {
-       
+        this.action = "setSupplyChannels";
     }
 
     

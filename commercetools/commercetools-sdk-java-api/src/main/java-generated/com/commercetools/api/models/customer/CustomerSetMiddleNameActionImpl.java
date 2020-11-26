@@ -30,7 +30,7 @@ public final class CustomerSetMiddleNameActionImpl implements CustomerSetMiddleN
         this.action = "setMiddleName";
     }
     public CustomerSetMiddleNameActionImpl() {
-       
+        this.action = "setMiddleName";
     }
 
     

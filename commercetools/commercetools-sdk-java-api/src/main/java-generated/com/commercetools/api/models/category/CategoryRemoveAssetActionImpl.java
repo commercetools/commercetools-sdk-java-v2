@@ -33,7 +33,7 @@ public final class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetA
         this.action = "removeAsset";
     }
     public CategoryRemoveAssetActionImpl() {
-       
+        this.action = "removeAsset";
     }
 
     

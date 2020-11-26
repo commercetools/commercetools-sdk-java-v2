@@ -49,7 +49,6 @@ public final class ChannelDraftImpl implements ChannelDraft {
         this.geoLocation = geoLocation;
     }
     public ChannelDraftImpl() {
-       
     }
 
     

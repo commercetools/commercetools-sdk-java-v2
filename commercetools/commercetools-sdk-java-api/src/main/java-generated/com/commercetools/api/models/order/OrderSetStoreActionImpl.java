@@ -31,7 +31,7 @@ public final class OrderSetStoreActionImpl implements OrderSetStoreAction {
         this.action = "setStore";
     }
     public OrderSetStoreActionImpl() {
-       
+        this.action = "setStore";
     }
 
     

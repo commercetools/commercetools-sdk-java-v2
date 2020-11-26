@@ -30,7 +30,6 @@ public final class GraphQLErrorLocationImpl implements GraphQLErrorLocation {
         this.column = column;
     }
     public GraphQLErrorLocationImpl() {
-       
     }
 
     

@@ -39,7 +39,7 @@ public final class ProductSetProductVariantKeyActionImpl implements ProductSetPr
         this.action = "setProductVariantKey";
     }
     public ProductSetProductVariantKeyActionImpl() {
-       
+        this.action = "setProductVariantKey";
     }
 
     

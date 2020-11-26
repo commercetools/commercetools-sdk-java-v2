@@ -30,7 +30,7 @@ public final class MyCustomerSetFirstNameActionImpl implements MyCustomerSetFirs
         this.action = "setFirstName";
     }
     public MyCustomerSetFirstNameActionImpl() {
-       
+        this.action = "setFirstName";
     }
 
     

@@ -30,7 +30,7 @@ public final class ProjectChangeLanguagesActionImpl implements ProjectChangeLang
         this.action = "changeLanguages";
     }
     public ProjectChangeLanguagesActionImpl() {
-       
+        this.action = "changeLanguages";
     }
 
     

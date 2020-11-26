@@ -35,7 +35,7 @@ public final class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeA
         this.action = "setCustomType";
     }
     public MyCartSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

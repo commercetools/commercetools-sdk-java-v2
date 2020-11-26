@@ -30,7 +30,7 @@ public final class ShippingMethodSetKeyActionImpl implements ShippingMethodSetKe
         this.action = "setKey";
     }
     public ShippingMethodSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

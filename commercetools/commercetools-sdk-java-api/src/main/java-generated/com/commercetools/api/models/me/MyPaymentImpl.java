@@ -52,7 +52,6 @@ public final class MyPaymentImpl implements MyPayment {
         this.custom = custom;
     }
     public MyPaymentImpl() {
-       
     }
 
     

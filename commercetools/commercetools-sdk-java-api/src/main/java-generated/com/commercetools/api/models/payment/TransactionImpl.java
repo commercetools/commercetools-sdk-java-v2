@@ -45,7 +45,6 @@ public final class TransactionImpl implements Transaction {
         this.state = state;
     }
     public TransactionImpl() {
-       
     }
 
     /**

@@ -39,7 +39,6 @@ public final class ChannelPagedQueryResponseImpl implements ChannelPagedQueryRes
         this.results = results;
     }
     public ChannelPagedQueryResponseImpl() {
-       
     }
 
     

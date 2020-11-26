@@ -39,7 +39,6 @@ public final class MyPaymentPagedQueryResponseImpl implements MyPaymentPagedQuer
         this.results = results;
     }
     public MyPaymentPagedQueryResponseImpl() {
-       
     }
 
     

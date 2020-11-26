@@ -39,7 +39,7 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl impl
         this.action = "setShippingAddressAndShippingMethod";
     }
     public StagedOrderSetShippingAddressAndShippingMethodActionImpl() {
-       
+        this.action = "setShippingAddressAndShippingMethod";
     }
 
     

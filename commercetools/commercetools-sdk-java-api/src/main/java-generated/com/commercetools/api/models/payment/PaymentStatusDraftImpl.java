@@ -33,7 +33,6 @@ public final class PaymentStatusDraftImpl implements PaymentStatusDraft {
         this.state = state;
     }
     public PaymentStatusDraftImpl() {
-       
     }
 
     

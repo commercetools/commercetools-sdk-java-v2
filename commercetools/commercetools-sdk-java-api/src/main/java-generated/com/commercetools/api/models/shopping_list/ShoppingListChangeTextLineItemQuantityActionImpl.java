@@ -33,7 +33,7 @@ public final class ShoppingListChangeTextLineItemQuantityActionImpl implements S
         this.action = "changeTextLineItemQuantity";
     }
     public ShoppingListChangeTextLineItemQuantityActionImpl() {
-       
+        this.action = "changeTextLineItemQuantity";
     }
 
     

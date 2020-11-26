@@ -27,7 +27,6 @@ public final class PaymentInfoImpl implements PaymentInfo {
         this.payments = payments;
     }
     public PaymentInfoImpl() {
-       
     }
 
     

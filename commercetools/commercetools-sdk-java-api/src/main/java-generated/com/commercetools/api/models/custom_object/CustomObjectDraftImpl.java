@@ -36,7 +36,6 @@ public final class CustomObjectDraftImpl implements CustomObjectDraft {
         this.version = version;
     }
     public CustomObjectDraftImpl() {
-       
     }
 
     /**

@@ -34,7 +34,7 @@ public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintA
         this.action = "changeInputHint";
     }
     public TypeChangeInputHintActionImpl() {
-       
+        this.action = "changeInputHint";
     }
 
     

@@ -34,7 +34,7 @@ public final class TypeResourceIdentifierImpl implements TypeResourceIdentifier 
         this.typeId = ReferenceTypeId.findEnum("type");
     }
     public TypeResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("type");
     }
 
     

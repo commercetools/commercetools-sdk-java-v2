@@ -30,7 +30,7 @@ public final class StateChangeInitialActionImpl implements StateChangeInitialAct
         this.action = "changeInitial";
     }
     public StateChangeInitialActionImpl() {
-       
+        this.action = "changeInitial";
     }
 
     

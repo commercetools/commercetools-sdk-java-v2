@@ -30,7 +30,7 @@ public final class CustomerCompanyNameSetMessagePayloadImpl implements CustomerC
         this.type = "CustomerCompanyNameSet";
     }
     public CustomerCompanyNameSetMessagePayloadImpl() {
-       
+        this.type = "CustomerCompanyNameSet";
     }
 
     

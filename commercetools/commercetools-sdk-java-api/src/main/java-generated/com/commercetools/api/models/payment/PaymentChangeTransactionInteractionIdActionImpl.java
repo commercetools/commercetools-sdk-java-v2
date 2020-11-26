@@ -33,7 +33,7 @@ public final class PaymentChangeTransactionInteractionIdActionImpl implements Pa
         this.action = "changeTransactionInteractionId";
     }
     public PaymentChangeTransactionInteractionIdActionImpl() {
-       
+        this.action = "changeTransactionInteractionId";
     }
 
     

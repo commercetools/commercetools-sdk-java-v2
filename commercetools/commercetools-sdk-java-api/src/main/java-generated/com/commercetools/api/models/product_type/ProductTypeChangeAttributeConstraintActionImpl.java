@@ -34,7 +34,7 @@ public final class ProductTypeChangeAttributeConstraintActionImpl implements Pro
         this.action = "changeAttributeConstraint";
     }
     public ProductTypeChangeAttributeConstraintActionImpl() {
-       
+        this.action = "changeAttributeConstraint";
     }
 
     

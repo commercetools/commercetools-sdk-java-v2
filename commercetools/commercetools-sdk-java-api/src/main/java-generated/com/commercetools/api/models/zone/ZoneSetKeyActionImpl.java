@@ -30,7 +30,7 @@ public final class ZoneSetKeyActionImpl implements ZoneSetKeyAction {
         this.action = "setKey";
     }
     public ZoneSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

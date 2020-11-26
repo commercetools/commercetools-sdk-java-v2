@@ -31,7 +31,7 @@ public final class CustomFieldReferenceTypeImpl implements CustomFieldReferenceT
         this.name = "Reference";
     }
     public CustomFieldReferenceTypeImpl() {
-       
+        this.name = "Reference";
     }
 
     

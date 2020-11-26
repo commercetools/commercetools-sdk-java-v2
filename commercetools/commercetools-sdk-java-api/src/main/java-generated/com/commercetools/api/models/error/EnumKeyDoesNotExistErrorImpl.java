@@ -36,7 +36,7 @@ public final class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistEr
         this.code = "EnumKeyDoesNotExist";
     }
     public EnumKeyDoesNotExistErrorImpl() {
-       
+        this.code = "EnumKeyDoesNotExist";
     }
 
     

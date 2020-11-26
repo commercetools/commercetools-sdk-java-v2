@@ -41,7 +41,7 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
         this.action = "setProductPriceCustomType";
     }
     public ProductSetProductPriceCustomTypeActionImpl() {
-       
+        this.action = "setProductPriceCustomType";
     }
 
     

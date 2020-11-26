@@ -36,7 +36,6 @@ public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatch
         this.price = price;
     }
     public ProductDiscountMatchQueryImpl() {
-       
     }
 
     

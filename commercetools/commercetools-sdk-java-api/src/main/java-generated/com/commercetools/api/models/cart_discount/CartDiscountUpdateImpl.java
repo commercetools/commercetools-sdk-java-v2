@@ -30,7 +30,6 @@ public final class CartDiscountUpdateImpl implements CartDiscountUpdate {
         this.actions = actions;
     }
     public CartDiscountUpdateImpl() {
-       
     }
 
     

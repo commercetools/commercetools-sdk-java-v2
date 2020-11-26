@@ -41,7 +41,7 @@ public final class StagedOrderChangeLineItemQuantityActionImpl implements Staged
         this.action = "changeLineItemQuantity";
     }
     public StagedOrderChangeLineItemQuantityActionImpl() {
-       
+        this.action = "changeLineItemQuantity";
     }
 
     

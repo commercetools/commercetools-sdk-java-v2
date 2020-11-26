@@ -68,7 +68,6 @@ public final class ProductImpl implements Product {
         this.reviewRatingStatistics = reviewRatingStatistics;
     }
     public ProductImpl() {
-       
     }
 
     /**

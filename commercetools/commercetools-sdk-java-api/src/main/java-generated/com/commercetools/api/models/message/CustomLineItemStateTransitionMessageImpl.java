@@ -74,7 +74,7 @@ public final class CustomLineItemStateTransitionMessageImpl implements CustomLin
         this.type = "CustomLineItemStateTransition";
     }
     public CustomLineItemStateTransitionMessageImpl() {
-       
+        this.type = "CustomLineItemStateTransition";
     }
 
     

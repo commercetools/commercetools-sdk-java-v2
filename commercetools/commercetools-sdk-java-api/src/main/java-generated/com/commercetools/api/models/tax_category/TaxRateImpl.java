@@ -45,7 +45,6 @@ public final class TaxRateImpl implements TaxRate {
         this.subRates = subRates;
     }
     public TaxRateImpl() {
-       
     }
 
     /**

@@ -34,7 +34,7 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl impl
         this.action = "applyDeltaToLineItemShippingDetailsTargets";
     }
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl() {
-       
+        this.action = "applyDeltaToLineItemShippingDetailsTargets";
     }
 
     

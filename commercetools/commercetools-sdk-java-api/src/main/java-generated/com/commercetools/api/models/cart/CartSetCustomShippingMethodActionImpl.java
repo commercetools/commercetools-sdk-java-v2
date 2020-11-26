@@ -42,7 +42,7 @@ public final class CartSetCustomShippingMethodActionImpl implements CartSetCusto
         this.action = "setCustomShippingMethod";
     }
     public CartSetCustomShippingMethodActionImpl() {
-       
+        this.action = "setCustomShippingMethod";
     }
 
     

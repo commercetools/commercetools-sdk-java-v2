@@ -41,7 +41,6 @@ public final class SubscriptionDeliveryImpl implements SubscriptionDelivery {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
     public SubscriptionDeliveryImpl() {
-       
     }
 
     

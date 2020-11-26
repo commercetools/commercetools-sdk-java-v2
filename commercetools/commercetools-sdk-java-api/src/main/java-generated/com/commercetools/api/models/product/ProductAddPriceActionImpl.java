@@ -40,7 +40,7 @@ public final class ProductAddPriceActionImpl implements ProductAddPriceAction {
         this.action = "addPrice";
     }
     public ProductAddPriceActionImpl() {
-       
+        this.action = "addPrice";
     }
 
     

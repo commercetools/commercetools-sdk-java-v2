@@ -34,7 +34,7 @@ public final class OrderReturnShipmentStateChangedMessagePayloadImpl implements 
         this.type = "OrderReturnShipmentStateChanged";
     }
     public OrderReturnShipmentStateChangedMessagePayloadImpl() {
-       
+        this.type = "OrderReturnShipmentStateChanged";
     }
 
     

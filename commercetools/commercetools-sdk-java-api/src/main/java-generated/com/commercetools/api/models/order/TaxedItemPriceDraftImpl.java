@@ -30,7 +30,6 @@ public final class TaxedItemPriceDraftImpl implements TaxedItemPriceDraft {
         this.totalGross = totalGross;
     }
     public TaxedItemPriceDraftImpl() {
-       
     }
 
     

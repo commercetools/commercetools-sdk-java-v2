@@ -31,7 +31,7 @@ public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExtern
         this.action = "setExternalOAuth";
     }
     public ProjectSetExternalOAuthActionImpl() {
-       
+        this.action = "setExternalOAuth";
     }
 
     

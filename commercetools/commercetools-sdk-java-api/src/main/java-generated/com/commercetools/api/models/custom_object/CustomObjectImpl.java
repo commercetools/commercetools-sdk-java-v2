@@ -55,7 +55,6 @@ public final class CustomObjectImpl implements CustomObject {
         this.value = value;
     }
     public CustomObjectImpl() {
-       
     }
 
     

@@ -58,7 +58,6 @@ public final class ShippingInfoImportDraftImpl implements ShippingInfoImportDraf
         this.shippingMethodState = shippingMethodState;
     }
     public ShippingInfoImportDraftImpl() {
-       
     }
 
     

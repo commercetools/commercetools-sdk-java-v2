@@ -34,7 +34,7 @@ public final class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTa
         this.action = "setLineItemTaxRate";
     }
     public CartSetLineItemTaxRateActionImpl() {
-       
+        this.action = "setLineItemTaxRate";
     }
 
     

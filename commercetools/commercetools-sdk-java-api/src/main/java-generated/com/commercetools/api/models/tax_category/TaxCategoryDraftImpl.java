@@ -36,7 +36,6 @@ public final class TaxCategoryDraftImpl implements TaxCategoryDraft {
         this.key = key;
     }
     public TaxCategoryDraftImpl() {
-       
     }
 
     

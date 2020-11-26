@@ -38,7 +38,7 @@ public final class CartValueTierImpl implements CartValueTier {
         this.type = ShippingRateTierType.findEnum("CartValue");
     }
     public CartValueTierImpl() {
-       
+        this.type = ShippingRateTierType.findEnum("CartValue");
     }
 
     

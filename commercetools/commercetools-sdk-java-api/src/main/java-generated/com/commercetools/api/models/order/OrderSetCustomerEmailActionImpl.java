@@ -30,7 +30,7 @@ public final class OrderSetCustomerEmailActionImpl implements OrderSetCustomerEm
         this.action = "setCustomerEmail";
     }
     public OrderSetCustomerEmailActionImpl() {
-       
+        this.action = "setCustomerEmail";
     }
 
     

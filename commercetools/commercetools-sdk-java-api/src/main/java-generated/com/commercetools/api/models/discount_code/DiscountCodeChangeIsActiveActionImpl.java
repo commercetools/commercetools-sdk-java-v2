@@ -30,7 +30,7 @@ public final class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeC
         this.action = "changeIsActive";
     }
     public DiscountCodeChangeIsActiveActionImpl() {
-       
+        this.action = "changeIsActive";
     }
 
     

@@ -34,7 +34,7 @@ public final class ProductTypeAddPlainEnumValueActionImpl implements ProductType
         this.action = "addPlainEnumValue";
     }
     public ProductTypeAddPlainEnumValueActionImpl() {
-       
+        this.action = "addPlainEnumValue";
     }
 
     

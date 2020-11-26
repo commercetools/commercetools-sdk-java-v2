@@ -103,7 +103,6 @@ public final class CustomerDraftImpl implements CustomerDraft {
         this.stores = stores;
     }
     public CustomerDraftImpl() {
-       
     }
 
     /**

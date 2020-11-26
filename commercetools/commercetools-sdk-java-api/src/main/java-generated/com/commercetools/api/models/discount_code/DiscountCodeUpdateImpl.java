@@ -30,7 +30,6 @@ public final class DiscountCodeUpdateImpl implements DiscountCodeUpdate {
         this.actions = actions;
     }
     public DiscountCodeUpdateImpl() {
-       
     }
 
     

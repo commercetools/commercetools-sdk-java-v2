@@ -31,7 +31,7 @@ public final class CategorySetMetaDescriptionActionImpl implements CategorySetMe
         this.action = "setMetaDescription";
     }
     public CategorySetMetaDescriptionActionImpl() {
-       
+        this.action = "setMetaDescription";
     }
 
     

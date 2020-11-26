@@ -34,7 +34,7 @@ public final class StagedOrderSetReturnShipmentStateActionImpl implements Staged
         this.action = "setReturnShipmentState";
     }
     public StagedOrderSetReturnShipmentStateActionImpl() {
-       
+        this.action = "setReturnShipmentState";
     }
 
     

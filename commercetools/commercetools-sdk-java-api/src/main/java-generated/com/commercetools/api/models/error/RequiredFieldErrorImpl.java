@@ -33,7 +33,7 @@ public final class RequiredFieldErrorImpl implements RequiredFieldError {
         this.code = "RequiredField";
     }
     public RequiredFieldErrorImpl() {
-       
+        this.code = "RequiredField";
     }
 
     

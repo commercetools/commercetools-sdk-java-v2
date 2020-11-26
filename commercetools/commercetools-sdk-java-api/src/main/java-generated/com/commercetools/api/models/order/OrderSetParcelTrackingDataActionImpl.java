@@ -34,7 +34,7 @@ public final class OrderSetParcelTrackingDataActionImpl implements OrderSetParce
         this.action = "setParcelTrackingData";
     }
     public OrderSetParcelTrackingDataActionImpl() {
-       
+        this.action = "setParcelTrackingData";
     }
 
     

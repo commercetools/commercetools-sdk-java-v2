@@ -30,7 +30,6 @@ public final class PriceFunctionImpl implements PriceFunction {
         this.function = function;
     }
     public PriceFunctionImpl() {
-       
     }
 
     /**

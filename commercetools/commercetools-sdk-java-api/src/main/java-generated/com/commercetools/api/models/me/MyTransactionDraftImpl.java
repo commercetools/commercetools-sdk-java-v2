@@ -38,7 +38,6 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
         this.interactionId = interactionId;
     }
     public MyTransactionDraftImpl() {
-       
     }
 
     /**

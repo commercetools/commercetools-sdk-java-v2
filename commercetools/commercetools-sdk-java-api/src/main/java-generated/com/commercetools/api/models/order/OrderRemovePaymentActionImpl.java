@@ -31,7 +31,7 @@ public final class OrderRemovePaymentActionImpl implements OrderRemovePaymentAct
         this.action = "removePayment";
     }
     public OrderRemovePaymentActionImpl() {
-       
+        this.action = "removePayment";
     }
 
     

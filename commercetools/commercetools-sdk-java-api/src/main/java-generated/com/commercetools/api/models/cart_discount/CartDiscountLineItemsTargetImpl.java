@@ -30,7 +30,7 @@ public final class CartDiscountLineItemsTargetImpl implements CartDiscountLineIt
         this.type = "lineItems";
     }
     public CartDiscountLineItemsTargetImpl() {
-       
+        this.type = "lineItems";
     }
 
     

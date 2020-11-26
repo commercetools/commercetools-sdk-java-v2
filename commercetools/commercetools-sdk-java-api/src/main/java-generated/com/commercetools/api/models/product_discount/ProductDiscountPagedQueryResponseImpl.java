@@ -39,7 +39,6 @@ public final class ProductDiscountPagedQueryResponseImpl implements ProductDisco
         this.results = results;
     }
     public ProductDiscountPagedQueryResponseImpl() {
-       
     }
 
     

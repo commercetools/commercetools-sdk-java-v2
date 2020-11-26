@@ -34,7 +34,7 @@ public final class OrderPaymentStateChangedMessagePayloadImpl implements OrderPa
         this.type = "OrderPaymentStateChanged";
     }
     public OrderPaymentStateChangedMessagePayloadImpl() {
-       
+        this.type = "OrderPaymentStateChanged";
     }
 
     

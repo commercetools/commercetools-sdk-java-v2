@@ -31,7 +31,7 @@ public final class ProductDiscountSetValidFromActionImpl implements ProductDisco
         this.action = "setValidFrom";
     }
     public ProductDiscountSetValidFromActionImpl() {
-       
+        this.action = "setValidFrom";
     }
 
     

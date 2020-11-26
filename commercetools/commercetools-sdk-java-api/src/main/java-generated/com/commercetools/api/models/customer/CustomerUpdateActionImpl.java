@@ -54,7 +54,6 @@ public final class CustomerUpdateActionImpl implements CustomerUpdateAction {
         this.action = action;
     }
     public CustomerUpdateActionImpl() {
-       
     }
 
     

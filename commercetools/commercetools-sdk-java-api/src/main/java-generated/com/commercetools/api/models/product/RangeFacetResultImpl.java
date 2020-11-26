@@ -32,7 +32,7 @@ public final class RangeFacetResultImpl implements RangeFacetResult {
         this.type = FacetTypes.findEnum("range");
     }
     public RangeFacetResultImpl() {
-       
+        this.type = FacetTypes.findEnum("range");
     }
 
     

@@ -88,7 +88,6 @@ public final class CategoryImpl implements Category {
         this.key = key;
     }
     public CategoryImpl() {
-       
     }
 
     /**

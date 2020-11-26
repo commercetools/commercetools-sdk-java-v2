@@ -30,7 +30,7 @@ public final class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemo
         this.action = "removeTaxRate";
     }
     public TaxCategoryRemoveTaxRateActionImpl() {
-       
+        this.action = "removeTaxRate";
     }
 
     

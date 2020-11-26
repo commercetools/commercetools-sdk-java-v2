@@ -39,7 +39,6 @@ public final class CustomObjectPagedQueryResponseImpl implements CustomObjectPag
         this.results = results;
     }
     public CustomObjectPagedQueryResponseImpl() {
-       
     }
 
     

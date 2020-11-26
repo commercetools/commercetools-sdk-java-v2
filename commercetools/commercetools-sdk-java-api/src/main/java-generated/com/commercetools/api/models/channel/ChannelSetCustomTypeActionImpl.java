@@ -35,7 +35,7 @@ public final class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTyp
         this.action = "setCustomType";
     }
     public ChannelSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

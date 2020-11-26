@@ -33,7 +33,7 @@ public final class OrderCustomerEmailSetMessagePayloadImpl implements OrderCusto
         this.type = "OrderCustomerEmailSet";
     }
     public OrderCustomerEmailSetMessagePayloadImpl() {
-       
+        this.type = "OrderCustomerEmailSet";
     }
 
     

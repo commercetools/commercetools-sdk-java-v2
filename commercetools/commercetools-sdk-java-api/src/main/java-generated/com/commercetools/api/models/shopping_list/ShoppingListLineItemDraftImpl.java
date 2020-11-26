@@ -43,7 +43,6 @@ public final class ShoppingListLineItemDraftImpl implements ShoppingListLineItem
         this.variantId = variantId;
     }
     public ShoppingListLineItemDraftImpl() {
-       
     }
 
     

@@ -30,7 +30,7 @@ public final class WeakPasswordErrorImpl implements WeakPasswordError {
         this.code = "WeakPassword";
     }
     public WeakPasswordErrorImpl() {
-       
+        this.code = "WeakPassword";
     }
 
     

@@ -34,7 +34,7 @@ public final class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumV
         this.action = "changeEnumValueLabel";
     }
     public TypeChangeEnumValueLabelActionImpl() {
-       
+        this.action = "changeEnumValueLabel";
     }
 
     

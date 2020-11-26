@@ -30,7 +30,7 @@ public final class StagedOrderSetCountryActionImpl implements StagedOrderSetCoun
         this.action = "setCountry";
     }
     public StagedOrderSetCountryActionImpl() {
-       
+        this.action = "setCountry";
     }
 
     

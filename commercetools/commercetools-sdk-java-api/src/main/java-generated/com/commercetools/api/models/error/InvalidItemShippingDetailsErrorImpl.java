@@ -36,7 +36,7 @@ public final class InvalidItemShippingDetailsErrorImpl implements InvalidItemShi
         this.code = "InvalidItemShippingDetails";
     }
     public InvalidItemShippingDetailsErrorImpl() {
-       
+        this.code = "InvalidItemShippingDetails";
     }
 
     

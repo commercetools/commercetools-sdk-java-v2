@@ -31,7 +31,7 @@ public final class StoresAddDistributionChannelsActionImpl implements StoresAddD
         this.action = "addDistributionChannel";
     }
     public StoresAddDistributionChannelsActionImpl() {
-       
+        this.action = "addDistributionChannel";
     }
 
     

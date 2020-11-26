@@ -31,7 +31,7 @@ public final class CategorySetMetaTitleActionImpl implements CategorySetMetaTitl
         this.action = "setMetaTitle";
     }
     public CategorySetMetaTitleActionImpl() {
-       
+        this.action = "setMetaTitle";
     }
 
     

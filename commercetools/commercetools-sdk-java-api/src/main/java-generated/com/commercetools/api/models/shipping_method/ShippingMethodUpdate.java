@@ -19,7 +19,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ShippingMethodUpdateImpl.class)
-public interface ShippingMethodUpdate  {
+public interface ShippingMethodUpdate extends com.commercetools.api.models.ResourceUpdate<ShippingMethodUpdate, ShippingMethodUpdateAction> {
 
     
     @NotNull

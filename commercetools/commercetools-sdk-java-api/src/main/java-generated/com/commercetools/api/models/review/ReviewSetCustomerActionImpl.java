@@ -31,7 +31,7 @@ public final class ReviewSetCustomerActionImpl implements ReviewSetCustomerActio
         this.action = "setCustomer";
     }
     public ReviewSetCustomerActionImpl() {
-       
+        this.action = "setCustomer";
     }
 
     

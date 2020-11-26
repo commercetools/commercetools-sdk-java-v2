@@ -31,7 +31,7 @@ public final class StagedOrderSetShippingMethodTaxAmountActionImpl implements St
         this.action = "setShippingMethodTaxAmount";
     }
     public StagedOrderSetShippingMethodTaxAmountActionImpl() {
-       
+        this.action = "setShippingMethodTaxAmount";
     }
 
     

@@ -31,7 +31,7 @@ public final class StoreSetNameActionImpl implements StoreSetNameAction {
         this.action = "setName";
     }
     public StoreSetNameActionImpl() {
-       
+        this.action = "setName";
     }
 
     

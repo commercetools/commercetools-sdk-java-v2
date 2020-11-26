@@ -76,7 +76,7 @@ public final class ProductPriceExternalDiscountSetMessageImpl implements Product
         this.type = "ProductPriceExternalDiscountSet";
     }
     public ProductPriceExternalDiscountSetMessageImpl() {
-       
+        this.type = "ProductPriceExternalDiscountSet";
     }
 
     

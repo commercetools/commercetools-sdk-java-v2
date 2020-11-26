@@ -30,7 +30,7 @@ public final class StagedOrderSetCustomerIdActionImpl implements StagedOrderSetC
         this.action = "setCustomerId";
     }
     public StagedOrderSetCustomerIdActionImpl() {
-       
+        this.action = "setCustomerId";
     }
 
     

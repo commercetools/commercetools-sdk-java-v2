@@ -61,7 +61,7 @@ public final class ProductCreatedMessageImpl implements ProductCreatedMessage {
         this.type = "ProductCreated";
     }
     public ProductCreatedMessageImpl() {
-       
+        this.type = "ProductCreated";
     }
 
     

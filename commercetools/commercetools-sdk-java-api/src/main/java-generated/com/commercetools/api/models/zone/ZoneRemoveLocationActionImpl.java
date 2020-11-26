@@ -31,7 +31,7 @@ public final class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAct
         this.action = "removeLocation";
     }
     public ZoneRemoveLocationActionImpl() {
-       
+        this.action = "removeLocation";
     }
 
     

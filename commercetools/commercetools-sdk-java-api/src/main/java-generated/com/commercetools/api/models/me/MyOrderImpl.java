@@ -175,7 +175,6 @@ public final class MyOrderImpl implements MyOrder {
         this.refusedGifts = refusedGifts;
     }
     public MyOrderImpl() {
-       
     }
 
     

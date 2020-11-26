@@ -34,7 +34,7 @@ public final class PaymentTransitionStateActionImpl implements PaymentTransition
         this.action = "transitionState";
     }
     public PaymentTransitionStateActionImpl() {
-       
+        this.action = "transitionState";
     }
 
     

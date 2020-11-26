@@ -30,7 +30,7 @@ public final class CartSetLocaleActionImpl implements CartSetLocaleAction {
         this.action = "setLocale";
     }
     public CartSetLocaleActionImpl() {
-       
+        this.action = "setLocale";
     }
 
     

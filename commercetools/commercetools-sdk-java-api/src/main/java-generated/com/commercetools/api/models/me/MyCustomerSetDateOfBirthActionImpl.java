@@ -31,7 +31,7 @@ public final class MyCustomerSetDateOfBirthActionImpl implements MyCustomerSetDa
         this.action = "setDateOfBirth";
     }
     public MyCustomerSetDateOfBirthActionImpl() {
-       
+        this.action = "setDateOfBirth";
     }
 
     

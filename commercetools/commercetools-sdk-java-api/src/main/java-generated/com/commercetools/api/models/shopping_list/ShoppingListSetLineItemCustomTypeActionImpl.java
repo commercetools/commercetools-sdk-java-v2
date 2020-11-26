@@ -38,7 +38,7 @@ public final class ShoppingListSetLineItemCustomTypeActionImpl implements Shoppi
         this.action = "setLineItemCustomType";
     }
     public ShoppingListSetLineItemCustomTypeActionImpl() {
-       
+        this.action = "setLineItemCustomType";
     }
 
     

@@ -34,7 +34,7 @@ public final class CustomerGroupResourceIdentifierImpl implements CustomerGroupR
         this.typeId = ReferenceTypeId.findEnum("customer-group");
     }
     public CustomerGroupResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("customer-group");
     }
 
     

@@ -34,7 +34,7 @@ public final class StagedOrderSetParcelItemsActionImpl implements StagedOrderSet
         this.action = "setParcelItems";
     }
     public StagedOrderSetParcelItemsActionImpl() {
-       
+        this.action = "setParcelItems";
     }
 
     

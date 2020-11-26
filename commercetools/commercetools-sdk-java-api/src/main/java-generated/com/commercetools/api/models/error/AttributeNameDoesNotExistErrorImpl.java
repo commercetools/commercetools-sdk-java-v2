@@ -33,7 +33,7 @@ public final class AttributeNameDoesNotExistErrorImpl implements AttributeNameDo
         this.code = "AttributeNameDoesNotExist";
     }
     public AttributeNameDoesNotExistErrorImpl() {
-       
+        this.code = "AttributeNameDoesNotExist";
     }
 
     

@@ -34,7 +34,7 @@ public final class CategoryResourceIdentifierImpl implements CategoryResourceIde
         this.typeId = ReferenceTypeId.findEnum("category");
     }
     public CategoryResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("category");
     }
 
     

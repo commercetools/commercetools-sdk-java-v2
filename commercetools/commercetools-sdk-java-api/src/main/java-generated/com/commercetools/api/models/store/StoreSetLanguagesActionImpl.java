@@ -30,7 +30,7 @@ public final class StoreSetLanguagesActionImpl implements StoreSetLanguagesActio
         this.action = "setLanguages";
     }
     public StoreSetLanguagesActionImpl() {
-       
+        this.action = "setLanguages";
     }
 
     

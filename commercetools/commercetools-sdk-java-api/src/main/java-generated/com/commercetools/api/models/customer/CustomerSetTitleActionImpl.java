@@ -30,7 +30,7 @@ public final class CustomerSetTitleActionImpl implements CustomerSetTitleAction 
         this.action = "setTitle";
     }
     public CustomerSetTitleActionImpl() {
-       
+        this.action = "setTitle";
     }
 
     

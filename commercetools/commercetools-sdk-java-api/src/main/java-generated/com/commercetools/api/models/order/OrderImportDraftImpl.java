@@ -105,7 +105,6 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
         this.origin = origin;
     }
     public OrderImportDraftImpl() {
-       
     }
 
     /**

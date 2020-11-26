@@ -58,7 +58,6 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
         this.anonymousId = anonymousId;
     }
     public ShoppingListDraftImpl() {
-       
     }
 
     /**

@@ -34,7 +34,7 @@ public final class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction 
         this.action = "addEnumValue";
     }
     public TypeAddEnumValueActionImpl() {
-       
+        this.action = "addEnumValue";
     }
 
     

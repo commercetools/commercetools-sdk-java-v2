@@ -30,7 +30,6 @@ public final class SubscriptionUpdateActionImpl implements SubscriptionUpdateAct
         this.action = action;
     }
     public SubscriptionUpdateActionImpl() {
-       
     }
 
     

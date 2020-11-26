@@ -44,7 +44,7 @@ public final class StagedOrderTransitionLineItemStateActionImpl implements Stage
         this.action = "transitionLineItemState";
     }
     public StagedOrderTransitionLineItemStateActionImpl() {
-       
+        this.action = "transitionLineItemState";
     }
 
     

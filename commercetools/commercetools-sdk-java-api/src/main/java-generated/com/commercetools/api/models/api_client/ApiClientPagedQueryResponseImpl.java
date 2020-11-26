@@ -39,7 +39,6 @@ public final class ApiClientPagedQueryResponseImpl implements ApiClientPagedQuer
         this.results = results;
     }
     public ApiClientPagedQueryResponseImpl() {
-       
     }
 
     

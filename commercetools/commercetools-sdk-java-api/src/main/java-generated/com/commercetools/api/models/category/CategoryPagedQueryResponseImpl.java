@@ -39,7 +39,6 @@ public final class CategoryPagedQueryResponseImpl implements CategoryPagedQueryR
         this.results = results;
     }
     public CategoryPagedQueryResponseImpl() {
-       
     }
 
     

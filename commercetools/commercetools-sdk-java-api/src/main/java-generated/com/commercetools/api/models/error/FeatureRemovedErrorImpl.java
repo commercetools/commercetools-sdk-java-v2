@@ -30,7 +30,7 @@ public final class FeatureRemovedErrorImpl implements FeatureRemovedError {
         this.code = "FeatureRemoved";
     }
     public FeatureRemovedErrorImpl() {
-       
+        this.code = "FeatureRemoved";
     }
 
     

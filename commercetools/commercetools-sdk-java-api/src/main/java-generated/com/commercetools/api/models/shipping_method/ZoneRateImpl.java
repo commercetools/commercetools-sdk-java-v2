@@ -31,7 +31,6 @@ public final class ZoneRateImpl implements ZoneRate {
         this.shippingRates = shippingRates;
     }
     public ZoneRateImpl() {
-       
     }
 
     

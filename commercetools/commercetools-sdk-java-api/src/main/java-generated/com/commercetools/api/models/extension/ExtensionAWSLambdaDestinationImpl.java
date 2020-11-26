@@ -36,7 +36,7 @@ public final class ExtensionAWSLambdaDestinationImpl implements ExtensionAWSLamb
         this.type = "AWSLambda";
     }
     public ExtensionAWSLambdaDestinationImpl() {
-       
+        this.type = "AWSLambda";
     }
 
     

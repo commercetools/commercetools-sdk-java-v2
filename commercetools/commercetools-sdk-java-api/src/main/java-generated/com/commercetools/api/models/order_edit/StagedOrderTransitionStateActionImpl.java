@@ -34,7 +34,7 @@ public final class StagedOrderTransitionStateActionImpl implements StagedOrderTr
         this.action = "transitionState";
     }
     public StagedOrderTransitionStateActionImpl() {
-       
+        this.action = "transitionState";
     }
 
     

@@ -39,7 +39,7 @@ public final class SqsDestinationImpl implements SqsDestination {
         this.type = "SQS";
     }
     public SqsDestinationImpl() {
-       
+        this.type = "SQS";
     }
 
     

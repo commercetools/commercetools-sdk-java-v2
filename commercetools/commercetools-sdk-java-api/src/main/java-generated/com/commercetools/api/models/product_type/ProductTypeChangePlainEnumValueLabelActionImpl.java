@@ -34,7 +34,7 @@ public final class ProductTypeChangePlainEnumValueLabelActionImpl implements Pro
         this.action = "changePlainEnumValueLabel";
     }
     public ProductTypeChangePlainEnumValueLabelActionImpl() {
-       
+        this.action = "changePlainEnumValueLabel";
     }
 
     

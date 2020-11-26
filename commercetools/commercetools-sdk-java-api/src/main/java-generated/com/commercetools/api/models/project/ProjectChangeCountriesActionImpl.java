@@ -30,7 +30,7 @@ public final class ProjectChangeCountriesActionImpl implements ProjectChangeCoun
         this.action = "changeCountries";
     }
     public ProjectChangeCountriesActionImpl() {
-       
+        this.action = "changeCountries";
     }
 
     

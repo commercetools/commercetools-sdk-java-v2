@@ -31,7 +31,7 @@ public final class CategoryCreatedMessagePayloadImpl implements CategoryCreatedM
         this.type = "CategoryCreated";
     }
     public CategoryCreatedMessagePayloadImpl() {
-       
+        this.type = "CategoryCreated";
     }
 
     

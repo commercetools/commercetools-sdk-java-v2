@@ -46,7 +46,7 @@ public final class ProductSetAssetSourcesActionImpl implements ProductSetAssetSo
         this.action = "setAssetSources";
     }
     public ProductSetAssetSourcesActionImpl() {
-       
+        this.action = "setAssetSources";
     }
 
     

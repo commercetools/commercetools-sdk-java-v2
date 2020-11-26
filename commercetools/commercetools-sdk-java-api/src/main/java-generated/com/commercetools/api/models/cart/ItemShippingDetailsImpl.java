@@ -30,7 +30,6 @@ public final class ItemShippingDetailsImpl implements ItemShippingDetails {
         this.valid = valid;
     }
     public ItemShippingDetailsImpl() {
-       
     }
 
     /**

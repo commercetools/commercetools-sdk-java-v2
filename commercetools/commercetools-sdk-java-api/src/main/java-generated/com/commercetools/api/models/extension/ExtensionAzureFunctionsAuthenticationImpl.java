@@ -30,7 +30,7 @@ public final class ExtensionAzureFunctionsAuthenticationImpl implements Extensio
         this.type = "AzureFunctions";
     }
     public ExtensionAzureFunctionsAuthenticationImpl() {
-       
+        this.type = "AzureFunctions";
     }
 
     

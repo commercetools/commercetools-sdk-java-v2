@@ -34,7 +34,7 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
         this.action = "setCustomField";
     }
     public CartDiscountSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

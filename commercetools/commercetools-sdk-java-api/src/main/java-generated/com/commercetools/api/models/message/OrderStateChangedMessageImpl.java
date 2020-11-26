@@ -64,7 +64,7 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
         this.type = "OrderStateChanged";
     }
     public OrderStateChangedMessageImpl() {
-       
+        this.type = "OrderStateChanged";
     }
 
     

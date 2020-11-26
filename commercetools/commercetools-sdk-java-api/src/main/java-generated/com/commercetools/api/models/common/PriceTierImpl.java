@@ -30,7 +30,6 @@ public final class PriceTierImpl implements PriceTier {
         this.value = value;
     }
     public PriceTierImpl() {
-       
     }
 
     

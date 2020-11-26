@@ -119,7 +119,6 @@ public final class CustomerImpl implements Customer {
         this.stores = stores;
     }
     public CustomerImpl() {
-       
     }
 
     /**

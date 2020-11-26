@@ -42,7 +42,6 @@ public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifier
         this.slug = slug;
     }
     public UserProvidedIdentifiersImpl() {
-       
     }
 
     

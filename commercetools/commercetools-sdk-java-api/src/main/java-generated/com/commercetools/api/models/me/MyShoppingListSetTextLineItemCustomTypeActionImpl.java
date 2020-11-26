@@ -38,7 +38,7 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionImpl implements 
         this.action = "setTextLineItemCustomType";
     }
     public MyShoppingListSetTextLineItemCustomTypeActionImpl() {
-       
+        this.action = "setTextLineItemCustomType";
     }
 
     

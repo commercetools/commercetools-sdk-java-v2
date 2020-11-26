@@ -37,7 +37,7 @@ public final class ShoppingListSetLineItemCustomFieldActionImpl implements Shopp
         this.action = "setLineItemCustomField";
     }
     public ShoppingListSetLineItemCustomFieldActionImpl() {
-       
+        this.action = "setLineItemCustomField";
     }
 
     

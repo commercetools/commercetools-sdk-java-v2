@@ -30,7 +30,7 @@ public final class CartDiscountChangeIsActiveActionImpl implements CartDiscountC
         this.action = "changeIsActive";
     }
     public CartDiscountChangeIsActiveActionImpl() {
-       
+        this.action = "changeIsActive";
     }
 
     

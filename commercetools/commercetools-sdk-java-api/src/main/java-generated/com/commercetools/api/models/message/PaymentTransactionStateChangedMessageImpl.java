@@ -64,7 +64,7 @@ public final class PaymentTransactionStateChangedMessageImpl implements PaymentT
         this.type = "PaymentTransactionStateChanged";
     }
     public PaymentTransactionStateChangedMessageImpl() {
-       
+        this.type = "PaymentTransactionStateChanged";
     }
 
     

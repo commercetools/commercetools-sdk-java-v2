@@ -30,7 +30,7 @@ public final class OrderRemoveDeliveryActionImpl implements OrderRemoveDeliveryA
         this.action = "removeDelivery";
     }
     public OrderRemoveDeliveryActionImpl() {
-       
+        this.action = "removeDelivery";
     }
 
     

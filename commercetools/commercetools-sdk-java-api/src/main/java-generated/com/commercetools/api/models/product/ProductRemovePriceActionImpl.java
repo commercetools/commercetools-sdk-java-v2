@@ -33,7 +33,7 @@ public final class ProductRemovePriceActionImpl implements ProductRemovePriceAct
         this.action = "removePrice";
     }
     public ProductRemovePriceActionImpl() {
-       
+        this.action = "removePrice";
     }
 
     

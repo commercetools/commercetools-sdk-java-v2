@@ -38,7 +38,7 @@ public final class CartSetCustomLineItemCustomTypeActionImpl implements CartSetC
         this.action = "setCustomLineItemCustomType";
     }
     public CartSetCustomLineItemCustomTypeActionImpl() {
-       
+        this.action = "setCustomLineItemCustomType";
     }
 
     

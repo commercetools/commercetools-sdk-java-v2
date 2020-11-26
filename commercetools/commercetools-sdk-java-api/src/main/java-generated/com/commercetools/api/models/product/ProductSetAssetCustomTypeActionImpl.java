@@ -50,7 +50,7 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
         this.action = "setAssetCustomType";
     }
     public ProductSetAssetCustomTypeActionImpl() {
-       
+        this.action = "setAssetCustomType";
     }
 
     

@@ -34,7 +34,7 @@ public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeCh
         this.action = "changeLocalizedEnumValueLabel";
     }
     public TypeChangeLocalizedEnumValueLabelActionImpl() {
-       
+        this.action = "changeLocalizedEnumValueLabel";
     }
 
     

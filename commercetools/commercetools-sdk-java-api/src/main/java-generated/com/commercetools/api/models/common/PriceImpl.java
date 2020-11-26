@@ -60,7 +60,6 @@ public final class PriceImpl implements Price {
         this.tiers = tiers;
     }
     public PriceImpl() {
-       
     }
 
     

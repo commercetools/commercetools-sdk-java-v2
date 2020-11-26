@@ -34,7 +34,7 @@ public final class ProductResourceIdentifierImpl implements ProductResourceIdent
         this.typeId = ReferenceTypeId.findEnum("product");
     }
     public ProductResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("product");
     }
 
     

@@ -31,7 +31,7 @@ public final class CartDiscountChangeValueActionImpl implements CartDiscountChan
         this.action = "changeValue";
     }
     public CartDiscountChangeValueActionImpl() {
-       
+        this.action = "changeValue";
     }
 
     

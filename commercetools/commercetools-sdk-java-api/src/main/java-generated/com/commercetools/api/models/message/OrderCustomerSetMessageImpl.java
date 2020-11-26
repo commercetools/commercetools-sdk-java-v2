@@ -71,7 +71,7 @@ public final class OrderCustomerSetMessageImpl implements OrderCustomerSetMessag
         this.type = "OrderCustomerSet";
     }
     public OrderCustomerSetMessageImpl() {
-       
+        this.type = "OrderCustomerSet";
     }
 
     

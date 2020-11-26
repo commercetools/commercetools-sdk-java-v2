@@ -28,7 +28,6 @@ public final class ExtensionDestinationImpl implements ExtensionDestination {
         this.type = type;
     }
     public ExtensionDestinationImpl() {
-       
     }
 
     

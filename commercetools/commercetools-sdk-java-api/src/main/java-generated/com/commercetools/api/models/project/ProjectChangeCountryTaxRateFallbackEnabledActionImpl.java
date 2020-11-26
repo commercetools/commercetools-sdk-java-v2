@@ -30,7 +30,7 @@ public final class ProjectChangeCountryTaxRateFallbackEnabledActionImpl implemen
         this.action = "changeCountryTaxRateFallbackEnabled";
     }
     public ProjectChangeCountryTaxRateFallbackEnabledActionImpl() {
-       
+        this.action = "changeCountryTaxRateFallbackEnabled";
     }
 
     

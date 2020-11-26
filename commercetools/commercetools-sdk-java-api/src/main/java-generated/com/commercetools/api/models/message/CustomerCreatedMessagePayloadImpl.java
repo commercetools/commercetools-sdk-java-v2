@@ -31,7 +31,7 @@ public final class CustomerCreatedMessagePayloadImpl implements CustomerCreatedM
         this.type = "CustomerCreated";
     }
     public CustomerCreatedMessagePayloadImpl() {
-       
+        this.type = "CustomerCreated";
     }
 
     

@@ -38,7 +38,6 @@ public final class FieldTypeImpl implements FieldType {
         this.name = name;
     }
     public FieldTypeImpl() {
-       
     }
 
     

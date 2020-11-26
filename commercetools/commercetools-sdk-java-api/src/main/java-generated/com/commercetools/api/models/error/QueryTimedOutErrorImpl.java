@@ -30,7 +30,7 @@ public final class QueryTimedOutErrorImpl implements QueryTimedOutError {
         this.code = "QueryTimedOut";
     }
     public QueryTimedOutErrorImpl() {
-       
+        this.code = "QueryTimedOut";
     }
 
     

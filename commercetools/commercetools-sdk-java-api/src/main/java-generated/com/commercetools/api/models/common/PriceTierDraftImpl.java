@@ -30,7 +30,6 @@ public final class PriceTierDraftImpl implements PriceTierDraft {
         this.value = value;
     }
     public PriceTierDraftImpl() {
-       
     }
 
     

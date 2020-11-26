@@ -31,7 +31,7 @@ public final class StagedOrderChangeTaxCalculationModeActionImpl implements Stag
         this.action = "changeTaxCalculationMode";
     }
     public StagedOrderChangeTaxCalculationModeActionImpl() {
-       
+        this.action = "changeTaxCalculationMode";
     }
 
     

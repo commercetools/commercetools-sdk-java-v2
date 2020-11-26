@@ -34,7 +34,7 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
         this.action = "setDeliveryAddress";
     }
     public OrderSetDeliveryAddressActionImpl() {
-       
+        this.action = "setDeliveryAddress";
     }
 
     

@@ -30,7 +30,7 @@ public final class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberA
         this.action = "setOrderNumber";
     }
     public OrderSetOrderNumberActionImpl() {
-       
+        this.action = "setOrderNumber";
     }
 
     

@@ -38,7 +38,7 @@ public final class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannel
         this.code = "MissingRoleOnChannel";
     }
     public MissingRoleOnChannelErrorImpl() {
-       
+        this.code = "MissingRoleOnChannel";
     }
 
     

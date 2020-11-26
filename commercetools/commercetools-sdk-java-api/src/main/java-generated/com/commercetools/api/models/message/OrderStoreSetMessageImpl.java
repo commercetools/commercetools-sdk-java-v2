@@ -61,7 +61,7 @@ public final class OrderStoreSetMessageImpl implements OrderStoreSetMessage {
         this.type = "OrderStoreSet";
     }
     public OrderStoreSetMessageImpl() {
-       
+        this.type = "OrderStoreSet";
     }
 
     

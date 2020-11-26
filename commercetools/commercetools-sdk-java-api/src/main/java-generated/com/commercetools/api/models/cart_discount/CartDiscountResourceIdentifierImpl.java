@@ -34,7 +34,7 @@ public final class CartDiscountResourceIdentifierImpl implements CartDiscountRes
         this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }
     public CartDiscountResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }
 
     

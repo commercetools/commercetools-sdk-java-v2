@@ -31,7 +31,7 @@ public final class ExtensionChangeDestinationActionImpl implements ExtensionChan
         this.action = "changeDestination";
     }
     public ExtensionChangeDestinationActionImpl() {
-       
+        this.action = "changeDestination";
     }
 
     

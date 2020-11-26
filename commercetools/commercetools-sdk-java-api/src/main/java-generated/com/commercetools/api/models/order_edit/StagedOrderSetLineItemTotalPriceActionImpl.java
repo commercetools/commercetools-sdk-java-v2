@@ -34,7 +34,7 @@ public final class StagedOrderSetLineItemTotalPriceActionImpl implements StagedO
         this.action = "setLineItemTotalPrice";
     }
     public StagedOrderSetLineItemTotalPriceActionImpl() {
-       
+        this.action = "setLineItemTotalPrice";
     }
 
     

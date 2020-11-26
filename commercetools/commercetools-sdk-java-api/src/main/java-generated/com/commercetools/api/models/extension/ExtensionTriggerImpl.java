@@ -31,7 +31,6 @@ public final class ExtensionTriggerImpl implements ExtensionTrigger {
         this.actions = actions;
     }
     public ExtensionTriggerImpl() {
-       
     }
 
     

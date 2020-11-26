@@ -31,7 +31,7 @@ public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
         this.action = "addLocation";
     }
     public ZoneAddLocationActionImpl() {
-       
+        this.action = "addLocation";
     }
 
     

@@ -36,7 +36,6 @@ public final class ParcelMeasurementsImpl implements ParcelMeasurements {
         this.weightInGram = weightInGram;
     }
     public ParcelMeasurementsImpl() {
-       
     }
 
     

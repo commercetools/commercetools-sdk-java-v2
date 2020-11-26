@@ -43,7 +43,7 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
         this.notificationType = "ResourceDeleted";
     }
     public ResourceDeletedDeliveryImpl() {
-       
+        this.notificationType = "ResourceDeleted";
     }
 
     

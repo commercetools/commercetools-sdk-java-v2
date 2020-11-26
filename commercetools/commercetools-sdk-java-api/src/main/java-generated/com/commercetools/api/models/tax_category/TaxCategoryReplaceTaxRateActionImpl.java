@@ -34,7 +34,7 @@ public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryRep
         this.action = "replaceTaxRate";
     }
     public TaxCategoryReplaceTaxRateActionImpl() {
-       
+        this.action = "replaceTaxRate";
     }
 
     

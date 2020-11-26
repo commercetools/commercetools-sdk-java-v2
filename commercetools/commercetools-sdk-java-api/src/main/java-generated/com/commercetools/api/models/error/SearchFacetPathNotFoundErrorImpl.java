@@ -30,7 +30,7 @@ public final class SearchFacetPathNotFoundErrorImpl implements SearchFacetPathNo
         this.code = "SearchFacetPathNotFound";
     }
     public SearchFacetPathNotFoundErrorImpl() {
-       
+        this.code = "SearchFacetPathNotFound";
     }
 
     

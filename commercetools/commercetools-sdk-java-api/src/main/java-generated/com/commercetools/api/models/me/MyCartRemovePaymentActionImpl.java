@@ -31,7 +31,7 @@ public final class MyCartRemovePaymentActionImpl implements MyCartRemovePaymentA
         this.action = "removePayment";
     }
     public MyCartRemovePaymentActionImpl() {
-       
+        this.action = "removePayment";
     }
 
     

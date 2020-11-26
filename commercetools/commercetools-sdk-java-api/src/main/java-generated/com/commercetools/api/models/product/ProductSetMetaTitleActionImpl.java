@@ -34,7 +34,7 @@ public final class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleA
         this.action = "setMetaTitle";
     }
     public ProductSetMetaTitleActionImpl() {
-       
+        this.action = "setMetaTitle";
     }
 
     

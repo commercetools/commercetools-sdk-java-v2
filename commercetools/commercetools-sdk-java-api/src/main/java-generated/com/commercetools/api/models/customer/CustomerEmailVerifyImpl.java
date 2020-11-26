@@ -30,7 +30,6 @@ public final class CustomerEmailVerifyImpl implements CustomerEmailVerify {
         this.tokenValue = tokenValue;
     }
     public CustomerEmailVerifyImpl() {
-       
     }
 
     

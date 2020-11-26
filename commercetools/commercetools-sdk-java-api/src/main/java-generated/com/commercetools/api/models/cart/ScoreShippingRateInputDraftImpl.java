@@ -30,7 +30,7 @@ public final class ScoreShippingRateInputDraftImpl implements ScoreShippingRateI
         this.type = "Score";
     }
     public ScoreShippingRateInputDraftImpl() {
-       
+        this.type = "Score";
     }
 
     

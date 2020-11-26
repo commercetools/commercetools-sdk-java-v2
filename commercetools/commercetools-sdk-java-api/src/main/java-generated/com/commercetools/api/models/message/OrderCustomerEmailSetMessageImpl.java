@@ -63,7 +63,7 @@ public final class OrderCustomerEmailSetMessageImpl implements OrderCustomerEmai
         this.type = "OrderCustomerEmailSet";
     }
     public OrderCustomerEmailSetMessageImpl() {
-       
+        this.type = "OrderCustomerEmailSet";
     }
 
     

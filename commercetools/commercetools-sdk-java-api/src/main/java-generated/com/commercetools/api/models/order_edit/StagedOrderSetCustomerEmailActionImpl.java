@@ -30,7 +30,7 @@ public final class StagedOrderSetCustomerEmailActionImpl implements StagedOrderS
         this.action = "setCustomerEmail";
     }
     public StagedOrderSetCustomerEmailActionImpl() {
-       
+        this.action = "setCustomerEmail";
     }
 
     

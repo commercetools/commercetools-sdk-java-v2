@@ -31,7 +31,7 @@ public final class OrderEditSetStagedActionsActionImpl implements OrderEditSetSt
         this.action = "setStagedActions";
     }
     public OrderEditSetStagedActionsActionImpl() {
-       
+        this.action = "setStagedActions";
     }
 
     

@@ -30,7 +30,7 @@ public final class NotEnabledErrorImpl implements NotEnabledError {
         this.code = "NotEnabled";
     }
     public NotEnabledErrorImpl() {
-       
+        this.code = "NotEnabled";
     }
 
     

@@ -30,7 +30,7 @@ public final class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRem
         this.action = "removeDelivery";
     }
     public StagedOrderRemoveDeliveryActionImpl() {
-       
+        this.action = "removeDelivery";
     }
 
     

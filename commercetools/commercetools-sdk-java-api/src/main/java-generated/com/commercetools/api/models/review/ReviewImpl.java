@@ -85,7 +85,6 @@ public final class ReviewImpl implements Review {
         this.custom = custom;
     }
     public ReviewImpl() {
-       
     }
 
     /**

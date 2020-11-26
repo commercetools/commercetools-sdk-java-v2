@@ -34,7 +34,7 @@ public final class FilteredFacetResultImpl implements FilteredFacetResult {
         this.type = FacetTypes.findEnum("filter");
     }
     public FilteredFacetResultImpl() {
-       
+        this.type = FacetTypes.findEnum("filter");
     }
 
     

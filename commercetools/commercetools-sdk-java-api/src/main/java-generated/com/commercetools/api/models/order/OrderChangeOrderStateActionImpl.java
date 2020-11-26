@@ -31,7 +31,7 @@ public final class OrderChangeOrderStateActionImpl implements OrderChangeOrderSt
         this.action = "changeOrderState";
     }
     public OrderChangeOrderStateActionImpl() {
-       
+        this.action = "changeOrderState";
     }
 
     

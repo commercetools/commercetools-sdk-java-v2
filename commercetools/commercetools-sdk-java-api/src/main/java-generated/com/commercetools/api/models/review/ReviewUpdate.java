@@ -19,7 +19,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = ReviewUpdateImpl.class)
-public interface ReviewUpdate  {
+public interface ReviewUpdate extends com.commercetools.api.models.ResourceUpdate<ReviewUpdate, ReviewUpdateAction> {
 
     
     @NotNull

@@ -61,7 +61,6 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
         this.variantId = variantId;
     }
     public ShoppingListLineItemImpl() {
-       
     }
 
     

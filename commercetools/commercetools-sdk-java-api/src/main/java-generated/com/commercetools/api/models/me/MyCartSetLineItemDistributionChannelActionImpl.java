@@ -34,7 +34,7 @@ public final class MyCartSetLineItemDistributionChannelActionImpl implements MyC
         this.action = "setLineItemDistributionChannel";
     }
     public MyCartSetLineItemDistributionChannelActionImpl() {
-       
+        this.action = "setLineItemDistributionChannel";
     }
 
     

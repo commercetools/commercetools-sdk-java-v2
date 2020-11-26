@@ -38,7 +38,6 @@ public final class ClientLoggingImpl implements ClientLogging {
         this.anonymousId = anonymousId;
     }
     public ClientLoggingImpl() {
-       
     }
 
     

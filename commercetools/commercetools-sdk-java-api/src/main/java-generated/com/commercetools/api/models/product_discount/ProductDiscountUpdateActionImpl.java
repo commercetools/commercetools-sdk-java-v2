@@ -36,7 +36,6 @@ public final class ProductDiscountUpdateActionImpl implements ProductDiscountUpd
         this.action = action;
     }
     public ProductDiscountUpdateActionImpl() {
-       
     }
 
     

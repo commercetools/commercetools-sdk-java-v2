@@ -30,7 +30,7 @@ public final class ReviewSetTextActionImpl implements ReviewSetTextAction {
         this.action = "setText";
     }
     public ReviewSetTextActionImpl() {
-       
+        this.action = "setText";
     }
 
     

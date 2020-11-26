@@ -34,7 +34,7 @@ public final class OrderSetCustomFieldActionImpl implements OrderSetCustomFieldA
         this.action = "setCustomField";
     }
     public OrderSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

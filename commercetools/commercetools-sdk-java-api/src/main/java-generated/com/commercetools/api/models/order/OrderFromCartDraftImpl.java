@@ -48,7 +48,6 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
         this.state = state;
     }
     public OrderFromCartDraftImpl() {
-       
     }
 
     /**

@@ -30,7 +30,6 @@ public final class TypeUpdateImpl implements TypeUpdate {
         this.actions = actions;
     }
     public TypeUpdateImpl() {
-       
     }
 
     

@@ -33,7 +33,7 @@ public final class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuA
         this.action = "legacySetSku";
     }
     public ProductLegacySetSkuActionImpl() {
-       
+        this.action = "legacySetSku";
     }
 
     

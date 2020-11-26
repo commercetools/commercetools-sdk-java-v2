@@ -34,7 +34,7 @@ public final class CartSetLineItemDistributionChannelActionImpl implements CartS
         this.action = "setLineItemDistributionChannel";
     }
     public CartSetLineItemDistributionChannelActionImpl() {
-       
+        this.action = "setLineItemDistributionChannel";
     }
 
     

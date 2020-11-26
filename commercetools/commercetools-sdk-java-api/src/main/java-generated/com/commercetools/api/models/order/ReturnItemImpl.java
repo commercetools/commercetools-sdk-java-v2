@@ -52,7 +52,6 @@ public final class ReturnItemImpl implements ReturnItem {
         this.createdAt = createdAt;
     }
     public ReturnItemImpl() {
-       
     }
 
     

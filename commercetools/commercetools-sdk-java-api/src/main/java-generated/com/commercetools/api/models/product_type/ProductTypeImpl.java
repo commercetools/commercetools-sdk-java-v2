@@ -58,7 +58,6 @@ public final class ProductTypeImpl implements ProductType {
         this.attributes = attributes;
     }
     public ProductTypeImpl() {
-       
     }
 
     /**

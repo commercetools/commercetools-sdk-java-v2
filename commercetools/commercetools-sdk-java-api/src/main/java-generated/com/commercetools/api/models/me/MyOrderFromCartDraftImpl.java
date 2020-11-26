@@ -30,7 +30,6 @@ public final class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft {
         this.version = version;
     }
     public MyOrderFromCartDraftImpl() {
-       
     }
 
     /**

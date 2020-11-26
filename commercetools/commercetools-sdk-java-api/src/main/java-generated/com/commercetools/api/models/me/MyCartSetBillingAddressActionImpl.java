@@ -31,7 +31,7 @@ public final class MyCartSetBillingAddressActionImpl implements MyCartSetBilling
         this.action = "setBillingAddress";
     }
     public MyCartSetBillingAddressActionImpl() {
-       
+        this.action = "setBillingAddress";
     }
 
     

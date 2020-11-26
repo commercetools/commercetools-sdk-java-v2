@@ -30,7 +30,7 @@ public final class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAct
         this.action = "setDescription";
     }
     public ZoneSetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

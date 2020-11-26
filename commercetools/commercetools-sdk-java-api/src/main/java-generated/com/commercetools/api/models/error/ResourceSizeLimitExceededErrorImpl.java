@@ -30,7 +30,7 @@ public final class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLim
         this.code = "ResourceSizeLimitExceeded";
     }
     public ResourceSizeLimitExceededErrorImpl() {
-       
+        this.code = "ResourceSizeLimitExceeded";
     }
 
     

@@ -61,7 +61,7 @@ public final class ProductPriceDiscountsSetMessageImpl implements ProductPriceDi
         this.type = "ProductPriceDiscountsSet";
     }
     public ProductPriceDiscountsSetMessageImpl() {
-       
+        this.type = "ProductPriceDiscountsSet";
     }
 
     

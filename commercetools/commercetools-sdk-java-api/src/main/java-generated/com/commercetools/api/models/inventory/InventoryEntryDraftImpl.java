@@ -44,7 +44,6 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
         this.custom = custom;
     }
     public InventoryEntryDraftImpl() {
-       
     }
 
     

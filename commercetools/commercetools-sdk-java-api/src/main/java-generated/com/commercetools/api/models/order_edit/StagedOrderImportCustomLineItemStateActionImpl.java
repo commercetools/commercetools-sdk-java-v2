@@ -34,7 +34,7 @@ public final class StagedOrderImportCustomLineItemStateActionImpl implements Sta
         this.action = "importCustomLineItemState";
     }
     public StagedOrderImportCustomLineItemStateActionImpl() {
-       
+        this.action = "importCustomLineItemState";
     }
 
     

@@ -41,7 +41,6 @@ public final class TypeUpdateActionImpl implements TypeUpdateAction {
         this.action = action;
     }
     public TypeUpdateActionImpl() {
-       
     }
 
     

@@ -30,7 +30,7 @@ public final class PaymentSetExternalIdActionImpl implements PaymentSetExternalI
         this.action = "setExternalId";
     }
     public PaymentSetExternalIdActionImpl() {
-       
+        this.action = "setExternalId";
     }
 
     

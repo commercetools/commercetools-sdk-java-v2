@@ -34,7 +34,7 @@ public final class StagedOrderSetCustomLineItemTaxAmountActionImpl implements St
         this.action = "setCustomLineItemTaxAmount";
     }
     public StagedOrderSetCustomLineItemTaxAmountActionImpl() {
-       
+        this.action = "setCustomLineItemTaxAmount";
     }
 
     

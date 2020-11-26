@@ -27,7 +27,6 @@ public final class FacetResultsImpl implements FacetResults {
         this.values = values;
     }
     public FacetResultsImpl() {
-       
     }
 
     

@@ -39,7 +39,6 @@ public final class CustomerPagedQueryResponseImpl implements CustomerPagedQueryR
         this.results = results;
     }
     public CustomerPagedQueryResponseImpl() {
-       
     }
 
     

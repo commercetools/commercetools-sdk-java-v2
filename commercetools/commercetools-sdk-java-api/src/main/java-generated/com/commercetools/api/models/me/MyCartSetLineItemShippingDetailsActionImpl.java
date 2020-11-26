@@ -34,7 +34,7 @@ public final class MyCartSetLineItemShippingDetailsActionImpl implements MyCartS
         this.action = "setLineItemShippingDetails";
     }
     public MyCartSetLineItemShippingDetailsActionImpl() {
-       
+        this.action = "setLineItemShippingDetails";
     }
 
     

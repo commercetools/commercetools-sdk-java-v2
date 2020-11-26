@@ -34,7 +34,7 @@ public final class CartSetCustomLineItemShippingDetailsActionImpl implements Car
         this.action = "setCustomLineItemShippingDetails";
     }
     public CartSetCustomLineItemShippingDetailsActionImpl() {
-       
+        this.action = "setCustomLineItemShippingDetails";
     }
 
     

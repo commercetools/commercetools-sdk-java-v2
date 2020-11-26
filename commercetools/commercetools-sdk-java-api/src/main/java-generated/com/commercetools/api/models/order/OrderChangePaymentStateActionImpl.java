@@ -31,7 +31,7 @@ public final class OrderChangePaymentStateActionImpl implements OrderChangePayme
         this.action = "changePaymentState";
     }
     public OrderChangePaymentStateActionImpl() {
-       
+        this.action = "changePaymentState";
     }
 
     

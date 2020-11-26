@@ -30,7 +30,7 @@ public final class CustomerSetExternalIdActionImpl implements CustomerSetExterna
         this.action = "setExternalId";
     }
     public CustomerSetExternalIdActionImpl() {
-       
+        this.action = "setExternalId";
     }
 
     

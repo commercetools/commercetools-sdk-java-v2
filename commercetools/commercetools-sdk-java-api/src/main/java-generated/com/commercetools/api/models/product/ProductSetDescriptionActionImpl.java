@@ -34,7 +34,7 @@ public final class ProductSetDescriptionActionImpl implements ProductSetDescript
         this.action = "setDescription";
     }
     public ProductSetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

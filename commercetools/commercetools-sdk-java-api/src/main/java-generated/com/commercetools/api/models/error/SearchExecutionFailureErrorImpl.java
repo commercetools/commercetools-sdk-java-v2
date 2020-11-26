@@ -30,7 +30,7 @@ public final class SearchExecutionFailureErrorImpl implements SearchExecutionFai
         this.code = "SearchExecutionFailure";
     }
     public SearchExecutionFailureErrorImpl() {
-       
+        this.code = "SearchExecutionFailure";
     }
 
     

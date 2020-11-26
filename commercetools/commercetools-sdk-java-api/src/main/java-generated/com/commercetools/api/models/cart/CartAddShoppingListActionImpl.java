@@ -38,7 +38,7 @@ public final class CartAddShoppingListActionImpl implements CartAddShoppingListA
         this.action = "addShoppingList";
     }
     public CartAddShoppingListActionImpl() {
-       
+        this.action = "addShoppingList";
     }
 
     

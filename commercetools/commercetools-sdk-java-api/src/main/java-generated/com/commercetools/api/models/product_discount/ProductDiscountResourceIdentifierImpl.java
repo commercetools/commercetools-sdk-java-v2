@@ -34,7 +34,7 @@ public final class ProductDiscountResourceIdentifierImpl implements ProductDisco
         this.typeId = ReferenceTypeId.findEnum("product-discount");
     }
     public ProductDiscountResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("product-discount");
     }
 
     

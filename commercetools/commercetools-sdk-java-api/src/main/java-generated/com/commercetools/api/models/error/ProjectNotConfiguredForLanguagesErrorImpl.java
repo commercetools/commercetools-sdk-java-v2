@@ -33,7 +33,7 @@ public final class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectN
         this.code = "ProjectNotConfiguredForLanguages";
     }
     public ProjectNotConfiguredForLanguagesErrorImpl() {
-       
+        this.code = "ProjectNotConfiguredForLanguages";
     }
 
     

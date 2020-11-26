@@ -31,7 +31,6 @@ public final class KeyReferenceImpl implements KeyReference {
         this.key = key;
     }
     public KeyReferenceImpl() {
-       
     }
 
     

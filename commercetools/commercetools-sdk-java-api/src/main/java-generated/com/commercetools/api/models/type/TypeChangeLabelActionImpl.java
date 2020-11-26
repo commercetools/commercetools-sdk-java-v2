@@ -34,7 +34,7 @@ public final class TypeChangeLabelActionImpl implements TypeChangeLabelAction {
         this.action = "changeLabel";
     }
     public TypeChangeLabelActionImpl() {
-       
+        this.action = "changeLabel";
     }
 
     

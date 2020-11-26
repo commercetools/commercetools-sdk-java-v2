@@ -37,7 +37,7 @@ public final class CartSetLineItemCustomFieldActionImpl implements CartSetLineIt
         this.action = "setLineItemCustomField";
     }
     public CartSetLineItemCustomFieldActionImpl() {
-       
+        this.action = "setLineItemCustomField";
     }
 
     

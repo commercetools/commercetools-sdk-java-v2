@@ -30,7 +30,7 @@ public final class StagedOrderRemoveCustomLineItemActionImpl implements StagedOr
         this.action = "removeCustomLineItem";
     }
     public StagedOrderRemoveCustomLineItemActionImpl() {
-       
+        this.action = "removeCustomLineItem";
     }
 
     

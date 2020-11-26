@@ -63,7 +63,6 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
         this.validUntil = validUntil;
     }
     public DiscountCodeDraftImpl() {
-       
     }
 
     

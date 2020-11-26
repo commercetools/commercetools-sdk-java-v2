@@ -30,7 +30,7 @@ public final class ProductRevertedStagedChangesMessagePayloadImpl implements Pro
         this.type = "ProductRevertedStagedChanges";
     }
     public ProductRevertedStagedChangesMessagePayloadImpl() {
-       
+        this.type = "ProductRevertedStagedChanges";
     }
 
     

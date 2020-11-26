@@ -30,7 +30,7 @@ public final class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfac
         this.action = "setInterfaceId";
     }
     public PaymentSetInterfaceIdActionImpl() {
-       
+        this.action = "setInterfaceId";
     }
 
     

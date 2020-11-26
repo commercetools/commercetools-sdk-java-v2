@@ -36,7 +36,7 @@ public final class OutOfStockErrorImpl implements OutOfStockError {
         this.code = "OutOfStock";
     }
     public OutOfStockErrorImpl() {
-       
+        this.code = "OutOfStock";
     }
 
     

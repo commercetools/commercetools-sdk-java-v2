@@ -30,7 +30,6 @@ public final class StateUpdateImpl implements StateUpdate {
         this.actions = actions;
     }
     public StateUpdateImpl() {
-       
     }
 
     

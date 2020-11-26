@@ -30,7 +30,7 @@ public final class CartDiscountValueRelativeDraftImpl implements CartDiscountVal
         this.type = "relative";
     }
     public CartDiscountValueRelativeDraftImpl() {
-       
+        this.type = "relative";
     }
 
     

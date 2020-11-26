@@ -28,7 +28,6 @@ public final class ShippingRateInputImpl implements ShippingRateInput {
         this.type = type;
     }
     public ShippingRateInputImpl() {
-       
     }
 
     

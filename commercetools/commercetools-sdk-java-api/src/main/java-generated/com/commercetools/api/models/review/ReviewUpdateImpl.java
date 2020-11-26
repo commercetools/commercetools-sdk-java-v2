@@ -30,7 +30,6 @@ public final class ReviewUpdateImpl implements ReviewUpdate {
         this.actions = actions;
     }
     public ReviewUpdateImpl() {
-       
     }
 
     

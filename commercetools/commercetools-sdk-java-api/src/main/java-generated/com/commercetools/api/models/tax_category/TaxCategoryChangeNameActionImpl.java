@@ -30,7 +30,7 @@ public final class TaxCategoryChangeNameActionImpl implements TaxCategoryChangeN
         this.action = "changeName";
     }
     public TaxCategoryChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

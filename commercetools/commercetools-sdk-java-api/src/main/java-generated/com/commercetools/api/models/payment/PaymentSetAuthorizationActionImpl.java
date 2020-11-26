@@ -35,7 +35,7 @@ public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthor
         this.action = "setAuthorization";
     }
     public PaymentSetAuthorizationActionImpl() {
-       
+        this.action = "setAuthorization";
     }
 
     

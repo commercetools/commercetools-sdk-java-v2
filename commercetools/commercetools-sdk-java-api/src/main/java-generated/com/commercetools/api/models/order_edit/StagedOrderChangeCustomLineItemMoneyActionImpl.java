@@ -34,7 +34,7 @@ public final class StagedOrderChangeCustomLineItemMoneyActionImpl implements Sta
         this.action = "changeCustomLineItemMoney";
     }
     public StagedOrderChangeCustomLineItemMoneyActionImpl() {
-       
+        this.action = "changeCustomLineItemMoney";
     }
 
     

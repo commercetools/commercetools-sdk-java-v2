@@ -33,7 +33,7 @@ public final class CartChangeCustomLineItemQuantityActionImpl implements CartCha
         this.action = "changeCustomLineItemQuantity";
     }
     public CartChangeCustomLineItemQuantityActionImpl() {
-       
+        this.action = "changeCustomLineItemQuantity";
     }
 
     

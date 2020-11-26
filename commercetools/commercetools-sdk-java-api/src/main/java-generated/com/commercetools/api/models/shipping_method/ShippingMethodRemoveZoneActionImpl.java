@@ -31,7 +31,7 @@ public final class ShippingMethodRemoveZoneActionImpl implements ShippingMethodR
         this.action = "removeZone";
     }
     public ShippingMethodRemoveZoneActionImpl() {
-       
+        this.action = "removeZone";
     }
 
     

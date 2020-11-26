@@ -37,7 +37,7 @@ public final class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryIte
         this.type = "DeliveryItemsUpdated";
     }
     public DeliveryItemsUpdatedMessagePayloadImpl() {
-       
+        this.type = "DeliveryItemsUpdated";
     }
 
     

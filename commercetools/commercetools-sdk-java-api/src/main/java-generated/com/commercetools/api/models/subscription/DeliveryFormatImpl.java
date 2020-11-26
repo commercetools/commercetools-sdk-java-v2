@@ -28,7 +28,6 @@ public final class DeliveryFormatImpl implements DeliveryFormat {
         this.type = type;
     }
     public DeliveryFormatImpl() {
-       
     }
 
     

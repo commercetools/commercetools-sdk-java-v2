@@ -34,7 +34,7 @@ public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements Stag
         this.action = "setCustomLineItemTaxRate";
     }
     public StagedOrderSetCustomLineItemTaxRateActionImpl() {
-       
+        this.action = "setCustomLineItemTaxRate";
     }
 
     

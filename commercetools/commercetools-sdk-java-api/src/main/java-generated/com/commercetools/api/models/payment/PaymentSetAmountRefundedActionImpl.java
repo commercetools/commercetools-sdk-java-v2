@@ -31,7 +31,7 @@ public final class PaymentSetAmountRefundedActionImpl implements PaymentSetAmoun
         this.action = "setAmountRefunded";
     }
     public PaymentSetAmountRefundedActionImpl() {
-       
+        this.action = "setAmountRefunded";
     }
 
     

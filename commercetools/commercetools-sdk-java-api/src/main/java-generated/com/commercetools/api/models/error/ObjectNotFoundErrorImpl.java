@@ -30,7 +30,7 @@ public final class ObjectNotFoundErrorImpl implements ObjectNotFoundError {
         this.code = "ObjectNotFound";
     }
     public ObjectNotFoundErrorImpl() {
-       
+        this.code = "ObjectNotFound";
     }
 
     

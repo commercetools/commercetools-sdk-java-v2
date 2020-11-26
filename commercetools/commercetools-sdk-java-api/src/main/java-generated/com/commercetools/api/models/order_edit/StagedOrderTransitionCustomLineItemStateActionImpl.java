@@ -44,7 +44,7 @@ public final class StagedOrderTransitionCustomLineItemStateActionImpl implements
         this.action = "transitionCustomLineItemState";
     }
     public StagedOrderTransitionCustomLineItemStateActionImpl() {
-       
+        this.action = "transitionCustomLineItemState";
     }
 
     

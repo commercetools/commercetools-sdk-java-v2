@@ -39,7 +39,7 @@ public final class ProductChangeAssetOrderActionImpl implements ProductChangeAss
         this.action = "changeAssetOrder";
     }
     public ProductChangeAssetOrderActionImpl() {
-       
+        this.action = "changeAssetOrder";
     }
 
     

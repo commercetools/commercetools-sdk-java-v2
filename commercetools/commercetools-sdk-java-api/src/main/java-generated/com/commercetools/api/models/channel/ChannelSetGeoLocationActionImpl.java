@@ -31,7 +31,7 @@ public final class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocat
         this.action = "setGeoLocation";
     }
     public ChannelSetGeoLocationActionImpl() {
-       
+        this.action = "setGeoLocation";
     }
 
     

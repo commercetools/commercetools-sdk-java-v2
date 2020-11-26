@@ -47,7 +47,6 @@ public final class AssetImpl implements Asset {
         this.key = key;
     }
     public AssetImpl() {
-       
     }
 
     

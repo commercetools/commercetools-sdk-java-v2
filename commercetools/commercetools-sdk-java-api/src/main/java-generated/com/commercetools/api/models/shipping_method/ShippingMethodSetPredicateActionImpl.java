@@ -30,7 +30,7 @@ public final class ShippingMethodSetPredicateActionImpl implements ShippingMetho
         this.action = "setPredicate";
     }
     public ShippingMethodSetPredicateActionImpl() {
-       
+        this.action = "setPredicate";
     }
 
     

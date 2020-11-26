@@ -27,7 +27,6 @@ public final class ChangeSubscriptionImpl implements ChangeSubscription {
         this.resourceTypeId = resourceTypeId;
     }
     public ChangeSubscriptionImpl() {
-       
     }
 
     

@@ -30,7 +30,7 @@ public final class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlread
         this.code = "AnonymousIdAlreadyInUse";
     }
     public AnonymousIdAlreadyInUseErrorImpl() {
-       
+        this.code = "AnonymousIdAlreadyInUse";
     }
 
     

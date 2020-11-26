@@ -61,7 +61,7 @@ public final class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage 
         this.type = "DeliveryRemoved";
     }
     public DeliveryRemovedMessageImpl() {
-       
+        this.type = "DeliveryRemoved";
     }
 
     

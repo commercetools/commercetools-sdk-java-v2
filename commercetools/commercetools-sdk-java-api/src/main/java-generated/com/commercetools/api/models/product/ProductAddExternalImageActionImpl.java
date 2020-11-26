@@ -40,7 +40,7 @@ public final class ProductAddExternalImageActionImpl implements ProductAddExtern
         this.action = "addExternalImage";
     }
     public ProductAddExternalImageActionImpl() {
-       
+        this.action = "addExternalImage";
     }
 
     

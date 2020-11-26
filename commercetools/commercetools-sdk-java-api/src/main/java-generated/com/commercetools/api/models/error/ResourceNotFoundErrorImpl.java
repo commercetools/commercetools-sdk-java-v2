@@ -30,7 +30,7 @@ public final class ResourceNotFoundErrorImpl implements ResourceNotFoundError {
         this.code = "ResourceNotFound";
     }
     public ResourceNotFoundErrorImpl() {
-       
+        this.code = "ResourceNotFound";
     }
 
     

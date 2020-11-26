@@ -30,7 +30,7 @@ public final class SyntaxErrorErrorImpl implements SyntaxErrorError {
         this.code = "SyntaxError";
     }
     public SyntaxErrorErrorImpl() {
-       
+        this.code = "SyntaxError";
     }
 
     

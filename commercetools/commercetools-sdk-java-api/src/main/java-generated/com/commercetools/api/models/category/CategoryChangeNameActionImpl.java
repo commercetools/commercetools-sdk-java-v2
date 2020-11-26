@@ -31,7 +31,7 @@ public final class CategoryChangeNameActionImpl implements CategoryChangeNameAct
         this.action = "changeName";
     }
     public CategoryChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

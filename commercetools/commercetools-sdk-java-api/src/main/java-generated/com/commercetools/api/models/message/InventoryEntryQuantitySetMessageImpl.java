@@ -69,7 +69,7 @@ public final class InventoryEntryQuantitySetMessageImpl implements InventoryEntr
         this.type = "InventoryEntryQuantitySet";
     }
     public InventoryEntryQuantitySetMessageImpl() {
-       
+        this.type = "InventoryEntryQuantitySet";
     }
 
     

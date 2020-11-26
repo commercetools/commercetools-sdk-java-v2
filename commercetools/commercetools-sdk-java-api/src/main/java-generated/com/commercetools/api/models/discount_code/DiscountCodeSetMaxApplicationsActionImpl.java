@@ -30,7 +30,7 @@ public final class DiscountCodeSetMaxApplicationsActionImpl implements DiscountC
         this.action = "setMaxApplications";
     }
     public DiscountCodeSetMaxApplicationsActionImpl() {
-       
+        this.action = "setMaxApplications";
     }
 
     

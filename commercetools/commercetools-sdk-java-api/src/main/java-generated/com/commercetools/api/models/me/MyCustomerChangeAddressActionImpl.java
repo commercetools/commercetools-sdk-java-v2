@@ -37,7 +37,7 @@ public final class MyCustomerChangeAddressActionImpl implements MyCustomerChange
         this.action = "changeAddress";
     }
     public MyCustomerChangeAddressActionImpl() {
-       
+        this.action = "changeAddress";
     }
 
     

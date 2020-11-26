@@ -31,7 +31,7 @@ public final class CartSetShippingAddressActionImpl implements CartSetShippingAd
         this.action = "setShippingAddress";
     }
     public CartSetShippingAddressActionImpl() {
-       
+        this.action = "setShippingAddress";
     }
 
     

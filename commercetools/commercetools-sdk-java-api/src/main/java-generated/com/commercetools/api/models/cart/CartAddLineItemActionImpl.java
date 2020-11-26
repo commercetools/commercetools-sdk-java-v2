@@ -66,7 +66,7 @@ public final class CartAddLineItemActionImpl implements CartAddLineItemAction {
         this.action = "addLineItem";
     }
     public CartAddLineItemActionImpl() {
-       
+        this.action = "addLineItem";
     }
 
     

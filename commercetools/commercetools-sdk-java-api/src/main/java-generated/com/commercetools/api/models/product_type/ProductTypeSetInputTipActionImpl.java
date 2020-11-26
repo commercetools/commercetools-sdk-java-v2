@@ -34,7 +34,7 @@ public final class ProductTypeSetInputTipActionImpl implements ProductTypeSetInp
         this.action = "setInputTip";
     }
     public ProductTypeSetInputTipActionImpl() {
-       
+        this.action = "setInputTip";
     }
 
     

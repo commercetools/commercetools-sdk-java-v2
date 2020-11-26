@@ -61,7 +61,7 @@ public final class InventoryEntryCreatedMessageImpl implements InventoryEntryCre
         this.type = "InventoryEntryCreated";
     }
     public InventoryEntryCreatedMessageImpl() {
-       
+        this.type = "InventoryEntryCreated";
     }
 
     

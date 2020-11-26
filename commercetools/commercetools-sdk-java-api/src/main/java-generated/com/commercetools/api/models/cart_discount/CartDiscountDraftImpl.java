@@ -68,7 +68,6 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
         this.custom = custom;
     }
     public CartDiscountDraftImpl() {
-       
     }
 
     

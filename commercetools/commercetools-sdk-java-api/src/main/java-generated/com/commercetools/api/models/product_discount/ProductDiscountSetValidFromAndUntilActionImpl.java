@@ -34,7 +34,7 @@ public final class ProductDiscountSetValidFromAndUntilActionImpl implements Prod
         this.action = "setValidFromAndUntil";
     }
     public ProductDiscountSetValidFromAndUntilActionImpl() {
-       
+        this.action = "setValidFromAndUntil";
     }
 
     

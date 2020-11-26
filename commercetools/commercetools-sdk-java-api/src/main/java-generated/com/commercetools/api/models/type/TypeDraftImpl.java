@@ -41,7 +41,6 @@ public final class TypeDraftImpl implements TypeDraft {
         this.fieldDefinitions = fieldDefinitions;
     }
     public TypeDraftImpl() {
-       
     }
 
     

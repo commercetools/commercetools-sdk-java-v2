@@ -34,7 +34,7 @@ public final class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKey
         this.action = "setMetaKeywords";
     }
     public ProductSetMetaKeywordsActionImpl() {
-       
+        this.action = "setMetaKeywords";
     }
 
     

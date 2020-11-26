@@ -30,7 +30,6 @@ public final class InventoryEntryUpdateImpl implements InventoryEntryUpdate {
         this.actions = actions;
     }
     public InventoryEntryUpdateImpl() {
-       
     }
 
     

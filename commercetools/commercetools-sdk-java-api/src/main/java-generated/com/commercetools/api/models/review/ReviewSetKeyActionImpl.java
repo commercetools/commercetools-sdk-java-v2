@@ -30,7 +30,7 @@ public final class ReviewSetKeyActionImpl implements ReviewSetKeyAction {
         this.action = "setKey";
     }
     public ReviewSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

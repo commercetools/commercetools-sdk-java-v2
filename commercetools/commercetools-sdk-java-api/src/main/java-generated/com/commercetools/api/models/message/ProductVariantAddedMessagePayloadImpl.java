@@ -34,7 +34,7 @@ public final class ProductVariantAddedMessagePayloadImpl implements ProductVaria
         this.type = "ProductVariantAdded";
     }
     public ProductVariantAddedMessagePayloadImpl() {
-       
+        this.type = "ProductVariantAdded";
     }
 
     

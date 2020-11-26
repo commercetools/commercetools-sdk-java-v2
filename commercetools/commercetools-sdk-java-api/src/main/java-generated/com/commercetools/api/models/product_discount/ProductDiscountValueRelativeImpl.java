@@ -30,7 +30,7 @@ public final class ProductDiscountValueRelativeImpl implements ProductDiscountVa
         this.type = "relative";
     }
     public ProductDiscountValueRelativeImpl() {
-       
+        this.type = "relative";
     }
 
     

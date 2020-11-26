@@ -33,7 +33,6 @@ public final class PaymentStatusImpl implements PaymentStatus {
         this.state = state;
     }
     public PaymentStatusImpl() {
-       
     }
 
     /**

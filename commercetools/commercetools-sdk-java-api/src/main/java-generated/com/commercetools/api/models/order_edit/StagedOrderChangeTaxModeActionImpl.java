@@ -31,7 +31,7 @@ public final class StagedOrderChangeTaxModeActionImpl implements StagedOrderChan
         this.action = "changeTaxMode";
     }
     public StagedOrderChangeTaxModeActionImpl() {
-       
+        this.action = "changeTaxMode";
     }
 
     

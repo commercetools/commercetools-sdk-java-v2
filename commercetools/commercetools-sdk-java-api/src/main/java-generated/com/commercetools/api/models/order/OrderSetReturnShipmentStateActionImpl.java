@@ -34,7 +34,7 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
         this.action = "setReturnShipmentState";
     }
     public OrderSetReturnShipmentStateActionImpl() {
-       
+        this.action = "setReturnShipmentState";
     }
 
     

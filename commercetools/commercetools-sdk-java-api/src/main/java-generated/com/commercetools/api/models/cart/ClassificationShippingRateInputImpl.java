@@ -34,7 +34,7 @@ public final class ClassificationShippingRateInputImpl implements Classification
         this.type = "Classification";
     }
     public ClassificationShippingRateInputImpl() {
-       
+        this.type = "Classification";
     }
 
     

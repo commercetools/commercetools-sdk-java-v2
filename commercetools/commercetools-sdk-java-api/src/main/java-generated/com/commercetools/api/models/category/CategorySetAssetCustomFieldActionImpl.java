@@ -40,7 +40,7 @@ public final class CategorySetAssetCustomFieldActionImpl implements CategorySetA
         this.action = "setAssetCustomField";
     }
     public CategorySetAssetCustomFieldActionImpl() {
-       
+        this.action = "setAssetCustomField";
     }
 
     

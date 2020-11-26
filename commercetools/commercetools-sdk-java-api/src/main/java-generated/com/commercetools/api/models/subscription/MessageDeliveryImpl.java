@@ -59,7 +59,7 @@ public final class MessageDeliveryImpl implements MessageDelivery {
         this.notificationType = "Message";
     }
     public MessageDeliveryImpl() {
-       
+        this.notificationType = "Message";
     }
 
     

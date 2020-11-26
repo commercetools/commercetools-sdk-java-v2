@@ -31,7 +31,7 @@ public final class MyCartRemoveDiscountCodeActionImpl implements MyCartRemoveDis
         this.action = "removeDiscountCode";
     }
     public MyCartRemoveDiscountCodeActionImpl() {
-       
+        this.action = "removeDiscountCode";
     }
 
     

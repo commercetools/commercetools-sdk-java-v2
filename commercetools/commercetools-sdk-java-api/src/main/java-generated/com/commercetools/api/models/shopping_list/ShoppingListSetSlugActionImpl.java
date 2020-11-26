@@ -31,7 +31,7 @@ public final class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugA
         this.action = "setSlug";
     }
     public ShoppingListSetSlugActionImpl() {
-       
+        this.action = "setSlug";
     }
 
     

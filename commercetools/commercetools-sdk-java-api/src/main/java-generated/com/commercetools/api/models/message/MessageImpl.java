@@ -134,7 +134,6 @@ public final class MessageImpl implements Message {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
     public MessageImpl() {
-       
     }
 
     

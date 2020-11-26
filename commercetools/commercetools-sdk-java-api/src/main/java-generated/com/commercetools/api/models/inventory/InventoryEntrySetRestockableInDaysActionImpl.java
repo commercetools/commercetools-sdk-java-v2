@@ -30,7 +30,7 @@ public final class InventoryEntrySetRestockableInDaysActionImpl implements Inven
         this.action = "setRestockableInDays";
     }
     public InventoryEntrySetRestockableInDaysActionImpl() {
-       
+        this.action = "setRestockableInDays";
     }
 
     

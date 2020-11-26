@@ -41,7 +41,7 @@ public final class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSe
         this.type = "OrderCustomerSet";
     }
     public OrderCustomerSetMessagePayloadImpl() {
-       
+        this.type = "OrderCustomerSet";
     }
 
     

@@ -93,7 +93,6 @@ public final class CartDiscountImpl implements CartDiscount {
         this.custom = custom;
     }
     public CartDiscountImpl() {
-       
     }
 
     /**

@@ -33,7 +33,7 @@ public final class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesEr
         this.code = "DuplicateEnumValues";
     }
     public DuplicateEnumValuesErrorImpl() {
-       
+        this.code = "DuplicateEnumValues";
     }
 
     

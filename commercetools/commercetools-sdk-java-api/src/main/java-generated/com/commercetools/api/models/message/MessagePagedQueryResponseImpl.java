@@ -39,7 +39,6 @@ public final class MessagePagedQueryResponseImpl implements MessagePagedQueryRes
         this.results = results;
     }
     public MessagePagedQueryResponseImpl() {
-       
     }
 
     

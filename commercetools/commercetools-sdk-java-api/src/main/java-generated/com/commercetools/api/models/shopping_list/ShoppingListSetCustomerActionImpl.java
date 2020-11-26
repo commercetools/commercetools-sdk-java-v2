@@ -31,7 +31,7 @@ public final class ShoppingListSetCustomerActionImpl implements ShoppingListSetC
         this.action = "setCustomer";
     }
     public ShoppingListSetCustomerActionImpl() {
-       
+        this.action = "setCustomer";
     }
 
     

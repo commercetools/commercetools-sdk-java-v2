@@ -45,7 +45,7 @@ public final class TermFacetResultImpl implements TermFacetResult {
         this.type = FacetTypes.findEnum("terms");
     }
     public TermFacetResultImpl() {
-       
+        this.type = FacetTypes.findEnum("terms");
     }
 
     

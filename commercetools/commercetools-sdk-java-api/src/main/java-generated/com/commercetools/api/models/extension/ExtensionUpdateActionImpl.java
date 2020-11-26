@@ -30,7 +30,6 @@ public final class ExtensionUpdateActionImpl implements ExtensionUpdateAction {
         this.action = action;
     }
     public ExtensionUpdateActionImpl() {
-       
     }
 
     

@@ -34,7 +34,7 @@ public final class TypeChangeFieldDefinitionLabelActionImpl implements TypeChang
         this.action = "changeFieldDefinitionLabel";
     }
     public TypeChangeFieldDefinitionLabelActionImpl() {
-       
+        this.action = "changeFieldDefinitionLabel";
     }
 
     

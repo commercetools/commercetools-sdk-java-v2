@@ -36,7 +36,6 @@ public final class CreatedByImpl implements CreatedBy {
         this.anonymousId = anonymousId;
     }
     public CreatedByImpl() {
-       
     }
 
     

@@ -42,7 +42,6 @@ public final class CustomerTokenImpl implements CustomerToken {
         this.value = value;
     }
     public CustomerTokenImpl() {
-       
     }
 
     

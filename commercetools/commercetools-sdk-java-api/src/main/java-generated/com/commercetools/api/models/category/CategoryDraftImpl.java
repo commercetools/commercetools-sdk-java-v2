@@ -63,7 +63,6 @@ public final class CategoryDraftImpl implements CategoryDraft {
         this.key = key;
     }
     public CategoryDraftImpl() {
-       
     }
 
     

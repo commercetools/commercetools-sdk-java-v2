@@ -34,7 +34,7 @@ public final class CategorySetCustomFieldActionImpl implements CategorySetCustom
         this.action = "setCustomField";
     }
     public CategorySetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

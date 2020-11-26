@@ -61,7 +61,7 @@ public final class ReviewCreatedMessageImpl implements ReviewCreatedMessage {
         this.type = "ReviewCreated";
     }
     public ReviewCreatedMessageImpl() {
-       
+        this.type = "ReviewCreated";
     }
 
     

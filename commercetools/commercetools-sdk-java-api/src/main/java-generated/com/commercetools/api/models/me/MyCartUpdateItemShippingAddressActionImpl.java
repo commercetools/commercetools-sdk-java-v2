@@ -31,7 +31,7 @@ public final class MyCartUpdateItemShippingAddressActionImpl implements MyCartUp
         this.action = "updateItemShippingAddress";
     }
     public MyCartUpdateItemShippingAddressActionImpl() {
-       
+        this.action = "updateItemShippingAddress";
     }
 
     

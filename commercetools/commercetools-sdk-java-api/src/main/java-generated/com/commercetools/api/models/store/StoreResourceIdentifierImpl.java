@@ -34,7 +34,7 @@ public final class StoreResourceIdentifierImpl implements StoreResourceIdentifie
         this.typeId = ReferenceTypeId.findEnum("store");
     }
     public StoreResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("store");
     }
 
     

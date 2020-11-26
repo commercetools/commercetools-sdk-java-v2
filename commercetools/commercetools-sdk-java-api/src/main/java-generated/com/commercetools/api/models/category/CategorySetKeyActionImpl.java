@@ -30,7 +30,7 @@ public final class CategorySetKeyActionImpl implements CategorySetKeyAction {
         this.action = "setKey";
     }
     public CategorySetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

@@ -54,7 +54,6 @@ public final class FacetResultRangeImpl implements FacetResultRange {
         this.mean = mean;
     }
     public FacetResultRangeImpl() {
-       
     }
 
     

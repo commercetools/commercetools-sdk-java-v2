@@ -31,7 +31,7 @@ public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectS
         this.action = "setShippingRateInputType";
     }
     public ProjectSetShippingRateInputTypeActionImpl() {
-       
+        this.action = "setShippingRateInputType";
     }
 
     

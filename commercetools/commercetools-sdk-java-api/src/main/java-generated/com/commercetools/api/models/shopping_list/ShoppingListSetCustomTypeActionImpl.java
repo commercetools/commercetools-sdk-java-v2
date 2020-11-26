@@ -35,7 +35,7 @@ public final class ShoppingListSetCustomTypeActionImpl implements ShoppingListSe
         this.action = "setCustomType";
     }
     public ShoppingListSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

@@ -30,7 +30,7 @@ public final class CartSetDeleteDaysAfterLastModificationActionImpl implements C
         this.action = "setDeleteDaysAfterLastModification";
     }
     public CartSetDeleteDaysAfterLastModificationActionImpl() {
-       
+        this.action = "setDeleteDaysAfterLastModification";
     }
 
     

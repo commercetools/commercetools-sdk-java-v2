@@ -34,7 +34,6 @@ public final class GraphQLErrorImpl implements GraphQLError {
         this.path = path;
     }
     public GraphQLErrorImpl() {
-       
     }
 
     

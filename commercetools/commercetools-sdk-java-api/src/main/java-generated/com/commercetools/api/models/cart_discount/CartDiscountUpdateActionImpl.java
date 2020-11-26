@@ -41,7 +41,6 @@ public final class CartDiscountUpdateActionImpl implements CartDiscountUpdateAct
         this.action = action;
     }
     public CartDiscountUpdateActionImpl() {
-       
     }
 
     

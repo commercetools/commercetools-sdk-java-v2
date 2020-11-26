@@ -30,7 +30,7 @@ public final class ProjectChangeCurrenciesActionImpl implements ProjectChangeCur
         this.action = "changeCurrencies";
     }
     public ProjectChangeCurrenciesActionImpl() {
-       
+        this.action = "changeCurrencies";
     }
 
     

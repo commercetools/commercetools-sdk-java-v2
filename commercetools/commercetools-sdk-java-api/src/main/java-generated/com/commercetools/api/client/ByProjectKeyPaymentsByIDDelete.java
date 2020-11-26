@@ -103,4 +103,10 @@ public class ByProjectKeyPaymentsByIDDelete extends ApiMethod<ByProjectKeyPaymen
     public ByProjectKeyPaymentsByIDDelete withExpand(final String expand){
         return new ByProjectKeyPaymentsByIDDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyPaymentsByIDDelete copy()
+    {
+        return new ByProjectKeyPaymentsByIDDelete(this);
+    }
 }

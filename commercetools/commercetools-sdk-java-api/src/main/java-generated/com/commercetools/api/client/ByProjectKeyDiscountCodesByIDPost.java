@@ -96,4 +96,10 @@ public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDis
     public ByProjectKeyDiscountCodesByIDPost withExpand(final String expand){
         return new ByProjectKeyDiscountCodesByIDPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyDiscountCodesByIDPost copy()
+    {
+        return new ByProjectKeyDiscountCodesByIDPost(this);
+    }
 }

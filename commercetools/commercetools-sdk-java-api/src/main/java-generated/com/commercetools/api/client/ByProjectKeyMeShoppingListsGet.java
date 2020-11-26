@@ -121,4 +121,10 @@ public class ByProjectKeyMeShoppingListsGet extends ApiMethod<ByProjectKeyMeShop
     public ByProjectKeyMeShoppingListsGet withWhere(final String where){
         return new ByProjectKeyMeShoppingListsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyMeShoppingListsGet copy()
+    {
+        return new ByProjectKeyMeShoppingListsGet(this);
+    }
 }

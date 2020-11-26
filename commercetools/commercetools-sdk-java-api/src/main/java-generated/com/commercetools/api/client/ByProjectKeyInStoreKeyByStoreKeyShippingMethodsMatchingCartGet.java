@@ -92,4 +92,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final String expand){
         return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(this);
+    }
 }

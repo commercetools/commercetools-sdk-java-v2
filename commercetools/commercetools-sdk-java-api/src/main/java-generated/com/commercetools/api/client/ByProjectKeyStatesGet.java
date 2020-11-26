@@ -121,4 +121,10 @@ public class ByProjectKeyStatesGet extends ApiMethod<ByProjectKeyStatesGet> {
     public ByProjectKeyStatesGet withWhere(final String where){
         return new ByProjectKeyStatesGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyStatesGet copy()
+    {
+        return new ByProjectKeyStatesGet(this);
+    }
 }

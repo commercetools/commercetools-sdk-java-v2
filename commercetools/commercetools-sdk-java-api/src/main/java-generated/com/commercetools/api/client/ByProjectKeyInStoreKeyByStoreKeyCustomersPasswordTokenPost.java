@@ -91,4 +91,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost extends 
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost(this);
+    }
 }

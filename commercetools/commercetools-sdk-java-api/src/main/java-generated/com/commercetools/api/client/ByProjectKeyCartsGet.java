@@ -129,4 +129,10 @@ public class ByProjectKeyCartsGet extends ApiMethod<ByProjectKeyCartsGet> {
     public ByProjectKeyCartsGet withWhere(final String where){
         return new ByProjectKeyCartsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyCartsGet copy()
+    {
+        return new ByProjectKeyCartsGet(this);
+    }
 }

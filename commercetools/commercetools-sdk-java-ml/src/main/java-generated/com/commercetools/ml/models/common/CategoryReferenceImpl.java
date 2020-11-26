@@ -28,7 +28,7 @@ public final class CategoryReferenceImpl implements CategoryReference {
     @JsonCreator
     CategoryReferenceImpl(@JsonProperty("id") final String id) {
         this.id = id;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("category").get();
+        this.typeId = ReferenceTypeId.findEnum("category");
     }
     public CategoryReferenceImpl() {
        

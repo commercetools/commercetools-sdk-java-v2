@@ -119,4 +119,10 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
     public ByProjectKeyProductsByIDImagesPost withStaged(final Boolean staged){
         return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("staged", staged);
     }
+    
+    @Override
+    protected ByProjectKeyProductsByIDImagesPost copy()
+    {
+        return new ByProjectKeyProductsByIDImagesPost(this);
+    }
 }

@@ -119,4 +119,10 @@ public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperations
     public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
         return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("state", state);
     }
+    
+    @Override
+    protected ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet copy()
+    {
+        return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet(this);
+    }
 }

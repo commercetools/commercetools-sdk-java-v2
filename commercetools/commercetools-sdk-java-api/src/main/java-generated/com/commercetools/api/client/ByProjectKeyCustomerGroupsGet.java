@@ -121,4 +121,10 @@ public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustome
     public ByProjectKeyCustomerGroupsGet withWhere(final String where){
         return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyCustomerGroupsGet copy()
+    {
+        return new ByProjectKeyCustomerGroupsGet(this);
+    }
 }

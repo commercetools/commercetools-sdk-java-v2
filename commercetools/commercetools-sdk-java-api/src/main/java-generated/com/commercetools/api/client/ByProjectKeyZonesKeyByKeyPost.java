@@ -96,4 +96,10 @@ public class ByProjectKeyZonesKeyByKeyPost extends ApiMethod<ByProjectKeyZonesKe
     public ByProjectKeyZonesKeyByKeyPost withExpand(final String expand){
         return new ByProjectKeyZonesKeyByKeyPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyZonesKeyByKeyPost copy()
+    {
+        return new ByProjectKeyZonesKeyByKeyPost(this);
+    }
 }

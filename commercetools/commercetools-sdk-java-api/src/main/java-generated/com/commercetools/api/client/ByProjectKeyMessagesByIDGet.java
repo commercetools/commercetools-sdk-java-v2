@@ -87,4 +87,10 @@ public class ByProjectKeyMessagesByIDGet extends ApiMethod<ByProjectKeyMessagesB
     public ByProjectKeyMessagesByIDGet withExpand(final String expand){
         return new ByProjectKeyMessagesByIDGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyMessagesByIDGet copy()
+    {
+        return new ByProjectKeyMessagesByIDGet(this);
+    }
 }

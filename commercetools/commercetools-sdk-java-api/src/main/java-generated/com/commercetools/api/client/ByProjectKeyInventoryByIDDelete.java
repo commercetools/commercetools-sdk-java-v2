@@ -95,4 +95,10 @@ public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInven
     public ByProjectKeyInventoryByIDDelete withExpand(final String expand){
         return new ByProjectKeyInventoryByIDDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyInventoryByIDDelete copy()
+    {
+        return new ByProjectKeyInventoryByIDDelete(this);
+    }
 }

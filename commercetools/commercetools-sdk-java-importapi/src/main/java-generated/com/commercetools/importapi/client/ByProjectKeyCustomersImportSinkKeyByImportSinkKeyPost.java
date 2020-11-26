@@ -90,4 +90,10 @@ public class ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost extends ApiMe
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+    
+    @Override
+    protected ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost copy()
+    {
+        return new ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost(this);
+    }
 }

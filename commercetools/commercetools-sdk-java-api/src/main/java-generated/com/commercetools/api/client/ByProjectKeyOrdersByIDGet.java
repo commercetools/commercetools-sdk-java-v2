@@ -87,4 +87,10 @@ public class ByProjectKeyOrdersByIDGet extends ApiMethod<ByProjectKeyOrdersByIDG
     public ByProjectKeyOrdersByIDGet withExpand(final String expand){
         return new ByProjectKeyOrdersByIDGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyOrdersByIDGet copy()
+    {
+        return new ByProjectKeyOrdersByIDGet(this);
+    }
 }

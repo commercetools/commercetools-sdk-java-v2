@@ -121,4 +121,10 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet> 
     public ByProjectKeyMessagesGet withWhere(final String where){
         return new ByProjectKeyMessagesGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyMessagesGet copy()
+    {
+        return new ByProjectKeyMessagesGet(this);
+    }
 }

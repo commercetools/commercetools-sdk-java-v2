@@ -75,4 +75,10 @@ public class ByProjectKeyProductProjectionsSearchPost extends ApiMethod<ByProjec
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyProductProjectionsSearchPost copy()
+    {
+        return new ByProjectKeyProductProjectionsSearchPost(this);
+    }
 }

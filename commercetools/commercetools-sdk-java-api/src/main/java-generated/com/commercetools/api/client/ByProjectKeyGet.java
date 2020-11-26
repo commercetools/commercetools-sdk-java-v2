@@ -75,4 +75,10 @@ public class ByProjectKeyGet extends ApiMethod<ByProjectKeyGet> {
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyGet copy()
+    {
+        return new ByProjectKeyGet(this);
+    }
 }

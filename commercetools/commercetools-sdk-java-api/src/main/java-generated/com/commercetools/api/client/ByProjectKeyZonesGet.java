@@ -121,4 +121,10 @@ public class ByProjectKeyZonesGet extends ApiMethod<ByProjectKeyZonesGet> {
     public ByProjectKeyZonesGet withWhere(final String where){
         return new ByProjectKeyZonesGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyZonesGet copy()
+    {
+        return new ByProjectKeyZonesGet(this);
+    }
 }

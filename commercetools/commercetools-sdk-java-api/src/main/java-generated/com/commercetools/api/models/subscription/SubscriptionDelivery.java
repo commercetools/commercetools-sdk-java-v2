@@ -20,10 +20,10 @@ import java.util.function.Function;
 import java.io.IOException;
 
 @JsonSubTypes({
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceCreatedDeliveryImpl.class, name = "ResourceCreated"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.MessageDeliveryImpl.class, name = "Message"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceDeletedDeliveryImpl.class, name = "ResourceDeleted"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceUpdatedDeliveryImpl.class, name = "ResourceUpdated"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceCreatedDeliveryImpl.class, name = "ResourceCreated")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceDeletedDeliveryImpl.class, name = "ResourceDeleted")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

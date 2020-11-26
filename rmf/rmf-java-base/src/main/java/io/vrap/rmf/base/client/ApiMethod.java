@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class ApiMethod<T extends ApiMethod<T>> {
+public abstract class ApiMethod<T extends ApiMethod<T>> {
     public static class ParamEntry<K, V> implements Map.Entry<K, V> {
         protected final K key;
         protected V value;
@@ -135,7 +135,5 @@ public class ApiMethod<T extends ApiMethod<T>> {
         return this.queryParams.stream().filter(e -> e.getKey().equals(key)).map(Map.Entry::getValue).findFirst().orElse(null);
     }
 
-    protected ApiMethod<T> copy() {
-        return new ApiMethod<>(this);
-    };
+    protected abstract T copy();
 }

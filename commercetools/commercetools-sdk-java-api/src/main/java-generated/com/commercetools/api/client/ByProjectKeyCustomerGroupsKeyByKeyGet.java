@@ -87,4 +87,10 @@ public class ByProjectKeyCustomerGroupsKeyByKeyGet extends ApiMethod<ByProjectKe
     public ByProjectKeyCustomerGroupsKeyByKeyGet withExpand(final String expand){
         return new ByProjectKeyCustomerGroupsKeyByKeyGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyCustomerGroupsKeyByKeyGet copy()
+    {
+        return new ByProjectKeyCustomerGroupsKeyByKeyGet(this);
+    }
 }

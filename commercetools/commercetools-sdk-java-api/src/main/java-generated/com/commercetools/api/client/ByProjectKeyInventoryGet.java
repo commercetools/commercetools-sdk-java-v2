@@ -121,4 +121,10 @@ public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet
     public ByProjectKeyInventoryGet withWhere(final String where){
         return new ByProjectKeyInventoryGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyInventoryGet copy()
+    {
+        return new ByProjectKeyInventoryGet(this);
+    }
 }

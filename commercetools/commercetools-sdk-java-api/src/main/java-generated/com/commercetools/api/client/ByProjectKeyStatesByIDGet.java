@@ -87,4 +87,10 @@ public class ByProjectKeyStatesByIDGet extends ApiMethod<ByProjectKeyStatesByIDG
     public ByProjectKeyStatesByIDGet withExpand(final String expand){
         return new ByProjectKeyStatesByIDGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyStatesByIDGet copy()
+    {
+        return new ByProjectKeyStatesByIDGet(this);
+    }
 }

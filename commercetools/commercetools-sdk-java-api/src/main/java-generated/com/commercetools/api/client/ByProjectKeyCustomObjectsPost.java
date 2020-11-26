@@ -96,4 +96,10 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
     public ByProjectKeyCustomObjectsPost withExpand(final String expand){
         return new ByProjectKeyCustomObjectsPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyCustomObjectsPost copy()
+    {
+        return new ByProjectKeyCustomObjectsPost(this);
+    }
 }

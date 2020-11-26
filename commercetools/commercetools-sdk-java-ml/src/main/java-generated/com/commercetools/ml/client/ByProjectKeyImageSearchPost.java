@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -51,17 +52,18 @@ public class ByProjectKeyImageSearchPost extends ApiMethod<ByProjectKeyImageSear
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/image-search", this.projectKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.POST);
-        httpRequest.setHeaders(getHeaders());
-        try{httpRequest.setBody(Files.readAllBytes(file.toPath()));}catch(Exception e){e.printStackTrace();}
-        return httpRequest;
+        try {
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), Files.readAllBytes(file.toPath()));
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+    
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse> executeBlocking(){
@@ -94,5 +96,11 @@ public class ByProjectKeyImageSearchPost extends ApiMethod<ByProjectKeyImageSear
     
     public ByProjectKeyImageSearchPost withOffset(final Integer offset){
         return new ByProjectKeyImageSearchPost(this).addQueryParam("offset", offset);
+    }
+    
+    @Override
+    protected ByProjectKeyImageSearchPost copy()
+    {
+        return new ByProjectKeyImageSearchPost(this);
     }
 }

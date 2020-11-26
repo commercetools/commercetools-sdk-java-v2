@@ -84,4 +84,10 @@ public class ByProjectKeyGraphqlPost extends ApiMethod<ByProjectKeyGraphqlPost> 
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyGraphqlPost copy()
+    {
+        return new ByProjectKeyGraphqlPost(this);
+    }
 }

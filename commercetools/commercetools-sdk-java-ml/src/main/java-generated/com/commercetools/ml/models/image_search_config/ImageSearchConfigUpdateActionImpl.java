@@ -23,10 +23,12 @@ public final class ImageSearchConfigUpdateActionImpl implements ImageSearchConfi
     private String action;
 
     @JsonCreator
-    ImageSearchConfigUpdateActionImpl() {
-        this.action = "null";
+    ImageSearchConfigUpdateActionImpl(@JsonProperty("action") final String action) {
+        this.action = action;
     }
-    
+    public ImageSearchConfigUpdateActionImpl() {
+       
+    }
 
     
     public String getAction(){

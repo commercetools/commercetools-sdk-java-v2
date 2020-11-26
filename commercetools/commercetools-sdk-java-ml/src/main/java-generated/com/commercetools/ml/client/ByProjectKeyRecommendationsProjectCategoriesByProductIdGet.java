@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -51,17 +52,13 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/recommendations/project-categories/%s", this.projectKey, this.productId);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.GET);
-        httpRequest.setHeaders(getHeaders());
         
-        return httpRequest;
+        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse> executeBlocking(){
@@ -121,5 +118,11 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(final Double confidenceMax){
         return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("confidenceMax", confidenceMax);
+    }
+    
+    @Override
+    protected ByProjectKeyRecommendationsProjectCategoriesByProductIdGet copy()
+    {
+        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this);
     }
 }

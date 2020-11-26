@@ -98,4 +98,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet e
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand){
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet(this);
+    }
 }

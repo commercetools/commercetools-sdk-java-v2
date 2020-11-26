@@ -121,4 +121,10 @@ public class ByProjectKeyDiscountCodesGet extends ApiMethod<ByProjectKeyDiscount
     public ByProjectKeyDiscountCodesGet withWhere(final String where){
         return new ByProjectKeyDiscountCodesGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyDiscountCodesGet copy()
+    {
+        return new ByProjectKeyDiscountCodesGet(this);
+    }
 }

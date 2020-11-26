@@ -121,4 +121,10 @@ public class ByProjectKeyReviewsGet extends ApiMethod<ByProjectKeyReviewsGet> {
     public ByProjectKeyReviewsGet withWhere(final String where){
         return new ByProjectKeyReviewsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyReviewsGet copy()
+    {
+        return new ByProjectKeyReviewsGet(this);
+    }
 }

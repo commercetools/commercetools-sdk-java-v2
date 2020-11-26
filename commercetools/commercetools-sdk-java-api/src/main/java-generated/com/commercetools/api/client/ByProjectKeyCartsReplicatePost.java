@@ -81,4 +81,10 @@ public class ByProjectKeyCartsReplicatePost extends ApiMethod<ByProjectKeyCartsR
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyCartsReplicatePost copy()
+    {
+        return new ByProjectKeyCartsReplicatePost(this);
+    }
 }

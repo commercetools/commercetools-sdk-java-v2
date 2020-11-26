@@ -123,4 +123,10 @@ public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomOb
     public ByProjectKeyCustomObjectsGet withWhere(final String where){
         return new ByProjectKeyCustomObjectsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyCustomObjectsGet copy()
+    {
+        return new ByProjectKeyCustomObjectsGet(this);
+    }
 }

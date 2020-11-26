@@ -6,6 +6,7 @@ import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import java.io.InputStream;
 import java.io.IOException;
 
+import java.net.URI;
 import java.nio.file.Files;
 
 import java.time.Duration;
@@ -48,17 +49,13 @@ public class ByProjectKeyMissingDataPricesStatusByTaskIdGet extends ApiMethod<By
     }
 
     public ApiHttpRequest createHttpRequest() {
-        ApiHttpRequest httpRequest = new ApiHttpRequest();
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/missing-data/prices/status/%s", this.projectKey, this.taskId);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        httpRequest.setUri(httpRequestPath); 
-        httpRequest.setMethod(ApiHttpMethod.GET);
-        httpRequest.setHeaders(getHeaders());
         
-        return httpRequest;
+        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     public ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingPricesTaskStatus> executeBlocking(){
@@ -81,4 +78,10 @@ public class ByProjectKeyMissingDataPricesStatusByTaskIdGet extends ApiMethod<By
     
     public void setTaskId(final String taskId) { this.taskId = taskId; }
 
+    
+    @Override
+    protected ByProjectKeyMissingDataPricesStatusByTaskIdGet copy()
+    {
+        return new ByProjectKeyMissingDataPricesStatusByTaskIdGet(this);
+    }
 }

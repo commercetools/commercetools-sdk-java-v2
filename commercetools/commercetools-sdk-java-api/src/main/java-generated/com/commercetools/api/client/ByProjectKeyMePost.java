@@ -84,4 +84,10 @@ public class ByProjectKeyMePost extends ApiMethod<ByProjectKeyMePost> {
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyMePost copy()
+    {
+        return new ByProjectKeyMePost(this);
+    }
 }

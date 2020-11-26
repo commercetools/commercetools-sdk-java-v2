@@ -106,4 +106,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost withExpand(final String expand){
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost(this);
+    }
 }

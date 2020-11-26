@@ -103,4 +103,10 @@ public class ByProjectKeyDiscountCodesByIDDelete extends ApiMethod<ByProjectKeyD
     public ByProjectKeyDiscountCodesByIDDelete withExpand(final String expand){
         return new ByProjectKeyDiscountCodesByIDDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyDiscountCodesByIDDelete copy()
+    {
+        return new ByProjectKeyDiscountCodesByIDDelete(this);
+    }
 }

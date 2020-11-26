@@ -109,4 +109,10 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends ApiMethod<B
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final String expand){
         return new ByProjectKeyCustomObjectsByContainerByKeyDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyCustomObjectsByContainerByKeyDelete copy()
+    {
+        return new ByProjectKeyCustomObjectsByContainerByKeyDelete(this);
+    }
 }

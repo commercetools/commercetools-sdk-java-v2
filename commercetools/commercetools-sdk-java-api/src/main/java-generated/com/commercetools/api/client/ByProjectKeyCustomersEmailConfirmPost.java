@@ -84,4 +84,10 @@ public class ByProjectKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKe
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyCustomersEmailConfirmPost copy()
+    {
+        return new ByProjectKeyCustomersEmailConfirmPost(this);
+    }
 }

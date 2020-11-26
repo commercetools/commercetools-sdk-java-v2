@@ -87,4 +87,10 @@ public class ByProjectKeyExtensionsKeyByKeyGet extends ApiMethod<ByProjectKeyExt
     public ByProjectKeyExtensionsKeyByKeyGet withExpand(final String expand){
         return new ByProjectKeyExtensionsKeyByKeyGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyExtensionsKeyByKeyGet copy()
+    {
+        return new ByProjectKeyExtensionsKeyByKeyGet(this);
+    }
 }

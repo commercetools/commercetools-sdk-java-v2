@@ -81,4 +81,10 @@ public class ByProjectKeyApiClientsByIDDelete extends ApiMethod<ByProjectKeyApiC
     
     public void setID(final String ID) { this.ID = ID; }
 
+    
+    @Override
+    protected ByProjectKeyApiClientsByIDDelete copy()
+    {
+        return new ByProjectKeyApiClientsByIDDelete(this);
+    }
 }

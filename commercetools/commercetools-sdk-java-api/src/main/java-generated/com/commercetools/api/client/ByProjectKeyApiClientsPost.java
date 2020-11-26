@@ -90,4 +90,10 @@ public class ByProjectKeyApiClientsPost extends ApiMethod<ByProjectKeyApiClients
     public ByProjectKeyApiClientsPost withExpand(final String expand){
         return new ByProjectKeyApiClientsPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyApiClientsPost copy()
+    {
+        return new ByProjectKeyApiClientsPost(this);
+    }
 }

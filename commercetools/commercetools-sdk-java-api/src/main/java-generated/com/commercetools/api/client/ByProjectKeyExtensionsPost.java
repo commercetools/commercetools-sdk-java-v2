@@ -90,4 +90,10 @@ public class ByProjectKeyExtensionsPost extends ApiMethod<ByProjectKeyExtensions
     public ByProjectKeyExtensionsPost withExpand(final String expand){
         return new ByProjectKeyExtensionsPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyExtensionsPost copy()
+    {
+        return new ByProjectKeyExtensionsPost(this);
+    }
 }

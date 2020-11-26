@@ -96,4 +96,10 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberPost extends ApiMethod<By
     public ByProjectKeyOrdersOrderNumberByOrderNumberPost withExpand(final String expand){
         return new ByProjectKeyOrdersOrderNumberByOrderNumberPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyOrdersOrderNumberByOrderNumberPost copy()
+    {
+        return new ByProjectKeyOrdersOrderNumberByOrderNumberPost(this);
+    }
 }

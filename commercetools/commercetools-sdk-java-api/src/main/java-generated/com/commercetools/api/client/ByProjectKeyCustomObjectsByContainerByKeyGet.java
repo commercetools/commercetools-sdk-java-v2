@@ -93,4 +93,10 @@ public class ByProjectKeyCustomObjectsByContainerByKeyGet extends ApiMethod<ByPr
     public ByProjectKeyCustomObjectsByContainerByKeyGet withExpand(final String expand){
         return new ByProjectKeyCustomObjectsByContainerByKeyGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyCustomObjectsByContainerByKeyGet copy()
+    {
+        return new ByProjectKeyCustomObjectsByContainerByKeyGet(this);
+    }
 }

@@ -86,4 +86,10 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends ApiMethod<ByProj
     public ByProjectKeyShippingMethodsMatchingCartGet withExpand(final String expand){
         return new ByProjectKeyShippingMethodsMatchingCartGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyShippingMethodsMatchingCartGet copy()
+    {
+        return new ByProjectKeyShippingMethodsMatchingCartGet(this);
+    }
 }

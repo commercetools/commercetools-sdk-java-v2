@@ -118,4 +118,10 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
     public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final Boolean withTotal){
         return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("withTotal", withTotal);
     }
+    
+    @Override
+    protected ByProjectKeyProductProjectionsSuggestGet copy()
+    {
+        return new ByProjectKeyProductProjectionsSuggestGet(this);
+    }
 }

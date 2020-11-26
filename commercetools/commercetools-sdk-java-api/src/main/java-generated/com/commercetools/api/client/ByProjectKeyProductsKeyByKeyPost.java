@@ -144,4 +144,10 @@ public class ByProjectKeyProductsKeyByKeyPost extends ApiMethod<ByProjectKeyProd
     public ByProjectKeyProductsKeyByKeyPost withExpand(final String expand){
         return new ByProjectKeyProductsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyProductsKeyByKeyPost copy()
+    {
+        return new ByProjectKeyProductsKeyByKeyPost(this);
+    }
 }

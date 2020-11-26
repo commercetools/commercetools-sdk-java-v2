@@ -121,4 +121,10 @@ public class ByProjectKeyShippingMethodsGet extends ApiMethod<ByProjectKeyShippi
     public ByProjectKeyShippingMethodsGet withWhere(final String where){
         return new ByProjectKeyShippingMethodsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyShippingMethodsGet copy()
+    {
+        return new ByProjectKeyShippingMethodsGet(this);
+    }
 }

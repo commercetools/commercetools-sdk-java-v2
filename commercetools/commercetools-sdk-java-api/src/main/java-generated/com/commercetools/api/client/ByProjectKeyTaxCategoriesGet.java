@@ -121,4 +121,10 @@ public class ByProjectKeyTaxCategoriesGet extends ApiMethod<ByProjectKeyTaxCateg
     public ByProjectKeyTaxCategoriesGet withWhere(final String where){
         return new ByProjectKeyTaxCategoriesGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyTaxCategoriesGet copy()
+    {
+        return new ByProjectKeyTaxCategoriesGet(this);
+    }
 }

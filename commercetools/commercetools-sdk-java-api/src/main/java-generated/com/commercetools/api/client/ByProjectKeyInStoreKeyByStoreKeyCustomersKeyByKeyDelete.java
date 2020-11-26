@@ -109,4 +109,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete extends Api
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete withExpand(final String expand){
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete(this);
+    }
 }

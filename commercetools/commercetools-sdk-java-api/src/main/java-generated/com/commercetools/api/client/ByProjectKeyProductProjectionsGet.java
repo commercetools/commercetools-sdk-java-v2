@@ -179,4 +179,10 @@ public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyPro
     public ByProjectKeyProductProjectionsGet withWhere(final String where){
         return new ByProjectKeyProductProjectionsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyProductProjectionsGet copy()
+    {
+        return new ByProjectKeyProductProjectionsGet(this);
+    }
 }

@@ -121,4 +121,10 @@ public class ByProjectKeyMeOrdersGet extends ApiMethod<ByProjectKeyMeOrdersGet> 
     public ByProjectKeyMeOrdersGet withWhere(final String where){
         return new ByProjectKeyMeOrdersGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyMeOrdersGet copy()
+    {
+        return new ByProjectKeyMeOrdersGet(this);
+    }
 }

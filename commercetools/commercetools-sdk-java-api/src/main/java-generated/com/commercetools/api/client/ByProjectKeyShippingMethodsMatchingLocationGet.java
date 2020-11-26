@@ -102,4 +102,10 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<By
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand){
         return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyShippingMethodsMatchingLocationGet copy()
+    {
+        return new ByProjectKeyShippingMethodsMatchingLocationGet(this);
+    }
 }

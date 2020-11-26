@@ -121,4 +121,10 @@ public class ByProjectKeyExtensionsGet extends ApiMethod<ByProjectKeyExtensionsG
     public ByProjectKeyExtensionsGet withWhere(final String where){
         return new ByProjectKeyExtensionsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyExtensionsGet copy()
+    {
+        return new ByProjectKeyExtensionsGet(this);
+    }
 }

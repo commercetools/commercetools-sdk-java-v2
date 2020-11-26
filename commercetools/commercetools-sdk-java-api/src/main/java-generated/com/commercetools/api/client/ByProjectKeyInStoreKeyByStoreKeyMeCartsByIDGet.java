@@ -93,4 +93,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet extends ApiMethod<By
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet withExpand(final String expand){
         return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet(this);
+    }
 }

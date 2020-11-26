@@ -90,4 +90,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(this);
+    }
 }

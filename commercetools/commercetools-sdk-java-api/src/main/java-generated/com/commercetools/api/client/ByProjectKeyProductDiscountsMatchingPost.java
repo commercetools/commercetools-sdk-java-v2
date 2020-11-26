@@ -81,4 +81,10 @@ public class ByProjectKeyProductDiscountsMatchingPost extends ApiMethod<ByProjec
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyProductDiscountsMatchingPost copy()
+    {
+        return new ByProjectKeyProductDiscountsMatchingPost(this);
+    }
 }

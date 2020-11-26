@@ -90,4 +90,10 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdGet extends ApiMethod<ByProj
     public ByProjectKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand){
         return new ByProjectKeyCartsCustomerIdByCustomerIdGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyCartsCustomerIdByCustomerIdGet copy()
+    {
+        return new ByProjectKeyCartsCustomerIdByCustomerIdGet(this);
+    }
 }

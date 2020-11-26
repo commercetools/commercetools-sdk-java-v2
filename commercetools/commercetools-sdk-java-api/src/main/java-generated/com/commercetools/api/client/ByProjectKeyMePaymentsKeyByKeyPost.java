@@ -96,4 +96,10 @@ public class ByProjectKeyMePaymentsKeyByKeyPost extends ApiMethod<ByProjectKeyMe
     public ByProjectKeyMePaymentsKeyByKeyPost withExpand(final String expand){
         return new ByProjectKeyMePaymentsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyMePaymentsKeyByKeyPost copy()
+    {
+        return new ByProjectKeyMePaymentsKeyByKeyPost(this);
+    }
 }

@@ -90,4 +90,10 @@ public class ByProjectKeyCartDiscountsPost extends ApiMethod<ByProjectKeyCartDis
     public ByProjectKeyCartDiscountsPost withExpand(final String expand){
         return new ByProjectKeyCartDiscountsPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyCartDiscountsPost copy()
+    {
+        return new ByProjectKeyCartDiscountsPost(this);
+    }
 }

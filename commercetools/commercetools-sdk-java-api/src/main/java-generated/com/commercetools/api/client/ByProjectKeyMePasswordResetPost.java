@@ -72,4 +72,10 @@ public class ByProjectKeyMePasswordResetPost extends ApiMethod<ByProjectKeyMePas
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyMePasswordResetPost copy()
+    {
+        return new ByProjectKeyMePasswordResetPost(this);
+    }
 }

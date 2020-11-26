@@ -121,4 +121,10 @@ public class ByProjectKeyMePaymentsGet extends ApiMethod<ByProjectKeyMePaymentsG
     public ByProjectKeyMePaymentsGet withWhere(final String where){
         return new ByProjectKeyMePaymentsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyMePaymentsGet copy()
+    {
+        return new ByProjectKeyMePaymentsGet(this);
+    }
 }

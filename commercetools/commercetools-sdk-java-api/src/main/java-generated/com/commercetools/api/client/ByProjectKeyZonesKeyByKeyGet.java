@@ -87,4 +87,10 @@ public class ByProjectKeyZonesKeyByKeyGet extends ApiMethod<ByProjectKeyZonesKey
     public ByProjectKeyZonesKeyByKeyGet withExpand(final String expand){
         return new ByProjectKeyZonesKeyByKeyGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyZonesKeyByKeyGet copy()
+    {
+        return new ByProjectKeyZonesKeyByKeyGet(this);
+    }
 }

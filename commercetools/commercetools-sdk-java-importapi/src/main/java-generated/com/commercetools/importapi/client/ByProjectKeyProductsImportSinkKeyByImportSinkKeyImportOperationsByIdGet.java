@@ -87,4 +87,10 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByI
     
     public void setId(final String id) { this.id = id; }
 
+    
+    @Override
+    protected ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdGet copy()
+    {
+        return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsByIdGet(this);
+    }
 }

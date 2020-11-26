@@ -81,4 +81,10 @@ public class ByProjectKeyMeSignupPost extends ApiMethod<ByProjectKeyMeSignupPost
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyMeSignupPost copy()
+    {
+        return new ByProjectKeyMeSignupPost(this);
+    }
 }

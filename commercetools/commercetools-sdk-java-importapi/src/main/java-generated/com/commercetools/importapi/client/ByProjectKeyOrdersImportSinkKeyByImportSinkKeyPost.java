@@ -90,4 +90,10 @@ public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyPost extends ApiMetho
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+    
+    @Override
+    protected ByProjectKeyOrdersImportSinkKeyByImportSinkKeyPost copy()
+    {
+        return new ByProjectKeyOrdersImportSinkKeyByImportSinkKeyPost(this);
+    }
 }

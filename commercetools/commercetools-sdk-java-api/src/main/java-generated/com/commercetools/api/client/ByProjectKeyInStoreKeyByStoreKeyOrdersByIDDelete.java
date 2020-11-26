@@ -109,4 +109,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete extends ApiMethod<
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete withExpand(final String expand){
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete(this);
+    }
 }

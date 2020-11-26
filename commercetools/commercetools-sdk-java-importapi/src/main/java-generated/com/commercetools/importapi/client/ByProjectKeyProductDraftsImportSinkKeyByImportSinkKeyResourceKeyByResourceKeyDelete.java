@@ -87,4 +87,10 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByR
     
     public void setResourceKey(final String resourceKey) { this.resourceKey = resourceKey; }
 
+    
+    @Override
+    protected ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete copy()
+    {
+        return new ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete(this);
+    }
 }

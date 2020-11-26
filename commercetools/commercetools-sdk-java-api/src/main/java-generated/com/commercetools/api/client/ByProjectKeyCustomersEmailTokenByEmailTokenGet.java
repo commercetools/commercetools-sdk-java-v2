@@ -87,4 +87,10 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<By
     public ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final String expand){
         return new ByProjectKeyCustomersEmailTokenByEmailTokenGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyCustomersEmailTokenByEmailTokenGet copy()
+    {
+        return new ByProjectKeyCustomersEmailTokenByEmailTokenGet(this);
+    }
 }

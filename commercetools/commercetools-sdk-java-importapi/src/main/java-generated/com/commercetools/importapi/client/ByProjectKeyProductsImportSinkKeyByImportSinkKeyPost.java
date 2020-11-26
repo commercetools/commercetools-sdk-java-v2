@@ -90,4 +90,10 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost extends ApiMet
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+    
+    @Override
+    protected ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost copy()
+    {
+        return new ByProjectKeyProductsImportSinkKeyByImportSinkKeyPost(this);
+    }
 }

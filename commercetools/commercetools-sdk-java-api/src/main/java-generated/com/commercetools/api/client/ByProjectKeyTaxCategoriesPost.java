@@ -90,4 +90,10 @@ public class ByProjectKeyTaxCategoriesPost extends ApiMethod<ByProjectKeyTaxCate
     public ByProjectKeyTaxCategoriesPost withExpand(final String expand){
         return new ByProjectKeyTaxCategoriesPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyTaxCategoriesPost copy()
+    {
+        return new ByProjectKeyTaxCategoriesPost(this);
+    }
 }

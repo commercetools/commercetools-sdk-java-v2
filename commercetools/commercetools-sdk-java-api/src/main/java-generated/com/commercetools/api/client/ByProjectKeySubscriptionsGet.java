@@ -121,4 +121,10 @@ public class ByProjectKeySubscriptionsGet extends ApiMethod<ByProjectKeySubscrip
     public ByProjectKeySubscriptionsGet withWhere(final String where){
         return new ByProjectKeySubscriptionsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeySubscriptionsGet copy()
+    {
+        return new ByProjectKeySubscriptionsGet(this);
+    }
 }

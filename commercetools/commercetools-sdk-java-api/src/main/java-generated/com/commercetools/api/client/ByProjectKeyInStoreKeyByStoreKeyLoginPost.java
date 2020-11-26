@@ -90,4 +90,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginPost extends ApiMethod<ByProje
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyLoginPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyLoginPost(this);
+    }
 }

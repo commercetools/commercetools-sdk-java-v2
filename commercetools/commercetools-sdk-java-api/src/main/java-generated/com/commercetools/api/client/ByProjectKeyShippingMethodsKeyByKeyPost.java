@@ -96,4 +96,10 @@ public class ByProjectKeyShippingMethodsKeyByKeyPost extends ApiMethod<ByProject
     public ByProjectKeyShippingMethodsKeyByKeyPost withExpand(final String expand){
         return new ByProjectKeyShippingMethodsKeyByKeyPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyShippingMethodsKeyByKeyPost copy()
+    {
+        return new ByProjectKeyShippingMethodsKeyByKeyPost(this);
+    }
 }

@@ -121,4 +121,10 @@ public class ByProjectKeyApiClientsGet extends ApiMethod<ByProjectKeyApiClientsG
     public ByProjectKeyApiClientsGet withWhere(final String where){
         return new ByProjectKeyApiClientsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyApiClientsGet copy()
+    {
+        return new ByProjectKeyApiClientsGet(this);
+    }
 }

@@ -84,4 +84,10 @@ public class ByProjectKeyCustomersPasswordPost extends ApiMethod<ByProjectKeyCus
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyCustomersPasswordPost copy()
+    {
+        return new ByProjectKeyCustomersPasswordPost(this);
+    }
 }

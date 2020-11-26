@@ -87,4 +87,10 @@ public class ByProjectKeyReviewsByIDGet extends ApiMethod<ByProjectKeyReviewsByI
     public ByProjectKeyReviewsByIDGet withExpand(final String expand){
         return new ByProjectKeyReviewsByIDGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyReviewsByIDGet copy()
+    {
+        return new ByProjectKeyReviewsByIDGet(this);
+    }
 }

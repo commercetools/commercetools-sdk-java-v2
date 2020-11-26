@@ -143,4 +143,10 @@ public class ByProjectKeyProductsByIDDelete extends ApiMethod<ByProjectKeyProduc
     public ByProjectKeyProductsByIDDelete withExpand(final String expand){
         return new ByProjectKeyProductsByIDDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyProductsByIDDelete copy()
+    {
+        return new ByProjectKeyProductsByIDDelete(this);
+    }
 }

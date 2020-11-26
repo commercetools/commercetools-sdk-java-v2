@@ -90,4 +90,10 @@ public class ByProjectKeyChannelsPost extends ApiMethod<ByProjectKeyChannelsPost
     public ByProjectKeyChannelsPost withExpand(final String expand){
         return new ByProjectKeyChannelsPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyChannelsPost copy()
+    {
+        return new ByProjectKeyChannelsPost(this);
+    }
 }

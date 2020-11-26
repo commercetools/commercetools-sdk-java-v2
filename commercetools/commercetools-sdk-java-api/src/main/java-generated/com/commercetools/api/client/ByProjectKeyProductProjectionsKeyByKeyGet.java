@@ -145,4 +145,10 @@ public class ByProjectKeyProductProjectionsKeyByKeyGet extends ApiMethod<ByProje
     public ByProjectKeyProductProjectionsKeyByKeyGet withExpand(final String expand){
         return new ByProjectKeyProductProjectionsKeyByKeyGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyProductProjectionsKeyByKeyGet copy()
+    {
+        return new ByProjectKeyProductProjectionsKeyByKeyGet(this);
+    }
 }

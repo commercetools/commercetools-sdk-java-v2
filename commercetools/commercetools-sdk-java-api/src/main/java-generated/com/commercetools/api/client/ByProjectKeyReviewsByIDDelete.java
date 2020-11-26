@@ -103,4 +103,10 @@ public class ByProjectKeyReviewsByIDDelete extends ApiMethod<ByProjectKeyReviews
     public ByProjectKeyReviewsByIDDelete withExpand(final String expand){
         return new ByProjectKeyReviewsByIDDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyReviewsByIDDelete copy()
+    {
+        return new ByProjectKeyReviewsByIDDelete(this);
+    }
 }

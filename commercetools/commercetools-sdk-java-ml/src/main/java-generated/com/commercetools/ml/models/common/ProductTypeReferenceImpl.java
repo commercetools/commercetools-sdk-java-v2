@@ -28,7 +28,7 @@ public final class ProductTypeReferenceImpl implements ProductTypeReference {
     @JsonCreator
     ProductTypeReferenceImpl(@JsonProperty("id") final String id) {
         this.id = id;
-        this.typeId = ReferenceTypeId.findEnumViaJsonName("product-type").get();
+        this.typeId = ReferenceTypeId.findEnum("product-type");
     }
     public ProductTypeReferenceImpl() {
        

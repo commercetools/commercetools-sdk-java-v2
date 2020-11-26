@@ -90,4 +90,10 @@ public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyPost extends Api
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+    
+    @Override
+    protected ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyPost copy()
+    {
+        return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyPost(this);
+    }
 }

@@ -93,4 +93,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final String expand){
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet(this);
+    }
 }

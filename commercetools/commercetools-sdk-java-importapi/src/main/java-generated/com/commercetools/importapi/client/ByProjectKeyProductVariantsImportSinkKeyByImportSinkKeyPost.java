@@ -90,4 +90,10 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyPost extends
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+    
+    @Override
+    protected ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyPost copy()
+    {
+        return new ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyPost(this);
+    }
 }

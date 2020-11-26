@@ -90,4 +90,10 @@ public class ByProjectKeyMeShoppingListsPost extends ApiMethod<ByProjectKeyMeSho
     public ByProjectKeyMeShoppingListsPost withExpand(final String expand){
         return new ByProjectKeyMeShoppingListsPost(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyMeShoppingListsPost copy()
+    {
+        return new ByProjectKeyMeShoppingListsPost(this);
+    }
 }

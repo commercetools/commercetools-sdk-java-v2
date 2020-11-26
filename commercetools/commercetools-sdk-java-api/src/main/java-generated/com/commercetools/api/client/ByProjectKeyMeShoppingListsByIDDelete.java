@@ -95,4 +95,10 @@ public class ByProjectKeyMeShoppingListsByIDDelete extends ApiMethod<ByProjectKe
     public ByProjectKeyMeShoppingListsByIDDelete withExpand(final String expand){
         return new ByProjectKeyMeShoppingListsByIDDelete(this).addQueryParam("expand", expand);
     }
+    
+    @Override
+    protected ByProjectKeyMeShoppingListsByIDDelete copy()
+    {
+        return new ByProjectKeyMeShoppingListsByIDDelete(this);
+    }
 }

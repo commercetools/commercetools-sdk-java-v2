@@ -81,4 +81,10 @@ public class ByProjectKeyApiClientsByIDGet extends ApiMethod<ByProjectKeyApiClie
     
     public void setID(final String ID) { this.ID = ID; }
 
+    
+    @Override
+    protected ByProjectKeyApiClientsByIDGet copy()
+    {
+        return new ByProjectKeyApiClientsByIDGet(this);
+    }
 }

@@ -82,4 +82,10 @@ public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends 
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+    
+    @Override
+    protected ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet copy()
+    {
+        return new ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet(this);
+    }
 }

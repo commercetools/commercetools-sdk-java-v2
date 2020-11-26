@@ -121,4 +121,10 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet> 
     public ByProjectKeyChannelsGet withWhere(final String where){
         return new ByProjectKeyChannelsGet(this).addQueryParam("where", where);
     }
+    
+    @Override
+    protected ByProjectKeyChannelsGet copy()
+    {
+        return new ByProjectKeyChannelsGet(this);
+    }
 }

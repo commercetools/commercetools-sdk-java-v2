@@ -13,6 +13,7 @@ import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.order_edit.OrderEdit;
 import com.commercetools.api.models.store.Store;
 import com.commercetools.api.models.store.StoreResourceIdentifierBuilder;
+import commercetools.customer.CustomerFixtures;
 import commercetools.customer_group.CustomerGroupFixtures;
 import commercetools.store.StoreFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
@@ -47,6 +48,22 @@ public class CartsFixtures {
         Cart cart = createCart(cartDraft);
         consumer.accept(cart);
         deleteCart(cart.getId(), cart.getVersion());
+    }
+
+    public static void withCartWithCustomer(final Consumer<Cart> consumer) {
+        CustomerFixtures.withCustomer(customer -> {
+            CartDraft cartDraft = CartDraftBuilder.of()
+                    .currency("EUR")
+                    .country("DE")
+//                    .customerEmail(customer.getEmail())
+//                    .customerId(customer.getId())
+                    .anonymousId(customer.getId())
+                    .build();
+
+            Cart cart = createCart(cartDraft);
+            consumer.accept(cart);
+            deleteCart(cart.getId(), cart.getVersion());
+        });
     }
 
     public static void withUpdateableCart(final UnaryOperator<Cart> operator) {

@@ -47,36 +47,6 @@ public class ProductFixtures {
         deleteProductById(product.getId(), product.getVersion());
     }
 
-    public static void withTaxedProduct(final Consumer<Product> user) {
-        TaxCategoryFixtures.withTaxCategory(taxCategory -> {
-            withUpdateableProduct(product -> {
-                List<ProductUpdateAction> updateActions = new ArrayList<>();
-                updateActions.add(ProductSetTaxCategoryActionBuilder.of()
-                        .taxCategory(
-                                TaxCategoryResourceIdentifierBuilder.of()
-                                        .id(taxCategory.getId())
-                                        .build())
-                        .build());
-                updateActions.add(ProductPublishActionBuilder.of().build());
-                Product updatedProduct = CommercetoolsTestUtils.getProjectRoot()
-                        .products()
-                        .withId(product.getId())
-                        .post(
-                                ProductUpdateBuilder.of()
-                                        .actions(updateActions)
-                                        .version(product.getVersion())
-                                        .build()
-                        )
-                        .executeBlocking().getBody();
-
-                Assert.assertNotNull(updatedProduct);
-
-                return updatedProduct;
-            });
-        });
-
-    }
-
 
     public static Product createProduct() {
         String randomKey = CommercetoolsTestUtils.randomKey();

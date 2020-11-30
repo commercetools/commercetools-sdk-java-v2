@@ -1,12 +1,8 @@
 package commercetools.me;
 
-import com.commercetools.api.models.cart.Cart;
-import com.commercetools.api.models.cart.CartDraft;
-import com.commercetools.api.models.cart.CartDraftBuilder;
 import com.commercetools.api.models.me.MyCart;
 import com.commercetools.api.models.me.MyCartDraft;
 import com.commercetools.api.models.me.MyCartDraftBuilder;
-import commercetools.customer.CustomerFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import org.junit.Assert;
 

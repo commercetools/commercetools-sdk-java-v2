@@ -55,8 +55,6 @@ public class CartsFixtures {
             CartDraft cartDraft = CartDraftBuilder.of()
                     .currency("EUR")
                     .country("DE")
-//                    .customerEmail(customer.getEmail())
-//                    .customerId(customer.getId())
                     .anonymousId(customer.getId())
                     .build();
 

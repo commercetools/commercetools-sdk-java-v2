@@ -47,7 +47,6 @@ public class ProductFixtures {
         deleteProductById(product.getId(), product.getVersion());
     }
 
-
     public static Product createProduct() {
         String randomKey = CommercetoolsTestUtils.randomKey();
 

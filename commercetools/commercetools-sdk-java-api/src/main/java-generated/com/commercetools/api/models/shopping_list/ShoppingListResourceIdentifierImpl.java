@@ -34,7 +34,7 @@ public final class ShoppingListResourceIdentifierImpl implements ShoppingListRes
         this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
     public ShoppingListResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
 
     

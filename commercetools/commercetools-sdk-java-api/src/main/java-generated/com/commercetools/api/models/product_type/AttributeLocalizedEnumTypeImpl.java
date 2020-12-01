@@ -31,7 +31,7 @@ public final class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedE
         this.name = "lenum";
     }
     public AttributeLocalizedEnumTypeImpl() {
-       
+        this.name = "lenum";
     }
 
     

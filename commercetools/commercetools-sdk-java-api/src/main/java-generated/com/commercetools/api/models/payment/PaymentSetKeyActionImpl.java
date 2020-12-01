@@ -30,7 +30,7 @@ public final class PaymentSetKeyActionImpl implements PaymentSetKeyAction {
         this.action = "setKey";
     }
     public PaymentSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

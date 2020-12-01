@@ -34,7 +34,7 @@ public final class InventoryEntrySetCustomFieldActionImpl implements InventoryEn
         this.action = "setCustomField";
     }
     public InventoryEntrySetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

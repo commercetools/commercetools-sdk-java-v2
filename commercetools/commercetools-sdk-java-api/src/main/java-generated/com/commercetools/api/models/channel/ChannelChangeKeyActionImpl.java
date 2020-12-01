@@ -30,7 +30,7 @@ public final class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction 
         this.action = "changeKey";
     }
     public ChannelChangeKeyActionImpl() {
-       
+        this.action = "changeKey";
     }
 
     

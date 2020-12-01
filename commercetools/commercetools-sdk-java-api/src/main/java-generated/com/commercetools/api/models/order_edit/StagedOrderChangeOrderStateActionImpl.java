@@ -31,7 +31,7 @@ public final class StagedOrderChangeOrderStateActionImpl implements StagedOrderC
         this.action = "changeOrderState";
     }
     public StagedOrderChangeOrderStateActionImpl() {
-       
+        this.action = "changeOrderState";
     }
 
     

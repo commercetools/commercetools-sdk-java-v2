@@ -50,7 +50,7 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
         this.code = "MatchingPriceNotFound";
     }
     public MatchingPriceNotFoundErrorImpl() {
-       
+        this.code = "MatchingPriceNotFound";
     }
 
     

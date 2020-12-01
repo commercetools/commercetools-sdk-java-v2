@@ -30,7 +30,7 @@ public final class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAct
         this.action = "setKey";
     }
     public ShoppingListSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

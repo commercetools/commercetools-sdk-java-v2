@@ -33,7 +33,7 @@ public final class ShoppingListChangeLineItemQuantityActionImpl implements Shopp
         this.action = "changeLineItemQuantity";
     }
     public ShoppingListChangeLineItemQuantityActionImpl() {
-       
+        this.action = "changeLineItemQuantity";
     }
 
     

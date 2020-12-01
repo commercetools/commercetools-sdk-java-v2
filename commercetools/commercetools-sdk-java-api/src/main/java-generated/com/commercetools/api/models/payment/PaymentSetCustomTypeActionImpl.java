@@ -35,7 +35,7 @@ public final class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTyp
         this.action = "setCustomType";
     }
     public PaymentSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

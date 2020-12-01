@@ -34,7 +34,7 @@ public final class CustomerResourceIdentifierImpl implements CustomerResourceIde
         this.typeId = ReferenceTypeId.findEnum("customer");
     }
     public CustomerResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("customer");
     }
 
     

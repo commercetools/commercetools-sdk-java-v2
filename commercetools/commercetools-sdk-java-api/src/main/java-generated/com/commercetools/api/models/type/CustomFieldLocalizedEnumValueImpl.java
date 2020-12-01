@@ -30,7 +30,6 @@ public final class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocal
         this.label = label;
     }
     public CustomFieldLocalizedEnumValueImpl() {
-       
     }
 
     

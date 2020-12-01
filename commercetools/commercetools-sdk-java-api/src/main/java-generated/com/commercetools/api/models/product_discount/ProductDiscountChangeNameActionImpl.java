@@ -31,7 +31,7 @@ public final class ProductDiscountChangeNameActionImpl implements ProductDiscoun
         this.action = "changeName";
     }
     public ProductDiscountChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

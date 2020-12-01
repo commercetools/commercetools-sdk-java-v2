@@ -35,7 +35,7 @@ public final class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSe
         this.action = "setCustomType";
     }
     public DiscountCodeSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

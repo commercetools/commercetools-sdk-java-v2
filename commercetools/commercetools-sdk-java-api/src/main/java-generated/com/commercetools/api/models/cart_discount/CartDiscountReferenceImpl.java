@@ -35,7 +35,7 @@ public final class CartDiscountReferenceImpl implements CartDiscountReference {
         this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }
     public CartDiscountReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("cart-discount");
     }
 
     

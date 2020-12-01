@@ -31,7 +31,7 @@ public final class ProductPublishActionImpl implements ProductPublishAction {
         this.action = "publish";
     }
     public ProductPublishActionImpl() {
-       
+        this.action = "publish";
     }
 
     

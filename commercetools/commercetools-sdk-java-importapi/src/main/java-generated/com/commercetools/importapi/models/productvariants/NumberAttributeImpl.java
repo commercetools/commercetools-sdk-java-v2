@@ -36,7 +36,7 @@ public final class NumberAttributeImpl implements NumberAttribute {
         this.type = "number";
     }
     public NumberAttributeImpl() {
-       
+        this.type = "number";
     }
 
     /**

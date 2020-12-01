@@ -30,7 +30,7 @@ public final class CustomerGroupChangeNameActionImpl implements CustomerGroupCha
         this.action = "changeName";
     }
     public CustomerGroupChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

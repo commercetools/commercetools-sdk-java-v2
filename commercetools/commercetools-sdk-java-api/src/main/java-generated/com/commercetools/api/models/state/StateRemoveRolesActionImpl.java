@@ -31,7 +31,7 @@ public final class StateRemoveRolesActionImpl implements StateRemoveRolesAction 
         this.action = "removeRoles";
     }
     public StateRemoveRolesActionImpl() {
-       
+        this.action = "removeRoles";
     }
 
     

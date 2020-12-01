@@ -64,7 +64,7 @@ public final class ProductVariantAddedMessageImpl implements ProductVariantAdded
         this.type = "ProductVariantAdded";
     }
     public ProductVariantAddedMessageImpl() {
-       
+        this.type = "ProductVariantAdded";
     }
 
     

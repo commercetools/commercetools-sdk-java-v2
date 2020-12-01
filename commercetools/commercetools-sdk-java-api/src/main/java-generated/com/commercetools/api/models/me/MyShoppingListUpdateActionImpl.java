@@ -45,7 +45,6 @@ public final class MyShoppingListUpdateActionImpl implements MyShoppingListUpdat
         this.action = action;
     }
     public MyShoppingListUpdateActionImpl() {
-       
     }
 
     

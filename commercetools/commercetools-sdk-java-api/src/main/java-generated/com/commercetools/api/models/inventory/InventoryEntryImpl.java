@@ -68,7 +68,6 @@ public final class InventoryEntryImpl implements InventoryEntry {
         this.custom = custom;
     }
     public InventoryEntryImpl() {
-       
     }
 
     /**

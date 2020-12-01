@@ -61,7 +61,7 @@ public final class ProductSlugChangedMessageImpl implements ProductSlugChangedMe
         this.type = "ProductSlugChanged";
     }
     public ProductSlugChangedMessageImpl() {
-       
+        this.type = "ProductSlugChanged";
     }
 
     

@@ -45,7 +45,6 @@ public final class ProductVariantDraftImportImpl implements ProductVariantDraftI
         this.assets = assets;
     }
     public ProductVariantDraftImportImpl() {
-       
     }
 
     

@@ -49,7 +49,7 @@ public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNon
         this.code = "DiscountCodeNonApplicable";
     }
     public DiscountCodeNonApplicableErrorImpl() {
-       
+        this.code = "DiscountCodeNonApplicable";
     }
 
     

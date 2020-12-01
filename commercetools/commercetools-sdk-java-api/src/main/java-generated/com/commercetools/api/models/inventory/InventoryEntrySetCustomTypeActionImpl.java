@@ -35,7 +35,7 @@ public final class InventoryEntrySetCustomTypeActionImpl implements InventoryEnt
         this.action = "setCustomType";
     }
     public InventoryEntrySetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

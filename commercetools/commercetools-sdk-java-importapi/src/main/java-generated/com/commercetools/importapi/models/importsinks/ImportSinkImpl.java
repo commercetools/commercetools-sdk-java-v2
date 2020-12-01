@@ -44,7 +44,6 @@ public final class ImportSinkImpl implements ImportSink {
         this.lastModifiedAt = lastModifiedAt;
     }
     public ImportSinkImpl() {
-       
     }
 
     /**

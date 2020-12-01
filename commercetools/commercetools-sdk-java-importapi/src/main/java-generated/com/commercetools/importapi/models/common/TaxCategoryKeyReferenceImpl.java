@@ -34,7 +34,7 @@ public final class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReferenc
         this.typeId = ReferenceType.findEnum("tax-category");
     }
     public TaxCategoryKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("tax-category");
     }
 
     

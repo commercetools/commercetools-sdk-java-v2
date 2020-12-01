@@ -30,7 +30,7 @@ public final class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchEr
         this.code = "EnumValuesMustMatch";
     }
     public EnumValuesMustMatchErrorImpl() {
-       
+        this.code = "EnumValuesMustMatch";
     }
 
     

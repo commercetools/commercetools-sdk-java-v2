@@ -42,7 +42,7 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public interface InventoryEntryUpdateAction  {
+public interface InventoryEntryUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<InventoryEntryUpdateAction> {
 
     
     @NotNull

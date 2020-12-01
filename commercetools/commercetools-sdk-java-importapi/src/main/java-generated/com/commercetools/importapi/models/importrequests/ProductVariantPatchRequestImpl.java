@@ -35,7 +35,7 @@ public final class ProductVariantPatchRequestImpl implements ProductVariantPatch
         this.type = ImportResourceType.findEnum("product-variant-patch");
     }
     public ProductVariantPatchRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("product-variant-patch");
     }
 
     /**

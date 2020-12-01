@@ -35,7 +35,7 @@ public final class InvalidJsonInputImpl implements InvalidJsonInput {
         this.code = "InvalidJsonInput";
     }
     public InvalidJsonInputImpl() {
-       
+        this.code = "InvalidJsonInput";
     }
 
     

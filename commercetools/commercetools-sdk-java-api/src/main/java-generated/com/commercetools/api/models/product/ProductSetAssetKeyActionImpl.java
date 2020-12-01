@@ -42,7 +42,7 @@ public final class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAct
         this.action = "setAssetKey";
     }
     public ProductSetAssetKeyActionImpl() {
-       
+        this.action = "setAssetKey";
     }
 
     

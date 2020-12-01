@@ -31,7 +31,7 @@ public final class ShoppingListSetDescriptionActionImpl implements ShoppingListS
         this.action = "setDescription";
     }
     public ShoppingListSetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

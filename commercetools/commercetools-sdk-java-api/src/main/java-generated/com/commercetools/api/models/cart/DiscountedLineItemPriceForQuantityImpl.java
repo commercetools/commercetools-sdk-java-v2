@@ -30,7 +30,6 @@ public final class DiscountedLineItemPriceForQuantityImpl implements DiscountedL
         this.discountedPrice = discountedPrice;
     }
     public DiscountedLineItemPriceForQuantityImpl() {
-       
     }
 
     

@@ -46,7 +46,6 @@ public final class ApiClientImpl implements ApiClient {
         this.secret = secret;
     }
     public ApiClientImpl() {
-       
     }
 
     /**

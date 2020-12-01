@@ -31,7 +31,7 @@ public final class CartDiscountChangeStackingModeActionImpl implements CartDisco
         this.action = "changeStackingMode";
     }
     public CartDiscountChangeStackingModeActionImpl() {
-       
+        this.action = "changeStackingMode";
     }
 
     

@@ -33,7 +33,7 @@ public final class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumV
         this.action = "changeEnumValueOrder";
     }
     public TypeChangeEnumValueOrderActionImpl() {
-       
+        this.action = "changeEnumValueOrder";
     }
 
     

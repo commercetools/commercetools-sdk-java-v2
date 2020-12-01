@@ -38,7 +38,7 @@ public final class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoA
         this.action = "updateSyncInfo";
     }
     public OrderUpdateSyncInfoActionImpl() {
-       
+        this.action = "updateSyncInfo";
     }
 
     

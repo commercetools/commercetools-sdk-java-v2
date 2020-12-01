@@ -34,7 +34,7 @@ public final class OrderBillingAddressSetMessagePayloadImpl implements OrderBill
         this.type = "OrderBillingAddressSet";
     }
     public OrderBillingAddressSetMessagePayloadImpl() {
-       
+        this.type = "OrderBillingAddressSet";
     }
 
     

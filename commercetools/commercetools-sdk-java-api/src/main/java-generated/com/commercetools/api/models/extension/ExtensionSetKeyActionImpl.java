@@ -30,7 +30,7 @@ public final class ExtensionSetKeyActionImpl implements ExtensionSetKeyAction {
         this.action = "setKey";
     }
     public ExtensionSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

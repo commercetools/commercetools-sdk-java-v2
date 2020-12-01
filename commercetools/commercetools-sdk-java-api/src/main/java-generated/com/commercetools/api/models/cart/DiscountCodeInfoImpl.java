@@ -31,7 +31,6 @@ public final class DiscountCodeInfoImpl implements DiscountCodeInfo {
         this.state = state;
     }
     public DiscountCodeInfoImpl() {
-       
     }
 
     

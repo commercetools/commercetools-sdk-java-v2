@@ -35,7 +35,7 @@ public final class OrderSetCustomTypeActionImpl implements OrderSetCustomTypeAct
         this.action = "setCustomType";
     }
     public OrderSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

@@ -34,7 +34,7 @@ public final class StagedOrderSetLineItemDistributionChannelActionImpl implement
         this.action = "setLineItemDistributionChannel";
     }
     public StagedOrderSetLineItemDistributionChannelActionImpl() {
-       
+        this.action = "setLineItemDistributionChannel";
     }
 
     

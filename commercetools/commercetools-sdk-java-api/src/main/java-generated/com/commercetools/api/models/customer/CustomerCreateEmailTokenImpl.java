@@ -33,7 +33,6 @@ public final class CustomerCreateEmailTokenImpl implements CustomerCreateEmailTo
         this.ttlMinutes = ttlMinutes;
     }
     public CustomerCreateEmailTokenImpl() {
-       
     }
 
     

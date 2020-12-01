@@ -34,7 +34,7 @@ public final class OrderSetCustomLineItemShippingDetailsActionImpl implements Or
         this.action = "setCustomLineItemShippingDetails";
     }
     public OrderSetCustomLineItemShippingDetailsActionImpl() {
-       
+        this.action = "setCustomLineItemShippingDetails";
     }
 
     

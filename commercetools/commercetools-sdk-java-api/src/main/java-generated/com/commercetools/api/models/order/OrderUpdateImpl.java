@@ -30,7 +30,6 @@ public final class OrderUpdateImpl implements OrderUpdate {
         this.actions = actions;
     }
     public OrderUpdateImpl() {
-       
     }
 
     

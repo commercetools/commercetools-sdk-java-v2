@@ -31,7 +31,7 @@ public final class StoresSetDistributionChannelsActionImpl implements StoresSetD
         this.action = "setDistributionChannels";
     }
     public StoresSetDistributionChannelsActionImpl() {
-       
+        this.action = "setDistributionChannels";
     }
 
     

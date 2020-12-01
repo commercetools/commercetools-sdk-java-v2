@@ -33,7 +33,7 @@ public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl implements Pa
         this.type = "PaymentStatusInterfaceCodeSet";
     }
     public PaymentStatusInterfaceCodeSetMessagePayloadImpl() {
-       
+        this.type = "PaymentStatusInterfaceCodeSet";
     }
 
     

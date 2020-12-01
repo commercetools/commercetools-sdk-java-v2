@@ -31,7 +31,7 @@ public final class CartDiscountSetValidFromActionImpl implements CartDiscountSet
         this.action = "setValidFrom";
     }
     public CartDiscountSetValidFromActionImpl() {
-       
+        this.action = "setValidFrom";
     }
 
     

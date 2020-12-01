@@ -68,7 +68,7 @@ public final class OrderDiscountCodeStateSetMessageImpl implements OrderDiscount
         this.type = "OrderDiscountCodeStateSet";
     }
     public OrderDiscountCodeStateSetMessageImpl() {
-       
+        this.type = "OrderDiscountCodeStateSet";
     }
 
     

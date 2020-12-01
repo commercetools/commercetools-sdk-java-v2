@@ -74,7 +74,6 @@ public final class PaymentDraftImpl implements PaymentDraft {
         this.key = key;
     }
     public PaymentDraftImpl() {
-       
     }
 
     /**

@@ -37,7 +37,7 @@ public final class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraf
         this.type = MoneyType.findEnum("centPrecision");
     }
     public CentPrecisionMoneyDraftImpl() {
-       
+        this.type = MoneyType.findEnum("centPrecision");
     }
 
     

@@ -30,7 +30,7 @@ public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsF
         this.type = "CloudEvents";
     }
     public DeliveryCloudEventsFormatImpl() {
-       
+        this.type = "CloudEvents";
     }
 
     

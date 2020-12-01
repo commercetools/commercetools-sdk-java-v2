@@ -62,7 +62,6 @@ public final class StoreImpl implements Store {
         this.supplyChannels = supplyChannels;
     }
     public StoreImpl() {
-       
     }
 
     

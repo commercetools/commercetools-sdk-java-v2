@@ -77,7 +77,6 @@ public final class CartUpdateActionImpl implements CartUpdateAction {
         this.action = action;
     }
     public CartUpdateActionImpl() {
-       
     }
 
     

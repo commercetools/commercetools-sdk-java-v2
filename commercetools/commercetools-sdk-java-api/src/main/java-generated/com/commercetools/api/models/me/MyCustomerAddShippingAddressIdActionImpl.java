@@ -33,7 +33,7 @@ public final class MyCustomerAddShippingAddressIdActionImpl implements MyCustome
         this.action = "addShippingAddressId";
     }
     public MyCustomerAddShippingAddressIdActionImpl() {
-       
+        this.action = "addShippingAddressId";
     }
 
     

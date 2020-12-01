@@ -37,7 +37,7 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
         this.action = "changePrice";
     }
     public ProductChangePriceActionImpl() {
-       
+        this.action = "changePrice";
     }
 
     

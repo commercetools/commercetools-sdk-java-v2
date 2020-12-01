@@ -34,7 +34,7 @@ public final class StateResourceIdentifierImpl implements StateResourceIdentifie
         this.typeId = ReferenceTypeId.findEnum("state");
     }
     public StateResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("state");
     }
 
     

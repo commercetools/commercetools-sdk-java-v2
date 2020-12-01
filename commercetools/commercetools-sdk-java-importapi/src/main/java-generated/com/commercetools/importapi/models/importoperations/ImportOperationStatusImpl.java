@@ -37,7 +37,6 @@ public final class ImportOperationStatusImpl implements ImportOperationStatus {
         this.errors = errors;
     }
     public ImportOperationStatusImpl() {
-       
     }
 
     /**

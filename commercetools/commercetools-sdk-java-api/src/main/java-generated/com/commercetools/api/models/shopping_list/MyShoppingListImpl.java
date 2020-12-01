@@ -80,7 +80,6 @@ public final class MyShoppingListImpl implements MyShoppingList {
         this.anonymousId = anonymousId;
     }
     public MyShoppingListImpl() {
-       
     }
 
     

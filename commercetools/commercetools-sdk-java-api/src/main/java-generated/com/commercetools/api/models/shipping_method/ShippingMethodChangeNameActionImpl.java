@@ -30,7 +30,7 @@ public final class ShippingMethodChangeNameActionImpl implements ShippingMethodC
         this.action = "changeName";
     }
     public ShippingMethodChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

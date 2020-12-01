@@ -34,7 +34,7 @@ public final class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeEr
         this.code = "DuplicatePriceScope";
     }
     public DuplicatePriceScopeErrorImpl() {
-       
+        this.code = "DuplicatePriceScope";
     }
 
     

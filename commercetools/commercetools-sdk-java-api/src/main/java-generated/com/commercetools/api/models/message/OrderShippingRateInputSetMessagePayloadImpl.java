@@ -34,7 +34,7 @@ public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderS
         this.type = "OrderShippingRateInputSet";
     }
     public OrderShippingRateInputSetMessagePayloadImpl() {
-       
+        this.type = "OrderShippingRateInputSet";
     }
 
     

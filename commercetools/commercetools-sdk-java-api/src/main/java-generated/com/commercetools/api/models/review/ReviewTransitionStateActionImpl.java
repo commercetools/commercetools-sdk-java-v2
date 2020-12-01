@@ -34,7 +34,7 @@ public final class ReviewTransitionStateActionImpl implements ReviewTransitionSt
         this.action = "transitionState";
     }
     public ReviewTransitionStateActionImpl() {
-       
+        this.action = "transitionState";
     }
 
     

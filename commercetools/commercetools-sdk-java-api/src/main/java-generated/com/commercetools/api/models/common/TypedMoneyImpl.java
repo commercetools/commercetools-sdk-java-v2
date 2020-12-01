@@ -38,7 +38,6 @@ public final class TypedMoneyImpl implements TypedMoney {
         this.currencyCode = currencyCode;
     }
     public TypedMoneyImpl() {
-       
     }
 
     

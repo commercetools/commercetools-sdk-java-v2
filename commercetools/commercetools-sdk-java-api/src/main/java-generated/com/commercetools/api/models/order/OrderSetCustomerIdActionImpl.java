@@ -30,7 +30,7 @@ public final class OrderSetCustomerIdActionImpl implements OrderSetCustomerIdAct
         this.action = "setCustomerId";
     }
     public OrderSetCustomerIdActionImpl() {
-       
+        this.action = "setCustomerId";
     }
 
     

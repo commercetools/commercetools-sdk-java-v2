@@ -147,7 +147,6 @@ public final class StagedOrderImpl implements StagedOrder {
         this.refusedGifts = refusedGifts;
     }
     public StagedOrderImpl() {
-       
     }
 
     /**

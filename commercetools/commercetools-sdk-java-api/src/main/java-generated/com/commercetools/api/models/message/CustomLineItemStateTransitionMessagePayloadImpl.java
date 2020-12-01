@@ -44,7 +44,7 @@ public final class CustomLineItemStateTransitionMessagePayloadImpl implements Cu
         this.type = "CustomLineItemStateTransition";
     }
     public CustomLineItemStateTransitionMessagePayloadImpl() {
-       
+        this.type = "CustomLineItemStateTransition";
     }
 
     

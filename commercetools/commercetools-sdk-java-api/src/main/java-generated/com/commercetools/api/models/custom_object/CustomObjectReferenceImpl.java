@@ -35,7 +35,7 @@ public final class CustomObjectReferenceImpl implements CustomObjectReference {
         this.typeId = ReferenceTypeId.findEnum("key-value-document");
     }
     public CustomObjectReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("key-value-document");
     }
 
     

@@ -64,7 +64,7 @@ public final class ProductAddedToCategoryMessageImpl implements ProductAddedToCa
         this.type = "ProductAddedToCategory";
     }
     public ProductAddedToCategoryMessageImpl() {
-       
+        this.type = "ProductAddedToCategory";
     }
 
     

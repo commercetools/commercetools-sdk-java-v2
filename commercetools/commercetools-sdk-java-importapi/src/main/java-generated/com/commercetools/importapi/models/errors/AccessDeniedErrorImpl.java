@@ -30,7 +30,7 @@ public final class AccessDeniedErrorImpl implements AccessDeniedError {
         this.code = "access_denied";
     }
     public AccessDeniedErrorImpl() {
-       
+        this.code = "access_denied";
     }
 
     

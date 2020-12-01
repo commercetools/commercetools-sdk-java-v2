@@ -30,7 +30,7 @@ public final class MyCustomerSetVatIdActionImpl implements MyCustomerSetVatIdAct
         this.action = "setVatId";
     }
     public MyCustomerSetVatIdActionImpl() {
-       
+        this.action = "setVatId";
     }
 
     

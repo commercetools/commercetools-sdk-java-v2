@@ -30,7 +30,7 @@ public final class ShoppingListSetAnonymousIdActionImpl implements ShoppingListS
         this.action = "setAnonymousId";
     }
     public ShoppingListSetAnonymousIdActionImpl() {
-       
+        this.action = "setAnonymousId";
     }
 
     

@@ -45,7 +45,6 @@ public final class MyShoppingListDraftImpl implements MyShoppingListDraft {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
     public MyShoppingListDraftImpl() {
-       
     }
 
     

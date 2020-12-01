@@ -30,7 +30,6 @@ public final class ShippingRatePriceTierImpl implements ShippingRatePriceTier {
         this.type = type;
     }
     public ShippingRatePriceTierImpl() {
-       
     }
 
     

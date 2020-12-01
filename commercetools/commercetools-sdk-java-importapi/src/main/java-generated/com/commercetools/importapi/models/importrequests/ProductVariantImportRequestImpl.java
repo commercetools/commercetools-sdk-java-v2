@@ -35,7 +35,7 @@ public final class ProductVariantImportRequestImpl implements ProductVariantImpo
         this.type = ImportResourceType.findEnum("product-variant");
     }
     public ProductVariantImportRequestImpl() {
-       
+        this.type = ImportResourceType.findEnum("product-variant");
     }
 
     /**

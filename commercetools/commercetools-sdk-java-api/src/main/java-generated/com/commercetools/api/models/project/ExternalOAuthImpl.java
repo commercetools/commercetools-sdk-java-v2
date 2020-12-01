@@ -30,7 +30,6 @@ public final class ExternalOAuthImpl implements ExternalOAuth {
         this.authorizationHeader = authorizationHeader;
     }
     public ExternalOAuthImpl() {
-       
     }
 
     

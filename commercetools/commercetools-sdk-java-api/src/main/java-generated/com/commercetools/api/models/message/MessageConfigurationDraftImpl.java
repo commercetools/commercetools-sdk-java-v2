@@ -30,7 +30,6 @@ public final class MessageConfigurationDraftImpl implements MessageConfiguration
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
     }
     public MessageConfigurationDraftImpl() {
-       
     }
 
     

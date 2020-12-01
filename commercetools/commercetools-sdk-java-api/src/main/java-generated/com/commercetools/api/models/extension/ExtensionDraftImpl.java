@@ -37,7 +37,6 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
         this.timeoutInMs = timeoutInMs;
     }
     public ExtensionDraftImpl() {
-       
     }
 
     /**

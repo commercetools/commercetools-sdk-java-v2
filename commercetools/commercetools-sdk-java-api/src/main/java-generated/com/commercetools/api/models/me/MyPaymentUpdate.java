@@ -19,7 +19,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = MyPaymentUpdateImpl.class)
-public interface MyPaymentUpdate  {
+public interface MyPaymentUpdate extends com.commercetools.api.models.ResourceUpdate<MyPaymentUpdate, MyPaymentUpdateAction> {
 
     
     @NotNull

@@ -61,7 +61,7 @@ public final class CustomerAddressRemovedMessageImpl implements CustomerAddressR
         this.type = "CustomerAddressRemoved";
     }
     public CustomerAddressRemovedMessageImpl() {
-       
+        this.type = "CustomerAddressRemoved";
     }
 
     

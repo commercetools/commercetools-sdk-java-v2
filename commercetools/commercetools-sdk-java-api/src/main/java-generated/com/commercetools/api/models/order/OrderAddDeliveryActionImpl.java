@@ -39,7 +39,7 @@ public final class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction 
         this.action = "addDelivery";
     }
     public OrderAddDeliveryActionImpl() {
-       
+        this.action = "addDelivery";
     }
 
     

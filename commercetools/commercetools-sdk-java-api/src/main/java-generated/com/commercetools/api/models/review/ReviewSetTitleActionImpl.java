@@ -30,7 +30,7 @@ public final class ReviewSetTitleActionImpl implements ReviewSetTitleAction {
         this.action = "setTitle";
     }
     public ReviewSetTitleActionImpl() {
-       
+        this.action = "setTitle";
     }
 
     

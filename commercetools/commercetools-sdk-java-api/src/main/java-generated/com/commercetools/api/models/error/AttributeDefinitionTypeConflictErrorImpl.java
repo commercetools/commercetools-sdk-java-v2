@@ -39,7 +39,7 @@ public final class AttributeDefinitionTypeConflictErrorImpl implements Attribute
         this.code = "AttributeDefinitionTypeConflict";
     }
     public AttributeDefinitionTypeConflictErrorImpl() {
-       
+        this.code = "AttributeDefinitionTypeConflict";
     }
 
     

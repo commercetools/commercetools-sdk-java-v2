@@ -38,7 +38,7 @@ public final class OrderEditAppliedImpl implements OrderEditApplied {
         this.type = "Applied";
     }
     public OrderEditAppliedImpl() {
-       
+        this.type = "Applied";
     }
 
     

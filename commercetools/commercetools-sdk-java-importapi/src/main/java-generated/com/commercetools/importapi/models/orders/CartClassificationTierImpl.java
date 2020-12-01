@@ -41,7 +41,7 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
         this.type = ShippingRateTierType.findEnum("CartClassification");
     }
     public CartClassificationTierImpl() {
-       
+        this.type = ShippingRateTierType.findEnum("CartClassification");
     }
 
     

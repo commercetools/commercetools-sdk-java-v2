@@ -39,7 +39,6 @@ public final class CustomerGroupPagedQueryResponseImpl implements CustomerGroupP
         this.results = results;
     }
     public CustomerGroupPagedQueryResponseImpl() {
-       
     }
 
     

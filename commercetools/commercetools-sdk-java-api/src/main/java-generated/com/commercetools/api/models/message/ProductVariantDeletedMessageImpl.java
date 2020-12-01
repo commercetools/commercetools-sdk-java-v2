@@ -64,7 +64,7 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
         this.type = "ProductVariantDeleted";
     }
     public ProductVariantDeletedMessageImpl() {
-       
+        this.type = "ProductVariantDeleted";
     }
 
     

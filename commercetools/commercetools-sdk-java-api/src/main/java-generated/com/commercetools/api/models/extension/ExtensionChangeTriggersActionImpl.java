@@ -31,7 +31,7 @@ public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeT
         this.action = "changeTriggers";
     }
     public ExtensionChangeTriggersActionImpl() {
-       
+        this.action = "changeTriggers";
     }
 
     

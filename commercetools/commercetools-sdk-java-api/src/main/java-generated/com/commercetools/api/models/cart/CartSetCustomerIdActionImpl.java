@@ -30,7 +30,7 @@ public final class CartSetCustomerIdActionImpl implements CartSetCustomerIdActio
         this.action = "setCustomerId";
     }
     public CartSetCustomerIdActionImpl() {
-       
+        this.action = "setCustomerId";
     }
 
     

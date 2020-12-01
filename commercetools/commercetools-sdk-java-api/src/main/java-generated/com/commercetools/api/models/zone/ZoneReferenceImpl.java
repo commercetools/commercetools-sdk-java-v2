@@ -35,7 +35,7 @@ public final class ZoneReferenceImpl implements ZoneReference {
         this.typeId = ReferenceTypeId.findEnum("zone");
     }
     public ZoneReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("zone");
     }
 
     

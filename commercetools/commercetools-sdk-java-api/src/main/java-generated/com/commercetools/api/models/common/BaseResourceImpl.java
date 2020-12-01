@@ -67,7 +67,6 @@ public final class BaseResourceImpl implements BaseResource {
         this.lastModifiedAt = lastModifiedAt;
     }
     public BaseResourceImpl() {
-       
     }
 
     

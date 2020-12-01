@@ -34,7 +34,7 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
         this.type = "OrderLineItemAdded";
     }
     public OrderLineItemAddedMessagePayloadImpl() {
-       
+        this.type = "OrderLineItemAdded";
     }
 
     

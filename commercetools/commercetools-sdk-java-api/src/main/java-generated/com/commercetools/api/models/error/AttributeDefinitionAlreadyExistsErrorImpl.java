@@ -39,7 +39,7 @@ public final class AttributeDefinitionAlreadyExistsErrorImpl implements Attribut
         this.code = "AttributeDefinitionAlreadyExists";
     }
     public AttributeDefinitionAlreadyExistsErrorImpl() {
-       
+        this.code = "AttributeDefinitionAlreadyExists";
     }
 
     

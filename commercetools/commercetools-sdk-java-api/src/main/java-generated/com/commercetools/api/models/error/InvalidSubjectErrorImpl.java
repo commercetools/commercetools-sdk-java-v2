@@ -30,7 +30,7 @@ public final class InvalidSubjectErrorImpl implements InvalidSubjectError {
         this.code = "InvalidSubject";
     }
     public InvalidSubjectErrorImpl() {
-       
+        this.code = "InvalidSubject";
     }
 
     

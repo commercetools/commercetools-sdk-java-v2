@@ -45,7 +45,7 @@ public final class CartRemoveLineItemActionImpl implements CartRemoveLineItemAct
         this.action = "removeLineItem";
     }
     public CartRemoveLineItemActionImpl() {
-       
+        this.action = "removeLineItem";
     }
 
     

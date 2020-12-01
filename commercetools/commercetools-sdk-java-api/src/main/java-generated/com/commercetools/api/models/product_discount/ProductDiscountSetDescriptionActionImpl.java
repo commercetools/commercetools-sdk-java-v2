@@ -31,7 +31,7 @@ public final class ProductDiscountSetDescriptionActionImpl implements ProductDis
         this.action = "setDescription";
     }
     public ProductDiscountSetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

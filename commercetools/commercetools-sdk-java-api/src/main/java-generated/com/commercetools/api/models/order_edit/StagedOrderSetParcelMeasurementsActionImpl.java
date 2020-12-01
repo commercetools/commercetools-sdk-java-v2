@@ -34,7 +34,7 @@ public final class StagedOrderSetParcelMeasurementsActionImpl implements StagedO
         this.action = "setParcelMeasurements";
     }
     public StagedOrderSetParcelMeasurementsActionImpl() {
-       
+        this.action = "setParcelMeasurements";
     }
 
     

@@ -145,7 +145,6 @@ public final class MyCartImpl implements MyCart {
         this.itemShippingAddresses = itemShippingAddresses;
     }
     public MyCartImpl() {
-       
     }
 
     

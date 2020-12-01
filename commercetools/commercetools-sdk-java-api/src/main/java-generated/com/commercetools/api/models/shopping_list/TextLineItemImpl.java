@@ -44,7 +44,6 @@ public final class TextLineItemImpl implements TextLineItem {
         this.quantity = quantity;
     }
     public TextLineItemImpl() {
-       
     }
 
     /**

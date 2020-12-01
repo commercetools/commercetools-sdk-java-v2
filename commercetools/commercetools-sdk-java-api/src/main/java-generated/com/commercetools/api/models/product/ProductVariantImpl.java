@@ -65,7 +65,6 @@ public final class ProductVariantImpl implements ProductVariant {
         this.scopedPriceDiscounted = scopedPriceDiscounted;
     }
     public ProductVariantImpl() {
-       
     }
 
     

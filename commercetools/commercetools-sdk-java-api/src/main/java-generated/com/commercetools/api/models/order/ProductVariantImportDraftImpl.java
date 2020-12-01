@@ -41,7 +41,6 @@ public final class ProductVariantImportDraftImpl implements ProductVariantImport
         this.images = images;
     }
     public ProductVariantImportDraftImpl() {
-       
     }
 
     /**

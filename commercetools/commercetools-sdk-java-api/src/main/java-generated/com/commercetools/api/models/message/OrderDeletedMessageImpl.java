@@ -61,7 +61,7 @@ public final class OrderDeletedMessageImpl implements OrderDeletedMessage {
         this.type = "OrderDeleted";
     }
     public OrderDeletedMessageImpl() {
-       
+        this.type = "OrderDeleted";
     }
 
     

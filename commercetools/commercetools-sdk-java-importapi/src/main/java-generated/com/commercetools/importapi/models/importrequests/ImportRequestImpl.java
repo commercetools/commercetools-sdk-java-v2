@@ -40,7 +40,6 @@ public final class ImportRequestImpl implements ImportRequest {
         this.type = type;
     }
     public ImportRequestImpl() {
-       
     }
 
     /**

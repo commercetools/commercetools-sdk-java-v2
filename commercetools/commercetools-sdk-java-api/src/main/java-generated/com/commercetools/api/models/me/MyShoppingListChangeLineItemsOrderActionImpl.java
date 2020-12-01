@@ -30,7 +30,7 @@ public final class MyShoppingListChangeLineItemsOrderActionImpl implements MySho
         this.action = "changeLineItemsOrder";
     }
     public MyShoppingListChangeLineItemsOrderActionImpl() {
-       
+        this.action = "changeLineItemsOrder";
     }
 
     

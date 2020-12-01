@@ -39,7 +39,6 @@ public final class ReviewPagedQueryResponseImpl implements ReviewPagedQueryRespo
         this.results = results;
     }
     public ReviewPagedQueryResponseImpl() {
-       
     }
 
     

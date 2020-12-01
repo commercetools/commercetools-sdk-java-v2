@@ -31,7 +31,7 @@ public final class TypeChangeNameActionImpl implements TypeChangeNameAction {
         this.action = "changeName";
     }
     public TypeChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

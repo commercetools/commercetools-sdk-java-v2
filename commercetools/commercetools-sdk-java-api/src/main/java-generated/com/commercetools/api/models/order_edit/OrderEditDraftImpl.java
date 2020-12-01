@@ -44,7 +44,6 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
         this.dryRun = dryRun;
     }
     public OrderEditDraftImpl() {
-       
     }
 
     /**

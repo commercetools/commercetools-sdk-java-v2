@@ -97,7 +97,6 @@ public final class CustomerImportImpl implements CustomerImport {
         this.custom = custom;
     }
     public CustomerImportImpl() {
-       
     }
 
     

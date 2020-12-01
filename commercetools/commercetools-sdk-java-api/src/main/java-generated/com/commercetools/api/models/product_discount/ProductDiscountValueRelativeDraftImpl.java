@@ -30,7 +30,7 @@ public final class ProductDiscountValueRelativeDraftImpl implements ProductDisco
         this.type = "relative";
     }
     public ProductDiscountValueRelativeDraftImpl() {
-       
+        this.type = "relative";
     }
 
     

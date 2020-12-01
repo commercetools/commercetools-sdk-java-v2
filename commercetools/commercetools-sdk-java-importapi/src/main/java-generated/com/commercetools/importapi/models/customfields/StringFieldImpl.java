@@ -33,7 +33,7 @@ public final class StringFieldImpl implements StringField {
         this.type = "String";
     }
     public StringFieldImpl() {
-       
+        this.type = "String";
     }
 
     /**

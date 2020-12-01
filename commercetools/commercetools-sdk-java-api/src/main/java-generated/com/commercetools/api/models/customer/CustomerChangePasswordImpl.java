@@ -36,7 +36,6 @@ public final class CustomerChangePasswordImpl implements CustomerChangePassword 
         this.newPassword = newPassword;
     }
     public CustomerChangePasswordImpl() {
-       
     }
 
     

@@ -35,7 +35,7 @@ public final class CustomerReferenceImpl implements CustomerReference {
         this.typeId = ReferenceTypeId.findEnum("customer");
     }
     public CustomerReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("customer");
     }
 
     

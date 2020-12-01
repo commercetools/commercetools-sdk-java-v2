@@ -34,7 +34,7 @@ public final class OrderSetLineItemShippingDetailsActionImpl implements OrderSet
         this.action = "setLineItemShippingDetails";
     }
     public OrderSetLineItemShippingDetailsActionImpl() {
-       
+        this.action = "setLineItemShippingDetails";
     }
 
     

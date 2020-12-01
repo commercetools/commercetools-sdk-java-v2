@@ -31,7 +31,6 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
         this.discountedAmount = discountedAmount;
     }
     public DiscountedLineItemPortionImpl() {
-       
     }
 
     /**

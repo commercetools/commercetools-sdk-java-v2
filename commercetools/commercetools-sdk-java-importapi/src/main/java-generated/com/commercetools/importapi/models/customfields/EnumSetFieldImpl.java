@@ -33,7 +33,7 @@ public final class EnumSetFieldImpl implements EnumSetField {
         this.type = "EnumSet";
     }
     public EnumSetFieldImpl() {
-       
+        this.type = "EnumSet";
     }
 
     /**

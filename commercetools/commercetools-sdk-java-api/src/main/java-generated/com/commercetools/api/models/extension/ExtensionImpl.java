@@ -59,7 +59,6 @@ public final class ExtensionImpl implements Extension {
         this.timeoutInMs = timeoutInMs;
     }
     public ExtensionImpl() {
-       
     }
 
     

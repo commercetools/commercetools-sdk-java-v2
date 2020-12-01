@@ -30,7 +30,7 @@ public final class LanguageUsedInStoresErrorImpl implements LanguageUsedInStores
         this.code = "LanguageUsedInStores";
     }
     public LanguageUsedInStoresErrorImpl() {
-       
+        this.code = "LanguageUsedInStores";
     }
 
     

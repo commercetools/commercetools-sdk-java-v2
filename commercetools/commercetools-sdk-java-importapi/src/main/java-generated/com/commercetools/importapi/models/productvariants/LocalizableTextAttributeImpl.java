@@ -37,7 +37,7 @@ public final class LocalizableTextAttributeImpl implements LocalizableTextAttrib
         this.type = "ltext";
     }
     public LocalizableTextAttributeImpl() {
-       
+        this.type = "ltext";
     }
 
     /**

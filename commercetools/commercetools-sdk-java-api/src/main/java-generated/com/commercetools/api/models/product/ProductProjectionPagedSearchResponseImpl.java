@@ -43,7 +43,6 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
         this.facets = facets;
     }
     public ProductProjectionPagedSearchResponseImpl() {
-       
     }
 
     

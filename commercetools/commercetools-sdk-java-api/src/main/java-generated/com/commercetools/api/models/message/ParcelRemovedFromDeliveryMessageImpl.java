@@ -64,7 +64,7 @@ public final class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemoved
         this.type = "ParcelRemovedFromDelivery";
     }
     public ParcelRemovedFromDeliveryMessageImpl() {
-       
+        this.type = "ParcelRemovedFromDelivery";
     }
 
     

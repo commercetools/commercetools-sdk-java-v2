@@ -74,7 +74,7 @@ public final class LineItemStateTransitionMessageImpl implements LineItemStateTr
         this.type = "LineItemStateTransition";
     }
     public LineItemStateTransitionMessageImpl() {
-       
+        this.type = "LineItemStateTransition";
     }
 
     

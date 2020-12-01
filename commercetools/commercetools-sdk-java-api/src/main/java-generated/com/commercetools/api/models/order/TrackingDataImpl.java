@@ -39,7 +39,6 @@ public final class TrackingDataImpl implements TrackingData {
         this.isReturn = isReturn;
     }
     public TrackingDataImpl() {
-       
     }
 
     /**

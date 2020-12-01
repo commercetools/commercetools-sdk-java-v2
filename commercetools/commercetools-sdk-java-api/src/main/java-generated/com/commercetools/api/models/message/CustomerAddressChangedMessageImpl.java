@@ -61,7 +61,7 @@ public final class CustomerAddressChangedMessageImpl implements CustomerAddressC
         this.type = "CustomerAddressChanged";
     }
     public CustomerAddressChangedMessageImpl() {
-       
+        this.type = "CustomerAddressChanged";
     }
 
     

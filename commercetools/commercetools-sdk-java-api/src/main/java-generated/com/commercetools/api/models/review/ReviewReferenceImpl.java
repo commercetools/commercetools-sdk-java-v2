@@ -35,7 +35,7 @@ public final class ReviewReferenceImpl implements ReviewReference {
         this.typeId = ReferenceTypeId.findEnum("review");
     }
     public ReviewReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("review");
     }
 
     

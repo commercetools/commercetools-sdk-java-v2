@@ -34,7 +34,7 @@ public final class CartSetLineItemShippingDetailsActionImpl implements CartSetLi
         this.action = "setLineItemShippingDetails";
     }
     public CartSetLineItemShippingDetailsActionImpl() {
-       
+        this.action = "setLineItemShippingDetails";
     }
 
     

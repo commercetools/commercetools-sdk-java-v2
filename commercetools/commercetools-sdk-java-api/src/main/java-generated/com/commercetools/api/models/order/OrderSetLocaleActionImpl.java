@@ -30,7 +30,7 @@ public final class OrderSetLocaleActionImpl implements OrderSetLocaleAction {
         this.action = "setLocale";
     }
     public OrderSetLocaleActionImpl() {
-       
+        this.action = "setLocale";
     }
 
     

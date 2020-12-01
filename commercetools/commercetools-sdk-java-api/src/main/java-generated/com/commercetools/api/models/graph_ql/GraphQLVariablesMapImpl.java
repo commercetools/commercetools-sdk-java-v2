@@ -27,7 +27,6 @@ public final class GraphQLVariablesMapImpl implements GraphQLVariablesMap {
         this.values = values;
     }
     public GraphQLVariablesMapImpl() {
-       
     }
 
     

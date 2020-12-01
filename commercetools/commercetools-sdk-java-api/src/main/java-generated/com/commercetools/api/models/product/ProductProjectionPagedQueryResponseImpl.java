@@ -39,7 +39,6 @@ public final class ProductProjectionPagedQueryResponseImpl implements ProductPro
         this.results = results;
     }
     public ProductProjectionPagedQueryResponseImpl() {
-       
     }
 
     

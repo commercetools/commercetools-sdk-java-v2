@@ -42,7 +42,7 @@ public final class ExtensionBadResponseErrorImpl implements ExtensionBadResponse
         this.code = "ExtensionBadResponse";
     }
     public ExtensionBadResponseErrorImpl() {
-       
+        this.code = "ExtensionBadResponse";
     }
 
     

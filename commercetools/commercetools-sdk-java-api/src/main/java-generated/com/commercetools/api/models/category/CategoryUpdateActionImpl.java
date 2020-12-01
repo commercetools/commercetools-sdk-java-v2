@@ -48,7 +48,6 @@ public final class CategoryUpdateActionImpl implements CategoryUpdateAction {
         this.action = action;
     }
     public CategoryUpdateActionImpl() {
-       
     }
 
     

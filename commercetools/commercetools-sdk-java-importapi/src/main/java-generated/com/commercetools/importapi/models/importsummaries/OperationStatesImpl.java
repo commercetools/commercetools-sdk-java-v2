@@ -45,7 +45,6 @@ public final class OperationStatesImpl implements OperationStates {
         this.rejected = rejected;
     }
     public OperationStatesImpl() {
-       
     }
 
     /**

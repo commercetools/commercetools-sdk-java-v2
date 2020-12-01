@@ -33,7 +33,6 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
         this.custom = custom;
     }
     public CustomerGroupDraftImpl() {
-       
     }
 
     /**

@@ -67,7 +67,6 @@ public final class CategoryImportImpl implements CategoryImport {
         this.custom = custom;
     }
     public CategoryImportImpl() {
-       
     }
 
     

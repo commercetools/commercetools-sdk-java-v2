@@ -31,7 +31,7 @@ public final class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerD
         this.type = "CustomerDateOfBirthSet";
     }
     public CustomerDateOfBirthSetMessagePayloadImpl() {
-       
+        this.type = "CustomerDateOfBirthSet";
     }
 
     

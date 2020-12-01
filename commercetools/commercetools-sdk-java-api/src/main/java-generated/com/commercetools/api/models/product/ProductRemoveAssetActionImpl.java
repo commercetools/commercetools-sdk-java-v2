@@ -42,7 +42,7 @@ public final class ProductRemoveAssetActionImpl implements ProductRemoveAssetAct
         this.action = "removeAsset";
     }
     public ProductRemoveAssetActionImpl() {
-       
+        this.action = "removeAsset";
     }
 
     

@@ -31,7 +31,7 @@ public final class ProductTypeChangeAttributeOrderActionImpl implements ProductT
         this.action = "changeAttributeOrder";
     }
     public ProductTypeChangeAttributeOrderActionImpl() {
-       
+        this.action = "changeAttributeOrder";
     }
 
     

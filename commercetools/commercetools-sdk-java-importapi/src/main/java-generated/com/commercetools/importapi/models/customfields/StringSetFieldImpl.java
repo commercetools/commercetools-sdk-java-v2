@@ -33,7 +33,7 @@ public final class StringSetFieldImpl implements StringSetField {
         this.type = "StringSet";
     }
     public StringSetFieldImpl() {
-       
+        this.type = "StringSet";
     }
 
     /**

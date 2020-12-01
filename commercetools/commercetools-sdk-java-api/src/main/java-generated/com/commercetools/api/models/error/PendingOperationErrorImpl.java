@@ -30,7 +30,7 @@ public final class PendingOperationErrorImpl implements PendingOperationError {
         this.code = "PendingOperation";
     }
     public PendingOperationErrorImpl() {
-       
+        this.code = "PendingOperation";
     }
 
     

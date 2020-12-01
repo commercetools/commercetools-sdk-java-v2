@@ -43,7 +43,7 @@ public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarge
         this.type = "multiBuyLineItems";
     }
     public MultiBuyLineItemsTargetImpl() {
-       
+        this.type = "multiBuyLineItems";
     }
 
     

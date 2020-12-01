@@ -31,7 +31,7 @@ public final class ShippingMethodChangeTaxCategoryActionImpl implements Shipping
         this.action = "changeTaxCategory";
     }
     public ShippingMethodChangeTaxCategoryActionImpl() {
-       
+        this.action = "changeTaxCategory";
     }
 
     

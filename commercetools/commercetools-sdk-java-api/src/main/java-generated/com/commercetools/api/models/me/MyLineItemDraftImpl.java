@@ -54,7 +54,6 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
         this.sku = sku;
     }
     public MyLineItemDraftImpl() {
-       
     }
 
     

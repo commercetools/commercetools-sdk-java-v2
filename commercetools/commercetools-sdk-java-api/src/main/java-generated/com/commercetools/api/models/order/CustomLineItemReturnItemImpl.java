@@ -51,7 +51,7 @@ public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnI
         this.type = "CustomLineItemReturnItem";
     }
     public CustomLineItemReturnItemImpl() {
-       
+        this.type = "CustomLineItemReturnItem";
     }
 
     

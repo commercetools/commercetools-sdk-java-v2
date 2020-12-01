@@ -51,7 +51,7 @@ public final class LineItemReturnItemImpl implements LineItemReturnItem {
         this.type = "LineItemReturnItem";
     }
     public LineItemReturnItemImpl() {
-       
+        this.type = "LineItemReturnItem";
     }
 
     

@@ -31,7 +31,7 @@ public final class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxR
         this.action = "changeTaxRoundingMode";
     }
     public CartChangeTaxRoundingModeActionImpl() {
-       
+        this.action = "changeTaxRoundingMode";
     }
 
     

@@ -34,7 +34,7 @@ public final class MaxResourceLimitExceededErrorImpl implements MaxResourceLimit
         this.code = "MaxResourceLimitExceeded";
     }
     public MaxResourceLimitExceededErrorImpl() {
-       
+        this.code = "MaxResourceLimitExceeded";
     }
 
     

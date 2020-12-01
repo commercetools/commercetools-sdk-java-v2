@@ -30,7 +30,6 @@ public final class CustomerUpdateImpl implements CustomerUpdate {
         this.actions = actions;
     }
     public CustomerUpdateImpl() {
-       
     }
 
     

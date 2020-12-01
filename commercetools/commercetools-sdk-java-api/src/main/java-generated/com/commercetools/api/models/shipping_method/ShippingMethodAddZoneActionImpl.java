@@ -31,7 +31,7 @@ public final class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZ
         this.action = "addZone";
     }
     public ShippingMethodAddZoneActionImpl() {
-       
+        this.action = "addZone";
     }
 
     

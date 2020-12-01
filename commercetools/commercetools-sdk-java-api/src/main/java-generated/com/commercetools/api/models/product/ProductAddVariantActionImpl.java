@@ -52,7 +52,7 @@ public final class ProductAddVariantActionImpl implements ProductAddVariantActio
         this.action = "addVariant";
     }
     public ProductAddVariantActionImpl() {
-       
+        this.action = "addVariant";
     }
 
     

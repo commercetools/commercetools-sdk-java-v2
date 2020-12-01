@@ -30,7 +30,7 @@ public final class CustomFieldSetTypeImpl implements CustomFieldSetType {
         this.name = "Set";
     }
     public CustomFieldSetTypeImpl() {
-       
+        this.name = "Set";
     }
 
     

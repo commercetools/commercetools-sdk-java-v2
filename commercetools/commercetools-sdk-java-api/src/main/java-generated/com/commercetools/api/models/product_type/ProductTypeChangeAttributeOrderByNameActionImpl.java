@@ -30,7 +30,7 @@ public final class ProductTypeChangeAttributeOrderByNameActionImpl implements Pr
         this.action = "changeAttributeOrderByName";
     }
     public ProductTypeChangeAttributeOrderByNameActionImpl() {
-       
+        this.action = "changeAttributeOrderByName";
     }
 
     

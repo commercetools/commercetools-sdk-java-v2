@@ -31,7 +31,7 @@ public final class CartChangeTaxModeActionImpl implements CartChangeTaxModeActio
         this.action = "changeTaxMode";
     }
     public CartChangeTaxModeActionImpl() {
-       
+        this.action = "changeTaxMode";
     }
 
     

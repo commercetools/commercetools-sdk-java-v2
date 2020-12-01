@@ -30,7 +30,7 @@ public final class CartDiscountChangeRequiresDiscountCodeActionImpl implements C
         this.action = "changeRequiresDiscountCode";
     }
     public CartDiscountChangeRequiresDiscountCodeActionImpl() {
-       
+        this.action = "changeRequiresDiscountCode";
     }
 
     

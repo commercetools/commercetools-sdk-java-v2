@@ -30,7 +30,7 @@ public final class CustomerChangeEmailActionImpl implements CustomerChangeEmailA
         this.action = "changeEmail";
     }
     public CustomerChangeEmailActionImpl() {
-       
+        this.action = "changeEmail";
     }
 
     

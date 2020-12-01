@@ -31,7 +31,7 @@ public final class ProductSetTaxCategoryActionImpl implements ProductSetTaxCateg
         this.action = "setTaxCategory";
     }
     public ProductSetTaxCategoryActionImpl() {
-       
+        this.action = "setTaxCategory";
     }
 
     

@@ -34,7 +34,7 @@ public final class OrderEditResourceIdentifierImpl implements OrderEditResourceI
         this.typeId = ReferenceTypeId.findEnum("order-edit");
     }
     public OrderEditResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("order-edit");
     }
 
     

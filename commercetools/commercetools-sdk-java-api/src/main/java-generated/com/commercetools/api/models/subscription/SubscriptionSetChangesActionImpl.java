@@ -31,7 +31,7 @@ public final class SubscriptionSetChangesActionImpl implements SubscriptionSetCh
         this.action = "setChanges";
     }
     public SubscriptionSetChangesActionImpl() {
-       
+        this.action = "setChanges";
     }
 
     

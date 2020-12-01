@@ -47,7 +47,6 @@ public final class ProductTypeUpdateActionImpl implements ProductTypeUpdateActio
         this.action = action;
     }
     public ProductTypeUpdateActionImpl() {
-       
     }
 
     

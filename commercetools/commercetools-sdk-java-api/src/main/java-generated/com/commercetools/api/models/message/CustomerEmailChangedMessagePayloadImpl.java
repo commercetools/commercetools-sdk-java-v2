@@ -30,7 +30,7 @@ public final class CustomerEmailChangedMessagePayloadImpl implements CustomerEma
         this.type = "CustomerEmailChanged";
     }
     public CustomerEmailChangedMessagePayloadImpl() {
-       
+        this.type = "CustomerEmailChanged";
     }
 
     

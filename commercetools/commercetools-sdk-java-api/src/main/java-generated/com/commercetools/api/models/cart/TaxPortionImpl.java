@@ -33,7 +33,6 @@ public final class TaxPortionImpl implements TaxPortion {
         this.amount = amount;
     }
     public TaxPortionImpl() {
-       
     }
 
     

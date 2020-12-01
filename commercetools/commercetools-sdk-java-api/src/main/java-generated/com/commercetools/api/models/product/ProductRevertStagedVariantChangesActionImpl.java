@@ -30,7 +30,7 @@ public final class ProductRevertStagedVariantChangesActionImpl implements Produc
         this.action = "revertStagedVariantChanges";
     }
     public ProductRevertStagedVariantChangesActionImpl() {
-       
+        this.action = "revertStagedVariantChanges";
     }
 
     

@@ -36,7 +36,7 @@ public final class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChan
         this.action = "changeEnumKey";
     }
     public ProductTypeChangeEnumKeyActionImpl() {
-       
+        this.action = "changeEnumKey";
     }
 
     

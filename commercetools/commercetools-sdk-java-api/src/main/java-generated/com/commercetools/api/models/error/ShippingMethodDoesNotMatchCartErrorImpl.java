@@ -30,7 +30,7 @@ public final class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMe
         this.code = "ShippingMethodDoesNotMatchCart";
     }
     public ShippingMethodDoesNotMatchCartErrorImpl() {
-       
+        this.code = "ShippingMethodDoesNotMatchCart";
     }
 
     

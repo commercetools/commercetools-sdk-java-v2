@@ -20,6 +20,15 @@ public final class AttributesBuilder {
         this.values = values;
         return this;
     }
+    
+    public AttributesBuilder addValue(final String key, final com.commercetools.importapi.models.productvariants.Attribute value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+        return this;
+    }
+    
 
     
     public Map<String, com.commercetools.importapi.models.productvariants.Attribute> getValues(){

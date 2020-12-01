@@ -37,7 +37,6 @@ public final class ReviewUpdateActionImpl implements ReviewUpdateAction {
         this.action = action;
     }
     public ReviewUpdateActionImpl() {
-       
     }
 
     

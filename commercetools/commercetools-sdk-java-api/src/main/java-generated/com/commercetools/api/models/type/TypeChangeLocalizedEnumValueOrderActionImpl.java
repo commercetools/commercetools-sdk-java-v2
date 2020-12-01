@@ -33,7 +33,7 @@ public final class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeCh
         this.action = "changeLocalizedEnumValueOrder";
     }
     public TypeChangeLocalizedEnumValueOrderActionImpl() {
-       
+        this.action = "changeLocalizedEnumValueOrder";
     }
 
     

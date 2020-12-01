@@ -71,7 +71,6 @@ public final class CustomLineItemImpl implements CustomLineItem {
         this.shippingDetails = shippingDetails;
     }
     public CustomLineItemImpl() {
-       
     }
 
     /**

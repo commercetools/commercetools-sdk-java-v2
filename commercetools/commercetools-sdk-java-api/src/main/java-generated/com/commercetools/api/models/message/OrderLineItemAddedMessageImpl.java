@@ -64,7 +64,7 @@ public final class OrderLineItemAddedMessageImpl implements OrderLineItemAddedMe
         this.type = "OrderLineItemAdded";
     }
     public OrderLineItemAddedMessageImpl() {
-       
+        this.type = "OrderLineItemAdded";
     }
 
     

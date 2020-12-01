@@ -31,7 +31,7 @@ public final class StateAddRolesActionImpl implements StateAddRolesAction {
         this.action = "addRoles";
     }
     public StateAddRolesActionImpl() {
-       
+        this.action = "addRoles";
     }
 
     

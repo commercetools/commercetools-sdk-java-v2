@@ -43,7 +43,7 @@ public final class ResourceCreatedDeliveryImpl implements ResourceCreatedDeliver
         this.notificationType = "ResourceCreated";
     }
     public ResourceCreatedDeliveryImpl() {
-       
+        this.notificationType = "ResourceCreated";
     }
 
     

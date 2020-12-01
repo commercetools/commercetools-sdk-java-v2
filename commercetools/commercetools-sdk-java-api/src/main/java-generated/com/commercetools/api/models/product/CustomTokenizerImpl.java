@@ -30,7 +30,7 @@ public final class CustomTokenizerImpl implements CustomTokenizer {
         this.type = "custom";
     }
     public CustomTokenizerImpl() {
-       
+        this.type = "custom";
     }
 
     

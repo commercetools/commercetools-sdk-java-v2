@@ -30,7 +30,7 @@ public final class CartDiscountSetKeyActionImpl implements CartDiscountSetKeyAct
         this.action = "setKey";
     }
     public CartDiscountSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

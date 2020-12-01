@@ -36,7 +36,6 @@ public final class ChannelUpdateActionImpl implements ChannelUpdateAction {
         this.action = action;
     }
     public ChannelUpdateActionImpl() {
-       
     }
 
     

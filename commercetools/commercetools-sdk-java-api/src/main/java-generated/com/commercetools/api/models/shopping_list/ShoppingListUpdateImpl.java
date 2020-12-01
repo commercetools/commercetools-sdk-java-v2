@@ -30,7 +30,6 @@ public final class ShoppingListUpdateImpl implements ShoppingListUpdate {
         this.actions = actions;
     }
     public ShoppingListUpdateImpl() {
-       
     }
 
     

@@ -34,7 +34,7 @@ public final class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier 
         this.typeId = ReferenceTypeId.findEnum("zone");
     }
     public ZoneResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("zone");
     }
 
     

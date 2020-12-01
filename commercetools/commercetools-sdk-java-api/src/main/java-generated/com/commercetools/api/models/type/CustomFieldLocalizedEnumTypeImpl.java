@@ -31,7 +31,7 @@ public final class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocali
         this.name = "LocalizedEnum";
     }
     public CustomFieldLocalizedEnumTypeImpl() {
-       
+        this.name = "LocalizedEnum";
     }
 
     

@@ -41,7 +41,7 @@ public final class CartDiscountValueGiftLineItemDraftImpl implements CartDiscoun
         this.type = "giftLineItem";
     }
     public CartDiscountValueGiftLineItemDraftImpl() {
-       
+        this.type = "giftLineItem";
     }
 
     

@@ -42,7 +42,6 @@ public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPr
         this.staged = staged;
     }
     public ProductPriceDiscountsSetUpdatedPriceImpl() {
-       
     }
 
     

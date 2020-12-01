@@ -36,7 +36,6 @@ public final class LastModifiedByImpl implements LastModifiedBy {
         this.anonymousId = anonymousId;
     }
     public LastModifiedByImpl() {
-       
     }
 
     

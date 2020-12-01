@@ -34,7 +34,7 @@ public final class ChannelSetCustomFieldActionImpl implements ChannelSetCustomFi
         this.action = "setCustomField";
     }
     public ChannelSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

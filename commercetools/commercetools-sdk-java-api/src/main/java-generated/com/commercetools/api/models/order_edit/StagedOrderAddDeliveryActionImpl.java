@@ -39,7 +39,7 @@ public final class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDel
         this.action = "addDelivery";
     }
     public StagedOrderAddDeliveryActionImpl() {
-       
+        this.action = "addDelivery";
     }
 
     

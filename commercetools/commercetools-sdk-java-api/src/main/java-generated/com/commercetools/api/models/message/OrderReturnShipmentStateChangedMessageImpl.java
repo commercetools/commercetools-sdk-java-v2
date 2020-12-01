@@ -64,7 +64,7 @@ public final class OrderReturnShipmentStateChangedMessageImpl implements OrderRe
         this.type = "OrderReturnShipmentStateChanged";
     }
     public OrderReturnShipmentStateChangedMessageImpl() {
-       
+        this.type = "OrderReturnShipmentStateChanged";
     }
 
     

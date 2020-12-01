@@ -34,7 +34,7 @@ public final class OrderShippingInfoSetMessagePayloadImpl implements OrderShippi
         this.type = "OrderShippingInfoSet";
     }
     public OrderShippingInfoSetMessagePayloadImpl() {
-       
+        this.type = "OrderShippingInfoSet";
     }
 
     

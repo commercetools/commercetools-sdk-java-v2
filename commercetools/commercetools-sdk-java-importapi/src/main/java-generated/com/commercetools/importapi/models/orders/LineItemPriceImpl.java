@@ -57,7 +57,6 @@ public final class LineItemPriceImpl implements LineItemPrice {
         this.custom = custom;
     }
     public LineItemPriceImpl() {
-       
     }
 
     /**

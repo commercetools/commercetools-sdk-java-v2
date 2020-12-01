@@ -34,7 +34,7 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
         this.type = "InventoryEntryDeleted";
     }
     public InventoryEntryDeletedMessagePayloadImpl() {
-       
+        this.type = "InventoryEntryDeleted";
     }
 
     

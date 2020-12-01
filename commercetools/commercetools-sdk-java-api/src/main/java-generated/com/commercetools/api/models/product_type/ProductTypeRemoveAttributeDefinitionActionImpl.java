@@ -30,7 +30,7 @@ public final class ProductTypeRemoveAttributeDefinitionActionImpl implements Pro
         this.action = "removeAttributeDefinition";
     }
     public ProductTypeRemoveAttributeDefinitionActionImpl() {
-       
+        this.action = "removeAttributeDefinition";
     }
 
     

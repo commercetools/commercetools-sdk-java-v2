@@ -30,7 +30,7 @@ public final class DiscountCodeSetMaxApplicationsPerCustomerActionImpl implement
         this.action = "setMaxApplicationsPerCustomer";
     }
     public DiscountCodeSetMaxApplicationsPerCustomerActionImpl() {
-       
+        this.action = "setMaxApplicationsPerCustomer";
     }
 
     

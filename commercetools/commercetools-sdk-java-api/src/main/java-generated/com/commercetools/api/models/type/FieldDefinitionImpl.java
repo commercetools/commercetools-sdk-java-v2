@@ -41,7 +41,6 @@ public final class FieldDefinitionImpl implements FieldDefinition {
         this.inputHint = inputHint;
     }
     public FieldDefinitionImpl() {
-       
     }
 
     /**

@@ -34,7 +34,7 @@ public final class StateKeyReferenceImpl implements StateKeyReference {
         this.typeId = ReferenceType.findEnum("state");
     }
     public StateKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("state");
     }
 
     

@@ -35,7 +35,7 @@ public final class CartSetShippingMethodActionImpl implements CartSetShippingMet
         this.action = "setShippingMethod";
     }
     public CartSetShippingMethodActionImpl() {
-       
+        this.action = "setShippingMethod";
     }
 
     

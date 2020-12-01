@@ -31,7 +31,7 @@ public final class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturn
         this.type = "ReturnInfoAdded";
     }
     public OrderReturnInfoAddedMessagePayloadImpl() {
-       
+        this.type = "ReturnInfoAdded";
     }
 
     

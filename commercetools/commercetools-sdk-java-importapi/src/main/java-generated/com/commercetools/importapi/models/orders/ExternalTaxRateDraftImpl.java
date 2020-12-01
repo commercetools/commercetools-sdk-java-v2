@@ -42,7 +42,6 @@ public final class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft {
         this.includedInPrice = includedInPrice;
     }
     public ExternalTaxRateDraftImpl() {
-       
     }
 
     

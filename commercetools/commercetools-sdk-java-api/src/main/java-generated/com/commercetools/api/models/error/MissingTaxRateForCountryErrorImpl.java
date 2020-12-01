@@ -39,7 +39,7 @@ public final class MissingTaxRateForCountryErrorImpl implements MissingTaxRateFo
         this.code = "MissingTaxRateForCountry";
     }
     public MissingTaxRateForCountryErrorImpl() {
-       
+        this.code = "MissingTaxRateForCountry";
     }
 
     

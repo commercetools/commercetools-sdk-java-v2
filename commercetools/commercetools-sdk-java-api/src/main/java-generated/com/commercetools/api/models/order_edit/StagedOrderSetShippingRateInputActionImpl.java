@@ -31,7 +31,7 @@ public final class StagedOrderSetShippingRateInputActionImpl implements StagedOr
         this.action = "setShippingRateInput";
     }
     public StagedOrderSetShippingRateInputActionImpl() {
-       
+        this.action = "setShippingRateInput";
     }
 
     

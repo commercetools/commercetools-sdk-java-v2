@@ -31,7 +31,7 @@ public final class StateSetTransitionsActionImpl implements StateSetTransitionsA
         this.action = "setTransitions";
     }
     public StateSetTransitionsActionImpl() {
-       
+        this.action = "setTransitions";
     }
 
     

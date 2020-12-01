@@ -31,7 +31,7 @@ public final class StateChangeTypeActionImpl implements StateChangeTypeAction {
         this.action = "changeType";
     }
     public StateChangeTypeActionImpl() {
-       
+        this.action = "changeType";
     }
 
     

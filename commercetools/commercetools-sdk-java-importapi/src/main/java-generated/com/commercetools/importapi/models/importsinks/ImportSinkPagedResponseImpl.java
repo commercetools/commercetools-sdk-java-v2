@@ -39,7 +39,6 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
         this.results = results;
     }
     public ImportSinkPagedResponseImpl() {
-       
     }
 
     /**

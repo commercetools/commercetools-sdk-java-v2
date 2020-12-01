@@ -30,7 +30,7 @@ public final class InventoryEntryRemoveQuantityActionImpl implements InventoryEn
         this.action = "removeQuantity";
     }
     public InventoryEntryRemoveQuantityActionImpl() {
-       
+        this.action = "removeQuantity";
     }
 
     

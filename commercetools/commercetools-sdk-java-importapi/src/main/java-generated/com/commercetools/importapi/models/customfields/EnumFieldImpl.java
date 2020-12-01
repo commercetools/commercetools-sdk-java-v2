@@ -33,7 +33,7 @@ public final class EnumFieldImpl implements EnumField {
         this.type = "Enum";
     }
     public EnumFieldImpl() {
-       
+        this.type = "Enum";
     }
 
     /**

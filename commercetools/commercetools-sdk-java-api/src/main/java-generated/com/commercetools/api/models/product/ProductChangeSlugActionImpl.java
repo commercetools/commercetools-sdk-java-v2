@@ -34,7 +34,7 @@ public final class ProductChangeSlugActionImpl implements ProductChangeSlugActio
         this.action = "changeSlug";
     }
     public ProductChangeSlugActionImpl() {
-       
+        this.action = "changeSlug";
     }
 
     

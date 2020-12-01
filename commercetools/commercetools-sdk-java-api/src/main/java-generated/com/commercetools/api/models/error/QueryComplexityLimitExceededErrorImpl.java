@@ -30,7 +30,7 @@ public final class QueryComplexityLimitExceededErrorImpl implements QueryComplex
         this.code = "QueryComplexityLimitExceeded";
     }
     public QueryComplexityLimitExceededErrorImpl() {
-       
+        this.code = "QueryComplexityLimitExceeded";
     }
 
     

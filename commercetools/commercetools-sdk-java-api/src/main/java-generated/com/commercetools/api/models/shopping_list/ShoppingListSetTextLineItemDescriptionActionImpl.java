@@ -34,7 +34,7 @@ public final class ShoppingListSetTextLineItemDescriptionActionImpl implements S
         this.action = "setTextLineItemDescription";
     }
     public ShoppingListSetTextLineItemDescriptionActionImpl() {
-       
+        this.action = "setTextLineItemDescription";
     }
 
     

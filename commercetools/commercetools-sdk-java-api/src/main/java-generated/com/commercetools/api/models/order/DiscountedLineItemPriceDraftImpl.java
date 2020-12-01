@@ -31,7 +31,6 @@ public final class DiscountedLineItemPriceDraftImpl implements DiscountedLineIte
         this.includedDiscounts = includedDiscounts;
     }
     public DiscountedLineItemPriceDraftImpl() {
-       
     }
 
     

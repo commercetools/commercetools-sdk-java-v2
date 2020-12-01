@@ -35,7 +35,7 @@ public final class MyCustomerSetCustomTypeActionImpl implements MyCustomerSetCus
         this.action = "setCustomType";
     }
     public MyCustomerSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

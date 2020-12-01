@@ -34,7 +34,6 @@ public final class StoreUpdateActionImpl implements StoreUpdateAction {
         this.action = action;
     }
     public StoreUpdateActionImpl() {
-       
     }
 
     

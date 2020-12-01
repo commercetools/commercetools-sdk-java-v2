@@ -35,7 +35,6 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
         this.attributes = attributes;
     }
     public ProductVariantPatchImpl() {
-       
     }
 
     /**

@@ -31,7 +31,7 @@ public final class ProductPriceDiscountsSetMessagePayloadImpl implements Product
         this.type = "ProductPriceDiscountsSet";
     }
     public ProductPriceDiscountsSetMessagePayloadImpl() {
-       
+        this.type = "ProductPriceDiscountsSet";
     }
 
     

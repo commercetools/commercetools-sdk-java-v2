@@ -38,7 +38,7 @@ public final class StagedOrderAddShoppingListActionImpl implements StagedOrderAd
         this.action = "addShoppingList";
     }
     public StagedOrderAddShoppingListActionImpl() {
-       
+        this.action = "addShoppingList";
     }
 
     

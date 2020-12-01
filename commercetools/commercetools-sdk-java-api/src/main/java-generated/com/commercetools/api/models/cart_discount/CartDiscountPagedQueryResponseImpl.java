@@ -39,7 +39,6 @@ public final class CartDiscountPagedQueryResponseImpl implements CartDiscountPag
         this.results = results;
     }
     public CartDiscountPagedQueryResponseImpl() {
-       
     }
 
     

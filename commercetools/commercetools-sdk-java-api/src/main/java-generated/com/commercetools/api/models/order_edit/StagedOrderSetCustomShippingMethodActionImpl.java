@@ -42,7 +42,7 @@ public final class StagedOrderSetCustomShippingMethodActionImpl implements Stage
         this.action = "setCustomShippingMethod";
     }
     public StagedOrderSetCustomShippingMethodActionImpl() {
-       
+        this.action = "setCustomShippingMethod";
     }
 
     

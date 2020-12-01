@@ -34,7 +34,7 @@ public final class ResourceCreationErrorImpl implements ResourceCreationError {
         this.code = "ResourceCreation";
     }
     public ResourceCreationErrorImpl() {
-       
+        this.code = "ResourceCreation";
     }
 
     

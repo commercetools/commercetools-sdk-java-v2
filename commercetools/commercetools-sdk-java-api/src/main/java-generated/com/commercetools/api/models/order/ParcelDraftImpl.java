@@ -35,7 +35,6 @@ public final class ParcelDraftImpl implements ParcelDraft {
         this.items = items;
     }
     public ParcelDraftImpl() {
-       
     }
 
     

@@ -31,7 +31,7 @@ public final class OrderChangeShipmentStateActionImpl implements OrderChangeShip
         this.action = "changeShipmentState";
     }
     public OrderChangeShipmentStateActionImpl() {
-       
+        this.action = "changeShipmentState";
     }
 
     

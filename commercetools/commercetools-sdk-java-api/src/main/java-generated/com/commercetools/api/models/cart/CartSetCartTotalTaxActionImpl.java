@@ -35,7 +35,7 @@ public final class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxA
         this.action = "setCartTotalTax";
     }
     public CartSetCartTotalTaxActionImpl() {
-       
+        this.action = "setCartTotalTax";
     }
 
     

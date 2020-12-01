@@ -61,7 +61,7 @@ public final class OrderDiscountCodeAddedMessageImpl implements OrderDiscountCod
         this.type = "OrderDiscountCodeAdded";
     }
     public OrderDiscountCodeAddedMessageImpl() {
-       
+        this.type = "OrderDiscountCodeAdded";
     }
 
     

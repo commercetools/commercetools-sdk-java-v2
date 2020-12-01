@@ -30,7 +30,7 @@ public final class CategoryChangeOrderHintActionImpl implements CategoryChangeOr
         this.action = "changeOrderHint";
     }
     public CategoryChangeOrderHintActionImpl() {
-       
+        this.action = "changeOrderHint";
     }
 
     

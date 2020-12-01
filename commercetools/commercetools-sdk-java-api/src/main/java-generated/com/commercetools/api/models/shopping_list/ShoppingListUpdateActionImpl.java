@@ -49,7 +49,6 @@ public final class ShoppingListUpdateActionImpl implements ShoppingListUpdateAct
         this.action = action;
     }
     public ShoppingListUpdateActionImpl() {
-       
     }
 
     

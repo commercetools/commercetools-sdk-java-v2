@@ -40,7 +40,7 @@ public final class HighPrecisionMoneyImpl implements HighPrecisionMoney {
         this.type = MoneyType.findEnum("highPrecision");
     }
     public HighPrecisionMoneyImpl() {
-       
+        this.type = MoneyType.findEnum("highPrecision");
     }
 
     

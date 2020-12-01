@@ -31,7 +31,7 @@ public final class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSe
         this.type = "CustomerGroupSet";
     }
     public CustomerGroupSetMessagePayloadImpl() {
-       
+        this.type = "CustomerGroupSet";
     }
 
     

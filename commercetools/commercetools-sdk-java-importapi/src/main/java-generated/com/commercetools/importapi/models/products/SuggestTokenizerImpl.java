@@ -28,7 +28,6 @@ public final class SuggestTokenizerImpl implements SuggestTokenizer {
         this.type = type;
     }
     public SuggestTokenizerImpl() {
-       
     }
 
     

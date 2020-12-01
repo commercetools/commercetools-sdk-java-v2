@@ -30,7 +30,7 @@ public final class CustomerSetLocaleActionImpl implements CustomerSetLocaleActio
         this.action = "setLocale";
     }
     public CustomerSetLocaleActionImpl() {
-       
+        this.action = "setLocale";
     }
 
     

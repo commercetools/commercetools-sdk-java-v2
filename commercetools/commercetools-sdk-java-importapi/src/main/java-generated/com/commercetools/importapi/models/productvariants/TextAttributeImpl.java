@@ -36,7 +36,7 @@ public final class TextAttributeImpl implements TextAttribute {
         this.type = "text";
     }
     public TextAttributeImpl() {
-       
+        this.type = "text";
     }
 
     /**

@@ -51,7 +51,6 @@ public final class AttributeDefinitionImpl implements AttributeDefinition {
         this.isSearchable = isSearchable;
     }
     public AttributeDefinitionImpl() {
-       
     }
 
     

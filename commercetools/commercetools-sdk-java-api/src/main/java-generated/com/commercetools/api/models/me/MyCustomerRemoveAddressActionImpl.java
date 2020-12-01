@@ -33,7 +33,7 @@ public final class MyCustomerRemoveAddressActionImpl implements MyCustomerRemove
         this.action = "removeAddress";
     }
     public MyCustomerRemoveAddressActionImpl() {
-       
+        this.action = "removeAddress";
     }
 
     

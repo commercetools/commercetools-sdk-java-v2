@@ -31,7 +31,7 @@ public final class CategoryChangeParentActionImpl implements CategoryChangeParen
         this.action = "changeParent";
     }
     public CategoryChangeParentActionImpl() {
-       
+        this.action = "changeParent";
     }
 
     

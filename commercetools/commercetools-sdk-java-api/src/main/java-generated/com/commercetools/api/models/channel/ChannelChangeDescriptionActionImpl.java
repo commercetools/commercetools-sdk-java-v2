@@ -31,7 +31,7 @@ public final class ChannelChangeDescriptionActionImpl implements ChannelChangeDe
         this.action = "changeDescription";
     }
     public ChannelChangeDescriptionActionImpl() {
-       
+        this.action = "changeDescription";
     }
 
     

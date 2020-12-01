@@ -38,7 +38,7 @@ public final class OrderSetCustomLineItemCustomTypeActionImpl implements OrderSe
         this.action = "setCustomLineItemCustomType";
     }
     public OrderSetCustomLineItemCustomTypeActionImpl() {
-       
+        this.action = "setCustomLineItemCustomType";
     }
 
     

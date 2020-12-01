@@ -34,7 +34,7 @@ public final class ReferenceSetFieldImpl implements ReferenceSetField {
         this.type = "ReferenceSet";
     }
     public ReferenceSetFieldImpl() {
-       
+        this.type = "ReferenceSet";
     }
 
     /**

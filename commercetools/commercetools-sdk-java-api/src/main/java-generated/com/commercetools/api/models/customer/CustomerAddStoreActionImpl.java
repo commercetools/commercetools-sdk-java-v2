@@ -31,7 +31,7 @@ public final class CustomerAddStoreActionImpl implements CustomerAddStoreAction 
         this.action = "addStore";
     }
     public CustomerAddStoreActionImpl() {
-       
+        this.action = "addStore";
     }
 
     

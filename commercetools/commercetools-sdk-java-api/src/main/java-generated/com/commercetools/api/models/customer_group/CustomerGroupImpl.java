@@ -55,7 +55,6 @@ public final class CustomerGroupImpl implements CustomerGroup {
         this.custom = custom;
     }
     public CustomerGroupImpl() {
-       
     }
 
     /**

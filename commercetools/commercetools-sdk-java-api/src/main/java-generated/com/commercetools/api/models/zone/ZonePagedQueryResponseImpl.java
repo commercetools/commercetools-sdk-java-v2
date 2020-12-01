@@ -39,7 +39,6 @@ public final class ZonePagedQueryResponseImpl implements ZonePagedQueryResponse 
         this.results = results;
     }
     public ZonePagedQueryResponseImpl() {
-       
     }
 
     

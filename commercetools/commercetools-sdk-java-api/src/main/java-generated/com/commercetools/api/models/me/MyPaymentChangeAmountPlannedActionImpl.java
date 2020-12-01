@@ -31,7 +31,7 @@ public final class MyPaymentChangeAmountPlannedActionImpl implements MyPaymentCh
         this.action = "changeAmountPlanned";
     }
     public MyPaymentChangeAmountPlannedActionImpl() {
-       
+        this.action = "changeAmountPlanned";
     }
 
     

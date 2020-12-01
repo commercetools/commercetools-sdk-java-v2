@@ -31,7 +31,7 @@ public final class SubscriptionSetMessagesActionImpl implements SubscriptionSetM
         this.action = "setMessages";
     }
     public SubscriptionSetMessagesActionImpl() {
-       
+        this.action = "setMessages";
     }
 
     

@@ -45,7 +45,7 @@ public final class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsA
         this.action = "setAssetTags";
     }
     public ProductSetAssetTagsActionImpl() {
-       
+        this.action = "setAssetTags";
     }
 
     

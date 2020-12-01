@@ -70,7 +70,7 @@ public final class StagedOrderAddLineItemActionImpl implements StagedOrderAddLin
         this.action = "addLineItem";
     }
     public StagedOrderAddLineItemActionImpl() {
-       
+        this.action = "addLineItem";
     }
 
     

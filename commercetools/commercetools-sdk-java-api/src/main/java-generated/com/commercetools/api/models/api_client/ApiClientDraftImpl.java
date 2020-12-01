@@ -33,7 +33,6 @@ public final class ApiClientDraftImpl implements ApiClientDraft {
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
     }
     public ApiClientDraftImpl() {
-       
     }
 
     

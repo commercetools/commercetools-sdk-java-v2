@@ -64,7 +64,7 @@ public final class ProductRemovedFromCategoryMessageImpl implements ProductRemov
         this.type = "ProductRemovedFromCategory";
     }
     public ProductRemovedFromCategoryMessageImpl() {
-       
+        this.type = "ProductRemovedFromCategory";
     }
 
     

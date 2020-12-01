@@ -63,7 +63,7 @@ public final class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentSt
         this.type = "PaymentStatusInterfaceCodeSet";
     }
     public PaymentStatusInterfaceCodeSetMessageImpl() {
-       
+        this.type = "PaymentStatusInterfaceCodeSet";
     }
 
     

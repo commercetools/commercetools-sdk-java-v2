@@ -42,7 +42,6 @@ public final class DeliveryImpl implements Delivery {
         this.address = address;
     }
     public DeliveryImpl() {
-       
     }
 
     

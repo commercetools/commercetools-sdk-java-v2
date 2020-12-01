@@ -34,7 +34,7 @@ public final class ShoppingListChangeTextLineItemNameActionImpl implements Shopp
         this.action = "changeTextLineItemName";
     }
     public ShoppingListChangeTextLineItemNameActionImpl() {
-       
+        this.action = "changeTextLineItemName";
     }
 
     

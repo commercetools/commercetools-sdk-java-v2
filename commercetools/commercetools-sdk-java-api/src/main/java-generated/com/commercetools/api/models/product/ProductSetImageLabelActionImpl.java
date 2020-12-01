@@ -42,7 +42,7 @@ public final class ProductSetImageLabelActionImpl implements ProductSetImageLabe
         this.action = "setImageLabel";
     }
     public ProductSetImageLabelActionImpl() {
-       
+        this.action = "setImageLabel";
     }
 
     

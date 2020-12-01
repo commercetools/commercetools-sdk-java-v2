@@ -64,7 +64,6 @@ public final class ProjectImpl implements Project {
         this.carts = carts;
     }
     public ProjectImpl() {
-       
     }
 
     /**

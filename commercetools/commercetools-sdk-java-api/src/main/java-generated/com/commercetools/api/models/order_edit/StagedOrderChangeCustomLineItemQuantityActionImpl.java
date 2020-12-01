@@ -33,7 +33,7 @@ public final class StagedOrderChangeCustomLineItemQuantityActionImpl implements 
         this.action = "changeCustomLineItemQuantity";
     }
     public StagedOrderChangeCustomLineItemQuantityActionImpl() {
-       
+        this.action = "changeCustomLineItemQuantity";
     }
 
     

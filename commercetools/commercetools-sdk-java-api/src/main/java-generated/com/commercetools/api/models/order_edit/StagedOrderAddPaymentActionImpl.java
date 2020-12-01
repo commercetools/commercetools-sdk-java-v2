@@ -31,7 +31,7 @@ public final class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaym
         this.action = "addPayment";
     }
     public StagedOrderAddPaymentActionImpl() {
-       
+        this.action = "addPayment";
     }
 
     

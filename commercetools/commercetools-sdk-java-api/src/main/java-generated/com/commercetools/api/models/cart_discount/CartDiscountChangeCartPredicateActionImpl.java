@@ -30,7 +30,7 @@ public final class CartDiscountChangeCartPredicateActionImpl implements CartDisc
         this.action = "changeCartPredicate";
     }
     public CartDiscountChangeCartPredicateActionImpl() {
-       
+        this.action = "changeCartPredicate";
     }
 
     

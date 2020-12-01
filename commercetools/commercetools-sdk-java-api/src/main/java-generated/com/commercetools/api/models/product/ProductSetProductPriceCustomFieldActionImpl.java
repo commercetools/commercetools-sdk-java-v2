@@ -40,7 +40,7 @@ public final class ProductSetProductPriceCustomFieldActionImpl implements Produc
         this.action = "setProductPriceCustomField";
     }
     public ProductSetProductPriceCustomFieldActionImpl() {
-       
+        this.action = "setProductPriceCustomField";
     }
 
     

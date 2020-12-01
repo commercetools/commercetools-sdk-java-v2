@@ -39,7 +39,6 @@ public final class ProductPagedQueryResponseImpl implements ProductPagedQueryRes
         this.results = results;
     }
     public ProductPagedQueryResponseImpl() {
-       
     }
 
     

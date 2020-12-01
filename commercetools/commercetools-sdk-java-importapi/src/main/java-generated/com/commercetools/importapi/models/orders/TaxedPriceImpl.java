@@ -34,7 +34,6 @@ public final class TaxedPriceImpl implements TaxedPrice {
         this.taxPortions = taxPortions;
     }
     public TaxedPriceImpl() {
-       
     }
 
     /**

@@ -34,7 +34,7 @@ public final class StagedOrderSetCustomFieldActionImpl implements StagedOrderSet
         this.action = "setCustomField";
     }
     public StagedOrderSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

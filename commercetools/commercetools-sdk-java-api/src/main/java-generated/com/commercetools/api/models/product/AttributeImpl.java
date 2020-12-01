@@ -30,7 +30,6 @@ public final class AttributeImpl implements Attribute {
         this.value = value;
     }
     public AttributeImpl() {
-       
     }
 
     

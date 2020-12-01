@@ -37,7 +37,7 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
         this.action = "addToCategory";
     }
     public ProductAddToCategoryActionImpl() {
-       
+        this.action = "addToCategory";
     }
 
     

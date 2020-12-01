@@ -44,7 +44,7 @@ public final class OrderTransitionLineItemStateActionImpl implements OrderTransi
         this.action = "transitionLineItemState";
     }
     public OrderTransitionLineItemStateActionImpl() {
-       
+        this.action = "transitionLineItemState";
     }
 
     

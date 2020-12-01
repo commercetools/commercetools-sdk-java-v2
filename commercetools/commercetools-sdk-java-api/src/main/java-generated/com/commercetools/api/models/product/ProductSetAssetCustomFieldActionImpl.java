@@ -49,7 +49,7 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
         this.action = "setAssetCustomField";
     }
     public ProductSetAssetCustomFieldActionImpl() {
-       
+        this.action = "setAssetCustomField";
     }
 
     

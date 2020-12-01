@@ -30,7 +30,7 @@ public final class InternalConstraintViolatedErrorImpl implements InternalConstr
         this.code = "InternalConstraintViolated";
     }
     public InternalConstraintViolatedErrorImpl() {
-       
+        this.code = "InternalConstraintViolated";
     }
 
     

@@ -61,7 +61,6 @@ public final class ProductDataImpl implements ProductData {
         this.searchKeywords = searchKeywords;
     }
     public ProductDataImpl() {
-       
     }
 
     

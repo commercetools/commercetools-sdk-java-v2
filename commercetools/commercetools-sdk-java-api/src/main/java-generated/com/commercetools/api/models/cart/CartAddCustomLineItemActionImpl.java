@@ -53,7 +53,7 @@ public final class CartAddCustomLineItemActionImpl implements CartAddCustomLineI
         this.action = "addCustomLineItem";
     }
     public CartAddCustomLineItemActionImpl() {
-       
+        this.action = "addCustomLineItem";
     }
 
     

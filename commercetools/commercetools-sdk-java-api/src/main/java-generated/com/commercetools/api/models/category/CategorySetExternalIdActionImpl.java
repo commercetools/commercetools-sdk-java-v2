@@ -30,7 +30,7 @@ public final class CategorySetExternalIdActionImpl implements CategorySetExterna
         this.action = "setExternalId";
     }
     public CategorySetExternalIdActionImpl() {
-       
+        this.action = "setExternalId";
     }
 
     

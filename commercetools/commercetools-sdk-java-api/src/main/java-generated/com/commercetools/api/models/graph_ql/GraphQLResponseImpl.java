@@ -31,7 +31,6 @@ public final class GraphQLResponseImpl implements GraphQLResponse {
         this.errors = errors;
     }
     public GraphQLResponseImpl() {
-       
     }
 
     

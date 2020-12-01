@@ -34,7 +34,7 @@ public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
         this.code = "ReferenceExists";
     }
     public ReferenceExistsErrorImpl() {
-       
+        this.code = "ReferenceExists";
     }
 
     

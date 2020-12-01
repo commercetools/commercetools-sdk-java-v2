@@ -47,7 +47,6 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
         this.meta = meta;
     }
     public PagedQueryResponseImpl() {
-       
     }
 
     

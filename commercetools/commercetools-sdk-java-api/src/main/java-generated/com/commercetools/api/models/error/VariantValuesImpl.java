@@ -34,7 +34,6 @@ public final class VariantValuesImpl implements VariantValues {
         this.attributes = attributes;
     }
     public VariantValuesImpl() {
-       
     }
 
     

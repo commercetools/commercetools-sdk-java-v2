@@ -31,7 +31,7 @@ public final class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbs
         this.type = "absolute";
     }
     public CartDiscountValueAbsoluteImpl() {
-       
+        this.type = "absolute";
     }
 
     

@@ -30,7 +30,7 @@ public final class ProductDiscountSetKeyActionImpl implements ProductDiscountSet
         this.action = "setKey";
     }
     public ProductDiscountSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

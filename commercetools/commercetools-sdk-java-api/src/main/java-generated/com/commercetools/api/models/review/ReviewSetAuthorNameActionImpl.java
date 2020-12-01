@@ -30,7 +30,7 @@ public final class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameA
         this.action = "setAuthorName";
     }
     public ReviewSetAuthorNameActionImpl() {
-       
+        this.action = "setAuthorName";
     }
 
     

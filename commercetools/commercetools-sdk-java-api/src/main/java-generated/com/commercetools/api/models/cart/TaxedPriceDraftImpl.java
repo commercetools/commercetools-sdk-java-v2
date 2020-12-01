@@ -34,7 +34,6 @@ public final class TaxedPriceDraftImpl implements TaxedPriceDraft {
         this.taxPortions = taxPortions;
     }
     public TaxedPriceDraftImpl() {
-       
     }
 
     

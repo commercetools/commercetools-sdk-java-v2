@@ -67,7 +67,6 @@ public final class OrderUpdateActionImpl implements OrderUpdateAction {
         this.action = action;
     }
     public OrderUpdateActionImpl() {
-       
     }
 
     

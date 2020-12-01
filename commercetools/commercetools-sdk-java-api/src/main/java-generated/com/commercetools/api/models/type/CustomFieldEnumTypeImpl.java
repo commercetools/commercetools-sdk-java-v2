@@ -31,7 +31,7 @@ public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
         this.name = "Enum";
     }
     public CustomFieldEnumTypeImpl() {
-       
+        this.name = "Enum";
     }
 
     

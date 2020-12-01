@@ -61,7 +61,7 @@ public final class PaymentInteractionAddedMessageImpl implements PaymentInteract
         this.type = "PaymentInteractionAdded";
     }
     public PaymentInteractionAddedMessageImpl() {
-       
+        this.type = "PaymentInteractionAdded";
     }
 
     

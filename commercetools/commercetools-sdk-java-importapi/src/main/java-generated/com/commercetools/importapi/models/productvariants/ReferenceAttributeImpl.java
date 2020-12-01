@@ -37,7 +37,7 @@ public final class ReferenceAttributeImpl implements ReferenceAttribute {
         this.type = "reference";
     }
     public ReferenceAttributeImpl() {
-       
+        this.type = "reference";
     }
 
     /**

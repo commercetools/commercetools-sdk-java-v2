@@ -68,7 +68,6 @@ public final class MyCartDraftImpl implements MyCartDraft {
         this.itemShippingAddresses = itemShippingAddresses;
     }
     public MyCartDraftImpl() {
-       
     }
 
     /**

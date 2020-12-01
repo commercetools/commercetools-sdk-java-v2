@@ -30,7 +30,7 @@ public final class AzureServiceBusDestinationImpl implements AzureServiceBusDest
         this.type = "AzureServiceBus";
     }
     public AzureServiceBusDestinationImpl() {
-       
+        this.type = "AzureServiceBus";
     }
 
     

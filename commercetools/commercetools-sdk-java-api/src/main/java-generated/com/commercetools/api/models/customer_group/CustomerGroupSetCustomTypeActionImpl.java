@@ -35,7 +35,7 @@ public final class CustomerGroupSetCustomTypeActionImpl implements CustomerGroup
         this.action = "setCustomType";
     }
     public CustomerGroupSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

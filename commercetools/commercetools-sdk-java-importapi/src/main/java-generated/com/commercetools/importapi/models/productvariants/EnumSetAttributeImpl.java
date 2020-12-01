@@ -37,7 +37,7 @@ public final class EnumSetAttributeImpl implements EnumSetAttribute {
         this.type = "enum-set";
     }
     public EnumSetAttributeImpl() {
-       
+        this.type = "enum-set";
     }
 
     /**

@@ -70,7 +70,7 @@ public final class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage 
         this.type = "ReviewRatingSet";
     }
     public ReviewRatingSetMessageImpl() {
-       
+        this.type = "ReviewRatingSet";
     }
 
     

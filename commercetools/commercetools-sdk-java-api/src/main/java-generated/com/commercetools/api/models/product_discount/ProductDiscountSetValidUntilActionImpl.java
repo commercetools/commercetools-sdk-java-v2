@@ -31,7 +31,7 @@ public final class ProductDiscountSetValidUntilActionImpl implements ProductDisc
         this.action = "setValidUntil";
     }
     public ProductDiscountSetValidUntilActionImpl() {
-       
+        this.action = "setValidUntil";
     }
 
     

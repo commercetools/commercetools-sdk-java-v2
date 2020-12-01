@@ -34,7 +34,6 @@ public final class ReturnInfoImpl implements ReturnInfo {
         this.returnDate = returnDate;
     }
     public ReturnInfoImpl() {
-       
     }
 
     

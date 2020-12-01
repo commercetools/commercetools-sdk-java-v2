@@ -30,7 +30,7 @@ public final class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedEr
         this.code = "ExternalOAuthFailed";
     }
     public ExternalOAuthFailedErrorImpl() {
-       
+        this.code = "ExternalOAuthFailed";
     }
 
     

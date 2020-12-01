@@ -30,7 +30,7 @@ public final class DiscountCodeChangeGroupsActionImpl implements DiscountCodeCha
         this.action = "changeGroups";
     }
     public DiscountCodeChangeGroupsActionImpl() {
-       
+        this.action = "changeGroups";
     }
 
     

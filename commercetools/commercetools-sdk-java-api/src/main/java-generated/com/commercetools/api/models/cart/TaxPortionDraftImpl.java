@@ -33,7 +33,6 @@ public final class TaxPortionDraftImpl implements TaxPortionDraft {
         this.amount = amount;
     }
     public TaxPortionDraftImpl() {
-       
     }
 
     

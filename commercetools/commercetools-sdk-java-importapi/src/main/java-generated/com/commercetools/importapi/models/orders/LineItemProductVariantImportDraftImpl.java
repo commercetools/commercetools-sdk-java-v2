@@ -42,7 +42,6 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
         this.images = images;
     }
     public LineItemProductVariantImportDraftImpl() {
-       
     }
 
     /**

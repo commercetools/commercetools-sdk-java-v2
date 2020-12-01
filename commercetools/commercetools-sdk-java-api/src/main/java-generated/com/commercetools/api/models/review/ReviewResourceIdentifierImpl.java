@@ -34,7 +34,7 @@ public final class ReviewResourceIdentifierImpl implements ReviewResourceIdentif
         this.typeId = ReferenceTypeId.findEnum("review");
     }
     public ReviewResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("review");
     }
 
     

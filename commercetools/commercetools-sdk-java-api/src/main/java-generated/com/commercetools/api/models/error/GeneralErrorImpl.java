@@ -30,7 +30,7 @@ public final class GeneralErrorImpl implements GeneralError {
         this.code = "General";
     }
     public GeneralErrorImpl() {
-       
+        this.code = "General";
     }
 
     

@@ -30,7 +30,7 @@ public final class TypeChangeFieldDefinitionOrderActionImpl implements TypeChang
         this.action = "changeFieldDefinitionOrder";
     }
     public TypeChangeFieldDefinitionOrderActionImpl() {
-       
+        this.action = "changeFieldDefinitionOrder";
     }
 
     

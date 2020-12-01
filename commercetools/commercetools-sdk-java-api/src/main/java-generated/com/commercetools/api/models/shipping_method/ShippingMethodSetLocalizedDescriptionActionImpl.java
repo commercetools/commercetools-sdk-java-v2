@@ -30,7 +30,7 @@ public final class ShippingMethodSetLocalizedDescriptionActionImpl implements Sh
         this.action = "setLocalizedDescription";
     }
     public ShippingMethodSetLocalizedDescriptionActionImpl() {
-       
+        this.action = "setLocalizedDescription";
     }
 
     

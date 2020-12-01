@@ -30,7 +30,6 @@ public final class PayloadNotIncludedImpl implements PayloadNotIncluded {
         this.payloadType = payloadType;
     }
     public PayloadNotIncludedImpl() {
-       
     }
 
     

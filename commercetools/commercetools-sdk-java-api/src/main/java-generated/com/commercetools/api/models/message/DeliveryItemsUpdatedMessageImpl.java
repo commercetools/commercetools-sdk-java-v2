@@ -67,7 +67,7 @@ public final class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdat
         this.type = "DeliveryItemsUpdated";
     }
     public DeliveryItemsUpdatedMessageImpl() {
-       
+        this.type = "DeliveryItemsUpdated";
     }
 
     

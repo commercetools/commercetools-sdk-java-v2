@@ -30,7 +30,7 @@ public final class StateChangeKeyActionImpl implements StateChangeKeyAction {
         this.action = "changeKey";
     }
     public StateChangeKeyActionImpl() {
-       
+        this.action = "changeKey";
     }
 
     

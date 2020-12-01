@@ -79,7 +79,6 @@ public final class ProductDraftImpl implements ProductDraft {
         this.publish = publish;
     }
     public ProductDraftImpl() {
-       
     }
 
     /**

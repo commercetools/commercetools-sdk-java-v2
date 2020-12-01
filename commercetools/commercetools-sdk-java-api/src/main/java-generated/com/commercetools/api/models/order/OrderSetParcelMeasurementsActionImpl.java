@@ -34,7 +34,7 @@ public final class OrderSetParcelMeasurementsActionImpl implements OrderSetParce
         this.action = "setParcelMeasurements";
     }
     public OrderSetParcelMeasurementsActionImpl() {
-       
+        this.action = "setParcelMeasurements";
     }
 
     

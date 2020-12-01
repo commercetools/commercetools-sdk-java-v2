@@ -37,7 +37,7 @@ public final class LocalizableEnumAttributeImpl implements LocalizableEnumAttrib
         this.type = "lenum";
     }
     public LocalizableEnumAttributeImpl() {
-       
+        this.type = "lenum";
     }
 
     /**

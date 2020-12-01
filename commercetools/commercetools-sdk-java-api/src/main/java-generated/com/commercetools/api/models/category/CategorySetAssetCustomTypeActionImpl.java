@@ -41,7 +41,7 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
         this.action = "setAssetCustomType";
     }
     public CategorySetAssetCustomTypeActionImpl() {
-       
+        this.action = "setAssetCustomType";
     }
 
     

@@ -30,7 +30,7 @@ public final class CustomerSetCustomerNumberActionImpl implements CustomerSetCus
         this.action = "setCustomerNumber";
     }
     public CustomerSetCustomerNumberActionImpl() {
-       
+        this.action = "setCustomerNumber";
     }
 
     

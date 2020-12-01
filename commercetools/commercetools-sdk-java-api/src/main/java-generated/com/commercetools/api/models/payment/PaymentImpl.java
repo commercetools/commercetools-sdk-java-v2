@@ -96,7 +96,6 @@ public final class PaymentImpl implements Payment {
         this.key = key;
     }
     public PaymentImpl() {
-       
     }
 
     

@@ -68,7 +68,6 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
         this.shippingDetails = shippingDetails;
     }
     public CustomLineItemDraftImpl() {
-       
     }
 
     

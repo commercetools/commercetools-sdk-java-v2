@@ -61,7 +61,7 @@ public final class OrderCreatedMessageImpl implements OrderCreatedMessage {
         this.type = "OrderCreated";
     }
     public OrderCreatedMessageImpl() {
-       
+        this.type = "OrderCreated";
     }
 
     

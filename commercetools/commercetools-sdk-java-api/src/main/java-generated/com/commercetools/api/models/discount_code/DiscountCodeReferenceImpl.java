@@ -35,7 +35,7 @@ public final class DiscountCodeReferenceImpl implements DiscountCodeReference {
         this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
     public DiscountCodeReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
 
     

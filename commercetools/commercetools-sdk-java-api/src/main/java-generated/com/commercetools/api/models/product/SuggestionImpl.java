@@ -27,7 +27,6 @@ public final class SuggestionImpl implements Suggestion {
         this.text = text;
     }
     public SuggestionImpl() {
-       
     }
 
     /**

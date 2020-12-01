@@ -37,7 +37,7 @@ public final class ProductSetAttributeInAllVariantsActionImpl implements Product
         this.action = "setAttributeInAllVariants";
     }
     public ProductSetAttributeInAllVariantsActionImpl() {
-       
+        this.action = "setAttributeInAllVariants";
     }
 
     

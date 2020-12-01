@@ -31,7 +31,7 @@ public final class PaymentSetAmountPaidActionImpl implements PaymentSetAmountPai
         this.action = "setAmountPaid";
     }
     public PaymentSetAmountPaidActionImpl() {
-       
+        this.action = "setAmountPaid";
     }
 
     

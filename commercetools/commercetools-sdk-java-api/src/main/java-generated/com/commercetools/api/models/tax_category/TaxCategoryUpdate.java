@@ -19,7 +19,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = TaxCategoryUpdateImpl.class)
-public interface TaxCategoryUpdate  {
+public interface TaxCategoryUpdate extends com.commercetools.api.models.ResourceUpdate<TaxCategoryUpdate, TaxCategoryUpdateAction> {
 
     
     @NotNull

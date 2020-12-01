@@ -75,7 +75,6 @@ public final class ChannelImpl implements Channel {
         this.geoLocation = geoLocation;
     }
     public ChannelImpl() {
-       
     }
 
     /**

@@ -31,7 +31,7 @@ public final class DiscountCodeSetValidUntilActionImpl implements DiscountCodeSe
         this.action = "setValidUntil";
     }
     public DiscountCodeSetValidUntilActionImpl() {
-       
+        this.action = "setValidUntil";
     }
 
     

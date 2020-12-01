@@ -37,7 +37,7 @@ public final class MyShoppingListSetLineItemCustomFieldActionImpl implements MyS
         this.action = "setLineItemCustomField";
     }
     public MyShoppingListSetLineItemCustomFieldActionImpl() {
-       
+        this.action = "setLineItemCustomField";
     }
 
     

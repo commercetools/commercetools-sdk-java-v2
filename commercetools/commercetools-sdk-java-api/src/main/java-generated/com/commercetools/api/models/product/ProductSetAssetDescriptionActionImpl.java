@@ -46,7 +46,7 @@ public final class ProductSetAssetDescriptionActionImpl implements ProductSetAss
         this.action = "setAssetDescription";
     }
     public ProductSetAssetDescriptionActionImpl() {
-       
+        this.action = "setAssetDescription";
     }
 
     

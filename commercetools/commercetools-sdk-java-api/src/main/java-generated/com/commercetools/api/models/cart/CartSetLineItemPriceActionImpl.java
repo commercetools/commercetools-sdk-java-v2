@@ -34,7 +34,7 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
         this.action = "setLineItemPrice";
     }
     public CartSetLineItemPriceActionImpl() {
-       
+        this.action = "setLineItemPrice";
     }
 
     

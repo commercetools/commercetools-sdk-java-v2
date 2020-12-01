@@ -31,7 +31,7 @@ public final class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMes
         this.type = "PaymentCreated";
     }
     public PaymentCreatedMessagePayloadImpl() {
-       
+        this.type = "PaymentCreated";
     }
 
     

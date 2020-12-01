@@ -30,7 +30,7 @@ public final class ZoneChangeNameActionImpl implements ZoneChangeNameAction {
         this.action = "changeName";
     }
     public ZoneChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

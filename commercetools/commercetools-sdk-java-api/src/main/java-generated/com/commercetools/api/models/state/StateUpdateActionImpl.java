@@ -35,7 +35,6 @@ public final class StateUpdateActionImpl implements StateUpdateAction {
         this.action = action;
     }
     public StateUpdateActionImpl() {
-       
     }
 
     

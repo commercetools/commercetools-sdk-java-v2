@@ -30,7 +30,7 @@ public final class MyShoppingListSetDeleteDaysAfterLastModificationActionImpl im
         this.action = "setDeleteDaysAfterLastModification";
     }
     public MyShoppingListSetDeleteDaysAfterLastModificationActionImpl() {
-       
+        this.action = "setDeleteDaysAfterLastModification";
     }
 
     

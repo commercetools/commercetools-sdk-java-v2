@@ -33,7 +33,6 @@ public final class FacetResultTermImpl implements FacetResultTerm {
         this.productCount = productCount;
     }
     public FacetResultTermImpl() {
-       
     }
 
     

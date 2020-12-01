@@ -27,7 +27,6 @@ public final class CartsConfigurationImpl implements CartsConfiguration {
         this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
     }
     public CartsConfigurationImpl() {
-       
     }
 
     /**

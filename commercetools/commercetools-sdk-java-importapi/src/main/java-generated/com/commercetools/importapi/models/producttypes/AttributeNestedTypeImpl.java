@@ -31,7 +31,7 @@ public final class AttributeNestedTypeImpl implements AttributeNestedType {
         this.name = "nested";
     }
     public AttributeNestedTypeImpl() {
-       
+        this.name = "nested";
     }
 
     

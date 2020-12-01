@@ -35,7 +35,7 @@ public final class OrderEditReferenceImpl implements OrderEditReference {
         this.typeId = ReferenceTypeId.findEnum("order-edit");
     }
     public OrderEditReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("order-edit");
     }
 
     

@@ -34,7 +34,7 @@ public final class PaymentStatusStateTransitionMessagePayloadImpl implements Pay
         this.type = "PaymentStatusStateTransition";
     }
     public PaymentStatusStateTransitionMessagePayloadImpl() {
-       
+        this.type = "PaymentStatusStateTransition";
     }
 
     

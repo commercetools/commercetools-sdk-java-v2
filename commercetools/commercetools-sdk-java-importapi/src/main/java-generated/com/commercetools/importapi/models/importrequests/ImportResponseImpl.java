@@ -31,7 +31,6 @@ public final class ImportResponseImpl implements ImportResponse {
         this.operationStatus = operationStatus;
     }
     public ImportResponseImpl() {
-       
     }
 
     

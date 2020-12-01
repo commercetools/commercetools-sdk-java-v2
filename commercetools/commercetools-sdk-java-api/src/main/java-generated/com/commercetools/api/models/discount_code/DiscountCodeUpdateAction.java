@@ -52,7 +52,7 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public interface DiscountCodeUpdateAction  {
+public interface DiscountCodeUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<DiscountCodeUpdateAction> {
 
     
     @NotNull

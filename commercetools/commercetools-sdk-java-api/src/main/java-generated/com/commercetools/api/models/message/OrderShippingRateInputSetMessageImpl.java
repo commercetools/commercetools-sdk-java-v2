@@ -64,7 +64,7 @@ public final class OrderShippingRateInputSetMessageImpl implements OrderShipping
         this.type = "OrderShippingRateInputSet";
     }
     public OrderShippingRateInputSetMessageImpl() {
-       
+        this.type = "OrderShippingRateInputSet";
     }
 
     

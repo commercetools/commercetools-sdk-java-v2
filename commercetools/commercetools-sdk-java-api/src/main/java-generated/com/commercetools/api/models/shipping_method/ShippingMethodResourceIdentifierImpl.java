@@ -34,7 +34,7 @@ public final class ShippingMethodResourceIdentifierImpl implements ShippingMetho
         this.typeId = ReferenceTypeId.findEnum("shipping-method");
     }
     public ShippingMethodResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("shipping-method");
     }
 
     

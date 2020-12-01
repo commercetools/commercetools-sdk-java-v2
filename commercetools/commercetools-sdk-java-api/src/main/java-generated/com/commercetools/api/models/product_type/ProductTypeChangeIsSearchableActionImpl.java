@@ -33,7 +33,7 @@ public final class ProductTypeChangeIsSearchableActionImpl implements ProductTyp
         this.action = "changeIsSearchable";
     }
     public ProductTypeChangeIsSearchableActionImpl() {
-       
+        this.action = "changeIsSearchable";
     }
 
     

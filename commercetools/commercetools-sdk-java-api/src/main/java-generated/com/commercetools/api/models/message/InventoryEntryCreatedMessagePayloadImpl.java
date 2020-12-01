@@ -31,7 +31,7 @@ public final class InventoryEntryCreatedMessagePayloadImpl implements InventoryE
         this.type = "InventoryEntryCreated";
     }
     public InventoryEntryCreatedMessagePayloadImpl() {
-       
+        this.type = "InventoryEntryCreated";
     }
 
     

@@ -37,7 +37,7 @@ public final class LocalizableTextSetAttributeImpl implements LocalizableTextSet
         this.type = "ltext-set";
     }
     public LocalizableTextSetAttributeImpl() {
-       
+        this.type = "ltext-set";
     }
 
     /**

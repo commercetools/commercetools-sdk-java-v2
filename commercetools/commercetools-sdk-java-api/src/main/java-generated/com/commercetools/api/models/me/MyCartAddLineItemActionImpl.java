@@ -70,7 +70,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
         this.action = "addLineItem";
     }
     public MyCartAddLineItemActionImpl() {
-       
+        this.action = "addLineItem";
     }
 
     

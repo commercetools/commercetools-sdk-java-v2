@@ -37,7 +37,7 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
         this.action = "setDiscountedPrice";
     }
     public ProductSetDiscountedPriceActionImpl() {
-       
+        this.action = "setDiscountedPrice";
     }
 
     

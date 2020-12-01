@@ -34,7 +34,7 @@ public final class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCu
         this.action = "setCustomLineItemTaxAmount";
     }
     public CartSetCustomLineItemTaxAmountActionImpl() {
-       
+        this.action = "setCustomLineItemTaxAmount";
     }
 
     

@@ -31,7 +31,6 @@ public final class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft 
         this.taxRate = taxRate;
     }
     public ExternalTaxAmountDraftImpl() {
-       
     }
 
     /**

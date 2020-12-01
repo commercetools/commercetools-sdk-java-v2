@@ -41,7 +41,7 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
         this.code = "DuplicateField";
     }
     public DuplicateFieldErrorImpl() {
-       
+        this.code = "DuplicateField";
     }
 
     

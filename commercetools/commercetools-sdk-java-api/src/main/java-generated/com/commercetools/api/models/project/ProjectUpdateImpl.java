@@ -30,7 +30,6 @@ public final class ProjectUpdateImpl implements ProjectUpdate {
         this.actions = actions;
     }
     public ProjectUpdateImpl() {
-       
     }
 
     

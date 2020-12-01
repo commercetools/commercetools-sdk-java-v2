@@ -31,7 +31,7 @@ public final class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessa
         this.type = "ReviewCreated";
     }
     public ReviewCreatedMessagePayloadImpl() {
-       
+        this.type = "ReviewCreated";
     }
 
     

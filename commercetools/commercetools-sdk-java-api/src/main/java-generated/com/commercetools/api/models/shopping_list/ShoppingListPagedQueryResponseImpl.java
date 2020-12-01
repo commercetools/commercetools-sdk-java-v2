@@ -39,7 +39,6 @@ public final class ShoppingListPagedQueryResponseImpl implements ShoppingListPag
         this.results = results;
     }
     public ShoppingListPagedQueryResponseImpl() {
-       
     }
 
     

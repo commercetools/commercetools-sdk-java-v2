@@ -30,7 +30,7 @@ public final class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAd
         this.action = "addDiscountCode";
     }
     public StagedOrderAddDiscountCodeActionImpl() {
-       
+        this.action = "addDiscountCode";
     }
 
     

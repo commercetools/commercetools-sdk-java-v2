@@ -64,7 +64,7 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
         this.type = "OrderStateTransition";
     }
     public OrderStateTransitionMessageImpl() {
-       
+        this.type = "OrderStateTransition";
     }
 
     

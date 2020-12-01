@@ -46,7 +46,7 @@ public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDeliver
         this.notificationType = "ResourceUpdated";
     }
     public ResourceUpdatedDeliveryImpl() {
-       
+        this.notificationType = "ResourceUpdated";
     }
 
     

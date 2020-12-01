@@ -42,7 +42,6 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
         this.format = format;
     }
     public SubscriptionDraftImpl() {
-       
     }
 
     

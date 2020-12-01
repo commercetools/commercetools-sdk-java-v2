@@ -31,7 +31,6 @@ public final class CustomFieldsDraftImpl implements CustomFieldsDraft {
         this.fields = fields;
     }
     public CustomFieldsDraftImpl() {
-       
     }
 
     /**

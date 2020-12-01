@@ -34,7 +34,7 @@ public final class CategoryKeyReferenceImpl implements CategoryKeyReference {
         this.typeId = ReferenceType.findEnum("category");
     }
     public CategoryKeyReferenceImpl() {
-       
+        this.typeId = ReferenceType.findEnum("category");
     }
 
     

@@ -35,7 +35,7 @@ public final class ProductDiscountReferenceImpl implements ProductDiscountRefere
         this.typeId = ReferenceTypeId.findEnum("product-discount");
     }
     public ProductDiscountReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("product-discount");
     }
 
     

@@ -30,7 +30,7 @@ public final class StagedOrderRemoveParcelFromDeliveryActionImpl implements Stag
         this.action = "removeParcelFromDelivery";
     }
     public StagedOrderRemoveParcelFromDeliveryActionImpl() {
-       
+        this.action = "removeParcelFromDelivery";
     }
 
     

@@ -38,7 +38,7 @@ public final class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpd
         this.action = "updateSyncInfo";
     }
     public StagedOrderUpdateSyncInfoActionImpl() {
-       
+        this.action = "updateSyncInfo";
     }
 
     

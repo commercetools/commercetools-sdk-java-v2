@@ -60,7 +60,6 @@ public final class QueryPriceImpl implements QueryPrice {
         this.tiers = tiers;
     }
     public QueryPriceImpl() {
-       
     }
 
     

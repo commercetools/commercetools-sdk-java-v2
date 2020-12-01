@@ -34,7 +34,7 @@ public final class PaymentChangeTransactionStateActionImpl implements PaymentCha
         this.action = "changeTransactionState";
     }
     public PaymentChangeTransactionStateActionImpl() {
-       
+        this.action = "changeTransactionState";
     }
 
     

@@ -34,7 +34,6 @@ public final class SyncInfoImpl implements SyncInfo {
         this.syncedAt = syncedAt;
     }
     public SyncInfoImpl() {
-       
     }
 
     /**

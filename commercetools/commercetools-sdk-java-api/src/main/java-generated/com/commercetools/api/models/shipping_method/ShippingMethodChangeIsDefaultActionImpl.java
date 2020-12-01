@@ -30,7 +30,7 @@ public final class ShippingMethodChangeIsDefaultActionImpl implements ShippingMe
         this.action = "changeIsDefault";
     }
     public ShippingMethodChangeIsDefaultActionImpl() {
-       
+        this.action = "changeIsDefault";
     }
 
     

@@ -34,7 +34,7 @@ public final class MoneyFieldImpl implements MoneyField {
         this.type = "Money";
     }
     public MoneyFieldImpl() {
-       
+        this.type = "Money";
     }
 
     /**

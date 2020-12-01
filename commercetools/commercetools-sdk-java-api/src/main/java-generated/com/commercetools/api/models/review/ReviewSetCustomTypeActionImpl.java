@@ -35,7 +35,7 @@ public final class ReviewSetCustomTypeActionImpl implements ReviewSetCustomTypeA
         this.action = "setCustomType";
     }
     public ReviewSetCustomTypeActionImpl() {
-       
+        this.action = "setCustomType";
     }
 
     

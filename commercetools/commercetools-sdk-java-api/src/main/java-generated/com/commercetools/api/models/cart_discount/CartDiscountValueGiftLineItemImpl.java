@@ -41,7 +41,7 @@ public final class CartDiscountValueGiftLineItemImpl implements CartDiscountValu
         this.type = "giftLineItem";
     }
     public CartDiscountValueGiftLineItemImpl() {
-       
+        this.type = "giftLineItem";
     }
 
     

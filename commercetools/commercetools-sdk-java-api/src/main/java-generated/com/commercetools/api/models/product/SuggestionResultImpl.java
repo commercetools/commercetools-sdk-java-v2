@@ -27,7 +27,6 @@ public final class SuggestionResultImpl implements SuggestionResult {
         this.values = values;
     }
     public SuggestionResultImpl() {
-       
     }
 
     

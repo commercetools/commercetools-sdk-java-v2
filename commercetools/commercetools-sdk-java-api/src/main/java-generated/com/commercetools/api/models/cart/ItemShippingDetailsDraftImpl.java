@@ -27,7 +27,6 @@ public final class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDr
         this.targets = targets;
     }
     public ItemShippingDetailsDraftImpl() {
-       
     }
 
     /**

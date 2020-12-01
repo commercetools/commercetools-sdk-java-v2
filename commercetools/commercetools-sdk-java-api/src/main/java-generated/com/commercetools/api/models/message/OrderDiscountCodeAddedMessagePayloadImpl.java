@@ -31,7 +31,7 @@ public final class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDisc
         this.type = "OrderDiscountCodeAdded";
     }
     public OrderDiscountCodeAddedMessagePayloadImpl() {
-       
+        this.type = "OrderDiscountCodeAdded";
     }
 
     

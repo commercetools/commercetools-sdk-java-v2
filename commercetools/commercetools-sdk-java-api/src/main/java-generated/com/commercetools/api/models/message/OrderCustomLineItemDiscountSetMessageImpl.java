@@ -68,7 +68,7 @@ public final class OrderCustomLineItemDiscountSetMessageImpl implements OrderCus
         this.type = "OrderCustomLineItemDiscountSet";
     }
     public OrderCustomLineItemDiscountSetMessageImpl() {
-       
+        this.type = "OrderCustomLineItemDiscountSet";
     }
 
     

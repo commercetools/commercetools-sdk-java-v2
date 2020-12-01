@@ -78,7 +78,7 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public interface MyCartUpdateAction  {
+public interface MyCartUpdateAction extends com.commercetools.api.models.ResourceUpdateAction<MyCartUpdateAction> {
 
     
     @NotNull

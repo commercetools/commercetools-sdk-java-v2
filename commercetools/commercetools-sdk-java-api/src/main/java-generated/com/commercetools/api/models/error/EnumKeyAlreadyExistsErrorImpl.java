@@ -36,7 +36,7 @@ public final class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExists
         this.code = "EnumKeyAlreadyExists";
     }
     public EnumKeyAlreadyExistsErrorImpl() {
-       
+        this.code = "EnumKeyAlreadyExists";
     }
 
     

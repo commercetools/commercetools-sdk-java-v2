@@ -31,7 +31,7 @@ public final class MyCustomerAddAddressActionImpl implements MyCustomerAddAddres
         this.action = "addAddress";
     }
     public MyCustomerAddAddressActionImpl() {
-       
+        this.action = "addAddress";
     }
 
     

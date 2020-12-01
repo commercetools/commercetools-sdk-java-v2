@@ -35,7 +35,6 @@ public final class ProjectUpdateActionImpl implements ProjectUpdateAction {
         this.action = action;
     }
     public ProjectUpdateActionImpl() {
-       
     }
 
     

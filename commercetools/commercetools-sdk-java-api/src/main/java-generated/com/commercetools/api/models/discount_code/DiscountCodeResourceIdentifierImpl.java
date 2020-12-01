@@ -34,7 +34,7 @@ public final class DiscountCodeResourceIdentifierImpl implements DiscountCodeRes
         this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
     public DiscountCodeResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("discount-code");
     }
 
     

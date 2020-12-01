@@ -33,7 +33,6 @@ public final class CustomerResetPasswordImpl implements CustomerResetPassword {
         this.version = version;
     }
     public CustomerResetPasswordImpl() {
-       
     }
 
     

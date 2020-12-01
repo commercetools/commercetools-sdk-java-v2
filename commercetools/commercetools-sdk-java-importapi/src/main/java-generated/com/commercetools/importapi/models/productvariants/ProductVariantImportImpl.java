@@ -56,7 +56,6 @@ public final class ProductVariantImportImpl implements ProductVariantImport {
         this.product = product;
     }
     public ProductVariantImportImpl() {
-       
     }
 
     

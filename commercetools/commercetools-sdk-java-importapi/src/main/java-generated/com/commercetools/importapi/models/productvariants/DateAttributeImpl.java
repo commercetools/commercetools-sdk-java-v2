@@ -37,7 +37,7 @@ public final class DateAttributeImpl implements DateAttribute {
         this.type = "date";
     }
     public DateAttributeImpl() {
-       
+        this.type = "date";
     }
 
     /**

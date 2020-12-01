@@ -38,7 +38,7 @@ public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantVa
         this.code = "DuplicateVariantValues";
     }
     public DuplicateVariantValuesErrorImpl() {
-       
+        this.code = "DuplicateVariantValues";
     }
 
     

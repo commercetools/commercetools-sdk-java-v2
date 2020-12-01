@@ -64,7 +64,7 @@ public final class InventoryEntryDeletedMessageImpl implements InventoryEntryDel
         this.type = "InventoryEntryDeleted";
     }
     public InventoryEntryDeletedMessageImpl() {
-       
+        this.type = "InventoryEntryDeleted";
     }
 
     

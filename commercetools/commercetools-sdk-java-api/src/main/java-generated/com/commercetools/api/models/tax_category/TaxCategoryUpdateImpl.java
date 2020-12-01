@@ -30,7 +30,6 @@ public final class TaxCategoryUpdateImpl implements TaxCategoryUpdate {
         this.actions = actions;
     }
     public TaxCategoryUpdateImpl() {
-       
     }
 
     

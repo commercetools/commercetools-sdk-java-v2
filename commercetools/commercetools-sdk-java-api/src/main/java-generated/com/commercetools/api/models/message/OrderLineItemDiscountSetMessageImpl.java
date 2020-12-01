@@ -72,7 +72,7 @@ public final class OrderLineItemDiscountSetMessageImpl implements OrderLineItemD
         this.type = "OrderLineItemDiscountSet";
     }
     public OrderLineItemDiscountSetMessageImpl() {
-       
+        this.type = "OrderLineItemDiscountSet";
     }
 
     

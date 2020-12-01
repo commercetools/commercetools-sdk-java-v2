@@ -34,7 +34,7 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
         this.type = "ProductVariantDeleted";
     }
     public ProductVariantDeletedMessagePayloadImpl() {
-       
+        this.type = "ProductVariantDeleted";
     }
 
     

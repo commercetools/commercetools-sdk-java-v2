@@ -34,7 +34,7 @@ public final class CartSetCustomLineItemTaxRateActionImpl implements CartSetCust
         this.action = "setCustomLineItemTaxRate";
     }
     public CartSetCustomLineItemTaxRateActionImpl() {
-       
+        this.action = "setCustomLineItemTaxRate";
     }
 
     

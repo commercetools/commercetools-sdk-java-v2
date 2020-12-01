@@ -30,7 +30,7 @@ public final class InsufficientScopeErrorImpl implements InsufficientScopeError 
         this.code = "insufficient_scope";
     }
     public InsufficientScopeErrorImpl() {
-       
+        this.code = "insufficient_scope";
     }
 
     

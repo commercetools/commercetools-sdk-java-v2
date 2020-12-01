@@ -30,7 +30,7 @@ public final class ProductDiscountChangePredicateActionImpl implements ProductDi
         this.action = "changePredicate";
     }
     public ProductDiscountChangePredicateActionImpl() {
-       
+        this.action = "changePredicate";
     }
 
     

@@ -32,7 +32,6 @@ public final class OrderEditUpdateActionImpl implements OrderEditUpdateAction {
         this.action = action;
     }
     public OrderEditUpdateActionImpl() {
-       
     }
 
     

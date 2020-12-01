@@ -31,7 +31,7 @@ public final class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessa
         this.type = "OrderStoreSet";
     }
     public OrderStoreSetMessagePayloadImpl() {
-       
+        this.type = "OrderStoreSet";
     }
 
     

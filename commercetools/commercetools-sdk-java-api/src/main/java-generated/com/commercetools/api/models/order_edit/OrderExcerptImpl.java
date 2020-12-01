@@ -34,7 +34,6 @@ public final class OrderExcerptImpl implements OrderExcerpt {
         this.version = version;
     }
     public OrderExcerptImpl() {
-       
     }
 
     

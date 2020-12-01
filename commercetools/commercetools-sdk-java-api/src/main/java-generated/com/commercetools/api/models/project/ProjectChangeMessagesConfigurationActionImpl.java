@@ -31,7 +31,7 @@ public final class ProjectChangeMessagesConfigurationActionImpl implements Proje
         this.action = "changeMessagesConfiguration";
     }
     public ProjectChangeMessagesConfigurationActionImpl() {
-       
+        this.action = "changeMessagesConfiguration";
     }
 
     

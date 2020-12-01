@@ -64,7 +64,7 @@ public final class OrderPaymentStateChangedMessageImpl implements OrderPaymentSt
         this.type = "OrderPaymentStateChanged";
     }
     public OrderPaymentStateChangedMessageImpl() {
-       
+        this.type = "OrderPaymentStateChanged";
     }
 
     

@@ -40,7 +40,7 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
         this.type = "ReviewRatingSet";
     }
     public ReviewRatingSetMessagePayloadImpl() {
-       
+        this.type = "ReviewRatingSet";
     }
 
     

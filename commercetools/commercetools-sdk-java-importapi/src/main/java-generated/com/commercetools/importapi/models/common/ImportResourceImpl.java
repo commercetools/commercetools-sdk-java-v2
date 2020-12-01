@@ -41,7 +41,6 @@ public final class ImportResourceImpl implements ImportResource {
         this.key = key;
     }
     public ImportResourceImpl() {
-       
     }
 
     

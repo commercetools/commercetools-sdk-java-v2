@@ -99,7 +99,6 @@ public final class ProductProjectionImpl implements ProductProjection {
         this.reviewRatingStatistics = reviewRatingStatistics;
     }
     public ProductProjectionImpl() {
-       
     }
 
     /**

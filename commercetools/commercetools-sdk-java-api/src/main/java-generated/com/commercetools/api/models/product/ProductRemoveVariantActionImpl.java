@@ -36,7 +36,7 @@ public final class ProductRemoveVariantActionImpl implements ProductRemoveVarian
         this.action = "removeVariant";
     }
     public ProductRemoveVariantActionImpl() {
-       
+        this.action = "removeVariant";
     }
 
     

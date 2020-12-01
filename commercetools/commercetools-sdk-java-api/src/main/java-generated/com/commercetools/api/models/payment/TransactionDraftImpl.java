@@ -42,7 +42,6 @@ public final class TransactionDraftImpl implements TransactionDraft {
         this.state = state;
     }
     public TransactionDraftImpl() {
-       
     }
 
     /**

@@ -36,7 +36,7 @@ public final class ProductChangeMasterVariantActionImpl implements ProductChange
         this.action = "changeMasterVariant";
     }
     public ProductChangeMasterVariantActionImpl() {
-       
+        this.action = "changeMasterVariant";
     }
 
     

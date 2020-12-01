@@ -58,7 +58,6 @@ public final class TaxCategoryImpl implements TaxCategory {
         this.key = key;
     }
     public TaxCategoryImpl() {
-       
     }
 
     /**

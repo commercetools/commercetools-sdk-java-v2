@@ -31,7 +31,7 @@ public final class MyShoppingListChangeNameActionImpl implements MyShoppingListC
         this.action = "changeName";
     }
     public MyShoppingListChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

@@ -39,7 +39,6 @@ public final class AttributeTypeImpl implements AttributeType {
         this.name = name;
     }
     public AttributeTypeImpl() {
-       
     }
 
     

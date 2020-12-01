@@ -34,7 +34,7 @@ public final class PaymentResourceIdentifierImpl implements PaymentResourceIdent
         this.typeId = ReferenceTypeId.findEnum("payment");
     }
     public PaymentResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("payment");
     }
 
     

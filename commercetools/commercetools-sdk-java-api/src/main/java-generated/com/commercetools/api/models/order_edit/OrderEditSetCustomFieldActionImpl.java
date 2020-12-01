@@ -34,7 +34,7 @@ public final class OrderEditSetCustomFieldActionImpl implements OrderEditSetCust
         this.action = "setCustomField";
     }
     public OrderEditSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

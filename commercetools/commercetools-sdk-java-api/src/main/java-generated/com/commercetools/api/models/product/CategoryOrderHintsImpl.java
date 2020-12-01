@@ -27,7 +27,6 @@ public final class CategoryOrderHintsImpl implements CategoryOrderHints {
         this.values = values;
     }
     public CategoryOrderHintsImpl() {
-       
     }
 
     

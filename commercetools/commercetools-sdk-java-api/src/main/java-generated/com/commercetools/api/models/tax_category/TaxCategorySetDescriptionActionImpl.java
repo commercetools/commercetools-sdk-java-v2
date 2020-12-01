@@ -30,7 +30,7 @@ public final class TaxCategorySetDescriptionActionImpl implements TaxCategorySet
         this.action = "setDescription";
     }
     public TaxCategorySetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

@@ -31,7 +31,7 @@ public final class ProductSlugChangedMessagePayloadImpl implements ProductSlugCh
         this.type = "ProductSlugChanged";
     }
     public ProductSlugChangedMessagePayloadImpl() {
-       
+        this.type = "ProductSlugChanged";
     }
 
     

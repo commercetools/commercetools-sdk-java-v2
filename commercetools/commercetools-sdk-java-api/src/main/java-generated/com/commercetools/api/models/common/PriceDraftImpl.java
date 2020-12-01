@@ -57,7 +57,6 @@ public final class PriceDraftImpl implements PriceDraft {
         this.discounted = discounted;
     }
     public PriceDraftImpl() {
-       
     }
 
     

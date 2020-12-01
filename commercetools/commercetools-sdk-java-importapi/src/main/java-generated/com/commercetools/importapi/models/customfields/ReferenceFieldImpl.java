@@ -34,7 +34,7 @@ public final class ReferenceFieldImpl implements ReferenceField {
         this.type = "Reference";
     }
     public ReferenceFieldImpl() {
-       
+        this.type = "Reference";
     }
 
     /**

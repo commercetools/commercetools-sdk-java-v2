@@ -145,7 +145,6 @@ public final class CartImpl implements Cart {
         this.itemShippingAddresses = itemShippingAddresses;
     }
     public CartImpl() {
-       
     }
 
     /**

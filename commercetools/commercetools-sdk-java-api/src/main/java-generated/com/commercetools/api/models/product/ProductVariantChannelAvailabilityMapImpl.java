@@ -27,7 +27,6 @@ public final class ProductVariantChannelAvailabilityMapImpl implements ProductVa
         this.values = values;
     }
     public ProductVariantChannelAvailabilityMapImpl() {
-       
     }
 
     

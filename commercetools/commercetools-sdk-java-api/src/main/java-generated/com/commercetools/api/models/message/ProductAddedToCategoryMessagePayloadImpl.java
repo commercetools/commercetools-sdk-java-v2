@@ -34,7 +34,7 @@ public final class ProductAddedToCategoryMessagePayloadImpl implements ProductAd
         this.type = "ProductAddedToCategory";
     }
     public ProductAddedToCategoryMessagePayloadImpl() {
-       
+        this.type = "ProductAddedToCategory";
     }
 
     

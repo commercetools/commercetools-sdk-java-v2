@@ -19,7 +19,7 @@ import java.io.IOException;
     comments = "https://github.com/vrapio/rmf-codegen"
 )
 @JsonDeserialize(as = DiscountCodeUpdateImpl.class)
-public interface DiscountCodeUpdate  {
+public interface DiscountCodeUpdate extends com.commercetools.api.models.ResourceUpdate<DiscountCodeUpdate, DiscountCodeUpdateAction> {
 
     
     @NotNull

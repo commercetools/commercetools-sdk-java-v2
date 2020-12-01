@@ -39,7 +39,6 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
         this.fractionDigits = fractionDigits;
     }
     public TypedMoneyDraftImpl() {
-       
     }
 
     

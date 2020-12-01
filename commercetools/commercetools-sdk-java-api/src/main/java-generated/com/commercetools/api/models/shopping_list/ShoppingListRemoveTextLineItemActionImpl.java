@@ -33,7 +33,7 @@ public final class ShoppingListRemoveTextLineItemActionImpl implements ShoppingL
         this.action = "removeTextLineItem";
     }
     public ShoppingListRemoveTextLineItemActionImpl() {
-       
+        this.action = "removeTextLineItem";
     }
 
     

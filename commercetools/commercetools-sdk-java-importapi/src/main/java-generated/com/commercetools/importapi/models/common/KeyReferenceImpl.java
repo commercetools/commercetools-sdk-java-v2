@@ -48,7 +48,6 @@ public final class KeyReferenceImpl implements KeyReference {
         this.typeId = typeId;
     }
     public KeyReferenceImpl() {
-       
     }
 
     

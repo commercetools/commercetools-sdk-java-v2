@@ -34,7 +34,7 @@ public final class ProductTypeChangePlainEnumValueOrderActionImpl implements Pro
         this.action = "changePlainEnumValueOrder";
     }
     public ProductTypeChangePlainEnumValueOrderActionImpl() {
-       
+        this.action = "changePlainEnumValueOrder";
     }
 
     

@@ -39,7 +39,7 @@ public final class ProductRemoveImageActionImpl implements ProductRemoveImageAct
         this.action = "removeImage";
     }
     public ProductRemoveImageActionImpl() {
-       
+        this.action = "removeImage";
     }
 
     

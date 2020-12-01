@@ -30,7 +30,7 @@ public final class MyPaymentSetMethodInfoInterfaceActionImpl implements MyPaymen
         this.action = "setMethodInfoInterface";
     }
     public MyPaymentSetMethodInfoInterfaceActionImpl() {
-       
+        this.action = "setMethodInfoInterface";
     }
 
     

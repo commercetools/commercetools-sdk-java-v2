@@ -31,7 +31,7 @@ public final class StateSetNameActionImpl implements StateSetNameAction {
         this.action = "setName";
     }
     public StateSetNameActionImpl() {
-       
+        this.action = "setName";
     }
 
     

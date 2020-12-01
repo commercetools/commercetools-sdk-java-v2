@@ -36,7 +36,6 @@ public final class AssetSourceImpl implements AssetSource {
         this.contentType = contentType;
     }
     public AssetSourceImpl() {
-       
     }
 
     

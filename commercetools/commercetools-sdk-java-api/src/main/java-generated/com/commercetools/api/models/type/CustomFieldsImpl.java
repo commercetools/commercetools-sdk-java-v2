@@ -31,7 +31,6 @@ public final class CustomFieldsImpl implements CustomFields {
         this.fields = fields;
     }
     public CustomFieldsImpl() {
-       
     }
 
     

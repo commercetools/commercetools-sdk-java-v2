@@ -70,7 +70,7 @@ public final class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMe
         this.type = "ParcelItemsUpdated";
     }
     public ParcelItemsUpdatedMessageImpl() {
-       
+        this.type = "ParcelItemsUpdated";
     }
 
     

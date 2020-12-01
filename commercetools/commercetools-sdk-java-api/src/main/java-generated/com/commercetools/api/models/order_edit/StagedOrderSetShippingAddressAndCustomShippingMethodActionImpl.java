@@ -46,7 +46,7 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionImp
         this.action = "setShippingAddressAndCustomShippingMethod";
     }
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl() {
-       
+        this.action = "setShippingAddressAndCustomShippingMethod";
     }
 
     

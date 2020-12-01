@@ -20,6 +20,15 @@ public final class FieldContainerBuilder {
         this.values = values;
         return this;
     }
+    
+    public FieldContainerBuilder addValue(final String key, final com.commercetools.importapi.models.customfields.CustomField value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+        return this;
+    }
+    
 
     
     public Map<String, com.commercetools.importapi.models.customfields.CustomField> getValues(){

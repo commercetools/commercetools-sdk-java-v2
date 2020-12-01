@@ -42,7 +42,6 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
         this.subRates = subRates;
     }
     public TaxRateDraftImpl() {
-       
     }
 
     

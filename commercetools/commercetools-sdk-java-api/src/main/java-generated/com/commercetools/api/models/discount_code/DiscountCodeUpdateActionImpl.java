@@ -39,7 +39,6 @@ public final class DiscountCodeUpdateActionImpl implements DiscountCodeUpdateAct
         this.action = action;
     }
     public DiscountCodeUpdateActionImpl() {
-       
     }
 
     

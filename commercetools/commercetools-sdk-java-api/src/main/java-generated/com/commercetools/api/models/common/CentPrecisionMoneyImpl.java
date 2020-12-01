@@ -37,7 +37,7 @@ public final class CentPrecisionMoneyImpl implements CentPrecisionMoney {
         this.type = MoneyType.findEnum("centPrecision");
     }
     public CentPrecisionMoneyImpl() {
-       
+        this.type = MoneyType.findEnum("centPrecision");
     }
 
     

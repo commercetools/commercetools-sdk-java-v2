@@ -30,7 +30,7 @@ public final class TypeChangeKeyActionImpl implements TypeChangeKeyAction {
         this.action = "changeKey";
     }
     public TypeChangeKeyActionImpl() {
-       
+        this.action = "changeKey";
     }
 
     

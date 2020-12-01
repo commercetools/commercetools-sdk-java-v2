@@ -42,7 +42,6 @@ public final class ErrorResponseImpl implements ErrorResponse {
         this.errors = errors;
     }
     public ErrorResponseImpl() {
-       
     }
 
     /**

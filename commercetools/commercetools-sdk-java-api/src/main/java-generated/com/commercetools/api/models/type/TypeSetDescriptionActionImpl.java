@@ -31,7 +31,7 @@ public final class TypeSetDescriptionActionImpl implements TypeSetDescriptionAct
         this.action = "setDescription";
     }
     public TypeSetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

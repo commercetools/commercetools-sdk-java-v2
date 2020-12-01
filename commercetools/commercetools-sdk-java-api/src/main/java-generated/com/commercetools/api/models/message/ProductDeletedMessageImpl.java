@@ -64,7 +64,7 @@ public final class ProductDeletedMessageImpl implements ProductDeletedMessage {
         this.type = "ProductDeleted";
     }
     public ProductDeletedMessageImpl() {
-       
+        this.type = "ProductDeleted";
     }
 
     

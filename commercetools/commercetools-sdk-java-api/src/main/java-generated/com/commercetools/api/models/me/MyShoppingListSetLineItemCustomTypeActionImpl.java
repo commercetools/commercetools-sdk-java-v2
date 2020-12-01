@@ -38,7 +38,7 @@ public final class MyShoppingListSetLineItemCustomTypeActionImpl implements MySh
         this.action = "setLineItemCustomType";
     }
     public MyShoppingListSetLineItemCustomTypeActionImpl() {
-       
+        this.action = "setLineItemCustomType";
     }
 
     

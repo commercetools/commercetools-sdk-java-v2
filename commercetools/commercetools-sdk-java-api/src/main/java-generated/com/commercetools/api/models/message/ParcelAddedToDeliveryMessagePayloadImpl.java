@@ -35,7 +35,7 @@ public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAdde
         this.type = "ParcelAddedToDelivery";
     }
     public ParcelAddedToDeliveryMessagePayloadImpl() {
-       
+        this.type = "ParcelAddedToDelivery";
     }
 
     

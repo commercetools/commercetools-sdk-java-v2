@@ -30,7 +30,7 @@ public final class StagedOrderSetOrderNumberActionImpl implements StagedOrderSet
         this.action = "setOrderNumber";
     }
     public StagedOrderSetOrderNumberActionImpl() {
-       
+        this.action = "setOrderNumber";
     }
 
     

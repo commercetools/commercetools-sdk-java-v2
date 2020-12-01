@@ -30,7 +30,7 @@ public final class NoMatchingProductDiscountFoundErrorImpl implements NoMatching
         this.code = "NoMatchingProductDiscountFound";
     }
     public NoMatchingProductDiscountFoundErrorImpl() {
-       
+        this.code = "NoMatchingProductDiscountFound";
     }
 
     

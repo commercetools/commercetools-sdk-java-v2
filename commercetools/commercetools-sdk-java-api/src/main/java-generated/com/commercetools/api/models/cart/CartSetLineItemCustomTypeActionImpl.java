@@ -38,7 +38,7 @@ public final class CartSetLineItemCustomTypeActionImpl implements CartSetLineIte
         this.action = "setLineItemCustomType";
     }
     public CartSetLineItemCustomTypeActionImpl() {
-       
+        this.action = "setLineItemCustomType";
     }
 
     

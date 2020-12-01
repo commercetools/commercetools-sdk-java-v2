@@ -30,7 +30,7 @@ public final class OrderEditSetKeyActionImpl implements OrderEditSetKeyAction {
         this.action = "setKey";
     }
     public OrderEditSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

@@ -34,7 +34,7 @@ public final class OrderStateChangedMessagePayloadImpl implements OrderStateChan
         this.type = "OrderStateChanged";
     }
     public OrderStateChangedMessagePayloadImpl() {
-       
+        this.type = "OrderStateChanged";
     }
 
     

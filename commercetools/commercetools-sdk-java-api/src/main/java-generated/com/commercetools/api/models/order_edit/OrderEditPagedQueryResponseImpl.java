@@ -39,7 +39,6 @@ public final class OrderEditPagedQueryResponseImpl implements OrderEditPagedQuer
         this.results = results;
     }
     public OrderEditPagedQueryResponseImpl() {
-       
     }
 
     

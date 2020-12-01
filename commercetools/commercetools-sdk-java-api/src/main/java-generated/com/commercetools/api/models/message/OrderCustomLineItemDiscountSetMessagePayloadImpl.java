@@ -38,7 +38,7 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadImpl implements O
         this.type = "OrderCustomLineItemDiscountSet";
     }
     public OrderCustomLineItemDiscountSetMessagePayloadImpl() {
-       
+        this.type = "OrderCustomLineItemDiscountSet";
     }
 
     

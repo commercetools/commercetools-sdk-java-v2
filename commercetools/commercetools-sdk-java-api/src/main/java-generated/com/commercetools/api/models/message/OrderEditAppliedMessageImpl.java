@@ -65,7 +65,7 @@ public final class OrderEditAppliedMessageImpl implements OrderEditAppliedMessag
         this.type = "OrderEditApplied";
     }
     public OrderEditAppliedMessageImpl() {
-       
+        this.type = "OrderEditApplied";
     }
 
     

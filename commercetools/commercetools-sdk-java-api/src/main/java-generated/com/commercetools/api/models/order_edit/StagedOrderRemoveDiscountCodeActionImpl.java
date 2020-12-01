@@ -31,7 +31,7 @@ public final class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrde
         this.action = "removeDiscountCode";
     }
     public StagedOrderRemoveDiscountCodeActionImpl() {
-       
+        this.action = "removeDiscountCode";
     }
 
     

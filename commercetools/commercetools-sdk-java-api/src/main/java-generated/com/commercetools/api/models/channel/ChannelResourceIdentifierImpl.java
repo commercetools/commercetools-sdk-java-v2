@@ -34,7 +34,7 @@ public final class ChannelResourceIdentifierImpl implements ChannelResourceIdent
         this.typeId = ReferenceTypeId.findEnum("channel");
     }
     public ChannelResourceIdentifierImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("channel");
     }
 
     

@@ -35,7 +35,7 @@ public final class StagedOrderSetShippingMethodActionImpl implements StagedOrder
         this.action = "setShippingMethod";
     }
     public StagedOrderSetShippingMethodActionImpl() {
-       
+        this.action = "setShippingMethod";
     }
 
     

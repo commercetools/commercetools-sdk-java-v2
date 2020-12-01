@@ -73,7 +73,6 @@ public final class StateImpl implements State {
         this.transitions = transitions;
     }
     public StateImpl() {
-       
     }
 
     

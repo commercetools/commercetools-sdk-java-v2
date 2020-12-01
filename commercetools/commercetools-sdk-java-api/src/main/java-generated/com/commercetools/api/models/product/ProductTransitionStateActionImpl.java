@@ -34,7 +34,7 @@ public final class ProductTransitionStateActionImpl implements ProductTransition
         this.action = "transitionState";
     }
     public ProductTransitionStateActionImpl() {
-       
+        this.action = "transitionState";
     }
 
     

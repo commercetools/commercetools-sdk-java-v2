@@ -31,7 +31,7 @@ public final class PaymentInteractionAddedMessagePayloadImpl implements PaymentI
         this.type = "PaymentInteractionAdded";
     }
     public PaymentInteractionAddedMessagePayloadImpl() {
-       
+        this.type = "PaymentInteractionAdded";
     }
 
     

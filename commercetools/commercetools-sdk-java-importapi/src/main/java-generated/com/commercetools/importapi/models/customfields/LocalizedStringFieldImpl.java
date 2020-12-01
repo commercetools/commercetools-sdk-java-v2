@@ -34,7 +34,7 @@ public final class LocalizedStringFieldImpl implements LocalizedStringField {
         this.type = "LocalizedString";
     }
     public LocalizedStringFieldImpl() {
-       
+        this.type = "LocalizedString";
     }
 
     /**

@@ -38,7 +38,7 @@ public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAct
         this.action = "addReturnInfo";
     }
     public OrderAddReturnInfoActionImpl() {
-       
+        this.action = "addReturnInfo";
     }
 
     

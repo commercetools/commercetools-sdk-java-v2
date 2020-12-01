@@ -35,7 +35,7 @@ public final class InventoryEntryReferenceImpl implements InventoryEntryReferenc
         this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }
     public InventoryEntryReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("inventory-entry");
     }
 
     

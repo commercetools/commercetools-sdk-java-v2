@@ -67,7 +67,6 @@ public final class OrderEditImpl implements OrderEdit {
         this.comment = comment;
     }
     public OrderEditImpl() {
-       
     }
 
     /**

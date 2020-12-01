@@ -30,7 +30,7 @@ public final class OrderEditSetCommentActionImpl implements OrderEditSetCommentA
         this.action = "setComment";
     }
     public OrderEditSetCommentActionImpl() {
-       
+        this.action = "setComment";
     }
 
     

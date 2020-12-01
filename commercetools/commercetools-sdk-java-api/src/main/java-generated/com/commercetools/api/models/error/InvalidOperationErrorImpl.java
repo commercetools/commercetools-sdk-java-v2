@@ -30,7 +30,7 @@ public final class InvalidOperationErrorImpl implements InvalidOperationError {
         this.code = "InvalidOperation";
     }
     public InvalidOperationErrorImpl() {
-       
+        this.code = "InvalidOperation";
     }
 
     

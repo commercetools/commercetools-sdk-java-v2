@@ -48,7 +48,6 @@ public final class StateDraftImpl implements StateDraft {
         this.transitions = transitions;
     }
     public StateDraftImpl() {
-       
     }
 
     

@@ -31,7 +31,6 @@ public final class ExtensionInputImpl implements ExtensionInput {
         this.resource = resource;
     }
     public ExtensionInputImpl() {
-       
     }
 
     

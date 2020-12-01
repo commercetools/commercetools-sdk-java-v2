@@ -30,7 +30,7 @@ public final class ProductTypeChangeNameActionImpl implements ProductTypeChangeN
         this.action = "changeName";
     }
     public ProductTypeChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

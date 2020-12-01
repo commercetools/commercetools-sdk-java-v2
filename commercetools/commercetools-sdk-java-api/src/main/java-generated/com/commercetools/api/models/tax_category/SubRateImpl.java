@@ -30,7 +30,6 @@ public final class SubRateImpl implements SubRate {
         this.amount = amount;
     }
     public SubRateImpl() {
-       
     }
 
     

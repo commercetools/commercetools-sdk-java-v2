@@ -31,7 +31,7 @@ public final class ProductDiscountValueAbsoluteImpl implements ProductDiscountVa
         this.type = "absolute";
     }
     public ProductDiscountValueAbsoluteImpl() {
-       
+        this.type = "absolute";
     }
 
     

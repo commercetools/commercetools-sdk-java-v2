@@ -34,7 +34,7 @@ public final class EditPreviewFailedErrorImpl implements EditPreviewFailedError 
         this.code = "EditPreviewFailed";
     }
     public EditPreviewFailedErrorImpl() {
-       
+        this.code = "EditPreviewFailed";
     }
 
     

@@ -96,7 +96,6 @@ public final class StagedOrderUpdateActionImpl implements StagedOrderUpdateActio
         this.action = action;
     }
     public StagedOrderUpdateActionImpl() {
-       
     }
 
     

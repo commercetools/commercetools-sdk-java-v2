@@ -34,7 +34,7 @@ public final class DiscountCodeSetCustomFieldActionImpl implements DiscountCodeS
         this.action = "setCustomField";
     }
     public DiscountCodeSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

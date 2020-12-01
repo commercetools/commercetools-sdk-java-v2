@@ -36,7 +36,6 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
         this.channels = channels;
     }
     public ProductVariantAvailabilityImpl() {
-       
     }
 
     

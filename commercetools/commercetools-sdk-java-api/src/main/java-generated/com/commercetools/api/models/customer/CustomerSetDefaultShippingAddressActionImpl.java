@@ -33,7 +33,7 @@ public final class CustomerSetDefaultShippingAddressActionImpl implements Custom
         this.action = "setDefaultShippingAddress";
     }
     public CustomerSetDefaultShippingAddressActionImpl() {
-       
+        this.action = "setDefaultShippingAddress";
     }
 
     

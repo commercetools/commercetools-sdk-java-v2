@@ -36,7 +36,6 @@ public final class ProductTypeDraftImpl implements ProductTypeDraft {
         this.attributes = attributes;
     }
     public ProductTypeDraftImpl() {
-       
     }
 
     /**

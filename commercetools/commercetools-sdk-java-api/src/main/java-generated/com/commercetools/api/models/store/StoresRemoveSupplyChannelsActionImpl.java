@@ -31,7 +31,7 @@ public final class StoresRemoveSupplyChannelsActionImpl implements StoresRemoveS
         this.action = "removeSupplyChannel";
     }
     public StoresRemoveSupplyChannelsActionImpl() {
-       
+        this.action = "removeSupplyChannel";
     }
 
     

@@ -60,7 +60,7 @@ public final class CustomerCompanyNameSetMessageImpl implements CustomerCompanyN
         this.type = "CustomerCompanyNameSet";
     }
     public CustomerCompanyNameSetMessageImpl() {
-       
+        this.type = "CustomerCompanyNameSet";
     }
 
     

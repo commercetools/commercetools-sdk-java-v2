@@ -34,7 +34,7 @@ public final class StagedOrderImportLineItemStateActionImpl implements StagedOrd
         this.action = "importLineItemState";
     }
     public StagedOrderImportLineItemStateActionImpl() {
-       
+        this.action = "importLineItemState";
     }
 
     

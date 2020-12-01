@@ -57,7 +57,7 @@ public final class CustomerEmailVerifiedMessageImpl implements CustomerEmailVeri
         this.type = "CustomerEmailVerified";
     }
     public CustomerEmailVerifiedMessageImpl() {
-       
+        this.type = "CustomerEmailVerified";
     }
 
     

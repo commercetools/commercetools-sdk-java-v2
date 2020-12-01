@@ -34,7 +34,7 @@ public final class StagedOrderSetCustomLineItemShippingDetailsActionImpl impleme
         this.action = "setCustomLineItemShippingDetails";
     }
     public StagedOrderSetCustomLineItemShippingDetailsActionImpl() {
-       
+        this.action = "setCustomLineItemShippingDetails";
     }
 
     

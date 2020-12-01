@@ -30,7 +30,7 @@ public final class MyPaymentSetMethodInfoMethodActionImpl implements MyPaymentSe
         this.action = "setMethodInfoMethod";
     }
     public MyPaymentSetMethodInfoMethodActionImpl() {
-       
+        this.action = "setMethodInfoMethod";
     }
 
     

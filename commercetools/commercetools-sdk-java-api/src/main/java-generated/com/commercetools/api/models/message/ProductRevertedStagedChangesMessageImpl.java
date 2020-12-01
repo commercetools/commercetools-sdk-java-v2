@@ -60,7 +60,7 @@ public final class ProductRevertedStagedChangesMessageImpl implements ProductRev
         this.type = "ProductRevertedStagedChanges";
     }
     public ProductRevertedStagedChangesMessageImpl() {
-       
+        this.type = "ProductRevertedStagedChanges";
     }
 
     

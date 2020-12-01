@@ -30,7 +30,7 @@ public final class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFiel
         this.action = "removeFieldDefinition";
     }
     public TypeRemoveFieldDefinitionActionImpl() {
-       
+        this.action = "removeFieldDefinition";
     }
 
     

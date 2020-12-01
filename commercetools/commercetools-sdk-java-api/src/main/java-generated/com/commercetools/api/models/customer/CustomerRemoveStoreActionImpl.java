@@ -31,7 +31,7 @@ public final class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreA
         this.action = "removeStore";
     }
     public CustomerRemoveStoreActionImpl() {
-       
+        this.action = "removeStore";
     }
 
     

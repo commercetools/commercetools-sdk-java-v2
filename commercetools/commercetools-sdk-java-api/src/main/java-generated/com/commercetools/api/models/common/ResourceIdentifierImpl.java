@@ -55,7 +55,6 @@ public final class ResourceIdentifierImpl implements ResourceIdentifier {
         this.key = key;
     }
     public ResourceIdentifierImpl() {
-       
     }
 
     

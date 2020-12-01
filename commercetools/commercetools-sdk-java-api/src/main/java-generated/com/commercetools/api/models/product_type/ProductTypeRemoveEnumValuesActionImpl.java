@@ -33,7 +33,7 @@ public final class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeR
         this.action = "removeEnumValues";
     }
     public ProductTypeRemoveEnumValuesActionImpl() {
-       
+        this.action = "removeEnumValues";
     }
 
     

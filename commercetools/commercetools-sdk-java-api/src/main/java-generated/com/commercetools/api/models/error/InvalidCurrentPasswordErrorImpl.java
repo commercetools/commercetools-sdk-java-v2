@@ -30,7 +30,7 @@ public final class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPass
         this.code = "InvalidCurrentPassword";
     }
     public InvalidCurrentPasswordErrorImpl() {
-       
+        this.code = "InvalidCurrentPassword";
     }
 
     

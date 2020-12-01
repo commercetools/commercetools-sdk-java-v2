@@ -30,7 +30,7 @@ public final class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAct
         this.action = "setAnonymousId";
     }
     public CartSetAnonymousIdActionImpl() {
-       
+        this.action = "setAnonymousId";
     }
 
     

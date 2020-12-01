@@ -30,7 +30,7 @@ public final class CartRecalculateActionImpl implements CartRecalculateAction {
         this.action = "recalculate";
     }
     public CartRecalculateActionImpl() {
-       
+        this.action = "recalculate";
     }
 
     

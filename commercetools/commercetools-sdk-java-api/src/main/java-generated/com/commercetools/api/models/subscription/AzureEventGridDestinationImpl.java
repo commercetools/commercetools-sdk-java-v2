@@ -33,7 +33,7 @@ public final class AzureEventGridDestinationImpl implements AzureEventGridDestin
         this.type = "EventGrid";
     }
     public AzureEventGridDestinationImpl() {
-       
+        this.type = "EventGrid";
     }
 
     

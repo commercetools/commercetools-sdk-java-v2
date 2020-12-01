@@ -37,7 +37,7 @@ public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddre
         this.type = "DeliveryAddressSet";
     }
     public DeliveryAddressSetMessagePayloadImpl() {
-       
+        this.type = "DeliveryAddressSet";
     }
 
     

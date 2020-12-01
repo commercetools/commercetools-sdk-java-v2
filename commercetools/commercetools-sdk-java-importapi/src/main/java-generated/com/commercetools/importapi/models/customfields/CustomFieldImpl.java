@@ -51,7 +51,6 @@ public final class CustomFieldImpl implements CustomField {
         this.type = type;
     }
     public CustomFieldImpl() {
-       
     }
 
     /**

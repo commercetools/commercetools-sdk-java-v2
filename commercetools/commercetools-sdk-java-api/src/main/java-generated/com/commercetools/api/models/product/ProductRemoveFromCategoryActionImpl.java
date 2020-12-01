@@ -34,7 +34,7 @@ public final class ProductRemoveFromCategoryActionImpl implements ProductRemoveF
         this.action = "removeFromCategory";
     }
     public ProductRemoveFromCategoryActionImpl() {
-       
+        this.action = "removeFromCategory";
     }
 
     

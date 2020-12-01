@@ -36,7 +36,6 @@ public final class ZoneDraftImpl implements ZoneDraft {
         this.locations = locations;
     }
     public ZoneDraftImpl() {
-       
     }
 
     /**

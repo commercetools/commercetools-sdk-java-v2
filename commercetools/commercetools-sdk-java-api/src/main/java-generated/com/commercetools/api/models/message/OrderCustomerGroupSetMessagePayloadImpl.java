@@ -34,7 +34,7 @@ public final class OrderCustomerGroupSetMessagePayloadImpl implements OrderCusto
         this.type = "OrderCustomerGroupSet";
     }
     public OrderCustomerGroupSetMessagePayloadImpl() {
-       
+        this.type = "OrderCustomerGroupSet";
     }
 
     

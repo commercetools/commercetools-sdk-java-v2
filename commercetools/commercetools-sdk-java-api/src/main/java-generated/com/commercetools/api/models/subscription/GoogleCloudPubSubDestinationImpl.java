@@ -33,7 +33,7 @@ public final class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSub
         this.type = "GoogleCloudPubSub";
     }
     public GoogleCloudPubSubDestinationImpl() {
-       
+        this.type = "GoogleCloudPubSub";
     }
 
     

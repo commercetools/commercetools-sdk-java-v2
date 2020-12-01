@@ -31,7 +31,7 @@ public final class OrderDiscountCodeRemovedMessagePayloadImpl implements OrderDi
         this.type = "OrderDiscountCodeRemoved";
     }
     public OrderDiscountCodeRemovedMessagePayloadImpl() {
-       
+        this.type = "OrderDiscountCodeRemoved";
     }
 
     

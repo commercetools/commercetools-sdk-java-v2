@@ -53,7 +53,6 @@ public final class ReferenceImpl implements Reference {
         this.id = id;
     }
     public ReferenceImpl() {
-       
     }
 
     

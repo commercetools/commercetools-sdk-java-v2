@@ -36,7 +36,7 @@ public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTag
         this.action = "setAssetTags";
     }
     public CategorySetAssetTagsActionImpl() {
-       
+        this.action = "setAssetTags";
     }
 
     

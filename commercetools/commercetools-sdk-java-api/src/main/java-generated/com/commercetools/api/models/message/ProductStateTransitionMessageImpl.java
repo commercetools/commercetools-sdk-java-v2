@@ -64,7 +64,7 @@ public final class ProductStateTransitionMessageImpl implements ProductStateTran
         this.type = "ProductStateTransition";
     }
     public ProductStateTransitionMessageImpl() {
-       
+        this.type = "ProductStateTransition";
     }
 
     

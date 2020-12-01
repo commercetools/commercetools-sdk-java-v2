@@ -31,7 +31,7 @@ public final class StateSetDescriptionActionImpl implements StateSetDescriptionA
         this.action = "setDescription";
     }
     public StateSetDescriptionActionImpl() {
-       
+        this.action = "setDescription";
     }
 
     

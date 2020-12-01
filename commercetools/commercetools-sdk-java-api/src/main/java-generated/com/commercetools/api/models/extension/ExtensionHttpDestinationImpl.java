@@ -34,7 +34,7 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
         this.type = "HTTP";
     }
     public ExtensionHttpDestinationImpl() {
-       
+        this.type = "HTTP";
     }
 
     

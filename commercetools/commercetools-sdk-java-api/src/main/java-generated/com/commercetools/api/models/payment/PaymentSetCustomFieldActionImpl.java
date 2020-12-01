@@ -34,7 +34,7 @@ public final class PaymentSetCustomFieldActionImpl implements PaymentSetCustomFi
         this.action = "setCustomField";
     }
     public PaymentSetCustomFieldActionImpl() {
-       
+        this.action = "setCustomField";
     }
 
     

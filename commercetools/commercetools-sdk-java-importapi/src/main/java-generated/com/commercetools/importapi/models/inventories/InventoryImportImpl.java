@@ -51,7 +51,6 @@ public final class InventoryImportImpl implements InventoryImport {
         this.custom = custom;
     }
     public InventoryImportImpl() {
-       
     }
 
     

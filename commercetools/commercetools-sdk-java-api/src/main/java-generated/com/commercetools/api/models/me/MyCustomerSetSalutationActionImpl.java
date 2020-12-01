@@ -30,7 +30,7 @@ public final class MyCustomerSetSalutationActionImpl implements MyCustomerSetSal
         this.action = "setSalutation";
     }
     public MyCustomerSetSalutationActionImpl() {
-       
+        this.action = "setSalutation";
     }
 
     

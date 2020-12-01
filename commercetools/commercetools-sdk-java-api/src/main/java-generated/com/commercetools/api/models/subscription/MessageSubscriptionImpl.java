@@ -30,7 +30,6 @@ public final class MessageSubscriptionImpl implements MessageSubscription {
         this.types = types;
     }
     public MessageSubscriptionImpl() {
-       
     }
 
     

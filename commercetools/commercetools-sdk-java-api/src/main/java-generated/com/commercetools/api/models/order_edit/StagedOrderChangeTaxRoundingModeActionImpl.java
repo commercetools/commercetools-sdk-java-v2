@@ -31,7 +31,7 @@ public final class StagedOrderChangeTaxRoundingModeActionImpl implements StagedO
         this.action = "changeTaxRoundingMode";
     }
     public StagedOrderChangeTaxRoundingModeActionImpl() {
-       
+        this.action = "changeTaxRoundingMode";
     }
 
     

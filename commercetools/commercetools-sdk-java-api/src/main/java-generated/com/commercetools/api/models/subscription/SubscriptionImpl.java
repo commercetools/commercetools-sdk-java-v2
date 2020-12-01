@@ -68,7 +68,6 @@ public final class SubscriptionImpl implements Subscription {
         this.status = status;
     }
     public SubscriptionImpl() {
-       
     }
 
     

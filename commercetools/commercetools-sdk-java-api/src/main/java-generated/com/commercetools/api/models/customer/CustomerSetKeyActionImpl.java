@@ -30,7 +30,7 @@ public final class CustomerSetKeyActionImpl implements CustomerSetKeyAction {
         this.action = "setKey";
     }
     public CustomerSetKeyActionImpl() {
-       
+        this.action = "setKey";
     }
 
     

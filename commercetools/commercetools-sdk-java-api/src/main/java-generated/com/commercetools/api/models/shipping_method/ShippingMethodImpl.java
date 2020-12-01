@@ -72,7 +72,6 @@ public final class ShippingMethodImpl implements ShippingMethod {
         this.predicate = predicate;
     }
     public ShippingMethodImpl() {
-       
     }
 
     /**

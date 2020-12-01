@@ -38,7 +38,7 @@ public final class StagedOrderSetLineItemCustomTypeActionImpl implements StagedO
         this.action = "setLineItemCustomType";
     }
     public StagedOrderSetLineItemCustomTypeActionImpl() {
-       
+        this.action = "setLineItemCustomType";
     }
 
     

@@ -30,7 +30,7 @@ public final class CategoryChangeAssetOrderActionImpl implements CategoryChangeA
         this.action = "changeAssetOrder";
     }
     public CategoryChangeAssetOrderActionImpl() {
-       
+        this.action = "changeAssetOrder";
     }
 
     

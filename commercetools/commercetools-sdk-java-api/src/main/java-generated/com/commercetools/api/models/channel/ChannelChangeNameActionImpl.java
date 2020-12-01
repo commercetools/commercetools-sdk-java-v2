@@ -31,7 +31,7 @@ public final class ChannelChangeNameActionImpl implements ChannelChangeNameActio
         this.action = "changeName";
     }
     public ChannelChangeNameActionImpl() {
-       
+        this.action = "changeName";
     }
 
     

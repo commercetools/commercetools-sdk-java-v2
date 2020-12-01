@@ -67,7 +67,7 @@ public final class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasure
         this.type = "ParcelMeasurementsUpdated";
     }
     public ParcelMeasurementsUpdatedMessageImpl() {
-       
+        this.type = "ParcelMeasurementsUpdated";
     }
 
     

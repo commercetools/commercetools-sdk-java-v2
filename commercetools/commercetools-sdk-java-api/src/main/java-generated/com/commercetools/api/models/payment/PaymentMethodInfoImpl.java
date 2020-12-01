@@ -33,7 +33,6 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
         this.name = name;
     }
     public PaymentMethodInfoImpl() {
-       
     }
 
     /**

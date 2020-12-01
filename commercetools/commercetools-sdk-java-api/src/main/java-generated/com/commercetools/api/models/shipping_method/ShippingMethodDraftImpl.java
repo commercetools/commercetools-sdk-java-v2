@@ -50,7 +50,6 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
         this.predicate = predicate;
     }
     public ShippingMethodDraftImpl() {
-       
     }
 
     

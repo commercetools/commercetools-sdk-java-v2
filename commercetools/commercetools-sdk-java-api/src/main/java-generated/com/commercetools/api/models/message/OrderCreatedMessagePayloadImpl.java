@@ -31,7 +31,7 @@ public final class OrderCreatedMessagePayloadImpl implements OrderCreatedMessage
         this.type = "OrderCreated";
     }
     public OrderCreatedMessagePayloadImpl() {
-       
+        this.type = "OrderCreated";
     }
 
     

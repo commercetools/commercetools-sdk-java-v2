@@ -31,7 +31,7 @@ public final class OrderSetBillingAddressActionImpl implements OrderSetBillingAd
         this.action = "setBillingAddress";
     }
     public OrderSetBillingAddressActionImpl() {
-       
+        this.action = "setBillingAddress";
     }
 
     

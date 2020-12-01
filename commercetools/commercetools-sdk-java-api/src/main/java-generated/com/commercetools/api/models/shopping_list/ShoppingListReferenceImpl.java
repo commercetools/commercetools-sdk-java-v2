@@ -35,7 +35,7 @@ public final class ShoppingListReferenceImpl implements ShoppingListReference {
         this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
     public ShoppingListReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("shopping-list");
     }
 
     

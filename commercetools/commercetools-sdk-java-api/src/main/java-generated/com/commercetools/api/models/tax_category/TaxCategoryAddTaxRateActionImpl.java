@@ -31,7 +31,7 @@ public final class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxR
         this.action = "addTaxRate";
     }
     public TaxCategoryAddTaxRateActionImpl() {
-       
+        this.action = "addTaxRate";
     }
 
     

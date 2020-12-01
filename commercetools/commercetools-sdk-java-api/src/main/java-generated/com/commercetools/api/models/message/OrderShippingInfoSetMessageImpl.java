@@ -64,7 +64,7 @@ public final class OrderShippingInfoSetMessageImpl implements OrderShippingInfoS
         this.type = "OrderShippingInfoSet";
     }
     public OrderShippingInfoSetMessageImpl() {
-       
+        this.type = "OrderShippingInfoSet";
     }
 
     

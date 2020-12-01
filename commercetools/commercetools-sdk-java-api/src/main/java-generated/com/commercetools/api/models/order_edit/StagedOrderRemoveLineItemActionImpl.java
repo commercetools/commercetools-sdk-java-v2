@@ -45,7 +45,7 @@ public final class StagedOrderRemoveLineItemActionImpl implements StagedOrderRem
         this.action = "removeLineItem";
     }
     public StagedOrderRemoveLineItemActionImpl() {
-       
+        this.action = "removeLineItem";
     }
 
     

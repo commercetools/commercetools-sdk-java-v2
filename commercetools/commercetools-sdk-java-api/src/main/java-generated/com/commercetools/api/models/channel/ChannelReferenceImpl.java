@@ -35,7 +35,7 @@ public final class ChannelReferenceImpl implements ChannelReference {
         this.typeId = ReferenceTypeId.findEnum("channel");
     }
     public ChannelReferenceImpl() {
-       
+        this.typeId = ReferenceTypeId.findEnum("channel");
     }
 
     

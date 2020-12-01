@@ -34,7 +34,7 @@ public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearc
         this.action = "setSearchKeywords";
     }
     public ProductSetSearchKeywordsActionImpl() {
-       
+        this.action = "setSearchKeywords";
     }
 
     

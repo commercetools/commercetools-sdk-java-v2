@@ -34,7 +34,7 @@ public final class ResourceDeletionErrorImpl implements ResourceDeletionError {
         this.code = "ResourceDeletion";
     }
     public ResourceDeletionErrorImpl() {
-       
+        this.code = "ResourceDeletion";
     }
 
     

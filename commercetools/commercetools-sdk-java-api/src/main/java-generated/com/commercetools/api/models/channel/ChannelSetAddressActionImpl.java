@@ -31,7 +31,7 @@ public final class ChannelSetAddressActionImpl implements ChannelSetAddressActio
         this.action = "setAddress";
     }
     public ChannelSetAddressActionImpl() {
-       
+        this.action = "setAddress";
     }
 
     

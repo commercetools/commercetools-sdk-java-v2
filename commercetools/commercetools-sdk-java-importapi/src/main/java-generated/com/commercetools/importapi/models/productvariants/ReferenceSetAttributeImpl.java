@@ -37,7 +37,7 @@ public final class ReferenceSetAttributeImpl implements ReferenceSetAttribute {
         this.type = "reference-set";
     }
     public ReferenceSetAttributeImpl() {
-       
+        this.type = "reference-set";
     }
 
     /**

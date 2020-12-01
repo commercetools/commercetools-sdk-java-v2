@@ -30,7 +30,7 @@ public final class ProductDiscountChangeIsActiveActionImpl implements ProductDis
         this.action = "changeIsActive";
     }
     public ProductDiscountChangeIsActiveActionImpl() {
-       
+        this.action = "changeIsActive";
     }
 
     

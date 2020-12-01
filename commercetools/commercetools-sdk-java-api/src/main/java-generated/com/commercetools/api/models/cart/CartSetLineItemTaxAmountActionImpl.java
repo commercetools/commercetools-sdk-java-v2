@@ -34,7 +34,7 @@ public final class CartSetLineItemTaxAmountActionImpl implements CartSetLineItem
         this.action = "setLineItemTaxAmount";
     }
     public CartSetLineItemTaxAmountActionImpl() {
-       
+        this.action = "setLineItemTaxAmount";
     }
 
     

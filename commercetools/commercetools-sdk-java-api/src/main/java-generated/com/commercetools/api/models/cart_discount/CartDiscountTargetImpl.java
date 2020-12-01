@@ -31,7 +31,6 @@ public final class CartDiscountTargetImpl implements CartDiscountTarget {
         this.type = type;
     }
     public CartDiscountTargetImpl() {
-       
     }
 
     

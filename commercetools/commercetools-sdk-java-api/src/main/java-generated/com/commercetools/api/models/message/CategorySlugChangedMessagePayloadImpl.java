@@ -31,7 +31,7 @@ public final class CategorySlugChangedMessagePayloadImpl implements CategorySlug
         this.type = "CategorySlugChanged";
     }
     public CategorySlugChangedMessagePayloadImpl() {
-       
+        this.type = "CategorySlugChanged";
     }
 
     

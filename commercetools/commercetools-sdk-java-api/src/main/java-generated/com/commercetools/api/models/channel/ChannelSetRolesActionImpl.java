@@ -31,7 +31,7 @@ public final class ChannelSetRolesActionImpl implements ChannelSetRolesAction {
         this.action = "setRoles";
     }
     public ChannelSetRolesActionImpl() {
-       
+        this.action = "setRoles";
     }
 
     

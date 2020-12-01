@@ -34,7 +34,7 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionImpl implements
         this.action = "changeLocalizedEnumValueOrder";
     }
     public ProductTypeChangeLocalizedEnumValueOrderActionImpl() {
-       
+        this.action = "changeLocalizedEnumValueOrder";
     }
 
     

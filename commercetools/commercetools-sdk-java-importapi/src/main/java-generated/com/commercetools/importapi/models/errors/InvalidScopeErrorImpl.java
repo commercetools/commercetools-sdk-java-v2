@@ -33,7 +33,7 @@ public final class InvalidScopeErrorImpl implements InvalidScopeError {
         this.code = "invalid_scope";
     }
     public InvalidScopeErrorImpl() {
-       
+        this.code = "invalid_scope";
     }
 
     

@@ -39,7 +39,6 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
         this.ratingsDistribution = ratingsDistribution;
     }
     public ReviewRatingStatisticsImpl() {
-       
     }
 
     /**

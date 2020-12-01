@@ -31,7 +31,7 @@ public final class CartSetShippingMethodTaxAmountActionImpl implements CartSetSh
         this.action = "setShippingMethodTaxAmount";
     }
     public CartSetShippingMethodTaxAmountActionImpl() {
-       
+        this.action = "setShippingMethodTaxAmount";
     }
 
     

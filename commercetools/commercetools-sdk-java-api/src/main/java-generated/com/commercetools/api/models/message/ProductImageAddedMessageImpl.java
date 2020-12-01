@@ -67,7 +67,7 @@ public final class ProductImageAddedMessageImpl implements ProductImageAddedMess
         this.type = "ProductImageAdded";
     }
     public ProductImageAddedMessageImpl() {
-       
+        this.type = "ProductImageAdded";
     }
 
     

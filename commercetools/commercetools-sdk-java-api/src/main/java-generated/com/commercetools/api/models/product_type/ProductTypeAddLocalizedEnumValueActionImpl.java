@@ -34,7 +34,7 @@ public final class ProductTypeAddLocalizedEnumValueActionImpl implements Product
         this.action = "addLocalizedEnumValue";
     }
     public ProductTypeAddLocalizedEnumValueActionImpl() {
-       
+        this.action = "addLocalizedEnumValue";
     }
 
     

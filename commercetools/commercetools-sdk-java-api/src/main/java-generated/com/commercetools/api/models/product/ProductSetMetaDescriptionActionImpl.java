@@ -34,7 +34,7 @@ public final class ProductSetMetaDescriptionActionImpl implements ProductSetMeta
         this.action = "setMetaDescription";
     }
     public ProductSetMetaDescriptionActionImpl() {
-       
+        this.action = "setMetaDescription";
     }
 
     

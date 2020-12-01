@@ -36,7 +36,6 @@ public final class ProductCatalogDataImpl implements ProductCatalogData {
         this.hasStagedChanges = hasStagedChanges;
     }
     public ProductCatalogDataImpl() {
-       
     }
 
     

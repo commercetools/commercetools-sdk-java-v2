@@ -37,7 +37,7 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
         this.action = "setAssetDescription";
     }
     public CategorySetAssetDescriptionActionImpl() {
-       
+        this.action = "setAssetDescription";
     }
 
     

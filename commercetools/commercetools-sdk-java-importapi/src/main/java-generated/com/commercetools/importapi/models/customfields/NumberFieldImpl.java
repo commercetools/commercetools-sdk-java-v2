@@ -33,7 +33,7 @@ public final class NumberFieldImpl implements NumberField {
         this.type = "Number";
     }
     public NumberFieldImpl() {
-       
+        this.type = "Number";
     }
 
     /**

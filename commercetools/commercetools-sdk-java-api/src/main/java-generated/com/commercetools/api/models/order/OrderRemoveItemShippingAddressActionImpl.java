@@ -30,7 +30,7 @@ public final class OrderRemoveItemShippingAddressActionImpl implements OrderRemo
         this.action = "removeItemShippingAddress";
     }
     public OrderRemoveItemShippingAddressActionImpl() {
-       
+        this.action = "removeItemShippingAddress";
     }
 
     

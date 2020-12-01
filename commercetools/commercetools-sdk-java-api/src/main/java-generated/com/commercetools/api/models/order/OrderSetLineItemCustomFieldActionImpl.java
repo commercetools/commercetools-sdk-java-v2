@@ -37,7 +37,7 @@ public final class OrderSetLineItemCustomFieldActionImpl implements OrderSetLine
         this.action = "setLineItemCustomField";
     }
     public OrderSetLineItemCustomFieldActionImpl() {
-       
+        this.action = "setLineItemCustomField";
     }
 
     

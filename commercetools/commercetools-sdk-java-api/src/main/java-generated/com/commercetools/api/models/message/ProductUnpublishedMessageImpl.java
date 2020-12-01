@@ -57,7 +57,7 @@ public final class ProductUnpublishedMessageImpl implements ProductUnpublishedMe
         this.type = "ProductUnpublished";
     }
     public ProductUnpublishedMessageImpl() {
-       
+        this.type = "ProductUnpublished";
     }
 
     

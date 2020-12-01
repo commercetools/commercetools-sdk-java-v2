@@ -30,7 +30,6 @@ public final class AttributePlainEnumValueImpl implements AttributePlainEnumValu
         this.label = label;
     }
     public AttributePlainEnumValueImpl() {
-       
     }
 
     

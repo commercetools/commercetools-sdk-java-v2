@@ -30,7 +30,7 @@ public final class GeoJsonPointImpl implements GeoJsonPoint {
         this.type = "Point";
     }
     public GeoJsonPointImpl() {
-       
+        this.type = "Point";
     }
 
     

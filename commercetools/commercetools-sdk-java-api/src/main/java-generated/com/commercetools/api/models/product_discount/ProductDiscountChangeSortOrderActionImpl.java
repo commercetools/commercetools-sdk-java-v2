@@ -30,7 +30,7 @@ public final class ProductDiscountChangeSortOrderActionImpl implements ProductDi
         this.action = "changeSortOrder";
     }
     public ProductDiscountChangeSortOrderActionImpl() {
-       
+        this.action = "changeSortOrder";
     }
 
     

@@ -30,7 +30,7 @@ public final class StagedOrderRemoveItemShippingAddressActionImpl implements Sta
         this.action = "removeItemShippingAddress";
     }
     public StagedOrderRemoveItemShippingAddressActionImpl() {
-       
+        this.action = "removeItemShippingAddress";
     }
 
     

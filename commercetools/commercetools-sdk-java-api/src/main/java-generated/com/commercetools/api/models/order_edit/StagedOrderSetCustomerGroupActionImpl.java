@@ -31,7 +31,7 @@ public final class StagedOrderSetCustomerGroupActionImpl implements StagedOrderS
         this.action = "setCustomerGroup";
     }
     public StagedOrderSetCustomerGroupActionImpl() {
-       
+        this.action = "setCustomerGroup";
     }
 
     

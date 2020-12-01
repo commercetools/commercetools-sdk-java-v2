@@ -38,7 +38,7 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
         this.type = "ProductPublished";
     }
     public ProductPublishedMessagePayloadImpl() {
-       
+        this.type = "ProductPublished";
     }
 
     

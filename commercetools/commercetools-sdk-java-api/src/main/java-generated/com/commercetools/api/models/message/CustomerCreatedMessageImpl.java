@@ -61,7 +61,7 @@ public final class CustomerCreatedMessageImpl implements CustomerCreatedMessage 
         this.type = "CustomerCreated";
     }
     public CustomerCreatedMessageImpl() {
-       
+        this.type = "CustomerCreated";
     }
 
     

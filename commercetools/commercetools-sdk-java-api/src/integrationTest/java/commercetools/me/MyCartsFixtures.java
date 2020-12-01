@@ -12,20 +12,6 @@ import java.util.function.UnaryOperator;
 import static commercetools.cart.CartsFixtures.deleteCart;
 
 public class MyCartsFixtures {
-    public static MyCart deleteMyCart(final String id, final Long version) {
-        MyCart myCart = CommercetoolsTestUtils.getProjectRoot()
-                .me().carts()
-                .withId(id)
-                .delete()
-                .withVersion(version)
-                .executeBlocking().getBody();
-
-        Assert.assertNotNull(myCart);
-        Assert.assertEquals(myCart.getId(), id);
-
-        return myCart;
-    }
-
     public static void withMeCart(final Consumer<MyCart> consumer) {
         MyCartDraft myCartDraft = MyCartDraftBuilder.of()
                 .currency("EUR")

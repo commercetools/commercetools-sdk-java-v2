@@ -43,7 +43,7 @@ public class MyCartsIntegrationTests {
         final ApiHttpClient apiAnonymousHttpClient = ClientFactory.create(
                 "https://api.europe-west1.gcp.commercetools.com/",
                 vrapHttpClient,
-                anonymousSessionTokenSupplier
+                staticTokenSupplier
         );
         ApiRoot apiAnonymousRoot = ApiFactory.create(() -> apiAnonymousHttpClient);
 

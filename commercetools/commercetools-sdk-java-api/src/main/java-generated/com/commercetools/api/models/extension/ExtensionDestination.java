@@ -16,8 +16,8 @@ import java.util.function.Function;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionHttpDestinationImpl.class, name = "HTTP"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionAWSLambdaDestinationImpl.class, name = "AWSLambda")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionAWSLambdaDestinationImpl.class, name = "AWSLambda"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionHttpDestinationImpl.class, name = "HTTP")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

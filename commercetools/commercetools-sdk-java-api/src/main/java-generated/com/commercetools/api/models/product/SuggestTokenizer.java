@@ -16,8 +16,8 @@ import java.util.function.Function;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.api.models.product.WhitespaceTokenizerImpl.class, name = "whitespace"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.product.CustomTokenizerImpl.class, name = "custom")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product.CustomTokenizerImpl.class, name = "custom"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product.WhitespaceTokenizerImpl.class, name = "whitespace")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

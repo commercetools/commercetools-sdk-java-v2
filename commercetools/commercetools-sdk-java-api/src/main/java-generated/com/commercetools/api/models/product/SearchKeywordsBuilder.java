@@ -20,6 +20,15 @@ public final class SearchKeywordsBuilder {
         this.values = values;
         return this;
     }
+    
+    public SearchKeywordsBuilder addValue(final String key, final java.util.List<com.commercetools.api.models.product.SearchKeyword> value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+        return this;
+    }
+    
 
     
     public Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> getValues(){

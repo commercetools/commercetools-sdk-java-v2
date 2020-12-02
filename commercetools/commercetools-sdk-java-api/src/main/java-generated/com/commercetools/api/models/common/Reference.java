@@ -38,6 +38,10 @@ import java.util.function.Function;
 import java.io.IOException;
 
 @JsonSubTypes({
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl.class, name = "cart-discount"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartReferenceImpl.class, name = "cart"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryReferenceImpl.class, name = "category"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelReferenceImpl.class, name = "channel"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.custom_object.CustomObjectReferenceImpl.class, name = "key-value-document"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl.class, name = "customer-group"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerReferenceImpl.class, name = "customer"),
@@ -47,8 +51,8 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderReferenceImpl.class, name = "order"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentReferenceImpl.class, name = "payment"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountReferenceImpl.class, name = "product-discount"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeReferenceImpl.class, name = "product-type"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductReferenceImpl.class, name = "product"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeReferenceImpl.class, name = "product-type"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.review.ReviewReferenceImpl.class, name = "review"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl.class, name = "shipping-method"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListReferenceImpl.class, name = "shopping-list"),
@@ -56,11 +60,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreReferenceImpl.class, name = "store"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl.class, name = "tax-category"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeReferenceImpl.class, name = "type"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneReferenceImpl.class, name = "zone"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl.class, name = "cart-discount"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.channel.ChannelReferenceImpl.class, name = "channel"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartReferenceImpl.class, name = "cart"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryReferenceImpl.class, name = "category")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneReferenceImpl.class, name = "zone")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

@@ -17,9 +17,9 @@ import java.util.function.Function;
 import java.io.IOException;
 
 @JsonSubTypes({
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraftImpl.class, name = "absolute"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueExternalDraftImpl.class, name = "external"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraftImpl.class, name = "relative"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteDraftImpl.class, name = "absolute")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueRelativeDraftImpl.class, name = "relative")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

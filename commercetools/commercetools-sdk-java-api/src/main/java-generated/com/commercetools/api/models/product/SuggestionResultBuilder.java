@@ -20,6 +20,15 @@ public final class SuggestionResultBuilder {
         this.values = values;
         return this;
     }
+    
+    public SuggestionResultBuilder addValue(final String key, final java.util.List<com.commercetools.api.models.product.Suggestion> value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+        return this;
+    }
+    
 
     
     public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> getValues(){

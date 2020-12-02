@@ -20,6 +20,15 @@ public final class LocalizedStringBuilder {
         this.values = values;
         return this;
     }
+    
+    public LocalizedStringBuilder addValue(final String key, final String value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+        return this;
+    }
+    
 
     
     public Map<String, String> getValues(){

@@ -16,8 +16,8 @@ import java.util.function.Function;
 import java.io.IOException;
 
 @JsonSubTypes({
-   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.DeliveryPlatformFormatImpl.class, name = "Platform"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.DeliveryCloudEventsFormatImpl.class, name = "CloudEvents")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.DeliveryCloudEventsFormatImpl.class, name = "CloudEvents"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.DeliveryPlatformFormatImpl.class, name = "Platform")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

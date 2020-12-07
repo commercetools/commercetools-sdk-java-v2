@@ -59,12 +59,16 @@ public final class CartDiscountValueGiftLineItemImpl implements CartDiscountValu
         return this.variantId;
     }
     
-    
+    /**
+    *  <p>The channel must have the role <code>InventorySupply</code></p>
+    */
     public com.commercetools.api.models.channel.ChannelReference getSupplyChannel(){
         return this.supplyChannel;
     }
     
-    
+    /**
+    *  <p>The channel must have the role <code>ProductDistribution</code></p>
+    */
     public com.commercetools.api.models.channel.ChannelReference getDistributionChannel(){
         return this.distributionChannel;
     }

@@ -1,8 +1,8 @@
 package com.commercetools.api.models.cart_discount;
 
 import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -27,27 +27,31 @@ public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDra
     @NotNull
     @Valid
     @JsonProperty("product")
-    public ProductReference getProduct();
+    public ProductResourceIdentifier getProduct();
     
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
-    
+    /**
+    *  <p>The channel must have the role <code>InventorySupply</code></p>
+    */
     @Valid
     @JsonProperty("supplyChannel")
-    public ChannelReference getSupplyChannel();
-    
+    public ChannelResourceIdentifier getSupplyChannel();
+    /**
+    *  <p>The channel must have the role <code>ProductDistribution</code></p>
+    */
     @Valid
     @JsonProperty("distributionChannel")
-    public ChannelReference getDistributionChannel();
+    public ChannelResourceIdentifier getDistributionChannel();
 
-    public void setProduct(final ProductReference product);
+    public void setProduct(final ProductResourceIdentifier product);
     
     public void setVariantId(final Long variantId);
     
-    public void setSupplyChannel(final ChannelReference supplyChannel);
+    public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
     
-    public void setDistributionChannel(final ChannelReference distributionChannel);
+    public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
     public static CartDiscountValueGiftLineItemDraftImpl of(){
         return new CartDiscountValueGiftLineItemDraftImpl();

@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -87,6 +89,34 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
     
     public void setIsMatching(final Boolean isMatching){
         this.isMatching = isMatching;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CartClassificationTierImpl that = (CartClassificationTierImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(value, that.value)
+                .append(price, that.price)
+                .append(tiers, that.tiers)
+                .append(isMatching, that.isMatching)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(value)
+            .append(price)
+            .append(tiers)
+            .append(isMatching)
+            .toHashCode();
     }
 
 }

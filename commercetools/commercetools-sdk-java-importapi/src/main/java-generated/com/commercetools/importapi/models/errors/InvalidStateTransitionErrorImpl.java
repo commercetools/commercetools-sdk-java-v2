@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -76,6 +78,32 @@ public final class InvalidStateTransitionErrorImpl implements InvalidStateTransi
     
     public void setNewState(final com.commercetools.importapi.models.common.ProcessingState newState){
         this.newState = newState;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        InvalidStateTransitionErrorImpl that = (InvalidStateTransitionErrorImpl) o;
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(currentState, that.currentState)
+                .append(newState, that.newState)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(message)
+            .append(currentState)
+            .append(newState)
+            .toHashCode();
     }
 
 }

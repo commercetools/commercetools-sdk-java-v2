@@ -21,6 +21,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -233,6 +235,50 @@ public final class PriceImportImpl implements PriceImport {
     
     public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product){
         this.product = product;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        PriceImportImpl that = (PriceImportImpl) o;
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(discounted, that.discounted)
+                .append(publish, that.publish)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
+                .append(productVariant, that.productVariant)
+                .append(product, that.product)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(value)
+            .append(country)
+            .append(validFrom)
+            .append(validUntil)
+            .append(customerGroup)
+            .append(channel)
+            .append(discounted)
+            .append(publish)
+            .append(tiers)
+            .append(custom)
+            .append(productVariant)
+            .append(product)
+            .toHashCode();
     }
 
 }

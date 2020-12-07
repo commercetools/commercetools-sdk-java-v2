@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -100,6 +102,36 @@ public final class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft {
     
     public void setIncludedInPrice(final Boolean includedInPrice){
         this.includedInPrice = includedInPrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ExternalTaxRateDraftImpl that = (ExternalTaxRateDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
+                .append(amount, that.amount)
+                .append(country, that.country)
+                .append(state, that.state)
+                .append(subRates, that.subRates)
+                .append(includedInPrice, that.includedInPrice)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(amount)
+            .append(country)
+            .append(state)
+            .append(subRates)
+            .append(includedInPrice)
+            .toHashCode();
     }
 
 }

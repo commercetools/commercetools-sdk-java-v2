@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -122,6 +124,38 @@ public final class OperationStatesImpl implements OperationStates {
     
     public void setRejected(final Long rejected){
         this.rejected = rejected;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OperationStatesImpl that = (OperationStatesImpl) o;
+    
+        return new EqualsBuilder()
+                .append(validationFailed, that.validationFailed)
+                .append(unresolved, that.unresolved)
+                .append(waitForMasterVariant, that.waitForMasterVariant)
+                .append(imported, that.imported)
+                .append(delete, that.delete)
+                .append(deleted, that.deleted)
+                .append(rejected, that.rejected)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(validationFailed)
+            .append(unresolved)
+            .append(waitForMasterVariant)
+            .append(imported)
+            .append(delete)
+            .append(deleted)
+            .append(rejected)
+            .toHashCode();
     }
 
 }

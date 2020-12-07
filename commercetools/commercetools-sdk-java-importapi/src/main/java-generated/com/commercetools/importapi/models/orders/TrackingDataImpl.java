@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -84,6 +86,34 @@ public final class TrackingDataImpl implements TrackingData {
     
     public void setIsReturn(final Boolean isReturn){
         this.isReturn = isReturn;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        TrackingDataImpl that = (TrackingDataImpl) o;
+    
+        return new EqualsBuilder()
+                .append(trackingId, that.trackingId)
+                .append(carrier, that.carrier)
+                .append(provider, that.provider)
+                .append(providerTransaction, that.providerTransaction)
+                .append(isReturn, that.isReturn)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(trackingId)
+            .append(carrier)
+            .append(provider)
+            .append(providerTransaction)
+            .append(isReturn)
+            .toHashCode();
     }
 
 }

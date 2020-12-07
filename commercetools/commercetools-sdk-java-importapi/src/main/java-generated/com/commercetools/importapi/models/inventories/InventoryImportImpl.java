@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -122,6 +124,38 @@ public final class InventoryImportImpl implements InventoryImport {
     
     public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){
         this.custom = custom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        InventoryImportImpl that = (InventoryImportImpl) o;
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(supplyChannel, that.supplyChannel)
+                .append(custom, that.custom)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(sku)
+            .append(quantityOnStock)
+            .append(restockableInDays)
+            .append(expectedDelivery)
+            .append(supplyChannel)
+            .append(custom)
+            .toHashCode();
     }
 
 }

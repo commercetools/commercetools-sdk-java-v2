@@ -16,6 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -203,6 +205,48 @@ public final class CategoryImportImpl implements CategoryImport {
     
     public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){
         this.custom = custom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CategoryImportImpl that = (CategoryImportImpl) o;
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(parent, that.parent)
+                .append(orderHint, that.orderHint)
+                .append(externalId, that.externalId)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(assets, that.assets)
+                .append(custom, that.custom)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(name)
+            .append(slug)
+            .append(description)
+            .append(parent)
+            .append(orderHint)
+            .append(externalId)
+            .append(metaTitle)
+            .append(metaDescription)
+            .append(metaKeywords)
+            .append(assets)
+            .append(custom)
+            .toHashCode();
     }
 
 }

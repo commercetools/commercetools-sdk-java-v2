@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -87,6 +89,32 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
     
     public void setResults(final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results){
        this.results = results;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ImportSinkPagedResponseImpl that = (ImportSinkPagedResponseImpl) o;
+    
+        return new EqualsBuilder()
+                .append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(count, that.count)
+                .append(results, that.results)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(limit)
+            .append(offset)
+            .append(count)
+            .append(results)
+            .toHashCode();
     }
 
 }

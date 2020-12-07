@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -48,6 +50,28 @@ public final class SearchKeywordImpl implements SearchKeyword {
     
     public void setSuggestTokenizer(final com.commercetools.importapi.models.products.SuggestTokenizer suggestTokenizer){
         this.suggestTokenizer = suggestTokenizer;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        SearchKeywordImpl that = (SearchKeywordImpl) o;
+    
+        return new EqualsBuilder()
+                .append(text, that.text)
+                .append(suggestTokenizer, that.suggestTokenizer)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(text)
+            .append(suggestTokenizer)
+            .toHashCode();
     }
 
 }

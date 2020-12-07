@@ -6,12 +6,11 @@ import org.apache.commons.lang3.SystemUtils;
 import org.slf4j.Logger;
 
 import java.util.List;
+import java.util.function.Supplier;
 
 import static java.util.Arrays.asList;
 
 public class MiddlewareFactory {
-    private final static String userAgent = buildUserAgent();
-
     @Deprecated
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier, final Logger logger)
     {
@@ -20,16 +19,21 @@ public class MiddlewareFactory {
 
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier, final InternalLoggerFactory internalLoggerFactory)
     {
+        return createDefault(tokenSupplier, internalLoggerFactory, MiddlewareFactory::buildUserAgent);
+    }
+
+    public static List<Middleware> createDefault(final TokenSupplier tokenSupplier, final InternalLoggerFactory internalLoggerFactory, final Supplier<String> userAgent)
+    {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
         return asList(
-                (request, next) -> next.apply(request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent)),
+                (request, next) -> next.apply(request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent.get())),
                 new ErrorMiddleware(),
                 new InternalLoggerMiddleware(internalLoggerFactory),
                 new OAuthMiddleware(oAuthHandler)
         );
     }
 
-    private static String buildUserAgent() {
+    public static String buildUserAgent() {
         String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;
         String osName = SystemUtils.OS_NAME;
         String osArch = SystemUtils.OS_ARCH;

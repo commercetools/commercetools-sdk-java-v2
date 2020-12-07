@@ -17,9 +17,9 @@ public class OAuthHandler extends AutoCloseableService {
     }
 
     public AuthenticationToken getToken() {
-        if (token == null)
+        if (token == null || token.isExpired())
             synchronized (this) {
-                if (token == null)
+                if (token == null || token.isExpired())
                     supplier.getToken().thenApply(authenticationToken -> token = authenticationToken).join();
             }
         return token;

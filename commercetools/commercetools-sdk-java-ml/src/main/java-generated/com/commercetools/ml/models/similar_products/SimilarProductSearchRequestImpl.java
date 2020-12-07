@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -49,7 +51,6 @@ public final class SimilarProductSearchRequestImpl implements SimilarProductSear
         this.confidenceMax = confidenceMax;
     }
     public SimilarProductSearchRequestImpl() {
-       
     }
 
     
@@ -134,6 +135,40 @@ public final class SimilarProductSearchRequestImpl implements SimilarProductSear
     
     public void setConfidenceMax(final Double confidenceMax){
         this.confidenceMax = confidenceMax;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        SimilarProductSearchRequestImpl that = (SimilarProductSearchRequestImpl) o;
+    
+        return new EqualsBuilder()
+                .append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(language, that.language)
+                .append(currencyCode, that.currencyCode)
+                .append(similarityMeasures, that.similarityMeasures)
+                .append(productSetSelectors, that.productSetSelectors)
+                .append(confidenceMin, that.confidenceMin)
+                .append(confidenceMax, that.confidenceMax)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(limit)
+            .append(offset)
+            .append(language)
+            .append(currencyCode)
+            .append(similarityMeasures)
+            .append(productSetSelectors)
+            .append(confidenceMin)
+            .append(confidenceMax)
+            .toHashCode();
     }
 
 }

@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -45,7 +47,6 @@ public final class ProductSetSelectorImpl implements ProductSetSelector {
         this.productSetLimit = productSetLimit;
     }
     public ProductSetSelectorImpl() {
-       
     }
 
     /**
@@ -120,6 +121,36 @@ public final class ProductSetSelectorImpl implements ProductSetSelector {
     
     public void setProductSetLimit(final Long productSetLimit){
         this.productSetLimit = productSetLimit;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductSetSelectorImpl that = (ProductSetSelectorImpl) o;
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
+                .append(productIds, that.productIds)
+                .append(productTypeIds, that.productTypeIds)
+                .append(staged, that.staged)
+                .append(includeVariants, that.includeVariants)
+                .append(productSetLimit, that.productSetLimit)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(productIds)
+            .append(productTypeIds)
+            .append(staged)
+            .append(includeVariants)
+            .append(productSetLimit)
+            .toHashCode();
     }
 
 }

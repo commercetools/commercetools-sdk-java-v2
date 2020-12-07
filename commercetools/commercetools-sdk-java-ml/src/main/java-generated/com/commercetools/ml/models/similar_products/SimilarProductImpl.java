@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -37,7 +39,6 @@ public final class SimilarProductImpl implements SimilarProduct {
         this.meta = meta;
     }
     public SimilarProductImpl() {
-       
     }
 
     /**
@@ -71,6 +72,30 @@ public final class SimilarProductImpl implements SimilarProduct {
     
     public void setMeta(final com.commercetools.ml.models.similar_products.SimilarProductMeta meta){
         this.meta = meta;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        SimilarProductImpl that = (SimilarProductImpl) o;
+    
+        return new EqualsBuilder()
+                .append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(meta, that.meta)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(product)
+            .append(variantId)
+            .append(meta)
+            .toHashCode();
     }
 
 }

@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -33,7 +35,6 @@ public final class MissingImagesImpl implements MissingImages {
         this.imageCount = imageCount;
     }
     public MissingImagesImpl() {
-       
     }
 
     
@@ -65,6 +66,30 @@ public final class MissingImagesImpl implements MissingImages {
     
     public void setImageCount(final Long imageCount){
         this.imageCount = imageCount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingImagesImpl that = (MissingImagesImpl) o;
+    
+        return new EqualsBuilder()
+                .append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(imageCount, that.imageCount)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(product)
+            .append(variantId)
+            .append(imageCount)
+            .toHashCode();
     }
 
 }

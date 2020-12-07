@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -33,7 +35,6 @@ public final class ResultItemImpl implements ResultItem {
         this.productVariants = productVariants;
     }
     public ResultItemImpl() {
-       
     }
 
     /**
@@ -60,6 +61,28 @@ public final class ResultItemImpl implements ResultItem {
     
     public void setProductVariants(final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants){
        this.productVariants = productVariants;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ResultItemImpl that = (ResultItemImpl) o;
+    
+        return new EqualsBuilder()
+                .append(imageUrl, that.imageUrl)
+                .append(productVariants, that.productVariants)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(imageUrl)
+            .append(productVariants)
+            .toHashCode();
     }
 
 }

@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -60,7 +62,6 @@ public final class MissingAttributesSearchRequestImpl implements MissingAttribut
         this.attributeName = attributeName;
     }
     public MissingAttributesSearchRequestImpl() {
-       
     }
 
     
@@ -201,6 +202,48 @@ public final class MissingAttributesSearchRequestImpl implements MissingAttribut
     
     public void setAttributeName(final String attributeName){
         this.attributeName = attributeName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingAttributesSearchRequestImpl that = (MissingAttributesSearchRequestImpl) o;
+    
+        return new EqualsBuilder()
+                .append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(staged, that.staged)
+                .append(productSetLimit, that.productSetLimit)
+                .append(includeVariants, that.includeVariants)
+                .append(coverageMin, that.coverageMin)
+                .append(coverageMax, that.coverageMax)
+                .append(sortBy, that.sortBy)
+                .append(showMissingAttributeNames, that.showMissingAttributeNames)
+                .append(productIds, that.productIds)
+                .append(productTypeIds, that.productTypeIds)
+                .append(attributeName, that.attributeName)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(limit)
+            .append(offset)
+            .append(staged)
+            .append(productSetLimit)
+            .append(includeVariants)
+            .append(coverageMin)
+            .append(coverageMax)
+            .append(sortBy)
+            .append(showMissingAttributeNames)
+            .append(productIds)
+            .append(productTypeIds)
+            .append(attributeName)
+            .toHashCode();
     }
 
 }

@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -38,7 +40,6 @@ public final class MissingImagesTaskStatusImpl implements MissingImagesTaskStatu
         this.result = result;
     }
     public MissingImagesTaskStatusImpl() {
-       
     }
 
     
@@ -70,6 +71,30 @@ public final class MissingImagesTaskStatusImpl implements MissingImagesTaskStatu
     
     public void setResult(final com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult result){
         this.result = result;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingImagesTaskStatusImpl that = (MissingImagesTaskStatusImpl) o;
+    
+        return new EqualsBuilder()
+                .append(state, that.state)
+                .append(expires, that.expires)
+                .append(result, that.result)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(state)
+            .append(expires)
+            .append(result)
+            .toHashCode();
     }
 
 }

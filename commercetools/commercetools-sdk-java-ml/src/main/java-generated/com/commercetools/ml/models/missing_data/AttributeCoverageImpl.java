@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -30,7 +32,6 @@ public final class AttributeCoverageImpl implements AttributeCoverage {
         this.values = values;
     }
     public AttributeCoverageImpl() {
-       
     }
 
     /**
@@ -53,6 +54,28 @@ public final class AttributeCoverageImpl implements AttributeCoverage {
     
     public void setValues(final Double values){
         this.values = values;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        AttributeCoverageImpl that = (AttributeCoverageImpl) o;
+    
+        return new EqualsBuilder()
+                .append(names, that.names)
+                .append(values, that.values)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(names)
+            .append(values)
+            .toHashCode();
     }
 
 }

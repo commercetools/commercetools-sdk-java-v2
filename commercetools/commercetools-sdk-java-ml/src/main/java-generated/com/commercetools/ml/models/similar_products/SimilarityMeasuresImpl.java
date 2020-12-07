@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -42,7 +44,6 @@ public final class SimilarityMeasuresImpl implements SimilarityMeasures {
         this.price = price;
     }
     public SimilarityMeasuresImpl() {
-       
     }
 
     /**
@@ -98,6 +99,34 @@ public final class SimilarityMeasuresImpl implements SimilarityMeasures {
     
     public void setPrice(final Long price){
         this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        SimilarityMeasuresImpl that = (SimilarityMeasuresImpl) o;
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(attribute, that.attribute)
+                .append(variantCount, that.variantCount)
+                .append(price, that.price)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(description)
+            .append(attribute)
+            .append(variantCount)
+            .append(price)
+            .toHashCode();
     }
 
 }

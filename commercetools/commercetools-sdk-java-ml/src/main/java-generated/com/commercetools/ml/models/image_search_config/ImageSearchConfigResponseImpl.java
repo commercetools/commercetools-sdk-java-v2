@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -31,7 +33,6 @@ public final class ImageSearchConfigResponseImpl implements ImageSearchConfigRes
         this.lastModifiedAt = lastModifiedAt;
     }
     public ImageSearchConfigResponseImpl() {
-       
     }
 
     /**
@@ -52,6 +53,28 @@ public final class ImageSearchConfigResponseImpl implements ImageSearchConfigRes
     
     public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
         this.lastModifiedAt = lastModifiedAt;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ImageSearchConfigResponseImpl that = (ImageSearchConfigResponseImpl) o;
+    
+        return new EqualsBuilder()
+                .append(status, that.status)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(status)
+            .append(lastModifiedAt)
+            .toHashCode();
     }
 
 }

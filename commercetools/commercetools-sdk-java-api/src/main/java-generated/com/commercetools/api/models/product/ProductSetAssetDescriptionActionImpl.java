@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -106,6 +108,38 @@ public final class ProductSetAssetDescriptionActionImpl implements ProductSetAss
     
     public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductSetAssetDescriptionActionImpl that = (ProductSetAssetDescriptionActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(description, that.description)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(variantId)
+            .append(sku)
+            .append(staged)
+            .append(assetId)
+            .append(assetKey)
+            .append(description)
+            .toHashCode();
     }
 
 }

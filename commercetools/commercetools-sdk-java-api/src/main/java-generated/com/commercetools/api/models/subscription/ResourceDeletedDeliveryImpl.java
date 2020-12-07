@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -94,6 +96,36 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
     
     public void setModifiedAt(final java.time.ZonedDateTime modifiedAt){
         this.modifiedAt = modifiedAt;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ResourceDeletedDeliveryImpl that = (ResourceDeletedDeliveryImpl) o;
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(version, that.version)
+                .append(modifiedAt, that.modifiedAt)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(notificationType)
+            .append(resource)
+            .append(resourceUserProvidedIdentifiers)
+            .append(version)
+            .append(modifiedAt)
+            .toHashCode();
     }
 
 }

@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -46,6 +48,28 @@ public final class InventoryEntryCreatedMessagePayloadImpl implements InventoryE
 
     public void setInventoryEntry(final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry){
         this.inventoryEntry = inventoryEntry;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        InventoryEntryCreatedMessagePayloadImpl that = (InventoryEntryCreatedMessagePayloadImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(inventoryEntry, that.inventoryEntry)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(inventoryEntry)
+            .toHashCode();
     }
 
 }

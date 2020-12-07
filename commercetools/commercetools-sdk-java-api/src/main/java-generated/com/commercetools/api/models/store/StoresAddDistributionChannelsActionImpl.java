@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -46,6 +48,28 @@ public final class StoresAddDistributionChannelsActionImpl implements StoresAddD
 
     public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
         this.distributionChannel = distributionChannel;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        StoresAddDistributionChannelsActionImpl that = (StoresAddDistributionChannelsActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(distributionChannel, that.distributionChannel)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(distributionChannel)
+            .toHashCode();
     }
 
 }

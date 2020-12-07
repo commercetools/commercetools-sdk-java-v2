@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -80,6 +82,32 @@ public final class ZoneDraftImpl implements ZoneDraft {
     
     public void setLocations(final java.util.List<com.commercetools.api.models.zone.Location> locations){
        this.locations = locations;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ZoneDraftImpl that = (ZoneDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(locations, that.locations)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(name)
+            .append(description)
+            .append(locations)
+            .toHashCode();
     }
 
 }

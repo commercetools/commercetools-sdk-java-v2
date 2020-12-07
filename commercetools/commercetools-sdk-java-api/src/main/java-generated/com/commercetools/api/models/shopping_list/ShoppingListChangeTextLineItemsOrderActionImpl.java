@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -49,6 +51,28 @@ public final class ShoppingListChangeTextLineItemsOrderActionImpl implements Sho
     
     public void setTextLineItemOrder(final java.util.List<String> textLineItemOrder){
        this.textLineItemOrder = textLineItemOrder;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ShoppingListChangeTextLineItemsOrderActionImpl that = (ShoppingListChangeTextLineItemsOrderActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(textLineItemOrder, that.textLineItemOrder)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(textLineItemOrder)
+            .toHashCode();
     }
 
 }

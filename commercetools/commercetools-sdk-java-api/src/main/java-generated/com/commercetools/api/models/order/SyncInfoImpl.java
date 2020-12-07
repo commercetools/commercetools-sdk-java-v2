@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -65,6 +67,30 @@ public final class SyncInfoImpl implements SyncInfo {
     
     public void setSyncedAt(final java.time.ZonedDateTime syncedAt){
         this.syncedAt = syncedAt;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        SyncInfoImpl that = (SyncInfoImpl) o;
+    
+        return new EqualsBuilder()
+                .append(channel, that.channel)
+                .append(externalId, that.externalId)
+                .append(syncedAt, that.syncedAt)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(channel)
+            .append(externalId)
+            .append(syncedAt)
+            .toHashCode();
     }
 
 }

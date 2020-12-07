@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -100,6 +102,34 @@ public final class FieldDefinitionImpl implements FieldDefinition {
     
     public void setInputHint(final com.commercetools.api.models.type.TypeTextInputHint inputHint){
         this.inputHint = inputHint;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        FieldDefinitionImpl that = (FieldDefinitionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(label, that.label)
+                .append(required, that.required)
+                .append(inputHint, that.inputHint)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(name)
+            .append(label)
+            .append(required)
+            .append(inputHint)
+            .toHashCode();
     }
 
 }

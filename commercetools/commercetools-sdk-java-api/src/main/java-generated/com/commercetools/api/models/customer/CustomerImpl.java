@@ -20,6 +20,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -430,6 +432,82 @@ public final class CustomerImpl implements Customer {
     
     public void setStores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores){
        this.stores = stores;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CustomerImpl that = (CustomerImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(customerNumber, that.customerNumber)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(middleName, that.middleName)
+                .append(title, that.title)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(companyName, that.companyName)
+                .append(vatId, that.vatId)
+                .append(addresses, that.addresses)
+                .append(defaultShippingAddressId, that.defaultShippingAddressId)
+                .append(shippingAddressIds, that.shippingAddressIds)
+                .append(defaultBillingAddressId, that.defaultBillingAddressId)
+                .append(billingAddressIds, that.billingAddressIds)
+                .append(isEmailVerified, that.isEmailVerified)
+                .append(externalId, that.externalId)
+                .append(customerGroup, that.customerGroup)
+                .append(custom, that.custom)
+                .append(locale, that.locale)
+                .append(salutation, that.salutation)
+                .append(key, that.key)
+                .append(stores, that.stores)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(customerNumber)
+            .append(email)
+            .append(password)
+            .append(firstName)
+            .append(lastName)
+            .append(middleName)
+            .append(title)
+            .append(dateOfBirth)
+            .append(companyName)
+            .append(vatId)
+            .append(addresses)
+            .append(defaultShippingAddressId)
+            .append(shippingAddressIds)
+            .append(defaultBillingAddressId)
+            .append(billingAddressIds)
+            .append(isEmailVerified)
+            .append(externalId)
+            .append(customerGroup)
+            .append(custom)
+            .append(locale)
+            .append(salutation)
+            .append(key)
+            .append(stores)
+            .toHashCode();
     }
 
 }

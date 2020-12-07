@@ -17,6 +17,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -189,6 +191,48 @@ public final class ProductVariantImpl implements ProductVariant {
     
     public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted){
         this.scopedPriceDiscounted = scopedPriceDiscounted;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductVariantImpl that = (ProductVariantImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(price, that.price)
+                .append(images, that.images)
+                .append(assets, that.assets)
+                .append(availability, that.availability)
+                .append(isMatchingVariant, that.isMatchingVariant)
+                .append(scopedPrice, that.scopedPrice)
+                .append(scopedPriceDiscounted, that.scopedPriceDiscounted)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(sku)
+            .append(key)
+            .append(prices)
+            .append(attributes)
+            .append(price)
+            .append(images)
+            .append(assets)
+            .append(availability)
+            .append(isMatchingVariant)
+            .append(scopedPrice)
+            .append(scopedPriceDiscounted)
+            .toHashCode();
     }
 
 }

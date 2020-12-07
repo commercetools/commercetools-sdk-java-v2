@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -195,6 +197,52 @@ public final class OrderCustomLineItemDiscountSetMessageImpl implements OrderCus
     
     public void setTaxedPrice(final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice){
         this.taxedPrice = taxedPrice;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderCustomLineItemDiscountSetMessageImpl that = (OrderCustomLineItemDiscountSetMessageImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customLineItemId, that.customLineItemId)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(taxedPrice, that.taxedPrice)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(sequenceNumber)
+            .append(resource)
+            .append(resourceVersion)
+            .append(type)
+            .append(resourceUserProvidedIdentifiers)
+            .append(customLineItemId)
+            .append(discountedPricePerQuantity)
+            .append(taxedPrice)
+            .toHashCode();
     }
 
 }

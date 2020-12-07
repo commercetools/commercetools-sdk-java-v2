@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -58,6 +60,30 @@ public final class OrderBillingAddressSetMessagePayloadImpl implements OrderBill
     
     public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress){
         this.oldAddress = oldAddress;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderBillingAddressSetMessagePayloadImpl that = (OrderBillingAddressSetMessagePayloadImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(address, that.address)
+                .append(oldAddress, that.oldAddress)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(address)
+            .append(oldAddress)
+            .toHashCode();
     }
 
 }

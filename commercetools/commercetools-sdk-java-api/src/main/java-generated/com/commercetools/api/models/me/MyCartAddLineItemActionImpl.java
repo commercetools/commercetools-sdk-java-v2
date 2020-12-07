@@ -19,6 +19,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -184,6 +186,50 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
     
     public void setAddedAt(final java.time.ZonedDateTime addedAt){
         this.addedAt = addedAt;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MyCartAddLineItemActionImpl that = (MyCartAddLineItemActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(custom, that.custom)
+                .append(distributionChannel, that.distributionChannel)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(supplyChannel, that.supplyChannel)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(shippingDetails, that.shippingDetails)
+                .append(addedAt, that.addedAt)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(custom)
+            .append(distributionChannel)
+            .append(externalTaxRate)
+            .append(productId)
+            .append(variantId)
+            .append(sku)
+            .append(quantity)
+            .append(supplyChannel)
+            .append(externalPrice)
+            .append(externalTotalPrice)
+            .append(shippingDetails)
+            .append(addedAt)
+            .toHashCode();
     }
 
 }

@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -62,6 +64,30 @@ public final class TaxPortionImpl implements TaxPortion {
     
     public void setAmount(final com.commercetools.api.models.common.TypedMoney amount){
         this.amount = amount;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        TaxPortionImpl that = (TaxPortionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
+                .append(rate, that.rate)
+                .append(amount, that.amount)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(rate)
+            .append(amount)
+            .toHashCode();
     }
 
 }

@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -61,6 +63,30 @@ public final class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectN
     
     public void setLanguages(final java.util.List<String> languages){
        this.languages = languages;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProjectNotConfiguredForLanguagesErrorImpl that = (ProjectNotConfiguredForLanguagesErrorImpl) o;
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(languages, that.languages)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(message)
+            .append(languages)
+            .toHashCode();
     }
 
 }

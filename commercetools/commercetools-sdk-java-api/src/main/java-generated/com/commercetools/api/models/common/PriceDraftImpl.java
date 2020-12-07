@@ -18,6 +18,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -144,6 +146,42 @@ public final class PriceDraftImpl implements PriceDraft {
     
     public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted){
         this.discounted = discounted;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        PriceDraftImpl that = (PriceDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(custom, that.custom)
+                .append(tiers, that.tiers)
+                .append(discounted, that.discounted)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(value)
+            .append(country)
+            .append(customerGroup)
+            .append(channel)
+            .append(validFrom)
+            .append(validUntil)
+            .append(custom)
+            .append(tiers)
+            .append(discounted)
+            .toHashCode();
     }
 
 }

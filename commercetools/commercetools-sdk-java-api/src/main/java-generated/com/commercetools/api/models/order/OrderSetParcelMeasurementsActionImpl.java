@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -58,6 +60,30 @@ public final class OrderSetParcelMeasurementsActionImpl implements OrderSetParce
     
     public void setMeasurements(final com.commercetools.api.models.order.ParcelMeasurements measurements){
         this.measurements = measurements;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderSetParcelMeasurementsActionImpl that = (OrderSetParcelMeasurementsActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(measurements, that.measurements)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(parcelId)
+            .append(measurements)
+            .toHashCode();
     }
 
 }

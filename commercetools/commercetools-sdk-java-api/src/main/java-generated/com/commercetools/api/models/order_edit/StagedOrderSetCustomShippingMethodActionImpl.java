@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -84,6 +86,34 @@ public final class StagedOrderSetCustomShippingMethodActionImpl implements Stage
     
     public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
         this.externalTaxRate = externalTaxRate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        StagedOrderSetCustomShippingMethodActionImpl that = (StagedOrderSetCustomShippingMethodActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(shippingRate, that.shippingRate)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(shippingMethodName)
+            .append(shippingRate)
+            .append(taxCategory)
+            .append(externalTaxRate)
+            .toHashCode();
     }
 
 }

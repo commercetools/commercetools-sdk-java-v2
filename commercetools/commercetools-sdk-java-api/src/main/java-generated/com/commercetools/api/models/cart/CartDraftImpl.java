@@ -25,6 +25,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -390,6 +392,72 @@ public final class CartDraftImpl implements CartDraft {
     
     public void setDiscountCodes(final java.util.List<String> discountCodes){
        this.discountCodes = discountCodes;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CartDraftImpl that = (CartDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(currency, that.currency)
+                .append(customerId, that.customerId)
+                .append(customerEmail, that.customerEmail)
+                .append(customerGroup, that.customerGroup)
+                .append(anonymousId, that.anonymousId)
+                .append(store, that.store)
+                .append(country, that.country)
+                .append(inventoryMode, that.inventoryMode)
+                .append(taxMode, that.taxMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingMethod, that.shippingMethod)
+                .append(externalTaxRateForShippingMethod, that.externalTaxRateForShippingMethod)
+                .append(custom, that.custom)
+                .append(locale, that.locale)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(origin, that.origin)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(discountCodes, that.discountCodes)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(currency)
+            .append(customerId)
+            .append(customerEmail)
+            .append(customerGroup)
+            .append(anonymousId)
+            .append(store)
+            .append(country)
+            .append(inventoryMode)
+            .append(taxMode)
+            .append(taxRoundingMode)
+            .append(taxCalculationMode)
+            .append(lineItems)
+            .append(customLineItems)
+            .append(shippingAddress)
+            .append(billingAddress)
+            .append(shippingMethod)
+            .append(externalTaxRateForShippingMethod)
+            .append(custom)
+            .append(locale)
+            .append(deleteDaysAfterLastModification)
+            .append(origin)
+            .append(shippingRateInput)
+            .append(itemShippingAddresses)
+            .append(discountCodes)
+            .toHashCode();
     }
 
 }

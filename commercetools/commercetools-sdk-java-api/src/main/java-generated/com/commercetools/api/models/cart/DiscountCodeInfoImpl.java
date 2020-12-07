@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -49,6 +51,28 @@ public final class DiscountCodeInfoImpl implements DiscountCodeInfo {
     
     public void setState(final com.commercetools.api.models.cart.DiscountCodeState state){
         this.state = state;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        DiscountCodeInfoImpl that = (DiscountCodeInfoImpl) o;
+    
+        return new EqualsBuilder()
+                .append(discountCode, that.discountCode)
+                .append(state, that.state)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(discountCode)
+            .append(state)
+            .toHashCode();
     }
 
 }

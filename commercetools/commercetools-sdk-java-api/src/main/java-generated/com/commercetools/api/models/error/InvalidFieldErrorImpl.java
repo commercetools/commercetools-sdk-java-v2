@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -86,6 +88,34 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
     
     public void setAllowedValues(final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues){
        this.allowedValues = allowedValues;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        InvalidFieldErrorImpl that = (InvalidFieldErrorImpl) o;
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(field, that.field)
+                .append(invalidValue, that.invalidValue)
+                .append(allowedValues, that.allowedValues)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(message)
+            .append(field)
+            .append(invalidValue)
+            .append(allowedValues)
+            .toHashCode();
     }
 
 }

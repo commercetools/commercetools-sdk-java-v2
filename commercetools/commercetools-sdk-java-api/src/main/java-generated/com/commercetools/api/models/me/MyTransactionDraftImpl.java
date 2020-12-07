@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -85,6 +87,32 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
     
     public void setInteractionId(final String interactionId){
         this.interactionId = interactionId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MyTransactionDraftImpl that = (MyTransactionDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(timestamp, that.timestamp)
+                .append(type, that.type)
+                .append(amount, that.amount)
+                .append(interactionId, that.interactionId)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(timestamp)
+            .append(type)
+            .append(amount)
+            .append(interactionId)
+            .toHashCode();
     }
 
 }

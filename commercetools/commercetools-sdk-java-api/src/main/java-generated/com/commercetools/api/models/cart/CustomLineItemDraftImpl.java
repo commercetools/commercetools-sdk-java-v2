@@ -17,6 +17,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -136,6 +138,40 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
     
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails){
         this.shippingDetails = shippingDetails;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CustomLineItemDraftImpl that = (CustomLineItemDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
+                .append(quantity, that.quantity)
+                .append(money, that.money)
+                .append(slug, that.slug)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(custom, that.custom)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(quantity)
+            .append(money)
+            .append(slug)
+            .append(taxCategory)
+            .append(externalTaxRate)
+            .append(custom)
+            .append(shippingDetails)
+            .toHashCode();
     }
 
 }

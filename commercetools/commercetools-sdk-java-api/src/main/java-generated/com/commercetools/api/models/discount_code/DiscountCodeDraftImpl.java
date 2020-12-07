@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -196,6 +198,48 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
     
     public void setValidUntil(final java.time.ZonedDateTime validUntil){
         this.validUntil = validUntil;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        DiscountCodeDraftImpl that = (DiscountCodeDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(code, that.code)
+                .append(cartDiscounts, that.cartDiscounts)
+                .append(cartPredicate, that.cartPredicate)
+                .append(isActive, that.isActive)
+                .append(maxApplications, that.maxApplications)
+                .append(maxApplicationsPerCustomer, that.maxApplicationsPerCustomer)
+                .append(custom, that.custom)
+                .append(groups, that.groups)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(description)
+            .append(code)
+            .append(cartDiscounts)
+            .append(cartPredicate)
+            .append(isActive)
+            .append(maxApplications)
+            .append(maxApplicationsPerCustomer)
+            .append(custom)
+            .append(groups)
+            .append(validFrom)
+            .append(validUntil)
+            .toHashCode();
     }
 
 }

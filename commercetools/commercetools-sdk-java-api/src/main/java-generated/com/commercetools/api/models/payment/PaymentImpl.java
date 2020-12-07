@@ -21,6 +21,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -318,6 +320,66 @@ public final class PaymentImpl implements Payment {
     
     public void setKey(final String key){
         this.key = key;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        PaymentImpl that = (PaymentImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(externalId, that.externalId)
+                .append(interfaceId, that.interfaceId)
+                .append(amountPlanned, that.amountPlanned)
+                .append(amountAuthorized, that.amountAuthorized)
+                .append(authorizedUntil, that.authorizedUntil)
+                .append(amountPaid, that.amountPaid)
+                .append(amountRefunded, that.amountRefunded)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(paymentStatus, that.paymentStatus)
+                .append(transactions, that.transactions)
+                .append(interfaceInteractions, that.interfaceInteractions)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(customer)
+            .append(anonymousId)
+            .append(externalId)
+            .append(interfaceId)
+            .append(amountPlanned)
+            .append(amountAuthorized)
+            .append(authorizedUntil)
+            .append(amountPaid)
+            .append(amountRefunded)
+            .append(paymentMethodInfo)
+            .append(paymentStatus)
+            .append(transactions)
+            .append(interfaceInteractions)
+            .append(custom)
+            .append(key)
+            .toHashCode();
     }
 
 }

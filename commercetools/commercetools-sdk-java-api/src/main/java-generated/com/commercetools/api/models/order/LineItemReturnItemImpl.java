@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -129,6 +131,42 @@ public final class LineItemReturnItemImpl implements LineItemReturnItem {
     
     public void setLineItemId(final String lineItemId){
         this.lineItemId = lineItemId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        LineItemReturnItemImpl that = (LineItemReturnItemImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(quantity, that.quantity)
+                .append(type, that.type)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(createdAt, that.createdAt)
+                .append(lineItemId, that.lineItemId)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(quantity)
+            .append(type)
+            .append(comment)
+            .append(shipmentState)
+            .append(paymentState)
+            .append(lastModifiedAt)
+            .append(createdAt)
+            .append(lineItemId)
+            .toHashCode();
     }
 
 }

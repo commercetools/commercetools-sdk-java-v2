@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -119,6 +121,38 @@ public final class StateDraftImpl implements StateDraft {
     
     public void setTransitions(final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions){
        this.transitions = transitions;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        StateDraftImpl that = (StateDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(initial, that.initial)
+                .append(roles, that.roles)
+                .append(transitions, that.transitions)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(type)
+            .append(name)
+            .append(description)
+            .append(initial)
+            .append(roles)
+            .append(transitions)
+            .toHashCode();
     }
 
 }

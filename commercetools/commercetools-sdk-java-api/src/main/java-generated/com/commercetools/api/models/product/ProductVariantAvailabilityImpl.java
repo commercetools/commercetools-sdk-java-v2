@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -72,6 +74,32 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
     
     public void setChannels(final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels){
         this.channels = channels;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductVariantAvailabilityImpl that = (ProductVariantAvailabilityImpl) o;
+    
+        return new EqualsBuilder()
+                .append(isOnStock, that.isOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(availableQuantity, that.availableQuantity)
+                .append(channels, that.channels)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(isOnStock)
+            .append(restockableInDays)
+            .append(availableQuantity)
+            .append(channels)
+            .toHashCode();
     }
 
 }

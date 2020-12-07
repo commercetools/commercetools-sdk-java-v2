@@ -27,6 +27,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -350,6 +352,68 @@ public final class OrderImportDraftImpl implements OrderImportDraft {
     
     public void setOrigin(final com.commercetools.api.models.cart.CartOrigin origin){
         this.origin = origin;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderImportDraftImpl that = (OrderImportDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(orderNumber, that.orderNumber)
+                .append(customerId, that.customerId)
+                .append(customerEmail, that.customerEmail)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(customerGroup, that.customerGroup)
+                .append(country, that.country)
+                .append(orderState, that.orderState)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(shippingInfo, that.shippingInfo)
+                .append(completedAt, that.completedAt)
+                .append(custom, that.custom)
+                .append(inventoryMode, that.inventoryMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(store, that.store)
+                .append(origin, that.origin)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(orderNumber)
+            .append(customerId)
+            .append(customerEmail)
+            .append(lineItems)
+            .append(customLineItems)
+            .append(totalPrice)
+            .append(taxedPrice)
+            .append(shippingAddress)
+            .append(billingAddress)
+            .append(customerGroup)
+            .append(country)
+            .append(orderState)
+            .append(shipmentState)
+            .append(paymentState)
+            .append(shippingInfo)
+            .append(completedAt)
+            .append(custom)
+            .append(inventoryMode)
+            .append(taxRoundingMode)
+            .append(itemShippingAddresses)
+            .append(store)
+            .append(origin)
+            .toHashCode();
     }
 
 }

@@ -18,6 +18,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -156,6 +158,44 @@ public final class QueryPriceImpl implements QueryPrice {
     
     public void setTiers(final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers){
        this.tiers = tiers;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        QueryPriceImpl that = (QueryPriceImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .append(tiers, that.tiers)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(value)
+            .append(country)
+            .append(customerGroup)
+            .append(channel)
+            .append(validFrom)
+            .append(validUntil)
+            .append(discounted)
+            .append(custom)
+            .append(tiers)
+            .toHashCode();
     }
 
 }

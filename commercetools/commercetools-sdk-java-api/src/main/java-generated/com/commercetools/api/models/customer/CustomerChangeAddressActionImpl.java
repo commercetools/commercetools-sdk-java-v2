@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -70,6 +72,32 @@ public final class CustomerChangeAddressActionImpl implements CustomerChangeAddr
     
     public void setAddress(final com.commercetools.api.models.common.Address address){
         this.address = address;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CustomerChangeAddressActionImpl that = (CustomerChangeAddressActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(addressKey, that.addressKey)
+                .append(address, that.address)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(addressId)
+            .append(addressKey)
+            .append(address)
+            .toHashCode();
     }
 
 }

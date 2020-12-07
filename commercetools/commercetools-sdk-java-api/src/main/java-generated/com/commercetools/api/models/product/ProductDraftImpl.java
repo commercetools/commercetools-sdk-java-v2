@@ -19,6 +19,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -250,6 +252,56 @@ public final class ProductDraftImpl implements ProductDraft {
     
     public void setPublish(final Boolean publish){
         this.publish = publish;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductDraftImpl that = (ProductDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(productType, that.productType)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(productType)
+            .append(name)
+            .append(slug)
+            .append(key)
+            .append(description)
+            .append(categories)
+            .append(categoryOrderHints)
+            .append(metaTitle)
+            .append(metaDescription)
+            .append(metaKeywords)
+            .append(masterVariant)
+            .append(variants)
+            .append(taxCategory)
+            .append(searchKeywords)
+            .append(state)
+            .append(publish)
+            .toHashCode();
     }
 
 }

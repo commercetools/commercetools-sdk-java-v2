@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -195,6 +197,52 @@ public final class ProductPublishedMessageImpl implements ProductPublishedMessag
     
     public void setScope(final com.commercetools.api.models.cart.ProductPublishScope scope){
         this.scope = scope;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductPublishedMessageImpl that = (ProductPublishedMessageImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(removedImageUrls, that.removedImageUrls)
+                .append(productProjection, that.productProjection)
+                .append(scope, that.scope)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(sequenceNumber)
+            .append(resource)
+            .append(resourceVersion)
+            .append(type)
+            .append(resourceUserProvidedIdentifiers)
+            .append(removedImageUrls)
+            .append(productProjection)
+            .append(scope)
+            .toHashCode();
     }
 
 }

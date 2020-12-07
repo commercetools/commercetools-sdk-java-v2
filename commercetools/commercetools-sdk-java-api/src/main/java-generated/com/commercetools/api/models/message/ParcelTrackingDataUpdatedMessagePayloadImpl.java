@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -70,6 +72,32 @@ public final class ParcelTrackingDataUpdatedMessagePayloadImpl implements Parcel
     
     public void setTrackingData(final com.commercetools.api.models.order.TrackingData trackingData){
         this.trackingData = trackingData;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ParcelTrackingDataUpdatedMessagePayloadImpl that = (ParcelTrackingDataUpdatedMessagePayloadImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(deliveryId, that.deliveryId)
+                .append(parcelId, that.parcelId)
+                .append(trackingData, that.trackingData)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(deliveryId)
+            .append(parcelId)
+            .append(trackingData)
+            .toHashCode();
     }
 
 }

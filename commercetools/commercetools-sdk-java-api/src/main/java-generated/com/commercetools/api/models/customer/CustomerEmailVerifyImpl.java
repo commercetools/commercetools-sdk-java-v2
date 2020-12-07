@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -48,6 +50,28 @@ public final class CustomerEmailVerifyImpl implements CustomerEmailVerify {
     
     public void setTokenValue(final String tokenValue){
         this.tokenValue = tokenValue;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CustomerEmailVerifyImpl that = (CustomerEmailVerifyImpl) o;
+    
+        return new EqualsBuilder()
+                .append(version, that.version)
+                .append(tokenValue, that.tokenValue)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(version)
+            .append(tokenValue)
+            .toHashCode();
     }
 
 }

@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -46,6 +48,28 @@ public final class CategorySetDescriptionActionImpl implements CategorySetDescri
 
     public void setDescription(final com.commercetools.api.models.common.LocalizedString description){
         this.description = description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CategorySetDescriptionActionImpl that = (CategorySetDescriptionActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(description, that.description)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(description)
+            .toHashCode();
     }
 
 }

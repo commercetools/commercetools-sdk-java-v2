@@ -19,6 +19,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -268,6 +270,60 @@ public final class ReviewImpl implements Review {
     
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ReviewImpl that = (ReviewImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(uniquenessValue, that.uniquenessValue)
+                .append(locale, that.locale)
+                .append(authorName, that.authorName)
+                .append(title, that.title)
+                .append(text, that.text)
+                .append(target, that.target)
+                .append(includedInStatistics, that.includedInStatistics)
+                .append(rating, that.rating)
+                .append(state, that.state)
+                .append(customer, that.customer)
+                .append(custom, that.custom)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(key)
+            .append(uniquenessValue)
+            .append(locale)
+            .append(authorName)
+            .append(title)
+            .append(text)
+            .append(target)
+            .append(includedInStatistics)
+            .append(rating)
+            .append(state)
+            .append(customer)
+            .append(custom)
+            .toHashCode();
     }
 
 }

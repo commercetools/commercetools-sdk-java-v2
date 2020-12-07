@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -71,6 +73,32 @@ public final class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderD
     
     public void setOldState(final com.commercetools.api.models.cart.DiscountCodeState oldState){
         this.oldState = oldState;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderDiscountCodeStateSetMessagePayloadImpl that = (OrderDiscountCodeStateSetMessagePayloadImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(discountCode, that.discountCode)
+                .append(state, that.state)
+                .append(oldState, that.oldState)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(discountCode)
+            .append(state)
+            .append(oldState)
+            .toHashCode();
     }
 
 }

@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -53,6 +55,28 @@ public final class GraphQLResponseImpl implements GraphQLResponse {
     
     public void setErrors(final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors){
        this.errors = errors;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        GraphQLResponseImpl that = (GraphQLResponseImpl) o;
+    
+        return new EqualsBuilder()
+                .append(data, that.data)
+                .append(errors, that.errors)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(data)
+            .append(errors)
+            .toHashCode();
     }
 
 }

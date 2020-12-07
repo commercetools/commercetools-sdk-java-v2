@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -72,6 +74,32 @@ public final class TypedMoneyImpl implements TypedMoney {
     
     public void setCurrencyCode(final String currencyCode){
         this.currencyCode = currencyCode;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        TypedMoneyImpl that = (TypedMoneyImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(fractionDigits)
+            .append(centAmount)
+            .append(currencyCode)
+            .toHashCode();
     }
 
 }

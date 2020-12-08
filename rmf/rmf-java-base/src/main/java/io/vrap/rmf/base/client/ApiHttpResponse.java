@@ -41,11 +41,6 @@ public class ApiHttpResponse<U> extends Base {
         return response;
     }
 
-    @Deprecated
-    public void setStatusCode(final int statusCode) {
-        this.statusCode = statusCode;
-    }
-
     public ApiHttpHeaders getHeaders() {
         return headers;
     }
@@ -55,11 +50,6 @@ public class ApiHttpResponse<U> extends Base {
         response.headers = headers;
 
         return response;
-    }
-
-    @Deprecated
-    public void setHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
     }
 
     public U getBody() {
@@ -73,11 +63,6 @@ public class ApiHttpResponse<U> extends Base {
         return response;
     }
 
-    @Deprecated
-    public void setBody(final U body) {
-        this.body = body;
-    }
-
     public String getMessage() {
         return message;
     }
@@ -87,11 +72,6 @@ public class ApiHttpResponse<U> extends Base {
         response.message = message;
 
         return response;
-    }
-
-    @Deprecated
-    public void setMessage(final String message) {
-        this.message = message;
     }
 
     @Override

@@ -43,11 +43,6 @@ public class ApiHttpRequest extends Base  {
         return request;
     }
 
-    @Deprecated
-    public void setMethod(final ApiHttpMethod method) {
-        this.method = method;
-    }
-
     public ApiHttpHeaders getHeaders() {
         if (headers == null) {
             this.headers = new ApiHttpHeaders();
@@ -82,11 +77,6 @@ public class ApiHttpRequest extends Base  {
         return request;
     }
 
-    @Deprecated
-    public void setHeaders(final ApiHttpHeaders headers) {
-        this.headers = headers;
-    }
-
     public byte[] getBody() {
         return body;
     }
@@ -110,20 +100,6 @@ public class ApiHttpRequest extends Base  {
         return request;
     }
 
-    @Deprecated
-    public void setBody(final byte[] body) {
-        this.body = body;
-    }
-
-    @Deprecated
-    public void setBody(final String body) {
-        if (body == null) {
-            this.body = null;
-            return;
-        }
-        setBody(body.getBytes(StandardCharsets.UTF_8));
-    }
-
     public URI getUri() {
         return uri;
     }
@@ -134,16 +110,6 @@ public class ApiHttpRequest extends Base  {
         } catch (MalformedURLException e) {
             throw new IllegalStateException("Malformed URI", e);
         }
-    }
-
-    @Deprecated
-    public void setUri(final String uri) {
-        this.uri = URI.create(uri);
-    }
-
-    @Deprecated
-    public void setUri(final URI uri) {
-        this.uri = uri;
     }
 
     public ApiHttpRequest withUri(final String uri) {

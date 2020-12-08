@@ -11,12 +11,6 @@ import java.util.function.Supplier;
 import static java.util.Arrays.asList;
 
 public class MiddlewareFactory {
-    @Deprecated
-    public static List<Middleware> createDefault(final TokenSupplier tokenSupplier, final Logger logger)
-    {
-        return createDefault(tokenSupplier, request -> InternalLogger.getLogger(ClientFactory.COMMERCETOOLS));
-    }
-
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier, final InternalLoggerFactory internalLoggerFactory)
     {
         return createDefault(tokenSupplier, internalLoggerFactory, MiddlewareFactory::buildUserAgent);

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,100 +150,108 @@ implements <a href="../../../../../com/commercetools/api/models/cart/ShippingInf
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getDeliveries--">getDeliveries</a></span>()</code>
 <div class="block">Deliveries are compilations of information on how the articles are being delivered to the customers.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getDiscountedPrice--">getDiscountedPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getPrice--">getPrice</a></span>()</code>
 <div class="block">Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getShippingMethod--">getShippingMethod</a></span>()</code>
 <div class="block">Not set if custom shipping method is used.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getShippingMethodName--">getShippingMethodName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getShippingMethodState--">getShippingMethodState</a></span>()</code>
 <div class="block">Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getShippingRate--">getShippingRate</a></span>()</code>
 <div class="block">The shipping rate used to determine the price.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getTaxCategory--">getTaxCategory</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getTaxedPrice--">getTaxedPrice</a></span>()</code>
 <div class="block">Set once the <code>taxRate</code> is set.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#getTaxRate--">getTaxRate</a></span>()</code>
 <div class="block">Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setDeliveries-com.commercetools.api.models.order.Delivery...-">setDeliveries</a></span>(<a href="../../../../../com/commercetools/api/models/order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>...&nbsp;deliveries)</code>&nbsp;</td>
-</tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setDeliveries-java.util.List-">setDeliveries</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;&nbsp;deliveries)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setDiscountedPrice-com.commercetools.api.models.cart.DiscountedLineItemPrice-">setDiscountedPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a>&nbsp;discountedPrice)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setDeliveries-com.commercetools.api.models.order.Delivery...-">setDeliveries</a></span>(<a href="../../../../../com/commercetools/api/models/order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>...&nbsp;deliveries)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setPrice-com.commercetools.api.models.common.TypedMoney-">setPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setDeliveries-java.util.List-">setDeliveries</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/Delivery.html" title="interface in com.commercetools.api.models.order">Delivery</a>&gt;&nbsp;deliveries)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setShippingMethod-com.commercetools.api.models.shipping_method.ShippingMethodReference-">setShippingMethod</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a>&nbsp;shippingMethod)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setDiscountedPrice-com.commercetools.api.models.cart.DiscountedLineItemPrice-">setDiscountedPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/DiscountedLineItemPrice.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPrice</a>&nbsp;discountedPrice)</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setShippingMethodName-java.lang.String-">setShippingMethodName</a></span>(java.lang.String&nbsp;shippingMethodName)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setPrice-com.commercetools.api.models.common.TypedMoney-">setPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setShippingMethodState-com.commercetools.api.models.cart.ShippingMethodState-">setShippingMethodState</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a>&nbsp;shippingMethodState)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setShippingMethod-com.commercetools.api.models.shipping_method.ShippingMethodReference-">setShippingMethod</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingMethodReference.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodReference</a>&nbsp;shippingMethod)</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setShippingRate-com.commercetools.api.models.shipping_method.ShippingRate-">setShippingRate</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;shippingRate)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setShippingMethodName-java.lang.String-">setShippingMethodName</a></span>(java.lang.String&nbsp;shippingMethodName)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setTaxCategory-com.commercetools.api.models.tax_category.TaxCategoryReference-">setTaxCategory</a></span>(<a href="../../../../../com/commercetools/api/models/tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setShippingMethodState-com.commercetools.api.models.cart.ShippingMethodState-">setShippingMethodState</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a>&nbsp;shippingMethodState)</code>&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setTaxedPrice-com.commercetools.api.models.cart.TaxedItemPrice-">setTaxedPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setShippingRate-com.commercetools.api.models.shipping_method.ShippingRate-">setShippingRate</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a>&nbsp;shippingRate)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setTaxCategory-com.commercetools.api.models.tax_category.TaxCategoryReference-">setTaxCategory</a></span>(<a href="../../../../../com/commercetools/api/models/tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</code>&nbsp;</td>
+</tr>
+<tr id="i21" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setTaxedPrice-com.commercetools.api.models.cart.TaxedItemPrice-">setTaxedPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</code>&nbsp;</td>
+</tr>
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ShippingInfoImpl.html#setTaxRate-com.commercetools.api.models.tax_category.TaxRate-">setTaxRate</a></span>(<a href="../../../../../com/commercetools/api/models/tax_category/TaxRate.html" title="interface in com.commercetools.api.models.tax_category">TaxRate</a>&nbsp;taxRate)</code>&nbsp;</td>
 </tr>
@@ -253,7 +261,7 @@ implements <a href="../../../../../com/commercetools/api/models/cart/ShippingInf
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.cart.ShippingInfo">
@@ -564,13 +572,39 @@ implements <a href="../../../../../com/commercetools/api/models/cart/ShippingInf
 <a name="setShippingMethodState-com.commercetools.api.models.cart.ShippingMethodState-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setShippingMethodState</h4>
 <pre>public&nbsp;void&nbsp;setShippingMethodState(<a href="../../../../../com/commercetools/api/models/cart/ShippingMethodState.html" title="interface in com.commercetools.api.models.cart">ShippingMethodState</a>&nbsp;shippingMethodState)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/cart/ShippingInfo.html#setShippingMethodState-com.commercetools.api.models.cart.ShippingMethodState-">setShippingMethodState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

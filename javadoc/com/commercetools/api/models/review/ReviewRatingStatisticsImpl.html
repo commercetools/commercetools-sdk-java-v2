@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,53 +150,61 @@ implements <a href="../../../../../com/commercetools/api/models/review/ReviewRat
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#getAverageRating--">getAverageRating</a></span>()</code>
 <div class="block">Average rating of one target
   This number is rounded with 5 decimals.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.Integer</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#getCount--">getCount</a></span>()</code>
 <div class="block">Number of ratings taken into account</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#getHighestRating--">getHighestRating</a></span>()</code>
 <div class="block">Highest rating of one target</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#getLowestRating--">getLowestRating</a></span>()</code>
 <div class="block">Lowest rating of one target</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>com.fasterxml.jackson.databind.JsonNode</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#getRatingsDistribution--">getRatingsDistribution</a></span>()</code>
 <div class="block">The full distribution of the ratings.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setAverageRating-java.lang.Double-">setAverageRating</a></span>(java.lang.Double&nbsp;averageRating)</code>&nbsp;</td>
-</tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setCount-java.lang.Integer-">setCount</a></span>(java.lang.Integer&nbsp;count)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setHighestRating-java.lang.Double-">setHighestRating</a></span>(java.lang.Double&nbsp;highestRating)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setAverageRating-java.lang.Double-">setAverageRating</a></span>(java.lang.Double&nbsp;averageRating)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setLowestRating-java.lang.Double-">setLowestRating</a></span>(java.lang.Double&nbsp;lowestRating)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setCount-java.lang.Integer-">setCount</a></span>(java.lang.Integer&nbsp;count)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setHighestRating-java.lang.Double-">setHighestRating</a></span>(java.lang.Double&nbsp;highestRating)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setLowestRating-java.lang.Double-">setLowestRating</a></span>(java.lang.Double&nbsp;lowestRating)</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatisticsImpl.html#setRatingsDistribution-com.fasterxml.jackson.databind.JsonNode-">setRatingsDistribution</a></span>(com.fasterxml.jackson.databind.JsonNode&nbsp;ratingsDistribution)</code>&nbsp;</td>
 </tr>
@@ -206,7 +214,7 @@ implements <a href="../../../../../com/commercetools/api/models/review/ReviewRat
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.review.ReviewRatingStatistics">
@@ -374,13 +382,39 @@ implements <a href="../../../../../com/commercetools/api/models/review/ReviewRat
 <a name="setRatingsDistribution-com.fasterxml.jackson.databind.JsonNode-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setRatingsDistribution</h4>
 <pre>public&nbsp;void&nbsp;setRatingsDistribution(com.fasterxml.jackson.databind.JsonNode&nbsp;ratingsDistribution)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatistics.html#setRatingsDistribution-com.fasterxml.jackson.databind.JsonNode-">setRatingsDistribution</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/review/ReviewRatingStatistics.html" title="interface in com.commercetools.api.models.review">ReviewRatingStatistics</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

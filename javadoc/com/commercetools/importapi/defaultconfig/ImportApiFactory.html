@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -265,6 +265,16 @@ extends java.lang.Object</pre>
              java.util.List&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
              <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code>&nbsp;</td>
 </tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/defaultconfig/ImportApiFactory.html#defaultClient-io.vrap.rmf.base.client.VrapHttpClient-io.vrap.rmf.base.client.oauth2.ClientCredentials-java.lang.String-java.lang.String-java.util.function.Supplier-java.util.List-io.vrap.rmf.base.client.http.CorrelationIdProvider-">defaultClient</a></span>(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+             <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+             java.lang.String&nbsp;tokenEndpoint,
+             java.lang.String&nbsp;apiEndpoint,
+             java.util.function.Supplier&lt;java.lang.String&gt;&nbsp;userAgentSupplier,
+             java.util.List&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
+             <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</code>&nbsp;</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -499,6 +509,20 @@ extends java.lang.Object</pre>
 <a name="defaultClient-io.vrap.rmf.base.client.VrapHttpClient-io.vrap.rmf.base.client.oauth2.ClientCredentials-java.lang.String-java.lang.String-java.util.List-io.vrap.rmf.base.client.http.CorrelationIdProvider-">
 <!--   -->
 </a>
+<ul class="blockList">
+<li class="blockList">
+<h4>defaultClient</h4>
+<pre>public static&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;defaultClient(<a href="../../../../io/vrap/rmf/base/client/VrapHttpClient.html" title="interface in io.vrap.rmf.base.client">VrapHttpClient</a>&nbsp;httpClient,
+                                          <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
+                                          java.lang.String&nbsp;tokenEndpoint,
+                                          java.lang.String&nbsp;apiEndpoint,
+                                          java.util.List&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
+                                          <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</pre>
+</li>
+</ul>
+<a name="defaultClient-io.vrap.rmf.base.client.VrapHttpClient-io.vrap.rmf.base.client.oauth2.ClientCredentials-java.lang.String-java.lang.String-java.util.function.Supplier-java.util.List-io.vrap.rmf.base.client.http.CorrelationIdProvider-">
+<!--   -->
+</a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>defaultClient</h4>
@@ -506,6 +530,7 @@ extends java.lang.Object</pre>
                                           <a href="../../../../io/vrap/rmf/base/client/oauth2/ClientCredentials.html" title="interface in io.vrap.rmf.base.client.oauth2">ClientCredentials</a>&nbsp;credentials,
                                           java.lang.String&nbsp;tokenEndpoint,
                                           java.lang.String&nbsp;apiEndpoint,
+                                          java.util.function.Supplier&lt;java.lang.String&gt;&nbsp;userAgentSupplier,
                                           java.util.List&lt;<a href="../../../../io/vrap/rmf/base/client/http/Middleware.html" title="interface in io.vrap.rmf.base.client.http">Middleware</a>&gt;&nbsp;middlewares,
                                           <a href="../../../../io/vrap/rmf/base/client/http/CorrelationIdProvider.html" title="interface in io.vrap.rmf.base.client.http">CorrelationIdProvider</a>&nbsp;correlationIdProvider)</pre>
 </li>

@@ -5,7 +5,7 @@ import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.cart.CustomLineItemDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -64,7 +64,7 @@ public interface CustomLineItemDraft  {
     */
     @Valid
     @JsonProperty("custom")
-    public CustomFields getCustom();
+    public CustomFieldsDraft getCustom();
     /**
     *  <p>Container for custom line item specific address(es).</p>
     */
@@ -84,7 +84,7 @@ public interface CustomLineItemDraft  {
     
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
     
-    public void setCustom(final CustomFields custom);
+    public void setCustom(final CustomFieldsDraft custom);
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 

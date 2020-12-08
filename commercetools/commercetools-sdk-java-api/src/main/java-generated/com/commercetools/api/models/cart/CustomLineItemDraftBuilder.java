@@ -5,7 +5,7 @@ import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.cart.CustomLineItemDraft;
 import javax.annotation.Nullable;
 import java.util.*;
@@ -37,7 +37,7 @@ public final class CustomLineItemDraftBuilder {
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
     
     @Nullable
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
     
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
@@ -72,7 +72,7 @@ public final class CustomLineItemDraftBuilder {
         return this;
     }
     
-    public CustomLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+    public CustomLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
@@ -113,7 +113,7 @@ public final class CustomLineItemDraftBuilder {
     }
     
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
     

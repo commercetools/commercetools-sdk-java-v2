@@ -5,7 +5,7 @@ import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -39,12 +39,12 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
     
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
     
-    private com.commercetools.api.models.type.CustomFields custom;
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
     
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @JsonCreator
-    CustomLineItemDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("quantity") final Long quantity, @JsonProperty("money") final com.commercetools.api.models.common.Money money, @JsonProperty("slug") final String slug, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    CustomLineItemDraftImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("quantity") final Long quantity, @JsonProperty("money") final com.commercetools.api.models.common.Money money, @JsonProperty("slug") final String slug, @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory, @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.name = name;
         this.quantity = quantity;
         this.money = money;
@@ -97,7 +97,7 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
     /**
     *  <p>The custom fields.</p>
     */
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
     
@@ -132,7 +132,7 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
         this.externalTaxRate = externalTaxRate;
     }
     
-    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
     }
     

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost> {
+public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost, com.commercetools.api.models.customer.Customer> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends 
         this.customerResetPassword = t.customerResetPassword;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/customers/password/reset", this.projectKey, this.storeKey);
@@ -70,14 +71,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetPost extends 
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }

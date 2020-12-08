@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyDiscountCodesByIDGet extends ApiMethod<ByProjectKeyDiscountCodesByIDGet> {
+public class ByProjectKeyDiscountCodesByIDGet extends ApiMethod<ByProjectKeyDiscountCodesByIDGet, com.commercetools.api.models.discount_code.DiscountCode> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyDiscountCodesByIDGet extends ApiMethod<ByProjectKeyDisc
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/discount-codes/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyDiscountCodesByIDGet extends ApiMethod<ByProjectKeyDisc
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.discount_code.DiscountCode.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyDiscountCodesByIDGet extends ApiMethod<ByProjectKeyDisc
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyDiscountCodesByIDGet withExpand(final String expand){
-        return new ByProjectKeyDiscountCodesByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

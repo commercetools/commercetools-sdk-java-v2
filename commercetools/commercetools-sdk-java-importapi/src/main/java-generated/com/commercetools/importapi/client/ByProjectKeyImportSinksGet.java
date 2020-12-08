@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSinksGet> {
+public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSinksGet, com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-sinks", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse.class);
     }
@@ -83,11 +87,11 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyImportSinksGet withLimit(final Double limit){
-        return new ByProjectKeyImportSinksGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyImportSinksGet withOffset(final Double offset){
-        return new ByProjectKeyImportSinksGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     @Override

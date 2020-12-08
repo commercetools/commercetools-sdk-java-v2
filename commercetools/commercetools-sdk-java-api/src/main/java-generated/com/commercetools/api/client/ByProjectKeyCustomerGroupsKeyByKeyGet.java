@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomerGroupsKeyByKeyGet extends ApiMethod<ByProjectKeyCustomerGroupsKeyByKeyGet> {
+public class ByProjectKeyCustomerGroupsKeyByKeyGet extends ApiMethod<ByProjectKeyCustomerGroupsKeyByKeyGet, com.commercetools.api.models.customer_group.CustomerGroup> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCustomerGroupsKeyByKeyGet extends ApiMethod<ByProjectKe
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customer-groups/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeyCustomerGroupsKeyByKeyGet extends ApiMethod<ByProjectKe
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer_group.CustomerGroup.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyCustomerGroupsKeyByKeyGet extends ApiMethod<ByProjectKe
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCustomerGroupsKeyByKeyGet withExpand(final String expand){
-        return new ByProjectKeyCustomerGroupsKeyByKeyGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

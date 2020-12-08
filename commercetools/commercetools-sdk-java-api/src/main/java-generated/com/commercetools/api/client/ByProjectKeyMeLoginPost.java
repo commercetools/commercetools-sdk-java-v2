@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeLoginPost extends ApiMethod<ByProjectKeyMeLoginPost> {
+public class ByProjectKeyMeLoginPost extends ApiMethod<ByProjectKeyMeLoginPost, com.commercetools.api.models.customer.CustomerSignInResult> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyMeLoginPost extends ApiMethod<ByProjectKeyMeLoginPost> 
         this.jsonNode = t.jsonNode;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/login", this.projectKey);
@@ -64,14 +65,17 @@ public class ByProjectKeyMeLoginPost extends ApiMethod<ByProjectKeyMeLoginPost> 
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.CustomerSignInResult.class);
     }

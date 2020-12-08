@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCartDiscountsGet extends ApiMethod<ByProjectKeyCartDiscountsGet> {
+public class ByProjectKeyCartDiscountsGet extends ApiMethod<ByProjectKeyCartDiscountsGet, com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyCartDiscountsGet extends ApiMethod<ByProjectKeyCartDisc
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/cart-discounts", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyCartDiscountsGet extends ApiMethod<ByProjectKeyCartDisc
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.cart_discount.CartDiscountPagedQueryResponse.class);
     }
@@ -99,27 +103,27 @@ public class ByProjectKeyCartDiscountsGet extends ApiMethod<ByProjectKeyCartDisc
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCartDiscountsGet withExpand(final String expand){
-        return new ByProjectKeyCartDiscountsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyCartDiscountsGet withSort(final String sort){
-        return new ByProjectKeyCartDiscountsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyCartDiscountsGet withLimit(final Integer limit){
-        return new ByProjectKeyCartDiscountsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyCartDiscountsGet withOffset(final Integer offset){
-        return new ByProjectKeyCartDiscountsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyCartDiscountsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyCartDiscountsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyCartDiscountsGet withWhere(final String where){
-        return new ByProjectKeyCartDiscountsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

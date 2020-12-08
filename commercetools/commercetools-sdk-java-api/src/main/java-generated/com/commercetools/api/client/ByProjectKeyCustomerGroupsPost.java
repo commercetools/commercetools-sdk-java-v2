@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomerGroupsPost extends ApiMethod<ByProjectKeyCustomerGroupsPost> {
+public class ByProjectKeyCustomerGroupsPost extends ApiMethod<ByProjectKeyCustomerGroupsPost, com.commercetools.api.models.customer_group.CustomerGroup> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCustomerGroupsPost extends ApiMethod<ByProjectKeyCustom
         this.customerGroupDraft = t.customerGroupDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customer-groups", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyCustomerGroupsPost extends ApiMethod<ByProjectKeyCustom
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer_group.CustomerGroup.class);
     }
@@ -88,7 +92,7 @@ public class ByProjectKeyCustomerGroupsPost extends ApiMethod<ByProjectKeyCustom
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomerGroupsPost withExpand(final String expand){
-        return new ByProjectKeyCustomerGroupsPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

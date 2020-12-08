@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCartDiscountsKeyByKeyDelete extends ApiMethod<ByProjectKeyCartDiscountsKeyByKeyDelete> {
+public class ByProjectKeyCartDiscountsKeyByKeyDelete extends ApiMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyDelete extends ApiMethod<ByProject
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/cart-discounts/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeyCartDiscountsKeyByKeyDelete extends ApiMethod<ByProject
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.cart_discount.CartDiscount.class);
     }
@@ -89,11 +93,11 @@ public class ByProjectKeyCartDiscountsKeyByKeyDelete extends ApiMethod<ByProject
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCartDiscountsKeyByKeyDelete withVersion(final Long version){
-        return new ByProjectKeyCartDiscountsKeyByKeyDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyCartDiscountsKeyByKeyDelete withExpand(final String expand){
-        return new ByProjectKeyCartDiscountsKeyByKeyDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

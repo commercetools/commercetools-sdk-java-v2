@@ -34,7 +34,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet> {
+public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet, com.commercetools.api.models.product.ProductPagedQueryResponse> {
 
     
     private String projectKey;
@@ -50,6 +50,7 @@ public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet> 
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/products", this.projectKey);
@@ -60,14 +61,17 @@ public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet> 
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.ProductPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.ProductPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product.ProductPagedQueryResponse.class);
     }
@@ -125,51 +129,51 @@ public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet> 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductsGet withPriceCurrency(final String priceCurrency){
-        return new ByProjectKeyProductsGet(this).addQueryParam("priceCurrency", priceCurrency);
+        return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsGet withPriceCountry(final String priceCountry){
-        return new ByProjectKeyProductsGet(this).addQueryParam("priceCountry", priceCountry);
+        return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsGet withPriceCustomerGroup(final String priceCustomerGroup){
-        return new ByProjectKeyProductsGet(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsGet withPriceChannel(final String priceChannel){
-        return new ByProjectKeyProductsGet(this).addQueryParam("priceChannel", priceChannel);
+        return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsGet withLocaleProjection(final String localeProjection){
-        return new ByProjectKeyProductsGet(this).addQueryParam("localeProjection", localeProjection);
+        return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsGet withStoreProjection(final String storeProjection){
-        return new ByProjectKeyProductsGet(this).addQueryParam("storeProjection", storeProjection);
+        return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsGet withExpand(final String expand){
-        return new ByProjectKeyProductsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyProductsGet withSort(final String sort){
-        return new ByProjectKeyProductsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductsGet withLimit(final Integer limit){
-        return new ByProjectKeyProductsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductsGet withOffset(final Integer offset){
-        return new ByProjectKeyProductsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyProductsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductsGet withWhere(final String where){
-        return new ByProjectKeyProductsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

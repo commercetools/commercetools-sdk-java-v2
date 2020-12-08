@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjectKeyProductProjectionsSuggestGet> {
+public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjectKeyProductProjectionsSuggestGet, com.fasterxml.jackson.databind.JsonNode> {
 
     
     private String projectKey;
@@ -45,6 +45,7 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-projections/suggest", this.projectKey);
@@ -55,14 +56,17 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
@@ -96,27 +100,27 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final Boolean fuzzy){
-        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("fuzzy", fuzzy);
+        return copy().addQueryParam("fuzzy", fuzzy);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withStaged(final Boolean staged){
-        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("staged", staged);
+        return copy().addQueryParam("staged", staged);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withSort(final String sort){
-        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withLimit(final Integer limit){
-        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withOffset(final Integer offset){
-        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyProductProjectionsSuggestGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     @Override

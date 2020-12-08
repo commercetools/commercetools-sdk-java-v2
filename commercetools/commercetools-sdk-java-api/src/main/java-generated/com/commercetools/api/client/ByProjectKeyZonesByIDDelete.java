@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyZonesByIDDelete extends ApiMethod<ByProjectKeyZonesByIDDelete> {
+public class ByProjectKeyZonesByIDDelete extends ApiMethod<ByProjectKeyZonesByIDDelete, com.commercetools.api.models.zone.Zone> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyZonesByIDDelete extends ApiMethod<ByProjectKeyZonesByID
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/zones/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyZonesByIDDelete extends ApiMethod<ByProjectKeyZonesByID
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.Zone>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.zone.Zone.class);
     }
@@ -89,11 +93,11 @@ public class ByProjectKeyZonesByIDDelete extends ApiMethod<ByProjectKeyZonesByID
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyZonesByIDDelete withVersion(final Long version){
-        return new ByProjectKeyZonesByIDDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyZonesByIDDelete withExpand(final String expand){
-        return new ByProjectKeyZonesByIDDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

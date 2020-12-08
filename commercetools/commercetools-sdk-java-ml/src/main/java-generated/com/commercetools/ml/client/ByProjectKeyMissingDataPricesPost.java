@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMissingDataPricesPost extends ApiMethod<ByProjectKeyMissingDataPricesPost> {
+public class ByProjectKeyMissingDataPricesPost extends ApiMethod<ByProjectKeyMissingDataPricesPost, com.commercetools.ml.models.common.TaskToken> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyMissingDataPricesPost extends ApiMethod<ByProjectKeyMis
         this.missingPricesSearchRequest = t.missingPricesSearchRequest;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/missing-data/prices", this.projectKey);
@@ -64,14 +65,17 @@ public class ByProjectKeyMissingDataPricesPost extends ApiMethod<ByProjectKeyMis
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.common.TaskToken> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.common.TaskToken> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.common.TaskToken>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.ml.models.common.TaskToken.class);
     }

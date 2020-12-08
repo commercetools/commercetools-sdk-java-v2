@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyTypesPost extends ApiMethod<ByProjectKeyTypesPost> {
+public class ByProjectKeyTypesPost extends ApiMethod<ByProjectKeyTypesPost, com.commercetools.api.models.type.Type> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyTypesPost extends ApiMethod<ByProjectKeyTypesPost> {
         this.typeDraft = t.typeDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/types", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyTypesPost extends ApiMethod<ByProjectKeyTypesPost> {
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.type.Type> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.type.Type> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.type.Type>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.type.Type.class);
     }
@@ -88,7 +92,7 @@ public class ByProjectKeyTypesPost extends ApiMethod<ByProjectKeyTypesPost> {
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyTypesPost withExpand(final String expand){
-        return new ByProjectKeyTypesPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

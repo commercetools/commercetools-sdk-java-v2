@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet extends ApiMethod<ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet> {
+public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet extends ApiMethod<ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet, com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperations
         this.importSinkKey = t.importSinkKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/inventories/importSinkKey=%s/import-operations", this.projectKey, this.importSinkKey);
@@ -61,14 +62,17 @@ public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperations
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class);
     }
@@ -101,23 +105,23 @@ public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperations
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
     public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit){
-        return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
-        return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort){
-        return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){
-        return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("resourceKey", resourceKey);
+        return copy().addQueryParam("resourceKey", resourceKey);
     }
     
     public ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
-        return new ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("state", state);
+        return copy().addQueryParam("state", state);
     }
     
     @Override

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeySubscriptionsKeyByKeyGet extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyGet> {
+public class ByProjectKeySubscriptionsKeyByKeyGet extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyGet, com.commercetools.api.models.subscription.Subscription> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeySubscriptionsKeyByKeyGet extends ApiMethod<ByProjectKey
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/subscriptions/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeySubscriptionsKeyByKeyGet extends ApiMethod<ByProjectKey
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.subscription.Subscription.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeySubscriptionsKeyByKeyGet extends ApiMethod<ByProjectKey
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeySubscriptionsKeyByKeyGet withExpand(final String expand){
-        return new ByProjectKeySubscriptionsKeyByKeyGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

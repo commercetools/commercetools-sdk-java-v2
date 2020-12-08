@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomObjectsByContainerGet extends ApiMethod<ByProjectKeyCustomObjectsByContainerGet> {
+public class ByProjectKeyCustomObjectsByContainerGet extends ApiMethod<ByProjectKeyCustomObjectsByContainerGet, com.commercetools.api.models.custom_object.CustomObject> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends ApiMethod<ByProject
         this.container = t.container;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/custom-objects/%s", this.projectKey, this.container);
@@ -61,14 +62,17 @@ public class ByProjectKeyCustomObjectsByContainerGet extends ApiMethod<ByProject
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.custom_object.CustomObject.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyCustomObjectsByContainerGet extends ApiMethod<ByProject
     public void setContainer(final String container) { this.container = container; }
 
     public ByProjectKeyCustomObjectsByContainerGet withExpand(final String expand){
-        return new ByProjectKeyCustomObjectsByContainerGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

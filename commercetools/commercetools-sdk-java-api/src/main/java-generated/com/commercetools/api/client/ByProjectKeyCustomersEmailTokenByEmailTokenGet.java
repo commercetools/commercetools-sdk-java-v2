@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<ByProjectKeyCustomersEmailTokenByEmailTokenGet> {
+public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<ByProjectKeyCustomersEmailTokenByEmailTokenGet, com.commercetools.api.models.customer.Customer> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<By
         this.emailToken = t.emailToken;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customers/email-token=%s", this.projectKey, this.emailToken);
@@ -61,14 +62,17 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<By
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<By
     public void setEmailToken(final String emailToken) { this.emailToken = emailToken; }
 
     public ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final String expand){
-        return new ByProjectKeyCustomersEmailTokenByEmailTokenGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

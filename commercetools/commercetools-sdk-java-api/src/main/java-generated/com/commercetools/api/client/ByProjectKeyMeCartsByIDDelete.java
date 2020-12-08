@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeCartsByIDDelete extends ApiMethod<ByProjectKeyMeCartsByIDDelete> {
+public class ByProjectKeyMeCartsByIDDelete extends ApiMethod<ByProjectKeyMeCartsByIDDelete, com.commercetools.api.models.me.MyCart> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyMeCartsByIDDelete extends ApiMethod<ByProjectKeyMeCarts
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/carts/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyMeCartsByIDDelete extends ApiMethod<ByProjectKeyMeCarts
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCart>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCart.class);
     }
@@ -89,11 +93,11 @@ public class ByProjectKeyMeCartsByIDDelete extends ApiMethod<ByProjectKeyMeCarts
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeCartsByIDDelete withVersion(final Long version){
-        return new ByProjectKeyMeCartsByIDDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyMeCartsByIDDelete withExpand(final String expand){
-        return new ByProjectKeyMeCartsByIDDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

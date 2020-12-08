@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyPaymentsByIDPost extends ApiMethod<ByProjectKeyPaymentsByIDPost> {
+public class ByProjectKeyPaymentsByIDPost extends ApiMethod<ByProjectKeyPaymentsByIDPost, com.commercetools.api.models.payment.Payment> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyPaymentsByIDPost extends ApiMethod<ByProjectKeyPayments
         this.paymentUpdate = t.paymentUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/payments/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyPaymentsByIDPost extends ApiMethod<ByProjectKeyPayments
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.payment.Payment.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyPaymentsByIDPost extends ApiMethod<ByProjectKeyPayments
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyPaymentsByIDPost withExpand(final String expand){
-        return new ByProjectKeyPaymentsByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

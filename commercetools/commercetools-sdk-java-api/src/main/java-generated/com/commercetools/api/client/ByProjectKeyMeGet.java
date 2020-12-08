@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet> {
+public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet, com.commercetools.api.models.me.MyCustomer> {
 
     
     private String projectKey;
@@ -45,6 +45,7 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet> {
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me", this.projectKey);
@@ -55,14 +56,17 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet> {
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
     }
@@ -96,27 +100,27 @@ public class ByProjectKeyMeGet extends ApiMethod<ByProjectKeyMeGet> {
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMeGet withSort(final String sort){
-        return new ByProjectKeyMeGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyMeGet withLimit(final Integer limit){
-        return new ByProjectKeyMeGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyMeGet withOffset(final Integer offset){
-        return new ByProjectKeyMeGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyMeGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyMeGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyMeGet withExpand(final String expand){
-        return new ByProjectKeyMeGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyMeGet withWhere(final String where){
-        return new ByProjectKeyMeGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

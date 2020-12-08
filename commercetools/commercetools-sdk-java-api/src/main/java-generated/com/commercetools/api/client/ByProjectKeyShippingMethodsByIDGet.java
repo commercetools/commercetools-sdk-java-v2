@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyShippingMethodsByIDGet extends ApiMethod<ByProjectKeyShippingMethodsByIDGet> {
+public class ByProjectKeyShippingMethodsByIDGet extends ApiMethod<ByProjectKeyShippingMethodsByIDGet, com.commercetools.api.models.shipping_method.ShippingMethod> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyShippingMethodsByIDGet extends ApiMethod<ByProjectKeySh
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/shipping-methods/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyShippingMethodsByIDGet extends ApiMethod<ByProjectKeySh
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shipping_method.ShippingMethod.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyShippingMethodsByIDGet extends ApiMethod<ByProjectKeySh
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyShippingMethodsByIDGet withExpand(final String expand){
-        return new ByProjectKeyShippingMethodsByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

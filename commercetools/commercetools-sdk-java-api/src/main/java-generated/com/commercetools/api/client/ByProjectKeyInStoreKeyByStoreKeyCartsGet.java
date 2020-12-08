@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsGet> {
+public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsGet, com.fasterxml.jackson.databind.JsonNode> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjec
         this.storeKey = t.storeKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/carts", this.projectKey, this.storeKey);
@@ -61,14 +62,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjec
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
@@ -109,31 +113,31 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjec
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withCustomerId(final String customerId){
-        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("customerId", customerId);
+        return copy().addQueryParam("customerId", customerId);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withExpand(final String expand){
-        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withSort(final String sort){
-        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withLimit(final Integer limit){
-        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withOffset(final Integer offset){
-        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withWhere(final String where){
-        return new ByProjectKeyInStoreKeyByStoreKeyCartsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

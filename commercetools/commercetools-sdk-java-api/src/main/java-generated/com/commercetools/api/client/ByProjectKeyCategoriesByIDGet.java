@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategoriesByIDGet> {
+public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategoriesByIDGet, com.commercetools.api.models.category.Category> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategor
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/categories/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategor
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.category.Category>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.category.Category.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategor
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCategoriesByIDGet withExpand(final String expand){
-        return new ByProjectKeyCategoriesByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

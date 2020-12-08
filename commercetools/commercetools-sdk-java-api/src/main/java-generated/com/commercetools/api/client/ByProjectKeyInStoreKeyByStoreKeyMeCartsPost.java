@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyMeCartsPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsPost> {
+public class ByProjectKeyInStoreKeyByStoreKeyMeCartsPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeCartsPost, com.commercetools.api.models.cart.Cart> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsPost extends ApiMethod<ByPro
         this.myCartDraft = t.myCartDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/me/carts", this.projectKey, this.storeKey);
@@ -70,14 +71,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsPost extends ApiMethod<ByPro
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.cart.Cart.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsPost extends ApiMethod<ByPro
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsPost withExpand(final String expand){
-        return new ByProjectKeyInStoreKeyByStoreKeyMeCartsPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

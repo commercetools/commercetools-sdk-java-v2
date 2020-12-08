@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDiscountCodesByIDPost> {
+public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDiscountCodesByIDPost, com.commercetools.api.models.discount_code.DiscountCode> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDis
         this.discountCodeUpdate = t.discountCodeUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/discount-codes/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDis
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.discount_code.DiscountCode.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDis
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyDiscountCodesByIDPost withExpand(final String expand){
-        return new ByProjectKeyDiscountCodesByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

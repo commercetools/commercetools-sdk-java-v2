@@ -38,7 +38,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomObjectsPost> {
+public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomObjectsPost, com.commercetools.api.models.custom_object.CustomObject> {
 
     
     private String projectKey;
@@ -57,6 +57,7 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
         this.customObjectDraft = t.customObjectDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/custom-objects", this.projectKey);
@@ -73,14 +74,17 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.custom_object.CustomObject.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyCustomObjectsPost extends ApiMethod<ByProjectKeyCustomO
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomObjectsPost withExpand(final String expand){
-        return new ByProjectKeyCustomObjectsPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

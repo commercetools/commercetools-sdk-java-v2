@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyShoppingListsGet extends ApiMethod<ByProjectKeyShoppingListsGet> {
+public class ByProjectKeyShoppingListsGet extends ApiMethod<ByProjectKeyShoppingListsGet, com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyShoppingListsGet extends ApiMethod<ByProjectKeyShopping
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/shopping-lists", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyShoppingListsGet extends ApiMethod<ByProjectKeyShopping
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse.class);
     }
@@ -99,27 +103,27 @@ public class ByProjectKeyShoppingListsGet extends ApiMethod<ByProjectKeyShopping
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShoppingListsGet withExpand(final String expand){
-        return new ByProjectKeyShoppingListsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyShoppingListsGet withSort(final String sort){
-        return new ByProjectKeyShoppingListsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyShoppingListsGet withLimit(final Integer limit){
-        return new ByProjectKeyShoppingListsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyShoppingListsGet withOffset(final Integer offset){
-        return new ByProjectKeyShoppingListsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyShoppingListsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyShoppingListsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyShoppingListsGet withWhere(final String where){
-        return new ByProjectKeyShoppingListsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

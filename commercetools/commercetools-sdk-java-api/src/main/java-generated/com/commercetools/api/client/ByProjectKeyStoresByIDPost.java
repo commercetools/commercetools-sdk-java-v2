@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyStoresByIDPost extends ApiMethod<ByProjectKeyStoresByIDPost> {
+public class ByProjectKeyStoresByIDPost extends ApiMethod<ByProjectKeyStoresByIDPost, com.commercetools.api.models.store.Store> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyStoresByIDPost extends ApiMethod<ByProjectKeyStoresByID
         this.storeUpdate = t.storeUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/stores/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyStoresByIDPost extends ApiMethod<ByProjectKeyStoresByID
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.store.Store> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.store.Store> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.Store>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.store.Store.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyStoresByIDPost extends ApiMethod<ByProjectKeyStoresByID
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyStoresByIDPost withExpand(final String expand){
-        return new ByProjectKeyStoresByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

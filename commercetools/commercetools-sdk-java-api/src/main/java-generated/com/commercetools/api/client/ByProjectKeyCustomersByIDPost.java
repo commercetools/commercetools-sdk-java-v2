@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomersByIDPost extends ApiMethod<ByProjectKeyCustomersByIDPost> {
+public class ByProjectKeyCustomersByIDPost extends ApiMethod<ByProjectKeyCustomersByIDPost, com.commercetools.api.models.customer.Customer> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyCustomersByIDPost extends ApiMethod<ByProjectKeyCustome
         this.customerUpdate = t.customerUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customers/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyCustomersByIDPost extends ApiMethod<ByProjectKeyCustome
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyCustomersByIDPost extends ApiMethod<ByProjectKeyCustome
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCustomersByIDPost withExpand(final String expand){
-        return new ByProjectKeyCustomersByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

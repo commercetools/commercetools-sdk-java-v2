@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyStoresPost extends ApiMethod<ByProjectKeyStoresPost> {
+public class ByProjectKeyStoresPost extends ApiMethod<ByProjectKeyStoresPost, com.commercetools.api.models.store.Store> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyStoresPost extends ApiMethod<ByProjectKeyStoresPost> {
         this.storeDraft = t.storeDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/stores", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyStoresPost extends ApiMethod<ByProjectKeyStoresPost> {
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.store.Store> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.store.Store> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.Store>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.store.Store.class);
     }
@@ -88,7 +92,7 @@ public class ByProjectKeyStoresPost extends ApiMethod<ByProjectKeyStoresPost> {
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyStoresPost withExpand(final String expand){
-        return new ByProjectKeyStoresPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

@@ -34,7 +34,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomObjectsGet> {
+public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomObjectsGet, com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse> {
 
     
     private String projectKey;
@@ -50,6 +50,7 @@ public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomOb
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/custom-objects", this.projectKey);
@@ -60,14 +61,17 @@ public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomOb
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse.class);
     }
@@ -101,27 +105,27 @@ public class ByProjectKeyCustomObjectsGet extends ApiMethod<ByProjectKeyCustomOb
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomObjectsGet withExpand(final String expand){
-        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyCustomObjectsGet withSort(final String sort){
-        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyCustomObjectsGet withLimit(final Integer limit){
-        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyCustomObjectsGet withOffset(final Integer offset){
-        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyCustomObjectsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyCustomObjectsGet withWhere(final String where){
-        return new ByProjectKeyCustomObjectsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

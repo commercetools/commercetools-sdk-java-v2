@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<ByProjectKeyRecommendationsGeneralCategoriesGet> {
+public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<ByProjectKeyRecommendationsGeneralCategoriesGet, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/recommendations/general-categories", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse.class);
     }
@@ -99,27 +103,27 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final String productImageUrl){
-        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("productImageUrl", productImageUrl);
+        return copy().addQueryParam("productImageUrl", productImageUrl);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final String productName){
-        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("productName", productName);
+        return copy().addQueryParam("productName", productName);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Integer limit){
-        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Integer offset){
-        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final Double confidenceMin){
-        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("confidenceMin", confidenceMin);
+        return copy().addQueryParam("confidenceMin", confidenceMin);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Double confidenceMax){
-        return new ByProjectKeyRecommendationsGeneralCategoriesGet(this).addQueryParam("confidenceMax", confidenceMax);
+        return copy().addQueryParam("confidenceMax", confidenceMax);
     }
     
     @Override

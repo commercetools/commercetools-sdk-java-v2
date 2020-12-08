@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyImageSearchConfigPost extends ApiMethod<ByProjectKeyImageSearchConfigPost> {
+public class ByProjectKeyImageSearchConfigPost extends ApiMethod<ByProjectKeyImageSearchConfigPost, com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyImageSearchConfigPost extends ApiMethod<ByProjectKeyIma
         this.imageSearchConfigRequest = t.imageSearchConfigRequest;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/image-search/config", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyImageSearchConfigPost extends ApiMethod<ByProjectKeyIma
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse.class);
     }

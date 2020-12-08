@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductDiscountsByIDGet extends ApiMethod<ByProjectKeyProductDiscountsByIDGet> {
+public class ByProjectKeyProductDiscountsByIDGet extends ApiMethod<ByProjectKeyProductDiscountsByIDGet, com.commercetools.api.models.product_discount.ProductDiscount> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyProductDiscountsByIDGet extends ApiMethod<ByProjectKeyP
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-discounts/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyProductDiscountsByIDGet extends ApiMethod<ByProjectKeyP
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product_discount.ProductDiscount.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyProductDiscountsByIDGet extends ApiMethod<ByProjectKeyP
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductDiscountsByIDGet withExpand(final String expand){
-        return new ByProjectKeyProductDiscountsByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

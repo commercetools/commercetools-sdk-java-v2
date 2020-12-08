@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductDiscountsKeyByKeyPost extends ApiMethod<ByProjectKeyProductDiscountsKeyByKeyPost> {
+public class ByProjectKeyProductDiscountsKeyByKeyPost extends ApiMethod<ByProjectKeyProductDiscountsKeyByKeyPost, com.commercetools.api.models.product_discount.ProductDiscount> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends ApiMethod<ByProjec
         this.productDiscountUpdate = t.productDiscountUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-discounts/key=%s", this.projectKey, this.key);
@@ -70,14 +71,17 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends ApiMethod<ByProjec
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product_discount.ProductDiscount.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyProductDiscountsKeyByKeyPost extends ApiMethod<ByProjec
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductDiscountsKeyByKeyPost withExpand(final String expand){
-        return new ByProjectKeyProductDiscountsKeyByKeyPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet> {
+public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
         this.storeKey = t.storeKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/shipping-methods/matching-cart", this.projectKey, this.storeKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class);
     }
@@ -86,11 +90,11 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withCartId(final String cartId){
-        return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(this).addQueryParam("cartId", cartId);
+        return copy().addQueryParam("cartId", cartId);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet withExpand(final String expand){
-        return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

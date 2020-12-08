@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyExtensionsGet extends ApiMethod<ByProjectKeyExtensionsGet> {
+public class ByProjectKeyExtensionsGet extends ApiMethod<ByProjectKeyExtensionsGet, com.commercetools.api.models.extension.ExtensionPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyExtensionsGet extends ApiMethod<ByProjectKeyExtensionsG
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/extensions", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyExtensionsGet extends ApiMethod<ByProjectKeyExtensionsG
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.extension.ExtensionPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.extension.ExtensionPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.extension.ExtensionPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.extension.ExtensionPagedQueryResponse.class);
     }
@@ -99,27 +103,27 @@ public class ByProjectKeyExtensionsGet extends ApiMethod<ByProjectKeyExtensionsG
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyExtensionsGet withExpand(final String expand){
-        return new ByProjectKeyExtensionsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyExtensionsGet withSort(final String sort){
-        return new ByProjectKeyExtensionsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyExtensionsGet withLimit(final Integer limit){
-        return new ByProjectKeyExtensionsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyExtensionsGet withOffset(final Integer offset){
-        return new ByProjectKeyExtensionsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyExtensionsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyExtensionsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyExtensionsGet withWhere(final String where){
-        return new ByProjectKeyExtensionsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

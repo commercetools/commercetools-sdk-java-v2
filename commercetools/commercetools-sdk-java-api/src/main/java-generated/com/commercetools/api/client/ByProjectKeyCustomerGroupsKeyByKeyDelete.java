@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomerGroupsKeyByKeyDelete extends ApiMethod<ByProjectKeyCustomerGroupsKeyByKeyDelete> {
+public class ByProjectKeyCustomerGroupsKeyByKeyDelete extends ApiMethod<ByProjectKeyCustomerGroupsKeyByKeyDelete, com.commercetools.api.models.customer_group.CustomerGroup> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCustomerGroupsKeyByKeyDelete extends ApiMethod<ByProjec
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customer-groups/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeyCustomerGroupsKeyByKeyDelete extends ApiMethod<ByProjec
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer_group.CustomerGroup.class);
     }
@@ -89,11 +93,11 @@ public class ByProjectKeyCustomerGroupsKeyByKeyDelete extends ApiMethod<ByProjec
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCustomerGroupsKeyByKeyDelete withVersion(final Long version){
-        return new ByProjectKeyCustomerGroupsKeyByKeyDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyCustomerGroupsKeyByKeyDelete withExpand(final String expand){
-        return new ByProjectKeyCustomerGroupsKeyByKeyDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

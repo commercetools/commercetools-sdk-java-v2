@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersEditsKeyByKeyPost extends ApiMethod<ByProjectKeyOrdersEditsKeyByKeyPost> {
+public class ByProjectKeyOrdersEditsKeyByKeyPost extends ApiMethod<ByProjectKeyOrdersEditsKeyByKeyPost, com.commercetools.api.models.order_edit.OrderEdit> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyOrdersEditsKeyByKeyPost extends ApiMethod<ByProjectKeyO
         this.orderEditUpdate = t.orderEditUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/edits/key=%s", this.projectKey, this.key);
@@ -70,14 +71,17 @@ public class ByProjectKeyOrdersEditsKeyByKeyPost extends ApiMethod<ByProjectKeyO
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order_edit.OrderEdit.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyOrdersEditsKeyByKeyPost extends ApiMethod<ByProjectKeyO
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyOrdersEditsKeyByKeyPost withExpand(final String expand){
-        return new ByProjectKeyOrdersEditsKeyByKeyPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

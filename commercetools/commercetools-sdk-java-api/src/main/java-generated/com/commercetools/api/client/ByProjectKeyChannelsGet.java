@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet> {
+public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet, com.commercetools.api.models.channel.ChannelPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet> 
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/channels", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet> 
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.channel.ChannelPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.channel.ChannelPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.channel.ChannelPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.channel.ChannelPagedQueryResponse.class);
     }
@@ -99,27 +103,27 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet> 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyChannelsGet withExpand(final String expand){
-        return new ByProjectKeyChannelsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyChannelsGet withSort(final String sort){
-        return new ByProjectKeyChannelsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyChannelsGet withLimit(final Integer limit){
-        return new ByProjectKeyChannelsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyChannelsGet withOffset(final Integer offset){
-        return new ByProjectKeyChannelsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyChannelsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyChannelsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyChannelsGet withWhere(final String where){
-        return new ByProjectKeyChannelsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeShoppingListsByIDGet extends ApiMethod<ByProjectKeyMeShoppingListsByIDGet> {
+public class ByProjectKeyMeShoppingListsByIDGet extends ApiMethod<ByProjectKeyMeShoppingListsByIDGet, com.commercetools.api.models.shopping_list.MyShoppingList> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyMeShoppingListsByIDGet extends ApiMethod<ByProjectKeyMe
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/shopping-lists/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyMeShoppingListsByIDGet extends ApiMethod<ByProjectKeyMe
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.MyShoppingList.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyMeShoppingListsByIDGet extends ApiMethod<ByProjectKeyMe
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeShoppingListsByIDGet withExpand(final String expand){
-        return new ByProjectKeyMeShoppingListsByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

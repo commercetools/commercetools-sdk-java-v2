@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKeyProductTypesKeyByKeyPost> {
+public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKeyProductTypesKeyByKeyPost, com.commercetools.api.models.product_type.ProductType> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKey
         this.productTypeUpdate = t.productTypeUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-types/key=%s", this.projectKey, this.key);
@@ -70,14 +71,17 @@ public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKey
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_type.ProductType> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_type.ProductType> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_type.ProductType>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product_type.ProductType.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKey
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductTypesKeyByKeyPost withExpand(final String expand){
-        return new ByProjectKeyProductTypesKeyByKeyPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

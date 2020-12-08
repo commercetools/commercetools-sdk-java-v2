@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyReviewsKeyByKeyDelete extends ApiMethod<ByProjectKeyReviewsKeyByKeyDelete> {
+public class ByProjectKeyReviewsKeyByKeyDelete extends ApiMethod<ByProjectKeyReviewsKeyByKeyDelete, com.commercetools.api.models.review.Review> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyReviewsKeyByKeyDelete extends ApiMethod<ByProjectKeyRev
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/reviews/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeyReviewsKeyByKeyDelete extends ApiMethod<ByProjectKeyRev
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.review.Review>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.review.Review.class);
     }
@@ -93,15 +97,15 @@ public class ByProjectKeyReviewsKeyByKeyDelete extends ApiMethod<ByProjectKeyRev
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyReviewsKeyByKeyDelete withDataErasure(final Boolean dataErasure){
-        return new ByProjectKeyReviewsKeyByKeyDelete(this).addQueryParam("dataErasure", dataErasure);
+        return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyReviewsKeyByKeyDelete withVersion(final Long version){
-        return new ByProjectKeyReviewsKeyByKeyDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyReviewsKeyByKeyDelete withExpand(final String expand){
-        return new ByProjectKeyReviewsKeyByKeyDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

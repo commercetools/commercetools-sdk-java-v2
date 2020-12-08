@@ -33,7 +33,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends ApiMethod<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet> {
+public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends ApiMethod<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet, com.commercetools.importapi.models.importsummaries.ImportSummary> {
 
     
     private String projectKey;
@@ -52,6 +52,7 @@ public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends 
         this.importSinkKey = t.importSinkKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-summaries/importSinkKey=%s", this.projectKey, this.importSinkKey);
@@ -62,14 +63,17 @@ public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends 
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importsummaries.ImportSummary.class);
     }

@@ -36,7 +36,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscriptionsPost> {
+public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscriptionsPost, com.commercetools.api.models.subscription.Subscription> {
 
     
     private String projectKey;
@@ -55,6 +55,7 @@ public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscri
         this.subscriptionDraft = t.subscriptionDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/subscriptions", this.projectKey);
@@ -71,14 +72,17 @@ public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscri
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.subscription.Subscription.class);
     }
@@ -92,7 +96,7 @@ public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscri
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeySubscriptionsPost withExpand(final String expand){
-        return new ByProjectKeySubscriptionsPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

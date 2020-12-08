@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsByIDGet> {
+public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsByIDGet, com.commercetools.api.models.product.Product> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsB
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/products/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsB
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.Product> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.Product> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product.Product.class);
     }
@@ -109,31 +113,31 @@ public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsB
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductsByIDGet withPriceCurrency(final String priceCurrency){
-        return new ByProjectKeyProductsByIDGet(this).addQueryParam("priceCurrency", priceCurrency);
+        return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsByIDGet withPriceCountry(final String priceCountry){
-        return new ByProjectKeyProductsByIDGet(this).addQueryParam("priceCountry", priceCountry);
+        return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsByIDGet withPriceCustomerGroup(final String priceCustomerGroup){
-        return new ByProjectKeyProductsByIDGet(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsByIDGet withPriceChannel(final String priceChannel){
-        return new ByProjectKeyProductsByIDGet(this).addQueryParam("priceChannel", priceChannel);
+        return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsByIDGet withLocaleProjection(final String localeProjection){
-        return new ByProjectKeyProductsByIDGet(this).addQueryParam("localeProjection", localeProjection);
+        return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsByIDGet withStoreProjection(final String storeProjection){
-        return new ByProjectKeyProductsByIDGet(this).addQueryParam("storeProjection", storeProjection);
+        return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsByIDGet withExpand(final String expand){
-        return new ByProjectKeyProductsByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomerGroupsByIDGet extends ApiMethod<ByProjectKeyCustomerGroupsByIDGet> {
+public class ByProjectKeyCustomerGroupsByIDGet extends ApiMethod<ByProjectKeyCustomerGroupsByIDGet, com.commercetools.api.models.customer_group.CustomerGroup> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCustomerGroupsByIDGet extends ApiMethod<ByProjectKeyCus
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customer-groups/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyCustomerGroupsByIDGet extends ApiMethod<ByProjectKeyCus
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer_group.CustomerGroup.class);
     }
@@ -85,7 +89,7 @@ public class ByProjectKeyCustomerGroupsByIDGet extends ApiMethod<ByProjectKeyCus
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCustomerGroupsByIDGet withExpand(final String expand){
-        return new ByProjectKeyCustomerGroupsByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

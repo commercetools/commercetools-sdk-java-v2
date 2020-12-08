@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyShippingMethodsKeyByKeyPost extends ApiMethod<ByProjectKeyShippingMethodsKeyByKeyPost> {
+public class ByProjectKeyShippingMethodsKeyByKeyPost extends ApiMethod<ByProjectKeyShippingMethodsKeyByKeyPost, com.commercetools.api.models.shipping_method.ShippingMethod> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyShippingMethodsKeyByKeyPost extends ApiMethod<ByProject
         this.shippingMethodUpdate = t.shippingMethodUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/shipping-methods/key=%s", this.projectKey, this.key);
@@ -70,14 +71,17 @@ public class ByProjectKeyShippingMethodsKeyByKeyPost extends ApiMethod<ByProject
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shipping_method.ShippingMethod.class);
     }
@@ -94,7 +98,7 @@ public class ByProjectKeyShippingMethodsKeyByKeyPost extends ApiMethod<ByProject
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyShippingMethodsKeyByKeyPost withExpand(final String expand){
-        return new ByProjectKeyShippingMethodsKeyByKeyPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

@@ -34,7 +34,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyProductProjectionsGet> {
+public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyProductProjectionsGet, com.commercetools.api.models.product.ProductProjectionPagedQueryResponse> {
 
     
     private String projectKey;
@@ -50,6 +50,7 @@ public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyPro
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-projections", this.projectKey);
@@ -60,14 +61,17 @@ public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyPro
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjectionPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product.ProductProjectionPagedQueryResponse.class);
     }
@@ -129,55 +133,55 @@ public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyPro
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductProjectionsGet withStaged(final Boolean staged){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("staged", staged);
+        return copy().addQueryParam("staged", staged);
     }
     
     public ByProjectKeyProductProjectionsGet withPriceCurrency(final String priceCurrency){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("priceCurrency", priceCurrency);
+        return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductProjectionsGet withPriceCountry(final String priceCountry){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("priceCountry", priceCountry);
+        return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductProjectionsGet withPriceCustomerGroup(final String priceCustomerGroup){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductProjectionsGet withPriceChannel(final String priceChannel){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("priceChannel", priceChannel);
+        return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductProjectionsGet withLocaleProjection(final String localeProjection){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("localeProjection", localeProjection);
+        return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductProjectionsGet withStoreProjection(final String storeProjection){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("storeProjection", storeProjection);
+        return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductProjectionsGet withExpand(final String expand){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyProductProjectionsGet withSort(final String sort){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductProjectionsGet withLimit(final Integer limit){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductProjectionsGet withOffset(final Integer offset){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductProjectionsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductProjectionsGet withWhere(final String where){
-        return new ByProjectKeyProductProjectionsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
     }
     
     @Override

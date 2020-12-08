@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet> {
+public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet, com.commercetools.api.models.order.Order> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet extends ApiMethod<B
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/me/orders/%s", this.projectKey, this.storeKey, this.ID);
@@ -64,14 +65,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet extends ApiMethod<B
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order.Order.class);
     }
@@ -91,7 +95,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet extends ApiMethod<B
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet withExpand(final String expand){
-        return new ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     @Override

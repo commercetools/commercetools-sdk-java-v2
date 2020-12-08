@@ -1,16 +1,18 @@
 package io.vrap.rmf.base.client;
 
+import io.vrap.rmf.base.client.oauth2.StaticTokenSupplier;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class AuthenticationTokenTest {
     @Test
     public void testExpiredNotSet() throws IOException {
         final AuthenticationToken token = VrapJsonUtils.fromJsonString("{ \"access_token\": \"12345\"}", AuthenticationToken.class);
-        Assertions.assertThat(token.isExpired()).isEqualTo(true);
+        Assertions.assertThat(token.isExpired()).isEqualTo(false);
     }
 
     @Test
@@ -23,5 +25,13 @@ public class AuthenticationTokenTest {
     public void testNotExpired() throws IOException {
         final AuthenticationToken token = VrapJsonUtils.fromJsonString("{ \"access_token\": \"12345\", \"expires_in\": 360}", AuthenticationToken.class);
         Assertions.assertThat(token.isExpired()).isEqualTo(false);
+    }
+
+    @Test
+    public void testStaticTokenSupplier() throws ExecutionException, InterruptedException {
+        final AuthenticationToken t = new AuthenticationToken();
+        t.setAccessToken("12345");
+        final StaticTokenSupplier staticTokenSupplier = new StaticTokenSupplier(t);
+        Assertions.assertThat(staticTokenSupplier.getToken().get().isExpired()).isFalse();
     }
 }

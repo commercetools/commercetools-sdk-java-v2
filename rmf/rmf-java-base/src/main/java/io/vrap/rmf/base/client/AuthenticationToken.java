@@ -27,7 +27,6 @@ public class AuthenticationToken {
     private ZonedDateTime expiresInZonedDateTime;
 
     public AuthenticationToken() {
-        expiresInZonedDateTime = ZonedDateTime.now();
     }
 
     public String getAccessToken() {
@@ -51,7 +50,7 @@ public class AuthenticationToken {
     }
 
     public void setExpiresIn(Long expiresIn) {
-        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn).map(seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5)).orElse(ZonedDateTime.now());
+        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn).map(seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5)).orElse(null);
         this.expiresIn = expiresIn;
     }
 
@@ -76,6 +75,6 @@ public class AuthenticationToken {
     }
 
     public boolean isExpired() {
-        return expiresInZonedDateTime.isBefore(ZonedDateTime.now());
+        return expiresInZonedDateTime != null && expiresInZonedDateTime.isBefore(ZonedDateTime.now());
     }
 }

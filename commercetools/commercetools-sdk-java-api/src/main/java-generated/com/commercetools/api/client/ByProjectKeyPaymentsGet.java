@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet, com.commercetools.api.models.payment.PaymentPagedQueryResponse> {
+public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet, com.commercetools.api.models.payment.PaymentPagedQueryResponse> implements com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyPaymentsGet, com.commercetools.api.models.payment.PaymentPagedQueryResponse> {
 
     
     private String projectKey;

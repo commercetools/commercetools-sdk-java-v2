@@ -114,7 +114,7 @@ public class ClientFactory {
     ) {
         List<Middleware> middlewareStack = new ArrayList<>(MiddlewareFactory.createDefault(tokenSupplier, internalLoggerFactory, userAgentSupplier));
         if (correlationIdProvider != null) {
-            middlewares.add((request, next) -> next.apply(request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId())));
+            middlewareStack.add((request, next) -> next.apply(request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId())));
         }
         middlewareStack.addAll(middlewares);
         final HandlerStack stack = HandlerStack.create(HttpHandler.create(httpClient), middlewareStack);

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProductDiscountsGet> {
+public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProductDiscountsGet, com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-discounts", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse.class);
     }
@@ -99,26 +103,32 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductDiscountsGet withExpand(final String expand){
-        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyProductDiscountsGet withSort(final String sort){
-        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductDiscountsGet withLimit(final Integer limit){
-        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductDiscountsGet withOffset(final Integer offset){
-        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductDiscountsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductDiscountsGet withWhere(final String where){
-        return new ByProjectKeyProductDiscountsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
+    }
+    
+    @Override
+    protected ByProjectKeyProductDiscountsGet copy()
+    {
+        return new ByProjectKeyProductDiscountsGet(this);
     }
 }

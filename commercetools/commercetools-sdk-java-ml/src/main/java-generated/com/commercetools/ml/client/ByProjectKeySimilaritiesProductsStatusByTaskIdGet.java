@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends ApiMethod<ByProjectKeySimilaritiesProductsStatusByTaskIdGet> {
+public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends ApiMethod<ByProjectKeySimilaritiesProductsStatusByTaskIdGet, com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends ApiMethod
         this.taskId = t.taskId;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/similarities/products/status/%s", this.projectKey, this.taskId);
@@ -58,14 +59,17 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends ApiMethod
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus.class);
     }
@@ -78,4 +82,10 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends ApiMethod
     
     public void setTaskId(final String taskId) { this.taskId = taskId; }
 
+    
+    @Override
+    protected ByProjectKeySimilaritiesProductsStatusByTaskIdGet copy()
+    {
+        return new ByProjectKeySimilaritiesProductsStatusByTaskIdGet(this);
+    }
 }

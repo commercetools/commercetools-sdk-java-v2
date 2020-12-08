@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrdersEditsByIDDelete> {
+public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrdersEditsByIDDelete, com.commercetools.api.models.order_edit.OrderEdit> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrd
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/edits/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrd
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order_edit.OrderEdit.class);
     }
@@ -89,10 +93,16 @@ public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrd
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyOrdersEditsByIDDelete withVersion(final Long version){
-        return new ByProjectKeyOrdersEditsByIDDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyOrdersEditsByIDDelete withExpand(final String expand){
-        return new ByProjectKeyOrdersEditsByIDDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyOrdersEditsByIDDelete copy()
+    {
+        return new ByProjectKeyOrdersEditsByIDDelete(this);
     }
 }

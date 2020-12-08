@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMePaymentsByIDPost extends ApiMethod<ByProjectKeyMePaymentsByIDPost> {
+public class ByProjectKeyMePaymentsByIDPost extends ApiMethod<ByProjectKeyMePaymentsByIDPost, com.commercetools.api.models.me.MyPayment> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyMePaymentsByIDPost extends ApiMethod<ByProjectKeyMePaym
         this.myPaymentUpdate = t.myPaymentUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/payments/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyMePaymentsByIDPost extends ApiMethod<ByProjectKeyMePaym
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyPayment> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyPayment> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyPayment>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyPayment.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyMePaymentsByIDPost extends ApiMethod<ByProjectKeyMePaym
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMePaymentsByIDPost withExpand(final String expand){
-        return new ByProjectKeyMePaymentsByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyMePaymentsByIDPost copy()
+    {
+        return new ByProjectKeyMePaymentsByIDPost(this);
     }
 }

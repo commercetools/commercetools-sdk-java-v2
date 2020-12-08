@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSinksPost> {
+public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSinksPost, com.commercetools.importapi.models.importsinks.ImportSink> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSin
         this.importSinkDraft = t.importSinkDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-sinks", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSin
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importsinks.ImportSink.class);
     }
@@ -84,4 +88,10 @@ public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSin
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyImportSinksPost copy()
+    {
+        return new ByProjectKeyImportSinksPost(this);
+    }
 }

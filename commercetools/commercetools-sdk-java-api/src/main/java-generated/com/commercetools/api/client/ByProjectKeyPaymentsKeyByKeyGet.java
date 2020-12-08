@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyPaymentsKeyByKeyGet extends ApiMethod<ByProjectKeyPaymentsKeyByKeyGet> {
+public class ByProjectKeyPaymentsKeyByKeyGet extends ApiMethod<ByProjectKeyPaymentsKeyByKeyGet, com.commercetools.api.models.payment.Payment> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyPaymentsKeyByKeyGet extends ApiMethod<ByProjectKeyPayme
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/payments/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeyPaymentsKeyByKeyGet extends ApiMethod<ByProjectKeyPayme
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.payment.Payment.class);
     }
@@ -85,6 +89,12 @@ public class ByProjectKeyPaymentsKeyByKeyGet extends ApiMethod<ByProjectKeyPayme
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyPaymentsKeyByKeyGet withExpand(final String expand){
-        return new ByProjectKeyPaymentsKeyByKeyGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyPaymentsKeyByKeyGet copy()
+    {
+        return new ByProjectKeyPaymentsKeyByKeyGet(this);
     }
 }

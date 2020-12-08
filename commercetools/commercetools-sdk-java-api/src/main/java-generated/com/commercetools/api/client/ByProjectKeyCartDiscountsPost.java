@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCartDiscountsPost extends ApiMethod<ByProjectKeyCartDiscountsPost> {
+public class ByProjectKeyCartDiscountsPost extends ApiMethod<ByProjectKeyCartDiscountsPost, com.commercetools.api.models.cart_discount.CartDiscount> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCartDiscountsPost extends ApiMethod<ByProjectKeyCartDis
         this.cartDiscountDraft = t.cartDiscountDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/cart-discounts", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyCartDiscountsPost extends ApiMethod<ByProjectKeyCartDis
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.cart_discount.CartDiscount.class);
     }
@@ -88,6 +92,12 @@ public class ByProjectKeyCartDiscountsPost extends ApiMethod<ByProjectKeyCartDis
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCartDiscountsPost withExpand(final String expand){
-        return new ByProjectKeyCartDiscountsPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyCartDiscountsPost copy()
+    {
+        return new ByProjectKeyCartDiscountsPost(this);
     }
 }

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersGet extends ApiMethod<ByProjectKeyOrdersGet> {
+public class ByProjectKeyOrdersGet extends ApiMethod<ByProjectKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyOrdersGet extends ApiMethod<ByProjectKeyOrdersGet> {
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyOrdersGet extends ApiMethod<ByProjectKeyOrdersGet> {
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order.OrderPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order.OrderPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.OrderPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order.OrderPagedQueryResponse.class);
     }
@@ -99,26 +103,32 @@ public class ByProjectKeyOrdersGet extends ApiMethod<ByProjectKeyOrdersGet> {
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyOrdersGet withExpand(final String expand){
-        return new ByProjectKeyOrdersGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyOrdersGet withSort(final String sort){
-        return new ByProjectKeyOrdersGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyOrdersGet withLimit(final Integer limit){
-        return new ByProjectKeyOrdersGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyOrdersGet withOffset(final Integer offset){
-        return new ByProjectKeyOrdersGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyOrdersGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyOrdersGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyOrdersGet withWhere(final String where){
-        return new ByProjectKeyOrdersGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
+    }
+    
+    @Override
+    protected ByProjectKeyOrdersGet copy()
+    {
+        return new ByProjectKeyOrdersGet(this);
     }
 }

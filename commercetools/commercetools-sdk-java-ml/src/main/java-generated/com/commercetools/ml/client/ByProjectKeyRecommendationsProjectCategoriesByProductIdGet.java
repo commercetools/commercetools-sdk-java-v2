@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends ApiMethod<ByProjectKeyRecommendationsProjectCategoriesByProductIdGet> {
+public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends ApiMethod<ByProjectKeyRecommendationsProjectCategoriesByProductIdGet, com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
         this.productId = t.productId;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/recommendations/project-categories/%s", this.projectKey, this.productId);
@@ -61,14 +62,17 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationPagedQueryResponse.class);
     }
@@ -101,22 +105,28 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
     public void setProductId(final String productId) { this.productId = productId; }
 
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withLimit(final Integer limit){
-        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withOffset(final Integer offset){
-        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withStaged(final Boolean staged){
-        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("staged", staged);
+        return copy().addQueryParam("staged", staged);
     }
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMin(final Double confidenceMin){
-        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("confidenceMin", confidenceMin);
+        return copy().addQueryParam("confidenceMin", confidenceMin);
     }
     
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(final Double confidenceMax){
-        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this).addQueryParam("confidenceMax", confidenceMax);
+        return copy().addQueryParam("confidenceMax", confidenceMax);
+    }
+    
+    @Override
+    protected ByProjectKeyRecommendationsProjectCategoriesByProductIdGet copy()
+    {
+        return new ByProjectKeyRecommendationsProjectCategoriesByProductIdGet(this);
     }
 }

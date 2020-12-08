@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeySubscriptionsKeyByKeyDelete extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyDelete> {
+public class ByProjectKeySubscriptionsKeyByKeyDelete extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyDelete, com.commercetools.api.models.subscription.Subscription> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete extends ApiMethod<ByProject
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/subscriptions/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete extends ApiMethod<ByProject
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.subscription.Subscription.class);
     }
@@ -89,10 +93,16 @@ public class ByProjectKeySubscriptionsKeyByKeyDelete extends ApiMethod<ByProject
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeySubscriptionsKeyByKeyDelete withVersion(final Long version){
-        return new ByProjectKeySubscriptionsKeyByKeyDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeySubscriptionsKeyByKeyDelete withExpand(final String expand){
-        return new ByProjectKeySubscriptionsKeyByKeyDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeySubscriptionsKeyByKeyDelete copy()
+    {
+        return new ByProjectKeySubscriptionsKeyByKeyDelete(this);
     }
 }

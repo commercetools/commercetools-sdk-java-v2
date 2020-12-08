@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet> {
+public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet, com.commercetools.api.models.payment.PaymentPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet> 
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/payments", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet> 
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.PaymentPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.PaymentPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.PaymentPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.payment.PaymentPagedQueryResponse.class);
     }
@@ -99,26 +103,32 @@ public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet> 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyPaymentsGet withExpand(final String expand){
-        return new ByProjectKeyPaymentsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyPaymentsGet withSort(final String sort){
-        return new ByProjectKeyPaymentsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyPaymentsGet withLimit(final Integer limit){
-        return new ByProjectKeyPaymentsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyPaymentsGet withOffset(final Integer offset){
-        return new ByProjectKeyPaymentsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyPaymentsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyPaymentsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyPaymentsGet withWhere(final String where){
-        return new ByProjectKeyPaymentsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
+    }
+    
+    @Override
+    protected ByProjectKeyPaymentsGet copy()
+    {
+        return new ByProjectKeyPaymentsGet(this);
     }
 }

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyPaymentsByIDDelete extends ApiMethod<ByProjectKeyPaymentsByIDDelete> {
+public class ByProjectKeyPaymentsByIDDelete extends ApiMethod<ByProjectKeyPaymentsByIDDelete, com.commercetools.api.models.payment.Payment> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyPaymentsByIDDelete extends ApiMethod<ByProjectKeyPaymen
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/payments/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyPaymentsByIDDelete extends ApiMethod<ByProjectKeyPaymen
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.payment.Payment.class);
     }
@@ -93,14 +97,20 @@ public class ByProjectKeyPaymentsByIDDelete extends ApiMethod<ByProjectKeyPaymen
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyPaymentsByIDDelete withDataErasure(final Boolean dataErasure){
-        return new ByProjectKeyPaymentsByIDDelete(this).addQueryParam("dataErasure", dataErasure);
+        return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyPaymentsByIDDelete withVersion(final Long version){
-        return new ByProjectKeyPaymentsByIDDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyPaymentsByIDDelete withExpand(final String expand){
-        return new ByProjectKeyPaymentsByIDDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyPaymentsByIDDelete copy()
+    {
+        return new ByProjectKeyPaymentsByIDDelete(this);
     }
 }

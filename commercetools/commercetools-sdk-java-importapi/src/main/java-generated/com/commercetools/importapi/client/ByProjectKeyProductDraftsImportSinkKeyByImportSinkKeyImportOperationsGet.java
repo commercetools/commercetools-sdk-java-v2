@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet extends ApiMethod<ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet> {
+public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet extends ApiMethod<ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet, com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperatio
         this.importSinkKey = t.importSinkKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-drafts/importSinkKey=%s/import-operations", this.projectKey, this.importSinkKey);
@@ -61,14 +62,17 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperatio
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class);
     }
@@ -101,22 +105,28 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperatio
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit){
-        return new ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
-        return new ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort){
-        return new ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){
-        return new ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("resourceKey", resourceKey);
+        return copy().addQueryParam("resourceKey", resourceKey);
     }
     
     public ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
-        return new ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("state", state);
+        return copy().addQueryParam("state", state);
+    }
+    
+    @Override
+    protected ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet copy()
+    {
+        return new ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyImportOperationsGet(this);
     }
 }

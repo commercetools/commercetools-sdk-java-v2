@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet> {
+public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<ByProjectKeyShippingMethodsMatchingLocationGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> {
 
     
     private String projectKey;
@@ -45,6 +45,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<By
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/shipping-methods/matching-location", this.projectKey);
@@ -55,14 +56,17 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<By
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class);
     }
@@ -88,18 +92,24 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<By
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final String country){
-        return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("country", country);
+        return copy().addQueryParam("country", country);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withState(final String state){
-        return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("state", state);
+        return copy().addQueryParam("state", state);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final String currency){
-        return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("currency", currency);
+        return copy().addQueryParam("currency", currency);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand){
-        return new ByProjectKeyShippingMethodsMatchingLocationGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyShippingMethodsMatchingLocationGet copy()
+    {
+        return new ByProjectKeyShippingMethodsMatchingLocationGet(this);
     }
 }

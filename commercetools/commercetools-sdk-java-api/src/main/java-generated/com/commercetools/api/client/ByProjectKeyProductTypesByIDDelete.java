@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductTypesByIDDelete extends ApiMethod<ByProjectKeyProductTypesByIDDelete> {
+public class ByProjectKeyProductTypesByIDDelete extends ApiMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyProductTypesByIDDelete extends ApiMethod<ByProjectKeyPr
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-types/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyProductTypesByIDDelete extends ApiMethod<ByProjectKeyPr
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_type.ProductType> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_type.ProductType> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_type.ProductType>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product_type.ProductType.class);
     }
@@ -89,10 +93,16 @@ public class ByProjectKeyProductTypesByIDDelete extends ApiMethod<ByProjectKeyPr
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductTypesByIDDelete withVersion(final Long version){
-        return new ByProjectKeyProductTypesByIDDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyProductTypesByIDDelete withExpand(final String expand){
-        return new ByProjectKeyProductTypesByIDDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyProductTypesByIDDelete copy()
+    {
+        return new ByProjectKeyProductTypesByIDDelete(this);
     }
 }

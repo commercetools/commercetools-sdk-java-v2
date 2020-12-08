@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyTaxCategoriesByIDGet extends ApiMethod<ByProjectKeyTaxCategoriesByIDGet> {
+public class ByProjectKeyTaxCategoriesByIDGet extends ApiMethod<ByProjectKeyTaxCategoriesByIDGet, com.commercetools.api.models.tax_category.TaxCategory> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyTaxCategoriesByIDGet extends ApiMethod<ByProjectKeyTaxC
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/tax-categories/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyTaxCategoriesByIDGet extends ApiMethod<ByProjectKeyTaxC
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.tax_category.TaxCategory> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.tax_category.TaxCategory> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.tax_category.TaxCategory>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.tax_category.TaxCategory.class);
     }
@@ -85,6 +89,12 @@ public class ByProjectKeyTaxCategoriesByIDGet extends ApiMethod<ByProjectKeyTaxC
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyTaxCategoriesByIDGet withExpand(final String expand){
-        return new ByProjectKeyTaxCategoriesByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyTaxCategoriesByIDGet copy()
+    {
+        return new ByProjectKeyTaxCategoriesByIDGet(this);
     }
 }

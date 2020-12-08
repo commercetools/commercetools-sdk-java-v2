@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeySubscriptionsByIDPost extends ApiMethod<ByProjectKeySubscriptionsByIDPost> {
+public class ByProjectKeySubscriptionsByIDPost extends ApiMethod<ByProjectKeySubscriptionsByIDPost, com.commercetools.api.models.subscription.Subscription> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeySubscriptionsByIDPost extends ApiMethod<ByProjectKeySub
         this.subscriptionUpdate = t.subscriptionUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/subscriptions/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeySubscriptionsByIDPost extends ApiMethod<ByProjectKeySub
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.subscription.Subscription.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeySubscriptionsByIDPost extends ApiMethod<ByProjectKeySub
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeySubscriptionsByIDPost withExpand(final String expand){
-        return new ByProjectKeySubscriptionsByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeySubscriptionsByIDPost copy()
+    {
+        return new ByProjectKeySubscriptionsByIDPost(this);
     }
 }

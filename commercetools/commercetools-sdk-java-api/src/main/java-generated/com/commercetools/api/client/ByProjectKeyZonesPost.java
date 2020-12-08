@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost> {
+public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost, com.commercetools.api.models.zone.Zone> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost> {
         this.zoneDraft = t.zoneDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/zones", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost> {
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.Zone>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.zone.Zone.class);
     }
@@ -88,6 +92,12 @@ public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost> {
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyZonesPost withExpand(final String expand){
-        return new ByProjectKeyZonesPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyZonesPost copy()
+    {
+        return new ByProjectKeyZonesPost(this);
     }
 }

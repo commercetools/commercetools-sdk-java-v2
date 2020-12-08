@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeShoppingListsKeyByKeyPost extends ApiMethod<ByProjectKeyMeShoppingListsKeyByKeyPost> {
+public class ByProjectKeyMeShoppingListsKeyByKeyPost extends ApiMethod<ByProjectKeyMeShoppingListsKeyByKeyPost, com.commercetools.api.models.shopping_list.MyShoppingList> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost extends ApiMethod<ByProject
         this.myShoppingListUpdate = t.myShoppingListUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/shopping-lists/key=%s", this.projectKey, this.key);
@@ -70,14 +71,17 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost extends ApiMethod<ByProject
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.MyShoppingList.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyMeShoppingListsKeyByKeyPost extends ApiMethod<ByProject
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyMeShoppingListsKeyByKeyPost withExpand(final String expand){
-        return new ByProjectKeyMeShoppingListsKeyByKeyPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyMeShoppingListsKeyByKeyPost copy()
+    {
+        return new ByProjectKeyMeShoppingListsKeyByKeyPost(this);
     }
 }

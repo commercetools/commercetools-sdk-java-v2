@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyChannelsByIDGet extends ApiMethod<ByProjectKeyChannelsByIDGet> {
+public class ByProjectKeyChannelsByIDGet extends ApiMethod<ByProjectKeyChannelsByIDGet, com.commercetools.api.models.channel.Channel> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyChannelsByIDGet extends ApiMethod<ByProjectKeyChannelsB
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/channels/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyChannelsByIDGet extends ApiMethod<ByProjectKeyChannelsB
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.channel.Channel> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.channel.Channel> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.channel.Channel>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.channel.Channel.class);
     }
@@ -85,6 +89,12 @@ public class ByProjectKeyChannelsByIDGet extends ApiMethod<ByProjectKeyChannelsB
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyChannelsByIDGet withExpand(final String expand){
-        return new ByProjectKeyChannelsByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyChannelsByIDGet copy()
+    {
+        return new ByProjectKeyChannelsByIDGet(this);
     }
 }

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInventoryByIDDelete> {
+public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInven
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/inventory/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInven
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.inventory.InventoryEntry.class);
     }
@@ -89,10 +93,16 @@ public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInven
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInventoryByIDDelete withVersion(final Long version){
-        return new ByProjectKeyInventoryByIDDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyInventoryByIDDelete withExpand(final String expand){
-        return new ByProjectKeyInventoryByIDDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyInventoryByIDDelete copy()
+    {
+        return new ByProjectKeyInventoryByIDDelete(this);
     }
 }

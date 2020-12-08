@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete> {
+public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete, com.commercetools.api.models.customer.Customer> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete extends Api
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/customers/key=%s", this.projectKey, this.storeKey, this.key);
@@ -64,14 +65,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete extends Api
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
@@ -99,14 +103,20 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete extends Api
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete withDataErasure(final Boolean dataErasure){
-        return new ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete(this).addQueryParam("dataErasure", dataErasure);
+        return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete withVersion(final Long version){
-        return new ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete withExpand(final String expand){
-        return new ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyDelete(this);
     }
 }

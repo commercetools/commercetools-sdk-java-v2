@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyLoginPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyLoginPost> {
+public class ByProjectKeyInStoreKeyByStoreKeyLoginPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyLoginPost, com.commercetools.api.models.customer.CustomerSignInResult> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginPost extends ApiMethod<ByProje
         this.customerSignin = t.customerSignin;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/login", this.projectKey, this.storeKey);
@@ -70,14 +71,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginPost extends ApiMethod<ByProje
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.CustomerSignInResult.class);
     }
@@ -90,4 +94,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyLoginPost extends ApiMethod<ByProje
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyLoginPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyLoginPost(this);
+    }
 }

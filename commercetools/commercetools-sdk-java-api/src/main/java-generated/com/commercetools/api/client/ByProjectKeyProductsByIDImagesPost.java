@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyProductsByIDImagesPost> {
+public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyProductsByIDImagesPost, com.commercetools.api.models.product.Product> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
         this.file = t.file;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/products/%s/images", this.projectKey, this.ID);
@@ -69,14 +70,17 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.Product> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.Product> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product.Product.class);
     }
@@ -105,18 +109,24 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductsByIDImagesPost withFilename(final String filename){
-        return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("filename", filename);
+        return copy().addQueryParam("filename", filename);
     }
     
     public ByProjectKeyProductsByIDImagesPost withVariant(final Double variant){
-        return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("variant", variant);
+        return copy().addQueryParam("variant", variant);
     }
     
     public ByProjectKeyProductsByIDImagesPost withSku(final String sku){
-        return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("sku", sku);
+        return copy().addQueryParam("sku", sku);
     }
     
     public ByProjectKeyProductsByIDImagesPost withStaged(final Boolean staged){
-        return new ByProjectKeyProductsByIDImagesPost(this).addQueryParam("staged", staged);
+        return copy().addQueryParam("staged", staged);
+    }
+    
+    @Override
+    protected ByProjectKeyProductsByIDImagesPost copy()
+    {
+        return new ByProjectKeyProductsByIDImagesPost(this);
     }
 }

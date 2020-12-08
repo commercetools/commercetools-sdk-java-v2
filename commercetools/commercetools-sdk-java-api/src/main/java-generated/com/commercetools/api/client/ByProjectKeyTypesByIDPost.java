@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyTypesByIDPost extends ApiMethod<ByProjectKeyTypesByIDPost> {
+public class ByProjectKeyTypesByIDPost extends ApiMethod<ByProjectKeyTypesByIDPost, com.commercetools.api.models.type.Type> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyTypesByIDPost extends ApiMethod<ByProjectKeyTypesByIDPo
         this.typeUpdate = t.typeUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/types/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyTypesByIDPost extends ApiMethod<ByProjectKeyTypesByIDPo
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.type.Type> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.type.Type> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.type.Type>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.type.Type.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyTypesByIDPost extends ApiMethod<ByProjectKeyTypesByIDPo
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyTypesByIDPost withExpand(final String expand){
-        return new ByProjectKeyTypesByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyTypesByIDPost copy()
+    {
+        return new ByProjectKeyTypesByIDPost(this);
     }
 }

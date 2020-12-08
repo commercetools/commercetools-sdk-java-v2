@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet> {
+public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet, com.commercetools.api.models.inventory.InventoryPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/inventory", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.inventory.InventoryPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.inventory.InventoryPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.inventory.InventoryPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.inventory.InventoryPagedQueryResponse.class);
     }
@@ -99,26 +103,32 @@ public class ByProjectKeyInventoryGet extends ApiMethod<ByProjectKeyInventoryGet
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyInventoryGet withExpand(final String expand){
-        return new ByProjectKeyInventoryGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyInventoryGet withSort(final String sort){
-        return new ByProjectKeyInventoryGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyInventoryGet withLimit(final Integer limit){
-        return new ByProjectKeyInventoryGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyInventoryGet withOffset(final Integer offset){
-        return new ByProjectKeyInventoryGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyInventoryGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyInventoryGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyInventoryGet withWhere(final String where){
-        return new ByProjectKeyInventoryGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
+    }
+    
+    @Override
+    protected ByProjectKeyInventoryGet copy()
+    {
+        return new ByProjectKeyInventoryGet(this);
     }
 }

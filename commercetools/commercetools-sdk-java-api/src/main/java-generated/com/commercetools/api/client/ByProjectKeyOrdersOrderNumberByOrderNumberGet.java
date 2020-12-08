@@ -33,7 +33,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberGet> {
+public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberGet, com.commercetools.api.models.order.Order> {
 
     
     private String projectKey;
@@ -52,6 +52,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByP
         this.orderNumber = t.orderNumber;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/order-number=%s", this.projectKey, this.orderNumber);
@@ -62,14 +63,17 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByP
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order.Order.class);
     }
@@ -86,6 +90,12 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByP
     public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand){
-        return new ByProjectKeyOrdersOrderNumberByOrderNumberGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyOrdersOrderNumberByOrderNumberGet copy()
+    {
+        return new ByProjectKeyOrdersOrderNumberByOrderNumberGet(this);
     }
 }

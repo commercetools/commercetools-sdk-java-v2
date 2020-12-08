@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeShoppingListsByIDDelete extends ApiMethod<ByProjectKeyMeShoppingListsByIDDelete> {
+public class ByProjectKeyMeShoppingListsByIDDelete extends ApiMethod<ByProjectKeyMeShoppingListsByIDDelete, com.commercetools.api.models.shopping_list.MyShoppingList> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyMeShoppingListsByIDDelete extends ApiMethod<ByProjectKe
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/shopping-lists/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyMeShoppingListsByIDDelete extends ApiMethod<ByProjectKe
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shopping_list.MyShoppingList.class);
     }
@@ -89,10 +93,16 @@ public class ByProjectKeyMeShoppingListsByIDDelete extends ApiMethod<ByProjectKe
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeShoppingListsByIDDelete withVersion(final Long version){
-        return new ByProjectKeyMeShoppingListsByIDDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyMeShoppingListsByIDDelete withExpand(final String expand){
-        return new ByProjectKeyMeShoppingListsByIDDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyMeShoppingListsByIDDelete copy()
+    {
+        return new ByProjectKeyMeShoppingListsByIDDelete(this);
     }
 }

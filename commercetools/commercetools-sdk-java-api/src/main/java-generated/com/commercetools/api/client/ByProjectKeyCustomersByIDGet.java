@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomersByIDGet extends ApiMethod<ByProjectKeyCustomersByIDGet> {
+public class ByProjectKeyCustomersByIDGet extends ApiMethod<ByProjectKeyCustomersByIDGet, com.commercetools.api.models.customer.Customer> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCustomersByIDGet extends ApiMethod<ByProjectKeyCustomer
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customers/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyCustomersByIDGet extends ApiMethod<ByProjectKeyCustomer
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
@@ -85,6 +89,12 @@ public class ByProjectKeyCustomersByIDGet extends ApiMethod<ByProjectKeyCustomer
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCustomersByIDGet withExpand(final String expand){
-        return new ByProjectKeyCustomersByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyCustomersByIDGet copy()
+    {
+        return new ByProjectKeyCustomersByIDGet(this);
     }
 }

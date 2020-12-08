@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyShippingMethodsKeyByKeyDelete extends ApiMethod<ByProjectKeyShippingMethodsKeyByKeyDelete> {
+public class ByProjectKeyShippingMethodsKeyByKeyDelete extends ApiMethod<ByProjectKeyShippingMethodsKeyByKeyDelete, com.commercetools.api.models.shipping_method.ShippingMethod> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyShippingMethodsKeyByKeyDelete extends ApiMethod<ByProje
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/shipping-methods/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeyShippingMethodsKeyByKeyDelete extends ApiMethod<ByProje
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shipping_method.ShippingMethod.class);
     }
@@ -89,10 +93,16 @@ public class ByProjectKeyShippingMethodsKeyByKeyDelete extends ApiMethod<ByProje
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyShippingMethodsKeyByKeyDelete withVersion(final Long version){
-        return new ByProjectKeyShippingMethodsKeyByKeyDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyShippingMethodsKeyByKeyDelete withExpand(final String expand){
-        return new ByProjectKeyShippingMethodsKeyByKeyDelete(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyShippingMethodsKeyByKeyDelete copy()
+    {
+        return new ByProjectKeyShippingMethodsKeyByKeyDelete(this);
     }
 }

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeySubscriptionsKeyByKeyPost extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyPost> {
+public class ByProjectKeySubscriptionsKeyByKeyPost extends ApiMethod<ByProjectKeySubscriptionsKeyByKeyPost, com.commercetools.api.models.subscription.Subscription> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeySubscriptionsKeyByKeyPost extends ApiMethod<ByProjectKe
         this.subscriptionUpdate = t.subscriptionUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/subscriptions/key=%s", this.projectKey, this.key);
@@ -70,14 +71,17 @@ public class ByProjectKeySubscriptionsKeyByKeyPost extends ApiMethod<ByProjectKe
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.Subscription>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.subscription.Subscription.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeySubscriptionsKeyByKeyPost extends ApiMethod<ByProjectKe
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeySubscriptionsKeyByKeyPost withExpand(final String expand){
-        return new ByProjectKeySubscriptionsKeyByKeyPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeySubscriptionsKeyByKeyPost copy()
+    {
+        return new ByProjectKeySubscriptionsKeyByKeyPost(this);
     }
 }

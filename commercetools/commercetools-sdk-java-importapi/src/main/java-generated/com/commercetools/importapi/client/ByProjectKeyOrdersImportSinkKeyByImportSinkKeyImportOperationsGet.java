@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet extends ApiMethod<ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet> {
+public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet extends ApiMethod<ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet, com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet e
         this.importSinkKey = t.importSinkKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/importSinkKey=%s/import-operations", this.projectKey, this.importSinkKey);
@@ -61,14 +62,17 @@ public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet e
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importoperations.ImportOperationPagedResponse.class);
     }
@@ -101,22 +105,28 @@ public class ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet e
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
     public ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit){
-        return new ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
-        return new ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort){
-        return new ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){
-        return new ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("resourceKey", resourceKey);
+        return copy().addQueryParam("resourceKey", resourceKey);
     }
     
     public ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
-        return new ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet(this).addQueryParam("state", state);
+        return copy().addQueryParam("state", state);
+    }
+    
+    @Override
+    protected ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet copy()
+    {
+        return new ByProjectKeyOrdersImportSinkKeyByImportSinkKeyImportOperationsGet(this);
     }
 }

@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCategoriesByIDPost extends ApiMethod<ByProjectKeyCategoriesByIDPost> {
+public class ByProjectKeyCategoriesByIDPost extends ApiMethod<ByProjectKeyCategoriesByIDPost, com.commercetools.api.models.category.Category> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyCategoriesByIDPost extends ApiMethod<ByProjectKeyCatego
         this.categoryUpdate = t.categoryUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/categories/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyCategoriesByIDPost extends ApiMethod<ByProjectKeyCatego
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.category.Category>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.category.Category.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyCategoriesByIDPost extends ApiMethod<ByProjectKeyCatego
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCategoriesByIDPost withExpand(final String expand){
-        return new ByProjectKeyCategoriesByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyCategoriesByIDPost copy()
+    {
+        return new ByProjectKeyCategoriesByIDPost(this);
     }
 }

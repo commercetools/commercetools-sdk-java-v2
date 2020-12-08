@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyPaymentsByIDGet extends ApiMethod<ByProjectKeyPaymentsByIDGet> {
+public class ByProjectKeyPaymentsByIDGet extends ApiMethod<ByProjectKeyPaymentsByIDGet, com.commercetools.api.models.payment.Payment> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyPaymentsByIDGet extends ApiMethod<ByProjectKeyPaymentsB
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/payments/%s", this.projectKey, this.ID);
@@ -61,14 +62,17 @@ public class ByProjectKeyPaymentsByIDGet extends ApiMethod<ByProjectKeyPaymentsB
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.payment.Payment>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.payment.Payment.class);
     }
@@ -85,6 +89,12 @@ public class ByProjectKeyPaymentsByIDGet extends ApiMethod<ByProjectKeyPaymentsB
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyPaymentsByIDGet withExpand(final String expand){
-        return new ByProjectKeyPaymentsByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyPaymentsByIDGet copy()
+    {
+        return new ByProjectKeyPaymentsByIDGet(this);
     }
 }

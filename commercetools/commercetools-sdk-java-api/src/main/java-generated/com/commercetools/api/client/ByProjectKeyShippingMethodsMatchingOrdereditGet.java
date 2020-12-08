@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<ByProjectKeyShippingMethodsMatchingOrdereditGet> {
+public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<ByProjectKeyShippingMethodsMatchingOrdereditGet, com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> {
 
     
     private String projectKey;
@@ -45,6 +45,7 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<B
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/shipping-methods/matching-orderedit", this.projectKey);
@@ -55,14 +56,17 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<B
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.shipping_method.ShippingMethodPagedQueryResponse.class);
     }
@@ -84,14 +88,20 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<B
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final String orderEditId){
-        return new ByProjectKeyShippingMethodsMatchingOrdereditGet(this).addQueryParam("orderEditId", orderEditId);
+        return copy().addQueryParam("orderEditId", orderEditId);
     }
     
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final String country){
-        return new ByProjectKeyShippingMethodsMatchingOrdereditGet(this).addQueryParam("country", country);
+        return copy().addQueryParam("country", country);
     }
     
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final String state){
-        return new ByProjectKeyShippingMethodsMatchingOrdereditGet(this).addQueryParam("state", state);
+        return copy().addQueryParam("state", state);
+    }
+    
+    @Override
+    protected ByProjectKeyShippingMethodsMatchingOrdereditGet copy()
+    {
+        return new ByProjectKeyShippingMethodsMatchingOrdereditGet(this);
     }
 }

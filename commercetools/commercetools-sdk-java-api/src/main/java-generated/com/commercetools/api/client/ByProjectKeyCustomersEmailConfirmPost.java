@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKeyCustomersEmailConfirmPost> {
+public class ByProjectKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKeyCustomersEmailConfirmPost, com.fasterxml.jackson.databind.JsonNode> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKe
         this.customerEmailVerify = t.customerEmailVerify;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customers/email/confirm", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKe
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
@@ -84,4 +88,10 @@ public class ByProjectKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKe
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+    
+    @Override
+    protected ByProjectKeyCustomersEmailConfirmPost copy()
+    {
+        return new ByProjectKeyCustomersEmailConfirmPost(this);
+    }
 }

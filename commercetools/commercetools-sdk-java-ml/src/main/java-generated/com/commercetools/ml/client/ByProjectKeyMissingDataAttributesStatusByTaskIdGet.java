@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMethod<ByProjectKeyMissingDataAttributesStatusByTaskIdGet> {
+public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMethod<ByProjectKeyMissingDataAttributesStatusByTaskIdGet, com.commercetools.ml.models.missing_data.MissingDataTaskStatus> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMetho
         this.taskId = t.taskId;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/missing-data/attributes/status/%s", this.projectKey, this.taskId);
@@ -58,14 +59,17 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMetho
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingDataTaskStatus> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingDataTaskStatus> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingDataTaskStatus>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.ml.models.missing_data.MissingDataTaskStatus.class);
     }
@@ -78,4 +82,10 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMetho
     
     public void setTaskId(final String taskId) { this.taskId = taskId; }
 
+    
+    @Override
+    protected ByProjectKeyMissingDataAttributesStatusByTaskIdGet copy()
+    {
+        return new ByProjectKeyMissingDataAttributesStatusByTaskIdGet(this);
+    }
 }

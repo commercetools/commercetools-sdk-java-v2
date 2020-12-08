@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost> {
+public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost, com.fasterxml.jackson.databind.JsonNode> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends A
         this.customerEmailVerify = t.customerEmailVerify;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/customers/email/confirm", this.projectKey, this.storeKey);
@@ -70,14 +71,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends A
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
@@ -90,4 +94,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends A
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost(this);
+    }
 }

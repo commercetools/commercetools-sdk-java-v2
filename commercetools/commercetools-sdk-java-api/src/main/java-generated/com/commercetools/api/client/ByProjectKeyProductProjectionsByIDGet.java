@@ -34,7 +34,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductProjectionsByIDGet extends ApiMethod<ByProjectKeyProductProjectionsByIDGet> {
+public class ByProjectKeyProductProjectionsByIDGet extends ApiMethod<ByProjectKeyProductProjectionsByIDGet, com.commercetools.api.models.product.ProductProjection> {
 
     
     private String projectKey;
@@ -53,6 +53,7 @@ public class ByProjectKeyProductProjectionsByIDGet extends ApiMethod<ByProjectKe
         this.ID = t.ID;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-projections/%s", this.projectKey, this.ID);
@@ -63,14 +64,17 @@ public class ByProjectKeyProductProjectionsByIDGet extends ApiMethod<ByProjectKe
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.ProductProjection> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.ProductProjection> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjection>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product.ProductProjection.class);
     }
@@ -115,34 +119,40 @@ public class ByProjectKeyProductProjectionsByIDGet extends ApiMethod<ByProjectKe
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductProjectionsByIDGet withStaged(final Boolean staged){
-        return new ByProjectKeyProductProjectionsByIDGet(this).addQueryParam("staged", staged);
+        return copy().addQueryParam("staged", staged);
     }
     
     public ByProjectKeyProductProjectionsByIDGet withPriceCurrency(final String priceCurrency){
-        return new ByProjectKeyProductProjectionsByIDGet(this).addQueryParam("priceCurrency", priceCurrency);
+        return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductProjectionsByIDGet withPriceCountry(final String priceCountry){
-        return new ByProjectKeyProductProjectionsByIDGet(this).addQueryParam("priceCountry", priceCountry);
+        return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductProjectionsByIDGet withPriceCustomerGroup(final String priceCustomerGroup){
-        return new ByProjectKeyProductProjectionsByIDGet(this).addQueryParam("priceCustomerGroup", priceCustomerGroup);
+        return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductProjectionsByIDGet withPriceChannel(final String priceChannel){
-        return new ByProjectKeyProductProjectionsByIDGet(this).addQueryParam("priceChannel", priceChannel);
+        return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductProjectionsByIDGet withLocaleProjection(final String localeProjection){
-        return new ByProjectKeyProductProjectionsByIDGet(this).addQueryParam("localeProjection", localeProjection);
+        return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductProjectionsByIDGet withStoreProjection(final String storeProjection){
-        return new ByProjectKeyProductProjectionsByIDGet(this).addQueryParam("storeProjection", storeProjection);
+        return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductProjectionsByIDGet withExpand(final String expand){
-        return new ByProjectKeyProductProjectionsByIDGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyProductProjectionsByIDGet copy()
+    {
+        return new ByProjectKeyProductProjectionsByIDGet(this);
     }
 }

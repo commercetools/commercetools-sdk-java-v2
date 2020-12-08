@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyZonesByIDPost extends ApiMethod<ByProjectKeyZonesByIDPost> {
+public class ByProjectKeyZonesByIDPost extends ApiMethod<ByProjectKeyZonesByIDPost, com.commercetools.api.models.zone.Zone> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyZonesByIDPost extends ApiMethod<ByProjectKeyZonesByIDPo
         this.zoneUpdate = t.zoneUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/zones/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyZonesByIDPost extends ApiMethod<ByProjectKeyZonesByIDPo
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.Zone>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.zone.Zone.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyZonesByIDPost extends ApiMethod<ByProjectKeyZonesByIDPo
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyZonesByIDPost withExpand(final String expand){
-        return new ByProjectKeyZonesByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyZonesByIDPost copy()
+    {
+        return new ByProjectKeyZonesByIDPost(this);
     }
 }

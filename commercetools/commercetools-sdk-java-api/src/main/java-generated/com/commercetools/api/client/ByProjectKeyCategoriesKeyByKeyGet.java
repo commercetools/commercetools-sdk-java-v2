@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCategoriesKeyByKeyGet extends ApiMethod<ByProjectKeyCategoriesKeyByKeyGet> {
+public class ByProjectKeyCategoriesKeyByKeyGet extends ApiMethod<ByProjectKeyCategoriesKeyByKeyGet, com.commercetools.api.models.category.Category> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyCategoriesKeyByKeyGet extends ApiMethod<ByProjectKeyCat
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/categories/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeyCategoriesKeyByKeyGet extends ApiMethod<ByProjectKeyCat
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.category.Category>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.category.Category.class);
     }
@@ -85,6 +89,12 @@ public class ByProjectKeyCategoriesKeyByKeyGet extends ApiMethod<ByProjectKeyCat
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCategoriesKeyByKeyGet withExpand(final String expand){
-        return new ByProjectKeyCategoriesKeyByKeyGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyCategoriesKeyByKeyGet copy()
+    {
+        return new ByProjectKeyCategoriesKeyByKeyGet(this);
     }
 }

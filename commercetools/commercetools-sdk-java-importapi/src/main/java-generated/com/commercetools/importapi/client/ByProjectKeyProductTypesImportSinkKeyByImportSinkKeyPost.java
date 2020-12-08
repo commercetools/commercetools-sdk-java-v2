@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost extends ApiMethod<ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost> {
+public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost extends ApiMethod<ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost, com.commercetools.importapi.models.importrequests.ImportResponse> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost extends Ap
         this.productTypeImportRequest = t.productTypeImportRequest;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-types/importSinkKey=%s", this.projectKey, this.importSinkKey);
@@ -70,14 +71,17 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost extends Ap
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importrequests.ImportResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importrequests.ImportResponse.class);
     }
@@ -90,4 +94,10 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost extends Ap
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+    
+    @Override
+    protected ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost copy()
+    {
+        return new ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost(this);
+    }
 }

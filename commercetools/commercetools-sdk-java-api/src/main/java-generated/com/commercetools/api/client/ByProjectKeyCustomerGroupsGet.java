@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustomerGroupsGet> {
+public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustomerGroupsGet, com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustome
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/customer-groups", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustome
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponse.class);
     }
@@ -99,26 +103,32 @@ public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustome
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomerGroupsGet withExpand(final String expand){
-        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyCustomerGroupsGet withSort(final String sort){
-        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyCustomerGroupsGet withLimit(final Integer limit){
-        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyCustomerGroupsGet withOffset(final Integer offset){
-        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyCustomerGroupsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyCustomerGroupsGet withWhere(final String where){
-        return new ByProjectKeyCustomerGroupsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
+    }
+    
+    @Override
+    protected ByProjectKeyCustomerGroupsGet copy()
+    {
+        return new ByProjectKeyCustomerGroupsGet(this);
     }
 }

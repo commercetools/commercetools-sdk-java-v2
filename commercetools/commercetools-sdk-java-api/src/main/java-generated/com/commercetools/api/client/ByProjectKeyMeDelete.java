@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete> {
+public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete, com.commercetools.api.models.me.MyCustomer> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete> {
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete> {
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
     }
@@ -79,6 +83,12 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete> {
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMeDelete withVersion(final Long version){
-        return new ByProjectKeyMeDelete(this).addQueryParam("version", version);
+        return copy().addQueryParam("version", version);
+    }
+    
+    @Override
+    protected ByProjectKeyMeDelete copy()
+    {
+        return new ByProjectKeyMeDelete(this);
     }
 }

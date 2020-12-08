@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyChannelsPost extends ApiMethod<ByProjectKeyChannelsPost> {
+public class ByProjectKeyChannelsPost extends ApiMethod<ByProjectKeyChannelsPost, com.commercetools.api.models.channel.Channel> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyChannelsPost extends ApiMethod<ByProjectKeyChannelsPost
         this.channelDraft = t.channelDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/channels", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyChannelsPost extends ApiMethod<ByProjectKeyChannelsPost
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.channel.Channel> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.channel.Channel> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.channel.Channel>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.channel.Channel.class);
     }
@@ -88,6 +92,12 @@ public class ByProjectKeyChannelsPost extends ApiMethod<ByProjectKeyChannelsPost
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyChannelsPost withExpand(final String expand){
-        return new ByProjectKeyChannelsPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyChannelsPost copy()
+    {
+        return new ByProjectKeyChannelsPost(this);
     }
 }

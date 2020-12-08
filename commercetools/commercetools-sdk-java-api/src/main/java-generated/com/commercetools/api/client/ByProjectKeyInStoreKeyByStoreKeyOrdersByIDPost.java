@@ -34,7 +34,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost> {
+public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost, com.commercetools.api.models.order.Order> {
 
     
     private String projectKey;
@@ -59,6 +59,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost extends ApiMethod<By
         this.orderUpdate = t.orderUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/orders/%s", this.projectKey, this.storeKey, this.ID);
@@ -75,14 +76,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost extends ApiMethod<By
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order.Order> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.Order>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order.Order.class);
     }
@@ -102,6 +106,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost extends ApiMethod<By
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost withExpand(final String expand){
-        return new ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost(this);
     }
 }

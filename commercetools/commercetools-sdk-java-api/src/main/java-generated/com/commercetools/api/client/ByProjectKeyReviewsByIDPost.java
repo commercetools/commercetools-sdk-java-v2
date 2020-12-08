@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyReviewsByIDPost extends ApiMethod<ByProjectKeyReviewsByIDPost> {
+public class ByProjectKeyReviewsByIDPost extends ApiMethod<ByProjectKeyReviewsByIDPost, com.commercetools.api.models.review.Review> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyReviewsByIDPost extends ApiMethod<ByProjectKeyReviewsBy
         this.reviewUpdate = t.reviewUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/reviews/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyReviewsByIDPost extends ApiMethod<ByProjectKeyReviewsBy
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.review.Review>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.review.Review.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyReviewsByIDPost extends ApiMethod<ByProjectKeyReviewsBy
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyReviewsByIDPost withExpand(final String expand){
-        return new ByProjectKeyReviewsByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyReviewsByIDPost copy()
+    {
+        return new ByProjectKeyReviewsByIDPost(this);
     }
 }

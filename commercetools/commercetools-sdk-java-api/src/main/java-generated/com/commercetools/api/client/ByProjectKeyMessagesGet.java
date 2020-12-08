@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet> {
+public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet, com.commercetools.api.models.message.MessagePagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet> 
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/messages", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet> 
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.message.MessagePagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.message.MessagePagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.message.MessagePagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.message.MessagePagedQueryResponse.class);
     }
@@ -99,26 +103,32 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet> 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMessagesGet withExpand(final String expand){
-        return new ByProjectKeyMessagesGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyMessagesGet withSort(final String sort){
-        return new ByProjectKeyMessagesGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyMessagesGet withLimit(final Integer limit){
-        return new ByProjectKeyMessagesGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyMessagesGet withOffset(final Integer offset){
-        return new ByProjectKeyMessagesGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyMessagesGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyMessagesGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyMessagesGet withWhere(final String where){
-        return new ByProjectKeyMessagesGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
+    }
+    
+    @Override
+    protected ByProjectKeyMessagesGet copy()
+    {
+        return new ByProjectKeyMessagesGet(this);
     }
 }

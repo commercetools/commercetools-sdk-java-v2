@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersEditsGet extends ApiMethod<ByProjectKeyOrdersEditsGet> {
+public class ByProjectKeyOrdersEditsGet extends ApiMethod<ByProjectKeyOrdersEditsGet, com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyOrdersEditsGet extends ApiMethod<ByProjectKeyOrdersEdit
         this.projectKey = t.projectKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/edits", this.projectKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyOrdersEditsGet extends ApiMethod<ByProjectKeyOrdersEdit
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse.class);
     }
@@ -99,26 +103,32 @@ public class ByProjectKeyOrdersEditsGet extends ApiMethod<ByProjectKeyOrdersEdit
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyOrdersEditsGet withExpand(final String expand){
-        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyOrdersEditsGet withSort(final String sort){
-        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("sort", sort);
+        return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyOrdersEditsGet withLimit(final Integer limit){
-        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("limit", limit);
+        return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyOrdersEditsGet withOffset(final Integer offset){
-        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("offset", offset);
+        return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyOrdersEditsGet withWithTotal(final Boolean withTotal){
-        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("withTotal", withTotal);
+        return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyOrdersEditsGet withWhere(final String where){
-        return new ByProjectKeyOrdersEditsGet(this).addQueryParam("where", where);
+        return copy().addQueryParam("where", where);
+    }
+    
+    @Override
+    protected ByProjectKeyOrdersEditsGet copy()
+    {
+        return new ByProjectKeyOrdersEditsGet(this);
     }
 }

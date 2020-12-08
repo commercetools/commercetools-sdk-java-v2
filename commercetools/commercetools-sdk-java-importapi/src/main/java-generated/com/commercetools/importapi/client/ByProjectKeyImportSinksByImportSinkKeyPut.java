@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyImportSinksByImportSinkKeyPut extends ApiMethod<ByProjectKeyImportSinksByImportSinkKeyPut> {
+public class ByProjectKeyImportSinksByImportSinkKeyPut extends ApiMethod<ByProjectKeyImportSinksByImportSinkKeyPut, com.commercetools.importapi.models.importsinks.ImportSink> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends ApiMethod<ByProje
         this.importSinkDraft = t.importSinkDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-sinks/%s", this.projectKey, this.importSinkKey);
@@ -70,14 +71,17 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends ApiMethod<ByProje
         return new ApiHttpRequest(ApiHttpMethod.PUT, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importsinks.ImportSink.class);
     }
@@ -90,4 +94,10 @@ public class ByProjectKeyImportSinksByImportSinkKeyPut extends ApiMethod<ByProje
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+    
+    @Override
+    protected ByProjectKeyImportSinksByImportSinkKeyPut copy()
+    {
+        return new ByProjectKeyImportSinksByImportSinkKeyPut(this);
+    }
 }

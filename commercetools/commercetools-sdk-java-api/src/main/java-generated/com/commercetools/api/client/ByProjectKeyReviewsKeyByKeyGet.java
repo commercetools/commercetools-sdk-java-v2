@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyReviewsKeyByKeyGet extends ApiMethod<ByProjectKeyReviewsKeyByKeyGet> {
+public class ByProjectKeyReviewsKeyByKeyGet extends ApiMethod<ByProjectKeyReviewsKeyByKeyGet, com.commercetools.api.models.review.Review> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyReviewsKeyByKeyGet extends ApiMethod<ByProjectKeyReview
         this.key = t.key;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/reviews/key=%s", this.projectKey, this.key);
@@ -61,14 +62,17 @@ public class ByProjectKeyReviewsKeyByKeyGet extends ApiMethod<ByProjectKeyReview
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.review.Review>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.review.Review.class);
     }
@@ -85,6 +89,12 @@ public class ByProjectKeyReviewsKeyByKeyGet extends ApiMethod<ByProjectKeyReview
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyReviewsKeyByKeyGet withExpand(final String expand){
-        return new ByProjectKeyReviewsKeyByKeyGet(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyReviewsKeyByKeyGet copy()
+    {
+        return new ByProjectKeyReviewsKeyByKeyGet(this);
     }
 }

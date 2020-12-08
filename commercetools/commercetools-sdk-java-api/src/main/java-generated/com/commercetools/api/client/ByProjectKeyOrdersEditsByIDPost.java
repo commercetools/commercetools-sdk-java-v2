@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersEditsByIDPost extends ApiMethod<ByProjectKeyOrdersEditsByIDPost> {
+public class ByProjectKeyOrdersEditsByIDPost extends ApiMethod<ByProjectKeyOrdersEditsByIDPost, com.commercetools.api.models.order_edit.OrderEdit> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyOrdersEditsByIDPost extends ApiMethod<ByProjectKeyOrder
         this.orderEditUpdate = t.orderEditUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/edits/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyOrdersEditsByIDPost extends ApiMethod<ByProjectKeyOrder
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEdit>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.order_edit.OrderEdit.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyOrdersEditsByIDPost extends ApiMethod<ByProjectKeyOrder
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyOrdersEditsByIDPost withExpand(final String expand){
-        return new ByProjectKeyOrdersEditsByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyOrdersEditsByIDPost copy()
+    {
+        return new ByProjectKeyOrdersEditsByIDPost(this);
     }
 }

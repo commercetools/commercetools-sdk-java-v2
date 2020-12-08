@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductDiscountsByIDPost extends ApiMethod<ByProjectKeyProductDiscountsByIDPost> {
+public class ByProjectKeyProductDiscountsByIDPost extends ApiMethod<ByProjectKeyProductDiscountsByIDPost, com.commercetools.api.models.product_discount.ProductDiscount> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyProductDiscountsByIDPost extends ApiMethod<ByProjectKey
         this.productDiscountUpdate = t.productDiscountUpdate;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/product-discounts/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyProductDiscountsByIDPost extends ApiMethod<ByProjectKey
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.product_discount.ProductDiscount.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyProductDiscountsByIDPost extends ApiMethod<ByProjectKey
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductDiscountsByIDPost withExpand(final String expand){
-        return new ByProjectKeyProductDiscountsByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyProductDiscountsByIDPost copy()
+    {
+        return new ByProjectKeyProductDiscountsByIDPost(this);
     }
 }

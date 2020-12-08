@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost> {
+public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost, com.commercetools.api.models.state.State> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost> {
         this.stateDraft = t.stateDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/states", this.projectKey);
@@ -67,14 +68,17 @@ public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost> {
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.State>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.state.State.class);
     }
@@ -88,6 +92,12 @@ public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost> {
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyStatesPost withExpand(final String expand){
-        return new ByProjectKeyStatesPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyStatesPost copy()
+    {
+        return new ByProjectKeyStatesPost(this);
     }
 }

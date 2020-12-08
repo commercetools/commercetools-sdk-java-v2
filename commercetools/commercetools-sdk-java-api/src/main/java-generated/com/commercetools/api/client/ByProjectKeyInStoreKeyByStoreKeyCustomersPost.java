@@ -39,7 +39,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPost> {
+public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPost, com.commercetools.api.models.customer.CustomerSignInResult> {
 
     
     private String projectKey;
@@ -61,6 +61,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends ApiMethod<ByP
         this.customerDraft = t.customerDraft;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/customers", this.projectKey, this.storeKey);
@@ -77,14 +78,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends ApiMethod<ByP
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.CustomerSignInResult.class);
     }
@@ -101,6 +105,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends ApiMethod<ByP
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPost withExpand(final String expand){
-        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCustomersPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPost(this);
     }
 }

@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKeyOrdersEditsByIDApplyPost> {
+public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKeyOrdersEditsByIDApplyPost, com.fasterxml.jackson.databind.JsonNode> {
 
     
     private String projectKey;
@@ -51,6 +51,7 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKey
         this.orderEditApply = t.orderEditApply;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/orders/edits/%s/apply", this.projectKey, this.ID);
@@ -67,14 +68,17 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKey
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
@@ -87,4 +91,10 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends ApiMethod<ByProjectKey
     
     public void setID(final String ID) { this.ID = ID; }
 
+    
+    @Override
+    protected ByProjectKeyOrdersEditsByIDApplyPost copy()
+    {
+        return new ByProjectKeyOrdersEditsByIDApplyPost(this);
+    }
 }

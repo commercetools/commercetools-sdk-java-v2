@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost> {
+public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost, com.commercetools.api.models.customer.Customer> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
         this.customerChangePassword = t.customerChangePassword;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/customers/password", this.projectKey, this.storeKey);
@@ -70,14 +71,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
@@ -90,4 +94,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(this);
+    }
 }

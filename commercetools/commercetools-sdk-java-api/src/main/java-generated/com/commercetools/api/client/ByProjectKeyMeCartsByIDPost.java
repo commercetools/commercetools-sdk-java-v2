@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeCartsByIDPost extends ApiMethod<ByProjectKeyMeCartsByIDPost> {
+public class ByProjectKeyMeCartsByIDPost extends ApiMethod<ByProjectKeyMeCartsByIDPost, com.commercetools.api.models.me.MyCart> {
 
     
     private String projectKey;
@@ -54,6 +54,7 @@ public class ByProjectKeyMeCartsByIDPost extends ApiMethod<ByProjectKeyMeCartsBy
         this.update = t.update;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/carts/%s", this.projectKey, this.ID);
@@ -70,14 +71,17 @@ public class ByProjectKeyMeCartsByIDPost extends ApiMethod<ByProjectKeyMeCartsBy
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCart>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCart.class);
     }
@@ -94,6 +98,12 @@ public class ByProjectKeyMeCartsByIDPost extends ApiMethod<ByProjectKeyMeCartsBy
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeCartsByIDPost withExpand(final String expand){
-        return new ByProjectKeyMeCartsByIDPost(this).addQueryParam("expand", expand);
+        return copy().addQueryParam("expand", expand);
+    }
+    
+    @Override
+    protected ByProjectKeyMeCartsByIDPost copy()
+    {
+        return new ByProjectKeyMeCartsByIDPost(this);
     }
 }

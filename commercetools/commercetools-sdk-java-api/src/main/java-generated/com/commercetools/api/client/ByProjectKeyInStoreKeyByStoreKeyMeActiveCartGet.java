@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet> {
+public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet, com.commercetools.api.models.cart.Cart> {
 
     
     private String projectKey;
@@ -48,6 +48,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet extends ApiMethod<B
         this.storeKey = t.storeKey;
     }
 
+    @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/me/active-cart", this.projectKey, this.storeKey);
@@ -58,14 +59,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet extends ApiMethod<B
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
+    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
+    @Override
     public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> execute(){
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.cart.Cart.class);
     }
@@ -78,4 +82,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet extends ApiMethod<B
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+    
+    @Override
+    protected ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet copy()
+    {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet(this);
+    }
 }

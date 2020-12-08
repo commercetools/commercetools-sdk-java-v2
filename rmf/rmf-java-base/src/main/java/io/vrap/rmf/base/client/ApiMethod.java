@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
-public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> {
+public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implements RequestCommand<TResult> {
     public static class ParamEntry<K, V> implements Map.Entry<K, V> {
         protected final K key;
         protected V value;

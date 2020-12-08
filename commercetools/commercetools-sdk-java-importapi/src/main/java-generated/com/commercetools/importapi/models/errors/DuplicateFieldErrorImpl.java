@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -79,6 +81,32 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
     
     public void setDuplicateValue(final com.fasterxml.jackson.databind.JsonNode duplicateValue){
         this.duplicateValue = duplicateValue;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        DuplicateFieldErrorImpl that = (DuplicateFieldErrorImpl) o;
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(field, that.field)
+                .append(duplicateValue, that.duplicateValue)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(message)
+            .append(field)
+            .append(duplicateValue)
+            .toHashCode();
     }
 
 }

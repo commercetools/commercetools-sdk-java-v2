@@ -16,6 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -160,6 +162,46 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
     
     public void setVariantId(final Long variantId){
         this.variantId = variantId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ShoppingListLineItemImpl that = (ShoppingListLineItemImpl) o;
+    
+        return new EqualsBuilder()
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(deactivatedAt, that.deactivatedAt)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(productId, that.productId)
+                .append(productSlug, that.productSlug)
+                .append(productType, that.productType)
+                .append(quantity, that.quantity)
+                .append(variant, that.variant)
+                .append(variantId, that.variantId)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(addedAt)
+            .append(custom)
+            .append(deactivatedAt)
+            .append(id)
+            .append(name)
+            .append(productId)
+            .append(productSlug)
+            .append(productType)
+            .append(quantity)
+            .append(variant)
+            .append(variantId)
+            .toHashCode();
     }
 
 }

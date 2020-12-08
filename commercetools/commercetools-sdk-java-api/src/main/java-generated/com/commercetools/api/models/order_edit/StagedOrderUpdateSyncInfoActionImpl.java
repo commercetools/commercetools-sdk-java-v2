@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -71,6 +73,32 @@ public final class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpd
     
     public void setSyncedAt(final java.time.ZonedDateTime syncedAt){
         this.syncedAt = syncedAt;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        StagedOrderUpdateSyncInfoActionImpl that = (StagedOrderUpdateSyncInfoActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(channel, that.channel)
+                .append(externalId, that.externalId)
+                .append(syncedAt, that.syncedAt)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(channel)
+            .append(externalId)
+            .append(syncedAt)
+            .toHashCode();
     }
 
 }

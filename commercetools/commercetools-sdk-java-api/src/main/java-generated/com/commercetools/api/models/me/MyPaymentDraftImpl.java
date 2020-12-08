@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -81,6 +83,32 @@ public final class MyPaymentDraftImpl implements MyPaymentDraft {
     
     public void setTransaction(final com.commercetools.api.models.me.MyTransactionDraft transaction){
         this.transaction = transaction;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MyPaymentDraftImpl that = (MyPaymentDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(amountPlanned, that.amountPlanned)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(custom, that.custom)
+                .append(transaction, that.transaction)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(amountPlanned)
+            .append(paymentMethodInfo)
+            .append(custom)
+            .append(transaction)
+            .toHashCode();
     }
 
 }

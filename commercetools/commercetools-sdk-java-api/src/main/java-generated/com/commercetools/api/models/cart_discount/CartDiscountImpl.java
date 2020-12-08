@@ -1,7 +1,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import com.commercetools.api.models.cart_discount.CartDiscountTarget;
-import com.commercetools.api.models.cart_discount.CartDiscountValue;
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.api.models.cart_discount.StackingMode;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
@@ -21,6 +21,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -47,7 +49,7 @@ public final class CartDiscountImpl implements CartDiscount {
     
     private com.commercetools.api.models.common.LocalizedString description;
     
-    private com.commercetools.api.models.cart_discount.CartDiscountValue value;
+    private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
     
     private String cartPredicate;
     
@@ -70,7 +72,7 @@ public final class CartDiscountImpl implements CartDiscount {
     private com.commercetools.api.models.type.CustomFields custom;
 
     @JsonCreator
-    CartDiscountImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("key") final String key, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValue value, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target, @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode, @JsonProperty("references") final java.util.List<com.commercetools.api.models.common.Reference> references, @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+    CartDiscountImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("key") final String key, @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description, @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value, @JsonProperty("cartPredicate") final String cartPredicate, @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target, @JsonProperty("sortOrder") final String sortOrder, @JsonProperty("isActive") final Boolean isActive, @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom, @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil, @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode, @JsonProperty("references") final java.util.List<com.commercetools.api.models.common.Reference> references, @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -152,7 +154,7 @@ public final class CartDiscountImpl implements CartDiscount {
     }
     
     
-    public com.commercetools.api.models.cart_discount.CartDiscountValue getValue(){
+    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue(){
         return this.value;
     }
     
@@ -261,7 +263,7 @@ public final class CartDiscountImpl implements CartDiscount {
         this.description = description;
     }
     
-    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValue value){
+    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value){
         this.value = value;
     }
     
@@ -307,6 +309,64 @@ public final class CartDiscountImpl implements CartDiscount {
     
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CartDiscountImpl that = (CartDiscountImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(cartPredicate, that.cartPredicate)
+                .append(target, that.target)
+                .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(requiresDiscountCode, that.requiresDiscountCode)
+                .append(references, that.references)
+                .append(stackingMode, that.stackingMode)
+                .append(custom, that.custom)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(name)
+            .append(key)
+            .append(description)
+            .append(value)
+            .append(cartPredicate)
+            .append(target)
+            .append(sortOrder)
+            .append(isActive)
+            .append(validFrom)
+            .append(validUntil)
+            .append(requiresDiscountCode)
+            .append(references)
+            .append(stackingMode)
+            .append(custom)
+            .toHashCode();
     }
 
 }

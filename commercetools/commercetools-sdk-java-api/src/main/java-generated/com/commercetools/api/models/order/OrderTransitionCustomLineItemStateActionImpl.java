@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -95,6 +97,36 @@ public final class OrderTransitionCustomLineItemStateActionImpl implements Order
     
     public void setActualTransitionDate(final java.time.ZonedDateTime actualTransitionDate){
         this.actualTransitionDate = actualTransitionDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderTransitionCustomLineItemStateActionImpl that = (OrderTransitionCustomLineItemStateActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(actualTransitionDate, that.actualTransitionDate)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(customLineItemId)
+            .append(quantity)
+            .append(fromState)
+            .append(toState)
+            .append(actualTransitionDate)
+            .toHashCode();
     }
 
 }

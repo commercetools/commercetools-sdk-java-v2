@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -122,6 +124,38 @@ public final class ApiClientImpl implements ApiClient {
     
     public void setSecret(final String secret){
         this.secret = secret;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ApiClientImpl that = (ApiClientImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(scope, that.scope)
+                .append(createdAt, that.createdAt)
+                .append(lastUsedAt, that.lastUsedAt)
+                .append(deleteAt, that.deleteAt)
+                .append(secret, that.secret)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(name)
+            .append(scope)
+            .append(createdAt)
+            .append(lastUsedAt)
+            .append(deleteAt)
+            .append(secret)
+            .toHashCode();
     }
 
 }

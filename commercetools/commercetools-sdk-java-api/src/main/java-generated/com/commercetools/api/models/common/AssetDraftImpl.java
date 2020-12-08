@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -106,6 +108,36 @@ public final class AssetDraftImpl implements AssetDraft {
     
     public void setKey(final String key){
         this.key = key;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        AssetDraftImpl that = (AssetDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(sources, that.sources)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(tags, that.tags)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(sources)
+            .append(name)
+            .append(description)
+            .append(tags)
+            .append(custom)
+            .append(key)
+            .toHashCode();
     }
 
 }

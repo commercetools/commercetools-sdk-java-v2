@@ -18,10 +18,10 @@ import java.util.function.Function;
 import java.io.IOException;
 
 @JsonSubTypes({
+   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditAppliedImpl.class, name = "Applied"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditNotProcessedImpl.class, name = "NotProcessed"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewFailureImpl.class, name = "PreviewFailure"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewSuccessImpl.class, name = "PreviewSuccess"),
-   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditAppliedImpl.class, name = "Applied")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewSuccessImpl.class, name = "PreviewSuccess")
 })
 @JsonTypeInfo(
     use = JsonTypeInfo.Id.NAME,

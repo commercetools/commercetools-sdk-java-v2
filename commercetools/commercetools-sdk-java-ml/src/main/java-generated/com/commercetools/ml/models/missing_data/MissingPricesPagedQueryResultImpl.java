@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -40,7 +42,6 @@ public final class MissingPricesPagedQueryResultImpl implements MissingPricesPag
         this.meta = meta;
     }
     public MissingPricesPagedQueryResultImpl() {
-       
     }
 
     
@@ -90,6 +91,34 @@ public final class MissingPricesPagedQueryResultImpl implements MissingPricesPag
     
     public void setMeta(final com.commercetools.ml.models.missing_data.MissingPricesMeta meta){
         this.meta = meta;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingPricesPagedQueryResultImpl that = (MissingPricesPagedQueryResultImpl) o;
+    
+        return new EqualsBuilder()
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .append(meta, that.meta)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(count)
+            .append(total)
+            .append(offset)
+            .append(results)
+            .append(meta)
+            .toHashCode();
     }
 
 }

@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -70,6 +72,32 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
     
     public void setStaged(final Boolean staged){
         this.staged = staged;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductAddToCategoryActionImpl that = (ProductAddToCategoryActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(category, that.category)
+                .append(orderHint, that.orderHint)
+                .append(staged, that.staged)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(category)
+            .append(orderHint)
+            .append(staged)
+            .toHashCode();
     }
 
 }

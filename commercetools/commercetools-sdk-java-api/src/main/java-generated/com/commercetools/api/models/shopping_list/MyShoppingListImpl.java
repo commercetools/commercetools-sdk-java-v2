@@ -20,6 +20,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -232,6 +234,56 @@ public final class MyShoppingListImpl implements MyShoppingList {
     
     public void setAnonymousId(final String anonymousId){
         this.anonymousId = anonymousId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MyShoppingListImpl that = (MyShoppingListImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(custom, that.custom)
+                .append(customer, that.customer)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(description, that.description)
+                .append(key, that.key)
+                .append(lineItems, that.lineItems)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(textLineItems, that.textLineItems)
+                .append(anonymousId, that.anonymousId)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(custom)
+            .append(customer)
+            .append(deleteDaysAfterLastModification)
+            .append(description)
+            .append(key)
+            .append(lineItems)
+            .append(name)
+            .append(slug)
+            .append(textLineItems)
+            .append(anonymousId)
+            .toHashCode();
     }
 
 }

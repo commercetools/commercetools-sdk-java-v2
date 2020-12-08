@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -71,7 +73,7 @@ public final class ReviewDraftImpl implements ReviewDraft {
     
     /**
     *  <p>If set, this value must be unique among reviews.
-    *  For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> + <code>product's id</code>.</p>
+    *  For example, if you want to have only one review per customer and per product, you can set the value to <code>customer's id</code> and <code>product's id</code>.</p>
     */
     public String getUniquenessValue(){
         return this.uniquenessValue;
@@ -174,6 +176,46 @@ public final class ReviewDraftImpl implements ReviewDraft {
     
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
         this.custom = custom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ReviewDraftImpl that = (ReviewDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
+                .append(uniquenessValue, that.uniquenessValue)
+                .append(locale, that.locale)
+                .append(authorName, that.authorName)
+                .append(title, that.title)
+                .append(text, that.text)
+                .append(target, that.target)
+                .append(state, that.state)
+                .append(rating, that.rating)
+                .append(customer, that.customer)
+                .append(custom, that.custom)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(uniquenessValue)
+            .append(locale)
+            .append(authorName)
+            .append(title)
+            .append(text)
+            .append(target)
+            .append(state)
+            .append(rating)
+            .append(customer)
+            .append(custom)
+            .toHashCode();
     }
 
 }

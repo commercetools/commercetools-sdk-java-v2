@@ -16,6 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -168,6 +170,46 @@ public final class ProductDataImpl implements ProductData {
     
     public void setSearchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords){
         this.searchKeywords = searchKeywords;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductDataImpl that = (ProductDataImpl) o;
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(description, that.description)
+                .append(slug, that.slug)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(searchKeywords, that.searchKeywords)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(categories)
+            .append(categoryOrderHints)
+            .append(description)
+            .append(slug)
+            .append(metaTitle)
+            .append(metaDescription)
+            .append(metaKeywords)
+            .append(masterVariant)
+            .append(variants)
+            .append(searchKeywords)
+            .toHashCode();
     }
 
 }

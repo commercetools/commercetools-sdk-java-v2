@@ -41,6 +41,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -620,6 +622,106 @@ public final class OrderImpl implements Order {
     
     public void setRefusedGifts(final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts){
        this.refusedGifts = refusedGifts;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderImpl that = (OrderImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(completedAt, that.completedAt)
+                .append(orderNumber, that.orderNumber)
+                .append(customerId, that.customerId)
+                .append(customerEmail, that.customerEmail)
+                .append(anonymousId, that.anonymousId)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(taxMode, that.taxMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(customerGroup, that.customerGroup)
+                .append(country, that.country)
+                .append(orderState, that.orderState)
+                .append(state, that.state)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(shippingInfo, that.shippingInfo)
+                .append(syncInfo, that.syncInfo)
+                .append(returnInfo, that.returnInfo)
+                .append(discountCodes, that.discountCodes)
+                .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
+                .append(cart, that.cart)
+                .append(custom, that.custom)
+                .append(paymentInfo, that.paymentInfo)
+                .append(locale, that.locale)
+                .append(inventoryMode, that.inventoryMode)
+                .append(origin, that.origin)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(refusedGifts, that.refusedGifts)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(completedAt)
+            .append(orderNumber)
+            .append(customerId)
+            .append(customerEmail)
+            .append(anonymousId)
+            .append(store)
+            .append(lineItems)
+            .append(customLineItems)
+            .append(totalPrice)
+            .append(taxedPrice)
+            .append(shippingAddress)
+            .append(billingAddress)
+            .append(taxMode)
+            .append(taxRoundingMode)
+            .append(customerGroup)
+            .append(country)
+            .append(orderState)
+            .append(state)
+            .append(shipmentState)
+            .append(paymentState)
+            .append(shippingInfo)
+            .append(syncInfo)
+            .append(returnInfo)
+            .append(discountCodes)
+            .append(lastMessageSequenceNumber)
+            .append(cart)
+            .append(custom)
+            .append(paymentInfo)
+            .append(locale)
+            .append(inventoryMode)
+            .append(origin)
+            .append(taxCalculationMode)
+            .append(shippingRateInput)
+            .append(itemShippingAddresses)
+            .append(refusedGifts)
+            .toHashCode();
     }
 
 }

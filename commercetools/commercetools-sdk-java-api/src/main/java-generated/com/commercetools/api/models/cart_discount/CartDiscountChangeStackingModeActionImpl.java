@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -46,6 +48,28 @@ public final class CartDiscountChangeStackingModeActionImpl implements CartDisco
 
     public void setStackingMode(final com.commercetools.api.models.cart_discount.StackingMode stackingMode){
         this.stackingMode = stackingMode;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CartDiscountChangeStackingModeActionImpl that = (CartDiscountChangeStackingModeActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(stackingMode, that.stackingMode)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(stackingMode)
+            .toHashCode();
     }
 
 }

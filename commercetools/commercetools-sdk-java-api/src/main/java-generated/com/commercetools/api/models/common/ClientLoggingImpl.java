@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -74,6 +76,32 @@ public final class ClientLoggingImpl implements ClientLogging {
     
     public void setAnonymousId(final String anonymousId){
         this.anonymousId = anonymousId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ClientLoggingImpl that = (ClientLoggingImpl) o;
+    
+        return new EqualsBuilder()
+                .append(clientId, that.clientId)
+                .append(externalUserId, that.externalUserId)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(clientId)
+            .append(externalUserId)
+            .append(customer)
+            .append(anonymousId)
+            .toHashCode();
     }
 
 }

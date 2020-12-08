@@ -34,6 +34,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -508,6 +510,90 @@ public final class CartImpl implements Cart {
     
     public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses){
        this.itemShippingAddresses = itemShippingAddresses;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CartImpl that = (CartImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(customerId, that.customerId)
+                .append(customerEmail, that.customerEmail)
+                .append(anonymousId, that.anonymousId)
+                .append(store, that.store)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(cartState, that.cartState)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(inventoryMode, that.inventoryMode)
+                .append(taxMode, that.taxMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(customerGroup, that.customerGroup)
+                .append(country, that.country)
+                .append(shippingInfo, that.shippingInfo)
+                .append(discountCodes, that.discountCodes)
+                .append(custom, that.custom)
+                .append(paymentInfo, that.paymentInfo)
+                .append(locale, that.locale)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(refusedGifts, that.refusedGifts)
+                .append(origin, that.origin)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(customerId)
+            .append(customerEmail)
+            .append(anonymousId)
+            .append(store)
+            .append(lineItems)
+            .append(customLineItems)
+            .append(totalPrice)
+            .append(taxedPrice)
+            .append(cartState)
+            .append(shippingAddress)
+            .append(billingAddress)
+            .append(inventoryMode)
+            .append(taxMode)
+            .append(taxRoundingMode)
+            .append(taxCalculationMode)
+            .append(customerGroup)
+            .append(country)
+            .append(shippingInfo)
+            .append(discountCodes)
+            .append(custom)
+            .append(paymentInfo)
+            .append(locale)
+            .append(deleteDaysAfterLastModification)
+            .append(refusedGifts)
+            .append(origin)
+            .append(shippingRateInput)
+            .append(itemShippingAddresses)
+            .toHashCode();
     }
 
 }

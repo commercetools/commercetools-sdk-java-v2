@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -72,6 +74,32 @@ public final class ProductCatalogDataImpl implements ProductCatalogData {
     
     public void setHasStagedChanges(final Boolean hasStagedChanges){
         this.hasStagedChanges = hasStagedChanges;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductCatalogDataImpl that = (ProductCatalogDataImpl) o;
+    
+        return new EqualsBuilder()
+                .append(published, that.published)
+                .append(current, that.current)
+                .append(staged, that.staged)
+                .append(hasStagedChanges, that.hasStagedChanges)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(published)
+            .append(current)
+            .append(staged)
+            .append(hasStagedChanges)
+            .toHashCode();
     }
 
 }

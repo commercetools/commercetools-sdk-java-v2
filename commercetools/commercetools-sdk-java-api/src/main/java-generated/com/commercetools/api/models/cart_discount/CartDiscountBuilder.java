@@ -1,7 +1,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import com.commercetools.api.models.cart_discount.CartDiscountTarget;
-import com.commercetools.api.models.cart_discount.CartDiscountValue;
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.api.models.cart_discount.StackingMode;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
@@ -50,7 +50,7 @@ public final class CartDiscountBuilder {
     private com.commercetools.api.models.common.LocalizedString description;
     
     
-    private com.commercetools.api.models.cart_discount.CartDiscountValue value;
+    private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
     
     
     private String cartPredicate;
@@ -127,7 +127,7 @@ public final class CartDiscountBuilder {
         return this;
     }
     
-    public CartDiscountBuilder value( final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
+    public CartDiscountBuilder value( final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
         this.value = value;
         return this;
     }
@@ -233,7 +233,7 @@ public final class CartDiscountBuilder {
     }
     
     
-    public com.commercetools.api.models.cart_discount.CartDiscountValue getValue(){
+    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue(){
         return this.value;
     }
     

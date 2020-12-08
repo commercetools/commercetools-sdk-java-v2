@@ -1,7 +1,7 @@
 package com.commercetools.api.models.cart;
 
 import com.commercetools.api.models.cart.TaxPortionDraft;
-import com.commercetools.api.models.common.TypedMoneyDraft;
+import com.commercetools.api.models.common.Money;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -21,14 +23,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 )
 public final class TaxedPriceDraftImpl implements TaxedPriceDraft {
 
-    private com.commercetools.api.models.common.TypedMoneyDraft totalNet;
+    private com.commercetools.api.models.common.Money totalNet;
     
-    private com.commercetools.api.models.common.TypedMoneyDraft totalGross;
+    private com.commercetools.api.models.common.Money totalGross;
     
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
     @JsonCreator
-    TaxedPriceDraftImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.TypedMoneyDraft totalNet, @JsonProperty("totalGross") final com.commercetools.api.models.common.TypedMoneyDraft totalGross, @JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
+    TaxedPriceDraftImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.Money totalNet, @JsonProperty("totalGross") final com.commercetools.api.models.common.Money totalGross, @JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
         this.totalNet = totalNet;
         this.totalGross = totalGross;
         this.taxPortions = taxPortions;
@@ -37,12 +39,12 @@ public final class TaxedPriceDraftImpl implements TaxedPriceDraft {
     }
 
     
-    public com.commercetools.api.models.common.TypedMoneyDraft getTotalNet(){
+    public com.commercetools.api.models.common.Money getTotalNet(){
         return this.totalNet;
     }
     
     
-    public com.commercetools.api.models.common.TypedMoneyDraft getTotalGross(){
+    public com.commercetools.api.models.common.Money getTotalGross(){
         return this.totalGross;
     }
     
@@ -51,11 +53,11 @@ public final class TaxedPriceDraftImpl implements TaxedPriceDraft {
         return this.taxPortions;
     }
 
-    public void setTotalNet(final com.commercetools.api.models.common.TypedMoneyDraft totalNet){
+    public void setTotalNet(final com.commercetools.api.models.common.Money totalNet){
         this.totalNet = totalNet;
     }
     
-    public void setTotalGross(final com.commercetools.api.models.common.TypedMoneyDraft totalGross){
+    public void setTotalGross(final com.commercetools.api.models.common.Money totalGross){
         this.totalGross = totalGross;
     }
     
@@ -65,6 +67,30 @@ public final class TaxedPriceDraftImpl implements TaxedPriceDraft {
     
     public void setTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions){
        this.taxPortions = taxPortions;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        TaxedPriceDraftImpl that = (TaxedPriceDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(totalNet)
+            .append(totalGross)
+            .append(taxPortions)
+            .toHashCode();
     }
 
 }

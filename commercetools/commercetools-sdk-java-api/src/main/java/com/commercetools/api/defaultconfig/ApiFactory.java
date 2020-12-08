@@ -227,4 +227,30 @@ public class ApiFactory {
                 correlationIdProvider
         );
     }
+
+    public static ApiHttpClient defaultClient(
+            final VrapHttpClient httpClient,
+            final ClientCredentials credentials,
+            final String tokenEndpoint,
+            final String apiEndpoint,
+            final Supplier<String> userAgentSupplier,
+            final List<Middleware> middlewares,
+            @Nullable final CorrelationIdProvider correlationIdProvider
+    ) {
+        return ClientFactory.create(
+                apiEndpoint,
+                httpClient,
+                new ClientCredentialsTokenSupplier(
+                        credentials.getClientId(),
+                        credentials.getClientSecret(),
+                        credentials.getScopes(),
+                        tokenEndpoint,
+                        httpClient
+                ),
+                ApiInternalLoggerFactory::get,
+                userAgentSupplier,
+                middlewares,
+                correlationIdProvider
+        );
+    }
 }

@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -46,6 +48,28 @@ public final class OrderAddPaymentActionImpl implements OrderAddPaymentAction {
 
     public void setPayment(final com.commercetools.api.models.payment.PaymentResourceIdentifier payment){
         this.payment = payment;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderAddPaymentActionImpl that = (OrderAddPaymentActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(payment, that.payment)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(payment)
+            .toHashCode();
     }
 
 }

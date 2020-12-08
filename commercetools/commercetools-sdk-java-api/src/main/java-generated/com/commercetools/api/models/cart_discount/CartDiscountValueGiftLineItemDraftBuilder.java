@@ -1,8 +1,8 @@
 package com.commercetools.api.models.cart_discount;
 
 import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft;
 import javax.annotation.Nullable;
 import java.util.*;
@@ -16,18 +16,18 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class CartDiscountValueGiftLineItemDraftBuilder {
 
     
-    private com.commercetools.api.models.product.ProductReference product;
+    private com.commercetools.api.models.product.ProductResourceIdentifier product;
     
     
     private Long variantId;
     
     @Nullable
-    private com.commercetools.api.models.channel.ChannelReference supplyChannel;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
     
     @Nullable
-    private com.commercetools.api.models.channel.ChannelReference distributionChannel;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
-    public CartDiscountValueGiftLineItemDraftBuilder product( final com.commercetools.api.models.product.ProductReference product) {
+    public CartDiscountValueGiftLineItemDraftBuilder product( final com.commercetools.api.models.product.ProductResourceIdentifier product) {
         this.product = product;
         return this;
     }
@@ -37,18 +37,18 @@ public final class CartDiscountValueGiftLineItemDraftBuilder {
         return this;
     }
     
-    public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+    public CartDiscountValueGiftLineItemDraftBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
     
-    public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(@Nullable final com.commercetools.api.models.channel.ChannelReference distributionChannel) {
+    public CartDiscountValueGiftLineItemDraftBuilder distributionChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
 
     
-    public com.commercetools.api.models.product.ProductReference getProduct(){
+    public com.commercetools.api.models.product.ProductResourceIdentifier getProduct(){
         return this.product;
     }
     
@@ -58,12 +58,12 @@ public final class CartDiscountValueGiftLineItemDraftBuilder {
     }
     
     @Nullable
-    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel(){
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
     
     @Nullable
-    public com.commercetools.api.models.channel.ChannelReference getDistributionChannel(){
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
         return this.distributionChannel;
     }
 

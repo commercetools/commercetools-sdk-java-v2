@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -104,6 +106,34 @@ public final class ErrorResponseImpl implements ErrorResponse {
     
     public void setErrors(final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors){
        this.errors = errors;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ErrorResponseImpl that = (ErrorResponseImpl) o;
+    
+        return new EqualsBuilder()
+                .append(statusCode, that.statusCode)
+                .append(message, that.message)
+                .append(error, that.error)
+                .append(errorDescription, that.errorDescription)
+                .append(errors, that.errors)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(statusCode)
+            .append(message)
+            .append(error)
+            .append(errorDescription)
+            .append(errors)
+            .toHashCode();
     }
 
 }

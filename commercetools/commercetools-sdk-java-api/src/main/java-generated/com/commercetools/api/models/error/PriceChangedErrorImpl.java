@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -73,6 +75,32 @@ public final class PriceChangedErrorImpl implements PriceChangedError {
     
     public void setShipping(final Boolean shipping){
         this.shipping = shipping;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        PriceChangedErrorImpl that = (PriceChangedErrorImpl) o;
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(lineItems, that.lineItems)
+                .append(shipping, that.shipping)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(message)
+            .append(lineItems)
+            .append(shipping)
+            .toHashCode();
     }
 
 }

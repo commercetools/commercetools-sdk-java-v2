@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -51,6 +53,28 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
 
     public void setShippingRateInput(final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput){
         this.shippingRateInput = shippingRateInput;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CartSetShippingRateInputActionImpl that = (CartSetShippingRateInputActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(shippingRateInput, that.shippingRateInput)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(shippingRateInput)
+            .toHashCode();
     }
 
 }

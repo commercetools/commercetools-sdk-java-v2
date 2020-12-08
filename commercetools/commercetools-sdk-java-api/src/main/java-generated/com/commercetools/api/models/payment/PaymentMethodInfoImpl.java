@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -71,6 +73,30 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
     
     public void setName(final com.commercetools.api.models.common.LocalizedString name){
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        PaymentMethodInfoImpl that = (PaymentMethodInfoImpl) o;
+    
+        return new EqualsBuilder()
+                .append(paymentInterface, that.paymentInterface)
+                .append(method, that.method)
+                .append(name, that.name)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(paymentInterface)
+            .append(method)
+            .append(name)
+            .toHashCode();
     }
 
 }

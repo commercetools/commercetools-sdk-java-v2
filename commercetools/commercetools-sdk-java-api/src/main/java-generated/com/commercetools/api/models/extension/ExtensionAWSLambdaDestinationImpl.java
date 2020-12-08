@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -69,6 +71,32 @@ public final class ExtensionAWSLambdaDestinationImpl implements ExtensionAWSLamb
     
     public void setAccessSecret(final String accessSecret){
         this.accessSecret = accessSecret;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ExtensionAWSLambdaDestinationImpl that = (ExtensionAWSLambdaDestinationImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(arn, that.arn)
+                .append(accessKey, that.accessKey)
+                .append(accessSecret, that.accessSecret)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(arn)
+            .append(accessKey)
+            .append(accessSecret)
+            .toHashCode();
     }
 
 }

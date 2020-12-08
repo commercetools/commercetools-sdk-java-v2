@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -45,6 +47,28 @@ public final class StagedOrderSetCustomerIdActionImpl implements StagedOrderSetC
 
     public void setCustomerId(final String customerId){
         this.customerId = customerId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        StagedOrderSetCustomerIdActionImpl that = (StagedOrderSetCustomerIdActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(customerId, that.customerId)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(customerId)
+            .toHashCode();
     }
 
 }

@@ -17,6 +17,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -209,6 +211,50 @@ public final class MyCartDraftImpl implements MyCartDraft {
     
     public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses){
        this.itemShippingAddresses = itemShippingAddresses;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MyCartDraftImpl that = (MyCartDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(currency, that.currency)
+                .append(customerEmail, that.customerEmail)
+                .append(country, that.country)
+                .append(inventoryMode, that.inventoryMode)
+                .append(lineItems, that.lineItems)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingMethod, that.shippingMethod)
+                .append(custom, that.custom)
+                .append(locale, that.locale)
+                .append(taxMode, that.taxMode)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(currency)
+            .append(customerEmail)
+            .append(country)
+            .append(inventoryMode)
+            .append(lineItems)
+            .append(shippingAddress)
+            .append(billingAddress)
+            .append(shippingMethod)
+            .append(custom)
+            .append(locale)
+            .append(taxMode)
+            .append(deleteDaysAfterLastModification)
+            .append(itemShippingAddresses)
+            .toHashCode();
     }
 
 }

@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -155,6 +157,46 @@ public final class MessageDeliveryImpl implements MessageDelivery {
     
     public void setPayloadNotIncluded(final com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded){
         this.payloadNotIncluded = payloadNotIncluded;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MessageDeliveryImpl that = (MessageDeliveryImpl) o;
+    
+        return new EqualsBuilder()
+                .append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resourceVersion, that.resourceVersion)
+                .append(payloadNotIncluded, that.payloadNotIncluded)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(projectKey)
+            .append(notificationType)
+            .append(resource)
+            .append(resourceUserProvidedIdentifiers)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(sequenceNumber)
+            .append(resourceVersion)
+            .append(payloadNotIncluded)
+            .toHashCode();
     }
 
 }

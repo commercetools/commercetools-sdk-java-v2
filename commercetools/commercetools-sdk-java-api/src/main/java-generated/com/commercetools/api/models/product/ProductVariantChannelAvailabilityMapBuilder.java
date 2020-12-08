@@ -20,6 +20,15 @@ public final class ProductVariantChannelAvailabilityMapBuilder {
         this.values = values;
         return this;
     }
+    
+    public ProductVariantChannelAvailabilityMapBuilder addValue(final String key, final com.commercetools.api.models.product.ProductVariantChannelAvailability value) {
+        if (this.values == null) {
+            values = new HashMap<>();
+        }
+        values.put(key, value);
+        return this;
+    }
+    
 
     
     public Map<String, com.commercetools.api.models.product.ProductVariantChannelAvailability> getValues(){

@@ -17,6 +17,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -203,6 +205,50 @@ public final class InventoryEntryImpl implements InventoryEntry {
     
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
         this.custom = custom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        InventoryEntryImpl that = (InventoryEntryImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sku, that.sku)
+                .append(supplyChannel, that.supplyChannel)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(availableQuantity, that.availableQuantity)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(custom, that.custom)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(sku)
+            .append(supplyChannel)
+            .append(quantityOnStock)
+            .append(availableQuantity)
+            .append(restockableInDays)
+            .append(expectedDelivery)
+            .append(custom)
+            .toHashCode();
     }
 
 }

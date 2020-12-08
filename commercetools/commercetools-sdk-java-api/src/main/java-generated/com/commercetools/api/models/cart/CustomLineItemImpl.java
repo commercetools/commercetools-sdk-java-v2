@@ -20,6 +20,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -222,6 +224,50 @@ public final class CustomLineItemImpl implements CustomLineItem {
     
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails){
         this.shippingDetails = shippingDetails;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CustomLineItemImpl that = (CustomLineItemImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(taxCategory, that.taxCategory)
+                .append(taxRate, that.taxRate)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(custom, that.custom)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(name)
+            .append(money)
+            .append(taxedPrice)
+            .append(totalPrice)
+            .append(slug)
+            .append(quantity)
+            .append(state)
+            .append(taxCategory)
+            .append(taxRate)
+            .append(discountedPricePerQuantity)
+            .append(custom)
+            .append(shippingDetails)
+            .toHashCode();
     }
 
 }

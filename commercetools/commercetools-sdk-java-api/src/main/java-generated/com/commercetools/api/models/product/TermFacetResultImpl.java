@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -100,6 +102,36 @@ public final class TermFacetResultImpl implements TermFacetResult {
     
     public void setTerms(final java.util.List<com.commercetools.api.models.product.FacetResultTerm> terms){
        this.terms = terms;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        TermFacetResultImpl that = (TermFacetResultImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(dataType, that.dataType)
+                .append(missing, that.missing)
+                .append(total, that.total)
+                .append(other, that.other)
+                .append(terms, that.terms)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(dataType)
+            .append(missing)
+            .append(total)
+            .append(other)
+            .append(terms)
+            .toHashCode();
     }
 
 }

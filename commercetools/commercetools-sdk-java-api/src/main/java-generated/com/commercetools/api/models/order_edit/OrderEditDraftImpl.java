@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -114,6 +116,36 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
     
     public void setDryRun(final Boolean dryRun){
         this.dryRun = dryRun;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderEditDraftImpl that = (OrderEditDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
+                .append(resource, that.resource)
+                .append(stagedActions, that.stagedActions)
+                .append(custom, that.custom)
+                .append(comment, that.comment)
+                .append(dryRun, that.dryRun)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(resource)
+            .append(stagedActions)
+            .append(custom)
+            .append(comment)
+            .append(dryRun)
+            .toHashCode();
     }
 
 }

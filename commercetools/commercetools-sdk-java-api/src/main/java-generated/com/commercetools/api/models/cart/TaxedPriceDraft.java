@@ -1,7 +1,7 @@
 package com.commercetools.api.models.cart;
 
 import com.commercetools.api.models.cart.TaxPortionDraft;
-import com.commercetools.api.models.common.TypedMoneyDraft;
+import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.cart.TaxedPriceDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -26,21 +26,21 @@ public interface TaxedPriceDraft  {
     @NotNull
     @Valid
     @JsonProperty("totalNet")
-    public TypedMoneyDraft getTotalNet();
+    public Money getTotalNet();
     
     @NotNull
     @Valid
     @JsonProperty("totalGross")
-    public TypedMoneyDraft getTotalGross();
+    public Money getTotalGross();
     
     @NotNull
     @Valid
     @JsonProperty("taxPortions")
     public List<TaxPortionDraft> getTaxPortions();
 
-    public void setTotalNet(final TypedMoneyDraft totalNet);
+    public void setTotalNet(final Money totalNet);
     
-    public void setTotalGross(final TypedMoneyDraft totalGross);
+    public void setTotalGross(final Money totalGross);
     
     @JsonIgnore
     public void setTaxPortions(final TaxPortionDraft ...taxPortions);

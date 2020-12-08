@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -49,6 +51,28 @@ public final class ExtensionInputImpl implements ExtensionInput {
     
     public void setResource(final com.commercetools.api.models.common.Reference resource){
         this.resource = resource;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ExtensionInputImpl that = (ExtensionInputImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(resource, that.resource)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(resource)
+            .toHashCode();
     }
 
 }

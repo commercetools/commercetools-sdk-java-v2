@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -31,7 +33,6 @@ public final class MissingPricesProductCountImpl implements MissingPricesProduct
         this.missingPrices = missingPrices;
     }
     public MissingPricesProductCountImpl() {
-       
     }
 
     
@@ -50,6 +51,28 @@ public final class MissingPricesProductCountImpl implements MissingPricesProduct
     
     public void setMissingPrices(final Long missingPrices){
         this.missingPrices = missingPrices;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingPricesProductCountImpl that = (MissingPricesProductCountImpl) o;
+    
+        return new EqualsBuilder()
+                .append(total, that.total)
+                .append(missingPrices, that.missingPrices)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(total)
+            .append(missingPrices)
+            .toHashCode();
     }
 
 }

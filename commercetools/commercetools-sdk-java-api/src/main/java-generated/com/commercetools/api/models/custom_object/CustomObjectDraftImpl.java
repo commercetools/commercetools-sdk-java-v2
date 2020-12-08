@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -76,6 +78,32 @@ public final class CustomObjectDraftImpl implements CustomObjectDraft {
     
     public void setVersion(final Long version){
         this.version = version;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CustomObjectDraftImpl that = (CustomObjectDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(container, that.container)
+                .append(key, that.key)
+                .append(value, that.value)
+                .append(version, that.version)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(container)
+            .append(key)
+            .append(value)
+            .append(version)
+            .toHashCode();
     }
 
 }

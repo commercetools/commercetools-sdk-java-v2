@@ -19,6 +19,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -300,6 +302,62 @@ public final class DiscountCodeImpl implements DiscountCode {
     
     public void setValidUntil(final java.time.ZonedDateTime validUntil){
         this.validUntil = validUntil;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        DiscountCodeImpl that = (DiscountCodeImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(code, that.code)
+                .append(cartDiscounts, that.cartDiscounts)
+                .append(cartPredicate, that.cartPredicate)
+                .append(isActive, that.isActive)
+                .append(references, that.references)
+                .append(maxApplications, that.maxApplications)
+                .append(maxApplicationsPerCustomer, that.maxApplicationsPerCustomer)
+                .append(custom, that.custom)
+                .append(groups, that.groups)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(createdAt)
+            .append(lastModifiedAt)
+            .append(lastModifiedBy)
+            .append(createdBy)
+            .append(name)
+            .append(description)
+            .append(code)
+            .append(cartDiscounts)
+            .append(cartPredicate)
+            .append(isActive)
+            .append(references)
+            .append(maxApplications)
+            .append(maxApplicationsPerCustomer)
+            .append(custom)
+            .append(groups)
+            .append(validFrom)
+            .append(validUntil)
+            .toHashCode();
     }
 
 }

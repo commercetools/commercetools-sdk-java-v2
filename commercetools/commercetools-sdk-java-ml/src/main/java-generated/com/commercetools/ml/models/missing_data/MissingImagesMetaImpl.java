@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -34,7 +36,6 @@ public final class MissingImagesMetaImpl implements MissingImagesMeta {
         this.threshold = threshold;
     }
     public MissingImagesMetaImpl() {
-       
     }
 
     
@@ -64,6 +65,30 @@ public final class MissingImagesMetaImpl implements MissingImagesMeta {
     
     public void setThreshold(final Long threshold){
         this.threshold = threshold;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingImagesMetaImpl that = (MissingImagesMetaImpl) o;
+    
+        return new EqualsBuilder()
+                .append(productLevel, that.productLevel)
+                .append(variantLevel, that.variantLevel)
+                .append(threshold, that.threshold)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(productLevel)
+            .append(variantLevel)
+            .append(threshold)
+            .toHashCode();
     }
 
 }

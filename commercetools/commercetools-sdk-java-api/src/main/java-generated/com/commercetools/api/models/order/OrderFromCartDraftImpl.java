@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -121,6 +123,38 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
     
     public void setState(final com.commercetools.api.models.state.StateResourceIdentifier state){
         this.state = state;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        OrderFromCartDraftImpl that = (OrderFromCartDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(orderNumber, that.orderNumber)
+                .append(paymentState, that.paymentState)
+                .append(shipmentState, that.shipmentState)
+                .append(orderState, that.orderState)
+                .append(state, that.state)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(id)
+            .append(version)
+            .append(orderNumber)
+            .append(paymentState)
+            .append(shipmentState)
+            .append(orderState)
+            .append(state)
+            .toHashCode();
     }
 
 }

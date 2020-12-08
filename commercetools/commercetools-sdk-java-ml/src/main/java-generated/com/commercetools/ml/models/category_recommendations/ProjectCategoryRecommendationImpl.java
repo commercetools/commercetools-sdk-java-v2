@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -33,7 +35,6 @@ public final class ProjectCategoryRecommendationImpl implements ProjectCategoryR
         this.path = path;
     }
     public ProjectCategoryRecommendationImpl() {
-       
     }
 
     /**
@@ -67,6 +68,30 @@ public final class ProjectCategoryRecommendationImpl implements ProjectCategoryR
     
     public void setPath(final String path){
         this.path = path;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProjectCategoryRecommendationImpl that = (ProjectCategoryRecommendationImpl) o;
+    
+        return new EqualsBuilder()
+                .append(category, that.category)
+                .append(confidence, that.confidence)
+                .append(path, that.path)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(category)
+            .append(confidence)
+            .append(path)
+            .toHashCode();
     }
 
 }

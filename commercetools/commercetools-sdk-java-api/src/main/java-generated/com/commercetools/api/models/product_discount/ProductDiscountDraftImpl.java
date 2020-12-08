@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -151,6 +153,42 @@ public final class ProductDiscountDraftImpl implements ProductDiscountDraft {
     
     public void setValidUntil(final java.time.ZonedDateTime validUntil){
         this.validUntil = validUntil;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductDiscountDraftImpl that = (ProductDiscountDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(predicate, that.predicate)
+                .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(key)
+            .append(description)
+            .append(value)
+            .append(predicate)
+            .append(sortOrder)
+            .append(isActive)
+            .append(validFrom)
+            .append(validUntil)
+            .toHashCode();
     }
 
 }

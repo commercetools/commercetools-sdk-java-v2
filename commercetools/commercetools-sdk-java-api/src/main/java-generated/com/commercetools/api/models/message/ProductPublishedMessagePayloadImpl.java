@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -75,6 +77,32 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
     
     public void setScope(final com.commercetools.api.models.cart.ProductPublishScope scope){
         this.scope = scope;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductPublishedMessagePayloadImpl that = (ProductPublishedMessagePayloadImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(removedImageUrls, that.removedImageUrls)
+                .append(productProjection, that.productProjection)
+                .append(scope, that.scope)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(removedImageUrls)
+            .append(productProjection)
+            .append(scope)
+            .toHashCode();
     }
 
 }

@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -33,7 +35,6 @@ public final class MissingAttributesMetaImpl implements MissingAttributesMeta {
         this.productTypeIds = productTypeIds;
     }
     public MissingAttributesMetaImpl() {
-       
     }
 
     
@@ -67,6 +68,30 @@ public final class MissingAttributesMetaImpl implements MissingAttributesMeta {
     
     public void setProductTypeIds(final java.util.List<String> productTypeIds){
        this.productTypeIds = productTypeIds;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingAttributesMetaImpl that = (MissingAttributesMetaImpl) o;
+    
+        return new EqualsBuilder()
+                .append(productLevel, that.productLevel)
+                .append(variantLevel, that.variantLevel)
+                .append(productTypeIds, that.productTypeIds)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(productLevel)
+            .append(variantLevel)
+            .append(productTypeIds)
+            .toHashCode();
     }
 
 }

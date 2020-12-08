@@ -16,6 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -160,6 +162,40 @@ public final class ProductVariantImportImpl implements ProductVariantImport {
     
     public void setProduct(final com.commercetools.importapi.models.common.ProductKeyReference product){
         this.product = product;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductVariantImportImpl that = (ProductVariantImportImpl) o;
+    
+        return new EqualsBuilder()
+                .append(key, that.key)
+                .append(sku, that.sku)
+                .append(isMasterVariant, that.isMasterVariant)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
+                .append(assets, that.assets)
+                .append(publish, that.publish)
+                .append(product, that.product)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(key)
+            .append(sku)
+            .append(isMasterVariant)
+            .append(attributes)
+            .append(images)
+            .append(assets)
+            .append(publish)
+            .append(product)
+            .toHashCode();
     }
 
 }

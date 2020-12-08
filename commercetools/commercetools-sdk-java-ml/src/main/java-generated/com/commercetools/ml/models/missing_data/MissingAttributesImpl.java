@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -48,7 +50,6 @@ public final class MissingAttributesImpl implements MissingAttributes {
         this.attributeCoverage = attributeCoverage;
     }
     public MissingAttributesImpl() {
-       
     }
 
     
@@ -126,6 +127,38 @@ public final class MissingAttributesImpl implements MissingAttributes {
     
     public void setAttributeCoverage(final com.commercetools.ml.models.missing_data.AttributeCoverage attributeCoverage){
         this.attributeCoverage = attributeCoverage;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingAttributesImpl that = (MissingAttributesImpl) o;
+    
+        return new EqualsBuilder()
+                .append(product, that.product)
+                .append(productType, that.productType)
+                .append(variantId, that.variantId)
+                .append(missingAttributeValues, that.missingAttributeValues)
+                .append(missingAttributeNames, that.missingAttributeNames)
+                .append(attributeCount, that.attributeCount)
+                .append(attributeCoverage, that.attributeCoverage)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(product)
+            .append(productType)
+            .append(variantId)
+            .append(missingAttributeValues)
+            .append(missingAttributeNames)
+            .append(attributeCount)
+            .append(attributeCoverage)
+            .toHashCode();
     }
 
 }

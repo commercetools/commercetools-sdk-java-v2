@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -144,6 +146,44 @@ public final class FacetResultRangeImpl implements FacetResultRange {
     
     public void setMean(final Double mean){
         this.mean = mean;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        FacetResultRangeImpl that = (FacetResultRangeImpl) o;
+    
+        return new EqualsBuilder()
+                .append(from, that.from)
+                .append(fromStr, that.fromStr)
+                .append(to, that.to)
+                .append(toStr, that.toStr)
+                .append(count, that.count)
+                .append(productCount, that.productCount)
+                .append(total, that.total)
+                .append(min, that.min)
+                .append(max, that.max)
+                .append(mean, that.mean)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(from)
+            .append(fromStr)
+            .append(to)
+            .append(toStr)
+            .append(count)
+            .append(productCount)
+            .append(total)
+            .append(min)
+            .append(max)
+            .append(mean)
+            .toHashCode();
     }
 
 }

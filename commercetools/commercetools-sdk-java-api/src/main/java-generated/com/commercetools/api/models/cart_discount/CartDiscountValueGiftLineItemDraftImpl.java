@@ -1,8 +1,8 @@
 package com.commercetools.api.models.cart_discount;
 
 import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -24,16 +26,16 @@ public final class CartDiscountValueGiftLineItemDraftImpl implements CartDiscoun
 
     private String type;
     
-    private com.commercetools.api.models.product.ProductReference product;
+    private com.commercetools.api.models.product.ProductResourceIdentifier product;
     
     private Long variantId;
     
-    private com.commercetools.api.models.channel.ChannelReference supplyChannel;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
     
-    private com.commercetools.api.models.channel.ChannelReference distributionChannel;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     @JsonCreator
-    CartDiscountValueGiftLineItemDraftImpl(@JsonProperty("product") final com.commercetools.api.models.product.ProductReference product, @JsonProperty("variantId") final Long variantId, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel) {
+    CartDiscountValueGiftLineItemDraftImpl(@JsonProperty("product") final com.commercetools.api.models.product.ProductResourceIdentifier product, @JsonProperty("variantId") final Long variantId, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.product = product;
         this.variantId = variantId;
         this.supplyChannel = supplyChannel;
@@ -50,7 +52,7 @@ public final class CartDiscountValueGiftLineItemDraftImpl implements CartDiscoun
     }
     
     
-    public com.commercetools.api.models.product.ProductReference getProduct(){
+    public com.commercetools.api.models.product.ProductResourceIdentifier getProduct(){
         return this.product;
     }
     
@@ -59,17 +61,21 @@ public final class CartDiscountValueGiftLineItemDraftImpl implements CartDiscoun
         return this.variantId;
     }
     
-    
-    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel(){
+    /**
+    *  <p>The channel must have the role <code>InventorySupply</code></p>
+    */
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
     
-    
-    public com.commercetools.api.models.channel.ChannelReference getDistributionChannel(){
+    /**
+    *  <p>The channel must have the role <code>ProductDistribution</code></p>
+    */
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
         return this.distributionChannel;
     }
 
-    public void setProduct(final com.commercetools.api.models.product.ProductReference product){
+    public void setProduct(final com.commercetools.api.models.product.ProductResourceIdentifier product){
         this.product = product;
     }
     
@@ -77,12 +83,40 @@ public final class CartDiscountValueGiftLineItemDraftImpl implements CartDiscoun
         this.variantId = variantId;
     }
     
-    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelReference supplyChannel){
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
         this.supplyChannel = supplyChannel;
     }
     
-    public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelReference distributionChannel){
+    public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
         this.distributionChannel = distributionChannel;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CartDiscountValueGiftLineItemDraftImpl that = (CartDiscountValueGiftLineItemDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(product)
+            .append(variantId)
+            .append(supplyChannel)
+            .append(distributionChannel)
+            .toHashCode();
     }
 
 }

@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -106,6 +108,38 @@ public final class ProductPriceExternalDiscountSetMessagePayloadImpl implements 
     
     public void setStaged(final Boolean staged){
         this.staged = staged;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductPriceExternalDiscountSetMessagePayloadImpl that = (ProductPriceExternalDiscountSetMessagePayloadImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(variantKey, that.variantKey)
+                .append(sku, that.sku)
+                .append(priceId, that.priceId)
+                .append(discounted, that.discounted)
+                .append(staged, that.staged)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(variantId)
+            .append(variantKey)
+            .append(sku)
+            .append(priceId)
+            .append(discounted)
+            .append(staged)
+            .toHashCode();
     }
 
 }

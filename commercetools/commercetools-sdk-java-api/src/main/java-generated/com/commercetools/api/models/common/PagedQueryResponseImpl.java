@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -114,6 +116,38 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
     
     public void setMeta(final com.fasterxml.jackson.databind.JsonNode meta){
         this.meta = meta;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        PagedQueryResponseImpl that = (PagedQueryResponseImpl) o;
+    
+        return new EqualsBuilder()
+                .append(limit, that.limit)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .append(facets, that.facets)
+                .append(meta, that.meta)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(limit)
+            .append(count)
+            .append(total)
+            .append(offset)
+            .append(results)
+            .append(facets)
+            .append(meta)
+            .toHashCode();
     }
 
 }

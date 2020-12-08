@@ -16,6 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -137,6 +139,40 @@ public final class ProductAddVariantActionImpl implements ProductAddVariantActio
     
     public void setAssets(final java.util.List<com.commercetools.api.models.common.Asset> assets){
        this.assets = assets;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProductAddVariantActionImpl that = (ProductAddVariantActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(images, that.images)
+                .append(attributes, that.attributes)
+                .append(staged, that.staged)
+                .append(assets, that.assets)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(sku)
+            .append(key)
+            .append(prices)
+            .append(images)
+            .append(attributes)
+            .append(staged)
+            .append(assets)
+            .toHashCode();
     }
 
 }

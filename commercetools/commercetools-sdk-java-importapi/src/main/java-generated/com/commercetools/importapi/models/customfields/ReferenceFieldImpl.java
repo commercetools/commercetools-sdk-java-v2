@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -53,6 +55,28 @@ public final class ReferenceFieldImpl implements ReferenceField {
 
     public void setValue(final com.commercetools.importapi.models.common.KeyReference value){
         this.value = value;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ReferenceFieldImpl that = (ReferenceFieldImpl) o;
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
+                .append(value, that.value)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(value)
+            .toHashCode();
     }
 
 }

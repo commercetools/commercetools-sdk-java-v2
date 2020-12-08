@@ -6,6 +6,7 @@ import com.commercetools.api.models.api_client.ApiClient;
 import com.commercetools.api.models.api_client.ApiClientDraft;
 import com.commercetools.api.models.api_client.ApiClientDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
+
 import org.junit.Assert;
 
 import java.util.function.Consumer;

@@ -15,6 +15,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -73,6 +75,32 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
     
     public void setFractionDigits(final Integer fractionDigits){
         this.fractionDigits = fractionDigits;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        TypedMoneyDraftImpl that = (TypedMoneyDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(centAmount)
+            .append(currencyCode)
+            .append(type)
+            .append(fractionDigits)
+            .toHashCode();
     }
 
 }

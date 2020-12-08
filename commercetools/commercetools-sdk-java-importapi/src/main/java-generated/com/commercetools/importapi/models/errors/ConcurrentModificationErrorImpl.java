@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -95,6 +97,34 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
     
     public void setConflictedResource(final com.fasterxml.jackson.databind.JsonNode conflictedResource){
         this.conflictedResource = conflictedResource;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ConcurrentModificationErrorImpl that = (ConcurrentModificationErrorImpl) o;
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(specifiedVersion, that.specifiedVersion)
+                .append(currentVersion, that.currentVersion)
+                .append(conflictedResource, that.conflictedResource)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(message)
+            .append(specifiedVersion)
+            .append(currentVersion)
+            .append(conflictedResource)
+            .toHashCode();
     }
 
 }

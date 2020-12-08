@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -113,6 +115,36 @@ public final class TaxRateDraftImpl implements TaxRateDraft {
     
     public void setSubRates(final java.util.List<com.commercetools.api.models.tax_category.SubRate> subRates){
        this.subRates = subRates;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        TaxRateDraftImpl that = (TaxRateDraftImpl) o;
+    
+        return new EqualsBuilder()
+                .append(name, that.name)
+                .append(amount, that.amount)
+                .append(includedInPrice, that.includedInPrice)
+                .append(country, that.country)
+                .append(state, that.state)
+                .append(subRates, that.subRates)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(name)
+            .append(amount)
+            .append(includedInPrice)
+            .append(country)
+            .append(state)
+            .append(subRates)
+            .toHashCode();
     }
 
 }

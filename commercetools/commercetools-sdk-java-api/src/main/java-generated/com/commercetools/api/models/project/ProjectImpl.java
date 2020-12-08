@@ -16,6 +16,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -196,6 +198,48 @@ public final class ProjectImpl implements Project {
     
     public void setCarts(final com.commercetools.api.models.project.CartsConfiguration carts){
         this.carts = carts;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ProjectImpl that = (ProjectImpl) o;
+    
+        return new EqualsBuilder()
+                .append(version, that.version)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(countries, that.countries)
+                .append(currencies, that.currencies)
+                .append(languages, that.languages)
+                .append(createdAt, that.createdAt)
+                .append(trialUntil, that.trialUntil)
+                .append(messages, that.messages)
+                .append(shippingRateInputType, that.shippingRateInputType)
+                .append(externalOAuth, that.externalOAuth)
+                .append(carts, that.carts)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(version)
+            .append(key)
+            .append(name)
+            .append(countries)
+            .append(currencies)
+            .append(languages)
+            .append(createdAt)
+            .append(trialUntil)
+            .append(messages)
+            .append(shippingRateInputType)
+            .append(externalOAuth)
+            .append(carts)
+            .toHashCode();
     }
 
 }

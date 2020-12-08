@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -74,6 +76,32 @@ public final class CategorySetAssetSourcesActionImpl implements CategorySetAsset
     
     public void setSources(final java.util.List<com.commercetools.api.models.common.AssetSource> sources){
        this.sources = sources;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CategorySetAssetSourcesActionImpl that = (CategorySetAssetSourcesActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(sources, that.sources)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(assetId)
+            .append(assetKey)
+            .append(sources)
+            .toHashCode();
     }
 
 }

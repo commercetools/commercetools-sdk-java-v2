@@ -18,6 +18,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -160,6 +162,42 @@ public final class LineItemPriceImpl implements LineItemPrice {
     
     public void setCustom(final com.commercetools.importapi.models.customfields.Custom custom){
         this.custom = custom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        LineItemPriceImpl that = (LineItemPriceImpl) o;
+    
+        return new EqualsBuilder()
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(discounted, that.discounted)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(value)
+            .append(country)
+            .append(validFrom)
+            .append(validUntil)
+            .append(customerGroup)
+            .append(channel)
+            .append(discounted)
+            .append(tiers)
+            .append(custom)
+            .toHashCode();
     }
 
 }

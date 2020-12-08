@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 /**
@@ -39,7 +41,6 @@ public final class ImageSearchResponseImpl implements ImageSearchResponse {
         this.results = results;
     }
     public ImageSearchResponseImpl() {
-       
     }
 
     /**
@@ -88,6 +89,32 @@ public final class ImageSearchResponseImpl implements ImageSearchResponse {
     
     public void setResults(final java.util.List<com.commercetools.ml.models.image_search.ResultItem> results){
        this.results = results;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        ImageSearchResponseImpl that = (ImageSearchResponseImpl) o;
+    
+        return new EqualsBuilder()
+                .append(count, that.count)
+                .append(offset, that.offset)
+                .append(total, that.total)
+                .append(results, that.results)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(count)
+            .append(offset)
+            .append(total)
+            .append(results)
+            .toHashCode();
     }
 
 }

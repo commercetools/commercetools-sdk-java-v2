@@ -1,7 +1,7 @@
 package com.commercetools.api.models.cart;
 
 import com.commercetools.api.models.cart.TaxPortionDraft;
-import com.commercetools.api.models.common.TypedMoneyDraft;
+import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.cart.TaxedPriceDraft;
 import javax.annotation.Nullable;
 import java.util.*;
@@ -15,20 +15,20 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class TaxedPriceDraftBuilder {
 
     
-    private com.commercetools.api.models.common.TypedMoneyDraft totalNet;
+    private com.commercetools.api.models.common.Money totalNet;
     
     
-    private com.commercetools.api.models.common.TypedMoneyDraft totalGross;
+    private com.commercetools.api.models.common.Money totalGross;
     
     
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
-    public TaxedPriceDraftBuilder totalNet( final com.commercetools.api.models.common.TypedMoneyDraft totalNet) {
+    public TaxedPriceDraftBuilder totalNet( final com.commercetools.api.models.common.Money totalNet) {
         this.totalNet = totalNet;
         return this;
     }
     
-    public TaxedPriceDraftBuilder totalGross( final com.commercetools.api.models.common.TypedMoneyDraft totalGross) {
+    public TaxedPriceDraftBuilder totalGross( final com.commercetools.api.models.common.Money totalGross) {
         this.totalGross = totalGross;
         return this;
     }
@@ -44,12 +44,12 @@ public final class TaxedPriceDraftBuilder {
     }
 
     
-    public com.commercetools.api.models.common.TypedMoneyDraft getTotalNet(){
+    public com.commercetools.api.models.common.Money getTotalNet(){
         return this.totalNet;
     }
     
     
-    public com.commercetools.api.models.common.TypedMoneyDraft getTotalGross(){
+    public com.commercetools.api.models.common.Money getTotalGross(){
         return this.totalGross;
     }
     

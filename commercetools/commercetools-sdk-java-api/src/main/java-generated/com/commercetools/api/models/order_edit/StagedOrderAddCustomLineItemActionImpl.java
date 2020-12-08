@@ -17,6 +17,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -122,6 +124,40 @@ public final class StagedOrderAddCustomLineItemActionImpl implements StagedOrder
     
     public void setExternalTaxRate(final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate){
         this.externalTaxRate = externalTaxRate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        StagedOrderAddCustomLineItemActionImpl that = (StagedOrderAddCustomLineItemActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(money, that.money)
+                .append(name, that.name)
+                .append(quantity, that.quantity)
+                .append(slug, that.slug)
+                .append(taxCategory, that.taxCategory)
+                .append(custom, that.custom)
+                .append(externalTaxRate, that.externalTaxRate)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(money)
+            .append(name)
+            .append(quantity)
+            .append(slug)
+            .append(taxCategory)
+            .append(custom)
+            .append(externalTaxRate)
+            .toHashCode();
     }
 
 }

@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -52,6 +54,28 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
     
     public void setCart(final com.fasterxml.jackson.databind.JsonNode cart){
         this.cart = cart;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        CustomerSignInResultImpl that = (CustomerSignInResultImpl) o;
+    
+        return new EqualsBuilder()
+                .append(customer, that.customer)
+                .append(cart, that.cart)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(customer)
+            .append(cart)
+            .toHashCode();
     }
 
 }

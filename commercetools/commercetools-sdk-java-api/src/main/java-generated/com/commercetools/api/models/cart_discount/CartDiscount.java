@@ -1,7 +1,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import com.commercetools.api.models.cart_discount.CartDiscountTarget;
-import com.commercetools.api.models.cart_discount.CartDiscountValue;
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
 import com.commercetools.api.models.cart_discount.StackingMode;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
@@ -82,7 +82,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     @NotNull
     @Valid
     @JsonProperty("value")
-    public CartDiscountValue getValue();
+    public CartDiscountValueDraft getValue();
     /**
     *  <p>A valid Cart predicate.</p>
     */
@@ -162,7 +162,7 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     
     public void setDescription(final LocalizedString description);
     
-    public void setValue(final CartDiscountValue value);
+    public void setValue(final CartDiscountValueDraft value);
     
     public void setCartPredicate(final String cartPredicate);
     

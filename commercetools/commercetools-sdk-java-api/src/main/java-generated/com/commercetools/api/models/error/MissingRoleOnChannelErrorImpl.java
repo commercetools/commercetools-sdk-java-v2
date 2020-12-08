@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -71,6 +73,32 @@ public final class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannel
     
     public void setMissingRole(final com.commercetools.api.models.channel.ChannelRoleEnum missingRole){
         this.missingRole = missingRole;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        MissingRoleOnChannelErrorImpl that = (MissingRoleOnChannelErrorImpl) o;
+    
+        return new EqualsBuilder()
+                .append(code, that.code)
+                .append(message, that.message)
+                .append(channel, that.channel)
+                .append(missingRole, that.missingRole)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(code)
+            .append(message)
+            .append(channel)
+            .append(missingRole)
+            .toHashCode();
     }
 
 }

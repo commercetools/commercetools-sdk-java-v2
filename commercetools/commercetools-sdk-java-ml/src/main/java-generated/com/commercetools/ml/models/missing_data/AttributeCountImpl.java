@@ -12,6 +12,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -33,7 +35,6 @@ public final class AttributeCountImpl implements AttributeCount {
         this.missingAttributeValues = missingAttributeValues;
     }
     public AttributeCountImpl() {
-       
     }
 
     /**
@@ -67,6 +68,30 @@ public final class AttributeCountImpl implements AttributeCount {
     
     public void setMissingAttributeValues(final Integer missingAttributeValues){
         this.missingAttributeValues = missingAttributeValues;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        AttributeCountImpl that = (AttributeCountImpl) o;
+    
+        return new EqualsBuilder()
+                .append(productTypeAttributes, that.productTypeAttributes)
+                .append(variantAttributes, that.variantAttributes)
+                .append(missingAttributeValues, that.missingAttributeValues)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(productTypeAttributes)
+            .append(variantAttributes)
+            .append(missingAttributeValues)
+            .toHashCode();
     }
 
 }

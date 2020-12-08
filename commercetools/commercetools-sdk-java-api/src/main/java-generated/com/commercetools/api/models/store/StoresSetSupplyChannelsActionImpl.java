@@ -13,6 +13,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 
 @Generated(
@@ -50,6 +52,28 @@ public final class StoresSetSupplyChannelsActionImpl implements StoresSetSupplyC
     
     public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
        this.supplyChannels = supplyChannels;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
+        StoresSetSupplyChannelsActionImpl that = (StoresSetSupplyChannelsActionImpl) o;
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(supplyChannels, that.supplyChannels)
+                .isEquals();
+    }
+    
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(supplyChannels)
+            .toHashCode();
     }
 
 }

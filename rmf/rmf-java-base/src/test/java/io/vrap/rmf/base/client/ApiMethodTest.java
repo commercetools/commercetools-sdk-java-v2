@@ -4,11 +4,13 @@ import org.assertj.core.util.Lists;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 public class ApiMethodTest {
-    static class TestApiMethod extends ApiMethod<TestApiMethod> {
+    static class TestApiMethod extends ApiMethod<TestApiMethod, Object> {
 
         public TestApiMethod(ApiHttpClient apiHttpClient) {
             super(apiHttpClient);
@@ -22,6 +24,26 @@ public class ApiMethodTest {
         protected TestApiMethod copy() {
             return new TestApiMethod(this);
         }
+
+        @Override
+        public ApiHttpRequest createHttpRequest() {
+            return null;
+        }
+
+        @Override
+        public CompletableFuture<ApiHttpResponse<Object>> execute() {
+            return null;
+        }
+
+        @Override
+        public ApiHttpResponse<Object> executeBlocking() {
+            return null;
+        }
+
+        @Override
+        public ApiHttpResponse<Object> executeBlocking(Duration timeout) {
+            return null;
+        }
     }
 
     private ApiHttpClient createClient() {
@@ -31,9 +53,9 @@ public class ApiMethodTest {
     @Test
     public void testImmutableWithQueryParam()
     {
-        ApiMethod<TestApiMethod> method = new TestApiMethod(createClient());
+        TestApiMethod method = new TestApiMethod(createClient());
 
-        ApiMethod<TestApiMethod> newMethod = method.withQueryParam("foo", "bar");
+        TestApiMethod newMethod = method.withQueryParam("foo", "bar");
 
         Assert.assertEquals(1, newMethod.getQueryParams().size());
         Assert.assertEquals(0, method.getQueryParams().size());
@@ -46,9 +68,9 @@ public class ApiMethodTest {
     @Test
     public void testImmutableWithoutQueryParam()
     {
-        ApiMethod<TestApiMethod> method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
+        TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
 
-        ApiMethod<TestApiMethod> newMethod = method.withoutQueryParam("foo");
+        TestApiMethod newMethod = method.withoutQueryParam("foo");
 
         Assert.assertEquals(1, method.getQueryParams().size());
         Assert.assertEquals(0, newMethod.getQueryParams().size());
@@ -61,9 +83,9 @@ public class ApiMethodTest {
     @Test
     public void testImmutableWithQueryParams()
     {
-        ApiMethod<TestApiMethod> method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
+        TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
 
-        ApiMethod<TestApiMethod> newMethod = method.withQueryParams(Lists.newArrayList(new ApiMethod.ParamEntry<>("fooz", "barz")));
+        TestApiMethod newMethod = method.withQueryParams(Lists.newArrayList(new ApiMethod.ParamEntry<>("fooz", "barz")));
 
         Assert.assertEquals(1, method.getQueryParams().size());
         Assert.assertEquals(1, newMethod.getQueryParams().size());
@@ -77,9 +99,9 @@ public class ApiMethodTest {
     @Test
     public void testImmutableAddQueryParam()
     {
-        ApiMethod<TestApiMethod> method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
+        TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
 
-        ApiMethod<TestApiMethod> newMethod = method.addQueryParam("fooz", "barz");
+        TestApiMethod newMethod = method.addQueryParam("fooz", "barz");
 
         Assert.assertEquals(1, method.getQueryParams().size());
         Assert.assertEquals(2, newMethod.getQueryParams().size());
@@ -94,7 +116,7 @@ public class ApiMethodTest {
     @Test
     public void testImmutableGetQueryParams()
     {
-        ApiMethod<TestApiMethod> method = new TestApiMethod(createClient()).withQueryParam("foo", "foo");
+        TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "foo");
 
         final List<ApiMethod.ParamEntry<String, String>> queryParams = method.getQueryParams();
         queryParams.add(new ApiMethod.ParamEntry<>("bar", "bar"));
@@ -109,7 +131,7 @@ public class ApiMethodTest {
     @Test
     public void testImmutableGetQueryParamsByKey()
     {
-        ApiMethod<TestApiMethod> method = new TestApiMethod(createClient()).withQueryParam("foo", "foo");
+        TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "foo");
 
         final List<String> queryParams = method.getQueryParam("foo");
         queryParams.add("bar");

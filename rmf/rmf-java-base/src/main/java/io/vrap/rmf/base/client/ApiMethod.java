@@ -4,12 +4,14 @@ import javax.annotation.Nullable;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
-public abstract class ApiMethod<T extends ApiMethod<T>> {
+public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> {
     public static class ParamEntry<K, V> implements Map.Entry<K, V> {
         protected final K key;
         protected V value;
@@ -62,34 +64,34 @@ public abstract class ApiMethod<T extends ApiMethod<T>> {
     public ApiMethod(final ApiHttpClient apiHttpClient){
         this.apiHttpClient = apiHttpClient;
     }
-    public ApiMethod(final ApiMethod<T> apiMethod){
+    public ApiMethod(final ApiMethod<T, TResult> apiMethod){
         this.apiHttpClient = apiMethod.apiHttpClient;
         this.headers = new ApiHttpHeaders(apiMethod.headers);
         this.queryParams =  new ArrayList<>(apiMethod.queryParams);
     }
 
     public T addHeader(final String key, final String value) {
-        ApiMethod<T> c = copy();
-        c.headers = c.headers.addHeader(key, value);
-        return (T)c;
+        T c = copy();
+        ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.addHeader(key, value);
+        return c;
     }
 
     public T withoutHeader(final String key) {
-        ApiMethod<T> c = copy();
-        c.headers = c.headers.withoutHeader(key);
-        return (T)c;
+        T c = copy();
+        ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.withoutHeader(key);
+        return c;
     }
 
     public T withHeader(final String key, final String value) {
-        ApiMethod<T> c = copy();
-        c.headers = c.headers.withHeader(key, value);
-        return (T)c;
+        T c = copy();
+        ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.withHeader(key, value);
+        return c;
     }
 
     public T withHeaders(final ApiHttpHeaders headers) {
-        ApiMethod<T> c = copy();
-        c.headers = headers;
-        return (T)c;
+        T c = copy();
+        ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers = headers;
+        return c;
     }
 
     public ApiHttpHeaders getHeaders() {
@@ -97,9 +99,9 @@ public abstract class ApiMethod<T extends ApiMethod<T>> {
     }
 
     public <V> T addQueryParam(final String key, final V value) {
-        ApiMethod<T> c = copy();
-        c.queryParams.add(new ParamEntry<>(key, value.toString()));
-        return (T)c;
+        T c = copy();
+        ((ApiMethod<T, TResult>)c).queryParams.add(new ParamEntry<>(key, value.toString()));
+        return c;
     }
 
     public <V> T withQueryParam(final String key, final V value) {
@@ -107,15 +109,15 @@ public abstract class ApiMethod<T extends ApiMethod<T>> {
     }
 
     public T withoutQueryParam(final String key) {
-        ApiMethod<T> c = copy();
-        c.queryParams = c.queryParams.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
-        return (T)c;
+        T c = copy();
+        ((ApiMethod<T, TResult>)c).queryParams = ((ApiMethod<T, TResult>)c).queryParams.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
+        return c;
     }
 
     public <V> T withQueryParams(final List<ParamEntry<String, String>> queryParams) {
-        ApiMethod<T> c = copy();
-        c.queryParams = queryParams;
-        return (T)c;
+        T c = copy();
+        ((ApiMethod<T, TResult>)c).queryParams = queryParams;
+        return c;
     }
 
     public List<ParamEntry<String, String>> getQueryParams() {
@@ -136,4 +138,12 @@ public abstract class ApiMethod<T extends ApiMethod<T>> {
     }
 
     protected abstract T copy();
+
+    public abstract ApiHttpRequest createHttpRequest();
+
+    public abstract CompletableFuture<ApiHttpResponse<TResult>> execute();
+
+    public abstract ApiHttpResponse<TResult> executeBlocking();
+
+    public abstract ApiHttpResponse<TResult> executeBlocking(Duration timeout);
 }

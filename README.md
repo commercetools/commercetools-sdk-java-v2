@@ -172,7 +172,7 @@ The latest stable SDK release can be retrieved from [jcenter](https://bintray.co
 ```gradle
 ext {
     versions = [
-        commercetools: "1.6.0"
+        commercetools: "2.0.0-beta.1"
     ]
 }
 
@@ -190,7 +190,7 @@ dependencies {
 ```
 ```maven
 <properties>
-    <commercetools.version>1.6.0</commercetools.version>
+    <commercetools.version>2.0.0-beta.1</commercetools.version>
 </properties>
 <dependencies>
     <dependency>

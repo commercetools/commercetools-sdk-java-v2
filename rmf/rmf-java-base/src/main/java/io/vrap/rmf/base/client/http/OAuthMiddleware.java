@@ -16,7 +16,7 @@ import java.util.function.Function;
 
 public class OAuthMiddleware  implements Middleware, AutoCloseable {
     private final OAuthHandler authHandler;
-    private final Logger logger = LoggerFactory.getLogger(TokenSupplier.LOGGER_AUTH);
+    private static final Logger logger = LoggerFactory.getLogger(TokenSupplier.LOGGER_AUTH);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
     private final ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 

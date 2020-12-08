@@ -14,7 +14,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 public class InternalLoggerMiddleware implements Middleware {
-    private final Logger classLogger = LoggerFactory.getLogger(InternalLoggerMiddleware.class);
+    private static final Logger classLogger = LoggerFactory.getLogger(InternalLoggerMiddleware.class);
     private final InternalLoggerFactory factory;
 
     public InternalLoggerMiddleware(InternalLoggerFactory factory) {

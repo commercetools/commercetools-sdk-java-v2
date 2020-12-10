@@ -64,7 +64,7 @@ public final class PaymentImpl implements Payment {
     private String key;
 
     @JsonCreator
-    PaymentImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("externalId") final String externalId, @JsonProperty("interfaceId") final String interfaceId, @JsonProperty("amountPlanned") final com.commercetools.api.models.common.TypedMoney amountPlanned, @JsonProperty("amountAuthorized") final com.commercetools.api.models.common.TypedMoney amountAuthorized, @JsonProperty("authorizedUntil") final String authorizedUntil, @JsonProperty("amountPaid") final com.commercetools.api.models.common.TypedMoney amountPaid, @JsonProperty("amountRefunded") final com.commercetools.api.models.common.TypedMoney amountRefunded, @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("paymentStatus") final com.commercetools.api.models.payment.PaymentStatus paymentStatus, @JsonProperty("transactions") final java.util.List<com.commercetools.api.models.payment.Transaction> transactions, @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.api.models.type.CustomFields> interfaceInteractions, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("key") final String key) {
+    PaymentImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("interfaceId") final String interfaceId, @JsonProperty("amountPlanned") final com.commercetools.api.models.common.TypedMoney amountPlanned, @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo, @JsonProperty("paymentStatus") final com.commercetools.api.models.payment.PaymentStatus paymentStatus, @JsonProperty("transactions") final java.util.List<com.commercetools.api.models.payment.Transaction> transactions, @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.api.models.type.CustomFields> interfaceInteractions, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("key") final String key) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -73,13 +73,8 @@ public final class PaymentImpl implements Payment {
         this.createdBy = createdBy;
         this.customer = customer;
         this.anonymousId = anonymousId;
-        this.externalId = externalId;
         this.interfaceId = interfaceId;
         this.amountPlanned = amountPlanned;
-        this.amountAuthorized = amountAuthorized;
-        this.authorizedUntil = authorizedUntil;
-        this.amountPaid = amountPaid;
-        this.amountRefunded = amountRefunded;
         this.paymentMethodInfo = paymentMethodInfo;
         this.paymentStatus = paymentStatus;
         this.transactions = transactions;

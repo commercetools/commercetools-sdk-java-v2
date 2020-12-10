@@ -176,13 +176,8 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
         instance.setCreatedBy(template.getCreatedBy());
         instance.setCustomer(template.getCustomer());
         instance.setAnonymousId(template.getAnonymousId());
-        instance.setExternalId(template.getExternalId());
         instance.setInterfaceId(template.getInterfaceId());
         instance.setAmountPlanned(template.getAmountPlanned());
-        instance.setAmountAuthorized(template.getAmountAuthorized());
-        instance.setAuthorizedUntil(template.getAuthorizedUntil());
-        instance.setAmountPaid(template.getAmountPaid());
-        instance.setAmountRefunded(template.getAmountRefunded());
         instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
         instance.setPaymentStatus(template.getPaymentStatus());
         instance.setTransactions(template.getTransactions());

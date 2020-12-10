@@ -241,7 +241,7 @@ public final class PaymentBuilder {
     }
 
     public Payment build() {
-        return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId, externalId, interfaceId, amountPlanned, amountAuthorized, authorizedUntil, amountPaid, amountRefunded, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom, key);
+        return new PaymentImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customer, anonymousId, interfaceId, amountPlanned, paymentMethodInfo, paymentStatus, transactions, interfaceInteractions, custom, key);
     }
 
     public static PaymentBuilder of() {
@@ -258,13 +258,8 @@ public final class PaymentBuilder {
         builder.createdBy = template.getCreatedBy();
         builder.customer = template.getCustomer();
         builder.anonymousId = template.getAnonymousId();
-        builder.externalId = template.getExternalId();
         builder.interfaceId = template.getInterfaceId();
         builder.amountPlanned = template.getAmountPlanned();
-        builder.amountAuthorized = template.getAmountAuthorized();
-        builder.authorizedUntil = template.getAuthorizedUntil();
-        builder.amountPaid = template.getAmountPaid();
-        builder.amountRefunded = template.getAmountRefunded();
         builder.paymentMethodInfo = template.getPaymentMethodInfo();
         builder.paymentStatus = template.getPaymentStatus();
         builder.transactions = template.getTransactions();

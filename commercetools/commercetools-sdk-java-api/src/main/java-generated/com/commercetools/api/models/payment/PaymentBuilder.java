@@ -47,25 +47,10 @@ public final class PaymentBuilder {
     private String anonymousId;
     
     @Nullable
-    private String externalId;
-    
-    @Nullable
     private String interfaceId;
     
     
     private com.commercetools.api.models.common.TypedMoney amountPlanned;
-    
-    @Nullable
-    private com.commercetools.api.models.common.TypedMoney amountAuthorized;
-    
-    @Nullable
-    private String authorizedUntil;
-    
-    @Nullable
-    private com.commercetools.api.models.common.TypedMoney amountPaid;
-    
-    @Nullable
-    private com.commercetools.api.models.common.TypedMoney amountRefunded;
     
     
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
@@ -125,11 +110,6 @@ public final class PaymentBuilder {
         return this;
     }
     
-    public PaymentBuilder externalId(@Nullable final String externalId) {
-        this.externalId = externalId;
-        return this;
-    }
-    
     public PaymentBuilder interfaceId(@Nullable final String interfaceId) {
         this.interfaceId = interfaceId;
         return this;
@@ -137,26 +117,6 @@ public final class PaymentBuilder {
     
     public PaymentBuilder amountPlanned( final com.commercetools.api.models.common.TypedMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
-        return this;
-    }
-    
-    public PaymentBuilder amountAuthorized(@Nullable final com.commercetools.api.models.common.TypedMoney amountAuthorized) {
-        this.amountAuthorized = amountAuthorized;
-        return this;
-    }
-    
-    public PaymentBuilder authorizedUntil(@Nullable final String authorizedUntil) {
-        this.authorizedUntil = authorizedUntil;
-        return this;
-    }
-    
-    public PaymentBuilder amountPaid(@Nullable final com.commercetools.api.models.common.TypedMoney amountPaid) {
-        this.amountPaid = amountPaid;
-        return this;
-    }
-    
-    public PaymentBuilder amountRefunded(@Nullable final com.commercetools.api.models.common.TypedMoney amountRefunded) {
-        this.amountRefunded = amountRefunded;
         return this;
     }
     
@@ -241,11 +201,6 @@ public final class PaymentBuilder {
     }
     
     @Nullable
-    public String getExternalId(){
-        return this.externalId;
-    }
-    
-    @Nullable
     public String getInterfaceId(){
         return this.interfaceId;
     }
@@ -253,26 +208,6 @@ public final class PaymentBuilder {
     
     public com.commercetools.api.models.common.TypedMoney getAmountPlanned(){
         return this.amountPlanned;
-    }
-    
-    @Nullable
-    public com.commercetools.api.models.common.TypedMoney getAmountAuthorized(){
-        return this.amountAuthorized;
-    }
-    
-    @Nullable
-    public String getAuthorizedUntil(){
-        return this.authorizedUntil;
-    }
-    
-    @Nullable
-    public com.commercetools.api.models.common.TypedMoney getAmountPaid(){
-        return this.amountPaid;
-    }
-    
-    @Nullable
-    public com.commercetools.api.models.common.TypedMoney getAmountRefunded(){
-        return this.amountRefunded;
     }
     
     

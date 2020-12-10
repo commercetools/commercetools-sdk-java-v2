@@ -70,10 +70,6 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     
     @JsonProperty("anonymousId")
     public String getAnonymousId();
-    
-    
-    @JsonProperty("externalId")
-    public String getExternalId();
     /**
     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP).
     *  Cannot be changed once it has been set.
@@ -90,22 +86,6 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     @Valid
     @JsonProperty("amountPlanned")
     public TypedMoney getAmountPlanned();
-    
-    @Valid
-    @JsonProperty("amountAuthorized")
-    public TypedMoney getAmountAuthorized();
-    
-    
-    @JsonProperty("authorizedUntil")
-    public String getAuthorizedUntil();
-    
-    @Valid
-    @JsonProperty("amountPaid")
-    public TypedMoney getAmountPaid();
-    
-    @Valid
-    @JsonProperty("amountRefunded")
-    public TypedMoney getAmountRefunded();
     
     @NotNull
     @Valid
@@ -161,19 +141,9 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     
     public void setAnonymousId(final String anonymousId);
     
-    public void setExternalId(final String externalId);
-    
     public void setInterfaceId(final String interfaceId);
     
     public void setAmountPlanned(final TypedMoney amountPlanned);
-    
-    public void setAmountAuthorized(final TypedMoney amountAuthorized);
-    
-    public void setAuthorizedUntil(final String authorizedUntil);
-    
-    public void setAmountPaid(final TypedMoney amountPaid);
-    
-    public void setAmountRefunded(final TypedMoney amountRefunded);
     
     public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
     

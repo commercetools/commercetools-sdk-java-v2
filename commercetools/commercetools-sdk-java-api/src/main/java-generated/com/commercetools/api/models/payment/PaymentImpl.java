@@ -47,19 +47,9 @@ public final class PaymentImpl implements Payment {
     
     private String anonymousId;
     
-    private String externalId;
-    
     private String interfaceId;
     
     private com.commercetools.api.models.common.TypedMoney amountPlanned;
-    
-    private com.commercetools.api.models.common.TypedMoney amountAuthorized;
-    
-    private String authorizedUntil;
-    
-    private com.commercetools.api.models.common.TypedMoney amountPaid;
-    
-    private com.commercetools.api.models.common.TypedMoney amountRefunded;
     
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
     
@@ -148,11 +138,6 @@ public final class PaymentImpl implements Payment {
         return this.anonymousId;
     }
     
-    
-    public String getExternalId(){
-        return this.externalId;
-    }
-    
     /**
     *  <p>The identifier that is used by the interface that manages the payment (usually the PSP).
     *  Cannot be changed once it has been set.
@@ -168,26 +153,6 @@ public final class PaymentImpl implements Payment {
     */
     public com.commercetools.api.models.common.TypedMoney getAmountPlanned(){
         return this.amountPlanned;
-    }
-    
-    
-    public com.commercetools.api.models.common.TypedMoney getAmountAuthorized(){
-        return this.amountAuthorized;
-    }
-    
-    
-    public String getAuthorizedUntil(){
-        return this.authorizedUntil;
-    }
-    
-    
-    public com.commercetools.api.models.common.TypedMoney getAmountPaid(){
-        return this.amountPaid;
-    }
-    
-    
-    public com.commercetools.api.models.common.TypedMoney getAmountRefunded(){
-        return this.amountRefunded;
     }
     
     
@@ -262,32 +227,12 @@ public final class PaymentImpl implements Payment {
         this.anonymousId = anonymousId;
     }
     
-    public void setExternalId(final String externalId){
-        this.externalId = externalId;
-    }
-    
     public void setInterfaceId(final String interfaceId){
         this.interfaceId = interfaceId;
     }
     
     public void setAmountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned){
         this.amountPlanned = amountPlanned;
-    }
-    
-    public void setAmountAuthorized(final com.commercetools.api.models.common.TypedMoney amountAuthorized){
-        this.amountAuthorized = amountAuthorized;
-    }
-    
-    public void setAuthorizedUntil(final String authorizedUntil){
-        this.authorizedUntil = authorizedUntil;
-    }
-    
-    public void setAmountPaid(final com.commercetools.api.models.common.TypedMoney amountPaid){
-        this.amountPaid = amountPaid;
-    }
-    
-    public void setAmountRefunded(final com.commercetools.api.models.common.TypedMoney amountRefunded){
-        this.amountRefunded = amountRefunded;
     }
     
     public void setPaymentMethodInfo(final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo){

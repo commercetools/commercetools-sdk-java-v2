@@ -1,10 +1,12 @@
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.TaxMode;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.me.MyLineItemDraft;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.me.MyCartDraft;
 import javax.annotation.Nullable;
@@ -56,6 +58,12 @@ public final class MyCartDraftBuilder {
     
     @Nullable
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+    
+    @Nullable
+    private com.commercetools.api.models.store.StoreKeyReference store;
+    
+    @Nullable
+    private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
     public MyCartDraftBuilder currency( final String currency) {
         this.currency = currency;
@@ -131,6 +139,21 @@ public final class MyCartDraftBuilder {
         this.itemShippingAddresses = itemShippingAddresses;
         return this;
     }
+    
+    public MyCartDraftBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
+        this.store = store;
+        return this;
+    }
+    
+    public MyCartDraftBuilder discountCodes(@Nullable final com.commercetools.api.models.cart.DiscountCodeInfo ...discountCodes) {
+        this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
+        return this;
+    }
+    
+    public MyCartDraftBuilder discountCodes(@Nullable final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
+        this.discountCodes = discountCodes;
+        return this;
+    }
 
     
     public String getCurrency(){
@@ -196,9 +219,19 @@ public final class MyCartDraftBuilder {
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses(){
         return this.itemShippingAddresses;
     }
+    
+    @Nullable
+    public com.commercetools.api.models.store.StoreKeyReference getStore(){
+        return this.store;
+    }
+    
+    @Nullable
+    public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes(){
+        return this.discountCodes;
+    }
 
     public MyCartDraft build() {
-        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress, billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification, itemShippingAddresses);
+        return new MyCartDraftImpl(currency, customerEmail, country, inventoryMode, lineItems, shippingAddress, billingAddress, shippingMethod, custom, locale, taxMode, deleteDaysAfterLastModification, itemShippingAddresses, store, discountCodes);
     }
 
     public static MyCartDraftBuilder of() {
@@ -220,6 +253,8 @@ public final class MyCartDraftBuilder {
         builder.taxMode = template.getTaxMode();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
+        builder.store = template.getStore();
+        builder.discountCodes = template.getDiscountCodes();
         return builder;
     }
 

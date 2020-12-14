@@ -1,10 +1,12 @@
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.TaxMode;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.me.MyLineItemDraft;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -52,9 +54,13 @@ public final class MyCartDraftImpl implements MyCartDraft {
     private Long deleteDaysAfterLastModification;
     
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
+    
+    private com.commercetools.api.models.store.StoreKeyReference store;
+    
+    private java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes;
 
     @JsonCreator
-    MyCartDraftImpl(@JsonProperty("currency") final String currency, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("country") final String country, @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems, @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress, @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("locale") final String locale, @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+    MyCartDraftImpl(@JsonProperty("currency") final String currency, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("country") final String country, @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.me.MyLineItemDraft> lineItems, @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress, @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("locale") final String locale, @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode, @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses, @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store, @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes) {
         this.currency = currency;
         this.customerEmail = customerEmail;
         this.country = country;
@@ -68,6 +74,8 @@ public final class MyCartDraftImpl implements MyCartDraft {
         this.taxMode = taxMode;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.itemShippingAddresses = itemShippingAddresses;
+        this.store = store;
+        this.discountCodes = discountCodes;
     }
     public MyCartDraftImpl() {
     }
@@ -152,6 +160,16 @@ public final class MyCartDraftImpl implements MyCartDraft {
     public java.util.List<com.commercetools.api.models.common.Address> getItemShippingAddresses(){
         return this.itemShippingAddresses;
     }
+    
+    
+    public com.commercetools.api.models.store.StoreKeyReference getStore(){
+        return this.store;
+    }
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> getDiscountCodes(){
+        return this.discountCodes;
+    }
 
     public void setCurrency(final String currency){
         this.currency = currency;
@@ -212,6 +230,18 @@ public final class MyCartDraftImpl implements MyCartDraft {
     public void setItemShippingAddresses(final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses){
        this.itemShippingAddresses = itemShippingAddresses;
     }
+    
+    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store){
+        this.store = store;
+    }
+    
+    public void setDiscountCodes(final com.commercetools.api.models.cart.DiscountCodeInfo ...discountCodes){
+       this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
+    }
+    
+    public void setDiscountCodes(final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes){
+       this.discountCodes = discountCodes;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -235,6 +265,8 @@ public final class MyCartDraftImpl implements MyCartDraft {
                 .append(taxMode, that.taxMode)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(store, that.store)
+                .append(discountCodes, that.discountCodes)
                 .isEquals();
     }
     
@@ -254,6 +286,8 @@ public final class MyCartDraftImpl implements MyCartDraft {
             .append(taxMode)
             .append(deleteDaysAfterLastModification)
             .append(itemShippingAddresses)
+            .append(store)
+            .append(discountCodes)
             .toHashCode();
     }
 

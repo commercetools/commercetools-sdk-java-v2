@@ -1,10 +1,12 @@
 package com.commercetools.api.models.me;
 
+import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.TaxMode;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.me.MyLineItemDraft;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.me.MyCartDraftImpl;
 
@@ -94,6 +96,14 @@ public interface MyCartDraft  {
     @Valid
     @JsonProperty("itemShippingAddresses")
     public List<Address> getItemShippingAddresses();
+    
+    @Valid
+    @JsonProperty("store")
+    public StoreKeyReference getStore();
+    
+    @Valid
+    @JsonProperty("discountCodes")
+    public List<DiscountCodeInfo> getDiscountCodes();
 
     public void setCurrency(final String currency);
     
@@ -124,6 +134,12 @@ public interface MyCartDraft  {
     @JsonIgnore
     public void setItemShippingAddresses(final Address ...itemShippingAddresses);
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
+    
+    public void setStore(final StoreKeyReference store);
+    
+    @JsonIgnore
+    public void setDiscountCodes(final DiscountCodeInfo ...discountCodes);
+    public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
 
     public static MyCartDraftImpl of(){
         return new MyCartDraftImpl();
@@ -145,6 +161,8 @@ public interface MyCartDraft  {
         instance.setTaxMode(template.getTaxMode());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
+        instance.setStore(template.getStore());
+        instance.setDiscountCodes(template.getDiscountCodes());
         return instance;
     }
 

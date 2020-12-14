@@ -30,10 +30,16 @@ public interface ResourceDeletedDelivery extends SubscriptionDelivery {
     @NotNull
     @JsonProperty("modifiedAt")
     public ZonedDateTime getModifiedAt();
+    
+    
+    @JsonProperty("dataErasure")
+    public Boolean getDataErasure();
 
     public void setVersion(final Long version);
     
     public void setModifiedAt(final ZonedDateTime modifiedAt);
+    
+    public void setDataErasure(final Boolean dataErasure);
 
     public static ResourceDeletedDeliveryImpl of(){
         return new ResourceDeletedDeliveryImpl();
@@ -47,6 +53,7 @@ public interface ResourceDeletedDelivery extends SubscriptionDelivery {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setVersion(template.getVersion());
         instance.setModifiedAt(template.getModifiedAt());
+        instance.setDataErasure(template.getDataErasure());
         return instance;
     }
 

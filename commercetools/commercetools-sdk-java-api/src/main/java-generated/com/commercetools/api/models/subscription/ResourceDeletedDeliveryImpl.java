@@ -34,14 +34,17 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
     private Long version;
     
     private java.time.ZonedDateTime modifiedAt;
+    
+    private Boolean dataErasure;
 
     @JsonCreator
-    ResourceDeletedDeliveryImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("version") final Long version, @JsonProperty("modifiedAt") final java.time.ZonedDateTime modifiedAt) {
+    ResourceDeletedDeliveryImpl(@JsonProperty("projectKey") final String projectKey, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("version") final Long version, @JsonProperty("modifiedAt") final java.time.ZonedDateTime modifiedAt, @JsonProperty("dataErasure") final Boolean dataErasure) {
         this.projectKey = projectKey;
         this.resource = resource;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.version = version;
         this.modifiedAt = modifiedAt;
+        this.dataErasure = dataErasure;
         this.notificationType = "ResourceDeleted";
     }
     public ResourceDeletedDeliveryImpl() {
@@ -77,6 +80,11 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
     public java.time.ZonedDateTime getModifiedAt(){
         return this.modifiedAt;
     }
+    
+    
+    public Boolean getDataErasure(){
+        return this.dataErasure;
+    }
 
     public void setProjectKey(final String projectKey){
         this.projectKey = projectKey;
@@ -97,6 +105,10 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
     public void setModifiedAt(final java.time.ZonedDateTime modifiedAt){
         this.modifiedAt = modifiedAt;
     }
+    
+    public void setDataErasure(final Boolean dataErasure){
+        this.dataErasure = dataErasure;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -113,6 +125,7 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(version, that.version)
                 .append(modifiedAt, that.modifiedAt)
+                .append(dataErasure, that.dataErasure)
                 .isEquals();
     }
     
@@ -125,6 +138,7 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
             .append(resourceUserProvidedIdentifiers)
             .append(version)
             .append(modifiedAt)
+            .append(dataErasure)
             .toHashCode();
     }
 

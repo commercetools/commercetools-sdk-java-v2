@@ -28,6 +28,9 @@ public final class ResourceDeletedDeliveryBuilder {
     
     
     private java.time.ZonedDateTime modifiedAt;
+    
+    @Nullable
+    private Boolean dataErasure;
 
     public ResourceDeletedDeliveryBuilder projectKey( final String projectKey) {
         this.projectKey = projectKey;
@@ -51,6 +54,11 @@ public final class ResourceDeletedDeliveryBuilder {
     
     public ResourceDeletedDeliveryBuilder modifiedAt( final java.time.ZonedDateTime modifiedAt) {
         this.modifiedAt = modifiedAt;
+        return this;
+    }
+    
+    public ResourceDeletedDeliveryBuilder dataErasure(@Nullable final Boolean dataErasure) {
+        this.dataErasure = dataErasure;
         return this;
     }
 
@@ -78,9 +86,14 @@ public final class ResourceDeletedDeliveryBuilder {
     public java.time.ZonedDateTime getModifiedAt(){
         return this.modifiedAt;
     }
+    
+    @Nullable
+    public Boolean getDataErasure(){
+        return this.dataErasure;
+    }
 
     public ResourceDeletedDelivery build() {
-        return new ResourceDeletedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version, modifiedAt);
+        return new ResourceDeletedDeliveryImpl(projectKey, resource, resourceUserProvidedIdentifiers, version, modifiedAt, dataErasure);
     }
 
     public static ResourceDeletedDeliveryBuilder of() {
@@ -94,6 +107,7 @@ public final class ResourceDeletedDeliveryBuilder {
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.version = template.getVersion();
         builder.modifiedAt = template.getModifiedAt();
+        builder.dataErasure = template.getDataErasure();
         return builder;
     }
 

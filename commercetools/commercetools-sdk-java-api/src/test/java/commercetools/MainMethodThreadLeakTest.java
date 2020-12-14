@@ -31,9 +31,10 @@ public class MainMethodThreadLeakTest {
                 ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
         final CompletableFuture<ApiHttpResponse<Project>> future = client.withProjectKey(getProjectKey()).get().execute();
         try {
-            future.get(1, TimeUnit.SECONDS);
-        } catch (ExecutionException | TimeoutException ignored) {}
-        client.close();
+            future.get(10, TimeUnit.SECONDS);
+        } finally {
+            client.close();
+        }
     }
 
     public static String getProjectKey() {

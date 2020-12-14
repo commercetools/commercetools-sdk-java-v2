@@ -26,4 +26,5 @@ task runMainMethodThreadLeakTest(type: JavaExec) {
     description = "Run the main method thread leak test class"
     classpath = sourceSets.test.runtimeClasspath
     main = "commercetools.MainMethodThreadLeakTest"
+    timeout = Duration.ofSeconds(20)
 }

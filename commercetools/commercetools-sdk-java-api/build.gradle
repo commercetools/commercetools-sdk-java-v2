@@ -20,3 +20,10 @@ dependencies {
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"
+
+task runMainMethodThreadLeakTest(type: JavaExec) {
+    group = "Execution"
+    description = "Run the main method thread leak test class"
+    classpath = sourceSets.test.runtimeClasspath
+    main = "commercetools.MainMethodThreadLeakTest"
+}

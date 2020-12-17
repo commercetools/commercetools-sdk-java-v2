@@ -97,11 +97,11 @@ public class ByProjectKeyProductProjectionsSearchGet extends ApiMethod<ByProject
     }
     
     public List<String> getFilterFacets() {
-        return this.getQueryParam("filterFacets");
+        return this.getQueryParam("filter.facets");
     }
     
     public List<String> getFilterQuery() {
-        return this.getQueryParam("filterQuery");
+        return this.getQueryParam("filter.query");
     }
     
     public List<String> getFacet() {
@@ -175,11 +175,11 @@ public class ByProjectKeyProductProjectionsSearchGet extends ApiMethod<ByProject
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final String filterFacets){
-        return copy().addQueryParam("filterFacets", filterFacets);
+        return copy().addQueryParam("filter.facets", filterFacets);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final String filterQuery){
-        return copy().addQueryParam("filterQuery", filterQuery);
+        return copy().addQueryParam("filter.query", filterQuery);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFacet(final String facet){

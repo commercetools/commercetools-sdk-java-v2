@@ -40,6 +40,7 @@ class Main {
 import com.commercetools.importapi.defaultconfig.ImportApiFactory;
 import com.commercetools.importapi.client.ApiRoot;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import com.commercetools.importapi.defaultconfig.ServiceRegion;
 
 class Main {
     public void main() {
@@ -85,12 +86,20 @@ class Main {
     public void main() {
         // Create CategoryDraft using builder pattern
         CategoryDraft categoryDraft = CategoryDraftBuilder.of()
-                .name("name")
-                .slug("slug")
-                .description("description")
+                .name(
+                    LocalizedStringBuilder.of().addValue("en", "name").build()
+                )
+                .slug(
+                    LocalizedStringBuilder.of().addValue("en", "slug").build()
+                )
+                .description(
+                    LocalizedStringBuilder.of().addValue("en", "description").build()
+                )
                 .externalId("random-id")
                 .key("random-key")
-                .metaDescription("metaDescription")
+                .metaDescription(
+                    LocalizedStringBuilder.of().addValue("en", "metaDescription").build()
+                )
                 .orderHint("hint")
                 .build();
 
@@ -103,33 +112,34 @@ class Main {
 
         // Get Category by id
         Category queriedCategory = apiRoot.withProjectKey("project-key")
-                    .categories()
-                    .withId(category.getId())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
-                    
+                .categories()
+                .withId(category.getId())
+                .get()
+                .executeBlocking()
+                .getBody();
+
         // Get Category by key
-        Category queriedCategory = apiRoot.withProjectKey("project-key")
-                    .categories()
-                    .withKey(category.getKey())
-                    .get()
-                    .executeBlocking()
-                    .getBody();
+        Category queriedCategoryByKey = apiRoot.withProjectKey("project-key")
+                .categories()
+                .withKey(category.getKey())
+                .get()
+                .executeBlocking()
+                .getBody();
 
         // Query Categories
         CategoryPagedQueryResponse response = apiRoot.withProjectKey("project-key")
                 .categories()
                 .get()
-                .addWhere("id=" + "\"" + category.getId() + "\"")
+                .withWhere("id=" + "\"" + category.getId() + "\"")
                 .executeBlocking().getBody();
 
         // Delete Category by id
+        Long version = 1L;
         Category deletedCategory = apiRoot.withProjectKey("project-key")
                 .categories()
                 .withId(category.getId())
                 .delete()
-                .addVersion(version)
+                .withVersion(version)
                 .executeBlocking()
                 .getBody();
 
@@ -140,12 +150,12 @@ class Main {
         updateActions.add(CategoryChangeNameActionBuilder.of()
                 .name(newName)
                 .build());
-        
+
         CategoryUpdate categoryUpdate = CategoryUpdateBuilder.of()
                 .version(category.getVersion())
                 .actions(updateActions)
                 .build();
-        
+
         Category updatedCategory = apiRoot.withProjectKey("project-key")
                 .categories()
                 .withId(category.getId())
@@ -154,12 +164,12 @@ class Main {
                 .getBody();
 
         // Delete Category by key
-        Category deletedCategory = apiRoot.withProjectKey("project-key")
+        Category deletedCategoryByKey = apiRoot.withProjectKey("project-key")
                 .categories()
                 .withKey(category.getKey())
                 .delete()
                 .withVersion(category.getVersion())
-                .executeBlocking().getBody();        
+                .executeBlocking().getBody();   
     }
 }
                 

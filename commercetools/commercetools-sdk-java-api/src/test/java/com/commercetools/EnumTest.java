@@ -1,4 +1,4 @@
-package commercetools;
+package com.commercetools;
 
 import com.commercetools.api.models.cart.CartOrigin;
 import com.commercetools.api.models.common.Reference;

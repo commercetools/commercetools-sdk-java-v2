@@ -1,4 +1,4 @@
-package commercetools;
+package com.commercetools;
 
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.defaultconfig.ApiFactory;

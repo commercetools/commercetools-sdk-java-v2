@@ -1,9 +1,6 @@
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.error.ErrorByExtension;
 import com.commercetools.api.models.error.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.error.ExtensionNoResponseError;
 import javax.annotation.Nullable;
 import java.util.*;
@@ -19,32 +16,24 @@ public final class ExtensionNoResponseErrorBuilder {
     
     private String message;
     
-    @Nullable
-    private com.commercetools.api.models.common.LocalizedString localizedMessage;
+    
+    private String extensionId;
     
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
-    
-    
-    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
+    private String extensionKey;
 
     public ExtensionNoResponseErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
     
-    public ExtensionNoResponseErrorBuilder localizedMessage(@Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
-        this.localizedMessage = localizedMessage;
+    public ExtensionNoResponseErrorBuilder extensionId( final String extensionId) {
+        this.extensionId = extensionId;
         return this;
     }
     
-    public ExtensionNoResponseErrorBuilder extensionExtraInfo(@Nullable final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo) {
-        this.extensionExtraInfo = extensionExtraInfo;
-        return this;
-    }
-    
-    public ExtensionNoResponseErrorBuilder errorByExtension( final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
-        this.errorByExtension = errorByExtension;
+    public ExtensionNoResponseErrorBuilder extensionKey(@Nullable final String extensionKey) {
+        this.extensionKey = extensionKey;
         return this;
     }
 
@@ -53,23 +42,18 @@ public final class ExtensionNoResponseErrorBuilder {
         return this.message;
     }
     
-    @Nullable
-    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
-        return this.localizedMessage;
+    
+    public String getExtensionId(){
+        return this.extensionId;
     }
     
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
-        return this.extensionExtraInfo;
-    }
-    
-    
-    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
-        return this.errorByExtension;
+    public String getExtensionKey(){
+        return this.extensionKey;
     }
 
     public ExtensionNoResponseError build() {
-        return new ExtensionNoResponseErrorImpl(message, localizedMessage, extensionExtraInfo, errorByExtension);
+        return new ExtensionNoResponseErrorImpl(message, extensionId, extensionKey);
     }
 
     public static ExtensionNoResponseErrorBuilder of() {
@@ -79,9 +63,8 @@ public final class ExtensionNoResponseErrorBuilder {
     public static ExtensionNoResponseErrorBuilder of(final ExtensionNoResponseError template) {
         ExtensionNoResponseErrorBuilder builder = new ExtensionNoResponseErrorBuilder();
         builder.message = template.getMessage();
-        builder.localizedMessage = template.getLocalizedMessage();
-        builder.extensionExtraInfo = template.getExtensionExtraInfo();
-        builder.errorByExtension = template.getErrorByExtension();
+        builder.extensionId = template.getExtensionId();
+        builder.extensionKey = template.getExtensionKey();
         return builder;
     }
 

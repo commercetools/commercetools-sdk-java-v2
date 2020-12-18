@@ -1,9 +1,6 @@
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.error.ErrorByExtension;
 import com.commercetools.api.models.error.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -29,18 +26,15 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
     
     private String message;
     
-    private com.commercetools.api.models.common.LocalizedString localizedMessage;
+    private String extensionId;
     
-    private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
-    
-    private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
+    private String extensionKey;
 
     @JsonCreator
-    ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("localizedMessage") final com.commercetools.api.models.common.LocalizedString localizedMessage, @JsonProperty("extensionExtraInfo") final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo, @JsonProperty("errorByExtension") final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
+    ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("extensionId") final String extensionId, @JsonProperty("extensionKey") final String extensionKey) {
         this.message = message;
-        this.localizedMessage = localizedMessage;
-        this.extensionExtraInfo = extensionExtraInfo;
-        this.errorByExtension = errorByExtension;
+        this.extensionId = extensionId;
+        this.extensionKey = extensionKey;
         this.code = "ExtensionNoResponse";
     }
     public ExtensionNoResponseErrorImpl() {
@@ -58,34 +52,25 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
     }
     
     
-    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
-        return this.localizedMessage;
+    public String getExtensionId(){
+        return this.extensionId;
     }
     
     
-    public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
-        return this.extensionExtraInfo;
-    }
-    
-    
-    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
-        return this.errorByExtension;
+    public String getExtensionKey(){
+        return this.extensionKey;
     }
 
     public void setMessage(final String message){
         this.message = message;
     }
     
-    public void setLocalizedMessage(final com.commercetools.api.models.common.LocalizedString localizedMessage){
-        this.localizedMessage = localizedMessage;
+    public void setExtensionId(final String extensionId){
+        this.extensionId = extensionId;
     }
     
-    public void setExtensionExtraInfo(final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo){
-        this.extensionExtraInfo = extensionExtraInfo;
-    }
-    
-    public void setErrorByExtension(final com.commercetools.api.models.error.ErrorByExtension errorByExtension){
-        this.errorByExtension = errorByExtension;
+    public void setExtensionKey(final String extensionKey){
+        this.extensionKey = extensionKey;
     }
 
     @Override
@@ -99,9 +84,8 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
         return new EqualsBuilder()
                 .append(code, that.code)
                 .append(message, that.message)
-                .append(localizedMessage, that.localizedMessage)
-                .append(extensionExtraInfo, that.extensionExtraInfo)
-                .append(errorByExtension, that.errorByExtension)
+                .append(extensionId, that.extensionId)
+                .append(extensionKey, that.extensionKey)
                 .isEquals();
     }
     
@@ -110,9 +94,8 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
         return new HashCodeBuilder(17, 37)
             .append(code)
             .append(message)
-            .append(localizedMessage)
-            .append(extensionExtraInfo)
-            .append(errorByExtension)
+            .append(extensionId)
+            .append(extensionKey)
             .toHashCode();
     }
 

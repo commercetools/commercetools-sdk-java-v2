@@ -1,9 +1,6 @@
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.error.ErrorByExtension;
 import com.commercetools.api.models.error.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.error.ExtensionNoResponseErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -25,24 +22,17 @@ import java.io.IOException;
 public interface ExtensionNoResponseError extends ErrorObject {
 
     
-    @Valid
-    @JsonProperty("localizedMessage")
-    public LocalizedString getLocalizedMessage();
-    
-    @Valid
-    @JsonProperty("extensionExtraInfo")
-    public JsonNode getExtensionExtraInfo();
-    
     @NotNull
-    @Valid
-    @JsonProperty("errorByExtension")
-    public ErrorByExtension getErrorByExtension();
+    @JsonProperty("extensionId")
+    public String getExtensionId();
+    
+    
+    @JsonProperty("extensionKey")
+    public String getExtensionKey();
 
-    public void setLocalizedMessage(final LocalizedString localizedMessage);
+    public void setExtensionId(final String extensionId);
     
-    public void setExtensionExtraInfo(final JsonNode extensionExtraInfo);
-    
-    public void setErrorByExtension(final ErrorByExtension errorByExtension);
+    public void setExtensionKey(final String extensionKey);
 
     public static ExtensionNoResponseErrorImpl of(){
         return new ExtensionNoResponseErrorImpl();
@@ -52,9 +42,8 @@ public interface ExtensionNoResponseError extends ErrorObject {
     public static ExtensionNoResponseErrorImpl of(final ExtensionNoResponseError template) {
         ExtensionNoResponseErrorImpl instance = new ExtensionNoResponseErrorImpl();
         instance.setMessage(template.getMessage());
-        instance.setLocalizedMessage(template.getLocalizedMessage());
-        instance.setExtensionExtraInfo(template.getExtensionExtraInfo());
-        instance.setErrorByExtension(template.getErrorByExtension());
+        instance.setExtensionId(template.getExtensionId());
+        instance.setExtensionKey(template.getExtensionKey());
         return instance;
     }
 

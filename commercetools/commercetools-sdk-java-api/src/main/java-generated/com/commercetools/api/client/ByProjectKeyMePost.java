@@ -26,7 +26,7 @@ import io.vrap.rmf.base.client.*;
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
-*  <p>Create my customer</p>
+*  <p>Update my customer</p>
 */
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
@@ -37,18 +37,18 @@ public class ByProjectKeyMePost extends ApiMethod<ByProjectKeyMePost, com.commer
     
     private String projectKey;
     
-    private com.commercetools.api.models.common.Update update;
+    private com.commercetools.api.models.me.MyCustomerUpdate myCustomerUpdate;
 
-    public ByProjectKeyMePost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.common.Update update) {
+    public ByProjectKeyMePost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.me.MyCustomerUpdate myCustomerUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
-        this.update = update;
+        this.myCustomerUpdate = myCustomerUpdate;
     }
 
     public ByProjectKeyMePost(ByProjectKeyMePost t) {
         super(t);
         this.projectKey = t.projectKey;
-        this.update = t.update;
+        this.myCustomerUpdate = t.myCustomerUpdate;
     }
 
     @Override
@@ -59,7 +59,7 @@ public class ByProjectKeyMePost extends ApiMethod<ByProjectKeyMePost, com.commer
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(update);
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(myCustomerUpdate);
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
     } catch(Exception e) {
         e.printStackTrace();

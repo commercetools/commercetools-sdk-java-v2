@@ -25,39 +25,36 @@ import io.vrap.rmf.base.client.*;
 
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
-/**
-*  <p>Update MyCart by ID</p>
-*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeCartsByIDPost extends ApiMethod<ByProjectKeyMeCartsByIDPost, com.commercetools.api.models.me.MyCart> {
+public class ByProjectKeyMeCartsKeyByKeyPost extends ApiMethod<ByProjectKeyMeCartsKeyByKeyPost, com.fasterxml.jackson.databind.JsonNode> {
 
     
     private String projectKey;
-    private String ID;
+    private String key;
     
     private com.commercetools.api.models.me.MyCartUpdate myCartUpdate;
 
-    public ByProjectKeyMeCartsByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.me.MyCartUpdate myCartUpdate) {
+    public ByProjectKeyMeCartsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key, com.commercetools.api.models.me.MyCartUpdate myCartUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
-        this.ID = ID;
+        this.key = key;
         this.myCartUpdate = myCartUpdate;
     }
 
-    public ByProjectKeyMeCartsByIDPost(ByProjectKeyMeCartsByIDPost t) {
+    public ByProjectKeyMeCartsKeyByKeyPost(ByProjectKeyMeCartsKeyByKeyPost t) {
         super(t);
         this.projectKey = t.projectKey;
-        this.ID = t.ID;
+        this.key = t.key;
         this.myCartUpdate = t.myCartUpdate;
     }
 
     @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/me/carts/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("/%s/me/carts/key=%s", this.projectKey, this.key);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
@@ -72,38 +69,32 @@ public class ByProjectKeyMeCartsByIDPost extends ApiMethod<ByProjectKeyMeCartsBy
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(){
+    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
     
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(Duration timeout){
+    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCart>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCart.class);
+    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(){
+        return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
 
     public String getProjectKey() {return this.projectKey;}
-    public String getID() {return this.ID;}
+    public String getKey() {return this.key;}
 
-    public List<String> getExpand() {
-        return this.getQueryParam("expand");
-    }
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
     
-    public void setID(final String ID) { this.ID = ID; }
+    public void setKey(final String key) { this.key = key; }
 
-    public ByProjectKeyMeCartsByIDPost withExpand(final String expand){
-        return copy().addQueryParam("expand", expand);
-    }
     
     @Override
-    protected ByProjectKeyMeCartsByIDPost copy()
+    protected ByProjectKeyMeCartsKeyByKeyPost copy()
     {
-        return new ByProjectKeyMeCartsByIDPost(this);
+        return new ByProjectKeyMeCartsKeyByKeyPost(this);
     }
 }

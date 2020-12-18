@@ -28,4 +28,7 @@ public class ByProjectKeyMeCartsRequestBuilder {
     public ByProjectKeyMeCartsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyMeCartsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
+    public ByProjectKeyMeCartsKeyByKeyRequestBuilder keyWithKeyValue(String key) {
+        return new ByProjectKeyMeCartsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
+    }
 }

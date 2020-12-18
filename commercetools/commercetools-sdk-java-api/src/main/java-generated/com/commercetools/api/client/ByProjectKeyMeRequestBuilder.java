@@ -21,8 +21,8 @@ public class ByProjectKeyMeRequestBuilder {
         return new ByProjectKeyMeGet(apiHttpClient, projectKey);
     }
     
-    public ByProjectKeyMePost post(com.commercetools.api.models.common.Update update) {
-        return new ByProjectKeyMePost(apiHttpClient, projectKey, update);
+    public ByProjectKeyMePost post(com.commercetools.api.models.me.MyCustomerUpdate myCustomerUpdate) {
+        return new ByProjectKeyMePost(apiHttpClient, projectKey, myCustomerUpdate);
     }
     
     public ByProjectKeyMeDelete delete() {

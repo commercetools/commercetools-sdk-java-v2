@@ -31,7 +31,7 @@ public class TaxCategoryFixtures {
                         .name(CommercetoolsTestUtils.randomString())
                         .amount(0.19)
                         .includedInPrice(true)
-                        .country("DEU")
+                        .country("DE")
                         .state("Berlin")
                         .subRates(Arrays.asList(SubRateBuilder.of()
                                 .name(CommercetoolsTestUtils.randomString())

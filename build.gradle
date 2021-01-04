@@ -249,11 +249,13 @@ subprojects { project ->
 }
 
 def exportedProjects= [
+        ":commercetools:commercetools-http-client",
         ":commercetools:commercetools-sdk-java-api",
         ":commercetools:commercetools-sdk-java-importapi",
         ":commercetools:commercetools-sdk-java-ml",
         ":rmf:rmf-java-base",
-        ":rmf:okhttp-client"
+        ":rmf:okhttp-client3",
+        ":rmf:okhttp-client4",
 ]
 task alljavadoc(type: Javadoc) {
     source exportedProjects.collect { project(it).sourceSets.main.allJava }

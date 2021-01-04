@@ -5,9 +5,9 @@ import com.commercetools.api.models.customer.CustomerDraft;
 import com.commercetools.api.models.customer.CustomerDraftBuilder;
 import commercetools.customer.CustomerFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
+import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.GlobalCustomerPasswordTokenSupplier;
-import io.vrap.rmf.okhttp.VrapOkHttpClient;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -17,7 +17,7 @@ import static commercetools.utils.CommercetoolsTestUtils.*;
 
 public class GlobalCustomerPasswordAuthIntegrationTest {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
+    private static final VrapHttpClient vrapHttpClient = HttpClientSupplier.of().get();
 
     @Test
     public void execute() {

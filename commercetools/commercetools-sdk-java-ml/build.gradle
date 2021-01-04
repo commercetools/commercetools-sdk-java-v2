@@ -1,5 +1,4 @@
 dependencies {
-    api project(':rmf:okhttp-client')
     api project(':rmf:rmf-java-base')
     implementation "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
     implementation "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"

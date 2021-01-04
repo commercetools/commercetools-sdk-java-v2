@@ -5,15 +5,14 @@ import com.commercetools.importapi.defaultconfig.ImportApiFactory;
 import com.commercetools.importapi.defaultconfig.ServiceRegion;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
+import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.okhttp.VrapOkHttpClient;
 
 import java.util.UUID;
 
 public class ImportApiTestUtils {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
     private static final ByProjectKeyRequestBuilder projectRoot;
 
     static{
@@ -27,7 +26,7 @@ public class ImportApiTestUtils {
                             .build(),
                     ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
                     ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-        }else{
+        } else {
             projectRoot = ImportApiFactory.createForProject(
                     getProjectKey(),
                     ClientCredentials.of().withClientId(getClientId())

@@ -5,15 +5,13 @@ import com.commercetools.api.defaultconfig.ApiFactory;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
-import io.vrap.rmf.base.client.VrapHttpClient;
+
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.okhttp.VrapOkHttpClient;
 
 import java.util.UUID;
 
 public class CommercetoolsTestUtils {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
     private static final ByProjectKeyRequestBuilder projectRoot;
 
     static{

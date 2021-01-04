@@ -11,8 +11,6 @@ import io.vrap.rmf.base.client.error.NotFoundException;
 import io.vrap.rmf.base.client.http.RetryMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
-import io.vrap.rmf.base.client.oauth2.TokenSupplier;
-import io.vrap.rmf.okhttp.VrapOkHttpClient;
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
@@ -67,7 +65,7 @@ public class MiddlewareTest {
                 .withClientSecret(CommercetoolsTestUtils.getClientSecret())
                 .build();
 
-        VrapHttpClient httpClient = new VrapOkHttpClient();
+        VrapHttpClient httpClient = HttpClientSupplier.of().get();
         ApiHttpClient client = ClientFactory.create(
                 ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
                 new VrapHttpClient() {
@@ -87,7 +85,7 @@ public class MiddlewareTest {
                         credentials.getClientSecret(),
                         credentials.getScopes(),
                         ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                        new VrapOkHttpClient()
+                        HttpClientSupplier.of().get()
                 )
         );
 

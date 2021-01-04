@@ -2,20 +2,16 @@ package commercetools.me;
 
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.defaultconfig.ApiFactory;
-import com.commercetools.api.models.customer.Customer;
 import com.commercetools.api.models.me.MyCart;
 import com.commercetools.api.models.me.MyCartDraft;
 import com.commercetools.api.models.me.MyCartDraftBuilder;
-import com.commercetools.api.models.product.Product;
-import commercetools.customer.CustomerFixtures;
-import commercetools.product.ProductFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ClientFactory;
+import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.AnonymousSessionTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.StaticTokenSupplier;
-import io.vrap.rmf.okhttp.VrapOkHttpClient;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -24,7 +20,7 @@ import java.util.concurrent.ExecutionException;
 import static commercetools.utils.CommercetoolsTestUtils.getProjectKey;
 
 public class MyCartsIntegrationTests {
-    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
+    private static final VrapHttpClient vrapHttpClient = HttpClientSupplier.of().get();
 
     @Test
     public void signInWithAnonymousCartWithNewActiveCart() throws ExecutionException, InterruptedException {

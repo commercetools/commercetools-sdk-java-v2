@@ -1,6 +1,5 @@
 
 dependencies {
-    api project(':rmf:okhttp-client')
     api project(':rmf:rmf-java-base')
     implementation "com.fasterxml.jackson.core:jackson-annotations:${versions.jackson}"
     implementation "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
@@ -12,7 +11,9 @@ dependencies {
     testImplementation "junit:junit:${versions.junit}"
     testImplementation "org.assertj:assertj-core:${versions.assertJ}"
     testImplementation 'org.skyscreamer:jsonassert:1.5.0'
+    testImplementation project(':commercetools:commercetools-http-client')
 
+    itestImplementation project(':commercetools:commercetools-http-client')
     itestImplementation "junit:junit:${versions.junit}"
     itestImplementation "ch.qos.logback:logback-classic:${versions.logback}"
     itestImplementation "org.assertj:assertj-core:${versions.assertJ}"

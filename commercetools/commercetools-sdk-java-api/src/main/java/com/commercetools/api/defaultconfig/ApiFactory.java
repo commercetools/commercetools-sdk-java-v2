@@ -1,9 +1,9 @@
 package com.commercetools.api.defaultconfig;
 
 import com.commercetools.api.client.ApiCorrelationIdProvider;
-import com.commercetools.api.client.ApiInternalLoggerFactory;
 import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.http.CorrelationIdProvider;
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ClientFactory;
@@ -11,7 +11,6 @@ import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.http.Middleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
-import io.vrap.rmf.okhttp.VrapOkHttpClient;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -26,7 +25,7 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        return createForProject(new VrapOkHttpClient(), projectKey, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), new ApiCorrelationIdProvider(projectKey));
+        return createForProject(projectKey, () -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), new ApiCorrelationIdProvider(projectKey)));
     }
 
     public static ByProjectKeyRequestBuilder createForProject(
@@ -36,7 +35,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ) {
-        return createForProject(new VrapOkHttpClient(), projectKey, credentials, tokenEndpoint, apiEndpoint, middlewares, new ApiCorrelationIdProvider(projectKey));
+        return createForProject(projectKey, () -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, middlewares, new ApiCorrelationIdProvider(projectKey)));
     }
 
     public static ByProjectKeyRequestBuilder createForProject(
@@ -47,7 +46,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ) {
-        return createForProject(httpClient, projectKey, credentials, tokenEndpoint, apiEndpoint, middlewares, new ApiCorrelationIdProvider(projectKey));
+        return createForProject(projectKey, () -> defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, new ApiCorrelationIdProvider(projectKey)));
     }
 
     public static ByProjectKeyRequestBuilder createForProject(
@@ -59,7 +58,7 @@ public class ApiFactory {
             final List<Middleware> middlewares,
             CorrelationIdProvider correlationIdProvider
     ) {
-        return createForProject(projectKey, () -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, correlationIdProvider));
+        return createForProject(projectKey, () -> defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, correlationIdProvider));
     }
 
     public static ByProjectKeyRequestBuilder createForProject(
@@ -74,7 +73,7 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        return create(() -> defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null));
+        return create(() -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null));
     }
 
     public static ApiRoot create(
@@ -83,7 +82,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final CorrelationIdProvider correlationIdProvider
     ) {
-        return create(() -> defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), correlationIdProvider));
+        return create(() -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), correlationIdProvider));
     }
 
     public static ApiRoot create(
@@ -92,7 +91,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ) {
-        return create(() -> defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint, middlewares, null));
+        return create(() -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, middlewares, null));
     }
 
     public static ApiRoot create(
@@ -102,7 +101,7 @@ public class ApiFactory {
             final List<Middleware> middlewares,
             final CorrelationIdProvider correlationIdProvider
     ) {
-        return create(() -> defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint, middlewares, correlationIdProvider));
+        return create(() -> defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, middlewares, correlationIdProvider));
     }
 
     public static ApiRoot create(
@@ -111,7 +110,7 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ) {
-        return create(() -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null));
+        return create(() -> defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null));
     }
 
     public static ApiRoot create(
@@ -121,7 +120,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final CorrelationIdProvider correlationIdProvider
     ) {
-        return create(() -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), correlationIdProvider));
+        return create(() -> defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), correlationIdProvider));
     }
 
     public static ApiRoot create(
@@ -131,7 +130,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ) {
-        return create(() -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, null));
+        return create(() -> defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, null));
     }
 
     public static ApiRoot create(
@@ -142,7 +141,7 @@ public class ApiFactory {
             final List<Middleware> middlewares,
             final CorrelationIdProvider correlationIdProvider
     ) {
-        return create(() -> defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, correlationIdProvider));
+        return create(() -> defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, correlationIdProvider));
     }
 
     public static ApiRoot create(final Supplier<ApiHttpClient> clientSupplier) {
@@ -154,7 +153,7 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ){
-        return defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null);
+        return defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null);
     }
 
     public static ApiHttpClient defaultClient(
@@ -163,7 +162,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final CorrelationIdProvider correlationIdProvider
     ){
-        return defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), correlationIdProvider);
+        return defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), correlationIdProvider);
     }
 
     public static ApiHttpClient defaultClient(
@@ -172,7 +171,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ){
-        return defaultClient(new VrapOkHttpClient(), credentials, tokenEndpoint, apiEndpoint, middlewares, null);
+        return defaultClient(HttpClientSupplier.of(), credentials, tokenEndpoint, apiEndpoint, middlewares, null);
     }
 
     public static ApiHttpClient defaultClient(
@@ -181,7 +180,7 @@ public class ApiFactory {
             final String tokenEndpoint,
             final String apiEndpoint
     ){
-        return defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null);
+        return defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), null);
     }
 
     public static ApiHttpClient defaultClient(
@@ -191,7 +190,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final CorrelationIdProvider correlationIdProvider
     ){
-        return defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), correlationIdProvider);
+        return defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, new ArrayList<>(), correlationIdProvider);
     }
 
     public static ApiHttpClient defaultClient(
@@ -201,7 +200,7 @@ public class ApiFactory {
             final String apiEndpoint,
             final List<Middleware> middlewares
     ) {
-        return defaultClient(httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, null);
+        return defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, null);
     }
 
     public static ApiHttpClient defaultClient(
@@ -212,20 +211,7 @@ public class ApiFactory {
             final List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider
     ) {
-        return ClientFactory.create(
-                apiEndpoint,
-                httpClient,
-                new ClientCredentialsTokenSupplier(
-                        credentials.getClientId(),
-                        credentials.getClientSecret(),
-                        credentials.getScopes(),
-                        tokenEndpoint,
-                        httpClient
-                ),
-                ApiInternalLoggerFactory::get,
-                middlewares,
-                correlationIdProvider
-        );
+        return defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, middlewares, correlationIdProvider);
     }
 
     public static ApiHttpClient defaultClient(
@@ -237,17 +223,51 @@ public class ApiFactory {
             final List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider
     ) {
+        return defaultClient(() -> httpClient, credentials, tokenEndpoint, apiEndpoint, userAgentSupplier, middlewares, correlationIdProvider);
+    }
+
+    public static ApiHttpClient defaultClient(
+            final Supplier<VrapHttpClient> httpClientSupplier,
+            final ClientCredentials credentials,
+            final String tokenEndpoint,
+            final String apiEndpoint,
+            final List<Middleware> middlewares,
+            @Nullable final CorrelationIdProvider correlationIdProvider
+    ) {
         return ClientFactory.create(
                 apiEndpoint,
-                httpClient,
+                httpClientSupplier.get(),
                 new ClientCredentialsTokenSupplier(
                         credentials.getClientId(),
                         credentials.getClientSecret(),
                         credentials.getScopes(),
                         tokenEndpoint,
-                        httpClient
+                        httpClientSupplier.get()
                 ),
-                ApiInternalLoggerFactory::get,
+                middlewares,
+                correlationIdProvider
+        );
+    }
+
+    public static ApiHttpClient defaultClient(
+            final Supplier<VrapHttpClient> httpClientSupplier,
+            final ClientCredentials credentials,
+            final String tokenEndpoint,
+            final String apiEndpoint,
+            final Supplier<String> userAgentSupplier,
+            final List<Middleware> middlewares,
+            @Nullable final CorrelationIdProvider correlationIdProvider
+    ) {
+        return ClientFactory.create(
+                apiEndpoint,
+                httpClientSupplier.get(),
+                new ClientCredentialsTokenSupplier(
+                        credentials.getClientId(),
+                        credentials.getClientSecret(),
+                        credentials.getScopes(),
+                        tokenEndpoint,
+                        httpClientSupplier.get()
+                ),
                 userAgentSupplier,
                 middlewares,
                 correlationIdProvider

@@ -193,6 +193,7 @@ repositories {
 }
 
 dependencies {
+    implementation "com.commercetools.sdk:commercetools-http-client:${versions.commercetools}"
     implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
     implementation "com.commercetools.sdk:commercetools-sdk-java-importapi:${versions.commercetools}"
     implementation "com.commercetools.sdk:commercetools-sdk-java-ml:${versions.commercetools}"
@@ -203,6 +204,11 @@ dependencies {
     <commercetools.version>2.0.0-beta.2</commercetools.version>
 </properties>
 <dependencies>
+    <dependency>
+      <groupId>com.commercetools.sdk</groupId>
+      <artifactId>commercetools-http-client</artifactId>
+      <version>${commercetools.version}</version>
+    </dependency>
     <dependency>
       <groupId>com.commercetools.sdk</groupId>
       <artifactId>commercetools-sdk-java-api</artifactId>

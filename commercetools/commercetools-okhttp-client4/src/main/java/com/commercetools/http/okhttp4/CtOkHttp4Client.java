@@ -1,8 +1,7 @@
-package io.vrap.rmf.okhttp;
+package com.commercetools.http.okhttp4;
 
 
 import io.vrap.rmf.base.client.ApiHttpHeaders;
-import io.vrap.rmf.base.client.ApiHttpHeaders.HeaderEntry;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
@@ -16,15 +15,10 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-/**
- *
- */
-@Deprecated
-public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
+public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
             .connectTimeout(120,TimeUnit.SECONDS)
@@ -33,19 +27,19 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
     private final OkHttpClient okHttpClient;
 
-    public VrapOkHttpClient() {
+    public CtOkHttp4Client() {
         okHttpClient = clientBuilder.get().build();
     }
 
-    public VrapOkHttpClient(BuilderOptions options) {
+    public CtOkHttp4Client(BuilderOptions options) {
         okHttpClient = options.plus(clientBuilder.get()).build();
     }
 
-    public VrapOkHttpClient(Supplier<OkHttpClient.Builder> builderSupplier) {
+    public CtOkHttp4Client(Supplier<OkHttpClient.Builder> builderSupplier) {
         okHttpClient = builderSupplier.get().build();
     }
 
-    public VrapOkHttpClient(int maxRequests, int maxRequestsPerHost) {
+    public CtOkHttp4Client(int maxRequests, int maxRequestsPerHost) {
         Dispatcher dispatcher = new Dispatcher();
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
@@ -54,7 +48,7 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
                 .build();
     }
 
-    public VrapOkHttpClient(ExecutorService executor, int maxRequests, int maxRequestsPerHost) {
+    public CtOkHttp4Client(ExecutorService executor, int maxRequests, int maxRequestsPerHost) {
         Dispatcher dispatcher = new Dispatcher(executor);
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
@@ -70,7 +64,7 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
         return makeRequest(okHttpClient, toRequest(request))
-                .thenApply(VrapOkHttpClient::toResponse);
+                .thenApply(CtOkHttp4Client::toResponse);
 
     }
 

@@ -1,8 +1,8 @@
 package commercetools.oauth;
 
+import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.AnonymousSessionTokenSupplier;
-import io.vrap.rmf.okhttp.VrapOkHttpClient;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ import static commercetools.utils.CommercetoolsTestUtils.*;
 
 public class AnonymousSessionAuthIntegrationTest {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
+    private static final VrapHttpClient vrapHttpClient = HttpClientSupplier.of().get();
 
     @Test
     public void execute() {

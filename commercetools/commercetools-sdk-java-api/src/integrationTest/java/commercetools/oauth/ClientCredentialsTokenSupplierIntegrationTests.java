@@ -1,15 +1,15 @@
 package commercetools.oauth;
 
+import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
-import io.vrap.rmf.okhttp.VrapOkHttpClient;
 import org.junit.Test;
 
 import java.util.concurrent.ExecutionException;
 
 public class ClientCredentialsTokenSupplierIntegrationTests {
 
-    private static final VrapHttpClient vrapHttpClient = new VrapOkHttpClient();
+    private static final VrapHttpClient vrapHttpClient = HttpClientSupplier.of().get();
 
     @Test(expected = ExecutionException.class)
     public void throwExceptionWrongCredentials() throws Exception {

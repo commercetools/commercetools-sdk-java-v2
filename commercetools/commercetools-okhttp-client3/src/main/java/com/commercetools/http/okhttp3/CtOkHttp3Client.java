@@ -1,8 +1,7 @@
-package io.vrap.rmf.okhttp;
+package com.commercetools.http.okhttp3;
 
 
 import io.vrap.rmf.base.client.ApiHttpHeaders;
-import io.vrap.rmf.base.client.ApiHttpHeaders.HeaderEntry;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
@@ -16,15 +15,10 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-/**
- *
- */
-@Deprecated
-public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
+public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
 
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
             .connectTimeout(120,TimeUnit.SECONDS)
@@ -33,19 +27,19 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
     private final OkHttpClient okHttpClient;
 
-    public VrapOkHttpClient() {
+    public CtOkHttp3Client() {
         okHttpClient = clientBuilder.get().build();
     }
 
-    public VrapOkHttpClient(BuilderOptions options) {
+    public CtOkHttp3Client(BuilderOptions options) {
         okHttpClient = options.plus(clientBuilder.get()).build();
     }
 
-    public VrapOkHttpClient(Supplier<OkHttpClient.Builder> builderSupplier) {
+    public CtOkHttp3Client(Supplier<OkHttpClient.Builder> builderSupplier) {
         okHttpClient = builderSupplier.get().build();
     }
 
-    public VrapOkHttpClient(int maxRequests, int maxRequestsPerHost) {
+    public CtOkHttp3Client(int maxRequests, int maxRequestsPerHost) {
         Dispatcher dispatcher = new Dispatcher();
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
@@ -54,7 +48,7 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
                 .build();
     }
 
-    public VrapOkHttpClient(ExecutorService executor, int maxRequests, int maxRequestsPerHost) {
+    public CtOkHttp3Client(ExecutorService executor, int maxRequests, int maxRequestsPerHost) {
         Dispatcher dispatcher = new Dispatcher(executor);
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
@@ -64,13 +58,13 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
     }
 
     private static final String CONTENT_TYPE =  "Content-Type";
-    private static final MediaType JSON = MediaType.get("application/json; charset=utf-8");
+    private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
     private static final byte[] emptyBody = new byte[0];
 
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
         return makeRequest(okHttpClient, toRequest(request))
-                .thenApply(VrapOkHttpClient::toResponse);
+                .thenApply(CtOkHttp3Client::toResponse);
 
     }
 
@@ -89,7 +83,7 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
                 response.message()
         );
         if (apiHttpResponse.getBody() != null) {
-            response.close();
+            response.body().close();
         }
         return apiHttpResponse;
     }
@@ -111,10 +105,10 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
         //default media type is JSON, if other media type is set as a header, use it
         MediaType mediaType = JSON;
         if(apiHttpRequest.getHeaders().getHeaders().stream().anyMatch(s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))){
-            mediaType = MediaType.get(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+            mediaType = MediaType.parse(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
         }
 
-        final RequestBody body = apiHttpRequest.getBody() == null ? null: RequestBody.create(apiHttpRequest.getBody(), mediaType);
+        final RequestBody body = apiHttpRequest.getBody() == null ? null: RequestBody.create(mediaType, apiHttpRequest.getBody());
         httpRequestBuilder.method(apiHttpRequest.getMethod().name(), body);
         return httpRequestBuilder.build();
     }

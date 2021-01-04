@@ -1,7 +1,6 @@
 # <img src="build/theme/resources/CT_cube_200px.png" width="40" align="center"></img> commercetools JAVA SDK
 
 
-[![][travis img]][travis]
 [![][maven img]][maven]
 [![][snyk img]][snyk]
 [![][license img]][license]
@@ -106,7 +105,7 @@ dependencies {
 
 ## Configuration
 
-Creating http requests starts from the ApiRoot which  holds information specific to the project. Easiest way to configure it is to use the following method:
+Creating http requests starts from the ApiRoot which  holds information specific to the project. To configure the ApiRoot use the following method:
 
 ```java
 import com.commercetools.api.defaultconfig.ApiFactory;
@@ -267,9 +266,6 @@ class Main {
 ```
 
 [](definitions for the top badges)
-
-[travis]:https://travis-ci.com/github/commercetools/commercetools-sdk-java-v2
-[travis img]:https://travis-ci.com/commercetools/commercetools-sdk-java-v2.svg?branch=master
 
 [snyk]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2
 [snyk img]:https://snyk.io/test/github/commercetools/commercetools-sdk-java-v2/badge.svg

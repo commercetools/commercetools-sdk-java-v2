@@ -12,6 +12,98 @@ This repository contains the commercetools platform and import-api java sdks gen
 
 * [<strong>Javadoc</strong>](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/index.html)
 
+## Installation
+
+### Java SDK with Gradle
+
+The latest stable SDK release can be retrieved from [jcenter](https://bintray.com/bintray/jcenter?filterByPkgName=commercetools-sdk-java) with:
+
+
+```gradle
+ext {
+    versions = [
+        commercetools: "2.0.0-beta.2"
+    ]
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation "com.commercetools.sdk:commercetools-http-client:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-sdk-java-importapi:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-sdk-java-ml:${versions.commercetools}"
+}
+```
+
+### Java SDK with Maven
+
+```maven
+<properties>
+    <commercetools.version>2.0.0-beta.2</commercetools.version>
+</properties>
+<dependencies>
+    <dependency>
+      <groupId>com.commercetools.sdk</groupId>
+      <artifactId>commercetools-http-client</artifactId>
+      <version>${commercetools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.commercetools.sdk</groupId>
+      <artifactId>commercetools-sdk-java-api</artifactId>
+      <version>${commercetools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.commercetools.sdk</groupId>
+      <artifactId>commercetools-sdk-java-importapi</artifactId>
+      <version>${commercetools.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.commercetools.sdk</groupId>
+      <artifactId>commercetools-sdk-java-ml</artifactId>
+      <version>${commercetools.version}</version>
+    </dependency>
+</dependencies>
+<profiles>
+    <profile>
+        <repositories>
+            <repository>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <id>central</id>
+                <name>bintray</name>
+                <url>https://jcenter.bintray.com</url>
+            </repository>
+        </repositories>
+        <pluginRepositories>
+            <pluginRepository>
+                <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                <id>central</id>
+                <name>bintray-plugins</name>
+                <url>https://jcenter.bintray.com</url>
+            </pluginRepository>
+        </pluginRepositories>
+        <id>bintray</id>
+    </profile>
+</profiles>
+```
+
+### Modules
+
+* `commercetools-http-client`: alias for commercetools-okhttp-client4
+* `commercetools-okhttp-client3`: uses OkHttp client 3.0
+* `commercetools-okhttp-client4`: uses OkHttp client 4.0
+* `commercetools-sdk-java-api`: models and request builders for the product API
+* `commercetools-sdk-java-importapi`: models and request builders for the import API
+* `commercetools-sdk-java-ml`: models and request builders for the machine learning API
+
 ## Configuration
 
 Creating http requests starts from the ApiRoot which  holds information specific to the project. Easiest way to configure it is to use the following method:
@@ -172,84 +264,6 @@ class Main {
                 .executeBlocking().getBody();   
     }
 }
-                
-```
-                
-## Using the generated commercetools-api SDK in your project
-
-The latest stable SDK release can be retrieved from [jcenter](https://bintray.com/bintray/jcenter?filterByPkgName=commercetools-sdk-java) with:
-
-```gradle
-ext {
-    versions = [
-        commercetools: "2.0.0-beta.2"
-    ]
-}
-
-sourceCompatibility = 1.8
-
-repositories {
-    jcenter()
-}
-
-dependencies {
-    implementation "com.commercetools.sdk:commercetools-http-client:${versions.commercetools}"
-    implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
-    implementation "com.commercetools.sdk:commercetools-sdk-java-importapi:${versions.commercetools}"
-    implementation "com.commercetools.sdk:commercetools-sdk-java-ml:${versions.commercetools}"
-}
-```
-```maven
-<properties>
-    <commercetools.version>2.0.0-beta.2</commercetools.version>
-</properties>
-<dependencies>
-    <dependency>
-      <groupId>com.commercetools.sdk</groupId>
-      <artifactId>commercetools-http-client</artifactId>
-      <version>${commercetools.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.commercetools.sdk</groupId>
-      <artifactId>commercetools-sdk-java-api</artifactId>
-      <version>${commercetools.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.commercetools.sdk</groupId>
-      <artifactId>commercetools-sdk-java-importapi</artifactId>
-      <version>${commercetools.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>com.commercetools.sdk</groupId>
-      <artifactId>commercetools-sdk-java-ml</artifactId>
-      <version>${commercetools.version}</version>
-    </dependency>
-</dependencies>
-<profiles>
-    <profile>
-        <repositories>
-            <repository>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-                <id>central</id>
-                <name>bintray</name>
-                <url>https://jcenter.bintray.com</url>
-            </repository>
-        </repositories>
-        <pluginRepositories>
-            <pluginRepository>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-                <id>central</id>
-                <name>bintray-plugins</name>
-                <url>https://jcenter.bintray.com</url>
-            </pluginRepository>
-        </pluginRepositories>
-        <id>bintray</id>
-    </profile>
-</profiles>
 ```
 
 [](definitions for the top badges)

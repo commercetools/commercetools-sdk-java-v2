@@ -31,16 +31,25 @@ public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
-    public static CustomerSetCustomerGroupActionImpl of(){
+    public static CustomerSetCustomerGroupAction of(){
         return new CustomerSetCustomerGroupActionImpl();
     }
     
 
-    public static CustomerSetCustomerGroupActionImpl of(final CustomerSetCustomerGroupAction template) {
+    public static CustomerSetCustomerGroupAction of(final CustomerSetCustomerGroupAction template) {
         CustomerSetCustomerGroupActionImpl instance = new CustomerSetCustomerGroupActionImpl();
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
+
+    public static CustomerSetCustomerGroupActionBuilder builder(){
+        return CustomerSetCustomerGroupActionBuilder.of();
+    }
+    
+    public static CustomerSetCustomerGroupActionBuilder builder(final CustomerSetCustomerGroupAction template){
+        return CustomerSetCustomerGroupActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetCustomerGroupAction(Function<CustomerSetCustomerGroupAction, T> helper) {
         return helper.apply(this);

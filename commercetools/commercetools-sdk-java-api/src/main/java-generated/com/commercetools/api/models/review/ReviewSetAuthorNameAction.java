@@ -30,16 +30,25 @@ public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
 
     public void setAuthorName(final String authorName);
 
-    public static ReviewSetAuthorNameActionImpl of(){
+    public static ReviewSetAuthorNameAction of(){
         return new ReviewSetAuthorNameActionImpl();
     }
     
 
-    public static ReviewSetAuthorNameActionImpl of(final ReviewSetAuthorNameAction template) {
+    public static ReviewSetAuthorNameAction of(final ReviewSetAuthorNameAction template) {
         ReviewSetAuthorNameActionImpl instance = new ReviewSetAuthorNameActionImpl();
         instance.setAuthorName(template.getAuthorName());
         return instance;
     }
+
+    public static ReviewSetAuthorNameActionBuilder builder(){
+        return ReviewSetAuthorNameActionBuilder.of();
+    }
+    
+    public static ReviewSetAuthorNameActionBuilder builder(final ReviewSetAuthorNameAction template){
+        return ReviewSetAuthorNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetAuthorNameAction(Function<ReviewSetAuthorNameAction, T> helper) {
         return helper.apply(this);

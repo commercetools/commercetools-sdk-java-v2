@@ -96,12 +96,12 @@ public interface AttributeDefinitionDraft  {
     
     public void setIsSearchable(final Boolean isSearchable);
 
-    public static AttributeDefinitionDraftImpl of(){
+    public static AttributeDefinitionDraft of(){
         return new AttributeDefinitionDraftImpl();
     }
     
 
-    public static AttributeDefinitionDraftImpl of(final AttributeDefinitionDraft template) {
+    public static AttributeDefinitionDraft of(final AttributeDefinitionDraft template) {
         AttributeDefinitionDraftImpl instance = new AttributeDefinitionDraftImpl();
         instance.setType(template.getType());
         instance.setName(template.getName());
@@ -113,6 +113,15 @@ public interface AttributeDefinitionDraft  {
         instance.setIsSearchable(template.getIsSearchable());
         return instance;
     }
+
+    public static AttributeDefinitionDraftBuilder builder(){
+        return AttributeDefinitionDraftBuilder.of();
+    }
+    
+    public static AttributeDefinitionDraftBuilder builder(final AttributeDefinitionDraft template){
+        return AttributeDefinitionDraftBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeDefinitionDraft(Function<AttributeDefinitionDraft, T> helper) {
         return helper.apply(this);

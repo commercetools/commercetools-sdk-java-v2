@@ -35,17 +35,26 @@ public interface MyShoppingListSetTextLineItemDescriptionAction extends MyShoppi
     
     public void setDescription(final LocalizedString description);
 
-    public static MyShoppingListSetTextLineItemDescriptionActionImpl of(){
+    public static MyShoppingListSetTextLineItemDescriptionAction of(){
         return new MyShoppingListSetTextLineItemDescriptionActionImpl();
     }
     
 
-    public static MyShoppingListSetTextLineItemDescriptionActionImpl of(final MyShoppingListSetTextLineItemDescriptionAction template) {
+    public static MyShoppingListSetTextLineItemDescriptionAction of(final MyShoppingListSetTextLineItemDescriptionAction template) {
         MyShoppingListSetTextLineItemDescriptionActionImpl instance = new MyShoppingListSetTextLineItemDescriptionActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static MyShoppingListSetTextLineItemDescriptionActionBuilder builder(){
+        return MyShoppingListSetTextLineItemDescriptionActionBuilder.of();
+    }
+    
+    public static MyShoppingListSetTextLineItemDescriptionActionBuilder builder(final MyShoppingListSetTextLineItemDescriptionAction template){
+        return MyShoppingListSetTextLineItemDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListSetTextLineItemDescriptionAction(Function<MyShoppingListSetTextLineItemDescriptionAction, T> helper) {
         return helper.apply(this);

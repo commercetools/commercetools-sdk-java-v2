@@ -28,16 +28,25 @@ public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAct
 
     public void setDescription(final String description);
 
-    public static ProductTypeChangeDescriptionActionImpl of(){
+    public static ProductTypeChangeDescriptionAction of(){
         return new ProductTypeChangeDescriptionActionImpl();
     }
     
 
-    public static ProductTypeChangeDescriptionActionImpl of(final ProductTypeChangeDescriptionAction template) {
+    public static ProductTypeChangeDescriptionAction of(final ProductTypeChangeDescriptionAction template) {
         ProductTypeChangeDescriptionActionImpl instance = new ProductTypeChangeDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static ProductTypeChangeDescriptionActionBuilder builder(){
+        return ProductTypeChangeDescriptionActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeDescriptionActionBuilder builder(final ProductTypeChangeDescriptionAction template){
+        return ProductTypeChangeDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeDescriptionAction(Function<ProductTypeChangeDescriptionAction, T> helper) {
         return helper.apply(this);

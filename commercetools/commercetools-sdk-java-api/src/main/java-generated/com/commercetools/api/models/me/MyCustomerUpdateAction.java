@@ -78,6 +78,7 @@ public interface MyCustomerUpdateAction extends com.commercetools.api.models.Res
 
 
 
+
     default <T> T withMyCustomerUpdateAction(Function<MyCustomerUpdateAction, T> helper) {
         return helper.apply(this);
     }

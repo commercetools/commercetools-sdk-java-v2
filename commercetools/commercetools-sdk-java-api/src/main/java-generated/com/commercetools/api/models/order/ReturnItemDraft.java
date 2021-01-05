@@ -52,12 +52,12 @@ public interface ReturnItemDraft  {
     
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
-    public static ReturnItemDraftImpl of(){
+    public static ReturnItemDraft of(){
         return new ReturnItemDraftImpl();
     }
     
 
-    public static ReturnItemDraftImpl of(final ReturnItemDraft template) {
+    public static ReturnItemDraft of(final ReturnItemDraft template) {
         ReturnItemDraftImpl instance = new ReturnItemDraftImpl();
         instance.setQuantity(template.getQuantity());
         instance.setLineItemId(template.getLineItemId());
@@ -66,6 +66,15 @@ public interface ReturnItemDraft  {
         instance.setShipmentState(template.getShipmentState());
         return instance;
     }
+
+    public static ReturnItemDraftBuilder builder(){
+        return ReturnItemDraftBuilder.of();
+    }
+    
+    public static ReturnItemDraftBuilder builder(final ReturnItemDraft template){
+        return ReturnItemDraftBuilder.of(template);
+    }
+    
 
     default <T> T withReturnItemDraft(Function<ReturnItemDraft, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface MyPaymentSetCustomFieldAction extends MyPaymentUpdateAction {
     
     public void setValue(final JsonNode value);
 
-    public static MyPaymentSetCustomFieldActionImpl of(){
+    public static MyPaymentSetCustomFieldAction of(){
         return new MyPaymentSetCustomFieldActionImpl();
     }
     
 
-    public static MyPaymentSetCustomFieldActionImpl of(final MyPaymentSetCustomFieldAction template) {
+    public static MyPaymentSetCustomFieldAction of(final MyPaymentSetCustomFieldAction template) {
         MyPaymentSetCustomFieldActionImpl instance = new MyPaymentSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static MyPaymentSetCustomFieldActionBuilder builder(){
+        return MyPaymentSetCustomFieldActionBuilder.of();
+    }
+    
+    public static MyPaymentSetCustomFieldActionBuilder builder(final MyPaymentSetCustomFieldAction template){
+        return MyPaymentSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyPaymentSetCustomFieldAction(Function<MyPaymentSetCustomFieldAction, T> helper) {
         return helper.apply(this);

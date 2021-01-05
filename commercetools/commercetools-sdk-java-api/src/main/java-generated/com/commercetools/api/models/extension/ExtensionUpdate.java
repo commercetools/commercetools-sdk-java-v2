@@ -37,17 +37,26 @@ public interface ExtensionUpdate extends com.commercetools.api.models.ResourceUp
     public void setActions(final ExtensionUpdateAction ...actions);
     public void setActions(final List<ExtensionUpdateAction> actions);
 
-    public static ExtensionUpdateImpl of(){
+    public static ExtensionUpdate of(){
         return new ExtensionUpdateImpl();
     }
     
 
-    public static ExtensionUpdateImpl of(final ExtensionUpdate template) {
+    public static ExtensionUpdate of(final ExtensionUpdate template) {
         ExtensionUpdateImpl instance = new ExtensionUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ExtensionUpdateBuilder builder(){
+        return ExtensionUpdateBuilder.of();
+    }
+    
+    public static ExtensionUpdateBuilder builder(final ExtensionUpdate template){
+        return ExtensionUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionUpdate(Function<ExtensionUpdate, T> helper) {
         return helper.apply(this);

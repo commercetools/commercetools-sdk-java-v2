@@ -35,17 +35,26 @@ public interface OrderShipmentStateChangedMessagePayload extends MessagePayload 
     
     public void setOldShipmentState(final ShipmentState oldShipmentState);
 
-    public static OrderShipmentStateChangedMessagePayloadImpl of(){
+    public static OrderShipmentStateChangedMessagePayload of(){
         return new OrderShipmentStateChangedMessagePayloadImpl();
     }
     
 
-    public static OrderShipmentStateChangedMessagePayloadImpl of(final OrderShipmentStateChangedMessagePayload template) {
+    public static OrderShipmentStateChangedMessagePayload of(final OrderShipmentStateChangedMessagePayload template) {
         OrderShipmentStateChangedMessagePayloadImpl instance = new OrderShipmentStateChangedMessagePayloadImpl();
         instance.setShipmentState(template.getShipmentState());
         instance.setOldShipmentState(template.getOldShipmentState());
         return instance;
     }
+
+    public static OrderShipmentStateChangedMessagePayloadBuilder builder(){
+        return OrderShipmentStateChangedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderShipmentStateChangedMessagePayloadBuilder builder(final OrderShipmentStateChangedMessagePayload template){
+        return OrderShipmentStateChangedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderShipmentStateChangedMessagePayload(Function<OrderShipmentStateChangedMessagePayload, T> helper) {
         return helper.apply(this);

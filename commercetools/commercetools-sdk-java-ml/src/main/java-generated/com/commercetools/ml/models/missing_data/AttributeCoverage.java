@@ -38,17 +38,26 @@ public interface AttributeCoverage  {
     
     public void setValues(final Double values);
 
-    public static AttributeCoverageImpl of(){
+    public static AttributeCoverage of(){
         return new AttributeCoverageImpl();
     }
     
 
-    public static AttributeCoverageImpl of(final AttributeCoverage template) {
+    public static AttributeCoverage of(final AttributeCoverage template) {
         AttributeCoverageImpl instance = new AttributeCoverageImpl();
         instance.setNames(template.getNames());
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public static AttributeCoverageBuilder builder(){
+        return AttributeCoverageBuilder.of();
+    }
+    
+    public static AttributeCoverageBuilder builder(final AttributeCoverage template){
+        return AttributeCoverageBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeCoverage(Function<AttributeCoverage, T> helper) {
         return helper.apply(this);

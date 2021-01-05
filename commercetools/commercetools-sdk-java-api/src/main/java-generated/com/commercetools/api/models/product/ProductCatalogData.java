@@ -48,12 +48,12 @@ public interface ProductCatalogData  {
     
     public void setHasStagedChanges(final Boolean hasStagedChanges);
 
-    public static ProductCatalogDataImpl of(){
+    public static ProductCatalogData of(){
         return new ProductCatalogDataImpl();
     }
     
 
-    public static ProductCatalogDataImpl of(final ProductCatalogData template) {
+    public static ProductCatalogData of(final ProductCatalogData template) {
         ProductCatalogDataImpl instance = new ProductCatalogDataImpl();
         instance.setPublished(template.getPublished());
         instance.setCurrent(template.getCurrent());
@@ -61,6 +61,15 @@ public interface ProductCatalogData  {
         instance.setHasStagedChanges(template.getHasStagedChanges());
         return instance;
     }
+
+    public static ProductCatalogDataBuilder builder(){
+        return ProductCatalogDataBuilder.of();
+    }
+    
+    public static ProductCatalogDataBuilder builder(final ProductCatalogData template){
+        return ProductCatalogDataBuilder.of(template);
+    }
+    
 
     default <T> T withProductCatalogData(Function<ProductCatalogData, T> helper) {
         return helper.apply(this);

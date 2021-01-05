@@ -23,16 +23,25 @@ public interface LanguageUsedInStoresError extends ErrorObject {
 
 
 
-    public static LanguageUsedInStoresErrorImpl of(){
+    public static LanguageUsedInStoresError of(){
         return new LanguageUsedInStoresErrorImpl();
     }
     
 
-    public static LanguageUsedInStoresErrorImpl of(final LanguageUsedInStoresError template) {
+    public static LanguageUsedInStoresError of(final LanguageUsedInStoresError template) {
         LanguageUsedInStoresErrorImpl instance = new LanguageUsedInStoresErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static LanguageUsedInStoresErrorBuilder builder(){
+        return LanguageUsedInStoresErrorBuilder.of();
+    }
+    
+    public static LanguageUsedInStoresErrorBuilder builder(final LanguageUsedInStoresError template){
+        return LanguageUsedInStoresErrorBuilder.of(template);
+    }
+    
 
     default <T> T withLanguageUsedInStoresError(Function<LanguageUsedInStoresError, T> helper) {
         return helper.apply(this);

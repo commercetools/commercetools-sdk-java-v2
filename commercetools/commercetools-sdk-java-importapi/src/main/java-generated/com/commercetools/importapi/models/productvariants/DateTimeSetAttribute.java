@@ -34,17 +34,26 @@ public interface DateTimeSetAttribute extends Attribute {
     public void setValue(final ZonedDateTime ...value);
     public void setValue(final List<ZonedDateTime> value);
 
-    public static DateTimeSetAttributeImpl of(){
+    public static DateTimeSetAttribute of(){
         return new DateTimeSetAttributeImpl();
     }
     
 
-    public static DateTimeSetAttributeImpl of(final DateTimeSetAttribute template) {
+    public static DateTimeSetAttribute of(final DateTimeSetAttribute template) {
         DateTimeSetAttributeImpl instance = new DateTimeSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static DateTimeSetAttributeBuilder builder(){
+        return DateTimeSetAttributeBuilder.of();
+    }
+    
+    public static DateTimeSetAttributeBuilder builder(final DateTimeSetAttribute template){
+        return DateTimeSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withDateTimeSetAttribute(Function<DateTimeSetAttribute, T> helper) {
         return helper.apply(this);

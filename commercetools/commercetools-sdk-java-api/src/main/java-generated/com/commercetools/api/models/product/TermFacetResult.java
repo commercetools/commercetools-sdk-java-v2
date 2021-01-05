@@ -58,12 +58,12 @@ public interface TermFacetResult extends FacetResult {
     public void setTerms(final FacetResultTerm ...terms);
     public void setTerms(final List<FacetResultTerm> terms);
 
-    public static TermFacetResultImpl of(){
+    public static TermFacetResult of(){
         return new TermFacetResultImpl();
     }
     
 
-    public static TermFacetResultImpl of(final TermFacetResult template) {
+    public static TermFacetResult of(final TermFacetResult template) {
         TermFacetResultImpl instance = new TermFacetResultImpl();
         instance.setDataType(template.getDataType());
         instance.setMissing(template.getMissing());
@@ -72,6 +72,15 @@ public interface TermFacetResult extends FacetResult {
         instance.setTerms(template.getTerms());
         return instance;
     }
+
+    public static TermFacetResultBuilder builder(){
+        return TermFacetResultBuilder.of();
+    }
+    
+    public static TermFacetResultBuilder builder(final TermFacetResult template){
+        return TermFacetResultBuilder.of(template);
+    }
+    
 
     default <T> T withTermFacetResult(Function<TermFacetResult, T> helper) {
         return helper.apply(this);

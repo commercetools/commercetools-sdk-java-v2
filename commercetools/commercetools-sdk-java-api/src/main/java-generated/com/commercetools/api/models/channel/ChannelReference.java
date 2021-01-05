@@ -30,17 +30,26 @@ public interface ChannelReference extends Reference {
 
     public void setObj(final Channel obj);
 
-    public static ChannelReferenceImpl of(){
+    public static ChannelReference of(){
         return new ChannelReferenceImpl();
     }
     
 
-    public static ChannelReferenceImpl of(final ChannelReference template) {
+    public static ChannelReference of(final ChannelReference template) {
         ChannelReferenceImpl instance = new ChannelReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static ChannelReferenceBuilder builder(){
+        return ChannelReferenceBuilder.of();
+    }
+    
+    public static ChannelReferenceBuilder builder(final ChannelReference template){
+        return ChannelReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withChannelReference(Function<ChannelReference, T> helper) {
         return helper.apply(this);

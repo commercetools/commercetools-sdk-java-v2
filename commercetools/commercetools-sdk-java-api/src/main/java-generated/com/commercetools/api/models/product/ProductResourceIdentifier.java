@@ -24,17 +24,26 @@ public interface ProductResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static ProductResourceIdentifierImpl of(){
+    public static ProductResourceIdentifier of(){
         return new ProductResourceIdentifierImpl();
     }
     
 
-    public static ProductResourceIdentifierImpl of(final ProductResourceIdentifier template) {
+    public static ProductResourceIdentifier of(final ProductResourceIdentifier template) {
         ProductResourceIdentifierImpl instance = new ProductResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ProductResourceIdentifierBuilder builder(){
+        return ProductResourceIdentifierBuilder.of();
+    }
+    
+    public static ProductResourceIdentifierBuilder builder(final ProductResourceIdentifier template){
+        return ProductResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withProductResourceIdentifier(Function<ProductResourceIdentifier, T> helper) {
         return helper.apply(this);

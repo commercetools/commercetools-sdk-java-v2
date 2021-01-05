@@ -40,18 +40,27 @@ public interface PaymentStatusDraft  {
     
     public void setState(final StateResourceIdentifier state);
 
-    public static PaymentStatusDraftImpl of(){
+    public static PaymentStatusDraft of(){
         return new PaymentStatusDraftImpl();
     }
     
 
-    public static PaymentStatusDraftImpl of(final PaymentStatusDraft template) {
+    public static PaymentStatusDraft of(final PaymentStatusDraft template) {
         PaymentStatusDraftImpl instance = new PaymentStatusDraftImpl();
         instance.setInterfaceCode(template.getInterfaceCode());
         instance.setInterfaceText(template.getInterfaceText());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static PaymentStatusDraftBuilder builder(){
+        return PaymentStatusDraftBuilder.of();
+    }
+    
+    public static PaymentStatusDraftBuilder builder(final PaymentStatusDraft template){
+        return PaymentStatusDraftBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentStatusDraft(Function<PaymentStatusDraft, T> helper) {
         return helper.apply(this);

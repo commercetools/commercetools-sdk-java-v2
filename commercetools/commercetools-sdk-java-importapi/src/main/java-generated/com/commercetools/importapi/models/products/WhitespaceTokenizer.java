@@ -23,15 +23,24 @@ public interface WhitespaceTokenizer extends SuggestTokenizer {
 
 
 
-    public static WhitespaceTokenizerImpl of(){
+    public static WhitespaceTokenizer of(){
         return new WhitespaceTokenizerImpl();
     }
     
 
-    public static WhitespaceTokenizerImpl of(final WhitespaceTokenizer template) {
+    public static WhitespaceTokenizer of(final WhitespaceTokenizer template) {
         WhitespaceTokenizerImpl instance = new WhitespaceTokenizerImpl();
         return instance;
     }
+
+    public static WhitespaceTokenizerBuilder builder(){
+        return WhitespaceTokenizerBuilder.of();
+    }
+    
+    public static WhitespaceTokenizerBuilder builder(final WhitespaceTokenizer template){
+        return WhitespaceTokenizerBuilder.of(template);
+    }
+    
 
     default <T> T withWhitespaceTokenizer(Function<WhitespaceTokenizer, T> helper) {
         return helper.apply(this);

@@ -31,16 +31,25 @@ public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateActi
 
     public void setAnonymousId(final String anonymousId);
 
-    public static ShoppingListSetAnonymousIdActionImpl of(){
+    public static ShoppingListSetAnonymousIdAction of(){
         return new ShoppingListSetAnonymousIdActionImpl();
     }
     
 
-    public static ShoppingListSetAnonymousIdActionImpl of(final ShoppingListSetAnonymousIdAction template) {
+    public static ShoppingListSetAnonymousIdAction of(final ShoppingListSetAnonymousIdAction template) {
         ShoppingListSetAnonymousIdActionImpl instance = new ShoppingListSetAnonymousIdActionImpl();
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static ShoppingListSetAnonymousIdActionBuilder builder(){
+        return ShoppingListSetAnonymousIdActionBuilder.of();
+    }
+    
+    public static ShoppingListSetAnonymousIdActionBuilder builder(final ShoppingListSetAnonymousIdAction template){
+        return ShoppingListSetAnonymousIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListSetAnonymousIdAction(Function<ShoppingListSetAnonymousIdAction, T> helper) {
         return helper.apply(this);

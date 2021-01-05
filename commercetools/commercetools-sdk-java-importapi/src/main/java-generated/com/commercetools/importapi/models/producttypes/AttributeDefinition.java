@@ -75,12 +75,12 @@ public interface AttributeDefinition  {
     
     public void setIsSearchable(final Boolean isSearchable);
 
-    public static AttributeDefinitionImpl of(){
+    public static AttributeDefinition of(){
         return new AttributeDefinitionImpl();
     }
     
 
-    public static AttributeDefinitionImpl of(final AttributeDefinition template) {
+    public static AttributeDefinition of(final AttributeDefinition template) {
         AttributeDefinitionImpl instance = new AttributeDefinitionImpl();
         instance.setType(template.getType());
         instance.setName(template.getName());
@@ -92,6 +92,15 @@ public interface AttributeDefinition  {
         instance.setIsSearchable(template.getIsSearchable());
         return instance;
     }
+
+    public static AttributeDefinitionBuilder builder(){
+        return AttributeDefinitionBuilder.of();
+    }
+    
+    public static AttributeDefinitionBuilder builder(final AttributeDefinition template){
+        return AttributeDefinitionBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);

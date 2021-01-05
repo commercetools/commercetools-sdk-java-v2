@@ -59,12 +59,12 @@ public interface ShoppingListLineItemDraft  {
     
     public void setVariantId(final Long variantId);
 
-    public static ShoppingListLineItemDraftImpl of(){
+    public static ShoppingListLineItemDraft of(){
         return new ShoppingListLineItemDraftImpl();
     }
     
 
-    public static ShoppingListLineItemDraftImpl of(final ShoppingListLineItemDraft template) {
+    public static ShoppingListLineItemDraft of(final ShoppingListLineItemDraft template) {
         ShoppingListLineItemDraftImpl instance = new ShoppingListLineItemDraftImpl();
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(template.getCustom());
@@ -74,6 +74,15 @@ public interface ShoppingListLineItemDraft  {
         instance.setVariantId(template.getVariantId());
         return instance;
     }
+
+    public static ShoppingListLineItemDraftBuilder builder(){
+        return ShoppingListLineItemDraftBuilder.of();
+    }
+    
+    public static ShoppingListLineItemDraftBuilder builder(final ShoppingListLineItemDraft template){
+        return ShoppingListLineItemDraftBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListLineItemDraft(Function<ShoppingListLineItemDraft, T> helper) {
         return helper.apply(this);

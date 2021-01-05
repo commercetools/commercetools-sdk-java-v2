@@ -34,17 +34,26 @@ public interface OrderEditApply  {
     
     public void setResourceVersion(final Integer resourceVersion);
 
-    public static OrderEditApplyImpl of(){
+    public static OrderEditApply of(){
         return new OrderEditApplyImpl();
     }
     
 
-    public static OrderEditApplyImpl of(final OrderEditApply template) {
+    public static OrderEditApply of(final OrderEditApply template) {
         OrderEditApplyImpl instance = new OrderEditApplyImpl();
         instance.setEditVersion(template.getEditVersion());
         instance.setResourceVersion(template.getResourceVersion());
         return instance;
     }
+
+    public static OrderEditApplyBuilder builder(){
+        return OrderEditApplyBuilder.of();
+    }
+    
+    public static OrderEditApplyBuilder builder(final OrderEditApply template){
+        return OrderEditApplyBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditApply(Function<OrderEditApply, T> helper) {
         return helper.apply(this);

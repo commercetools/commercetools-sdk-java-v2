@@ -31,16 +31,25 @@ public interface LocalizedEnumField extends CustomField {
 
     public void setValue(final String value);
 
-    public static LocalizedEnumFieldImpl of(){
+    public static LocalizedEnumField of(){
         return new LocalizedEnumFieldImpl();
     }
     
 
-    public static LocalizedEnumFieldImpl of(final LocalizedEnumField template) {
+    public static LocalizedEnumField of(final LocalizedEnumField template) {
         LocalizedEnumFieldImpl instance = new LocalizedEnumFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static LocalizedEnumFieldBuilder builder(){
+        return LocalizedEnumFieldBuilder.of();
+    }
+    
+    public static LocalizedEnumFieldBuilder builder(final LocalizedEnumField template){
+        return LocalizedEnumFieldBuilder.of(template);
+    }
+    
 
     default <T> T withLocalizedEnumField(Function<LocalizedEnumField, T> helper) {
         return helper.apply(this);

@@ -38,16 +38,25 @@ public interface OrderImportRequest extends ImportRequest {
     public void setResources(final OrderImport ...resources);
     public void setResources(final List<OrderImport> resources);
 
-    public static OrderImportRequestImpl of(){
+    public static OrderImportRequest of(){
         return new OrderImportRequestImpl();
     }
     
 
-    public static OrderImportRequestImpl of(final OrderImportRequest template) {
+    public static OrderImportRequest of(final OrderImportRequest template) {
         OrderImportRequestImpl instance = new OrderImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public static OrderImportRequestBuilder builder(){
+        return OrderImportRequestBuilder.of();
+    }
+    
+    public static OrderImportRequestBuilder builder(final OrderImportRequest template){
+        return OrderImportRequestBuilder.of(template);
+    }
+    
 
     default <T> T withOrderImportRequest(Function<OrderImportRequest, T> helper) {
         return helper.apply(this);

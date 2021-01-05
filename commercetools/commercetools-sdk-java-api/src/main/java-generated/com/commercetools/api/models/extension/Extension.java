@@ -98,12 +98,12 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
     
     public void setTimeoutInMs(final Integer timeoutInMs);
 
-    public static ExtensionImpl of(){
+    public static Extension of(){
         return new ExtensionImpl();
     }
     
 
-    public static ExtensionImpl of(final Extension template) {
+    public static Extension of(final Extension template) {
         ExtensionImpl instance = new ExtensionImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -117,6 +117,15 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
         instance.setTimeoutInMs(template.getTimeoutInMs());
         return instance;
     }
+
+    public static ExtensionBuilder builder(){
+        return ExtensionBuilder.of();
+    }
+    
+    public static ExtensionBuilder builder(final Extension template){
+        return ExtensionBuilder.of(template);
+    }
+    
 
     default <T> T withExtension(Function<Extension, T> helper) {
         return helper.apply(this);

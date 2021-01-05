@@ -37,17 +37,26 @@ public interface InventoryEntryUpdate extends com.commercetools.api.models.Resou
     public void setActions(final InventoryEntryUpdateAction ...actions);
     public void setActions(final List<InventoryEntryUpdateAction> actions);
 
-    public static InventoryEntryUpdateImpl of(){
+    public static InventoryEntryUpdate of(){
         return new InventoryEntryUpdateImpl();
     }
     
 
-    public static InventoryEntryUpdateImpl of(final InventoryEntryUpdate template) {
+    public static InventoryEntryUpdate of(final InventoryEntryUpdate template) {
         InventoryEntryUpdateImpl instance = new InventoryEntryUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static InventoryEntryUpdateBuilder builder(){
+        return InventoryEntryUpdateBuilder.of();
+    }
+    
+    public static InventoryEntryUpdateBuilder builder(final InventoryEntryUpdate template){
+        return InventoryEntryUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryUpdate(Function<InventoryEntryUpdate, T> helper) {
         return helper.apply(this);

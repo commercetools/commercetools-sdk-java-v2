@@ -46,18 +46,27 @@ public interface TaxedPriceDraft  {
     public void setTaxPortions(final TaxPortionDraft ...taxPortions);
     public void setTaxPortions(final List<TaxPortionDraft> taxPortions);
 
-    public static TaxedPriceDraftImpl of(){
+    public static TaxedPriceDraft of(){
         return new TaxedPriceDraftImpl();
     }
     
 
-    public static TaxedPriceDraftImpl of(final TaxedPriceDraft template) {
+    public static TaxedPriceDraft of(final TaxedPriceDraft template) {
         TaxedPriceDraftImpl instance = new TaxedPriceDraftImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
         instance.setTaxPortions(template.getTaxPortions());
         return instance;
     }
+
+    public static TaxedPriceDraftBuilder builder(){
+        return TaxedPriceDraftBuilder.of();
+    }
+    
+    public static TaxedPriceDraftBuilder builder(final TaxedPriceDraft template){
+        return TaxedPriceDraftBuilder.of(template);
+    }
+    
 
     default <T> T withTaxedPriceDraft(Function<TaxedPriceDraft, T> helper) {
         return helper.apply(this);

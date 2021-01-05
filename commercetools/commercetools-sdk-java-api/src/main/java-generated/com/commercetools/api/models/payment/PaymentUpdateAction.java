@@ -80,6 +80,7 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
 
 
 
+
     default <T> T withPaymentUpdateAction(Function<PaymentUpdateAction, T> helper) {
         return helper.apply(this);
     }

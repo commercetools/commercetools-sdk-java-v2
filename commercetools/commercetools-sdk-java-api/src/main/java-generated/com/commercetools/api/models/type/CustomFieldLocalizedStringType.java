@@ -23,15 +23,24 @@ public interface CustomFieldLocalizedStringType extends FieldType {
 
 
 
-    public static CustomFieldLocalizedStringTypeImpl of(){
+    public static CustomFieldLocalizedStringType of(){
         return new CustomFieldLocalizedStringTypeImpl();
     }
     
 
-    public static CustomFieldLocalizedStringTypeImpl of(final CustomFieldLocalizedStringType template) {
+    public static CustomFieldLocalizedStringType of(final CustomFieldLocalizedStringType template) {
         CustomFieldLocalizedStringTypeImpl instance = new CustomFieldLocalizedStringTypeImpl();
         return instance;
     }
+
+    public static CustomFieldLocalizedStringTypeBuilder builder(){
+        return CustomFieldLocalizedStringTypeBuilder.of();
+    }
+    
+    public static CustomFieldLocalizedStringTypeBuilder builder(final CustomFieldLocalizedStringType template){
+        return CustomFieldLocalizedStringTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldLocalizedStringType(Function<CustomFieldLocalizedStringType, T> helper) {
         return helper.apply(this);

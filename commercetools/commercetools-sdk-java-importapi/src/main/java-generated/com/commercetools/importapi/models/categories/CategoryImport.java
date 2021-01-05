@@ -123,12 +123,12 @@ public interface CategoryImport extends ImportResource {
     
     public void setCustom(final Custom custom);
 
-    public static CategoryImportImpl of(){
+    public static CategoryImport of(){
         return new CategoryImportImpl();
     }
     
 
-    public static CategoryImportImpl of(final CategoryImport template) {
+    public static CategoryImport of(final CategoryImport template) {
         CategoryImportImpl instance = new CategoryImportImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -144,6 +144,15 @@ public interface CategoryImport extends ImportResource {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static CategoryImportBuilder builder(){
+        return CategoryImportBuilder.of();
+    }
+    
+    public static CategoryImportBuilder builder(final CategoryImport template){
+        return CategoryImportBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryImport(Function<CategoryImport, T> helper) {
         return helper.apply(this);

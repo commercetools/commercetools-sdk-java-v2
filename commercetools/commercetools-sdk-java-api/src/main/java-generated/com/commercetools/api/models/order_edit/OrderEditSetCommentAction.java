@@ -28,16 +28,25 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
 
     public void setComment(final String comment);
 
-    public static OrderEditSetCommentActionImpl of(){
+    public static OrderEditSetCommentAction of(){
         return new OrderEditSetCommentActionImpl();
     }
     
 
-    public static OrderEditSetCommentActionImpl of(final OrderEditSetCommentAction template) {
+    public static OrderEditSetCommentAction of(final OrderEditSetCommentAction template) {
         OrderEditSetCommentActionImpl instance = new OrderEditSetCommentActionImpl();
         instance.setComment(template.getComment());
         return instance;
     }
+
+    public static OrderEditSetCommentActionBuilder builder(){
+        return OrderEditSetCommentActionBuilder.of();
+    }
+    
+    public static OrderEditSetCommentActionBuilder builder(final OrderEditSetCommentAction template){
+        return OrderEditSetCommentActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditSetCommentAction(Function<OrderEditSetCommentAction, T> helper) {
         return helper.apply(this);

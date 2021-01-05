@@ -35,17 +35,26 @@ public interface InventoryEntrySetCustomFieldAction extends InventoryEntryUpdate
     
     public void setValue(final JsonNode value);
 
-    public static InventoryEntrySetCustomFieldActionImpl of(){
+    public static InventoryEntrySetCustomFieldAction of(){
         return new InventoryEntrySetCustomFieldActionImpl();
     }
     
 
-    public static InventoryEntrySetCustomFieldActionImpl of(final InventoryEntrySetCustomFieldAction template) {
+    public static InventoryEntrySetCustomFieldAction of(final InventoryEntrySetCustomFieldAction template) {
         InventoryEntrySetCustomFieldActionImpl instance = new InventoryEntrySetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static InventoryEntrySetCustomFieldActionBuilder builder(){
+        return InventoryEntrySetCustomFieldActionBuilder.of();
+    }
+    
+    public static InventoryEntrySetCustomFieldActionBuilder builder(final InventoryEntrySetCustomFieldAction template){
+        return InventoryEntrySetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntrySetCustomFieldAction(Function<InventoryEntrySetCustomFieldAction, T> helper) {
         return helper.apply(this);

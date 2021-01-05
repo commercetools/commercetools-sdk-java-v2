@@ -35,17 +35,26 @@ public interface StagedOrderSetReturnPaymentStateAction extends StagedOrderUpdat
     
     public void setPaymentState(final ReturnPaymentState paymentState);
 
-    public static StagedOrderSetReturnPaymentStateActionImpl of(){
+    public static StagedOrderSetReturnPaymentStateAction of(){
         return new StagedOrderSetReturnPaymentStateActionImpl();
     }
     
 
-    public static StagedOrderSetReturnPaymentStateActionImpl of(final StagedOrderSetReturnPaymentStateAction template) {
+    public static StagedOrderSetReturnPaymentStateAction of(final StagedOrderSetReturnPaymentStateAction template) {
         StagedOrderSetReturnPaymentStateActionImpl instance = new StagedOrderSetReturnPaymentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }
+
+    public static StagedOrderSetReturnPaymentStateActionBuilder builder(){
+        return StagedOrderSetReturnPaymentStateActionBuilder.of();
+    }
+    
+    public static StagedOrderSetReturnPaymentStateActionBuilder builder(final StagedOrderSetReturnPaymentStateAction template){
+        return StagedOrderSetReturnPaymentStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetReturnPaymentStateAction(Function<StagedOrderSetReturnPaymentStateAction, T> helper) {
         return helper.apply(this);

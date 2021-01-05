@@ -74,12 +74,12 @@ public interface ChannelDraft  {
     
     public void setGeoLocation(final GeoJson geoLocation);
 
-    public static ChannelDraftImpl of(){
+    public static ChannelDraft of(){
         return new ChannelDraftImpl();
     }
     
 
-    public static ChannelDraftImpl of(final ChannelDraft template) {
+    public static ChannelDraft of(final ChannelDraft template) {
         ChannelDraftImpl instance = new ChannelDraftImpl();
         instance.setKey(template.getKey());
         instance.setRoles(template.getRoles());
@@ -90,6 +90,15 @@ public interface ChannelDraft  {
         instance.setGeoLocation(template.getGeoLocation());
         return instance;
     }
+
+    public static ChannelDraftBuilder builder(){
+        return ChannelDraftBuilder.of();
+    }
+    
+    public static ChannelDraftBuilder builder(final ChannelDraft template){
+        return ChannelDraftBuilder.of(template);
+    }
+    
 
     default <T> T withChannelDraft(Function<ChannelDraft, T> helper) {
         return helper.apply(this);

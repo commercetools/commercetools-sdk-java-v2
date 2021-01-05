@@ -31,16 +31,25 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
-    public static DiscountCodeSetValidFromActionImpl of(){
+    public static DiscountCodeSetValidFromAction of(){
         return new DiscountCodeSetValidFromActionImpl();
     }
     
 
-    public static DiscountCodeSetValidFromActionImpl of(final DiscountCodeSetValidFromAction template) {
+    public static DiscountCodeSetValidFromAction of(final DiscountCodeSetValidFromAction template) {
         DiscountCodeSetValidFromActionImpl instance = new DiscountCodeSetValidFromActionImpl();
         instance.setValidFrom(template.getValidFrom());
         return instance;
     }
+
+    public static DiscountCodeSetValidFromActionBuilder builder(){
+        return DiscountCodeSetValidFromActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetValidFromActionBuilder builder(final DiscountCodeSetValidFromAction template){
+        return DiscountCodeSetValidFromActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetValidFromAction(Function<DiscountCodeSetValidFromAction, T> helper) {
         return helper.apply(this);

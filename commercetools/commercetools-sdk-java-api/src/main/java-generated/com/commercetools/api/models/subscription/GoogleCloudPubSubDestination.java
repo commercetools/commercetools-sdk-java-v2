@@ -34,17 +34,26 @@ public interface GoogleCloudPubSubDestination extends Destination {
     
     public void setTopic(final String topic);
 
-    public static GoogleCloudPubSubDestinationImpl of(){
+    public static GoogleCloudPubSubDestination of(){
         return new GoogleCloudPubSubDestinationImpl();
     }
     
 
-    public static GoogleCloudPubSubDestinationImpl of(final GoogleCloudPubSubDestination template) {
+    public static GoogleCloudPubSubDestination of(final GoogleCloudPubSubDestination template) {
         GoogleCloudPubSubDestinationImpl instance = new GoogleCloudPubSubDestinationImpl();
         instance.setProjectId(template.getProjectId());
         instance.setTopic(template.getTopic());
         return instance;
     }
+
+    public static GoogleCloudPubSubDestinationBuilder builder(){
+        return GoogleCloudPubSubDestinationBuilder.of();
+    }
+    
+    public static GoogleCloudPubSubDestinationBuilder builder(final GoogleCloudPubSubDestination template){
+        return GoogleCloudPubSubDestinationBuilder.of(template);
+    }
+    
 
     default <T> T withGoogleCloudPubSubDestination(Function<GoogleCloudPubSubDestination, T> helper) {
         return helper.apply(this);

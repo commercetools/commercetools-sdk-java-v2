@@ -54,6 +54,7 @@ public interface StateUpdateAction extends com.commercetools.api.models.Resource
 
 
 
+
     default <T> T withStateUpdateAction(Function<StateUpdateAction, T> helper) {
         return helper.apply(this);
     }

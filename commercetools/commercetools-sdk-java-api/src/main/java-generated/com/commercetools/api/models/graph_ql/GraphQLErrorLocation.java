@@ -34,17 +34,26 @@ public interface GraphQLErrorLocation  {
     
     public void setColumn(final Integer column);
 
-    public static GraphQLErrorLocationImpl of(){
+    public static GraphQLErrorLocation of(){
         return new GraphQLErrorLocationImpl();
     }
     
 
-    public static GraphQLErrorLocationImpl of(final GraphQLErrorLocation template) {
+    public static GraphQLErrorLocation of(final GraphQLErrorLocation template) {
         GraphQLErrorLocationImpl instance = new GraphQLErrorLocationImpl();
         instance.setLine(template.getLine());
         instance.setColumn(template.getColumn());
         return instance;
     }
+
+    public static GraphQLErrorLocationBuilder builder(){
+        return GraphQLErrorLocationBuilder.of();
+    }
+    
+    public static GraphQLErrorLocationBuilder builder(final GraphQLErrorLocation template){
+        return GraphQLErrorLocationBuilder.of(template);
+    }
+    
 
     default <T> T withGraphQLErrorLocation(Function<GraphQLErrorLocation, T> helper) {
         return helper.apply(this);

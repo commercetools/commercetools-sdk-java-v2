@@ -32,16 +32,25 @@ public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdate
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
-    public static ProductDiscountSetValidFromActionImpl of(){
+    public static ProductDiscountSetValidFromAction of(){
         return new ProductDiscountSetValidFromActionImpl();
     }
     
 
-    public static ProductDiscountSetValidFromActionImpl of(final ProductDiscountSetValidFromAction template) {
+    public static ProductDiscountSetValidFromAction of(final ProductDiscountSetValidFromAction template) {
         ProductDiscountSetValidFromActionImpl instance = new ProductDiscountSetValidFromActionImpl();
         instance.setValidFrom(template.getValidFrom());
         return instance;
     }
+
+    public static ProductDiscountSetValidFromActionBuilder builder(){
+        return ProductDiscountSetValidFromActionBuilder.of();
+    }
+    
+    public static ProductDiscountSetValidFromActionBuilder builder(final ProductDiscountSetValidFromAction template){
+        return ProductDiscountSetValidFromActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountSetValidFromAction(Function<ProductDiscountSetValidFromAction, T> helper) {
         return helper.apply(this);

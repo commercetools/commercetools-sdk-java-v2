@@ -30,16 +30,25 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
 
     public void setSlug(final LocalizedString slug);
 
-    public static ProductSlugChangedMessagePayloadImpl of(){
+    public static ProductSlugChangedMessagePayload of(){
         return new ProductSlugChangedMessagePayloadImpl();
     }
     
 
-    public static ProductSlugChangedMessagePayloadImpl of(final ProductSlugChangedMessagePayload template) {
+    public static ProductSlugChangedMessagePayload of(final ProductSlugChangedMessagePayload template) {
         ProductSlugChangedMessagePayloadImpl instance = new ProductSlugChangedMessagePayloadImpl();
         instance.setSlug(template.getSlug());
         return instance;
     }
+
+    public static ProductSlugChangedMessagePayloadBuilder builder(){
+        return ProductSlugChangedMessagePayloadBuilder.of();
+    }
+    
+    public static ProductSlugChangedMessagePayloadBuilder builder(final ProductSlugChangedMessagePayload template){
+        return ProductSlugChangedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductSlugChangedMessagePayload(Function<ProductSlugChangedMessagePayload, T> helper) {
         return helper.apply(this);

@@ -40,6 +40,7 @@ public interface SuggestTokenizer  {
 
 
 
+
     default <T> T withSuggestTokenizer(Function<SuggestTokenizer, T> helper) {
         return helper.apply(this);
     }

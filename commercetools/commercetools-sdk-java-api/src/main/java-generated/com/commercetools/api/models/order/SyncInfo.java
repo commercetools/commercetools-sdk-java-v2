@@ -46,18 +46,27 @@ public interface SyncInfo  {
     
     public void setSyncedAt(final ZonedDateTime syncedAt);
 
-    public static SyncInfoImpl of(){
+    public static SyncInfo of(){
         return new SyncInfoImpl();
     }
     
 
-    public static SyncInfoImpl of(final SyncInfo template) {
+    public static SyncInfo of(final SyncInfo template) {
         SyncInfoImpl instance = new SyncInfoImpl();
         instance.setChannel(template.getChannel());
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }
+
+    public static SyncInfoBuilder builder(){
+        return SyncInfoBuilder.of();
+    }
+    
+    public static SyncInfoBuilder builder(final SyncInfo template){
+        return SyncInfoBuilder.of(template);
+    }
+    
 
     default <T> T withSyncInfo(Function<SyncInfo, T> helper) {
         return helper.apply(this);

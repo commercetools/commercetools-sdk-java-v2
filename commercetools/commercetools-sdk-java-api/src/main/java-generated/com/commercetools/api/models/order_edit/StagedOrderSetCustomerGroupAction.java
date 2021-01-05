@@ -29,16 +29,25 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
-    public static StagedOrderSetCustomerGroupActionImpl of(){
+    public static StagedOrderSetCustomerGroupAction of(){
         return new StagedOrderSetCustomerGroupActionImpl();
     }
     
 
-    public static StagedOrderSetCustomerGroupActionImpl of(final StagedOrderSetCustomerGroupAction template) {
+    public static StagedOrderSetCustomerGroupAction of(final StagedOrderSetCustomerGroupAction template) {
         StagedOrderSetCustomerGroupActionImpl instance = new StagedOrderSetCustomerGroupActionImpl();
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
+
+    public static StagedOrderSetCustomerGroupActionBuilder builder(){
+        return StagedOrderSetCustomerGroupActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomerGroupActionBuilder builder(final StagedOrderSetCustomerGroupAction template){
+        return StagedOrderSetCustomerGroupActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomerGroupAction(Function<StagedOrderSetCustomerGroupAction, T> helper) {
         return helper.apply(this);

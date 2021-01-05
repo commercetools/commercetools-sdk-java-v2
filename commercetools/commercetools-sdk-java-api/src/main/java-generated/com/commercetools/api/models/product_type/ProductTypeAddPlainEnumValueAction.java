@@ -36,17 +36,26 @@ public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAct
     
     public void setValue(final AttributePlainEnumValue value);
 
-    public static ProductTypeAddPlainEnumValueActionImpl of(){
+    public static ProductTypeAddPlainEnumValueAction of(){
         return new ProductTypeAddPlainEnumValueActionImpl();
     }
     
 
-    public static ProductTypeAddPlainEnumValueActionImpl of(final ProductTypeAddPlainEnumValueAction template) {
+    public static ProductTypeAddPlainEnumValueAction of(final ProductTypeAddPlainEnumValueAction template) {
         ProductTypeAddPlainEnumValueActionImpl instance = new ProductTypeAddPlainEnumValueActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ProductTypeAddPlainEnumValueActionBuilder builder(){
+        return ProductTypeAddPlainEnumValueActionBuilder.of();
+    }
+    
+    public static ProductTypeAddPlainEnumValueActionBuilder builder(final ProductTypeAddPlainEnumValueAction template){
+        return ProductTypeAddPlainEnumValueActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeAddPlainEnumValueAction(Function<ProductTypeAddPlainEnumValueAction, T> helper) {
         return helper.apply(this);

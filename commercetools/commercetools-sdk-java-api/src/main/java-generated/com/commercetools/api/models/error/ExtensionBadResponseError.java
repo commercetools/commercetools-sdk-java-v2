@@ -44,12 +44,12 @@ public interface ExtensionBadResponseError extends ErrorObject {
     
     public void setErrorByExtension(final ErrorByExtension errorByExtension);
 
-    public static ExtensionBadResponseErrorImpl of(){
+    public static ExtensionBadResponseError of(){
         return new ExtensionBadResponseErrorImpl();
     }
     
 
-    public static ExtensionBadResponseErrorImpl of(final ExtensionBadResponseError template) {
+    public static ExtensionBadResponseError of(final ExtensionBadResponseError template) {
         ExtensionBadResponseErrorImpl instance = new ExtensionBadResponseErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setLocalizedMessage(template.getLocalizedMessage());
@@ -57,6 +57,15 @@ public interface ExtensionBadResponseError extends ErrorObject {
         instance.setErrorByExtension(template.getErrorByExtension());
         return instance;
     }
+
+    public static ExtensionBadResponseErrorBuilder builder(){
+        return ExtensionBadResponseErrorBuilder.of();
+    }
+    
+    public static ExtensionBadResponseErrorBuilder builder(final ExtensionBadResponseError template){
+        return ExtensionBadResponseErrorBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionBadResponseError(Function<ExtensionBadResponseError, T> helper) {
         return helper.apply(this);

@@ -36,17 +36,26 @@ public interface ExtensionInput  {
     
     public void setResource(final Reference resource);
 
-    public static ExtensionInputImpl of(){
+    public static ExtensionInput of(){
         return new ExtensionInputImpl();
     }
     
 
-    public static ExtensionInputImpl of(final ExtensionInput template) {
+    public static ExtensionInput of(final ExtensionInput template) {
         ExtensionInputImpl instance = new ExtensionInputImpl();
         instance.setAction(template.getAction());
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public static ExtensionInputBuilder builder(){
+        return ExtensionInputBuilder.of();
+    }
+    
+    public static ExtensionInputBuilder builder(final ExtensionInput template){
+        return ExtensionInputBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionInput(Function<ExtensionInput, T> helper) {
         return helper.apply(this);

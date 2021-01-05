@@ -28,16 +28,25 @@ public interface ExtensionAuthorizationHeaderAuthentication extends ExtensionHtt
 
     public void setHeaderValue(final String headerValue);
 
-    public static ExtensionAuthorizationHeaderAuthenticationImpl of(){
+    public static ExtensionAuthorizationHeaderAuthentication of(){
         return new ExtensionAuthorizationHeaderAuthenticationImpl();
     }
     
 
-    public static ExtensionAuthorizationHeaderAuthenticationImpl of(final ExtensionAuthorizationHeaderAuthentication template) {
+    public static ExtensionAuthorizationHeaderAuthentication of(final ExtensionAuthorizationHeaderAuthentication template) {
         ExtensionAuthorizationHeaderAuthenticationImpl instance = new ExtensionAuthorizationHeaderAuthenticationImpl();
         instance.setHeaderValue(template.getHeaderValue());
         return instance;
     }
+
+    public static ExtensionAuthorizationHeaderAuthenticationBuilder builder(){
+        return ExtensionAuthorizationHeaderAuthenticationBuilder.of();
+    }
+    
+    public static ExtensionAuthorizationHeaderAuthenticationBuilder builder(final ExtensionAuthorizationHeaderAuthentication template){
+        return ExtensionAuthorizationHeaderAuthenticationBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionAuthorizationHeaderAuthentication(Function<ExtensionAuthorizationHeaderAuthentication, T> helper) {
         return helper.apply(this);

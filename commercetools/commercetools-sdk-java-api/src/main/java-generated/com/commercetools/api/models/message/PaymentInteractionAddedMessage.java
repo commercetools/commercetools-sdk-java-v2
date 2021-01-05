@@ -30,12 +30,12 @@ public interface PaymentInteractionAddedMessage extends Message {
 
     public void setInteraction(final CustomFields interaction);
 
-    public static PaymentInteractionAddedMessageImpl of(){
+    public static PaymentInteractionAddedMessage of(){
         return new PaymentInteractionAddedMessageImpl();
     }
     
 
-    public static PaymentInteractionAddedMessageImpl of(final PaymentInteractionAddedMessage template) {
+    public static PaymentInteractionAddedMessage of(final PaymentInteractionAddedMessage template) {
         PaymentInteractionAddedMessageImpl instance = new PaymentInteractionAddedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface PaymentInteractionAddedMessage extends Message {
         instance.setInteraction(template.getInteraction());
         return instance;
     }
+
+    public static PaymentInteractionAddedMessageBuilder builder(){
+        return PaymentInteractionAddedMessageBuilder.of();
+    }
+    
+    public static PaymentInteractionAddedMessageBuilder builder(final PaymentInteractionAddedMessage template){
+        return PaymentInteractionAddedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentInteractionAddedMessage(Function<PaymentInteractionAddedMessage, T> helper) {
         return helper.apply(this);

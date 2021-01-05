@@ -30,15 +30,24 @@ public interface SearchKeywords  {
     @JsonAnySetter
     public void setValue(String key, List<SearchKeyword> value);
 
-    public static SearchKeywordsImpl of(){
+    public static SearchKeywords of(){
         return new SearchKeywordsImpl();
     }
     
 
-    public static SearchKeywordsImpl of(final SearchKeywords template) {
+    public static SearchKeywords of(final SearchKeywords template) {
         SearchKeywordsImpl instance = new SearchKeywordsImpl();
         return instance;
     }
+
+    public static SearchKeywordsBuilder builder(){
+        return SearchKeywordsBuilder.of();
+    }
+    
+    public static SearchKeywordsBuilder builder(final SearchKeywords template){
+        return SearchKeywordsBuilder.of(template);
+    }
+    
 
     default <T> T withSearchKeywords(Function<SearchKeywords, T> helper) {
         return helper.apply(this);

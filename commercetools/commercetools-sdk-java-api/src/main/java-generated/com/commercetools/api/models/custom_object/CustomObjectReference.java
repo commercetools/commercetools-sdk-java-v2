@@ -30,17 +30,26 @@ public interface CustomObjectReference extends Reference {
 
     public void setObj(final CustomObject obj);
 
-    public static CustomObjectReferenceImpl of(){
+    public static CustomObjectReference of(){
         return new CustomObjectReferenceImpl();
     }
     
 
-    public static CustomObjectReferenceImpl of(final CustomObjectReference template) {
+    public static CustomObjectReference of(final CustomObjectReference template) {
         CustomObjectReferenceImpl instance = new CustomObjectReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static CustomObjectReferenceBuilder builder(){
+        return CustomObjectReferenceBuilder.of();
+    }
+    
+    public static CustomObjectReferenceBuilder builder(final CustomObjectReference template){
+        return CustomObjectReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCustomObjectReference(Function<CustomObjectReference, T> helper) {
         return helper.apply(this);

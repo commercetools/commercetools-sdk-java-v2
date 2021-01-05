@@ -42,18 +42,27 @@ public interface CategorySetAssetTagsAction extends CategoryUpdateAction {
     public void setTags(final String ...tags);
     public void setTags(final List<String> tags);
 
-    public static CategorySetAssetTagsActionImpl of(){
+    public static CategorySetAssetTagsAction of(){
         return new CategorySetAssetTagsActionImpl();
     }
     
 
-    public static CategorySetAssetTagsActionImpl of(final CategorySetAssetTagsAction template) {
+    public static CategorySetAssetTagsAction of(final CategorySetAssetTagsAction template) {
         CategorySetAssetTagsActionImpl instance = new CategorySetAssetTagsActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setTags(template.getTags());
         return instance;
     }
+
+    public static CategorySetAssetTagsActionBuilder builder(){
+        return CategorySetAssetTagsActionBuilder.of();
+    }
+    
+    public static CategorySetAssetTagsActionBuilder builder(final CategorySetAssetTagsAction template){
+        return CategorySetAssetTagsActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetAssetTagsAction(Function<CategorySetAssetTagsAction, T> helper) {
         return helper.apply(this);

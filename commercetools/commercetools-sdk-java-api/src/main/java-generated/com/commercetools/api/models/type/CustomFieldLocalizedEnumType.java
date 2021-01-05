@@ -32,16 +32,25 @@ public interface CustomFieldLocalizedEnumType extends FieldType {
     public void setValues(final CustomFieldLocalizedEnumValue ...values);
     public void setValues(final List<CustomFieldLocalizedEnumValue> values);
 
-    public static CustomFieldLocalizedEnumTypeImpl of(){
+    public static CustomFieldLocalizedEnumType of(){
         return new CustomFieldLocalizedEnumTypeImpl();
     }
     
 
-    public static CustomFieldLocalizedEnumTypeImpl of(final CustomFieldLocalizedEnumType template) {
+    public static CustomFieldLocalizedEnumType of(final CustomFieldLocalizedEnumType template) {
         CustomFieldLocalizedEnumTypeImpl instance = new CustomFieldLocalizedEnumTypeImpl();
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public static CustomFieldLocalizedEnumTypeBuilder builder(){
+        return CustomFieldLocalizedEnumTypeBuilder.of();
+    }
+    
+    public static CustomFieldLocalizedEnumTypeBuilder builder(final CustomFieldLocalizedEnumType template){
+        return CustomFieldLocalizedEnumTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldLocalizedEnumType(Function<CustomFieldLocalizedEnumType, T> helper) {
         return helper.apply(this);

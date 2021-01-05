@@ -29,16 +29,25 @@ public interface StagedOrderChangeOrderStateAction extends StagedOrderUpdateActi
 
     public void setOrderState(final OrderState orderState);
 
-    public static StagedOrderChangeOrderStateActionImpl of(){
+    public static StagedOrderChangeOrderStateAction of(){
         return new StagedOrderChangeOrderStateActionImpl();
     }
     
 
-    public static StagedOrderChangeOrderStateActionImpl of(final StagedOrderChangeOrderStateAction template) {
+    public static StagedOrderChangeOrderStateAction of(final StagedOrderChangeOrderStateAction template) {
         StagedOrderChangeOrderStateActionImpl instance = new StagedOrderChangeOrderStateActionImpl();
         instance.setOrderState(template.getOrderState());
         return instance;
     }
+
+    public static StagedOrderChangeOrderStateActionBuilder builder(){
+        return StagedOrderChangeOrderStateActionBuilder.of();
+    }
+    
+    public static StagedOrderChangeOrderStateActionBuilder builder(final StagedOrderChangeOrderStateAction template){
+        return StagedOrderChangeOrderStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderChangeOrderStateAction(Function<StagedOrderChangeOrderStateAction, T> helper) {
         return helper.apply(this);

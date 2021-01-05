@@ -31,16 +31,25 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
     public void setTransitions(final StateResourceIdentifier ...transitions);
     public void setTransitions(final List<StateResourceIdentifier> transitions);
 
-    public static StateSetTransitionsActionImpl of(){
+    public static StateSetTransitionsAction of(){
         return new StateSetTransitionsActionImpl();
     }
     
 
-    public static StateSetTransitionsActionImpl of(final StateSetTransitionsAction template) {
+    public static StateSetTransitionsAction of(final StateSetTransitionsAction template) {
         StateSetTransitionsActionImpl instance = new StateSetTransitionsActionImpl();
         instance.setTransitions(template.getTransitions());
         return instance;
     }
+
+    public static StateSetTransitionsActionBuilder builder(){
+        return StateSetTransitionsActionBuilder.of();
+    }
+    
+    public static StateSetTransitionsActionBuilder builder(final StateSetTransitionsAction template){
+        return StateSetTransitionsActionBuilder.of(template);
+    }
+    
 
     default <T> T withStateSetTransitionsAction(Function<StateSetTransitionsAction, T> helper) {
         return helper.apply(this);

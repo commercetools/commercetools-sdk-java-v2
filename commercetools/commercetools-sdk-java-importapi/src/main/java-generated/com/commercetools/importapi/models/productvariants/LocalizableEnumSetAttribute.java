@@ -34,17 +34,26 @@ public interface LocalizableEnumSetAttribute extends Attribute {
     public void setValue(final String ...value);
     public void setValue(final List<String> value);
 
-    public static LocalizableEnumSetAttributeImpl of(){
+    public static LocalizableEnumSetAttribute of(){
         return new LocalizableEnumSetAttributeImpl();
     }
     
 
-    public static LocalizableEnumSetAttributeImpl of(final LocalizableEnumSetAttribute template) {
+    public static LocalizableEnumSetAttribute of(final LocalizableEnumSetAttribute template) {
         LocalizableEnumSetAttributeImpl instance = new LocalizableEnumSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static LocalizableEnumSetAttributeBuilder builder(){
+        return LocalizableEnumSetAttributeBuilder.of();
+    }
+    
+    public static LocalizableEnumSetAttributeBuilder builder(final LocalizableEnumSetAttribute template){
+        return LocalizableEnumSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withLocalizableEnumSetAttribute(Function<LocalizableEnumSetAttribute, T> helper) {
         return helper.apply(this);

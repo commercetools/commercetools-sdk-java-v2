@@ -37,17 +37,26 @@ public interface MyShoppingListUpdate extends com.commercetools.api.models.Resou
     public void setActions(final MyShoppingListUpdateAction ...actions);
     public void setActions(final List<MyShoppingListUpdateAction> actions);
 
-    public static MyShoppingListUpdateImpl of(){
+    public static MyShoppingListUpdate of(){
         return new MyShoppingListUpdateImpl();
     }
     
 
-    public static MyShoppingListUpdateImpl of(final MyShoppingListUpdate template) {
+    public static MyShoppingListUpdate of(final MyShoppingListUpdate template) {
         MyShoppingListUpdateImpl instance = new MyShoppingListUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static MyShoppingListUpdateBuilder builder(){
+        return MyShoppingListUpdateBuilder.of();
+    }
+    
+    public static MyShoppingListUpdateBuilder builder(final MyShoppingListUpdate template){
+        return MyShoppingListUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListUpdate(Function<MyShoppingListUpdate, T> helper) {
         return helper.apply(this);

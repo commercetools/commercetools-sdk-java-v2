@@ -31,16 +31,25 @@ public interface PaymentSetCustomerAction extends PaymentUpdateAction {
 
     public void setCustomer(final CustomerResourceIdentifier customer);
 
-    public static PaymentSetCustomerActionImpl of(){
+    public static PaymentSetCustomerAction of(){
         return new PaymentSetCustomerActionImpl();
     }
     
 
-    public static PaymentSetCustomerActionImpl of(final PaymentSetCustomerAction template) {
+    public static PaymentSetCustomerAction of(final PaymentSetCustomerAction template) {
         PaymentSetCustomerActionImpl instance = new PaymentSetCustomerActionImpl();
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public static PaymentSetCustomerActionBuilder builder(){
+        return PaymentSetCustomerActionBuilder.of();
+    }
+    
+    public static PaymentSetCustomerActionBuilder builder(final PaymentSetCustomerAction template){
+        return PaymentSetCustomerActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetCustomerAction(Function<PaymentSetCustomerAction, T> helper) {
         return helper.apply(this);

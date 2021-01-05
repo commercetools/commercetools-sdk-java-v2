@@ -23,15 +23,24 @@ public interface AttributeNumberType extends AttributeType {
 
 
 
-    public static AttributeNumberTypeImpl of(){
+    public static AttributeNumberType of(){
         return new AttributeNumberTypeImpl();
     }
     
 
-    public static AttributeNumberTypeImpl of(final AttributeNumberType template) {
+    public static AttributeNumberType of(final AttributeNumberType template) {
         AttributeNumberTypeImpl instance = new AttributeNumberTypeImpl();
         return instance;
     }
+
+    public static AttributeNumberTypeBuilder builder(){
+        return AttributeNumberTypeBuilder.of();
+    }
+    
+    public static AttributeNumberTypeBuilder builder(final AttributeNumberType template){
+        return AttributeNumberTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeNumberType(Function<AttributeNumberType, T> helper) {
         return helper.apply(this);

@@ -37,17 +37,26 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
     
     public void setAssetKey(final String assetKey);
 
-    public static CategorySetAssetKeyActionImpl of(){
+    public static CategorySetAssetKeyAction of(){
         return new CategorySetAssetKeyActionImpl();
     }
     
 
-    public static CategorySetAssetKeyActionImpl of(final CategorySetAssetKeyAction template) {
+    public static CategorySetAssetKeyAction of(final CategorySetAssetKeyAction template) {
         CategorySetAssetKeyActionImpl instance = new CategorySetAssetKeyActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         return instance;
     }
+
+    public static CategorySetAssetKeyActionBuilder builder(){
+        return CategorySetAssetKeyActionBuilder.of();
+    }
+    
+    public static CategorySetAssetKeyActionBuilder builder(final CategorySetAssetKeyAction template){
+        return CategorySetAssetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetAssetKeyAction(Function<CategorySetAssetKeyAction, T> helper) {
         return helper.apply(this);

@@ -24,17 +24,26 @@ public interface ReviewResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static ReviewResourceIdentifierImpl of(){
+    public static ReviewResourceIdentifier of(){
         return new ReviewResourceIdentifierImpl();
     }
     
 
-    public static ReviewResourceIdentifierImpl of(final ReviewResourceIdentifier template) {
+    public static ReviewResourceIdentifier of(final ReviewResourceIdentifier template) {
         ReviewResourceIdentifierImpl instance = new ReviewResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ReviewResourceIdentifierBuilder builder(){
+        return ReviewResourceIdentifierBuilder.of();
+    }
+    
+    public static ReviewResourceIdentifierBuilder builder(final ReviewResourceIdentifier template){
+        return ReviewResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withReviewResourceIdentifier(Function<ReviewResourceIdentifier, T> helper) {
         return helper.apply(this);

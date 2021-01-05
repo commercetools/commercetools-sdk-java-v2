@@ -30,16 +30,25 @@ public interface MyPaymentChangeAmountPlannedAction extends MyPaymentUpdateActio
 
     public void setAmount(final Money amount);
 
-    public static MyPaymentChangeAmountPlannedActionImpl of(){
+    public static MyPaymentChangeAmountPlannedAction of(){
         return new MyPaymentChangeAmountPlannedActionImpl();
     }
     
 
-    public static MyPaymentChangeAmountPlannedActionImpl of(final MyPaymentChangeAmountPlannedAction template) {
+    public static MyPaymentChangeAmountPlannedAction of(final MyPaymentChangeAmountPlannedAction template) {
         MyPaymentChangeAmountPlannedActionImpl instance = new MyPaymentChangeAmountPlannedActionImpl();
         instance.setAmount(template.getAmount());
         return instance;
     }
+
+    public static MyPaymentChangeAmountPlannedActionBuilder builder(){
+        return MyPaymentChangeAmountPlannedActionBuilder.of();
+    }
+    
+    public static MyPaymentChangeAmountPlannedActionBuilder builder(final MyPaymentChangeAmountPlannedAction template){
+        return MyPaymentChangeAmountPlannedActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyPaymentChangeAmountPlannedAction(Function<MyPaymentChangeAmountPlannedAction, T> helper) {
         return helper.apply(this);

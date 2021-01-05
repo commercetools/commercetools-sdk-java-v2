@@ -30,16 +30,25 @@ public interface ReviewSetKeyAction extends ReviewUpdateAction {
 
     public void setKey(final String key);
 
-    public static ReviewSetKeyActionImpl of(){
+    public static ReviewSetKeyAction of(){
         return new ReviewSetKeyActionImpl();
     }
     
 
-    public static ReviewSetKeyActionImpl of(final ReviewSetKeyAction template) {
+    public static ReviewSetKeyAction of(final ReviewSetKeyAction template) {
         ReviewSetKeyActionImpl instance = new ReviewSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ReviewSetKeyActionBuilder builder(){
+        return ReviewSetKeyActionBuilder.of();
+    }
+    
+    public static ReviewSetKeyActionBuilder builder(final ReviewSetKeyAction template){
+        return ReviewSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetKeyAction(Function<ReviewSetKeyAction, T> helper) {
         return helper.apply(this);

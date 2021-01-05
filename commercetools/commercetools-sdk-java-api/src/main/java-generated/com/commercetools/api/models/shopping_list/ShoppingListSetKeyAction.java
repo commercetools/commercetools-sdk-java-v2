@@ -30,16 +30,25 @@ public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
 
     public void setKey(final String key);
 
-    public static ShoppingListSetKeyActionImpl of(){
+    public static ShoppingListSetKeyAction of(){
         return new ShoppingListSetKeyActionImpl();
     }
     
 
-    public static ShoppingListSetKeyActionImpl of(final ShoppingListSetKeyAction template) {
+    public static ShoppingListSetKeyAction of(final ShoppingListSetKeyAction template) {
         ShoppingListSetKeyActionImpl instance = new ShoppingListSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ShoppingListSetKeyActionBuilder builder(){
+        return ShoppingListSetKeyActionBuilder.of();
+    }
+    
+    public static ShoppingListSetKeyActionBuilder builder(final ShoppingListSetKeyAction template){
+        return ShoppingListSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListSetKeyAction(Function<ShoppingListSetKeyAction, T> helper) {
         return helper.apply(this);

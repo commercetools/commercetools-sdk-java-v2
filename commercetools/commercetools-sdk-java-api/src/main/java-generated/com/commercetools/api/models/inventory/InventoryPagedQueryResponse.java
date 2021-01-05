@@ -55,12 +55,12 @@ public interface InventoryPagedQueryResponse extends com.commercetools.api.model
     public void setResults(final InventoryEntry ...results);
     public void setResults(final List<InventoryEntry> results);
 
-    public static InventoryPagedQueryResponseImpl of(){
+    public static InventoryPagedQueryResponse of(){
         return new InventoryPagedQueryResponseImpl();
     }
     
 
-    public static InventoryPagedQueryResponseImpl of(final InventoryPagedQueryResponse template) {
+    public static InventoryPagedQueryResponse of(final InventoryPagedQueryResponse template) {
         InventoryPagedQueryResponseImpl instance = new InventoryPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface InventoryPagedQueryResponse extends com.commercetools.api.model
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static InventoryPagedQueryResponseBuilder builder(){
+        return InventoryPagedQueryResponseBuilder.of();
+    }
+    
+    public static InventoryPagedQueryResponseBuilder builder(final InventoryPagedQueryResponse template){
+        return InventoryPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryPagedQueryResponse(Function<InventoryPagedQueryResponse, T> helper) {
         return helper.apply(this);

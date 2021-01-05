@@ -29,16 +29,25 @@ public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
 
     public void setSlug(final LocalizedString slug);
 
-    public static ShoppingListSetSlugActionImpl of(){
+    public static ShoppingListSetSlugAction of(){
         return new ShoppingListSetSlugActionImpl();
     }
     
 
-    public static ShoppingListSetSlugActionImpl of(final ShoppingListSetSlugAction template) {
+    public static ShoppingListSetSlugAction of(final ShoppingListSetSlugAction template) {
         ShoppingListSetSlugActionImpl instance = new ShoppingListSetSlugActionImpl();
         instance.setSlug(template.getSlug());
         return instance;
     }
+
+    public static ShoppingListSetSlugActionBuilder builder(){
+        return ShoppingListSetSlugActionBuilder.of();
+    }
+    
+    public static ShoppingListSetSlugActionBuilder builder(final ShoppingListSetSlugAction template){
+        return ShoppingListSetSlugActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListSetSlugAction(Function<ShoppingListSetSlugAction, T> helper) {
         return helper.apply(this);

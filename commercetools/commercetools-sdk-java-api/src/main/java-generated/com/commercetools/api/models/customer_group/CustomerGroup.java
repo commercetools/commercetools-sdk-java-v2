@@ -90,12 +90,12 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
     
     public void setCustom(final CustomFields custom);
 
-    public static CustomerGroupImpl of(){
+    public static CustomerGroup of(){
         return new CustomerGroupImpl();
     }
     
 
-    public static CustomerGroupImpl of(final CustomerGroup template) {
+    public static CustomerGroup of(final CustomerGroup template) {
         CustomerGroupImpl instance = new CustomerGroupImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -108,6 +108,15 @@ public interface CustomerGroup extends BaseResource, com.commercetools.api.model
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static CustomerGroupBuilder builder(){
+        return CustomerGroupBuilder.of();
+    }
+    
+    public static CustomerGroupBuilder builder(final CustomerGroup template){
+        return CustomerGroupBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroup(Function<CustomerGroup, T> helper) {
         return helper.apply(this);

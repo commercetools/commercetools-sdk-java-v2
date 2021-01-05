@@ -74,6 +74,7 @@ public interface MyShoppingListUpdateAction extends com.commercetools.api.models
 
 
 
+
     default <T> T withMyShoppingListUpdateAction(Function<MyShoppingListUpdateAction, T> helper) {
         return helper.apply(this);
     }

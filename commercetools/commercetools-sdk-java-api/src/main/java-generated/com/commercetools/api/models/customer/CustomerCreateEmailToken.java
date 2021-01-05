@@ -40,18 +40,27 @@ public interface CustomerCreateEmailToken  {
     
     public void setTtlMinutes(final Long ttlMinutes);
 
-    public static CustomerCreateEmailTokenImpl of(){
+    public static CustomerCreateEmailToken of(){
         return new CustomerCreateEmailTokenImpl();
     }
     
 
-    public static CustomerCreateEmailTokenImpl of(final CustomerCreateEmailToken template) {
+    public static CustomerCreateEmailToken of(final CustomerCreateEmailToken template) {
         CustomerCreateEmailTokenImpl instance = new CustomerCreateEmailTokenImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setTtlMinutes(template.getTtlMinutes());
         return instance;
     }
+
+    public static CustomerCreateEmailTokenBuilder builder(){
+        return CustomerCreateEmailTokenBuilder.of();
+    }
+    
+    public static CustomerCreateEmailTokenBuilder builder(final CustomerCreateEmailToken template){
+        return CustomerCreateEmailTokenBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerCreateEmailToken(Function<CustomerCreateEmailToken, T> helper) {
         return helper.apply(this);

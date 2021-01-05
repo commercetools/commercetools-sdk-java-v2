@@ -37,17 +37,26 @@ public interface StateUpdate extends com.commercetools.api.models.ResourceUpdate
     public void setActions(final StateUpdateAction ...actions);
     public void setActions(final List<StateUpdateAction> actions);
 
-    public static StateUpdateImpl of(){
+    public static StateUpdate of(){
         return new StateUpdateImpl();
     }
     
 
-    public static StateUpdateImpl of(final StateUpdate template) {
+    public static StateUpdate of(final StateUpdate template) {
         StateUpdateImpl instance = new StateUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static StateUpdateBuilder builder(){
+        return StateUpdateBuilder.of();
+    }
+    
+    public static StateUpdateBuilder builder(final StateUpdate template){
+        return StateUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withStateUpdate(Function<StateUpdate, T> helper) {
         return helper.apply(this);

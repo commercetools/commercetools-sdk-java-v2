@@ -30,16 +30,25 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
 
     public void setExternalId(final String externalId);
 
-    public static CategorySetExternalIdActionImpl of(){
+    public static CategorySetExternalIdAction of(){
         return new CategorySetExternalIdActionImpl();
     }
     
 
-    public static CategorySetExternalIdActionImpl of(final CategorySetExternalIdAction template) {
+    public static CategorySetExternalIdAction of(final CategorySetExternalIdAction template) {
         CategorySetExternalIdActionImpl instance = new CategorySetExternalIdActionImpl();
         instance.setExternalId(template.getExternalId());
         return instance;
     }
+
+    public static CategorySetExternalIdActionBuilder builder(){
+        return CategorySetExternalIdActionBuilder.of();
+    }
+    
+    public static CategorySetExternalIdActionBuilder builder(final CategorySetExternalIdAction template){
+        return CategorySetExternalIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetExternalIdAction(Function<CategorySetExternalIdAction, T> helper) {
         return helper.apply(this);

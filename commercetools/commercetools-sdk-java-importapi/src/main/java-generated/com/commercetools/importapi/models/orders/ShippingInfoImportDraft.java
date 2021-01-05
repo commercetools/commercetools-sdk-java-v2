@@ -95,12 +95,12 @@ public interface ShippingInfoImportDraft  {
     
     public void setShippingMethodState(final ShippingMethodState shippingMethodState);
 
-    public static ShippingInfoImportDraftImpl of(){
+    public static ShippingInfoImportDraft of(){
         return new ShippingInfoImportDraftImpl();
     }
     
 
-    public static ShippingInfoImportDraftImpl of(final ShippingInfoImportDraft template) {
+    public static ShippingInfoImportDraft of(final ShippingInfoImportDraft template) {
         ShippingInfoImportDraftImpl instance = new ShippingInfoImportDraftImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
         instance.setPrice(template.getPrice());
@@ -113,6 +113,15 @@ public interface ShippingInfoImportDraft  {
         instance.setShippingMethodState(template.getShippingMethodState());
         return instance;
     }
+
+    public static ShippingInfoImportDraftBuilder builder(){
+        return ShippingInfoImportDraftBuilder.of();
+    }
+    
+    public static ShippingInfoImportDraftBuilder builder(final ShippingInfoImportDraft template){
+        return ShippingInfoImportDraftBuilder.of(template);
+    }
+    
 
     default <T> T withShippingInfoImportDraft(Function<ShippingInfoImportDraft, T> helper) {
         return helper.apply(this);

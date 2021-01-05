@@ -45,12 +45,12 @@ public interface ProductPublishedMessage extends Message {
     
     public void setScope(final ProductPublishScope scope);
 
-    public static ProductPublishedMessageImpl of(){
+    public static ProductPublishedMessage of(){
         return new ProductPublishedMessageImpl();
     }
     
 
-    public static ProductPublishedMessageImpl of(final ProductPublishedMessage template) {
+    public static ProductPublishedMessage of(final ProductPublishedMessage template) {
         ProductPublishedMessageImpl instance = new ProductPublishedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -67,6 +67,15 @@ public interface ProductPublishedMessage extends Message {
         instance.setScope(template.getScope());
         return instance;
     }
+
+    public static ProductPublishedMessageBuilder builder(){
+        return ProductPublishedMessageBuilder.of();
+    }
+    
+    public static ProductPublishedMessageBuilder builder(final ProductPublishedMessage template){
+        return ProductPublishedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductPublishedMessage(Function<ProductPublishedMessage, T> helper) {
         return helper.apply(this);

@@ -34,17 +34,26 @@ public interface ImageDimensions  {
     
     public void setH(final Integer h);
 
-    public static ImageDimensionsImpl of(){
+    public static ImageDimensions of(){
         return new ImageDimensionsImpl();
     }
     
 
-    public static ImageDimensionsImpl of(final ImageDimensions template) {
+    public static ImageDimensions of(final ImageDimensions template) {
         ImageDimensionsImpl instance = new ImageDimensionsImpl();
         instance.setW(template.getW());
         instance.setH(template.getH());
         return instance;
     }
+
+    public static ImageDimensionsBuilder builder(){
+        return ImageDimensionsBuilder.of();
+    }
+    
+    public static ImageDimensionsBuilder builder(final ImageDimensions template){
+        return ImageDimensionsBuilder.of(template);
+    }
+    
 
     default <T> T withImageDimensions(Function<ImageDimensions, T> helper) {
         return helper.apply(this);

@@ -62,6 +62,7 @@ public interface DiscountCodeUpdateAction extends com.commercetools.api.models.R
 
 
 
+
     default <T> T withDiscountCodeUpdateAction(Function<DiscountCodeUpdateAction, T> helper) {
         return helper.apply(this);
     }

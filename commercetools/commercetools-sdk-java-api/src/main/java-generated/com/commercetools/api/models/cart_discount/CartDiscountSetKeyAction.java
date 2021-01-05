@@ -30,16 +30,25 @@ public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
 
     public void setKey(final String key);
 
-    public static CartDiscountSetKeyActionImpl of(){
+    public static CartDiscountSetKeyAction of(){
         return new CartDiscountSetKeyActionImpl();
     }
     
 
-    public static CartDiscountSetKeyActionImpl of(final CartDiscountSetKeyAction template) {
+    public static CartDiscountSetKeyAction of(final CartDiscountSetKeyAction template) {
         CartDiscountSetKeyActionImpl instance = new CartDiscountSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CartDiscountSetKeyActionBuilder builder(){
+        return CartDiscountSetKeyActionBuilder.of();
+    }
+    
+    public static CartDiscountSetKeyActionBuilder builder(final CartDiscountSetKeyAction template){
+        return CartDiscountSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountSetKeyAction(Function<CartDiscountSetKeyAction, T> helper) {
         return helper.apply(this);

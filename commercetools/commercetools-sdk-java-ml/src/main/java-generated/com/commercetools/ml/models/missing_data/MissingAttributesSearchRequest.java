@@ -122,12 +122,12 @@ public interface MissingAttributesSearchRequest  {
     
     public void setAttributeName(final String attributeName);
 
-    public static MissingAttributesSearchRequestImpl of(){
+    public static MissingAttributesSearchRequest of(){
         return new MissingAttributesSearchRequestImpl();
     }
     
 
-    public static MissingAttributesSearchRequestImpl of(final MissingAttributesSearchRequest template) {
+    public static MissingAttributesSearchRequest of(final MissingAttributesSearchRequest template) {
         MissingAttributesSearchRequestImpl instance = new MissingAttributesSearchRequestImpl();
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
@@ -143,6 +143,15 @@ public interface MissingAttributesSearchRequest  {
         instance.setAttributeName(template.getAttributeName());
         return instance;
     }
+
+    public static MissingAttributesSearchRequestBuilder builder(){
+        return MissingAttributesSearchRequestBuilder.of();
+    }
+    
+    public static MissingAttributesSearchRequestBuilder builder(final MissingAttributesSearchRequest template){
+        return MissingAttributesSearchRequestBuilder.of(template);
+    }
+    
 
     default <T> T withMissingAttributesSearchRequest(Function<MissingAttributesSearchRequest, T> helper) {
         return helper.apply(this);

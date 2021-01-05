@@ -23,16 +23,25 @@ public interface FeatureRemovedError extends ErrorObject {
 
 
 
-    public static FeatureRemovedErrorImpl of(){
+    public static FeatureRemovedError of(){
         return new FeatureRemovedErrorImpl();
     }
     
 
-    public static FeatureRemovedErrorImpl of(final FeatureRemovedError template) {
+    public static FeatureRemovedError of(final FeatureRemovedError template) {
         FeatureRemovedErrorImpl instance = new FeatureRemovedErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static FeatureRemovedErrorBuilder builder(){
+        return FeatureRemovedErrorBuilder.of();
+    }
+    
+    public static FeatureRemovedErrorBuilder builder(final FeatureRemovedError template){
+        return FeatureRemovedErrorBuilder.of(template);
+    }
+    
 
     default <T> T withFeatureRemovedError(Function<FeatureRemovedError, T> helper) {
         return helper.apply(this);

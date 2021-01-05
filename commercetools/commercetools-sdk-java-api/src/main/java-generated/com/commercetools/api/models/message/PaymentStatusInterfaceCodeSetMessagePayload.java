@@ -34,17 +34,26 @@ public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayl
     
     public void setInterfaceCode(final String interfaceCode);
 
-    public static PaymentStatusInterfaceCodeSetMessagePayloadImpl of(){
+    public static PaymentStatusInterfaceCodeSetMessagePayload of(){
         return new PaymentStatusInterfaceCodeSetMessagePayloadImpl();
     }
     
 
-    public static PaymentStatusInterfaceCodeSetMessagePayloadImpl of(final PaymentStatusInterfaceCodeSetMessagePayload template) {
+    public static PaymentStatusInterfaceCodeSetMessagePayload of(final PaymentStatusInterfaceCodeSetMessagePayload template) {
         PaymentStatusInterfaceCodeSetMessagePayloadImpl instance = new PaymentStatusInterfaceCodeSetMessagePayloadImpl();
         instance.setPaymentId(template.getPaymentId());
         instance.setInterfaceCode(template.getInterfaceCode());
         return instance;
     }
+
+    public static PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder(){
+        return PaymentStatusInterfaceCodeSetMessagePayloadBuilder.of();
+    }
+    
+    public static PaymentStatusInterfaceCodeSetMessagePayloadBuilder builder(final PaymentStatusInterfaceCodeSetMessagePayload template){
+        return PaymentStatusInterfaceCodeSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentStatusInterfaceCodeSetMessagePayload(Function<PaymentStatusInterfaceCodeSetMessagePayload, T> helper) {
         return helper.apply(this);

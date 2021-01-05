@@ -124,12 +124,12 @@ public interface LineItemDraft  {
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static LineItemDraftImpl of(){
+    public static LineItemDraft of(){
         return new LineItemDraftImpl();
     }
     
 
-    public static LineItemDraftImpl of(final LineItemDraft template) {
+    public static LineItemDraft of(final LineItemDraft template) {
         LineItemDraftImpl instance = new LineItemDraftImpl();
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
@@ -145,6 +145,15 @@ public interface LineItemDraft  {
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static LineItemDraftBuilder builder(){
+        return LineItemDraftBuilder.of();
+    }
+    
+    public static LineItemDraftBuilder builder(final LineItemDraft template){
+        return LineItemDraftBuilder.of(template);
+    }
+    
 
     default <T> T withLineItemDraft(Function<LineItemDraft, T> helper) {
         return helper.apply(this);

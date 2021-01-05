@@ -31,16 +31,25 @@ public interface CartDiscountSetValidFromAction extends CartDiscountUpdateAction
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
-    public static CartDiscountSetValidFromActionImpl of(){
+    public static CartDiscountSetValidFromAction of(){
         return new CartDiscountSetValidFromActionImpl();
     }
     
 
-    public static CartDiscountSetValidFromActionImpl of(final CartDiscountSetValidFromAction template) {
+    public static CartDiscountSetValidFromAction of(final CartDiscountSetValidFromAction template) {
         CartDiscountSetValidFromActionImpl instance = new CartDiscountSetValidFromActionImpl();
         instance.setValidFrom(template.getValidFrom());
         return instance;
     }
+
+    public static CartDiscountSetValidFromActionBuilder builder(){
+        return CartDiscountSetValidFromActionBuilder.of();
+    }
+    
+    public static CartDiscountSetValidFromActionBuilder builder(final CartDiscountSetValidFromAction template){
+        return CartDiscountSetValidFromActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountSetValidFromAction(Function<CartDiscountSetValidFromAction, T> helper) {
         return helper.apply(this);

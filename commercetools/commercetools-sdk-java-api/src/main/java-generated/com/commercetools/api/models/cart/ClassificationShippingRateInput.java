@@ -36,17 +36,26 @@ public interface ClassificationShippingRateInput extends ShippingRateInput {
     
     public void setLabel(final LocalizedString label);
 
-    public static ClassificationShippingRateInputImpl of(){
+    public static ClassificationShippingRateInput of(){
         return new ClassificationShippingRateInputImpl();
     }
     
 
-    public static ClassificationShippingRateInputImpl of(final ClassificationShippingRateInput template) {
+    public static ClassificationShippingRateInput of(final ClassificationShippingRateInput template) {
         ClassificationShippingRateInputImpl instance = new ClassificationShippingRateInputImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static ClassificationShippingRateInputBuilder builder(){
+        return ClassificationShippingRateInputBuilder.of();
+    }
+    
+    public static ClassificationShippingRateInputBuilder builder(final ClassificationShippingRateInput template){
+        return ClassificationShippingRateInputBuilder.of(template);
+    }
+    
 
     default <T> T withClassificationShippingRateInput(Function<ClassificationShippingRateInput, T> helper) {
         return helper.apply(this);

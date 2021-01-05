@@ -48,6 +48,7 @@ public interface TaxCategoryUpdateAction extends com.commercetools.api.models.Re
 
 
 
+
     default <T> T withTaxCategoryUpdateAction(Function<TaxCategoryUpdateAction, T> helper) {
         return helper.apply(this);
     }

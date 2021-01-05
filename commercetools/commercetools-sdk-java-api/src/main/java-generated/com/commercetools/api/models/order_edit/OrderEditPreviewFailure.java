@@ -32,16 +32,25 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
     public void setErrors(final ErrorObject ...errors);
     public void setErrors(final List<ErrorObject> errors);
 
-    public static OrderEditPreviewFailureImpl of(){
+    public static OrderEditPreviewFailure of(){
         return new OrderEditPreviewFailureImpl();
     }
     
 
-    public static OrderEditPreviewFailureImpl of(final OrderEditPreviewFailure template) {
+    public static OrderEditPreviewFailure of(final OrderEditPreviewFailure template) {
         OrderEditPreviewFailureImpl instance = new OrderEditPreviewFailureImpl();
         instance.setErrors(template.getErrors());
         return instance;
     }
+
+    public static OrderEditPreviewFailureBuilder builder(){
+        return OrderEditPreviewFailureBuilder.of();
+    }
+    
+    public static OrderEditPreviewFailureBuilder builder(final OrderEditPreviewFailure template){
+        return OrderEditPreviewFailureBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditPreviewFailure(Function<OrderEditPreviewFailure, T> helper) {
         return helper.apply(this);

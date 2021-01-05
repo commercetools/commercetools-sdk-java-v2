@@ -36,17 +36,26 @@ public interface TypeChangeFieldDefinitionLabelAction extends TypeUpdateAction {
     
     public void setLabel(final LocalizedString label);
 
-    public static TypeChangeFieldDefinitionLabelActionImpl of(){
+    public static TypeChangeFieldDefinitionLabelAction of(){
         return new TypeChangeFieldDefinitionLabelActionImpl();
     }
     
 
-    public static TypeChangeFieldDefinitionLabelActionImpl of(final TypeChangeFieldDefinitionLabelAction template) {
+    public static TypeChangeFieldDefinitionLabelAction of(final TypeChangeFieldDefinitionLabelAction template) {
         TypeChangeFieldDefinitionLabelActionImpl instance = new TypeChangeFieldDefinitionLabelActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static TypeChangeFieldDefinitionLabelActionBuilder builder(){
+        return TypeChangeFieldDefinitionLabelActionBuilder.of();
+    }
+    
+    public static TypeChangeFieldDefinitionLabelActionBuilder builder(final TypeChangeFieldDefinitionLabelAction template){
+        return TypeChangeFieldDefinitionLabelActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeFieldDefinitionLabelAction(Function<TypeChangeFieldDefinitionLabelAction, T> helper) {
         return helper.apply(this);

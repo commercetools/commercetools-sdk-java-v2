@@ -40,17 +40,26 @@ public interface ItemShippingTarget  {
     
     public void setQuantity(final Double quantity);
 
-    public static ItemShippingTargetImpl of(){
+    public static ItemShippingTarget of(){
         return new ItemShippingTargetImpl();
     }
     
 
-    public static ItemShippingTargetImpl of(final ItemShippingTarget template) {
+    public static ItemShippingTarget of(final ItemShippingTarget template) {
         ItemShippingTargetImpl instance = new ItemShippingTargetImpl();
         instance.setAddressKey(template.getAddressKey());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static ItemShippingTargetBuilder builder(){
+        return ItemShippingTargetBuilder.of();
+    }
+    
+    public static ItemShippingTargetBuilder builder(final ItemShippingTarget template){
+        return ItemShippingTargetBuilder.of(template);
+    }
+    
 
     default <T> T withItemShippingTarget(Function<ItemShippingTarget, T> helper) {
         return helper.apply(this);

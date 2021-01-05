@@ -93,12 +93,12 @@ public interface Price  {
     public void setTiers(final PriceTier ...tiers);
     public void setTiers(final List<PriceTier> tiers);
 
-    public static PriceImpl of(){
+    public static Price of(){
         return new PriceImpl();
     }
     
 
-    public static PriceImpl of(final Price template) {
+    public static Price of(final Price template) {
         PriceImpl instance = new PriceImpl();
         instance.setId(template.getId());
         instance.setValue(template.getValue());
@@ -112,6 +112,15 @@ public interface Price  {
         instance.setTiers(template.getTiers());
         return instance;
     }
+
+    public static PriceBuilder builder(){
+        return PriceBuilder.of();
+    }
+    
+    public static PriceBuilder builder(final Price template){
+        return PriceBuilder.of(template);
+    }
+    
 
     default <T> T withPrice(Function<Price, T> helper) {
         return helper.apply(this);

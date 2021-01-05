@@ -53,12 +53,12 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
     
     public void setDistributionChannel(final ChannelReference distributionChannel);
 
-    public static CartDiscountValueGiftLineItemImpl of(){
+    public static CartDiscountValueGiftLineItem of(){
         return new CartDiscountValueGiftLineItemImpl();
     }
     
 
-    public static CartDiscountValueGiftLineItemImpl of(final CartDiscountValueGiftLineItem template) {
+    public static CartDiscountValueGiftLineItem of(final CartDiscountValueGiftLineItem template) {
         CartDiscountValueGiftLineItemImpl instance = new CartDiscountValueGiftLineItemImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantId(template.getVariantId());
@@ -66,6 +66,15 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue {
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public static CartDiscountValueGiftLineItemBuilder builder(){
+        return CartDiscountValueGiftLineItemBuilder.of();
+    }
+    
+    public static CartDiscountValueGiftLineItemBuilder builder(final CartDiscountValueGiftLineItem template){
+        return CartDiscountValueGiftLineItemBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountValueGiftLineItem(Function<CartDiscountValueGiftLineItem, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
     
     public void setNewValue(final TextInputHint newValue);
 
-    public static ProductTypeChangeInputHintActionImpl of(){
+    public static ProductTypeChangeInputHintAction of(){
         return new ProductTypeChangeInputHintActionImpl();
     }
     
 
-    public static ProductTypeChangeInputHintActionImpl of(final ProductTypeChangeInputHintAction template) {
+    public static ProductTypeChangeInputHintAction of(final ProductTypeChangeInputHintAction template) {
         ProductTypeChangeInputHintActionImpl instance = new ProductTypeChangeInputHintActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());
         return instance;
     }
+
+    public static ProductTypeChangeInputHintActionBuilder builder(){
+        return ProductTypeChangeInputHintActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeInputHintActionBuilder builder(final ProductTypeChangeInputHintAction template){
+        return ProductTypeChangeInputHintActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeInputHintAction(Function<ProductTypeChangeInputHintAction, T> helper) {
         return helper.apply(this);

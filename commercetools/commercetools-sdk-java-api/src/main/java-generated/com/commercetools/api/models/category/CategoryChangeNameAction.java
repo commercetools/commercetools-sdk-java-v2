@@ -30,16 +30,25 @@ public interface CategoryChangeNameAction extends CategoryUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static CategoryChangeNameActionImpl of(){
+    public static CategoryChangeNameAction of(){
         return new CategoryChangeNameActionImpl();
     }
     
 
-    public static CategoryChangeNameActionImpl of(final CategoryChangeNameAction template) {
+    public static CategoryChangeNameAction of(final CategoryChangeNameAction template) {
         CategoryChangeNameActionImpl instance = new CategoryChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static CategoryChangeNameActionBuilder builder(){
+        return CategoryChangeNameActionBuilder.of();
+    }
+    
+    public static CategoryChangeNameActionBuilder builder(final CategoryChangeNameAction template){
+        return CategoryChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryChangeNameAction(Function<CategoryChangeNameAction, T> helper) {
         return helper.apply(this);

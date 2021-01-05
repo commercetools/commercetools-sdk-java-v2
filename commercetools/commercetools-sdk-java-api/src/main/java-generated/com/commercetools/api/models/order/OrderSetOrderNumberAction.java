@@ -28,16 +28,25 @@ public interface OrderSetOrderNumberAction extends OrderUpdateAction {
 
     public void setOrderNumber(final String orderNumber);
 
-    public static OrderSetOrderNumberActionImpl of(){
+    public static OrderSetOrderNumberAction of(){
         return new OrderSetOrderNumberActionImpl();
     }
     
 
-    public static OrderSetOrderNumberActionImpl of(final OrderSetOrderNumberAction template) {
+    public static OrderSetOrderNumberAction of(final OrderSetOrderNumberAction template) {
         OrderSetOrderNumberActionImpl instance = new OrderSetOrderNumberActionImpl();
         instance.setOrderNumber(template.getOrderNumber());
         return instance;
     }
+
+    public static OrderSetOrderNumberActionBuilder builder(){
+        return OrderSetOrderNumberActionBuilder.of();
+    }
+    
+    public static OrderSetOrderNumberActionBuilder builder(final OrderSetOrderNumberAction template){
+        return OrderSetOrderNumberActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetOrderNumberAction(Function<OrderSetOrderNumberAction, T> helper) {
         return helper.apply(this);

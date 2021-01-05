@@ -34,16 +34,25 @@ public interface TimeSetField extends CustomField {
     public void setValue(final LocalTime ...value);
     public void setValue(final List<LocalTime> value);
 
-    public static TimeSetFieldImpl of(){
+    public static TimeSetField of(){
         return new TimeSetFieldImpl();
     }
     
 
-    public static TimeSetFieldImpl of(final TimeSetField template) {
+    public static TimeSetField of(final TimeSetField template) {
         TimeSetFieldImpl instance = new TimeSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TimeSetFieldBuilder builder(){
+        return TimeSetFieldBuilder.of();
+    }
+    
+    public static TimeSetFieldBuilder builder(final TimeSetField template){
+        return TimeSetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withTimeSetField(Function<TimeSetField, T> helper) {
         return helper.apply(this);

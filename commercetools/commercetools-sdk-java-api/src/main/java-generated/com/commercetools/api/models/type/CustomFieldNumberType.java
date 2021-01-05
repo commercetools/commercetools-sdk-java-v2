@@ -23,15 +23,24 @@ public interface CustomFieldNumberType extends FieldType {
 
 
 
-    public static CustomFieldNumberTypeImpl of(){
+    public static CustomFieldNumberType of(){
         return new CustomFieldNumberTypeImpl();
     }
     
 
-    public static CustomFieldNumberTypeImpl of(final CustomFieldNumberType template) {
+    public static CustomFieldNumberType of(final CustomFieldNumberType template) {
         CustomFieldNumberTypeImpl instance = new CustomFieldNumberTypeImpl();
         return instance;
     }
+
+    public static CustomFieldNumberTypeBuilder builder(){
+        return CustomFieldNumberTypeBuilder.of();
+    }
+    
+    public static CustomFieldNumberTypeBuilder builder(final CustomFieldNumberType template){
+        return CustomFieldNumberTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldNumberType(Function<CustomFieldNumberType, T> helper) {
         return helper.apply(this);

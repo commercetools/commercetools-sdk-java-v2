@@ -35,12 +35,12 @@ public interface OrderShippingAddressSetMessage extends Message {
     
     public void setOldAddress(final Address oldAddress);
 
-    public static OrderShippingAddressSetMessageImpl of(){
+    public static OrderShippingAddressSetMessage of(){
         return new OrderShippingAddressSetMessageImpl();
     }
     
 
-    public static OrderShippingAddressSetMessageImpl of(final OrderShippingAddressSetMessage template) {
+    public static OrderShippingAddressSetMessage of(final OrderShippingAddressSetMessage template) {
         OrderShippingAddressSetMessageImpl instance = new OrderShippingAddressSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -56,6 +56,15 @@ public interface OrderShippingAddressSetMessage extends Message {
         instance.setOldAddress(template.getOldAddress());
         return instance;
     }
+
+    public static OrderShippingAddressSetMessageBuilder builder(){
+        return OrderShippingAddressSetMessageBuilder.of();
+    }
+    
+    public static OrderShippingAddressSetMessageBuilder builder(final OrderShippingAddressSetMessage template){
+        return OrderShippingAddressSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderShippingAddressSetMessage(Function<OrderShippingAddressSetMessage, T> helper) {
         return helper.apply(this);

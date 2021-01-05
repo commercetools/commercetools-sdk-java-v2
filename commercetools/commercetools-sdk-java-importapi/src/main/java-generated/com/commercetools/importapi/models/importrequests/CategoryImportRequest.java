@@ -38,16 +38,25 @@ public interface CategoryImportRequest extends ImportRequest {
     public void setResources(final CategoryImport ...resources);
     public void setResources(final List<CategoryImport> resources);
 
-    public static CategoryImportRequestImpl of(){
+    public static CategoryImportRequest of(){
         return new CategoryImportRequestImpl();
     }
     
 
-    public static CategoryImportRequestImpl of(final CategoryImportRequest template) {
+    public static CategoryImportRequest of(final CategoryImportRequest template) {
         CategoryImportRequestImpl instance = new CategoryImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public static CategoryImportRequestBuilder builder(){
+        return CategoryImportRequestBuilder.of();
+    }
+    
+    public static CategoryImportRequestBuilder builder(final CategoryImportRequest template){
+        return CategoryImportRequestBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryImportRequest(Function<CategoryImportRequest, T> helper) {
         return helper.apply(this);

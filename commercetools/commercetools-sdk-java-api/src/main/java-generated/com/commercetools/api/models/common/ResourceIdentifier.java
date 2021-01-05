@@ -92,6 +92,7 @@ public interface ResourceIdentifier  {
 
 
 
+
     default <T> T withResourceIdentifier(Function<ResourceIdentifier, T> helper) {
         return helper.apply(this);
     }

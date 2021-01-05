@@ -49,12 +49,12 @@ public interface CartScoreTier extends ShippingRatePriceTier {
     
     public void setIsMatching(final Boolean isMatching);
 
-    public static CartScoreTierImpl of(){
+    public static CartScoreTier of(){
         return new CartScoreTierImpl();
     }
     
 
-    public static CartScoreTierImpl of(final CartScoreTier template) {
+    public static CartScoreTier of(final CartScoreTier template) {
         CartScoreTierImpl instance = new CartScoreTierImpl();
         instance.setScore(template.getScore());
         instance.setPrice(template.getPrice());
@@ -62,6 +62,15 @@ public interface CartScoreTier extends ShippingRatePriceTier {
         instance.setIsMatching(template.getIsMatching());
         return instance;
     }
+
+    public static CartScoreTierBuilder builder(){
+        return CartScoreTierBuilder.of();
+    }
+    
+    public static CartScoreTierBuilder builder(final CartScoreTier template){
+        return CartScoreTierBuilder.of(template);
+    }
+    
 
     default <T> T withCartScoreTier(Function<CartScoreTier, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface OrderCustomerGroupSetMessagePayload extends MessagePayload {
     
     public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
 
-    public static OrderCustomerGroupSetMessagePayloadImpl of(){
+    public static OrderCustomerGroupSetMessagePayload of(){
         return new OrderCustomerGroupSetMessagePayloadImpl();
     }
     
 
-    public static OrderCustomerGroupSetMessagePayloadImpl of(final OrderCustomerGroupSetMessagePayload template) {
+    public static OrderCustomerGroupSetMessagePayload of(final OrderCustomerGroupSetMessagePayload template) {
         OrderCustomerGroupSetMessagePayloadImpl instance = new OrderCustomerGroupSetMessagePayloadImpl();
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setOldCustomerGroup(template.getOldCustomerGroup());
         return instance;
     }
+
+    public static OrderCustomerGroupSetMessagePayloadBuilder builder(){
+        return OrderCustomerGroupSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderCustomerGroupSetMessagePayloadBuilder builder(final OrderCustomerGroupSetMessagePayload template){
+        return OrderCustomerGroupSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderCustomerGroupSetMessagePayload(Function<OrderCustomerGroupSetMessagePayload, T> helper) {
         return helper.apply(this);

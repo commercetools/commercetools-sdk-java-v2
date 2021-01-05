@@ -36,18 +36,27 @@ public interface MissingRoleOnChannelError extends ErrorObject {
     
     public void setMissingRole(final ChannelRoleEnum missingRole);
 
-    public static MissingRoleOnChannelErrorImpl of(){
+    public static MissingRoleOnChannelError of(){
         return new MissingRoleOnChannelErrorImpl();
     }
     
 
-    public static MissingRoleOnChannelErrorImpl of(final MissingRoleOnChannelError template) {
+    public static MissingRoleOnChannelError of(final MissingRoleOnChannelError template) {
         MissingRoleOnChannelErrorImpl instance = new MissingRoleOnChannelErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setChannel(template.getChannel());
         instance.setMissingRole(template.getMissingRole());
         return instance;
     }
+
+    public static MissingRoleOnChannelErrorBuilder builder(){
+        return MissingRoleOnChannelErrorBuilder.of();
+    }
+    
+    public static MissingRoleOnChannelErrorBuilder builder(final MissingRoleOnChannelError template){
+        return MissingRoleOnChannelErrorBuilder.of(template);
+    }
+    
 
     default <T> T withMissingRoleOnChannelError(Function<MissingRoleOnChannelError, T> helper) {
         return helper.apply(this);

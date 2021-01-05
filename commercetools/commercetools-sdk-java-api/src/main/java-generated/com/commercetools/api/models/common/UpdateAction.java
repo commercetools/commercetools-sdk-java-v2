@@ -28,16 +28,25 @@ public interface UpdateAction extends com.commercetools.api.models.ResourceUpdat
 
     public void setAction(final String action);
 
-    public static UpdateActionImpl of(){
+    public static UpdateAction of(){
         return new UpdateActionImpl();
     }
     
 
-    public static UpdateActionImpl of(final UpdateAction template) {
+    public static UpdateAction of(final UpdateAction template) {
         UpdateActionImpl instance = new UpdateActionImpl();
         instance.setAction(template.getAction());
         return instance;
     }
+
+    public static UpdateActionBuilder builder(){
+        return UpdateActionBuilder.of();
+    }
+    
+    public static UpdateActionBuilder builder(final UpdateAction template){
+        return UpdateActionBuilder.of(template);
+    }
+    
 
     default <T> T withUpdateAction(Function<UpdateAction, T> helper) {
         return helper.apply(this);

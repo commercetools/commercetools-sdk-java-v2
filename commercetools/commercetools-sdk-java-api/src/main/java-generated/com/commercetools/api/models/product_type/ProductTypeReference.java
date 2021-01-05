@@ -30,17 +30,26 @@ public interface ProductTypeReference extends Reference {
 
     public void setObj(final ProductType obj);
 
-    public static ProductTypeReferenceImpl of(){
+    public static ProductTypeReference of(){
         return new ProductTypeReferenceImpl();
     }
     
 
-    public static ProductTypeReferenceImpl of(final ProductTypeReference template) {
+    public static ProductTypeReference of(final ProductTypeReference template) {
         ProductTypeReferenceImpl instance = new ProductTypeReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static ProductTypeReferenceBuilder builder(){
+        return ProductTypeReferenceBuilder.of();
+    }
+    
+    public static ProductTypeReferenceBuilder builder(final ProductTypeReference template){
+        return ProductTypeReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeReference(Function<ProductTypeReference, T> helper) {
         return helper.apply(this);

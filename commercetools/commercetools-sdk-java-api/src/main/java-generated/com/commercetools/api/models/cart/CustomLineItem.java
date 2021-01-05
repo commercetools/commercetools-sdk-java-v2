@@ -143,12 +143,12 @@ public interface CustomLineItem  {
     
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
-    public static CustomLineItemImpl of(){
+    public static CustomLineItem of(){
         return new CustomLineItemImpl();
     }
     
 
-    public static CustomLineItemImpl of(final CustomLineItem template) {
+    public static CustomLineItem of(final CustomLineItem template) {
         CustomLineItemImpl instance = new CustomLineItemImpl();
         instance.setId(template.getId());
         instance.setName(template.getName());
@@ -165,6 +165,15 @@ public interface CustomLineItem  {
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static CustomLineItemBuilder builder(){
+        return CustomLineItemBuilder.of();
+    }
+    
+    public static CustomLineItemBuilder builder(final CustomLineItem template){
+        return CustomLineItemBuilder.of(template);
+    }
+    
 
     default <T> T withCustomLineItem(Function<CustomLineItem, T> helper) {
         return helper.apply(this);

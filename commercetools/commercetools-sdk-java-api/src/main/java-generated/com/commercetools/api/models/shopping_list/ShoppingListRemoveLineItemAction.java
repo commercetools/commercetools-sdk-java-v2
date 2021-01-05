@@ -34,17 +34,26 @@ public interface ShoppingListRemoveLineItemAction extends ShoppingListUpdateActi
     
     public void setQuantity(final Long quantity);
 
-    public static ShoppingListRemoveLineItemActionImpl of(){
+    public static ShoppingListRemoveLineItemAction of(){
         return new ShoppingListRemoveLineItemActionImpl();
     }
     
 
-    public static ShoppingListRemoveLineItemActionImpl of(final ShoppingListRemoveLineItemAction template) {
+    public static ShoppingListRemoveLineItemAction of(final ShoppingListRemoveLineItemAction template) {
         ShoppingListRemoveLineItemActionImpl instance = new ShoppingListRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static ShoppingListRemoveLineItemActionBuilder builder(){
+        return ShoppingListRemoveLineItemActionBuilder.of();
+    }
+    
+    public static ShoppingListRemoveLineItemActionBuilder builder(final ShoppingListRemoveLineItemAction template){
+        return ShoppingListRemoveLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListRemoveLineItemAction(Function<ShoppingListRemoveLineItemAction, T> helper) {
         return helper.apply(this);

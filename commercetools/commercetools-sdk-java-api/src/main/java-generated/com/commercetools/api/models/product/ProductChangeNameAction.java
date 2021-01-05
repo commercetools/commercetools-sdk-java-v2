@@ -36,17 +36,26 @@ public interface ProductChangeNameAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductChangeNameActionImpl of(){
+    public static ProductChangeNameAction of(){
         return new ProductChangeNameActionImpl();
     }
     
 
-    public static ProductChangeNameActionImpl of(final ProductChangeNameAction template) {
+    public static ProductChangeNameAction of(final ProductChangeNameAction template) {
         ProductChangeNameActionImpl instance = new ProductChangeNameActionImpl();
         instance.setName(template.getName());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductChangeNameActionBuilder builder(){
+        return ProductChangeNameActionBuilder.of();
+    }
+    
+    public static ProductChangeNameActionBuilder builder(final ProductChangeNameAction template){
+        return ProductChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductChangeNameAction(Function<ProductChangeNameAction, T> helper) {
         return helper.apply(this);

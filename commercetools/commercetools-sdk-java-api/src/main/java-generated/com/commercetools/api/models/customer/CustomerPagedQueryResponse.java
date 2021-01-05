@@ -55,12 +55,12 @@ public interface CustomerPagedQueryResponse extends com.commercetools.api.models
     public void setResults(final Customer ...results);
     public void setResults(final List<Customer> results);
 
-    public static CustomerPagedQueryResponseImpl of(){
+    public static CustomerPagedQueryResponse of(){
         return new CustomerPagedQueryResponseImpl();
     }
     
 
-    public static CustomerPagedQueryResponseImpl of(final CustomerPagedQueryResponse template) {
+    public static CustomerPagedQueryResponse of(final CustomerPagedQueryResponse template) {
         CustomerPagedQueryResponseImpl instance = new CustomerPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface CustomerPagedQueryResponse extends com.commercetools.api.models
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static CustomerPagedQueryResponseBuilder builder(){
+        return CustomerPagedQueryResponseBuilder.of();
+    }
+    
+    public static CustomerPagedQueryResponseBuilder builder(final CustomerPagedQueryResponse template){
+        return CustomerPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerPagedQueryResponse(Function<CustomerPagedQueryResponse, T> helper) {
         return helper.apply(this);

@@ -302,12 +302,12 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     public void setItemShippingAddresses(final Address ...itemShippingAddresses);
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
-    public static CartImpl of(){
+    public static Cart of(){
         return new CartImpl();
     }
     
 
-    public static CartImpl of(final Cart template) {
+    public static Cart of(final Cart template) {
         CartImpl instance = new CartImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -344,6 +344,15 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         return instance;
     }
+
+    public static CartBuilder builder(){
+        return CartBuilder.of();
+    }
+    
+    public static CartBuilder builder(final Cart template){
+        return CartBuilder.of(template);
+    }
+    
 
     default <T> T withCart(Function<Cart, T> helper) {
         return helper.apply(this);

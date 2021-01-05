@@ -30,16 +30,25 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
 
     public void setDescription(final LocalizedString description);
 
-    public static StateSetDescriptionActionImpl of(){
+    public static StateSetDescriptionAction of(){
         return new StateSetDescriptionActionImpl();
     }
     
 
-    public static StateSetDescriptionActionImpl of(final StateSetDescriptionAction template) {
+    public static StateSetDescriptionAction of(final StateSetDescriptionAction template) {
         StateSetDescriptionActionImpl instance = new StateSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static StateSetDescriptionActionBuilder builder(){
+        return StateSetDescriptionActionBuilder.of();
+    }
+    
+    public static StateSetDescriptionActionBuilder builder(final StateSetDescriptionAction template){
+        return StateSetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withStateSetDescriptionAction(Function<StateSetDescriptionAction, T> helper) {
         return helper.apply(this);

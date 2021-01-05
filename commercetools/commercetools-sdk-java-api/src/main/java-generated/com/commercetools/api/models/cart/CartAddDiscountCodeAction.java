@@ -28,16 +28,25 @@ public interface CartAddDiscountCodeAction extends CartUpdateAction {
 
     public void setCode(final String code);
 
-    public static CartAddDiscountCodeActionImpl of(){
+    public static CartAddDiscountCodeAction of(){
         return new CartAddDiscountCodeActionImpl();
     }
     
 
-    public static CartAddDiscountCodeActionImpl of(final CartAddDiscountCodeAction template) {
+    public static CartAddDiscountCodeAction of(final CartAddDiscountCodeAction template) {
         CartAddDiscountCodeActionImpl instance = new CartAddDiscountCodeActionImpl();
         instance.setCode(template.getCode());
         return instance;
     }
+
+    public static CartAddDiscountCodeActionBuilder builder(){
+        return CartAddDiscountCodeActionBuilder.of();
+    }
+    
+    public static CartAddDiscountCodeActionBuilder builder(final CartAddDiscountCodeAction template){
+        return CartAddDiscountCodeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartAddDiscountCodeAction(Function<CartAddDiscountCodeAction, T> helper) {
         return helper.apply(this);

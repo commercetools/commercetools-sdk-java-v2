@@ -44,18 +44,27 @@ public interface OrderEditApplied extends OrderEditResult {
     
     public void setExcerptAfterEdit(final OrderExcerpt excerptAfterEdit);
 
-    public static OrderEditAppliedImpl of(){
+    public static OrderEditApplied of(){
         return new OrderEditAppliedImpl();
     }
     
 
-    public static OrderEditAppliedImpl of(final OrderEditApplied template) {
+    public static OrderEditApplied of(final OrderEditApplied template) {
         OrderEditAppliedImpl instance = new OrderEditAppliedImpl();
         instance.setAppliedAt(template.getAppliedAt());
         instance.setExcerptBeforeEdit(template.getExcerptBeforeEdit());
         instance.setExcerptAfterEdit(template.getExcerptAfterEdit());
         return instance;
     }
+
+    public static OrderEditAppliedBuilder builder(){
+        return OrderEditAppliedBuilder.of();
+    }
+    
+    public static OrderEditAppliedBuilder builder(final OrderEditApplied template){
+        return OrderEditAppliedBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditApplied(Function<OrderEditApplied, T> helper) {
         return helper.apply(this);

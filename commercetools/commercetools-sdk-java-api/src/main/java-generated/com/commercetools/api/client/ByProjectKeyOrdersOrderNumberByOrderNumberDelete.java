@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete extends ApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberDelete, com.commercetools.api.models.order.Order> {
+public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete extends ApiMethod<ByProjectKeyOrdersOrderNumberByOrderNumberDelete, com.commercetools.api.models.order.Order> implements com.commercetools.api.client.DataerasureTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, com.commercetools.api.client.VersionedTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyOrdersOrderNumberByOrderNumberDelete> {
 
     
     private String projectKey;

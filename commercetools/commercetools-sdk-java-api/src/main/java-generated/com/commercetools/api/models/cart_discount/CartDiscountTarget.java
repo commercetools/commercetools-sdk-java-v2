@@ -46,6 +46,7 @@ public interface CartDiscountTarget  {
 
 
 
+
     default <T> T withCartDiscountTarget(Function<CartDiscountTarget, T> helper) {
         return helper.apply(this);
     }

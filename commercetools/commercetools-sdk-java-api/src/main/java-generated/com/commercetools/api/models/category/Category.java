@@ -171,12 +171,12 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
     
     public void setKey(final String key);
 
-    public static CategoryImpl of(){
+    public static Category of(){
         return new CategoryImpl();
     }
     
 
-    public static CategoryImpl of(final Category template) {
+    public static Category of(final Category template) {
         CategoryImpl instance = new CategoryImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -199,6 +199,15 @@ public interface Category extends BaseResource, com.commercetools.api.models.Dom
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CategoryBuilder builder(){
+        return CategoryBuilder.of();
+    }
+    
+    public static CategoryBuilder builder(final Category template){
+        return CategoryBuilder.of(template);
+    }
+    
 
     default <T> T withCategory(Function<Category, T> helper) {
         return helper.apply(this);

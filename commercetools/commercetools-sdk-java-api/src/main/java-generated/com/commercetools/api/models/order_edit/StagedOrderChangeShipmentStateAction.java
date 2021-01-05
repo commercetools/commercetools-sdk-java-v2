@@ -29,16 +29,25 @@ public interface StagedOrderChangeShipmentStateAction extends StagedOrderUpdateA
 
     public void setShipmentState(final ShipmentState shipmentState);
 
-    public static StagedOrderChangeShipmentStateActionImpl of(){
+    public static StagedOrderChangeShipmentStateAction of(){
         return new StagedOrderChangeShipmentStateActionImpl();
     }
     
 
-    public static StagedOrderChangeShipmentStateActionImpl of(final StagedOrderChangeShipmentStateAction template) {
+    public static StagedOrderChangeShipmentStateAction of(final StagedOrderChangeShipmentStateAction template) {
         StagedOrderChangeShipmentStateActionImpl instance = new StagedOrderChangeShipmentStateActionImpl();
         instance.setShipmentState(template.getShipmentState());
         return instance;
     }
+
+    public static StagedOrderChangeShipmentStateActionBuilder builder(){
+        return StagedOrderChangeShipmentStateActionBuilder.of();
+    }
+    
+    public static StagedOrderChangeShipmentStateActionBuilder builder(final StagedOrderChangeShipmentStateAction template){
+        return StagedOrderChangeShipmentStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderChangeShipmentStateAction(Function<StagedOrderChangeShipmentStateAction, T> helper) {
         return helper.apply(this);

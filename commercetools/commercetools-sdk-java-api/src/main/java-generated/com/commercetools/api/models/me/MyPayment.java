@@ -89,12 +89,12 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
     
     public void setCustom(final CustomFields custom);
 
-    public static MyPaymentImpl of(){
+    public static MyPayment of(){
         return new MyPaymentImpl();
     }
     
 
-    public static MyPaymentImpl of(final MyPayment template) {
+    public static MyPayment of(final MyPayment template) {
         MyPaymentImpl instance = new MyPaymentImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -106,6 +106,15 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static MyPaymentBuilder builder(){
+        return MyPaymentBuilder.of();
+    }
+    
+    public static MyPaymentBuilder builder(final MyPayment template){
+        return MyPaymentBuilder.of(template);
+    }
+    
 
     default <T> T withMyPayment(Function<MyPayment, T> helper) {
         return helper.apply(this);

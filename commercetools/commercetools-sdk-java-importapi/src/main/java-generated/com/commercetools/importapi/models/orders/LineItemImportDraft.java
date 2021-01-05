@@ -123,12 +123,12 @@ public interface LineItemImportDraft  {
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static LineItemImportDraftImpl of(){
+    public static LineItemImportDraft of(){
         return new LineItemImportDraftImpl();
     }
     
 
-    public static LineItemImportDraftImpl of(final LineItemImportDraft template) {
+    public static LineItemImportDraft of(final LineItemImportDraft template) {
         LineItemImportDraftImpl instance = new LineItemImportDraftImpl();
         instance.setProduct(template.getProduct());
         instance.setName(template.getName());
@@ -142,6 +142,15 @@ public interface LineItemImportDraft  {
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static LineItemImportDraftBuilder builder(){
+        return LineItemImportDraftBuilder.of();
+    }
+    
+    public static LineItemImportDraftBuilder builder(final LineItemImportDraft template){
+        return LineItemImportDraftBuilder.of(template);
+    }
+    
 
     default <T> T withLineItemImportDraft(Function<LineItemImportDraft, T> helper) {
         return helper.apply(this);

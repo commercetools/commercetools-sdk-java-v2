@@ -30,16 +30,25 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
 
     public void setKey(final String key);
 
-    public static CustomerSetKeyActionImpl of(){
+    public static CustomerSetKeyAction of(){
         return new CustomerSetKeyActionImpl();
     }
     
 
-    public static CustomerSetKeyActionImpl of(final CustomerSetKeyAction template) {
+    public static CustomerSetKeyAction of(final CustomerSetKeyAction template) {
         CustomerSetKeyActionImpl instance = new CustomerSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CustomerSetKeyActionBuilder builder(){
+        return CustomerSetKeyActionBuilder.of();
+    }
+    
+    public static CustomerSetKeyActionBuilder builder(final CustomerSetKeyAction template){
+        return CustomerSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetKeyAction(Function<CustomerSetKeyAction, T> helper) {
         return helper.apply(this);

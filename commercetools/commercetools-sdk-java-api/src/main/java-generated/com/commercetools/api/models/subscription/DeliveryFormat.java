@@ -40,6 +40,7 @@ public interface DeliveryFormat  {
 
 
 
+
     default <T> T withDeliveryFormat(Function<DeliveryFormat, T> helper) {
         return helper.apply(this);
     }

@@ -34,17 +34,26 @@ public interface TimeSetAttribute extends Attribute {
     public void setValue(final LocalTime ...value);
     public void setValue(final List<LocalTime> value);
 
-    public static TimeSetAttributeImpl of(){
+    public static TimeSetAttribute of(){
         return new TimeSetAttributeImpl();
     }
     
 
-    public static TimeSetAttributeImpl of(final TimeSetAttribute template) {
+    public static TimeSetAttribute of(final TimeSetAttribute template) {
         TimeSetAttributeImpl instance = new TimeSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TimeSetAttributeBuilder builder(){
+        return TimeSetAttributeBuilder.of();
+    }
+    
+    public static TimeSetAttributeBuilder builder(final TimeSetAttribute template){
+        return TimeSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withTimeSetAttribute(Function<TimeSetAttribute, T> helper) {
         return helper.apply(this);

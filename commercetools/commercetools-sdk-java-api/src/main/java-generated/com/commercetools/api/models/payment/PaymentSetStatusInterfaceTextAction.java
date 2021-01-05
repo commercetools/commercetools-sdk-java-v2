@@ -28,16 +28,25 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
 
     public void setInterfaceText(final String interfaceText);
 
-    public static PaymentSetStatusInterfaceTextActionImpl of(){
+    public static PaymentSetStatusInterfaceTextAction of(){
         return new PaymentSetStatusInterfaceTextActionImpl();
     }
     
 
-    public static PaymentSetStatusInterfaceTextActionImpl of(final PaymentSetStatusInterfaceTextAction template) {
+    public static PaymentSetStatusInterfaceTextAction of(final PaymentSetStatusInterfaceTextAction template) {
         PaymentSetStatusInterfaceTextActionImpl instance = new PaymentSetStatusInterfaceTextActionImpl();
         instance.setInterfaceText(template.getInterfaceText());
         return instance;
     }
+
+    public static PaymentSetStatusInterfaceTextActionBuilder builder(){
+        return PaymentSetStatusInterfaceTextActionBuilder.of();
+    }
+    
+    public static PaymentSetStatusInterfaceTextActionBuilder builder(final PaymentSetStatusInterfaceTextAction template){
+        return PaymentSetStatusInterfaceTextActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetStatusInterfaceTextAction(Function<PaymentSetStatusInterfaceTextAction, T> helper) {
         return helper.apply(this);

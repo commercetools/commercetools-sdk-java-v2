@@ -28,16 +28,25 @@ public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscou
 
     public void setRequiresDiscountCode(final Boolean requiresDiscountCode);
 
-    public static CartDiscountChangeRequiresDiscountCodeActionImpl of(){
+    public static CartDiscountChangeRequiresDiscountCodeAction of(){
         return new CartDiscountChangeRequiresDiscountCodeActionImpl();
     }
     
 
-    public static CartDiscountChangeRequiresDiscountCodeActionImpl of(final CartDiscountChangeRequiresDiscountCodeAction template) {
+    public static CartDiscountChangeRequiresDiscountCodeAction of(final CartDiscountChangeRequiresDiscountCodeAction template) {
         CartDiscountChangeRequiresDiscountCodeActionImpl instance = new CartDiscountChangeRequiresDiscountCodeActionImpl();
         instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
         return instance;
     }
+
+    public static CartDiscountChangeRequiresDiscountCodeActionBuilder builder(){
+        return CartDiscountChangeRequiresDiscountCodeActionBuilder.of();
+    }
+    
+    public static CartDiscountChangeRequiresDiscountCodeActionBuilder builder(final CartDiscountChangeRequiresDiscountCodeAction template){
+        return CartDiscountChangeRequiresDiscountCodeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountChangeRequiresDiscountCodeAction(Function<CartDiscountChangeRequiresDiscountCodeAction, T> helper) {
         return helper.apply(this);

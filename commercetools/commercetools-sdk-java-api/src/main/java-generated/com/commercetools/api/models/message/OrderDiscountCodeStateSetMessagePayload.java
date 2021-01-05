@@ -43,18 +43,27 @@ public interface OrderDiscountCodeStateSetMessagePayload extends MessagePayload 
     
     public void setOldState(final DiscountCodeState oldState);
 
-    public static OrderDiscountCodeStateSetMessagePayloadImpl of(){
+    public static OrderDiscountCodeStateSetMessagePayload of(){
         return new OrderDiscountCodeStateSetMessagePayloadImpl();
     }
     
 
-    public static OrderDiscountCodeStateSetMessagePayloadImpl of(final OrderDiscountCodeStateSetMessagePayload template) {
+    public static OrderDiscountCodeStateSetMessagePayload of(final OrderDiscountCodeStateSetMessagePayload template) {
         OrderDiscountCodeStateSetMessagePayloadImpl instance = new OrderDiscountCodeStateSetMessagePayloadImpl();
         instance.setDiscountCode(template.getDiscountCode());
         instance.setState(template.getState());
         instance.setOldState(template.getOldState());
         return instance;
     }
+
+    public static OrderDiscountCodeStateSetMessagePayloadBuilder builder(){
+        return OrderDiscountCodeStateSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderDiscountCodeStateSetMessagePayloadBuilder builder(final OrderDiscountCodeStateSetMessagePayload template){
+        return OrderDiscountCodeStateSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderDiscountCodeStateSetMessagePayload(Function<OrderDiscountCodeStateSetMessagePayload, T> helper) {
         return helper.apply(this);

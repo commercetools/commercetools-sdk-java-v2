@@ -28,16 +28,25 @@ public interface MyCustomerSetMiddleNameAction extends MyCustomerUpdateAction {
 
     public void setMiddleName(final String middleName);
 
-    public static MyCustomerSetMiddleNameActionImpl of(){
+    public static MyCustomerSetMiddleNameAction of(){
         return new MyCustomerSetMiddleNameActionImpl();
     }
     
 
-    public static MyCustomerSetMiddleNameActionImpl of(final MyCustomerSetMiddleNameAction template) {
+    public static MyCustomerSetMiddleNameAction of(final MyCustomerSetMiddleNameAction template) {
         MyCustomerSetMiddleNameActionImpl instance = new MyCustomerSetMiddleNameActionImpl();
         instance.setMiddleName(template.getMiddleName());
         return instance;
     }
+
+    public static MyCustomerSetMiddleNameActionBuilder builder(){
+        return MyCustomerSetMiddleNameActionBuilder.of();
+    }
+    
+    public static MyCustomerSetMiddleNameActionBuilder builder(final MyCustomerSetMiddleNameAction template){
+        return MyCustomerSetMiddleNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetMiddleNameAction(Function<MyCustomerSetMiddleNameAction, T> helper) {
         return helper.apply(this);

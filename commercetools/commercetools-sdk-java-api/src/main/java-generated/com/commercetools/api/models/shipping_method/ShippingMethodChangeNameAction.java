@@ -28,16 +28,25 @@ public interface ShippingMethodChangeNameAction extends ShippingMethodUpdateActi
 
     public void setName(final String name);
 
-    public static ShippingMethodChangeNameActionImpl of(){
+    public static ShippingMethodChangeNameAction of(){
         return new ShippingMethodChangeNameActionImpl();
     }
     
 
-    public static ShippingMethodChangeNameActionImpl of(final ShippingMethodChangeNameAction template) {
+    public static ShippingMethodChangeNameAction of(final ShippingMethodChangeNameAction template) {
         ShippingMethodChangeNameActionImpl instance = new ShippingMethodChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ShippingMethodChangeNameActionBuilder builder(){
+        return ShippingMethodChangeNameActionBuilder.of();
+    }
+    
+    public static ShippingMethodChangeNameActionBuilder builder(final ShippingMethodChangeNameAction template){
+        return ShippingMethodChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodChangeNameAction(Function<ShippingMethodChangeNameAction, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface TypeChangeNameAction extends TypeUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static TypeChangeNameActionImpl of(){
+    public static TypeChangeNameAction of(){
         return new TypeChangeNameActionImpl();
     }
     
 
-    public static TypeChangeNameActionImpl of(final TypeChangeNameAction template) {
+    public static TypeChangeNameAction of(final TypeChangeNameAction template) {
         TypeChangeNameActionImpl instance = new TypeChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static TypeChangeNameActionBuilder builder(){
+        return TypeChangeNameActionBuilder.of();
+    }
+    
+    public static TypeChangeNameActionBuilder builder(final TypeChangeNameAction template){
+        return TypeChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeNameAction(Function<TypeChangeNameAction, T> helper) {
         return helper.apply(this);

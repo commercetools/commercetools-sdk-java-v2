@@ -107,12 +107,12 @@ public interface ProductVariant  {
     
     public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted);
 
-    public static ProductVariantImpl of(){
+    public static ProductVariant of(){
         return new ProductVariantImpl();
     }
     
 
-    public static ProductVariantImpl of(final ProductVariant template) {
+    public static ProductVariant of(final ProductVariant template) {
         ProductVariantImpl instance = new ProductVariantImpl();
         instance.setId(template.getId());
         instance.setSku(template.getSku());
@@ -128,6 +128,15 @@ public interface ProductVariant  {
         instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
         return instance;
     }
+
+    public static ProductVariantBuilder builder(){
+        return ProductVariantBuilder.of();
+    }
+    
+    public static ProductVariantBuilder builder(final ProductVariant template){
+        return ProductVariantBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariant(Function<ProductVariant, T> helper) {
         return helper.apply(this);

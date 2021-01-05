@@ -44,18 +44,27 @@ public interface ProductChangePriceAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductChangePriceActionImpl of(){
+    public static ProductChangePriceAction of(){
         return new ProductChangePriceActionImpl();
     }
     
 
-    public static ProductChangePriceActionImpl of(final ProductChangePriceAction template) {
+    public static ProductChangePriceAction of(final ProductChangePriceAction template) {
         ProductChangePriceActionImpl instance = new ProductChangePriceActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setPrice(template.getPrice());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductChangePriceActionBuilder builder(){
+        return ProductChangePriceActionBuilder.of();
+    }
+    
+    public static ProductChangePriceActionBuilder builder(final ProductChangePriceAction template){
+        return ProductChangePriceActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductChangePriceAction(Function<ProductChangePriceAction, T> helper) {
         return helper.apply(this);

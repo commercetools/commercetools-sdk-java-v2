@@ -176,6 +176,7 @@ public interface StagedOrderUpdateAction extends com.commercetools.api.models.Re
 
 
 
+
     default <T> T withStagedOrderUpdateAction(Function<StagedOrderUpdateAction, T> helper) {
         return helper.apply(this);
     }

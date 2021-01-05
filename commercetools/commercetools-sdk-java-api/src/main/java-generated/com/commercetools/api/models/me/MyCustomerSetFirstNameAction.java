@@ -28,16 +28,25 @@ public interface MyCustomerSetFirstNameAction extends MyCustomerUpdateAction {
 
     public void setFirstName(final String firstName);
 
-    public static MyCustomerSetFirstNameActionImpl of(){
+    public static MyCustomerSetFirstNameAction of(){
         return new MyCustomerSetFirstNameActionImpl();
     }
     
 
-    public static MyCustomerSetFirstNameActionImpl of(final MyCustomerSetFirstNameAction template) {
+    public static MyCustomerSetFirstNameAction of(final MyCustomerSetFirstNameAction template) {
         MyCustomerSetFirstNameActionImpl instance = new MyCustomerSetFirstNameActionImpl();
         instance.setFirstName(template.getFirstName());
         return instance;
     }
+
+    public static MyCustomerSetFirstNameActionBuilder builder(){
+        return MyCustomerSetFirstNameActionBuilder.of();
+    }
+    
+    public static MyCustomerSetFirstNameActionBuilder builder(final MyCustomerSetFirstNameAction template){
+        return MyCustomerSetFirstNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetFirstNameAction(Function<MyCustomerSetFirstNameAction, T> helper) {
         return helper.apply(this);

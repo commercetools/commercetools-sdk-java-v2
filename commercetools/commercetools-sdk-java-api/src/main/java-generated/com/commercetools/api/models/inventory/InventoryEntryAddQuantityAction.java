@@ -28,16 +28,25 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
 
     public void setQuantity(final Long quantity);
 
-    public static InventoryEntryAddQuantityActionImpl of(){
+    public static InventoryEntryAddQuantityAction of(){
         return new InventoryEntryAddQuantityActionImpl();
     }
     
 
-    public static InventoryEntryAddQuantityActionImpl of(final InventoryEntryAddQuantityAction template) {
+    public static InventoryEntryAddQuantityAction of(final InventoryEntryAddQuantityAction template) {
         InventoryEntryAddQuantityActionImpl instance = new InventoryEntryAddQuantityActionImpl();
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static InventoryEntryAddQuantityActionBuilder builder(){
+        return InventoryEntryAddQuantityActionBuilder.of();
+    }
+    
+    public static InventoryEntryAddQuantityActionBuilder builder(final InventoryEntryAddQuantityAction template){
+        return InventoryEntryAddQuantityActionBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryAddQuantityAction(Function<InventoryEntryAddQuantityAction, T> helper) {
         return helper.apply(this);

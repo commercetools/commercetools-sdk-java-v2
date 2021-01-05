@@ -46,18 +46,27 @@ public interface ParcelDraft  {
     public void setItems(final DeliveryItem ...items);
     public void setItems(final List<DeliveryItem> items);
 
-    public static ParcelDraftImpl of(){
+    public static ParcelDraft of(){
         return new ParcelDraftImpl();
     }
     
 
-    public static ParcelDraftImpl of(final ParcelDraft template) {
+    public static ParcelDraft of(final ParcelDraft template) {
         ParcelDraftImpl instance = new ParcelDraftImpl();
         instance.setMeasurements(template.getMeasurements());
         instance.setTrackingData(template.getTrackingData());
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public static ParcelDraftBuilder builder(){
+        return ParcelDraftBuilder.of();
+    }
+    
+    public static ParcelDraftBuilder builder(final ParcelDraft template){
+        return ParcelDraftBuilder.of(template);
+    }
+    
 
     default <T> T withParcelDraft(Function<ParcelDraft, T> helper) {
         return helper.apply(this);

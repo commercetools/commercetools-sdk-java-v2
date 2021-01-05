@@ -28,16 +28,25 @@ public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
 
     public void setOrderHint(final String orderHint);
 
-    public static CategoryChangeOrderHintActionImpl of(){
+    public static CategoryChangeOrderHintAction of(){
         return new CategoryChangeOrderHintActionImpl();
     }
     
 
-    public static CategoryChangeOrderHintActionImpl of(final CategoryChangeOrderHintAction template) {
+    public static CategoryChangeOrderHintAction of(final CategoryChangeOrderHintAction template) {
         CategoryChangeOrderHintActionImpl instance = new CategoryChangeOrderHintActionImpl();
         instance.setOrderHint(template.getOrderHint());
         return instance;
     }
+
+    public static CategoryChangeOrderHintActionBuilder builder(){
+        return CategoryChangeOrderHintActionBuilder.of();
+    }
+    
+    public static CategoryChangeOrderHintActionBuilder builder(final CategoryChangeOrderHintAction template){
+        return CategoryChangeOrderHintActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryChangeOrderHintAction(Function<CategoryChangeOrderHintAction, T> helper) {
         return helper.apply(this);

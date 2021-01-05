@@ -72,12 +72,12 @@ public interface InventoryImport extends ImportResource {
     
     public void setCustom(final Custom custom);
 
-    public static InventoryImportImpl of(){
+    public static InventoryImport of(){
         return new InventoryImportImpl();
     }
     
 
-    public static InventoryImportImpl of(final InventoryImport template) {
+    public static InventoryImport of(final InventoryImport template) {
         InventoryImportImpl instance = new InventoryImportImpl();
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
@@ -88,6 +88,15 @@ public interface InventoryImport extends ImportResource {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static InventoryImportBuilder builder(){
+        return InventoryImportBuilder.of();
+    }
+    
+    public static InventoryImportBuilder builder(final InventoryImport template){
+        return InventoryImportBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryImport(Function<InventoryImport, T> helper) {
         return helper.apply(this);

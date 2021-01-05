@@ -48,12 +48,12 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductRemoveImageActionImpl of(){
+    public static ProductRemoveImageAction of(){
         return new ProductRemoveImageActionImpl();
     }
     
 
-    public static ProductRemoveImageActionImpl of(final ProductRemoveImageAction template) {
+    public static ProductRemoveImageAction of(final ProductRemoveImageAction template) {
         ProductRemoveImageActionImpl instance = new ProductRemoveImageActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -61,6 +61,15 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductRemoveImageActionBuilder builder(){
+        return ProductRemoveImageActionBuilder.of();
+    }
+    
+    public static ProductRemoveImageActionBuilder builder(final ProductRemoveImageAction template){
+        return ProductRemoveImageActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductRemoveImageAction(Function<ProductRemoveImageAction, T> helper) {
         return helper.apply(this);

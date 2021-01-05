@@ -37,17 +37,26 @@ public interface ReviewUpdate extends com.commercetools.api.models.ResourceUpdat
     public void setActions(final ReviewUpdateAction ...actions);
     public void setActions(final List<ReviewUpdateAction> actions);
 
-    public static ReviewUpdateImpl of(){
+    public static ReviewUpdate of(){
         return new ReviewUpdateImpl();
     }
     
 
-    public static ReviewUpdateImpl of(final ReviewUpdate template) {
+    public static ReviewUpdate of(final ReviewUpdate template) {
         ReviewUpdateImpl instance = new ReviewUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ReviewUpdateBuilder builder(){
+        return ReviewUpdateBuilder.of();
+    }
+    
+    public static ReviewUpdateBuilder builder(final ReviewUpdate template){
+        return ReviewUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withReviewUpdate(Function<ReviewUpdate, T> helper) {
         return helper.apply(this);

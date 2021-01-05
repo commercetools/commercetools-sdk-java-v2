@@ -30,16 +30,25 @@ public interface DeliveryAddedMessagePayload extends MessagePayload {
 
     public void setDelivery(final Delivery delivery);
 
-    public static DeliveryAddedMessagePayloadImpl of(){
+    public static DeliveryAddedMessagePayload of(){
         return new DeliveryAddedMessagePayloadImpl();
     }
     
 
-    public static DeliveryAddedMessagePayloadImpl of(final DeliveryAddedMessagePayload template) {
+    public static DeliveryAddedMessagePayload of(final DeliveryAddedMessagePayload template) {
         DeliveryAddedMessagePayloadImpl instance = new DeliveryAddedMessagePayloadImpl();
         instance.setDelivery(template.getDelivery());
         return instance;
     }
+
+    public static DeliveryAddedMessagePayloadBuilder builder(){
+        return DeliveryAddedMessagePayloadBuilder.of();
+    }
+    
+    public static DeliveryAddedMessagePayloadBuilder builder(final DeliveryAddedMessagePayload template){
+        return DeliveryAddedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryAddedMessagePayload(Function<DeliveryAddedMessagePayload, T> helper) {
         return helper.apply(this);

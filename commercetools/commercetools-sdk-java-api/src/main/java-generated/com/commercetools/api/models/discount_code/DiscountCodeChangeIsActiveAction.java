@@ -28,16 +28,25 @@ public interface DiscountCodeChangeIsActiveAction extends DiscountCodeUpdateActi
 
     public void setIsActive(final Boolean isActive);
 
-    public static DiscountCodeChangeIsActiveActionImpl of(){
+    public static DiscountCodeChangeIsActiveAction of(){
         return new DiscountCodeChangeIsActiveActionImpl();
     }
     
 
-    public static DiscountCodeChangeIsActiveActionImpl of(final DiscountCodeChangeIsActiveAction template) {
+    public static DiscountCodeChangeIsActiveAction of(final DiscountCodeChangeIsActiveAction template) {
         DiscountCodeChangeIsActiveActionImpl instance = new DiscountCodeChangeIsActiveActionImpl();
         instance.setIsActive(template.getIsActive());
         return instance;
     }
+
+    public static DiscountCodeChangeIsActiveActionBuilder builder(){
+        return DiscountCodeChangeIsActiveActionBuilder.of();
+    }
+    
+    public static DiscountCodeChangeIsActiveActionBuilder builder(final DiscountCodeChangeIsActiveAction template){
+        return DiscountCodeChangeIsActiveActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeChangeIsActiveAction(Function<DiscountCodeChangeIsActiveAction, T> helper) {
         return helper.apply(this);

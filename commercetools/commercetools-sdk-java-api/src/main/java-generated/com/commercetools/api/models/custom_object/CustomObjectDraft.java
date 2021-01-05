@@ -50,12 +50,12 @@ public interface CustomObjectDraft  {
     
     public void setVersion(final Long version);
 
-    public static CustomObjectDraftImpl of(){
+    public static CustomObjectDraft of(){
         return new CustomObjectDraftImpl();
     }
     
 
-    public static CustomObjectDraftImpl of(final CustomObjectDraft template) {
+    public static CustomObjectDraft of(final CustomObjectDraft template) {
         CustomObjectDraftImpl instance = new CustomObjectDraftImpl();
         instance.setContainer(template.getContainer());
         instance.setKey(template.getKey());
@@ -63,6 +63,15 @@ public interface CustomObjectDraft  {
         instance.setVersion(template.getVersion());
         return instance;
     }
+
+    public static CustomObjectDraftBuilder builder(){
+        return CustomObjectDraftBuilder.of();
+    }
+    
+    public static CustomObjectDraftBuilder builder(final CustomObjectDraft template){
+        return CustomObjectDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCustomObjectDraft(Function<CustomObjectDraft, T> helper) {
         return helper.apply(this);

@@ -31,16 +31,25 @@ public interface StateRemoveRolesAction extends StateUpdateAction {
     public void setRoles(final StateRoleEnum ...roles);
     public void setRoles(final List<StateRoleEnum> roles);
 
-    public static StateRemoveRolesActionImpl of(){
+    public static StateRemoveRolesAction of(){
         return new StateRemoveRolesActionImpl();
     }
     
 
-    public static StateRemoveRolesActionImpl of(final StateRemoveRolesAction template) {
+    public static StateRemoveRolesAction of(final StateRemoveRolesAction template) {
         StateRemoveRolesActionImpl instance = new StateRemoveRolesActionImpl();
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public static StateRemoveRolesActionBuilder builder(){
+        return StateRemoveRolesActionBuilder.of();
+    }
+    
+    public static StateRemoveRolesActionBuilder builder(final StateRemoveRolesAction template){
+        return StateRemoveRolesActionBuilder.of(template);
+    }
+    
 
     default <T> T withStateRemoveRolesAction(Function<StateRemoveRolesAction, T> helper) {
         return helper.apply(this);

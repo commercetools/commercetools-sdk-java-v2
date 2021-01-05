@@ -67,12 +67,12 @@ public interface MessageDelivery extends SubscriptionDelivery {
     
     public void setPayloadNotIncluded(final PayloadNotIncluded payloadNotIncluded);
 
-    public static MessageDeliveryImpl of(){
+    public static MessageDelivery of(){
         return new MessageDeliveryImpl();
     }
     
 
-    public static MessageDeliveryImpl of(final MessageDelivery template) {
+    public static MessageDelivery of(final MessageDelivery template) {
         MessageDeliveryImpl instance = new MessageDeliveryImpl();
         instance.setProjectKey(template.getProjectKey());
         instance.setResource(template.getResource());
@@ -86,6 +86,15 @@ public interface MessageDelivery extends SubscriptionDelivery {
         instance.setPayloadNotIncluded(template.getPayloadNotIncluded());
         return instance;
     }
+
+    public static MessageDeliveryBuilder builder(){
+        return MessageDeliveryBuilder.of();
+    }
+    
+    public static MessageDeliveryBuilder builder(final MessageDelivery template){
+        return MessageDeliveryBuilder.of(template);
+    }
+    
 
     default <T> T withMessageDelivery(Function<MessageDelivery, T> helper) {
         return helper.apply(this);

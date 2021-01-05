@@ -35,17 +35,26 @@ public interface CategorySetCustomFieldAction extends CategoryUpdateAction {
     
     public void setValue(final JsonNode value);
 
-    public static CategorySetCustomFieldActionImpl of(){
+    public static CategorySetCustomFieldAction of(){
         return new CategorySetCustomFieldActionImpl();
     }
     
 
-    public static CategorySetCustomFieldActionImpl of(final CategorySetCustomFieldAction template) {
+    public static CategorySetCustomFieldAction of(final CategorySetCustomFieldAction template) {
         CategorySetCustomFieldActionImpl instance = new CategorySetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static CategorySetCustomFieldActionBuilder builder(){
+        return CategorySetCustomFieldActionBuilder.of();
+    }
+    
+    public static CategorySetCustomFieldActionBuilder builder(final CategorySetCustomFieldAction template){
+        return CategorySetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetCustomFieldAction(Function<CategorySetCustomFieldAction, T> helper) {
         return helper.apply(this);

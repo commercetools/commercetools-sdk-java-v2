@@ -32,17 +32,26 @@ public interface DateAttribute extends Attribute {
 
     public void setValue(final LocalDate value);
 
-    public static DateAttributeImpl of(){
+    public static DateAttribute of(){
         return new DateAttributeImpl();
     }
     
 
-    public static DateAttributeImpl of(final DateAttribute template) {
+    public static DateAttribute of(final DateAttribute template) {
         DateAttributeImpl instance = new DateAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static DateAttributeBuilder builder(){
+        return DateAttributeBuilder.of();
+    }
+    
+    public static DateAttributeBuilder builder(final DateAttribute template){
+        return DateAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withDateAttribute(Function<DateAttribute, T> helper) {
         return helper.apply(this);

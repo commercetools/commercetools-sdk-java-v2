@@ -41,12 +41,12 @@ public interface ResourceDeletedDelivery extends SubscriptionDelivery {
     
     public void setDataErasure(final Boolean dataErasure);
 
-    public static ResourceDeletedDeliveryImpl of(){
+    public static ResourceDeletedDelivery of(){
         return new ResourceDeletedDeliveryImpl();
     }
     
 
-    public static ResourceDeletedDeliveryImpl of(final ResourceDeletedDelivery template) {
+    public static ResourceDeletedDelivery of(final ResourceDeletedDelivery template) {
         ResourceDeletedDeliveryImpl instance = new ResourceDeletedDeliveryImpl();
         instance.setProjectKey(template.getProjectKey());
         instance.setResource(template.getResource());
@@ -56,6 +56,15 @@ public interface ResourceDeletedDelivery extends SubscriptionDelivery {
         instance.setDataErasure(template.getDataErasure());
         return instance;
     }
+
+    public static ResourceDeletedDeliveryBuilder builder(){
+        return ResourceDeletedDeliveryBuilder.of();
+    }
+    
+    public static ResourceDeletedDeliveryBuilder builder(final ResourceDeletedDelivery template){
+        return ResourceDeletedDeliveryBuilder.of(template);
+    }
+    
 
     default <T> T withResourceDeletedDelivery(Function<ResourceDeletedDelivery, T> helper) {
         return helper.apply(this);

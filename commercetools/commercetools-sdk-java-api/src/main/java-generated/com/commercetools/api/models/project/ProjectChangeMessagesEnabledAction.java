@@ -28,16 +28,25 @@ public interface ProjectChangeMessagesEnabledAction extends ProjectUpdateAction 
 
     public void setMessagesEnabled(final Boolean messagesEnabled);
 
-    public static ProjectChangeMessagesEnabledActionImpl of(){
+    public static ProjectChangeMessagesEnabledAction of(){
         return new ProjectChangeMessagesEnabledActionImpl();
     }
     
 
-    public static ProjectChangeMessagesEnabledActionImpl of(final ProjectChangeMessagesEnabledAction template) {
+    public static ProjectChangeMessagesEnabledAction of(final ProjectChangeMessagesEnabledAction template) {
         ProjectChangeMessagesEnabledActionImpl instance = new ProjectChangeMessagesEnabledActionImpl();
         instance.setMessagesEnabled(template.getMessagesEnabled());
         return instance;
     }
+
+    public static ProjectChangeMessagesEnabledActionBuilder builder(){
+        return ProjectChangeMessagesEnabledActionBuilder.of();
+    }
+    
+    public static ProjectChangeMessagesEnabledActionBuilder builder(final ProjectChangeMessagesEnabledAction template){
+        return ProjectChangeMessagesEnabledActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectChangeMessagesEnabledAction(Function<ProjectChangeMessagesEnabledAction, T> helper) {
         return helper.apply(this);

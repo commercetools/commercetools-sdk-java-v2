@@ -28,16 +28,25 @@ public interface OrderRemoveParcelFromDeliveryAction extends OrderUpdateAction {
 
     public void setParcelId(final String parcelId);
 
-    public static OrderRemoveParcelFromDeliveryActionImpl of(){
+    public static OrderRemoveParcelFromDeliveryAction of(){
         return new OrderRemoveParcelFromDeliveryActionImpl();
     }
     
 
-    public static OrderRemoveParcelFromDeliveryActionImpl of(final OrderRemoveParcelFromDeliveryAction template) {
+    public static OrderRemoveParcelFromDeliveryAction of(final OrderRemoveParcelFromDeliveryAction template) {
         OrderRemoveParcelFromDeliveryActionImpl instance = new OrderRemoveParcelFromDeliveryActionImpl();
         instance.setParcelId(template.getParcelId());
         return instance;
     }
+
+    public static OrderRemoveParcelFromDeliveryActionBuilder builder(){
+        return OrderRemoveParcelFromDeliveryActionBuilder.of();
+    }
+    
+    public static OrderRemoveParcelFromDeliveryActionBuilder builder(final OrderRemoveParcelFromDeliveryAction template){
+        return OrderRemoveParcelFromDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderRemoveParcelFromDeliveryAction(Function<OrderRemoveParcelFromDeliveryAction, T> helper) {
         return helper.apply(this);

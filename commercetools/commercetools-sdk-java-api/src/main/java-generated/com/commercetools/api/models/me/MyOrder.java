@@ -315,12 +315,12 @@ public interface MyOrder extends BaseResource, com.commercetools.api.models.Doma
     public void setRefusedGifts(final CartDiscountReference ...refusedGifts);
     public void setRefusedGifts(final List<CartDiscountReference> refusedGifts);
 
-    public static MyOrderImpl of(){
+    public static MyOrder of(){
         return new MyOrderImpl();
     }
     
 
-    public static MyOrderImpl of(final MyOrder template) {
+    public static MyOrder of(final MyOrder template) {
         MyOrderImpl instance = new MyOrderImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -365,6 +365,15 @@ public interface MyOrder extends BaseResource, com.commercetools.api.models.Doma
         instance.setRefusedGifts(template.getRefusedGifts());
         return instance;
     }
+
+    public static MyOrderBuilder builder(){
+        return MyOrderBuilder.of();
+    }
+    
+    public static MyOrderBuilder builder(final MyOrder template){
+        return MyOrderBuilder.of(template);
+    }
+    
 
     default <T> T withMyOrder(Function<MyOrder, T> helper) {
         return helper.apply(this);

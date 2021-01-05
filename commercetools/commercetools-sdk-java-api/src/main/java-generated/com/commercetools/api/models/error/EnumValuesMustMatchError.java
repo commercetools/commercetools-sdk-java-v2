@@ -23,16 +23,25 @@ public interface EnumValuesMustMatchError extends ErrorObject {
 
 
 
-    public static EnumValuesMustMatchErrorImpl of(){
+    public static EnumValuesMustMatchError of(){
         return new EnumValuesMustMatchErrorImpl();
     }
     
 
-    public static EnumValuesMustMatchErrorImpl of(final EnumValuesMustMatchError template) {
+    public static EnumValuesMustMatchError of(final EnumValuesMustMatchError template) {
         EnumValuesMustMatchErrorImpl instance = new EnumValuesMustMatchErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static EnumValuesMustMatchErrorBuilder builder(){
+        return EnumValuesMustMatchErrorBuilder.of();
+    }
+    
+    public static EnumValuesMustMatchErrorBuilder builder(final EnumValuesMustMatchError template){
+        return EnumValuesMustMatchErrorBuilder.of(template);
+    }
+    
 
     default <T> T withEnumValuesMustMatchError(Function<EnumValuesMustMatchError, T> helper) {
         return helper.apply(this);

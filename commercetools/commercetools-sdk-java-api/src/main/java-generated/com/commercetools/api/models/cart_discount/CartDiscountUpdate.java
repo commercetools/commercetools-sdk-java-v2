@@ -37,17 +37,26 @@ public interface CartDiscountUpdate extends com.commercetools.api.models.Resourc
     public void setActions(final CartDiscountUpdateAction ...actions);
     public void setActions(final List<CartDiscountUpdateAction> actions);
 
-    public static CartDiscountUpdateImpl of(){
+    public static CartDiscountUpdate of(){
         return new CartDiscountUpdateImpl();
     }
     
 
-    public static CartDiscountUpdateImpl of(final CartDiscountUpdate template) {
+    public static CartDiscountUpdate of(final CartDiscountUpdate template) {
         CartDiscountUpdateImpl instance = new CartDiscountUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static CartDiscountUpdateBuilder builder(){
+        return CartDiscountUpdateBuilder.of();
+    }
+    
+    public static CartDiscountUpdateBuilder builder(final CartDiscountUpdate template){
+        return CartDiscountUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountUpdate(Function<CartDiscountUpdate, T> helper) {
         return helper.apply(this);

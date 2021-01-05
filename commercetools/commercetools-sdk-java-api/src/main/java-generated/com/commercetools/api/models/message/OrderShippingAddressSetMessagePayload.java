@@ -35,17 +35,26 @@ public interface OrderShippingAddressSetMessagePayload extends MessagePayload {
     
     public void setOldAddress(final Address oldAddress);
 
-    public static OrderShippingAddressSetMessagePayloadImpl of(){
+    public static OrderShippingAddressSetMessagePayload of(){
         return new OrderShippingAddressSetMessagePayloadImpl();
     }
     
 
-    public static OrderShippingAddressSetMessagePayloadImpl of(final OrderShippingAddressSetMessagePayload template) {
+    public static OrderShippingAddressSetMessagePayload of(final OrderShippingAddressSetMessagePayload template) {
         OrderShippingAddressSetMessagePayloadImpl instance = new OrderShippingAddressSetMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         instance.setOldAddress(template.getOldAddress());
         return instance;
     }
+
+    public static OrderShippingAddressSetMessagePayloadBuilder builder(){
+        return OrderShippingAddressSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderShippingAddressSetMessagePayloadBuilder builder(final OrderShippingAddressSetMessagePayload template){
+        return OrderShippingAddressSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderShippingAddressSetMessagePayload(Function<OrderShippingAddressSetMessagePayload, T> helper) {
         return helper.apply(this);

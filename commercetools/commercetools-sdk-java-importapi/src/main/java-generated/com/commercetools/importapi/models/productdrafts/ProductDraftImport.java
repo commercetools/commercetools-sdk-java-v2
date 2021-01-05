@@ -152,12 +152,12 @@ public interface ProductDraftImport extends ImportResource {
     
     public void setPublish(final Boolean publish);
 
-    public static ProductDraftImportImpl of(){
+    public static ProductDraftImport of(){
         return new ProductDraftImportImpl();
     }
     
 
-    public static ProductDraftImportImpl of(final ProductDraftImport template) {
+    public static ProductDraftImport of(final ProductDraftImport template) {
         ProductDraftImportImpl instance = new ProductDraftImportImpl();
         instance.setKey(template.getKey());
         instance.setProductType(template.getProductType());
@@ -176,6 +176,15 @@ public interface ProductDraftImport extends ImportResource {
         instance.setPublish(template.getPublish());
         return instance;
     }
+
+    public static ProductDraftImportBuilder builder(){
+        return ProductDraftImportBuilder.of();
+    }
+    
+    public static ProductDraftImportBuilder builder(final ProductDraftImport template){
+        return ProductDraftImportBuilder.of(template);
+    }
+    
 
     default <T> T withProductDraftImport(Function<ProductDraftImport, T> helper) {
         return helper.apply(this);

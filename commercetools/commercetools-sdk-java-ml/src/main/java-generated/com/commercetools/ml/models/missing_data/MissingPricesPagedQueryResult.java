@@ -57,12 +57,12 @@ public interface MissingPricesPagedQueryResult  {
     
     public void setMeta(final MissingPricesMeta meta);
 
-    public static MissingPricesPagedQueryResultImpl of(){
+    public static MissingPricesPagedQueryResult of(){
         return new MissingPricesPagedQueryResultImpl();
     }
     
 
-    public static MissingPricesPagedQueryResultImpl of(final MissingPricesPagedQueryResult template) {
+    public static MissingPricesPagedQueryResult of(final MissingPricesPagedQueryResult template) {
         MissingPricesPagedQueryResultImpl instance = new MissingPricesPagedQueryResultImpl();
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
@@ -71,6 +71,15 @@ public interface MissingPricesPagedQueryResult  {
         instance.setMeta(template.getMeta());
         return instance;
     }
+
+    public static MissingPricesPagedQueryResultBuilder builder(){
+        return MissingPricesPagedQueryResultBuilder.of();
+    }
+    
+    public static MissingPricesPagedQueryResultBuilder builder(final MissingPricesPagedQueryResult template){
+        return MissingPricesPagedQueryResultBuilder.of(template);
+    }
+    
 
     default <T> T withMissingPricesPagedQueryResult(Function<MissingPricesPagedQueryResult, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
 
     public void setInventoryEntry(final InventoryEntry inventoryEntry);
 
-    public static InventoryEntryCreatedMessagePayloadImpl of(){
+    public static InventoryEntryCreatedMessagePayload of(){
         return new InventoryEntryCreatedMessagePayloadImpl();
     }
     
 
-    public static InventoryEntryCreatedMessagePayloadImpl of(final InventoryEntryCreatedMessagePayload template) {
+    public static InventoryEntryCreatedMessagePayload of(final InventoryEntryCreatedMessagePayload template) {
         InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
         instance.setInventoryEntry(template.getInventoryEntry());
         return instance;
     }
+
+    public static InventoryEntryCreatedMessagePayloadBuilder builder(){
+        return InventoryEntryCreatedMessagePayloadBuilder.of();
+    }
+    
+    public static InventoryEntryCreatedMessagePayloadBuilder builder(final InventoryEntryCreatedMessagePayload template){
+        return InventoryEntryCreatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryCreatedMessagePayload(Function<InventoryEntryCreatedMessagePayload, T> helper) {
         return helper.apply(this);

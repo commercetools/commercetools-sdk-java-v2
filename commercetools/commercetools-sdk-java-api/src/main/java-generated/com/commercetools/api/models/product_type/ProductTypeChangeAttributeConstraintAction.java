@@ -35,17 +35,26 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
     
     public void setNewValue(final AttributeConstraintEnumDraft newValue);
 
-    public static ProductTypeChangeAttributeConstraintActionImpl of(){
+    public static ProductTypeChangeAttributeConstraintAction of(){
         return new ProductTypeChangeAttributeConstraintActionImpl();
     }
     
 
-    public static ProductTypeChangeAttributeConstraintActionImpl of(final ProductTypeChangeAttributeConstraintAction template) {
+    public static ProductTypeChangeAttributeConstraintAction of(final ProductTypeChangeAttributeConstraintAction template) {
         ProductTypeChangeAttributeConstraintActionImpl instance = new ProductTypeChangeAttributeConstraintActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());
         return instance;
     }
+
+    public static ProductTypeChangeAttributeConstraintActionBuilder builder(){
+        return ProductTypeChangeAttributeConstraintActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeAttributeConstraintActionBuilder builder(final ProductTypeChangeAttributeConstraintAction template){
+        return ProductTypeChangeAttributeConstraintActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeAttributeConstraintAction(Function<ProductTypeChangeAttributeConstraintAction, T> helper) {
         return helper.apply(this);

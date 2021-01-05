@@ -30,17 +30,26 @@ public interface TypeReference extends Reference {
 
     public void setObj(final Type obj);
 
-    public static TypeReferenceImpl of(){
+    public static TypeReference of(){
         return new TypeReferenceImpl();
     }
     
 
-    public static TypeReferenceImpl of(final TypeReference template) {
+    public static TypeReference of(final TypeReference template) {
         TypeReferenceImpl instance = new TypeReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static TypeReferenceBuilder builder(){
+        return TypeReferenceBuilder.of();
+    }
+    
+    public static TypeReferenceBuilder builder(final TypeReference template){
+        return TypeReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withTypeReference(Function<TypeReference, T> helper) {
         return helper.apply(this);

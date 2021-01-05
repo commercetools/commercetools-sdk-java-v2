@@ -30,12 +30,12 @@ public interface InventoryEntryCreatedMessage extends Message {
 
     public void setInventoryEntry(final InventoryEntry inventoryEntry);
 
-    public static InventoryEntryCreatedMessageImpl of(){
+    public static InventoryEntryCreatedMessage of(){
         return new InventoryEntryCreatedMessageImpl();
     }
     
 
-    public static InventoryEntryCreatedMessageImpl of(final InventoryEntryCreatedMessage template) {
+    public static InventoryEntryCreatedMessage of(final InventoryEntryCreatedMessage template) {
         InventoryEntryCreatedMessageImpl instance = new InventoryEntryCreatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface InventoryEntryCreatedMessage extends Message {
         instance.setInventoryEntry(template.getInventoryEntry());
         return instance;
     }
+
+    public static InventoryEntryCreatedMessageBuilder builder(){
+        return InventoryEntryCreatedMessageBuilder.of();
+    }
+    
+    public static InventoryEntryCreatedMessageBuilder builder(final InventoryEntryCreatedMessage template){
+        return InventoryEntryCreatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryCreatedMessage(Function<InventoryEntryCreatedMessage, T> helper) {
         return helper.apply(this);

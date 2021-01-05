@@ -40,18 +40,27 @@ public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductChangeMasterVariantActionImpl of(){
+    public static ProductChangeMasterVariantAction of(){
         return new ProductChangeMasterVariantActionImpl();
     }
     
 
-    public static ProductChangeMasterVariantActionImpl of(final ProductChangeMasterVariantAction template) {
+    public static ProductChangeMasterVariantAction of(final ProductChangeMasterVariantAction template) {
         ProductChangeMasterVariantActionImpl instance = new ProductChangeMasterVariantActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductChangeMasterVariantActionBuilder builder(){
+        return ProductChangeMasterVariantActionBuilder.of();
+    }
+    
+    public static ProductChangeMasterVariantActionBuilder builder(final ProductChangeMasterVariantAction template){
+        return ProductChangeMasterVariantActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductChangeMasterVariantAction(Function<ProductChangeMasterVariantAction, T> helper) {
         return helper.apply(this);

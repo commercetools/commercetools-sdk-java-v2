@@ -54,12 +54,12 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductMoveImageToPositionActionImpl of(){
+    public static ProductMoveImageToPositionAction of(){
         return new ProductMoveImageToPositionActionImpl();
     }
     
 
-    public static ProductMoveImageToPositionActionImpl of(final ProductMoveImageToPositionAction template) {
+    public static ProductMoveImageToPositionAction of(final ProductMoveImageToPositionAction template) {
         ProductMoveImageToPositionActionImpl instance = new ProductMoveImageToPositionActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -68,6 +68,15 @@ public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductMoveImageToPositionActionBuilder builder(){
+        return ProductMoveImageToPositionActionBuilder.of();
+    }
+    
+    public static ProductMoveImageToPositionActionBuilder builder(final ProductMoveImageToPositionAction template){
+        return ProductMoveImageToPositionActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductMoveImageToPositionAction(Function<ProductMoveImageToPositionAction, T> helper) {
         return helper.apply(this);

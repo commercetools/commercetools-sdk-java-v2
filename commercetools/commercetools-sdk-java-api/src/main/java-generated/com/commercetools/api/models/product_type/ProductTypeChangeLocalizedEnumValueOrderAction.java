@@ -38,17 +38,26 @@ public interface ProductTypeChangeLocalizedEnumValueOrderAction extends ProductT
     public void setValues(final AttributeLocalizedEnumValue ...values);
     public void setValues(final List<AttributeLocalizedEnumValue> values);
 
-    public static ProductTypeChangeLocalizedEnumValueOrderActionImpl of(){
+    public static ProductTypeChangeLocalizedEnumValueOrderAction of(){
         return new ProductTypeChangeLocalizedEnumValueOrderActionImpl();
     }
     
 
-    public static ProductTypeChangeLocalizedEnumValueOrderActionImpl of(final ProductTypeChangeLocalizedEnumValueOrderAction template) {
+    public static ProductTypeChangeLocalizedEnumValueOrderAction of(final ProductTypeChangeLocalizedEnumValueOrderAction template) {
         ProductTypeChangeLocalizedEnumValueOrderActionImpl instance = new ProductTypeChangeLocalizedEnumValueOrderActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public static ProductTypeChangeLocalizedEnumValueOrderActionBuilder builder(){
+        return ProductTypeChangeLocalizedEnumValueOrderActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeLocalizedEnumValueOrderActionBuilder builder(final ProductTypeChangeLocalizedEnumValueOrderAction template){
+        return ProductTypeChangeLocalizedEnumValueOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeLocalizedEnumValueOrderAction(Function<ProductTypeChangeLocalizedEnumValueOrderAction, T> helper) {
         return helper.apply(this);

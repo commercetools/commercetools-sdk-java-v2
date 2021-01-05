@@ -30,16 +30,25 @@ public interface CartUpdateItemShippingAddressAction extends CartUpdateAction {
 
     public void setAddress(final Address address);
 
-    public static CartUpdateItemShippingAddressActionImpl of(){
+    public static CartUpdateItemShippingAddressAction of(){
         return new CartUpdateItemShippingAddressActionImpl();
     }
     
 
-    public static CartUpdateItemShippingAddressActionImpl of(final CartUpdateItemShippingAddressAction template) {
+    public static CartUpdateItemShippingAddressAction of(final CartUpdateItemShippingAddressAction template) {
         CartUpdateItemShippingAddressActionImpl instance = new CartUpdateItemShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static CartUpdateItemShippingAddressActionBuilder builder(){
+        return CartUpdateItemShippingAddressActionBuilder.of();
+    }
+    
+    public static CartUpdateItemShippingAddressActionBuilder builder(final CartUpdateItemShippingAddressAction template){
+        return CartUpdateItemShippingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartUpdateItemShippingAddressAction(Function<CartUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);

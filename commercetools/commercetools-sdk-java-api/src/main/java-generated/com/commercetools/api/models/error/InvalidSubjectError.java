@@ -23,16 +23,25 @@ public interface InvalidSubjectError extends ErrorObject {
 
 
 
-    public static InvalidSubjectErrorImpl of(){
+    public static InvalidSubjectError of(){
         return new InvalidSubjectErrorImpl();
     }
     
 
-    public static InvalidSubjectErrorImpl of(final InvalidSubjectError template) {
+    public static InvalidSubjectError of(final InvalidSubjectError template) {
         InvalidSubjectErrorImpl instance = new InvalidSubjectErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidSubjectErrorBuilder builder(){
+        return InvalidSubjectErrorBuilder.of();
+    }
+    
+    public static InvalidSubjectErrorBuilder builder(final InvalidSubjectError template){
+        return InvalidSubjectErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidSubjectError(Function<InvalidSubjectError, T> helper) {
         return helper.apply(this);

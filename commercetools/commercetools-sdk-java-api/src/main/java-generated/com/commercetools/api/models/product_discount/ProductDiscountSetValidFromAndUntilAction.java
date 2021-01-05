@@ -38,17 +38,26 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
     
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static ProductDiscountSetValidFromAndUntilActionImpl of(){
+    public static ProductDiscountSetValidFromAndUntilAction of(){
         return new ProductDiscountSetValidFromAndUntilActionImpl();
     }
     
 
-    public static ProductDiscountSetValidFromAndUntilActionImpl of(final ProductDiscountSetValidFromAndUntilAction template) {
+    public static ProductDiscountSetValidFromAndUntilAction of(final ProductDiscountSetValidFromAndUntilAction template) {
         ProductDiscountSetValidFromAndUntilActionImpl instance = new ProductDiscountSetValidFromAndUntilActionImpl();
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static ProductDiscountSetValidFromAndUntilActionBuilder builder(){
+        return ProductDiscountSetValidFromAndUntilActionBuilder.of();
+    }
+    
+    public static ProductDiscountSetValidFromAndUntilActionBuilder builder(final ProductDiscountSetValidFromAndUntilAction template){
+        return ProductDiscountSetValidFromAndUntilActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountSetValidFromAndUntilAction(Function<ProductDiscountSetValidFromAndUntilAction, T> helper) {
         return helper.apply(this);

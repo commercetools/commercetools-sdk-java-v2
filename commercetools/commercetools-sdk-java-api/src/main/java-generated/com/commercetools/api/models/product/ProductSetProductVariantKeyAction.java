@@ -48,12 +48,12 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductSetProductVariantKeyActionImpl of(){
+    public static ProductSetProductVariantKeyAction of(){
         return new ProductSetProductVariantKeyActionImpl();
     }
     
 
-    public static ProductSetProductVariantKeyActionImpl of(final ProductSetProductVariantKeyAction template) {
+    public static ProductSetProductVariantKeyAction of(final ProductSetProductVariantKeyAction template) {
         ProductSetProductVariantKeyActionImpl instance = new ProductSetProductVariantKeyActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -61,6 +61,15 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductSetProductVariantKeyActionBuilder builder(){
+        return ProductSetProductVariantKeyActionBuilder.of();
+    }
+    
+    public static ProductSetProductVariantKeyActionBuilder builder(final ProductSetProductVariantKeyAction template){
+        return ProductSetProductVariantKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetProductVariantKeyAction(Function<ProductSetProductVariantKeyAction, T> helper) {
         return helper.apply(this);

@@ -53,12 +53,12 @@ public interface ParcelItemsUpdatedMessage extends Message {
     public void setOldItems(final DeliveryItem ...oldItems);
     public void setOldItems(final List<DeliveryItem> oldItems);
 
-    public static ParcelItemsUpdatedMessageImpl of(){
+    public static ParcelItemsUpdatedMessage of(){
         return new ParcelItemsUpdatedMessageImpl();
     }
     
 
-    public static ParcelItemsUpdatedMessageImpl of(final ParcelItemsUpdatedMessage template) {
+    public static ParcelItemsUpdatedMessage of(final ParcelItemsUpdatedMessage template) {
         ParcelItemsUpdatedMessageImpl instance = new ParcelItemsUpdatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -76,6 +76,15 @@ public interface ParcelItemsUpdatedMessage extends Message {
         instance.setOldItems(template.getOldItems());
         return instance;
     }
+
+    public static ParcelItemsUpdatedMessageBuilder builder(){
+        return ParcelItemsUpdatedMessageBuilder.of();
+    }
+    
+    public static ParcelItemsUpdatedMessageBuilder builder(final ParcelItemsUpdatedMessage template){
+        return ParcelItemsUpdatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withParcelItemsUpdatedMessage(Function<ParcelItemsUpdatedMessage, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
     
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
-    public static StagedOrderSetLineItemTotalPriceActionImpl of(){
+    public static StagedOrderSetLineItemTotalPriceAction of(){
         return new StagedOrderSetLineItemTotalPriceActionImpl();
     }
     
 
-    public static StagedOrderSetLineItemTotalPriceActionImpl of(final StagedOrderSetLineItemTotalPriceAction template) {
+    public static StagedOrderSetLineItemTotalPriceAction of(final StagedOrderSetLineItemTotalPriceAction template) {
         StagedOrderSetLineItemTotalPriceActionImpl instance = new StagedOrderSetLineItemTotalPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         return instance;
     }
+
+    public static StagedOrderSetLineItemTotalPriceActionBuilder builder(){
+        return StagedOrderSetLineItemTotalPriceActionBuilder.of();
+    }
+    
+    public static StagedOrderSetLineItemTotalPriceActionBuilder builder(final StagedOrderSetLineItemTotalPriceAction template){
+        return StagedOrderSetLineItemTotalPriceActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetLineItemTotalPriceAction(Function<StagedOrderSetLineItemTotalPriceAction, T> helper) {
         return helper.apply(this);

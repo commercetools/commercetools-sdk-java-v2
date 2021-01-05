@@ -31,16 +31,25 @@ public interface PaymentInfo  {
     public void setPayments(final PaymentReference ...payments);
     public void setPayments(final List<PaymentReference> payments);
 
-    public static PaymentInfoImpl of(){
+    public static PaymentInfo of(){
         return new PaymentInfoImpl();
     }
     
 
-    public static PaymentInfoImpl of(final PaymentInfo template) {
+    public static PaymentInfo of(final PaymentInfo template) {
         PaymentInfoImpl instance = new PaymentInfoImpl();
         instance.setPayments(template.getPayments());
         return instance;
     }
+
+    public static PaymentInfoBuilder builder(){
+        return PaymentInfoBuilder.of();
+    }
+    
+    public static PaymentInfoBuilder builder(final PaymentInfo template){
+        return PaymentInfoBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentInfo(Function<PaymentInfo, T> helper) {
         return helper.apply(this);

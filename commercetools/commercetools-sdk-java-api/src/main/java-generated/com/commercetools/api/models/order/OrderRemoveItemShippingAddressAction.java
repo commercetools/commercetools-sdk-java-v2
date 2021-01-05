@@ -28,16 +28,25 @@ public interface OrderRemoveItemShippingAddressAction extends OrderUpdateAction 
 
     public void setAddressKey(final String addressKey);
 
-    public static OrderRemoveItemShippingAddressActionImpl of(){
+    public static OrderRemoveItemShippingAddressAction of(){
         return new OrderRemoveItemShippingAddressActionImpl();
     }
     
 
-    public static OrderRemoveItemShippingAddressActionImpl of(final OrderRemoveItemShippingAddressAction template) {
+    public static OrderRemoveItemShippingAddressAction of(final OrderRemoveItemShippingAddressAction template) {
         OrderRemoveItemShippingAddressActionImpl instance = new OrderRemoveItemShippingAddressActionImpl();
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public static OrderRemoveItemShippingAddressActionBuilder builder(){
+        return OrderRemoveItemShippingAddressActionBuilder.of();
+    }
+    
+    public static OrderRemoveItemShippingAddressActionBuilder builder(final OrderRemoveItemShippingAddressAction template){
+        return OrderRemoveItemShippingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderRemoveItemShippingAddressAction(Function<OrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);

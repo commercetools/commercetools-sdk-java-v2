@@ -55,12 +55,12 @@ public interface ShippingMethodPagedQueryResponse extends com.commercetools.api.
     public void setResults(final ShippingMethod ...results);
     public void setResults(final List<ShippingMethod> results);
 
-    public static ShippingMethodPagedQueryResponseImpl of(){
+    public static ShippingMethodPagedQueryResponse of(){
         return new ShippingMethodPagedQueryResponseImpl();
     }
     
 
-    public static ShippingMethodPagedQueryResponseImpl of(final ShippingMethodPagedQueryResponse template) {
+    public static ShippingMethodPagedQueryResponse of(final ShippingMethodPagedQueryResponse template) {
         ShippingMethodPagedQueryResponseImpl instance = new ShippingMethodPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ShippingMethodPagedQueryResponse extends com.commercetools.api.
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ShippingMethodPagedQueryResponseBuilder builder(){
+        return ShippingMethodPagedQueryResponseBuilder.of();
+    }
+    
+    public static ShippingMethodPagedQueryResponseBuilder builder(final ShippingMethodPagedQueryResponse template){
+        return ShippingMethodPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodPagedQueryResponse(Function<ShippingMethodPagedQueryResponse, T> helper) {
         return helper.apply(this);

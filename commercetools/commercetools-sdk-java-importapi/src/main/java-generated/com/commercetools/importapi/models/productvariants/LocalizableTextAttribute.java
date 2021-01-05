@@ -33,17 +33,26 @@ public interface LocalizableTextAttribute extends Attribute {
 
     public void setValue(final LocalizedString value);
 
-    public static LocalizableTextAttributeImpl of(){
+    public static LocalizableTextAttribute of(){
         return new LocalizableTextAttributeImpl();
     }
     
 
-    public static LocalizableTextAttributeImpl of(final LocalizableTextAttribute template) {
+    public static LocalizableTextAttribute of(final LocalizableTextAttribute template) {
         LocalizableTextAttributeImpl instance = new LocalizableTextAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static LocalizableTextAttributeBuilder builder(){
+        return LocalizableTextAttributeBuilder.of();
+    }
+    
+    public static LocalizableTextAttributeBuilder builder(final LocalizableTextAttribute template){
+        return LocalizableTextAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withLocalizableTextAttribute(Function<LocalizableTextAttribute, T> helper) {
         return helper.apply(this);

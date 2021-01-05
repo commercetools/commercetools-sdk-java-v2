@@ -23,16 +23,25 @@ public interface OverCapacityError extends ErrorObject {
 
 
 
-    public static OverCapacityErrorImpl of(){
+    public static OverCapacityError of(){
         return new OverCapacityErrorImpl();
     }
     
 
-    public static OverCapacityErrorImpl of(final OverCapacityError template) {
+    public static OverCapacityError of(final OverCapacityError template) {
         OverCapacityErrorImpl instance = new OverCapacityErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static OverCapacityErrorBuilder builder(){
+        return OverCapacityErrorBuilder.of();
+    }
+    
+    public static OverCapacityErrorBuilder builder(final OverCapacityError template){
+        return OverCapacityErrorBuilder.of(template);
+    }
+    
 
     default <T> T withOverCapacityError(Function<OverCapacityError, T> helper) {
         return helper.apply(this);

@@ -27,16 +27,25 @@ public interface ProductDiscountKeyReference extends KeyReference {
 
 
 
-    public static ProductDiscountKeyReferenceImpl of(){
+    public static ProductDiscountKeyReference of(){
         return new ProductDiscountKeyReferenceImpl();
     }
     
 
-    public static ProductDiscountKeyReferenceImpl of(final ProductDiscountKeyReference template) {
+    public static ProductDiscountKeyReference of(final ProductDiscountKeyReference template) {
         ProductDiscountKeyReferenceImpl instance = new ProductDiscountKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ProductDiscountKeyReferenceBuilder builder(){
+        return ProductDiscountKeyReferenceBuilder.of();
+    }
+    
+    public static ProductDiscountKeyReferenceBuilder builder(final ProductDiscountKeyReference template){
+        return ProductDiscountKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountKeyReference(Function<ProductDiscountKeyReference, T> helper) {
         return helper.apply(this);

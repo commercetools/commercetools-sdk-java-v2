@@ -35,17 +35,26 @@ public interface CustomerGroupSetCustomFieldAction extends CustomerGroupUpdateAc
     
     public void setValue(final JsonNode value);
 
-    public static CustomerGroupSetCustomFieldActionImpl of(){
+    public static CustomerGroupSetCustomFieldAction of(){
         return new CustomerGroupSetCustomFieldActionImpl();
     }
     
 
-    public static CustomerGroupSetCustomFieldActionImpl of(final CustomerGroupSetCustomFieldAction template) {
+    public static CustomerGroupSetCustomFieldAction of(final CustomerGroupSetCustomFieldAction template) {
         CustomerGroupSetCustomFieldActionImpl instance = new CustomerGroupSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static CustomerGroupSetCustomFieldActionBuilder builder(){
+        return CustomerGroupSetCustomFieldActionBuilder.of();
+    }
+    
+    public static CustomerGroupSetCustomFieldActionBuilder builder(final CustomerGroupSetCustomFieldAction template){
+        return CustomerGroupSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupSetCustomFieldAction(Function<CustomerGroupSetCustomFieldAction, T> helper) {
         return helper.apply(this);

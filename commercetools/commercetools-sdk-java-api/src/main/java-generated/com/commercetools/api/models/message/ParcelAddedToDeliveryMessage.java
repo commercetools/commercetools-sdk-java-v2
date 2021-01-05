@@ -38,12 +38,12 @@ public interface ParcelAddedToDeliveryMessage extends Message {
     
     public void setParcel(final Parcel parcel);
 
-    public static ParcelAddedToDeliveryMessageImpl of(){
+    public static ParcelAddedToDeliveryMessage of(){
         return new ParcelAddedToDeliveryMessageImpl();
     }
     
 
-    public static ParcelAddedToDeliveryMessageImpl of(final ParcelAddedToDeliveryMessage template) {
+    public static ParcelAddedToDeliveryMessage of(final ParcelAddedToDeliveryMessage template) {
         ParcelAddedToDeliveryMessageImpl instance = new ParcelAddedToDeliveryMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -59,6 +59,15 @@ public interface ParcelAddedToDeliveryMessage extends Message {
         instance.setParcel(template.getParcel());
         return instance;
     }
+
+    public static ParcelAddedToDeliveryMessageBuilder builder(){
+        return ParcelAddedToDeliveryMessageBuilder.of();
+    }
+    
+    public static ParcelAddedToDeliveryMessageBuilder builder(final ParcelAddedToDeliveryMessage template){
+        return ParcelAddedToDeliveryMessageBuilder.of(template);
+    }
+    
 
     default <T> T withParcelAddedToDeliveryMessage(Function<ParcelAddedToDeliveryMessage, T> helper) {
         return helper.apply(this);

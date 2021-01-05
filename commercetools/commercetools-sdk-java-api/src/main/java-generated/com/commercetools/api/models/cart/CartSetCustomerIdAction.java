@@ -30,16 +30,25 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
 
     public void setCustomerId(final String customerId);
 
-    public static CartSetCustomerIdActionImpl of(){
+    public static CartSetCustomerIdAction of(){
         return new CartSetCustomerIdActionImpl();
     }
     
 
-    public static CartSetCustomerIdActionImpl of(final CartSetCustomerIdAction template) {
+    public static CartSetCustomerIdAction of(final CartSetCustomerIdAction template) {
         CartSetCustomerIdActionImpl instance = new CartSetCustomerIdActionImpl();
         instance.setCustomerId(template.getCustomerId());
         return instance;
     }
+
+    public static CartSetCustomerIdActionBuilder builder(){
+        return CartSetCustomerIdActionBuilder.of();
+    }
+    
+    public static CartSetCustomerIdActionBuilder builder(final CartSetCustomerIdAction template){
+        return CartSetCustomerIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCustomerIdAction(Function<CartSetCustomerIdAction, T> helper) {
         return helper.apply(this);

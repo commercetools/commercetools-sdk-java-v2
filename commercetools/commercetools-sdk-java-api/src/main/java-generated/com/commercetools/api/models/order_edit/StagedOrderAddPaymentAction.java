@@ -30,16 +30,25 @@ public interface StagedOrderAddPaymentAction extends StagedOrderUpdateAction {
 
     public void setPayment(final PaymentResourceIdentifier payment);
 
-    public static StagedOrderAddPaymentActionImpl of(){
+    public static StagedOrderAddPaymentAction of(){
         return new StagedOrderAddPaymentActionImpl();
     }
     
 
-    public static StagedOrderAddPaymentActionImpl of(final StagedOrderAddPaymentAction template) {
+    public static StagedOrderAddPaymentAction of(final StagedOrderAddPaymentAction template) {
         StagedOrderAddPaymentActionImpl instance = new StagedOrderAddPaymentActionImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public static StagedOrderAddPaymentActionBuilder builder(){
+        return StagedOrderAddPaymentActionBuilder.of();
+    }
+    
+    public static StagedOrderAddPaymentActionBuilder builder(final StagedOrderAddPaymentAction template){
+        return StagedOrderAddPaymentActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderAddPaymentAction(Function<StagedOrderAddPaymentAction, T> helper) {
         return helper.apply(this);

@@ -31,16 +31,25 @@ public interface DiscountCodeSetValidUntilAction extends DiscountCodeUpdateActio
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static DiscountCodeSetValidUntilActionImpl of(){
+    public static DiscountCodeSetValidUntilAction of(){
         return new DiscountCodeSetValidUntilActionImpl();
     }
     
 
-    public static DiscountCodeSetValidUntilActionImpl of(final DiscountCodeSetValidUntilAction template) {
+    public static DiscountCodeSetValidUntilAction of(final DiscountCodeSetValidUntilAction template) {
         DiscountCodeSetValidUntilActionImpl instance = new DiscountCodeSetValidUntilActionImpl();
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static DiscountCodeSetValidUntilActionBuilder builder(){
+        return DiscountCodeSetValidUntilActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetValidUntilActionBuilder builder(final DiscountCodeSetValidUntilAction template){
+        return DiscountCodeSetValidUntilActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetValidUntilAction(Function<DiscountCodeSetValidUntilAction, T> helper) {
         return helper.apply(this);

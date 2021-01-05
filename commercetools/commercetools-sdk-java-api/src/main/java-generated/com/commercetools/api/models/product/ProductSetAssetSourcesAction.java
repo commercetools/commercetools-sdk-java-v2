@@ -62,12 +62,12 @@ public interface ProductSetAssetSourcesAction extends ProductUpdateAction {
     public void setSources(final AssetSource ...sources);
     public void setSources(final List<AssetSource> sources);
 
-    public static ProductSetAssetSourcesActionImpl of(){
+    public static ProductSetAssetSourcesAction of(){
         return new ProductSetAssetSourcesActionImpl();
     }
     
 
-    public static ProductSetAssetSourcesActionImpl of(final ProductSetAssetSourcesAction template) {
+    public static ProductSetAssetSourcesAction of(final ProductSetAssetSourcesAction template) {
         ProductSetAssetSourcesActionImpl instance = new ProductSetAssetSourcesActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -77,6 +77,15 @@ public interface ProductSetAssetSourcesAction extends ProductUpdateAction {
         instance.setSources(template.getSources());
         return instance;
     }
+
+    public static ProductSetAssetSourcesActionBuilder builder(){
+        return ProductSetAssetSourcesActionBuilder.of();
+    }
+    
+    public static ProductSetAssetSourcesActionBuilder builder(final ProductSetAssetSourcesAction template){
+        return ProductSetAssetSourcesActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetAssetSourcesAction(Function<ProductSetAssetSourcesAction, T> helper) {
         return helper.apply(this);

@@ -35,16 +35,25 @@ public interface ReferenceSetField extends CustomField {
     public void setValue(final KeyReference ...value);
     public void setValue(final List<KeyReference> value);
 
-    public static ReferenceSetFieldImpl of(){
+    public static ReferenceSetField of(){
         return new ReferenceSetFieldImpl();
     }
     
 
-    public static ReferenceSetFieldImpl of(final ReferenceSetField template) {
+    public static ReferenceSetField of(final ReferenceSetField template) {
         ReferenceSetFieldImpl instance = new ReferenceSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ReferenceSetFieldBuilder builder(){
+        return ReferenceSetFieldBuilder.of();
+    }
+    
+    public static ReferenceSetFieldBuilder builder(final ReferenceSetField template){
+        return ReferenceSetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withReferenceSetField(Function<ReferenceSetField, T> helper) {
         return helper.apply(this);

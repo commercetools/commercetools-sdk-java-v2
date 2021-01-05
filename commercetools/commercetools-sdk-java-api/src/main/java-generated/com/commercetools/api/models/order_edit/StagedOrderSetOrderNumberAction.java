@@ -28,16 +28,25 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
 
     public void setOrderNumber(final String orderNumber);
 
-    public static StagedOrderSetOrderNumberActionImpl of(){
+    public static StagedOrderSetOrderNumberAction of(){
         return new StagedOrderSetOrderNumberActionImpl();
     }
     
 
-    public static StagedOrderSetOrderNumberActionImpl of(final StagedOrderSetOrderNumberAction template) {
+    public static StagedOrderSetOrderNumberAction of(final StagedOrderSetOrderNumberAction template) {
         StagedOrderSetOrderNumberActionImpl instance = new StagedOrderSetOrderNumberActionImpl();
         instance.setOrderNumber(template.getOrderNumber());
         return instance;
     }
+
+    public static StagedOrderSetOrderNumberActionBuilder builder(){
+        return StagedOrderSetOrderNumberActionBuilder.of();
+    }
+    
+    public static StagedOrderSetOrderNumberActionBuilder builder(final StagedOrderSetOrderNumberAction template){
+        return StagedOrderSetOrderNumberActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetOrderNumberAction(Function<StagedOrderSetOrderNumberAction, T> helper) {
         return helper.apply(this);

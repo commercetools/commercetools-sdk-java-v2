@@ -106,12 +106,12 @@ public interface ReviewDraft  {
     
     public void setCustom(final CustomFieldsDraft custom);
 
-    public static ReviewDraftImpl of(){
+    public static ReviewDraft of(){
         return new ReviewDraftImpl();
     }
     
 
-    public static ReviewDraftImpl of(final ReviewDraft template) {
+    public static ReviewDraft of(final ReviewDraft template) {
         ReviewDraftImpl instance = new ReviewDraftImpl();
         instance.setKey(template.getKey());
         instance.setUniquenessValue(template.getUniquenessValue());
@@ -126,6 +126,15 @@ public interface ReviewDraft  {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static ReviewDraftBuilder builder(){
+        return ReviewDraftBuilder.of();
+    }
+    
+    public static ReviewDraftBuilder builder(final ReviewDraft template){
+        return ReviewDraftBuilder.of(template);
+    }
+    
 
     default <T> T withReviewDraft(Function<ReviewDraft, T> helper) {
         return helper.apply(this);

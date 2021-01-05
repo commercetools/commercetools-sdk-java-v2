@@ -128,12 +128,12 @@ public interface CartDiscountDraft  {
     
     public void setCustom(final CustomFields custom);
 
-    public static CartDiscountDraftImpl of(){
+    public static CartDiscountDraft of(){
         return new CartDiscountDraftImpl();
     }
     
 
-    public static CartDiscountDraftImpl of(final CartDiscountDraft template) {
+    public static CartDiscountDraft of(final CartDiscountDraft template) {
         CartDiscountDraftImpl instance = new CartDiscountDraftImpl();
         instance.setName(template.getName());
         instance.setKey(template.getKey());
@@ -150,6 +150,15 @@ public interface CartDiscountDraft  {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static CartDiscountDraftBuilder builder(){
+        return CartDiscountDraftBuilder.of();
+    }
+    
+    public static CartDiscountDraftBuilder builder(final CartDiscountDraft template){
+        return CartDiscountDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountDraft(Function<CartDiscountDraft, T> helper) {
         return helper.apply(this);

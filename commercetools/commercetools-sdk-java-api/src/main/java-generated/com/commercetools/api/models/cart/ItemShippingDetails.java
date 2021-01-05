@@ -44,17 +44,26 @@ public interface ItemShippingDetails  {
     
     public void setValid(final Boolean valid);
 
-    public static ItemShippingDetailsImpl of(){
+    public static ItemShippingDetails of(){
         return new ItemShippingDetailsImpl();
     }
     
 
-    public static ItemShippingDetailsImpl of(final ItemShippingDetails template) {
+    public static ItemShippingDetails of(final ItemShippingDetails template) {
         ItemShippingDetailsImpl instance = new ItemShippingDetailsImpl();
         instance.setTargets(template.getTargets());
         instance.setValid(template.getValid());
         return instance;
     }
+
+    public static ItemShippingDetailsBuilder builder(){
+        return ItemShippingDetailsBuilder.of();
+    }
+    
+    public static ItemShippingDetailsBuilder builder(final ItemShippingDetails template){
+        return ItemShippingDetailsBuilder.of(template);
+    }
+    
 
     default <T> T withItemShippingDetails(Function<ItemShippingDetails, T> helper) {
         return helper.apply(this);

@@ -27,16 +27,25 @@ public interface ShippingMethodKeyReference extends KeyReference {
 
 
 
-    public static ShippingMethodKeyReferenceImpl of(){
+    public static ShippingMethodKeyReference of(){
         return new ShippingMethodKeyReferenceImpl();
     }
     
 
-    public static ShippingMethodKeyReferenceImpl of(final ShippingMethodKeyReference template) {
+    public static ShippingMethodKeyReference of(final ShippingMethodKeyReference template) {
         ShippingMethodKeyReferenceImpl instance = new ShippingMethodKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ShippingMethodKeyReferenceBuilder builder(){
+        return ShippingMethodKeyReferenceBuilder.of();
+    }
+    
+    public static ShippingMethodKeyReferenceBuilder builder(final ShippingMethodKeyReference template){
+        return ShippingMethodKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodKeyReference(Function<ShippingMethodKeyReference, T> helper) {
         return helper.apply(this);

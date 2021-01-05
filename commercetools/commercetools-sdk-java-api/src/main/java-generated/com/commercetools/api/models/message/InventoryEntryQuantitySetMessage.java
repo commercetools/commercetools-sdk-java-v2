@@ -46,12 +46,12 @@ public interface InventoryEntryQuantitySetMessage extends Message {
     
     public void setNewAvailableQuantity(final Long newAvailableQuantity);
 
-    public static InventoryEntryQuantitySetMessageImpl of(){
+    public static InventoryEntryQuantitySetMessage of(){
         return new InventoryEntryQuantitySetMessageImpl();
     }
     
 
-    public static InventoryEntryQuantitySetMessageImpl of(final InventoryEntryQuantitySetMessage template) {
+    public static InventoryEntryQuantitySetMessage of(final InventoryEntryQuantitySetMessage template) {
         InventoryEntryQuantitySetMessageImpl instance = new InventoryEntryQuantitySetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -69,6 +69,15 @@ public interface InventoryEntryQuantitySetMessage extends Message {
         instance.setNewAvailableQuantity(template.getNewAvailableQuantity());
         return instance;
     }
+
+    public static InventoryEntryQuantitySetMessageBuilder builder(){
+        return InventoryEntryQuantitySetMessageBuilder.of();
+    }
+    
+    public static InventoryEntryQuantitySetMessageBuilder builder(final InventoryEntryQuantitySetMessage template){
+        return InventoryEntryQuantitySetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryQuantitySetMessage(Function<InventoryEntryQuantitySetMessage, T> helper) {
         return helper.apply(this);

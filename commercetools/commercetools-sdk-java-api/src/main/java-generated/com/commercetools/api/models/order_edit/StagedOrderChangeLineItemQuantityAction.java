@@ -48,12 +48,12 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
     
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
-    public static StagedOrderChangeLineItemQuantityActionImpl of(){
+    public static StagedOrderChangeLineItemQuantityAction of(){
         return new StagedOrderChangeLineItemQuantityActionImpl();
     }
     
 
-    public static StagedOrderChangeLineItemQuantityActionImpl of(final StagedOrderChangeLineItemQuantityAction template) {
+    public static StagedOrderChangeLineItemQuantityAction of(final StagedOrderChangeLineItemQuantityAction template) {
         StagedOrderChangeLineItemQuantityActionImpl instance = new StagedOrderChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -61,6 +61,15 @@ public interface StagedOrderChangeLineItemQuantityAction extends StagedOrderUpda
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         return instance;
     }
+
+    public static StagedOrderChangeLineItemQuantityActionBuilder builder(){
+        return StagedOrderChangeLineItemQuantityActionBuilder.of();
+    }
+    
+    public static StagedOrderChangeLineItemQuantityActionBuilder builder(final StagedOrderChangeLineItemQuantityAction template){
+        return StagedOrderChangeLineItemQuantityActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderChangeLineItemQuantityAction(Function<StagedOrderChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);

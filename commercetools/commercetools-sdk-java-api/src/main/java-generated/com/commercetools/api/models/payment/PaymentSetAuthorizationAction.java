@@ -36,17 +36,26 @@ public interface PaymentSetAuthorizationAction extends PaymentUpdateAction {
     
     public void setUntil(final ZonedDateTime until);
 
-    public static PaymentSetAuthorizationActionImpl of(){
+    public static PaymentSetAuthorizationAction of(){
         return new PaymentSetAuthorizationActionImpl();
     }
     
 
-    public static PaymentSetAuthorizationActionImpl of(final PaymentSetAuthorizationAction template) {
+    public static PaymentSetAuthorizationAction of(final PaymentSetAuthorizationAction template) {
         PaymentSetAuthorizationActionImpl instance = new PaymentSetAuthorizationActionImpl();
         instance.setAmount(template.getAmount());
         instance.setUntil(template.getUntil());
         return instance;
     }
+
+    public static PaymentSetAuthorizationActionBuilder builder(){
+        return PaymentSetAuthorizationActionBuilder.of();
+    }
+    
+    public static PaymentSetAuthorizationActionBuilder builder(final PaymentSetAuthorizationAction template){
+        return PaymentSetAuthorizationActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetAuthorizationAction(Function<PaymentSetAuthorizationAction, T> helper) {
         return helper.apply(this);

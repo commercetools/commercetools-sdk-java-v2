@@ -38,12 +38,12 @@ public interface OrderEditAppliedMessage extends Message {
     
     public void setResult(final OrderEditApplied result);
 
-    public static OrderEditAppliedMessageImpl of(){
+    public static OrderEditAppliedMessage of(){
         return new OrderEditAppliedMessageImpl();
     }
     
 
-    public static OrderEditAppliedMessageImpl of(final OrderEditAppliedMessage template) {
+    public static OrderEditAppliedMessage of(final OrderEditAppliedMessage template) {
         OrderEditAppliedMessageImpl instance = new OrderEditAppliedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -59,6 +59,15 @@ public interface OrderEditAppliedMessage extends Message {
         instance.setResult(template.getResult());
         return instance;
     }
+
+    public static OrderEditAppliedMessageBuilder builder(){
+        return OrderEditAppliedMessageBuilder.of();
+    }
+    
+    public static OrderEditAppliedMessageBuilder builder(final OrderEditAppliedMessage template){
+        return OrderEditAppliedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditAppliedMessage(Function<OrderEditAppliedMessage, T> helper) {
         return helper.apply(this);

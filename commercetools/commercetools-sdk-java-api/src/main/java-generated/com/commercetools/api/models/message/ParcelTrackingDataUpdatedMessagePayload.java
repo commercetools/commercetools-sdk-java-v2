@@ -41,18 +41,27 @@ public interface ParcelTrackingDataUpdatedMessagePayload extends MessagePayload 
     
     public void setTrackingData(final TrackingData trackingData);
 
-    public static ParcelTrackingDataUpdatedMessagePayloadImpl of(){
+    public static ParcelTrackingDataUpdatedMessagePayload of(){
         return new ParcelTrackingDataUpdatedMessagePayloadImpl();
     }
     
 
-    public static ParcelTrackingDataUpdatedMessagePayloadImpl of(final ParcelTrackingDataUpdatedMessagePayload template) {
+    public static ParcelTrackingDataUpdatedMessagePayload of(final ParcelTrackingDataUpdatedMessagePayload template) {
         ParcelTrackingDataUpdatedMessagePayloadImpl instance = new ParcelTrackingDataUpdatedMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
         instance.setTrackingData(template.getTrackingData());
         return instance;
     }
+
+    public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder(){
+        return ParcelTrackingDataUpdatedMessagePayloadBuilder.of();
+    }
+    
+    public static ParcelTrackingDataUpdatedMessagePayloadBuilder builder(final ParcelTrackingDataUpdatedMessagePayload template){
+        return ParcelTrackingDataUpdatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withParcelTrackingDataUpdatedMessagePayload(Function<ParcelTrackingDataUpdatedMessagePayload, T> helper) {
         return helper.apply(this);

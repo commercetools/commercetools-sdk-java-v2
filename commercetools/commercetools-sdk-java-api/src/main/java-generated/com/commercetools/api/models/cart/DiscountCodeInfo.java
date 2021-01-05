@@ -36,17 +36,26 @@ public interface DiscountCodeInfo  {
     
     public void setState(final DiscountCodeState state);
 
-    public static DiscountCodeInfoImpl of(){
+    public static DiscountCodeInfo of(){
         return new DiscountCodeInfoImpl();
     }
     
 
-    public static DiscountCodeInfoImpl of(final DiscountCodeInfo template) {
+    public static DiscountCodeInfo of(final DiscountCodeInfo template) {
         DiscountCodeInfoImpl instance = new DiscountCodeInfoImpl();
         instance.setDiscountCode(template.getDiscountCode());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static DiscountCodeInfoBuilder builder(){
+        return DiscountCodeInfoBuilder.of();
+    }
+    
+    public static DiscountCodeInfoBuilder builder(final DiscountCodeInfo template){
+        return DiscountCodeInfoBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeInfo(Function<DiscountCodeInfo, T> helper) {
         return helper.apply(this);

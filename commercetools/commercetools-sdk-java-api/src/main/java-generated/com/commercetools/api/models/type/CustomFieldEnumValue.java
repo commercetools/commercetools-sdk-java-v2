@@ -34,17 +34,26 @@ public interface CustomFieldEnumValue  {
     
     public void setLabel(final String label);
 
-    public static CustomFieldEnumValueImpl of(){
+    public static CustomFieldEnumValue of(){
         return new CustomFieldEnumValueImpl();
     }
     
 
-    public static CustomFieldEnumValueImpl of(final CustomFieldEnumValue template) {
+    public static CustomFieldEnumValue of(final CustomFieldEnumValue template) {
         CustomFieldEnumValueImpl instance = new CustomFieldEnumValueImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static CustomFieldEnumValueBuilder builder(){
+        return CustomFieldEnumValueBuilder.of();
+    }
+    
+    public static CustomFieldEnumValueBuilder builder(final CustomFieldEnumValue template){
+        return CustomFieldEnumValueBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldEnumValue(Function<CustomFieldEnumValue, T> helper) {
         return helper.apply(this);

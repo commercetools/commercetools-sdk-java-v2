@@ -28,16 +28,25 @@ public interface MyCartRemoveItemShippingAddressAction extends MyCartUpdateActio
 
     public void setAddressKey(final String addressKey);
 
-    public static MyCartRemoveItemShippingAddressActionImpl of(){
+    public static MyCartRemoveItemShippingAddressAction of(){
         return new MyCartRemoveItemShippingAddressActionImpl();
     }
     
 
-    public static MyCartRemoveItemShippingAddressActionImpl of(final MyCartRemoveItemShippingAddressAction template) {
+    public static MyCartRemoveItemShippingAddressAction of(final MyCartRemoveItemShippingAddressAction template) {
         MyCartRemoveItemShippingAddressActionImpl instance = new MyCartRemoveItemShippingAddressActionImpl();
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public static MyCartRemoveItemShippingAddressActionBuilder builder(){
+        return MyCartRemoveItemShippingAddressActionBuilder.of();
+    }
+    
+    public static MyCartRemoveItemShippingAddressActionBuilder builder(final MyCartRemoveItemShippingAddressAction template){
+        return MyCartRemoveItemShippingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartRemoveItemShippingAddressAction(Function<MyCartRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);

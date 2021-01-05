@@ -57,12 +57,12 @@ public interface ProjectCategoryRecommendationPagedQueryResponse  {
     
     public void setMeta(final ProjectCategoryRecommendationMeta meta);
 
-    public static ProjectCategoryRecommendationPagedQueryResponseImpl of(){
+    public static ProjectCategoryRecommendationPagedQueryResponse of(){
         return new ProjectCategoryRecommendationPagedQueryResponseImpl();
     }
     
 
-    public static ProjectCategoryRecommendationPagedQueryResponseImpl of(final ProjectCategoryRecommendationPagedQueryResponse template) {
+    public static ProjectCategoryRecommendationPagedQueryResponse of(final ProjectCategoryRecommendationPagedQueryResponse template) {
         ProjectCategoryRecommendationPagedQueryResponseImpl instance = new ProjectCategoryRecommendationPagedQueryResponseImpl();
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
@@ -71,6 +71,15 @@ public interface ProjectCategoryRecommendationPagedQueryResponse  {
         instance.setMeta(template.getMeta());
         return instance;
     }
+
+    public static ProjectCategoryRecommendationPagedQueryResponseBuilder builder(){
+        return ProjectCategoryRecommendationPagedQueryResponseBuilder.of();
+    }
+    
+    public static ProjectCategoryRecommendationPagedQueryResponseBuilder builder(final ProjectCategoryRecommendationPagedQueryResponse template){
+        return ProjectCategoryRecommendationPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withProjectCategoryRecommendationPagedQueryResponse(Function<ProjectCategoryRecommendationPagedQueryResponse, T> helper) {
         return helper.apply(this);

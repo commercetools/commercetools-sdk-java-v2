@@ -60,12 +60,12 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction 
     
     public void setCustom(final CustomFieldsDraft custom);
 
-    public static ShoppingListAddLineItemActionImpl of(){
+    public static ShoppingListAddLineItemAction of(){
         return new ShoppingListAddLineItemActionImpl();
     }
     
 
-    public static ShoppingListAddLineItemActionImpl of(final ShoppingListAddLineItemAction template) {
+    public static ShoppingListAddLineItemAction of(final ShoppingListAddLineItemAction template) {
         ShoppingListAddLineItemActionImpl instance = new ShoppingListAddLineItemActionImpl();
         instance.setSku(template.getSku());
         instance.setProductId(template.getProductId());
@@ -75,6 +75,15 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction 
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static ShoppingListAddLineItemActionBuilder builder(){
+        return ShoppingListAddLineItemActionBuilder.of();
+    }
+    
+    public static ShoppingListAddLineItemActionBuilder builder(final ShoppingListAddLineItemAction template){
+        return ShoppingListAddLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListAddLineItemAction(Function<ShoppingListAddLineItemAction, T> helper) {
         return helper.apply(this);

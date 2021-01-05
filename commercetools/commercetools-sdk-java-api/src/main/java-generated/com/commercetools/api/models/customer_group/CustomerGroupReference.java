@@ -30,17 +30,26 @@ public interface CustomerGroupReference extends Reference {
 
     public void setObj(final CustomerGroup obj);
 
-    public static CustomerGroupReferenceImpl of(){
+    public static CustomerGroupReference of(){
         return new CustomerGroupReferenceImpl();
     }
     
 
-    public static CustomerGroupReferenceImpl of(final CustomerGroupReference template) {
+    public static CustomerGroupReference of(final CustomerGroupReference template) {
         CustomerGroupReferenceImpl instance = new CustomerGroupReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static CustomerGroupReferenceBuilder builder(){
+        return CustomerGroupReferenceBuilder.of();
+    }
+    
+    public static CustomerGroupReferenceBuilder builder(final CustomerGroupReference template){
+        return CustomerGroupReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupReference(Function<CustomerGroupReference, T> helper) {
         return helper.apply(this);

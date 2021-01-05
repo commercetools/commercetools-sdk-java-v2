@@ -35,17 +35,26 @@ public interface ItemState  {
     
     public void setState(final StateReference state);
 
-    public static ItemStateImpl of(){
+    public static ItemState of(){
         return new ItemStateImpl();
     }
     
 
-    public static ItemStateImpl of(final ItemState template) {
+    public static ItemState of(final ItemState template) {
         ItemStateImpl instance = new ItemStateImpl();
         instance.setQuantity(template.getQuantity());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static ItemStateBuilder builder(){
+        return ItemStateBuilder.of();
+    }
+    
+    public static ItemStateBuilder builder(final ItemState template){
+        return ItemStateBuilder.of(template);
+    }
+    
 
     default <T> T withItemState(Function<ItemState, T> helper) {
         return helper.apply(this);

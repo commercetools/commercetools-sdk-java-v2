@@ -60,6 +60,7 @@ public interface TypedMoney  {
 
 
 
+
     default <T> T withTypedMoney(Function<TypedMoney, T> helper) {
         return helper.apply(this);
     }

@@ -24,17 +24,26 @@ public interface PaymentResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static PaymentResourceIdentifierImpl of(){
+    public static PaymentResourceIdentifier of(){
         return new PaymentResourceIdentifierImpl();
     }
     
 
-    public static PaymentResourceIdentifierImpl of(final PaymentResourceIdentifier template) {
+    public static PaymentResourceIdentifier of(final PaymentResourceIdentifier template) {
         PaymentResourceIdentifierImpl instance = new PaymentResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static PaymentResourceIdentifierBuilder builder(){
+        return PaymentResourceIdentifierBuilder.of();
+    }
+    
+    public static PaymentResourceIdentifierBuilder builder(final PaymentResourceIdentifier template){
+        return PaymentResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentResourceIdentifier(Function<PaymentResourceIdentifier, T> helper) {
         return helper.apply(this);

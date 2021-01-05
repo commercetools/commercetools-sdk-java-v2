@@ -38,17 +38,26 @@ public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUp
     
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
-    public static ShippingMethodRemoveShippingRateActionImpl of(){
+    public static ShippingMethodRemoveShippingRateAction of(){
         return new ShippingMethodRemoveShippingRateActionImpl();
     }
     
 
-    public static ShippingMethodRemoveShippingRateActionImpl of(final ShippingMethodRemoveShippingRateAction template) {
+    public static ShippingMethodRemoveShippingRateAction of(final ShippingMethodRemoveShippingRateAction template) {
         ShippingMethodRemoveShippingRateActionImpl instance = new ShippingMethodRemoveShippingRateActionImpl();
         instance.setZone(template.getZone());
         instance.setShippingRate(template.getShippingRate());
         return instance;
     }
+
+    public static ShippingMethodRemoveShippingRateActionBuilder builder(){
+        return ShippingMethodRemoveShippingRateActionBuilder.of();
+    }
+    
+    public static ShippingMethodRemoveShippingRateActionBuilder builder(final ShippingMethodRemoveShippingRateAction template){
+        return ShippingMethodRemoveShippingRateActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodRemoveShippingRateAction(Function<ShippingMethodRemoveShippingRateAction, T> helper) {
         return helper.apply(this);

@@ -29,16 +29,25 @@ public interface AttributeSetType extends AttributeType {
 
     public void setElementType(final AttributeType elementType);
 
-    public static AttributeSetTypeImpl of(){
+    public static AttributeSetType of(){
         return new AttributeSetTypeImpl();
     }
     
 
-    public static AttributeSetTypeImpl of(final AttributeSetType template) {
+    public static AttributeSetType of(final AttributeSetType template) {
         AttributeSetTypeImpl instance = new AttributeSetTypeImpl();
         instance.setElementType(template.getElementType());
         return instance;
     }
+
+    public static AttributeSetTypeBuilder builder(){
+        return AttributeSetTypeBuilder.of();
+    }
+    
+    public static AttributeSetTypeBuilder builder(final AttributeSetType template){
+        return AttributeSetTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeSetType(Function<AttributeSetType, T> helper) {
         return helper.apply(this);

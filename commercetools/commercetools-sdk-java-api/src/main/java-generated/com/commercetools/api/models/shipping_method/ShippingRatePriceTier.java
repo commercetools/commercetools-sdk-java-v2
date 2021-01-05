@@ -43,6 +43,7 @@ public interface ShippingRatePriceTier  {
 
 
 
+
     default <T> T withShippingRatePriceTier(Function<ShippingRatePriceTier, T> helper) {
         return helper.apply(this);
     }

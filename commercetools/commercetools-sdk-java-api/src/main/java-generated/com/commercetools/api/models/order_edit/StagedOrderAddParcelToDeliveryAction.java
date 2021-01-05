@@ -51,12 +51,12 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
     public void setItems(final DeliveryItem ...items);
     public void setItems(final List<DeliveryItem> items);
 
-    public static StagedOrderAddParcelToDeliveryActionImpl of(){
+    public static StagedOrderAddParcelToDeliveryAction of(){
         return new StagedOrderAddParcelToDeliveryActionImpl();
     }
     
 
-    public static StagedOrderAddParcelToDeliveryActionImpl of(final StagedOrderAddParcelToDeliveryAction template) {
+    public static StagedOrderAddParcelToDeliveryAction of(final StagedOrderAddParcelToDeliveryAction template) {
         StagedOrderAddParcelToDeliveryActionImpl instance = new StagedOrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setMeasurements(template.getMeasurements());
@@ -64,6 +64,15 @@ public interface StagedOrderAddParcelToDeliveryAction extends StagedOrderUpdateA
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public static StagedOrderAddParcelToDeliveryActionBuilder builder(){
+        return StagedOrderAddParcelToDeliveryActionBuilder.of();
+    }
+    
+    public static StagedOrderAddParcelToDeliveryActionBuilder builder(final StagedOrderAddParcelToDeliveryAction template){
+        return StagedOrderAddParcelToDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderAddParcelToDeliveryAction(Function<StagedOrderAddParcelToDeliveryAction, T> helper) {
         return helper.apply(this);

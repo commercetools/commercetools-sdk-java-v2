@@ -28,16 +28,25 @@ public interface ProjectChangeNameAction extends ProjectUpdateAction {
 
     public void setName(final String name);
 
-    public static ProjectChangeNameActionImpl of(){
+    public static ProjectChangeNameAction of(){
         return new ProjectChangeNameActionImpl();
     }
     
 
-    public static ProjectChangeNameActionImpl of(final ProjectChangeNameAction template) {
+    public static ProjectChangeNameAction of(final ProjectChangeNameAction template) {
         ProjectChangeNameActionImpl instance = new ProjectChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ProjectChangeNameActionBuilder builder(){
+        return ProjectChangeNameActionBuilder.of();
+    }
+    
+    public static ProjectChangeNameActionBuilder builder(final ProjectChangeNameAction template){
+        return ProjectChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectChangeNameAction(Function<ProjectChangeNameAction, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAc
 
     public void setCartPredicate(final String cartPredicate);
 
-    public static DiscountCodeSetCartPredicateActionImpl of(){
+    public static DiscountCodeSetCartPredicateAction of(){
         return new DiscountCodeSetCartPredicateActionImpl();
     }
     
 
-    public static DiscountCodeSetCartPredicateActionImpl of(final DiscountCodeSetCartPredicateAction template) {
+    public static DiscountCodeSetCartPredicateAction of(final DiscountCodeSetCartPredicateAction template) {
         DiscountCodeSetCartPredicateActionImpl instance = new DiscountCodeSetCartPredicateActionImpl();
         instance.setCartPredicate(template.getCartPredicate());
         return instance;
     }
+
+    public static DiscountCodeSetCartPredicateActionBuilder builder(){
+        return DiscountCodeSetCartPredicateActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetCartPredicateActionBuilder builder(final DiscountCodeSetCartPredicateAction template){
+        return DiscountCodeSetCartPredicateActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetCartPredicateAction(Function<DiscountCodeSetCartPredicateAction, T> helper) {
         return helper.apply(this);

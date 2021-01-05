@@ -31,16 +31,25 @@ public interface CartDiscountSetDescriptionAction extends CartDiscountUpdateActi
 
     public void setDescription(final LocalizedString description);
 
-    public static CartDiscountSetDescriptionActionImpl of(){
+    public static CartDiscountSetDescriptionAction of(){
         return new CartDiscountSetDescriptionActionImpl();
     }
     
 
-    public static CartDiscountSetDescriptionActionImpl of(final CartDiscountSetDescriptionAction template) {
+    public static CartDiscountSetDescriptionAction of(final CartDiscountSetDescriptionAction template) {
         CartDiscountSetDescriptionActionImpl instance = new CartDiscountSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static CartDiscountSetDescriptionActionBuilder builder(){
+        return CartDiscountSetDescriptionActionBuilder.of();
+    }
+    
+    public static CartDiscountSetDescriptionActionBuilder builder(final CartDiscountSetDescriptionAction template){
+        return CartDiscountSetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountSetDescriptionAction(Function<CartDiscountSetDescriptionAction, T> helper) {
         return helper.apply(this);

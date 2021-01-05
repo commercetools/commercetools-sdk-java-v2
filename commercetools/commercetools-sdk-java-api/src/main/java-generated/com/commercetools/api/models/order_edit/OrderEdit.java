@@ -126,12 +126,12 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
     
     public void setComment(final String comment);
 
-    public static OrderEditImpl of(){
+    public static OrderEdit of(){
         return new OrderEditImpl();
     }
     
 
-    public static OrderEditImpl of(final OrderEdit template) {
+    public static OrderEdit of(final OrderEdit template) {
         OrderEditImpl instance = new OrderEditImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -147,6 +147,15 @@ public interface OrderEdit extends BaseResource, com.commercetools.api.models.Do
         instance.setComment(template.getComment());
         return instance;
     }
+
+    public static OrderEditBuilder builder(){
+        return OrderEditBuilder.of();
+    }
+    
+    public static OrderEditBuilder builder(final OrderEdit template){
+        return OrderEditBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEdit(Function<OrderEdit, T> helper) {
         return helper.apply(this);

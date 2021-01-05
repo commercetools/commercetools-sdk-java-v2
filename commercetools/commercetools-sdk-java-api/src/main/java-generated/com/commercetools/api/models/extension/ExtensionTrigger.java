@@ -37,17 +37,26 @@ public interface ExtensionTrigger  {
     public void setActions(final ExtensionAction ...actions);
     public void setActions(final List<ExtensionAction> actions);
 
-    public static ExtensionTriggerImpl of(){
+    public static ExtensionTrigger of(){
         return new ExtensionTriggerImpl();
     }
     
 
-    public static ExtensionTriggerImpl of(final ExtensionTrigger template) {
+    public static ExtensionTrigger of(final ExtensionTrigger template) {
         ExtensionTriggerImpl instance = new ExtensionTriggerImpl();
         instance.setResourceTypeId(template.getResourceTypeId());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ExtensionTriggerBuilder builder(){
+        return ExtensionTriggerBuilder.of();
+    }
+    
+    public static ExtensionTriggerBuilder builder(final ExtensionTrigger template){
+        return ExtensionTriggerBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionTrigger(Function<ExtensionTrigger, T> helper) {
         return helper.apply(this);

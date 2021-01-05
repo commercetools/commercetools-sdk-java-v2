@@ -38,17 +38,26 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
     
     public void setShippingRate(final ShippingRateDraft shippingRate);
 
-    public static ShippingMethodAddShippingRateActionImpl of(){
+    public static ShippingMethodAddShippingRateAction of(){
         return new ShippingMethodAddShippingRateActionImpl();
     }
     
 
-    public static ShippingMethodAddShippingRateActionImpl of(final ShippingMethodAddShippingRateAction template) {
+    public static ShippingMethodAddShippingRateAction of(final ShippingMethodAddShippingRateAction template) {
         ShippingMethodAddShippingRateActionImpl instance = new ShippingMethodAddShippingRateActionImpl();
         instance.setZone(template.getZone());
         instance.setShippingRate(template.getShippingRate());
         return instance;
     }
+
+    public static ShippingMethodAddShippingRateActionBuilder builder(){
+        return ShippingMethodAddShippingRateActionBuilder.of();
+    }
+    
+    public static ShippingMethodAddShippingRateActionBuilder builder(final ShippingMethodAddShippingRateAction template){
+        return ShippingMethodAddShippingRateActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodAddShippingRateAction(Function<ShippingMethodAddShippingRateAction, T> helper) {
         return helper.apply(this);

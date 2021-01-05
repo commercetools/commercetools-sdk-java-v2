@@ -40,18 +40,27 @@ public interface FacetResultTerm  {
     
     public void setProductCount(final Long productCount);
 
-    public static FacetResultTermImpl of(){
+    public static FacetResultTerm of(){
         return new FacetResultTermImpl();
     }
     
 
-    public static FacetResultTermImpl of(final FacetResultTerm template) {
+    public static FacetResultTerm of(final FacetResultTerm template) {
         FacetResultTermImpl instance = new FacetResultTermImpl();
         instance.setTerm(template.getTerm());
         instance.setCount(template.getCount());
         instance.setProductCount(template.getProductCount());
         return instance;
     }
+
+    public static FacetResultTermBuilder builder(){
+        return FacetResultTermBuilder.of();
+    }
+    
+    public static FacetResultTermBuilder builder(final FacetResultTerm template){
+        return FacetResultTermBuilder.of(template);
+    }
+    
 
     default <T> T withFacetResultTerm(Function<FacetResultTerm, T> helper) {
         return helper.apply(this);

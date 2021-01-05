@@ -29,15 +29,24 @@ public interface CategoryOrderHints  {
     @JsonAnySetter
     public void setValue(String key, String value);
 
-    public static CategoryOrderHintsImpl of(){
+    public static CategoryOrderHints of(){
         return new CategoryOrderHintsImpl();
     }
     
 
-    public static CategoryOrderHintsImpl of(final CategoryOrderHints template) {
+    public static CategoryOrderHints of(final CategoryOrderHints template) {
         CategoryOrderHintsImpl instance = new CategoryOrderHintsImpl();
         return instance;
     }
+
+    public static CategoryOrderHintsBuilder builder(){
+        return CategoryOrderHintsBuilder.of();
+    }
+    
+    public static CategoryOrderHintsBuilder builder(final CategoryOrderHints template){
+        return CategoryOrderHintsBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryOrderHints(Function<CategoryOrderHints, T> helper) {
         return helper.apply(this);

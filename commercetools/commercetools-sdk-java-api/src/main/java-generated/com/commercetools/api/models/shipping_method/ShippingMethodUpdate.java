@@ -37,17 +37,26 @@ public interface ShippingMethodUpdate extends com.commercetools.api.models.Resou
     public void setActions(final ShippingMethodUpdateAction ...actions);
     public void setActions(final List<ShippingMethodUpdateAction> actions);
 
-    public static ShippingMethodUpdateImpl of(){
+    public static ShippingMethodUpdate of(){
         return new ShippingMethodUpdateImpl();
     }
     
 
-    public static ShippingMethodUpdateImpl of(final ShippingMethodUpdate template) {
+    public static ShippingMethodUpdate of(final ShippingMethodUpdate template) {
         ShippingMethodUpdateImpl instance = new ShippingMethodUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ShippingMethodUpdateBuilder builder(){
+        return ShippingMethodUpdateBuilder.of();
+    }
+    
+    public static ShippingMethodUpdateBuilder builder(final ShippingMethodUpdate template){
+        return ShippingMethodUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodUpdate(Function<ShippingMethodUpdate, T> helper) {
         return helper.apply(this);

@@ -35,16 +35,25 @@ public interface LocalizedStringSetField extends CustomField {
     public void setValue(final LocalizedString ...value);
     public void setValue(final List<LocalizedString> value);
 
-    public static LocalizedStringSetFieldImpl of(){
+    public static LocalizedStringSetField of(){
         return new LocalizedStringSetFieldImpl();
     }
     
 
-    public static LocalizedStringSetFieldImpl of(final LocalizedStringSetField template) {
+    public static LocalizedStringSetField of(final LocalizedStringSetField template) {
         LocalizedStringSetFieldImpl instance = new LocalizedStringSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static LocalizedStringSetFieldBuilder builder(){
+        return LocalizedStringSetFieldBuilder.of();
+    }
+    
+    public static LocalizedStringSetFieldBuilder builder(final LocalizedStringSetField template){
+        return LocalizedStringSetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withLocalizedStringSetField(Function<LocalizedStringSetField, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
 
     public void setStore(final StoreResourceIdentifier store);
 
-    public static CustomerRemoveStoreActionImpl of(){
+    public static CustomerRemoveStoreAction of(){
         return new CustomerRemoveStoreActionImpl();
     }
     
 
-    public static CustomerRemoveStoreActionImpl of(final CustomerRemoveStoreAction template) {
+    public static CustomerRemoveStoreAction of(final CustomerRemoveStoreAction template) {
         CustomerRemoveStoreActionImpl instance = new CustomerRemoveStoreActionImpl();
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public static CustomerRemoveStoreActionBuilder builder(){
+        return CustomerRemoveStoreActionBuilder.of();
+    }
+    
+    public static CustomerRemoveStoreActionBuilder builder(final CustomerRemoveStoreAction template){
+        return CustomerRemoveStoreActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerRemoveStoreAction(Function<CustomerRemoveStoreAction, T> helper) {
         return helper.apply(this);

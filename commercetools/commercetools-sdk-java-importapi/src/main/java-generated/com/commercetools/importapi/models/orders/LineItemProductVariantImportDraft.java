@@ -71,12 +71,12 @@ public interface LineItemProductVariantImportDraft  {
     public void setImages(final Image ...images);
     public void setImages(final List<Image> images);
 
-    public static LineItemProductVariantImportDraftImpl of(){
+    public static LineItemProductVariantImportDraft of(){
         return new LineItemProductVariantImportDraftImpl();
     }
     
 
-    public static LineItemProductVariantImportDraftImpl of(final LineItemProductVariantImportDraft template) {
+    public static LineItemProductVariantImportDraft of(final LineItemProductVariantImportDraft template) {
         LineItemProductVariantImportDraftImpl instance = new LineItemProductVariantImportDraftImpl();
         instance.setProduct(template.getProduct());
         instance.setSku(template.getSku());
@@ -85,6 +85,15 @@ public interface LineItemProductVariantImportDraft  {
         instance.setImages(template.getImages());
         return instance;
     }
+
+    public static LineItemProductVariantImportDraftBuilder builder(){
+        return LineItemProductVariantImportDraftBuilder.of();
+    }
+    
+    public static LineItemProductVariantImportDraftBuilder builder(final LineItemProductVariantImportDraft template){
+        return LineItemProductVariantImportDraftBuilder.of(template);
+    }
+    
 
     default <T> T withLineItemProductVariantImportDraft(Function<LineItemProductVariantImportDraft, T> helper) {
         return helper.apply(this);

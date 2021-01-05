@@ -30,16 +30,25 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
 
     public void setIsDefault(final Boolean isDefault);
 
-    public static ShippingMethodChangeIsDefaultActionImpl of(){
+    public static ShippingMethodChangeIsDefaultAction of(){
         return new ShippingMethodChangeIsDefaultActionImpl();
     }
     
 
-    public static ShippingMethodChangeIsDefaultActionImpl of(final ShippingMethodChangeIsDefaultAction template) {
+    public static ShippingMethodChangeIsDefaultAction of(final ShippingMethodChangeIsDefaultAction template) {
         ShippingMethodChangeIsDefaultActionImpl instance = new ShippingMethodChangeIsDefaultActionImpl();
         instance.setIsDefault(template.getIsDefault());
         return instance;
     }
+
+    public static ShippingMethodChangeIsDefaultActionBuilder builder(){
+        return ShippingMethodChangeIsDefaultActionBuilder.of();
+    }
+    
+    public static ShippingMethodChangeIsDefaultActionBuilder builder(final ShippingMethodChangeIsDefaultAction template){
+        return ShippingMethodChangeIsDefaultActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodChangeIsDefaultAction(Function<ShippingMethodChangeIsDefaultAction, T> helper) {
         return helper.apply(this);

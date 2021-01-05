@@ -30,16 +30,25 @@ public interface ProductDiscountChangeValueAction extends ProductDiscountUpdateA
 
     public void setValue(final ProductDiscountValueDraft value);
 
-    public static ProductDiscountChangeValueActionImpl of(){
+    public static ProductDiscountChangeValueAction of(){
         return new ProductDiscountChangeValueActionImpl();
     }
     
 
-    public static ProductDiscountChangeValueActionImpl of(final ProductDiscountChangeValueAction template) {
+    public static ProductDiscountChangeValueAction of(final ProductDiscountChangeValueAction template) {
         ProductDiscountChangeValueActionImpl instance = new ProductDiscountChangeValueActionImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ProductDiscountChangeValueActionBuilder builder(){
+        return ProductDiscountChangeValueActionBuilder.of();
+    }
+    
+    public static ProductDiscountChangeValueActionBuilder builder(final ProductDiscountChangeValueAction template){
+        return ProductDiscountChangeValueActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountChangeValueAction(Function<ProductDiscountChangeValueAction, T> helper) {
         return helper.apply(this);

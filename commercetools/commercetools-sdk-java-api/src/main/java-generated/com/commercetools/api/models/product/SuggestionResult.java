@@ -30,15 +30,24 @@ public interface SuggestionResult  {
     @JsonAnySetter
     public void setValue(String key, List<Suggestion> value);
 
-    public static SuggestionResultImpl of(){
+    public static SuggestionResult of(){
         return new SuggestionResultImpl();
     }
     
 
-    public static SuggestionResultImpl of(final SuggestionResult template) {
+    public static SuggestionResult of(final SuggestionResult template) {
         SuggestionResultImpl instance = new SuggestionResultImpl();
         return instance;
     }
+
+    public static SuggestionResultBuilder builder(){
+        return SuggestionResultBuilder.of();
+    }
+    
+    public static SuggestionResultBuilder builder(final SuggestionResult template){
+        return SuggestionResultBuilder.of(template);
+    }
+    
 
     default <T> T withSuggestionResult(Function<SuggestionResult, T> helper) {
         return helper.apply(this);

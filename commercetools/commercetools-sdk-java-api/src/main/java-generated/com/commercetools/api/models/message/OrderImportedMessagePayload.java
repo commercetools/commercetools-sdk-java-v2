@@ -30,16 +30,25 @@ public interface OrderImportedMessagePayload extends MessagePayload {
 
     public void setOrder(final Order order);
 
-    public static OrderImportedMessagePayloadImpl of(){
+    public static OrderImportedMessagePayload of(){
         return new OrderImportedMessagePayloadImpl();
     }
     
 
-    public static OrderImportedMessagePayloadImpl of(final OrderImportedMessagePayload template) {
+    public static OrderImportedMessagePayload of(final OrderImportedMessagePayload template) {
         OrderImportedMessagePayloadImpl instance = new OrderImportedMessagePayloadImpl();
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public static OrderImportedMessagePayloadBuilder builder(){
+        return OrderImportedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderImportedMessagePayloadBuilder builder(final OrderImportedMessagePayload template){
+        return OrderImportedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderImportedMessagePayload(Function<OrderImportedMessagePayload, T> helper) {
         return helper.apply(this);

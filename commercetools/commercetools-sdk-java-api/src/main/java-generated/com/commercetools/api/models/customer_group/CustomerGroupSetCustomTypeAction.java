@@ -41,17 +41,26 @@ public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAct
     
     public void setFields(final FieldContainer fields);
 
-    public static CustomerGroupSetCustomTypeActionImpl of(){
+    public static CustomerGroupSetCustomTypeAction of(){
         return new CustomerGroupSetCustomTypeActionImpl();
     }
     
 
-    public static CustomerGroupSetCustomTypeActionImpl of(final CustomerGroupSetCustomTypeAction template) {
+    public static CustomerGroupSetCustomTypeAction of(final CustomerGroupSetCustomTypeAction template) {
         CustomerGroupSetCustomTypeActionImpl instance = new CustomerGroupSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static CustomerGroupSetCustomTypeActionBuilder builder(){
+        return CustomerGroupSetCustomTypeActionBuilder.of();
+    }
+    
+    public static CustomerGroupSetCustomTypeActionBuilder builder(final CustomerGroupSetCustomTypeAction template){
+        return CustomerGroupSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupSetCustomTypeAction(Function<CustomerGroupSetCustomTypeAction, T> helper) {
         return helper.apply(this);

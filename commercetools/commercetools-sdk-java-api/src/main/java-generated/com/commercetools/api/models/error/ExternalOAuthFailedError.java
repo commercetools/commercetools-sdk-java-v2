@@ -23,16 +23,25 @@ public interface ExternalOAuthFailedError extends ErrorObject {
 
 
 
-    public static ExternalOAuthFailedErrorImpl of(){
+    public static ExternalOAuthFailedError of(){
         return new ExternalOAuthFailedErrorImpl();
     }
     
 
-    public static ExternalOAuthFailedErrorImpl of(final ExternalOAuthFailedError template) {
+    public static ExternalOAuthFailedError of(final ExternalOAuthFailedError template) {
         ExternalOAuthFailedErrorImpl instance = new ExternalOAuthFailedErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static ExternalOAuthFailedErrorBuilder builder(){
+        return ExternalOAuthFailedErrorBuilder.of();
+    }
+    
+    public static ExternalOAuthFailedErrorBuilder builder(final ExternalOAuthFailedError template){
+        return ExternalOAuthFailedErrorBuilder.of(template);
+    }
+    
 
     default <T> T withExternalOAuthFailedError(Function<ExternalOAuthFailedError, T> helper) {
         return helper.apply(this);

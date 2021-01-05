@@ -55,12 +55,12 @@ public interface ProductDiscountPagedQueryResponse extends com.commercetools.api
     public void setResults(final ProductDiscount ...results);
     public void setResults(final List<ProductDiscount> results);
 
-    public static ProductDiscountPagedQueryResponseImpl of(){
+    public static ProductDiscountPagedQueryResponse of(){
         return new ProductDiscountPagedQueryResponseImpl();
     }
     
 
-    public static ProductDiscountPagedQueryResponseImpl of(final ProductDiscountPagedQueryResponse template) {
+    public static ProductDiscountPagedQueryResponse of(final ProductDiscountPagedQueryResponse template) {
         ProductDiscountPagedQueryResponseImpl instance = new ProductDiscountPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ProductDiscountPagedQueryResponse extends com.commercetools.api
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ProductDiscountPagedQueryResponseBuilder builder(){
+        return ProductDiscountPagedQueryResponseBuilder.of();
+    }
+    
+    public static ProductDiscountPagedQueryResponseBuilder builder(final ProductDiscountPagedQueryResponse template){
+        return ProductDiscountPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountPagedQueryResponse(Function<ProductDiscountPagedQueryResponse, T> helper) {
         return helper.apply(this);

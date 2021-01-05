@@ -37,17 +37,26 @@ public interface ImageSearchConfigResponse  {
     
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
-    public static ImageSearchConfigResponseImpl of(){
+    public static ImageSearchConfigResponse of(){
         return new ImageSearchConfigResponseImpl();
     }
     
 
-    public static ImageSearchConfigResponseImpl of(final ImageSearchConfigResponse template) {
+    public static ImageSearchConfigResponse of(final ImageSearchConfigResponse template) {
         ImageSearchConfigResponseImpl instance = new ImageSearchConfigResponseImpl();
         instance.setStatus(template.getStatus());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         return instance;
     }
+
+    public static ImageSearchConfigResponseBuilder builder(){
+        return ImageSearchConfigResponseBuilder.of();
+    }
+    
+    public static ImageSearchConfigResponseBuilder builder(final ImageSearchConfigResponse template){
+        return ImageSearchConfigResponseBuilder.of(template);
+    }
+    
 
     default <T> T withImageSearchConfigResponse(Function<ImageSearchConfigResponse, T> helper) {
         return helper.apply(this);

@@ -32,16 +32,25 @@ public interface CategorySetKeyAction extends CategoryUpdateAction {
 
     public void setKey(final String key);
 
-    public static CategorySetKeyActionImpl of(){
+    public static CategorySetKeyAction of(){
         return new CategorySetKeyActionImpl();
     }
     
 
-    public static CategorySetKeyActionImpl of(final CategorySetKeyAction template) {
+    public static CategorySetKeyAction of(final CategorySetKeyAction template) {
         CategorySetKeyActionImpl instance = new CategorySetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CategorySetKeyActionBuilder builder(){
+        return CategorySetKeyActionBuilder.of();
+    }
+    
+    public static CategorySetKeyActionBuilder builder(final CategorySetKeyAction template){
+        return CategorySetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetKeyAction(Function<CategorySetKeyAction, T> helper) {
         return helper.apply(this);

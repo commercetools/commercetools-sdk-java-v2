@@ -30,16 +30,25 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
     public void setLanguages(final String ...languages);
     public void setLanguages(final List<String> languages);
 
-    public static StoreSetLanguagesActionImpl of(){
+    public static StoreSetLanguagesAction of(){
         return new StoreSetLanguagesActionImpl();
     }
     
 
-    public static StoreSetLanguagesActionImpl of(final StoreSetLanguagesAction template) {
+    public static StoreSetLanguagesAction of(final StoreSetLanguagesAction template) {
         StoreSetLanguagesActionImpl instance = new StoreSetLanguagesActionImpl();
         instance.setLanguages(template.getLanguages());
         return instance;
     }
+
+    public static StoreSetLanguagesActionBuilder builder(){
+        return StoreSetLanguagesActionBuilder.of();
+    }
+    
+    public static StoreSetLanguagesActionBuilder builder(final StoreSetLanguagesAction template){
+        return StoreSetLanguagesActionBuilder.of(template);
+    }
+    
 
     default <T> T withStoreSetLanguagesAction(Function<StoreSetLanguagesAction, T> helper) {
         return helper.apply(this);

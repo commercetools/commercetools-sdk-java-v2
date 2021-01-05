@@ -55,12 +55,12 @@ public interface ChannelPagedQueryResponse extends com.commercetools.api.models.
     public void setResults(final Channel ...results);
     public void setResults(final List<Channel> results);
 
-    public static ChannelPagedQueryResponseImpl of(){
+    public static ChannelPagedQueryResponse of(){
         return new ChannelPagedQueryResponseImpl();
     }
     
 
-    public static ChannelPagedQueryResponseImpl of(final ChannelPagedQueryResponse template) {
+    public static ChannelPagedQueryResponse of(final ChannelPagedQueryResponse template) {
         ChannelPagedQueryResponseImpl instance = new ChannelPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ChannelPagedQueryResponse extends com.commercetools.api.models.
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ChannelPagedQueryResponseBuilder builder(){
+        return ChannelPagedQueryResponseBuilder.of();
+    }
+    
+    public static ChannelPagedQueryResponseBuilder builder(final ChannelPagedQueryResponse template){
+        return ChannelPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withChannelPagedQueryResponse(Function<ChannelPagedQueryResponse, T> helper) {
         return helper.apply(this);

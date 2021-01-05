@@ -30,12 +30,12 @@ public interface OrderReturnInfoAddedMessage extends Message {
 
     public void setReturnInfo(final ReturnInfo returnInfo);
 
-    public static OrderReturnInfoAddedMessageImpl of(){
+    public static OrderReturnInfoAddedMessage of(){
         return new OrderReturnInfoAddedMessageImpl();
     }
     
 
-    public static OrderReturnInfoAddedMessageImpl of(final OrderReturnInfoAddedMessage template) {
+    public static OrderReturnInfoAddedMessage of(final OrderReturnInfoAddedMessage template) {
         OrderReturnInfoAddedMessageImpl instance = new OrderReturnInfoAddedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface OrderReturnInfoAddedMessage extends Message {
         instance.setReturnInfo(template.getReturnInfo());
         return instance;
     }
+
+    public static OrderReturnInfoAddedMessageBuilder builder(){
+        return OrderReturnInfoAddedMessageBuilder.of();
+    }
+    
+    public static OrderReturnInfoAddedMessageBuilder builder(final OrderReturnInfoAddedMessage template){
+        return OrderReturnInfoAddedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderReturnInfoAddedMessage(Function<OrderReturnInfoAddedMessage, T> helper) {
         return helper.apply(this);

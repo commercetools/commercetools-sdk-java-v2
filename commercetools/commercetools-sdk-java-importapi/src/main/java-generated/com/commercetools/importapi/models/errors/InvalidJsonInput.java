@@ -28,16 +28,25 @@ public interface InvalidJsonInput extends ErrorObject {
 
 
 
-    public static InvalidJsonInputImpl of(){
+    public static InvalidJsonInput of(){
         return new InvalidJsonInputImpl();
     }
     
 
-    public static InvalidJsonInputImpl of(final InvalidJsonInput template) {
+    public static InvalidJsonInput of(final InvalidJsonInput template) {
         InvalidJsonInputImpl instance = new InvalidJsonInputImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidJsonInputBuilder builder(){
+        return InvalidJsonInputBuilder.of();
+    }
+    
+    public static InvalidJsonInputBuilder builder(final InvalidJsonInput template){
+        return InvalidJsonInputBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidJsonInput(Function<InvalidJsonInput, T> helper) {
         return helper.apply(this);

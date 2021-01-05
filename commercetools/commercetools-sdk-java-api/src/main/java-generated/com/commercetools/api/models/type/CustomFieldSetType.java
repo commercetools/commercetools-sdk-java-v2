@@ -29,16 +29,25 @@ public interface CustomFieldSetType extends FieldType {
 
     public void setElementType(final FieldType elementType);
 
-    public static CustomFieldSetTypeImpl of(){
+    public static CustomFieldSetType of(){
         return new CustomFieldSetTypeImpl();
     }
     
 
-    public static CustomFieldSetTypeImpl of(final CustomFieldSetType template) {
+    public static CustomFieldSetType of(final CustomFieldSetType template) {
         CustomFieldSetTypeImpl instance = new CustomFieldSetTypeImpl();
         instance.setElementType(template.getElementType());
         return instance;
     }
+
+    public static CustomFieldSetTypeBuilder builder(){
+        return CustomFieldSetTypeBuilder.of();
+    }
+    
+    public static CustomFieldSetTypeBuilder builder(final CustomFieldSetType template){
+        return CustomFieldSetTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldSetType(Function<CustomFieldSetType, T> helper) {
         return helper.apply(this);

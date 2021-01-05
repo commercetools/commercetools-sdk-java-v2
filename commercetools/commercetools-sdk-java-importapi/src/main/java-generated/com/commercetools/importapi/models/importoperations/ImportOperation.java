@@ -118,12 +118,12 @@ public interface ImportOperation  {
     
     public void setExpiresAt(final ZonedDateTime expiresAt);
 
-    public static ImportOperationImpl of(){
+    public static ImportOperation of(){
         return new ImportOperationImpl();
     }
     
 
-    public static ImportOperationImpl of(final ImportOperation template) {
+    public static ImportOperation of(final ImportOperation template) {
         ImportOperationImpl instance = new ImportOperationImpl();
         instance.setVersion(template.getVersion());
         instance.setImportSinkKey(template.getImportSinkKey());
@@ -138,6 +138,15 @@ public interface ImportOperation  {
         instance.setExpiresAt(template.getExpiresAt());
         return instance;
     }
+
+    public static ImportOperationBuilder builder(){
+        return ImportOperationBuilder.of();
+    }
+    
+    public static ImportOperationBuilder builder(final ImportOperation template){
+        return ImportOperationBuilder.of(template);
+    }
+    
 
     default <T> T withImportOperation(Function<ImportOperation, T> helper) {
         return helper.apply(this);

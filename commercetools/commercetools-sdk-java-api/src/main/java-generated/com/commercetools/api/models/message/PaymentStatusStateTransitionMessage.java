@@ -36,12 +36,12 @@ public interface PaymentStatusStateTransitionMessage extends Message {
     
     public void setForce(final Boolean force);
 
-    public static PaymentStatusStateTransitionMessageImpl of(){
+    public static PaymentStatusStateTransitionMessage of(){
         return new PaymentStatusStateTransitionMessageImpl();
     }
     
 
-    public static PaymentStatusStateTransitionMessageImpl of(final PaymentStatusStateTransitionMessage template) {
+    public static PaymentStatusStateTransitionMessage of(final PaymentStatusStateTransitionMessage template) {
         PaymentStatusStateTransitionMessageImpl instance = new PaymentStatusStateTransitionMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -57,6 +57,15 @@ public interface PaymentStatusStateTransitionMessage extends Message {
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static PaymentStatusStateTransitionMessageBuilder builder(){
+        return PaymentStatusStateTransitionMessageBuilder.of();
+    }
+    
+    public static PaymentStatusStateTransitionMessageBuilder builder(final PaymentStatusStateTransitionMessage template){
+        return PaymentStatusStateTransitionMessageBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentStatusStateTransitionMessage(Function<PaymentStatusStateTransitionMessage, T> helper) {
         return helper.apply(this);

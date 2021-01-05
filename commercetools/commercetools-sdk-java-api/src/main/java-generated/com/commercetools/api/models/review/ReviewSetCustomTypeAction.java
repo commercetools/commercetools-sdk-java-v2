@@ -41,17 +41,26 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
     
     public void setFields(final FieldContainer fields);
 
-    public static ReviewSetCustomTypeActionImpl of(){
+    public static ReviewSetCustomTypeAction of(){
         return new ReviewSetCustomTypeActionImpl();
     }
     
 
-    public static ReviewSetCustomTypeActionImpl of(final ReviewSetCustomTypeAction template) {
+    public static ReviewSetCustomTypeAction of(final ReviewSetCustomTypeAction template) {
         ReviewSetCustomTypeActionImpl instance = new ReviewSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static ReviewSetCustomTypeActionBuilder builder(){
+        return ReviewSetCustomTypeActionBuilder.of();
+    }
+    
+    public static ReviewSetCustomTypeActionBuilder builder(final ReviewSetCustomTypeAction template){
+        return ReviewSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetCustomTypeAction(Function<ReviewSetCustomTypeAction, T> helper) {
         return helper.apply(this);

@@ -23,16 +23,25 @@ public interface EnumValueIsUsedError extends ErrorObject {
 
 
 
-    public static EnumValueIsUsedErrorImpl of(){
+    public static EnumValueIsUsedError of(){
         return new EnumValueIsUsedErrorImpl();
     }
     
 
-    public static EnumValueIsUsedErrorImpl of(final EnumValueIsUsedError template) {
+    public static EnumValueIsUsedError of(final EnumValueIsUsedError template) {
         EnumValueIsUsedErrorImpl instance = new EnumValueIsUsedErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static EnumValueIsUsedErrorBuilder builder(){
+        return EnumValueIsUsedErrorBuilder.of();
+    }
+    
+    public static EnumValueIsUsedErrorBuilder builder(final EnumValueIsUsedError template){
+        return EnumValueIsUsedErrorBuilder.of(template);
+    }
+    
 
     default <T> T withEnumValueIsUsedError(Function<EnumValueIsUsedError, T> helper) {
         return helper.apply(this);

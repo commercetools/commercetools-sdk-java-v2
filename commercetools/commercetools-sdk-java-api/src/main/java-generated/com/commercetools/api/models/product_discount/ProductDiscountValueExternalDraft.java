@@ -23,15 +23,24 @@ public interface ProductDiscountValueExternalDraft extends ProductDiscountValueD
 
 
 
-    public static ProductDiscountValueExternalDraftImpl of(){
+    public static ProductDiscountValueExternalDraft of(){
         return new ProductDiscountValueExternalDraftImpl();
     }
     
 
-    public static ProductDiscountValueExternalDraftImpl of(final ProductDiscountValueExternalDraft template) {
+    public static ProductDiscountValueExternalDraft of(final ProductDiscountValueExternalDraft template) {
         ProductDiscountValueExternalDraftImpl instance = new ProductDiscountValueExternalDraftImpl();
         return instance;
     }
+
+    public static ProductDiscountValueExternalDraftBuilder builder(){
+        return ProductDiscountValueExternalDraftBuilder.of();
+    }
+    
+    public static ProductDiscountValueExternalDraftBuilder builder(final ProductDiscountValueExternalDraft template){
+        return ProductDiscountValueExternalDraftBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountValueExternalDraft(Function<ProductDiscountValueExternalDraft, T> helper) {
         return helper.apply(this);

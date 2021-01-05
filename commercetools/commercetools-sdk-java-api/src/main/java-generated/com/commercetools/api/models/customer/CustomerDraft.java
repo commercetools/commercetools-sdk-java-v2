@@ -223,12 +223,12 @@ public interface CustomerDraft  {
     public void setStores(final StoreResourceIdentifier ...stores);
     public void setStores(final List<StoreResourceIdentifier> stores);
 
-    public static CustomerDraftImpl of(){
+    public static CustomerDraft of(){
         return new CustomerDraftImpl();
     }
     
 
-    public static CustomerDraftImpl of(final CustomerDraft template) {
+    public static CustomerDraft of(final CustomerDraft template) {
         CustomerDraftImpl instance = new CustomerDraftImpl();
         instance.setCustomerNumber(template.getCustomerNumber());
         instance.setEmail(template.getEmail());
@@ -257,6 +257,15 @@ public interface CustomerDraft  {
         instance.setStores(template.getStores());
         return instance;
     }
+
+    public static CustomerDraftBuilder builder(){
+        return CustomerDraftBuilder.of();
+    }
+    
+    public static CustomerDraftBuilder builder(final CustomerDraft template){
+        return CustomerDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerDraft(Function<CustomerDraft, T> helper) {
         return helper.apply(this);

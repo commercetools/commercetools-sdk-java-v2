@@ -27,16 +27,25 @@ public interface CartDiscountKeyReference extends KeyReference {
 
 
 
-    public static CartDiscountKeyReferenceImpl of(){
+    public static CartDiscountKeyReference of(){
         return new CartDiscountKeyReferenceImpl();
     }
     
 
-    public static CartDiscountKeyReferenceImpl of(final CartDiscountKeyReference template) {
+    public static CartDiscountKeyReference of(final CartDiscountKeyReference template) {
         CartDiscountKeyReferenceImpl instance = new CartDiscountKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CartDiscountKeyReferenceBuilder builder(){
+        return CartDiscountKeyReferenceBuilder.of();
+    }
+    
+    public static CartDiscountKeyReferenceBuilder builder(final CartDiscountKeyReference template){
+        return CartDiscountKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountKeyReference(Function<CartDiscountKeyReference, T> helper) {
         return helper.apply(this);

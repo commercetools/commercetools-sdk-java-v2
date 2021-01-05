@@ -23,15 +23,24 @@ public interface CustomFieldTimeType extends FieldType {
 
 
 
-    public static CustomFieldTimeTypeImpl of(){
+    public static CustomFieldTimeType of(){
         return new CustomFieldTimeTypeImpl();
     }
     
 
-    public static CustomFieldTimeTypeImpl of(final CustomFieldTimeType template) {
+    public static CustomFieldTimeType of(final CustomFieldTimeType template) {
         CustomFieldTimeTypeImpl instance = new CustomFieldTimeTypeImpl();
         return instance;
     }
+
+    public static CustomFieldTimeTypeBuilder builder(){
+        return CustomFieldTimeTypeBuilder.of();
+    }
+    
+    public static CustomFieldTimeTypeBuilder builder(final CustomFieldTimeType template){
+        return CustomFieldTimeTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldTimeType(Function<CustomFieldTimeType, T> helper) {
         return helper.apply(this);

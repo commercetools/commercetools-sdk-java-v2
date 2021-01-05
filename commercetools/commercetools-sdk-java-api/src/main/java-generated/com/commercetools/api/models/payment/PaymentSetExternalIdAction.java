@@ -28,16 +28,25 @@ public interface PaymentSetExternalIdAction extends PaymentUpdateAction {
 
     public void setExternalId(final String externalId);
 
-    public static PaymentSetExternalIdActionImpl of(){
+    public static PaymentSetExternalIdAction of(){
         return new PaymentSetExternalIdActionImpl();
     }
     
 
-    public static PaymentSetExternalIdActionImpl of(final PaymentSetExternalIdAction template) {
+    public static PaymentSetExternalIdAction of(final PaymentSetExternalIdAction template) {
         PaymentSetExternalIdActionImpl instance = new PaymentSetExternalIdActionImpl();
         instance.setExternalId(template.getExternalId());
         return instance;
     }
+
+    public static PaymentSetExternalIdActionBuilder builder(){
+        return PaymentSetExternalIdActionBuilder.of();
+    }
+    
+    public static PaymentSetExternalIdActionBuilder builder(final PaymentSetExternalIdAction template){
+        return PaymentSetExternalIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetExternalIdAction(Function<PaymentSetExternalIdAction, T> helper) {
         return helper.apply(this);

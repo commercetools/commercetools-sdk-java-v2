@@ -29,16 +29,25 @@ public interface OrderSetBillingAddressAction extends OrderUpdateAction {
 
     public void setAddress(final Address address);
 
-    public static OrderSetBillingAddressActionImpl of(){
+    public static OrderSetBillingAddressAction of(){
         return new OrderSetBillingAddressActionImpl();
     }
     
 
-    public static OrderSetBillingAddressActionImpl of(final OrderSetBillingAddressAction template) {
+    public static OrderSetBillingAddressAction of(final OrderSetBillingAddressAction template) {
         OrderSetBillingAddressActionImpl instance = new OrderSetBillingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static OrderSetBillingAddressActionBuilder builder(){
+        return OrderSetBillingAddressActionBuilder.of();
+    }
+    
+    public static OrderSetBillingAddressActionBuilder builder(final OrderSetBillingAddressAction template){
+        return OrderSetBillingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetBillingAddressAction(Function<OrderSetBillingAddressAction, T> helper) {
         return helper.apply(this);

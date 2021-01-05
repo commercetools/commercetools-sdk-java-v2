@@ -35,17 +35,26 @@ public interface DuplicateAttributeValueError extends ErrorObject {
 
     public void setAttribute(final Attribute attribute);
 
-    public static DuplicateAttributeValueErrorImpl of(){
+    public static DuplicateAttributeValueError of(){
         return new DuplicateAttributeValueErrorImpl();
     }
     
 
-    public static DuplicateAttributeValueErrorImpl of(final DuplicateAttributeValueError template) {
+    public static DuplicateAttributeValueError of(final DuplicateAttributeValueError template) {
         DuplicateAttributeValueErrorImpl instance = new DuplicateAttributeValueErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setAttribute(template.getAttribute());
         return instance;
     }
+
+    public static DuplicateAttributeValueErrorBuilder builder(){
+        return DuplicateAttributeValueErrorBuilder.of();
+    }
+    
+    public static DuplicateAttributeValueErrorBuilder builder(final DuplicateAttributeValueError template){
+        return DuplicateAttributeValueErrorBuilder.of(template);
+    }
+    
 
     default <T> T withDuplicateAttributeValueError(Function<DuplicateAttributeValueError, T> helper) {
         return helper.apply(this);

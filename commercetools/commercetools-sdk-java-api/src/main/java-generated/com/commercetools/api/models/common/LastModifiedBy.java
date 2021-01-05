@@ -23,12 +23,12 @@ public interface LastModifiedBy extends ClientLogging {
 
 
 
-    public static LastModifiedByImpl of(){
+    public static LastModifiedBy of(){
         return new LastModifiedByImpl();
     }
     
 
-    public static LastModifiedByImpl of(final LastModifiedBy template) {
+    public static LastModifiedBy of(final LastModifiedBy template) {
         LastModifiedByImpl instance = new LastModifiedByImpl();
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
@@ -36,6 +36,15 @@ public interface LastModifiedBy extends ClientLogging {
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static LastModifiedByBuilder builder(){
+        return LastModifiedByBuilder.of();
+    }
+    
+    public static LastModifiedByBuilder builder(final LastModifiedBy template){
+        return LastModifiedByBuilder.of(template);
+    }
+    
 
     default <T> T withLastModifiedBy(Function<LastModifiedBy, T> helper) {
         return helper.apply(this);

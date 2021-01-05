@@ -28,16 +28,25 @@ public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction
 
     public void setDescription(final String description);
 
-    public static TaxCategorySetDescriptionActionImpl of(){
+    public static TaxCategorySetDescriptionAction of(){
         return new TaxCategorySetDescriptionActionImpl();
     }
     
 
-    public static TaxCategorySetDescriptionActionImpl of(final TaxCategorySetDescriptionAction template) {
+    public static TaxCategorySetDescriptionAction of(final TaxCategorySetDescriptionAction template) {
         TaxCategorySetDescriptionActionImpl instance = new TaxCategorySetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static TaxCategorySetDescriptionActionBuilder builder(){
+        return TaxCategorySetDescriptionActionBuilder.of();
+    }
+    
+    public static TaxCategorySetDescriptionActionBuilder builder(final TaxCategorySetDescriptionAction template){
+        return TaxCategorySetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategorySetDescriptionAction(Function<TaxCategorySetDescriptionAction, T> helper) {
         return helper.apply(this);

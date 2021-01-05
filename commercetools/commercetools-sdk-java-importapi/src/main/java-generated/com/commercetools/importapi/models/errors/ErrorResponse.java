@@ -70,12 +70,12 @@ public interface ErrorResponse  {
     public void setErrors(final ErrorObject ...errors);
     public void setErrors(final List<ErrorObject> errors);
 
-    public static ErrorResponseImpl of(){
+    public static ErrorResponse of(){
         return new ErrorResponseImpl();
     }
     
 
-    public static ErrorResponseImpl of(final ErrorResponse template) {
+    public static ErrorResponse of(final ErrorResponse template) {
         ErrorResponseImpl instance = new ErrorResponseImpl();
         instance.setStatusCode(template.getStatusCode());
         instance.setMessage(template.getMessage());
@@ -84,6 +84,15 @@ public interface ErrorResponse  {
         instance.setErrors(template.getErrors());
         return instance;
     }
+
+    public static ErrorResponseBuilder builder(){
+        return ErrorResponseBuilder.of();
+    }
+    
+    public static ErrorResponseBuilder builder(final ErrorResponse template){
+        return ErrorResponseBuilder.of(template);
+    }
+    
 
     default <T> T withErrorResponse(Function<ErrorResponse, T> helper) {
         return helper.apply(this);

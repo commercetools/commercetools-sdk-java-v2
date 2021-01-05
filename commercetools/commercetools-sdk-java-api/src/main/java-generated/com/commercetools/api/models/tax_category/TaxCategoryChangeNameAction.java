@@ -28,16 +28,25 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
 
     public void setName(final String name);
 
-    public static TaxCategoryChangeNameActionImpl of(){
+    public static TaxCategoryChangeNameAction of(){
         return new TaxCategoryChangeNameActionImpl();
     }
     
 
-    public static TaxCategoryChangeNameActionImpl of(final TaxCategoryChangeNameAction template) {
+    public static TaxCategoryChangeNameAction of(final TaxCategoryChangeNameAction template) {
         TaxCategoryChangeNameActionImpl instance = new TaxCategoryChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static TaxCategoryChangeNameActionBuilder builder(){
+        return TaxCategoryChangeNameActionBuilder.of();
+    }
+    
+    public static TaxCategoryChangeNameActionBuilder builder(final TaxCategoryChangeNameAction template){
+        return TaxCategoryChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryChangeNameAction(Function<TaxCategoryChangeNameAction, T> helper) {
         return helper.apply(this);

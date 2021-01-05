@@ -35,17 +35,26 @@ public interface PaymentChangeTransactionTimestampAction extends PaymentUpdateAc
     
     public void setTimestamp(final ZonedDateTime timestamp);
 
-    public static PaymentChangeTransactionTimestampActionImpl of(){
+    public static PaymentChangeTransactionTimestampAction of(){
         return new PaymentChangeTransactionTimestampActionImpl();
     }
     
 
-    public static PaymentChangeTransactionTimestampActionImpl of(final PaymentChangeTransactionTimestampAction template) {
+    public static PaymentChangeTransactionTimestampAction of(final PaymentChangeTransactionTimestampAction template) {
         PaymentChangeTransactionTimestampActionImpl instance = new PaymentChangeTransactionTimestampActionImpl();
         instance.setTransactionId(template.getTransactionId());
         instance.setTimestamp(template.getTimestamp());
         return instance;
     }
+
+    public static PaymentChangeTransactionTimestampActionBuilder builder(){
+        return PaymentChangeTransactionTimestampActionBuilder.of();
+    }
+    
+    public static PaymentChangeTransactionTimestampActionBuilder builder(final PaymentChangeTransactionTimestampAction template){
+        return PaymentChangeTransactionTimestampActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentChangeTransactionTimestampAction(Function<PaymentChangeTransactionTimestampAction, T> helper) {
         return helper.apply(this);

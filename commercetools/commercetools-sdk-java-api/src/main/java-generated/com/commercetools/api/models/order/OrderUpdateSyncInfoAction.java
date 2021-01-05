@@ -43,18 +43,27 @@ public interface OrderUpdateSyncInfoAction extends OrderUpdateAction {
     
     public void setSyncedAt(final ZonedDateTime syncedAt);
 
-    public static OrderUpdateSyncInfoActionImpl of(){
+    public static OrderUpdateSyncInfoAction of(){
         return new OrderUpdateSyncInfoActionImpl();
     }
     
 
-    public static OrderUpdateSyncInfoActionImpl of(final OrderUpdateSyncInfoAction template) {
+    public static OrderUpdateSyncInfoAction of(final OrderUpdateSyncInfoAction template) {
         OrderUpdateSyncInfoActionImpl instance = new OrderUpdateSyncInfoActionImpl();
         instance.setChannel(template.getChannel());
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }
+
+    public static OrderUpdateSyncInfoActionBuilder builder(){
+        return OrderUpdateSyncInfoActionBuilder.of();
+    }
+    
+    public static OrderUpdateSyncInfoActionBuilder builder(final OrderUpdateSyncInfoAction template){
+        return OrderUpdateSyncInfoActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderUpdateSyncInfoAction(Function<OrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);

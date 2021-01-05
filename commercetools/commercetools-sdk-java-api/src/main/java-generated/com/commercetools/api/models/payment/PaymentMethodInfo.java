@@ -51,18 +51,27 @@ public interface PaymentMethodInfo  {
     
     public void setName(final LocalizedString name);
 
-    public static PaymentMethodInfoImpl of(){
+    public static PaymentMethodInfo of(){
         return new PaymentMethodInfoImpl();
     }
     
 
-    public static PaymentMethodInfoImpl of(final PaymentMethodInfo template) {
+    public static PaymentMethodInfo of(final PaymentMethodInfo template) {
         PaymentMethodInfoImpl instance = new PaymentMethodInfoImpl();
         instance.setPaymentInterface(template.getPaymentInterface());
         instance.setMethod(template.getMethod());
         instance.setName(template.getName());
         return instance;
     }
+
+    public static PaymentMethodInfoBuilder builder(){
+        return PaymentMethodInfoBuilder.of();
+    }
+    
+    public static PaymentMethodInfoBuilder builder(final PaymentMethodInfo template){
+        return PaymentMethodInfoBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentMethodInfo(Function<PaymentMethodInfo, T> helper) {
         return helper.apply(this);

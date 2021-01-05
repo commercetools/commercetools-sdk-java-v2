@@ -36,17 +36,26 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
     
     public void setFields(final FieldContainer fields);
 
-    public static MyShoppingListSetCustomTypeActionImpl of(){
+    public static MyShoppingListSetCustomTypeAction of(){
         return new MyShoppingListSetCustomTypeActionImpl();
     }
     
 
-    public static MyShoppingListSetCustomTypeActionImpl of(final MyShoppingListSetCustomTypeAction template) {
+    public static MyShoppingListSetCustomTypeAction of(final MyShoppingListSetCustomTypeAction template) {
         MyShoppingListSetCustomTypeActionImpl instance = new MyShoppingListSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static MyShoppingListSetCustomTypeActionBuilder builder(){
+        return MyShoppingListSetCustomTypeActionBuilder.of();
+    }
+    
+    public static MyShoppingListSetCustomTypeActionBuilder builder(final MyShoppingListSetCustomTypeAction template){
+        return MyShoppingListSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListSetCustomTypeAction(Function<MyShoppingListSetCustomTypeAction, T> helper) {
         return helper.apply(this);

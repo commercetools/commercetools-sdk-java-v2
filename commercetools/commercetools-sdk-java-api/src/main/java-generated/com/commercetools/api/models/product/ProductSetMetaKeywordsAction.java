@@ -35,17 +35,26 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductSetMetaKeywordsActionImpl of(){
+    public static ProductSetMetaKeywordsAction of(){
         return new ProductSetMetaKeywordsActionImpl();
     }
     
 
-    public static ProductSetMetaKeywordsActionImpl of(final ProductSetMetaKeywordsAction template) {
+    public static ProductSetMetaKeywordsAction of(final ProductSetMetaKeywordsAction template) {
         ProductSetMetaKeywordsActionImpl instance = new ProductSetMetaKeywordsActionImpl();
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductSetMetaKeywordsActionBuilder builder(){
+        return ProductSetMetaKeywordsActionBuilder.of();
+    }
+    
+    public static ProductSetMetaKeywordsActionBuilder builder(final ProductSetMetaKeywordsAction template){
+        return ProductSetMetaKeywordsActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetMetaKeywordsAction(Function<ProductSetMetaKeywordsAction, T> helper) {
         return helper.apply(this);

@@ -211,12 +211,12 @@ public interface OrderImportDraft  {
     
     public void setOrigin(final CartOrigin origin);
 
-    public static OrderImportDraftImpl of(){
+    public static OrderImportDraft of(){
         return new OrderImportDraftImpl();
     }
     
 
-    public static OrderImportDraftImpl of(final OrderImportDraft template) {
+    public static OrderImportDraft of(final OrderImportDraft template) {
         OrderImportDraftImpl instance = new OrderImportDraftImpl();
         instance.setOrderNumber(template.getOrderNumber());
         instance.setCustomerId(template.getCustomerId());
@@ -242,6 +242,15 @@ public interface OrderImportDraft  {
         instance.setOrigin(template.getOrigin());
         return instance;
     }
+
+    public static OrderImportDraftBuilder builder(){
+        return OrderImportDraftBuilder.of();
+    }
+    
+    public static OrderImportDraftBuilder builder(final OrderImportDraft template){
+        return OrderImportDraftBuilder.of(template);
+    }
+    
 
     default <T> T withOrderImportDraft(Function<OrderImportDraft, T> helper) {
         return helper.apply(this);

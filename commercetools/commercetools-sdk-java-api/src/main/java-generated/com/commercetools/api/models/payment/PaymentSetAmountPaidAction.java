@@ -29,16 +29,25 @@ public interface PaymentSetAmountPaidAction extends PaymentUpdateAction {
 
     public void setAmount(final Money amount);
 
-    public static PaymentSetAmountPaidActionImpl of(){
+    public static PaymentSetAmountPaidAction of(){
         return new PaymentSetAmountPaidActionImpl();
     }
     
 
-    public static PaymentSetAmountPaidActionImpl of(final PaymentSetAmountPaidAction template) {
+    public static PaymentSetAmountPaidAction of(final PaymentSetAmountPaidAction template) {
         PaymentSetAmountPaidActionImpl instance = new PaymentSetAmountPaidActionImpl();
         instance.setAmount(template.getAmount());
         return instance;
     }
+
+    public static PaymentSetAmountPaidActionBuilder builder(){
+        return PaymentSetAmountPaidActionBuilder.of();
+    }
+    
+    public static PaymentSetAmountPaidActionBuilder builder(final PaymentSetAmountPaidAction template){
+        return PaymentSetAmountPaidActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetAmountPaidAction(Function<PaymentSetAmountPaidAction, T> helper) {
         return helper.apply(this);

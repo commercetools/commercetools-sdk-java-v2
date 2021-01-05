@@ -52,12 +52,12 @@ public interface InvalidFieldError extends ErrorObject {
     public void setAllowedValues(final JsonNode ...allowedValues);
     public void setAllowedValues(final List<JsonNode> allowedValues);
 
-    public static InvalidFieldErrorImpl of(){
+    public static InvalidFieldError of(){
         return new InvalidFieldErrorImpl();
     }
     
 
-    public static InvalidFieldErrorImpl of(final InvalidFieldError template) {
+    public static InvalidFieldError of(final InvalidFieldError template) {
         InvalidFieldErrorImpl instance = new InvalidFieldErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setField(template.getField());
@@ -65,6 +65,15 @@ public interface InvalidFieldError extends ErrorObject {
         instance.setAllowedValues(template.getAllowedValues());
         return instance;
     }
+
+    public static InvalidFieldErrorBuilder builder(){
+        return InvalidFieldErrorBuilder.of();
+    }
+    
+    public static InvalidFieldErrorBuilder builder(final InvalidFieldError template){
+        return InvalidFieldErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidFieldError(Function<InvalidFieldError, T> helper) {
         return helper.apply(this);

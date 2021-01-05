@@ -31,16 +31,25 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
 
     public void setKey(final String key);
 
-    public static ProductSetKeyActionImpl of(){
+    public static ProductSetKeyAction of(){
         return new ProductSetKeyActionImpl();
     }
     
 
-    public static ProductSetKeyActionImpl of(final ProductSetKeyAction template) {
+    public static ProductSetKeyAction of(final ProductSetKeyAction template) {
         ProductSetKeyActionImpl instance = new ProductSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ProductSetKeyActionBuilder builder(){
+        return ProductSetKeyActionBuilder.of();
+    }
+    
+    public static ProductSetKeyActionBuilder builder(final ProductSetKeyAction template){
+        return ProductSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetKeyAction(Function<ProductSetKeyAction, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface MyShoppingListChangeNameAction extends MyShoppingListUpdateActi
 
     public void setName(final LocalizedString name);
 
-    public static MyShoppingListChangeNameActionImpl of(){
+    public static MyShoppingListChangeNameAction of(){
         return new MyShoppingListChangeNameActionImpl();
     }
     
 
-    public static MyShoppingListChangeNameActionImpl of(final MyShoppingListChangeNameAction template) {
+    public static MyShoppingListChangeNameAction of(final MyShoppingListChangeNameAction template) {
         MyShoppingListChangeNameActionImpl instance = new MyShoppingListChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static MyShoppingListChangeNameActionBuilder builder(){
+        return MyShoppingListChangeNameActionBuilder.of();
+    }
+    
+    public static MyShoppingListChangeNameActionBuilder builder(final MyShoppingListChangeNameAction template){
+        return MyShoppingListChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListChangeNameAction(Function<MyShoppingListChangeNameAction, T> helper) {
         return helper.apply(this);

@@ -174,12 +174,12 @@ public interface Address  {
     
     public void setExternalId(final String externalId);
 
-    public static AddressImpl of(){
+    public static Address of(){
         return new AddressImpl();
     }
     
 
-    public static AddressImpl of(final Address template) {
+    public static Address of(final Address template) {
         AddressImpl instance = new AddressImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
@@ -208,6 +208,15 @@ public interface Address  {
         instance.setExternalId(template.getExternalId());
         return instance;
     }
+
+    public static AddressBuilder builder(){
+        return AddressBuilder.of();
+    }
+    
+    public static AddressBuilder builder(final Address template){
+        return AddressBuilder.of(template);
+    }
+    
 
     default <T> T withAddress(Function<Address, T> helper) {
         return helper.apply(this);

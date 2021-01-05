@@ -35,17 +35,26 @@ public interface MoneySetAttribute extends Attribute {
     public void setValue(final TypedMoney ...value);
     public void setValue(final List<TypedMoney> value);
 
-    public static MoneySetAttributeImpl of(){
+    public static MoneySetAttribute of(){
         return new MoneySetAttributeImpl();
     }
     
 
-    public static MoneySetAttributeImpl of(final MoneySetAttribute template) {
+    public static MoneySetAttribute of(final MoneySetAttribute template) {
         MoneySetAttributeImpl instance = new MoneySetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static MoneySetAttributeBuilder builder(){
+        return MoneySetAttributeBuilder.of();
+    }
+    
+    public static MoneySetAttributeBuilder builder(final MoneySetAttribute template){
+        return MoneySetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withMoneySetAttribute(Function<MoneySetAttribute, T> helper) {
         return helper.apply(this);

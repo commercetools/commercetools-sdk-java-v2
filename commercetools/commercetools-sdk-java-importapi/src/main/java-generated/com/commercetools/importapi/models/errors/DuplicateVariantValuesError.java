@@ -36,17 +36,26 @@ public interface DuplicateVariantValuesError extends ErrorObject {
 
     public void setVariantValues(final VariantValues variantValues);
 
-    public static DuplicateVariantValuesErrorImpl of(){
+    public static DuplicateVariantValuesError of(){
         return new DuplicateVariantValuesErrorImpl();
     }
     
 
-    public static DuplicateVariantValuesErrorImpl of(final DuplicateVariantValuesError template) {
+    public static DuplicateVariantValuesError of(final DuplicateVariantValuesError template) {
         DuplicateVariantValuesErrorImpl instance = new DuplicateVariantValuesErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setVariantValues(template.getVariantValues());
         return instance;
     }
+
+    public static DuplicateVariantValuesErrorBuilder builder(){
+        return DuplicateVariantValuesErrorBuilder.of();
+    }
+    
+    public static DuplicateVariantValuesErrorBuilder builder(final DuplicateVariantValuesError template){
+        return DuplicateVariantValuesErrorBuilder.of(template);
+    }
+    
 
     default <T> T withDuplicateVariantValuesError(Function<DuplicateVariantValuesError, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface StagedOrderRemoveItemShippingAddressAction extends StagedOrderU
 
     public void setAddressKey(final String addressKey);
 
-    public static StagedOrderRemoveItemShippingAddressActionImpl of(){
+    public static StagedOrderRemoveItemShippingAddressAction of(){
         return new StagedOrderRemoveItemShippingAddressActionImpl();
     }
     
 
-    public static StagedOrderRemoveItemShippingAddressActionImpl of(final StagedOrderRemoveItemShippingAddressAction template) {
+    public static StagedOrderRemoveItemShippingAddressAction of(final StagedOrderRemoveItemShippingAddressAction template) {
         StagedOrderRemoveItemShippingAddressActionImpl instance = new StagedOrderRemoveItemShippingAddressActionImpl();
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public static StagedOrderRemoveItemShippingAddressActionBuilder builder(){
+        return StagedOrderRemoveItemShippingAddressActionBuilder.of();
+    }
+    
+    public static StagedOrderRemoveItemShippingAddressActionBuilder builder(final StagedOrderRemoveItemShippingAddressAction template){
+        return StagedOrderRemoveItemShippingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderRemoveItemShippingAddressAction(Function<StagedOrderRemoveItemShippingAddressAction, T> helper) {
         return helper.apply(this);

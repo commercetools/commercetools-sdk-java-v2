@@ -30,17 +30,26 @@ public interface DuplicateEnumValuesError extends ErrorObject {
     public void setDuplicates(final String ...duplicates);
     public void setDuplicates(final List<String> duplicates);
 
-    public static DuplicateEnumValuesErrorImpl of(){
+    public static DuplicateEnumValuesError of(){
         return new DuplicateEnumValuesErrorImpl();
     }
     
 
-    public static DuplicateEnumValuesErrorImpl of(final DuplicateEnumValuesError template) {
+    public static DuplicateEnumValuesError of(final DuplicateEnumValuesError template) {
         DuplicateEnumValuesErrorImpl instance = new DuplicateEnumValuesErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setDuplicates(template.getDuplicates());
         return instance;
     }
+
+    public static DuplicateEnumValuesErrorBuilder builder(){
+        return DuplicateEnumValuesErrorBuilder.of();
+    }
+    
+    public static DuplicateEnumValuesErrorBuilder builder(final DuplicateEnumValuesError template){
+        return DuplicateEnumValuesErrorBuilder.of(template);
+    }
+    
 
     default <T> T withDuplicateEnumValuesError(Function<DuplicateEnumValuesError, T> helper) {
         return helper.apply(this);

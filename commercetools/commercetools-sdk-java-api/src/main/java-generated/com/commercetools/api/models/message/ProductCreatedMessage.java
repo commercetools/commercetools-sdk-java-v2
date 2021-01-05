@@ -30,12 +30,12 @@ public interface ProductCreatedMessage extends Message {
 
     public void setProductProjection(final ProductProjection productProjection);
 
-    public static ProductCreatedMessageImpl of(){
+    public static ProductCreatedMessage of(){
         return new ProductCreatedMessageImpl();
     }
     
 
-    public static ProductCreatedMessageImpl of(final ProductCreatedMessage template) {
+    public static ProductCreatedMessage of(final ProductCreatedMessage template) {
         ProductCreatedMessageImpl instance = new ProductCreatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface ProductCreatedMessage extends Message {
         instance.setProductProjection(template.getProductProjection());
         return instance;
     }
+
+    public static ProductCreatedMessageBuilder builder(){
+        return ProductCreatedMessageBuilder.of();
+    }
+    
+    public static ProductCreatedMessageBuilder builder(final ProductCreatedMessage template){
+        return ProductCreatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductCreatedMessage(Function<ProductCreatedMessage, T> helper) {
         return helper.apply(this);

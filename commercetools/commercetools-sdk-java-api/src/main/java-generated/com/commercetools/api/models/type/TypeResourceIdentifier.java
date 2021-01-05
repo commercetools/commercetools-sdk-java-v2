@@ -24,17 +24,26 @@ public interface TypeResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static TypeResourceIdentifierImpl of(){
+    public static TypeResourceIdentifier of(){
         return new TypeResourceIdentifierImpl();
     }
     
 
-    public static TypeResourceIdentifierImpl of(final TypeResourceIdentifier template) {
+    public static TypeResourceIdentifier of(final TypeResourceIdentifier template) {
         TypeResourceIdentifierImpl instance = new TypeResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static TypeResourceIdentifierBuilder builder(){
+        return TypeResourceIdentifierBuilder.of();
+    }
+    
+    public static TypeResourceIdentifierBuilder builder(final TypeResourceIdentifier template){
+        return TypeResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withTypeResourceIdentifier(Function<TypeResourceIdentifier, T> helper) {
         return helper.apply(this);

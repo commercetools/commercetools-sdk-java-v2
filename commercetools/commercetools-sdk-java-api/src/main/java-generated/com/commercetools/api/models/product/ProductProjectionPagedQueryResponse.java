@@ -55,12 +55,12 @@ public interface ProductProjectionPagedQueryResponse extends com.commercetools.a
     public void setResults(final ProductProjection ...results);
     public void setResults(final List<ProductProjection> results);
 
-    public static ProductProjectionPagedQueryResponseImpl of(){
+    public static ProductProjectionPagedQueryResponse of(){
         return new ProductProjectionPagedQueryResponseImpl();
     }
     
 
-    public static ProductProjectionPagedQueryResponseImpl of(final ProductProjectionPagedQueryResponse template) {
+    public static ProductProjectionPagedQueryResponse of(final ProductProjectionPagedQueryResponse template) {
         ProductProjectionPagedQueryResponseImpl instance = new ProductProjectionPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ProductProjectionPagedQueryResponse extends com.commercetools.a
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ProductProjectionPagedQueryResponseBuilder builder(){
+        return ProductProjectionPagedQueryResponseBuilder.of();
+    }
+    
+    public static ProductProjectionPagedQueryResponseBuilder builder(final ProductProjectionPagedQueryResponse template){
+        return ProductProjectionPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withProductProjectionPagedQueryResponse(Function<ProductProjectionPagedQueryResponse, T> helper) {
         return helper.apply(this);

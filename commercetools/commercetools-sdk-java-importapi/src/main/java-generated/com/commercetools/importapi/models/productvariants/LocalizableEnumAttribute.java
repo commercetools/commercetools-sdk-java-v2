@@ -32,17 +32,26 @@ public interface LocalizableEnumAttribute extends Attribute {
 
     public void setValue(final String value);
 
-    public static LocalizableEnumAttributeImpl of(){
+    public static LocalizableEnumAttribute of(){
         return new LocalizableEnumAttributeImpl();
     }
     
 
-    public static LocalizableEnumAttributeImpl of(final LocalizableEnumAttribute template) {
+    public static LocalizableEnumAttribute of(final LocalizableEnumAttribute template) {
         LocalizableEnumAttributeImpl instance = new LocalizableEnumAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static LocalizableEnumAttributeBuilder builder(){
+        return LocalizableEnumAttributeBuilder.of();
+    }
+    
+    public static LocalizableEnumAttributeBuilder builder(final LocalizableEnumAttribute template){
+        return LocalizableEnumAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withLocalizableEnumAttribute(Function<LocalizableEnumAttribute, T> helper) {
         return helper.apply(this);

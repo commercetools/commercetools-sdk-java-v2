@@ -158,12 +158,12 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     
     public void setCustom(final CustomFields custom);
 
-    public static ReviewImpl of(){
+    public static Review of(){
         return new ReviewImpl();
     }
     
 
-    public static ReviewImpl of(final Review template) {
+    public static Review of(final Review template) {
         ReviewImpl instance = new ReviewImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -185,6 +185,15 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static ReviewBuilder builder(){
+        return ReviewBuilder.of();
+    }
+    
+    public static ReviewBuilder builder(final Review template){
+        return ReviewBuilder.of(template);
+    }
+    
 
     default <T> T withReview(Function<Review, T> helper) {
         return helper.apply(this);

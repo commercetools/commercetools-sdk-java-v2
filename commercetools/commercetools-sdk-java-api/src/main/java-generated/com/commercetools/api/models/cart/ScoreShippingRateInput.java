@@ -28,16 +28,25 @@ public interface ScoreShippingRateInput extends ShippingRateInput {
 
     public void setScore(final Double score);
 
-    public static ScoreShippingRateInputImpl of(){
+    public static ScoreShippingRateInput of(){
         return new ScoreShippingRateInputImpl();
     }
     
 
-    public static ScoreShippingRateInputImpl of(final ScoreShippingRateInput template) {
+    public static ScoreShippingRateInput of(final ScoreShippingRateInput template) {
         ScoreShippingRateInputImpl instance = new ScoreShippingRateInputImpl();
         instance.setScore(template.getScore());
         return instance;
     }
+
+    public static ScoreShippingRateInputBuilder builder(){
+        return ScoreShippingRateInputBuilder.of();
+    }
+    
+    public static ScoreShippingRateInputBuilder builder(final ScoreShippingRateInput template){
+        return ScoreShippingRateInputBuilder.of(template);
+    }
+    
 
     default <T> T withScoreShippingRateInput(Function<ScoreShippingRateInput, T> helper) {
         return helper.apply(this);

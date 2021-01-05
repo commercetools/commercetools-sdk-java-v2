@@ -41,18 +41,27 @@ public interface StagedOrderSetCustomLineItemCustomFieldAction extends StagedOrd
     
     public void setValue(final JsonNode value);
 
-    public static StagedOrderSetCustomLineItemCustomFieldActionImpl of(){
+    public static StagedOrderSetCustomLineItemCustomFieldAction of(){
         return new StagedOrderSetCustomLineItemCustomFieldActionImpl();
     }
     
 
-    public static StagedOrderSetCustomLineItemCustomFieldActionImpl of(final StagedOrderSetCustomLineItemCustomFieldAction template) {
+    public static StagedOrderSetCustomLineItemCustomFieldAction of(final StagedOrderSetCustomLineItemCustomFieldAction template) {
         StagedOrderSetCustomLineItemCustomFieldActionImpl instance = new StagedOrderSetCustomLineItemCustomFieldActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static StagedOrderSetCustomLineItemCustomFieldActionBuilder builder(){
+        return StagedOrderSetCustomLineItemCustomFieldActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomLineItemCustomFieldActionBuilder builder(final StagedOrderSetCustomLineItemCustomFieldAction template){
+        return StagedOrderSetCustomLineItemCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomLineItemCustomFieldAction(Function<StagedOrderSetCustomLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);

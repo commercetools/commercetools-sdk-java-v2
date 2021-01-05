@@ -35,17 +35,26 @@ public interface StagedOrderSetLineItemShippingDetailsAction extends StagedOrder
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static StagedOrderSetLineItemShippingDetailsActionImpl of(){
+    public static StagedOrderSetLineItemShippingDetailsAction of(){
         return new StagedOrderSetLineItemShippingDetailsActionImpl();
     }
     
 
-    public static StagedOrderSetLineItemShippingDetailsActionImpl of(final StagedOrderSetLineItemShippingDetailsAction template) {
+    public static StagedOrderSetLineItemShippingDetailsAction of(final StagedOrderSetLineItemShippingDetailsAction template) {
         StagedOrderSetLineItemShippingDetailsActionImpl instance = new StagedOrderSetLineItemShippingDetailsActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static StagedOrderSetLineItemShippingDetailsActionBuilder builder(){
+        return StagedOrderSetLineItemShippingDetailsActionBuilder.of();
+    }
+    
+    public static StagedOrderSetLineItemShippingDetailsActionBuilder builder(final StagedOrderSetLineItemShippingDetailsAction template){
+        return StagedOrderSetLineItemShippingDetailsActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetLineItemShippingDetailsAction(Function<StagedOrderSetLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);

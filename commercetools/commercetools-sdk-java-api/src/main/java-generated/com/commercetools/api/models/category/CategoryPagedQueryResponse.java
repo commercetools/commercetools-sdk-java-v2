@@ -55,12 +55,12 @@ public interface CategoryPagedQueryResponse extends com.commercetools.api.models
     public void setResults(final Category ...results);
     public void setResults(final List<Category> results);
 
-    public static CategoryPagedQueryResponseImpl of(){
+    public static CategoryPagedQueryResponse of(){
         return new CategoryPagedQueryResponseImpl();
     }
     
 
-    public static CategoryPagedQueryResponseImpl of(final CategoryPagedQueryResponse template) {
+    public static CategoryPagedQueryResponse of(final CategoryPagedQueryResponse template) {
         CategoryPagedQueryResponseImpl instance = new CategoryPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface CategoryPagedQueryResponse extends com.commercetools.api.models
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static CategoryPagedQueryResponseBuilder builder(){
+        return CategoryPagedQueryResponseBuilder.of();
+    }
+    
+    public static CategoryPagedQueryResponseBuilder builder(final CategoryPagedQueryResponse template){
+        return CategoryPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryPagedQueryResponse(Function<CategoryPagedQueryResponse, T> helper) {
         return helper.apply(this);

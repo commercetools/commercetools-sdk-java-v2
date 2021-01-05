@@ -34,17 +34,26 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
     
     public void setQuantity(final Double quantity);
 
-    public static StagedOrderChangeCustomLineItemQuantityActionImpl of(){
+    public static StagedOrderChangeCustomLineItemQuantityAction of(){
         return new StagedOrderChangeCustomLineItemQuantityActionImpl();
     }
     
 
-    public static StagedOrderChangeCustomLineItemQuantityActionImpl of(final StagedOrderChangeCustomLineItemQuantityAction template) {
+    public static StagedOrderChangeCustomLineItemQuantityAction of(final StagedOrderChangeCustomLineItemQuantityAction template) {
         StagedOrderChangeCustomLineItemQuantityActionImpl instance = new StagedOrderChangeCustomLineItemQuantityActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static StagedOrderChangeCustomLineItemQuantityActionBuilder builder(){
+        return StagedOrderChangeCustomLineItemQuantityActionBuilder.of();
+    }
+    
+    public static StagedOrderChangeCustomLineItemQuantityActionBuilder builder(final StagedOrderChangeCustomLineItemQuantityAction template){
+        return StagedOrderChangeCustomLineItemQuantityActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderChangeCustomLineItemQuantityAction(Function<StagedOrderChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);

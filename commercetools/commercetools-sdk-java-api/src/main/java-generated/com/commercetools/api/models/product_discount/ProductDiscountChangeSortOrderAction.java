@@ -31,16 +31,25 @@ public interface ProductDiscountChangeSortOrderAction extends ProductDiscountUpd
 
     public void setSortOrder(final String sortOrder);
 
-    public static ProductDiscountChangeSortOrderActionImpl of(){
+    public static ProductDiscountChangeSortOrderAction of(){
         return new ProductDiscountChangeSortOrderActionImpl();
     }
     
 
-    public static ProductDiscountChangeSortOrderActionImpl of(final ProductDiscountChangeSortOrderAction template) {
+    public static ProductDiscountChangeSortOrderAction of(final ProductDiscountChangeSortOrderAction template) {
         ProductDiscountChangeSortOrderActionImpl instance = new ProductDiscountChangeSortOrderActionImpl();
         instance.setSortOrder(template.getSortOrder());
         return instance;
     }
+
+    public static ProductDiscountChangeSortOrderActionBuilder builder(){
+        return ProductDiscountChangeSortOrderActionBuilder.of();
+    }
+    
+    public static ProductDiscountChangeSortOrderActionBuilder builder(final ProductDiscountChangeSortOrderAction template){
+        return ProductDiscountChangeSortOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountChangeSortOrderAction(Function<ProductDiscountChangeSortOrderAction, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface MyCustomerSetSalutationAction extends MyCustomerUpdateAction {
 
     public void setSalutation(final String salutation);
 
-    public static MyCustomerSetSalutationActionImpl of(){
+    public static MyCustomerSetSalutationAction of(){
         return new MyCustomerSetSalutationActionImpl();
     }
     
 
-    public static MyCustomerSetSalutationActionImpl of(final MyCustomerSetSalutationAction template) {
+    public static MyCustomerSetSalutationAction of(final MyCustomerSetSalutationAction template) {
         MyCustomerSetSalutationActionImpl instance = new MyCustomerSetSalutationActionImpl();
         instance.setSalutation(template.getSalutation());
         return instance;
     }
+
+    public static MyCustomerSetSalutationActionBuilder builder(){
+        return MyCustomerSetSalutationActionBuilder.of();
+    }
+    
+    public static MyCustomerSetSalutationActionBuilder builder(final MyCustomerSetSalutationAction template){
+        return MyCustomerSetSalutationActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetSalutationAction(Function<MyCustomerSetSalutationAction, T> helper) {
         return helper.apply(this);

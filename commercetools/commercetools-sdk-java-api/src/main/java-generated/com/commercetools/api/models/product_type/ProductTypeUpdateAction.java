@@ -78,6 +78,7 @@ public interface ProductTypeUpdateAction extends com.commercetools.api.models.Re
 
 
 
+
     default <T> T withProductTypeUpdateAction(Function<ProductTypeUpdateAction, T> helper) {
         return helper.apply(this);
     }

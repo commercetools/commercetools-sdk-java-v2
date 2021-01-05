@@ -40,12 +40,12 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
     
     public void setState(final String state);
 
-    public static MissingTaxRateForCountryErrorImpl of(){
+    public static MissingTaxRateForCountryError of(){
         return new MissingTaxRateForCountryErrorImpl();
     }
     
 
-    public static MissingTaxRateForCountryErrorImpl of(final MissingTaxRateForCountryError template) {
+    public static MissingTaxRateForCountryError of(final MissingTaxRateForCountryError template) {
         MissingTaxRateForCountryErrorImpl instance = new MissingTaxRateForCountryErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setTaxCategoryId(template.getTaxCategoryId());
@@ -53,6 +53,15 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
         instance.setState(template.getState());
         return instance;
     }
+
+    public static MissingTaxRateForCountryErrorBuilder builder(){
+        return MissingTaxRateForCountryErrorBuilder.of();
+    }
+    
+    public static MissingTaxRateForCountryErrorBuilder builder(final MissingTaxRateForCountryError template){
+        return MissingTaxRateForCountryErrorBuilder.of(template);
+    }
+    
 
     default <T> T withMissingTaxRateForCountryError(Function<MissingTaxRateForCountryError, T> helper) {
         return helper.apply(this);

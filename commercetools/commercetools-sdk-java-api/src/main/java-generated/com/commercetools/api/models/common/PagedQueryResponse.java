@@ -69,12 +69,12 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
     
     public void setMeta(final JsonNode meta);
 
-    public static PagedQueryResponseImpl of(){
+    public static PagedQueryResponse of(){
         return new PagedQueryResponseImpl();
     }
     
 
-    public static PagedQueryResponseImpl of(final PagedQueryResponse template) {
+    public static PagedQueryResponse of(final PagedQueryResponse template) {
         PagedQueryResponseImpl instance = new PagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -85,6 +85,15 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
         instance.setMeta(template.getMeta());
         return instance;
     }
+
+    public static PagedQueryResponseBuilder builder(){
+        return PagedQueryResponseBuilder.of();
+    }
+    
+    public static PagedQueryResponseBuilder builder(final PagedQueryResponse template){
+        return PagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withPagedQueryResponse(Function<PagedQueryResponse, T> helper) {
         return helper.apply(this);

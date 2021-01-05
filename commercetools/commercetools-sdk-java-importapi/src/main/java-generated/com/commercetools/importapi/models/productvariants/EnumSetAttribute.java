@@ -34,17 +34,26 @@ public interface EnumSetAttribute extends Attribute {
     public void setValue(final String ...value);
     public void setValue(final List<String> value);
 
-    public static EnumSetAttributeImpl of(){
+    public static EnumSetAttribute of(){
         return new EnumSetAttributeImpl();
     }
     
 
-    public static EnumSetAttributeImpl of(final EnumSetAttribute template) {
+    public static EnumSetAttribute of(final EnumSetAttribute template) {
         EnumSetAttributeImpl instance = new EnumSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static EnumSetAttributeBuilder builder(){
+        return EnumSetAttributeBuilder.of();
+    }
+    
+    public static EnumSetAttributeBuilder builder(final EnumSetAttribute template){
+        return EnumSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withEnumSetAttribute(Function<EnumSetAttribute, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface OrderSetReturnPaymentStateAction extends OrderUpdateAction {
     
     public void setPaymentState(final ReturnPaymentState paymentState);
 
-    public static OrderSetReturnPaymentStateActionImpl of(){
+    public static OrderSetReturnPaymentStateAction of(){
         return new OrderSetReturnPaymentStateActionImpl();
     }
     
 
-    public static OrderSetReturnPaymentStateActionImpl of(final OrderSetReturnPaymentStateAction template) {
+    public static OrderSetReturnPaymentStateAction of(final OrderSetReturnPaymentStateAction template) {
         OrderSetReturnPaymentStateActionImpl instance = new OrderSetReturnPaymentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }
+
+    public static OrderSetReturnPaymentStateActionBuilder builder(){
+        return OrderSetReturnPaymentStateActionBuilder.of();
+    }
+    
+    public static OrderSetReturnPaymentStateActionBuilder builder(final OrderSetReturnPaymentStateAction template){
+        return OrderSetReturnPaymentStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetReturnPaymentStateAction(Function<OrderSetReturnPaymentStateAction, T> helper) {
         return helper.apply(this);

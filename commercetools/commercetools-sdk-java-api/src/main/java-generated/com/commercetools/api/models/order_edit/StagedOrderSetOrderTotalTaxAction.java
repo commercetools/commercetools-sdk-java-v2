@@ -39,17 +39,26 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
     public void setExternalTaxPortions(final TaxPortionDraft ...externalTaxPortions);
     public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
 
-    public static StagedOrderSetOrderTotalTaxActionImpl of(){
+    public static StagedOrderSetOrderTotalTaxAction of(){
         return new StagedOrderSetOrderTotalTaxActionImpl();
     }
     
 
-    public static StagedOrderSetOrderTotalTaxActionImpl of(final StagedOrderSetOrderTotalTaxAction template) {
+    public static StagedOrderSetOrderTotalTaxAction of(final StagedOrderSetOrderTotalTaxAction template) {
         StagedOrderSetOrderTotalTaxActionImpl instance = new StagedOrderSetOrderTotalTaxActionImpl();
         instance.setExternalTotalGross(template.getExternalTotalGross());
         instance.setExternalTaxPortions(template.getExternalTaxPortions());
         return instance;
     }
+
+    public static StagedOrderSetOrderTotalTaxActionBuilder builder(){
+        return StagedOrderSetOrderTotalTaxActionBuilder.of();
+    }
+    
+    public static StagedOrderSetOrderTotalTaxActionBuilder builder(final StagedOrderSetOrderTotalTaxAction template){
+        return StagedOrderSetOrderTotalTaxActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetOrderTotalTaxAction(Function<StagedOrderSetOrderTotalTaxAction, T> helper) {
         return helper.apply(this);

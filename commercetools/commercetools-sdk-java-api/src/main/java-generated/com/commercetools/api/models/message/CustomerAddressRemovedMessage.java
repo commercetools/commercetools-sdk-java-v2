@@ -30,12 +30,12 @@ public interface CustomerAddressRemovedMessage extends Message {
 
     public void setAddress(final Address address);
 
-    public static CustomerAddressRemovedMessageImpl of(){
+    public static CustomerAddressRemovedMessage of(){
         return new CustomerAddressRemovedMessageImpl();
     }
     
 
-    public static CustomerAddressRemovedMessageImpl of(final CustomerAddressRemovedMessage template) {
+    public static CustomerAddressRemovedMessage of(final CustomerAddressRemovedMessage template) {
         CustomerAddressRemovedMessageImpl instance = new CustomerAddressRemovedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface CustomerAddressRemovedMessage extends Message {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static CustomerAddressRemovedMessageBuilder builder(){
+        return CustomerAddressRemovedMessageBuilder.of();
+    }
+    
+    public static CustomerAddressRemovedMessageBuilder builder(final CustomerAddressRemovedMessage template){
+        return CustomerAddressRemovedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerAddressRemovedMessage(Function<CustomerAddressRemovedMessage, T> helper) {
         return helper.apply(this);

@@ -50,18 +50,27 @@ public interface MissingPricesTaskStatus  {
     
     public void setResult(final MissingPricesPagedQueryResult result);
 
-    public static MissingPricesTaskStatusImpl of(){
+    public static MissingPricesTaskStatus of(){
         return new MissingPricesTaskStatusImpl();
     }
     
 
-    public static MissingPricesTaskStatusImpl of(final MissingPricesTaskStatus template) {
+    public static MissingPricesTaskStatus of(final MissingPricesTaskStatus template) {
         MissingPricesTaskStatusImpl instance = new MissingPricesTaskStatusImpl();
         instance.setState(template.getState());
         instance.setExpires(template.getExpires());
         instance.setResult(template.getResult());
         return instance;
     }
+
+    public static MissingPricesTaskStatusBuilder builder(){
+        return MissingPricesTaskStatusBuilder.of();
+    }
+    
+    public static MissingPricesTaskStatusBuilder builder(final MissingPricesTaskStatus template){
+        return MissingPricesTaskStatusBuilder.of(template);
+    }
+    
 
     default <T> T withMissingPricesTaskStatus(Function<MissingPricesTaskStatus, T> helper) {
         return helper.apply(this);

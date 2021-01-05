@@ -35,17 +35,26 @@ public interface OrderShippingRateInputSetMessagePayload extends MessagePayload 
     
     public void setOldShippingRateInput(final ShippingRateInput oldShippingRateInput);
 
-    public static OrderShippingRateInputSetMessagePayloadImpl of(){
+    public static OrderShippingRateInputSetMessagePayload of(){
         return new OrderShippingRateInputSetMessagePayloadImpl();
     }
     
 
-    public static OrderShippingRateInputSetMessagePayloadImpl of(final OrderShippingRateInputSetMessagePayload template) {
+    public static OrderShippingRateInputSetMessagePayload of(final OrderShippingRateInputSetMessagePayload template) {
         OrderShippingRateInputSetMessagePayloadImpl instance = new OrderShippingRateInputSetMessagePayloadImpl();
         instance.setShippingRateInput(template.getShippingRateInput());
         instance.setOldShippingRateInput(template.getOldShippingRateInput());
         return instance;
     }
+
+    public static OrderShippingRateInputSetMessagePayloadBuilder builder(){
+        return OrderShippingRateInputSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderShippingRateInputSetMessagePayloadBuilder builder(final OrderShippingRateInputSetMessagePayload template){
+        return OrderShippingRateInputSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderShippingRateInputSetMessagePayload(Function<OrderShippingRateInputSetMessagePayload, T> helper) {
         return helper.apply(this);

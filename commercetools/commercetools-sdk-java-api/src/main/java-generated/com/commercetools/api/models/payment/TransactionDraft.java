@@ -66,12 +66,12 @@ public interface TransactionDraft  {
     
     public void setState(final TransactionState state);
 
-    public static TransactionDraftImpl of(){
+    public static TransactionDraft of(){
         return new TransactionDraftImpl();
     }
     
 
-    public static TransactionDraftImpl of(final TransactionDraft template) {
+    public static TransactionDraft of(final TransactionDraft template) {
         TransactionDraftImpl instance = new TransactionDraftImpl();
         instance.setTimestamp(template.getTimestamp());
         instance.setType(template.getType());
@@ -80,6 +80,15 @@ public interface TransactionDraft  {
         instance.setState(template.getState());
         return instance;
     }
+
+    public static TransactionDraftBuilder builder(){
+        return TransactionDraftBuilder.of();
+    }
+    
+    public static TransactionDraftBuilder builder(final TransactionDraft template){
+        return TransactionDraftBuilder.of(template);
+    }
+    
 
     default <T> T withTransactionDraft(Function<TransactionDraft, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface CustomTokenizer extends SuggestTokenizer {
     public void setInputs(final String ...inputs);
     public void setInputs(final List<String> inputs);
 
-    public static CustomTokenizerImpl of(){
+    public static CustomTokenizer of(){
         return new CustomTokenizerImpl();
     }
     
 
-    public static CustomTokenizerImpl of(final CustomTokenizer template) {
+    public static CustomTokenizer of(final CustomTokenizer template) {
         CustomTokenizerImpl instance = new CustomTokenizerImpl();
         instance.setInputs(template.getInputs());
         return instance;
     }
+
+    public static CustomTokenizerBuilder builder(){
+        return CustomTokenizerBuilder.of();
+    }
+    
+    public static CustomTokenizerBuilder builder(final CustomTokenizer template){
+        return CustomTokenizerBuilder.of(template);
+    }
+    
 
     default <T> T withCustomTokenizer(Function<CustomTokenizer, T> helper) {
         return helper.apply(this);

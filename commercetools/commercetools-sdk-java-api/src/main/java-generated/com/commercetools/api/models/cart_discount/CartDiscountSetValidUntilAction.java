@@ -31,16 +31,25 @@ public interface CartDiscountSetValidUntilAction extends CartDiscountUpdateActio
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static CartDiscountSetValidUntilActionImpl of(){
+    public static CartDiscountSetValidUntilAction of(){
         return new CartDiscountSetValidUntilActionImpl();
     }
     
 
-    public static CartDiscountSetValidUntilActionImpl of(final CartDiscountSetValidUntilAction template) {
+    public static CartDiscountSetValidUntilAction of(final CartDiscountSetValidUntilAction template) {
         CartDiscountSetValidUntilActionImpl instance = new CartDiscountSetValidUntilActionImpl();
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static CartDiscountSetValidUntilActionBuilder builder(){
+        return CartDiscountSetValidUntilActionBuilder.of();
+    }
+    
+    public static CartDiscountSetValidUntilActionBuilder builder(final CartDiscountSetValidUntilAction template){
+        return CartDiscountSetValidUntilActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountSetValidUntilAction(Function<CartDiscountSetValidUntilAction, T> helper) {
         return helper.apply(this);

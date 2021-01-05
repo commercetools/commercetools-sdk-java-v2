@@ -28,16 +28,25 @@ public interface StagedOrderSetCustomerEmailAction extends StagedOrderUpdateActi
 
     public void setEmail(final String email);
 
-    public static StagedOrderSetCustomerEmailActionImpl of(){
+    public static StagedOrderSetCustomerEmailAction of(){
         return new StagedOrderSetCustomerEmailActionImpl();
     }
     
 
-    public static StagedOrderSetCustomerEmailActionImpl of(final StagedOrderSetCustomerEmailAction template) {
+    public static StagedOrderSetCustomerEmailAction of(final StagedOrderSetCustomerEmailAction template) {
         StagedOrderSetCustomerEmailActionImpl instance = new StagedOrderSetCustomerEmailActionImpl();
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public static StagedOrderSetCustomerEmailActionBuilder builder(){
+        return StagedOrderSetCustomerEmailActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomerEmailActionBuilder builder(final StagedOrderSetCustomerEmailAction template){
+        return StagedOrderSetCustomerEmailActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomerEmailAction(Function<StagedOrderSetCustomerEmailAction, T> helper) {
         return helper.apply(this);

@@ -30,12 +30,12 @@ public interface PaymentTransactionAddedMessage extends Message {
 
     public void setTransaction(final Transaction transaction);
 
-    public static PaymentTransactionAddedMessageImpl of(){
+    public static PaymentTransactionAddedMessage of(){
         return new PaymentTransactionAddedMessageImpl();
     }
     
 
-    public static PaymentTransactionAddedMessageImpl of(final PaymentTransactionAddedMessage template) {
+    public static PaymentTransactionAddedMessage of(final PaymentTransactionAddedMessage template) {
         PaymentTransactionAddedMessageImpl instance = new PaymentTransactionAddedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface PaymentTransactionAddedMessage extends Message {
         instance.setTransaction(template.getTransaction());
         return instance;
     }
+
+    public static PaymentTransactionAddedMessageBuilder builder(){
+        return PaymentTransactionAddedMessageBuilder.of();
+    }
+    
+    public static PaymentTransactionAddedMessageBuilder builder(final PaymentTransactionAddedMessage template){
+        return PaymentTransactionAddedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentTransactionAddedMessage(Function<PaymentTransactionAddedMessage, T> helper) {
         return helper.apply(this);

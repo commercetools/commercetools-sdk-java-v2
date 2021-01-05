@@ -77,12 +77,12 @@ public interface OrderFromCartDraft  {
     
     public void setState(final StateResourceIdentifier state);
 
-    public static OrderFromCartDraftImpl of(){
+    public static OrderFromCartDraft of(){
         return new OrderFromCartDraftImpl();
     }
     
 
-    public static OrderFromCartDraftImpl of(final OrderFromCartDraft template) {
+    public static OrderFromCartDraft of(final OrderFromCartDraft template) {
         OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -93,6 +93,15 @@ public interface OrderFromCartDraft  {
         instance.setState(template.getState());
         return instance;
     }
+
+    public static OrderFromCartDraftBuilder builder(){
+        return OrderFromCartDraftBuilder.of();
+    }
+    
+    public static OrderFromCartDraftBuilder builder(final OrderFromCartDraft template){
+        return OrderFromCartDraftBuilder.of(template);
+    }
+    
 
     default <T> T withOrderFromCartDraft(Function<OrderFromCartDraft, T> helper) {
         return helper.apply(this);

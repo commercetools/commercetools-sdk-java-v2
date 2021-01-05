@@ -202,12 +202,12 @@ public interface CustomerImport extends ImportResource {
     
     public void setCustom(final Custom custom);
 
-    public static CustomerImportImpl of(){
+    public static CustomerImport of(){
         return new CustomerImportImpl();
     }
     
 
-    public static CustomerImportImpl of(final CustomerImport template) {
+    public static CustomerImport of(final CustomerImport template) {
         CustomerImportImpl instance = new CustomerImportImpl();
         instance.setKey(template.getKey());
         instance.setCustomerNumber(template.getCustomerNumber());
@@ -233,6 +233,15 @@ public interface CustomerImport extends ImportResource {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static CustomerImportBuilder builder(){
+        return CustomerImportBuilder.of();
+    }
+    
+    public static CustomerImportBuilder builder(final CustomerImport template){
+        return CustomerImportBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerImport(Function<CustomerImport, T> helper) {
         return helper.apply(this);

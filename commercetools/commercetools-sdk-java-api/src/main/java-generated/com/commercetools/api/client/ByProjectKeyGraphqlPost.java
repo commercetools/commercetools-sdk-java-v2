@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyGraphqlPost extends ApiMethod<ByProjectKeyGraphqlPost, com.commercetools.api.models.graph_ql.GraphQLResponse> {
+public class ByProjectKeyGraphqlPost extends ApiMethod<ByProjectKeyGraphqlPost, com.commercetools.api.models.graph_ql.GraphQLResponse> implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyGraphqlPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyGraphqlPost> {
 
     
     private String projectKey;

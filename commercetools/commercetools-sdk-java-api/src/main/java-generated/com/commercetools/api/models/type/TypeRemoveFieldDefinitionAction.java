@@ -28,16 +28,25 @@ public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
 
     public void setFieldName(final String fieldName);
 
-    public static TypeRemoveFieldDefinitionActionImpl of(){
+    public static TypeRemoveFieldDefinitionAction of(){
         return new TypeRemoveFieldDefinitionActionImpl();
     }
     
 
-    public static TypeRemoveFieldDefinitionActionImpl of(final TypeRemoveFieldDefinitionAction template) {
+    public static TypeRemoveFieldDefinitionAction of(final TypeRemoveFieldDefinitionAction template) {
         TypeRemoveFieldDefinitionActionImpl instance = new TypeRemoveFieldDefinitionActionImpl();
         instance.setFieldName(template.getFieldName());
         return instance;
     }
+
+    public static TypeRemoveFieldDefinitionActionBuilder builder(){
+        return TypeRemoveFieldDefinitionActionBuilder.of();
+    }
+    
+    public static TypeRemoveFieldDefinitionActionBuilder builder(final TypeRemoveFieldDefinitionAction template){
+        return TypeRemoveFieldDefinitionActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeRemoveFieldDefinitionAction(Function<TypeRemoveFieldDefinitionAction, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface OrderEditSetCustomFieldAction extends OrderEditUpdateAction {
     
     public void setValue(final JsonNode value);
 
-    public static OrderEditSetCustomFieldActionImpl of(){
+    public static OrderEditSetCustomFieldAction of(){
         return new OrderEditSetCustomFieldActionImpl();
     }
     
 
-    public static OrderEditSetCustomFieldActionImpl of(final OrderEditSetCustomFieldAction template) {
+    public static OrderEditSetCustomFieldAction of(final OrderEditSetCustomFieldAction template) {
         OrderEditSetCustomFieldActionImpl instance = new OrderEditSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static OrderEditSetCustomFieldActionBuilder builder(){
+        return OrderEditSetCustomFieldActionBuilder.of();
+    }
+    
+    public static OrderEditSetCustomFieldActionBuilder builder(final OrderEditSetCustomFieldAction template){
+        return OrderEditSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditSetCustomFieldAction(Function<OrderEditSetCustomFieldAction, T> helper) {
         return helper.apply(this);

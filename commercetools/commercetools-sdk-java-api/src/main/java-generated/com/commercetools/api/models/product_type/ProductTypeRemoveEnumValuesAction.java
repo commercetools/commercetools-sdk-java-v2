@@ -36,17 +36,26 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
     public void setKeys(final String ...keys);
     public void setKeys(final List<String> keys);
 
-    public static ProductTypeRemoveEnumValuesActionImpl of(){
+    public static ProductTypeRemoveEnumValuesAction of(){
         return new ProductTypeRemoveEnumValuesActionImpl();
     }
     
 
-    public static ProductTypeRemoveEnumValuesActionImpl of(final ProductTypeRemoveEnumValuesAction template) {
+    public static ProductTypeRemoveEnumValuesAction of(final ProductTypeRemoveEnumValuesAction template) {
         ProductTypeRemoveEnumValuesActionImpl instance = new ProductTypeRemoveEnumValuesActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setKeys(template.getKeys());
         return instance;
     }
+
+    public static ProductTypeRemoveEnumValuesActionBuilder builder(){
+        return ProductTypeRemoveEnumValuesActionBuilder.of();
+    }
+    
+    public static ProductTypeRemoveEnumValuesActionBuilder builder(final ProductTypeRemoveEnumValuesAction template){
+        return ProductTypeRemoveEnumValuesActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeRemoveEnumValuesAction(Function<ProductTypeRemoveEnumValuesAction, T> helper) {
         return helper.apply(this);

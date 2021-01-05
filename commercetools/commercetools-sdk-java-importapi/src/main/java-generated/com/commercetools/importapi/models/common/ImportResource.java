@@ -42,16 +42,25 @@ public interface ImportResource  {
 
     public void setKey(final String key);
 
-    public static ImportResourceImpl of(){
+    public static ImportResource of(){
         return new ImportResourceImpl();
     }
     
 
-    public static ImportResourceImpl of(final ImportResource template) {
+    public static ImportResource of(final ImportResource template) {
         ImportResourceImpl instance = new ImportResourceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ImportResourceBuilder builder(){
+        return ImportResourceBuilder.of();
+    }
+    
+    public static ImportResourceBuilder builder(final ImportResource template){
+        return ImportResourceBuilder.of(template);
+    }
+    
 
     default <T> T withImportResource(Function<ImportResource, T> helper) {
         return helper.apply(this);

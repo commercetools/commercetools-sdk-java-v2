@@ -113,12 +113,12 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
     public void setFieldDefinitions(final FieldDefinition ...fieldDefinitions);
     public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
-    public static TypeImpl of(){
+    public static Type of(){
         return new TypeImpl();
     }
     
 
-    public static TypeImpl of(final Type template) {
+    public static Type of(final Type template) {
         TypeImpl instance = new TypeImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -133,6 +133,15 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
         instance.setFieldDefinitions(template.getFieldDefinitions());
         return instance;
     }
+
+    public static TypeBuilder builder(){
+        return TypeBuilder.of();
+    }
+    
+    public static TypeBuilder builder(final Type template){
+        return TypeBuilder.of(template);
+    }
+    
 
     default <T> T withType(Function<Type, T> helper) {
         return helper.apply(this);

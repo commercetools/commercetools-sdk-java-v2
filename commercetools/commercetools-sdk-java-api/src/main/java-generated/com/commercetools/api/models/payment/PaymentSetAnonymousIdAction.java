@@ -31,16 +31,25 @@ public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
 
     public void setAnonymousId(final String anonymousId);
 
-    public static PaymentSetAnonymousIdActionImpl of(){
+    public static PaymentSetAnonymousIdAction of(){
         return new PaymentSetAnonymousIdActionImpl();
     }
     
 
-    public static PaymentSetAnonymousIdActionImpl of(final PaymentSetAnonymousIdAction template) {
+    public static PaymentSetAnonymousIdAction of(final PaymentSetAnonymousIdAction template) {
         PaymentSetAnonymousIdActionImpl instance = new PaymentSetAnonymousIdActionImpl();
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static PaymentSetAnonymousIdActionBuilder builder(){
+        return PaymentSetAnonymousIdActionBuilder.of();
+    }
+    
+    public static PaymentSetAnonymousIdActionBuilder builder(final PaymentSetAnonymousIdAction template){
+        return PaymentSetAnonymousIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetAnonymousIdAction(Function<PaymentSetAnonymousIdAction, T> helper) {
         return helper.apply(this);

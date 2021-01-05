@@ -30,16 +30,25 @@ public interface ZoneSetKeyAction extends ZoneUpdateAction {
 
     public void setKey(final String key);
 
-    public static ZoneSetKeyActionImpl of(){
+    public static ZoneSetKeyAction of(){
         return new ZoneSetKeyActionImpl();
     }
     
 
-    public static ZoneSetKeyActionImpl of(final ZoneSetKeyAction template) {
+    public static ZoneSetKeyAction of(final ZoneSetKeyAction template) {
         ZoneSetKeyActionImpl instance = new ZoneSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ZoneSetKeyActionBuilder builder(){
+        return ZoneSetKeyActionBuilder.of();
+    }
+    
+    public static ZoneSetKeyActionBuilder builder(final ZoneSetKeyAction template){
+        return ZoneSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withZoneSetKeyAction(Function<ZoneSetKeyAction, T> helper) {
         return helper.apply(this);

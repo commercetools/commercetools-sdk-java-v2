@@ -38,17 +38,26 @@ public interface StagedOrderImportLineItemStateAction extends StagedOrderUpdateA
     public void setState(final ItemState ...state);
     public void setState(final List<ItemState> state);
 
-    public static StagedOrderImportLineItemStateActionImpl of(){
+    public static StagedOrderImportLineItemStateAction of(){
         return new StagedOrderImportLineItemStateActionImpl();
     }
     
 
-    public static StagedOrderImportLineItemStateActionImpl of(final StagedOrderImportLineItemStateAction template) {
+    public static StagedOrderImportLineItemStateAction of(final StagedOrderImportLineItemStateAction template) {
         StagedOrderImportLineItemStateActionImpl instance = new StagedOrderImportLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static StagedOrderImportLineItemStateActionBuilder builder(){
+        return StagedOrderImportLineItemStateActionBuilder.of();
+    }
+    
+    public static StagedOrderImportLineItemStateActionBuilder builder(final StagedOrderImportLineItemStateAction template){
+        return StagedOrderImportLineItemStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderImportLineItemStateAction(Function<StagedOrderImportLineItemStateAction, T> helper) {
         return helper.apply(this);

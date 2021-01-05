@@ -30,12 +30,12 @@ public interface CategorySlugChangedMessage extends Message {
 
     public void setSlug(final LocalizedString slug);
 
-    public static CategorySlugChangedMessageImpl of(){
+    public static CategorySlugChangedMessage of(){
         return new CategorySlugChangedMessageImpl();
     }
     
 
-    public static CategorySlugChangedMessageImpl of(final CategorySlugChangedMessage template) {
+    public static CategorySlugChangedMessage of(final CategorySlugChangedMessage template) {
         CategorySlugChangedMessageImpl instance = new CategorySlugChangedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface CategorySlugChangedMessage extends Message {
         instance.setSlug(template.getSlug());
         return instance;
     }
+
+    public static CategorySlugChangedMessageBuilder builder(){
+        return CategorySlugChangedMessageBuilder.of();
+    }
+    
+    public static CategorySlugChangedMessageBuilder builder(final CategorySlugChangedMessage template){
+        return CategorySlugChangedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySlugChangedMessage(Function<CategorySlugChangedMessage, T> helper) {
         return helper.apply(this);

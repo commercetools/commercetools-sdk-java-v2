@@ -60,12 +60,12 @@ public interface ImportSinkPagedResponse  {
     public void setResults(final ImportSink ...results);
     public void setResults(final List<ImportSink> results);
 
-    public static ImportSinkPagedResponseImpl of(){
+    public static ImportSinkPagedResponse of(){
         return new ImportSinkPagedResponseImpl();
     }
     
 
-    public static ImportSinkPagedResponseImpl of(final ImportSinkPagedResponse template) {
+    public static ImportSinkPagedResponse of(final ImportSinkPagedResponse template) {
         ImportSinkPagedResponseImpl instance = new ImportSinkPagedResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
@@ -73,6 +73,15 @@ public interface ImportSinkPagedResponse  {
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ImportSinkPagedResponseBuilder builder(){
+        return ImportSinkPagedResponseBuilder.of();
+    }
+    
+    public static ImportSinkPagedResponseBuilder builder(final ImportSinkPagedResponse template){
+        return ImportSinkPagedResponseBuilder.of(template);
+    }
+    
 
     default <T> T withImportSinkPagedResponse(Function<ImportSinkPagedResponse, T> helper) {
         return helper.apply(this);

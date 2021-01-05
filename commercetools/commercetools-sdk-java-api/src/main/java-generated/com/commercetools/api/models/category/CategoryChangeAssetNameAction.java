@@ -42,18 +42,27 @@ public interface CategoryChangeAssetNameAction extends CategoryUpdateAction {
     
     public void setName(final LocalizedString name);
 
-    public static CategoryChangeAssetNameActionImpl of(){
+    public static CategoryChangeAssetNameAction of(){
         return new CategoryChangeAssetNameActionImpl();
     }
     
 
-    public static CategoryChangeAssetNameActionImpl of(final CategoryChangeAssetNameAction template) {
+    public static CategoryChangeAssetNameAction of(final CategoryChangeAssetNameAction template) {
         CategoryChangeAssetNameActionImpl instance = new CategoryChangeAssetNameActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setName(template.getName());
         return instance;
     }
+
+    public static CategoryChangeAssetNameActionBuilder builder(){
+        return CategoryChangeAssetNameActionBuilder.of();
+    }
+    
+    public static CategoryChangeAssetNameActionBuilder builder(final CategoryChangeAssetNameAction template){
+        return CategoryChangeAssetNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryChangeAssetNameAction(Function<CategoryChangeAssetNameAction, T> helper) {
         return helper.apply(this);

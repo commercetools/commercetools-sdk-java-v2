@@ -52,6 +52,7 @@ public interface InventoryEntryUpdateAction extends com.commercetools.api.models
 
 
 
+
     default <T> T withInventoryEntryUpdateAction(Function<InventoryEntryUpdateAction, T> helper) {
         return helper.apply(this);
     }

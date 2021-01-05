@@ -69,12 +69,12 @@ public interface ProductVariantDraft  {
     public void setAssets(final AssetDraft ...assets);
     public void setAssets(final List<AssetDraft> assets);
 
-    public static ProductVariantDraftImpl of(){
+    public static ProductVariantDraft of(){
         return new ProductVariantDraftImpl();
     }
     
 
-    public static ProductVariantDraftImpl of(final ProductVariantDraft template) {
+    public static ProductVariantDraft of(final ProductVariantDraft template) {
         ProductVariantDraftImpl instance = new ProductVariantDraftImpl();
         instance.setSku(template.getSku());
         instance.setKey(template.getKey());
@@ -84,6 +84,15 @@ public interface ProductVariantDraft  {
         instance.setAssets(template.getAssets());
         return instance;
     }
+
+    public static ProductVariantDraftBuilder builder(){
+        return ProductVariantDraftBuilder.of();
+    }
+    
+    public static ProductVariantDraftBuilder builder(final ProductVariantDraft template){
+        return ProductVariantDraftBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantDraft(Function<ProductVariantDraft, T> helper) {
         return helper.apply(this);

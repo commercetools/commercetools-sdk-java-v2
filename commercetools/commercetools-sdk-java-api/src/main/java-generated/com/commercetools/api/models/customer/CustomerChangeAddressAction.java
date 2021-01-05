@@ -42,18 +42,27 @@ public interface CustomerChangeAddressAction extends CustomerUpdateAction {
     
     public void setAddress(final Address address);
 
-    public static CustomerChangeAddressActionImpl of(){
+    public static CustomerChangeAddressAction of(){
         return new CustomerChangeAddressActionImpl();
     }
     
 
-    public static CustomerChangeAddressActionImpl of(final CustomerChangeAddressAction template) {
+    public static CustomerChangeAddressAction of(final CustomerChangeAddressAction template) {
         CustomerChangeAddressActionImpl instance = new CustomerChangeAddressActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static CustomerChangeAddressActionBuilder builder(){
+        return CustomerChangeAddressActionBuilder.of();
+    }
+    
+    public static CustomerChangeAddressActionBuilder builder(final CustomerChangeAddressAction template){
+        return CustomerChangeAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerChangeAddressAction(Function<CustomerChangeAddressAction, T> helper) {
         return helper.apply(this);

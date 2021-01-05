@@ -35,17 +35,26 @@ public interface StagedOrderSetParcelTrackingDataAction extends StagedOrderUpdat
     
     public void setTrackingData(final TrackingData trackingData);
 
-    public static StagedOrderSetParcelTrackingDataActionImpl of(){
+    public static StagedOrderSetParcelTrackingDataAction of(){
         return new StagedOrderSetParcelTrackingDataActionImpl();
     }
     
 
-    public static StagedOrderSetParcelTrackingDataActionImpl of(final StagedOrderSetParcelTrackingDataAction template) {
+    public static StagedOrderSetParcelTrackingDataAction of(final StagedOrderSetParcelTrackingDataAction template) {
         StagedOrderSetParcelTrackingDataActionImpl instance = new StagedOrderSetParcelTrackingDataActionImpl();
         instance.setParcelId(template.getParcelId());
         instance.setTrackingData(template.getTrackingData());
         return instance;
     }
+
+    public static StagedOrderSetParcelTrackingDataActionBuilder builder(){
+        return StagedOrderSetParcelTrackingDataActionBuilder.of();
+    }
+    
+    public static StagedOrderSetParcelTrackingDataActionBuilder builder(final StagedOrderSetParcelTrackingDataAction template){
+        return StagedOrderSetParcelTrackingDataActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetParcelTrackingDataAction(Function<StagedOrderSetParcelTrackingDataAction, T> helper) {
         return helper.apply(this);

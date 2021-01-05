@@ -35,12 +35,12 @@ public interface OrderCustomerGroupSetMessage extends Message {
     
     public void setOldCustomerGroup(final CustomerGroupReference oldCustomerGroup);
 
-    public static OrderCustomerGroupSetMessageImpl of(){
+    public static OrderCustomerGroupSetMessage of(){
         return new OrderCustomerGroupSetMessageImpl();
     }
     
 
-    public static OrderCustomerGroupSetMessageImpl of(final OrderCustomerGroupSetMessage template) {
+    public static OrderCustomerGroupSetMessage of(final OrderCustomerGroupSetMessage template) {
         OrderCustomerGroupSetMessageImpl instance = new OrderCustomerGroupSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -56,6 +56,15 @@ public interface OrderCustomerGroupSetMessage extends Message {
         instance.setOldCustomerGroup(template.getOldCustomerGroup());
         return instance;
     }
+
+    public static OrderCustomerGroupSetMessageBuilder builder(){
+        return OrderCustomerGroupSetMessageBuilder.of();
+    }
+    
+    public static OrderCustomerGroupSetMessageBuilder builder(final OrderCustomerGroupSetMessage template){
+        return OrderCustomerGroupSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderCustomerGroupSetMessage(Function<OrderCustomerGroupSetMessage, T> helper) {
         return helper.apply(this);

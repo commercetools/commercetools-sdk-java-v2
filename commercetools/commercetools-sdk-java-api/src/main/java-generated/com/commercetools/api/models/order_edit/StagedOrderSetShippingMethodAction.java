@@ -36,17 +36,26 @@ public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAct
     
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-    public static StagedOrderSetShippingMethodActionImpl of(){
+    public static StagedOrderSetShippingMethodAction of(){
         return new StagedOrderSetShippingMethodActionImpl();
     }
     
 
-    public static StagedOrderSetShippingMethodActionImpl of(final StagedOrderSetShippingMethodAction template) {
+    public static StagedOrderSetShippingMethodAction of(final StagedOrderSetShippingMethodAction template) {
         StagedOrderSetShippingMethodActionImpl instance = new StagedOrderSetShippingMethodActionImpl();
         instance.setShippingMethod(template.getShippingMethod());
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public static StagedOrderSetShippingMethodActionBuilder builder(){
+        return StagedOrderSetShippingMethodActionBuilder.of();
+    }
+    
+    public static StagedOrderSetShippingMethodActionBuilder builder(final StagedOrderSetShippingMethodAction template){
+        return StagedOrderSetShippingMethodActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetShippingMethodAction(Function<StagedOrderSetShippingMethodAction, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface OrderDeletedMessagePayload extends MessagePayload {
 
     public void setOrder(final Order order);
 
-    public static OrderDeletedMessagePayloadImpl of(){
+    public static OrderDeletedMessagePayload of(){
         return new OrderDeletedMessagePayloadImpl();
     }
     
 
-    public static OrderDeletedMessagePayloadImpl of(final OrderDeletedMessagePayload template) {
+    public static OrderDeletedMessagePayload of(final OrderDeletedMessagePayload template) {
         OrderDeletedMessagePayloadImpl instance = new OrderDeletedMessagePayloadImpl();
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public static OrderDeletedMessagePayloadBuilder builder(){
+        return OrderDeletedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderDeletedMessagePayloadBuilder builder(final OrderDeletedMessagePayload template){
+        return OrderDeletedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderDeletedMessagePayload(Function<OrderDeletedMessagePayload, T> helper) {
         return helper.apply(this);

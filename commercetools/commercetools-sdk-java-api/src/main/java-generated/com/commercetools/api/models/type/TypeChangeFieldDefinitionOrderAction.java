@@ -30,16 +30,25 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
     public void setFieldNames(final String ...fieldNames);
     public void setFieldNames(final List<String> fieldNames);
 
-    public static TypeChangeFieldDefinitionOrderActionImpl of(){
+    public static TypeChangeFieldDefinitionOrderAction of(){
         return new TypeChangeFieldDefinitionOrderActionImpl();
     }
     
 
-    public static TypeChangeFieldDefinitionOrderActionImpl of(final TypeChangeFieldDefinitionOrderAction template) {
+    public static TypeChangeFieldDefinitionOrderAction of(final TypeChangeFieldDefinitionOrderAction template) {
         TypeChangeFieldDefinitionOrderActionImpl instance = new TypeChangeFieldDefinitionOrderActionImpl();
         instance.setFieldNames(template.getFieldNames());
         return instance;
     }
+
+    public static TypeChangeFieldDefinitionOrderActionBuilder builder(){
+        return TypeChangeFieldDefinitionOrderActionBuilder.of();
+    }
+    
+    public static TypeChangeFieldDefinitionOrderActionBuilder builder(final TypeChangeFieldDefinitionOrderAction template){
+        return TypeChangeFieldDefinitionOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeFieldDefinitionOrderAction(Function<TypeChangeFieldDefinitionOrderAction, T> helper) {
         return helper.apply(this);

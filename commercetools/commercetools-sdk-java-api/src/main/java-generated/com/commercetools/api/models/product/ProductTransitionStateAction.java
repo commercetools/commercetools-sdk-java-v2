@@ -35,17 +35,26 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
     
     public void setForce(final Boolean force);
 
-    public static ProductTransitionStateActionImpl of(){
+    public static ProductTransitionStateAction of(){
         return new ProductTransitionStateActionImpl();
     }
     
 
-    public static ProductTransitionStateActionImpl of(final ProductTransitionStateAction template) {
+    public static ProductTransitionStateAction of(final ProductTransitionStateAction template) {
         ProductTransitionStateActionImpl instance = new ProductTransitionStateActionImpl();
         instance.setState(template.getState());
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static ProductTransitionStateActionBuilder builder(){
+        return ProductTransitionStateActionBuilder.of();
+    }
+    
+    public static ProductTransitionStateActionBuilder builder(final ProductTransitionStateAction template){
+        return ProductTransitionStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTransitionStateAction(Function<ProductTransitionStateAction, T> helper) {
         return helper.apply(this);

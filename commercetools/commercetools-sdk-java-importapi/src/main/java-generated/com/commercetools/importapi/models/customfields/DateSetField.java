@@ -34,16 +34,25 @@ public interface DateSetField extends CustomField {
     public void setValue(final LocalDate ...value);
     public void setValue(final List<LocalDate> value);
 
-    public static DateSetFieldImpl of(){
+    public static DateSetField of(){
         return new DateSetFieldImpl();
     }
     
 
-    public static DateSetFieldImpl of(final DateSetField template) {
+    public static DateSetField of(final DateSetField template) {
         DateSetFieldImpl instance = new DateSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static DateSetFieldBuilder builder(){
+        return DateSetFieldBuilder.of();
+    }
+    
+    public static DateSetFieldBuilder builder(final DateSetField template){
+        return DateSetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withDateSetField(Function<DateSetField, T> helper) {
         return helper.apply(this);

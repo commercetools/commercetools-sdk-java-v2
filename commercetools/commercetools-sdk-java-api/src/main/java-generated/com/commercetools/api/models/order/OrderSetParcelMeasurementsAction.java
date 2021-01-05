@@ -35,17 +35,26 @@ public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
     
     public void setMeasurements(final ParcelMeasurements measurements);
 
-    public static OrderSetParcelMeasurementsActionImpl of(){
+    public static OrderSetParcelMeasurementsAction of(){
         return new OrderSetParcelMeasurementsActionImpl();
     }
     
 
-    public static OrderSetParcelMeasurementsActionImpl of(final OrderSetParcelMeasurementsAction template) {
+    public static OrderSetParcelMeasurementsAction of(final OrderSetParcelMeasurementsAction template) {
         OrderSetParcelMeasurementsActionImpl instance = new OrderSetParcelMeasurementsActionImpl();
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
         return instance;
     }
+
+    public static OrderSetParcelMeasurementsActionBuilder builder(){
+        return OrderSetParcelMeasurementsActionBuilder.of();
+    }
+    
+    public static OrderSetParcelMeasurementsActionBuilder builder(final OrderSetParcelMeasurementsAction template){
+        return OrderSetParcelMeasurementsActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetParcelMeasurementsAction(Function<OrderSetParcelMeasurementsAction, T> helper) {
         return helper.apply(this);

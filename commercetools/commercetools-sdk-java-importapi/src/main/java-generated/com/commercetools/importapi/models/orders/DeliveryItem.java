@@ -34,17 +34,26 @@ public interface DeliveryItem  {
     
     public void setQuantity(final Double quantity);
 
-    public static DeliveryItemImpl of(){
+    public static DeliveryItem of(){
         return new DeliveryItemImpl();
     }
     
 
-    public static DeliveryItemImpl of(final DeliveryItem template) {
+    public static DeliveryItem of(final DeliveryItem template) {
         DeliveryItemImpl instance = new DeliveryItemImpl();
         instance.setId(template.getId());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static DeliveryItemBuilder builder(){
+        return DeliveryItemBuilder.of();
+    }
+    
+    public static DeliveryItemBuilder builder(final DeliveryItem template){
+        return DeliveryItemBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryItem(Function<DeliveryItem, T> helper) {
         return helper.apply(this);

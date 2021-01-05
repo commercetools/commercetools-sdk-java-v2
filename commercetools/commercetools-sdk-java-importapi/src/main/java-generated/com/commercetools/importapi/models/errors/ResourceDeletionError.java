@@ -29,17 +29,26 @@ public interface ResourceDeletionError extends ErrorObject {
 
     public void setResource(final JsonNode resource);
 
-    public static ResourceDeletionErrorImpl of(){
+    public static ResourceDeletionError of(){
         return new ResourceDeletionErrorImpl();
     }
     
 
-    public static ResourceDeletionErrorImpl of(final ResourceDeletionError template) {
+    public static ResourceDeletionError of(final ResourceDeletionError template) {
         ResourceDeletionErrorImpl instance = new ResourceDeletionErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public static ResourceDeletionErrorBuilder builder(){
+        return ResourceDeletionErrorBuilder.of();
+    }
+    
+    public static ResourceDeletionErrorBuilder builder(final ResourceDeletionError template){
+        return ResourceDeletionErrorBuilder.of(template);
+    }
+    
 
     default <T> T withResourceDeletionError(Function<ResourceDeletionError, T> helper) {
         return helper.apply(this);

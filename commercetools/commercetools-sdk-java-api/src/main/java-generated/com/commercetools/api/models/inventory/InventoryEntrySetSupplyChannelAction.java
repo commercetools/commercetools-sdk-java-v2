@@ -32,16 +32,25 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
-    public static InventoryEntrySetSupplyChannelActionImpl of(){
+    public static InventoryEntrySetSupplyChannelAction of(){
         return new InventoryEntrySetSupplyChannelActionImpl();
     }
     
 
-    public static InventoryEntrySetSupplyChannelActionImpl of(final InventoryEntrySetSupplyChannelAction template) {
+    public static InventoryEntrySetSupplyChannelAction of(final InventoryEntrySetSupplyChannelAction template) {
         InventoryEntrySetSupplyChannelActionImpl instance = new InventoryEntrySetSupplyChannelActionImpl();
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
+
+    public static InventoryEntrySetSupplyChannelActionBuilder builder(){
+        return InventoryEntrySetSupplyChannelActionBuilder.of();
+    }
+    
+    public static InventoryEntrySetSupplyChannelActionBuilder builder(final InventoryEntrySetSupplyChannelAction template){
+        return InventoryEntrySetSupplyChannelActionBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntrySetSupplyChannelAction(Function<InventoryEntrySetSupplyChannelAction, T> helper) {
         return helper.apply(this);

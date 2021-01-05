@@ -56,12 +56,12 @@ public interface LineItemStateTransitionMessagePayload extends MessagePayload {
     
     public void setToState(final StateReference toState);
 
-    public static LineItemStateTransitionMessagePayloadImpl of(){
+    public static LineItemStateTransitionMessagePayload of(){
         return new LineItemStateTransitionMessagePayloadImpl();
     }
     
 
-    public static LineItemStateTransitionMessagePayloadImpl of(final LineItemStateTransitionMessagePayload template) {
+    public static LineItemStateTransitionMessagePayload of(final LineItemStateTransitionMessagePayload template) {
         LineItemStateTransitionMessagePayloadImpl instance = new LineItemStateTransitionMessagePayloadImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setTransitionDate(template.getTransitionDate());
@@ -70,6 +70,15 @@ public interface LineItemStateTransitionMessagePayload extends MessagePayload {
         instance.setToState(template.getToState());
         return instance;
     }
+
+    public static LineItemStateTransitionMessagePayloadBuilder builder(){
+        return LineItemStateTransitionMessagePayloadBuilder.of();
+    }
+    
+    public static LineItemStateTransitionMessagePayloadBuilder builder(final LineItemStateTransitionMessagePayload template){
+        return LineItemStateTransitionMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withLineItemStateTransitionMessagePayload(Function<LineItemStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);

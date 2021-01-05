@@ -29,17 +29,26 @@ public interface ResourceUpdateError extends ErrorObject {
 
     public void setResource(final JsonNode resource);
 
-    public static ResourceUpdateErrorImpl of(){
+    public static ResourceUpdateError of(){
         return new ResourceUpdateErrorImpl();
     }
     
 
-    public static ResourceUpdateErrorImpl of(final ResourceUpdateError template) {
+    public static ResourceUpdateError of(final ResourceUpdateError template) {
         ResourceUpdateErrorImpl instance = new ResourceUpdateErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public static ResourceUpdateErrorBuilder builder(){
+        return ResourceUpdateErrorBuilder.of();
+    }
+    
+    public static ResourceUpdateErrorBuilder builder(final ResourceUpdateError template){
+        return ResourceUpdateErrorBuilder.of(template);
+    }
+    
 
     default <T> T withResourceUpdateError(Function<ResourceUpdateError, T> helper) {
         return helper.apply(this);

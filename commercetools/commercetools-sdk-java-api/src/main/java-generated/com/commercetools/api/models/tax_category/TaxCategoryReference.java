@@ -30,17 +30,26 @@ public interface TaxCategoryReference extends Reference {
 
     public void setObj(final TaxCategory obj);
 
-    public static TaxCategoryReferenceImpl of(){
+    public static TaxCategoryReference of(){
         return new TaxCategoryReferenceImpl();
     }
     
 
-    public static TaxCategoryReferenceImpl of(final TaxCategoryReference template) {
+    public static TaxCategoryReference of(final TaxCategoryReference template) {
         TaxCategoryReferenceImpl instance = new TaxCategoryReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static TaxCategoryReferenceBuilder builder(){
+        return TaxCategoryReferenceBuilder.of();
+    }
+    
+    public static TaxCategoryReferenceBuilder builder(final TaxCategoryReference template){
+        return TaxCategoryReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryReference(Function<TaxCategoryReference, T> helper) {
         return helper.apply(this);

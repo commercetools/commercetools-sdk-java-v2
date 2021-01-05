@@ -38,16 +38,25 @@ public interface PriceImportRequest extends ImportRequest {
     public void setResources(final PriceImport ...resources);
     public void setResources(final List<PriceImport> resources);
 
-    public static PriceImportRequestImpl of(){
+    public static PriceImportRequest of(){
         return new PriceImportRequestImpl();
     }
     
 
-    public static PriceImportRequestImpl of(final PriceImportRequest template) {
+    public static PriceImportRequest of(final PriceImportRequest template) {
         PriceImportRequestImpl instance = new PriceImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public static PriceImportRequestBuilder builder(){
+        return PriceImportRequestBuilder.of();
+    }
+    
+    public static PriceImportRequestBuilder builder(final PriceImportRequest template){
+        return PriceImportRequestBuilder.of(template);
+    }
+    
 
     default <T> T withPriceImportRequest(Function<PriceImportRequest, T> helper) {
         return helper.apply(this);

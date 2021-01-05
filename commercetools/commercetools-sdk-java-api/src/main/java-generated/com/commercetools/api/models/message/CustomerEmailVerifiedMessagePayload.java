@@ -23,15 +23,24 @@ public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
 
 
 
-    public static CustomerEmailVerifiedMessagePayloadImpl of(){
+    public static CustomerEmailVerifiedMessagePayload of(){
         return new CustomerEmailVerifiedMessagePayloadImpl();
     }
     
 
-    public static CustomerEmailVerifiedMessagePayloadImpl of(final CustomerEmailVerifiedMessagePayload template) {
+    public static CustomerEmailVerifiedMessagePayload of(final CustomerEmailVerifiedMessagePayload template) {
         CustomerEmailVerifiedMessagePayloadImpl instance = new CustomerEmailVerifiedMessagePayloadImpl();
         return instance;
     }
+
+    public static CustomerEmailVerifiedMessagePayloadBuilder builder(){
+        return CustomerEmailVerifiedMessagePayloadBuilder.of();
+    }
+    
+    public static CustomerEmailVerifiedMessagePayloadBuilder builder(final CustomerEmailVerifiedMessagePayload template){
+        return CustomerEmailVerifiedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerEmailVerifiedMessagePayload(Function<CustomerEmailVerifiedMessagePayload, T> helper) {
         return helper.apply(this);

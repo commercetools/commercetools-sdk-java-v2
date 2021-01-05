@@ -28,16 +28,25 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
 
     public void setVariantId(final Long variantId);
 
-    public static ProductRevertStagedVariantChangesActionImpl of(){
+    public static ProductRevertStagedVariantChangesAction of(){
         return new ProductRevertStagedVariantChangesActionImpl();
     }
     
 
-    public static ProductRevertStagedVariantChangesActionImpl of(final ProductRevertStagedVariantChangesAction template) {
+    public static ProductRevertStagedVariantChangesAction of(final ProductRevertStagedVariantChangesAction template) {
         ProductRevertStagedVariantChangesActionImpl instance = new ProductRevertStagedVariantChangesActionImpl();
         instance.setVariantId(template.getVariantId());
         return instance;
     }
+
+    public static ProductRevertStagedVariantChangesActionBuilder builder(){
+        return ProductRevertStagedVariantChangesActionBuilder.of();
+    }
+    
+    public static ProductRevertStagedVariantChangesActionBuilder builder(final ProductRevertStagedVariantChangesAction template){
+        return ProductRevertStagedVariantChangesActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductRevertStagedVariantChangesAction(Function<ProductRevertStagedVariantChangesAction, T> helper) {
         return helper.apply(this);

@@ -34,12 +34,12 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
     
     public void setInterfaceCode(final String interfaceCode);
 
-    public static PaymentStatusInterfaceCodeSetMessageImpl of(){
+    public static PaymentStatusInterfaceCodeSetMessage of(){
         return new PaymentStatusInterfaceCodeSetMessageImpl();
     }
     
 
-    public static PaymentStatusInterfaceCodeSetMessageImpl of(final PaymentStatusInterfaceCodeSetMessage template) {
+    public static PaymentStatusInterfaceCodeSetMessage of(final PaymentStatusInterfaceCodeSetMessage template) {
         PaymentStatusInterfaceCodeSetMessageImpl instance = new PaymentStatusInterfaceCodeSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -55,6 +55,15 @@ public interface PaymentStatusInterfaceCodeSetMessage extends Message {
         instance.setInterfaceCode(template.getInterfaceCode());
         return instance;
     }
+
+    public static PaymentStatusInterfaceCodeSetMessageBuilder builder(){
+        return PaymentStatusInterfaceCodeSetMessageBuilder.of();
+    }
+    
+    public static PaymentStatusInterfaceCodeSetMessageBuilder builder(final PaymentStatusInterfaceCodeSetMessage template){
+        return PaymentStatusInterfaceCodeSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentStatusInterfaceCodeSetMessage(Function<PaymentStatusInterfaceCodeSetMessage, T> helper) {
         return helper.apply(this);

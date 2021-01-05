@@ -35,17 +35,26 @@ public interface OrderPaymentStateChangedMessagePayload extends MessagePayload {
     
     public void setOldPaymentState(final PaymentState oldPaymentState);
 
-    public static OrderPaymentStateChangedMessagePayloadImpl of(){
+    public static OrderPaymentStateChangedMessagePayload of(){
         return new OrderPaymentStateChangedMessagePayloadImpl();
     }
     
 
-    public static OrderPaymentStateChangedMessagePayloadImpl of(final OrderPaymentStateChangedMessagePayload template) {
+    public static OrderPaymentStateChangedMessagePayload of(final OrderPaymentStateChangedMessagePayload template) {
         OrderPaymentStateChangedMessagePayloadImpl instance = new OrderPaymentStateChangedMessagePayloadImpl();
         instance.setPaymentState(template.getPaymentState());
         instance.setOldPaymentState(template.getOldPaymentState());
         return instance;
     }
+
+    public static OrderPaymentStateChangedMessagePayloadBuilder builder(){
+        return OrderPaymentStateChangedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderPaymentStateChangedMessagePayloadBuilder builder(final OrderPaymentStateChangedMessagePayload template){
+        return OrderPaymentStateChangedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderPaymentStateChangedMessagePayload(Function<OrderPaymentStateChangedMessagePayload, T> helper) {
         return helper.apply(this);

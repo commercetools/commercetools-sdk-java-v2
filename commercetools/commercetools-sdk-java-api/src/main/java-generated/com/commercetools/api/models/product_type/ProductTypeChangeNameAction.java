@@ -28,16 +28,25 @@ public interface ProductTypeChangeNameAction extends ProductTypeUpdateAction {
 
     public void setName(final String name);
 
-    public static ProductTypeChangeNameActionImpl of(){
+    public static ProductTypeChangeNameAction of(){
         return new ProductTypeChangeNameActionImpl();
     }
     
 
-    public static ProductTypeChangeNameActionImpl of(final ProductTypeChangeNameAction template) {
+    public static ProductTypeChangeNameAction of(final ProductTypeChangeNameAction template) {
         ProductTypeChangeNameActionImpl instance = new ProductTypeChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ProductTypeChangeNameActionBuilder builder(){
+        return ProductTypeChangeNameActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeNameActionBuilder builder(final ProductTypeChangeNameAction template){
+        return ProductTypeChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeNameAction(Function<ProductTypeChangeNameAction, T> helper) {
         return helper.apply(this);

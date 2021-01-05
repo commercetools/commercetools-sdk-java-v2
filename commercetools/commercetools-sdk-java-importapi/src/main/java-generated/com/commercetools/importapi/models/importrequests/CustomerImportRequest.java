@@ -38,16 +38,25 @@ public interface CustomerImportRequest extends ImportRequest {
     public void setResources(final CustomerImport ...resources);
     public void setResources(final List<CustomerImport> resources);
 
-    public static CustomerImportRequestImpl of(){
+    public static CustomerImportRequest of(){
         return new CustomerImportRequestImpl();
     }
     
 
-    public static CustomerImportRequestImpl of(final CustomerImportRequest template) {
+    public static CustomerImportRequest of(final CustomerImportRequest template) {
         CustomerImportRequestImpl instance = new CustomerImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public static CustomerImportRequestBuilder builder(){
+        return CustomerImportRequestBuilder.of();
+    }
+    
+    public static CustomerImportRequestBuilder builder(final CustomerImportRequest template){
+        return CustomerImportRequestBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerImportRequest(Function<CustomerImportRequest, T> helper) {
         return helper.apply(this);

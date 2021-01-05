@@ -38,17 +38,26 @@ public interface MissingImagesProductLevel extends MissingImagesCount {
     
     public void setTotal(final Long total);
 
-    public static MissingImagesProductLevelImpl of(){
+    public static MissingImagesProductLevel of(){
         return new MissingImagesProductLevelImpl();
     }
     
 
-    public static MissingImagesProductLevelImpl of(final MissingImagesProductLevel template) {
+    public static MissingImagesProductLevel of(final MissingImagesProductLevel template) {
         MissingImagesProductLevelImpl instance = new MissingImagesProductLevelImpl();
         instance.setMissingImages(template.getMissingImages());
         instance.setTotal(template.getTotal());
         return instance;
     }
+
+    public static MissingImagesProductLevelBuilder builder(){
+        return MissingImagesProductLevelBuilder.of();
+    }
+    
+    public static MissingImagesProductLevelBuilder builder(final MissingImagesProductLevel template){
+        return MissingImagesProductLevelBuilder.of(template);
+    }
+    
 
     default <T> T withMissingImagesProductLevel(Function<MissingImagesProductLevel, T> helper) {
         return helper.apply(this);

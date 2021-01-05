@@ -28,16 +28,25 @@ public interface ChangeSubscription  {
 
     public void setResourceTypeId(final String resourceTypeId);
 
-    public static ChangeSubscriptionImpl of(){
+    public static ChangeSubscription of(){
         return new ChangeSubscriptionImpl();
     }
     
 
-    public static ChangeSubscriptionImpl of(final ChangeSubscription template) {
+    public static ChangeSubscription of(final ChangeSubscription template) {
         ChangeSubscriptionImpl instance = new ChangeSubscriptionImpl();
         instance.setResourceTypeId(template.getResourceTypeId());
         return instance;
     }
+
+    public static ChangeSubscriptionBuilder builder(){
+        return ChangeSubscriptionBuilder.of();
+    }
+    
+    public static ChangeSubscriptionBuilder builder(final ChangeSubscription template){
+        return ChangeSubscriptionBuilder.of(template);
+    }
+    
 
     default <T> T withChangeSubscription(Function<ChangeSubscription, T> helper) {
         return helper.apply(this);

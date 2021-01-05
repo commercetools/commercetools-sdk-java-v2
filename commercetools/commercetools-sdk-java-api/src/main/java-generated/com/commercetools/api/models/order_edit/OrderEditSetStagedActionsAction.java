@@ -34,16 +34,25 @@ public interface OrderEditSetStagedActionsAction extends OrderEditUpdateAction {
     public void setStagedActions(final StagedOrderUpdateAction ...stagedActions);
     public void setStagedActions(final List<StagedOrderUpdateAction> stagedActions);
 
-    public static OrderEditSetStagedActionsActionImpl of(){
+    public static OrderEditSetStagedActionsAction of(){
         return new OrderEditSetStagedActionsActionImpl();
     }
     
 
-    public static OrderEditSetStagedActionsActionImpl of(final OrderEditSetStagedActionsAction template) {
+    public static OrderEditSetStagedActionsAction of(final OrderEditSetStagedActionsAction template) {
         OrderEditSetStagedActionsActionImpl instance = new OrderEditSetStagedActionsActionImpl();
         instance.setStagedActions(template.getStagedActions());
         return instance;
     }
+
+    public static OrderEditSetStagedActionsActionBuilder builder(){
+        return OrderEditSetStagedActionsActionBuilder.of();
+    }
+    
+    public static OrderEditSetStagedActionsActionBuilder builder(final OrderEditSetStagedActionsAction template){
+        return OrderEditSetStagedActionsActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditSetStagedActionsAction(Function<OrderEditSetStagedActionsAction, T> helper) {
         return helper.apply(this);

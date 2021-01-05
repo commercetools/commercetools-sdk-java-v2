@@ -69,12 +69,12 @@ public interface ProductVariantDraftImport  {
     public void setAssets(final Asset ...assets);
     public void setAssets(final List<Asset> assets);
 
-    public static ProductVariantDraftImportImpl of(){
+    public static ProductVariantDraftImport of(){
         return new ProductVariantDraftImportImpl();
     }
     
 
-    public static ProductVariantDraftImportImpl of(final ProductVariantDraftImport template) {
+    public static ProductVariantDraftImport of(final ProductVariantDraftImport template) {
         ProductVariantDraftImportImpl instance = new ProductVariantDraftImportImpl();
         instance.setSku(template.getSku());
         instance.setKey(template.getKey());
@@ -84,6 +84,15 @@ public interface ProductVariantDraftImport  {
         instance.setAssets(template.getAssets());
         return instance;
     }
+
+    public static ProductVariantDraftImportBuilder builder(){
+        return ProductVariantDraftImportBuilder.of();
+    }
+    
+    public static ProductVariantDraftImportBuilder builder(final ProductVariantDraftImport template){
+        return ProductVariantDraftImportBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantDraftImport(Function<ProductVariantDraftImport, T> helper) {
         return helper.apply(this);

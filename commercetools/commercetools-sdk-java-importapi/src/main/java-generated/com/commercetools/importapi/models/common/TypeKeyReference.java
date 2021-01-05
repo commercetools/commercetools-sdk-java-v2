@@ -27,16 +27,25 @@ public interface TypeKeyReference extends KeyReference {
 
 
 
-    public static TypeKeyReferenceImpl of(){
+    public static TypeKeyReference of(){
         return new TypeKeyReferenceImpl();
     }
     
 
-    public static TypeKeyReferenceImpl of(final TypeKeyReference template) {
+    public static TypeKeyReference of(final TypeKeyReference template) {
         TypeKeyReferenceImpl instance = new TypeKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static TypeKeyReferenceBuilder builder(){
+        return TypeKeyReferenceBuilder.of();
+    }
+    
+    public static TypeKeyReferenceBuilder builder(final TypeKeyReference template){
+        return TypeKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withTypeKeyReference(Function<TypeKeyReference, T> helper) {
         return helper.apply(this);

@@ -41,17 +41,26 @@ public interface ZoneRate  {
     public void setShippingRates(final ShippingRate ...shippingRates);
     public void setShippingRates(final List<ShippingRate> shippingRates);
 
-    public static ZoneRateImpl of(){
+    public static ZoneRate of(){
         return new ZoneRateImpl();
     }
     
 
-    public static ZoneRateImpl of(final ZoneRate template) {
+    public static ZoneRate of(final ZoneRate template) {
         ZoneRateImpl instance = new ZoneRateImpl();
         instance.setZone(template.getZone());
         instance.setShippingRates(template.getShippingRates());
         return instance;
     }
+
+    public static ZoneRateBuilder builder(){
+        return ZoneRateBuilder.of();
+    }
+    
+    public static ZoneRateBuilder builder(final ZoneRate template){
+        return ZoneRateBuilder.of(template);
+    }
+    
 
     default <T> T withZoneRate(Function<ZoneRate, T> helper) {
         return helper.apply(this);

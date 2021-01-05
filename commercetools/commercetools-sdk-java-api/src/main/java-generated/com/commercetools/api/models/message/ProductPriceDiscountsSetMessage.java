@@ -32,12 +32,12 @@ public interface ProductPriceDiscountsSetMessage extends Message {
     public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice ...updatedPrices);
     public void setUpdatedPrices(final List<ProductPriceDiscountsSetUpdatedPrice> updatedPrices);
 
-    public static ProductPriceDiscountsSetMessageImpl of(){
+    public static ProductPriceDiscountsSetMessage of(){
         return new ProductPriceDiscountsSetMessageImpl();
     }
     
 
-    public static ProductPriceDiscountsSetMessageImpl of(final ProductPriceDiscountsSetMessage template) {
+    public static ProductPriceDiscountsSetMessage of(final ProductPriceDiscountsSetMessage template) {
         ProductPriceDiscountsSetMessageImpl instance = new ProductPriceDiscountsSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -52,6 +52,15 @@ public interface ProductPriceDiscountsSetMessage extends Message {
         instance.setUpdatedPrices(template.getUpdatedPrices());
         return instance;
     }
+
+    public static ProductPriceDiscountsSetMessageBuilder builder(){
+        return ProductPriceDiscountsSetMessageBuilder.of();
+    }
+    
+    public static ProductPriceDiscountsSetMessageBuilder builder(final ProductPriceDiscountsSetMessage template){
+        return ProductPriceDiscountsSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductPriceDiscountsSetMessage(Function<ProductPriceDiscountsSetMessage, T> helper) {
         return helper.apply(this);

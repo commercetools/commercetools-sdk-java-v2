@@ -23,15 +23,24 @@ public interface OrderEditNotProcessed extends OrderEditResult {
 
 
 
-    public static OrderEditNotProcessedImpl of(){
+    public static OrderEditNotProcessed of(){
         return new OrderEditNotProcessedImpl();
     }
     
 
-    public static OrderEditNotProcessedImpl of(final OrderEditNotProcessed template) {
+    public static OrderEditNotProcessed of(final OrderEditNotProcessed template) {
         OrderEditNotProcessedImpl instance = new OrderEditNotProcessedImpl();
         return instance;
     }
+
+    public static OrderEditNotProcessedBuilder builder(){
+        return OrderEditNotProcessedBuilder.of();
+    }
+    
+    public static OrderEditNotProcessedBuilder builder(final OrderEditNotProcessed template){
+        return OrderEditNotProcessedBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditNotProcessed(Function<OrderEditNotProcessed, T> helper) {
         return helper.apply(this);

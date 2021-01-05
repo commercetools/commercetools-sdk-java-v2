@@ -23,16 +23,25 @@ public interface InvalidCurrentPasswordError extends ErrorObject {
 
 
 
-    public static InvalidCurrentPasswordErrorImpl of(){
+    public static InvalidCurrentPasswordError of(){
         return new InvalidCurrentPasswordErrorImpl();
     }
     
 
-    public static InvalidCurrentPasswordErrorImpl of(final InvalidCurrentPasswordError template) {
+    public static InvalidCurrentPasswordError of(final InvalidCurrentPasswordError template) {
         InvalidCurrentPasswordErrorImpl instance = new InvalidCurrentPasswordErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidCurrentPasswordErrorBuilder builder(){
+        return InvalidCurrentPasswordErrorBuilder.of();
+    }
+    
+    public static InvalidCurrentPasswordErrorBuilder builder(final InvalidCurrentPasswordError template){
+        return InvalidCurrentPasswordErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidCurrentPasswordError(Function<InvalidCurrentPasswordError, T> helper) {
         return helper.apply(this);

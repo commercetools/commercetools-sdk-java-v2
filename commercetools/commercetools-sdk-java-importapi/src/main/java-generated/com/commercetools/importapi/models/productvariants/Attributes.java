@@ -33,15 +33,24 @@ public interface Attributes  {
     @JsonAnySetter
     public void setValue(String key, Attribute value);
 
-    public static AttributesImpl of(){
+    public static Attributes of(){
         return new AttributesImpl();
     }
     
 
-    public static AttributesImpl of(final Attributes template) {
+    public static Attributes of(final Attributes template) {
         AttributesImpl instance = new AttributesImpl();
         return instance;
     }
+
+    public static AttributesBuilder builder(){
+        return AttributesBuilder.of();
+    }
+    
+    public static AttributesBuilder builder(final Attributes template){
+        return AttributesBuilder.of(template);
+    }
+    
 
     default <T> T withAttributes(Function<Attributes, T> helper) {
         return helper.apply(this);

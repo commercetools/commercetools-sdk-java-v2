@@ -35,17 +35,26 @@ public interface LocalizedEnumValue  {
     
     public void setLabel(final LocalizedString label);
 
-    public static LocalizedEnumValueImpl of(){
+    public static LocalizedEnumValue of(){
         return new LocalizedEnumValueImpl();
     }
     
 
-    public static LocalizedEnumValueImpl of(final LocalizedEnumValue template) {
+    public static LocalizedEnumValue of(final LocalizedEnumValue template) {
         LocalizedEnumValueImpl instance = new LocalizedEnumValueImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static LocalizedEnumValueBuilder builder(){
+        return LocalizedEnumValueBuilder.of();
+    }
+    
+    public static LocalizedEnumValueBuilder builder(final LocalizedEnumValue template){
+        return LocalizedEnumValueBuilder.of(template);
+    }
+    
 
     default <T> T withLocalizedEnumValue(Function<LocalizedEnumValue, T> helper) {
         return helper.apply(this);

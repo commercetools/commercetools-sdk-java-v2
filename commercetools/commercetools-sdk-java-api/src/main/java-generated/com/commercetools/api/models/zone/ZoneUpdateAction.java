@@ -46,6 +46,7 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
 
 
 
+
     default <T> T withZoneUpdateAction(Function<ZoneUpdateAction, T> helper) {
         return helper.apply(this);
     }

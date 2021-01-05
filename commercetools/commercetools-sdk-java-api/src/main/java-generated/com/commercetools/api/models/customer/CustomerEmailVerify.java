@@ -34,17 +34,26 @@ public interface CustomerEmailVerify  {
     
     public void setTokenValue(final String tokenValue);
 
-    public static CustomerEmailVerifyImpl of(){
+    public static CustomerEmailVerify of(){
         return new CustomerEmailVerifyImpl();
     }
     
 
-    public static CustomerEmailVerifyImpl of(final CustomerEmailVerify template) {
+    public static CustomerEmailVerify of(final CustomerEmailVerify template) {
         CustomerEmailVerifyImpl instance = new CustomerEmailVerifyImpl();
         instance.setVersion(template.getVersion());
         instance.setTokenValue(template.getTokenValue());
         return instance;
     }
+
+    public static CustomerEmailVerifyBuilder builder(){
+        return CustomerEmailVerifyBuilder.of();
+    }
+    
+    public static CustomerEmailVerifyBuilder builder(final CustomerEmailVerify template){
+        return CustomerEmailVerifyBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerEmailVerify(Function<CustomerEmailVerify, T> helper) {
         return helper.apply(this);

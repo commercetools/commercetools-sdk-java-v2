@@ -33,16 +33,25 @@ public interface BooleanSetField extends CustomField {
     public void setValue(final Boolean ...value);
     public void setValue(final List<Boolean> value);
 
-    public static BooleanSetFieldImpl of(){
+    public static BooleanSetField of(){
         return new BooleanSetFieldImpl();
     }
     
 
-    public static BooleanSetFieldImpl of(final BooleanSetField template) {
+    public static BooleanSetField of(final BooleanSetField template) {
         BooleanSetFieldImpl instance = new BooleanSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static BooleanSetFieldBuilder builder(){
+        return BooleanSetFieldBuilder.of();
+    }
+    
+    public static BooleanSetFieldBuilder builder(final BooleanSetField template){
+        return BooleanSetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withBooleanSetField(Function<BooleanSetField, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface CartSetCustomLineItemTaxAmountAction extends CartUpdateAction {
     
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
-    public static CartSetCustomLineItemTaxAmountActionImpl of(){
+    public static CartSetCustomLineItemTaxAmountAction of(){
         return new CartSetCustomLineItemTaxAmountActionImpl();
     }
     
 
-    public static CartSetCustomLineItemTaxAmountActionImpl of(final CartSetCustomLineItemTaxAmountAction template) {
+    public static CartSetCustomLineItemTaxAmountAction of(final CartSetCustomLineItemTaxAmountAction template) {
         CartSetCustomLineItemTaxAmountActionImpl instance = new CartSetCustomLineItemTaxAmountActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
         return instance;
     }
+
+    public static CartSetCustomLineItemTaxAmountActionBuilder builder(){
+        return CartSetCustomLineItemTaxAmountActionBuilder.of();
+    }
+    
+    public static CartSetCustomLineItemTaxAmountActionBuilder builder(final CartSetCustomLineItemTaxAmountAction template){
+        return CartSetCustomLineItemTaxAmountActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCustomLineItemTaxAmountAction(Function<CartSetCustomLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);

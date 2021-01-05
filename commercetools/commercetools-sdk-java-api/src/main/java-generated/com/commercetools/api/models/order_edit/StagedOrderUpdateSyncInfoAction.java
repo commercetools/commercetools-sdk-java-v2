@@ -43,18 +43,27 @@ public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction
     
     public void setSyncedAt(final ZonedDateTime syncedAt);
 
-    public static StagedOrderUpdateSyncInfoActionImpl of(){
+    public static StagedOrderUpdateSyncInfoAction of(){
         return new StagedOrderUpdateSyncInfoActionImpl();
     }
     
 
-    public static StagedOrderUpdateSyncInfoActionImpl of(final StagedOrderUpdateSyncInfoAction template) {
+    public static StagedOrderUpdateSyncInfoAction of(final StagedOrderUpdateSyncInfoAction template) {
         StagedOrderUpdateSyncInfoActionImpl instance = new StagedOrderUpdateSyncInfoActionImpl();
         instance.setChannel(template.getChannel());
         instance.setExternalId(template.getExternalId());
         instance.setSyncedAt(template.getSyncedAt());
         return instance;
     }
+
+    public static StagedOrderUpdateSyncInfoActionBuilder builder(){
+        return StagedOrderUpdateSyncInfoActionBuilder.of();
+    }
+    
+    public static StagedOrderUpdateSyncInfoActionBuilder builder(final StagedOrderUpdateSyncInfoAction template){
+        return StagedOrderUpdateSyncInfoActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderUpdateSyncInfoAction(Function<StagedOrderUpdateSyncInfoAction, T> helper) {
         return helper.apply(this);

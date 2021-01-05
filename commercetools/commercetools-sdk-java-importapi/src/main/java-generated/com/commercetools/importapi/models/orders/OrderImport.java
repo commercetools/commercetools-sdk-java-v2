@@ -229,12 +229,12 @@ public interface OrderImport extends ImportResource {
     public void setItemShippingAddresses(final Address ...itemShippingAddresses);
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
-    public static OrderImportImpl of(){
+    public static OrderImport of(){
         return new OrderImportImpl();
     }
     
 
-    public static OrderImportImpl of(final OrderImport template) {
+    public static OrderImport of(final OrderImport template) {
         OrderImportImpl instance = new OrderImportImpl();
         instance.setKey(template.getKey());
         instance.setOrderNumber(template.getOrderNumber());
@@ -261,6 +261,15 @@ public interface OrderImport extends ImportResource {
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         return instance;
     }
+
+    public static OrderImportBuilder builder(){
+        return OrderImportBuilder.of();
+    }
+    
+    public static OrderImportBuilder builder(final OrderImport template){
+        return OrderImportBuilder.of(template);
+    }
+    
 
     default <T> T withOrderImport(Function<OrderImport, T> helper) {
         return helper.apply(this);

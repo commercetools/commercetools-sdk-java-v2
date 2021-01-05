@@ -50,18 +50,27 @@ public interface SimilarProduct  {
     
     public void setMeta(final SimilarProductMeta meta);
 
-    public static SimilarProductImpl of(){
+    public static SimilarProduct of(){
         return new SimilarProductImpl();
     }
     
 
-    public static SimilarProductImpl of(final SimilarProduct template) {
+    public static SimilarProduct of(final SimilarProduct template) {
         SimilarProductImpl instance = new SimilarProductImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantId(template.getVariantId());
         instance.setMeta(template.getMeta());
         return instance;
     }
+
+    public static SimilarProductBuilder builder(){
+        return SimilarProductBuilder.of();
+    }
+    
+    public static SimilarProductBuilder builder(final SimilarProduct template){
+        return SimilarProductBuilder.of(template);
+    }
+    
 
     default <T> T withSimilarProduct(Function<SimilarProduct, T> helper) {
         return helper.apply(this);

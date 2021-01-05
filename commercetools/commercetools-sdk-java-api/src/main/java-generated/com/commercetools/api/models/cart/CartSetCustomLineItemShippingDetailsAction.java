@@ -35,17 +35,26 @@ public interface CartSetCustomLineItemShippingDetailsAction extends CartUpdateAc
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static CartSetCustomLineItemShippingDetailsActionImpl of(){
+    public static CartSetCustomLineItemShippingDetailsAction of(){
         return new CartSetCustomLineItemShippingDetailsActionImpl();
     }
     
 
-    public static CartSetCustomLineItemShippingDetailsActionImpl of(final CartSetCustomLineItemShippingDetailsAction template) {
+    public static CartSetCustomLineItemShippingDetailsAction of(final CartSetCustomLineItemShippingDetailsAction template) {
         CartSetCustomLineItemShippingDetailsActionImpl instance = new CartSetCustomLineItemShippingDetailsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static CartSetCustomLineItemShippingDetailsActionBuilder builder(){
+        return CartSetCustomLineItemShippingDetailsActionBuilder.of();
+    }
+    
+    public static CartSetCustomLineItemShippingDetailsActionBuilder builder(final CartSetCustomLineItemShippingDetailsAction template){
+        return CartSetCustomLineItemShippingDetailsActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCustomLineItemShippingDetailsAction(Function<CartSetCustomLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);

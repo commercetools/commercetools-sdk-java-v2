@@ -36,17 +36,26 @@ public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderU
     
     public void setMoney(final Money money);
 
-    public static StagedOrderChangeCustomLineItemMoneyActionImpl of(){
+    public static StagedOrderChangeCustomLineItemMoneyAction of(){
         return new StagedOrderChangeCustomLineItemMoneyActionImpl();
     }
     
 
-    public static StagedOrderChangeCustomLineItemMoneyActionImpl of(final StagedOrderChangeCustomLineItemMoneyAction template) {
+    public static StagedOrderChangeCustomLineItemMoneyAction of(final StagedOrderChangeCustomLineItemMoneyAction template) {
         StagedOrderChangeCustomLineItemMoneyActionImpl instance = new StagedOrderChangeCustomLineItemMoneyActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public static StagedOrderChangeCustomLineItemMoneyActionBuilder builder(){
+        return StagedOrderChangeCustomLineItemMoneyActionBuilder.of();
+    }
+    
+    public static StagedOrderChangeCustomLineItemMoneyActionBuilder builder(final StagedOrderChangeCustomLineItemMoneyAction template){
+        return StagedOrderChangeCustomLineItemMoneyActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderChangeCustomLineItemMoneyAction(Function<StagedOrderChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);

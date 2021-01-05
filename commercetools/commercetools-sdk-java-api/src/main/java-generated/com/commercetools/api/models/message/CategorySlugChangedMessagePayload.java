@@ -30,16 +30,25 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
 
     public void setSlug(final LocalizedString slug);
 
-    public static CategorySlugChangedMessagePayloadImpl of(){
+    public static CategorySlugChangedMessagePayload of(){
         return new CategorySlugChangedMessagePayloadImpl();
     }
     
 
-    public static CategorySlugChangedMessagePayloadImpl of(final CategorySlugChangedMessagePayload template) {
+    public static CategorySlugChangedMessagePayload of(final CategorySlugChangedMessagePayload template) {
         CategorySlugChangedMessagePayloadImpl instance = new CategorySlugChangedMessagePayloadImpl();
         instance.setSlug(template.getSlug());
         return instance;
     }
+
+    public static CategorySlugChangedMessagePayloadBuilder builder(){
+        return CategorySlugChangedMessagePayloadBuilder.of();
+    }
+    
+    public static CategorySlugChangedMessagePayloadBuilder builder(final CategorySlugChangedMessagePayload template){
+        return CategorySlugChangedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySlugChangedMessagePayload(Function<CategorySlugChangedMessagePayload, T> helper) {
         return helper.apply(this);

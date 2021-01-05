@@ -30,16 +30,25 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
 
     public void setZone(final ZoneResourceIdentifier zone);
 
-    public static ShippingMethodRemoveZoneActionImpl of(){
+    public static ShippingMethodRemoveZoneAction of(){
         return new ShippingMethodRemoveZoneActionImpl();
     }
     
 
-    public static ShippingMethodRemoveZoneActionImpl of(final ShippingMethodRemoveZoneAction template) {
+    public static ShippingMethodRemoveZoneAction of(final ShippingMethodRemoveZoneAction template) {
         ShippingMethodRemoveZoneActionImpl instance = new ShippingMethodRemoveZoneActionImpl();
         instance.setZone(template.getZone());
         return instance;
     }
+
+    public static ShippingMethodRemoveZoneActionBuilder builder(){
+        return ShippingMethodRemoveZoneActionBuilder.of();
+    }
+    
+    public static ShippingMethodRemoveZoneActionBuilder builder(final ShippingMethodRemoveZoneAction template){
+        return ShippingMethodRemoveZoneActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodRemoveZoneAction(Function<ShippingMethodRemoveZoneAction, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface CartDiscountValueRelativeDraft extends CartDiscountValueDraft {
 
     public void setPermyriad(final Long permyriad);
 
-    public static CartDiscountValueRelativeDraftImpl of(){
+    public static CartDiscountValueRelativeDraft of(){
         return new CartDiscountValueRelativeDraftImpl();
     }
     
 
-    public static CartDiscountValueRelativeDraftImpl of(final CartDiscountValueRelativeDraft template) {
+    public static CartDiscountValueRelativeDraft of(final CartDiscountValueRelativeDraft template) {
         CartDiscountValueRelativeDraftImpl instance = new CartDiscountValueRelativeDraftImpl();
         instance.setPermyriad(template.getPermyriad());
         return instance;
     }
+
+    public static CartDiscountValueRelativeDraftBuilder builder(){
+        return CartDiscountValueRelativeDraftBuilder.of();
+    }
+    
+    public static CartDiscountValueRelativeDraftBuilder builder(final CartDiscountValueRelativeDraft template){
+        return CartDiscountValueRelativeDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountValueRelativeDraft(Function<CartDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);

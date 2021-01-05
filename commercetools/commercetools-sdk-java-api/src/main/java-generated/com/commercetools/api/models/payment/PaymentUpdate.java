@@ -37,17 +37,26 @@ public interface PaymentUpdate extends com.commercetools.api.models.ResourceUpda
     public void setActions(final PaymentUpdateAction ...actions);
     public void setActions(final List<PaymentUpdateAction> actions);
 
-    public static PaymentUpdateImpl of(){
+    public static PaymentUpdate of(){
         return new PaymentUpdateImpl();
     }
     
 
-    public static PaymentUpdateImpl of(final PaymentUpdate template) {
+    public static PaymentUpdate of(final PaymentUpdate template) {
         PaymentUpdateImpl instance = new PaymentUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static PaymentUpdateBuilder builder(){
+        return PaymentUpdateBuilder.of();
+    }
+    
+    public static PaymentUpdateBuilder builder(final PaymentUpdate template){
+        return PaymentUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentUpdate(Function<PaymentUpdate, T> helper) {
         return helper.apply(this);

@@ -42,18 +42,27 @@ public interface ProductAddToCategoryAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductAddToCategoryActionImpl of(){
+    public static ProductAddToCategoryAction of(){
         return new ProductAddToCategoryActionImpl();
     }
     
 
-    public static ProductAddToCategoryActionImpl of(final ProductAddToCategoryAction template) {
+    public static ProductAddToCategoryAction of(final ProductAddToCategoryAction template) {
         ProductAddToCategoryActionImpl instance = new ProductAddToCategoryActionImpl();
         instance.setCategory(template.getCategory());
         instance.setOrderHint(template.getOrderHint());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductAddToCategoryActionBuilder builder(){
+        return ProductAddToCategoryActionBuilder.of();
+    }
+    
+    public static ProductAddToCategoryActionBuilder builder(final ProductAddToCategoryAction template){
+        return ProductAddToCategoryActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductAddToCategoryAction(Function<ProductAddToCategoryAction, T> helper) {
         return helper.apply(this);

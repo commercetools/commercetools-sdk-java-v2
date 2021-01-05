@@ -37,17 +37,26 @@ public interface CustomerUpdate extends com.commercetools.api.models.ResourceUpd
     public void setActions(final CustomerUpdateAction ...actions);
     public void setActions(final List<CustomerUpdateAction> actions);
 
-    public static CustomerUpdateImpl of(){
+    public static CustomerUpdate of(){
         return new CustomerUpdateImpl();
     }
     
 
-    public static CustomerUpdateImpl of(final CustomerUpdate template) {
+    public static CustomerUpdate of(final CustomerUpdate template) {
         CustomerUpdateImpl instance = new CustomerUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static CustomerUpdateBuilder builder(){
+        return CustomerUpdateBuilder.of();
+    }
+    
+    public static CustomerUpdateBuilder builder(final CustomerUpdate template){
+        return CustomerUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerUpdate(Function<CustomerUpdate, T> helper) {
         return helper.apply(this);

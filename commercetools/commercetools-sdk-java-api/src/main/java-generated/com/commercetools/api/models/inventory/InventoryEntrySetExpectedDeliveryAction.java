@@ -29,16 +29,25 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
 
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
 
-    public static InventoryEntrySetExpectedDeliveryActionImpl of(){
+    public static InventoryEntrySetExpectedDeliveryAction of(){
         return new InventoryEntrySetExpectedDeliveryActionImpl();
     }
     
 
-    public static InventoryEntrySetExpectedDeliveryActionImpl of(final InventoryEntrySetExpectedDeliveryAction template) {
+    public static InventoryEntrySetExpectedDeliveryAction of(final InventoryEntrySetExpectedDeliveryAction template) {
         InventoryEntrySetExpectedDeliveryActionImpl instance = new InventoryEntrySetExpectedDeliveryActionImpl();
         instance.setExpectedDelivery(template.getExpectedDelivery());
         return instance;
     }
+
+    public static InventoryEntrySetExpectedDeliveryActionBuilder builder(){
+        return InventoryEntrySetExpectedDeliveryActionBuilder.of();
+    }
+    
+    public static InventoryEntrySetExpectedDeliveryActionBuilder builder(final InventoryEntrySetExpectedDeliveryAction template){
+        return InventoryEntrySetExpectedDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntrySetExpectedDeliveryAction(Function<InventoryEntrySetExpectedDeliveryAction, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface MyCustomerSetLocaleAction extends MyCustomerUpdateAction {
 
     public void setLocale(final String locale);
 
-    public static MyCustomerSetLocaleActionImpl of(){
+    public static MyCustomerSetLocaleAction of(){
         return new MyCustomerSetLocaleActionImpl();
     }
     
 
-    public static MyCustomerSetLocaleActionImpl of(final MyCustomerSetLocaleAction template) {
+    public static MyCustomerSetLocaleAction of(final MyCustomerSetLocaleAction template) {
         MyCustomerSetLocaleActionImpl instance = new MyCustomerSetLocaleActionImpl();
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public static MyCustomerSetLocaleActionBuilder builder(){
+        return MyCustomerSetLocaleActionBuilder.of();
+    }
+    
+    public static MyCustomerSetLocaleActionBuilder builder(final MyCustomerSetLocaleAction template){
+        return MyCustomerSetLocaleActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetLocaleAction(Function<MyCustomerSetLocaleAction, T> helper) {
         return helper.apply(this);

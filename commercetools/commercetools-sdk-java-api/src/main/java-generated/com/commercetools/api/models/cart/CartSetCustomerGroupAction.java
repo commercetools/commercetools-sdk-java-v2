@@ -29,16 +29,25 @@ public interface CartSetCustomerGroupAction extends CartUpdateAction {
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
 
-    public static CartSetCustomerGroupActionImpl of(){
+    public static CartSetCustomerGroupAction of(){
         return new CartSetCustomerGroupActionImpl();
     }
     
 
-    public static CartSetCustomerGroupActionImpl of(final CartSetCustomerGroupAction template) {
+    public static CartSetCustomerGroupAction of(final CartSetCustomerGroupAction template) {
         CartSetCustomerGroupActionImpl instance = new CartSetCustomerGroupActionImpl();
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
+
+    public static CartSetCustomerGroupActionBuilder builder(){
+        return CartSetCustomerGroupActionBuilder.of();
+    }
+    
+    public static CartSetCustomerGroupActionBuilder builder(final CartSetCustomerGroupAction template){
+        return CartSetCustomerGroupActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCustomerGroupAction(Function<CartSetCustomerGroupAction, T> helper) {
         return helper.apply(this);

@@ -35,16 +35,25 @@ public interface ImportResponse  {
     public void setOperationStatus(final ImportOperationStatus ...operationStatus);
     public void setOperationStatus(final List<ImportOperationStatus> operationStatus);
 
-    public static ImportResponseImpl of(){
+    public static ImportResponse of(){
         return new ImportResponseImpl();
     }
     
 
-    public static ImportResponseImpl of(final ImportResponse template) {
+    public static ImportResponse of(final ImportResponse template) {
         ImportResponseImpl instance = new ImportResponseImpl();
         instance.setOperationStatus(template.getOperationStatus());
         return instance;
     }
+
+    public static ImportResponseBuilder builder(){
+        return ImportResponseBuilder.of();
+    }
+    
+    public static ImportResponseBuilder builder(final ImportResponse template){
+        return ImportResponseBuilder.of(template);
+    }
+    
 
     default <T> T withImportResponse(Function<ImportResponse, T> helper) {
         return helper.apply(this);

@@ -34,18 +34,27 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
     
     public void setConflictingAttributeName(final String conflictingAttributeName);
 
-    public static EnumKeyAlreadyExistsErrorImpl of(){
+    public static EnumKeyAlreadyExistsError of(){
         return new EnumKeyAlreadyExistsErrorImpl();
     }
     
 
-    public static EnumKeyAlreadyExistsErrorImpl of(final EnumKeyAlreadyExistsError template) {
+    public static EnumKeyAlreadyExistsError of(final EnumKeyAlreadyExistsError template) {
         EnumKeyAlreadyExistsErrorImpl instance = new EnumKeyAlreadyExistsErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setConflictingEnumKey(template.getConflictingEnumKey());
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public static EnumKeyAlreadyExistsErrorBuilder builder(){
+        return EnumKeyAlreadyExistsErrorBuilder.of();
+    }
+    
+    public static EnumKeyAlreadyExistsErrorBuilder builder(final EnumKeyAlreadyExistsError template){
+        return EnumKeyAlreadyExistsErrorBuilder.of(template);
+    }
+    
 
     default <T> T withEnumKeyAlreadyExistsError(Function<EnumKeyAlreadyExistsError, T> helper) {
         return helper.apply(this);

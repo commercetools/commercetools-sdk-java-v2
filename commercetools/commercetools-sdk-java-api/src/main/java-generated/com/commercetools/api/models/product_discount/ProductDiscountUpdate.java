@@ -37,17 +37,26 @@ public interface ProductDiscountUpdate extends com.commercetools.api.models.Reso
     public void setActions(final ProductDiscountUpdateAction ...actions);
     public void setActions(final List<ProductDiscountUpdateAction> actions);
 
-    public static ProductDiscountUpdateImpl of(){
+    public static ProductDiscountUpdate of(){
         return new ProductDiscountUpdateImpl();
     }
     
 
-    public static ProductDiscountUpdateImpl of(final ProductDiscountUpdate template) {
+    public static ProductDiscountUpdate of(final ProductDiscountUpdate template) {
         ProductDiscountUpdateImpl instance = new ProductDiscountUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ProductDiscountUpdateBuilder builder(){
+        return ProductDiscountUpdateBuilder.of();
+    }
+    
+    public static ProductDiscountUpdateBuilder builder(final ProductDiscountUpdate template){
+        return ProductDiscountUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountUpdate(Function<ProductDiscountUpdate, T> helper) {
         return helper.apply(this);

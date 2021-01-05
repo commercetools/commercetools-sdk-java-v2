@@ -30,16 +30,25 @@ public interface ReviewCreatedMessagePayload extends MessagePayload {
 
     public void setReview(final Review review);
 
-    public static ReviewCreatedMessagePayloadImpl of(){
+    public static ReviewCreatedMessagePayload of(){
         return new ReviewCreatedMessagePayloadImpl();
     }
     
 
-    public static ReviewCreatedMessagePayloadImpl of(final ReviewCreatedMessagePayload template) {
+    public static ReviewCreatedMessagePayload of(final ReviewCreatedMessagePayload template) {
         ReviewCreatedMessagePayloadImpl instance = new ReviewCreatedMessagePayloadImpl();
         instance.setReview(template.getReview());
         return instance;
     }
+
+    public static ReviewCreatedMessagePayloadBuilder builder(){
+        return ReviewCreatedMessagePayloadBuilder.of();
+    }
+    
+    public static ReviewCreatedMessagePayloadBuilder builder(final ReviewCreatedMessagePayload template){
+        return ReviewCreatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withReviewCreatedMessagePayload(Function<ReviewCreatedMessagePayload, T> helper) {
         return helper.apply(this);

@@ -35,15 +35,24 @@ public interface FieldContainer  {
     @JsonAnySetter
     public void setValue(String key, CustomField value);
 
-    public static FieldContainerImpl of(){
+    public static FieldContainer of(){
         return new FieldContainerImpl();
     }
     
 
-    public static FieldContainerImpl of(final FieldContainer template) {
+    public static FieldContainer of(final FieldContainer template) {
         FieldContainerImpl instance = new FieldContainerImpl();
         return instance;
     }
+
+    public static FieldContainerBuilder builder(){
+        return FieldContainerBuilder.of();
+    }
+    
+    public static FieldContainerBuilder builder(final FieldContainer template){
+        return FieldContainerBuilder.of(template);
+    }
+    
 
     default <T> T withFieldContainer(Function<FieldContainer, T> helper) {
         return helper.apply(this);

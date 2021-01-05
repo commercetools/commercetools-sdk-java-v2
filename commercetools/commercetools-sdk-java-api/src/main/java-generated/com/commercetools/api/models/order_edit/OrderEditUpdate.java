@@ -43,18 +43,27 @@ public interface OrderEditUpdate extends com.commercetools.api.models.ResourceUp
     
     public void setDryRun(final Boolean dryRun);
 
-    public static OrderEditUpdateImpl of(){
+    public static OrderEditUpdate of(){
         return new OrderEditUpdateImpl();
     }
     
 
-    public static OrderEditUpdateImpl of(final OrderEditUpdate template) {
+    public static OrderEditUpdate of(final OrderEditUpdate template) {
         OrderEditUpdateImpl instance = new OrderEditUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         instance.setDryRun(template.getDryRun());
         return instance;
     }
+
+    public static OrderEditUpdateBuilder builder(){
+        return OrderEditUpdateBuilder.of();
+    }
+    
+    public static OrderEditUpdateBuilder builder(final OrderEditUpdate template){
+        return OrderEditUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditUpdate(Function<OrderEditUpdate, T> helper) {
         return helper.apply(this);

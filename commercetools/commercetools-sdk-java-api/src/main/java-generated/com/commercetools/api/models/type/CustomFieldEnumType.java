@@ -32,16 +32,25 @@ public interface CustomFieldEnumType extends FieldType {
     public void setValues(final CustomFieldEnumValue ...values);
     public void setValues(final List<CustomFieldEnumValue> values);
 
-    public static CustomFieldEnumTypeImpl of(){
+    public static CustomFieldEnumType of(){
         return new CustomFieldEnumTypeImpl();
     }
     
 
-    public static CustomFieldEnumTypeImpl of(final CustomFieldEnumType template) {
+    public static CustomFieldEnumType of(final CustomFieldEnumType template) {
         CustomFieldEnumTypeImpl instance = new CustomFieldEnumTypeImpl();
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public static CustomFieldEnumTypeBuilder builder(){
+        return CustomFieldEnumTypeBuilder.of();
+    }
+    
+    public static CustomFieldEnumTypeBuilder builder(final CustomFieldEnumType template){
+        return CustomFieldEnumTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldEnumType(Function<CustomFieldEnumType, T> helper) {
         return helper.apply(this);

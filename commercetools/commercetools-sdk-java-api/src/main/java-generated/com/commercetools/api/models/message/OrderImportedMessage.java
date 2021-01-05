@@ -30,12 +30,12 @@ public interface OrderImportedMessage extends Message {
 
     public void setOrder(final Order order);
 
-    public static OrderImportedMessageImpl of(){
+    public static OrderImportedMessage of(){
         return new OrderImportedMessageImpl();
     }
     
 
-    public static OrderImportedMessageImpl of(final OrderImportedMessage template) {
+    public static OrderImportedMessage of(final OrderImportedMessage template) {
         OrderImportedMessageImpl instance = new OrderImportedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface OrderImportedMessage extends Message {
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public static OrderImportedMessageBuilder builder(){
+        return OrderImportedMessageBuilder.of();
+    }
+    
+    public static OrderImportedMessageBuilder builder(final OrderImportedMessage template){
+        return OrderImportedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderImportedMessage(Function<OrderImportedMessage, T> helper) {
         return helper.apply(this);

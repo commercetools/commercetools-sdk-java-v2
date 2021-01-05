@@ -36,17 +36,26 @@ public interface TypeChangeLabelAction extends TypeUpdateAction {
     
     public void setLabel(final LocalizedString label);
 
-    public static TypeChangeLabelActionImpl of(){
+    public static TypeChangeLabelAction of(){
         return new TypeChangeLabelActionImpl();
     }
     
 
-    public static TypeChangeLabelActionImpl of(final TypeChangeLabelAction template) {
+    public static TypeChangeLabelAction of(final TypeChangeLabelAction template) {
         TypeChangeLabelActionImpl instance = new TypeChangeLabelActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static TypeChangeLabelActionBuilder builder(){
+        return TypeChangeLabelActionBuilder.of();
+    }
+    
+    public static TypeChangeLabelActionBuilder builder(final TypeChangeLabelAction template){
+        return TypeChangeLabelActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeLabelAction(Function<TypeChangeLabelAction, T> helper) {
         return helper.apply(this);

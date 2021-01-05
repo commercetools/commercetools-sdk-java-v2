@@ -30,16 +30,25 @@ public interface StoresRemoveSupplyChannelsAction extends StoreUpdateAction {
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
-    public static StoresRemoveSupplyChannelsActionImpl of(){
+    public static StoresRemoveSupplyChannelsAction of(){
         return new StoresRemoveSupplyChannelsActionImpl();
     }
     
 
-    public static StoresRemoveSupplyChannelsActionImpl of(final StoresRemoveSupplyChannelsAction template) {
+    public static StoresRemoveSupplyChannelsAction of(final StoresRemoveSupplyChannelsAction template) {
         StoresRemoveSupplyChannelsActionImpl instance = new StoresRemoveSupplyChannelsActionImpl();
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
+
+    public static StoresRemoveSupplyChannelsActionBuilder builder(){
+        return StoresRemoveSupplyChannelsActionBuilder.of();
+    }
+    
+    public static StoresRemoveSupplyChannelsActionBuilder builder(final StoresRemoveSupplyChannelsAction template){
+        return StoresRemoveSupplyChannelsActionBuilder.of(template);
+    }
+    
 
     default <T> T withStoresRemoveSupplyChannelsAction(Function<StoresRemoveSupplyChannelsAction, T> helper) {
         return helper.apply(this);

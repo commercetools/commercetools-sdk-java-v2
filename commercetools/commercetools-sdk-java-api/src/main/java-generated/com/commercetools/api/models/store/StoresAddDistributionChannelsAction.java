@@ -30,16 +30,25 @@ public interface StoresAddDistributionChannelsAction extends StoreUpdateAction {
 
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-    public static StoresAddDistributionChannelsActionImpl of(){
+    public static StoresAddDistributionChannelsAction of(){
         return new StoresAddDistributionChannelsActionImpl();
     }
     
 
-    public static StoresAddDistributionChannelsActionImpl of(final StoresAddDistributionChannelsAction template) {
+    public static StoresAddDistributionChannelsAction of(final StoresAddDistributionChannelsAction template) {
         StoresAddDistributionChannelsActionImpl instance = new StoresAddDistributionChannelsActionImpl();
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public static StoresAddDistributionChannelsActionBuilder builder(){
+        return StoresAddDistributionChannelsActionBuilder.of();
+    }
+    
+    public static StoresAddDistributionChannelsActionBuilder builder(final StoresAddDistributionChannelsAction template){
+        return StoresAddDistributionChannelsActionBuilder.of(template);
+    }
+    
 
     default <T> T withStoresAddDistributionChannelsAction(Function<StoresAddDistributionChannelsAction, T> helper) {
         return helper.apply(this);

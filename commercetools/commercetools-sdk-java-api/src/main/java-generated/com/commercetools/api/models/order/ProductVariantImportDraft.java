@@ -76,12 +76,12 @@ public interface ProductVariantImportDraft  {
     public void setImages(final Image ...images);
     public void setImages(final List<Image> images);
 
-    public static ProductVariantImportDraftImpl of(){
+    public static ProductVariantImportDraft of(){
         return new ProductVariantImportDraftImpl();
     }
     
 
-    public static ProductVariantImportDraftImpl of(final ProductVariantImportDraft template) {
+    public static ProductVariantImportDraft of(final ProductVariantImportDraft template) {
         ProductVariantImportDraftImpl instance = new ProductVariantImportDraftImpl();
         instance.setId(template.getId());
         instance.setSku(template.getSku());
@@ -90,6 +90,15 @@ public interface ProductVariantImportDraft  {
         instance.setImages(template.getImages());
         return instance;
     }
+
+    public static ProductVariantImportDraftBuilder builder(){
+        return ProductVariantImportDraftBuilder.of();
+    }
+    
+    public static ProductVariantImportDraftBuilder builder(final ProductVariantImportDraft template){
+        return ProductVariantImportDraftBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantImportDraft(Function<ProductVariantImportDraft, T> helper) {
         return helper.apply(this);

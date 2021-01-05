@@ -23,16 +23,25 @@ public interface SemanticErrorError extends ErrorObject {
 
 
 
-    public static SemanticErrorErrorImpl of(){
+    public static SemanticErrorError of(){
         return new SemanticErrorErrorImpl();
     }
     
 
-    public static SemanticErrorErrorImpl of(final SemanticErrorError template) {
+    public static SemanticErrorError of(final SemanticErrorError template) {
         SemanticErrorErrorImpl instance = new SemanticErrorErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static SemanticErrorErrorBuilder builder(){
+        return SemanticErrorErrorBuilder.of();
+    }
+    
+    public static SemanticErrorErrorBuilder builder(final SemanticErrorError template){
+        return SemanticErrorErrorBuilder.of(template);
+    }
+    
 
     default <T> T withSemanticErrorError(Function<SemanticErrorError, T> helper) {
         return helper.apply(this);

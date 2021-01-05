@@ -27,16 +27,25 @@ public interface TaxCategoryKeyReference extends KeyReference {
 
 
 
-    public static TaxCategoryKeyReferenceImpl of(){
+    public static TaxCategoryKeyReference of(){
         return new TaxCategoryKeyReferenceImpl();
     }
     
 
-    public static TaxCategoryKeyReferenceImpl of(final TaxCategoryKeyReference template) {
+    public static TaxCategoryKeyReference of(final TaxCategoryKeyReference template) {
         TaxCategoryKeyReferenceImpl instance = new TaxCategoryKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static TaxCategoryKeyReferenceBuilder builder(){
+        return TaxCategoryKeyReferenceBuilder.of();
+    }
+    
+    public static TaxCategoryKeyReferenceBuilder builder(final TaxCategoryKeyReference template){
+        return TaxCategoryKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryKeyReference(Function<TaxCategoryKeyReference, T> helper) {
         return helper.apply(this);

@@ -30,17 +30,26 @@ public interface DiscountCodeReference extends Reference {
 
     public void setObj(final DiscountCode obj);
 
-    public static DiscountCodeReferenceImpl of(){
+    public static DiscountCodeReference of(){
         return new DiscountCodeReferenceImpl();
     }
     
 
-    public static DiscountCodeReferenceImpl of(final DiscountCodeReference template) {
+    public static DiscountCodeReference of(final DiscountCodeReference template) {
         DiscountCodeReferenceImpl instance = new DiscountCodeReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static DiscountCodeReferenceBuilder builder(){
+        return DiscountCodeReferenceBuilder.of();
+    }
+    
+    public static DiscountCodeReferenceBuilder builder(final DiscountCodeReference template){
+        return DiscountCodeReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeReference(Function<DiscountCodeReference, T> helper) {
         return helper.apply(this);

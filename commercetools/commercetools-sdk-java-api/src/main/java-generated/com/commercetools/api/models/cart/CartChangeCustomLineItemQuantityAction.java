@@ -34,17 +34,26 @@ public interface CartChangeCustomLineItemQuantityAction extends CartUpdateAction
     
     public void setQuantity(final Long quantity);
 
-    public static CartChangeCustomLineItemQuantityActionImpl of(){
+    public static CartChangeCustomLineItemQuantityAction of(){
         return new CartChangeCustomLineItemQuantityActionImpl();
     }
     
 
-    public static CartChangeCustomLineItemQuantityActionImpl of(final CartChangeCustomLineItemQuantityAction template) {
+    public static CartChangeCustomLineItemQuantityAction of(final CartChangeCustomLineItemQuantityAction template) {
         CartChangeCustomLineItemQuantityActionImpl instance = new CartChangeCustomLineItemQuantityActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static CartChangeCustomLineItemQuantityActionBuilder builder(){
+        return CartChangeCustomLineItemQuantityActionBuilder.of();
+    }
+    
+    public static CartChangeCustomLineItemQuantityActionBuilder builder(final CartChangeCustomLineItemQuantityAction template){
+        return CartChangeCustomLineItemQuantityActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartChangeCustomLineItemQuantityAction(Function<CartChangeCustomLineItemQuantityAction, T> helper) {
         return helper.apply(this);

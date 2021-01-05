@@ -23,16 +23,25 @@ public interface InternalConstraintViolatedError extends ErrorObject {
 
 
 
-    public static InternalConstraintViolatedErrorImpl of(){
+    public static InternalConstraintViolatedError of(){
         return new InternalConstraintViolatedErrorImpl();
     }
     
 
-    public static InternalConstraintViolatedErrorImpl of(final InternalConstraintViolatedError template) {
+    public static InternalConstraintViolatedError of(final InternalConstraintViolatedError template) {
         InternalConstraintViolatedErrorImpl instance = new InternalConstraintViolatedErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InternalConstraintViolatedErrorBuilder builder(){
+        return InternalConstraintViolatedErrorBuilder.of();
+    }
+    
+    public static InternalConstraintViolatedErrorBuilder builder(final InternalConstraintViolatedError template){
+        return InternalConstraintViolatedErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInternalConstraintViolatedError(Function<InternalConstraintViolatedError, T> helper) {
         return helper.apply(this);

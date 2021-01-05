@@ -28,16 +28,25 @@ public interface DeliveryCloudEventsFormat extends DeliveryFormat {
 
     public void setCloudEventsVersion(final String cloudEventsVersion);
 
-    public static DeliveryCloudEventsFormatImpl of(){
+    public static DeliveryCloudEventsFormat of(){
         return new DeliveryCloudEventsFormatImpl();
     }
     
 
-    public static DeliveryCloudEventsFormatImpl of(final DeliveryCloudEventsFormat template) {
+    public static DeliveryCloudEventsFormat of(final DeliveryCloudEventsFormat template) {
         DeliveryCloudEventsFormatImpl instance = new DeliveryCloudEventsFormatImpl();
         instance.setCloudEventsVersion(template.getCloudEventsVersion());
         return instance;
     }
+
+    public static DeliveryCloudEventsFormatBuilder builder(){
+        return DeliveryCloudEventsFormatBuilder.of();
+    }
+    
+    public static DeliveryCloudEventsFormatBuilder builder(final DeliveryCloudEventsFormat template){
+        return DeliveryCloudEventsFormatBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryCloudEventsFormat(Function<DeliveryCloudEventsFormat, T> helper) {
         return helper.apply(this);

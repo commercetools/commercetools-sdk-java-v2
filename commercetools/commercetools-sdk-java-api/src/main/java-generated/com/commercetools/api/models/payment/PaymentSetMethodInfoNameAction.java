@@ -31,16 +31,25 @@ public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static PaymentSetMethodInfoNameActionImpl of(){
+    public static PaymentSetMethodInfoNameAction of(){
         return new PaymentSetMethodInfoNameActionImpl();
     }
     
 
-    public static PaymentSetMethodInfoNameActionImpl of(final PaymentSetMethodInfoNameAction template) {
+    public static PaymentSetMethodInfoNameAction of(final PaymentSetMethodInfoNameAction template) {
         PaymentSetMethodInfoNameActionImpl instance = new PaymentSetMethodInfoNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static PaymentSetMethodInfoNameActionBuilder builder(){
+        return PaymentSetMethodInfoNameActionBuilder.of();
+    }
+    
+    public static PaymentSetMethodInfoNameActionBuilder builder(final PaymentSetMethodInfoNameAction template){
+        return PaymentSetMethodInfoNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetMethodInfoNameAction(Function<PaymentSetMethodInfoNameAction, T> helper) {
         return helper.apply(this);

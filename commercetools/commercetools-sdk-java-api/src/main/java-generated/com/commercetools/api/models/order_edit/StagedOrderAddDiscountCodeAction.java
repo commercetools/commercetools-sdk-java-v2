@@ -28,16 +28,25 @@ public interface StagedOrderAddDiscountCodeAction extends StagedOrderUpdateActio
 
     public void setCode(final String code);
 
-    public static StagedOrderAddDiscountCodeActionImpl of(){
+    public static StagedOrderAddDiscountCodeAction of(){
         return new StagedOrderAddDiscountCodeActionImpl();
     }
     
 
-    public static StagedOrderAddDiscountCodeActionImpl of(final StagedOrderAddDiscountCodeAction template) {
+    public static StagedOrderAddDiscountCodeAction of(final StagedOrderAddDiscountCodeAction template) {
         StagedOrderAddDiscountCodeActionImpl instance = new StagedOrderAddDiscountCodeActionImpl();
         instance.setCode(template.getCode());
         return instance;
     }
+
+    public static StagedOrderAddDiscountCodeActionBuilder builder(){
+        return StagedOrderAddDiscountCodeActionBuilder.of();
+    }
+    
+    public static StagedOrderAddDiscountCodeActionBuilder builder(final StagedOrderAddDiscountCodeAction template){
+        return StagedOrderAddDiscountCodeActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderAddDiscountCodeAction(Function<StagedOrderAddDiscountCodeAction, T> helper) {
         return helper.apply(this);

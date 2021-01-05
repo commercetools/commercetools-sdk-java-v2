@@ -36,17 +36,26 @@ public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
     
     public void setFields(final FieldContainer fields);
 
-    public static ChannelSetCustomTypeActionImpl of(){
+    public static ChannelSetCustomTypeAction of(){
         return new ChannelSetCustomTypeActionImpl();
     }
     
 
-    public static ChannelSetCustomTypeActionImpl of(final ChannelSetCustomTypeAction template) {
+    public static ChannelSetCustomTypeAction of(final ChannelSetCustomTypeAction template) {
         ChannelSetCustomTypeActionImpl instance = new ChannelSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static ChannelSetCustomTypeActionBuilder builder(){
+        return ChannelSetCustomTypeActionBuilder.of();
+    }
+    
+    public static ChannelSetCustomTypeActionBuilder builder(final ChannelSetCustomTypeAction template){
+        return ChannelSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelSetCustomTypeAction(Function<ChannelSetCustomTypeAction, T> helper) {
         return helper.apply(this);

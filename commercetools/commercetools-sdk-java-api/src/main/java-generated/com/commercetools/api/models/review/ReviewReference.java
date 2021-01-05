@@ -30,17 +30,26 @@ public interface ReviewReference extends Reference {
 
     public void setObj(final Review obj);
 
-    public static ReviewReferenceImpl of(){
+    public static ReviewReference of(){
         return new ReviewReferenceImpl();
     }
     
 
-    public static ReviewReferenceImpl of(final ReviewReference template) {
+    public static ReviewReference of(final ReviewReference template) {
         ReviewReferenceImpl instance = new ReviewReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static ReviewReferenceBuilder builder(){
+        return ReviewReferenceBuilder.of();
+    }
+    
+    public static ReviewReferenceBuilder builder(final ReviewReference template){
+        return ReviewReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withReviewReference(Function<ReviewReference, T> helper) {
         return helper.apply(this);

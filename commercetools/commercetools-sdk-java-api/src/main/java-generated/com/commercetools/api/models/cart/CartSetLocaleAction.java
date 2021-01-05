@@ -28,16 +28,25 @@ public interface CartSetLocaleAction extends CartUpdateAction {
 
     public void setLocale(final String locale);
 
-    public static CartSetLocaleActionImpl of(){
+    public static CartSetLocaleAction of(){
         return new CartSetLocaleActionImpl();
     }
     
 
-    public static CartSetLocaleActionImpl of(final CartSetLocaleAction template) {
+    public static CartSetLocaleAction of(final CartSetLocaleAction template) {
         CartSetLocaleActionImpl instance = new CartSetLocaleActionImpl();
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public static CartSetLocaleActionBuilder builder(){
+        return CartSetLocaleActionBuilder.of();
+    }
+    
+    public static CartSetLocaleActionBuilder builder(final CartSetLocaleAction template){
+        return CartSetLocaleActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetLocaleAction(Function<CartSetLocaleAction, T> helper) {
         return helper.apply(this);

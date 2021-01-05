@@ -36,17 +36,26 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
     
     public void setNewValue(final AttributePlainEnumValue newValue);
 
-    public static ProductTypeChangePlainEnumValueLabelActionImpl of(){
+    public static ProductTypeChangePlainEnumValueLabelAction of(){
         return new ProductTypeChangePlainEnumValueLabelActionImpl();
     }
     
 
-    public static ProductTypeChangePlainEnumValueLabelActionImpl of(final ProductTypeChangePlainEnumValueLabelAction template) {
+    public static ProductTypeChangePlainEnumValueLabelAction of(final ProductTypeChangePlainEnumValueLabelAction template) {
         ProductTypeChangePlainEnumValueLabelActionImpl instance = new ProductTypeChangePlainEnumValueLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());
         return instance;
     }
+
+    public static ProductTypeChangePlainEnumValueLabelActionBuilder builder(){
+        return ProductTypeChangePlainEnumValueLabelActionBuilder.of();
+    }
+    
+    public static ProductTypeChangePlainEnumValueLabelActionBuilder builder(final ProductTypeChangePlainEnumValueLabelAction template){
+        return ProductTypeChangePlainEnumValueLabelActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangePlainEnumValueLabelAction(Function<ProductTypeChangePlainEnumValueLabelAction, T> helper) {
         return helper.apply(this);

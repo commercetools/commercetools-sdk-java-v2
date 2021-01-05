@@ -109,12 +109,12 @@ public interface ShippingInfo  {
     
     public void setShippingMethodState(final ShippingMethodState shippingMethodState);
 
-    public static ShippingInfoImpl of(){
+    public static ShippingInfo of(){
         return new ShippingInfoImpl();
     }
     
 
-    public static ShippingInfoImpl of(final ShippingInfo template) {
+    public static ShippingInfo of(final ShippingInfo template) {
         ShippingInfoImpl instance = new ShippingInfoImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
         instance.setPrice(template.getPrice());
@@ -128,6 +128,15 @@ public interface ShippingInfo  {
         instance.setShippingMethodState(template.getShippingMethodState());
         return instance;
     }
+
+    public static ShippingInfoBuilder builder(){
+        return ShippingInfoBuilder.of();
+    }
+    
+    public static ShippingInfoBuilder builder(final ShippingInfo template){
+        return ShippingInfoBuilder.of(template);
+    }
+    
 
     default <T> T withShippingInfo(Function<ShippingInfo, T> helper) {
         return helper.apply(this);

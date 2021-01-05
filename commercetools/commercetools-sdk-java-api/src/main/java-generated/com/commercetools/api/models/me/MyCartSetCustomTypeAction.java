@@ -36,17 +36,26 @@ public interface MyCartSetCustomTypeAction extends MyCartUpdateAction {
     
     public void setFields(final FieldContainer fields);
 
-    public static MyCartSetCustomTypeActionImpl of(){
+    public static MyCartSetCustomTypeAction of(){
         return new MyCartSetCustomTypeActionImpl();
     }
     
 
-    public static MyCartSetCustomTypeActionImpl of(final MyCartSetCustomTypeAction template) {
+    public static MyCartSetCustomTypeAction of(final MyCartSetCustomTypeAction template) {
         MyCartSetCustomTypeActionImpl instance = new MyCartSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static MyCartSetCustomTypeActionBuilder builder(){
+        return MyCartSetCustomTypeActionBuilder.of();
+    }
+    
+    public static MyCartSetCustomTypeActionBuilder builder(final MyCartSetCustomTypeAction template){
+        return MyCartSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartSetCustomTypeAction(Function<MyCartSetCustomTypeAction, T> helper) {
         return helper.apply(this);

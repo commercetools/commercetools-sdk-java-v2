@@ -28,16 +28,25 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
 
     public void setVatId(final String vatId);
 
-    public static MyCustomerSetVatIdActionImpl of(){
+    public static MyCustomerSetVatIdAction of(){
         return new MyCustomerSetVatIdActionImpl();
     }
     
 
-    public static MyCustomerSetVatIdActionImpl of(final MyCustomerSetVatIdAction template) {
+    public static MyCustomerSetVatIdAction of(final MyCustomerSetVatIdAction template) {
         MyCustomerSetVatIdActionImpl instance = new MyCustomerSetVatIdActionImpl();
         instance.setVatId(template.getVatId());
         return instance;
     }
+
+    public static MyCustomerSetVatIdActionBuilder builder(){
+        return MyCustomerSetVatIdActionBuilder.of();
+    }
+    
+    public static MyCustomerSetVatIdActionBuilder builder(final MyCustomerSetVatIdAction template){
+        return MyCustomerSetVatIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetVatIdAction(Function<MyCustomerSetVatIdAction, T> helper) {
         return helper.apply(this);

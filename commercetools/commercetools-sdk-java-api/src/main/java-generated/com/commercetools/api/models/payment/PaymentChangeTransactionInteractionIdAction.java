@@ -34,17 +34,26 @@ public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpda
     
     public void setInteractionId(final String interactionId);
 
-    public static PaymentChangeTransactionInteractionIdActionImpl of(){
+    public static PaymentChangeTransactionInteractionIdAction of(){
         return new PaymentChangeTransactionInteractionIdActionImpl();
     }
     
 
-    public static PaymentChangeTransactionInteractionIdActionImpl of(final PaymentChangeTransactionInteractionIdAction template) {
+    public static PaymentChangeTransactionInteractionIdAction of(final PaymentChangeTransactionInteractionIdAction template) {
         PaymentChangeTransactionInteractionIdActionImpl instance = new PaymentChangeTransactionInteractionIdActionImpl();
         instance.setTransactionId(template.getTransactionId());
         instance.setInteractionId(template.getInteractionId());
         return instance;
     }
+
+    public static PaymentChangeTransactionInteractionIdActionBuilder builder(){
+        return PaymentChangeTransactionInteractionIdActionBuilder.of();
+    }
+    
+    public static PaymentChangeTransactionInteractionIdActionBuilder builder(final PaymentChangeTransactionInteractionIdAction template){
+        return PaymentChangeTransactionInteractionIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentChangeTransactionInteractionIdAction(Function<PaymentChangeTransactionInteractionIdAction, T> helper) {
         return helper.apply(this);

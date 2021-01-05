@@ -47,18 +47,27 @@ public interface ProjectCategoryRecommendation  {
     
     public void setPath(final String path);
 
-    public static ProjectCategoryRecommendationImpl of(){
+    public static ProjectCategoryRecommendation of(){
         return new ProjectCategoryRecommendationImpl();
     }
     
 
-    public static ProjectCategoryRecommendationImpl of(final ProjectCategoryRecommendation template) {
+    public static ProjectCategoryRecommendation of(final ProjectCategoryRecommendation template) {
         ProjectCategoryRecommendationImpl instance = new ProjectCategoryRecommendationImpl();
         instance.setCategory(template.getCategory());
         instance.setConfidence(template.getConfidence());
         instance.setPath(template.getPath());
         return instance;
     }
+
+    public static ProjectCategoryRecommendationBuilder builder(){
+        return ProjectCategoryRecommendationBuilder.of();
+    }
+    
+    public static ProjectCategoryRecommendationBuilder builder(final ProjectCategoryRecommendation template){
+        return ProjectCategoryRecommendationBuilder.of(template);
+    }
+    
 
     default <T> T withProjectCategoryRecommendation(Function<ProjectCategoryRecommendation, T> helper) {
         return helper.apply(this);

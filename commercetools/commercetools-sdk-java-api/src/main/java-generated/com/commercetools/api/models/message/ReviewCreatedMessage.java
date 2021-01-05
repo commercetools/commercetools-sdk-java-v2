@@ -30,12 +30,12 @@ public interface ReviewCreatedMessage extends Message {
 
     public void setReview(final Review review);
 
-    public static ReviewCreatedMessageImpl of(){
+    public static ReviewCreatedMessage of(){
         return new ReviewCreatedMessageImpl();
     }
     
 
-    public static ReviewCreatedMessageImpl of(final ReviewCreatedMessage template) {
+    public static ReviewCreatedMessage of(final ReviewCreatedMessage template) {
         ReviewCreatedMessageImpl instance = new ReviewCreatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface ReviewCreatedMessage extends Message {
         instance.setReview(template.getReview());
         return instance;
     }
+
+    public static ReviewCreatedMessageBuilder builder(){
+        return ReviewCreatedMessageBuilder.of();
+    }
+    
+    public static ReviewCreatedMessageBuilder builder(final ReviewCreatedMessage template){
+        return ReviewCreatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withReviewCreatedMessage(Function<ReviewCreatedMessage, T> helper) {
         return helper.apply(this);

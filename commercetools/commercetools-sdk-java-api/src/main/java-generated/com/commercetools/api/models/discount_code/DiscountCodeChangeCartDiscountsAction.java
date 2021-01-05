@@ -32,16 +32,25 @@ public interface DiscountCodeChangeCartDiscountsAction extends DiscountCodeUpdat
     public void setCartDiscounts(final CartDiscountResourceIdentifier ...cartDiscounts);
     public void setCartDiscounts(final List<CartDiscountResourceIdentifier> cartDiscounts);
 
-    public static DiscountCodeChangeCartDiscountsActionImpl of(){
+    public static DiscountCodeChangeCartDiscountsAction of(){
         return new DiscountCodeChangeCartDiscountsActionImpl();
     }
     
 
-    public static DiscountCodeChangeCartDiscountsActionImpl of(final DiscountCodeChangeCartDiscountsAction template) {
+    public static DiscountCodeChangeCartDiscountsAction of(final DiscountCodeChangeCartDiscountsAction template) {
         DiscountCodeChangeCartDiscountsActionImpl instance = new DiscountCodeChangeCartDiscountsActionImpl();
         instance.setCartDiscounts(template.getCartDiscounts());
         return instance;
     }
+
+    public static DiscountCodeChangeCartDiscountsActionBuilder builder(){
+        return DiscountCodeChangeCartDiscountsActionBuilder.of();
+    }
+    
+    public static DiscountCodeChangeCartDiscountsActionBuilder builder(final DiscountCodeChangeCartDiscountsAction template){
+        return DiscountCodeChangeCartDiscountsActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeChangeCartDiscountsAction(Function<DiscountCodeChangeCartDiscountsAction, T> helper) {
         return helper.apply(this);

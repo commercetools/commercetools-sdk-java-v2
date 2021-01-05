@@ -30,12 +30,12 @@ public interface ProductRevertedStagedChangesMessage extends Message {
     public void setRemovedImageUrls(final String ...removedImageUrls);
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-    public static ProductRevertedStagedChangesMessageImpl of(){
+    public static ProductRevertedStagedChangesMessage of(){
         return new ProductRevertedStagedChangesMessageImpl();
     }
     
 
-    public static ProductRevertedStagedChangesMessageImpl of(final ProductRevertedStagedChangesMessage template) {
+    public static ProductRevertedStagedChangesMessage of(final ProductRevertedStagedChangesMessage template) {
         ProductRevertedStagedChangesMessageImpl instance = new ProductRevertedStagedChangesMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface ProductRevertedStagedChangesMessage extends Message {
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         return instance;
     }
+
+    public static ProductRevertedStagedChangesMessageBuilder builder(){
+        return ProductRevertedStagedChangesMessageBuilder.of();
+    }
+    
+    public static ProductRevertedStagedChangesMessageBuilder builder(final ProductRevertedStagedChangesMessage template){
+        return ProductRevertedStagedChangesMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductRevertedStagedChangesMessage(Function<ProductRevertedStagedChangesMessage, T> helper) {
         return helper.apply(this);

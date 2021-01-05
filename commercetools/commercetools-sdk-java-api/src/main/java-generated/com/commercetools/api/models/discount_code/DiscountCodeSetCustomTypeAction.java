@@ -41,17 +41,26 @@ public interface DiscountCodeSetCustomTypeAction extends DiscountCodeUpdateActio
     
     public void setFields(final FieldContainer fields);
 
-    public static DiscountCodeSetCustomTypeActionImpl of(){
+    public static DiscountCodeSetCustomTypeAction of(){
         return new DiscountCodeSetCustomTypeActionImpl();
     }
     
 
-    public static DiscountCodeSetCustomTypeActionImpl of(final DiscountCodeSetCustomTypeAction template) {
+    public static DiscountCodeSetCustomTypeAction of(final DiscountCodeSetCustomTypeAction template) {
         DiscountCodeSetCustomTypeActionImpl instance = new DiscountCodeSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static DiscountCodeSetCustomTypeActionBuilder builder(){
+        return DiscountCodeSetCustomTypeActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetCustomTypeActionBuilder builder(final DiscountCodeSetCustomTypeAction template){
+        return DiscountCodeSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetCustomTypeAction(Function<DiscountCodeSetCustomTypeAction, T> helper) {
         return helper.apply(this);

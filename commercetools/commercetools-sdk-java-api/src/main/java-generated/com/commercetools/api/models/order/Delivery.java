@@ -64,12 +64,12 @@ public interface Delivery  {
     
     public void setAddress(final Address address);
 
-    public static DeliveryImpl of(){
+    public static Delivery of(){
         return new DeliveryImpl();
     }
     
 
-    public static DeliveryImpl of(final Delivery template) {
+    public static Delivery of(final Delivery template) {
         DeliveryImpl instance = new DeliveryImpl();
         instance.setId(template.getId());
         instance.setCreatedAt(template.getCreatedAt());
@@ -78,6 +78,15 @@ public interface Delivery  {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static DeliveryBuilder builder(){
+        return DeliveryBuilder.of();
+    }
+    
+    public static DeliveryBuilder builder(final Delivery template){
+        return DeliveryBuilder.of(template);
+    }
+    
 
     default <T> T withDelivery(Function<Delivery, T> helper) {
         return helper.apply(this);

@@ -30,15 +30,24 @@ public interface ProductVariantChannelAvailabilityMap  {
     @JsonAnySetter
     public void setValue(String key, ProductVariantChannelAvailability value);
 
-    public static ProductVariantChannelAvailabilityMapImpl of(){
+    public static ProductVariantChannelAvailabilityMap of(){
         return new ProductVariantChannelAvailabilityMapImpl();
     }
     
 
-    public static ProductVariantChannelAvailabilityMapImpl of(final ProductVariantChannelAvailabilityMap template) {
+    public static ProductVariantChannelAvailabilityMap of(final ProductVariantChannelAvailabilityMap template) {
         ProductVariantChannelAvailabilityMapImpl instance = new ProductVariantChannelAvailabilityMapImpl();
         return instance;
     }
+
+    public static ProductVariantChannelAvailabilityMapBuilder builder(){
+        return ProductVariantChannelAvailabilityMapBuilder.of();
+    }
+    
+    public static ProductVariantChannelAvailabilityMapBuilder builder(final ProductVariantChannelAvailabilityMap template){
+        return ProductVariantChannelAvailabilityMapBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantChannelAvailabilityMap(Function<ProductVariantChannelAvailabilityMap, T> helper) {
         return helper.apply(this);

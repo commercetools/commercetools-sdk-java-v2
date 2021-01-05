@@ -35,17 +35,26 @@ public interface OrderSetReturnShipmentStateAction extends OrderUpdateAction {
     
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
-    public static OrderSetReturnShipmentStateActionImpl of(){
+    public static OrderSetReturnShipmentStateAction of(){
         return new OrderSetReturnShipmentStateActionImpl();
     }
     
 
-    public static OrderSetReturnShipmentStateActionImpl of(final OrderSetReturnShipmentStateAction template) {
+    public static OrderSetReturnShipmentStateAction of(final OrderSetReturnShipmentStateAction template) {
         OrderSetReturnShipmentStateActionImpl instance = new OrderSetReturnShipmentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setShipmentState(template.getShipmentState());
         return instance;
     }
+
+    public static OrderSetReturnShipmentStateActionBuilder builder(){
+        return OrderSetReturnShipmentStateActionBuilder.of();
+    }
+    
+    public static OrderSetReturnShipmentStateActionBuilder builder(final OrderSetReturnShipmentStateAction template){
+        return OrderSetReturnShipmentStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetReturnShipmentStateAction(Function<OrderSetReturnShipmentStateAction, T> helper) {
         return helper.apply(this);

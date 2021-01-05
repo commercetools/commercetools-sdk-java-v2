@@ -55,12 +55,12 @@ public interface MessagePagedQueryResponse extends com.commercetools.api.models.
     public void setResults(final Message ...results);
     public void setResults(final List<Message> results);
 
-    public static MessagePagedQueryResponseImpl of(){
+    public static MessagePagedQueryResponse of(){
         return new MessagePagedQueryResponseImpl();
     }
     
 
-    public static MessagePagedQueryResponseImpl of(final MessagePagedQueryResponse template) {
+    public static MessagePagedQueryResponse of(final MessagePagedQueryResponse template) {
         MessagePagedQueryResponseImpl instance = new MessagePagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface MessagePagedQueryResponse extends com.commercetools.api.models.
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static MessagePagedQueryResponseBuilder builder(){
+        return MessagePagedQueryResponseBuilder.of();
+    }
+    
+    public static MessagePagedQueryResponseBuilder builder(final MessagePagedQueryResponse template){
+        return MessagePagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withMessagePagedQueryResponse(Function<MessagePagedQueryResponse, T> helper) {
         return helper.apply(this);

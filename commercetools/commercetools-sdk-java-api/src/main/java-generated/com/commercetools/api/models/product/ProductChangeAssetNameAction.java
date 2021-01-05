@@ -60,12 +60,12 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
     
     public void setName(final LocalizedString name);
 
-    public static ProductChangeAssetNameActionImpl of(){
+    public static ProductChangeAssetNameAction of(){
         return new ProductChangeAssetNameActionImpl();
     }
     
 
-    public static ProductChangeAssetNameActionImpl of(final ProductChangeAssetNameAction template) {
+    public static ProductChangeAssetNameAction of(final ProductChangeAssetNameAction template) {
         ProductChangeAssetNameActionImpl instance = new ProductChangeAssetNameActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -75,6 +75,15 @@ public interface ProductChangeAssetNameAction extends ProductUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ProductChangeAssetNameActionBuilder builder(){
+        return ProductChangeAssetNameActionBuilder.of();
+    }
+    
+    public static ProductChangeAssetNameActionBuilder builder(final ProductChangeAssetNameAction template){
+        return ProductChangeAssetNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductChangeAssetNameAction(Function<ProductChangeAssetNameAction, T> helper) {
         return helper.apply(this);

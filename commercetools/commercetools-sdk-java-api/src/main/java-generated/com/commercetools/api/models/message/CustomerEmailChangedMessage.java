@@ -28,12 +28,12 @@ public interface CustomerEmailChangedMessage extends Message {
 
     public void setEmail(final String email);
 
-    public static CustomerEmailChangedMessageImpl of(){
+    public static CustomerEmailChangedMessage of(){
         return new CustomerEmailChangedMessageImpl();
     }
     
 
-    public static CustomerEmailChangedMessageImpl of(final CustomerEmailChangedMessage template) {
+    public static CustomerEmailChangedMessage of(final CustomerEmailChangedMessage template) {
         CustomerEmailChangedMessageImpl instance = new CustomerEmailChangedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -48,6 +48,15 @@ public interface CustomerEmailChangedMessage extends Message {
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public static CustomerEmailChangedMessageBuilder builder(){
+        return CustomerEmailChangedMessageBuilder.of();
+    }
+    
+    public static CustomerEmailChangedMessageBuilder builder(final CustomerEmailChangedMessage template){
+        return CustomerEmailChangedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerEmailChangedMessage(Function<CustomerEmailChangedMessage, T> helper) {
         return helper.apply(this);

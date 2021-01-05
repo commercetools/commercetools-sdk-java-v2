@@ -24,17 +24,26 @@ public interface ShoppingListResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static ShoppingListResourceIdentifierImpl of(){
+    public static ShoppingListResourceIdentifier of(){
         return new ShoppingListResourceIdentifierImpl();
     }
     
 
-    public static ShoppingListResourceIdentifierImpl of(final ShoppingListResourceIdentifier template) {
+    public static ShoppingListResourceIdentifier of(final ShoppingListResourceIdentifier template) {
         ShoppingListResourceIdentifierImpl instance = new ShoppingListResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ShoppingListResourceIdentifierBuilder builder(){
+        return ShoppingListResourceIdentifierBuilder.of();
+    }
+    
+    public static ShoppingListResourceIdentifierBuilder builder(final ShoppingListResourceIdentifier template){
+        return ShoppingListResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListResourceIdentifier(Function<ShoppingListResourceIdentifier, T> helper) {
         return helper.apply(this);

@@ -80,12 +80,12 @@ public interface ShippingMethodDraft  {
     
     public void setPredicate(final String predicate);
 
-    public static ShippingMethodDraftImpl of(){
+    public static ShippingMethodDraft of(){
         return new ShippingMethodDraftImpl();
     }
     
 
-    public static ShippingMethodDraftImpl of(final ShippingMethodDraft template) {
+    public static ShippingMethodDraft of(final ShippingMethodDraft template) {
         ShippingMethodDraftImpl instance = new ShippingMethodDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -97,6 +97,15 @@ public interface ShippingMethodDraft  {
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public static ShippingMethodDraftBuilder builder(){
+        return ShippingMethodDraftBuilder.of();
+    }
+    
+    public static ShippingMethodDraftBuilder builder(final ShippingMethodDraft template){
+        return ShippingMethodDraftBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodDraft(Function<ShippingMethodDraft, T> helper) {
         return helper.apply(this);

@@ -47,12 +47,12 @@ public interface ProductDiscountMatchQuery  {
     
     public void setPrice(final QueryPrice price);
 
-    public static ProductDiscountMatchQueryImpl of(){
+    public static ProductDiscountMatchQuery of(){
         return new ProductDiscountMatchQueryImpl();
     }
     
 
-    public static ProductDiscountMatchQueryImpl of(final ProductDiscountMatchQuery template) {
+    public static ProductDiscountMatchQuery of(final ProductDiscountMatchQuery template) {
         ProductDiscountMatchQueryImpl instance = new ProductDiscountMatchQueryImpl();
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
@@ -60,6 +60,15 @@ public interface ProductDiscountMatchQuery  {
         instance.setPrice(template.getPrice());
         return instance;
     }
+
+    public static ProductDiscountMatchQueryBuilder builder(){
+        return ProductDiscountMatchQueryBuilder.of();
+    }
+    
+    public static ProductDiscountMatchQueryBuilder builder(final ProductDiscountMatchQuery template){
+        return ProductDiscountMatchQueryBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountMatchQuery(Function<ProductDiscountMatchQuery, T> helper) {
         return helper.apply(this);

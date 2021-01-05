@@ -27,16 +27,25 @@ public interface CustomerKeyReference extends KeyReference {
 
 
 
-    public static CustomerKeyReferenceImpl of(){
+    public static CustomerKeyReference of(){
         return new CustomerKeyReferenceImpl();
     }
     
 
-    public static CustomerKeyReferenceImpl of(final CustomerKeyReference template) {
+    public static CustomerKeyReference of(final CustomerKeyReference template) {
         CustomerKeyReferenceImpl instance = new CustomerKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CustomerKeyReferenceBuilder builder(){
+        return CustomerKeyReferenceBuilder.of();
+    }
+    
+    public static CustomerKeyReferenceBuilder builder(final CustomerKeyReference template){
+        return CustomerKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerKeyReference(Function<CustomerKeyReference, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface StagedOrderSetCustomLineItemShippingDetailsAction extends Stage
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static StagedOrderSetCustomLineItemShippingDetailsActionImpl of(){
+    public static StagedOrderSetCustomLineItemShippingDetailsAction of(){
         return new StagedOrderSetCustomLineItemShippingDetailsActionImpl();
     }
     
 
-    public static StagedOrderSetCustomLineItemShippingDetailsActionImpl of(final StagedOrderSetCustomLineItemShippingDetailsAction template) {
+    public static StagedOrderSetCustomLineItemShippingDetailsAction of(final StagedOrderSetCustomLineItemShippingDetailsAction template) {
         StagedOrderSetCustomLineItemShippingDetailsActionImpl instance = new StagedOrderSetCustomLineItemShippingDetailsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static StagedOrderSetCustomLineItemShippingDetailsActionBuilder builder(){
+        return StagedOrderSetCustomLineItemShippingDetailsActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomLineItemShippingDetailsActionBuilder builder(final StagedOrderSetCustomLineItemShippingDetailsAction template){
+        return StagedOrderSetCustomLineItemShippingDetailsActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomLineItemShippingDetailsAction(Function<StagedOrderSetCustomLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);

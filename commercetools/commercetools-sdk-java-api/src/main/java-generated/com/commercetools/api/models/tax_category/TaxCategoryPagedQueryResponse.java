@@ -55,12 +55,12 @@ public interface TaxCategoryPagedQueryResponse extends com.commercetools.api.mod
     public void setResults(final TaxCategory ...results);
     public void setResults(final List<TaxCategory> results);
 
-    public static TaxCategoryPagedQueryResponseImpl of(){
+    public static TaxCategoryPagedQueryResponse of(){
         return new TaxCategoryPagedQueryResponseImpl();
     }
     
 
-    public static TaxCategoryPagedQueryResponseImpl of(final TaxCategoryPagedQueryResponse template) {
+    public static TaxCategoryPagedQueryResponse of(final TaxCategoryPagedQueryResponse template) {
         TaxCategoryPagedQueryResponseImpl instance = new TaxCategoryPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface TaxCategoryPagedQueryResponse extends com.commercetools.api.mod
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static TaxCategoryPagedQueryResponseBuilder builder(){
+        return TaxCategoryPagedQueryResponseBuilder.of();
+    }
+    
+    public static TaxCategoryPagedQueryResponseBuilder builder(final TaxCategoryPagedQueryResponse template){
+        return TaxCategoryPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryPagedQueryResponse(Function<TaxCategoryPagedQueryResponse, T> helper) {
         return helper.apply(this);

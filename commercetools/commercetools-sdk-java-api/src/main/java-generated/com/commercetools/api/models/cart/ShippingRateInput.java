@@ -40,6 +40,7 @@ public interface ShippingRateInput  {
 
 
 
+
     default <T> T withShippingRateInput(Function<ShippingRateInput, T> helper) {
         return helper.apply(this);
     }

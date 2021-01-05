@@ -31,16 +31,25 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static DiscountCodeSetNameActionImpl of(){
+    public static DiscountCodeSetNameAction of(){
         return new DiscountCodeSetNameActionImpl();
     }
     
 
-    public static DiscountCodeSetNameActionImpl of(final DiscountCodeSetNameAction template) {
+    public static DiscountCodeSetNameAction of(final DiscountCodeSetNameAction template) {
         DiscountCodeSetNameActionImpl instance = new DiscountCodeSetNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static DiscountCodeSetNameActionBuilder builder(){
+        return DiscountCodeSetNameActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetNameActionBuilder builder(final DiscountCodeSetNameAction template){
+        return DiscountCodeSetNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetNameAction(Function<DiscountCodeSetNameAction, T> helper) {
         return helper.apply(this);

@@ -37,17 +37,26 @@ public interface DiscountCodeUpdate extends com.commercetools.api.models.Resourc
     public void setActions(final DiscountCodeUpdateAction ...actions);
     public void setActions(final List<DiscountCodeUpdateAction> actions);
 
-    public static DiscountCodeUpdateImpl of(){
+    public static DiscountCodeUpdate of(){
         return new DiscountCodeUpdateImpl();
     }
     
 
-    public static DiscountCodeUpdateImpl of(final DiscountCodeUpdate template) {
+    public static DiscountCodeUpdate of(final DiscountCodeUpdate template) {
         DiscountCodeUpdateImpl instance = new DiscountCodeUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static DiscountCodeUpdateBuilder builder(){
+        return DiscountCodeUpdateBuilder.of();
+    }
+    
+    public static DiscountCodeUpdateBuilder builder(final DiscountCodeUpdate template){
+        return DiscountCodeUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeUpdate(Function<DiscountCodeUpdate, T> helper) {
         return helper.apply(this);

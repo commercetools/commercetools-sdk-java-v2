@@ -50,18 +50,27 @@ public interface SimilarProductsTaskStatus  {
     
     public void setResult(final SimilarProductsPagedQueryResult result);
 
-    public static SimilarProductsTaskStatusImpl of(){
+    public static SimilarProductsTaskStatus of(){
         return new SimilarProductsTaskStatusImpl();
     }
     
 
-    public static SimilarProductsTaskStatusImpl of(final SimilarProductsTaskStatus template) {
+    public static SimilarProductsTaskStatus of(final SimilarProductsTaskStatus template) {
         SimilarProductsTaskStatusImpl instance = new SimilarProductsTaskStatusImpl();
         instance.setState(template.getState());
         instance.setExpires(template.getExpires());
         instance.setResult(template.getResult());
         return instance;
     }
+
+    public static SimilarProductsTaskStatusBuilder builder(){
+        return SimilarProductsTaskStatusBuilder.of();
+    }
+    
+    public static SimilarProductsTaskStatusBuilder builder(final SimilarProductsTaskStatus template){
+        return SimilarProductsTaskStatusBuilder.of(template);
+    }
+    
 
     default <T> T withSimilarProductsTaskStatus(Function<SimilarProductsTaskStatus, T> helper) {
         return helper.apply(this);

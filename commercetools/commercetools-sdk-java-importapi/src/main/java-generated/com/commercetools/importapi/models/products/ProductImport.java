@@ -139,12 +139,12 @@ public interface ProductImport extends ImportResource {
     
     public void setPublish(final Boolean publish);
 
-    public static ProductImportImpl of(){
+    public static ProductImport of(){
         return new ProductImportImpl();
     }
     
 
-    public static ProductImportImpl of(final ProductImport template) {
+    public static ProductImport of(final ProductImport template) {
         ProductImportImpl instance = new ProductImportImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -161,6 +161,15 @@ public interface ProductImport extends ImportResource {
         instance.setPublish(template.getPublish());
         return instance;
     }
+
+    public static ProductImportBuilder builder(){
+        return ProductImportBuilder.of();
+    }
+    
+    public static ProductImportBuilder builder(final ProductImport template){
+        return ProductImportBuilder.of(template);
+    }
+    
 
     default <T> T withProductImport(Function<ProductImport, T> helper) {
         return helper.apply(this);

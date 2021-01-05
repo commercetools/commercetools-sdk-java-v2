@@ -37,17 +37,26 @@ public interface CustomerGroupUpdate extends com.commercetools.api.models.Resour
     public void setActions(final CustomerGroupUpdateAction ...actions);
     public void setActions(final List<CustomerGroupUpdateAction> actions);
 
-    public static CustomerGroupUpdateImpl of(){
+    public static CustomerGroupUpdate of(){
         return new CustomerGroupUpdateImpl();
     }
     
 
-    public static CustomerGroupUpdateImpl of(final CustomerGroupUpdate template) {
+    public static CustomerGroupUpdate of(final CustomerGroupUpdate template) {
         CustomerGroupUpdateImpl instance = new CustomerGroupUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static CustomerGroupUpdateBuilder builder(){
+        return CustomerGroupUpdateBuilder.of();
+    }
+    
+    public static CustomerGroupUpdateBuilder builder(final CustomerGroupUpdate template){
+        return CustomerGroupUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupUpdate(Function<CustomerGroupUpdate, T> helper) {
         return helper.apply(this);

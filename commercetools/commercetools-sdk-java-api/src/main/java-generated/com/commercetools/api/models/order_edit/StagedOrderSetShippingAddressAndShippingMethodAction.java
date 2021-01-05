@@ -44,18 +44,27 @@ public interface StagedOrderSetShippingAddressAndShippingMethodAction extends St
     
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-    public static StagedOrderSetShippingAddressAndShippingMethodActionImpl of(){
+    public static StagedOrderSetShippingAddressAndShippingMethodAction of(){
         return new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
     }
     
 
-    public static StagedOrderSetShippingAddressAndShippingMethodActionImpl of(final StagedOrderSetShippingAddressAndShippingMethodAction template) {
+    public static StagedOrderSetShippingAddressAndShippingMethodAction of(final StagedOrderSetShippingAddressAndShippingMethodAction template) {
         StagedOrderSetShippingAddressAndShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndShippingMethodActionImpl();
         instance.setAddress(template.getAddress());
         instance.setShippingMethod(template.getShippingMethod());
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public static StagedOrderSetShippingAddressAndShippingMethodActionBuilder builder(){
+        return StagedOrderSetShippingAddressAndShippingMethodActionBuilder.of();
+    }
+    
+    public static StagedOrderSetShippingAddressAndShippingMethodActionBuilder builder(final StagedOrderSetShippingAddressAndShippingMethodAction template){
+        return StagedOrderSetShippingAddressAndShippingMethodActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetShippingAddressAndShippingMethodAction(Function<StagedOrderSetShippingAddressAndShippingMethodAction, T> helper) {
         return helper.apply(this);

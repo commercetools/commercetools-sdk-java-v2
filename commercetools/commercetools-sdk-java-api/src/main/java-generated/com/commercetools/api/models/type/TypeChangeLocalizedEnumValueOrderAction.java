@@ -36,17 +36,26 @@ public interface TypeChangeLocalizedEnumValueOrderAction extends TypeUpdateActio
     public void setKeys(final String ...keys);
     public void setKeys(final List<String> keys);
 
-    public static TypeChangeLocalizedEnumValueOrderActionImpl of(){
+    public static TypeChangeLocalizedEnumValueOrderAction of(){
         return new TypeChangeLocalizedEnumValueOrderActionImpl();
     }
     
 
-    public static TypeChangeLocalizedEnumValueOrderActionImpl of(final TypeChangeLocalizedEnumValueOrderAction template) {
+    public static TypeChangeLocalizedEnumValueOrderAction of(final TypeChangeLocalizedEnumValueOrderAction template) {
         TypeChangeLocalizedEnumValueOrderActionImpl instance = new TypeChangeLocalizedEnumValueOrderActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setKeys(template.getKeys());
         return instance;
     }
+
+    public static TypeChangeLocalizedEnumValueOrderActionBuilder builder(){
+        return TypeChangeLocalizedEnumValueOrderActionBuilder.of();
+    }
+    
+    public static TypeChangeLocalizedEnumValueOrderActionBuilder builder(final TypeChangeLocalizedEnumValueOrderAction template){
+        return TypeChangeLocalizedEnumValueOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeLocalizedEnumValueOrderAction(Function<TypeChangeLocalizedEnumValueOrderAction, T> helper) {
         return helper.apply(this);

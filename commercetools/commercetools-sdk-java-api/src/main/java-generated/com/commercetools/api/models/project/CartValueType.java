@@ -24,15 +24,24 @@ public interface CartValueType extends ShippingRateInputType {
 
 
 
-    public static CartValueTypeImpl of(){
+    public static CartValueType of(){
         return new CartValueTypeImpl();
     }
     
 
-    public static CartValueTypeImpl of(final CartValueType template) {
+    public static CartValueType of(final CartValueType template) {
         CartValueTypeImpl instance = new CartValueTypeImpl();
         return instance;
     }
+
+    public static CartValueTypeBuilder builder(){
+        return CartValueTypeBuilder.of();
+    }
+    
+    public static CartValueTypeBuilder builder(final CartValueType template){
+        return CartValueTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCartValueType(Function<CartValueType, T> helper) {
         return helper.apply(this);

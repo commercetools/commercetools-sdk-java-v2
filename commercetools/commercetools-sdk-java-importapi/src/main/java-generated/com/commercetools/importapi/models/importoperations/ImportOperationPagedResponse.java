@@ -60,12 +60,12 @@ public interface ImportOperationPagedResponse  {
     public void setResults(final ImportOperation ...results);
     public void setResults(final List<ImportOperation> results);
 
-    public static ImportOperationPagedResponseImpl of(){
+    public static ImportOperationPagedResponse of(){
         return new ImportOperationPagedResponseImpl();
     }
     
 
-    public static ImportOperationPagedResponseImpl of(final ImportOperationPagedResponse template) {
+    public static ImportOperationPagedResponse of(final ImportOperationPagedResponse template) {
         ImportOperationPagedResponseImpl instance = new ImportOperationPagedResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
@@ -73,6 +73,15 @@ public interface ImportOperationPagedResponse  {
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ImportOperationPagedResponseBuilder builder(){
+        return ImportOperationPagedResponseBuilder.of();
+    }
+    
+    public static ImportOperationPagedResponseBuilder builder(final ImportOperationPagedResponse template){
+        return ImportOperationPagedResponseBuilder.of(template);
+    }
+    
 
     default <T> T withImportOperationPagedResponse(Function<ImportOperationPagedResponse, T> helper) {
         return helper.apply(this);

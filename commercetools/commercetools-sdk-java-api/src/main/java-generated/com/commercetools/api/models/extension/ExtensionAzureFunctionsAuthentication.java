@@ -28,16 +28,25 @@ public interface ExtensionAzureFunctionsAuthentication extends ExtensionHttpDest
 
     public void setKey(final String key);
 
-    public static ExtensionAzureFunctionsAuthenticationImpl of(){
+    public static ExtensionAzureFunctionsAuthentication of(){
         return new ExtensionAzureFunctionsAuthenticationImpl();
     }
     
 
-    public static ExtensionAzureFunctionsAuthenticationImpl of(final ExtensionAzureFunctionsAuthentication template) {
+    public static ExtensionAzureFunctionsAuthentication of(final ExtensionAzureFunctionsAuthentication template) {
         ExtensionAzureFunctionsAuthenticationImpl instance = new ExtensionAzureFunctionsAuthenticationImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ExtensionAzureFunctionsAuthenticationBuilder builder(){
+        return ExtensionAzureFunctionsAuthenticationBuilder.of();
+    }
+    
+    public static ExtensionAzureFunctionsAuthenticationBuilder builder(final ExtensionAzureFunctionsAuthentication template){
+        return ExtensionAzureFunctionsAuthenticationBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionAzureFunctionsAuthentication(Function<ExtensionAzureFunctionsAuthentication, T> helper) {
         return helper.apply(this);

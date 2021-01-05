@@ -34,17 +34,26 @@ public interface MessageConfiguration  {
     
     public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation);
 
-    public static MessageConfigurationImpl of(){
+    public static MessageConfiguration of(){
         return new MessageConfigurationImpl();
     }
     
 
-    public static MessageConfigurationImpl of(final MessageConfiguration template) {
+    public static MessageConfiguration of(final MessageConfiguration template) {
         MessageConfigurationImpl instance = new MessageConfigurationImpl();
         instance.setEnabled(template.getEnabled());
         instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
         return instance;
     }
+
+    public static MessageConfigurationBuilder builder(){
+        return MessageConfigurationBuilder.of();
+    }
+    
+    public static MessageConfigurationBuilder builder(final MessageConfiguration template){
+        return MessageConfigurationBuilder.of(template);
+    }
+    
 
     default <T> T withMessageConfiguration(Function<MessageConfiguration, T> helper) {
         return helper.apply(this);

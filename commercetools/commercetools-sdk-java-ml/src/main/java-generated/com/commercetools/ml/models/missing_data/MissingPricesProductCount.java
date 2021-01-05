@@ -35,17 +35,26 @@ public interface MissingPricesProductCount  {
     
     public void setMissingPrices(final Long missingPrices);
 
-    public static MissingPricesProductCountImpl of(){
+    public static MissingPricesProductCount of(){
         return new MissingPricesProductCountImpl();
     }
     
 
-    public static MissingPricesProductCountImpl of(final MissingPricesProductCount template) {
+    public static MissingPricesProductCount of(final MissingPricesProductCount template) {
         MissingPricesProductCountImpl instance = new MissingPricesProductCountImpl();
         instance.setTotal(template.getTotal());
         instance.setMissingPrices(template.getMissingPrices());
         return instance;
     }
+
+    public static MissingPricesProductCountBuilder builder(){
+        return MissingPricesProductCountBuilder.of();
+    }
+    
+    public static MissingPricesProductCountBuilder builder(final MissingPricesProductCount template){
+        return MissingPricesProductCountBuilder.of(template);
+    }
+    
 
     default <T> T withMissingPricesProductCount(Function<MissingPricesProductCount, T> helper) {
         return helper.apply(this);

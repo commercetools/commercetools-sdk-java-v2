@@ -93,12 +93,12 @@ public interface MyLineItemDraft  {
     
     public void setSku(final String sku);
 
-    public static MyLineItemDraftImpl of(){
+    public static MyLineItemDraft of(){
         return new MyLineItemDraftImpl();
     }
     
 
-    public static MyLineItemDraftImpl of(final MyLineItemDraft template) {
+    public static MyLineItemDraft of(final MyLineItemDraft template) {
         MyLineItemDraftImpl instance = new MyLineItemDraftImpl();
         instance.setProductId(template.getProductId());
         instance.setVariantId(template.getVariantId());
@@ -111,6 +111,15 @@ public interface MyLineItemDraft  {
         instance.setSku(template.getSku());
         return instance;
     }
+
+    public static MyLineItemDraftBuilder builder(){
+        return MyLineItemDraftBuilder.of();
+    }
+    
+    public static MyLineItemDraftBuilder builder(final MyLineItemDraft template){
+        return MyLineItemDraftBuilder.of(template);
+    }
+    
 
     default <T> T withMyLineItemDraft(Function<MyLineItemDraft, T> helper) {
         return helper.apply(this);

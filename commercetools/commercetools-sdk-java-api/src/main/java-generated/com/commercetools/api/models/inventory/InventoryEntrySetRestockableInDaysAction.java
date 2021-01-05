@@ -28,16 +28,25 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
 
     public void setRestockableInDays(final Long restockableInDays);
 
-    public static InventoryEntrySetRestockableInDaysActionImpl of(){
+    public static InventoryEntrySetRestockableInDaysAction of(){
         return new InventoryEntrySetRestockableInDaysActionImpl();
     }
     
 
-    public static InventoryEntrySetRestockableInDaysActionImpl of(final InventoryEntrySetRestockableInDaysAction template) {
+    public static InventoryEntrySetRestockableInDaysAction of(final InventoryEntrySetRestockableInDaysAction template) {
         InventoryEntrySetRestockableInDaysActionImpl instance = new InventoryEntrySetRestockableInDaysActionImpl();
         instance.setRestockableInDays(template.getRestockableInDays());
         return instance;
     }
+
+    public static InventoryEntrySetRestockableInDaysActionBuilder builder(){
+        return InventoryEntrySetRestockableInDaysActionBuilder.of();
+    }
+    
+    public static InventoryEntrySetRestockableInDaysActionBuilder builder(final InventoryEntrySetRestockableInDaysAction template){
+        return InventoryEntrySetRestockableInDaysActionBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntrySetRestockableInDaysAction(Function<InventoryEntrySetRestockableInDaysAction, T> helper) {
         return helper.apply(this);

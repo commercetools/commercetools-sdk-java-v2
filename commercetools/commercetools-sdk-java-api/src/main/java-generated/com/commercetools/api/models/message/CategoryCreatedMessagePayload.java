@@ -30,16 +30,25 @@ public interface CategoryCreatedMessagePayload extends MessagePayload {
 
     public void setCategory(final Category category);
 
-    public static CategoryCreatedMessagePayloadImpl of(){
+    public static CategoryCreatedMessagePayload of(){
         return new CategoryCreatedMessagePayloadImpl();
     }
     
 
-    public static CategoryCreatedMessagePayloadImpl of(final CategoryCreatedMessagePayload template) {
+    public static CategoryCreatedMessagePayload of(final CategoryCreatedMessagePayload template) {
         CategoryCreatedMessagePayloadImpl instance = new CategoryCreatedMessagePayloadImpl();
         instance.setCategory(template.getCategory());
         return instance;
     }
+
+    public static CategoryCreatedMessagePayloadBuilder builder(){
+        return CategoryCreatedMessagePayloadBuilder.of();
+    }
+    
+    public static CategoryCreatedMessagePayloadBuilder builder(final CategoryCreatedMessagePayload template){
+        return CategoryCreatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryCreatedMessagePayload(Function<CategoryCreatedMessagePayload, T> helper) {
         return helper.apply(this);

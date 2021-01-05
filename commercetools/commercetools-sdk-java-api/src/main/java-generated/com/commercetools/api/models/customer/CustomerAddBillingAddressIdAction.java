@@ -34,17 +34,26 @@ public interface CustomerAddBillingAddressIdAction extends CustomerUpdateAction 
     
     public void setAddressKey(final String addressKey);
 
-    public static CustomerAddBillingAddressIdActionImpl of(){
+    public static CustomerAddBillingAddressIdAction of(){
         return new CustomerAddBillingAddressIdActionImpl();
     }
     
 
-    public static CustomerAddBillingAddressIdActionImpl of(final CustomerAddBillingAddressIdAction template) {
+    public static CustomerAddBillingAddressIdAction of(final CustomerAddBillingAddressIdAction template) {
         CustomerAddBillingAddressIdActionImpl instance = new CustomerAddBillingAddressIdActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public static CustomerAddBillingAddressIdActionBuilder builder(){
+        return CustomerAddBillingAddressIdActionBuilder.of();
+    }
+    
+    public static CustomerAddBillingAddressIdActionBuilder builder(final CustomerAddBillingAddressIdAction template){
+        return CustomerAddBillingAddressIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerAddBillingAddressIdAction(Function<CustomerAddBillingAddressIdAction, T> helper) {
         return helper.apply(this);

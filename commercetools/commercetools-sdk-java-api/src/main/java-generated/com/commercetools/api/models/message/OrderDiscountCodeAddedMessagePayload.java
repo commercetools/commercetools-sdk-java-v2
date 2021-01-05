@@ -30,16 +30,25 @@ public interface OrderDiscountCodeAddedMessagePayload extends MessagePayload {
 
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
-    public static OrderDiscountCodeAddedMessagePayloadImpl of(){
+    public static OrderDiscountCodeAddedMessagePayload of(){
         return new OrderDiscountCodeAddedMessagePayloadImpl();
     }
     
 
-    public static OrderDiscountCodeAddedMessagePayloadImpl of(final OrderDiscountCodeAddedMessagePayload template) {
+    public static OrderDiscountCodeAddedMessagePayload of(final OrderDiscountCodeAddedMessagePayload template) {
         OrderDiscountCodeAddedMessagePayloadImpl instance = new OrderDiscountCodeAddedMessagePayloadImpl();
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
+
+    public static OrderDiscountCodeAddedMessagePayloadBuilder builder(){
+        return OrderDiscountCodeAddedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderDiscountCodeAddedMessagePayloadBuilder builder(final OrderDiscountCodeAddedMessagePayload template){
+        return OrderDiscountCodeAddedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderDiscountCodeAddedMessagePayload(Function<OrderDiscountCodeAddedMessagePayload, T> helper) {
         return helper.apply(this);

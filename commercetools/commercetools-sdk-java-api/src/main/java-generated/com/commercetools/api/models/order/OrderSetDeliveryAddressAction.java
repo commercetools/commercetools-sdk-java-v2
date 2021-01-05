@@ -35,17 +35,26 @@ public interface OrderSetDeliveryAddressAction extends OrderUpdateAction {
     
     public void setAddress(final Address address);
 
-    public static OrderSetDeliveryAddressActionImpl of(){
+    public static OrderSetDeliveryAddressAction of(){
         return new OrderSetDeliveryAddressActionImpl();
     }
     
 
-    public static OrderSetDeliveryAddressActionImpl of(final OrderSetDeliveryAddressAction template) {
+    public static OrderSetDeliveryAddressAction of(final OrderSetDeliveryAddressAction template) {
         OrderSetDeliveryAddressActionImpl instance = new OrderSetDeliveryAddressActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static OrderSetDeliveryAddressActionBuilder builder(){
+        return OrderSetDeliveryAddressActionBuilder.of();
+    }
+    
+    public static OrderSetDeliveryAddressActionBuilder builder(final OrderSetDeliveryAddressAction template){
+        return OrderSetDeliveryAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetDeliveryAddressAction(Function<OrderSetDeliveryAddressAction, T> helper) {
         return helper.apply(this);

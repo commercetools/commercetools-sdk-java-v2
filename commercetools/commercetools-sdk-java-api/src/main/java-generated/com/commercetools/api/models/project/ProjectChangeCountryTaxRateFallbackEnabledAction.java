@@ -30,16 +30,25 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
 
     public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
 
-    public static ProjectChangeCountryTaxRateFallbackEnabledActionImpl of(){
+    public static ProjectChangeCountryTaxRateFallbackEnabledAction of(){
         return new ProjectChangeCountryTaxRateFallbackEnabledActionImpl();
     }
     
 
-    public static ProjectChangeCountryTaxRateFallbackEnabledActionImpl of(final ProjectChangeCountryTaxRateFallbackEnabledAction template) {
+    public static ProjectChangeCountryTaxRateFallbackEnabledAction of(final ProjectChangeCountryTaxRateFallbackEnabledAction template) {
         ProjectChangeCountryTaxRateFallbackEnabledActionImpl instance = new ProjectChangeCountryTaxRateFallbackEnabledActionImpl();
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
         return instance;
     }
+
+    public static ProjectChangeCountryTaxRateFallbackEnabledActionBuilder builder(){
+        return ProjectChangeCountryTaxRateFallbackEnabledActionBuilder.of();
+    }
+    
+    public static ProjectChangeCountryTaxRateFallbackEnabledActionBuilder builder(final ProjectChangeCountryTaxRateFallbackEnabledAction template){
+        return ProjectChangeCountryTaxRateFallbackEnabledActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectChangeCountryTaxRateFallbackEnabledAction(Function<ProjectChangeCountryTaxRateFallbackEnabledAction, T> helper) {
         return helper.apply(this);

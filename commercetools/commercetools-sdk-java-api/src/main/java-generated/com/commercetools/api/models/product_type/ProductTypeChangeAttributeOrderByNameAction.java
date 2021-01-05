@@ -30,16 +30,25 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
     public void setAttributeNames(final String ...attributeNames);
     public void setAttributeNames(final List<String> attributeNames);
 
-    public static ProductTypeChangeAttributeOrderByNameActionImpl of(){
+    public static ProductTypeChangeAttributeOrderByNameAction of(){
         return new ProductTypeChangeAttributeOrderByNameActionImpl();
     }
     
 
-    public static ProductTypeChangeAttributeOrderByNameActionImpl of(final ProductTypeChangeAttributeOrderByNameAction template) {
+    public static ProductTypeChangeAttributeOrderByNameAction of(final ProductTypeChangeAttributeOrderByNameAction template) {
         ProductTypeChangeAttributeOrderByNameActionImpl instance = new ProductTypeChangeAttributeOrderByNameActionImpl();
         instance.setAttributeNames(template.getAttributeNames());
         return instance;
     }
+
+    public static ProductTypeChangeAttributeOrderByNameActionBuilder builder(){
+        return ProductTypeChangeAttributeOrderByNameActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeAttributeOrderByNameActionBuilder builder(final ProductTypeChangeAttributeOrderByNameAction template){
+        return ProductTypeChangeAttributeOrderByNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeAttributeOrderByNameAction(Function<ProductTypeChangeAttributeOrderByNameAction, T> helper) {
         return helper.apply(this);

@@ -41,18 +41,27 @@ public interface ShoppingListSetLineItemCustomFieldAction extends ShoppingListUp
     
     public void setValue(final JsonNode value);
 
-    public static ShoppingListSetLineItemCustomFieldActionImpl of(){
+    public static ShoppingListSetLineItemCustomFieldAction of(){
         return new ShoppingListSetLineItemCustomFieldActionImpl();
     }
     
 
-    public static ShoppingListSetLineItemCustomFieldActionImpl of(final ShoppingListSetLineItemCustomFieldAction template) {
+    public static ShoppingListSetLineItemCustomFieldAction of(final ShoppingListSetLineItemCustomFieldAction template) {
         ShoppingListSetLineItemCustomFieldActionImpl instance = new ShoppingListSetLineItemCustomFieldActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ShoppingListSetLineItemCustomFieldActionBuilder builder(){
+        return ShoppingListSetLineItemCustomFieldActionBuilder.of();
+    }
+    
+    public static ShoppingListSetLineItemCustomFieldActionBuilder builder(final ShoppingListSetLineItemCustomFieldAction template){
+        return ShoppingListSetLineItemCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListSetLineItemCustomFieldAction(Function<ShoppingListSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);

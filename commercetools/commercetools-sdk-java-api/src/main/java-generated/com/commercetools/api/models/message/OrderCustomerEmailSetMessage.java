@@ -34,12 +34,12 @@ public interface OrderCustomerEmailSetMessage extends Message {
     
     public void setOldEmail(final String oldEmail);
 
-    public static OrderCustomerEmailSetMessageImpl of(){
+    public static OrderCustomerEmailSetMessage of(){
         return new OrderCustomerEmailSetMessageImpl();
     }
     
 
-    public static OrderCustomerEmailSetMessageImpl of(final OrderCustomerEmailSetMessage template) {
+    public static OrderCustomerEmailSetMessage of(final OrderCustomerEmailSetMessage template) {
         OrderCustomerEmailSetMessageImpl instance = new OrderCustomerEmailSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -55,6 +55,15 @@ public interface OrderCustomerEmailSetMessage extends Message {
         instance.setOldEmail(template.getOldEmail());
         return instance;
     }
+
+    public static OrderCustomerEmailSetMessageBuilder builder(){
+        return OrderCustomerEmailSetMessageBuilder.of();
+    }
+    
+    public static OrderCustomerEmailSetMessageBuilder builder(final OrderCustomerEmailSetMessage template){
+        return OrderCustomerEmailSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderCustomerEmailSetMessage(Function<OrderCustomerEmailSetMessage, T> helper) {
         return helper.apply(this);

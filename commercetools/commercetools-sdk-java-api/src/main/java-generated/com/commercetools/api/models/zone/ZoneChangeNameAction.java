@@ -28,16 +28,25 @@ public interface ZoneChangeNameAction extends ZoneUpdateAction {
 
     public void setName(final String name);
 
-    public static ZoneChangeNameActionImpl of(){
+    public static ZoneChangeNameAction of(){
         return new ZoneChangeNameActionImpl();
     }
     
 
-    public static ZoneChangeNameActionImpl of(final ZoneChangeNameAction template) {
+    public static ZoneChangeNameAction of(final ZoneChangeNameAction template) {
         ZoneChangeNameActionImpl instance = new ZoneChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ZoneChangeNameActionBuilder builder(){
+        return ZoneChangeNameActionBuilder.of();
+    }
+    
+    public static ZoneChangeNameActionBuilder builder(final ZoneChangeNameAction template){
+        return ZoneChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withZoneChangeNameAction(Function<ZoneChangeNameAction, T> helper) {
         return helper.apply(this);

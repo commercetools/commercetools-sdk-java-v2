@@ -31,16 +31,25 @@ public interface CustomerSetCustomerNumberAction extends CustomerUpdateAction {
 
     public void setCustomerNumber(final String customerNumber);
 
-    public static CustomerSetCustomerNumberActionImpl of(){
+    public static CustomerSetCustomerNumberAction of(){
         return new CustomerSetCustomerNumberActionImpl();
     }
     
 
-    public static CustomerSetCustomerNumberActionImpl of(final CustomerSetCustomerNumberAction template) {
+    public static CustomerSetCustomerNumberAction of(final CustomerSetCustomerNumberAction template) {
         CustomerSetCustomerNumberActionImpl instance = new CustomerSetCustomerNumberActionImpl();
         instance.setCustomerNumber(template.getCustomerNumber());
         return instance;
     }
+
+    public static CustomerSetCustomerNumberActionBuilder builder(){
+        return CustomerSetCustomerNumberActionBuilder.of();
+    }
+    
+    public static CustomerSetCustomerNumberActionBuilder builder(final CustomerSetCustomerNumberAction template){
+        return CustomerSetCustomerNumberActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetCustomerNumberAction(Function<CustomerSetCustomerNumberAction, T> helper) {
         return helper.apply(this);

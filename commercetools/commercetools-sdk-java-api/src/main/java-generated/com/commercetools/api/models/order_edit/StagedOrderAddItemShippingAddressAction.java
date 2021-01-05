@@ -30,16 +30,25 @@ public interface StagedOrderAddItemShippingAddressAction extends StagedOrderUpda
 
     public void setAddress(final Address address);
 
-    public static StagedOrderAddItemShippingAddressActionImpl of(){
+    public static StagedOrderAddItemShippingAddressAction of(){
         return new StagedOrderAddItemShippingAddressActionImpl();
     }
     
 
-    public static StagedOrderAddItemShippingAddressActionImpl of(final StagedOrderAddItemShippingAddressAction template) {
+    public static StagedOrderAddItemShippingAddressAction of(final StagedOrderAddItemShippingAddressAction template) {
         StagedOrderAddItemShippingAddressActionImpl instance = new StagedOrderAddItemShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static StagedOrderAddItemShippingAddressActionBuilder builder(){
+        return StagedOrderAddItemShippingAddressActionBuilder.of();
+    }
+    
+    public static StagedOrderAddItemShippingAddressActionBuilder builder(final StagedOrderAddItemShippingAddressAction template){
+        return StagedOrderAddItemShippingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderAddItemShippingAddressAction(Function<StagedOrderAddItemShippingAddressAction, T> helper) {
         return helper.apply(this);

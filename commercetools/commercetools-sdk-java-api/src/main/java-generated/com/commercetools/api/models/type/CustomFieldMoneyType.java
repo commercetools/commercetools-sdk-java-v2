@@ -23,15 +23,24 @@ public interface CustomFieldMoneyType extends FieldType {
 
 
 
-    public static CustomFieldMoneyTypeImpl of(){
+    public static CustomFieldMoneyType of(){
         return new CustomFieldMoneyTypeImpl();
     }
     
 
-    public static CustomFieldMoneyTypeImpl of(final CustomFieldMoneyType template) {
+    public static CustomFieldMoneyType of(final CustomFieldMoneyType template) {
         CustomFieldMoneyTypeImpl instance = new CustomFieldMoneyTypeImpl();
         return instance;
     }
+
+    public static CustomFieldMoneyTypeBuilder builder(){
+        return CustomFieldMoneyTypeBuilder.of();
+    }
+    
+    public static CustomFieldMoneyTypeBuilder builder(final CustomFieldMoneyType template){
+        return CustomFieldMoneyTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldMoneyType(Function<CustomFieldMoneyType, T> helper) {
         return helper.apply(this);

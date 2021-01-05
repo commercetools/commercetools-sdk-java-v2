@@ -27,16 +27,25 @@ public interface InvalidInput extends ErrorObject {
 
 
 
-    public static InvalidInputImpl of(){
+    public static InvalidInput of(){
         return new InvalidInputImpl();
     }
     
 
-    public static InvalidInputImpl of(final InvalidInput template) {
+    public static InvalidInput of(final InvalidInput template) {
         InvalidInputImpl instance = new InvalidInputImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidInputBuilder builder(){
+        return InvalidInputBuilder.of();
+    }
+    
+    public static InvalidInputBuilder builder(final InvalidInput template){
+        return InvalidInputBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidInput(Function<InvalidInput, T> helper) {
         return helper.apply(this);

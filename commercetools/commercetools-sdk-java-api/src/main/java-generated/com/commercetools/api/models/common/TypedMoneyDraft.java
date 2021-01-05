@@ -47,6 +47,7 @@ public interface TypedMoneyDraft extends Money {
 
 
 
+
     default <T> T withTypedMoneyDraft(Function<TypedMoneyDraft, T> helper) {
         return helper.apply(this);
     }

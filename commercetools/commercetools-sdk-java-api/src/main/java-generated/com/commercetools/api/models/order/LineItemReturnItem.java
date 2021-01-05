@@ -28,12 +28,12 @@ public interface LineItemReturnItem extends ReturnItem {
 
     public void setLineItemId(final String lineItemId);
 
-    public static LineItemReturnItemImpl of(){
+    public static LineItemReturnItem of(){
         return new LineItemReturnItemImpl();
     }
     
 
-    public static LineItemReturnItemImpl of(final LineItemReturnItem template) {
+    public static LineItemReturnItem of(final LineItemReturnItem template) {
         LineItemReturnItemImpl instance = new LineItemReturnItemImpl();
         instance.setId(template.getId());
         instance.setQuantity(template.getQuantity());
@@ -45,6 +45,15 @@ public interface LineItemReturnItem extends ReturnItem {
         instance.setLineItemId(template.getLineItemId());
         return instance;
     }
+
+    public static LineItemReturnItemBuilder builder(){
+        return LineItemReturnItemBuilder.of();
+    }
+    
+    public static LineItemReturnItemBuilder builder(final LineItemReturnItem template){
+        return LineItemReturnItemBuilder.of(template);
+    }
+    
 
     default <T> T withLineItemReturnItem(Function<LineItemReturnItem, T> helper) {
         return helper.apply(this);

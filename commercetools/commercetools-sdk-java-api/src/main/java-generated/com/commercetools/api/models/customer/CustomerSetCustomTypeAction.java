@@ -41,17 +41,26 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
     
     public void setFields(final FieldContainer fields);
 
-    public static CustomerSetCustomTypeActionImpl of(){
+    public static CustomerSetCustomTypeAction of(){
         return new CustomerSetCustomTypeActionImpl();
     }
     
 
-    public static CustomerSetCustomTypeActionImpl of(final CustomerSetCustomTypeAction template) {
+    public static CustomerSetCustomTypeAction of(final CustomerSetCustomTypeAction template) {
         CustomerSetCustomTypeActionImpl instance = new CustomerSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static CustomerSetCustomTypeActionBuilder builder(){
+        return CustomerSetCustomTypeActionBuilder.of();
+    }
+    
+    public static CustomerSetCustomTypeActionBuilder builder(final CustomerSetCustomTypeAction template){
+        return CustomerSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetCustomTypeAction(Function<CustomerSetCustomTypeAction, T> helper) {
         return helper.apply(this);

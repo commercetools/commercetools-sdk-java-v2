@@ -38,17 +38,26 @@ public interface MissingPricesVariantLevel extends MissingPricesProductCount {
     
     public void setMissingPrices(final Long missingPrices);
 
-    public static MissingPricesVariantLevelImpl of(){
+    public static MissingPricesVariantLevel of(){
         return new MissingPricesVariantLevelImpl();
     }
     
 
-    public static MissingPricesVariantLevelImpl of(final MissingPricesVariantLevel template) {
+    public static MissingPricesVariantLevel of(final MissingPricesVariantLevel template) {
         MissingPricesVariantLevelImpl instance = new MissingPricesVariantLevelImpl();
         instance.setTotal(template.getTotal());
         instance.setMissingPrices(template.getMissingPrices());
         return instance;
     }
+
+    public static MissingPricesVariantLevelBuilder builder(){
+        return MissingPricesVariantLevelBuilder.of();
+    }
+    
+    public static MissingPricesVariantLevelBuilder builder(final MissingPricesVariantLevel template){
+        return MissingPricesVariantLevelBuilder.of(template);
+    }
+    
 
     default <T> T withMissingPricesVariantLevel(Function<MissingPricesVariantLevel, T> helper) {
         return helper.apply(this);

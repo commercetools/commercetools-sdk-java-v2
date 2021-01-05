@@ -60,12 +60,12 @@ public interface MyTransactionDraft  {
     
     public void setInteractionId(final String interactionId);
 
-    public static MyTransactionDraftImpl of(){
+    public static MyTransactionDraft of(){
         return new MyTransactionDraftImpl();
     }
     
 
-    public static MyTransactionDraftImpl of(final MyTransactionDraft template) {
+    public static MyTransactionDraft of(final MyTransactionDraft template) {
         MyTransactionDraftImpl instance = new MyTransactionDraftImpl();
         instance.setTimestamp(template.getTimestamp());
         instance.setType(template.getType());
@@ -73,6 +73,15 @@ public interface MyTransactionDraft  {
         instance.setInteractionId(template.getInteractionId());
         return instance;
     }
+
+    public static MyTransactionDraftBuilder builder(){
+        return MyTransactionDraftBuilder.of();
+    }
+    
+    public static MyTransactionDraftBuilder builder(final MyTransactionDraft template){
+        return MyTransactionDraftBuilder.of(template);
+    }
+    
 
     default <T> T withMyTransactionDraft(Function<MyTransactionDraft, T> helper) {
         return helper.apply(this);

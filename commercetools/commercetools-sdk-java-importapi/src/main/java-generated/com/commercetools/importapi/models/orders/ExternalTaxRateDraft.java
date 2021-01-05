@@ -60,12 +60,12 @@ public interface ExternalTaxRateDraft  {
     
     public void setIncludedInPrice(final Boolean includedInPrice);
 
-    public static ExternalTaxRateDraftImpl of(){
+    public static ExternalTaxRateDraft of(){
         return new ExternalTaxRateDraftImpl();
     }
     
 
-    public static ExternalTaxRateDraftImpl of(final ExternalTaxRateDraft template) {
+    public static ExternalTaxRateDraft of(final ExternalTaxRateDraft template) {
         ExternalTaxRateDraftImpl instance = new ExternalTaxRateDraftImpl();
         instance.setName(template.getName());
         instance.setAmount(template.getAmount());
@@ -75,6 +75,15 @@ public interface ExternalTaxRateDraft  {
         instance.setIncludedInPrice(template.getIncludedInPrice());
         return instance;
     }
+
+    public static ExternalTaxRateDraftBuilder builder(){
+        return ExternalTaxRateDraftBuilder.of();
+    }
+    
+    public static ExternalTaxRateDraftBuilder builder(final ExternalTaxRateDraft template){
+        return ExternalTaxRateDraftBuilder.of(template);
+    }
+    
 
     default <T> T withExternalTaxRateDraft(Function<ExternalTaxRateDraft, T> helper) {
         return helper.apply(this);

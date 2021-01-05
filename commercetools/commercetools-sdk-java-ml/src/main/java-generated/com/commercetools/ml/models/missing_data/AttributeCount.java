@@ -46,18 +46,27 @@ public interface AttributeCount  {
     
     public void setMissingAttributeValues(final Integer missingAttributeValues);
 
-    public static AttributeCountImpl of(){
+    public static AttributeCount of(){
         return new AttributeCountImpl();
     }
     
 
-    public static AttributeCountImpl of(final AttributeCount template) {
+    public static AttributeCount of(final AttributeCount template) {
         AttributeCountImpl instance = new AttributeCountImpl();
         instance.setProductTypeAttributes(template.getProductTypeAttributes());
         instance.setVariantAttributes(template.getVariantAttributes());
         instance.setMissingAttributeValues(template.getMissingAttributeValues());
         return instance;
     }
+
+    public static AttributeCountBuilder builder(){
+        return AttributeCountBuilder.of();
+    }
+    
+    public static AttributeCountBuilder builder(final AttributeCount template){
+        return AttributeCountBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeCount(Function<AttributeCount, T> helper) {
         return helper.apply(this);

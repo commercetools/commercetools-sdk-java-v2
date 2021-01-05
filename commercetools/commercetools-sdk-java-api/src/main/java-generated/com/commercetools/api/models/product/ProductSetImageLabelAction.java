@@ -57,12 +57,12 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductSetImageLabelActionImpl of(){
+    public static ProductSetImageLabelAction of(){
         return new ProductSetImageLabelActionImpl();
     }
     
 
-    public static ProductSetImageLabelActionImpl of(final ProductSetImageLabelAction template) {
+    public static ProductSetImageLabelAction of(final ProductSetImageLabelAction template) {
         ProductSetImageLabelActionImpl instance = new ProductSetImageLabelActionImpl();
         instance.setSku(template.getSku());
         instance.setVariantId(template.getVariantId());
@@ -71,6 +71,15 @@ public interface ProductSetImageLabelAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductSetImageLabelActionBuilder builder(){
+        return ProductSetImageLabelActionBuilder.of();
+    }
+    
+    public static ProductSetImageLabelActionBuilder builder(final ProductSetImageLabelAction template){
+        return ProductSetImageLabelActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetImageLabelAction(Function<ProductSetImageLabelAction, T> helper) {
         return helper.apply(this);

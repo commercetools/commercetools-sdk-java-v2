@@ -24,17 +24,26 @@ public interface ProductDiscountResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static ProductDiscountResourceIdentifierImpl of(){
+    public static ProductDiscountResourceIdentifier of(){
         return new ProductDiscountResourceIdentifierImpl();
     }
     
 
-    public static ProductDiscountResourceIdentifierImpl of(final ProductDiscountResourceIdentifier template) {
+    public static ProductDiscountResourceIdentifier of(final ProductDiscountResourceIdentifier template) {
         ProductDiscountResourceIdentifierImpl instance = new ProductDiscountResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ProductDiscountResourceIdentifierBuilder builder(){
+        return ProductDiscountResourceIdentifierBuilder.of();
+    }
+    
+    public static ProductDiscountResourceIdentifierBuilder builder(final ProductDiscountResourceIdentifier template){
+        return ProductDiscountResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountResourceIdentifier(Function<ProductDiscountResourceIdentifier, T> helper) {
         return helper.apply(this);

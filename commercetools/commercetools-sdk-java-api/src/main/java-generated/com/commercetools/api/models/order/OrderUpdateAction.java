@@ -118,6 +118,7 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
 
 
 
+
     default <T> T withOrderUpdateAction(Function<OrderUpdateAction, T> helper) {
         return helper.apply(this);
     }

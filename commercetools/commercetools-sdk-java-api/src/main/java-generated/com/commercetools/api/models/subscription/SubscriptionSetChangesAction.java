@@ -31,16 +31,25 @@ public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
     public void setChanges(final ChangeSubscription ...changes);
     public void setChanges(final List<ChangeSubscription> changes);
 
-    public static SubscriptionSetChangesActionImpl of(){
+    public static SubscriptionSetChangesAction of(){
         return new SubscriptionSetChangesActionImpl();
     }
     
 
-    public static SubscriptionSetChangesActionImpl of(final SubscriptionSetChangesAction template) {
+    public static SubscriptionSetChangesAction of(final SubscriptionSetChangesAction template) {
         SubscriptionSetChangesActionImpl instance = new SubscriptionSetChangesActionImpl();
         instance.setChanges(template.getChanges());
         return instance;
     }
+
+    public static SubscriptionSetChangesActionBuilder builder(){
+        return SubscriptionSetChangesActionBuilder.of();
+    }
+    
+    public static SubscriptionSetChangesActionBuilder builder(final SubscriptionSetChangesAction template){
+        return SubscriptionSetChangesActionBuilder.of(template);
+    }
+    
 
     default <T> T withSubscriptionSetChangesAction(Function<SubscriptionSetChangesAction, T> helper) {
         return helper.apply(this);

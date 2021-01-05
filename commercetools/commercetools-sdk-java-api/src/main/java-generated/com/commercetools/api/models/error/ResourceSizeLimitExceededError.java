@@ -23,16 +23,25 @@ public interface ResourceSizeLimitExceededError extends ErrorObject {
 
 
 
-    public static ResourceSizeLimitExceededErrorImpl of(){
+    public static ResourceSizeLimitExceededError of(){
         return new ResourceSizeLimitExceededErrorImpl();
     }
     
 
-    public static ResourceSizeLimitExceededErrorImpl of(final ResourceSizeLimitExceededError template) {
+    public static ResourceSizeLimitExceededError of(final ResourceSizeLimitExceededError template) {
         ResourceSizeLimitExceededErrorImpl instance = new ResourceSizeLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static ResourceSizeLimitExceededErrorBuilder builder(){
+        return ResourceSizeLimitExceededErrorBuilder.of();
+    }
+    
+    public static ResourceSizeLimitExceededErrorBuilder builder(final ResourceSizeLimitExceededError template){
+        return ResourceSizeLimitExceededErrorBuilder.of(template);
+    }
+    
 
     default <T> T withResourceSizeLimitExceededError(Function<ResourceSizeLimitExceededError, T> helper) {
         return helper.apply(this);

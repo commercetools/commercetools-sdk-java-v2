@@ -34,16 +34,25 @@ public interface DateTimeSetField extends CustomField {
     public void setValue(final ZonedDateTime ...value);
     public void setValue(final List<ZonedDateTime> value);
 
-    public static DateTimeSetFieldImpl of(){
+    public static DateTimeSetField of(){
         return new DateTimeSetFieldImpl();
     }
     
 
-    public static DateTimeSetFieldImpl of(final DateTimeSetField template) {
+    public static DateTimeSetField of(final DateTimeSetField template) {
         DateTimeSetFieldImpl instance = new DateTimeSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static DateTimeSetFieldBuilder builder(){
+        return DateTimeSetFieldBuilder.of();
+    }
+    
+    public static DateTimeSetFieldBuilder builder(final DateTimeSetField template){
+        return DateTimeSetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withDateTimeSetField(Function<DateTimeSetField, T> helper) {
         return helper.apply(this);

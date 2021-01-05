@@ -30,16 +30,25 @@ public interface Suggestion  {
 
     public void setText(final String text);
 
-    public static SuggestionImpl of(){
+    public static Suggestion of(){
         return new SuggestionImpl();
     }
     
 
-    public static SuggestionImpl of(final Suggestion template) {
+    public static Suggestion of(final Suggestion template) {
         SuggestionImpl instance = new SuggestionImpl();
         instance.setText(template.getText());
         return instance;
     }
+
+    public static SuggestionBuilder builder(){
+        return SuggestionBuilder.of();
+    }
+    
+    public static SuggestionBuilder builder(final Suggestion template){
+        return SuggestionBuilder.of(template);
+    }
+    
 
     default <T> T withSuggestion(Function<Suggestion, T> helper) {
         return helper.apply(this);

@@ -58,12 +58,12 @@ public interface CustomerSignin  {
     
     public void setUpdateProductData(final Boolean updateProductData);
 
-    public static CustomerSigninImpl of(){
+    public static CustomerSignin of(){
         return new CustomerSigninImpl();
     }
     
 
-    public static CustomerSigninImpl of(final CustomerSignin template) {
+    public static CustomerSignin of(final CustomerSignin template) {
         CustomerSigninImpl instance = new CustomerSigninImpl();
         instance.setEmail(template.getEmail());
         instance.setPassword(template.getPassword());
@@ -73,6 +73,15 @@ public interface CustomerSignin  {
         instance.setUpdateProductData(template.getUpdateProductData());
         return instance;
     }
+
+    public static CustomerSigninBuilder builder(){
+        return CustomerSigninBuilder.of();
+    }
+    
+    public static CustomerSigninBuilder builder(final CustomerSignin template){
+        return CustomerSigninBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSignin(Function<CustomerSignin, T> helper) {
         return helper.apply(this);

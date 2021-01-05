@@ -28,16 +28,25 @@ public interface CustomerEmailChangedMessagePayload extends MessagePayload {
 
     public void setEmail(final String email);
 
-    public static CustomerEmailChangedMessagePayloadImpl of(){
+    public static CustomerEmailChangedMessagePayload of(){
         return new CustomerEmailChangedMessagePayloadImpl();
     }
     
 
-    public static CustomerEmailChangedMessagePayloadImpl of(final CustomerEmailChangedMessagePayload template) {
+    public static CustomerEmailChangedMessagePayload of(final CustomerEmailChangedMessagePayload template) {
         CustomerEmailChangedMessagePayloadImpl instance = new CustomerEmailChangedMessagePayloadImpl();
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public static CustomerEmailChangedMessagePayloadBuilder builder(){
+        return CustomerEmailChangedMessagePayloadBuilder.of();
+    }
+    
+    public static CustomerEmailChangedMessagePayloadBuilder builder(final CustomerEmailChangedMessagePayload template){
+        return CustomerEmailChangedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerEmailChangedMessagePayload(Function<CustomerEmailChangedMessagePayload, T> helper) {
         return helper.apply(this);

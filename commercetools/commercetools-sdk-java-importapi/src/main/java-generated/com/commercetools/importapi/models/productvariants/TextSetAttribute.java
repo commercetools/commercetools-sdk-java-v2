@@ -33,17 +33,26 @@ public interface TextSetAttribute extends Attribute {
     public void setValue(final String ...value);
     public void setValue(final List<String> value);
 
-    public static TextSetAttributeImpl of(){
+    public static TextSetAttribute of(){
         return new TextSetAttributeImpl();
     }
     
 
-    public static TextSetAttributeImpl of(final TextSetAttribute template) {
+    public static TextSetAttribute of(final TextSetAttribute template) {
         TextSetAttributeImpl instance = new TextSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TextSetAttributeBuilder builder(){
+        return TextSetAttributeBuilder.of();
+    }
+    
+    public static TextSetAttributeBuilder builder(final TextSetAttribute template){
+        return TextSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withTextSetAttribute(Function<TextSetAttribute, T> helper) {
         return helper.apply(this);

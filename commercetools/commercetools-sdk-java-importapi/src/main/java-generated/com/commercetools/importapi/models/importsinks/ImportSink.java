@@ -69,12 +69,12 @@ public interface ImportSink  {
     
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
-    public static ImportSinkImpl of(){
+    public static ImportSink of(){
         return new ImportSinkImpl();
     }
     
 
-    public static ImportSinkImpl of(final ImportSink template) {
+    public static ImportSink of(final ImportSink template) {
         ImportSinkImpl instance = new ImportSinkImpl();
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());
@@ -83,6 +83,15 @@ public interface ImportSink  {
         instance.setLastModifiedAt(template.getLastModifiedAt());
         return instance;
     }
+
+    public static ImportSinkBuilder builder(){
+        return ImportSinkBuilder.of();
+    }
+    
+    public static ImportSinkBuilder builder(final ImportSink template){
+        return ImportSinkBuilder.of(template);
+    }
+    
 
     default <T> T withImportSink(Function<ImportSink, T> helper) {
         return helper.apply(this);

@@ -30,12 +30,12 @@ public interface CustomerAddressChangedMessage extends Message {
 
     public void setAddress(final Address address);
 
-    public static CustomerAddressChangedMessageImpl of(){
+    public static CustomerAddressChangedMessage of(){
         return new CustomerAddressChangedMessageImpl();
     }
     
 
-    public static CustomerAddressChangedMessageImpl of(final CustomerAddressChangedMessage template) {
+    public static CustomerAddressChangedMessage of(final CustomerAddressChangedMessage template) {
         CustomerAddressChangedMessageImpl instance = new CustomerAddressChangedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface CustomerAddressChangedMessage extends Message {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static CustomerAddressChangedMessageBuilder builder(){
+        return CustomerAddressChangedMessageBuilder.of();
+    }
+    
+    public static CustomerAddressChangedMessageBuilder builder(final CustomerAddressChangedMessage template){
+        return CustomerAddressChangedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerAddressChangedMessage(Function<CustomerAddressChangedMessage, T> helper) {
         return helper.apply(this);

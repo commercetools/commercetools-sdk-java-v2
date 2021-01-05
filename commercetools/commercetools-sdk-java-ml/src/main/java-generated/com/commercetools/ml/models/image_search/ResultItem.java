@@ -44,17 +44,26 @@ public interface ResultItem  {
     public void setProductVariants(final ProductVariant ...productVariants);
     public void setProductVariants(final List<ProductVariant> productVariants);
 
-    public static ResultItemImpl of(){
+    public static ResultItem of(){
         return new ResultItemImpl();
     }
     
 
-    public static ResultItemImpl of(final ResultItem template) {
+    public static ResultItem of(final ResultItem template) {
         ResultItemImpl instance = new ResultItemImpl();
         instance.setImageUrl(template.getImageUrl());
         instance.setProductVariants(template.getProductVariants());
         return instance;
     }
+
+    public static ResultItemBuilder builder(){
+        return ResultItemBuilder.of();
+    }
+    
+    public static ResultItemBuilder builder(final ResultItem template){
+        return ResultItemBuilder.of(template);
+    }
+    
 
     default <T> T withResultItem(Function<ResultItem, T> helper) {
         return helper.apply(this);

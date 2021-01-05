@@ -157,12 +157,12 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
     
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static ProductDiscountImpl of(){
+    public static ProductDiscount of(){
         return new ProductDiscountImpl();
     }
     
 
-    public static ProductDiscountImpl of(final ProductDiscount template) {
+    public static ProductDiscount of(final ProductDiscount template) {
         ProductDiscountImpl instance = new ProductDiscountImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -182,6 +182,15 @@ public interface ProductDiscount extends BaseResource, com.commercetools.api.mod
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static ProductDiscountBuilder builder(){
+        return ProductDiscountBuilder.of();
+    }
+    
+    public static ProductDiscountBuilder builder(final ProductDiscount template){
+        return ProductDiscountBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscount(Function<ProductDiscount, T> helper) {
         return helper.apply(this);

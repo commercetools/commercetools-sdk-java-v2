@@ -46,12 +46,12 @@ public interface ProductVariantAvailability  {
     
     public void setChannels(final ProductVariantChannelAvailabilityMap channels);
 
-    public static ProductVariantAvailabilityImpl of(){
+    public static ProductVariantAvailability of(){
         return new ProductVariantAvailabilityImpl();
     }
     
 
-    public static ProductVariantAvailabilityImpl of(final ProductVariantAvailability template) {
+    public static ProductVariantAvailability of(final ProductVariantAvailability template) {
         ProductVariantAvailabilityImpl instance = new ProductVariantAvailabilityImpl();
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
@@ -59,6 +59,15 @@ public interface ProductVariantAvailability  {
         instance.setChannels(template.getChannels());
         return instance;
     }
+
+    public static ProductVariantAvailabilityBuilder builder(){
+        return ProductVariantAvailabilityBuilder.of();
+    }
+    
+    public static ProductVariantAvailabilityBuilder builder(final ProductVariantAvailability template){
+        return ProductVariantAvailabilityBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantAvailability(Function<ProductVariantAvailability, T> helper) {
         return helper.apply(this);

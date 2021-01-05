@@ -34,17 +34,26 @@ public interface SubRate  {
     
     public void setAmount(final Double amount);
 
-    public static SubRateImpl of(){
+    public static SubRate of(){
         return new SubRateImpl();
     }
     
 
-    public static SubRateImpl of(final SubRate template) {
+    public static SubRate of(final SubRate template) {
         SubRateImpl instance = new SubRateImpl();
         instance.setName(template.getName());
         instance.setAmount(template.getAmount());
         return instance;
     }
+
+    public static SubRateBuilder builder(){
+        return SubRateBuilder.of();
+    }
+    
+    public static SubRateBuilder builder(final SubRate template){
+        return SubRateBuilder.of(template);
+    }
+    
 
     default <T> T withSubRate(Function<SubRate, T> helper) {
         return helper.apply(this);

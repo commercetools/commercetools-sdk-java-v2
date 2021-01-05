@@ -45,18 +45,27 @@ public interface MissingImagesMeta  {
     
     public void setThreshold(final Long threshold);
 
-    public static MissingImagesMetaImpl of(){
+    public static MissingImagesMeta of(){
         return new MissingImagesMetaImpl();
     }
     
 
-    public static MissingImagesMetaImpl of(final MissingImagesMeta template) {
+    public static MissingImagesMeta of(final MissingImagesMeta template) {
         MissingImagesMetaImpl instance = new MissingImagesMetaImpl();
         instance.setProductLevel(template.getProductLevel());
         instance.setVariantLevel(template.getVariantLevel());
         instance.setThreshold(template.getThreshold());
         return instance;
     }
+
+    public static MissingImagesMetaBuilder builder(){
+        return MissingImagesMetaBuilder.of();
+    }
+    
+    public static MissingImagesMetaBuilder builder(final MissingImagesMeta template){
+        return MissingImagesMetaBuilder.of(template);
+    }
+    
 
     default <T> T withMissingImagesMeta(Function<MissingImagesMeta, T> helper) {
         return helper.apply(this);

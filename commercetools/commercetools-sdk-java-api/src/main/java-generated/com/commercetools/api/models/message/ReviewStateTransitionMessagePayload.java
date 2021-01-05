@@ -63,12 +63,12 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
     
     public void setForce(final Boolean force);
 
-    public static ReviewStateTransitionMessagePayloadImpl of(){
+    public static ReviewStateTransitionMessagePayload of(){
         return new ReviewStateTransitionMessagePayloadImpl();
     }
     
 
-    public static ReviewStateTransitionMessagePayloadImpl of(final ReviewStateTransitionMessagePayload template) {
+    public static ReviewStateTransitionMessagePayload of(final ReviewStateTransitionMessagePayload template) {
         ReviewStateTransitionMessagePayloadImpl instance = new ReviewStateTransitionMessagePayloadImpl();
         instance.setOldState(template.getOldState());
         instance.setNewState(template.getNewState());
@@ -78,6 +78,15 @@ public interface ReviewStateTransitionMessagePayload extends MessagePayload {
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static ReviewStateTransitionMessagePayloadBuilder builder(){
+        return ReviewStateTransitionMessagePayloadBuilder.of();
+    }
+    
+    public static ReviewStateTransitionMessagePayloadBuilder builder(final ReviewStateTransitionMessagePayload template){
+        return ReviewStateTransitionMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withReviewStateTransitionMessagePayload(Function<ReviewStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);

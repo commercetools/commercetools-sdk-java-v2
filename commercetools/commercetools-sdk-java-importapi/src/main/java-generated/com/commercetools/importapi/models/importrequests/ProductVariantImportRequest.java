@@ -38,16 +38,25 @@ public interface ProductVariantImportRequest extends ImportRequest {
     public void setResources(final ProductVariantImport ...resources);
     public void setResources(final List<ProductVariantImport> resources);
 
-    public static ProductVariantImportRequestImpl of(){
+    public static ProductVariantImportRequest of(){
         return new ProductVariantImportRequestImpl();
     }
     
 
-    public static ProductVariantImportRequestImpl of(final ProductVariantImportRequest template) {
+    public static ProductVariantImportRequest of(final ProductVariantImportRequest template) {
         ProductVariantImportRequestImpl instance = new ProductVariantImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public static ProductVariantImportRequestBuilder builder(){
+        return ProductVariantImportRequestBuilder.of();
+    }
+    
+    public static ProductVariantImportRequestBuilder builder(final ProductVariantImportRequest template){
+        return ProductVariantImportRequestBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantImportRequest(Function<ProductVariantImportRequest, T> helper) {
         return helper.apply(this);

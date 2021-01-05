@@ -30,16 +30,25 @@ public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction 
 
     public void setDestination(final ExtensionDestination destination);
 
-    public static ExtensionChangeDestinationActionImpl of(){
+    public static ExtensionChangeDestinationAction of(){
         return new ExtensionChangeDestinationActionImpl();
     }
     
 
-    public static ExtensionChangeDestinationActionImpl of(final ExtensionChangeDestinationAction template) {
+    public static ExtensionChangeDestinationAction of(final ExtensionChangeDestinationAction template) {
         ExtensionChangeDestinationActionImpl instance = new ExtensionChangeDestinationActionImpl();
         instance.setDestination(template.getDestination());
         return instance;
     }
+
+    public static ExtensionChangeDestinationActionBuilder builder(){
+        return ExtensionChangeDestinationActionBuilder.of();
+    }
+    
+    public static ExtensionChangeDestinationActionBuilder builder(final ExtensionChangeDestinationAction template){
+        return ExtensionChangeDestinationActionBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionChangeDestinationAction(Function<ExtensionChangeDestinationAction, T> helper) {
         return helper.apply(this);

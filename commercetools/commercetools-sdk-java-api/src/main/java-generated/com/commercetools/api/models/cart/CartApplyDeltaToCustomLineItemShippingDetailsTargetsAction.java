@@ -38,17 +38,26 @@ public interface CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction exte
     public void setTargetsDelta(final ItemShippingTarget ...targetsDelta);
     public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
 
-    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl of(){
+    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction of(){
         return new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl();
     }
     
 
-    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl of(final CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction template) {
+    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction of(final CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction template) {
         CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setTargetsDelta(template.getTargetsDelta());
         return instance;
     }
+
+    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder builder(){
+        return CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder.of();
+    }
+    
+    public static CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder builder(final CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction template){
+        return CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartApplyDeltaToCustomLineItemShippingDetailsTargetsAction(Function<CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction, T> helper) {
         return helper.apply(this);

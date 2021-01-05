@@ -32,16 +32,25 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
     public void setLanguages(final String ...languages);
     public void setLanguages(final List<String> languages);
 
-    public static ProjectChangeLanguagesActionImpl of(){
+    public static ProjectChangeLanguagesAction of(){
         return new ProjectChangeLanguagesActionImpl();
     }
     
 
-    public static ProjectChangeLanguagesActionImpl of(final ProjectChangeLanguagesAction template) {
+    public static ProjectChangeLanguagesAction of(final ProjectChangeLanguagesAction template) {
         ProjectChangeLanguagesActionImpl instance = new ProjectChangeLanguagesActionImpl();
         instance.setLanguages(template.getLanguages());
         return instance;
     }
+
+    public static ProjectChangeLanguagesActionBuilder builder(){
+        return ProjectChangeLanguagesActionBuilder.of();
+    }
+    
+    public static ProjectChangeLanguagesActionBuilder builder(final ProjectChangeLanguagesAction template){
+        return ProjectChangeLanguagesActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectChangeLanguagesAction(Function<ProjectChangeLanguagesAction, T> helper) {
         return helper.apply(this);

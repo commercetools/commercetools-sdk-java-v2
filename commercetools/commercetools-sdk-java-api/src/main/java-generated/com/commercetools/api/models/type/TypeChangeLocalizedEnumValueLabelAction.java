@@ -36,17 +36,26 @@ public interface TypeChangeLocalizedEnumValueLabelAction extends TypeUpdateActio
     
     public void setValue(final CustomFieldLocalizedEnumValue value);
 
-    public static TypeChangeLocalizedEnumValueLabelActionImpl of(){
+    public static TypeChangeLocalizedEnumValueLabelAction of(){
         return new TypeChangeLocalizedEnumValueLabelActionImpl();
     }
     
 
-    public static TypeChangeLocalizedEnumValueLabelActionImpl of(final TypeChangeLocalizedEnumValueLabelAction template) {
+    public static TypeChangeLocalizedEnumValueLabelAction of(final TypeChangeLocalizedEnumValueLabelAction template) {
         TypeChangeLocalizedEnumValueLabelActionImpl instance = new TypeChangeLocalizedEnumValueLabelActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TypeChangeLocalizedEnumValueLabelActionBuilder builder(){
+        return TypeChangeLocalizedEnumValueLabelActionBuilder.of();
+    }
+    
+    public static TypeChangeLocalizedEnumValueLabelActionBuilder builder(final TypeChangeLocalizedEnumValueLabelAction template){
+        return TypeChangeLocalizedEnumValueLabelActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeLocalizedEnumValueLabelAction(Function<TypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);

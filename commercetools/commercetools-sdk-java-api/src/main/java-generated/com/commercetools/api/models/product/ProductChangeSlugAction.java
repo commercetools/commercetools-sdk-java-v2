@@ -40,17 +40,26 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductChangeSlugActionImpl of(){
+    public static ProductChangeSlugAction of(){
         return new ProductChangeSlugActionImpl();
     }
     
 
-    public static ProductChangeSlugActionImpl of(final ProductChangeSlugAction template) {
+    public static ProductChangeSlugAction of(final ProductChangeSlugAction template) {
         ProductChangeSlugActionImpl instance = new ProductChangeSlugActionImpl();
         instance.setSlug(template.getSlug());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductChangeSlugActionBuilder builder(){
+        return ProductChangeSlugActionBuilder.of();
+    }
+    
+    public static ProductChangeSlugActionBuilder builder(final ProductChangeSlugAction template){
+        return ProductChangeSlugActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductChangeSlugAction(Function<ProductChangeSlugAction, T> helper) {
         return helper.apply(this);

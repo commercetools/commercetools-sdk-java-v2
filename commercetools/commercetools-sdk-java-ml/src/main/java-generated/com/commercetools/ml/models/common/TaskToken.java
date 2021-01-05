@@ -41,17 +41,26 @@ public interface TaskToken  {
     
     public void setUriPath(final String uriPath);
 
-    public static TaskTokenImpl of(){
+    public static TaskToken of(){
         return new TaskTokenImpl();
     }
     
 
-    public static TaskTokenImpl of(final TaskToken template) {
+    public static TaskToken of(final TaskToken template) {
         TaskTokenImpl instance = new TaskTokenImpl();
         instance.setTaskId(template.getTaskId());
         instance.setUriPath(template.getUriPath());
         return instance;
     }
+
+    public static TaskTokenBuilder builder(){
+        return TaskTokenBuilder.of();
+    }
+    
+    public static TaskTokenBuilder builder(final TaskToken template){
+        return TaskTokenBuilder.of(template);
+    }
+    
 
     default <T> T withTaskToken(Function<TaskToken, T> helper) {
         return helper.apply(this);

@@ -30,12 +30,12 @@ public interface PaymentCreatedMessage extends Message {
 
     public void setPayment(final Payment payment);
 
-    public static PaymentCreatedMessageImpl of(){
+    public static PaymentCreatedMessage of(){
         return new PaymentCreatedMessageImpl();
     }
     
 
-    public static PaymentCreatedMessageImpl of(final PaymentCreatedMessage template) {
+    public static PaymentCreatedMessage of(final PaymentCreatedMessage template) {
         PaymentCreatedMessageImpl instance = new PaymentCreatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface PaymentCreatedMessage extends Message {
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public static PaymentCreatedMessageBuilder builder(){
+        return PaymentCreatedMessageBuilder.of();
+    }
+    
+    public static PaymentCreatedMessageBuilder builder(final PaymentCreatedMessage template){
+        return PaymentCreatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentCreatedMessage(Function<PaymentCreatedMessage, T> helper) {
         return helper.apply(this);

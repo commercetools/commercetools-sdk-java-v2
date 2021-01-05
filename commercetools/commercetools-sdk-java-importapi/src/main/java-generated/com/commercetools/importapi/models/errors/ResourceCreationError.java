@@ -29,17 +29,26 @@ public interface ResourceCreationError extends ErrorObject {
 
     public void setResource(final JsonNode resource);
 
-    public static ResourceCreationErrorImpl of(){
+    public static ResourceCreationError of(){
         return new ResourceCreationErrorImpl();
     }
     
 
-    public static ResourceCreationErrorImpl of(final ResourceCreationError template) {
+    public static ResourceCreationError of(final ResourceCreationError template) {
         ResourceCreationErrorImpl instance = new ResourceCreationErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public static ResourceCreationErrorBuilder builder(){
+        return ResourceCreationErrorBuilder.of();
+    }
+    
+    public static ResourceCreationErrorBuilder builder(final ResourceCreationError template){
+        return ResourceCreationErrorBuilder.of(template);
+    }
+    
 
     default <T> T withResourceCreationError(Function<ResourceCreationError, T> helper) {
         return helper.apply(this);

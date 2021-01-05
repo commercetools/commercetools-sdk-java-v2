@@ -30,16 +30,25 @@ public interface ReviewSetTitleAction extends ReviewUpdateAction {
 
     public void setTitle(final String title);
 
-    public static ReviewSetTitleActionImpl of(){
+    public static ReviewSetTitleAction of(){
         return new ReviewSetTitleActionImpl();
     }
     
 
-    public static ReviewSetTitleActionImpl of(final ReviewSetTitleAction template) {
+    public static ReviewSetTitleAction of(final ReviewSetTitleAction template) {
         ReviewSetTitleActionImpl instance = new ReviewSetTitleActionImpl();
         instance.setTitle(template.getTitle());
         return instance;
     }
+
+    public static ReviewSetTitleActionBuilder builder(){
+        return ReviewSetTitleActionBuilder.of();
+    }
+    
+    public static ReviewSetTitleActionBuilder builder(final ReviewSetTitleAction template){
+        return ReviewSetTitleActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetTitleAction(Function<ReviewSetTitleAction, T> helper) {
         return helper.apply(this);

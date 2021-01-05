@@ -36,17 +36,26 @@ public interface Money  {
     
     public void setCurrencyCode(final String currencyCode);
 
-    public static MoneyImpl of(){
+    public static Money of(){
         return new MoneyImpl();
     }
     
 
-    public static MoneyImpl of(final Money template) {
+    public static Money of(final Money template) {
         MoneyImpl instance = new MoneyImpl();
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
     }
+
+    public static MoneyBuilder builder(){
+        return MoneyBuilder.of();
+    }
+    
+    public static MoneyBuilder builder(final Money template){
+        return MoneyBuilder.of(template);
+    }
+    
 
     default <T> T withMoney(Function<Money, T> helper) {
         return helper.apply(this);

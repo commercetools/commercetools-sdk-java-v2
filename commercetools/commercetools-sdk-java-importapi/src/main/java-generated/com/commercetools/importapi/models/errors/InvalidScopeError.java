@@ -26,16 +26,25 @@ public interface InvalidScopeError extends ErrorObject {
 
 
 
-    public static InvalidScopeErrorImpl of(){
+    public static InvalidScopeError of(){
         return new InvalidScopeErrorImpl();
     }
     
 
-    public static InvalidScopeErrorImpl of(final InvalidScopeError template) {
+    public static InvalidScopeError of(final InvalidScopeError template) {
         InvalidScopeErrorImpl instance = new InvalidScopeErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidScopeErrorBuilder builder(){
+        return InvalidScopeErrorBuilder.of();
+    }
+    
+    public static InvalidScopeErrorBuilder builder(final InvalidScopeError template){
+        return InvalidScopeErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidScopeError(Function<InvalidScopeError, T> helper) {
         return helper.apply(this);

@@ -38,17 +38,26 @@ public interface ProductDeletedMessagePayload extends MessagePayload {
     
     public void setCurrentProjection(final ProductProjection currentProjection);
 
-    public static ProductDeletedMessagePayloadImpl of(){
+    public static ProductDeletedMessagePayload of(){
         return new ProductDeletedMessagePayloadImpl();
     }
     
 
-    public static ProductDeletedMessagePayloadImpl of(final ProductDeletedMessagePayload template) {
+    public static ProductDeletedMessagePayload of(final ProductDeletedMessagePayload template) {
         ProductDeletedMessagePayloadImpl instance = new ProductDeletedMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         instance.setCurrentProjection(template.getCurrentProjection());
         return instance;
     }
+
+    public static ProductDeletedMessagePayloadBuilder builder(){
+        return ProductDeletedMessagePayloadBuilder.of();
+    }
+    
+    public static ProductDeletedMessagePayloadBuilder builder(final ProductDeletedMessagePayload template){
+        return ProductDeletedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductDeletedMessagePayload(Function<ProductDeletedMessagePayload, T> helper) {
         return helper.apply(this);

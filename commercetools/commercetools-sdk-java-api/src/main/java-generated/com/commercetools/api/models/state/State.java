@@ -138,12 +138,12 @@ public interface State extends BaseResource, com.commercetools.api.models.Domain
     public void setTransitions(final StateReference ...transitions);
     public void setTransitions(final List<StateReference> transitions);
 
-    public static StateImpl of(){
+    public static State of(){
         return new StateImpl();
     }
     
 
-    public static StateImpl of(final State template) {
+    public static State of(final State template) {
         StateImpl instance = new StateImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -161,6 +161,15 @@ public interface State extends BaseResource, com.commercetools.api.models.Domain
         instance.setTransitions(template.getTransitions());
         return instance;
     }
+
+    public static StateBuilder builder(){
+        return StateBuilder.of();
+    }
+    
+    public static StateBuilder builder(final State template){
+        return StateBuilder.of(template);
+    }
+    
 
     default <T> T withState(Function<State, T> helper) {
         return helper.apply(this);

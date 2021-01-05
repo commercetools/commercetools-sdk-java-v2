@@ -23,16 +23,25 @@ public interface NotEnabledError extends ErrorObject {
 
 
 
-    public static NotEnabledErrorImpl of(){
+    public static NotEnabledError of(){
         return new NotEnabledErrorImpl();
     }
     
 
-    public static NotEnabledErrorImpl of(final NotEnabledError template) {
+    public static NotEnabledError of(final NotEnabledError template) {
         NotEnabledErrorImpl instance = new NotEnabledErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static NotEnabledErrorBuilder builder(){
+        return NotEnabledErrorBuilder.of();
+    }
+    
+    public static NotEnabledErrorBuilder builder(final NotEnabledError template){
+        return NotEnabledErrorBuilder.of(template);
+    }
+    
 
     default <T> T withNotEnabledError(Function<NotEnabledError, T> helper) {
         return helper.apply(this);

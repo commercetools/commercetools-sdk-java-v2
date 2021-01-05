@@ -38,17 +38,26 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
     public void setState(final ItemState ...state);
     public void setState(final List<ItemState> state);
 
-    public static StagedOrderImportCustomLineItemStateActionImpl of(){
+    public static StagedOrderImportCustomLineItemStateAction of(){
         return new StagedOrderImportCustomLineItemStateActionImpl();
     }
     
 
-    public static StagedOrderImportCustomLineItemStateActionImpl of(final StagedOrderImportCustomLineItemStateAction template) {
+    public static StagedOrderImportCustomLineItemStateAction of(final StagedOrderImportCustomLineItemStateAction template) {
         StagedOrderImportCustomLineItemStateActionImpl instance = new StagedOrderImportCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static StagedOrderImportCustomLineItemStateActionBuilder builder(){
+        return StagedOrderImportCustomLineItemStateActionBuilder.of();
+    }
+    
+    public static StagedOrderImportCustomLineItemStateActionBuilder builder(final StagedOrderImportCustomLineItemStateAction template){
+        return StagedOrderImportCustomLineItemStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderImportCustomLineItemStateAction(Function<StagedOrderImportCustomLineItemStateAction, T> helper) {
         return helper.apply(this);

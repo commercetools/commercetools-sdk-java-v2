@@ -56,12 +56,12 @@ public interface MyPaymentDraft  {
     
     public void setTransaction(final MyTransactionDraft transaction);
 
-    public static MyPaymentDraftImpl of(){
+    public static MyPaymentDraft of(){
         return new MyPaymentDraftImpl();
     }
     
 
-    public static MyPaymentDraftImpl of(final MyPaymentDraft template) {
+    public static MyPaymentDraft of(final MyPaymentDraft template) {
         MyPaymentDraftImpl instance = new MyPaymentDraftImpl();
         instance.setAmountPlanned(template.getAmountPlanned());
         instance.setPaymentMethodInfo(template.getPaymentMethodInfo());
@@ -69,6 +69,15 @@ public interface MyPaymentDraft  {
         instance.setTransaction(template.getTransaction());
         return instance;
     }
+
+    public static MyPaymentDraftBuilder builder(){
+        return MyPaymentDraftBuilder.of();
+    }
+    
+    public static MyPaymentDraftBuilder builder(final MyPaymentDraft template){
+        return MyPaymentDraftBuilder.of(template);
+    }
+    
 
     default <T> T withMyPaymentDraft(Function<MyPaymentDraft, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
 
     public void setCustomLineItemId(final String customLineItemId);
 
-    public static StagedOrderRemoveCustomLineItemActionImpl of(){
+    public static StagedOrderRemoveCustomLineItemAction of(){
         return new StagedOrderRemoveCustomLineItemActionImpl();
     }
     
 
-    public static StagedOrderRemoveCustomLineItemActionImpl of(final StagedOrderRemoveCustomLineItemAction template) {
+    public static StagedOrderRemoveCustomLineItemAction of(final StagedOrderRemoveCustomLineItemAction template) {
         StagedOrderRemoveCustomLineItemActionImpl instance = new StagedOrderRemoveCustomLineItemActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         return instance;
     }
+
+    public static StagedOrderRemoveCustomLineItemActionBuilder builder(){
+        return StagedOrderRemoveCustomLineItemActionBuilder.of();
+    }
+    
+    public static StagedOrderRemoveCustomLineItemActionBuilder builder(final StagedOrderRemoveCustomLineItemAction template){
+        return StagedOrderRemoveCustomLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderRemoveCustomLineItemAction(Function<StagedOrderRemoveCustomLineItemAction, T> helper) {
         return helper.apply(this);

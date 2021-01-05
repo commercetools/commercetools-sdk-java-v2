@@ -31,16 +31,25 @@ public interface ProductDiscountSetKeyAction extends ProductDiscountUpdateAction
 
     public void setKey(final String key);
 
-    public static ProductDiscountSetKeyActionImpl of(){
+    public static ProductDiscountSetKeyAction of(){
         return new ProductDiscountSetKeyActionImpl();
     }
     
 
-    public static ProductDiscountSetKeyActionImpl of(final ProductDiscountSetKeyAction template) {
+    public static ProductDiscountSetKeyAction of(final ProductDiscountSetKeyAction template) {
         ProductDiscountSetKeyActionImpl instance = new ProductDiscountSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ProductDiscountSetKeyActionBuilder builder(){
+        return ProductDiscountSetKeyActionBuilder.of();
+    }
+    
+    public static ProductDiscountSetKeyActionBuilder builder(final ProductDiscountSetKeyAction template){
+        return ProductDiscountSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountSetKeyAction(Function<ProductDiscountSetKeyAction, T> helper) {
         return helper.apply(this);

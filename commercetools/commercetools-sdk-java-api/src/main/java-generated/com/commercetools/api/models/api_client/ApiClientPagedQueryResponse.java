@@ -55,12 +55,12 @@ public interface ApiClientPagedQueryResponse extends com.commercetools.api.model
     public void setResults(final ApiClient ...results);
     public void setResults(final List<ApiClient> results);
 
-    public static ApiClientPagedQueryResponseImpl of(){
+    public static ApiClientPagedQueryResponse of(){
         return new ApiClientPagedQueryResponseImpl();
     }
     
 
-    public static ApiClientPagedQueryResponseImpl of(final ApiClientPagedQueryResponse template) {
+    public static ApiClientPagedQueryResponse of(final ApiClientPagedQueryResponse template) {
         ApiClientPagedQueryResponseImpl instance = new ApiClientPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ApiClientPagedQueryResponse extends com.commercetools.api.model
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ApiClientPagedQueryResponseBuilder builder(){
+        return ApiClientPagedQueryResponseBuilder.of();
+    }
+    
+    public static ApiClientPagedQueryResponseBuilder builder(final ApiClientPagedQueryResponse template){
+        return ApiClientPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withApiClientPagedQueryResponse(Function<ApiClientPagedQueryResponse, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface FilteredFacetResult extends FacetResult {
     
     public void setProductCount(final Long productCount);
 
-    public static FilteredFacetResultImpl of(){
+    public static FilteredFacetResult of(){
         return new FilteredFacetResultImpl();
     }
     
 
-    public static FilteredFacetResultImpl of(final FilteredFacetResult template) {
+    public static FilteredFacetResult of(final FilteredFacetResult template) {
         FilteredFacetResultImpl instance = new FilteredFacetResultImpl();
         instance.setCount(template.getCount());
         instance.setProductCount(template.getProductCount());
         return instance;
     }
+
+    public static FilteredFacetResultBuilder builder(){
+        return FilteredFacetResultBuilder.of();
+    }
+    
+    public static FilteredFacetResultBuilder builder(final FilteredFacetResult template){
+        return FilteredFacetResultBuilder.of(template);
+    }
+    
 
     default <T> T withFilteredFacetResult(Function<FilteredFacetResult, T> helper) {
         return helper.apply(this);

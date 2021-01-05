@@ -35,17 +35,26 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
     
     public void setTrackingData(final TrackingData trackingData);
 
-    public static OrderSetParcelTrackingDataActionImpl of(){
+    public static OrderSetParcelTrackingDataAction of(){
         return new OrderSetParcelTrackingDataActionImpl();
     }
     
 
-    public static OrderSetParcelTrackingDataActionImpl of(final OrderSetParcelTrackingDataAction template) {
+    public static OrderSetParcelTrackingDataAction of(final OrderSetParcelTrackingDataAction template) {
         OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
         instance.setParcelId(template.getParcelId());
         instance.setTrackingData(template.getTrackingData());
         return instance;
     }
+
+    public static OrderSetParcelTrackingDataActionBuilder builder(){
+        return OrderSetParcelTrackingDataActionBuilder.of();
+    }
+    
+    public static OrderSetParcelTrackingDataActionBuilder builder(final OrderSetParcelTrackingDataAction template){
+        return OrderSetParcelTrackingDataActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetParcelTrackingDataAction(Function<OrderSetParcelTrackingDataAction, T> helper) {
         return helper.apply(this);

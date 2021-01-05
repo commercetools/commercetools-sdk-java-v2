@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry> {
+public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInventoryByIDDelete, com.commercetools.api.models.inventory.InventoryEntry> implements com.commercetools.api.client.VersionedTrait<ByProjectKeyInventoryByIDDelete>, com.commercetools.api.client.ConflictingTrait<ByProjectKeyInventoryByIDDelete>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyInventoryByIDDelete>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyInventoryByIDDelete>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInventoryByIDDelete> {
 
     
     private String projectKey;

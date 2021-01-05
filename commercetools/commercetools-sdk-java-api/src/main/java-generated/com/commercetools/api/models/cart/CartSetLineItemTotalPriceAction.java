@@ -35,17 +35,26 @@ public interface CartSetLineItemTotalPriceAction extends CartUpdateAction {
     
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
-    public static CartSetLineItemTotalPriceActionImpl of(){
+    public static CartSetLineItemTotalPriceAction of(){
         return new CartSetLineItemTotalPriceActionImpl();
     }
     
 
-    public static CartSetLineItemTotalPriceActionImpl of(final CartSetLineItemTotalPriceAction template) {
+    public static CartSetLineItemTotalPriceAction of(final CartSetLineItemTotalPriceAction template) {
         CartSetLineItemTotalPriceActionImpl instance = new CartSetLineItemTotalPriceActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         return instance;
     }
+
+    public static CartSetLineItemTotalPriceActionBuilder builder(){
+        return CartSetLineItemTotalPriceActionBuilder.of();
+    }
+    
+    public static CartSetLineItemTotalPriceActionBuilder builder(final CartSetLineItemTotalPriceAction template){
+        return CartSetLineItemTotalPriceActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetLineItemTotalPriceAction(Function<CartSetLineItemTotalPriceAction, T> helper) {
         return helper.apply(this);

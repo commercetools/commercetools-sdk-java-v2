@@ -42,18 +42,27 @@ public interface ShoppingListSetLineItemCustomTypeAction extends ShoppingListUpd
     
     public void setFields(final FieldContainer fields);
 
-    public static ShoppingListSetLineItemCustomTypeActionImpl of(){
+    public static ShoppingListSetLineItemCustomTypeAction of(){
         return new ShoppingListSetLineItemCustomTypeActionImpl();
     }
     
 
-    public static ShoppingListSetLineItemCustomTypeActionImpl of(final ShoppingListSetLineItemCustomTypeAction template) {
+    public static ShoppingListSetLineItemCustomTypeAction of(final ShoppingListSetLineItemCustomTypeAction template) {
         ShoppingListSetLineItemCustomTypeActionImpl instance = new ShoppingListSetLineItemCustomTypeActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static ShoppingListSetLineItemCustomTypeActionBuilder builder(){
+        return ShoppingListSetLineItemCustomTypeActionBuilder.of();
+    }
+    
+    public static ShoppingListSetLineItemCustomTypeActionBuilder builder(final ShoppingListSetLineItemCustomTypeAction template){
+        return ShoppingListSetLineItemCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListSetLineItemCustomTypeAction(Function<ShoppingListSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);

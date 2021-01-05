@@ -28,16 +28,25 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
 
     public void setCustomLineItemId(final String customLineItemId);
 
-    public static CartRemoveCustomLineItemActionImpl of(){
+    public static CartRemoveCustomLineItemAction of(){
         return new CartRemoveCustomLineItemActionImpl();
     }
     
 
-    public static CartRemoveCustomLineItemActionImpl of(final CartRemoveCustomLineItemAction template) {
+    public static CartRemoveCustomLineItemAction of(final CartRemoveCustomLineItemAction template) {
         CartRemoveCustomLineItemActionImpl instance = new CartRemoveCustomLineItemActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         return instance;
     }
+
+    public static CartRemoveCustomLineItemActionBuilder builder(){
+        return CartRemoveCustomLineItemActionBuilder.of();
+    }
+    
+    public static CartRemoveCustomLineItemActionBuilder builder(final CartRemoveCustomLineItemAction template){
+        return CartRemoveCustomLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartRemoveCustomLineItemAction(Function<CartRemoveCustomLineItemAction, T> helper) {
         return helper.apply(this);

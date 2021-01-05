@@ -36,17 +36,26 @@ public interface PaymentTransitionStateAction extends PaymentUpdateAction {
     
     public void setForce(final Boolean force);
 
-    public static PaymentTransitionStateActionImpl of(){
+    public static PaymentTransitionStateAction of(){
         return new PaymentTransitionStateActionImpl();
     }
     
 
-    public static PaymentTransitionStateActionImpl of(final PaymentTransitionStateAction template) {
+    public static PaymentTransitionStateAction of(final PaymentTransitionStateAction template) {
         PaymentTransitionStateActionImpl instance = new PaymentTransitionStateActionImpl();
         instance.setState(template.getState());
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static PaymentTransitionStateActionBuilder builder(){
+        return PaymentTransitionStateActionBuilder.of();
+    }
+    
+    public static PaymentTransitionStateActionBuilder builder(final PaymentTransitionStateAction template){
+        return PaymentTransitionStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentTransitionStateAction(Function<PaymentTransitionStateAction, T> helper) {
         return helper.apply(this);

@@ -36,17 +36,26 @@ public interface PriceFunction  {
     
     public void setFunction(final String function);
 
-    public static PriceFunctionImpl of(){
+    public static PriceFunction of(){
         return new PriceFunctionImpl();
     }
     
 
-    public static PriceFunctionImpl of(final PriceFunction template) {
+    public static PriceFunction of(final PriceFunction template) {
         PriceFunctionImpl instance = new PriceFunctionImpl();
         instance.setCurrencyCode(template.getCurrencyCode());
         instance.setFunction(template.getFunction());
         return instance;
     }
+
+    public static PriceFunctionBuilder builder(){
+        return PriceFunctionBuilder.of();
+    }
+    
+    public static PriceFunctionBuilder builder(final PriceFunction template){
+        return PriceFunctionBuilder.of(template);
+    }
+    
 
     default <T> T withPriceFunction(Function<PriceFunction, T> helper) {
         return helper.apply(this);

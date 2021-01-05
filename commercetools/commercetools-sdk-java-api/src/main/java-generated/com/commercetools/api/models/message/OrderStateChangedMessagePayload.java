@@ -35,17 +35,26 @@ public interface OrderStateChangedMessagePayload extends MessagePayload {
     
     public void setOldOrderState(final OrderState oldOrderState);
 
-    public static OrderStateChangedMessagePayloadImpl of(){
+    public static OrderStateChangedMessagePayload of(){
         return new OrderStateChangedMessagePayloadImpl();
     }
     
 
-    public static OrderStateChangedMessagePayloadImpl of(final OrderStateChangedMessagePayload template) {
+    public static OrderStateChangedMessagePayload of(final OrderStateChangedMessagePayload template) {
         OrderStateChangedMessagePayloadImpl instance = new OrderStateChangedMessagePayloadImpl();
         instance.setOrderState(template.getOrderState());
         instance.setOldOrderState(template.getOldOrderState());
         return instance;
     }
+
+    public static OrderStateChangedMessagePayloadBuilder builder(){
+        return OrderStateChangedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderStateChangedMessagePayloadBuilder builder(final OrderStateChangedMessagePayload template){
+        return OrderStateChangedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderStateChangedMessagePayload(Function<OrderStateChangedMessagePayload, T> helper) {
         return helper.apply(this);

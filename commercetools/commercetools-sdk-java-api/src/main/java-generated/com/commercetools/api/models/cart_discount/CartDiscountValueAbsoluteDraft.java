@@ -32,16 +32,25 @@ public interface CartDiscountValueAbsoluteDraft extends CartDiscountValueDraft {
     public void setMoney(final Money ...money);
     public void setMoney(final List<Money> money);
 
-    public static CartDiscountValueAbsoluteDraftImpl of(){
+    public static CartDiscountValueAbsoluteDraft of(){
         return new CartDiscountValueAbsoluteDraftImpl();
     }
     
 
-    public static CartDiscountValueAbsoluteDraftImpl of(final CartDiscountValueAbsoluteDraft template) {
+    public static CartDiscountValueAbsoluteDraft of(final CartDiscountValueAbsoluteDraft template) {
         CartDiscountValueAbsoluteDraftImpl instance = new CartDiscountValueAbsoluteDraftImpl();
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public static CartDiscountValueAbsoluteDraftBuilder builder(){
+        return CartDiscountValueAbsoluteDraftBuilder.of();
+    }
+    
+    public static CartDiscountValueAbsoluteDraftBuilder builder(final CartDiscountValueAbsoluteDraft template){
+        return CartDiscountValueAbsoluteDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountValueAbsoluteDraft(Function<CartDiscountValueAbsoluteDraft, T> helper) {
         return helper.apply(this);

@@ -23,15 +23,24 @@ public interface ProductDiscountValueExternal extends ProductDiscountValue {
 
 
 
-    public static ProductDiscountValueExternalImpl of(){
+    public static ProductDiscountValueExternal of(){
         return new ProductDiscountValueExternalImpl();
     }
     
 
-    public static ProductDiscountValueExternalImpl of(final ProductDiscountValueExternal template) {
+    public static ProductDiscountValueExternal of(final ProductDiscountValueExternal template) {
         ProductDiscountValueExternalImpl instance = new ProductDiscountValueExternalImpl();
         return instance;
     }
+
+    public static ProductDiscountValueExternalBuilder builder(){
+        return ProductDiscountValueExternalBuilder.of();
+    }
+    
+    public static ProductDiscountValueExternalBuilder builder(final ProductDiscountValueExternal template){
+        return ProductDiscountValueExternalBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountValueExternal(Function<ProductDiscountValueExternal, T> helper) {
         return helper.apply(this);

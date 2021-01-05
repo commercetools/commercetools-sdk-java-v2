@@ -60,6 +60,7 @@ public interface FieldType  {
 
 
 
+
     default <T> T withFieldType(Function<FieldType, T> helper) {
         return helper.apply(this);
     }

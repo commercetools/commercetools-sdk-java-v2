@@ -99,12 +99,12 @@ public interface ProductVariantImport extends ImportResource {
     
     public void setProduct(final ProductKeyReference product);
 
-    public static ProductVariantImportImpl of(){
+    public static ProductVariantImport of(){
         return new ProductVariantImportImpl();
     }
     
 
-    public static ProductVariantImportImpl of(final ProductVariantImport template) {
+    public static ProductVariantImport of(final ProductVariantImport template) {
         ProductVariantImportImpl instance = new ProductVariantImportImpl();
         instance.setKey(template.getKey());
         instance.setSku(template.getSku());
@@ -116,6 +116,15 @@ public interface ProductVariantImport extends ImportResource {
         instance.setProduct(template.getProduct());
         return instance;
     }
+
+    public static ProductVariantImportBuilder builder(){
+        return ProductVariantImportBuilder.of();
+    }
+    
+    public static ProductVariantImportBuilder builder(final ProductVariantImport template){
+        return ProductVariantImportBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantImport(Function<ProductVariantImport, T> helper) {
         return helper.apply(this);

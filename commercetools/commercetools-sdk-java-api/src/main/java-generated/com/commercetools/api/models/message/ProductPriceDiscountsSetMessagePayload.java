@@ -32,16 +32,25 @@ public interface ProductPriceDiscountsSetMessagePayload extends MessagePayload {
     public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice ...updatedPrices);
     public void setUpdatedPrices(final List<ProductPriceDiscountsSetUpdatedPrice> updatedPrices);
 
-    public static ProductPriceDiscountsSetMessagePayloadImpl of(){
+    public static ProductPriceDiscountsSetMessagePayload of(){
         return new ProductPriceDiscountsSetMessagePayloadImpl();
     }
     
 
-    public static ProductPriceDiscountsSetMessagePayloadImpl of(final ProductPriceDiscountsSetMessagePayload template) {
+    public static ProductPriceDiscountsSetMessagePayload of(final ProductPriceDiscountsSetMessagePayload template) {
         ProductPriceDiscountsSetMessagePayloadImpl instance = new ProductPriceDiscountsSetMessagePayloadImpl();
         instance.setUpdatedPrices(template.getUpdatedPrices());
         return instance;
     }
+
+    public static ProductPriceDiscountsSetMessagePayloadBuilder builder(){
+        return ProductPriceDiscountsSetMessagePayloadBuilder.of();
+    }
+    
+    public static ProductPriceDiscountsSetMessagePayloadBuilder builder(final ProductPriceDiscountsSetMessagePayload template){
+        return ProductPriceDiscountsSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductPriceDiscountsSetMessagePayload(Function<ProductPriceDiscountsSetMessagePayload, T> helper) {
         return helper.apply(this);

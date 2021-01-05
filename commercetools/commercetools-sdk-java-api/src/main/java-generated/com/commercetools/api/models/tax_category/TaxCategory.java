@@ -101,12 +101,12 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
     
     public void setKey(final String key);
 
-    public static TaxCategoryImpl of(){
+    public static TaxCategory of(){
         return new TaxCategoryImpl();
     }
     
 
-    public static TaxCategoryImpl of(final TaxCategory template) {
+    public static TaxCategory of(final TaxCategory template) {
         TaxCategoryImpl instance = new TaxCategoryImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -120,6 +120,15 @@ public interface TaxCategory extends BaseResource, com.commercetools.api.models.
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static TaxCategoryBuilder builder(){
+        return TaxCategoryBuilder.of();
+    }
+    
+    public static TaxCategoryBuilder builder(final TaxCategory template){
+        return TaxCategoryBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategory(Function<TaxCategory, T> helper) {
         return helper.apply(this);

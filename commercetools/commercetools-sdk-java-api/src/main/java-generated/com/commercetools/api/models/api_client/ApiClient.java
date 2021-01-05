@@ -78,12 +78,12 @@ public interface ApiClient  {
     
     public void setSecret(final String secret);
 
-    public static ApiClientImpl of(){
+    public static ApiClient of(){
         return new ApiClientImpl();
     }
     
 
-    public static ApiClientImpl of(final ApiClient template) {
+    public static ApiClient of(final ApiClient template) {
         ApiClientImpl instance = new ApiClientImpl();
         instance.setId(template.getId());
         instance.setName(template.getName());
@@ -94,6 +94,15 @@ public interface ApiClient  {
         instance.setSecret(template.getSecret());
         return instance;
     }
+
+    public static ApiClientBuilder builder(){
+        return ApiClientBuilder.of();
+    }
+    
+    public static ApiClientBuilder builder(final ApiClient template){
+        return ApiClientBuilder.of(template);
+    }
+    
 
     default <T> T withApiClient(Function<ApiClient, T> helper) {
         return helper.apply(this);

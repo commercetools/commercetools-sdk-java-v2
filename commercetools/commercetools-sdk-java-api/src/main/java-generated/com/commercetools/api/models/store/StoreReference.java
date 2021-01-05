@@ -30,17 +30,26 @@ public interface StoreReference extends Reference {
 
     public void setObj(final Store obj);
 
-    public static StoreReferenceImpl of(){
+    public static StoreReference of(){
         return new StoreReferenceImpl();
     }
     
 
-    public static StoreReferenceImpl of(final StoreReference template) {
+    public static StoreReference of(final StoreReference template) {
         StoreReferenceImpl instance = new StoreReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static StoreReferenceBuilder builder(){
+        return StoreReferenceBuilder.of();
+    }
+    
+    public static StoreReferenceBuilder builder(final StoreReference template){
+        return StoreReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withStoreReference(Function<StoreReference, T> helper) {
         return helper.apply(this);

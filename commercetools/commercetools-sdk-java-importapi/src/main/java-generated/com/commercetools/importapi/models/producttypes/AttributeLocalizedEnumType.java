@@ -32,16 +32,25 @@ public interface AttributeLocalizedEnumType extends AttributeType {
     public void setValues(final AttributeLocalizedEnumValue ...values);
     public void setValues(final List<AttributeLocalizedEnumValue> values);
 
-    public static AttributeLocalizedEnumTypeImpl of(){
+    public static AttributeLocalizedEnumType of(){
         return new AttributeLocalizedEnumTypeImpl();
     }
     
 
-    public static AttributeLocalizedEnumTypeImpl of(final AttributeLocalizedEnumType template) {
+    public static AttributeLocalizedEnumType of(final AttributeLocalizedEnumType template) {
         AttributeLocalizedEnumTypeImpl instance = new AttributeLocalizedEnumTypeImpl();
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public static AttributeLocalizedEnumTypeBuilder builder(){
+        return AttributeLocalizedEnumTypeBuilder.of();
+    }
+    
+    public static AttributeLocalizedEnumTypeBuilder builder(final AttributeLocalizedEnumType template){
+        return AttributeLocalizedEnumTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeLocalizedEnumType(Function<AttributeLocalizedEnumType, T> helper) {
         return helper.apply(this);

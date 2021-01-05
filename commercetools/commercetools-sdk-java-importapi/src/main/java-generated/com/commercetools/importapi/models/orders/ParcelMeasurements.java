@@ -46,12 +46,12 @@ public interface ParcelMeasurements  {
     
     public void setWeightInGram(final Double weightInGram);
 
-    public static ParcelMeasurementsImpl of(){
+    public static ParcelMeasurements of(){
         return new ParcelMeasurementsImpl();
     }
     
 
-    public static ParcelMeasurementsImpl of(final ParcelMeasurements template) {
+    public static ParcelMeasurements of(final ParcelMeasurements template) {
         ParcelMeasurementsImpl instance = new ParcelMeasurementsImpl();
         instance.setHeightInMillimeter(template.getHeightInMillimeter());
         instance.setLengthInMillimeter(template.getLengthInMillimeter());
@@ -59,6 +59,15 @@ public interface ParcelMeasurements  {
         instance.setWeightInGram(template.getWeightInGram());
         return instance;
     }
+
+    public static ParcelMeasurementsBuilder builder(){
+        return ParcelMeasurementsBuilder.of();
+    }
+    
+    public static ParcelMeasurementsBuilder builder(final ParcelMeasurements template){
+        return ParcelMeasurementsBuilder.of(template);
+    }
+    
 
     default <T> T withParcelMeasurements(Function<ParcelMeasurements, T> helper) {
         return helper.apply(this);

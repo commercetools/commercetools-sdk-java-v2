@@ -114,12 +114,12 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     
     public void setStatus(final SubscriptionHealthStatus status);
 
-    public static SubscriptionImpl of(){
+    public static Subscription of(){
         return new SubscriptionImpl();
     }
     
 
-    public static SubscriptionImpl of(final Subscription template) {
+    public static Subscription of(final Subscription template) {
         SubscriptionImpl instance = new SubscriptionImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -135,6 +135,15 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
         instance.setStatus(template.getStatus());
         return instance;
     }
+
+    public static SubscriptionBuilder builder(){
+        return SubscriptionBuilder.of();
+    }
+    
+    public static SubscriptionBuilder builder(final Subscription template){
+        return SubscriptionBuilder.of(template);
+    }
+    
 
     default <T> T withSubscription(Function<Subscription, T> helper) {
         return helper.apply(this);

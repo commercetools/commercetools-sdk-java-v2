@@ -27,16 +27,25 @@ public interface CustomerGroupKeyReference extends KeyReference {
 
 
 
-    public static CustomerGroupKeyReferenceImpl of(){
+    public static CustomerGroupKeyReference of(){
         return new CustomerGroupKeyReferenceImpl();
     }
     
 
-    public static CustomerGroupKeyReferenceImpl of(final CustomerGroupKeyReference template) {
+    public static CustomerGroupKeyReference of(final CustomerGroupKeyReference template) {
         CustomerGroupKeyReferenceImpl instance = new CustomerGroupKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CustomerGroupKeyReferenceBuilder builder(){
+        return CustomerGroupKeyReferenceBuilder.of();
+    }
+    
+    public static CustomerGroupKeyReferenceBuilder builder(final CustomerGroupKeyReference template){
+        return CustomerGroupKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupKeyReference(Function<CustomerGroupKeyReference, T> helper) {
         return helper.apply(this);

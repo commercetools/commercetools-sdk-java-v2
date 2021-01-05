@@ -44,18 +44,27 @@ public interface ShippingRateDraft  {
     public void setTiers(final ShippingRatePriceTier ...tiers);
     public void setTiers(final List<ShippingRatePriceTier> tiers);
 
-    public static ShippingRateDraftImpl of(){
+    public static ShippingRateDraft of(){
         return new ShippingRateDraftImpl();
     }
     
 
-    public static ShippingRateDraftImpl of(final ShippingRateDraft template) {
+    public static ShippingRateDraft of(final ShippingRateDraft template) {
         ShippingRateDraftImpl instance = new ShippingRateDraftImpl();
         instance.setPrice(template.getPrice());
         instance.setFreeAbove(template.getFreeAbove());
         instance.setTiers(template.getTiers());
         return instance;
     }
+
+    public static ShippingRateDraftBuilder builder(){
+        return ShippingRateDraftBuilder.of();
+    }
+    
+    public static ShippingRateDraftBuilder builder(final ShippingRateDraft template){
+        return ShippingRateDraftBuilder.of(template);
+    }
+    
 
     default <T> T withShippingRateDraft(Function<ShippingRateDraft, T> helper) {
         return helper.apply(this);

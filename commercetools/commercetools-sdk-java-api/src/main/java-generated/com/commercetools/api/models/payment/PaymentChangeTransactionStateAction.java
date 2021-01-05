@@ -35,17 +35,26 @@ public interface PaymentChangeTransactionStateAction extends PaymentUpdateAction
     
     public void setState(final TransactionState state);
 
-    public static PaymentChangeTransactionStateActionImpl of(){
+    public static PaymentChangeTransactionStateAction of(){
         return new PaymentChangeTransactionStateActionImpl();
     }
     
 
-    public static PaymentChangeTransactionStateActionImpl of(final PaymentChangeTransactionStateAction template) {
+    public static PaymentChangeTransactionStateAction of(final PaymentChangeTransactionStateAction template) {
         PaymentChangeTransactionStateActionImpl instance = new PaymentChangeTransactionStateActionImpl();
         instance.setTransactionId(template.getTransactionId());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static PaymentChangeTransactionStateActionBuilder builder(){
+        return PaymentChangeTransactionStateActionBuilder.of();
+    }
+    
+    public static PaymentChangeTransactionStateActionBuilder builder(final PaymentChangeTransactionStateAction template){
+        return PaymentChangeTransactionStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentChangeTransactionStateAction(Function<PaymentChangeTransactionStateAction, T> helper) {
         return helper.apply(this);

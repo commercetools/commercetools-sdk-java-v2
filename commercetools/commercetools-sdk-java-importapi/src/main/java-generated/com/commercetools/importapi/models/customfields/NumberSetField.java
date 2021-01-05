@@ -33,16 +33,25 @@ public interface NumberSetField extends CustomField {
     public void setValue(final Double ...value);
     public void setValue(final List<Double> value);
 
-    public static NumberSetFieldImpl of(){
+    public static NumberSetField of(){
         return new NumberSetFieldImpl();
     }
     
 
-    public static NumberSetFieldImpl of(final NumberSetField template) {
+    public static NumberSetField of(final NumberSetField template) {
         NumberSetFieldImpl instance = new NumberSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static NumberSetFieldBuilder builder(){
+        return NumberSetFieldBuilder.of();
+    }
+    
+    public static NumberSetFieldBuilder builder(final NumberSetField template){
+        return NumberSetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withNumberSetField(Function<NumberSetField, T> helper) {
         return helper.apply(this);

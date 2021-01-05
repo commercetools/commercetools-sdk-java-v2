@@ -75,12 +75,12 @@ public interface OrderEditDraft  {
     
     public void setDryRun(final Boolean dryRun);
 
-    public static OrderEditDraftImpl of(){
+    public static OrderEditDraft of(){
         return new OrderEditDraftImpl();
     }
     
 
-    public static OrderEditDraftImpl of(final OrderEditDraft template) {
+    public static OrderEditDraft of(final OrderEditDraft template) {
         OrderEditDraftImpl instance = new OrderEditDraftImpl();
         instance.setKey(template.getKey());
         instance.setResource(template.getResource());
@@ -90,6 +90,15 @@ public interface OrderEditDraft  {
         instance.setDryRun(template.getDryRun());
         return instance;
     }
+
+    public static OrderEditDraftBuilder builder(){
+        return OrderEditDraftBuilder.of();
+    }
+    
+    public static OrderEditDraftBuilder builder(final OrderEditDraft template){
+        return OrderEditDraftBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditDraft(Function<OrderEditDraft, T> helper) {
         return helper.apply(this);

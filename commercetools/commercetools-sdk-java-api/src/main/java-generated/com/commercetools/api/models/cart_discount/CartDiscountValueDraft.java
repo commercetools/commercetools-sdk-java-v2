@@ -42,6 +42,7 @@ public interface CartDiscountValueDraft  {
 
 
 
+
     default <T> T withCartDiscountValueDraft(Function<CartDiscountValueDraft, T> helper) {
         return helper.apply(this);
     }

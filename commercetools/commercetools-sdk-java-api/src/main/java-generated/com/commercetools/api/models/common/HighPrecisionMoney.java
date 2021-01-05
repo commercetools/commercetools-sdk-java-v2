@@ -29,12 +29,12 @@ public interface HighPrecisionMoney extends TypedMoney {
 
     public void setPreciseAmount(final Long preciseAmount);
 
-    public static HighPrecisionMoneyImpl of(){
+    public static HighPrecisionMoney of(){
         return new HighPrecisionMoneyImpl();
     }
     
 
-    public static HighPrecisionMoneyImpl of(final HighPrecisionMoney template) {
+    public static HighPrecisionMoney of(final HighPrecisionMoney template) {
         HighPrecisionMoneyImpl instance = new HighPrecisionMoneyImpl();
         instance.setFractionDigits(template.getFractionDigits());
         instance.setCentAmount(template.getCentAmount());
@@ -42,6 +42,15 @@ public interface HighPrecisionMoney extends TypedMoney {
         instance.setPreciseAmount(template.getPreciseAmount());
         return instance;
     }
+
+    public static HighPrecisionMoneyBuilder builder(){
+        return HighPrecisionMoneyBuilder.of();
+    }
+    
+    public static HighPrecisionMoneyBuilder builder(final HighPrecisionMoney template){
+        return HighPrecisionMoneyBuilder.of(template);
+    }
+    
 
     default <T> T withHighPrecisionMoney(Function<HighPrecisionMoney, T> helper) {
         return helper.apply(this);

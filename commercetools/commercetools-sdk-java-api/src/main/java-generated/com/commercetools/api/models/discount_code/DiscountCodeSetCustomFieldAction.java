@@ -35,17 +35,26 @@ public interface DiscountCodeSetCustomFieldAction extends DiscountCodeUpdateActi
     
     public void setValue(final JsonNode value);
 
-    public static DiscountCodeSetCustomFieldActionImpl of(){
+    public static DiscountCodeSetCustomFieldAction of(){
         return new DiscountCodeSetCustomFieldActionImpl();
     }
     
 
-    public static DiscountCodeSetCustomFieldActionImpl of(final DiscountCodeSetCustomFieldAction template) {
+    public static DiscountCodeSetCustomFieldAction of(final DiscountCodeSetCustomFieldAction template) {
         DiscountCodeSetCustomFieldActionImpl instance = new DiscountCodeSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static DiscountCodeSetCustomFieldActionBuilder builder(){
+        return DiscountCodeSetCustomFieldActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetCustomFieldActionBuilder builder(final DiscountCodeSetCustomFieldAction template){
+        return DiscountCodeSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetCustomFieldAction(Function<DiscountCodeSetCustomFieldAction, T> helper) {
         return helper.apply(this);

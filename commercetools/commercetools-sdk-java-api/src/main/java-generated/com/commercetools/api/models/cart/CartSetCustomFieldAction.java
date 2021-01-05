@@ -35,17 +35,26 @@ public interface CartSetCustomFieldAction extends CartUpdateAction {
     
     public void setValue(final JsonNode value);
 
-    public static CartSetCustomFieldActionImpl of(){
+    public static CartSetCustomFieldAction of(){
         return new CartSetCustomFieldActionImpl();
     }
     
 
-    public static CartSetCustomFieldActionImpl of(final CartSetCustomFieldAction template) {
+    public static CartSetCustomFieldAction of(final CartSetCustomFieldAction template) {
         CartSetCustomFieldActionImpl instance = new CartSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static CartSetCustomFieldActionBuilder builder(){
+        return CartSetCustomFieldActionBuilder.of();
+    }
+    
+    public static CartSetCustomFieldActionBuilder builder(final CartSetCustomFieldAction template){
+        return CartSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCustomFieldAction(Function<CartSetCustomFieldAction, T> helper) {
         return helper.apply(this);

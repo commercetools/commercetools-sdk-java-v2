@@ -66,6 +66,7 @@ public interface CartDiscountUpdateAction extends com.commercetools.api.models.R
 
 
 
+
     default <T> T withCartDiscountUpdateAction(Function<CartDiscountUpdateAction, T> helper) {
         return helper.apply(this);
     }

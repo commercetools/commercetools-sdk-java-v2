@@ -36,17 +36,26 @@ public interface TaxedItemPriceDraft  {
     
     public void setTotalGross(final Money totalGross);
 
-    public static TaxedItemPriceDraftImpl of(){
+    public static TaxedItemPriceDraft of(){
         return new TaxedItemPriceDraftImpl();
     }
     
 
-    public static TaxedItemPriceDraftImpl of(final TaxedItemPriceDraft template) {
+    public static TaxedItemPriceDraft of(final TaxedItemPriceDraft template) {
         TaxedItemPriceDraftImpl instance = new TaxedItemPriceDraftImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
         return instance;
     }
+
+    public static TaxedItemPriceDraftBuilder builder(){
+        return TaxedItemPriceDraftBuilder.of();
+    }
+    
+    public static TaxedItemPriceDraftBuilder builder(final TaxedItemPriceDraft template){
+        return TaxedItemPriceDraftBuilder.of(template);
+    }
+    
 
     default <T> T withTaxedItemPriceDraft(Function<TaxedItemPriceDraft, T> helper) {
         return helper.apply(this);

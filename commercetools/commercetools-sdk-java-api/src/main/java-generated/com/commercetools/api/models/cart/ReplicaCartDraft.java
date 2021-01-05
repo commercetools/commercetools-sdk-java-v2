@@ -28,16 +28,25 @@ public interface ReplicaCartDraft  {
 
     public void setReference(final JsonNode reference);
 
-    public static ReplicaCartDraftImpl of(){
+    public static ReplicaCartDraft of(){
         return new ReplicaCartDraftImpl();
     }
     
 
-    public static ReplicaCartDraftImpl of(final ReplicaCartDraft template) {
+    public static ReplicaCartDraft of(final ReplicaCartDraft template) {
         ReplicaCartDraftImpl instance = new ReplicaCartDraftImpl();
         instance.setReference(template.getReference());
         return instance;
     }
+
+    public static ReplicaCartDraftBuilder builder(){
+        return ReplicaCartDraftBuilder.of();
+    }
+    
+    public static ReplicaCartDraftBuilder builder(final ReplicaCartDraft template){
+        return ReplicaCartDraftBuilder.of(template);
+    }
+    
 
     default <T> T withReplicaCartDraft(Function<ReplicaCartDraft, T> helper) {
         return helper.apply(this);

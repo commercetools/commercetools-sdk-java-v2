@@ -30,17 +30,26 @@ public interface ShoppingListReference extends Reference {
 
     public void setObj(final ShoppingList obj);
 
-    public static ShoppingListReferenceImpl of(){
+    public static ShoppingListReference of(){
         return new ShoppingListReferenceImpl();
     }
     
 
-    public static ShoppingListReferenceImpl of(final ShoppingListReference template) {
+    public static ShoppingListReference of(final ShoppingListReference template) {
         ShoppingListReferenceImpl instance = new ShoppingListReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static ShoppingListReferenceBuilder builder(){
+        return ShoppingListReferenceBuilder.of();
+    }
+    
+    public static ShoppingListReferenceBuilder builder(final ShoppingListReference template){
+        return ShoppingListReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListReference(Function<ShoppingListReference, T> helper) {
         return helper.apply(this);

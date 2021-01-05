@@ -60,12 +60,12 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
     
     public void setChannel(final ChannelReference channel);
 
-    public static MatchingPriceNotFoundErrorImpl of(){
+    public static MatchingPriceNotFoundError of(){
         return new MatchingPriceNotFoundErrorImpl();
     }
     
 
-    public static MatchingPriceNotFoundErrorImpl of(final MatchingPriceNotFoundError template) {
+    public static MatchingPriceNotFoundError of(final MatchingPriceNotFoundError template) {
         MatchingPriceNotFoundErrorImpl instance = new MatchingPriceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setProductId(template.getProductId());
@@ -76,6 +76,15 @@ public interface MatchingPriceNotFoundError extends ErrorObject {
         instance.setChannel(template.getChannel());
         return instance;
     }
+
+    public static MatchingPriceNotFoundErrorBuilder builder(){
+        return MatchingPriceNotFoundErrorBuilder.of();
+    }
+    
+    public static MatchingPriceNotFoundErrorBuilder builder(final MatchingPriceNotFoundError template){
+        return MatchingPriceNotFoundErrorBuilder.of(template);
+    }
+    
 
     default <T> T withMatchingPriceNotFoundError(Function<MatchingPriceNotFoundError, T> helper) {
         return helper.apply(this);

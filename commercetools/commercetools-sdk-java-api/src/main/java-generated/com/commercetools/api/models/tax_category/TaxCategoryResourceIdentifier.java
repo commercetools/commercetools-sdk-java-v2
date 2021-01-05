@@ -24,17 +24,26 @@ public interface TaxCategoryResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static TaxCategoryResourceIdentifierImpl of(){
+    public static TaxCategoryResourceIdentifier of(){
         return new TaxCategoryResourceIdentifierImpl();
     }
     
 
-    public static TaxCategoryResourceIdentifierImpl of(final TaxCategoryResourceIdentifier template) {
+    public static TaxCategoryResourceIdentifier of(final TaxCategoryResourceIdentifier template) {
         TaxCategoryResourceIdentifierImpl instance = new TaxCategoryResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static TaxCategoryResourceIdentifierBuilder builder(){
+        return TaxCategoryResourceIdentifierBuilder.of();
+    }
+    
+    public static TaxCategoryResourceIdentifierBuilder builder(final TaxCategoryResourceIdentifier template){
+        return TaxCategoryResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryResourceIdentifier(Function<TaxCategoryResourceIdentifier, T> helper) {
         return helper.apply(this);

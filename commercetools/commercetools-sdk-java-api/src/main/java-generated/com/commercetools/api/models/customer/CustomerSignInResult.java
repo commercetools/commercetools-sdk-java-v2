@@ -39,17 +39,26 @@ public interface CustomerSignInResult  {
     
     public void setCart(final JsonNode cart);
 
-    public static CustomerSignInResultImpl of(){
+    public static CustomerSignInResult of(){
         return new CustomerSignInResultImpl();
     }
     
 
-    public static CustomerSignInResultImpl of(final CustomerSignInResult template) {
+    public static CustomerSignInResult of(final CustomerSignInResult template) {
         CustomerSignInResultImpl instance = new CustomerSignInResultImpl();
         instance.setCustomer(template.getCustomer());
         instance.setCart(template.getCart());
         return instance;
     }
+
+    public static CustomerSignInResultBuilder builder(){
+        return CustomerSignInResultBuilder.of();
+    }
+    
+    public static CustomerSignInResultBuilder builder(final CustomerSignInResult template){
+        return CustomerSignInResultBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSignInResult(Function<CustomerSignInResult, T> helper) {
         return helper.apply(this);

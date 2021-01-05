@@ -82,12 +82,12 @@ public interface FacetResultRange  {
     
     public void setMean(final Double mean);
 
-    public static FacetResultRangeImpl of(){
+    public static FacetResultRange of(){
         return new FacetResultRangeImpl();
     }
     
 
-    public static FacetResultRangeImpl of(final FacetResultRange template) {
+    public static FacetResultRange of(final FacetResultRange template) {
         FacetResultRangeImpl instance = new FacetResultRangeImpl();
         instance.setFrom(template.getFrom());
         instance.setFromStr(template.getFromStr());
@@ -101,6 +101,15 @@ public interface FacetResultRange  {
         instance.setMean(template.getMean());
         return instance;
     }
+
+    public static FacetResultRangeBuilder builder(){
+        return FacetResultRangeBuilder.of();
+    }
+    
+    public static FacetResultRangeBuilder builder(final FacetResultRange template){
+        return FacetResultRangeBuilder.of(template);
+    }
+    
 
     default <T> T withFacetResultRange(Function<FacetResultRange, T> helper) {
         return helper.apply(this);

@@ -110,12 +110,12 @@ public interface MissingPricesSearchRequest  {
     public void setProductTypeIds(final String ...productTypeIds);
     public void setProductTypeIds(final List<String> productTypeIds);
 
-    public static MissingPricesSearchRequestImpl of(){
+    public static MissingPricesSearchRequest of(){
         return new MissingPricesSearchRequestImpl();
     }
     
 
-    public static MissingPricesSearchRequestImpl of(final MissingPricesSearchRequest template) {
+    public static MissingPricesSearchRequest of(final MissingPricesSearchRequest template) {
         MissingPricesSearchRequestImpl instance = new MissingPricesSearchRequestImpl();
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
@@ -130,6 +130,15 @@ public interface MissingPricesSearchRequest  {
         instance.setProductTypeIds(template.getProductTypeIds());
         return instance;
     }
+
+    public static MissingPricesSearchRequestBuilder builder(){
+        return MissingPricesSearchRequestBuilder.of();
+    }
+    
+    public static MissingPricesSearchRequestBuilder builder(final MissingPricesSearchRequest template){
+        return MissingPricesSearchRequestBuilder.of(template);
+    }
+    
 
     default <T> T withMissingPricesSearchRequest(Function<MissingPricesSearchRequest, T> helper) {
         return helper.apply(this);

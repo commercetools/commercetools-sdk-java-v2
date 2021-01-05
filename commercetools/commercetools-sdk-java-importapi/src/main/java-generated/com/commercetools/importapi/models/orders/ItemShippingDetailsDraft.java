@@ -33,16 +33,25 @@ public interface ItemShippingDetailsDraft  {
     public void setTargets(final ItemShippingTarget ...targets);
     public void setTargets(final List<ItemShippingTarget> targets);
 
-    public static ItemShippingDetailsDraftImpl of(){
+    public static ItemShippingDetailsDraft of(){
         return new ItemShippingDetailsDraftImpl();
     }
     
 
-    public static ItemShippingDetailsDraftImpl of(final ItemShippingDetailsDraft template) {
+    public static ItemShippingDetailsDraft of(final ItemShippingDetailsDraft template) {
         ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();
         instance.setTargets(template.getTargets());
         return instance;
     }
+
+    public static ItemShippingDetailsDraftBuilder builder(){
+        return ItemShippingDetailsDraftBuilder.of();
+    }
+    
+    public static ItemShippingDetailsDraftBuilder builder(final ItemShippingDetailsDraft template){
+        return ItemShippingDetailsDraftBuilder.of(template);
+    }
+    
 
     default <T> T withItemShippingDetailsDraft(Function<ItemShippingDetailsDraft, T> helper) {
         return helper.apply(this);

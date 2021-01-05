@@ -24,17 +24,26 @@ public interface CartDiscountResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static CartDiscountResourceIdentifierImpl of(){
+    public static CartDiscountResourceIdentifier of(){
         return new CartDiscountResourceIdentifierImpl();
     }
     
 
-    public static CartDiscountResourceIdentifierImpl of(final CartDiscountResourceIdentifier template) {
+    public static CartDiscountResourceIdentifier of(final CartDiscountResourceIdentifier template) {
         CartDiscountResourceIdentifierImpl instance = new CartDiscountResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CartDiscountResourceIdentifierBuilder builder(){
+        return CartDiscountResourceIdentifierBuilder.of();
+    }
+    
+    public static CartDiscountResourceIdentifierBuilder builder(final CartDiscountResourceIdentifier template){
+        return CartDiscountResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountResourceIdentifier(Function<CartDiscountResourceIdentifier, T> helper) {
         return helper.apply(this);

@@ -41,17 +41,26 @@ public interface PaymentSetCustomTypeAction extends PaymentUpdateAction {
     
     public void setFields(final FieldContainer fields);
 
-    public static PaymentSetCustomTypeActionImpl of(){
+    public static PaymentSetCustomTypeAction of(){
         return new PaymentSetCustomTypeActionImpl();
     }
     
 
-    public static PaymentSetCustomTypeActionImpl of(final PaymentSetCustomTypeAction template) {
+    public static PaymentSetCustomTypeAction of(final PaymentSetCustomTypeAction template) {
         PaymentSetCustomTypeActionImpl instance = new PaymentSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static PaymentSetCustomTypeActionBuilder builder(){
+        return PaymentSetCustomTypeActionBuilder.of();
+    }
+    
+    public static PaymentSetCustomTypeActionBuilder builder(final PaymentSetCustomTypeAction template){
+        return PaymentSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetCustomTypeAction(Function<PaymentSetCustomTypeAction, T> helper) {
         return helper.apply(this);

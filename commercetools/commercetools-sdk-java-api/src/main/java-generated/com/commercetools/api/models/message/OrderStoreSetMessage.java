@@ -30,12 +30,12 @@ public interface OrderStoreSetMessage extends Message {
 
     public void setStore(final StoreKeyReference store);
 
-    public static OrderStoreSetMessageImpl of(){
+    public static OrderStoreSetMessage of(){
         return new OrderStoreSetMessageImpl();
     }
     
 
-    public static OrderStoreSetMessageImpl of(final OrderStoreSetMessage template) {
+    public static OrderStoreSetMessage of(final OrderStoreSetMessage template) {
         OrderStoreSetMessageImpl instance = new OrderStoreSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface OrderStoreSetMessage extends Message {
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public static OrderStoreSetMessageBuilder builder(){
+        return OrderStoreSetMessageBuilder.of();
+    }
+    
+    public static OrderStoreSetMessageBuilder builder(final OrderStoreSetMessage template){
+        return OrderStoreSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderStoreSetMessage(Function<OrderStoreSetMessage, T> helper) {
         return helper.apply(this);

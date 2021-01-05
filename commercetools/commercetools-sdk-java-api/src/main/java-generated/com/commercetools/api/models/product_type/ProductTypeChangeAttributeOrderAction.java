@@ -32,16 +32,25 @@ public interface ProductTypeChangeAttributeOrderAction extends ProductTypeUpdate
     public void setAttributes(final AttributeDefinition ...attributes);
     public void setAttributes(final List<AttributeDefinition> attributes);
 
-    public static ProductTypeChangeAttributeOrderActionImpl of(){
+    public static ProductTypeChangeAttributeOrderAction of(){
         return new ProductTypeChangeAttributeOrderActionImpl();
     }
     
 
-    public static ProductTypeChangeAttributeOrderActionImpl of(final ProductTypeChangeAttributeOrderAction template) {
+    public static ProductTypeChangeAttributeOrderAction of(final ProductTypeChangeAttributeOrderAction template) {
         ProductTypeChangeAttributeOrderActionImpl instance = new ProductTypeChangeAttributeOrderActionImpl();
         instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public static ProductTypeChangeAttributeOrderActionBuilder builder(){
+        return ProductTypeChangeAttributeOrderActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeAttributeOrderActionBuilder builder(final ProductTypeChangeAttributeOrderAction template){
+        return ProductTypeChangeAttributeOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeAttributeOrderAction(Function<ProductTypeChangeAttributeOrderAction, T> helper) {
         return helper.apply(this);

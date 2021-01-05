@@ -55,12 +55,12 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
     public void setResults(final State ...results);
     public void setResults(final List<State> results);
 
-    public static StatePagedQueryResponseImpl of(){
+    public static StatePagedQueryResponse of(){
         return new StatePagedQueryResponseImpl();
     }
     
 
-    public static StatePagedQueryResponseImpl of(final StatePagedQueryResponse template) {
+    public static StatePagedQueryResponse of(final StatePagedQueryResponse template) {
         StatePagedQueryResponseImpl instance = new StatePagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface StatePagedQueryResponse extends com.commercetools.api.models.Re
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static StatePagedQueryResponseBuilder builder(){
+        return StatePagedQueryResponseBuilder.of();
+    }
+    
+    public static StatePagedQueryResponseBuilder builder(final StatePagedQueryResponse template){
+        return StatePagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withStatePagedQueryResponse(Function<StatePagedQueryResponse, T> helper) {
         return helper.apply(this);

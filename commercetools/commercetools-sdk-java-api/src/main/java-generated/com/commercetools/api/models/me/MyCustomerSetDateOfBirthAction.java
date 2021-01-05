@@ -29,16 +29,25 @@ public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
 
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
-    public static MyCustomerSetDateOfBirthActionImpl of(){
+    public static MyCustomerSetDateOfBirthAction of(){
         return new MyCustomerSetDateOfBirthActionImpl();
     }
     
 
-    public static MyCustomerSetDateOfBirthActionImpl of(final MyCustomerSetDateOfBirthAction template) {
+    public static MyCustomerSetDateOfBirthAction of(final MyCustomerSetDateOfBirthAction template) {
         MyCustomerSetDateOfBirthActionImpl instance = new MyCustomerSetDateOfBirthActionImpl();
         instance.setDateOfBirth(template.getDateOfBirth());
         return instance;
     }
+
+    public static MyCustomerSetDateOfBirthActionBuilder builder(){
+        return MyCustomerSetDateOfBirthActionBuilder.of();
+    }
+    
+    public static MyCustomerSetDateOfBirthActionBuilder builder(final MyCustomerSetDateOfBirthAction template){
+        return MyCustomerSetDateOfBirthActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetDateOfBirthAction(Function<MyCustomerSetDateOfBirthAction, T> helper) {
         return helper.apply(this);

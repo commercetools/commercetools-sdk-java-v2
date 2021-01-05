@@ -40,18 +40,27 @@ public interface SnsDestination extends Destination {
     
     public void setTopicArn(final String topicArn);
 
-    public static SnsDestinationImpl of(){
+    public static SnsDestination of(){
         return new SnsDestinationImpl();
     }
     
 
-    public static SnsDestinationImpl of(final SnsDestination template) {
+    public static SnsDestination of(final SnsDestination template) {
         SnsDestinationImpl instance = new SnsDestinationImpl();
         instance.setAccessKey(template.getAccessKey());
         instance.setAccessSecret(template.getAccessSecret());
         instance.setTopicArn(template.getTopicArn());
         return instance;
     }
+
+    public static SnsDestinationBuilder builder(){
+        return SnsDestinationBuilder.of();
+    }
+    
+    public static SnsDestinationBuilder builder(final SnsDestination template){
+        return SnsDestinationBuilder.of(template);
+    }
+    
 
     default <T> T withSnsDestination(Function<SnsDestination, T> helper) {
         return helper.apply(this);

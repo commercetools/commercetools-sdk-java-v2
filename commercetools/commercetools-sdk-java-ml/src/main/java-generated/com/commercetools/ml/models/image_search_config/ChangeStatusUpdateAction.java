@@ -29,16 +29,25 @@ public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction 
 
     public void setStatus(final ImageSearchConfigStatus status);
 
-    public static ChangeStatusUpdateActionImpl of(){
+    public static ChangeStatusUpdateAction of(){
         return new ChangeStatusUpdateActionImpl();
     }
     
 
-    public static ChangeStatusUpdateActionImpl of(final ChangeStatusUpdateAction template) {
+    public static ChangeStatusUpdateAction of(final ChangeStatusUpdateAction template) {
         ChangeStatusUpdateActionImpl instance = new ChangeStatusUpdateActionImpl();
         instance.setStatus(template.getStatus());
         return instance;
     }
+
+    public static ChangeStatusUpdateActionBuilder builder(){
+        return ChangeStatusUpdateActionBuilder.of();
+    }
+    
+    public static ChangeStatusUpdateActionBuilder builder(final ChangeStatusUpdateAction template){
+        return ChangeStatusUpdateActionBuilder.of(template);
+    }
+    
 
     default <T> T withChangeStatusUpdateAction(Function<ChangeStatusUpdateAction, T> helper) {
         return helper.apply(this);

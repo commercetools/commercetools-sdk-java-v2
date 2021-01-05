@@ -28,16 +28,25 @@ public interface StagedOrderRemoveDeliveryAction extends StagedOrderUpdateAction
 
     public void setDeliveryId(final String deliveryId);
 
-    public static StagedOrderRemoveDeliveryActionImpl of(){
+    public static StagedOrderRemoveDeliveryAction of(){
         return new StagedOrderRemoveDeliveryActionImpl();
     }
     
 
-    public static StagedOrderRemoveDeliveryActionImpl of(final StagedOrderRemoveDeliveryAction template) {
+    public static StagedOrderRemoveDeliveryAction of(final StagedOrderRemoveDeliveryAction template) {
         StagedOrderRemoveDeliveryActionImpl instance = new StagedOrderRemoveDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
+
+    public static StagedOrderRemoveDeliveryActionBuilder builder(){
+        return StagedOrderRemoveDeliveryActionBuilder.of();
+    }
+    
+    public static StagedOrderRemoveDeliveryActionBuilder builder(final StagedOrderRemoveDeliveryAction template){
+        return StagedOrderRemoveDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderRemoveDeliveryAction(Function<StagedOrderRemoveDeliveryAction, T> helper) {
         return helper.apply(this);

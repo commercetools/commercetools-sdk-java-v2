@@ -59,12 +59,12 @@ public interface ProductSetAssetDescriptionAction extends ProductUpdateAction {
     
     public void setDescription(final LocalizedString description);
 
-    public static ProductSetAssetDescriptionActionImpl of(){
+    public static ProductSetAssetDescriptionAction of(){
         return new ProductSetAssetDescriptionActionImpl();
     }
     
 
-    public static ProductSetAssetDescriptionActionImpl of(final ProductSetAssetDescriptionAction template) {
+    public static ProductSetAssetDescriptionAction of(final ProductSetAssetDescriptionAction template) {
         ProductSetAssetDescriptionActionImpl instance = new ProductSetAssetDescriptionActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -74,6 +74,15 @@ public interface ProductSetAssetDescriptionAction extends ProductUpdateAction {
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static ProductSetAssetDescriptionActionBuilder builder(){
+        return ProductSetAssetDescriptionActionBuilder.of();
+    }
+    
+    public static ProductSetAssetDescriptionActionBuilder builder(final ProductSetAssetDescriptionAction template){
+        return ProductSetAssetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetAssetDescriptionAction(Function<ProductSetAssetDescriptionAction, T> helper) {
         return helper.apply(this);

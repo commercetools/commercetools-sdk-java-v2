@@ -23,16 +23,25 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
 
 
 
-    public static QueryComplexityLimitExceededErrorImpl of(){
+    public static QueryComplexityLimitExceededError of(){
         return new QueryComplexityLimitExceededErrorImpl();
     }
     
 
-    public static QueryComplexityLimitExceededErrorImpl of(final QueryComplexityLimitExceededError template) {
+    public static QueryComplexityLimitExceededError of(final QueryComplexityLimitExceededError template) {
         QueryComplexityLimitExceededErrorImpl instance = new QueryComplexityLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static QueryComplexityLimitExceededErrorBuilder builder(){
+        return QueryComplexityLimitExceededErrorBuilder.of();
+    }
+    
+    public static QueryComplexityLimitExceededErrorBuilder builder(final QueryComplexityLimitExceededError template){
+        return QueryComplexityLimitExceededErrorBuilder.of(template);
+    }
+    
 
     default <T> T withQueryComplexityLimitExceededError(Function<QueryComplexityLimitExceededError, T> helper) {
         return helper.apply(this);

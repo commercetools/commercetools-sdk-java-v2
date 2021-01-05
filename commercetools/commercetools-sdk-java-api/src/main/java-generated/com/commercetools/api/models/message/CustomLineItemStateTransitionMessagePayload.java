@@ -56,12 +56,12 @@ public interface CustomLineItemStateTransitionMessagePayload extends MessagePayl
     
     public void setToState(final StateReference toState);
 
-    public static CustomLineItemStateTransitionMessagePayloadImpl of(){
+    public static CustomLineItemStateTransitionMessagePayload of(){
         return new CustomLineItemStateTransitionMessagePayloadImpl();
     }
     
 
-    public static CustomLineItemStateTransitionMessagePayloadImpl of(final CustomLineItemStateTransitionMessagePayload template) {
+    public static CustomLineItemStateTransitionMessagePayload of(final CustomLineItemStateTransitionMessagePayload template) {
         CustomLineItemStateTransitionMessagePayloadImpl instance = new CustomLineItemStateTransitionMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setTransitionDate(template.getTransitionDate());
@@ -70,6 +70,15 @@ public interface CustomLineItemStateTransitionMessagePayload extends MessagePayl
         instance.setToState(template.getToState());
         return instance;
     }
+
+    public static CustomLineItemStateTransitionMessagePayloadBuilder builder(){
+        return CustomLineItemStateTransitionMessagePayloadBuilder.of();
+    }
+    
+    public static CustomLineItemStateTransitionMessagePayloadBuilder builder(final CustomLineItemStateTransitionMessagePayload template){
+        return CustomLineItemStateTransitionMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCustomLineItemStateTransitionMessagePayload(Function<CustomLineItemStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);

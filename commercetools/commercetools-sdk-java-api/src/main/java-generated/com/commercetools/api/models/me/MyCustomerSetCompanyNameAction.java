@@ -28,16 +28,25 @@ public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
 
     public void setCompanyName(final String companyName);
 
-    public static MyCustomerSetCompanyNameActionImpl of(){
+    public static MyCustomerSetCompanyNameAction of(){
         return new MyCustomerSetCompanyNameActionImpl();
     }
     
 
-    public static MyCustomerSetCompanyNameActionImpl of(final MyCustomerSetCompanyNameAction template) {
+    public static MyCustomerSetCompanyNameAction of(final MyCustomerSetCompanyNameAction template) {
         MyCustomerSetCompanyNameActionImpl instance = new MyCustomerSetCompanyNameActionImpl();
         instance.setCompanyName(template.getCompanyName());
         return instance;
     }
+
+    public static MyCustomerSetCompanyNameActionBuilder builder(){
+        return MyCustomerSetCompanyNameActionBuilder.of();
+    }
+    
+    public static MyCustomerSetCompanyNameActionBuilder builder(final MyCustomerSetCompanyNameAction template){
+        return MyCustomerSetCompanyNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetCompanyNameAction(Function<MyCustomerSetCompanyNameAction, T> helper) {
         return helper.apply(this);

@@ -24,18 +24,27 @@ public interface CentPrecisionMoney extends TypedMoney {
 
 
 
-    public static CentPrecisionMoneyImpl of(){
+    public static CentPrecisionMoney of(){
         return new CentPrecisionMoneyImpl();
     }
     
 
-    public static CentPrecisionMoneyImpl of(final CentPrecisionMoney template) {
+    public static CentPrecisionMoney of(final CentPrecisionMoney template) {
         CentPrecisionMoneyImpl instance = new CentPrecisionMoneyImpl();
         instance.setFractionDigits(template.getFractionDigits());
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
     }
+
+    public static CentPrecisionMoneyBuilder builder(){
+        return CentPrecisionMoneyBuilder.of();
+    }
+    
+    public static CentPrecisionMoneyBuilder builder(final CentPrecisionMoney template){
+        return CentPrecisionMoneyBuilder.of(template);
+    }
+    
 
     default <T> T withCentPrecisionMoney(Function<CentPrecisionMoney, T> helper) {
         return helper.apply(this);

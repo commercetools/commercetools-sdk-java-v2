@@ -34,17 +34,26 @@ public interface DateSetAttribute extends Attribute {
     public void setValue(final LocalDate ...value);
     public void setValue(final List<LocalDate> value);
 
-    public static DateSetAttributeImpl of(){
+    public static DateSetAttribute of(){
         return new DateSetAttributeImpl();
     }
     
 
-    public static DateSetAttributeImpl of(final DateSetAttribute template) {
+    public static DateSetAttribute of(final DateSetAttribute template) {
         DateSetAttributeImpl instance = new DateSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static DateSetAttributeBuilder builder(){
+        return DateSetAttributeBuilder.of();
+    }
+    
+    public static DateSetAttributeBuilder builder(final DateSetAttribute template){
+        return DateSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withDateSetAttribute(Function<DateSetAttribute, T> helper) {
         return helper.apply(this);

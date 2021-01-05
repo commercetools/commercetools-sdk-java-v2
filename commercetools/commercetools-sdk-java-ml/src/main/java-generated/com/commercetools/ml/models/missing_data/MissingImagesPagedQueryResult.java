@@ -57,12 +57,12 @@ public interface MissingImagesPagedQueryResult  {
     
     public void setMeta(final MissingImagesMeta meta);
 
-    public static MissingImagesPagedQueryResultImpl of(){
+    public static MissingImagesPagedQueryResult of(){
         return new MissingImagesPagedQueryResultImpl();
     }
     
 
-    public static MissingImagesPagedQueryResultImpl of(final MissingImagesPagedQueryResult template) {
+    public static MissingImagesPagedQueryResult of(final MissingImagesPagedQueryResult template) {
         MissingImagesPagedQueryResultImpl instance = new MissingImagesPagedQueryResultImpl();
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
@@ -71,6 +71,15 @@ public interface MissingImagesPagedQueryResult  {
         instance.setMeta(template.getMeta());
         return instance;
     }
+
+    public static MissingImagesPagedQueryResultBuilder builder(){
+        return MissingImagesPagedQueryResultBuilder.of();
+    }
+    
+    public static MissingImagesPagedQueryResultBuilder builder(final MissingImagesPagedQueryResult template){
+        return MissingImagesPagedQueryResultBuilder.of(template);
+    }
+    
 
     default <T> T withMissingImagesPagedQueryResult(Function<MissingImagesPagedQueryResult, T> helper) {
         return helper.apply(this);

@@ -52,12 +52,12 @@ public interface ConcurrentModificationError extends ErrorObject {
     
     public void setConflictedResource(final JsonNode conflictedResource);
 
-    public static ConcurrentModificationErrorImpl of(){
+    public static ConcurrentModificationError of(){
         return new ConcurrentModificationErrorImpl();
     }
     
 
-    public static ConcurrentModificationErrorImpl of(final ConcurrentModificationError template) {
+    public static ConcurrentModificationError of(final ConcurrentModificationError template) {
         ConcurrentModificationErrorImpl instance = new ConcurrentModificationErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setSpecifiedVersion(template.getSpecifiedVersion());
@@ -65,6 +65,15 @@ public interface ConcurrentModificationError extends ErrorObject {
         instance.setConflictedResource(template.getConflictedResource());
         return instance;
     }
+
+    public static ConcurrentModificationErrorBuilder builder(){
+        return ConcurrentModificationErrorBuilder.of();
+    }
+    
+    public static ConcurrentModificationErrorBuilder builder(final ConcurrentModificationError template){
+        return ConcurrentModificationErrorBuilder.of(template);
+    }
+    
 
     default <T> T withConcurrentModificationError(Function<ConcurrentModificationError, T> helper) {
         return helper.apply(this);

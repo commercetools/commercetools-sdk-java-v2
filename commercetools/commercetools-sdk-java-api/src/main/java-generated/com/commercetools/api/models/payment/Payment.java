@@ -161,12 +161,12 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
     
     public void setKey(final String key);
 
-    public static PaymentImpl of(){
+    public static Payment of(){
         return new PaymentImpl();
     }
     
 
-    public static PaymentImpl of(final Payment template) {
+    public static Payment of(final Payment template) {
         PaymentImpl instance = new PaymentImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -186,6 +186,15 @@ public interface Payment extends BaseResource, com.commercetools.api.models.Doma
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static PaymentBuilder builder(){
+        return PaymentBuilder.of();
+    }
+    
+    public static PaymentBuilder builder(final Payment template){
+        return PaymentBuilder.of(template);
+    }
+    
 
     default <T> T withPayment(Function<Payment, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface PriceTierDraft  {
     
     public void setValue(final Money value);
 
-    public static PriceTierDraftImpl of(){
+    public static PriceTierDraft of(){
         return new PriceTierDraftImpl();
     }
     
 
-    public static PriceTierDraftImpl of(final PriceTierDraft template) {
+    public static PriceTierDraft of(final PriceTierDraft template) {
         PriceTierDraftImpl instance = new PriceTierDraftImpl();
         instance.setMinimumQuantity(template.getMinimumQuantity());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static PriceTierDraftBuilder builder(){
+        return PriceTierDraftBuilder.of();
+    }
+    
+    public static PriceTierDraftBuilder builder(final PriceTierDraft template){
+        return PriceTierDraftBuilder.of(template);
+    }
+    
 
     default <T> T withPriceTierDraft(Function<PriceTierDraft, T> helper) {
         return helper.apply(this);

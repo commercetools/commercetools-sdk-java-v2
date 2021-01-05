@@ -35,17 +35,26 @@ public interface OrderReturnShipmentStateChangedMessagePayload extends MessagePa
     
     public void setReturnShipmentState(final ReturnShipmentState returnShipmentState);
 
-    public static OrderReturnShipmentStateChangedMessagePayloadImpl of(){
+    public static OrderReturnShipmentStateChangedMessagePayload of(){
         return new OrderReturnShipmentStateChangedMessagePayloadImpl();
     }
     
 
-    public static OrderReturnShipmentStateChangedMessagePayloadImpl of(final OrderReturnShipmentStateChangedMessagePayload template) {
+    public static OrderReturnShipmentStateChangedMessagePayload of(final OrderReturnShipmentStateChangedMessagePayload template) {
         OrderReturnShipmentStateChangedMessagePayloadImpl instance = new OrderReturnShipmentStateChangedMessagePayloadImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setReturnShipmentState(template.getReturnShipmentState());
         return instance;
     }
+
+    public static OrderReturnShipmentStateChangedMessagePayloadBuilder builder(){
+        return OrderReturnShipmentStateChangedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderReturnShipmentStateChangedMessagePayloadBuilder builder(final OrderReturnShipmentStateChangedMessagePayload template){
+        return OrderReturnShipmentStateChangedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderReturnShipmentStateChangedMessagePayload(Function<OrderReturnShipmentStateChangedMessagePayload, T> helper) {
         return helper.apply(this);

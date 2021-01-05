@@ -37,17 +37,26 @@ public interface ChannelUpdate extends com.commercetools.api.models.ResourceUpda
     public void setActions(final ChannelUpdateAction ...actions);
     public void setActions(final List<ChannelUpdateAction> actions);
 
-    public static ChannelUpdateImpl of(){
+    public static ChannelUpdate of(){
         return new ChannelUpdateImpl();
     }
     
 
-    public static ChannelUpdateImpl of(final ChannelUpdate template) {
+    public static ChannelUpdate of(final ChannelUpdate template) {
         ChannelUpdateImpl instance = new ChannelUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ChannelUpdateBuilder builder(){
+        return ChannelUpdateBuilder.of();
+    }
+    
+    public static ChannelUpdateBuilder builder(final ChannelUpdate template){
+        return ChannelUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withChannelUpdate(Function<ChannelUpdate, T> helper) {
         return helper.apply(this);

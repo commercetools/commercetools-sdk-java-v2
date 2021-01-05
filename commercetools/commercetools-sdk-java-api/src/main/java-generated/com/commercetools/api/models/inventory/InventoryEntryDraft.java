@@ -62,12 +62,12 @@ public interface InventoryEntryDraft  {
     
     public void setCustom(final CustomFieldsDraft custom);
 
-    public static InventoryEntryDraftImpl of(){
+    public static InventoryEntryDraft of(){
         return new InventoryEntryDraftImpl();
     }
     
 
-    public static InventoryEntryDraftImpl of(final InventoryEntryDraft template) {
+    public static InventoryEntryDraft of(final InventoryEntryDraft template) {
         InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();
         instance.setSku(template.getSku());
         instance.setSupplyChannel(template.getSupplyChannel());
@@ -77,6 +77,15 @@ public interface InventoryEntryDraft  {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static InventoryEntryDraftBuilder builder(){
+        return InventoryEntryDraftBuilder.of();
+    }
+    
+    public static InventoryEntryDraftBuilder builder(final InventoryEntryDraft template){
+        return InventoryEntryDraftBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryDraft(Function<InventoryEntryDraft, T> helper) {
         return helper.apply(this);

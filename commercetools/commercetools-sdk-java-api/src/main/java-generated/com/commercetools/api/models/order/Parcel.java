@@ -59,12 +59,12 @@ public interface Parcel  {
     public void setItems(final DeliveryItem ...items);
     public void setItems(final List<DeliveryItem> items);
 
-    public static ParcelImpl of(){
+    public static Parcel of(){
         return new ParcelImpl();
     }
     
 
-    public static ParcelImpl of(final Parcel template) {
+    public static Parcel of(final Parcel template) {
         ParcelImpl instance = new ParcelImpl();
         instance.setId(template.getId());
         instance.setCreatedAt(template.getCreatedAt());
@@ -73,6 +73,15 @@ public interface Parcel  {
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public static ParcelBuilder builder(){
+        return ParcelBuilder.of();
+    }
+    
+    public static ParcelBuilder builder(final Parcel template){
+        return ParcelBuilder.of(template);
+    }
+    
 
     default <T> T withParcel(Function<Parcel, T> helper) {
         return helper.apply(this);

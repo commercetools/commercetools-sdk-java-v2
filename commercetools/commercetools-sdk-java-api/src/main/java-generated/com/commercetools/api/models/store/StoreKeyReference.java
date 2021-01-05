@@ -24,16 +24,25 @@ public interface StoreKeyReference extends KeyReference {
 
 
 
-    public static StoreKeyReferenceImpl of(){
+    public static StoreKeyReference of(){
         return new StoreKeyReferenceImpl();
     }
     
 
-    public static StoreKeyReferenceImpl of(final StoreKeyReference template) {
+    public static StoreKeyReference of(final StoreKeyReference template) {
         StoreKeyReferenceImpl instance = new StoreKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static StoreKeyReferenceBuilder builder(){
+        return StoreKeyReferenceBuilder.of();
+    }
+    
+    public static StoreKeyReferenceBuilder builder(final StoreKeyReference template){
+        return StoreKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withStoreKeyReference(Function<StoreKeyReference, T> helper) {
         return helper.apply(this);

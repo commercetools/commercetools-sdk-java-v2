@@ -29,16 +29,25 @@ public interface StateChangeTypeAction extends StateUpdateAction {
 
     public void setType(final StateTypeEnum type);
 
-    public static StateChangeTypeActionImpl of(){
+    public static StateChangeTypeAction of(){
         return new StateChangeTypeActionImpl();
     }
     
 
-    public static StateChangeTypeActionImpl of(final StateChangeTypeAction template) {
+    public static StateChangeTypeAction of(final StateChangeTypeAction template) {
         StateChangeTypeActionImpl instance = new StateChangeTypeActionImpl();
         instance.setType(template.getType());
         return instance;
     }
+
+    public static StateChangeTypeActionBuilder builder(){
+        return StateChangeTypeActionBuilder.of();
+    }
+    
+    public static StateChangeTypeActionBuilder builder(final StateChangeTypeAction template){
+        return StateChangeTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withStateChangeTypeAction(Function<StateChangeTypeAction, T> helper) {
         return helper.apply(this);

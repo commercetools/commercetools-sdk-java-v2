@@ -24,17 +24,26 @@ public interface InventoryEntryResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static InventoryEntryResourceIdentifierImpl of(){
+    public static InventoryEntryResourceIdentifier of(){
         return new InventoryEntryResourceIdentifierImpl();
     }
     
 
-    public static InventoryEntryResourceIdentifierImpl of(final InventoryEntryResourceIdentifier template) {
+    public static InventoryEntryResourceIdentifier of(final InventoryEntryResourceIdentifier template) {
         InventoryEntryResourceIdentifierImpl instance = new InventoryEntryResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static InventoryEntryResourceIdentifierBuilder builder(){
+        return InventoryEntryResourceIdentifierBuilder.of();
+    }
+    
+    public static InventoryEntryResourceIdentifierBuilder builder(final InventoryEntryResourceIdentifier template){
+        return InventoryEntryResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryResourceIdentifier(Function<InventoryEntryResourceIdentifier, T> helper) {
         return helper.apply(this);

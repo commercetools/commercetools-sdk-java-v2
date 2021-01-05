@@ -60,12 +60,12 @@ public interface ImageSearchResponse  {
     public void setResults(final ResultItem ...results);
     public void setResults(final List<ResultItem> results);
 
-    public static ImageSearchResponseImpl of(){
+    public static ImageSearchResponse of(){
         return new ImageSearchResponseImpl();
     }
     
 
-    public static ImageSearchResponseImpl of(final ImageSearchResponse template) {
+    public static ImageSearchResponse of(final ImageSearchResponse template) {
         ImageSearchResponseImpl instance = new ImageSearchResponseImpl();
         instance.setCount(template.getCount());
         instance.setOffset(template.getOffset());
@@ -73,6 +73,15 @@ public interface ImageSearchResponse  {
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ImageSearchResponseBuilder builder(){
+        return ImageSearchResponseBuilder.of();
+    }
+    
+    public static ImageSearchResponseBuilder builder(final ImageSearchResponse template){
+        return ImageSearchResponseBuilder.of(template);
+    }
+    
 
     default <T> T withImageSearchResponse(Function<ImageSearchResponse, T> helper) {
         return helper.apply(this);

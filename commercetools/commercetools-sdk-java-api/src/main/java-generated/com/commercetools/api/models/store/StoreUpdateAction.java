@@ -52,6 +52,7 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
 
 
 
+
     default <T> T withStoreUpdateAction(Function<StoreUpdateAction, T> helper) {
         return helper.apply(this);
     }

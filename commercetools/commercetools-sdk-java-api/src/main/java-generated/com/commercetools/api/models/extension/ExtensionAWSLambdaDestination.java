@@ -40,18 +40,27 @@ public interface ExtensionAWSLambdaDestination extends ExtensionDestination {
     
     public void setAccessSecret(final String accessSecret);
 
-    public static ExtensionAWSLambdaDestinationImpl of(){
+    public static ExtensionAWSLambdaDestination of(){
         return new ExtensionAWSLambdaDestinationImpl();
     }
     
 
-    public static ExtensionAWSLambdaDestinationImpl of(final ExtensionAWSLambdaDestination template) {
+    public static ExtensionAWSLambdaDestination of(final ExtensionAWSLambdaDestination template) {
         ExtensionAWSLambdaDestinationImpl instance = new ExtensionAWSLambdaDestinationImpl();
         instance.setArn(template.getArn());
         instance.setAccessKey(template.getAccessKey());
         instance.setAccessSecret(template.getAccessSecret());
         return instance;
     }
+
+    public static ExtensionAWSLambdaDestinationBuilder builder(){
+        return ExtensionAWSLambdaDestinationBuilder.of();
+    }
+    
+    public static ExtensionAWSLambdaDestinationBuilder builder(final ExtensionAWSLambdaDestination template){
+        return ExtensionAWSLambdaDestinationBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionAWSLambdaDestination(Function<ExtensionAWSLambdaDestination, T> helper) {
         return helper.apply(this);

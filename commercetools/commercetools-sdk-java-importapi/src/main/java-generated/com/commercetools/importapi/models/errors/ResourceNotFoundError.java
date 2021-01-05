@@ -29,17 +29,26 @@ public interface ResourceNotFoundError extends ErrorObject {
 
     public void setResource(final JsonNode resource);
 
-    public static ResourceNotFoundErrorImpl of(){
+    public static ResourceNotFoundError of(){
         return new ResourceNotFoundErrorImpl();
     }
     
 
-    public static ResourceNotFoundErrorImpl of(final ResourceNotFoundError template) {
+    public static ResourceNotFoundError of(final ResourceNotFoundError template) {
         ResourceNotFoundErrorImpl instance = new ResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public static ResourceNotFoundErrorBuilder builder(){
+        return ResourceNotFoundErrorBuilder.of();
+    }
+    
+    public static ResourceNotFoundErrorBuilder builder(final ResourceNotFoundError template){
+        return ResourceNotFoundErrorBuilder.of(template);
+    }
+    
 
     default <T> T withResourceNotFoundError(Function<ResourceNotFoundError, T> helper) {
         return helper.apply(this);

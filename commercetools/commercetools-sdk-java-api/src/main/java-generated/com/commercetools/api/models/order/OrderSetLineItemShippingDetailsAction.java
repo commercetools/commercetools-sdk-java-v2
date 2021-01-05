@@ -35,17 +35,26 @@ public interface OrderSetLineItemShippingDetailsAction extends OrderUpdateAction
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static OrderSetLineItemShippingDetailsActionImpl of(){
+    public static OrderSetLineItemShippingDetailsAction of(){
         return new OrderSetLineItemShippingDetailsActionImpl();
     }
     
 
-    public static OrderSetLineItemShippingDetailsActionImpl of(final OrderSetLineItemShippingDetailsAction template) {
+    public static OrderSetLineItemShippingDetailsAction of(final OrderSetLineItemShippingDetailsAction template) {
         OrderSetLineItemShippingDetailsActionImpl instance = new OrderSetLineItemShippingDetailsActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static OrderSetLineItemShippingDetailsActionBuilder builder(){
+        return OrderSetLineItemShippingDetailsActionBuilder.of();
+    }
+    
+    public static OrderSetLineItemShippingDetailsActionBuilder builder(final OrderSetLineItemShippingDetailsAction template){
+        return OrderSetLineItemShippingDetailsActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetLineItemShippingDetailsAction(Function<OrderSetLineItemShippingDetailsAction, T> helper) {
         return helper.apply(this);

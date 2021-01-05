@@ -41,18 +41,27 @@ public interface CategorySetAssetDescriptionAction extends CategoryUpdateAction 
     
     public void setDescription(final LocalizedString description);
 
-    public static CategorySetAssetDescriptionActionImpl of(){
+    public static CategorySetAssetDescriptionAction of(){
         return new CategorySetAssetDescriptionActionImpl();
     }
     
 
-    public static CategorySetAssetDescriptionActionImpl of(final CategorySetAssetDescriptionAction template) {
+    public static CategorySetAssetDescriptionAction of(final CategorySetAssetDescriptionAction template) {
         CategorySetAssetDescriptionActionImpl instance = new CategorySetAssetDescriptionActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static CategorySetAssetDescriptionActionBuilder builder(){
+        return CategorySetAssetDescriptionActionBuilder.of();
+    }
+    
+    public static CategorySetAssetDescriptionActionBuilder builder(final CategorySetAssetDescriptionAction template){
+        return CategorySetAssetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetAssetDescriptionAction(Function<CategorySetAssetDescriptionAction, T> helper) {
         return helper.apply(this);

@@ -36,17 +36,26 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
     
     public void setNewValue(final AttributeLocalizedEnumValue newValue);
 
-    public static ProductTypeChangeLocalizedEnumValueLabelActionImpl of(){
+    public static ProductTypeChangeLocalizedEnumValueLabelAction of(){
         return new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
     }
     
 
-    public static ProductTypeChangeLocalizedEnumValueLabelActionImpl of(final ProductTypeChangeLocalizedEnumValueLabelAction template) {
+    public static ProductTypeChangeLocalizedEnumValueLabelAction of(final ProductTypeChangeLocalizedEnumValueLabelAction template) {
         ProductTypeChangeLocalizedEnumValueLabelActionImpl instance = new ProductTypeChangeLocalizedEnumValueLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewValue(template.getNewValue());
         return instance;
     }
+
+    public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder builder(){
+        return ProductTypeChangeLocalizedEnumValueLabelActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeLocalizedEnumValueLabelActionBuilder builder(final ProductTypeChangeLocalizedEnumValueLabelAction template){
+        return ProductTypeChangeLocalizedEnumValueLabelActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeLocalizedEnumValueLabelAction(Function<ProductTypeChangeLocalizedEnumValueLabelAction, T> helper) {
         return helper.apply(this);

@@ -45,18 +45,27 @@ public interface MissingImages  {
     
     public void setImageCount(final Long imageCount);
 
-    public static MissingImagesImpl of(){
+    public static MissingImages of(){
         return new MissingImagesImpl();
     }
     
 
-    public static MissingImagesImpl of(final MissingImages template) {
+    public static MissingImages of(final MissingImages template) {
         MissingImagesImpl instance = new MissingImagesImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantId(template.getVariantId());
         instance.setImageCount(template.getImageCount());
         return instance;
     }
+
+    public static MissingImagesBuilder builder(){
+        return MissingImagesBuilder.of();
+    }
+    
+    public static MissingImagesBuilder builder(final MissingImages template){
+        return MissingImagesBuilder.of(template);
+    }
+    
 
     default <T> T withMissingImages(Function<MissingImages, T> helper) {
         return helper.apply(this);

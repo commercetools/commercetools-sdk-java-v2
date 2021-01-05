@@ -30,16 +30,25 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
 
     public void setParent(final CategoryResourceIdentifier parent);
 
-    public static CategoryChangeParentActionImpl of(){
+    public static CategoryChangeParentAction of(){
         return new CategoryChangeParentActionImpl();
     }
     
 
-    public static CategoryChangeParentActionImpl of(final CategoryChangeParentAction template) {
+    public static CategoryChangeParentAction of(final CategoryChangeParentAction template) {
         CategoryChangeParentActionImpl instance = new CategoryChangeParentActionImpl();
         instance.setParent(template.getParent());
         return instance;
     }
+
+    public static CategoryChangeParentActionBuilder builder(){
+        return CategoryChangeParentActionBuilder.of();
+    }
+    
+    public static CategoryChangeParentActionBuilder builder(final CategoryChangeParentAction template){
+        return CategoryChangeParentActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryChangeParentAction(Function<CategoryChangeParentAction, T> helper) {
         return helper.apply(this);

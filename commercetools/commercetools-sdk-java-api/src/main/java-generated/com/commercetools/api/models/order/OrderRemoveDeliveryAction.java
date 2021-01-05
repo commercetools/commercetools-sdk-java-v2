@@ -28,16 +28,25 @@ public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
 
     public void setDeliveryId(final String deliveryId);
 
-    public static OrderRemoveDeliveryActionImpl of(){
+    public static OrderRemoveDeliveryAction of(){
         return new OrderRemoveDeliveryActionImpl();
     }
     
 
-    public static OrderRemoveDeliveryActionImpl of(final OrderRemoveDeliveryAction template) {
+    public static OrderRemoveDeliveryAction of(final OrderRemoveDeliveryAction template) {
         OrderRemoveDeliveryActionImpl instance = new OrderRemoveDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
+
+    public static OrderRemoveDeliveryActionBuilder builder(){
+        return OrderRemoveDeliveryActionBuilder.of();
+    }
+    
+    public static OrderRemoveDeliveryActionBuilder builder(final OrderRemoveDeliveryAction template){
+        return OrderRemoveDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderRemoveDeliveryAction(Function<OrderRemoveDeliveryAction, T> helper) {
         return helper.apply(this);

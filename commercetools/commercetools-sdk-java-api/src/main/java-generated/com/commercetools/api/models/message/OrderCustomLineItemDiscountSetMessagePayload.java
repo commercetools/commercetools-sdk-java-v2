@@ -45,18 +45,27 @@ public interface OrderCustomLineItemDiscountSetMessagePayload extends MessagePay
     
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
-    public static OrderCustomLineItemDiscountSetMessagePayloadImpl of(){
+    public static OrderCustomLineItemDiscountSetMessagePayload of(){
         return new OrderCustomLineItemDiscountSetMessagePayloadImpl();
     }
     
 
-    public static OrderCustomLineItemDiscountSetMessagePayloadImpl of(final OrderCustomLineItemDiscountSetMessagePayload template) {
+    public static OrderCustomLineItemDiscountSetMessagePayload of(final OrderCustomLineItemDiscountSetMessagePayload template) {
         OrderCustomLineItemDiscountSetMessagePayloadImpl instance = new OrderCustomLineItemDiscountSetMessagePayloadImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setDiscountedPricePerQuantity(template.getDiscountedPricePerQuantity());
         instance.setTaxedPrice(template.getTaxedPrice());
         return instance;
     }
+
+    public static OrderCustomLineItemDiscountSetMessagePayloadBuilder builder(){
+        return OrderCustomLineItemDiscountSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderCustomLineItemDiscountSetMessagePayloadBuilder builder(final OrderCustomLineItemDiscountSetMessagePayload template){
+        return OrderCustomLineItemDiscountSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderCustomLineItemDiscountSetMessagePayload(Function<OrderCustomLineItemDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);

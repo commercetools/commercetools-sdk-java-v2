@@ -38,16 +38,25 @@ public interface InventoryImportRequest extends ImportRequest {
     public void setResources(final InventoryImport ...resources);
     public void setResources(final List<InventoryImport> resources);
 
-    public static InventoryImportRequestImpl of(){
+    public static InventoryImportRequest of(){
         return new InventoryImportRequestImpl();
     }
     
 
-    public static InventoryImportRequestImpl of(final InventoryImportRequest template) {
+    public static InventoryImportRequest of(final InventoryImportRequest template) {
         InventoryImportRequestImpl instance = new InventoryImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public static InventoryImportRequestBuilder builder(){
+        return InventoryImportRequestBuilder.of();
+    }
+    
+    public static InventoryImportRequestBuilder builder(final InventoryImportRequest template){
+        return InventoryImportRequestBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryImportRequest(Function<InventoryImportRequest, T> helper) {
         return helper.apply(this);

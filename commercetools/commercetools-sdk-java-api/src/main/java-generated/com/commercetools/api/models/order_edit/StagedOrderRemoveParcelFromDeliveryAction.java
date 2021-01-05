@@ -28,16 +28,25 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
 
     public void setParcelId(final String parcelId);
 
-    public static StagedOrderRemoveParcelFromDeliveryActionImpl of(){
+    public static StagedOrderRemoveParcelFromDeliveryAction of(){
         return new StagedOrderRemoveParcelFromDeliveryActionImpl();
     }
     
 
-    public static StagedOrderRemoveParcelFromDeliveryActionImpl of(final StagedOrderRemoveParcelFromDeliveryAction template) {
+    public static StagedOrderRemoveParcelFromDeliveryAction of(final StagedOrderRemoveParcelFromDeliveryAction template) {
         StagedOrderRemoveParcelFromDeliveryActionImpl instance = new StagedOrderRemoveParcelFromDeliveryActionImpl();
         instance.setParcelId(template.getParcelId());
         return instance;
     }
+
+    public static StagedOrderRemoveParcelFromDeliveryActionBuilder builder(){
+        return StagedOrderRemoveParcelFromDeliveryActionBuilder.of();
+    }
+    
+    public static StagedOrderRemoveParcelFromDeliveryActionBuilder builder(final StagedOrderRemoveParcelFromDeliveryAction template){
+        return StagedOrderRemoveParcelFromDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderRemoveParcelFromDeliveryAction(Function<StagedOrderRemoveParcelFromDeliveryAction, T> helper) {
         return helper.apply(this);

@@ -27,16 +27,25 @@ public interface StateKeyReference extends KeyReference {
 
 
 
-    public static StateKeyReferenceImpl of(){
+    public static StateKeyReference of(){
         return new StateKeyReferenceImpl();
     }
     
 
-    public static StateKeyReferenceImpl of(final StateKeyReference template) {
+    public static StateKeyReference of(final StateKeyReference template) {
         StateKeyReferenceImpl instance = new StateKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static StateKeyReferenceBuilder builder(){
+        return StateKeyReferenceBuilder.of();
+    }
+    
+    public static StateKeyReferenceBuilder builder(final StateKeyReference template){
+        return StateKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withStateKeyReference(Function<StateKeyReference, T> helper) {
         return helper.apply(this);

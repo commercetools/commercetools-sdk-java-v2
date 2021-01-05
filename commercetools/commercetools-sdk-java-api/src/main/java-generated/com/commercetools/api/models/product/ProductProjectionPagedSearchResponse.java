@@ -63,12 +63,12 @@ public interface ProductProjectionPagedSearchResponse extends com.commercetools.
     
     public void setFacets(final FacetResults facets);
 
-    public static ProductProjectionPagedSearchResponseImpl of(){
+    public static ProductProjectionPagedSearchResponse of(){
         return new ProductProjectionPagedSearchResponseImpl();
     }
     
 
-    public static ProductProjectionPagedSearchResponseImpl of(final ProductProjectionPagedSearchResponse template) {
+    public static ProductProjectionPagedSearchResponse of(final ProductProjectionPagedSearchResponse template) {
         ProductProjectionPagedSearchResponseImpl instance = new ProductProjectionPagedSearchResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -78,6 +78,15 @@ public interface ProductProjectionPagedSearchResponse extends com.commercetools.
         instance.setFacets(template.getFacets());
         return instance;
     }
+
+    public static ProductProjectionPagedSearchResponseBuilder builder(){
+        return ProductProjectionPagedSearchResponseBuilder.of();
+    }
+    
+    public static ProductProjectionPagedSearchResponseBuilder builder(final ProductProjectionPagedSearchResponse template){
+        return ProductProjectionPagedSearchResponseBuilder.of(template);
+    }
+    
 
     default <T> T withProductProjectionPagedSearchResponse(Function<ProductProjectionPagedSearchResponse, T> helper) {
         return helper.apply(this);

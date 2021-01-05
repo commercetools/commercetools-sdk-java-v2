@@ -37,17 +37,26 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
     public void setActions(final UpdateAction ...actions);
     public void setActions(final List<UpdateAction> actions);
 
-    public static UpdateImpl of(){
+    public static Update of(){
         return new UpdateImpl();
     }
     
 
-    public static UpdateImpl of(final Update template) {
+    public static Update of(final Update template) {
         UpdateImpl instance = new UpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static UpdateBuilder builder(){
+        return UpdateBuilder.of();
+    }
+    
+    public static UpdateBuilder builder(final Update template){
+        return UpdateBuilder.of(template);
+    }
+    
 
     default <T> T withUpdate(Function<Update, T> helper) {
         return helper.apply(this);

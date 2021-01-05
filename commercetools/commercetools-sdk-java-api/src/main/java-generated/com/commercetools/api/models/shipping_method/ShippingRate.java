@@ -59,12 +59,12 @@ public interface ShippingRate  {
     public void setTiers(final ShippingRatePriceTier ...tiers);
     public void setTiers(final List<ShippingRatePriceTier> tiers);
 
-    public static ShippingRateImpl of(){
+    public static ShippingRate of(){
         return new ShippingRateImpl();
     }
     
 
-    public static ShippingRateImpl of(final ShippingRate template) {
+    public static ShippingRate of(final ShippingRate template) {
         ShippingRateImpl instance = new ShippingRateImpl();
         instance.setPrice(template.getPrice());
         instance.setFreeAbove(template.getFreeAbove());
@@ -72,6 +72,15 @@ public interface ShippingRate  {
         instance.setTiers(template.getTiers());
         return instance;
     }
+
+    public static ShippingRateBuilder builder(){
+        return ShippingRateBuilder.of();
+    }
+    
+    public static ShippingRateBuilder builder(final ShippingRate template){
+        return ShippingRateBuilder.of(template);
+    }
+    
 
     default <T> T withShippingRate(Function<ShippingRate, T> helper) {
         return helper.apply(this);

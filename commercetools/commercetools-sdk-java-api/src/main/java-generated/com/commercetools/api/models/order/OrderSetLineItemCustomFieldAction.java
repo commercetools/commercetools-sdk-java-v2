@@ -41,18 +41,27 @@ public interface OrderSetLineItemCustomFieldAction extends OrderUpdateAction {
     
     public void setValue(final JsonNode value);
 
-    public static OrderSetLineItemCustomFieldActionImpl of(){
+    public static OrderSetLineItemCustomFieldAction of(){
         return new OrderSetLineItemCustomFieldActionImpl();
     }
     
 
-    public static OrderSetLineItemCustomFieldActionImpl of(final OrderSetLineItemCustomFieldAction template) {
+    public static OrderSetLineItemCustomFieldAction of(final OrderSetLineItemCustomFieldAction template) {
         OrderSetLineItemCustomFieldActionImpl instance = new OrderSetLineItemCustomFieldActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static OrderSetLineItemCustomFieldActionBuilder builder(){
+        return OrderSetLineItemCustomFieldActionBuilder.of();
+    }
+    
+    public static OrderSetLineItemCustomFieldActionBuilder builder(final OrderSetLineItemCustomFieldAction template){
+        return OrderSetLineItemCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetLineItemCustomFieldAction(Function<OrderSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);

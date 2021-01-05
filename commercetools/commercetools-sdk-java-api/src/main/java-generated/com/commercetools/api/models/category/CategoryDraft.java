@@ -117,12 +117,12 @@ public interface CategoryDraft  {
     
     public void setKey(final String key);
 
-    public static CategoryDraftImpl of(){
+    public static CategoryDraft of(){
         return new CategoryDraftImpl();
     }
     
 
-    public static CategoryDraftImpl of(final CategoryDraft template) {
+    public static CategoryDraft of(final CategoryDraft template) {
         CategoryDraftImpl instance = new CategoryDraftImpl();
         instance.setName(template.getName());
         instance.setSlug(template.getSlug());
@@ -138,6 +138,15 @@ public interface CategoryDraft  {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CategoryDraftBuilder builder(){
+        return CategoryDraftBuilder.of();
+    }
+    
+    public static CategoryDraftBuilder builder(final CategoryDraft template){
+        return CategoryDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryDraft(Function<CategoryDraft, T> helper) {
         return helper.apply(this);

@@ -42,18 +42,27 @@ public interface StagedOrderSetLineItemCustomTypeAction extends StagedOrderUpdat
     
     public void setFields(final FieldContainer fields);
 
-    public static StagedOrderSetLineItemCustomTypeActionImpl of(){
+    public static StagedOrderSetLineItemCustomTypeAction of(){
         return new StagedOrderSetLineItemCustomTypeActionImpl();
     }
     
 
-    public static StagedOrderSetLineItemCustomTypeActionImpl of(final StagedOrderSetLineItemCustomTypeAction template) {
+    public static StagedOrderSetLineItemCustomTypeAction of(final StagedOrderSetLineItemCustomTypeAction template) {
         StagedOrderSetLineItemCustomTypeActionImpl instance = new StagedOrderSetLineItemCustomTypeActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static StagedOrderSetLineItemCustomTypeActionBuilder builder(){
+        return StagedOrderSetLineItemCustomTypeActionBuilder.of();
+    }
+    
+    public static StagedOrderSetLineItemCustomTypeActionBuilder builder(final StagedOrderSetLineItemCustomTypeAction template){
+        return StagedOrderSetLineItemCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetLineItemCustomTypeAction(Function<StagedOrderSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);

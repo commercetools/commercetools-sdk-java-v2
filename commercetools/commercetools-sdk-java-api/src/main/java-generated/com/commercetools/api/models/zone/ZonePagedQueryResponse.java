@@ -55,12 +55,12 @@ public interface ZonePagedQueryResponse extends com.commercetools.api.models.Res
     public void setResults(final Zone ...results);
     public void setResults(final List<Zone> results);
 
-    public static ZonePagedQueryResponseImpl of(){
+    public static ZonePagedQueryResponse of(){
         return new ZonePagedQueryResponseImpl();
     }
     
 
-    public static ZonePagedQueryResponseImpl of(final ZonePagedQueryResponse template) {
+    public static ZonePagedQueryResponse of(final ZonePagedQueryResponse template) {
         ZonePagedQueryResponseImpl instance = new ZonePagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ZonePagedQueryResponse extends com.commercetools.api.models.Res
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ZonePagedQueryResponseBuilder builder(){
+        return ZonePagedQueryResponseBuilder.of();
+    }
+    
+    public static ZonePagedQueryResponseBuilder builder(final ZonePagedQueryResponse template){
+        return ZonePagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withZonePagedQueryResponse(Function<ZonePagedQueryResponse, T> helper) {
         return helper.apply(this);

@@ -39,17 +39,26 @@ public interface ExternalTaxAmountDraft  {
     
     public void setTaxRate(final ExternalTaxRateDraft taxRate);
 
-    public static ExternalTaxAmountDraftImpl of(){
+    public static ExternalTaxAmountDraft of(){
         return new ExternalTaxAmountDraftImpl();
     }
     
 
-    public static ExternalTaxAmountDraftImpl of(final ExternalTaxAmountDraft template) {
+    public static ExternalTaxAmountDraft of(final ExternalTaxAmountDraft template) {
         ExternalTaxAmountDraftImpl instance = new ExternalTaxAmountDraftImpl();
         instance.setTotalGross(template.getTotalGross());
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
+
+    public static ExternalTaxAmountDraftBuilder builder(){
+        return ExternalTaxAmountDraftBuilder.of();
+    }
+    
+    public static ExternalTaxAmountDraftBuilder builder(final ExternalTaxAmountDraft template){
+        return ExternalTaxAmountDraftBuilder.of(template);
+    }
+    
 
     default <T> T withExternalTaxAmountDraft(Function<ExternalTaxAmountDraft, T> helper) {
         return helper.apply(this);

@@ -27,16 +27,25 @@ public interface PriceKeyReference extends KeyReference {
 
 
 
-    public static PriceKeyReferenceImpl of(){
+    public static PriceKeyReference of(){
         return new PriceKeyReferenceImpl();
     }
     
 
-    public static PriceKeyReferenceImpl of(final PriceKeyReference template) {
+    public static PriceKeyReference of(final PriceKeyReference template) {
         PriceKeyReferenceImpl instance = new PriceKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static PriceKeyReferenceBuilder builder(){
+        return PriceKeyReferenceBuilder.of();
+    }
+    
+    public static PriceKeyReferenceBuilder builder(final PriceKeyReference template){
+        return PriceKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withPriceKeyReference(Function<PriceKeyReference, T> helper) {
         return helper.apply(this);

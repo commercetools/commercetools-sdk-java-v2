@@ -44,18 +44,27 @@ public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
     public void setSources(final AssetSource ...sources);
     public void setSources(final List<AssetSource> sources);
 
-    public static CategorySetAssetSourcesActionImpl of(){
+    public static CategorySetAssetSourcesAction of(){
         return new CategorySetAssetSourcesActionImpl();
     }
     
 
-    public static CategorySetAssetSourcesActionImpl of(final CategorySetAssetSourcesAction template) {
+    public static CategorySetAssetSourcesAction of(final CategorySetAssetSourcesAction template) {
         CategorySetAssetSourcesActionImpl instance = new CategorySetAssetSourcesActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         instance.setSources(template.getSources());
         return instance;
     }
+
+    public static CategorySetAssetSourcesActionBuilder builder(){
+        return CategorySetAssetSourcesActionBuilder.of();
+    }
+    
+    public static CategorySetAssetSourcesActionBuilder builder(final CategorySetAssetSourcesAction template){
+        return CategorySetAssetSourcesActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetAssetSourcesAction(Function<CategorySetAssetSourcesAction, T> helper) {
         return helper.apply(this);

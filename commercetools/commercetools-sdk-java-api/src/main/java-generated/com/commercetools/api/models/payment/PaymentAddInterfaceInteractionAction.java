@@ -37,17 +37,26 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
     
     public void setFields(final FieldContainer fields);
 
-    public static PaymentAddInterfaceInteractionActionImpl of(){
+    public static PaymentAddInterfaceInteractionAction of(){
         return new PaymentAddInterfaceInteractionActionImpl();
     }
     
 
-    public static PaymentAddInterfaceInteractionActionImpl of(final PaymentAddInterfaceInteractionAction template) {
+    public static PaymentAddInterfaceInteractionAction of(final PaymentAddInterfaceInteractionAction template) {
         PaymentAddInterfaceInteractionActionImpl instance = new PaymentAddInterfaceInteractionActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static PaymentAddInterfaceInteractionActionBuilder builder(){
+        return PaymentAddInterfaceInteractionActionBuilder.of();
+    }
+    
+    public static PaymentAddInterfaceInteractionActionBuilder builder(final PaymentAddInterfaceInteractionAction template){
+        return PaymentAddInterfaceInteractionActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentAddInterfaceInteractionAction(Function<PaymentAddInterfaceInteractionAction, T> helper) {
         return helper.apply(this);

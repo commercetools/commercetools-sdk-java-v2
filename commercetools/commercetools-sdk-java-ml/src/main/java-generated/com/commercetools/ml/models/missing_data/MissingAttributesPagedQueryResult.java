@@ -57,12 +57,12 @@ public interface MissingAttributesPagedQueryResult  {
     
     public void setMeta(final MissingAttributesMeta meta);
 
-    public static MissingAttributesPagedQueryResultImpl of(){
+    public static MissingAttributesPagedQueryResult of(){
         return new MissingAttributesPagedQueryResultImpl();
     }
     
 
-    public static MissingAttributesPagedQueryResultImpl of(final MissingAttributesPagedQueryResult template) {
+    public static MissingAttributesPagedQueryResult of(final MissingAttributesPagedQueryResult template) {
         MissingAttributesPagedQueryResultImpl instance = new MissingAttributesPagedQueryResultImpl();
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
@@ -71,6 +71,15 @@ public interface MissingAttributesPagedQueryResult  {
         instance.setMeta(template.getMeta());
         return instance;
     }
+
+    public static MissingAttributesPagedQueryResultBuilder builder(){
+        return MissingAttributesPagedQueryResultBuilder.of();
+    }
+    
+    public static MissingAttributesPagedQueryResultBuilder builder(final MissingAttributesPagedQueryResult template){
+        return MissingAttributesPagedQueryResultBuilder.of(template);
+    }
+    
 
     default <T> T withMissingAttributesPagedQueryResult(Function<MissingAttributesPagedQueryResult, T> helper) {
         return helper.apply(this);

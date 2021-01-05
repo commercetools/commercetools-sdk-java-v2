@@ -29,16 +29,25 @@ public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
 
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
-    public static CartChangeTaxRoundingModeActionImpl of(){
+    public static CartChangeTaxRoundingModeAction of(){
         return new CartChangeTaxRoundingModeActionImpl();
     }
     
 
-    public static CartChangeTaxRoundingModeActionImpl of(final CartChangeTaxRoundingModeAction template) {
+    public static CartChangeTaxRoundingModeAction of(final CartChangeTaxRoundingModeAction template) {
         CartChangeTaxRoundingModeActionImpl instance = new CartChangeTaxRoundingModeActionImpl();
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         return instance;
     }
+
+    public static CartChangeTaxRoundingModeActionBuilder builder(){
+        return CartChangeTaxRoundingModeActionBuilder.of();
+    }
+    
+    public static CartChangeTaxRoundingModeActionBuilder builder(final CartChangeTaxRoundingModeAction template){
+        return CartChangeTaxRoundingModeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartChangeTaxRoundingModeAction(Function<CartChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);

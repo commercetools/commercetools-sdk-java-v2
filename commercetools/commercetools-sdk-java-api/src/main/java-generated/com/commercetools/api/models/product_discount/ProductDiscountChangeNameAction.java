@@ -30,16 +30,25 @@ public interface ProductDiscountChangeNameAction extends ProductDiscountUpdateAc
 
     public void setName(final LocalizedString name);
 
-    public static ProductDiscountChangeNameActionImpl of(){
+    public static ProductDiscountChangeNameAction of(){
         return new ProductDiscountChangeNameActionImpl();
     }
     
 
-    public static ProductDiscountChangeNameActionImpl of(final ProductDiscountChangeNameAction template) {
+    public static ProductDiscountChangeNameAction of(final ProductDiscountChangeNameAction template) {
         ProductDiscountChangeNameActionImpl instance = new ProductDiscountChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ProductDiscountChangeNameActionBuilder builder(){
+        return ProductDiscountChangeNameActionBuilder.of();
+    }
+    
+    public static ProductDiscountChangeNameActionBuilder builder(final ProductDiscountChangeNameAction template){
+        return ProductDiscountChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountChangeNameAction(Function<ProductDiscountChangeNameAction, T> helper) {
         return helper.apply(this);

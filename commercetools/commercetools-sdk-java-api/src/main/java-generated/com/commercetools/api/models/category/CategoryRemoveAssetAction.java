@@ -34,17 +34,26 @@ public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
     
     public void setAssetKey(final String assetKey);
 
-    public static CategoryRemoveAssetActionImpl of(){
+    public static CategoryRemoveAssetAction of(){
         return new CategoryRemoveAssetActionImpl();
     }
     
 
-    public static CategoryRemoveAssetActionImpl of(final CategoryRemoveAssetAction template) {
+    public static CategoryRemoveAssetAction of(final CategoryRemoveAssetAction template) {
         CategoryRemoveAssetActionImpl instance = new CategoryRemoveAssetActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
         return instance;
     }
+
+    public static CategoryRemoveAssetActionBuilder builder(){
+        return CategoryRemoveAssetActionBuilder.of();
+    }
+    
+    public static CategoryRemoveAssetActionBuilder builder(final CategoryRemoveAssetAction template){
+        return CategoryRemoveAssetActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryRemoveAssetAction(Function<CategoryRemoveAssetAction, T> helper) {
         return helper.apply(this);

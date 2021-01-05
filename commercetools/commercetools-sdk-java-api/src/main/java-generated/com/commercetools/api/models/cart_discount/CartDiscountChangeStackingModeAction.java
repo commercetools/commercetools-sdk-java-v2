@@ -29,16 +29,25 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
 
     public void setStackingMode(final StackingMode stackingMode);
 
-    public static CartDiscountChangeStackingModeActionImpl of(){
+    public static CartDiscountChangeStackingModeAction of(){
         return new CartDiscountChangeStackingModeActionImpl();
     }
     
 
-    public static CartDiscountChangeStackingModeActionImpl of(final CartDiscountChangeStackingModeAction template) {
+    public static CartDiscountChangeStackingModeAction of(final CartDiscountChangeStackingModeAction template) {
         CartDiscountChangeStackingModeActionImpl instance = new CartDiscountChangeStackingModeActionImpl();
         instance.setStackingMode(template.getStackingMode());
         return instance;
     }
+
+    public static CartDiscountChangeStackingModeActionBuilder builder(){
+        return CartDiscountChangeStackingModeActionBuilder.of();
+    }
+    
+    public static CartDiscountChangeStackingModeActionBuilder builder(final CartDiscountChangeStackingModeAction template){
+        return CartDiscountChangeStackingModeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountChangeStackingModeAction(Function<CartDiscountChangeStackingModeAction, T> helper) {
         return helper.apply(this);

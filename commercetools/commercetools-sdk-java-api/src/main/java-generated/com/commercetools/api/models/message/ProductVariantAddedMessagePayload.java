@@ -36,17 +36,26 @@ public interface ProductVariantAddedMessagePayload extends MessagePayload {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductVariantAddedMessagePayloadImpl of(){
+    public static ProductVariantAddedMessagePayload of(){
         return new ProductVariantAddedMessagePayloadImpl();
     }
     
 
-    public static ProductVariantAddedMessagePayloadImpl of(final ProductVariantAddedMessagePayload template) {
+    public static ProductVariantAddedMessagePayload of(final ProductVariantAddedMessagePayload template) {
         ProductVariantAddedMessagePayloadImpl instance = new ProductVariantAddedMessagePayloadImpl();
         instance.setVariant(template.getVariant());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductVariantAddedMessagePayloadBuilder builder(){
+        return ProductVariantAddedMessagePayloadBuilder.of();
+    }
+    
+    public static ProductVariantAddedMessagePayloadBuilder builder(final ProductVariantAddedMessagePayload template){
+        return ProductVariantAddedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantAddedMessagePayload(Function<ProductVariantAddedMessagePayload, T> helper) {
         return helper.apply(this);

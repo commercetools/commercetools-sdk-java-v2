@@ -32,16 +32,25 @@ public interface AttributeNestedType extends AttributeType {
 
     public void setTypeReference(final ProductTypeKeyReference typeReference);
 
-    public static AttributeNestedTypeImpl of(){
+    public static AttributeNestedType of(){
         return new AttributeNestedTypeImpl();
     }
     
 
-    public static AttributeNestedTypeImpl of(final AttributeNestedType template) {
+    public static AttributeNestedType of(final AttributeNestedType template) {
         AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
         instance.setTypeReference(template.getTypeReference());
         return instance;
     }
+
+    public static AttributeNestedTypeBuilder builder(){
+        return AttributeNestedTypeBuilder.of();
+    }
+    
+    public static AttributeNestedTypeBuilder builder(final AttributeNestedType template){
+        return AttributeNestedTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeNestedType(Function<AttributeNestedType, T> helper) {
         return helper.apply(this);

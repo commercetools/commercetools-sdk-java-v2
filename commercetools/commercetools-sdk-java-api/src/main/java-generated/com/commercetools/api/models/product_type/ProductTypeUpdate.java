@@ -37,17 +37,26 @@ public interface ProductTypeUpdate extends com.commercetools.api.models.Resource
     public void setActions(final ProductTypeUpdateAction ...actions);
     public void setActions(final List<ProductTypeUpdateAction> actions);
 
-    public static ProductTypeUpdateImpl of(){
+    public static ProductTypeUpdate of(){
         return new ProductTypeUpdateImpl();
     }
     
 
-    public static ProductTypeUpdateImpl of(final ProductTypeUpdate template) {
+    public static ProductTypeUpdate of(final ProductTypeUpdate template) {
         ProductTypeUpdateImpl instance = new ProductTypeUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ProductTypeUpdateBuilder builder(){
+        return ProductTypeUpdateBuilder.of();
+    }
+    
+    public static ProductTypeUpdateBuilder builder(final ProductTypeUpdate template){
+        return ProductTypeUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeUpdate(Function<ProductTypeUpdate, T> helper) {
         return helper.apply(this);

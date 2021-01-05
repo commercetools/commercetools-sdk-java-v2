@@ -31,16 +31,25 @@ public interface DiscountCodeSetDescriptionAction extends DiscountCodeUpdateActi
 
     public void setDescription(final LocalizedString description);
 
-    public static DiscountCodeSetDescriptionActionImpl of(){
+    public static DiscountCodeSetDescriptionAction of(){
         return new DiscountCodeSetDescriptionActionImpl();
     }
     
 
-    public static DiscountCodeSetDescriptionActionImpl of(final DiscountCodeSetDescriptionAction template) {
+    public static DiscountCodeSetDescriptionAction of(final DiscountCodeSetDescriptionAction template) {
         DiscountCodeSetDescriptionActionImpl instance = new DiscountCodeSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static DiscountCodeSetDescriptionActionBuilder builder(){
+        return DiscountCodeSetDescriptionActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetDescriptionActionBuilder builder(final DiscountCodeSetDescriptionAction template){
+        return DiscountCodeSetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetDescriptionAction(Function<DiscountCodeSetDescriptionAction, T> helper) {
         return helper.apply(this);

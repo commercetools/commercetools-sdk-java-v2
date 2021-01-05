@@ -28,16 +28,25 @@ public interface OrderSetCustomerIdAction extends OrderUpdateAction {
 
     public void setCustomerId(final String customerId);
 
-    public static OrderSetCustomerIdActionImpl of(){
+    public static OrderSetCustomerIdAction of(){
         return new OrderSetCustomerIdActionImpl();
     }
     
 
-    public static OrderSetCustomerIdActionImpl of(final OrderSetCustomerIdAction template) {
+    public static OrderSetCustomerIdAction of(final OrderSetCustomerIdAction template) {
         OrderSetCustomerIdActionImpl instance = new OrderSetCustomerIdActionImpl();
         instance.setCustomerId(template.getCustomerId());
         return instance;
     }
+
+    public static OrderSetCustomerIdActionBuilder builder(){
+        return OrderSetCustomerIdActionBuilder.of();
+    }
+    
+    public static OrderSetCustomerIdActionBuilder builder(final OrderSetCustomerIdAction template){
+        return OrderSetCustomerIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetCustomerIdAction(Function<OrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);

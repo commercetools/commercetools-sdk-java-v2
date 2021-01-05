@@ -78,12 +78,12 @@ public interface OperationStates  {
     
     public void setRejected(final Long rejected);
 
-    public static OperationStatesImpl of(){
+    public static OperationStates of(){
         return new OperationStatesImpl();
     }
     
 
-    public static OperationStatesImpl of(final OperationStates template) {
+    public static OperationStates of(final OperationStates template) {
         OperationStatesImpl instance = new OperationStatesImpl();
         instance.setValidationFailed(template.getValidationFailed());
         instance.setUnresolved(template.getUnresolved());
@@ -94,6 +94,15 @@ public interface OperationStates  {
         instance.setRejected(template.getRejected());
         return instance;
     }
+
+    public static OperationStatesBuilder builder(){
+        return OperationStatesBuilder.of();
+    }
+    
+    public static OperationStatesBuilder builder(final OperationStates template){
+        return OperationStatesBuilder.of(template);
+    }
+    
 
     default <T> T withOperationStates(Function<OperationStates, T> helper) {
         return helper.apply(this);

@@ -36,12 +36,12 @@ public interface ProductStateTransitionMessage extends Message {
     
     public void setForce(final Boolean force);
 
-    public static ProductStateTransitionMessageImpl of(){
+    public static ProductStateTransitionMessage of(){
         return new ProductStateTransitionMessageImpl();
     }
     
 
-    public static ProductStateTransitionMessageImpl of(final ProductStateTransitionMessage template) {
+    public static ProductStateTransitionMessage of(final ProductStateTransitionMessage template) {
         ProductStateTransitionMessageImpl instance = new ProductStateTransitionMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -57,6 +57,15 @@ public interface ProductStateTransitionMessage extends Message {
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static ProductStateTransitionMessageBuilder builder(){
+        return ProductStateTransitionMessageBuilder.of();
+    }
+    
+    public static ProductStateTransitionMessageBuilder builder(final ProductStateTransitionMessage template){
+        return ProductStateTransitionMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductStateTransitionMessage(Function<ProductStateTransitionMessage, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface PaymentAddTransactionAction extends PaymentUpdateAction {
 
     public void setTransaction(final TransactionDraft transaction);
 
-    public static PaymentAddTransactionActionImpl of(){
+    public static PaymentAddTransactionAction of(){
         return new PaymentAddTransactionActionImpl();
     }
     
 
-    public static PaymentAddTransactionActionImpl of(final PaymentAddTransactionAction template) {
+    public static PaymentAddTransactionAction of(final PaymentAddTransactionAction template) {
         PaymentAddTransactionActionImpl instance = new PaymentAddTransactionActionImpl();
         instance.setTransaction(template.getTransaction());
         return instance;
     }
+
+    public static PaymentAddTransactionActionBuilder builder(){
+        return PaymentAddTransactionActionBuilder.of();
+    }
+    
+    public static PaymentAddTransactionActionBuilder builder(final PaymentAddTransactionAction template){
+        return PaymentAddTransactionActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentAddTransactionAction(Function<PaymentAddTransactionAction, T> helper) {
         return helper.apply(this);

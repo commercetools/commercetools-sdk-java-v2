@@ -23,16 +23,25 @@ public interface InvalidCredentialsError extends ErrorObject {
 
 
 
-    public static InvalidCredentialsErrorImpl of(){
+    public static InvalidCredentialsError of(){
         return new InvalidCredentialsErrorImpl();
     }
     
 
-    public static InvalidCredentialsErrorImpl of(final InvalidCredentialsError template) {
+    public static InvalidCredentialsError of(final InvalidCredentialsError template) {
         InvalidCredentialsErrorImpl instance = new InvalidCredentialsErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidCredentialsErrorBuilder builder(){
+        return InvalidCredentialsErrorBuilder.of();
+    }
+    
+    public static InvalidCredentialsErrorBuilder builder(final InvalidCredentialsError template){
+        return InvalidCredentialsErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidCredentialsError(Function<InvalidCredentialsError, T> helper) {
         return helper.apply(this);

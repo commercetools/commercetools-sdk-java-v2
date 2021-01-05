@@ -23,15 +23,24 @@ public interface AttributeTextType extends AttributeType {
 
 
 
-    public static AttributeTextTypeImpl of(){
+    public static AttributeTextType of(){
         return new AttributeTextTypeImpl();
     }
     
 
-    public static AttributeTextTypeImpl of(final AttributeTextType template) {
+    public static AttributeTextType of(final AttributeTextType template) {
         AttributeTextTypeImpl instance = new AttributeTextTypeImpl();
         return instance;
     }
+
+    public static AttributeTextTypeBuilder builder(){
+        return AttributeTextTypeBuilder.of();
+    }
+    
+    public static AttributeTextTypeBuilder builder(final AttributeTextType template){
+        return AttributeTextTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeTextType(Function<AttributeTextType, T> helper) {
         return helper.apply(this);

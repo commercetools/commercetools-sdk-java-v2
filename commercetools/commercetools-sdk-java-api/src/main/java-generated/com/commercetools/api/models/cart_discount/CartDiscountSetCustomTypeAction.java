@@ -41,17 +41,26 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     
     public void setFields(final JsonNode fields);
 
-    public static CartDiscountSetCustomTypeActionImpl of(){
+    public static CartDiscountSetCustomTypeAction of(){
         return new CartDiscountSetCustomTypeActionImpl();
     }
     
 
-    public static CartDiscountSetCustomTypeActionImpl of(final CartDiscountSetCustomTypeAction template) {
+    public static CartDiscountSetCustomTypeAction of(final CartDiscountSetCustomTypeAction template) {
         CartDiscountSetCustomTypeActionImpl instance = new CartDiscountSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static CartDiscountSetCustomTypeActionBuilder builder(){
+        return CartDiscountSetCustomTypeActionBuilder.of();
+    }
+    
+    public static CartDiscountSetCustomTypeActionBuilder builder(final CartDiscountSetCustomTypeAction template){
+        return CartDiscountSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountSetCustomTypeAction(Function<CartDiscountSetCustomTypeAction, T> helper) {
         return helper.apply(this);

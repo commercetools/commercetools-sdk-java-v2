@@ -33,7 +33,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends ApiMethod<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet, com.commercetools.importapi.models.importsummaries.ImportSummary> {
+public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends ApiMethod<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet, com.commercetools.importapi.models.importsummaries.ImportSummary> implements com.commercetools.importapi.client.Secured_by_view_import_sinksTrait<ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet> {
 
     
     private String projectKey;

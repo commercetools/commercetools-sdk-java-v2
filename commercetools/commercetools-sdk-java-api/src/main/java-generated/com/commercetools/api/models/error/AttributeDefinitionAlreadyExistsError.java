@@ -40,12 +40,12 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
     
     public void setConflictingAttributeName(final String conflictingAttributeName);
 
-    public static AttributeDefinitionAlreadyExistsErrorImpl of(){
+    public static AttributeDefinitionAlreadyExistsError of(){
         return new AttributeDefinitionAlreadyExistsErrorImpl();
     }
     
 
-    public static AttributeDefinitionAlreadyExistsErrorImpl of(final AttributeDefinitionAlreadyExistsError template) {
+    public static AttributeDefinitionAlreadyExistsError of(final AttributeDefinitionAlreadyExistsError template) {
         AttributeDefinitionAlreadyExistsErrorImpl instance = new AttributeDefinitionAlreadyExistsErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setConflictingProductTypeId(template.getConflictingProductTypeId());
@@ -53,6 +53,15 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public static AttributeDefinitionAlreadyExistsErrorBuilder builder(){
+        return AttributeDefinitionAlreadyExistsErrorBuilder.of();
+    }
+    
+    public static AttributeDefinitionAlreadyExistsErrorBuilder builder(final AttributeDefinitionAlreadyExistsError template){
+        return AttributeDefinitionAlreadyExistsErrorBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeDefinitionAlreadyExistsError(Function<AttributeDefinitionAlreadyExistsError, T> helper) {
         return helper.apply(this);

@@ -42,18 +42,27 @@ public interface ProductImageAddedMessagePayload extends MessagePayload {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductImageAddedMessagePayloadImpl of(){
+    public static ProductImageAddedMessagePayload of(){
         return new ProductImageAddedMessagePayloadImpl();
     }
     
 
-    public static ProductImageAddedMessagePayloadImpl of(final ProductImageAddedMessagePayload template) {
+    public static ProductImageAddedMessagePayload of(final ProductImageAddedMessagePayload template) {
         ProductImageAddedMessagePayloadImpl instance = new ProductImageAddedMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
         instance.setImage(template.getImage());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductImageAddedMessagePayloadBuilder builder(){
+        return ProductImageAddedMessagePayloadBuilder.of();
+    }
+    
+    public static ProductImageAddedMessagePayloadBuilder builder(final ProductImageAddedMessagePayload template){
+        return ProductImageAddedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductImageAddedMessagePayload(Function<ProductImageAddedMessagePayload, T> helper) {
         return helper.apply(this);

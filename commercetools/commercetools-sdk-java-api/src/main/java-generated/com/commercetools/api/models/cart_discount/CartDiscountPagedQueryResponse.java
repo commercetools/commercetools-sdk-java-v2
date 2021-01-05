@@ -55,12 +55,12 @@ public interface CartDiscountPagedQueryResponse extends com.commercetools.api.mo
     public void setResults(final CartDiscount ...results);
     public void setResults(final List<CartDiscount> results);
 
-    public static CartDiscountPagedQueryResponseImpl of(){
+    public static CartDiscountPagedQueryResponse of(){
         return new CartDiscountPagedQueryResponseImpl();
     }
     
 
-    public static CartDiscountPagedQueryResponseImpl of(final CartDiscountPagedQueryResponse template) {
+    public static CartDiscountPagedQueryResponse of(final CartDiscountPagedQueryResponse template) {
         CartDiscountPagedQueryResponseImpl instance = new CartDiscountPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface CartDiscountPagedQueryResponse extends com.commercetools.api.mo
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static CartDiscountPagedQueryResponseBuilder builder(){
+        return CartDiscountPagedQueryResponseBuilder.of();
+    }
+    
+    public static CartDiscountPagedQueryResponseBuilder builder(final CartDiscountPagedQueryResponse template){
+        return CartDiscountPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountPagedQueryResponse(Function<CartDiscountPagedQueryResponse, T> helper) {
         return helper.apply(this);

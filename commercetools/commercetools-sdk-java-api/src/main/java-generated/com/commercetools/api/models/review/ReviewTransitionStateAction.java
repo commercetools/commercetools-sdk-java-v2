@@ -36,17 +36,26 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
     
     public void setForce(final Boolean force);
 
-    public static ReviewTransitionStateActionImpl of(){
+    public static ReviewTransitionStateAction of(){
         return new ReviewTransitionStateActionImpl();
     }
     
 
-    public static ReviewTransitionStateActionImpl of(final ReviewTransitionStateAction template) {
+    public static ReviewTransitionStateAction of(final ReviewTransitionStateAction template) {
         ReviewTransitionStateActionImpl instance = new ReviewTransitionStateActionImpl();
         instance.setState(template.getState());
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static ReviewTransitionStateActionBuilder builder(){
+        return ReviewTransitionStateActionBuilder.of();
+    }
+    
+    public static ReviewTransitionStateActionBuilder builder(final ReviewTransitionStateAction template){
+        return ReviewTransitionStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewTransitionStateAction(Function<ReviewTransitionStateAction, T> helper) {
         return helper.apply(this);

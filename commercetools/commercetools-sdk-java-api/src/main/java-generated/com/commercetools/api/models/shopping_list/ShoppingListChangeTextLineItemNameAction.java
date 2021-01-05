@@ -36,17 +36,26 @@ public interface ShoppingListChangeTextLineItemNameAction extends ShoppingListUp
     
     public void setName(final LocalizedString name);
 
-    public static ShoppingListChangeTextLineItemNameActionImpl of(){
+    public static ShoppingListChangeTextLineItemNameAction of(){
         return new ShoppingListChangeTextLineItemNameActionImpl();
     }
     
 
-    public static ShoppingListChangeTextLineItemNameActionImpl of(final ShoppingListChangeTextLineItemNameAction template) {
+    public static ShoppingListChangeTextLineItemNameAction of(final ShoppingListChangeTextLineItemNameAction template) {
         ShoppingListChangeTextLineItemNameActionImpl instance = new ShoppingListChangeTextLineItemNameActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ShoppingListChangeTextLineItemNameActionBuilder builder(){
+        return ShoppingListChangeTextLineItemNameActionBuilder.of();
+    }
+    
+    public static ShoppingListChangeTextLineItemNameActionBuilder builder(final ShoppingListChangeTextLineItemNameAction template){
+        return ShoppingListChangeTextLineItemNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListChangeTextLineItemNameAction(Function<ShoppingListChangeTextLineItemNameAction, T> helper) {
         return helper.apply(this);

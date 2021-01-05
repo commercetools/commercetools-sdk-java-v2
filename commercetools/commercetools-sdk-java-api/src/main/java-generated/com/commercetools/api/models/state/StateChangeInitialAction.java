@@ -28,16 +28,25 @@ public interface StateChangeInitialAction extends StateUpdateAction {
 
     public void setInitial(final Boolean initial);
 
-    public static StateChangeInitialActionImpl of(){
+    public static StateChangeInitialAction of(){
         return new StateChangeInitialActionImpl();
     }
     
 
-    public static StateChangeInitialActionImpl of(final StateChangeInitialAction template) {
+    public static StateChangeInitialAction of(final StateChangeInitialAction template) {
         StateChangeInitialActionImpl instance = new StateChangeInitialActionImpl();
         instance.setInitial(template.getInitial());
         return instance;
     }
+
+    public static StateChangeInitialActionBuilder builder(){
+        return StateChangeInitialActionBuilder.of();
+    }
+    
+    public static StateChangeInitialActionBuilder builder(final StateChangeInitialAction template){
+        return StateChangeInitialActionBuilder.of(template);
+    }
+    
 
     default <T> T withStateChangeInitialAction(Function<StateChangeInitialAction, T> helper) {
         return helper.apply(this);

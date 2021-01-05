@@ -36,17 +36,26 @@ public interface MyShoppingListChangeTextLineItemNameAction extends MyShoppingLi
     
     public void setName(final LocalizedString name);
 
-    public static MyShoppingListChangeTextLineItemNameActionImpl of(){
+    public static MyShoppingListChangeTextLineItemNameAction of(){
         return new MyShoppingListChangeTextLineItemNameActionImpl();
     }
     
 
-    public static MyShoppingListChangeTextLineItemNameActionImpl of(final MyShoppingListChangeTextLineItemNameAction template) {
+    public static MyShoppingListChangeTextLineItemNameAction of(final MyShoppingListChangeTextLineItemNameAction template) {
         MyShoppingListChangeTextLineItemNameActionImpl instance = new MyShoppingListChangeTextLineItemNameActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setName(template.getName());
         return instance;
     }
+
+    public static MyShoppingListChangeTextLineItemNameActionBuilder builder(){
+        return MyShoppingListChangeTextLineItemNameActionBuilder.of();
+    }
+    
+    public static MyShoppingListChangeTextLineItemNameActionBuilder builder(final MyShoppingListChangeTextLineItemNameAction template){
+        return MyShoppingListChangeTextLineItemNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListChangeTextLineItemNameAction(Function<MyShoppingListChangeTextLineItemNameAction, T> helper) {
         return helper.apply(this);

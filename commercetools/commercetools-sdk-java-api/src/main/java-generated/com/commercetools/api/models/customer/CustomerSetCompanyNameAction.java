@@ -30,16 +30,25 @@ public interface CustomerSetCompanyNameAction extends CustomerUpdateAction {
 
     public void setCompanyName(final String companyName);
 
-    public static CustomerSetCompanyNameActionImpl of(){
+    public static CustomerSetCompanyNameAction of(){
         return new CustomerSetCompanyNameActionImpl();
     }
     
 
-    public static CustomerSetCompanyNameActionImpl of(final CustomerSetCompanyNameAction template) {
+    public static CustomerSetCompanyNameAction of(final CustomerSetCompanyNameAction template) {
         CustomerSetCompanyNameActionImpl instance = new CustomerSetCompanyNameActionImpl();
         instance.setCompanyName(template.getCompanyName());
         return instance;
     }
+
+    public static CustomerSetCompanyNameActionBuilder builder(){
+        return CustomerSetCompanyNameActionBuilder.of();
+    }
+    
+    public static CustomerSetCompanyNameActionBuilder builder(final CustomerSetCompanyNameAction template){
+        return CustomerSetCompanyNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetCompanyNameAction(Function<CustomerSetCompanyNameAction, T> helper) {
         return helper.apply(this);

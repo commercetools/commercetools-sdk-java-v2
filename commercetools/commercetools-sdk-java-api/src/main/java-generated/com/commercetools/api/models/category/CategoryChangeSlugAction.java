@@ -33,16 +33,25 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
 
     public void setSlug(final LocalizedString slug);
 
-    public static CategoryChangeSlugActionImpl of(){
+    public static CategoryChangeSlugAction of(){
         return new CategoryChangeSlugActionImpl();
     }
     
 
-    public static CategoryChangeSlugActionImpl of(final CategoryChangeSlugAction template) {
+    public static CategoryChangeSlugAction of(final CategoryChangeSlugAction template) {
         CategoryChangeSlugActionImpl instance = new CategoryChangeSlugActionImpl();
         instance.setSlug(template.getSlug());
         return instance;
     }
+
+    public static CategoryChangeSlugActionBuilder builder(){
+        return CategoryChangeSlugActionBuilder.of();
+    }
+    
+    public static CategoryChangeSlugActionBuilder builder(final CategoryChangeSlugAction template){
+        return CategoryChangeSlugActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryChangeSlugAction(Function<CategoryChangeSlugAction, T> helper) {
         return helper.apply(this);

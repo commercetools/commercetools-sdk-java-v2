@@ -39,17 +39,26 @@ public interface DiscountedPrice  {
     
     public void setDiscount(final ProductDiscountKeyReference discount);
 
-    public static DiscountedPriceImpl of(){
+    public static DiscountedPrice of(){
         return new DiscountedPriceImpl();
     }
     
 
-    public static DiscountedPriceImpl of(final DiscountedPrice template) {
+    public static DiscountedPrice of(final DiscountedPrice template) {
         DiscountedPriceImpl instance = new DiscountedPriceImpl();
         instance.setValue(template.getValue());
         instance.setDiscount(template.getDiscount());
         return instance;
     }
+
+    public static DiscountedPriceBuilder builder(){
+        return DiscountedPriceBuilder.of();
+    }
+    
+    public static DiscountedPriceBuilder builder(final DiscountedPrice template){
+        return DiscountedPriceBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountedPrice(Function<DiscountedPrice, T> helper) {
         return helper.apply(this);

@@ -32,16 +32,25 @@ public interface DateField extends CustomField {
 
     public void setValue(final LocalDate value);
 
-    public static DateFieldImpl of(){
+    public static DateField of(){
         return new DateFieldImpl();
     }
     
 
-    public static DateFieldImpl of(final DateField template) {
+    public static DateField of(final DateField template) {
         DateFieldImpl instance = new DateFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static DateFieldBuilder builder(){
+        return DateFieldBuilder.of();
+    }
+    
+    public static DateFieldBuilder builder(final DateField template){
+        return DateFieldBuilder.of(template);
+    }
+    
 
     default <T> T withDateField(Function<DateField, T> helper) {
         return helper.apply(this);

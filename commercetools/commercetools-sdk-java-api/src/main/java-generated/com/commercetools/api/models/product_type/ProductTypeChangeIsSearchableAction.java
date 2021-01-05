@@ -34,17 +34,26 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
     
     public void setIsSearchable(final Boolean isSearchable);
 
-    public static ProductTypeChangeIsSearchableActionImpl of(){
+    public static ProductTypeChangeIsSearchableAction of(){
         return new ProductTypeChangeIsSearchableActionImpl();
     }
     
 
-    public static ProductTypeChangeIsSearchableActionImpl of(final ProductTypeChangeIsSearchableAction template) {
+    public static ProductTypeChangeIsSearchableAction of(final ProductTypeChangeIsSearchableAction template) {
         ProductTypeChangeIsSearchableActionImpl instance = new ProductTypeChangeIsSearchableActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setIsSearchable(template.getIsSearchable());
         return instance;
     }
+
+    public static ProductTypeChangeIsSearchableActionBuilder builder(){
+        return ProductTypeChangeIsSearchableActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeIsSearchableActionBuilder builder(final ProductTypeChangeIsSearchableAction template){
+        return ProductTypeChangeIsSearchableActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeIsSearchableAction(Function<ProductTypeChangeIsSearchableAction, T> helper) {
         return helper.apply(this);

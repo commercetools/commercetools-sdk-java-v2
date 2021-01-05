@@ -36,17 +36,26 @@ public interface MyOrderFromCartDraft  {
     
     public void setVersion(final Long version);
 
-    public static MyOrderFromCartDraftImpl of(){
+    public static MyOrderFromCartDraft of(){
         return new MyOrderFromCartDraftImpl();
     }
     
 
-    public static MyOrderFromCartDraftImpl of(final MyOrderFromCartDraft template) {
+    public static MyOrderFromCartDraft of(final MyOrderFromCartDraft template) {
         MyOrderFromCartDraftImpl instance = new MyOrderFromCartDraftImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         return instance;
     }
+
+    public static MyOrderFromCartDraftBuilder builder(){
+        return MyOrderFromCartDraftBuilder.of();
+    }
+    
+    public static MyOrderFromCartDraftBuilder builder(final MyOrderFromCartDraft template){
+        return MyOrderFromCartDraftBuilder.of(template);
+    }
+    
 
     default <T> T withMyOrderFromCartDraft(Function<MyOrderFromCartDraft, T> helper) {
         return helper.apply(this);

@@ -66,12 +66,12 @@ public interface AssetDraft  {
     
     public void setKey(final String key);
 
-    public static AssetDraftImpl of(){
+    public static AssetDraft of(){
         return new AssetDraftImpl();
     }
     
 
-    public static AssetDraftImpl of(final AssetDraft template) {
+    public static AssetDraft of(final AssetDraft template) {
         AssetDraftImpl instance = new AssetDraftImpl();
         instance.setSources(template.getSources());
         instance.setName(template.getName());
@@ -81,6 +81,15 @@ public interface AssetDraft  {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static AssetDraftBuilder builder(){
+        return AssetDraftBuilder.of();
+    }
+    
+    public static AssetDraftBuilder builder(final AssetDraft template){
+        return AssetDraftBuilder.of(template);
+    }
+    
 
     default <T> T withAssetDraft(Function<AssetDraft, T> helper) {
         return helper.apply(this);

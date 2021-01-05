@@ -30,16 +30,25 @@ public interface CustomerSetExternalIdAction extends CustomerUpdateAction {
 
     public void setExternalId(final String externalId);
 
-    public static CustomerSetExternalIdActionImpl of(){
+    public static CustomerSetExternalIdAction of(){
         return new CustomerSetExternalIdActionImpl();
     }
     
 
-    public static CustomerSetExternalIdActionImpl of(final CustomerSetExternalIdAction template) {
+    public static CustomerSetExternalIdAction of(final CustomerSetExternalIdAction template) {
         CustomerSetExternalIdActionImpl instance = new CustomerSetExternalIdActionImpl();
         instance.setExternalId(template.getExternalId());
         return instance;
     }
+
+    public static CustomerSetExternalIdActionBuilder builder(){
+        return CustomerSetExternalIdActionBuilder.of();
+    }
+    
+    public static CustomerSetExternalIdActionBuilder builder(final CustomerSetExternalIdAction template){
+        return CustomerSetExternalIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetExternalIdAction(Function<CustomerSetExternalIdAction, T> helper) {
         return helper.apply(this);

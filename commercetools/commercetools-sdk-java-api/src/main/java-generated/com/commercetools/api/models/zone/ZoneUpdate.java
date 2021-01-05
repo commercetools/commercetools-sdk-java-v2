@@ -37,17 +37,26 @@ public interface ZoneUpdate extends com.commercetools.api.models.ResourceUpdate<
     public void setActions(final ZoneUpdateAction ...actions);
     public void setActions(final List<ZoneUpdateAction> actions);
 
-    public static ZoneUpdateImpl of(){
+    public static ZoneUpdate of(){
         return new ZoneUpdateImpl();
     }
     
 
-    public static ZoneUpdateImpl of(final ZoneUpdate template) {
+    public static ZoneUpdate of(final ZoneUpdate template) {
         ZoneUpdateImpl instance = new ZoneUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ZoneUpdateBuilder builder(){
+        return ZoneUpdateBuilder.of();
+    }
+    
+    public static ZoneUpdateBuilder builder(final ZoneUpdate template){
+        return ZoneUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withZoneUpdate(Function<ZoneUpdate, T> helper) {
         return helper.apply(this);

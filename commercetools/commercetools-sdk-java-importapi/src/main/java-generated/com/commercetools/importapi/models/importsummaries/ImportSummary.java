@@ -43,17 +43,26 @@ public interface ImportSummary  {
     
     public void setTotal(final Long total);
 
-    public static ImportSummaryImpl of(){
+    public static ImportSummary of(){
         return new ImportSummaryImpl();
     }
     
 
-    public static ImportSummaryImpl of(final ImportSummary template) {
+    public static ImportSummary of(final ImportSummary template) {
         ImportSummaryImpl instance = new ImportSummaryImpl();
         instance.setStates(template.getStates());
         instance.setTotal(template.getTotal());
         return instance;
     }
+
+    public static ImportSummaryBuilder builder(){
+        return ImportSummaryBuilder.of();
+    }
+    
+    public static ImportSummaryBuilder builder(final ImportSummary template){
+        return ImportSummaryBuilder.of(template);
+    }
+    
 
     default <T> T withImportSummary(Function<ImportSummary, T> helper) {
         return helper.apply(this);

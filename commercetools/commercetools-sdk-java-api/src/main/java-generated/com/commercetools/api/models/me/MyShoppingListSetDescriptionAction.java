@@ -29,16 +29,25 @@ public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdate
 
     public void setDescription(final LocalizedString description);
 
-    public static MyShoppingListSetDescriptionActionImpl of(){
+    public static MyShoppingListSetDescriptionAction of(){
         return new MyShoppingListSetDescriptionActionImpl();
     }
     
 
-    public static MyShoppingListSetDescriptionActionImpl of(final MyShoppingListSetDescriptionAction template) {
+    public static MyShoppingListSetDescriptionAction of(final MyShoppingListSetDescriptionAction template) {
         MyShoppingListSetDescriptionActionImpl instance = new MyShoppingListSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static MyShoppingListSetDescriptionActionBuilder builder(){
+        return MyShoppingListSetDescriptionActionBuilder.of();
+    }
+    
+    public static MyShoppingListSetDescriptionActionBuilder builder(final MyShoppingListSetDescriptionAction template){
+        return MyShoppingListSetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListSetDescriptionAction(Function<MyShoppingListSetDescriptionAction, T> helper) {
         return helper.apply(this);

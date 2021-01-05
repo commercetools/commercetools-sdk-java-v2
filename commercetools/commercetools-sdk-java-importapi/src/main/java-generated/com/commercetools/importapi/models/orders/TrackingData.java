@@ -52,12 +52,12 @@ public interface TrackingData  {
     
     public void setIsReturn(final Boolean isReturn);
 
-    public static TrackingDataImpl of(){
+    public static TrackingData of(){
         return new TrackingDataImpl();
     }
     
 
-    public static TrackingDataImpl of(final TrackingData template) {
+    public static TrackingData of(final TrackingData template) {
         TrackingDataImpl instance = new TrackingDataImpl();
         instance.setTrackingId(template.getTrackingId());
         instance.setCarrier(template.getCarrier());
@@ -66,6 +66,15 @@ public interface TrackingData  {
         instance.setIsReturn(template.getIsReturn());
         return instance;
     }
+
+    public static TrackingDataBuilder builder(){
+        return TrackingDataBuilder.of();
+    }
+    
+    public static TrackingDataBuilder builder(final TrackingData template){
+        return TrackingDataBuilder.of(template);
+    }
+    
 
     default <T> T withTrackingData(Function<TrackingData, T> helper) {
         return helper.apply(this);

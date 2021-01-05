@@ -23,16 +23,25 @@ public interface WeakPasswordError extends ErrorObject {
 
 
 
-    public static WeakPasswordErrorImpl of(){
+    public static WeakPasswordError of(){
         return new WeakPasswordErrorImpl();
     }
     
 
-    public static WeakPasswordErrorImpl of(final WeakPasswordError template) {
+    public static WeakPasswordError of(final WeakPasswordError template) {
         WeakPasswordErrorImpl instance = new WeakPasswordErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static WeakPasswordErrorBuilder builder(){
+        return WeakPasswordErrorBuilder.of();
+    }
+    
+    public static WeakPasswordErrorBuilder builder(final WeakPasswordError template){
+        return WeakPasswordErrorBuilder.of(template);
+    }
+    
 
     default <T> T withWeakPasswordError(Function<WeakPasswordError, T> helper) {
         return helper.apply(this);

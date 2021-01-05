@@ -35,16 +35,25 @@ public interface ReferenceField extends CustomField {
 
     public void setValue(final KeyReference value);
 
-    public static ReferenceFieldImpl of(){
+    public static ReferenceField of(){
         return new ReferenceFieldImpl();
     }
     
 
-    public static ReferenceFieldImpl of(final ReferenceField template) {
+    public static ReferenceField of(final ReferenceField template) {
         ReferenceFieldImpl instance = new ReferenceFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ReferenceFieldBuilder builder(){
+        return ReferenceFieldBuilder.of();
+    }
+    
+    public static ReferenceFieldBuilder builder(final ReferenceField template){
+        return ReferenceFieldBuilder.of(template);
+    }
+    
 
     default <T> T withReferenceField(Function<ReferenceField, T> helper) {
         return helper.apply(this);

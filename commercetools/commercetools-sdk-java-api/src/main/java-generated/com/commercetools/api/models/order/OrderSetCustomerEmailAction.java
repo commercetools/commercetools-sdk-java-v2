@@ -28,16 +28,25 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
 
     public void setEmail(final String email);
 
-    public static OrderSetCustomerEmailActionImpl of(){
+    public static OrderSetCustomerEmailAction of(){
         return new OrderSetCustomerEmailActionImpl();
     }
     
 
-    public static OrderSetCustomerEmailActionImpl of(final OrderSetCustomerEmailAction template) {
+    public static OrderSetCustomerEmailAction of(final OrderSetCustomerEmailAction template) {
         OrderSetCustomerEmailActionImpl instance = new OrderSetCustomerEmailActionImpl();
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public static OrderSetCustomerEmailActionBuilder builder(){
+        return OrderSetCustomerEmailActionBuilder.of();
+    }
+    
+    public static OrderSetCustomerEmailActionBuilder builder(final OrderSetCustomerEmailAction template){
+        return OrderSetCustomerEmailActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetCustomerEmailAction(Function<OrderSetCustomerEmailAction, T> helper) {
         return helper.apply(this);

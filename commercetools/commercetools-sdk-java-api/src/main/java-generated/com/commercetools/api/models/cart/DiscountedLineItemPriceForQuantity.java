@@ -35,17 +35,26 @@ public interface DiscountedLineItemPriceForQuantity  {
     
     public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
 
-    public static DiscountedLineItemPriceForQuantityImpl of(){
+    public static DiscountedLineItemPriceForQuantity of(){
         return new DiscountedLineItemPriceForQuantityImpl();
     }
     
 
-    public static DiscountedLineItemPriceForQuantityImpl of(final DiscountedLineItemPriceForQuantity template) {
+    public static DiscountedLineItemPriceForQuantity of(final DiscountedLineItemPriceForQuantity template) {
         DiscountedLineItemPriceForQuantityImpl instance = new DiscountedLineItemPriceForQuantityImpl();
         instance.setQuantity(template.getQuantity());
         instance.setDiscountedPrice(template.getDiscountedPrice());
         return instance;
     }
+
+    public static DiscountedLineItemPriceForQuantityBuilder builder(){
+        return DiscountedLineItemPriceForQuantityBuilder.of();
+    }
+    
+    public static DiscountedLineItemPriceForQuantityBuilder builder(final DiscountedLineItemPriceForQuantity template){
+        return DiscountedLineItemPriceForQuantityBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountedLineItemPriceForQuantity(Function<DiscountedLineItemPriceForQuantity, T> helper) {
         return helper.apply(this);

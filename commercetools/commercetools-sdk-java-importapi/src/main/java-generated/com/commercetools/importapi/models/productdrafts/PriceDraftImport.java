@@ -103,12 +103,12 @@ public interface PriceDraftImport  {
     
     public void setKey(final String key);
 
-    public static PriceDraftImportImpl of(){
+    public static PriceDraftImport of(){
         return new PriceDraftImportImpl();
     }
     
 
-    public static PriceDraftImportImpl of(final PriceDraftImport template) {
+    public static PriceDraftImport of(final PriceDraftImport template) {
         PriceDraftImportImpl instance = new PriceDraftImportImpl();
         instance.setValue(template.getValue());
         instance.setCountry(template.getCountry());
@@ -122,6 +122,15 @@ public interface PriceDraftImport  {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static PriceDraftImportBuilder builder(){
+        return PriceDraftImportBuilder.of();
+    }
+    
+    public static PriceDraftImportBuilder builder(final PriceDraftImport template){
+        return PriceDraftImportBuilder.of(template);
+    }
+    
 
     default <T> T withPriceDraftImport(Function<PriceDraftImport, T> helper) {
         return helper.apply(this);

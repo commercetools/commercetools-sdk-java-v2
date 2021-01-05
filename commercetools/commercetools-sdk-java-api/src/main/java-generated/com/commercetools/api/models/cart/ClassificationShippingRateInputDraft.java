@@ -28,16 +28,25 @@ public interface ClassificationShippingRateInputDraft extends ShippingRateInputD
 
     public void setKey(final String key);
 
-    public static ClassificationShippingRateInputDraftImpl of(){
+    public static ClassificationShippingRateInputDraft of(){
         return new ClassificationShippingRateInputDraftImpl();
     }
     
 
-    public static ClassificationShippingRateInputDraftImpl of(final ClassificationShippingRateInputDraft template) {
+    public static ClassificationShippingRateInputDraft of(final ClassificationShippingRateInputDraft template) {
         ClassificationShippingRateInputDraftImpl instance = new ClassificationShippingRateInputDraftImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ClassificationShippingRateInputDraftBuilder builder(){
+        return ClassificationShippingRateInputDraftBuilder.of();
+    }
+    
+    public static ClassificationShippingRateInputDraftBuilder builder(final ClassificationShippingRateInputDraft template){
+        return ClassificationShippingRateInputDraftBuilder.of(template);
+    }
+    
 
     default <T> T withClassificationShippingRateInputDraft(Function<ClassificationShippingRateInputDraft, T> helper) {
         return helper.apply(this);

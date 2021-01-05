@@ -36,17 +36,26 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
     
     public void setAddressKey(final String addressKey);
 
-    public static CustomerSetDefaultBillingAddressActionImpl of(){
+    public static CustomerSetDefaultBillingAddressAction of(){
         return new CustomerSetDefaultBillingAddressActionImpl();
     }
     
 
-    public static CustomerSetDefaultBillingAddressActionImpl of(final CustomerSetDefaultBillingAddressAction template) {
+    public static CustomerSetDefaultBillingAddressAction of(final CustomerSetDefaultBillingAddressAction template) {
         CustomerSetDefaultBillingAddressActionImpl instance = new CustomerSetDefaultBillingAddressActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public static CustomerSetDefaultBillingAddressActionBuilder builder(){
+        return CustomerSetDefaultBillingAddressActionBuilder.of();
+    }
+    
+    public static CustomerSetDefaultBillingAddressActionBuilder builder(final CustomerSetDefaultBillingAddressAction template){
+        return CustomerSetDefaultBillingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetDefaultBillingAddressAction(Function<CustomerSetDefaultBillingAddressAction, T> helper) {
         return helper.apply(this);

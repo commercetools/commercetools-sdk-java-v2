@@ -28,16 +28,25 @@ public interface MyShoppingListSetDeleteDaysAfterLastModificationAction extends 
 
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
 
-    public static MyShoppingListSetDeleteDaysAfterLastModificationActionImpl of(){
+    public static MyShoppingListSetDeleteDaysAfterLastModificationAction of(){
         return new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl();
     }
     
 
-    public static MyShoppingListSetDeleteDaysAfterLastModificationActionImpl of(final MyShoppingListSetDeleteDaysAfterLastModificationAction template) {
+    public static MyShoppingListSetDeleteDaysAfterLastModificationAction of(final MyShoppingListSetDeleteDaysAfterLastModificationAction template) {
         MyShoppingListSetDeleteDaysAfterLastModificationActionImpl instance = new MyShoppingListSetDeleteDaysAfterLastModificationActionImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;
     }
+
+    public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder builder(){
+        return MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder.of();
+    }
+    
+    public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder builder(final MyShoppingListSetDeleteDaysAfterLastModificationAction template){
+        return MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListSetDeleteDaysAfterLastModificationAction(Function<MyShoppingListSetDeleteDaysAfterLastModificationAction, T> helper) {
         return helper.apply(this);

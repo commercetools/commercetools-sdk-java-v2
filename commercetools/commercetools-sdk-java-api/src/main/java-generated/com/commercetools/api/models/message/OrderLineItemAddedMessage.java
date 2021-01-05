@@ -36,12 +36,12 @@ public interface OrderLineItemAddedMessage extends Message {
     
     public void setAddedQuantity(final Long addedQuantity);
 
-    public static OrderLineItemAddedMessageImpl of(){
+    public static OrderLineItemAddedMessage of(){
         return new OrderLineItemAddedMessageImpl();
     }
     
 
-    public static OrderLineItemAddedMessageImpl of(final OrderLineItemAddedMessage template) {
+    public static OrderLineItemAddedMessage of(final OrderLineItemAddedMessage template) {
         OrderLineItemAddedMessageImpl instance = new OrderLineItemAddedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -57,6 +57,15 @@ public interface OrderLineItemAddedMessage extends Message {
         instance.setAddedQuantity(template.getAddedQuantity());
         return instance;
     }
+
+    public static OrderLineItemAddedMessageBuilder builder(){
+        return OrderLineItemAddedMessageBuilder.of();
+    }
+    
+    public static OrderLineItemAddedMessageBuilder builder(final OrderLineItemAddedMessage template){
+        return OrderLineItemAddedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderLineItemAddedMessage(Function<OrderLineItemAddedMessage, T> helper) {
         return helper.apply(this);

@@ -52,12 +52,12 @@ public interface ProductTypeDraft  {
     public void setAttributes(final AttributeDefinitionDraft ...attributes);
     public void setAttributes(final List<AttributeDefinitionDraft> attributes);
 
-    public static ProductTypeDraftImpl of(){
+    public static ProductTypeDraft of(){
         return new ProductTypeDraftImpl();
     }
     
 
-    public static ProductTypeDraftImpl of(final ProductTypeDraft template) {
+    public static ProductTypeDraft of(final ProductTypeDraft template) {
         ProductTypeDraftImpl instance = new ProductTypeDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -65,6 +65,15 @@ public interface ProductTypeDraft  {
         instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public static ProductTypeDraftBuilder builder(){
+        return ProductTypeDraftBuilder.of();
+    }
+    
+    public static ProductTypeDraftBuilder builder(final ProductTypeDraft template){
+        return ProductTypeDraftBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeDraft(Function<ProductTypeDraft, T> helper) {
         return helper.apply(this);

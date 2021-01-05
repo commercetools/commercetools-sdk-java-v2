@@ -40,18 +40,27 @@ public interface ProductRemoveVariantAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductRemoveVariantActionImpl of(){
+    public static ProductRemoveVariantAction of(){
         return new ProductRemoveVariantActionImpl();
     }
     
 
-    public static ProductRemoveVariantActionImpl of(final ProductRemoveVariantAction template) {
+    public static ProductRemoveVariantAction of(final ProductRemoveVariantAction template) {
         ProductRemoveVariantActionImpl instance = new ProductRemoveVariantActionImpl();
         instance.setId(template.getId());
         instance.setSku(template.getSku());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductRemoveVariantActionBuilder builder(){
+        return ProductRemoveVariantActionBuilder.of();
+    }
+    
+    public static ProductRemoveVariantActionBuilder builder(final ProductRemoveVariantAction template){
+        return ProductRemoveVariantActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductRemoveVariantAction(Function<ProductRemoveVariantAction, T> helper) {
         return helper.apply(this);

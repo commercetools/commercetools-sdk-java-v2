@@ -58,12 +58,12 @@ public interface ProductPriceDiscountsSetUpdatedPrice  {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductPriceDiscountsSetUpdatedPriceImpl of(){
+    public static ProductPriceDiscountsSetUpdatedPrice of(){
         return new ProductPriceDiscountsSetUpdatedPriceImpl();
     }
     
 
-    public static ProductPriceDiscountsSetUpdatedPriceImpl of(final ProductPriceDiscountsSetUpdatedPrice template) {
+    public static ProductPriceDiscountsSetUpdatedPrice of(final ProductPriceDiscountsSetUpdatedPrice template) {
         ProductPriceDiscountsSetUpdatedPriceImpl instance = new ProductPriceDiscountsSetUpdatedPriceImpl();
         instance.setVariantId(template.getVariantId());
         instance.setVariantKey(template.getVariantKey());
@@ -73,6 +73,15 @@ public interface ProductPriceDiscountsSetUpdatedPrice  {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductPriceDiscountsSetUpdatedPriceBuilder builder(){
+        return ProductPriceDiscountsSetUpdatedPriceBuilder.of();
+    }
+    
+    public static ProductPriceDiscountsSetUpdatedPriceBuilder builder(final ProductPriceDiscountsSetUpdatedPrice template){
+        return ProductPriceDiscountsSetUpdatedPriceBuilder.of(template);
+    }
+    
 
     default <T> T withProductPriceDiscountsSetUpdatedPrice(Function<ProductPriceDiscountsSetUpdatedPrice, T> helper) {
         return helper.apply(this);

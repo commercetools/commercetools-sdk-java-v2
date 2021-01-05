@@ -41,18 +41,27 @@ public interface ParcelMeasurementsUpdatedMessagePayload extends MessagePayload 
     
     public void setMeasurements(final ParcelMeasurements measurements);
 
-    public static ParcelMeasurementsUpdatedMessagePayloadImpl of(){
+    public static ParcelMeasurementsUpdatedMessagePayload of(){
         return new ParcelMeasurementsUpdatedMessagePayloadImpl();
     }
     
 
-    public static ParcelMeasurementsUpdatedMessagePayloadImpl of(final ParcelMeasurementsUpdatedMessagePayload template) {
+    public static ParcelMeasurementsUpdatedMessagePayload of(final ParcelMeasurementsUpdatedMessagePayload template) {
         ParcelMeasurementsUpdatedMessagePayloadImpl instance = new ParcelMeasurementsUpdatedMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
         return instance;
     }
+
+    public static ParcelMeasurementsUpdatedMessagePayloadBuilder builder(){
+        return ParcelMeasurementsUpdatedMessagePayloadBuilder.of();
+    }
+    
+    public static ParcelMeasurementsUpdatedMessagePayloadBuilder builder(final ParcelMeasurementsUpdatedMessagePayload template){
+        return ParcelMeasurementsUpdatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withParcelMeasurementsUpdatedMessagePayload(Function<ParcelMeasurementsUpdatedMessagePayload, T> helper) {
         return helper.apply(this);

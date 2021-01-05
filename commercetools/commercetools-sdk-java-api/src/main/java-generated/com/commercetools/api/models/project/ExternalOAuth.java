@@ -34,17 +34,26 @@ public interface ExternalOAuth  {
     
     public void setAuthorizationHeader(final String authorizationHeader);
 
-    public static ExternalOAuthImpl of(){
+    public static ExternalOAuth of(){
         return new ExternalOAuthImpl();
     }
     
 
-    public static ExternalOAuthImpl of(final ExternalOAuth template) {
+    public static ExternalOAuth of(final ExternalOAuth template) {
         ExternalOAuthImpl instance = new ExternalOAuthImpl();
         instance.setUrl(template.getUrl());
         instance.setAuthorizationHeader(template.getAuthorizationHeader());
         return instance;
     }
+
+    public static ExternalOAuthBuilder builder(){
+        return ExternalOAuthBuilder.of();
+    }
+    
+    public static ExternalOAuthBuilder builder(final ExternalOAuth template){
+        return ExternalOAuthBuilder.of(template);
+    }
+    
 
     default <T> T withExternalOAuth(Function<ExternalOAuth, T> helper) {
         return helper.apply(this);

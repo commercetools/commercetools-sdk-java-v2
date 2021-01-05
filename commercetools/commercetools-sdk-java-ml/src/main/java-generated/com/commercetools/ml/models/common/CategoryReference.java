@@ -24,16 +24,25 @@ public interface CategoryReference extends Reference {
 
 
 
-    public static CategoryReferenceImpl of(){
+    public static CategoryReference of(){
         return new CategoryReferenceImpl();
     }
     
 
-    public static CategoryReferenceImpl of(final CategoryReference template) {
+    public static CategoryReference of(final CategoryReference template) {
         CategoryReferenceImpl instance = new CategoryReferenceImpl();
         instance.setId(template.getId());
         return instance;
     }
+
+    public static CategoryReferenceBuilder builder(){
+        return CategoryReferenceBuilder.of();
+    }
+    
+    public static CategoryReferenceBuilder builder(final CategoryReference template){
+        return CategoryReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryReference(Function<CategoryReference, T> helper) {
         return helper.apply(this);

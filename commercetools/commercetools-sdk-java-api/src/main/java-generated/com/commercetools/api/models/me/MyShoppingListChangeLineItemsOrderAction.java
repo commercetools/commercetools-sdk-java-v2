@@ -30,16 +30,25 @@ public interface MyShoppingListChangeLineItemsOrderAction extends MyShoppingList
     public void setLineItemOrder(final String ...lineItemOrder);
     public void setLineItemOrder(final List<String> lineItemOrder);
 
-    public static MyShoppingListChangeLineItemsOrderActionImpl of(){
+    public static MyShoppingListChangeLineItemsOrderAction of(){
         return new MyShoppingListChangeLineItemsOrderActionImpl();
     }
     
 
-    public static MyShoppingListChangeLineItemsOrderActionImpl of(final MyShoppingListChangeLineItemsOrderAction template) {
+    public static MyShoppingListChangeLineItemsOrderAction of(final MyShoppingListChangeLineItemsOrderAction template) {
         MyShoppingListChangeLineItemsOrderActionImpl instance = new MyShoppingListChangeLineItemsOrderActionImpl();
         instance.setLineItemOrder(template.getLineItemOrder());
         return instance;
     }
+
+    public static MyShoppingListChangeLineItemsOrderActionBuilder builder(){
+        return MyShoppingListChangeLineItemsOrderActionBuilder.of();
+    }
+    
+    public static MyShoppingListChangeLineItemsOrderActionBuilder builder(final MyShoppingListChangeLineItemsOrderAction template){
+        return MyShoppingListChangeLineItemsOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListChangeLineItemsOrderAction(Function<MyShoppingListChangeLineItemsOrderAction, T> helper) {
         return helper.apply(this);

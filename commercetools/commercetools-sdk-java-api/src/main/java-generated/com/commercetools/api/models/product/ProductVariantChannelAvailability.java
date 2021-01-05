@@ -40,18 +40,27 @@ public interface ProductVariantChannelAvailability  {
     
     public void setAvailableQuantity(final Long availableQuantity);
 
-    public static ProductVariantChannelAvailabilityImpl of(){
+    public static ProductVariantChannelAvailability of(){
         return new ProductVariantChannelAvailabilityImpl();
     }
     
 
-    public static ProductVariantChannelAvailabilityImpl of(final ProductVariantChannelAvailability template) {
+    public static ProductVariantChannelAvailability of(final ProductVariantChannelAvailability template) {
         ProductVariantChannelAvailabilityImpl instance = new ProductVariantChannelAvailabilityImpl();
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
         return instance;
     }
+
+    public static ProductVariantChannelAvailabilityBuilder builder(){
+        return ProductVariantChannelAvailabilityBuilder.of();
+    }
+    
+    public static ProductVariantChannelAvailabilityBuilder builder(final ProductVariantChannelAvailability template){
+        return ProductVariantChannelAvailabilityBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantChannelAvailability(Function<ProductVariantChannelAvailability, T> helper) {
         return helper.apply(this);

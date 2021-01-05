@@ -56,12 +56,12 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
     
     public void setCustom(final CustomFieldsDraft custom);
 
-    public static ShoppingListAddTextLineItemActionImpl of(){
+    public static ShoppingListAddTextLineItemAction of(){
         return new ShoppingListAddTextLineItemActionImpl();
     }
     
 
-    public static ShoppingListAddTextLineItemActionImpl of(final ShoppingListAddTextLineItemAction template) {
+    public static ShoppingListAddTextLineItemAction of(final ShoppingListAddTextLineItemAction template) {
         ShoppingListAddTextLineItemActionImpl instance = new ShoppingListAddTextLineItemActionImpl();
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
@@ -70,6 +70,15 @@ public interface ShoppingListAddTextLineItemAction extends ShoppingListUpdateAct
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static ShoppingListAddTextLineItemActionBuilder builder(){
+        return ShoppingListAddTextLineItemActionBuilder.of();
+    }
+    
+    public static ShoppingListAddTextLineItemActionBuilder builder(final ShoppingListAddTextLineItemAction template){
+        return ShoppingListAddTextLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListAddTextLineItemAction(Function<ShoppingListAddTextLineItemAction, T> helper) {
         return helper.apply(this);

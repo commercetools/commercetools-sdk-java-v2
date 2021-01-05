@@ -60,12 +60,12 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
     public void setTags(final String ...tags);
     public void setTags(final List<String> tags);
 
-    public static ProductSetAssetTagsActionImpl of(){
+    public static ProductSetAssetTagsAction of(){
         return new ProductSetAssetTagsActionImpl();
     }
     
 
-    public static ProductSetAssetTagsActionImpl of(final ProductSetAssetTagsAction template) {
+    public static ProductSetAssetTagsAction of(final ProductSetAssetTagsAction template) {
         ProductSetAssetTagsActionImpl instance = new ProductSetAssetTagsActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -75,6 +75,15 @@ public interface ProductSetAssetTagsAction extends ProductUpdateAction {
         instance.setTags(template.getTags());
         return instance;
     }
+
+    public static ProductSetAssetTagsActionBuilder builder(){
+        return ProductSetAssetTagsActionBuilder.of();
+    }
+    
+    public static ProductSetAssetTagsActionBuilder builder(final ProductSetAssetTagsAction template){
+        return ProductSetAssetTagsActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetAssetTagsAction(Function<ProductSetAssetTagsAction, T> helper) {
         return helper.apply(this);

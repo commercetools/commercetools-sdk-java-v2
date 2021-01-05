@@ -37,17 +37,26 @@ public interface MyCustomerUpdate extends com.commercetools.api.models.ResourceU
     public void setActions(final MyCustomerUpdateAction ...actions);
     public void setActions(final List<MyCustomerUpdateAction> actions);
 
-    public static MyCustomerUpdateImpl of(){
+    public static MyCustomerUpdate of(){
         return new MyCustomerUpdateImpl();
     }
     
 
-    public static MyCustomerUpdateImpl of(final MyCustomerUpdate template) {
+    public static MyCustomerUpdate of(final MyCustomerUpdate template) {
         MyCustomerUpdateImpl instance = new MyCustomerUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static MyCustomerUpdateBuilder builder(){
+        return MyCustomerUpdateBuilder.of();
+    }
+    
+    public static MyCustomerUpdateBuilder builder(final MyCustomerUpdate template){
+        return MyCustomerUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerUpdate(Function<MyCustomerUpdate, T> helper) {
         return helper.apply(this);

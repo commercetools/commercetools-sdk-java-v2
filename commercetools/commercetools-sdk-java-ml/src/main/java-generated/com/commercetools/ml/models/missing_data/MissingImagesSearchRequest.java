@@ -94,12 +94,12 @@ public interface MissingImagesSearchRequest  {
     public void setProductTypeIds(final String ...productTypeIds);
     public void setProductTypeIds(final List<String> productTypeIds);
 
-    public static MissingImagesSearchRequestImpl of(){
+    public static MissingImagesSearchRequest of(){
         return new MissingImagesSearchRequestImpl();
     }
     
 
-    public static MissingImagesSearchRequestImpl of(final MissingImagesSearchRequest template) {
+    public static MissingImagesSearchRequest of(final MissingImagesSearchRequest template) {
         MissingImagesSearchRequestImpl instance = new MissingImagesSearchRequestImpl();
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
@@ -112,6 +112,15 @@ public interface MissingImagesSearchRequest  {
         instance.setProductTypeIds(template.getProductTypeIds());
         return instance;
     }
+
+    public static MissingImagesSearchRequestBuilder builder(){
+        return MissingImagesSearchRequestBuilder.of();
+    }
+    
+    public static MissingImagesSearchRequestBuilder builder(final MissingImagesSearchRequest template){
+        return MissingImagesSearchRequestBuilder.of(template);
+    }
+    
 
     default <T> T withMissingImagesSearchRequest(Function<MissingImagesSearchRequest, T> helper) {
         return helper.apply(this);

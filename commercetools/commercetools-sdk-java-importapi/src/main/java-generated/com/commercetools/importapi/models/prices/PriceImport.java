@@ -148,12 +148,12 @@ public interface PriceImport extends ImportResource {
     
     public void setProduct(final ProductKeyReference product);
 
-    public static PriceImportImpl of(){
+    public static PriceImport of(){
         return new PriceImportImpl();
     }
     
 
-    public static PriceImportImpl of(final PriceImport template) {
+    public static PriceImport of(final PriceImport template) {
         PriceImportImpl instance = new PriceImportImpl();
         instance.setKey(template.getKey());
         instance.setValue(template.getValue());
@@ -170,6 +170,15 @@ public interface PriceImport extends ImportResource {
         instance.setProduct(template.getProduct());
         return instance;
     }
+
+    public static PriceImportBuilder builder(){
+        return PriceImportBuilder.of();
+    }
+    
+    public static PriceImportBuilder builder(final PriceImport template){
+        return PriceImportBuilder.of(template);
+    }
+    
 
     default <T> T withPriceImport(Function<PriceImport, T> helper) {
         return helper.apply(this);

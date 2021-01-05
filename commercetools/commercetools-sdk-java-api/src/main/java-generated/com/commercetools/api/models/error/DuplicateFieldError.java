@@ -42,12 +42,12 @@ public interface DuplicateFieldError extends ErrorObject {
     
     public void setConflictingResource(final Reference conflictingResource);
 
-    public static DuplicateFieldErrorImpl of(){
+    public static DuplicateFieldError of(){
         return new DuplicateFieldErrorImpl();
     }
     
 
-    public static DuplicateFieldErrorImpl of(final DuplicateFieldError template) {
+    public static DuplicateFieldError of(final DuplicateFieldError template) {
         DuplicateFieldErrorImpl instance = new DuplicateFieldErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setField(template.getField());
@@ -55,6 +55,15 @@ public interface DuplicateFieldError extends ErrorObject {
         instance.setConflictingResource(template.getConflictingResource());
         return instance;
     }
+
+    public static DuplicateFieldErrorBuilder builder(){
+        return DuplicateFieldErrorBuilder.of();
+    }
+    
+    public static DuplicateFieldErrorBuilder builder(final DuplicateFieldError template){
+        return DuplicateFieldErrorBuilder.of(template);
+    }
+    
 
     default <T> T withDuplicateFieldError(Function<DuplicateFieldError, T> helper) {
         return helper.apply(this);

@@ -32,17 +32,26 @@ public interface EnumAttribute extends Attribute {
 
     public void setValue(final String value);
 
-    public static EnumAttributeImpl of(){
+    public static EnumAttribute of(){
         return new EnumAttributeImpl();
     }
     
 
-    public static EnumAttributeImpl of(final EnumAttribute template) {
+    public static EnumAttribute of(final EnumAttribute template) {
         EnumAttributeImpl instance = new EnumAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static EnumAttributeBuilder builder(){
+        return EnumAttributeBuilder.of();
+    }
+    
+    public static EnumAttributeBuilder builder(final EnumAttribute template){
+        return EnumAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withEnumAttribute(Function<EnumAttribute, T> helper) {
         return helper.apply(this);

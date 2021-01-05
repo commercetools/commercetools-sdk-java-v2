@@ -55,12 +55,12 @@ public interface MyPaymentPagedQueryResponse extends com.commercetools.api.model
     public void setResults(final MyPayment ...results);
     public void setResults(final List<MyPayment> results);
 
-    public static MyPaymentPagedQueryResponseImpl of(){
+    public static MyPaymentPagedQueryResponse of(){
         return new MyPaymentPagedQueryResponseImpl();
     }
     
 
-    public static MyPaymentPagedQueryResponseImpl of(final MyPaymentPagedQueryResponse template) {
+    public static MyPaymentPagedQueryResponse of(final MyPaymentPagedQueryResponse template) {
         MyPaymentPagedQueryResponseImpl instance = new MyPaymentPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface MyPaymentPagedQueryResponse extends com.commercetools.api.model
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static MyPaymentPagedQueryResponseBuilder builder(){
+        return MyPaymentPagedQueryResponseBuilder.of();
+    }
+    
+    public static MyPaymentPagedQueryResponseBuilder builder(final MyPaymentPagedQueryResponse template){
+        return MyPaymentPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withMyPaymentPagedQueryResponse(Function<MyPaymentPagedQueryResponse, T> helper) {
         return helper.apply(this);

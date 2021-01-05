@@ -48,18 +48,27 @@ public interface ProjectCategoryRecommendationMeta  {
     public void setGeneralCategoryNames(final String ...generalCategoryNames);
     public void setGeneralCategoryNames(final List<String> generalCategoryNames);
 
-    public static ProjectCategoryRecommendationMetaImpl of(){
+    public static ProjectCategoryRecommendationMeta of(){
         return new ProjectCategoryRecommendationMetaImpl();
     }
     
 
-    public static ProjectCategoryRecommendationMetaImpl of(final ProjectCategoryRecommendationMeta template) {
+    public static ProjectCategoryRecommendationMeta of(final ProjectCategoryRecommendationMeta template) {
         ProjectCategoryRecommendationMetaImpl instance = new ProjectCategoryRecommendationMetaImpl();
         instance.setProductName(template.getProductName());
         instance.setProductImageUrl(template.getProductImageUrl());
         instance.setGeneralCategoryNames(template.getGeneralCategoryNames());
         return instance;
     }
+
+    public static ProjectCategoryRecommendationMetaBuilder builder(){
+        return ProjectCategoryRecommendationMetaBuilder.of();
+    }
+    
+    public static ProjectCategoryRecommendationMetaBuilder builder(final ProjectCategoryRecommendationMeta template){
+        return ProjectCategoryRecommendationMetaBuilder.of(template);
+    }
+    
 
     default <T> T withProjectCategoryRecommendationMeta(Function<ProjectCategoryRecommendationMeta, T> helper) {
         return helper.apply(this);

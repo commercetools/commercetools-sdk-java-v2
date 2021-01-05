@@ -40,18 +40,27 @@ public interface CustomerResetPassword  {
     
     public void setVersion(final Long version);
 
-    public static CustomerResetPasswordImpl of(){
+    public static CustomerResetPassword of(){
         return new CustomerResetPasswordImpl();
     }
     
 
-    public static CustomerResetPasswordImpl of(final CustomerResetPassword template) {
+    public static CustomerResetPassword of(final CustomerResetPassword template) {
         CustomerResetPasswordImpl instance = new CustomerResetPasswordImpl();
         instance.setTokenValue(template.getTokenValue());
         instance.setNewPassword(template.getNewPassword());
         instance.setVersion(template.getVersion());
         return instance;
     }
+
+    public static CustomerResetPasswordBuilder builder(){
+        return CustomerResetPasswordBuilder.of();
+    }
+    
+    public static CustomerResetPasswordBuilder builder(final CustomerResetPassword template){
+        return CustomerResetPasswordBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerResetPassword(Function<CustomerResetPassword, T> helper) {
         return helper.apply(this);

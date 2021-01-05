@@ -29,16 +29,25 @@ public interface ChannelSetAddressAction extends ChannelUpdateAction {
 
     public void setAddress(final Address address);
 
-    public static ChannelSetAddressActionImpl of(){
+    public static ChannelSetAddressAction of(){
         return new ChannelSetAddressActionImpl();
     }
     
 
-    public static ChannelSetAddressActionImpl of(final ChannelSetAddressAction template) {
+    public static ChannelSetAddressAction of(final ChannelSetAddressAction template) {
         ChannelSetAddressActionImpl instance = new ChannelSetAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static ChannelSetAddressActionBuilder builder(){
+        return ChannelSetAddressActionBuilder.of();
+    }
+    
+    public static ChannelSetAddressActionBuilder builder(final ChannelSetAddressAction template){
+        return ChannelSetAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelSetAddressAction(Function<ChannelSetAddressAction, T> helper) {
         return helper.apply(this);

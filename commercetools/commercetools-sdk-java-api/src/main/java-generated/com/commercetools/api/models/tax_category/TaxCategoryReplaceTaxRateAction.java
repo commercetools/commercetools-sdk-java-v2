@@ -36,17 +36,26 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
     
     public void setTaxRate(final TaxRateDraft taxRate);
 
-    public static TaxCategoryReplaceTaxRateActionImpl of(){
+    public static TaxCategoryReplaceTaxRateAction of(){
         return new TaxCategoryReplaceTaxRateActionImpl();
     }
     
 
-    public static TaxCategoryReplaceTaxRateActionImpl of(final TaxCategoryReplaceTaxRateAction template) {
+    public static TaxCategoryReplaceTaxRateAction of(final TaxCategoryReplaceTaxRateAction template) {
         TaxCategoryReplaceTaxRateActionImpl instance = new TaxCategoryReplaceTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
+
+    public static TaxCategoryReplaceTaxRateActionBuilder builder(){
+        return TaxCategoryReplaceTaxRateActionBuilder.of();
+    }
+    
+    public static TaxCategoryReplaceTaxRateActionBuilder builder(final TaxCategoryReplaceTaxRateAction template){
+        return TaxCategoryReplaceTaxRateActionBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryReplaceTaxRateAction(Function<TaxCategoryReplaceTaxRateAction, T> helper) {
         return helper.apply(this);

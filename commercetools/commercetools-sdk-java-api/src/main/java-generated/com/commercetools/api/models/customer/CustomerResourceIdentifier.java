@@ -24,17 +24,26 @@ public interface CustomerResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static CustomerResourceIdentifierImpl of(){
+    public static CustomerResourceIdentifier of(){
         return new CustomerResourceIdentifierImpl();
     }
     
 
-    public static CustomerResourceIdentifierImpl of(final CustomerResourceIdentifier template) {
+    public static CustomerResourceIdentifier of(final CustomerResourceIdentifier template) {
         CustomerResourceIdentifierImpl instance = new CustomerResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CustomerResourceIdentifierBuilder builder(){
+        return CustomerResourceIdentifierBuilder.of();
+    }
+    
+    public static CustomerResourceIdentifierBuilder builder(final CustomerResourceIdentifier template){
+        return CustomerResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerResourceIdentifier(Function<CustomerResourceIdentifier, T> helper) {
         return helper.apply(this);

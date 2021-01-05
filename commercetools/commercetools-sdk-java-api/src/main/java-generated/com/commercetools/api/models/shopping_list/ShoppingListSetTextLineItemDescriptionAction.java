@@ -35,17 +35,26 @@ public interface ShoppingListSetTextLineItemDescriptionAction extends ShoppingLi
     
     public void setDescription(final LocalizedString description);
 
-    public static ShoppingListSetTextLineItemDescriptionActionImpl of(){
+    public static ShoppingListSetTextLineItemDescriptionAction of(){
         return new ShoppingListSetTextLineItemDescriptionActionImpl();
     }
     
 
-    public static ShoppingListSetTextLineItemDescriptionActionImpl of(final ShoppingListSetTextLineItemDescriptionAction template) {
+    public static ShoppingListSetTextLineItemDescriptionAction of(final ShoppingListSetTextLineItemDescriptionAction template) {
         ShoppingListSetTextLineItemDescriptionActionImpl instance = new ShoppingListSetTextLineItemDescriptionActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static ShoppingListSetTextLineItemDescriptionActionBuilder builder(){
+        return ShoppingListSetTextLineItemDescriptionActionBuilder.of();
+    }
+    
+    public static ShoppingListSetTextLineItemDescriptionActionBuilder builder(final ShoppingListSetTextLineItemDescriptionAction template){
+        return ShoppingListSetTextLineItemDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListSetTextLineItemDescriptionAction(Function<ShoppingListSetTextLineItemDescriptionAction, T> helper) {
         return helper.apply(this);

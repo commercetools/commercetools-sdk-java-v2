@@ -60,12 +60,12 @@ public interface SubscriptionDraft  {
     
     public void setFormat(final DeliveryFormat format);
 
-    public static SubscriptionDraftImpl of(){
+    public static SubscriptionDraft of(){
         return new SubscriptionDraftImpl();
     }
     
 
-    public static SubscriptionDraftImpl of(final SubscriptionDraft template) {
+    public static SubscriptionDraft of(final SubscriptionDraft template) {
         SubscriptionDraftImpl instance = new SubscriptionDraftImpl();
         instance.setChanges(template.getChanges());
         instance.setDestination(template.getDestination());
@@ -74,6 +74,15 @@ public interface SubscriptionDraft  {
         instance.setFormat(template.getFormat());
         return instance;
     }
+
+    public static SubscriptionDraftBuilder builder(){
+        return SubscriptionDraftBuilder.of();
+    }
+    
+    public static SubscriptionDraftBuilder builder(final SubscriptionDraft template){
+        return SubscriptionDraftBuilder.of(template);
+    }
+    
 
     default <T> T withSubscriptionDraft(Function<SubscriptionDraft, T> helper) {
         return helper.apply(this);

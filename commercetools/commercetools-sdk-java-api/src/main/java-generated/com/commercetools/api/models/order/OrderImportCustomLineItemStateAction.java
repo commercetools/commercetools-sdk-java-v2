@@ -38,17 +38,26 @@ public interface OrderImportCustomLineItemStateAction extends OrderUpdateAction 
     public void setState(final ItemState ...state);
     public void setState(final List<ItemState> state);
 
-    public static OrderImportCustomLineItemStateActionImpl of(){
+    public static OrderImportCustomLineItemStateAction of(){
         return new OrderImportCustomLineItemStateActionImpl();
     }
     
 
-    public static OrderImportCustomLineItemStateActionImpl of(final OrderImportCustomLineItemStateAction template) {
+    public static OrderImportCustomLineItemStateAction of(final OrderImportCustomLineItemStateAction template) {
         OrderImportCustomLineItemStateActionImpl instance = new OrderImportCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static OrderImportCustomLineItemStateActionBuilder builder(){
+        return OrderImportCustomLineItemStateActionBuilder.of();
+    }
+    
+    public static OrderImportCustomLineItemStateActionBuilder builder(final OrderImportCustomLineItemStateAction template){
+        return OrderImportCustomLineItemStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderImportCustomLineItemStateAction(Function<OrderImportCustomLineItemStateAction, T> helper) {
         return helper.apply(this);

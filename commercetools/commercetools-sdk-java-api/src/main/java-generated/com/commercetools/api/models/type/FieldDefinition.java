@@ -70,12 +70,12 @@ public interface FieldDefinition  {
     
     public void setInputHint(final TypeTextInputHint inputHint);
 
-    public static FieldDefinitionImpl of(){
+    public static FieldDefinition of(){
         return new FieldDefinitionImpl();
     }
     
 
-    public static FieldDefinitionImpl of(final FieldDefinition template) {
+    public static FieldDefinition of(final FieldDefinition template) {
         FieldDefinitionImpl instance = new FieldDefinitionImpl();
         instance.setType(template.getType());
         instance.setName(template.getName());
@@ -84,6 +84,15 @@ public interface FieldDefinition  {
         instance.setInputHint(template.getInputHint());
         return instance;
     }
+
+    public static FieldDefinitionBuilder builder(){
+        return FieldDefinitionBuilder.of();
+    }
+    
+    public static FieldDefinitionBuilder builder(final FieldDefinition template){
+        return FieldDefinitionBuilder.of(template);
+    }
+    
 
     default <T> T withFieldDefinition(Function<FieldDefinition, T> helper) {
         return helper.apply(this);

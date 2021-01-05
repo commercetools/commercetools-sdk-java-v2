@@ -28,16 +28,25 @@ public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction 
 
     public void setCustomerId(final String customerId);
 
-    public static StagedOrderSetCustomerIdActionImpl of(){
+    public static StagedOrderSetCustomerIdAction of(){
         return new StagedOrderSetCustomerIdActionImpl();
     }
     
 
-    public static StagedOrderSetCustomerIdActionImpl of(final StagedOrderSetCustomerIdAction template) {
+    public static StagedOrderSetCustomerIdAction of(final StagedOrderSetCustomerIdAction template) {
         StagedOrderSetCustomerIdActionImpl instance = new StagedOrderSetCustomerIdActionImpl();
         instance.setCustomerId(template.getCustomerId());
         return instance;
     }
+
+    public static StagedOrderSetCustomerIdActionBuilder builder(){
+        return StagedOrderSetCustomerIdActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomerIdActionBuilder builder(final StagedOrderSetCustomerIdAction template){
+        return StagedOrderSetCustomerIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomerIdAction(Function<StagedOrderSetCustomerIdAction, T> helper) {
         return helper.apply(this);

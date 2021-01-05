@@ -38,17 +38,26 @@ public interface TaxedItemPrice  {
     
     public void setTotalGross(final TypedMoney totalGross);
 
-    public static TaxedItemPriceImpl of(){
+    public static TaxedItemPrice of(){
         return new TaxedItemPriceImpl();
     }
     
 
-    public static TaxedItemPriceImpl of(final TaxedItemPrice template) {
+    public static TaxedItemPrice of(final TaxedItemPrice template) {
         TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
         return instance;
     }
+
+    public static TaxedItemPriceBuilder builder(){
+        return TaxedItemPriceBuilder.of();
+    }
+    
+    public static TaxedItemPriceBuilder builder(final TaxedItemPrice template){
+        return TaxedItemPriceBuilder.of(template);
+    }
+    
 
     default <T> T withTaxedItemPrice(Function<TaxedItemPrice, T> helper) {
         return helper.apply(this);

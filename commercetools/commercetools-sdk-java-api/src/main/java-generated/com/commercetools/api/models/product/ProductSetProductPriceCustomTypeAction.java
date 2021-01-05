@@ -48,12 +48,12 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
     
     public void setFields(final FieldContainer fields);
 
-    public static ProductSetProductPriceCustomTypeActionImpl of(){
+    public static ProductSetProductPriceCustomTypeAction of(){
         return new ProductSetProductPriceCustomTypeActionImpl();
     }
     
 
-    public static ProductSetProductPriceCustomTypeActionImpl of(final ProductSetProductPriceCustomTypeAction template) {
+    public static ProductSetProductPriceCustomTypeAction of(final ProductSetProductPriceCustomTypeAction template) {
         ProductSetProductPriceCustomTypeActionImpl instance = new ProductSetProductPriceCustomTypeActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());
@@ -61,6 +61,15 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static ProductSetProductPriceCustomTypeActionBuilder builder(){
+        return ProductSetProductPriceCustomTypeActionBuilder.of();
+    }
+    
+    public static ProductSetProductPriceCustomTypeActionBuilder builder(final ProductSetProductPriceCustomTypeAction template){
+        return ProductSetProductPriceCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetProductPriceCustomTypeAction(Function<ProductSetProductPriceCustomTypeAction, T> helper) {
         return helper.apply(this);

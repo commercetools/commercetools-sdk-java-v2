@@ -70,12 +70,12 @@ public interface StoreDraft  {
     public void setSupplyChannels(final ChannelResourceIdentifier ...supplyChannels);
     public void setSupplyChannels(final List<ChannelResourceIdentifier> supplyChannels);
 
-    public static StoreDraftImpl of(){
+    public static StoreDraft of(){
         return new StoreDraftImpl();
     }
     
 
-    public static StoreDraftImpl of(final StoreDraft template) {
+    public static StoreDraft of(final StoreDraft template) {
         StoreDraftImpl instance = new StoreDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -84,6 +84,15 @@ public interface StoreDraft  {
         instance.setSupplyChannels(template.getSupplyChannels());
         return instance;
     }
+
+    public static StoreDraftBuilder builder(){
+        return StoreDraftBuilder.of();
+    }
+    
+    public static StoreDraftBuilder builder(final StoreDraft template){
+        return StoreDraftBuilder.of(template);
+    }
+    
 
     default <T> T withStoreDraft(Function<StoreDraft, T> helper) {
         return helper.apply(this);

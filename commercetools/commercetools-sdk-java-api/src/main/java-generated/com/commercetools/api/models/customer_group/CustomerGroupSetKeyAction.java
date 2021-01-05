@@ -30,16 +30,25 @@ public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
 
     public void setKey(final String key);
 
-    public static CustomerGroupSetKeyActionImpl of(){
+    public static CustomerGroupSetKeyAction of(){
         return new CustomerGroupSetKeyActionImpl();
     }
     
 
-    public static CustomerGroupSetKeyActionImpl of(final CustomerGroupSetKeyAction template) {
+    public static CustomerGroupSetKeyAction of(final CustomerGroupSetKeyAction template) {
         CustomerGroupSetKeyActionImpl instance = new CustomerGroupSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CustomerGroupSetKeyActionBuilder builder(){
+        return CustomerGroupSetKeyActionBuilder.of();
+    }
+    
+    public static CustomerGroupSetKeyActionBuilder builder(final CustomerGroupSetKeyAction template){
+        return CustomerGroupSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupSetKeyAction(Function<CustomerGroupSetKeyAction, T> helper) {
         return helper.apply(this);

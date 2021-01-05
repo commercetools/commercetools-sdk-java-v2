@@ -23,16 +23,25 @@ public interface PendingOperationError extends ErrorObject {
 
 
 
-    public static PendingOperationErrorImpl of(){
+    public static PendingOperationError of(){
         return new PendingOperationErrorImpl();
     }
     
 
-    public static PendingOperationErrorImpl of(final PendingOperationError template) {
+    public static PendingOperationError of(final PendingOperationError template) {
         PendingOperationErrorImpl instance = new PendingOperationErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static PendingOperationErrorBuilder builder(){
+        return PendingOperationErrorBuilder.of();
+    }
+    
+    public static PendingOperationErrorBuilder builder(final PendingOperationError template){
+        return PendingOperationErrorBuilder.of(template);
+    }
+    
 
     default <T> T withPendingOperationError(Function<PendingOperationError, T> helper) {
         return helper.apply(this);

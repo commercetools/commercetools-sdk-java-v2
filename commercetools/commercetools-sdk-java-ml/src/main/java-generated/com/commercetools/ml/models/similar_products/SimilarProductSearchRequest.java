@@ -81,12 +81,12 @@ public interface SimilarProductSearchRequest  {
     
     public void setConfidenceMax(final Double confidenceMax);
 
-    public static SimilarProductSearchRequestImpl of(){
+    public static SimilarProductSearchRequest of(){
         return new SimilarProductSearchRequestImpl();
     }
     
 
-    public static SimilarProductSearchRequestImpl of(final SimilarProductSearchRequest template) {
+    public static SimilarProductSearchRequest of(final SimilarProductSearchRequest template) {
         SimilarProductSearchRequestImpl instance = new SimilarProductSearchRequestImpl();
         instance.setLimit(template.getLimit());
         instance.setOffset(template.getOffset());
@@ -98,6 +98,15 @@ public interface SimilarProductSearchRequest  {
         instance.setConfidenceMax(template.getConfidenceMax());
         return instance;
     }
+
+    public static SimilarProductSearchRequestBuilder builder(){
+        return SimilarProductSearchRequestBuilder.of();
+    }
+    
+    public static SimilarProductSearchRequestBuilder builder(final SimilarProductSearchRequest template){
+        return SimilarProductSearchRequestBuilder.of(template);
+    }
+    
 
     default <T> T withSimilarProductSearchRequest(Function<SimilarProductSearchRequest, T> helper) {
         return helper.apply(this);

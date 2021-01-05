@@ -30,17 +30,26 @@ public interface ProductDiscountReference extends Reference {
 
     public void setObj(final ProductDiscount obj);
 
-    public static ProductDiscountReferenceImpl of(){
+    public static ProductDiscountReference of(){
         return new ProductDiscountReferenceImpl();
     }
     
 
-    public static ProductDiscountReferenceImpl of(final ProductDiscountReference template) {
+    public static ProductDiscountReference of(final ProductDiscountReference template) {
         ProductDiscountReferenceImpl instance = new ProductDiscountReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static ProductDiscountReferenceBuilder builder(){
+        return ProductDiscountReferenceBuilder.of();
+    }
+    
+    public static ProductDiscountReferenceBuilder builder(final ProductDiscountReference template){
+        return ProductDiscountReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountReference(Function<ProductDiscountReference, T> helper) {
         return helper.apply(this);

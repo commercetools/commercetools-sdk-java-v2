@@ -33,16 +33,25 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
 
     public void setTimeoutInMs(final Integer timeoutInMs);
 
-    public static ExtensionSetTimeoutInMsActionImpl of(){
+    public static ExtensionSetTimeoutInMsAction of(){
         return new ExtensionSetTimeoutInMsActionImpl();
     }
     
 
-    public static ExtensionSetTimeoutInMsActionImpl of(final ExtensionSetTimeoutInMsAction template) {
+    public static ExtensionSetTimeoutInMsAction of(final ExtensionSetTimeoutInMsAction template) {
         ExtensionSetTimeoutInMsActionImpl instance = new ExtensionSetTimeoutInMsActionImpl();
         instance.setTimeoutInMs(template.getTimeoutInMs());
         return instance;
     }
+
+    public static ExtensionSetTimeoutInMsActionBuilder builder(){
+        return ExtensionSetTimeoutInMsActionBuilder.of();
+    }
+    
+    public static ExtensionSetTimeoutInMsActionBuilder builder(final ExtensionSetTimeoutInMsAction template){
+        return ExtensionSetTimeoutInMsActionBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionSetTimeoutInMsAction(Function<ExtensionSetTimeoutInMsAction, T> helper) {
         return helper.apply(this);

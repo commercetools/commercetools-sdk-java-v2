@@ -171,12 +171,12 @@ public interface ProductProjection extends BaseResource, com.commercetools.api.m
     
     public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
 
-    public static ProductProjectionImpl of(){
+    public static ProductProjection of(){
         return new ProductProjectionImpl();
     }
     
 
-    public static ProductProjectionImpl of(final ProductProjection template) {
+    public static ProductProjection of(final ProductProjection template) {
         ProductProjectionImpl instance = new ProductProjectionImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -202,6 +202,15 @@ public interface ProductProjection extends BaseResource, com.commercetools.api.m
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
         return instance;
     }
+
+    public static ProductProjectionBuilder builder(){
+        return ProductProjectionBuilder.of();
+    }
+    
+    public static ProductProjectionBuilder builder(final ProductProjection template){
+        return ProductProjectionBuilder.of(template);
+    }
+    
 
     default <T> T withProductProjection(Function<ProductProjection, T> helper) {
         return helper.apply(this);

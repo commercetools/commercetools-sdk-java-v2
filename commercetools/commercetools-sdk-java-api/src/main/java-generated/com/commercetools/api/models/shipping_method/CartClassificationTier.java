@@ -43,18 +43,27 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
     
     public void setIsMatching(final Boolean isMatching);
 
-    public static CartClassificationTierImpl of(){
+    public static CartClassificationTier of(){
         return new CartClassificationTierImpl();
     }
     
 
-    public static CartClassificationTierImpl of(final CartClassificationTier template) {
+    public static CartClassificationTier of(final CartClassificationTier template) {
         CartClassificationTierImpl instance = new CartClassificationTierImpl();
         instance.setValue(template.getValue());
         instance.setPrice(template.getPrice());
         instance.setIsMatching(template.getIsMatching());
         return instance;
     }
+
+    public static CartClassificationTierBuilder builder(){
+        return CartClassificationTierBuilder.of();
+    }
+    
+    public static CartClassificationTierBuilder builder(final CartClassificationTier template){
+        return CartClassificationTierBuilder.of(template);
+    }
+    
 
     default <T> T withCartClassificationTier(Function<CartClassificationTier, T> helper) {
         return helper.apply(this);

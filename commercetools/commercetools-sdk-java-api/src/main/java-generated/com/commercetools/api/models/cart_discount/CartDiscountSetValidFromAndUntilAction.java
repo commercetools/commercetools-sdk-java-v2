@@ -39,17 +39,26 @@ public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpda
     
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static CartDiscountSetValidFromAndUntilActionImpl of(){
+    public static CartDiscountSetValidFromAndUntilAction of(){
         return new CartDiscountSetValidFromAndUntilActionImpl();
     }
     
 
-    public static CartDiscountSetValidFromAndUntilActionImpl of(final CartDiscountSetValidFromAndUntilAction template) {
+    public static CartDiscountSetValidFromAndUntilAction of(final CartDiscountSetValidFromAndUntilAction template) {
         CartDiscountSetValidFromAndUntilActionImpl instance = new CartDiscountSetValidFromAndUntilActionImpl();
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static CartDiscountSetValidFromAndUntilActionBuilder builder(){
+        return CartDiscountSetValidFromAndUntilActionBuilder.of();
+    }
+    
+    public static CartDiscountSetValidFromAndUntilActionBuilder builder(final CartDiscountSetValidFromAndUntilAction template){
+        return CartDiscountSetValidFromAndUntilActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountSetValidFromAndUntilAction(Function<CartDiscountSetValidFromAndUntilAction, T> helper) {
         return helper.apply(this);

@@ -44,18 +44,27 @@ public interface PaymentStatus  {
     
     public void setState(final StateReference state);
 
-    public static PaymentStatusImpl of(){
+    public static PaymentStatus of(){
         return new PaymentStatusImpl();
     }
     
 
-    public static PaymentStatusImpl of(final PaymentStatus template) {
+    public static PaymentStatus of(final PaymentStatus template) {
         PaymentStatusImpl instance = new PaymentStatusImpl();
         instance.setInterfaceCode(template.getInterfaceCode());
         instance.setInterfaceText(template.getInterfaceText());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static PaymentStatusBuilder builder(){
+        return PaymentStatusBuilder.of();
+    }
+    
+    public static PaymentStatusBuilder builder(final PaymentStatus template){
+        return PaymentStatusBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentStatus(Function<PaymentStatus, T> helper) {
         return helper.apply(this);

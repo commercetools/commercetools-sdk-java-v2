@@ -30,16 +30,25 @@ public interface TaxCategorySetKeyAction extends TaxCategoryUpdateAction {
 
     public void setKey(final String key);
 
-    public static TaxCategorySetKeyActionImpl of(){
+    public static TaxCategorySetKeyAction of(){
         return new TaxCategorySetKeyActionImpl();
     }
     
 
-    public static TaxCategorySetKeyActionImpl of(final TaxCategorySetKeyAction template) {
+    public static TaxCategorySetKeyAction of(final TaxCategorySetKeyAction template) {
         TaxCategorySetKeyActionImpl instance = new TaxCategorySetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static TaxCategorySetKeyActionBuilder builder(){
+        return TaxCategorySetKeyActionBuilder.of();
+    }
+    
+    public static TaxCategorySetKeyActionBuilder builder(final TaxCategorySetKeyAction template){
+        return TaxCategorySetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategorySetKeyAction(Function<TaxCategorySetKeyAction, T> helper) {
         return helper.apply(this);

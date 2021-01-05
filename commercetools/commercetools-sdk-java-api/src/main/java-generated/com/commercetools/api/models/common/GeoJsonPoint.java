@@ -30,16 +30,25 @@ public interface GeoJsonPoint extends GeoJson {
     public void setCoordinates(final Double ...coordinates);
     public void setCoordinates(final List<Double> coordinates);
 
-    public static GeoJsonPointImpl of(){
+    public static GeoJsonPoint of(){
         return new GeoJsonPointImpl();
     }
     
 
-    public static GeoJsonPointImpl of(final GeoJsonPoint template) {
+    public static GeoJsonPoint of(final GeoJsonPoint template) {
         GeoJsonPointImpl instance = new GeoJsonPointImpl();
         instance.setCoordinates(template.getCoordinates());
         return instance;
     }
+
+    public static GeoJsonPointBuilder builder(){
+        return GeoJsonPointBuilder.of();
+    }
+    
+    public static GeoJsonPointBuilder builder(final GeoJsonPoint template){
+        return GeoJsonPointBuilder.of(template);
+    }
+    
 
     default <T> T withGeoJsonPoint(Function<GeoJsonPoint, T> helper) {
         return helper.apply(this);

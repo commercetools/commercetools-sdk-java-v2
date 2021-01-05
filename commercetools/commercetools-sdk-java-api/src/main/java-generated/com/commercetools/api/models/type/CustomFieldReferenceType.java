@@ -29,16 +29,25 @@ public interface CustomFieldReferenceType extends FieldType {
 
     public void setReferenceTypeId(final ReferenceTypeId referenceTypeId);
 
-    public static CustomFieldReferenceTypeImpl of(){
+    public static CustomFieldReferenceType of(){
         return new CustomFieldReferenceTypeImpl();
     }
     
 
-    public static CustomFieldReferenceTypeImpl of(final CustomFieldReferenceType template) {
+    public static CustomFieldReferenceType of(final CustomFieldReferenceType template) {
         CustomFieldReferenceTypeImpl instance = new CustomFieldReferenceTypeImpl();
         instance.setReferenceTypeId(template.getReferenceTypeId());
         return instance;
     }
+
+    public static CustomFieldReferenceTypeBuilder builder(){
+        return CustomFieldReferenceTypeBuilder.of();
+    }
+    
+    public static CustomFieldReferenceTypeBuilder builder(final CustomFieldReferenceType template){
+        return CustomFieldReferenceTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldReferenceType(Function<CustomFieldReferenceType, T> helper) {
         return helper.apply(this);

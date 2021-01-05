@@ -103,12 +103,12 @@ public interface LineItemPrice  {
     
     public void setCustom(final Custom custom);
 
-    public static LineItemPriceImpl of(){
+    public static LineItemPrice of(){
         return new LineItemPriceImpl();
     }
     
 
-    public static LineItemPriceImpl of(final LineItemPrice template) {
+    public static LineItemPrice of(final LineItemPrice template) {
         LineItemPriceImpl instance = new LineItemPriceImpl();
         instance.setValue(template.getValue());
         instance.setCountry(template.getCountry());
@@ -121,6 +121,15 @@ public interface LineItemPrice  {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static LineItemPriceBuilder builder(){
+        return LineItemPriceBuilder.of();
+    }
+    
+    public static LineItemPriceBuilder builder(final LineItemPrice template){
+        return LineItemPriceBuilder.of(template);
+    }
+    
 
     default <T> T withLineItemPrice(Function<LineItemPrice, T> helper) {
         return helper.apply(this);

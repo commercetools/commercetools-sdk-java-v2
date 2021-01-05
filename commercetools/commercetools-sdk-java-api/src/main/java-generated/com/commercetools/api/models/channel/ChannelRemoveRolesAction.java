@@ -31,16 +31,25 @@ public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
     public void setRoles(final ChannelRoleEnum ...roles);
     public void setRoles(final List<ChannelRoleEnum> roles);
 
-    public static ChannelRemoveRolesActionImpl of(){
+    public static ChannelRemoveRolesAction of(){
         return new ChannelRemoveRolesActionImpl();
     }
     
 
-    public static ChannelRemoveRolesActionImpl of(final ChannelRemoveRolesAction template) {
+    public static ChannelRemoveRolesAction of(final ChannelRemoveRolesAction template) {
         ChannelRemoveRolesActionImpl instance = new ChannelRemoveRolesActionImpl();
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public static ChannelRemoveRolesActionBuilder builder(){
+        return ChannelRemoveRolesActionBuilder.of();
+    }
+    
+    public static ChannelRemoveRolesActionBuilder builder(final ChannelRemoveRolesAction template){
+        return ChannelRemoveRolesActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelRemoveRolesAction(Function<ChannelRemoveRolesAction, T> helper) {
         return helper.apply(this);

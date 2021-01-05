@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyReviewsByIDGet extends ApiMethod<ByProjectKeyReviewsByIDGet, com.commercetools.api.models.review.Review> {
+public class ByProjectKeyReviewsByIDGet extends ApiMethod<ByProjectKeyReviewsByIDGet, com.commercetools.api.models.review.Review> implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyReviewsByIDGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyReviewsByIDGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyReviewsByIDGet> {
 
     
     private String projectKey;

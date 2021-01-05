@@ -41,17 +41,26 @@ public interface CartSetCartTotalTaxAction extends CartUpdateAction {
     public void setExternalTaxPortions(final TaxPortionDraft ...externalTaxPortions);
     public void setExternalTaxPortions(final List<TaxPortionDraft> externalTaxPortions);
 
-    public static CartSetCartTotalTaxActionImpl of(){
+    public static CartSetCartTotalTaxAction of(){
         return new CartSetCartTotalTaxActionImpl();
     }
     
 
-    public static CartSetCartTotalTaxActionImpl of(final CartSetCartTotalTaxAction template) {
+    public static CartSetCartTotalTaxAction of(final CartSetCartTotalTaxAction template) {
         CartSetCartTotalTaxActionImpl instance = new CartSetCartTotalTaxActionImpl();
         instance.setExternalTotalGross(template.getExternalTotalGross());
         instance.setExternalTaxPortions(template.getExternalTaxPortions());
         return instance;
     }
+
+    public static CartSetCartTotalTaxActionBuilder builder(){
+        return CartSetCartTotalTaxActionBuilder.of();
+    }
+    
+    public static CartSetCartTotalTaxActionBuilder builder(final CartSetCartTotalTaxAction template){
+        return CartSetCartTotalTaxActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCartTotalTaxAction(Function<CartSetCartTotalTaxAction, T> helper) {
         return helper.apply(this);

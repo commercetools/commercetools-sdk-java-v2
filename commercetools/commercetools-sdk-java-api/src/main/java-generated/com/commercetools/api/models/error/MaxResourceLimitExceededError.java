@@ -29,17 +29,26 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
 
     public void setExceededResource(final ReferenceTypeId exceededResource);
 
-    public static MaxResourceLimitExceededErrorImpl of(){
+    public static MaxResourceLimitExceededError of(){
         return new MaxResourceLimitExceededErrorImpl();
     }
     
 
-    public static MaxResourceLimitExceededErrorImpl of(final MaxResourceLimitExceededError template) {
+    public static MaxResourceLimitExceededError of(final MaxResourceLimitExceededError template) {
         MaxResourceLimitExceededErrorImpl instance = new MaxResourceLimitExceededErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setExceededResource(template.getExceededResource());
         return instance;
     }
+
+    public static MaxResourceLimitExceededErrorBuilder builder(){
+        return MaxResourceLimitExceededErrorBuilder.of();
+    }
+    
+    public static MaxResourceLimitExceededErrorBuilder builder(final MaxResourceLimitExceededError template){
+        return MaxResourceLimitExceededErrorBuilder.of(template);
+    }
+    
 
     default <T> T withMaxResourceLimitExceededError(Function<MaxResourceLimitExceededError, T> helper) {
         return helper.apply(this);

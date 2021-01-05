@@ -24,17 +24,26 @@ public interface StateResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static StateResourceIdentifierImpl of(){
+    public static StateResourceIdentifier of(){
         return new StateResourceIdentifierImpl();
     }
     
 
-    public static StateResourceIdentifierImpl of(final StateResourceIdentifier template) {
+    public static StateResourceIdentifier of(final StateResourceIdentifier template) {
         StateResourceIdentifierImpl instance = new StateResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static StateResourceIdentifierBuilder builder(){
+        return StateResourceIdentifierBuilder.of();
+    }
+    
+    public static StateResourceIdentifierBuilder builder(final StateResourceIdentifier template){
+        return StateResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withStateResourceIdentifier(Function<StateResourceIdentifier, T> helper) {
         return helper.apply(this);

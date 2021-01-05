@@ -36,17 +36,26 @@ public interface OrderSetCustomTypeAction extends OrderUpdateAction {
     
     public void setFields(final FieldContainer fields);
 
-    public static OrderSetCustomTypeActionImpl of(){
+    public static OrderSetCustomTypeAction of(){
         return new OrderSetCustomTypeActionImpl();
     }
     
 
-    public static OrderSetCustomTypeActionImpl of(final OrderSetCustomTypeAction template) {
+    public static OrderSetCustomTypeAction of(final OrderSetCustomTypeAction template) {
         OrderSetCustomTypeActionImpl instance = new OrderSetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static OrderSetCustomTypeActionBuilder builder(){
+        return OrderSetCustomTypeActionBuilder.of();
+    }
+    
+    public static OrderSetCustomTypeActionBuilder builder(final OrderSetCustomTypeAction template){
+        return OrderSetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetCustomTypeAction(Function<OrderSetCustomTypeAction, T> helper) {
         return helper.apply(this);

@@ -30,17 +30,26 @@ public interface OrderEditReference extends Reference {
 
     public void setObj(final OrderEdit obj);
 
-    public static OrderEditReferenceImpl of(){
+    public static OrderEditReference of(){
         return new OrderEditReferenceImpl();
     }
     
 
-    public static OrderEditReferenceImpl of(final OrderEditReference template) {
+    public static OrderEditReference of(final OrderEditReference template) {
         OrderEditReferenceImpl instance = new OrderEditReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static OrderEditReferenceBuilder builder(){
+        return OrderEditReferenceBuilder.of();
+    }
+    
+    public static OrderEditReferenceBuilder builder(final OrderEditReference template){
+        return OrderEditReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditReference(Function<OrderEditReference, T> helper) {
         return helper.apply(this);

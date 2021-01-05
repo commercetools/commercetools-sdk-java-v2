@@ -48,6 +48,7 @@ public interface MyPaymentUpdateAction extends com.commercetools.api.models.Reso
 
 
 
+
     default <T> T withMyPaymentUpdateAction(Function<MyPaymentUpdateAction, T> helper) {
         return helper.apply(this);
     }

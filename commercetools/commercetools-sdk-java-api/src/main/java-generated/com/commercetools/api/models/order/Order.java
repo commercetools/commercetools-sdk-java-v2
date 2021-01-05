@@ -363,12 +363,12 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
     public void setRefusedGifts(final CartDiscountReference ...refusedGifts);
     public void setRefusedGifts(final List<CartDiscountReference> refusedGifts);
 
-    public static OrderImpl of(){
+    public static Order of(){
         return new OrderImpl();
     }
     
 
-    public static OrderImpl of(final Order template) {
+    public static Order of(final Order template) {
         OrderImpl instance = new OrderImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -413,6 +413,15 @@ public interface Order extends BaseResource, com.commercetools.api.models.Domain
         instance.setRefusedGifts(template.getRefusedGifts());
         return instance;
     }
+
+    public static OrderBuilder builder(){
+        return OrderBuilder.of();
+    }
+    
+    public static OrderBuilder builder(final Order template){
+        return OrderBuilder.of(template);
+    }
+    
 
     default <T> T withOrder(Function<Order, T> helper) {
         return helper.apply(this);

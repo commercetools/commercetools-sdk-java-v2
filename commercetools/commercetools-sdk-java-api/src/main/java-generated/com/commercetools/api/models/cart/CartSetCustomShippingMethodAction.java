@@ -50,12 +50,12 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-    public static CartSetCustomShippingMethodActionImpl of(){
+    public static CartSetCustomShippingMethodAction of(){
         return new CartSetCustomShippingMethodActionImpl();
     }
     
 
-    public static CartSetCustomShippingMethodActionImpl of(final CartSetCustomShippingMethodAction template) {
+    public static CartSetCustomShippingMethodAction of(final CartSetCustomShippingMethodAction template) {
         CartSetCustomShippingMethodActionImpl instance = new CartSetCustomShippingMethodActionImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
         instance.setShippingRate(template.getShippingRate());
@@ -63,6 +63,15 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public static CartSetCustomShippingMethodActionBuilder builder(){
+        return CartSetCustomShippingMethodActionBuilder.of();
+    }
+    
+    public static CartSetCustomShippingMethodActionBuilder builder(final CartSetCustomShippingMethodAction template){
+        return CartSetCustomShippingMethodActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCustomShippingMethodAction(Function<CartSetCustomShippingMethodAction, T> helper) {
         return helper.apply(this);

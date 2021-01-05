@@ -78,6 +78,7 @@ public interface BaseResource  {
 
 
 
+
     default <T> T withBaseResource(Function<BaseResource, T> helper) {
         return helper.apply(this);
     }

@@ -57,12 +57,12 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductSetAttributeActionImpl of(){
+    public static ProductSetAttributeAction of(){
         return new ProductSetAttributeActionImpl();
     }
     
 
-    public static ProductSetAttributeActionImpl of(final ProductSetAttributeAction template) {
+    public static ProductSetAttributeAction of(final ProductSetAttributeAction template) {
         ProductSetAttributeActionImpl instance = new ProductSetAttributeActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -71,6 +71,15 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductSetAttributeActionBuilder builder(){
+        return ProductSetAttributeActionBuilder.of();
+    }
+    
+    public static ProductSetAttributeActionBuilder builder(final ProductSetAttributeAction template){
+        return ProductSetAttributeActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetAttributeAction(Function<ProductSetAttributeAction, T> helper) {
         return helper.apply(this);

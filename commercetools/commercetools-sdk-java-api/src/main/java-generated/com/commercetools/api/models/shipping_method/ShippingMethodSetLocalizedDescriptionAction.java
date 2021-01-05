@@ -28,16 +28,25 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
 
     public void setLocalizedDescription(final String localizedDescription);
 
-    public static ShippingMethodSetLocalizedDescriptionActionImpl of(){
+    public static ShippingMethodSetLocalizedDescriptionAction of(){
         return new ShippingMethodSetLocalizedDescriptionActionImpl();
     }
     
 
-    public static ShippingMethodSetLocalizedDescriptionActionImpl of(final ShippingMethodSetLocalizedDescriptionAction template) {
+    public static ShippingMethodSetLocalizedDescriptionAction of(final ShippingMethodSetLocalizedDescriptionAction template) {
         ShippingMethodSetLocalizedDescriptionActionImpl instance = new ShippingMethodSetLocalizedDescriptionActionImpl();
         instance.setLocalizedDescription(template.getLocalizedDescription());
         return instance;
     }
+
+    public static ShippingMethodSetLocalizedDescriptionActionBuilder builder(){
+        return ShippingMethodSetLocalizedDescriptionActionBuilder.of();
+    }
+    
+    public static ShippingMethodSetLocalizedDescriptionActionBuilder builder(final ShippingMethodSetLocalizedDescriptionAction template){
+        return ShippingMethodSetLocalizedDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodSetLocalizedDescriptionAction(Function<ShippingMethodSetLocalizedDescriptionAction, T> helper) {
         return helper.apply(this);

@@ -34,17 +34,26 @@ public interface MessageConfigurationDraft  {
     
     public void setDeleteDaysAfterCreation(final Integer deleteDaysAfterCreation);
 
-    public static MessageConfigurationDraftImpl of(){
+    public static MessageConfigurationDraft of(){
         return new MessageConfigurationDraftImpl();
     }
     
 
-    public static MessageConfigurationDraftImpl of(final MessageConfigurationDraft template) {
+    public static MessageConfigurationDraft of(final MessageConfigurationDraft template) {
         MessageConfigurationDraftImpl instance = new MessageConfigurationDraftImpl();
         instance.setEnabled(template.getEnabled());
         instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
         return instance;
     }
+
+    public static MessageConfigurationDraftBuilder builder(){
+        return MessageConfigurationDraftBuilder.of();
+    }
+    
+    public static MessageConfigurationDraftBuilder builder(final MessageConfigurationDraft template){
+        return MessageConfigurationDraftBuilder.of(template);
+    }
+    
 
     default <T> T withMessageConfigurationDraft(Function<MessageConfigurationDraft, T> helper) {
         return helper.apply(this);

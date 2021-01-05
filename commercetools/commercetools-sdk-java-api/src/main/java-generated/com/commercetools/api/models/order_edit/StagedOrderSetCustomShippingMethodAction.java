@@ -50,12 +50,12 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
     
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-    public static StagedOrderSetCustomShippingMethodActionImpl of(){
+    public static StagedOrderSetCustomShippingMethodAction of(){
         return new StagedOrderSetCustomShippingMethodActionImpl();
     }
     
 
-    public static StagedOrderSetCustomShippingMethodActionImpl of(final StagedOrderSetCustomShippingMethodAction template) {
+    public static StagedOrderSetCustomShippingMethodAction of(final StagedOrderSetCustomShippingMethodAction template) {
         StagedOrderSetCustomShippingMethodActionImpl instance = new StagedOrderSetCustomShippingMethodActionImpl();
         instance.setShippingMethodName(template.getShippingMethodName());
         instance.setShippingRate(template.getShippingRate());
@@ -63,6 +63,15 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public static StagedOrderSetCustomShippingMethodActionBuilder builder(){
+        return StagedOrderSetCustomShippingMethodActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomShippingMethodActionBuilder builder(final StagedOrderSetCustomShippingMethodAction template){
+        return StagedOrderSetCustomShippingMethodActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomShippingMethodAction(Function<StagedOrderSetCustomShippingMethodAction, T> helper) {
         return helper.apply(this);

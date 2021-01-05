@@ -36,17 +36,26 @@ public interface MessageSubscription  {
     public void setTypes(final String ...types);
     public void setTypes(final List<String> types);
 
-    public static MessageSubscriptionImpl of(){
+    public static MessageSubscription of(){
         return new MessageSubscriptionImpl();
     }
     
 
-    public static MessageSubscriptionImpl of(final MessageSubscription template) {
+    public static MessageSubscription of(final MessageSubscription template) {
         MessageSubscriptionImpl instance = new MessageSubscriptionImpl();
         instance.setResourceTypeId(template.getResourceTypeId());
         instance.setTypes(template.getTypes());
         return instance;
     }
+
+    public static MessageSubscriptionBuilder builder(){
+        return MessageSubscriptionBuilder.of();
+    }
+    
+    public static MessageSubscriptionBuilder builder(final MessageSubscription template){
+        return MessageSubscriptionBuilder.of(template);
+    }
+    
 
     default <T> T withMessageSubscription(Function<MessageSubscription, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
 
     public void setAddress(final Address address);
 
-    public static OrderUpdateItemShippingAddressActionImpl of(){
+    public static OrderUpdateItemShippingAddressAction of(){
         return new OrderUpdateItemShippingAddressActionImpl();
     }
     
 
-    public static OrderUpdateItemShippingAddressActionImpl of(final OrderUpdateItemShippingAddressAction template) {
+    public static OrderUpdateItemShippingAddressAction of(final OrderUpdateItemShippingAddressAction template) {
         OrderUpdateItemShippingAddressActionImpl instance = new OrderUpdateItemShippingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static OrderUpdateItemShippingAddressActionBuilder builder(){
+        return OrderUpdateItemShippingAddressActionBuilder.of();
+    }
+    
+    public static OrderUpdateItemShippingAddressActionBuilder builder(final OrderUpdateItemShippingAddressAction template){
+        return OrderUpdateItemShippingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderUpdateItemShippingAddressAction(Function<OrderUpdateItemShippingAddressAction, T> helper) {
         return helper.apply(this);

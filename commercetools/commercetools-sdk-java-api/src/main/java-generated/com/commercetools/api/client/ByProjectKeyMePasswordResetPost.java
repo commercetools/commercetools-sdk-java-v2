@@ -29,7 +29,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMePasswordResetPost extends ApiMethod<ByProjectKeyMePasswordResetPost, com.commercetools.api.models.me.MyCustomer> {
+public class ByProjectKeyMePasswordResetPost extends ApiMethod<ByProjectKeyMePasswordResetPost, com.commercetools.api.models.me.MyCustomer> implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePasswordResetPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePasswordResetPost> {
 
     
     private String projectKey;

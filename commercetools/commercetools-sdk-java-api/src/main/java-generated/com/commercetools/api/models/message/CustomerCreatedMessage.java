@@ -30,12 +30,12 @@ public interface CustomerCreatedMessage extends Message {
 
     public void setCustomer(final Customer customer);
 
-    public static CustomerCreatedMessageImpl of(){
+    public static CustomerCreatedMessage of(){
         return new CustomerCreatedMessageImpl();
     }
     
 
-    public static CustomerCreatedMessageImpl of(final CustomerCreatedMessage template) {
+    public static CustomerCreatedMessage of(final CustomerCreatedMessage template) {
         CustomerCreatedMessageImpl instance = new CustomerCreatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface CustomerCreatedMessage extends Message {
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public static CustomerCreatedMessageBuilder builder(){
+        return CustomerCreatedMessageBuilder.of();
+    }
+    
+    public static CustomerCreatedMessageBuilder builder(final CustomerCreatedMessage template){
+        return CustomerCreatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerCreatedMessage(Function<CustomerCreatedMessage, T> helper) {
         return helper.apply(this);

@@ -41,17 +41,26 @@ public interface ZoneRateDraft  {
     public void setShippingRates(final ShippingRateDraft ...shippingRates);
     public void setShippingRates(final List<ShippingRateDraft> shippingRates);
 
-    public static ZoneRateDraftImpl of(){
+    public static ZoneRateDraft of(){
         return new ZoneRateDraftImpl();
     }
     
 
-    public static ZoneRateDraftImpl of(final ZoneRateDraft template) {
+    public static ZoneRateDraft of(final ZoneRateDraft template) {
         ZoneRateDraftImpl instance = new ZoneRateDraftImpl();
         instance.setZone(template.getZone());
         instance.setShippingRates(template.getShippingRates());
         return instance;
     }
+
+    public static ZoneRateDraftBuilder builder(){
+        return ZoneRateDraftBuilder.of();
+    }
+    
+    public static ZoneRateDraftBuilder builder(final ZoneRateDraft template){
+        return ZoneRateDraftBuilder.of(template);
+    }
+    
 
     default <T> T withZoneRateDraft(Function<ZoneRateDraft, T> helper) {
         return helper.apply(this);

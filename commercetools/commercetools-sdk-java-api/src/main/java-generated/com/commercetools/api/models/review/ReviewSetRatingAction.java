@@ -31,16 +31,25 @@ public interface ReviewSetRatingAction extends ReviewUpdateAction {
 
     public void setRating(final Integer rating);
 
-    public static ReviewSetRatingActionImpl of(){
+    public static ReviewSetRatingAction of(){
         return new ReviewSetRatingActionImpl();
     }
     
 
-    public static ReviewSetRatingActionImpl of(final ReviewSetRatingAction template) {
+    public static ReviewSetRatingAction of(final ReviewSetRatingAction template) {
         ReviewSetRatingActionImpl instance = new ReviewSetRatingActionImpl();
         instance.setRating(template.getRating());
         return instance;
     }
+
+    public static ReviewSetRatingActionBuilder builder(){
+        return ReviewSetRatingActionBuilder.of();
+    }
+    
+    public static ReviewSetRatingActionBuilder builder(final ReviewSetRatingAction template){
+        return ReviewSetRatingActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetRatingAction(Function<ReviewSetRatingAction, T> helper) {
         return helper.apply(this);

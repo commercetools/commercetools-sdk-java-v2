@@ -99,12 +99,12 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
     public void setAttributes(final AttributeDefinition ...attributes);
     public void setAttributes(final List<AttributeDefinition> attributes);
 
-    public static ProductTypeImpl of(){
+    public static ProductType of(){
         return new ProductTypeImpl();
     }
     
 
-    public static ProductTypeImpl of(final ProductType template) {
+    public static ProductType of(final ProductType template) {
         ProductTypeImpl instance = new ProductTypeImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -118,6 +118,15 @@ public interface ProductType extends BaseResource, com.commercetools.api.models.
         instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public static ProductTypeBuilder builder(){
+        return ProductTypeBuilder.of();
+    }
+    
+    public static ProductTypeBuilder builder(final ProductType template){
+        return ProductTypeBuilder.of(template);
+    }
+    
 
     default <T> T withProductType(Function<ProductType, T> helper) {
         return helper.apply(this);

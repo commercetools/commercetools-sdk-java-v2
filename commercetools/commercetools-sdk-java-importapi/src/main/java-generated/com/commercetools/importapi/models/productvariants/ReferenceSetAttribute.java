@@ -35,17 +35,26 @@ public interface ReferenceSetAttribute extends Attribute {
     public void setValue(final KeyReference ...value);
     public void setValue(final List<KeyReference> value);
 
-    public static ReferenceSetAttributeImpl of(){
+    public static ReferenceSetAttribute of(){
         return new ReferenceSetAttributeImpl();
     }
     
 
-    public static ReferenceSetAttributeImpl of(final ReferenceSetAttribute template) {
+    public static ReferenceSetAttribute of(final ReferenceSetAttribute template) {
         ReferenceSetAttributeImpl instance = new ReferenceSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ReferenceSetAttributeBuilder builder(){
+        return ReferenceSetAttributeBuilder.of();
+    }
+    
+    public static ReferenceSetAttributeBuilder builder(final ReferenceSetAttribute template){
+        return ReferenceSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withReferenceSetAttribute(Function<ReferenceSetAttribute, T> helper) {
         return helper.apply(this);

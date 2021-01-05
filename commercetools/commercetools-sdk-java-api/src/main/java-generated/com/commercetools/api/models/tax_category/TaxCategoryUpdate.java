@@ -37,17 +37,26 @@ public interface TaxCategoryUpdate extends com.commercetools.api.models.Resource
     public void setActions(final TaxCategoryUpdateAction ...actions);
     public void setActions(final List<TaxCategoryUpdateAction> actions);
 
-    public static TaxCategoryUpdateImpl of(){
+    public static TaxCategoryUpdate of(){
         return new TaxCategoryUpdateImpl();
     }
     
 
-    public static TaxCategoryUpdateImpl of(final TaxCategoryUpdate template) {
+    public static TaxCategoryUpdate of(final TaxCategoryUpdate template) {
         TaxCategoryUpdateImpl instance = new TaxCategoryUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static TaxCategoryUpdateBuilder builder(){
+        return TaxCategoryUpdateBuilder.of();
+    }
+    
+    public static TaxCategoryUpdateBuilder builder(final TaxCategoryUpdate template){
+        return TaxCategoryUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryUpdate(Function<TaxCategoryUpdate, T> helper) {
         return helper.apply(this);

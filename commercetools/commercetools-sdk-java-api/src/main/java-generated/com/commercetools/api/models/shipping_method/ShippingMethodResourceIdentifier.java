@@ -24,17 +24,26 @@ public interface ShippingMethodResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static ShippingMethodResourceIdentifierImpl of(){
+    public static ShippingMethodResourceIdentifier of(){
         return new ShippingMethodResourceIdentifierImpl();
     }
     
 
-    public static ShippingMethodResourceIdentifierImpl of(final ShippingMethodResourceIdentifier template) {
+    public static ShippingMethodResourceIdentifier of(final ShippingMethodResourceIdentifier template) {
         ShippingMethodResourceIdentifierImpl instance = new ShippingMethodResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ShippingMethodResourceIdentifierBuilder builder(){
+        return ShippingMethodResourceIdentifierBuilder.of();
+    }
+    
+    public static ShippingMethodResourceIdentifierBuilder builder(final ShippingMethodResourceIdentifier template){
+        return ShippingMethodResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodResourceIdentifier(Function<ShippingMethodResourceIdentifier, T> helper) {
         return helper.apply(this);

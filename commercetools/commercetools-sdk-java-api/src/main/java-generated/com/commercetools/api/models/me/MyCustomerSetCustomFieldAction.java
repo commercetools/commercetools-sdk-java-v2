@@ -35,17 +35,26 @@ public interface MyCustomerSetCustomFieldAction extends MyCustomerUpdateAction {
     
     public void setValue(final JsonNode value);
 
-    public static MyCustomerSetCustomFieldActionImpl of(){
+    public static MyCustomerSetCustomFieldAction of(){
         return new MyCustomerSetCustomFieldActionImpl();
     }
     
 
-    public static MyCustomerSetCustomFieldActionImpl of(final MyCustomerSetCustomFieldAction template) {
+    public static MyCustomerSetCustomFieldAction of(final MyCustomerSetCustomFieldAction template) {
         MyCustomerSetCustomFieldActionImpl instance = new MyCustomerSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static MyCustomerSetCustomFieldActionBuilder builder(){
+        return MyCustomerSetCustomFieldActionBuilder.of();
+    }
+    
+    public static MyCustomerSetCustomFieldActionBuilder builder(final MyCustomerSetCustomFieldAction template){
+        return MyCustomerSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetCustomFieldAction(Function<MyCustomerSetCustomFieldAction, T> helper) {
         return helper.apply(this);

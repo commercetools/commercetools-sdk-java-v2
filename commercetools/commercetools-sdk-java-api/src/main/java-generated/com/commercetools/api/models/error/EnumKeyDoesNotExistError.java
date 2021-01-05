@@ -34,18 +34,27 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
     
     public void setConflictingAttributeName(final String conflictingAttributeName);
 
-    public static EnumKeyDoesNotExistErrorImpl of(){
+    public static EnumKeyDoesNotExistError of(){
         return new EnumKeyDoesNotExistErrorImpl();
     }
     
 
-    public static EnumKeyDoesNotExistErrorImpl of(final EnumKeyDoesNotExistError template) {
+    public static EnumKeyDoesNotExistError of(final EnumKeyDoesNotExistError template) {
         EnumKeyDoesNotExistErrorImpl instance = new EnumKeyDoesNotExistErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setConflictingEnumKey(template.getConflictingEnumKey());
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public static EnumKeyDoesNotExistErrorBuilder builder(){
+        return EnumKeyDoesNotExistErrorBuilder.of();
+    }
+    
+    public static EnumKeyDoesNotExistErrorBuilder builder(final EnumKeyDoesNotExistError template){
+        return EnumKeyDoesNotExistErrorBuilder.of(template);
+    }
+    
 
     default <T> T withEnumKeyDoesNotExistError(Function<EnumKeyDoesNotExistError, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
 
     public void setKey(final String key);
 
-    public static ShippingMethodSetKeyActionImpl of(){
+    public static ShippingMethodSetKeyAction of(){
         return new ShippingMethodSetKeyActionImpl();
     }
     
 
-    public static ShippingMethodSetKeyActionImpl of(final ShippingMethodSetKeyAction template) {
+    public static ShippingMethodSetKeyAction of(final ShippingMethodSetKeyAction template) {
         ShippingMethodSetKeyActionImpl instance = new ShippingMethodSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ShippingMethodSetKeyActionBuilder builder(){
+        return ShippingMethodSetKeyActionBuilder.of();
+    }
+    
+    public static ShippingMethodSetKeyActionBuilder builder(final ShippingMethodSetKeyAction template){
+        return ShippingMethodSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodSetKeyAction(Function<ShippingMethodSetKeyAction, T> helper) {
         return helper.apply(this);

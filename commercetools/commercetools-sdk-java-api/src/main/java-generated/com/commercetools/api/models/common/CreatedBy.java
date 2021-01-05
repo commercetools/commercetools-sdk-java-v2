@@ -23,12 +23,12 @@ public interface CreatedBy extends ClientLogging {
 
 
 
-    public static CreatedByImpl of(){
+    public static CreatedBy of(){
         return new CreatedByImpl();
     }
     
 
-    public static CreatedByImpl of(final CreatedBy template) {
+    public static CreatedBy of(final CreatedBy template) {
         CreatedByImpl instance = new CreatedByImpl();
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
@@ -36,6 +36,15 @@ public interface CreatedBy extends ClientLogging {
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static CreatedByBuilder builder(){
+        return CreatedByBuilder.of();
+    }
+    
+    public static CreatedByBuilder builder(final CreatedBy template){
+        return CreatedByBuilder.of(template);
+    }
+    
 
     default <T> T withCreatedBy(Function<CreatedBy, T> helper) {
         return helper.apply(this);

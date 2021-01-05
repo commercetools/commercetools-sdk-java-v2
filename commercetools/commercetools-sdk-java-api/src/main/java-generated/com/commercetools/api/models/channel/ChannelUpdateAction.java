@@ -56,6 +56,7 @@ public interface ChannelUpdateAction extends com.commercetools.api.models.Resour
 
 
 
+
     default <T> T withChannelUpdateAction(Function<ChannelUpdateAction, T> helper) {
         return helper.apply(this);
     }

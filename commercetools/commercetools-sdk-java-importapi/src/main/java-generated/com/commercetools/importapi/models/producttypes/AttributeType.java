@@ -62,6 +62,7 @@ public interface AttributeType  {
 
 
 
+
     default <T> T withAttributeType(Function<AttributeType, T> helper) {
         return helper.apply(this);
     }

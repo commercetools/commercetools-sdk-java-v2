@@ -23,16 +23,25 @@ public interface QueryTimedOutError extends ErrorObject {
 
 
 
-    public static QueryTimedOutErrorImpl of(){
+    public static QueryTimedOutError of(){
         return new QueryTimedOutErrorImpl();
     }
     
 
-    public static QueryTimedOutErrorImpl of(final QueryTimedOutError template) {
+    public static QueryTimedOutError of(final QueryTimedOutError template) {
         QueryTimedOutErrorImpl instance = new QueryTimedOutErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static QueryTimedOutErrorBuilder builder(){
+        return QueryTimedOutErrorBuilder.of();
+    }
+    
+    public static QueryTimedOutErrorBuilder builder(final QueryTimedOutError template){
+        return QueryTimedOutErrorBuilder.of(template);
+    }
+    
 
     default <T> T withQueryTimedOutError(Function<QueryTimedOutError, T> helper) {
         return helper.apply(this);

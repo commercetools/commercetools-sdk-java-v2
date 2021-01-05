@@ -76,12 +76,12 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
     public void setAssets(final Asset ...assets);
     public void setAssets(final List<Asset> assets);
 
-    public static ProductAddVariantActionImpl of(){
+    public static ProductAddVariantAction of(){
         return new ProductAddVariantActionImpl();
     }
     
 
-    public static ProductAddVariantActionImpl of(final ProductAddVariantAction template) {
+    public static ProductAddVariantAction of(final ProductAddVariantAction template) {
         ProductAddVariantActionImpl instance = new ProductAddVariantActionImpl();
         instance.setSku(template.getSku());
         instance.setKey(template.getKey());
@@ -92,6 +92,15 @@ public interface ProductAddVariantAction extends ProductUpdateAction {
         instance.setAssets(template.getAssets());
         return instance;
     }
+
+    public static ProductAddVariantActionBuilder builder(){
+        return ProductAddVariantActionBuilder.of();
+    }
+    
+    public static ProductAddVariantActionBuilder builder(final ProductAddVariantAction template){
+        return ProductAddVariantActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductAddVariantAction(Function<ProductAddVariantAction, T> helper) {
         return helper.apply(this);

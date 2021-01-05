@@ -29,16 +29,25 @@ public interface CartChangeTaxCalculationModeAction extends CartUpdateAction {
 
     public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
 
-    public static CartChangeTaxCalculationModeActionImpl of(){
+    public static CartChangeTaxCalculationModeAction of(){
         return new CartChangeTaxCalculationModeActionImpl();
     }
     
 
-    public static CartChangeTaxCalculationModeActionImpl of(final CartChangeTaxCalculationModeAction template) {
+    public static CartChangeTaxCalculationModeAction of(final CartChangeTaxCalculationModeAction template) {
         CartChangeTaxCalculationModeActionImpl instance = new CartChangeTaxCalculationModeActionImpl();
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         return instance;
     }
+
+    public static CartChangeTaxCalculationModeActionBuilder builder(){
+        return CartChangeTaxCalculationModeActionBuilder.of();
+    }
+    
+    public static CartChangeTaxCalculationModeActionBuilder builder(final CartChangeTaxCalculationModeAction template){
+        return CartChangeTaxCalculationModeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartChangeTaxCalculationModeAction(Function<CartChangeTaxCalculationModeAction, T> helper) {
         return helper.apply(this);

@@ -71,12 +71,12 @@ public interface StateDraft  {
     public void setTransitions(final StateResourceIdentifier ...transitions);
     public void setTransitions(final List<StateResourceIdentifier> transitions);
 
-    public static StateDraftImpl of(){
+    public static StateDraft of(){
         return new StateDraftImpl();
     }
     
 
-    public static StateDraftImpl of(final StateDraft template) {
+    public static StateDraft of(final StateDraft template) {
         StateDraftImpl instance = new StateDraftImpl();
         instance.setKey(template.getKey());
         instance.setType(template.getType());
@@ -87,6 +87,15 @@ public interface StateDraft  {
         instance.setTransitions(template.getTransitions());
         return instance;
     }
+
+    public static StateDraftBuilder builder(){
+        return StateDraftBuilder.of();
+    }
+    
+    public static StateDraftBuilder builder(final StateDraft template){
+        return StateDraftBuilder.of(template);
+    }
+    
 
     default <T> T withStateDraft(Function<StateDraft, T> helper) {
         return helper.apply(this);

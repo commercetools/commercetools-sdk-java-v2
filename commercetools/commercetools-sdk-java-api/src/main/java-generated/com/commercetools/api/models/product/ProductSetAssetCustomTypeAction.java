@@ -71,12 +71,12 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
     
     public void setFields(final JsonNode fields);
 
-    public static ProductSetAssetCustomTypeActionImpl of(){
+    public static ProductSetAssetCustomTypeAction of(){
         return new ProductSetAssetCustomTypeActionImpl();
     }
     
 
-    public static ProductSetAssetCustomTypeActionImpl of(final ProductSetAssetCustomTypeAction template) {
+    public static ProductSetAssetCustomTypeAction of(final ProductSetAssetCustomTypeAction template) {
         ProductSetAssetCustomTypeActionImpl instance = new ProductSetAssetCustomTypeActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -87,6 +87,15 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static ProductSetAssetCustomTypeActionBuilder builder(){
+        return ProductSetAssetCustomTypeActionBuilder.of();
+    }
+    
+    public static ProductSetAssetCustomTypeActionBuilder builder(final ProductSetAssetCustomTypeAction template){
+        return ProductSetAssetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetAssetCustomTypeAction(Function<ProductSetAssetCustomTypeAction, T> helper) {
         return helper.apply(this);

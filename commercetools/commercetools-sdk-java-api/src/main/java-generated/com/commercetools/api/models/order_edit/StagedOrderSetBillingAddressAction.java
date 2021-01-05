@@ -29,16 +29,25 @@ public interface StagedOrderSetBillingAddressAction extends StagedOrderUpdateAct
 
     public void setAddress(final Address address);
 
-    public static StagedOrderSetBillingAddressActionImpl of(){
+    public static StagedOrderSetBillingAddressAction of(){
         return new StagedOrderSetBillingAddressActionImpl();
     }
     
 
-    public static StagedOrderSetBillingAddressActionImpl of(final StagedOrderSetBillingAddressAction template) {
+    public static StagedOrderSetBillingAddressAction of(final StagedOrderSetBillingAddressAction template) {
         StagedOrderSetBillingAddressActionImpl instance = new StagedOrderSetBillingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static StagedOrderSetBillingAddressActionBuilder builder(){
+        return StagedOrderSetBillingAddressActionBuilder.of();
+    }
+    
+    public static StagedOrderSetBillingAddressActionBuilder builder(final StagedOrderSetBillingAddressAction template){
+        return StagedOrderSetBillingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetBillingAddressAction(Function<StagedOrderSetBillingAddressAction, T> helper) {
         return helper.apply(this);

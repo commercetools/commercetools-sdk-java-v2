@@ -39,17 +39,26 @@ public interface DiscountedLineItemPriceDraft  {
     public void setIncludedDiscounts(final DiscountedLineItemPortion ...includedDiscounts);
     public void setIncludedDiscounts(final List<DiscountedLineItemPortion> includedDiscounts);
 
-    public static DiscountedLineItemPriceDraftImpl of(){
+    public static DiscountedLineItemPriceDraft of(){
         return new DiscountedLineItemPriceDraftImpl();
     }
     
 
-    public static DiscountedLineItemPriceDraftImpl of(final DiscountedLineItemPriceDraft template) {
+    public static DiscountedLineItemPriceDraft of(final DiscountedLineItemPriceDraft template) {
         DiscountedLineItemPriceDraftImpl instance = new DiscountedLineItemPriceDraftImpl();
         instance.setValue(template.getValue());
         instance.setIncludedDiscounts(template.getIncludedDiscounts());
         return instance;
     }
+
+    public static DiscountedLineItemPriceDraftBuilder builder(){
+        return DiscountedLineItemPriceDraftBuilder.of();
+    }
+    
+    public static DiscountedLineItemPriceDraftBuilder builder(final DiscountedLineItemPriceDraft template){
+        return DiscountedLineItemPriceDraftBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountedLineItemPriceDraft(Function<DiscountedLineItemPriceDraft, T> helper) {
         return helper.apply(this);

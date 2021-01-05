@@ -55,12 +55,12 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
     public void setResults(final Review ...results);
     public void setResults(final List<Review> results);
 
-    public static ReviewPagedQueryResponseImpl of(){
+    public static ReviewPagedQueryResponse of(){
         return new ReviewPagedQueryResponseImpl();
     }
     
 
-    public static ReviewPagedQueryResponseImpl of(final ReviewPagedQueryResponse template) {
+    public static ReviewPagedQueryResponse of(final ReviewPagedQueryResponse template) {
         ReviewPagedQueryResponseImpl instance = new ReviewPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ReviewPagedQueryResponseBuilder builder(){
+        return ReviewPagedQueryResponseBuilder.of();
+    }
+    
+    public static ReviewPagedQueryResponseBuilder builder(final ReviewPagedQueryResponse template){
+        return ReviewPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withReviewPagedQueryResponse(Function<ReviewPagedQueryResponse, T> helper) {
         return helper.apply(this);

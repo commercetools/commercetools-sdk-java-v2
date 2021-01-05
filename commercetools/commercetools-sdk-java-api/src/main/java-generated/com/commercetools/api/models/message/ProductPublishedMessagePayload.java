@@ -45,18 +45,27 @@ public interface ProductPublishedMessagePayload extends MessagePayload {
     
     public void setScope(final ProductPublishScope scope);
 
-    public static ProductPublishedMessagePayloadImpl of(){
+    public static ProductPublishedMessagePayload of(){
         return new ProductPublishedMessagePayloadImpl();
     }
     
 
-    public static ProductPublishedMessagePayloadImpl of(final ProductPublishedMessagePayload template) {
+    public static ProductPublishedMessagePayload of(final ProductPublishedMessagePayload template) {
         ProductPublishedMessagePayloadImpl instance = new ProductPublishedMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         instance.setProductProjection(template.getProductProjection());
         instance.setScope(template.getScope());
         return instance;
     }
+
+    public static ProductPublishedMessagePayloadBuilder builder(){
+        return ProductPublishedMessagePayloadBuilder.of();
+    }
+    
+    public static ProductPublishedMessagePayloadBuilder builder(final ProductPublishedMessagePayload template){
+        return ProductPublishedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductPublishedMessagePayload(Function<ProductPublishedMessagePayload, T> helper) {
         return helper.apply(this);

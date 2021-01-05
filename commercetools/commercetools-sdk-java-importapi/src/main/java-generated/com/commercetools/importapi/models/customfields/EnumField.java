@@ -31,16 +31,25 @@ public interface EnumField extends CustomField {
 
     public void setValue(final String value);
 
-    public static EnumFieldImpl of(){
+    public static EnumField of(){
         return new EnumFieldImpl();
     }
     
 
-    public static EnumFieldImpl of(final EnumField template) {
+    public static EnumField of(final EnumField template) {
         EnumFieldImpl instance = new EnumFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static EnumFieldBuilder builder(){
+        return EnumFieldBuilder.of();
+    }
+    
+    public static EnumFieldBuilder builder(final EnumField template){
+        return EnumFieldBuilder.of(template);
+    }
+    
 
     default <T> T withEnumField(Function<EnumField, T> helper) {
         return helper.apply(this);

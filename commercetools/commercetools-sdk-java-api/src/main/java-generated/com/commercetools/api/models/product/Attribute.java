@@ -36,17 +36,26 @@ public interface Attribute  {
     
     public void setValue(final JsonNode value);
 
-    public static AttributeImpl of(){
+    public static Attribute of(){
         return new AttributeImpl();
     }
     
 
-    public static AttributeImpl of(final Attribute template) {
+    public static Attribute of(final Attribute template) {
         AttributeImpl instance = new AttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static AttributeBuilder builder(){
+        return AttributeBuilder.of();
+    }
+    
+    public static AttributeBuilder builder(final Attribute template){
+        return AttributeBuilder.of(template);
+    }
+    
 
     default <T> T withAttribute(Function<Attribute, T> helper) {
         return helper.apply(this);

@@ -101,12 +101,12 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static StagedOrderAddLineItemActionImpl of(){
+    public static StagedOrderAddLineItemAction of(){
         return new StagedOrderAddLineItemActionImpl();
     }
     
 
-    public static StagedOrderAddLineItemActionImpl of(final StagedOrderAddLineItemAction template) {
+    public static StagedOrderAddLineItemAction of(final StagedOrderAddLineItemAction template) {
         StagedOrderAddLineItemActionImpl instance = new StagedOrderAddLineItemActionImpl();
         instance.setCustom(template.getCustom());
         instance.setDistributionChannel(template.getDistributionChannel());
@@ -122,6 +122,15 @@ public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static StagedOrderAddLineItemActionBuilder builder(){
+        return StagedOrderAddLineItemActionBuilder.of();
+    }
+    
+    public static StagedOrderAddLineItemActionBuilder builder(final StagedOrderAddLineItemAction template){
+        return StagedOrderAddLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderAddLineItemAction(Function<StagedOrderAddLineItemAction, T> helper) {
         return helper.apply(this);

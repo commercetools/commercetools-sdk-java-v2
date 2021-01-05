@@ -30,16 +30,25 @@ public interface MyCartRemovePaymentAction extends MyCartUpdateAction {
 
     public void setPayment(final PaymentResourceIdentifier payment);
 
-    public static MyCartRemovePaymentActionImpl of(){
+    public static MyCartRemovePaymentAction of(){
         return new MyCartRemovePaymentActionImpl();
     }
     
 
-    public static MyCartRemovePaymentActionImpl of(final MyCartRemovePaymentAction template) {
+    public static MyCartRemovePaymentAction of(final MyCartRemovePaymentAction template) {
         MyCartRemovePaymentActionImpl instance = new MyCartRemovePaymentActionImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public static MyCartRemovePaymentActionBuilder builder(){
+        return MyCartRemovePaymentActionBuilder.of();
+    }
+    
+    public static MyCartRemovePaymentActionBuilder builder(final MyCartRemovePaymentAction template){
+        return MyCartRemovePaymentActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartRemovePaymentAction(Function<MyCartRemovePaymentAction, T> helper) {
         return helper.apply(this);

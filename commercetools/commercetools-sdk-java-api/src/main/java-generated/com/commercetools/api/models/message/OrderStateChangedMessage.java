@@ -35,12 +35,12 @@ public interface OrderStateChangedMessage extends Message {
     
     public void setOldOrderState(final OrderState oldOrderState);
 
-    public static OrderStateChangedMessageImpl of(){
+    public static OrderStateChangedMessage of(){
         return new OrderStateChangedMessageImpl();
     }
     
 
-    public static OrderStateChangedMessageImpl of(final OrderStateChangedMessage template) {
+    public static OrderStateChangedMessage of(final OrderStateChangedMessage template) {
         OrderStateChangedMessageImpl instance = new OrderStateChangedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -56,6 +56,15 @@ public interface OrderStateChangedMessage extends Message {
         instance.setOldOrderState(template.getOldOrderState());
         return instance;
     }
+
+    public static OrderStateChangedMessageBuilder builder(){
+        return OrderStateChangedMessageBuilder.of();
+    }
+    
+    public static OrderStateChangedMessageBuilder builder(final OrderStateChangedMessage template){
+        return OrderStateChangedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderStateChangedMessage(Function<OrderStateChangedMessage, T> helper) {
         return helper.apply(this);

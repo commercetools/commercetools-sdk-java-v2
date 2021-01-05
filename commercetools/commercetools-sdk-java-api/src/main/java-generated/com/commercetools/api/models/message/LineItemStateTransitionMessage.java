@@ -56,12 +56,12 @@ public interface LineItemStateTransitionMessage extends Message {
     
     public void setToState(final StateReference toState);
 
-    public static LineItemStateTransitionMessageImpl of(){
+    public static LineItemStateTransitionMessage of(){
         return new LineItemStateTransitionMessageImpl();
     }
     
 
-    public static LineItemStateTransitionMessageImpl of(final LineItemStateTransitionMessage template) {
+    public static LineItemStateTransitionMessage of(final LineItemStateTransitionMessage template) {
         LineItemStateTransitionMessageImpl instance = new LineItemStateTransitionMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -80,6 +80,15 @@ public interface LineItemStateTransitionMessage extends Message {
         instance.setToState(template.getToState());
         return instance;
     }
+
+    public static LineItemStateTransitionMessageBuilder builder(){
+        return LineItemStateTransitionMessageBuilder.of();
+    }
+    
+    public static LineItemStateTransitionMessageBuilder builder(final LineItemStateTransitionMessage template){
+        return LineItemStateTransitionMessageBuilder.of(template);
+    }
+    
 
     default <T> T withLineItemStateTransitionMessage(Function<LineItemStateTransitionMessage, T> helper) {
         return helper.apply(this);

@@ -24,17 +24,26 @@ public interface OrderResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static OrderResourceIdentifierImpl of(){
+    public static OrderResourceIdentifier of(){
         return new OrderResourceIdentifierImpl();
     }
     
 
-    public static OrderResourceIdentifierImpl of(final OrderResourceIdentifier template) {
+    public static OrderResourceIdentifier of(final OrderResourceIdentifier template) {
         OrderResourceIdentifierImpl instance = new OrderResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static OrderResourceIdentifierBuilder builder(){
+        return OrderResourceIdentifierBuilder.of();
+    }
+    
+    public static OrderResourceIdentifierBuilder builder(final OrderResourceIdentifier template){
+        return OrderResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withOrderResourceIdentifier(Function<OrderResourceIdentifier, T> helper) {
         return helper.apply(this);

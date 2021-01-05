@@ -40,6 +40,7 @@ public interface ExtensionHttpDestinationAuthentication  {
 
 
 
+
     default <T> T withExtensionHttpDestinationAuthentication(Function<ExtensionHttpDestinationAuthentication, T> helper) {
         return helper.apply(this);
     }

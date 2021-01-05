@@ -62,12 +62,12 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
     
     public void setSelectionMode(final SelectionMode selectionMode);
 
-    public static MultiBuyCustomLineItemsTargetImpl of(){
+    public static MultiBuyCustomLineItemsTarget of(){
         return new MultiBuyCustomLineItemsTargetImpl();
     }
     
 
-    public static MultiBuyCustomLineItemsTargetImpl of(final MultiBuyCustomLineItemsTarget template) {
+    public static MultiBuyCustomLineItemsTarget of(final MultiBuyCustomLineItemsTarget template) {
         MultiBuyCustomLineItemsTargetImpl instance = new MultiBuyCustomLineItemsTargetImpl();
         instance.setPredicate(template.getPredicate());
         instance.setTriggerQuantity(template.getTriggerQuantity());
@@ -76,6 +76,15 @@ public interface MultiBuyCustomLineItemsTarget extends CartDiscountTarget {
         instance.setSelectionMode(template.getSelectionMode());
         return instance;
     }
+
+    public static MultiBuyCustomLineItemsTargetBuilder builder(){
+        return MultiBuyCustomLineItemsTargetBuilder.of();
+    }
+    
+    public static MultiBuyCustomLineItemsTargetBuilder builder(final MultiBuyCustomLineItemsTarget template){
+        return MultiBuyCustomLineItemsTargetBuilder.of(template);
+    }
+    
 
     default <T> T withMultiBuyCustomLineItemsTarget(Function<MultiBuyCustomLineItemsTarget, T> helper) {
         return helper.apply(this);

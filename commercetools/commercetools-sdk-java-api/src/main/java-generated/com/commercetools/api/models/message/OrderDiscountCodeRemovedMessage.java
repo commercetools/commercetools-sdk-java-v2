@@ -30,12 +30,12 @@ public interface OrderDiscountCodeRemovedMessage extends Message {
 
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
-    public static OrderDiscountCodeRemovedMessageImpl of(){
+    public static OrderDiscountCodeRemovedMessage of(){
         return new OrderDiscountCodeRemovedMessageImpl();
     }
     
 
-    public static OrderDiscountCodeRemovedMessageImpl of(final OrderDiscountCodeRemovedMessage template) {
+    public static OrderDiscountCodeRemovedMessage of(final OrderDiscountCodeRemovedMessage template) {
         OrderDiscountCodeRemovedMessageImpl instance = new OrderDiscountCodeRemovedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface OrderDiscountCodeRemovedMessage extends Message {
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
+
+    public static OrderDiscountCodeRemovedMessageBuilder builder(){
+        return OrderDiscountCodeRemovedMessageBuilder.of();
+    }
+    
+    public static OrderDiscountCodeRemovedMessageBuilder builder(final OrderDiscountCodeRemovedMessage template){
+        return OrderDiscountCodeRemovedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderDiscountCodeRemovedMessage(Function<OrderDiscountCodeRemovedMessage, T> helper) {
         return helper.apply(this);

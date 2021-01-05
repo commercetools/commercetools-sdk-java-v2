@@ -36,17 +36,26 @@ public interface InventoryEntryDeletedMessagePayload extends MessagePayload {
     
     public void setSupplyChannel(final ChannelReference supplyChannel);
 
-    public static InventoryEntryDeletedMessagePayloadImpl of(){
+    public static InventoryEntryDeletedMessagePayload of(){
         return new InventoryEntryDeletedMessagePayloadImpl();
     }
     
 
-    public static InventoryEntryDeletedMessagePayloadImpl of(final InventoryEntryDeletedMessagePayload template) {
+    public static InventoryEntryDeletedMessagePayload of(final InventoryEntryDeletedMessagePayload template) {
         InventoryEntryDeletedMessagePayloadImpl instance = new InventoryEntryDeletedMessagePayloadImpl();
         instance.setSku(template.getSku());
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
+
+    public static InventoryEntryDeletedMessagePayloadBuilder builder(){
+        return InventoryEntryDeletedMessagePayloadBuilder.of();
+    }
+    
+    public static InventoryEntryDeletedMessagePayloadBuilder builder(final InventoryEntryDeletedMessagePayload template){
+        return InventoryEntryDeletedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryDeletedMessagePayload(Function<InventoryEntryDeletedMessagePayload, T> helper) {
         return helper.apply(this);

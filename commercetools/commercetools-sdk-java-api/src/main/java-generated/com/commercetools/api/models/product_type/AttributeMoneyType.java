@@ -23,15 +23,24 @@ public interface AttributeMoneyType extends AttributeType {
 
 
 
-    public static AttributeMoneyTypeImpl of(){
+    public static AttributeMoneyType of(){
         return new AttributeMoneyTypeImpl();
     }
     
 
-    public static AttributeMoneyTypeImpl of(final AttributeMoneyType template) {
+    public static AttributeMoneyType of(final AttributeMoneyType template) {
         AttributeMoneyTypeImpl instance = new AttributeMoneyTypeImpl();
         return instance;
     }
+
+    public static AttributeMoneyTypeBuilder builder(){
+        return AttributeMoneyTypeBuilder.of();
+    }
+    
+    public static AttributeMoneyTypeBuilder builder(final AttributeMoneyType template){
+        return AttributeMoneyTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeMoneyType(Function<AttributeMoneyType, T> helper) {
         return helper.apply(this);

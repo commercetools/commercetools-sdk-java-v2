@@ -30,16 +30,25 @@ public interface OrderCreatedMessagePayload extends MessagePayload {
 
     public void setOrder(final Order order);
 
-    public static OrderCreatedMessagePayloadImpl of(){
+    public static OrderCreatedMessagePayload of(){
         return new OrderCreatedMessagePayloadImpl();
     }
     
 
-    public static OrderCreatedMessagePayloadImpl of(final OrderCreatedMessagePayload template) {
+    public static OrderCreatedMessagePayload of(final OrderCreatedMessagePayload template) {
         OrderCreatedMessagePayloadImpl instance = new OrderCreatedMessagePayloadImpl();
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public static OrderCreatedMessagePayloadBuilder builder(){
+        return OrderCreatedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderCreatedMessagePayloadBuilder builder(final OrderCreatedMessagePayload template){
+        return OrderCreatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderCreatedMessagePayload(Function<OrderCreatedMessagePayload, T> helper) {
         return helper.apply(this);

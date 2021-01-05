@@ -31,16 +31,25 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
 
     public void setPredicate(final String predicate);
 
-    public static ShippingMethodSetPredicateActionImpl of(){
+    public static ShippingMethodSetPredicateAction of(){
         return new ShippingMethodSetPredicateActionImpl();
     }
     
 
-    public static ShippingMethodSetPredicateActionImpl of(final ShippingMethodSetPredicateAction template) {
+    public static ShippingMethodSetPredicateAction of(final ShippingMethodSetPredicateAction template) {
         ShippingMethodSetPredicateActionImpl instance = new ShippingMethodSetPredicateActionImpl();
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public static ShippingMethodSetPredicateActionBuilder builder(){
+        return ShippingMethodSetPredicateActionBuilder.of();
+    }
+    
+    public static ShippingMethodSetPredicateActionBuilder builder(final ShippingMethodSetPredicateAction template){
+        return ShippingMethodSetPredicateActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodSetPredicateAction(Function<ShippingMethodSetPredicateAction, T> helper) {
         return helper.apply(this);

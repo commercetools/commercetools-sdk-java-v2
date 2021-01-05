@@ -41,18 +41,27 @@ public interface StagedOrderSetLineItemCustomFieldAction extends StagedOrderUpda
     
     public void setValue(final JsonNode value);
 
-    public static StagedOrderSetLineItemCustomFieldActionImpl of(){
+    public static StagedOrderSetLineItemCustomFieldAction of(){
         return new StagedOrderSetLineItemCustomFieldActionImpl();
     }
     
 
-    public static StagedOrderSetLineItemCustomFieldActionImpl of(final StagedOrderSetLineItemCustomFieldAction template) {
+    public static StagedOrderSetLineItemCustomFieldAction of(final StagedOrderSetLineItemCustomFieldAction template) {
         StagedOrderSetLineItemCustomFieldActionImpl instance = new StagedOrderSetLineItemCustomFieldActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static StagedOrderSetLineItemCustomFieldActionBuilder builder(){
+        return StagedOrderSetLineItemCustomFieldActionBuilder.of();
+    }
+    
+    public static StagedOrderSetLineItemCustomFieldActionBuilder builder(final StagedOrderSetLineItemCustomFieldAction template){
+        return StagedOrderSetLineItemCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetLineItemCustomFieldAction(Function<StagedOrderSetLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);

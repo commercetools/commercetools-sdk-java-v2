@@ -29,16 +29,25 @@ public interface CartSetBillingAddressAction extends CartUpdateAction {
 
     public void setAddress(final Address address);
 
-    public static CartSetBillingAddressActionImpl of(){
+    public static CartSetBillingAddressAction of(){
         return new CartSetBillingAddressActionImpl();
     }
     
 
-    public static CartSetBillingAddressActionImpl of(final CartSetBillingAddressAction template) {
+    public static CartSetBillingAddressAction of(final CartSetBillingAddressAction template) {
         CartSetBillingAddressActionImpl instance = new CartSetBillingAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static CartSetBillingAddressActionBuilder builder(){
+        return CartSetBillingAddressActionBuilder.of();
+    }
+    
+    public static CartSetBillingAddressActionBuilder builder(final CartSetBillingAddressAction template){
+        return CartSetBillingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetBillingAddressAction(Function<CartSetBillingAddressAction, T> helper) {
         return helper.apply(this);

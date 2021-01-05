@@ -33,16 +33,25 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
     public void setGroups(final String ...groups);
     public void setGroups(final List<String> groups);
 
-    public static DiscountCodeChangeGroupsActionImpl of(){
+    public static DiscountCodeChangeGroupsAction of(){
         return new DiscountCodeChangeGroupsActionImpl();
     }
     
 
-    public static DiscountCodeChangeGroupsActionImpl of(final DiscountCodeChangeGroupsAction template) {
+    public static DiscountCodeChangeGroupsAction of(final DiscountCodeChangeGroupsAction template) {
         DiscountCodeChangeGroupsActionImpl instance = new DiscountCodeChangeGroupsActionImpl();
         instance.setGroups(template.getGroups());
         return instance;
     }
+
+    public static DiscountCodeChangeGroupsActionBuilder builder(){
+        return DiscountCodeChangeGroupsActionBuilder.of();
+    }
+    
+    public static DiscountCodeChangeGroupsActionBuilder builder(final DiscountCodeChangeGroupsAction template){
+        return DiscountCodeChangeGroupsActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeChangeGroupsAction(Function<DiscountCodeChangeGroupsAction, T> helper) {
         return helper.apply(this);

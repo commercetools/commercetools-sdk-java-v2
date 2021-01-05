@@ -30,16 +30,25 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
 
     public void setStagedAction(final StagedOrderUpdateAction stagedAction);
 
-    public static OrderEditAddStagedActionActionImpl of(){
+    public static OrderEditAddStagedActionAction of(){
         return new OrderEditAddStagedActionActionImpl();
     }
     
 
-    public static OrderEditAddStagedActionActionImpl of(final OrderEditAddStagedActionAction template) {
+    public static OrderEditAddStagedActionAction of(final OrderEditAddStagedActionAction template) {
         OrderEditAddStagedActionActionImpl instance = new OrderEditAddStagedActionActionImpl();
         instance.setStagedAction(template.getStagedAction());
         return instance;
     }
+
+    public static OrderEditAddStagedActionActionBuilder builder(){
+        return OrderEditAddStagedActionActionBuilder.of();
+    }
+    
+    public static OrderEditAddStagedActionActionBuilder builder(final OrderEditAddStagedActionAction template){
+        return OrderEditAddStagedActionActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditAddStagedActionAction(Function<OrderEditAddStagedActionAction, T> helper) {
         return helper.apply(this);

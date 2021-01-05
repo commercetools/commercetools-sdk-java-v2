@@ -34,17 +34,26 @@ public interface AssetDimensions  {
     
     public void setH(final Integer h);
 
-    public static AssetDimensionsImpl of(){
+    public static AssetDimensions of(){
         return new AssetDimensionsImpl();
     }
     
 
-    public static AssetDimensionsImpl of(final AssetDimensions template) {
+    public static AssetDimensions of(final AssetDimensions template) {
         AssetDimensionsImpl instance = new AssetDimensionsImpl();
         instance.setW(template.getW());
         instance.setH(template.getH());
         return instance;
     }
+
+    public static AssetDimensionsBuilder builder(){
+        return AssetDimensionsBuilder.of();
+    }
+    
+    public static AssetDimensionsBuilder builder(final AssetDimensions template){
+        return AssetDimensionsBuilder.of(template);
+    }
+    
 
     default <T> T withAssetDimensions(Function<AssetDimensions, T> helper) {
         return helper.apply(this);

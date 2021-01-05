@@ -28,16 +28,25 @@ public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
 
     public void setCompanyName(final String companyName);
 
-    public static CustomerCompanyNameSetMessagePayloadImpl of(){
+    public static CustomerCompanyNameSetMessagePayload of(){
         return new CustomerCompanyNameSetMessagePayloadImpl();
     }
     
 
-    public static CustomerCompanyNameSetMessagePayloadImpl of(final CustomerCompanyNameSetMessagePayload template) {
+    public static CustomerCompanyNameSetMessagePayload of(final CustomerCompanyNameSetMessagePayload template) {
         CustomerCompanyNameSetMessagePayloadImpl instance = new CustomerCompanyNameSetMessagePayloadImpl();
         instance.setCompanyName(template.getCompanyName());
         return instance;
     }
+
+    public static CustomerCompanyNameSetMessagePayloadBuilder builder(){
+        return CustomerCompanyNameSetMessagePayloadBuilder.of();
+    }
+    
+    public static CustomerCompanyNameSetMessagePayloadBuilder builder(final CustomerCompanyNameSetMessagePayload template){
+        return CustomerCompanyNameSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerCompanyNameSetMessagePayload(Function<CustomerCompanyNameSetMessagePayload, T> helper) {
         return helper.apply(this);

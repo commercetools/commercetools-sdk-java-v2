@@ -35,17 +35,26 @@ public interface OrderShippingInfoSetMessagePayload extends MessagePayload {
     
     public void setOldShippingInfo(final ShippingInfo oldShippingInfo);
 
-    public static OrderShippingInfoSetMessagePayloadImpl of(){
+    public static OrderShippingInfoSetMessagePayload of(){
         return new OrderShippingInfoSetMessagePayloadImpl();
     }
     
 
-    public static OrderShippingInfoSetMessagePayloadImpl of(final OrderShippingInfoSetMessagePayload template) {
+    public static OrderShippingInfoSetMessagePayload of(final OrderShippingInfoSetMessagePayload template) {
         OrderShippingInfoSetMessagePayloadImpl instance = new OrderShippingInfoSetMessagePayloadImpl();
         instance.setShippingInfo(template.getShippingInfo());
         instance.setOldShippingInfo(template.getOldShippingInfo());
         return instance;
     }
+
+    public static OrderShippingInfoSetMessagePayloadBuilder builder(){
+        return OrderShippingInfoSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderShippingInfoSetMessagePayloadBuilder builder(final OrderShippingInfoSetMessagePayload template){
+        return OrderShippingInfoSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderShippingInfoSetMessagePayload(Function<OrderShippingInfoSetMessagePayload, T> helper) {
         return helper.apply(this);

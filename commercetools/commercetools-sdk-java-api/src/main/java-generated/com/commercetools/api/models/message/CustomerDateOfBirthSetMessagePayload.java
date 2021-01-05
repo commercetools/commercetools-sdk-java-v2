@@ -29,16 +29,25 @@ public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
 
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
-    public static CustomerDateOfBirthSetMessagePayloadImpl of(){
+    public static CustomerDateOfBirthSetMessagePayload of(){
         return new CustomerDateOfBirthSetMessagePayloadImpl();
     }
     
 
-    public static CustomerDateOfBirthSetMessagePayloadImpl of(final CustomerDateOfBirthSetMessagePayload template) {
+    public static CustomerDateOfBirthSetMessagePayload of(final CustomerDateOfBirthSetMessagePayload template) {
         CustomerDateOfBirthSetMessagePayloadImpl instance = new CustomerDateOfBirthSetMessagePayloadImpl();
         instance.setDateOfBirth(template.getDateOfBirth());
         return instance;
     }
+
+    public static CustomerDateOfBirthSetMessagePayloadBuilder builder(){
+        return CustomerDateOfBirthSetMessagePayloadBuilder.of();
+    }
+    
+    public static CustomerDateOfBirthSetMessagePayloadBuilder builder(final CustomerDateOfBirthSetMessagePayload template){
+        return CustomerDateOfBirthSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerDateOfBirthSetMessagePayload(Function<CustomerDateOfBirthSetMessagePayload, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface ChannelSetCustomFieldAction extends ChannelUpdateAction {
     
     public void setValue(final JsonNode value);
 
-    public static ChannelSetCustomFieldActionImpl of(){
+    public static ChannelSetCustomFieldAction of(){
         return new ChannelSetCustomFieldActionImpl();
     }
     
 
-    public static ChannelSetCustomFieldActionImpl of(final ChannelSetCustomFieldAction template) {
+    public static ChannelSetCustomFieldAction of(final ChannelSetCustomFieldAction template) {
         ChannelSetCustomFieldActionImpl instance = new ChannelSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ChannelSetCustomFieldActionBuilder builder(){
+        return ChannelSetCustomFieldActionBuilder.of();
+    }
+    
+    public static ChannelSetCustomFieldActionBuilder builder(final ChannelSetCustomFieldAction template){
+        return ChannelSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelSetCustomFieldAction(Function<ChannelSetCustomFieldAction, T> helper) {
         return helper.apply(this);

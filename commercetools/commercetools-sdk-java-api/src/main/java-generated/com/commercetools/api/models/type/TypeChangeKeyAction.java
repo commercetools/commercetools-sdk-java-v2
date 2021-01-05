@@ -28,16 +28,25 @@ public interface TypeChangeKeyAction extends TypeUpdateAction {
 
     public void setKey(final String key);
 
-    public static TypeChangeKeyActionImpl of(){
+    public static TypeChangeKeyAction of(){
         return new TypeChangeKeyActionImpl();
     }
     
 
-    public static TypeChangeKeyActionImpl of(final TypeChangeKeyAction template) {
+    public static TypeChangeKeyAction of(final TypeChangeKeyAction template) {
         TypeChangeKeyActionImpl instance = new TypeChangeKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static TypeChangeKeyActionBuilder builder(){
+        return TypeChangeKeyActionBuilder.of();
+    }
+    
+    public static TypeChangeKeyActionBuilder builder(final TypeChangeKeyAction template){
+        return TypeChangeKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeKeyAction(Function<TypeChangeKeyAction, T> helper) {
         return helper.apply(this);

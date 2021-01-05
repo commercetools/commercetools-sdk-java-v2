@@ -35,16 +35,25 @@ public interface MoneySetField extends CustomField {
     public void setValue(final Money ...value);
     public void setValue(final List<Money> value);
 
-    public static MoneySetFieldImpl of(){
+    public static MoneySetField of(){
         return new MoneySetFieldImpl();
     }
     
 
-    public static MoneySetFieldImpl of(final MoneySetField template) {
+    public static MoneySetField of(final MoneySetField template) {
         MoneySetFieldImpl instance = new MoneySetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static MoneySetFieldBuilder builder(){
+        return MoneySetFieldBuilder.of();
+    }
+    
+    public static MoneySetFieldBuilder builder(final MoneySetField template){
+        return MoneySetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withMoneySetField(Function<MoneySetField, T> helper) {
         return helper.apply(this);

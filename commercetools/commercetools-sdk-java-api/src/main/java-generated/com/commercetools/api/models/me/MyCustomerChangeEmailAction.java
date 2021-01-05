@@ -28,16 +28,25 @@ public interface MyCustomerChangeEmailAction extends MyCustomerUpdateAction {
 
     public void setEmail(final String email);
 
-    public static MyCustomerChangeEmailActionImpl of(){
+    public static MyCustomerChangeEmailAction of(){
         return new MyCustomerChangeEmailActionImpl();
     }
     
 
-    public static MyCustomerChangeEmailActionImpl of(final MyCustomerChangeEmailAction template) {
+    public static MyCustomerChangeEmailAction of(final MyCustomerChangeEmailAction template) {
         MyCustomerChangeEmailActionImpl instance = new MyCustomerChangeEmailActionImpl();
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public static MyCustomerChangeEmailActionBuilder builder(){
+        return MyCustomerChangeEmailActionBuilder.of();
+    }
+    
+    public static MyCustomerChangeEmailActionBuilder builder(final MyCustomerChangeEmailAction template){
+        return MyCustomerChangeEmailActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerChangeEmailAction(Function<MyCustomerChangeEmailAction, T> helper) {
         return helper.apply(this);

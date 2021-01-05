@@ -29,15 +29,24 @@ public interface FacetResults  {
     @JsonAnySetter
     public void setValue(String key, JsonNode value);
 
-    public static FacetResultsImpl of(){
+    public static FacetResults of(){
         return new FacetResultsImpl();
     }
     
 
-    public static FacetResultsImpl of(final FacetResults template) {
+    public static FacetResults of(final FacetResults template) {
         FacetResultsImpl instance = new FacetResultsImpl();
         return instance;
     }
+
+    public static FacetResultsBuilder builder(){
+        return FacetResultsBuilder.of();
+    }
+    
+    public static FacetResultsBuilder builder(final FacetResults template){
+        return FacetResultsBuilder.of(template);
+    }
+    
 
     default <T> T withFacetResults(Function<FacetResults, T> helper) {
         return helper.apply(this);

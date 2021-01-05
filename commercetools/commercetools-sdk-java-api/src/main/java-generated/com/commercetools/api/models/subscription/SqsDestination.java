@@ -46,12 +46,12 @@ public interface SqsDestination extends Destination {
     
     public void setRegion(final String region);
 
-    public static SqsDestinationImpl of(){
+    public static SqsDestination of(){
         return new SqsDestinationImpl();
     }
     
 
-    public static SqsDestinationImpl of(final SqsDestination template) {
+    public static SqsDestination of(final SqsDestination template) {
         SqsDestinationImpl instance = new SqsDestinationImpl();
         instance.setAccessKey(template.getAccessKey());
         instance.setAccessSecret(template.getAccessSecret());
@@ -59,6 +59,15 @@ public interface SqsDestination extends Destination {
         instance.setRegion(template.getRegion());
         return instance;
     }
+
+    public static SqsDestinationBuilder builder(){
+        return SqsDestinationBuilder.of();
+    }
+    
+    public static SqsDestinationBuilder builder(final SqsDestination template){
+        return SqsDestinationBuilder.of(template);
+    }
+    
 
     default <T> T withSqsDestination(Function<SqsDestination, T> helper) {
         return helper.apply(this);

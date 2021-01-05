@@ -101,12 +101,12 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
     
     public void setAddedAt(final ZonedDateTime addedAt);
 
-    public static MyCartAddLineItemActionImpl of(){
+    public static MyCartAddLineItemAction of(){
         return new MyCartAddLineItemActionImpl();
     }
     
 
-    public static MyCartAddLineItemActionImpl of(final MyCartAddLineItemAction template) {
+    public static MyCartAddLineItemAction of(final MyCartAddLineItemAction template) {
         MyCartAddLineItemActionImpl instance = new MyCartAddLineItemActionImpl();
         instance.setCustom(template.getCustom());
         instance.setDistributionChannel(template.getDistributionChannel());
@@ -122,6 +122,15 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
         instance.setAddedAt(template.getAddedAt());
         return instance;
     }
+
+    public static MyCartAddLineItemActionBuilder builder(){
+        return MyCartAddLineItemActionBuilder.of();
+    }
+    
+    public static MyCartAddLineItemActionBuilder builder(final MyCartAddLineItemAction template){
+        return MyCartAddLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartAddLineItemAction(Function<MyCartAddLineItemAction, T> helper) {
         return helper.apply(this);

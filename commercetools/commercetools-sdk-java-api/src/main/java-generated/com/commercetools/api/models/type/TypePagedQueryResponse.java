@@ -55,12 +55,12 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
     public void setResults(final Type ...results);
     public void setResults(final List<Type> results);
 
-    public static TypePagedQueryResponseImpl of(){
+    public static TypePagedQueryResponse of(){
         return new TypePagedQueryResponseImpl();
     }
     
 
-    public static TypePagedQueryResponseImpl of(final TypePagedQueryResponse template) {
+    public static TypePagedQueryResponse of(final TypePagedQueryResponse template) {
         TypePagedQueryResponseImpl instance = new TypePagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static TypePagedQueryResponseBuilder builder(){
+        return TypePagedQueryResponseBuilder.of();
+    }
+    
+    public static TypePagedQueryResponseBuilder builder(final TypePagedQueryResponse template){
+        return TypePagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withTypePagedQueryResponse(Function<TypePagedQueryResponse, T> helper) {
         return helper.apply(this);

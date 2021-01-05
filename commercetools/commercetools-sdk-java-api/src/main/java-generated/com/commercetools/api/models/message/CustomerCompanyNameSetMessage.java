@@ -28,12 +28,12 @@ public interface CustomerCompanyNameSetMessage extends Message {
 
     public void setCompanyName(final String companyName);
 
-    public static CustomerCompanyNameSetMessageImpl of(){
+    public static CustomerCompanyNameSetMessage of(){
         return new CustomerCompanyNameSetMessageImpl();
     }
     
 
-    public static CustomerCompanyNameSetMessageImpl of(final CustomerCompanyNameSetMessage template) {
+    public static CustomerCompanyNameSetMessage of(final CustomerCompanyNameSetMessage template) {
         CustomerCompanyNameSetMessageImpl instance = new CustomerCompanyNameSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -48,6 +48,15 @@ public interface CustomerCompanyNameSetMessage extends Message {
         instance.setCompanyName(template.getCompanyName());
         return instance;
     }
+
+    public static CustomerCompanyNameSetMessageBuilder builder(){
+        return CustomerCompanyNameSetMessageBuilder.of();
+    }
+    
+    public static CustomerCompanyNameSetMessageBuilder builder(final CustomerCompanyNameSetMessage template){
+        return CustomerCompanyNameSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerCompanyNameSetMessage(Function<CustomerCompanyNameSetMessage, T> helper) {
         return helper.apply(this);

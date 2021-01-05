@@ -31,16 +31,25 @@ public interface StringField extends CustomField {
 
     public void setValue(final String value);
 
-    public static StringFieldImpl of(){
+    public static StringField of(){
         return new StringFieldImpl();
     }
     
 
-    public static StringFieldImpl of(final StringField template) {
+    public static StringField of(final StringField template) {
         StringFieldImpl instance = new StringFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static StringFieldBuilder builder(){
+        return StringFieldBuilder.of();
+    }
+    
+    public static StringFieldBuilder builder(final StringField template){
+        return StringFieldBuilder.of(template);
+    }
+    
 
     default <T> T withStringField(Function<StringField, T> helper) {
         return helper.apply(this);

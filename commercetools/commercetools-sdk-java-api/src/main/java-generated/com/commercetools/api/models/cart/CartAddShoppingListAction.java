@@ -43,18 +43,27 @@ public interface CartAddShoppingListAction extends CartUpdateAction {
     
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-    public static CartAddShoppingListActionImpl of(){
+    public static CartAddShoppingListAction of(){
         return new CartAddShoppingListActionImpl();
     }
     
 
-    public static CartAddShoppingListActionImpl of(final CartAddShoppingListAction template) {
+    public static CartAddShoppingListAction of(final CartAddShoppingListAction template) {
         CartAddShoppingListActionImpl instance = new CartAddShoppingListActionImpl();
         instance.setShoppingList(template.getShoppingList());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public static CartAddShoppingListActionBuilder builder(){
+        return CartAddShoppingListActionBuilder.of();
+    }
+    
+    public static CartAddShoppingListActionBuilder builder(final CartAddShoppingListAction template){
+        return CartAddShoppingListActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartAddShoppingListAction(Function<CartAddShoppingListAction, T> helper) {
         return helper.apply(this);

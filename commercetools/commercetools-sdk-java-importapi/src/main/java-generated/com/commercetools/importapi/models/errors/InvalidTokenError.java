@@ -23,16 +23,25 @@ public interface InvalidTokenError extends ErrorObject {
 
 
 
-    public static InvalidTokenErrorImpl of(){
+    public static InvalidTokenError of(){
         return new InvalidTokenErrorImpl();
     }
     
 
-    public static InvalidTokenErrorImpl of(final InvalidTokenError template) {
+    public static InvalidTokenError of(final InvalidTokenError template) {
         InvalidTokenErrorImpl instance = new InvalidTokenErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidTokenErrorBuilder builder(){
+        return InvalidTokenErrorBuilder.of();
+    }
+    
+    public static InvalidTokenErrorBuilder builder(final InvalidTokenError template){
+        return InvalidTokenErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidTokenError(Function<InvalidTokenError, T> helper) {
         return helper.apply(this);

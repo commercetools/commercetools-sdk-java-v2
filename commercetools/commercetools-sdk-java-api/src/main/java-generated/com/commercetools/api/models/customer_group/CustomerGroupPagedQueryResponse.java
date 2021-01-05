@@ -55,12 +55,12 @@ public interface CustomerGroupPagedQueryResponse extends com.commercetools.api.m
     public void setResults(final CustomerGroup ...results);
     public void setResults(final List<CustomerGroup> results);
 
-    public static CustomerGroupPagedQueryResponseImpl of(){
+    public static CustomerGroupPagedQueryResponse of(){
         return new CustomerGroupPagedQueryResponseImpl();
     }
     
 
-    public static CustomerGroupPagedQueryResponseImpl of(final CustomerGroupPagedQueryResponse template) {
+    public static CustomerGroupPagedQueryResponse of(final CustomerGroupPagedQueryResponse template) {
         CustomerGroupPagedQueryResponseImpl instance = new CustomerGroupPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface CustomerGroupPagedQueryResponse extends com.commercetools.api.m
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static CustomerGroupPagedQueryResponseBuilder builder(){
+        return CustomerGroupPagedQueryResponseBuilder.of();
+    }
+    
+    public static CustomerGroupPagedQueryResponseBuilder builder(final CustomerGroupPagedQueryResponse template){
+        return CustomerGroupPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupPagedQueryResponse(Function<CustomerGroupPagedQueryResponse, T> helper) {
         return helper.apply(this);

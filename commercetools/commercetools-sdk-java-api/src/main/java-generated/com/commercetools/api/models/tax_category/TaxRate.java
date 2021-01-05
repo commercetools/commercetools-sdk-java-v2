@@ -81,12 +81,12 @@ public interface TaxRate  {
     public void setSubRates(final SubRate ...subRates);
     public void setSubRates(final List<SubRate> subRates);
 
-    public static TaxRateImpl of(){
+    public static TaxRate of(){
         return new TaxRateImpl();
     }
     
 
-    public static TaxRateImpl of(final TaxRate template) {
+    public static TaxRate of(final TaxRate template) {
         TaxRateImpl instance = new TaxRateImpl();
         instance.setId(template.getId());
         instance.setName(template.getName());
@@ -97,6 +97,15 @@ public interface TaxRate  {
         instance.setSubRates(template.getSubRates());
         return instance;
     }
+
+    public static TaxRateBuilder builder(){
+        return TaxRateBuilder.of();
+    }
+    
+    public static TaxRateBuilder builder(final TaxRate template){
+        return TaxRateBuilder.of(template);
+    }
+    
 
     default <T> T withTaxRate(Function<TaxRate, T> helper) {
         return helper.apply(this);

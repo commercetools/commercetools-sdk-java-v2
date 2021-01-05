@@ -30,16 +30,25 @@ public interface CustomerAddStoreAction extends CustomerUpdateAction {
 
     public void setStore(final StoreResourceIdentifier store);
 
-    public static CustomerAddStoreActionImpl of(){
+    public static CustomerAddStoreAction of(){
         return new CustomerAddStoreActionImpl();
     }
     
 
-    public static CustomerAddStoreActionImpl of(final CustomerAddStoreAction template) {
+    public static CustomerAddStoreAction of(final CustomerAddStoreAction template) {
         CustomerAddStoreActionImpl instance = new CustomerAddStoreActionImpl();
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public static CustomerAddStoreActionBuilder builder(){
+        return CustomerAddStoreActionBuilder.of();
+    }
+    
+    public static CustomerAddStoreActionBuilder builder(final CustomerAddStoreAction template){
+        return CustomerAddStoreActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerAddStoreAction(Function<CustomerAddStoreAction, T> helper) {
         return helper.apply(this);

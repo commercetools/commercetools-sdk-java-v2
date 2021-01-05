@@ -35,17 +35,26 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
     
     public void setInputHint(final TypeTextInputHint inputHint);
 
-    public static TypeChangeInputHintActionImpl of(){
+    public static TypeChangeInputHintAction of(){
         return new TypeChangeInputHintActionImpl();
     }
     
 
-    public static TypeChangeInputHintActionImpl of(final TypeChangeInputHintAction template) {
+    public static TypeChangeInputHintAction of(final TypeChangeInputHintAction template) {
         TypeChangeInputHintActionImpl instance = new TypeChangeInputHintActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setInputHint(template.getInputHint());
         return instance;
     }
+
+    public static TypeChangeInputHintActionBuilder builder(){
+        return TypeChangeInputHintActionBuilder.of();
+    }
+    
+    public static TypeChangeInputHintActionBuilder builder(final TypeChangeInputHintAction template){
+        return TypeChangeInputHintActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeInputHintAction(Function<TypeChangeInputHintAction, T> helper) {
         return helper.apply(this);

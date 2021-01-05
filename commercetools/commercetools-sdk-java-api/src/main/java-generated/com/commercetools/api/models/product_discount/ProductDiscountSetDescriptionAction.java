@@ -29,16 +29,25 @@ public interface ProductDiscountSetDescriptionAction extends ProductDiscountUpda
 
     public void setDescription(final LocalizedString description);
 
-    public static ProductDiscountSetDescriptionActionImpl of(){
+    public static ProductDiscountSetDescriptionAction of(){
         return new ProductDiscountSetDescriptionActionImpl();
     }
     
 
-    public static ProductDiscountSetDescriptionActionImpl of(final ProductDiscountSetDescriptionAction template) {
+    public static ProductDiscountSetDescriptionAction of(final ProductDiscountSetDescriptionAction template) {
         ProductDiscountSetDescriptionActionImpl instance = new ProductDiscountSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static ProductDiscountSetDescriptionActionBuilder builder(){
+        return ProductDiscountSetDescriptionActionBuilder.of();
+    }
+    
+    public static ProductDiscountSetDescriptionActionBuilder builder(final ProductDiscountSetDescriptionAction template){
+        return ProductDiscountSetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountSetDescriptionAction(Function<ProductDiscountSetDescriptionAction, T> helper) {
         return helper.apply(this);

@@ -44,6 +44,7 @@ public interface SubscriptionUpdateAction extends com.commercetools.api.models.R
 
 
 
+
     default <T> T withSubscriptionUpdateAction(Function<SubscriptionUpdateAction, T> helper) {
         return helper.apply(this);
     }

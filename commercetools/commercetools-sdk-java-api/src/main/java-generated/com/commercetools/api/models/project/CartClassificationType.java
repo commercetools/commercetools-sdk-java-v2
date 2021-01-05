@@ -33,16 +33,25 @@ public interface CartClassificationType extends ShippingRateInputType {
     public void setValues(final CustomFieldLocalizedEnumValue ...values);
     public void setValues(final List<CustomFieldLocalizedEnumValue> values);
 
-    public static CartClassificationTypeImpl of(){
+    public static CartClassificationType of(){
         return new CartClassificationTypeImpl();
     }
     
 
-    public static CartClassificationTypeImpl of(final CartClassificationType template) {
+    public static CartClassificationType of(final CartClassificationType template) {
         CartClassificationTypeImpl instance = new CartClassificationTypeImpl();
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public static CartClassificationTypeBuilder builder(){
+        return CartClassificationTypeBuilder.of();
+    }
+    
+    public static CartClassificationTypeBuilder builder(final CartClassificationType template){
+        return CartClassificationTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCartClassificationType(Function<CartClassificationType, T> helper) {
         return helper.apply(this);

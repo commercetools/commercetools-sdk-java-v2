@@ -23,12 +23,12 @@ public interface ProductUnpublishedMessage extends Message {
 
 
 
-    public static ProductUnpublishedMessageImpl of(){
+    public static ProductUnpublishedMessage of(){
         return new ProductUnpublishedMessageImpl();
     }
     
 
-    public static ProductUnpublishedMessageImpl of(final ProductUnpublishedMessage template) {
+    public static ProductUnpublishedMessage of(final ProductUnpublishedMessage template) {
         ProductUnpublishedMessageImpl instance = new ProductUnpublishedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -42,6 +42,15 @@ public interface ProductUnpublishedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         return instance;
     }
+
+    public static ProductUnpublishedMessageBuilder builder(){
+        return ProductUnpublishedMessageBuilder.of();
+    }
+    
+    public static ProductUnpublishedMessageBuilder builder(final ProductUnpublishedMessage template){
+        return ProductUnpublishedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductUnpublishedMessage(Function<ProductUnpublishedMessage, T> helper) {
         return helper.apply(this);

@@ -39,18 +39,27 @@ public interface InvalidStateTransitionError extends ErrorObject {
     
     public void setNewState(final ProcessingState newState);
 
-    public static InvalidStateTransitionErrorImpl of(){
+    public static InvalidStateTransitionError of(){
         return new InvalidStateTransitionErrorImpl();
     }
     
 
-    public static InvalidStateTransitionErrorImpl of(final InvalidStateTransitionError template) {
+    public static InvalidStateTransitionError of(final InvalidStateTransitionError template) {
         InvalidStateTransitionErrorImpl instance = new InvalidStateTransitionErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setCurrentState(template.getCurrentState());
         instance.setNewState(template.getNewState());
         return instance;
     }
+
+    public static InvalidStateTransitionErrorBuilder builder(){
+        return InvalidStateTransitionErrorBuilder.of();
+    }
+    
+    public static InvalidStateTransitionErrorBuilder builder(final InvalidStateTransitionError template){
+        return InvalidStateTransitionErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidStateTransitionError(Function<InvalidStateTransitionError, T> helper) {
         return helper.apply(this);

@@ -23,16 +23,25 @@ public interface AnonymousIdAlreadyInUseError extends ErrorObject {
 
 
 
-    public static AnonymousIdAlreadyInUseErrorImpl of(){
+    public static AnonymousIdAlreadyInUseError of(){
         return new AnonymousIdAlreadyInUseErrorImpl();
     }
     
 
-    public static AnonymousIdAlreadyInUseErrorImpl of(final AnonymousIdAlreadyInUseError template) {
+    public static AnonymousIdAlreadyInUseError of(final AnonymousIdAlreadyInUseError template) {
         AnonymousIdAlreadyInUseErrorImpl instance = new AnonymousIdAlreadyInUseErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static AnonymousIdAlreadyInUseErrorBuilder builder(){
+        return AnonymousIdAlreadyInUseErrorBuilder.of();
+    }
+    
+    public static AnonymousIdAlreadyInUseErrorBuilder builder(final AnonymousIdAlreadyInUseError template){
+        return AnonymousIdAlreadyInUseErrorBuilder.of(template);
+    }
+    
 
     default <T> T withAnonymousIdAlreadyInUseError(Function<AnonymousIdAlreadyInUseError, T> helper) {
         return helper.apply(this);

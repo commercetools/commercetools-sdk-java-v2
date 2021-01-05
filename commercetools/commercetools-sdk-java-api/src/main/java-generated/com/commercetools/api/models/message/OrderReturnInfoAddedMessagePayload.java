@@ -30,16 +30,25 @@ public interface OrderReturnInfoAddedMessagePayload extends MessagePayload {
 
     public void setReturnInfo(final ReturnInfo returnInfo);
 
-    public static OrderReturnInfoAddedMessagePayloadImpl of(){
+    public static OrderReturnInfoAddedMessagePayload of(){
         return new OrderReturnInfoAddedMessagePayloadImpl();
     }
     
 
-    public static OrderReturnInfoAddedMessagePayloadImpl of(final OrderReturnInfoAddedMessagePayload template) {
+    public static OrderReturnInfoAddedMessagePayload of(final OrderReturnInfoAddedMessagePayload template) {
         OrderReturnInfoAddedMessagePayloadImpl instance = new OrderReturnInfoAddedMessagePayloadImpl();
         instance.setReturnInfo(template.getReturnInfo());
         return instance;
     }
+
+    public static OrderReturnInfoAddedMessagePayloadBuilder builder(){
+        return OrderReturnInfoAddedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderReturnInfoAddedMessagePayloadBuilder builder(final OrderReturnInfoAddedMessagePayload template){
+        return OrderReturnInfoAddedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderReturnInfoAddedMessagePayload(Function<OrderReturnInfoAddedMessagePayload, T> helper) {
         return helper.apply(this);

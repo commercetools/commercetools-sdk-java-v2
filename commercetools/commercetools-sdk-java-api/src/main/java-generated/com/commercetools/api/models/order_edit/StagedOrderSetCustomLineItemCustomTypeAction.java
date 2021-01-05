@@ -42,18 +42,27 @@ public interface StagedOrderSetCustomLineItemCustomTypeAction extends StagedOrde
     
     public void setFields(final FieldContainer fields);
 
-    public static StagedOrderSetCustomLineItemCustomTypeActionImpl of(){
+    public static StagedOrderSetCustomLineItemCustomTypeAction of(){
         return new StagedOrderSetCustomLineItemCustomTypeActionImpl();
     }
     
 
-    public static StagedOrderSetCustomLineItemCustomTypeActionImpl of(final StagedOrderSetCustomLineItemCustomTypeAction template) {
+    public static StagedOrderSetCustomLineItemCustomTypeAction of(final StagedOrderSetCustomLineItemCustomTypeAction template) {
         StagedOrderSetCustomLineItemCustomTypeActionImpl instance = new StagedOrderSetCustomLineItemCustomTypeActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static StagedOrderSetCustomLineItemCustomTypeActionBuilder builder(){
+        return StagedOrderSetCustomLineItemCustomTypeActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomLineItemCustomTypeActionBuilder builder(final StagedOrderSetCustomLineItemCustomTypeAction template){
+        return StagedOrderSetCustomLineItemCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomLineItemCustomTypeAction(Function<StagedOrderSetCustomLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);

@@ -34,17 +34,26 @@ public interface CustomerCreatePasswordResetToken  {
     
     public void setTtlMinutes(final Long ttlMinutes);
 
-    public static CustomerCreatePasswordResetTokenImpl of(){
+    public static CustomerCreatePasswordResetToken of(){
         return new CustomerCreatePasswordResetTokenImpl();
     }
     
 
-    public static CustomerCreatePasswordResetTokenImpl of(final CustomerCreatePasswordResetToken template) {
+    public static CustomerCreatePasswordResetToken of(final CustomerCreatePasswordResetToken template) {
         CustomerCreatePasswordResetTokenImpl instance = new CustomerCreatePasswordResetTokenImpl();
         instance.setEmail(template.getEmail());
         instance.setTtlMinutes(template.getTtlMinutes());
         return instance;
     }
+
+    public static CustomerCreatePasswordResetTokenBuilder builder(){
+        return CustomerCreatePasswordResetTokenBuilder.of();
+    }
+    
+    public static CustomerCreatePasswordResetTokenBuilder builder(final CustomerCreatePasswordResetToken template){
+        return CustomerCreatePasswordResetTokenBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerCreatePasswordResetToken(Function<CustomerCreatePasswordResetToken, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
 
     public void setKey(final String key);
 
-    public static ChannelChangeKeyActionImpl of(){
+    public static ChannelChangeKeyAction of(){
         return new ChannelChangeKeyActionImpl();
     }
     
 
-    public static ChannelChangeKeyActionImpl of(final ChannelChangeKeyAction template) {
+    public static ChannelChangeKeyAction of(final ChannelChangeKeyAction template) {
         ChannelChangeKeyActionImpl instance = new ChannelChangeKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ChannelChangeKeyActionBuilder builder(){
+        return ChannelChangeKeyActionBuilder.of();
+    }
+    
+    public static ChannelChangeKeyActionBuilder builder(final ChannelChangeKeyAction template){
+        return ChannelChangeKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelChangeKeyAction(Function<ChannelChangeKeyAction, T> helper) {
         return helper.apply(this);

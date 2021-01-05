@@ -43,12 +43,12 @@ public interface OrderDiscountCodeStateSetMessage extends Message {
     
     public void setOldState(final DiscountCodeState oldState);
 
-    public static OrderDiscountCodeStateSetMessageImpl of(){
+    public static OrderDiscountCodeStateSetMessage of(){
         return new OrderDiscountCodeStateSetMessageImpl();
     }
     
 
-    public static OrderDiscountCodeStateSetMessageImpl of(final OrderDiscountCodeStateSetMessage template) {
+    public static OrderDiscountCodeStateSetMessage of(final OrderDiscountCodeStateSetMessage template) {
         OrderDiscountCodeStateSetMessageImpl instance = new OrderDiscountCodeStateSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -65,6 +65,15 @@ public interface OrderDiscountCodeStateSetMessage extends Message {
         instance.setOldState(template.getOldState());
         return instance;
     }
+
+    public static OrderDiscountCodeStateSetMessageBuilder builder(){
+        return OrderDiscountCodeStateSetMessageBuilder.of();
+    }
+    
+    public static OrderDiscountCodeStateSetMessageBuilder builder(final OrderDiscountCodeStateSetMessage template){
+        return OrderDiscountCodeStateSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderDiscountCodeStateSetMessage(Function<OrderDiscountCodeStateSetMessage, T> helper) {
         return helper.apply(this);

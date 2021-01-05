@@ -30,16 +30,25 @@ public interface CartRemoveDiscountCodeAction extends CartUpdateAction {
 
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
-    public static CartRemoveDiscountCodeActionImpl of(){
+    public static CartRemoveDiscountCodeAction of(){
         return new CartRemoveDiscountCodeActionImpl();
     }
     
 
-    public static CartRemoveDiscountCodeActionImpl of(final CartRemoveDiscountCodeAction template) {
+    public static CartRemoveDiscountCodeAction of(final CartRemoveDiscountCodeAction template) {
         CartRemoveDiscountCodeActionImpl instance = new CartRemoveDiscountCodeActionImpl();
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
+
+    public static CartRemoveDiscountCodeActionBuilder builder(){
+        return CartRemoveDiscountCodeActionBuilder.of();
+    }
+    
+    public static CartRemoveDiscountCodeActionBuilder builder(final CartRemoveDiscountCodeAction template){
+        return CartRemoveDiscountCodeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartRemoveDiscountCodeAction(Function<CartRemoveDiscountCodeAction, T> helper) {
         return helper.apply(this);

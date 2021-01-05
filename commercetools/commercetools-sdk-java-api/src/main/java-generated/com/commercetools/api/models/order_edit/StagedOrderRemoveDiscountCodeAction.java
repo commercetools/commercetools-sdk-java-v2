@@ -30,16 +30,25 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
 
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
-    public static StagedOrderRemoveDiscountCodeActionImpl of(){
+    public static StagedOrderRemoveDiscountCodeAction of(){
         return new StagedOrderRemoveDiscountCodeActionImpl();
     }
     
 
-    public static StagedOrderRemoveDiscountCodeActionImpl of(final StagedOrderRemoveDiscountCodeAction template) {
+    public static StagedOrderRemoveDiscountCodeAction of(final StagedOrderRemoveDiscountCodeAction template) {
         StagedOrderRemoveDiscountCodeActionImpl instance = new StagedOrderRemoveDiscountCodeActionImpl();
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
+
+    public static StagedOrderRemoveDiscountCodeActionBuilder builder(){
+        return StagedOrderRemoveDiscountCodeActionBuilder.of();
+    }
+    
+    public static StagedOrderRemoveDiscountCodeActionBuilder builder(final StagedOrderRemoveDiscountCodeAction template){
+        return StagedOrderRemoveDiscountCodeActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderRemoveDiscountCodeAction(Function<StagedOrderRemoveDiscountCodeAction, T> helper) {
         return helper.apply(this);

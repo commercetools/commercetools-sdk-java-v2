@@ -45,18 +45,27 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
     
     public void setReturnDate(final ZonedDateTime returnDate);
 
-    public static StagedOrderAddReturnInfoActionImpl of(){
+    public static StagedOrderAddReturnInfoAction of(){
         return new StagedOrderAddReturnInfoActionImpl();
     }
     
 
-    public static StagedOrderAddReturnInfoActionImpl of(final StagedOrderAddReturnInfoAction template) {
+    public static StagedOrderAddReturnInfoAction of(final StagedOrderAddReturnInfoAction template) {
         StagedOrderAddReturnInfoActionImpl instance = new StagedOrderAddReturnInfoActionImpl();
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setItems(template.getItems());
         instance.setReturnDate(template.getReturnDate());
         return instance;
     }
+
+    public static StagedOrderAddReturnInfoActionBuilder builder(){
+        return StagedOrderAddReturnInfoActionBuilder.of();
+    }
+    
+    public static StagedOrderAddReturnInfoActionBuilder builder(final StagedOrderAddReturnInfoAction template){
+        return StagedOrderAddReturnInfoActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderAddReturnInfoAction(Function<StagedOrderAddReturnInfoAction, T> helper) {
         return helper.apply(this);

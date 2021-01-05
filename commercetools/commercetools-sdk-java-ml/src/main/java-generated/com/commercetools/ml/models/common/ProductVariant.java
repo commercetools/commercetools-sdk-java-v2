@@ -50,18 +50,27 @@ public interface ProductVariant  {
     
     public void setVariantId(final Integer variantId);
 
-    public static ProductVariantImpl of(){
+    public static ProductVariant of(){
         return new ProductVariantImpl();
     }
     
 
-    public static ProductVariantImpl of(final ProductVariant template) {
+    public static ProductVariant of(final ProductVariant template) {
         ProductVariantImpl instance = new ProductVariantImpl();
         instance.setProduct(template.getProduct());
         instance.setStaged(template.getStaged());
         instance.setVariantId(template.getVariantId());
         return instance;
     }
+
+    public static ProductVariantBuilder builder(){
+        return ProductVariantBuilder.of();
+    }
+    
+    public static ProductVariantBuilder builder(final ProductVariant template){
+        return ProductVariantBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariant(Function<ProductVariant, T> helper) {
         return helper.apply(this);

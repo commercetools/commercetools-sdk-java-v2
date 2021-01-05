@@ -38,17 +38,26 @@ public interface MissingImagesVariantLevel extends MissingImagesCount {
     
     public void setTotal(final Long total);
 
-    public static MissingImagesVariantLevelImpl of(){
+    public static MissingImagesVariantLevel of(){
         return new MissingImagesVariantLevelImpl();
     }
     
 
-    public static MissingImagesVariantLevelImpl of(final MissingImagesVariantLevel template) {
+    public static MissingImagesVariantLevel of(final MissingImagesVariantLevel template) {
         MissingImagesVariantLevelImpl instance = new MissingImagesVariantLevelImpl();
         instance.setMissingImages(template.getMissingImages());
         instance.setTotal(template.getTotal());
         return instance;
     }
+
+    public static MissingImagesVariantLevelBuilder builder(){
+        return MissingImagesVariantLevelBuilder.of();
+    }
+    
+    public static MissingImagesVariantLevelBuilder builder(final MissingImagesVariantLevel template){
+        return MissingImagesVariantLevelBuilder.of(template);
+    }
+    
 
     default <T> T withMissingImagesVariantLevel(Function<MissingImagesVariantLevel, T> helper) {
         return helper.apply(this);

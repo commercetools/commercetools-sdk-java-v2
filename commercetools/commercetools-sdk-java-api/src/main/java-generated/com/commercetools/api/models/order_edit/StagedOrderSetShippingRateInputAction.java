@@ -29,16 +29,25 @@ public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdate
 
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
-    public static StagedOrderSetShippingRateInputActionImpl of(){
+    public static StagedOrderSetShippingRateInputAction of(){
         return new StagedOrderSetShippingRateInputActionImpl();
     }
     
 
-    public static StagedOrderSetShippingRateInputActionImpl of(final StagedOrderSetShippingRateInputAction template) {
+    public static StagedOrderSetShippingRateInputAction of(final StagedOrderSetShippingRateInputAction template) {
         StagedOrderSetShippingRateInputActionImpl instance = new StagedOrderSetShippingRateInputActionImpl();
         instance.setShippingRateInput(template.getShippingRateInput());
         return instance;
     }
+
+    public static StagedOrderSetShippingRateInputActionBuilder builder(){
+        return StagedOrderSetShippingRateInputActionBuilder.of();
+    }
+    
+    public static StagedOrderSetShippingRateInputActionBuilder builder(final StagedOrderSetShippingRateInputAction template){
+        return StagedOrderSetShippingRateInputActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetShippingRateInputAction(Function<StagedOrderSetShippingRateInputAction, T> helper) {
         return helper.apply(this);

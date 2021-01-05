@@ -29,15 +29,24 @@ public interface GraphQLVariablesMap  {
     @JsonAnySetter
     public void setValue(String key, JsonNode value);
 
-    public static GraphQLVariablesMapImpl of(){
+    public static GraphQLVariablesMap of(){
         return new GraphQLVariablesMapImpl();
     }
     
 
-    public static GraphQLVariablesMapImpl of(final GraphQLVariablesMap template) {
+    public static GraphQLVariablesMap of(final GraphQLVariablesMap template) {
         GraphQLVariablesMapImpl instance = new GraphQLVariablesMapImpl();
         return instance;
     }
+
+    public static GraphQLVariablesMapBuilder builder(){
+        return GraphQLVariablesMapBuilder.of();
+    }
+    
+    public static GraphQLVariablesMapBuilder builder(final GraphQLVariablesMap template){
+        return GraphQLVariablesMapBuilder.of(template);
+    }
+    
 
     default <T> T withGraphQLVariablesMap(Function<GraphQLVariablesMap, T> helper) {
         return helper.apply(this);

@@ -38,17 +38,26 @@ public interface GeneralCategoryRecommendation  {
     
     public void setConfidence(final Double confidence);
 
-    public static GeneralCategoryRecommendationImpl of(){
+    public static GeneralCategoryRecommendation of(){
         return new GeneralCategoryRecommendationImpl();
     }
     
 
-    public static GeneralCategoryRecommendationImpl of(final GeneralCategoryRecommendation template) {
+    public static GeneralCategoryRecommendation of(final GeneralCategoryRecommendation template) {
         GeneralCategoryRecommendationImpl instance = new GeneralCategoryRecommendationImpl();
         instance.setCategoryName(template.getCategoryName());
         instance.setConfidence(template.getConfidence());
         return instance;
     }
+
+    public static GeneralCategoryRecommendationBuilder builder(){
+        return GeneralCategoryRecommendationBuilder.of();
+    }
+    
+    public static GeneralCategoryRecommendationBuilder builder(final GeneralCategoryRecommendation template){
+        return GeneralCategoryRecommendationBuilder.of(template);
+    }
+    
 
     default <T> T withGeneralCategoryRecommendation(Function<GeneralCategoryRecommendation, T> helper) {
         return helper.apply(this);

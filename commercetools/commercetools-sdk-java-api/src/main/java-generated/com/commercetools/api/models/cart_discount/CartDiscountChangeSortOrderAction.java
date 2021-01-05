@@ -31,16 +31,25 @@ public interface CartDiscountChangeSortOrderAction extends CartDiscountUpdateAct
 
     public void setSortOrder(final String sortOrder);
 
-    public static CartDiscountChangeSortOrderActionImpl of(){
+    public static CartDiscountChangeSortOrderAction of(){
         return new CartDiscountChangeSortOrderActionImpl();
     }
     
 
-    public static CartDiscountChangeSortOrderActionImpl of(final CartDiscountChangeSortOrderAction template) {
+    public static CartDiscountChangeSortOrderAction of(final CartDiscountChangeSortOrderAction template) {
         CartDiscountChangeSortOrderActionImpl instance = new CartDiscountChangeSortOrderActionImpl();
         instance.setSortOrder(template.getSortOrder());
         return instance;
     }
+
+    public static CartDiscountChangeSortOrderActionBuilder builder(){
+        return CartDiscountChangeSortOrderActionBuilder.of();
+    }
+    
+    public static CartDiscountChangeSortOrderActionBuilder builder(final CartDiscountChangeSortOrderAction template){
+        return CartDiscountChangeSortOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountChangeSortOrderAction(Function<CartDiscountChangeSortOrderAction, T> helper) {
         return helper.apply(this);

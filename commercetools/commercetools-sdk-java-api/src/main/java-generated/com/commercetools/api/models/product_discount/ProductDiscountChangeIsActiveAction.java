@@ -28,16 +28,25 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
 
     public void setIsActive(final Boolean isActive);
 
-    public static ProductDiscountChangeIsActiveActionImpl of(){
+    public static ProductDiscountChangeIsActiveAction of(){
         return new ProductDiscountChangeIsActiveActionImpl();
     }
     
 
-    public static ProductDiscountChangeIsActiveActionImpl of(final ProductDiscountChangeIsActiveAction template) {
+    public static ProductDiscountChangeIsActiveAction of(final ProductDiscountChangeIsActiveAction template) {
         ProductDiscountChangeIsActiveActionImpl instance = new ProductDiscountChangeIsActiveActionImpl();
         instance.setIsActive(template.getIsActive());
         return instance;
     }
+
+    public static ProductDiscountChangeIsActiveActionBuilder builder(){
+        return ProductDiscountChangeIsActiveActionBuilder.of();
+    }
+    
+    public static ProductDiscountChangeIsActiveActionBuilder builder(final ProductDiscountChangeIsActiveAction template){
+        return ProductDiscountChangeIsActiveActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountChangeIsActiveAction(Function<ProductDiscountChangeIsActiveAction, T> helper) {
         return helper.apply(this);

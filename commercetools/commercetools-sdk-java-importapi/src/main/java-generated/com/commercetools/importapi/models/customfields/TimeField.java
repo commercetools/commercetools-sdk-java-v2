@@ -32,16 +32,25 @@ public interface TimeField extends CustomField {
 
     public void setValue(final LocalTime value);
 
-    public static TimeFieldImpl of(){
+    public static TimeField of(){
         return new TimeFieldImpl();
     }
     
 
-    public static TimeFieldImpl of(final TimeField template) {
+    public static TimeField of(final TimeField template) {
         TimeFieldImpl instance = new TimeFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TimeFieldBuilder builder(){
+        return TimeFieldBuilder.of();
+    }
+    
+    public static TimeFieldBuilder builder(final TimeField template){
+        return TimeFieldBuilder.of(template);
+    }
+    
 
     default <T> T withTimeField(Function<TimeField, T> helper) {
         return helper.apply(this);

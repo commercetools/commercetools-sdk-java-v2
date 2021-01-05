@@ -30,12 +30,12 @@ public interface CustomerGroupSetMessage extends Message {
 
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
-    public static CustomerGroupSetMessageImpl of(){
+    public static CustomerGroupSetMessage of(){
         return new CustomerGroupSetMessageImpl();
     }
     
 
-    public static CustomerGroupSetMessageImpl of(final CustomerGroupSetMessage template) {
+    public static CustomerGroupSetMessage of(final CustomerGroupSetMessage template) {
         CustomerGroupSetMessageImpl instance = new CustomerGroupSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface CustomerGroupSetMessage extends Message {
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
+
+    public static CustomerGroupSetMessageBuilder builder(){
+        return CustomerGroupSetMessageBuilder.of();
+    }
+    
+    public static CustomerGroupSetMessageBuilder builder(final CustomerGroupSetMessage template){
+        return CustomerGroupSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupSetMessage(Function<CustomerGroupSetMessage, T> helper) {
         return helper.apply(this);

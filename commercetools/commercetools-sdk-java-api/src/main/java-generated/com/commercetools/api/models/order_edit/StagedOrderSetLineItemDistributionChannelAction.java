@@ -35,17 +35,26 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
     
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-    public static StagedOrderSetLineItemDistributionChannelActionImpl of(){
+    public static StagedOrderSetLineItemDistributionChannelAction of(){
         return new StagedOrderSetLineItemDistributionChannelActionImpl();
     }
     
 
-    public static StagedOrderSetLineItemDistributionChannelActionImpl of(final StagedOrderSetLineItemDistributionChannelAction template) {
+    public static StagedOrderSetLineItemDistributionChannelAction of(final StagedOrderSetLineItemDistributionChannelAction template) {
         StagedOrderSetLineItemDistributionChannelActionImpl instance = new StagedOrderSetLineItemDistributionChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public static StagedOrderSetLineItemDistributionChannelActionBuilder builder(){
+        return StagedOrderSetLineItemDistributionChannelActionBuilder.of();
+    }
+    
+    public static StagedOrderSetLineItemDistributionChannelActionBuilder builder(final StagedOrderSetLineItemDistributionChannelAction template){
+        return StagedOrderSetLineItemDistributionChannelActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetLineItemDistributionChannelAction(Function<StagedOrderSetLineItemDistributionChannelAction, T> helper) {
         return helper.apply(this);

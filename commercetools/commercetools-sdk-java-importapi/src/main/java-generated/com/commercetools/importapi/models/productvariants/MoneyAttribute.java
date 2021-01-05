@@ -33,17 +33,26 @@ public interface MoneyAttribute extends Attribute {
 
     public void setValue(final TypedMoney value);
 
-    public static MoneyAttributeImpl of(){
+    public static MoneyAttribute of(){
         return new MoneyAttributeImpl();
     }
     
 
-    public static MoneyAttributeImpl of(final MoneyAttribute template) {
+    public static MoneyAttribute of(final MoneyAttribute template) {
         MoneyAttributeImpl instance = new MoneyAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static MoneyAttributeBuilder builder(){
+        return MoneyAttributeBuilder.of();
+    }
+    
+    public static MoneyAttributeBuilder builder(final MoneyAttribute template){
+        return MoneyAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withMoneyAttribute(Function<MoneyAttribute, T> helper) {
         return helper.apply(this);

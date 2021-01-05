@@ -55,12 +55,12 @@ public interface CustomObjectPagedQueryResponse extends com.commercetools.api.mo
     public void setResults(final CustomObject ...results);
     public void setResults(final List<CustomObject> results);
 
-    public static CustomObjectPagedQueryResponseImpl of(){
+    public static CustomObjectPagedQueryResponse of(){
         return new CustomObjectPagedQueryResponseImpl();
     }
     
 
-    public static CustomObjectPagedQueryResponseImpl of(final CustomObjectPagedQueryResponse template) {
+    public static CustomObjectPagedQueryResponse of(final CustomObjectPagedQueryResponse template) {
         CustomObjectPagedQueryResponseImpl instance = new CustomObjectPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface CustomObjectPagedQueryResponse extends com.commercetools.api.mo
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static CustomObjectPagedQueryResponseBuilder builder(){
+        return CustomObjectPagedQueryResponseBuilder.of();
+    }
+    
+    public static CustomObjectPagedQueryResponseBuilder builder(final CustomObjectPagedQueryResponse template){
+        return CustomObjectPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withCustomObjectPagedQueryResponse(Function<CustomObjectPagedQueryResponse, T> helper) {
         return helper.apply(this);

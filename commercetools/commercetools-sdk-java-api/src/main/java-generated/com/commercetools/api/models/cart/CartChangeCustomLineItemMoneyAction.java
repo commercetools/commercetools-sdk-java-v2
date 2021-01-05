@@ -36,17 +36,26 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
     
     public void setMoney(final Money money);
 
-    public static CartChangeCustomLineItemMoneyActionImpl of(){
+    public static CartChangeCustomLineItemMoneyAction of(){
         return new CartChangeCustomLineItemMoneyActionImpl();
     }
     
 
-    public static CartChangeCustomLineItemMoneyActionImpl of(final CartChangeCustomLineItemMoneyAction template) {
+    public static CartChangeCustomLineItemMoneyAction of(final CartChangeCustomLineItemMoneyAction template) {
         CartChangeCustomLineItemMoneyActionImpl instance = new CartChangeCustomLineItemMoneyActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public static CartChangeCustomLineItemMoneyActionBuilder builder(){
+        return CartChangeCustomLineItemMoneyActionBuilder.of();
+    }
+    
+    public static CartChangeCustomLineItemMoneyActionBuilder builder(final CartChangeCustomLineItemMoneyAction template){
+        return CartChangeCustomLineItemMoneyActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartChangeCustomLineItemMoneyAction(Function<CartChangeCustomLineItemMoneyAction, T> helper) {
         return helper.apply(this);

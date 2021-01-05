@@ -28,16 +28,25 @@ public interface MyCustomerSetTitleAction extends MyCustomerUpdateAction {
 
     public void setTitle(final String title);
 
-    public static MyCustomerSetTitleActionImpl of(){
+    public static MyCustomerSetTitleAction of(){
         return new MyCustomerSetTitleActionImpl();
     }
     
 
-    public static MyCustomerSetTitleActionImpl of(final MyCustomerSetTitleAction template) {
+    public static MyCustomerSetTitleAction of(final MyCustomerSetTitleAction template) {
         MyCustomerSetTitleActionImpl instance = new MyCustomerSetTitleActionImpl();
         instance.setTitle(template.getTitle());
         return instance;
     }
+
+    public static MyCustomerSetTitleActionBuilder builder(){
+        return MyCustomerSetTitleActionBuilder.of();
+    }
+    
+    public static MyCustomerSetTitleActionBuilder builder(final MyCustomerSetTitleAction template){
+        return MyCustomerSetTitleActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetTitleAction(Function<MyCustomerSetTitleAction, T> helper) {
         return helper.apply(this);

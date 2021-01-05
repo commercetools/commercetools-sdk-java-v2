@@ -30,16 +30,25 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
 
     public void setDescription(final LocalizedString description);
 
-    public static ChannelChangeDescriptionActionImpl of(){
+    public static ChannelChangeDescriptionAction of(){
         return new ChannelChangeDescriptionActionImpl();
     }
     
 
-    public static ChannelChangeDescriptionActionImpl of(final ChannelChangeDescriptionAction template) {
+    public static ChannelChangeDescriptionAction of(final ChannelChangeDescriptionAction template) {
         ChannelChangeDescriptionActionImpl instance = new ChannelChangeDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static ChannelChangeDescriptionActionBuilder builder(){
+        return ChannelChangeDescriptionActionBuilder.of();
+    }
+    
+    public static ChannelChangeDescriptionActionBuilder builder(final ChannelChangeDescriptionAction template){
+        return ChannelChangeDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelChangeDescriptionAction(Function<ChannelChangeDescriptionAction, T> helper) {
         return helper.apply(this);

@@ -30,17 +30,26 @@ public interface CartReference extends Reference {
 
     public void setObj(final Cart obj);
 
-    public static CartReferenceImpl of(){
+    public static CartReference of(){
         return new CartReferenceImpl();
     }
     
 
-    public static CartReferenceImpl of(final CartReference template) {
+    public static CartReference of(final CartReference template) {
         CartReferenceImpl instance = new CartReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static CartReferenceBuilder builder(){
+        return CartReferenceBuilder.of();
+    }
+    
+    public static CartReferenceBuilder builder(final CartReference template){
+        return CartReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCartReference(Function<CartReference, T> helper) {
         return helper.apply(this);

@@ -33,17 +33,26 @@ public interface BooleanSetAttribute extends Attribute {
     public void setValue(final Boolean ...value);
     public void setValue(final List<Boolean> value);
 
-    public static BooleanSetAttributeImpl of(){
+    public static BooleanSetAttribute of(){
         return new BooleanSetAttributeImpl();
     }
     
 
-    public static BooleanSetAttributeImpl of(final BooleanSetAttribute template) {
+    public static BooleanSetAttribute of(final BooleanSetAttribute template) {
         BooleanSetAttributeImpl instance = new BooleanSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static BooleanSetAttributeBuilder builder(){
+        return BooleanSetAttributeBuilder.of();
+    }
+    
+    public static BooleanSetAttributeBuilder builder(final BooleanSetAttribute template){
+        return BooleanSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withBooleanSetAttribute(Function<BooleanSetAttribute, T> helper) {
         return helper.apply(this);

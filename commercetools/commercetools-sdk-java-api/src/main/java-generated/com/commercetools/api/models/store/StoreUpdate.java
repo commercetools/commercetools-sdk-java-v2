@@ -37,17 +37,26 @@ public interface StoreUpdate extends com.commercetools.api.models.ResourceUpdate
     public void setActions(final StoreUpdateAction ...actions);
     public void setActions(final List<StoreUpdateAction> actions);
 
-    public static StoreUpdateImpl of(){
+    public static StoreUpdate of(){
         return new StoreUpdateImpl();
     }
     
 
-    public static StoreUpdateImpl of(final StoreUpdate template) {
+    public static StoreUpdate of(final StoreUpdate template) {
         StoreUpdateImpl instance = new StoreUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static StoreUpdateBuilder builder(){
+        return StoreUpdateBuilder.of();
+    }
+    
+    public static StoreUpdateBuilder builder(final StoreUpdate template){
+        return StoreUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withStoreUpdate(Function<StoreUpdate, T> helper) {
         return helper.apply(this);

@@ -30,17 +30,26 @@ public interface ZoneReference extends Reference {
 
     public void setObj(final Zone obj);
 
-    public static ZoneReferenceImpl of(){
+    public static ZoneReference of(){
         return new ZoneReferenceImpl();
     }
     
 
-    public static ZoneReferenceImpl of(final ZoneReference template) {
+    public static ZoneReference of(final ZoneReference template) {
         ZoneReferenceImpl instance = new ZoneReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static ZoneReferenceBuilder builder(){
+        return ZoneReferenceBuilder.of();
+    }
+    
+    public static ZoneReferenceBuilder builder(final ZoneReference template){
+        return ZoneReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withZoneReference(Function<ZoneReference, T> helper) {
         return helper.apply(this);

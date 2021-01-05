@@ -49,12 +49,12 @@ public interface TaxCategoryDraft  {
     
     public void setKey(final String key);
 
-    public static TaxCategoryDraftImpl of(){
+    public static TaxCategoryDraft of(){
         return new TaxCategoryDraftImpl();
     }
     
 
-    public static TaxCategoryDraftImpl of(final TaxCategoryDraft template) {
+    public static TaxCategoryDraft of(final TaxCategoryDraft template) {
         TaxCategoryDraftImpl instance = new TaxCategoryDraftImpl();
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
@@ -62,6 +62,15 @@ public interface TaxCategoryDraft  {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static TaxCategoryDraftBuilder builder(){
+        return TaxCategoryDraftBuilder.of();
+    }
+    
+    public static TaxCategoryDraftBuilder builder(final TaxCategoryDraft template){
+        return TaxCategoryDraftBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryDraft(Function<TaxCategoryDraft, T> helper) {
         return helper.apply(this);

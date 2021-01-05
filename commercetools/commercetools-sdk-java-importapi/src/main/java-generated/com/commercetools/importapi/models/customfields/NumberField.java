@@ -31,16 +31,25 @@ public interface NumberField extends CustomField {
 
     public void setValue(final Double value);
 
-    public static NumberFieldImpl of(){
+    public static NumberField of(){
         return new NumberFieldImpl();
     }
     
 
-    public static NumberFieldImpl of(final NumberField template) {
+    public static NumberField of(final NumberField template) {
         NumberFieldImpl instance = new NumberFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static NumberFieldBuilder builder(){
+        return NumberFieldBuilder.of();
+    }
+    
+    public static NumberFieldBuilder builder(final NumberField template){
+        return NumberFieldBuilder.of(template);
+    }
+    
 
     default <T> T withNumberField(Function<NumberField, T> helper) {
         return helper.apply(this);

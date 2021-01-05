@@ -53,12 +53,12 @@ public interface ZoneDraft  {
     public void setLocations(final Location ...locations);
     public void setLocations(final List<Location> locations);
 
-    public static ZoneDraftImpl of(){
+    public static ZoneDraft of(){
         return new ZoneDraftImpl();
     }
     
 
-    public static ZoneDraftImpl of(final ZoneDraft template) {
+    public static ZoneDraft of(final ZoneDraft template) {
         ZoneDraftImpl instance = new ZoneDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -66,6 +66,15 @@ public interface ZoneDraft  {
         instance.setLocations(template.getLocations());
         return instance;
     }
+
+    public static ZoneDraftBuilder builder(){
+        return ZoneDraftBuilder.of();
+    }
+    
+    public static ZoneDraftBuilder builder(final ZoneDraft template){
+        return ZoneDraftBuilder.of(template);
+    }
+    
 
     default <T> T withZoneDraft(Function<ZoneDraft, T> helper) {
         return helper.apply(this);

@@ -34,17 +34,26 @@ public interface AttributePlainEnumValue  {
     
     public void setLabel(final String label);
 
-    public static AttributePlainEnumValueImpl of(){
+    public static AttributePlainEnumValue of(){
         return new AttributePlainEnumValueImpl();
     }
     
 
-    public static AttributePlainEnumValueImpl of(final AttributePlainEnumValue template) {
+    public static AttributePlainEnumValue of(final AttributePlainEnumValue template) {
         AttributePlainEnumValueImpl instance = new AttributePlainEnumValueImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static AttributePlainEnumValueBuilder builder(){
+        return AttributePlainEnumValueBuilder.of();
+    }
+    
+    public static AttributePlainEnumValueBuilder builder(final AttributePlainEnumValue template){
+        return AttributePlainEnumValueBuilder.of(template);
+    }
+    
 
     default <T> T withAttributePlainEnumValue(Function<AttributePlainEnumValue, T> helper) {
         return helper.apply(this);

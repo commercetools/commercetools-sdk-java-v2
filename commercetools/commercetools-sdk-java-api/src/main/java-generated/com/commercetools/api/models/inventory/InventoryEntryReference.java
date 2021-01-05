@@ -30,17 +30,26 @@ public interface InventoryEntryReference extends Reference {
 
     public void setObj(final InventoryEntry obj);
 
-    public static InventoryEntryReferenceImpl of(){
+    public static InventoryEntryReference of(){
         return new InventoryEntryReferenceImpl();
     }
     
 
-    public static InventoryEntryReferenceImpl of(final InventoryEntryReference template) {
+    public static InventoryEntryReference of(final InventoryEntryReference template) {
         InventoryEntryReferenceImpl instance = new InventoryEntryReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static InventoryEntryReferenceBuilder builder(){
+        return InventoryEntryReferenceBuilder.of();
+    }
+    
+    public static InventoryEntryReferenceBuilder builder(final InventoryEntryReference template){
+        return InventoryEntryReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryReference(Function<InventoryEntryReference, T> helper) {
         return helper.apply(this);

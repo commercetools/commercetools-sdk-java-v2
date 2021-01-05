@@ -40,17 +40,26 @@ public interface OrderEditPreviewSuccess extends OrderEditResult {
     public void setMessagePayloads(final MessagePayload ...messagePayloads);
     public void setMessagePayloads(final List<MessagePayload> messagePayloads);
 
-    public static OrderEditPreviewSuccessImpl of(){
+    public static OrderEditPreviewSuccess of(){
         return new OrderEditPreviewSuccessImpl();
     }
     
 
-    public static OrderEditPreviewSuccessImpl of(final OrderEditPreviewSuccess template) {
+    public static OrderEditPreviewSuccess of(final OrderEditPreviewSuccess template) {
         OrderEditPreviewSuccessImpl instance = new OrderEditPreviewSuccessImpl();
         instance.setPreview(template.getPreview());
         instance.setMessagePayloads(template.getMessagePayloads());
         return instance;
     }
+
+    public static OrderEditPreviewSuccessBuilder builder(){
+        return OrderEditPreviewSuccessBuilder.of();
+    }
+    
+    public static OrderEditPreviewSuccessBuilder builder(final OrderEditPreviewSuccess template){
+        return OrderEditPreviewSuccessBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditPreviewSuccess(Function<OrderEditPreviewSuccess, T> helper) {
         return helper.apply(this);

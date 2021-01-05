@@ -28,16 +28,25 @@ public interface StateChangeKeyAction extends StateUpdateAction {
 
     public void setKey(final String key);
 
-    public static StateChangeKeyActionImpl of(){
+    public static StateChangeKeyAction of(){
         return new StateChangeKeyActionImpl();
     }
     
 
-    public static StateChangeKeyActionImpl of(final StateChangeKeyAction template) {
+    public static StateChangeKeyAction of(final StateChangeKeyAction template) {
         StateChangeKeyActionImpl instance = new StateChangeKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static StateChangeKeyActionBuilder builder(){
+        return StateChangeKeyActionBuilder.of();
+    }
+    
+    public static StateChangeKeyActionBuilder builder(final StateChangeKeyAction template){
+        return StateChangeKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withStateChangeKeyAction(Function<StateChangeKeyAction, T> helper) {
         return helper.apply(this);

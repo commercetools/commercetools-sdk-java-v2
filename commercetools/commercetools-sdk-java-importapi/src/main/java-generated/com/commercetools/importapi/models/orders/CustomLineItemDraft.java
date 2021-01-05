@@ -111,12 +111,12 @@ public interface CustomLineItemDraft  {
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static CustomLineItemDraftImpl of(){
+    public static CustomLineItemDraft of(){
         return new CustomLineItemDraftImpl();
     }
     
 
-    public static CustomLineItemDraftImpl of(final CustomLineItemDraft template) {
+    public static CustomLineItemDraft of(final CustomLineItemDraft template) {
         CustomLineItemDraftImpl instance = new CustomLineItemDraftImpl();
         instance.setName(template.getName());
         instance.setMoney(template.getMoney());
@@ -132,6 +132,15 @@ public interface CustomLineItemDraft  {
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static CustomLineItemDraftBuilder builder(){
+        return CustomLineItemDraftBuilder.of();
+    }
+    
+    public static CustomLineItemDraftBuilder builder(final CustomLineItemDraft template){
+        return CustomLineItemDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCustomLineItemDraft(Function<CustomLineItemDraft, T> helper) {
         return helper.apply(this);

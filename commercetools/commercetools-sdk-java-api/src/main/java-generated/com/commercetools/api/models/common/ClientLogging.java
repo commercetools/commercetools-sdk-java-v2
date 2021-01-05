@@ -48,12 +48,12 @@ public interface ClientLogging  {
     
     public void setAnonymousId(final String anonymousId);
 
-    public static ClientLoggingImpl of(){
+    public static ClientLogging of(){
         return new ClientLoggingImpl();
     }
     
 
-    public static ClientLoggingImpl of(final ClientLogging template) {
+    public static ClientLogging of(final ClientLogging template) {
         ClientLoggingImpl instance = new ClientLoggingImpl();
         instance.setClientId(template.getClientId());
         instance.setExternalUserId(template.getExternalUserId());
@@ -61,6 +61,15 @@ public interface ClientLogging  {
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static ClientLoggingBuilder builder(){
+        return ClientLoggingBuilder.of();
+    }
+    
+    public static ClientLoggingBuilder builder(final ClientLogging template){
+        return ClientLoggingBuilder.of(template);
+    }
+    
 
     default <T> T withClientLogging(Function<ClientLogging, T> helper) {
         return helper.apply(this);

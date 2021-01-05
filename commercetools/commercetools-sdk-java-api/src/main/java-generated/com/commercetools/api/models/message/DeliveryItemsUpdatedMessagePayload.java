@@ -47,18 +47,27 @@ public interface DeliveryItemsUpdatedMessagePayload extends MessagePayload {
     public void setOldItems(final DeliveryItem ...oldItems);
     public void setOldItems(final List<DeliveryItem> oldItems);
 
-    public static DeliveryItemsUpdatedMessagePayloadImpl of(){
+    public static DeliveryItemsUpdatedMessagePayload of(){
         return new DeliveryItemsUpdatedMessagePayloadImpl();
     }
     
 
-    public static DeliveryItemsUpdatedMessagePayloadImpl of(final DeliveryItemsUpdatedMessagePayload template) {
+    public static DeliveryItemsUpdatedMessagePayload of(final DeliveryItemsUpdatedMessagePayload template) {
         DeliveryItemsUpdatedMessagePayloadImpl instance = new DeliveryItemsUpdatedMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
         instance.setOldItems(template.getOldItems());
         return instance;
     }
+
+    public static DeliveryItemsUpdatedMessagePayloadBuilder builder(){
+        return DeliveryItemsUpdatedMessagePayloadBuilder.of();
+    }
+    
+    public static DeliveryItemsUpdatedMessagePayloadBuilder builder(final DeliveryItemsUpdatedMessagePayload template){
+        return DeliveryItemsUpdatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryItemsUpdatedMessagePayload(Function<DeliveryItemsUpdatedMessagePayload, T> helper) {
         return helper.apply(this);

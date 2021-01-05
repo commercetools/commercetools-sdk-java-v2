@@ -36,17 +36,26 @@ public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductRemoveFromCategoryActionImpl of(){
+    public static ProductRemoveFromCategoryAction of(){
         return new ProductRemoveFromCategoryActionImpl();
     }
     
 
-    public static ProductRemoveFromCategoryActionImpl of(final ProductRemoveFromCategoryAction template) {
+    public static ProductRemoveFromCategoryAction of(final ProductRemoveFromCategoryAction template) {
         ProductRemoveFromCategoryActionImpl instance = new ProductRemoveFromCategoryActionImpl();
         instance.setCategory(template.getCategory());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductRemoveFromCategoryActionBuilder builder(){
+        return ProductRemoveFromCategoryActionBuilder.of();
+    }
+    
+    public static ProductRemoveFromCategoryActionBuilder builder(final ProductRemoveFromCategoryAction template){
+        return ProductRemoveFromCategoryActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductRemoveFromCategoryAction(Function<ProductRemoveFromCategoryAction, T> helper) {
         return helper.apply(this);

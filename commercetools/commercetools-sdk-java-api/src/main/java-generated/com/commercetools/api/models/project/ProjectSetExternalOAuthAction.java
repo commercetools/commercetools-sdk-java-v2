@@ -32,16 +32,25 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
 
     public void setExternalOAuth(final ExternalOAuth externalOAuth);
 
-    public static ProjectSetExternalOAuthActionImpl of(){
+    public static ProjectSetExternalOAuthAction of(){
         return new ProjectSetExternalOAuthActionImpl();
     }
     
 
-    public static ProjectSetExternalOAuthActionImpl of(final ProjectSetExternalOAuthAction template) {
+    public static ProjectSetExternalOAuthAction of(final ProjectSetExternalOAuthAction template) {
         ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
         instance.setExternalOAuth(template.getExternalOAuth());
         return instance;
     }
+
+    public static ProjectSetExternalOAuthActionBuilder builder(){
+        return ProjectSetExternalOAuthActionBuilder.of();
+    }
+    
+    public static ProjectSetExternalOAuthActionBuilder builder(final ProjectSetExternalOAuthAction template){
+        return ProjectSetExternalOAuthActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectSetExternalOAuthAction(Function<ProjectSetExternalOAuthAction, T> helper) {
         return helper.apply(this);

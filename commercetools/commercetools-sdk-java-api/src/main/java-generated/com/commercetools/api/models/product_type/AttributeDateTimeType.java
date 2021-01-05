@@ -23,15 +23,24 @@ public interface AttributeDateTimeType extends AttributeType {
 
 
 
-    public static AttributeDateTimeTypeImpl of(){
+    public static AttributeDateTimeType of(){
         return new AttributeDateTimeTypeImpl();
     }
     
 
-    public static AttributeDateTimeTypeImpl of(final AttributeDateTimeType template) {
+    public static AttributeDateTimeType of(final AttributeDateTimeType template) {
         AttributeDateTimeTypeImpl instance = new AttributeDateTimeTypeImpl();
         return instance;
     }
+
+    public static AttributeDateTimeTypeBuilder builder(){
+        return AttributeDateTimeTypeBuilder.of();
+    }
+    
+    public static AttributeDateTimeTypeBuilder builder(final AttributeDateTimeType template){
+        return AttributeDateTimeTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeDateTimeType(Function<AttributeDateTimeType, T> helper) {
         return helper.apply(this);

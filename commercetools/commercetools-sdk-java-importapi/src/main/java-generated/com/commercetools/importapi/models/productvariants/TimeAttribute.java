@@ -32,17 +32,26 @@ public interface TimeAttribute extends Attribute {
 
     public void setValue(final LocalTime value);
 
-    public static TimeAttributeImpl of(){
+    public static TimeAttribute of(){
         return new TimeAttributeImpl();
     }
     
 
-    public static TimeAttributeImpl of(final TimeAttribute template) {
+    public static TimeAttribute of(final TimeAttribute template) {
         TimeAttributeImpl instance = new TimeAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TimeAttributeBuilder builder(){
+        return TimeAttributeBuilder.of();
+    }
+    
+    public static TimeAttributeBuilder builder(final TimeAttribute template){
+        return TimeAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withTimeAttribute(Function<TimeAttribute, T> helper) {
         return helper.apply(this);

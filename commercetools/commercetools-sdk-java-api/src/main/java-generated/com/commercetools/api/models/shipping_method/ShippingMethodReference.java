@@ -30,17 +30,26 @@ public interface ShippingMethodReference extends Reference {
 
     public void setObj(final ShippingMethod obj);
 
-    public static ShippingMethodReferenceImpl of(){
+    public static ShippingMethodReference of(){
         return new ShippingMethodReferenceImpl();
     }
     
 
-    public static ShippingMethodReferenceImpl of(final ShippingMethodReference template) {
+    public static ShippingMethodReference of(final ShippingMethodReference template) {
         ShippingMethodReferenceImpl instance = new ShippingMethodReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static ShippingMethodReferenceBuilder builder(){
+        return ShippingMethodReferenceBuilder.of();
+    }
+    
+    public static ShippingMethodReferenceBuilder builder(final ShippingMethodReference template){
+        return ShippingMethodReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodReference(Function<ShippingMethodReference, T> helper) {
         return helper.apply(this);

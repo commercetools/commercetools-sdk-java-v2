@@ -91,12 +91,12 @@ public interface ScopedPrice  {
     
     public void setCustom(final CustomFields custom);
 
-    public static ScopedPriceImpl of(){
+    public static ScopedPrice of(){
         return new ScopedPriceImpl();
     }
     
 
-    public static ScopedPriceImpl of(final ScopedPrice template) {
+    public static ScopedPrice of(final ScopedPrice template) {
         ScopedPriceImpl instance = new ScopedPriceImpl();
         instance.setId(template.getId());
         instance.setValue(template.getValue());
@@ -110,6 +110,15 @@ public interface ScopedPrice  {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static ScopedPriceBuilder builder(){
+        return ScopedPriceBuilder.of();
+    }
+    
+    public static ScopedPriceBuilder builder(final ScopedPrice template){
+        return ScopedPriceBuilder.of(template);
+    }
+    
 
     default <T> T withScopedPrice(Function<ScopedPrice, T> helper) {
         return helper.apply(this);

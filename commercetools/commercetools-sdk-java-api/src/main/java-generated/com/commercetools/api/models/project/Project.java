@@ -118,12 +118,12 @@ public interface Project  {
     
     public void setCarts(final CartsConfiguration carts);
 
-    public static ProjectImpl of(){
+    public static Project of(){
         return new ProjectImpl();
     }
     
 
-    public static ProjectImpl of(final Project template) {
+    public static Project of(final Project template) {
         ProjectImpl instance = new ProjectImpl();
         instance.setVersion(template.getVersion());
         instance.setKey(template.getKey());
@@ -139,6 +139,15 @@ public interface Project  {
         instance.setCarts(template.getCarts());
         return instance;
     }
+
+    public static ProjectBuilder builder(){
+        return ProjectBuilder.of();
+    }
+    
+    public static ProjectBuilder builder(final Project template){
+        return ProjectBuilder.of(template);
+    }
+    
 
     default <T> T withProject(Function<Project, T> helper) {
         return helper.apply(this);

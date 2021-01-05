@@ -48,12 +48,12 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
     
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
-    public static MyCartChangeLineItemQuantityActionImpl of(){
+    public static MyCartChangeLineItemQuantityAction of(){
         return new MyCartChangeLineItemQuantityActionImpl();
     }
     
 
-    public static MyCartChangeLineItemQuantityActionImpl of(final MyCartChangeLineItemQuantityAction template) {
+    public static MyCartChangeLineItemQuantityAction of(final MyCartChangeLineItemQuantityAction template) {
         MyCartChangeLineItemQuantityActionImpl instance = new MyCartChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -61,6 +61,15 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         return instance;
     }
+
+    public static MyCartChangeLineItemQuantityActionBuilder builder(){
+        return MyCartChangeLineItemQuantityActionBuilder.of();
+    }
+    
+    public static MyCartChangeLineItemQuantityActionBuilder builder(final MyCartChangeLineItemQuantityAction template){
+        return MyCartChangeLineItemQuantityActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartChangeLineItemQuantityAction(Function<MyCartChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);

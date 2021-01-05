@@ -38,16 +38,25 @@ public interface ProductDraftImportRequest extends ImportRequest {
     public void setResources(final ProductDraftImport ...resources);
     public void setResources(final List<ProductDraftImport> resources);
 
-    public static ProductDraftImportRequestImpl of(){
+    public static ProductDraftImportRequest of(){
         return new ProductDraftImportRequestImpl();
     }
     
 
-    public static ProductDraftImportRequestImpl of(final ProductDraftImportRequest template) {
+    public static ProductDraftImportRequest of(final ProductDraftImportRequest template) {
         ProductDraftImportRequestImpl instance = new ProductDraftImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public static ProductDraftImportRequestBuilder builder(){
+        return ProductDraftImportRequestBuilder.of();
+    }
+    
+    public static ProductDraftImportRequestBuilder builder(final ProductDraftImportRequest template){
+        return ProductDraftImportRequestBuilder.of(template);
+    }
+    
 
     default <T> T withProductDraftImportRequest(Function<ProductDraftImportRequest, T> helper) {
         return helper.apply(this);

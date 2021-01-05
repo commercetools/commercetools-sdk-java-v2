@@ -38,12 +38,12 @@ public interface ProductDeletedMessage extends Message {
     
     public void setCurrentProjection(final ProductProjection currentProjection);
 
-    public static ProductDeletedMessageImpl of(){
+    public static ProductDeletedMessage of(){
         return new ProductDeletedMessageImpl();
     }
     
 
-    public static ProductDeletedMessageImpl of(final ProductDeletedMessage template) {
+    public static ProductDeletedMessage of(final ProductDeletedMessage template) {
         ProductDeletedMessageImpl instance = new ProductDeletedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -59,6 +59,15 @@ public interface ProductDeletedMessage extends Message {
         instance.setCurrentProjection(template.getCurrentProjection());
         return instance;
     }
+
+    public static ProductDeletedMessageBuilder builder(){
+        return ProductDeletedMessageBuilder.of();
+    }
+    
+    public static ProductDeletedMessageBuilder builder(final ProductDeletedMessage template){
+        return ProductDeletedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductDeletedMessage(Function<ProductDeletedMessage, T> helper) {
         return helper.apply(this);

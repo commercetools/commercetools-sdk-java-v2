@@ -29,16 +29,25 @@ public interface TypeSetDescriptionAction extends TypeUpdateAction {
 
     public void setDescription(final LocalizedString description);
 
-    public static TypeSetDescriptionActionImpl of(){
+    public static TypeSetDescriptionAction of(){
         return new TypeSetDescriptionActionImpl();
     }
     
 
-    public static TypeSetDescriptionActionImpl of(final TypeSetDescriptionAction template) {
+    public static TypeSetDescriptionAction of(final TypeSetDescriptionAction template) {
         TypeSetDescriptionActionImpl instance = new TypeSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static TypeSetDescriptionActionBuilder builder(){
+        return TypeSetDescriptionActionBuilder.of();
+    }
+    
+    public static TypeSetDescriptionActionBuilder builder(final TypeSetDescriptionAction template){
+        return TypeSetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeSetDescriptionAction(Function<TypeSetDescriptionAction, T> helper) {
         return helper.apply(this);

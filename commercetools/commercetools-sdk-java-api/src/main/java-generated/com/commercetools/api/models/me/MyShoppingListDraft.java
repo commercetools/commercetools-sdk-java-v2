@@ -70,12 +70,12 @@ public interface MyShoppingListDraft  {
     
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
 
-    public static MyShoppingListDraftImpl of(){
+    public static MyShoppingListDraft of(){
         return new MyShoppingListDraftImpl();
     }
     
 
-    public static MyShoppingListDraftImpl of(final MyShoppingListDraft template) {
+    public static MyShoppingListDraft of(final MyShoppingListDraft template) {
         MyShoppingListDraftImpl instance = new MyShoppingListDraftImpl();
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
@@ -85,6 +85,15 @@ public interface MyShoppingListDraft  {
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;
     }
+
+    public static MyShoppingListDraftBuilder builder(){
+        return MyShoppingListDraftBuilder.of();
+    }
+    
+    public static MyShoppingListDraftBuilder builder(final MyShoppingListDraft template){
+        return MyShoppingListDraftBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListDraft(Function<MyShoppingListDraft, T> helper) {
         return helper.apply(this);

@@ -35,12 +35,12 @@ public interface OrderShippingRateInputSetMessage extends Message {
     
     public void setOldShippingRateInput(final ShippingRateInput oldShippingRateInput);
 
-    public static OrderShippingRateInputSetMessageImpl of(){
+    public static OrderShippingRateInputSetMessage of(){
         return new OrderShippingRateInputSetMessageImpl();
     }
     
 
-    public static OrderShippingRateInputSetMessageImpl of(final OrderShippingRateInputSetMessage template) {
+    public static OrderShippingRateInputSetMessage of(final OrderShippingRateInputSetMessage template) {
         OrderShippingRateInputSetMessageImpl instance = new OrderShippingRateInputSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -56,6 +56,15 @@ public interface OrderShippingRateInputSetMessage extends Message {
         instance.setOldShippingRateInput(template.getOldShippingRateInput());
         return instance;
     }
+
+    public static OrderShippingRateInputSetMessageBuilder builder(){
+        return OrderShippingRateInputSetMessageBuilder.of();
+    }
+    
+    public static OrderShippingRateInputSetMessageBuilder builder(final OrderShippingRateInputSetMessage template){
+        return OrderShippingRateInputSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderShippingRateInputSetMessage(Function<OrderShippingRateInputSetMessage, T> helper) {
         return helper.apply(this);

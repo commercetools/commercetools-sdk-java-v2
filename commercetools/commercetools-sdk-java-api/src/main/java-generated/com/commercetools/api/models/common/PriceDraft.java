@@ -87,12 +87,12 @@ public interface PriceDraft  {
     
     public void setDiscounted(final DiscountedPrice discounted);
 
-    public static PriceDraftImpl of(){
+    public static PriceDraft of(){
         return new PriceDraftImpl();
     }
     
 
-    public static PriceDraftImpl of(final PriceDraft template) {
+    public static PriceDraft of(final PriceDraft template) {
         PriceDraftImpl instance = new PriceDraftImpl();
         instance.setValue(template.getValue());
         instance.setCountry(template.getCountry());
@@ -105,6 +105,15 @@ public interface PriceDraft  {
         instance.setDiscounted(template.getDiscounted());
         return instance;
     }
+
+    public static PriceDraftBuilder builder(){
+        return PriceDraftBuilder.of();
+    }
+    
+    public static PriceDraftBuilder builder(final PriceDraft template){
+        return PriceDraftBuilder.of(template);
+    }
+    
 
     default <T> T withPriceDraft(Function<PriceDraft, T> helper) {
         return helper.apply(this);

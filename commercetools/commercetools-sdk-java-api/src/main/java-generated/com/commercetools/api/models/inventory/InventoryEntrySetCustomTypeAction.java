@@ -41,17 +41,26 @@ public interface InventoryEntrySetCustomTypeAction extends InventoryEntryUpdateA
     
     public void setFields(final FieldContainer fields);
 
-    public static InventoryEntrySetCustomTypeActionImpl of(){
+    public static InventoryEntrySetCustomTypeAction of(){
         return new InventoryEntrySetCustomTypeActionImpl();
     }
     
 
-    public static InventoryEntrySetCustomTypeActionImpl of(final InventoryEntrySetCustomTypeAction template) {
+    public static InventoryEntrySetCustomTypeAction of(final InventoryEntrySetCustomTypeAction template) {
         InventoryEntrySetCustomTypeActionImpl instance = new InventoryEntrySetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static InventoryEntrySetCustomTypeActionBuilder builder(){
+        return InventoryEntrySetCustomTypeActionBuilder.of();
+    }
+    
+    public static InventoryEntrySetCustomTypeActionBuilder builder(final InventoryEntrySetCustomTypeAction template){
+        return InventoryEntrySetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntrySetCustomTypeAction(Function<InventoryEntrySetCustomTypeAction, T> helper) {
         return helper.apply(this);

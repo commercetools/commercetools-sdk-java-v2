@@ -46,12 +46,12 @@ public interface CustomerChangePassword  {
     
     public void setNewPassword(final String newPassword);
 
-    public static CustomerChangePasswordImpl of(){
+    public static CustomerChangePassword of(){
         return new CustomerChangePasswordImpl();
     }
     
 
-    public static CustomerChangePasswordImpl of(final CustomerChangePassword template) {
+    public static CustomerChangePassword of(final CustomerChangePassword template) {
         CustomerChangePasswordImpl instance = new CustomerChangePasswordImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -59,6 +59,15 @@ public interface CustomerChangePassword  {
         instance.setNewPassword(template.getNewPassword());
         return instance;
     }
+
+    public static CustomerChangePasswordBuilder builder(){
+        return CustomerChangePasswordBuilder.of();
+    }
+    
+    public static CustomerChangePasswordBuilder builder(final CustomerChangePassword template){
+        return CustomerChangePasswordBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerChangePassword(Function<CustomerChangePassword, T> helper) {
         return helper.apply(this);

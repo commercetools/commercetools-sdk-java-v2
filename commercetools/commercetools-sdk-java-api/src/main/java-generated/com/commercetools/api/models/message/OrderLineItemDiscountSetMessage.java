@@ -53,12 +53,12 @@ public interface OrderLineItemDiscountSetMessage extends Message {
     
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
-    public static OrderLineItemDiscountSetMessageImpl of(){
+    public static OrderLineItemDiscountSetMessage of(){
         return new OrderLineItemDiscountSetMessageImpl();
     }
     
 
-    public static OrderLineItemDiscountSetMessageImpl of(final OrderLineItemDiscountSetMessage template) {
+    public static OrderLineItemDiscountSetMessage of(final OrderLineItemDiscountSetMessage template) {
         OrderLineItemDiscountSetMessageImpl instance = new OrderLineItemDiscountSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -76,6 +76,15 @@ public interface OrderLineItemDiscountSetMessage extends Message {
         instance.setTaxedPrice(template.getTaxedPrice());
         return instance;
     }
+
+    public static OrderLineItemDiscountSetMessageBuilder builder(){
+        return OrderLineItemDiscountSetMessageBuilder.of();
+    }
+    
+    public static OrderLineItemDiscountSetMessageBuilder builder(final OrderLineItemDiscountSetMessage template){
+        return OrderLineItemDiscountSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderLineItemDiscountSetMessage(Function<OrderLineItemDiscountSetMessage, T> helper) {
         return helper.apply(this);

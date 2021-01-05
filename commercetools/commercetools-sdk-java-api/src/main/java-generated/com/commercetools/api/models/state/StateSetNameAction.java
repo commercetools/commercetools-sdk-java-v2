@@ -30,16 +30,25 @@ public interface StateSetNameAction extends StateUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static StateSetNameActionImpl of(){
+    public static StateSetNameAction of(){
         return new StateSetNameActionImpl();
     }
     
 
-    public static StateSetNameActionImpl of(final StateSetNameAction template) {
+    public static StateSetNameAction of(final StateSetNameAction template) {
         StateSetNameActionImpl instance = new StateSetNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static StateSetNameActionBuilder builder(){
+        return StateSetNameActionBuilder.of();
+    }
+    
+    public static StateSetNameActionBuilder builder(final StateSetNameAction template){
+        return StateSetNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withStateSetNameAction(Function<StateSetNameAction, T> helper) {
         return helper.apply(this);

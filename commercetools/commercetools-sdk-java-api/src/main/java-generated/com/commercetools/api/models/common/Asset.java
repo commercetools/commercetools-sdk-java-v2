@@ -72,12 +72,12 @@ public interface Asset  {
     
     public void setKey(final String key);
 
-    public static AssetImpl of(){
+    public static Asset of(){
         return new AssetImpl();
     }
     
 
-    public static AssetImpl of(final Asset template) {
+    public static Asset of(final Asset template) {
         AssetImpl instance = new AssetImpl();
         instance.setId(template.getId());
         instance.setSources(template.getSources());
@@ -88,6 +88,15 @@ public interface Asset  {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static AssetBuilder builder(){
+        return AssetBuilder.of();
+    }
+    
+    public static AssetBuilder builder(final Asset template){
+        return AssetBuilder.of(template);
+    }
+    
 
     default <T> T withAsset(Function<Asset, T> helper) {
         return helper.apply(this);

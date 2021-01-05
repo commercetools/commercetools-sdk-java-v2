@@ -46,18 +46,27 @@ public interface GraphQLError  {
     public void setPath(final JsonNode ...path);
     public void setPath(final List<JsonNode> path);
 
-    public static GraphQLErrorImpl of(){
+    public static GraphQLError of(){
         return new GraphQLErrorImpl();
     }
     
 
-    public static GraphQLErrorImpl of(final GraphQLError template) {
+    public static GraphQLError of(final GraphQLError template) {
         GraphQLErrorImpl instance = new GraphQLErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setLocations(template.getLocations());
         instance.setPath(template.getPath());
         return instance;
     }
+
+    public static GraphQLErrorBuilder builder(){
+        return GraphQLErrorBuilder.of();
+    }
+    
+    public static GraphQLErrorBuilder builder(final GraphQLError template){
+        return GraphQLErrorBuilder.of(template);
+    }
+    
 
     default <T> T withGraphQLError(Function<GraphQLError, T> helper) {
         return helper.apply(this);

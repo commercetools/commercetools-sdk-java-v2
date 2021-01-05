@@ -38,17 +38,26 @@ public interface StagedOrderSetDeliveryItemsAction extends StagedOrderUpdateActi
     public void setItems(final DeliveryItem ...items);
     public void setItems(final List<DeliveryItem> items);
 
-    public static StagedOrderSetDeliveryItemsActionImpl of(){
+    public static StagedOrderSetDeliveryItemsAction of(){
         return new StagedOrderSetDeliveryItemsActionImpl();
     }
     
 
-    public static StagedOrderSetDeliveryItemsActionImpl of(final StagedOrderSetDeliveryItemsAction template) {
+    public static StagedOrderSetDeliveryItemsAction of(final StagedOrderSetDeliveryItemsAction template) {
         StagedOrderSetDeliveryItemsActionImpl instance = new StagedOrderSetDeliveryItemsActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public static StagedOrderSetDeliveryItemsActionBuilder builder(){
+        return StagedOrderSetDeliveryItemsActionBuilder.of();
+    }
+    
+    public static StagedOrderSetDeliveryItemsActionBuilder builder(final StagedOrderSetDeliveryItemsAction template){
+        return StagedOrderSetDeliveryItemsActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetDeliveryItemsAction(Function<StagedOrderSetDeliveryItemsAction, T> helper) {
         return helper.apply(this);

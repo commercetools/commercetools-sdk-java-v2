@@ -36,17 +36,26 @@ public interface OrderStateTransitionMessagePayload extends MessagePayload {
     
     public void setForce(final Boolean force);
 
-    public static OrderStateTransitionMessagePayloadImpl of(){
+    public static OrderStateTransitionMessagePayload of(){
         return new OrderStateTransitionMessagePayloadImpl();
     }
     
 
-    public static OrderStateTransitionMessagePayloadImpl of(final OrderStateTransitionMessagePayload template) {
+    public static OrderStateTransitionMessagePayload of(final OrderStateTransitionMessagePayload template) {
         OrderStateTransitionMessagePayloadImpl instance = new OrderStateTransitionMessagePayloadImpl();
         instance.setState(template.getState());
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static OrderStateTransitionMessagePayloadBuilder builder(){
+        return OrderStateTransitionMessagePayloadBuilder.of();
+    }
+    
+    public static OrderStateTransitionMessagePayloadBuilder builder(final OrderStateTransitionMessagePayload template){
+        return OrderStateTransitionMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderStateTransitionMessagePayload(Function<OrderStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);

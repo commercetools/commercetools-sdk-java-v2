@@ -36,17 +36,26 @@ public interface TypeAddLocalizedEnumValueAction extends TypeUpdateAction {
     
     public void setValue(final CustomFieldLocalizedEnumValue value);
 
-    public static TypeAddLocalizedEnumValueActionImpl of(){
+    public static TypeAddLocalizedEnumValueAction of(){
         return new TypeAddLocalizedEnumValueActionImpl();
     }
     
 
-    public static TypeAddLocalizedEnumValueActionImpl of(final TypeAddLocalizedEnumValueAction template) {
+    public static TypeAddLocalizedEnumValueAction of(final TypeAddLocalizedEnumValueAction template) {
         TypeAddLocalizedEnumValueActionImpl instance = new TypeAddLocalizedEnumValueActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TypeAddLocalizedEnumValueActionBuilder builder(){
+        return TypeAddLocalizedEnumValueActionBuilder.of();
+    }
+    
+    public static TypeAddLocalizedEnumValueActionBuilder builder(final TypeAddLocalizedEnumValueAction template){
+        return TypeAddLocalizedEnumValueActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeAddLocalizedEnumValueAction(Function<TypeAddLocalizedEnumValueAction, T> helper) {
         return helper.apply(this);

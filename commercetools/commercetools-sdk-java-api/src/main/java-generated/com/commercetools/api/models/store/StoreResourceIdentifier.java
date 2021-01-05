@@ -24,17 +24,26 @@ public interface StoreResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static StoreResourceIdentifierImpl of(){
+    public static StoreResourceIdentifier of(){
         return new StoreResourceIdentifierImpl();
     }
     
 
-    public static StoreResourceIdentifierImpl of(final StoreResourceIdentifier template) {
+    public static StoreResourceIdentifier of(final StoreResourceIdentifier template) {
         StoreResourceIdentifierImpl instance = new StoreResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static StoreResourceIdentifierBuilder builder(){
+        return StoreResourceIdentifierBuilder.of();
+    }
+    
+    public static StoreResourceIdentifierBuilder builder(final StoreResourceIdentifier template){
+        return StoreResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withStoreResourceIdentifier(Function<StoreResourceIdentifier, T> helper) {
         return helper.apply(this);

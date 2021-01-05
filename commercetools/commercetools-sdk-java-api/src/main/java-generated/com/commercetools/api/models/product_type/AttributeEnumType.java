@@ -32,16 +32,25 @@ public interface AttributeEnumType extends AttributeType {
     public void setValues(final AttributePlainEnumValue ...values);
     public void setValues(final List<AttributePlainEnumValue> values);
 
-    public static AttributeEnumTypeImpl of(){
+    public static AttributeEnumType of(){
         return new AttributeEnumTypeImpl();
     }
     
 
-    public static AttributeEnumTypeImpl of(final AttributeEnumType template) {
+    public static AttributeEnumType of(final AttributeEnumType template) {
         AttributeEnumTypeImpl instance = new AttributeEnumTypeImpl();
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public static AttributeEnumTypeBuilder builder(){
+        return AttributeEnumTypeBuilder.of();
+    }
+    
+    public static AttributeEnumTypeBuilder builder(final AttributeEnumType template){
+        return AttributeEnumTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeEnumType(Function<AttributeEnumType, T> helper) {
         return helper.apply(this);

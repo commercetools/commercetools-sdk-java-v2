@@ -41,12 +41,12 @@ public interface DeliveryAddressSetMessage extends Message {
     
     public void setOldAddress(final Address oldAddress);
 
-    public static DeliveryAddressSetMessageImpl of(){
+    public static DeliveryAddressSetMessage of(){
         return new DeliveryAddressSetMessageImpl();
     }
     
 
-    public static DeliveryAddressSetMessageImpl of(final DeliveryAddressSetMessage template) {
+    public static DeliveryAddressSetMessage of(final DeliveryAddressSetMessage template) {
         DeliveryAddressSetMessageImpl instance = new DeliveryAddressSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -63,6 +63,15 @@ public interface DeliveryAddressSetMessage extends Message {
         instance.setOldAddress(template.getOldAddress());
         return instance;
     }
+
+    public static DeliveryAddressSetMessageBuilder builder(){
+        return DeliveryAddressSetMessageBuilder.of();
+    }
+    
+    public static DeliveryAddressSetMessageBuilder builder(final DeliveryAddressSetMessage template){
+        return DeliveryAddressSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryAddressSetMessage(Function<DeliveryAddressSetMessage, T> helper) {
         return helper.apply(this);

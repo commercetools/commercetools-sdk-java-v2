@@ -41,18 +41,27 @@ public interface Image  {
     
     public void setLabel(final String label);
 
-    public static ImageImpl of(){
+    public static Image of(){
         return new ImageImpl();
     }
     
 
-    public static ImageImpl of(final Image template) {
+    public static Image of(final Image template) {
         ImageImpl instance = new ImageImpl();
         instance.setUrl(template.getUrl());
         instance.setDimensions(template.getDimensions());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static ImageBuilder builder(){
+        return ImageBuilder.of();
+    }
+    
+    public static ImageBuilder builder(final Image template){
+        return ImageBuilder.of(template);
+    }
+    
 
     default <T> T withImage(Function<Image, T> helper) {
         return helper.apply(this);

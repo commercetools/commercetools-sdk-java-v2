@@ -32,16 +32,25 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
 
     public void setCustomer(final CustomerResourceIdentifier customer);
 
-    public static ReviewSetCustomerActionImpl of(){
+    public static ReviewSetCustomerAction of(){
         return new ReviewSetCustomerActionImpl();
     }
     
 
-    public static ReviewSetCustomerActionImpl of(final ReviewSetCustomerAction template) {
+    public static ReviewSetCustomerAction of(final ReviewSetCustomerAction template) {
         ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public static ReviewSetCustomerActionBuilder builder(){
+        return ReviewSetCustomerActionBuilder.of();
+    }
+    
+    public static ReviewSetCustomerActionBuilder builder(final ReviewSetCustomerAction template){
+        return ReviewSetCustomerActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetCustomerAction(Function<ReviewSetCustomerAction, T> helper) {
         return helper.apply(this);

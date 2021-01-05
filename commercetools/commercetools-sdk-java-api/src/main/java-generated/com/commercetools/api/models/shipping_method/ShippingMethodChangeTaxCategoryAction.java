@@ -30,16 +30,25 @@ public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpd
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
-    public static ShippingMethodChangeTaxCategoryActionImpl of(){
+    public static ShippingMethodChangeTaxCategoryAction of(){
         return new ShippingMethodChangeTaxCategoryActionImpl();
     }
     
 
-    public static ShippingMethodChangeTaxCategoryActionImpl of(final ShippingMethodChangeTaxCategoryAction template) {
+    public static ShippingMethodChangeTaxCategoryAction of(final ShippingMethodChangeTaxCategoryAction template) {
         ShippingMethodChangeTaxCategoryActionImpl instance = new ShippingMethodChangeTaxCategoryActionImpl();
         instance.setTaxCategory(template.getTaxCategory());
         return instance;
     }
+
+    public static ShippingMethodChangeTaxCategoryActionBuilder builder(){
+        return ShippingMethodChangeTaxCategoryActionBuilder.of();
+    }
+    
+    public static ShippingMethodChangeTaxCategoryActionBuilder builder(final ShippingMethodChangeTaxCategoryAction template){
+        return ShippingMethodChangeTaxCategoryActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodChangeTaxCategoryAction(Function<ShippingMethodChangeTaxCategoryAction, T> helper) {
         return helper.apply(this);

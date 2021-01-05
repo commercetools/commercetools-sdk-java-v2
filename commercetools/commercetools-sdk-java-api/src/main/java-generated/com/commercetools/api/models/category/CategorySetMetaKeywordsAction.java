@@ -29,16 +29,25 @@ public interface CategorySetMetaKeywordsAction extends CategoryUpdateAction {
 
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
-    public static CategorySetMetaKeywordsActionImpl of(){
+    public static CategorySetMetaKeywordsAction of(){
         return new CategorySetMetaKeywordsActionImpl();
     }
     
 
-    public static CategorySetMetaKeywordsActionImpl of(final CategorySetMetaKeywordsAction template) {
+    public static CategorySetMetaKeywordsAction of(final CategorySetMetaKeywordsAction template) {
         CategorySetMetaKeywordsActionImpl instance = new CategorySetMetaKeywordsActionImpl();
         instance.setMetaKeywords(template.getMetaKeywords());
         return instance;
     }
+
+    public static CategorySetMetaKeywordsActionBuilder builder(){
+        return CategorySetMetaKeywordsActionBuilder.of();
+    }
+    
+    public static CategorySetMetaKeywordsActionBuilder builder(final CategorySetMetaKeywordsAction template){
+        return CategorySetMetaKeywordsActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetMetaKeywordsAction(Function<CategorySetMetaKeywordsAction, T> helper) {
         return helper.apply(this);

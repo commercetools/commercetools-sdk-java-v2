@@ -35,17 +35,26 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
     
     public void setInputTip(final LocalizedString inputTip);
 
-    public static ProductTypeSetInputTipActionImpl of(){
+    public static ProductTypeSetInputTipAction of(){
         return new ProductTypeSetInputTipActionImpl();
     }
     
 
-    public static ProductTypeSetInputTipActionImpl of(final ProductTypeSetInputTipAction template) {
+    public static ProductTypeSetInputTipAction of(final ProductTypeSetInputTipAction template) {
         ProductTypeSetInputTipActionImpl instance = new ProductTypeSetInputTipActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setInputTip(template.getInputTip());
         return instance;
     }
+
+    public static ProductTypeSetInputTipActionBuilder builder(){
+        return ProductTypeSetInputTipActionBuilder.of();
+    }
+    
+    public static ProductTypeSetInputTipActionBuilder builder(final ProductTypeSetInputTipAction template){
+        return ProductTypeSetInputTipActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeSetInputTipAction(Function<ProductTypeSetInputTipAction, T> helper) {
         return helper.apply(this);

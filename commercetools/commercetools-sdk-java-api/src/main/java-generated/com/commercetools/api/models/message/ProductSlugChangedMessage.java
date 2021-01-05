@@ -30,12 +30,12 @@ public interface ProductSlugChangedMessage extends Message {
 
     public void setSlug(final LocalizedString slug);
 
-    public static ProductSlugChangedMessageImpl of(){
+    public static ProductSlugChangedMessage of(){
         return new ProductSlugChangedMessageImpl();
     }
     
 
-    public static ProductSlugChangedMessageImpl of(final ProductSlugChangedMessage template) {
+    public static ProductSlugChangedMessage of(final ProductSlugChangedMessage template) {
         ProductSlugChangedMessageImpl instance = new ProductSlugChangedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface ProductSlugChangedMessage extends Message {
         instance.setSlug(template.getSlug());
         return instance;
     }
+
+    public static ProductSlugChangedMessageBuilder builder(){
+        return ProductSlugChangedMessageBuilder.of();
+    }
+    
+    public static ProductSlugChangedMessageBuilder builder(final ProductSlugChangedMessage template){
+        return ProductSlugChangedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductSlugChangedMessage(Function<ProductSlugChangedMessage, T> helper) {
         return helper.apply(this);

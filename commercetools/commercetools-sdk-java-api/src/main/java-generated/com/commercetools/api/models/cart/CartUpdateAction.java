@@ -138,6 +138,7 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
 
 
 
+
     default <T> T withCartUpdateAction(Function<CartUpdateAction, T> helper) {
         return helper.apply(this);
     }

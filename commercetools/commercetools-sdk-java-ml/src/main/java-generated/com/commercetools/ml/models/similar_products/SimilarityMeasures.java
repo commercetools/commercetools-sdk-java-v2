@@ -65,12 +65,12 @@ public interface SimilarityMeasures  {
     
     public void setPrice(final Long price);
 
-    public static SimilarityMeasuresImpl of(){
+    public static SimilarityMeasures of(){
         return new SimilarityMeasuresImpl();
     }
     
 
-    public static SimilarityMeasuresImpl of(final SimilarityMeasures template) {
+    public static SimilarityMeasures of(final SimilarityMeasures template) {
         SimilarityMeasuresImpl instance = new SimilarityMeasuresImpl();
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
@@ -79,6 +79,15 @@ public interface SimilarityMeasures  {
         instance.setPrice(template.getPrice());
         return instance;
     }
+
+    public static SimilarityMeasuresBuilder builder(){
+        return SimilarityMeasuresBuilder.of();
+    }
+    
+    public static SimilarityMeasuresBuilder builder(final SimilarityMeasures template){
+        return SimilarityMeasuresBuilder.of(template);
+    }
+    
 
     default <T> T withSimilarityMeasures(Function<SimilarityMeasures, T> helper) {
         return helper.apply(this);

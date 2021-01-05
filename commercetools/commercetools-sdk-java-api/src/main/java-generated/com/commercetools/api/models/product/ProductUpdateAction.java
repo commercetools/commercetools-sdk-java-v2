@@ -128,6 +128,7 @@ public interface ProductUpdateAction extends com.commercetools.api.models.Resour
 
 
 
+
     default <T> T withProductUpdateAction(Function<ProductUpdateAction, T> helper) {
         return helper.apply(this);
     }

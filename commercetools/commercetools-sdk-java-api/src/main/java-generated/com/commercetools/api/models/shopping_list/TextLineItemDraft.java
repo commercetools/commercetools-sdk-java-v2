@@ -61,12 +61,12 @@ public interface TextLineItemDraft  {
     
     public void setQuantity(final Integer quantity);
 
-    public static TextLineItemDraftImpl of(){
+    public static TextLineItemDraft of(){
         return new TextLineItemDraftImpl();
     }
     
 
-    public static TextLineItemDraftImpl of(final TextLineItemDraft template) {
+    public static TextLineItemDraft of(final TextLineItemDraft template) {
         TextLineItemDraftImpl instance = new TextLineItemDraftImpl();
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(template.getCustom());
@@ -75,6 +75,15 @@ public interface TextLineItemDraft  {
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static TextLineItemDraftBuilder builder(){
+        return TextLineItemDraftBuilder.of();
+    }
+    
+    public static TextLineItemDraftBuilder builder(final TextLineItemDraft template){
+        return TextLineItemDraftBuilder.of(template);
+    }
+    
 
     default <T> T withTextLineItemDraft(Function<TextLineItemDraft, T> helper) {
         return helper.apply(this);

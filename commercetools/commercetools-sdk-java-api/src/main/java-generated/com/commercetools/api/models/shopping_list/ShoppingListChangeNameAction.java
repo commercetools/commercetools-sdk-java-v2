@@ -30,16 +30,25 @@ public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static ShoppingListChangeNameActionImpl of(){
+    public static ShoppingListChangeNameAction of(){
         return new ShoppingListChangeNameActionImpl();
     }
     
 
-    public static ShoppingListChangeNameActionImpl of(final ShoppingListChangeNameAction template) {
+    public static ShoppingListChangeNameAction of(final ShoppingListChangeNameAction template) {
         ShoppingListChangeNameActionImpl instance = new ShoppingListChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ShoppingListChangeNameActionBuilder builder(){
+        return ShoppingListChangeNameActionBuilder.of();
+    }
+    
+    public static ShoppingListChangeNameActionBuilder builder(final ShoppingListChangeNameAction template){
+        return ShoppingListChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListChangeNameAction(Function<ShoppingListChangeNameAction, T> helper) {
         return helper.apply(this);

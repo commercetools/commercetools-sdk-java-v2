@@ -30,16 +30,25 @@ public interface OrderAddPaymentAction extends OrderUpdateAction {
 
     public void setPayment(final PaymentResourceIdentifier payment);
 
-    public static OrderAddPaymentActionImpl of(){
+    public static OrderAddPaymentAction of(){
         return new OrderAddPaymentActionImpl();
     }
     
 
-    public static OrderAddPaymentActionImpl of(final OrderAddPaymentAction template) {
+    public static OrderAddPaymentAction of(final OrderAddPaymentAction template) {
         OrderAddPaymentActionImpl instance = new OrderAddPaymentActionImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public static OrderAddPaymentActionBuilder builder(){
+        return OrderAddPaymentActionBuilder.of();
+    }
+    
+    public static OrderAddPaymentActionBuilder builder(final OrderAddPaymentAction template){
+        return OrderAddPaymentActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderAddPaymentAction(Function<OrderAddPaymentAction, T> helper) {
         return helper.apply(this);

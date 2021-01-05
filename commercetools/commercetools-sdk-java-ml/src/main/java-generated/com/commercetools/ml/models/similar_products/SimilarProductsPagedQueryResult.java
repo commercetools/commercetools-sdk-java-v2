@@ -57,12 +57,12 @@ public interface SimilarProductsPagedQueryResult  {
     
     public void setMeta(final SimilarProductSearchRequestMeta meta);
 
-    public static SimilarProductsPagedQueryResultImpl of(){
+    public static SimilarProductsPagedQueryResult of(){
         return new SimilarProductsPagedQueryResultImpl();
     }
     
 
-    public static SimilarProductsPagedQueryResultImpl of(final SimilarProductsPagedQueryResult template) {
+    public static SimilarProductsPagedQueryResult of(final SimilarProductsPagedQueryResult template) {
         SimilarProductsPagedQueryResultImpl instance = new SimilarProductsPagedQueryResultImpl();
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
@@ -71,6 +71,15 @@ public interface SimilarProductsPagedQueryResult  {
         instance.setMeta(template.getMeta());
         return instance;
     }
+
+    public static SimilarProductsPagedQueryResultBuilder builder(){
+        return SimilarProductsPagedQueryResultBuilder.of();
+    }
+    
+    public static SimilarProductsPagedQueryResultBuilder builder(final SimilarProductsPagedQueryResult template){
+        return SimilarProductsPagedQueryResultBuilder.of(template);
+    }
+    
 
     default <T> T withSimilarProductsPagedQueryResult(Function<SimilarProductsPagedQueryResult, T> helper) {
         return helper.apply(this);

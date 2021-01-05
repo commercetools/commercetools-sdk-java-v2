@@ -30,16 +30,25 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
     public void setFieldDefinition(final FieldDefinition fieldDefinition);
 
-    public static TypeAddFieldDefinitionActionImpl of(){
+    public static TypeAddFieldDefinitionAction of(){
         return new TypeAddFieldDefinitionActionImpl();
     }
     
 
-    public static TypeAddFieldDefinitionActionImpl of(final TypeAddFieldDefinitionAction template) {
+    public static TypeAddFieldDefinitionAction of(final TypeAddFieldDefinitionAction template) {
         TypeAddFieldDefinitionActionImpl instance = new TypeAddFieldDefinitionActionImpl();
         instance.setFieldDefinition(template.getFieldDefinition());
         return instance;
     }
+
+    public static TypeAddFieldDefinitionActionBuilder builder(){
+        return TypeAddFieldDefinitionActionBuilder.of();
+    }
+    
+    public static TypeAddFieldDefinitionActionBuilder builder(final TypeAddFieldDefinitionAction template){
+        return TypeAddFieldDefinitionActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeAddFieldDefinitionAction(Function<TypeAddFieldDefinitionAction, T> helper) {
         return helper.apply(this);

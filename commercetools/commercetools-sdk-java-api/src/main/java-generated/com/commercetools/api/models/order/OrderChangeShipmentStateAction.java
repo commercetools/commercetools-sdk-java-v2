@@ -29,16 +29,25 @@ public interface OrderChangeShipmentStateAction extends OrderUpdateAction {
 
     public void setShipmentState(final ShipmentState shipmentState);
 
-    public static OrderChangeShipmentStateActionImpl of(){
+    public static OrderChangeShipmentStateAction of(){
         return new OrderChangeShipmentStateActionImpl();
     }
     
 
-    public static OrderChangeShipmentStateActionImpl of(final OrderChangeShipmentStateAction template) {
+    public static OrderChangeShipmentStateAction of(final OrderChangeShipmentStateAction template) {
         OrderChangeShipmentStateActionImpl instance = new OrderChangeShipmentStateActionImpl();
         instance.setShipmentState(template.getShipmentState());
         return instance;
     }
+
+    public static OrderChangeShipmentStateActionBuilder builder(){
+        return OrderChangeShipmentStateActionBuilder.of();
+    }
+    
+    public static OrderChangeShipmentStateActionBuilder builder(final OrderChangeShipmentStateAction template){
+        return OrderChangeShipmentStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderChangeShipmentStateAction(Function<OrderChangeShipmentStateAction, T> helper) {
         return helper.apply(this);

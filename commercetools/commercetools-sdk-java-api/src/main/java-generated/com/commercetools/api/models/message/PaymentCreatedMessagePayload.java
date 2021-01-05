@@ -30,16 +30,25 @@ public interface PaymentCreatedMessagePayload extends MessagePayload {
 
     public void setPayment(final Payment payment);
 
-    public static PaymentCreatedMessagePayloadImpl of(){
+    public static PaymentCreatedMessagePayload of(){
         return new PaymentCreatedMessagePayloadImpl();
     }
     
 
-    public static PaymentCreatedMessagePayloadImpl of(final PaymentCreatedMessagePayload template) {
+    public static PaymentCreatedMessagePayload of(final PaymentCreatedMessagePayload template) {
         PaymentCreatedMessagePayloadImpl instance = new PaymentCreatedMessagePayloadImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public static PaymentCreatedMessagePayloadBuilder builder(){
+        return PaymentCreatedMessagePayloadBuilder.of();
+    }
+    
+    public static PaymentCreatedMessagePayloadBuilder builder(final PaymentCreatedMessagePayload template){
+        return PaymentCreatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentCreatedMessagePayload(Function<PaymentCreatedMessagePayload, T> helper) {
         return helper.apply(this);

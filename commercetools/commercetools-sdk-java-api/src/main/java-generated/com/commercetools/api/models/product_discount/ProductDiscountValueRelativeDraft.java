@@ -28,16 +28,25 @@ public interface ProductDiscountValueRelativeDraft extends ProductDiscountValueD
 
     public void setPermyriad(final Long permyriad);
 
-    public static ProductDiscountValueRelativeDraftImpl of(){
+    public static ProductDiscountValueRelativeDraft of(){
         return new ProductDiscountValueRelativeDraftImpl();
     }
     
 
-    public static ProductDiscountValueRelativeDraftImpl of(final ProductDiscountValueRelativeDraft template) {
+    public static ProductDiscountValueRelativeDraft of(final ProductDiscountValueRelativeDraft template) {
         ProductDiscountValueRelativeDraftImpl instance = new ProductDiscountValueRelativeDraftImpl();
         instance.setPermyriad(template.getPermyriad());
         return instance;
     }
+
+    public static ProductDiscountValueRelativeDraftBuilder builder(){
+        return ProductDiscountValueRelativeDraftBuilder.of();
+    }
+    
+    public static ProductDiscountValueRelativeDraftBuilder builder(final ProductDiscountValueRelativeDraft template){
+        return ProductDiscountValueRelativeDraftBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountValueRelativeDraft(Function<ProductDiscountValueRelativeDraft, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface ShippingMethodSetDescriptionAction extends ShippingMethodUpdate
 
     public void setDescription(final String description);
 
-    public static ShippingMethodSetDescriptionActionImpl of(){
+    public static ShippingMethodSetDescriptionAction of(){
         return new ShippingMethodSetDescriptionActionImpl();
     }
     
 
-    public static ShippingMethodSetDescriptionActionImpl of(final ShippingMethodSetDescriptionAction template) {
+    public static ShippingMethodSetDescriptionAction of(final ShippingMethodSetDescriptionAction template) {
         ShippingMethodSetDescriptionActionImpl instance = new ShippingMethodSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static ShippingMethodSetDescriptionActionBuilder builder(){
+        return ShippingMethodSetDescriptionActionBuilder.of();
+    }
+    
+    public static ShippingMethodSetDescriptionActionBuilder builder(final ShippingMethodSetDescriptionAction template){
+        return ShippingMethodSetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethodSetDescriptionAction(Function<ShippingMethodSetDescriptionAction, T> helper) {
         return helper.apply(this);

@@ -36,17 +36,26 @@ public interface TypeAddEnumValueAction extends TypeUpdateAction {
     
     public void setValue(final CustomFieldEnumValue value);
 
-    public static TypeAddEnumValueActionImpl of(){
+    public static TypeAddEnumValueAction of(){
         return new TypeAddEnumValueActionImpl();
     }
     
 
-    public static TypeAddEnumValueActionImpl of(final TypeAddEnumValueAction template) {
+    public static TypeAddEnumValueAction of(final TypeAddEnumValueAction template) {
         TypeAddEnumValueActionImpl instance = new TypeAddEnumValueActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TypeAddEnumValueActionBuilder builder(){
+        return TypeAddEnumValueActionBuilder.of();
+    }
+    
+    public static TypeAddEnumValueActionBuilder builder(final TypeAddEnumValueAction template){
+        return TypeAddEnumValueActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeAddEnumValueAction(Function<TypeAddEnumValueAction, T> helper) {
         return helper.apply(this);

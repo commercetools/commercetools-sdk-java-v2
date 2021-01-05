@@ -102,12 +102,12 @@ public interface ProductData  {
     
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
-    public static ProductDataImpl of(){
+    public static ProductData of(){
         return new ProductDataImpl();
     }
     
 
-    public static ProductDataImpl of(final ProductData template) {
+    public static ProductData of(final ProductData template) {
         ProductDataImpl instance = new ProductDataImpl();
         instance.setName(template.getName());
         instance.setCategories(template.getCategories());
@@ -122,6 +122,15 @@ public interface ProductData  {
         instance.setSearchKeywords(template.getSearchKeywords());
         return instance;
     }
+
+    public static ProductDataBuilder builder(){
+        return ProductDataBuilder.of();
+    }
+    
+    public static ProductDataBuilder builder(final ProductData template){
+        return ProductDataBuilder.of(template);
+    }
+    
 
     default <T> T withProductData(Function<ProductData, T> helper) {
         return helper.apply(this);

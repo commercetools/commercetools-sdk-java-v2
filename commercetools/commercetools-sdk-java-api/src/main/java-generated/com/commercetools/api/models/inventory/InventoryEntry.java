@@ -123,12 +123,12 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
     
     public void setCustom(final CustomFields custom);
 
-    public static InventoryEntryImpl of(){
+    public static InventoryEntry of(){
         return new InventoryEntryImpl();
     }
     
 
-    public static InventoryEntryImpl of(final InventoryEntry template) {
+    public static InventoryEntry of(final InventoryEntry template) {
         InventoryEntryImpl instance = new InventoryEntryImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -145,6 +145,15 @@ public interface InventoryEntry extends BaseResource, com.commercetools.api.mode
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static InventoryEntryBuilder builder(){
+        return InventoryEntryBuilder.of();
+    }
+    
+    public static InventoryEntryBuilder builder(final InventoryEntry template){
+        return InventoryEntryBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntry(Function<InventoryEntry, T> helper) {
         return helper.apply(this);

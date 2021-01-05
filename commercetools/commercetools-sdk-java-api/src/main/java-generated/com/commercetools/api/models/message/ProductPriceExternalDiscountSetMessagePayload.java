@@ -59,12 +59,12 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
     
     public void setStaged(final Boolean staged);
 
-    public static ProductPriceExternalDiscountSetMessagePayloadImpl of(){
+    public static ProductPriceExternalDiscountSetMessagePayload of(){
         return new ProductPriceExternalDiscountSetMessagePayloadImpl();
     }
     
 
-    public static ProductPriceExternalDiscountSetMessagePayloadImpl of(final ProductPriceExternalDiscountSetMessagePayload template) {
+    public static ProductPriceExternalDiscountSetMessagePayload of(final ProductPriceExternalDiscountSetMessagePayload template) {
         ProductPriceExternalDiscountSetMessagePayloadImpl instance = new ProductPriceExternalDiscountSetMessagePayloadImpl();
         instance.setVariantId(template.getVariantId());
         instance.setVariantKey(template.getVariantKey());
@@ -74,6 +74,15 @@ public interface ProductPriceExternalDiscountSetMessagePayload extends MessagePa
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductPriceExternalDiscountSetMessagePayloadBuilder builder(){
+        return ProductPriceExternalDiscountSetMessagePayloadBuilder.of();
+    }
+    
+    public static ProductPriceExternalDiscountSetMessagePayloadBuilder builder(final ProductPriceExternalDiscountSetMessagePayload template){
+        return ProductPriceExternalDiscountSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductPriceExternalDiscountSetMessagePayload(Function<ProductPriceExternalDiscountSetMessagePayload, T> helper) {
         return helper.apply(this);

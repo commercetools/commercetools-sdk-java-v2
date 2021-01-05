@@ -34,17 +34,26 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
     
     public void setQuantity(final Long quantity);
 
-    public static MyShoppingListRemoveTextLineItemActionImpl of(){
+    public static MyShoppingListRemoveTextLineItemAction of(){
         return new MyShoppingListRemoveTextLineItemActionImpl();
     }
     
 
-    public static MyShoppingListRemoveTextLineItemActionImpl of(final MyShoppingListRemoveTextLineItemAction template) {
+    public static MyShoppingListRemoveTextLineItemAction of(final MyShoppingListRemoveTextLineItemAction template) {
         MyShoppingListRemoveTextLineItemActionImpl instance = new MyShoppingListRemoveTextLineItemActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static MyShoppingListRemoveTextLineItemActionBuilder builder(){
+        return MyShoppingListRemoveTextLineItemActionBuilder.of();
+    }
+    
+    public static MyShoppingListRemoveTextLineItemActionBuilder builder(final MyShoppingListRemoveTextLineItemAction template){
+        return MyShoppingListRemoveTextLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListRemoveTextLineItemAction(Function<MyShoppingListRemoveTextLineItemAction, T> helper) {
         return helper.apply(this);

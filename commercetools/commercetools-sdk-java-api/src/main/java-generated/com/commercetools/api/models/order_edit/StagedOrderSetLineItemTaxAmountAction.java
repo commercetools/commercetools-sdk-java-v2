@@ -35,17 +35,26 @@ public interface StagedOrderSetLineItemTaxAmountAction extends StagedOrderUpdate
     
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
-    public static StagedOrderSetLineItemTaxAmountActionImpl of(){
+    public static StagedOrderSetLineItemTaxAmountAction of(){
         return new StagedOrderSetLineItemTaxAmountActionImpl();
     }
     
 
-    public static StagedOrderSetLineItemTaxAmountActionImpl of(final StagedOrderSetLineItemTaxAmountAction template) {
+    public static StagedOrderSetLineItemTaxAmountAction of(final StagedOrderSetLineItemTaxAmountAction template) {
         StagedOrderSetLineItemTaxAmountActionImpl instance = new StagedOrderSetLineItemTaxAmountActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
         return instance;
     }
+
+    public static StagedOrderSetLineItemTaxAmountActionBuilder builder(){
+        return StagedOrderSetLineItemTaxAmountActionBuilder.of();
+    }
+    
+    public static StagedOrderSetLineItemTaxAmountActionBuilder builder(final StagedOrderSetLineItemTaxAmountAction template){
+        return StagedOrderSetLineItemTaxAmountActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetLineItemTaxAmountAction(Function<StagedOrderSetLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);

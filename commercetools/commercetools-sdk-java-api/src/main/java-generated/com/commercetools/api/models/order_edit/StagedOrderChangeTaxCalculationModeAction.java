@@ -29,16 +29,25 @@ public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUp
 
     public void setTaxCalculationMode(final TaxCalculationMode taxCalculationMode);
 
-    public static StagedOrderChangeTaxCalculationModeActionImpl of(){
+    public static StagedOrderChangeTaxCalculationModeAction of(){
         return new StagedOrderChangeTaxCalculationModeActionImpl();
     }
     
 
-    public static StagedOrderChangeTaxCalculationModeActionImpl of(final StagedOrderChangeTaxCalculationModeAction template) {
+    public static StagedOrderChangeTaxCalculationModeAction of(final StagedOrderChangeTaxCalculationModeAction template) {
         StagedOrderChangeTaxCalculationModeActionImpl instance = new StagedOrderChangeTaxCalculationModeActionImpl();
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         return instance;
     }
+
+    public static StagedOrderChangeTaxCalculationModeActionBuilder builder(){
+        return StagedOrderChangeTaxCalculationModeActionBuilder.of();
+    }
+    
+    public static StagedOrderChangeTaxCalculationModeActionBuilder builder(final StagedOrderChangeTaxCalculationModeAction template){
+        return StagedOrderChangeTaxCalculationModeActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderChangeTaxCalculationModeAction(Function<StagedOrderChangeTaxCalculationModeAction, T> helper) {
         return helper.apply(this);

@@ -47,12 +47,12 @@ public interface DeliveryItemsUpdatedMessage extends Message {
     public void setOldItems(final DeliveryItem ...oldItems);
     public void setOldItems(final List<DeliveryItem> oldItems);
 
-    public static DeliveryItemsUpdatedMessageImpl of(){
+    public static DeliveryItemsUpdatedMessage of(){
         return new DeliveryItemsUpdatedMessageImpl();
     }
     
 
-    public static DeliveryItemsUpdatedMessageImpl of(final DeliveryItemsUpdatedMessage template) {
+    public static DeliveryItemsUpdatedMessage of(final DeliveryItemsUpdatedMessage template) {
         DeliveryItemsUpdatedMessageImpl instance = new DeliveryItemsUpdatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -69,6 +69,15 @@ public interface DeliveryItemsUpdatedMessage extends Message {
         instance.setOldItems(template.getOldItems());
         return instance;
     }
+
+    public static DeliveryItemsUpdatedMessageBuilder builder(){
+        return DeliveryItemsUpdatedMessageBuilder.of();
+    }
+    
+    public static DeliveryItemsUpdatedMessageBuilder builder(final DeliveryItemsUpdatedMessage template){
+        return DeliveryItemsUpdatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryItemsUpdatedMessage(Function<DeliveryItemsUpdatedMessage, T> helper) {
         return helper.apply(this);

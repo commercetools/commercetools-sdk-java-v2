@@ -23,16 +23,25 @@ public interface SearchExecutionFailureError extends ErrorObject {
 
 
 
-    public static SearchExecutionFailureErrorImpl of(){
+    public static SearchExecutionFailureError of(){
         return new SearchExecutionFailureErrorImpl();
     }
     
 
-    public static SearchExecutionFailureErrorImpl of(final SearchExecutionFailureError template) {
+    public static SearchExecutionFailureError of(final SearchExecutionFailureError template) {
         SearchExecutionFailureErrorImpl instance = new SearchExecutionFailureErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static SearchExecutionFailureErrorBuilder builder(){
+        return SearchExecutionFailureErrorBuilder.of();
+    }
+    
+    public static SearchExecutionFailureErrorBuilder builder(final SearchExecutionFailureError template){
+        return SearchExecutionFailureErrorBuilder.of(template);
+    }
+    
 
     default <T> T withSearchExecutionFailureError(Function<SearchExecutionFailureError, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
 
     public void setDescription(final String description);
 
-    public static ZoneSetDescriptionActionImpl of(){
+    public static ZoneSetDescriptionAction of(){
         return new ZoneSetDescriptionActionImpl();
     }
     
 
-    public static ZoneSetDescriptionActionImpl of(final ZoneSetDescriptionAction template) {
+    public static ZoneSetDescriptionAction of(final ZoneSetDescriptionAction template) {
         ZoneSetDescriptionActionImpl instance = new ZoneSetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static ZoneSetDescriptionActionBuilder builder(){
+        return ZoneSetDescriptionActionBuilder.of();
+    }
+    
+    public static ZoneSetDescriptionActionBuilder builder(final ZoneSetDescriptionAction template){
+        return ZoneSetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withZoneSetDescriptionAction(Function<ZoneSetDescriptionAction, T> helper) {
         return helper.apply(this);

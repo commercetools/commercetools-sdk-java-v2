@@ -151,12 +151,12 @@ public interface ProductDraft  {
     
     public void setPublish(final Boolean publish);
 
-    public static ProductDraftImpl of(){
+    public static ProductDraft of(){
         return new ProductDraftImpl();
     }
     
 
-    public static ProductDraftImpl of(final ProductDraft template) {
+    public static ProductDraft of(final ProductDraft template) {
         ProductDraftImpl instance = new ProductDraftImpl();
         instance.setProductType(template.getProductType());
         instance.setName(template.getName());
@@ -176,6 +176,15 @@ public interface ProductDraft  {
         instance.setPublish(template.getPublish());
         return instance;
     }
+
+    public static ProductDraftBuilder builder(){
+        return ProductDraftBuilder.of();
+    }
+    
+    public static ProductDraftBuilder builder(final ProductDraft template){
+        return ProductDraftBuilder.of(template);
+    }
+    
 
     default <T> T withProductDraft(Function<ProductDraft, T> helper) {
         return helper.apply(this);

@@ -31,16 +31,25 @@ public interface ChannelSetRolesAction extends ChannelUpdateAction {
     public void setRoles(final ChannelRoleEnum ...roles);
     public void setRoles(final List<ChannelRoleEnum> roles);
 
-    public static ChannelSetRolesActionImpl of(){
+    public static ChannelSetRolesAction of(){
         return new ChannelSetRolesActionImpl();
     }
     
 
-    public static ChannelSetRolesActionImpl of(final ChannelSetRolesAction template) {
+    public static ChannelSetRolesAction of(final ChannelSetRolesAction template) {
         ChannelSetRolesActionImpl instance = new ChannelSetRolesActionImpl();
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public static ChannelSetRolesActionBuilder builder(){
+        return ChannelSetRolesActionBuilder.of();
+    }
+    
+    public static ChannelSetRolesActionBuilder builder(final ChannelSetRolesAction template){
+        return ChannelSetRolesActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelSetRolesAction(Function<ChannelSetRolesAction, T> helper) {
         return helper.apply(this);

@@ -29,12 +29,12 @@ public interface CustomerDateOfBirthSetMessage extends Message {
 
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
-    public static CustomerDateOfBirthSetMessageImpl of(){
+    public static CustomerDateOfBirthSetMessage of(){
         return new CustomerDateOfBirthSetMessageImpl();
     }
     
 
-    public static CustomerDateOfBirthSetMessageImpl of(final CustomerDateOfBirthSetMessage template) {
+    public static CustomerDateOfBirthSetMessage of(final CustomerDateOfBirthSetMessage template) {
         CustomerDateOfBirthSetMessageImpl instance = new CustomerDateOfBirthSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -49,6 +49,15 @@ public interface CustomerDateOfBirthSetMessage extends Message {
         instance.setDateOfBirth(template.getDateOfBirth());
         return instance;
     }
+
+    public static CustomerDateOfBirthSetMessageBuilder builder(){
+        return CustomerDateOfBirthSetMessageBuilder.of();
+    }
+    
+    public static CustomerDateOfBirthSetMessageBuilder builder(final CustomerDateOfBirthSetMessage template){
+        return CustomerDateOfBirthSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerDateOfBirthSetMessage(Function<CustomerDateOfBirthSetMessage, T> helper) {
         return helper.apply(this);

@@ -34,17 +34,26 @@ public interface SearchKeyword  {
     
     public void setSuggestTokenizer(final JsonNode suggestTokenizer);
 
-    public static SearchKeywordImpl of(){
+    public static SearchKeyword of(){
         return new SearchKeywordImpl();
     }
     
 
-    public static SearchKeywordImpl of(final SearchKeyword template) {
+    public static SearchKeyword of(final SearchKeyword template) {
         SearchKeywordImpl instance = new SearchKeywordImpl();
         instance.setText(template.getText());
         instance.setSuggestTokenizer(template.getSuggestTokenizer());
         return instance;
     }
+
+    public static SearchKeywordBuilder builder(){
+        return SearchKeywordBuilder.of();
+    }
+    
+    public static SearchKeywordBuilder builder(final SearchKeyword template){
+        return SearchKeywordBuilder.of(template);
+    }
+    
 
     default <T> T withSearchKeyword(Function<SearchKeyword, T> helper) {
         return helper.apply(this);

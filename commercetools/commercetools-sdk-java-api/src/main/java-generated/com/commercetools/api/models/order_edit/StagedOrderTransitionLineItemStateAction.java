@@ -56,12 +56,12 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
     
     public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
 
-    public static StagedOrderTransitionLineItemStateActionImpl of(){
+    public static StagedOrderTransitionLineItemStateAction of(){
         return new StagedOrderTransitionLineItemStateActionImpl();
     }
     
 
-    public static StagedOrderTransitionLineItemStateActionImpl of(final StagedOrderTransitionLineItemStateAction template) {
+    public static StagedOrderTransitionLineItemStateAction of(final StagedOrderTransitionLineItemStateAction template) {
         StagedOrderTransitionLineItemStateActionImpl instance = new StagedOrderTransitionLineItemStateActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -70,6 +70,15 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }
+
+    public static StagedOrderTransitionLineItemStateActionBuilder builder(){
+        return StagedOrderTransitionLineItemStateActionBuilder.of();
+    }
+    
+    public static StagedOrderTransitionLineItemStateActionBuilder builder(final StagedOrderTransitionLineItemStateAction template){
+        return StagedOrderTransitionLineItemStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderTransitionLineItemStateAction(Function<StagedOrderTransitionLineItemStateAction, T> helper) {
         return helper.apply(this);

@@ -41,18 +41,27 @@ public interface ProductSetDiscountedPriceAction extends ProductUpdateAction {
     
     public void setDiscounted(final DiscountedPrice discounted);
 
-    public static ProductSetDiscountedPriceActionImpl of(){
+    public static ProductSetDiscountedPriceAction of(){
         return new ProductSetDiscountedPriceActionImpl();
     }
     
 
-    public static ProductSetDiscountedPriceActionImpl of(final ProductSetDiscountedPriceAction template) {
+    public static ProductSetDiscountedPriceAction of(final ProductSetDiscountedPriceAction template) {
         ProductSetDiscountedPriceActionImpl instance = new ProductSetDiscountedPriceActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());
         instance.setDiscounted(template.getDiscounted());
         return instance;
     }
+
+    public static ProductSetDiscountedPriceActionBuilder builder(){
+        return ProductSetDiscountedPriceActionBuilder.of();
+    }
+    
+    public static ProductSetDiscountedPriceActionBuilder builder(final ProductSetDiscountedPriceAction template){
+        return ProductSetDiscountedPriceActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetDiscountedPriceAction(Function<ProductSetDiscountedPriceAction, T> helper) {
         return helper.apply(this);

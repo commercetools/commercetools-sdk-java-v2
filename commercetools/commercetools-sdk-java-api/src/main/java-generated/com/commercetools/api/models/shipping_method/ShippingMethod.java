@@ -126,12 +126,12 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
     
     public void setPredicate(final String predicate);
 
-    public static ShippingMethodImpl of(){
+    public static ShippingMethod of(){
         return new ShippingMethodImpl();
     }
     
 
-    public static ShippingMethodImpl of(final ShippingMethod template) {
+    public static ShippingMethod of(final ShippingMethod template) {
         ShippingMethodImpl instance = new ShippingMethodImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -149,6 +149,15 @@ public interface ShippingMethod extends BaseResource, com.commercetools.api.mode
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public static ShippingMethodBuilder builder(){
+        return ShippingMethodBuilder.of();
+    }
+    
+    public static ShippingMethodBuilder builder(final ShippingMethod template){
+        return ShippingMethodBuilder.of(template);
+    }
+    
 
     default <T> T withShippingMethod(Function<ShippingMethod, T> helper) {
         return helper.apply(this);

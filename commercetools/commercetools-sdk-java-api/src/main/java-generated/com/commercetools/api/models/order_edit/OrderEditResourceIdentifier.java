@@ -24,17 +24,26 @@ public interface OrderEditResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static OrderEditResourceIdentifierImpl of(){
+    public static OrderEditResourceIdentifier of(){
         return new OrderEditResourceIdentifierImpl();
     }
     
 
-    public static OrderEditResourceIdentifierImpl of(final OrderEditResourceIdentifier template) {
+    public static OrderEditResourceIdentifier of(final OrderEditResourceIdentifier template) {
         OrderEditResourceIdentifierImpl instance = new OrderEditResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static OrderEditResourceIdentifierBuilder builder(){
+        return OrderEditResourceIdentifierBuilder.of();
+    }
+    
+    public static OrderEditResourceIdentifierBuilder builder(final OrderEditResourceIdentifier template){
+        return OrderEditResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditResourceIdentifier(Function<OrderEditResourceIdentifier, T> helper) {
         return helper.apply(this);

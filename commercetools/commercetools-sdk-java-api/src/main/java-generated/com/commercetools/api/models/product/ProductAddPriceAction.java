@@ -48,12 +48,12 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductAddPriceActionImpl of(){
+    public static ProductAddPriceAction of(){
         return new ProductAddPriceActionImpl();
     }
     
 
-    public static ProductAddPriceActionImpl of(final ProductAddPriceAction template) {
+    public static ProductAddPriceAction of(final ProductAddPriceAction template) {
         ProductAddPriceActionImpl instance = new ProductAddPriceActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -61,6 +61,15 @@ public interface ProductAddPriceAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductAddPriceActionBuilder builder(){
+        return ProductAddPriceActionBuilder.of();
+    }
+    
+    public static ProductAddPriceActionBuilder builder(final ProductAddPriceAction template){
+        return ProductAddPriceActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductAddPriceAction(Function<ProductAddPriceAction, T> helper) {
         return helper.apply(this);

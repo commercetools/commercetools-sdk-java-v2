@@ -42,18 +42,27 @@ public interface MyCartSetLineItemCustomTypeAction extends MyCartUpdateAction {
     
     public void setFields(final FieldContainer fields);
 
-    public static MyCartSetLineItemCustomTypeActionImpl of(){
+    public static MyCartSetLineItemCustomTypeAction of(){
         return new MyCartSetLineItemCustomTypeActionImpl();
     }
     
 
-    public static MyCartSetLineItemCustomTypeActionImpl of(final MyCartSetLineItemCustomTypeAction template) {
+    public static MyCartSetLineItemCustomTypeAction of(final MyCartSetLineItemCustomTypeAction template) {
         MyCartSetLineItemCustomTypeActionImpl instance = new MyCartSetLineItemCustomTypeActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static MyCartSetLineItemCustomTypeActionBuilder builder(){
+        return MyCartSetLineItemCustomTypeActionBuilder.of();
+    }
+    
+    public static MyCartSetLineItemCustomTypeActionBuilder builder(final MyCartSetLineItemCustomTypeAction template){
+        return MyCartSetLineItemCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartSetLineItemCustomTypeAction(Function<MyCartSetLineItemCustomTypeAction, T> helper) {
         return helper.apply(this);

@@ -38,17 +38,26 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
     public void setItems(final DeliveryItem ...items);
     public void setItems(final List<DeliveryItem> items);
 
-    public static OrderSetDeliveryItemsActionImpl of(){
+    public static OrderSetDeliveryItemsAction of(){
         return new OrderSetDeliveryItemsActionImpl();
     }
     
 
-    public static OrderSetDeliveryItemsActionImpl of(final OrderSetDeliveryItemsAction template) {
+    public static OrderSetDeliveryItemsAction of(final OrderSetDeliveryItemsAction template) {
         OrderSetDeliveryItemsActionImpl instance = new OrderSetDeliveryItemsActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public static OrderSetDeliveryItemsActionBuilder builder(){
+        return OrderSetDeliveryItemsActionBuilder.of();
+    }
+    
+    public static OrderSetDeliveryItemsActionBuilder builder(final OrderSetDeliveryItemsAction template){
+        return OrderSetDeliveryItemsActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetDeliveryItemsAction(Function<OrderSetDeliveryItemsAction, T> helper) {
         return helper.apply(this);

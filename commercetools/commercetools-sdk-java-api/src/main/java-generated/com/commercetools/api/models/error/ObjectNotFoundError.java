@@ -23,16 +23,25 @@ public interface ObjectNotFoundError extends ErrorObject {
 
 
 
-    public static ObjectNotFoundErrorImpl of(){
+    public static ObjectNotFoundError of(){
         return new ObjectNotFoundErrorImpl();
     }
     
 
-    public static ObjectNotFoundErrorImpl of(final ObjectNotFoundError template) {
+    public static ObjectNotFoundError of(final ObjectNotFoundError template) {
         ObjectNotFoundErrorImpl instance = new ObjectNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static ObjectNotFoundErrorBuilder builder(){
+        return ObjectNotFoundErrorBuilder.of();
+    }
+    
+    public static ObjectNotFoundErrorBuilder builder(final ObjectNotFoundError template){
+        return ObjectNotFoundErrorBuilder.of(template);
+    }
+    
 
     default <T> T withObjectNotFoundError(Function<ObjectNotFoundError, T> helper) {
         return helper.apply(this);

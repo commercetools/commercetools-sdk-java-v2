@@ -23,16 +23,25 @@ public interface SearchFacetPathNotFoundError extends ErrorObject {
 
 
 
-    public static SearchFacetPathNotFoundErrorImpl of(){
+    public static SearchFacetPathNotFoundError of(){
         return new SearchFacetPathNotFoundErrorImpl();
     }
     
 
-    public static SearchFacetPathNotFoundErrorImpl of(final SearchFacetPathNotFoundError template) {
+    public static SearchFacetPathNotFoundError of(final SearchFacetPathNotFoundError template) {
         SearchFacetPathNotFoundErrorImpl instance = new SearchFacetPathNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static SearchFacetPathNotFoundErrorBuilder builder(){
+        return SearchFacetPathNotFoundErrorBuilder.of();
+    }
+    
+    public static SearchFacetPathNotFoundErrorBuilder builder(final SearchFacetPathNotFoundError template){
+        return SearchFacetPathNotFoundErrorBuilder.of(template);
+    }
+    
 
     default <T> T withSearchFacetPathNotFoundError(Function<SearchFacetPathNotFoundError, T> helper) {
         return helper.apply(this);

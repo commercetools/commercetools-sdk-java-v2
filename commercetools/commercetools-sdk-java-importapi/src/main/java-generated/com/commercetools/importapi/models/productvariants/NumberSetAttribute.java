@@ -33,17 +33,26 @@ public interface NumberSetAttribute extends Attribute {
     public void setValue(final Double ...value);
     public void setValue(final List<Double> value);
 
-    public static NumberSetAttributeImpl of(){
+    public static NumberSetAttribute of(){
         return new NumberSetAttributeImpl();
     }
     
 
-    public static NumberSetAttributeImpl of(final NumberSetAttribute template) {
+    public static NumberSetAttribute of(final NumberSetAttribute template) {
         NumberSetAttributeImpl instance = new NumberSetAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static NumberSetAttributeBuilder builder(){
+        return NumberSetAttributeBuilder.of();
+    }
+    
+    public static NumberSetAttributeBuilder builder(final NumberSetAttribute template){
+        return NumberSetAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withNumberSetAttribute(Function<NumberSetAttribute, T> helper) {
         return helper.apply(this);

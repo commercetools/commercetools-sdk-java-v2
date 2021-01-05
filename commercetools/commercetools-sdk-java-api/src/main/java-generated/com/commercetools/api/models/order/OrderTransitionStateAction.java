@@ -36,17 +36,26 @@ public interface OrderTransitionStateAction extends OrderUpdateAction {
     
     public void setForce(final Boolean force);
 
-    public static OrderTransitionStateActionImpl of(){
+    public static OrderTransitionStateAction of(){
         return new OrderTransitionStateActionImpl();
     }
     
 
-    public static OrderTransitionStateActionImpl of(final OrderTransitionStateAction template) {
+    public static OrderTransitionStateAction of(final OrderTransitionStateAction template) {
         OrderTransitionStateActionImpl instance = new OrderTransitionStateActionImpl();
         instance.setState(template.getState());
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static OrderTransitionStateActionBuilder builder(){
+        return OrderTransitionStateActionBuilder.of();
+    }
+    
+    public static OrderTransitionStateActionBuilder builder(final OrderTransitionStateAction template){
+        return OrderTransitionStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderTransitionStateAction(Function<OrderTransitionStateAction, T> helper) {
         return helper.apply(this);

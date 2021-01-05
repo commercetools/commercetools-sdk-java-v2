@@ -40,18 +40,27 @@ public interface GraphQLRequest  {
     
     public void setVariables(final GraphQLVariablesMap variables);
 
-    public static GraphQLRequestImpl of(){
+    public static GraphQLRequest of(){
         return new GraphQLRequestImpl();
     }
     
 
-    public static GraphQLRequestImpl of(final GraphQLRequest template) {
+    public static GraphQLRequest of(final GraphQLRequest template) {
         GraphQLRequestImpl instance = new GraphQLRequestImpl();
         instance.setQuery(template.getQuery());
         instance.setOperationName(template.getOperationName());
         instance.setVariables(template.getVariables());
         return instance;
     }
+
+    public static GraphQLRequestBuilder builder(){
+        return GraphQLRequestBuilder.of();
+    }
+    
+    public static GraphQLRequestBuilder builder(final GraphQLRequest template){
+        return GraphQLRequestBuilder.of(template);
+    }
+    
 
     default <T> T withGraphQLRequest(Function<GraphQLRequest, T> helper) {
         return helper.apply(this);

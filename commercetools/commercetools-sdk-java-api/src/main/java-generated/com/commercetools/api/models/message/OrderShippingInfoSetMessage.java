@@ -35,12 +35,12 @@ public interface OrderShippingInfoSetMessage extends Message {
     
     public void setOldShippingInfo(final ShippingInfo oldShippingInfo);
 
-    public static OrderShippingInfoSetMessageImpl of(){
+    public static OrderShippingInfoSetMessage of(){
         return new OrderShippingInfoSetMessageImpl();
     }
     
 
-    public static OrderShippingInfoSetMessageImpl of(final OrderShippingInfoSetMessage template) {
+    public static OrderShippingInfoSetMessage of(final OrderShippingInfoSetMessage template) {
         OrderShippingInfoSetMessageImpl instance = new OrderShippingInfoSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -56,6 +56,15 @@ public interface OrderShippingInfoSetMessage extends Message {
         instance.setOldShippingInfo(template.getOldShippingInfo());
         return instance;
     }
+
+    public static OrderShippingInfoSetMessageBuilder builder(){
+        return OrderShippingInfoSetMessageBuilder.of();
+    }
+    
+    public static OrderShippingInfoSetMessageBuilder builder(final OrderShippingInfoSetMessage template){
+        return OrderShippingInfoSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderShippingInfoSetMessage(Function<OrderShippingInfoSetMessage, T> helper) {
         return helper.apply(this);

@@ -24,17 +24,26 @@ public interface ChannelResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static ChannelResourceIdentifierImpl of(){
+    public static ChannelResourceIdentifier of(){
         return new ChannelResourceIdentifierImpl();
     }
     
 
-    public static ChannelResourceIdentifierImpl of(final ChannelResourceIdentifier template) {
+    public static ChannelResourceIdentifier of(final ChannelResourceIdentifier template) {
         ChannelResourceIdentifierImpl instance = new ChannelResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ChannelResourceIdentifierBuilder builder(){
+        return ChannelResourceIdentifierBuilder.of();
+    }
+    
+    public static ChannelResourceIdentifierBuilder builder(final ChannelResourceIdentifier template){
+        return ChannelResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withChannelResourceIdentifier(Function<ChannelResourceIdentifier, T> helper) {
         return helper.apply(this);

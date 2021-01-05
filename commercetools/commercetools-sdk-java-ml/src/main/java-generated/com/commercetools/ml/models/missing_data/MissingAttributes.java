@@ -79,12 +79,12 @@ public interface MissingAttributes  {
     
     public void setAttributeCoverage(final AttributeCoverage attributeCoverage);
 
-    public static MissingAttributesImpl of(){
+    public static MissingAttributes of(){
         return new MissingAttributesImpl();
     }
     
 
-    public static MissingAttributesImpl of(final MissingAttributes template) {
+    public static MissingAttributes of(final MissingAttributes template) {
         MissingAttributesImpl instance = new MissingAttributesImpl();
         instance.setProduct(template.getProduct());
         instance.setProductType(template.getProductType());
@@ -95,6 +95,15 @@ public interface MissingAttributes  {
         instance.setAttributeCoverage(template.getAttributeCoverage());
         return instance;
     }
+
+    public static MissingAttributesBuilder builder(){
+        return MissingAttributesBuilder.of();
+    }
+    
+    public static MissingAttributesBuilder builder(final MissingAttributes template){
+        return MissingAttributesBuilder.of(template);
+    }
+    
 
     default <T> T withMissingAttributes(Function<MissingAttributes, T> helper) {
         return helper.apply(this);

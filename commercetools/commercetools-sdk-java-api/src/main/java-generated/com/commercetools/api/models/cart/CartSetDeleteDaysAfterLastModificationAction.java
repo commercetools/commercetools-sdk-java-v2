@@ -28,16 +28,25 @@ public interface CartSetDeleteDaysAfterLastModificationAction extends CartUpdate
 
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
-    public static CartSetDeleteDaysAfterLastModificationActionImpl of(){
+    public static CartSetDeleteDaysAfterLastModificationAction of(){
         return new CartSetDeleteDaysAfterLastModificationActionImpl();
     }
     
 
-    public static CartSetDeleteDaysAfterLastModificationActionImpl of(final CartSetDeleteDaysAfterLastModificationAction template) {
+    public static CartSetDeleteDaysAfterLastModificationAction of(final CartSetDeleteDaysAfterLastModificationAction template) {
         CartSetDeleteDaysAfterLastModificationActionImpl instance = new CartSetDeleteDaysAfterLastModificationActionImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;
     }
+
+    public static CartSetDeleteDaysAfterLastModificationActionBuilder builder(){
+        return CartSetDeleteDaysAfterLastModificationActionBuilder.of();
+    }
+    
+    public static CartSetDeleteDaysAfterLastModificationActionBuilder builder(final CartSetDeleteDaysAfterLastModificationAction template){
+        return CartSetDeleteDaysAfterLastModificationActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetDeleteDaysAfterLastModificationAction(Function<CartSetDeleteDaysAfterLastModificationAction, T> helper) {
         return helper.apply(this);

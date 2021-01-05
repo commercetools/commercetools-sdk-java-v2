@@ -34,18 +34,27 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
     
     public void setItemId(final String itemId);
 
-    public static InvalidItemShippingDetailsErrorImpl of(){
+    public static InvalidItemShippingDetailsError of(){
         return new InvalidItemShippingDetailsErrorImpl();
     }
     
 
-    public static InvalidItemShippingDetailsErrorImpl of(final InvalidItemShippingDetailsError template) {
+    public static InvalidItemShippingDetailsError of(final InvalidItemShippingDetailsError template) {
         InvalidItemShippingDetailsErrorImpl instance = new InvalidItemShippingDetailsErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setSubject(template.getSubject());
         instance.setItemId(template.getItemId());
         return instance;
     }
+
+    public static InvalidItemShippingDetailsErrorBuilder builder(){
+        return InvalidItemShippingDetailsErrorBuilder.of();
+    }
+    
+    public static InvalidItemShippingDetailsErrorBuilder builder(final InvalidItemShippingDetailsError template){
+        return InvalidItemShippingDetailsErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidItemShippingDetailsError(Function<InvalidItemShippingDetailsError, T> helper) {
         return helper.apply(this);

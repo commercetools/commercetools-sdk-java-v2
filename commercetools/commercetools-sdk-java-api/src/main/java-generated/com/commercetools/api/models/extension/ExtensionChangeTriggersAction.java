@@ -32,16 +32,25 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
     public void setTriggers(final ExtensionTrigger ...triggers);
     public void setTriggers(final List<ExtensionTrigger> triggers);
 
-    public static ExtensionChangeTriggersActionImpl of(){
+    public static ExtensionChangeTriggersAction of(){
         return new ExtensionChangeTriggersActionImpl();
     }
     
 
-    public static ExtensionChangeTriggersActionImpl of(final ExtensionChangeTriggersAction template) {
+    public static ExtensionChangeTriggersAction of(final ExtensionChangeTriggersAction template) {
         ExtensionChangeTriggersActionImpl instance = new ExtensionChangeTriggersActionImpl();
         instance.setTriggers(template.getTriggers());
         return instance;
     }
+
+    public static ExtensionChangeTriggersActionBuilder builder(){
+        return ExtensionChangeTriggersActionBuilder.of();
+    }
+    
+    public static ExtensionChangeTriggersActionBuilder builder(final ExtensionChangeTriggersAction template){
+        return ExtensionChangeTriggersActionBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionChangeTriggersAction(Function<ExtensionChangeTriggersAction, T> helper) {
         return helper.apply(this);

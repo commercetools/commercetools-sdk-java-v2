@@ -23,15 +23,24 @@ public interface ProductUnpublishedMessagePayload extends MessagePayload {
 
 
 
-    public static ProductUnpublishedMessagePayloadImpl of(){
+    public static ProductUnpublishedMessagePayload of(){
         return new ProductUnpublishedMessagePayloadImpl();
     }
     
 
-    public static ProductUnpublishedMessagePayloadImpl of(final ProductUnpublishedMessagePayload template) {
+    public static ProductUnpublishedMessagePayload of(final ProductUnpublishedMessagePayload template) {
         ProductUnpublishedMessagePayloadImpl instance = new ProductUnpublishedMessagePayloadImpl();
         return instance;
     }
+
+    public static ProductUnpublishedMessagePayloadBuilder builder(){
+        return ProductUnpublishedMessagePayloadBuilder.of();
+    }
+    
+    public static ProductUnpublishedMessagePayloadBuilder builder(final ProductUnpublishedMessagePayload template){
+        return ProductUnpublishedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductUnpublishedMessagePayload(Function<ProductUnpublishedMessagePayload, T> helper) {
         return helper.apply(this);

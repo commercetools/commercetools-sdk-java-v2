@@ -39,17 +39,26 @@ public interface CustomFields  {
     
     public void setFields(final FieldContainer fields);
 
-    public static CustomFieldsImpl of(){
+    public static CustomFields of(){
         return new CustomFieldsImpl();
     }
     
 
-    public static CustomFieldsImpl of(final CustomFields template) {
+    public static CustomFields of(final CustomFields template) {
         CustomFieldsImpl instance = new CustomFieldsImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static CustomFieldsBuilder builder(){
+        return CustomFieldsBuilder.of();
+    }
+    
+    public static CustomFieldsBuilder builder(final CustomFields template){
+        return CustomFieldsBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFields(Function<CustomFields, T> helper) {
         return helper.apply(this);

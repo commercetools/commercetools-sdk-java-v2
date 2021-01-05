@@ -32,16 +32,25 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
     public void setCurrencies(final String ...currencies);
     public void setCurrencies(final List<String> currencies);
 
-    public static ProjectChangeCurrenciesActionImpl of(){
+    public static ProjectChangeCurrenciesAction of(){
         return new ProjectChangeCurrenciesActionImpl();
     }
     
 
-    public static ProjectChangeCurrenciesActionImpl of(final ProjectChangeCurrenciesAction template) {
+    public static ProjectChangeCurrenciesAction of(final ProjectChangeCurrenciesAction template) {
         ProjectChangeCurrenciesActionImpl instance = new ProjectChangeCurrenciesActionImpl();
         instance.setCurrencies(template.getCurrencies());
         return instance;
     }
+
+    public static ProjectChangeCurrenciesActionBuilder builder(){
+        return ProjectChangeCurrenciesActionBuilder.of();
+    }
+    
+    public static ProjectChangeCurrenciesActionBuilder builder(final ProjectChangeCurrenciesAction template){
+        return ProjectChangeCurrenciesActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectChangeCurrenciesAction(Function<ProjectChangeCurrenciesAction, T> helper) {
         return helper.apply(this);

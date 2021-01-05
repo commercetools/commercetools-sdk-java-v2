@@ -32,16 +32,25 @@ public interface ProductDiscountValueAbsoluteDraft extends ProductDiscountValueD
     public void setMoney(final Money ...money);
     public void setMoney(final List<Money> money);
 
-    public static ProductDiscountValueAbsoluteDraftImpl of(){
+    public static ProductDiscountValueAbsoluteDraft of(){
         return new ProductDiscountValueAbsoluteDraftImpl();
     }
     
 
-    public static ProductDiscountValueAbsoluteDraftImpl of(final ProductDiscountValueAbsoluteDraft template) {
+    public static ProductDiscountValueAbsoluteDraft of(final ProductDiscountValueAbsoluteDraft template) {
         ProductDiscountValueAbsoluteDraftImpl instance = new ProductDiscountValueAbsoluteDraftImpl();
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public static ProductDiscountValueAbsoluteDraftBuilder builder(){
+        return ProductDiscountValueAbsoluteDraftBuilder.of();
+    }
+    
+    public static ProductDiscountValueAbsoluteDraftBuilder builder(final ProductDiscountValueAbsoluteDraft template){
+        return ProductDiscountValueAbsoluteDraftBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountValueAbsoluteDraft(Function<ProductDiscountValueAbsoluteDraft, T> helper) {
         return helper.apply(this);

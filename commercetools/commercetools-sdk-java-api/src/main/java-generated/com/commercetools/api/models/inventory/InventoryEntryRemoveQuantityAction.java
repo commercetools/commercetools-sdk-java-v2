@@ -28,16 +28,25 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
 
     public void setQuantity(final Long quantity);
 
-    public static InventoryEntryRemoveQuantityActionImpl of(){
+    public static InventoryEntryRemoveQuantityAction of(){
         return new InventoryEntryRemoveQuantityActionImpl();
     }
     
 
-    public static InventoryEntryRemoveQuantityActionImpl of(final InventoryEntryRemoveQuantityAction template) {
+    public static InventoryEntryRemoveQuantityAction of(final InventoryEntryRemoveQuantityAction template) {
         InventoryEntryRemoveQuantityActionImpl instance = new InventoryEntryRemoveQuantityActionImpl();
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static InventoryEntryRemoveQuantityActionBuilder builder(){
+        return InventoryEntryRemoveQuantityActionBuilder.of();
+    }
+    
+    public static InventoryEntryRemoveQuantityActionBuilder builder(final InventoryEntryRemoveQuantityAction template){
+        return InventoryEntryRemoveQuantityActionBuilder.of(template);
+    }
+    
 
     default <T> T withInventoryEntryRemoveQuantityAction(Function<InventoryEntryRemoveQuantityAction, T> helper) {
         return helper.apply(this);

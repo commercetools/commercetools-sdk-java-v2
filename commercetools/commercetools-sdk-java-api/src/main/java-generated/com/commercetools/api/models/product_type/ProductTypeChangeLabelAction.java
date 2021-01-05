@@ -36,17 +36,26 @@ public interface ProductTypeChangeLabelAction extends ProductTypeUpdateAction {
     
     public void setLabel(final LocalizedString label);
 
-    public static ProductTypeChangeLabelActionImpl of(){
+    public static ProductTypeChangeLabelAction of(){
         return new ProductTypeChangeLabelActionImpl();
     }
     
 
-    public static ProductTypeChangeLabelActionImpl of(final ProductTypeChangeLabelAction template) {
+    public static ProductTypeChangeLabelAction of(final ProductTypeChangeLabelAction template) {
         ProductTypeChangeLabelActionImpl instance = new ProductTypeChangeLabelActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static ProductTypeChangeLabelActionBuilder builder(){
+        return ProductTypeChangeLabelActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeLabelActionBuilder builder(final ProductTypeChangeLabelAction template){
+        return ProductTypeChangeLabelActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeLabelAction(Function<ProductTypeChangeLabelAction, T> helper) {
         return helper.apply(this);

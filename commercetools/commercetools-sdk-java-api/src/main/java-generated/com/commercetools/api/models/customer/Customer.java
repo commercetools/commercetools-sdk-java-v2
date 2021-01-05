@@ -247,12 +247,12 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
     public void setStores(final StoreKeyReference ...stores);
     public void setStores(final List<StoreKeyReference> stores);
 
-    public static CustomerImpl of(){
+    public static Customer of(){
         return new CustomerImpl();
     }
     
 
-    public static CustomerImpl of(final Customer template) {
+    public static Customer of(final Customer template) {
         CustomerImpl instance = new CustomerImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -285,6 +285,15 @@ public interface Customer extends BaseResource, com.commercetools.api.models.Dom
         instance.setStores(template.getStores());
         return instance;
     }
+
+    public static CustomerBuilder builder(){
+        return CustomerBuilder.of();
+    }
+    
+    public static CustomerBuilder builder(final Customer template){
+        return CustomerBuilder.of(template);
+    }
+    
 
     default <T> T withCustomer(Function<Customer, T> helper) {
         return helper.apply(this);

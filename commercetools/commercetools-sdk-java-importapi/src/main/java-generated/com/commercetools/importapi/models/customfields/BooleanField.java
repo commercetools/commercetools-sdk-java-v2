@@ -31,16 +31,25 @@ public interface BooleanField extends CustomField {
 
     public void setValue(final Boolean value);
 
-    public static BooleanFieldImpl of(){
+    public static BooleanField of(){
         return new BooleanFieldImpl();
     }
     
 
-    public static BooleanFieldImpl of(final BooleanField template) {
+    public static BooleanField of(final BooleanField template) {
         BooleanFieldImpl instance = new BooleanFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static BooleanFieldBuilder builder(){
+        return BooleanFieldBuilder.of();
+    }
+    
+    public static BooleanFieldBuilder builder(final BooleanField template){
+        return BooleanFieldBuilder.of(template);
+    }
+    
 
     default <T> T withBooleanField(Function<BooleanField, T> helper) {
         return helper.apply(this);

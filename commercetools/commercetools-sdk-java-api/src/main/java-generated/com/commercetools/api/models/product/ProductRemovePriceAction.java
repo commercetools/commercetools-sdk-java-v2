@@ -36,17 +36,26 @@ public interface ProductRemovePriceAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductRemovePriceActionImpl of(){
+    public static ProductRemovePriceAction of(){
         return new ProductRemovePriceActionImpl();
     }
     
 
-    public static ProductRemovePriceActionImpl of(final ProductRemovePriceAction template) {
+    public static ProductRemovePriceAction of(final ProductRemovePriceAction template) {
         ProductRemovePriceActionImpl instance = new ProductRemovePriceActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductRemovePriceActionBuilder builder(){
+        return ProductRemovePriceActionBuilder.of();
+    }
+    
+    public static ProductRemovePriceActionBuilder builder(final ProductRemovePriceAction template){
+        return ProductRemovePriceActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductRemovePriceAction(Function<ProductRemovePriceAction, T> helper) {
         return helper.apply(this);

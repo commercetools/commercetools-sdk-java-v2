@@ -23,16 +23,25 @@ public interface GenericError extends ErrorObject {
 
 
 
-    public static GenericErrorImpl of(){
+    public static GenericError of(){
         return new GenericErrorImpl();
     }
     
 
-    public static GenericErrorImpl of(final GenericError template) {
+    public static GenericError of(final GenericError template) {
         GenericErrorImpl instance = new GenericErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static GenericErrorBuilder builder(){
+        return GenericErrorBuilder.of();
+    }
+    
+    public static GenericErrorBuilder builder(final GenericError template){
+        return GenericErrorBuilder.of(template);
+    }
+    
 
     default <T> T withGenericError(Function<GenericError, T> helper) {
         return helper.apply(this);

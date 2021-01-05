@@ -31,17 +31,26 @@ public interface TextAttribute extends Attribute {
 
     public void setValue(final String value);
 
-    public static TextAttributeImpl of(){
+    public static TextAttribute of(){
         return new TextAttributeImpl();
     }
     
 
-    public static TextAttributeImpl of(final TextAttribute template) {
+    public static TextAttribute of(final TextAttribute template) {
         TextAttributeImpl instance = new TextAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TextAttributeBuilder builder(){
+        return TextAttributeBuilder.of();
+    }
+    
+    public static TextAttributeBuilder builder(final TextAttribute template){
+        return TextAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withTextAttribute(Function<TextAttribute, T> helper) {
         return helper.apply(this);

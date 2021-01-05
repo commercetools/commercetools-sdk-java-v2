@@ -28,16 +28,25 @@ public interface IronMqDestination extends Destination {
 
     public void setUri(final String uri);
 
-    public static IronMqDestinationImpl of(){
+    public static IronMqDestination of(){
         return new IronMqDestinationImpl();
     }
     
 
-    public static IronMqDestinationImpl of(final IronMqDestination template) {
+    public static IronMqDestination of(final IronMqDestination template) {
         IronMqDestinationImpl instance = new IronMqDestinationImpl();
         instance.setUri(template.getUri());
         return instance;
     }
+
+    public static IronMqDestinationBuilder builder(){
+        return IronMqDestinationBuilder.of();
+    }
+    
+    public static IronMqDestinationBuilder builder(final IronMqDestination template){
+        return IronMqDestinationBuilder.of(template);
+    }
+    
 
     default <T> T withIronMqDestination(Function<IronMqDestination, T> helper) {
         return helper.apply(this);

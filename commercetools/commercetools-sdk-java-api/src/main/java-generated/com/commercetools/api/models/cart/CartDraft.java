@@ -236,12 +236,12 @@ public interface CartDraft  {
     public void setDiscountCodes(final String ...discountCodes);
     public void setDiscountCodes(final List<String> discountCodes);
 
-    public static CartDraftImpl of(){
+    public static CartDraft of(){
         return new CartDraftImpl();
     }
     
 
-    public static CartDraftImpl of(final CartDraft template) {
+    public static CartDraft of(final CartDraft template) {
         CartDraftImpl instance = new CartDraftImpl();
         instance.setCurrency(template.getCurrency());
         instance.setCustomerId(template.getCustomerId());
@@ -269,6 +269,15 @@ public interface CartDraft  {
         instance.setDiscountCodes(template.getDiscountCodes());
         return instance;
     }
+
+    public static CartDraftBuilder builder(){
+        return CartDraftBuilder.of();
+    }
+    
+    public static CartDraftBuilder builder(final CartDraft template){
+        return CartDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCartDraft(Function<CartDraft, T> helper) {
         return helper.apply(this);

@@ -149,12 +149,12 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
     
     public void setAnonymousId(final String anonymousId);
 
-    public static ShoppingListImpl of(){
+    public static ShoppingList of(){
         return new ShoppingListImpl();
     }
     
 
-    public static ShoppingListImpl of(final ShoppingList template) {
+    public static ShoppingList of(final ShoppingList template) {
         ShoppingListImpl instance = new ShoppingListImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -174,6 +174,15 @@ public interface ShoppingList extends BaseResource, com.commercetools.api.models
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static ShoppingListBuilder builder(){
+        return ShoppingListBuilder.of();
+    }
+    
+    public static ShoppingListBuilder builder(final ShoppingList template){
+        return ShoppingListBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingList(Function<ShoppingList, T> helper) {
         return helper.apply(this);

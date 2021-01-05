@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyMeShoppingListsGet extends ApiMethod<ByProjectKeyMeShoppingListsGet, com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse> {
+public class ByProjectKeyMeShoppingListsGet extends ApiMethod<ByProjectKeyMeShoppingListsGet, com.commercetools.api.models.shopping_list.ShoppingListPagedQueryResponse> implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeShoppingListsGet>, com.commercetools.api.client.SortableTrait<ByProjectKeyMeShoppingListsGet>, com.commercetools.api.client.PagingTrait<ByProjectKeyMeShoppingListsGet>, com.commercetools.api.client.QueryTrait<ByProjectKeyMeShoppingListsGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeShoppingListsGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeShoppingListsGet> {
 
     
     private String projectKey;

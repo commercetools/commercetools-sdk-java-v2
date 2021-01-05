@@ -119,12 +119,12 @@ public interface DiscountCodeDraft  {
     
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static DiscountCodeDraftImpl of(){
+    public static DiscountCodeDraft of(){
         return new DiscountCodeDraftImpl();
     }
     
 
-    public static DiscountCodeDraftImpl of(final DiscountCodeDraft template) {
+    public static DiscountCodeDraft of(final DiscountCodeDraft template) {
         DiscountCodeDraftImpl instance = new DiscountCodeDraftImpl();
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
@@ -140,6 +140,15 @@ public interface DiscountCodeDraft  {
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static DiscountCodeDraftBuilder builder(){
+        return DiscountCodeDraftBuilder.of();
+    }
+    
+    public static DiscountCodeDraftBuilder builder(final DiscountCodeDraft template){
+        return DiscountCodeDraftBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeDraft(Function<DiscountCodeDraft, T> helper) {
         return helper.apply(this);

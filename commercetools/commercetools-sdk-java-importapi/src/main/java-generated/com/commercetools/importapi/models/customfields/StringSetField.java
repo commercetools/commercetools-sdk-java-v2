@@ -33,16 +33,25 @@ public interface StringSetField extends CustomField {
     public void setValue(final String ...value);
     public void setValue(final List<String> value);
 
-    public static StringSetFieldImpl of(){
+    public static StringSetField of(){
         return new StringSetFieldImpl();
     }
     
 
-    public static StringSetFieldImpl of(final StringSetField template) {
+    public static StringSetField of(final StringSetField template) {
         StringSetFieldImpl instance = new StringSetFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static StringSetFieldBuilder builder(){
+        return StringSetFieldBuilder.of();
+    }
+    
+    public static StringSetFieldBuilder builder(final StringSetField template){
+        return StringSetFieldBuilder.of(template);
+    }
+    
 
     default <T> T withStringSetField(Function<StringSetField, T> helper) {
         return helper.apply(this);

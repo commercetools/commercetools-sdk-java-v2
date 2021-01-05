@@ -103,12 +103,12 @@ public interface ShoppingListDraft  {
     
     public void setAnonymousId(final String anonymousId);
 
-    public static ShoppingListDraftImpl of(){
+    public static ShoppingListDraft of(){
         return new ShoppingListDraftImpl();
     }
     
 
-    public static ShoppingListDraftImpl of(final ShoppingListDraft template) {
+    public static ShoppingListDraft of(final ShoppingListDraft template) {
         ShoppingListDraftImpl instance = new ShoppingListDraftImpl();
         instance.setCustom(template.getCustom());
         instance.setCustomer(template.getCustomer());
@@ -122,6 +122,15 @@ public interface ShoppingListDraft  {
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static ShoppingListDraftBuilder builder(){
+        return ShoppingListDraftBuilder.of();
+    }
+    
+    public static ShoppingListDraftBuilder builder(final ShoppingListDraft template){
+        return ShoppingListDraftBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListDraft(Function<ShoppingListDraft, T> helper) {
         return helper.apply(this);

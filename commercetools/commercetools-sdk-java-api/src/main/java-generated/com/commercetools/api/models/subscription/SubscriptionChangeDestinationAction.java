@@ -30,16 +30,25 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
 
     public void setDestination(final Destination destination);
 
-    public static SubscriptionChangeDestinationActionImpl of(){
+    public static SubscriptionChangeDestinationAction of(){
         return new SubscriptionChangeDestinationActionImpl();
     }
     
 
-    public static SubscriptionChangeDestinationActionImpl of(final SubscriptionChangeDestinationAction template) {
+    public static SubscriptionChangeDestinationAction of(final SubscriptionChangeDestinationAction template) {
         SubscriptionChangeDestinationActionImpl instance = new SubscriptionChangeDestinationActionImpl();
         instance.setDestination(template.getDestination());
         return instance;
     }
+
+    public static SubscriptionChangeDestinationActionBuilder builder(){
+        return SubscriptionChangeDestinationActionBuilder.of();
+    }
+    
+    public static SubscriptionChangeDestinationActionBuilder builder(final SubscriptionChangeDestinationAction template){
+        return SubscriptionChangeDestinationActionBuilder.of(template);
+    }
+    
 
     default <T> T withSubscriptionChangeDestinationAction(Function<SubscriptionChangeDestinationAction, T> helper) {
         return helper.apply(this);

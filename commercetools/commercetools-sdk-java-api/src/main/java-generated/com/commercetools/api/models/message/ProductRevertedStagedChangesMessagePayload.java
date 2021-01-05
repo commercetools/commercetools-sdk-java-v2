@@ -30,16 +30,25 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
     public void setRemovedImageUrls(final String ...removedImageUrls);
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-    public static ProductRevertedStagedChangesMessagePayloadImpl of(){
+    public static ProductRevertedStagedChangesMessagePayload of(){
         return new ProductRevertedStagedChangesMessagePayloadImpl();
     }
     
 
-    public static ProductRevertedStagedChangesMessagePayloadImpl of(final ProductRevertedStagedChangesMessagePayload template) {
+    public static ProductRevertedStagedChangesMessagePayload of(final ProductRevertedStagedChangesMessagePayload template) {
         ProductRevertedStagedChangesMessagePayloadImpl instance = new ProductRevertedStagedChangesMessagePayloadImpl();
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         return instance;
     }
+
+    public static ProductRevertedStagedChangesMessagePayloadBuilder builder(){
+        return ProductRevertedStagedChangesMessagePayloadBuilder.of();
+    }
+    
+    public static ProductRevertedStagedChangesMessagePayloadBuilder builder(final ProductRevertedStagedChangesMessagePayload template){
+        return ProductRevertedStagedChangesMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductRevertedStagedChangesMessagePayload(Function<ProductRevertedStagedChangesMessagePayload, T> helper) {
         return helper.apply(this);

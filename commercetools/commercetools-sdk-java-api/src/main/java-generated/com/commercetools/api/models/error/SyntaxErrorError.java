@@ -23,16 +23,25 @@ public interface SyntaxErrorError extends ErrorObject {
 
 
 
-    public static SyntaxErrorErrorImpl of(){
+    public static SyntaxErrorError of(){
         return new SyntaxErrorErrorImpl();
     }
     
 
-    public static SyntaxErrorErrorImpl of(final SyntaxErrorError template) {
+    public static SyntaxErrorError of(final SyntaxErrorError template) {
         SyntaxErrorErrorImpl instance = new SyntaxErrorErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static SyntaxErrorErrorBuilder builder(){
+        return SyntaxErrorErrorBuilder.of();
+    }
+    
+    public static SyntaxErrorErrorBuilder builder(final SyntaxErrorError template){
+        return SyntaxErrorErrorBuilder.of(template);
+    }
+    
 
     default <T> T withSyntaxErrorError(Function<SyntaxErrorError, T> helper) {
         return helper.apply(this);

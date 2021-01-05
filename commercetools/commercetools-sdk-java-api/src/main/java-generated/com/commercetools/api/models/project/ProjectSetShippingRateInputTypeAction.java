@@ -31,16 +31,25 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
 
     public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
 
-    public static ProjectSetShippingRateInputTypeActionImpl of(){
+    public static ProjectSetShippingRateInputTypeAction of(){
         return new ProjectSetShippingRateInputTypeActionImpl();
     }
     
 
-    public static ProjectSetShippingRateInputTypeActionImpl of(final ProjectSetShippingRateInputTypeAction template) {
+    public static ProjectSetShippingRateInputTypeAction of(final ProjectSetShippingRateInputTypeAction template) {
         ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
         instance.setShippingRateInputType(template.getShippingRateInputType());
         return instance;
     }
+
+    public static ProjectSetShippingRateInputTypeActionBuilder builder(){
+        return ProjectSetShippingRateInputTypeActionBuilder.of();
+    }
+    
+    public static ProjectSetShippingRateInputTypeActionBuilder builder(final ProjectSetShippingRateInputTypeAction template){
+        return ProjectSetShippingRateInputTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectSetShippingRateInputTypeAction(Function<ProjectSetShippingRateInputTypeAction, T> helper) {
         return helper.apply(this);

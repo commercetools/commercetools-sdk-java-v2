@@ -56,12 +56,12 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
     
     public void setPosition(final Integer position);
 
-    public static ProductAddAssetActionImpl of(){
+    public static ProductAddAssetAction of(){
         return new ProductAddAssetActionImpl();
     }
     
 
-    public static ProductAddAssetActionImpl of(final ProductAddAssetAction template) {
+    public static ProductAddAssetAction of(final ProductAddAssetAction template) {
         ProductAddAssetActionImpl instance = new ProductAddAssetActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -70,6 +70,15 @@ public interface ProductAddAssetAction extends ProductUpdateAction {
         instance.setPosition(template.getPosition());
         return instance;
     }
+
+    public static ProductAddAssetActionBuilder builder(){
+        return ProductAddAssetActionBuilder.of();
+    }
+    
+    public static ProductAddAssetActionBuilder builder(final ProductAddAssetAction template){
+        return ProductAddAssetActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductAddAssetAction(Function<ProductAddAssetAction, T> helper) {
         return helper.apply(this);

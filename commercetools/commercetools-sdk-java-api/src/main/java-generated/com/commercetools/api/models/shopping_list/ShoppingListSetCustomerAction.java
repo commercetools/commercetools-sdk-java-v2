@@ -29,16 +29,25 @@ public interface ShoppingListSetCustomerAction extends ShoppingListUpdateAction 
 
     public void setCustomer(final CustomerResourceIdentifier customer);
 
-    public static ShoppingListSetCustomerActionImpl of(){
+    public static ShoppingListSetCustomerAction of(){
         return new ShoppingListSetCustomerActionImpl();
     }
     
 
-    public static ShoppingListSetCustomerActionImpl of(final ShoppingListSetCustomerAction template) {
+    public static ShoppingListSetCustomerAction of(final ShoppingListSetCustomerAction template) {
         ShoppingListSetCustomerActionImpl instance = new ShoppingListSetCustomerActionImpl();
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public static ShoppingListSetCustomerActionBuilder builder(){
+        return ShoppingListSetCustomerActionBuilder.of();
+    }
+    
+    public static ShoppingListSetCustomerActionBuilder builder(final ShoppingListSetCustomerAction template){
+        return ShoppingListSetCustomerActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListSetCustomerAction(Function<ShoppingListSetCustomerAction, T> helper) {
         return helper.apply(this);

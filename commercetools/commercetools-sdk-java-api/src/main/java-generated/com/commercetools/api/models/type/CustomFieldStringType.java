@@ -23,15 +23,24 @@ public interface CustomFieldStringType extends FieldType {
 
 
 
-    public static CustomFieldStringTypeImpl of(){
+    public static CustomFieldStringType of(){
         return new CustomFieldStringTypeImpl();
     }
     
 
-    public static CustomFieldStringTypeImpl of(final CustomFieldStringType template) {
+    public static CustomFieldStringType of(final CustomFieldStringType template) {
         CustomFieldStringTypeImpl instance = new CustomFieldStringTypeImpl();
         return instance;
     }
+
+    public static CustomFieldStringTypeBuilder builder(){
+        return CustomFieldStringTypeBuilder.of();
+    }
+    
+    public static CustomFieldStringTypeBuilder builder(final CustomFieldStringType template){
+        return CustomFieldStringTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldStringType(Function<CustomFieldStringType, T> helper) {
         return helper.apply(this);

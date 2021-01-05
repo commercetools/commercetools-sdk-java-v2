@@ -36,17 +36,26 @@ public interface CustomLineItemTaxedPrice  {
     
     public void setTotalGross(final TypedMoney totalGross);
 
-    public static CustomLineItemTaxedPriceImpl of(){
+    public static CustomLineItemTaxedPrice of(){
         return new CustomLineItemTaxedPriceImpl();
     }
     
 
-    public static CustomLineItemTaxedPriceImpl of(final CustomLineItemTaxedPrice template) {
+    public static CustomLineItemTaxedPrice of(final CustomLineItemTaxedPrice template) {
         CustomLineItemTaxedPriceImpl instance = new CustomLineItemTaxedPriceImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
         return instance;
     }
+
+    public static CustomLineItemTaxedPriceBuilder builder(){
+        return CustomLineItemTaxedPriceBuilder.of();
+    }
+    
+    public static CustomLineItemTaxedPriceBuilder builder(final CustomLineItemTaxedPrice template){
+        return CustomLineItemTaxedPriceBuilder.of(template);
+    }
+    
 
     default <T> T withCustomLineItemTaxedPrice(Function<CustomLineItemTaxedPrice, T> helper) {
         return helper.apply(this);

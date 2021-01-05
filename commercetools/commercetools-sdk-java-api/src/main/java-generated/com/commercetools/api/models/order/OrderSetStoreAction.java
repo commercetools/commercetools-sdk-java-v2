@@ -29,16 +29,25 @@ public interface OrderSetStoreAction extends OrderUpdateAction {
 
     public void setStore(final StoreResourceIdentifier store);
 
-    public static OrderSetStoreActionImpl of(){
+    public static OrderSetStoreAction of(){
         return new OrderSetStoreActionImpl();
     }
     
 
-    public static OrderSetStoreActionImpl of(final OrderSetStoreAction template) {
+    public static OrderSetStoreAction of(final OrderSetStoreAction template) {
         OrderSetStoreActionImpl instance = new OrderSetStoreActionImpl();
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public static OrderSetStoreActionBuilder builder(){
+        return OrderSetStoreActionBuilder.of();
+    }
+    
+    public static OrderSetStoreActionBuilder builder(final OrderSetStoreAction template){
+        return OrderSetStoreActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetStoreAction(Function<OrderSetStoreAction, T> helper) {
         return helper.apply(this);

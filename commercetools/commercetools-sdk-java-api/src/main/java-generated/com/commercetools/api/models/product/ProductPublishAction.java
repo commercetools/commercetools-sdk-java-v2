@@ -29,16 +29,25 @@ public interface ProductPublishAction extends ProductUpdateAction {
 
     public void setScope(final ProductPublishScope scope);
 
-    public static ProductPublishActionImpl of(){
+    public static ProductPublishAction of(){
         return new ProductPublishActionImpl();
     }
     
 
-    public static ProductPublishActionImpl of(final ProductPublishAction template) {
+    public static ProductPublishAction of(final ProductPublishAction template) {
         ProductPublishActionImpl instance = new ProductPublishActionImpl();
         instance.setScope(template.getScope());
         return instance;
     }
+
+    public static ProductPublishActionBuilder builder(){
+        return ProductPublishActionBuilder.of();
+    }
+    
+    public static ProductPublishActionBuilder builder(final ProductPublishAction template){
+        return ProductPublishActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductPublishAction(Function<ProductPublishAction, T> helper) {
         return helper.apply(this);

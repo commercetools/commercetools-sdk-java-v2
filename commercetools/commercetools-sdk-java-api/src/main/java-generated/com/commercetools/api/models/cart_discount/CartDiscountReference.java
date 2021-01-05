@@ -30,17 +30,26 @@ public interface CartDiscountReference extends Reference {
 
     public void setObj(final CartDiscount obj);
 
-    public static CartDiscountReferenceImpl of(){
+    public static CartDiscountReference of(){
         return new CartDiscountReferenceImpl();
     }
     
 
-    public static CartDiscountReferenceImpl of(final CartDiscountReference template) {
+    public static CartDiscountReference of(final CartDiscountReference template) {
         CartDiscountReferenceImpl instance = new CartDiscountReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static CartDiscountReferenceBuilder builder(){
+        return CartDiscountReferenceBuilder.of();
+    }
+    
+    public static CartDiscountReferenceBuilder builder(final CartDiscountReference template){
+        return CartDiscountReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountReference(Function<CartDiscountReference, T> helper) {
         return helper.apply(this);

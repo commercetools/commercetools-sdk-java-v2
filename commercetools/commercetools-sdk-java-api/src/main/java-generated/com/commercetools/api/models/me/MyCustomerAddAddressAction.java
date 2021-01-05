@@ -30,16 +30,25 @@ public interface MyCustomerAddAddressAction extends MyCustomerUpdateAction {
 
     public void setAddress(final Address address);
 
-    public static MyCustomerAddAddressActionImpl of(){
+    public static MyCustomerAddAddressAction of(){
         return new MyCustomerAddAddressActionImpl();
     }
     
 
-    public static MyCustomerAddAddressActionImpl of(final MyCustomerAddAddressAction template) {
+    public static MyCustomerAddAddressAction of(final MyCustomerAddAddressAction template) {
         MyCustomerAddAddressActionImpl instance = new MyCustomerAddAddressActionImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static MyCustomerAddAddressActionBuilder builder(){
+        return MyCustomerAddAddressActionBuilder.of();
+    }
+    
+    public static MyCustomerAddAddressActionBuilder builder(final MyCustomerAddAddressAction template){
+        return MyCustomerAddAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerAddAddressAction(Function<MyCustomerAddAddressAction, T> helper) {
         return helper.apply(this);

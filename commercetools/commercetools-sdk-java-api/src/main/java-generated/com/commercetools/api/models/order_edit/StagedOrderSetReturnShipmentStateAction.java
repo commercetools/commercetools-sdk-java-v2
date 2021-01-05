@@ -35,17 +35,26 @@ public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpda
     
     public void setShipmentState(final ReturnShipmentState shipmentState);
 
-    public static StagedOrderSetReturnShipmentStateActionImpl of(){
+    public static StagedOrderSetReturnShipmentStateAction of(){
         return new StagedOrderSetReturnShipmentStateActionImpl();
     }
     
 
-    public static StagedOrderSetReturnShipmentStateActionImpl of(final StagedOrderSetReturnShipmentStateAction template) {
+    public static StagedOrderSetReturnShipmentStateAction of(final StagedOrderSetReturnShipmentStateAction template) {
         StagedOrderSetReturnShipmentStateActionImpl instance = new StagedOrderSetReturnShipmentStateActionImpl();
         instance.setReturnItemId(template.getReturnItemId());
         instance.setShipmentState(template.getShipmentState());
         return instance;
     }
+
+    public static StagedOrderSetReturnShipmentStateActionBuilder builder(){
+        return StagedOrderSetReturnShipmentStateActionBuilder.of();
+    }
+    
+    public static StagedOrderSetReturnShipmentStateActionBuilder builder(final StagedOrderSetReturnShipmentStateAction template){
+        return StagedOrderSetReturnShipmentStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetReturnShipmentStateAction(Function<StagedOrderSetReturnShipmentStateAction, T> helper) {
         return helper.apply(this);

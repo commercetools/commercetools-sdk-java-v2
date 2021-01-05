@@ -47,18 +47,27 @@ public interface StagedOrderAddDeliveryAction extends StagedOrderUpdateAction {
     public void setParcels(final ParcelDraft ...parcels);
     public void setParcels(final List<ParcelDraft> parcels);
 
-    public static StagedOrderAddDeliveryActionImpl of(){
+    public static StagedOrderAddDeliveryAction of(){
         return new StagedOrderAddDeliveryActionImpl();
     }
     
 
-    public static StagedOrderAddDeliveryActionImpl of(final StagedOrderAddDeliveryAction template) {
+    public static StagedOrderAddDeliveryAction of(final StagedOrderAddDeliveryAction template) {
         StagedOrderAddDeliveryActionImpl instance = new StagedOrderAddDeliveryActionImpl();
         instance.setItems(template.getItems());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
         return instance;
     }
+
+    public static StagedOrderAddDeliveryActionBuilder builder(){
+        return StagedOrderAddDeliveryActionBuilder.of();
+    }
+    
+    public static StagedOrderAddDeliveryActionBuilder builder(final StagedOrderAddDeliveryAction template){
+        return StagedOrderAddDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderAddDeliveryAction(Function<StagedOrderAddDeliveryAction, T> helper) {
         return helper.apply(this);

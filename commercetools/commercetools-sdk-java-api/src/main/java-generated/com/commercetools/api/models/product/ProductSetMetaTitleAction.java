@@ -35,17 +35,26 @@ public interface ProductSetMetaTitleAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductSetMetaTitleActionImpl of(){
+    public static ProductSetMetaTitleAction of(){
         return new ProductSetMetaTitleActionImpl();
     }
     
 
-    public static ProductSetMetaTitleActionImpl of(final ProductSetMetaTitleAction template) {
+    public static ProductSetMetaTitleAction of(final ProductSetMetaTitleAction template) {
         ProductSetMetaTitleActionImpl instance = new ProductSetMetaTitleActionImpl();
         instance.setMetaTitle(template.getMetaTitle());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductSetMetaTitleActionBuilder builder(){
+        return ProductSetMetaTitleActionBuilder.of();
+    }
+    
+    public static ProductSetMetaTitleActionBuilder builder(final ProductSetMetaTitleAction template){
+        return ProductSetMetaTitleActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetMetaTitleAction(Function<ProductSetMetaTitleAction, T> helper) {
         return helper.apply(this);

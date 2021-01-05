@@ -37,17 +37,26 @@ public interface GraphQLResponse  {
     public void setErrors(final GraphQLError ...errors);
     public void setErrors(final List<GraphQLError> errors);
 
-    public static GraphQLResponseImpl of(){
+    public static GraphQLResponse of(){
         return new GraphQLResponseImpl();
     }
     
 
-    public static GraphQLResponseImpl of(final GraphQLResponse template) {
+    public static GraphQLResponse of(final GraphQLResponse template) {
         GraphQLResponseImpl instance = new GraphQLResponseImpl();
         instance.setData(template.getData());
         instance.setErrors(template.getErrors());
         return instance;
     }
+
+    public static GraphQLResponseBuilder builder(){
+        return GraphQLResponseBuilder.of();
+    }
+    
+    public static GraphQLResponseBuilder builder(final GraphQLResponse template){
+        return GraphQLResponseBuilder.of(template);
+    }
+    
 
     default <T> T withGraphQLResponse(Function<GraphQLResponse, T> helper) {
         return helper.apply(this);

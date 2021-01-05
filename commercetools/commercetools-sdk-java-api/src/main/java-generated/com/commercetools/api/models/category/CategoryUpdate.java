@@ -37,17 +37,26 @@ public interface CategoryUpdate extends com.commercetools.api.models.ResourceUpd
     public void setActions(final CategoryUpdateAction ...actions);
     public void setActions(final List<CategoryUpdateAction> actions);
 
-    public static CategoryUpdateImpl of(){
+    public static CategoryUpdate of(){
         return new CategoryUpdateImpl();
     }
     
 
-    public static CategoryUpdateImpl of(final CategoryUpdate template) {
+    public static CategoryUpdate of(final CategoryUpdate template) {
         CategoryUpdateImpl instance = new CategoryUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static CategoryUpdateBuilder builder(){
+        return CategoryUpdateBuilder.of();
+    }
+    
+    public static CategoryUpdateBuilder builder(final CategoryUpdate template){
+        return CategoryUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryUpdate(Function<CategoryUpdate, T> helper) {
         return helper.apply(this);

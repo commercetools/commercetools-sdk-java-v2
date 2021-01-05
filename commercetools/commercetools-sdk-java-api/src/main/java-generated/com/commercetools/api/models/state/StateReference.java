@@ -30,17 +30,26 @@ public interface StateReference extends Reference {
 
     public void setObj(final State obj);
 
-    public static StateReferenceImpl of(){
+    public static StateReference of(){
         return new StateReferenceImpl();
     }
     
 
-    public static StateReferenceImpl of(final StateReference template) {
+    public static StateReference of(final StateReference template) {
         StateReferenceImpl instance = new StateReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static StateReferenceBuilder builder(){
+        return StateReferenceBuilder.of();
+    }
+    
+    public static StateReferenceBuilder builder(final StateReference template){
+        return StateReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withStateReference(Function<StateReference, T> helper) {
         return helper.apply(this);

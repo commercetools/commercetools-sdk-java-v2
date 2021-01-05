@@ -30,16 +30,25 @@ public interface DeliveryRemovedMessagePayload extends MessagePayload {
 
     public void setDelivery(final Delivery delivery);
 
-    public static DeliveryRemovedMessagePayloadImpl of(){
+    public static DeliveryRemovedMessagePayload of(){
         return new DeliveryRemovedMessagePayloadImpl();
     }
     
 
-    public static DeliveryRemovedMessagePayloadImpl of(final DeliveryRemovedMessagePayload template) {
+    public static DeliveryRemovedMessagePayload of(final DeliveryRemovedMessagePayload template) {
         DeliveryRemovedMessagePayloadImpl instance = new DeliveryRemovedMessagePayloadImpl();
         instance.setDelivery(template.getDelivery());
         return instance;
     }
+
+    public static DeliveryRemovedMessagePayloadBuilder builder(){
+        return DeliveryRemovedMessagePayloadBuilder.of();
+    }
+    
+    public static DeliveryRemovedMessagePayloadBuilder builder(final DeliveryRemovedMessagePayload template){
+        return DeliveryRemovedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryRemovedMessagePayload(Function<DeliveryRemovedMessagePayload, T> helper) {
         return helper.apply(this);

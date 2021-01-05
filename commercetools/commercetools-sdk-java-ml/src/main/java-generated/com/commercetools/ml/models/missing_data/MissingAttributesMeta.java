@@ -46,18 +46,27 @@ public interface MissingAttributesMeta  {
     public void setProductTypeIds(final String ...productTypeIds);
     public void setProductTypeIds(final List<String> productTypeIds);
 
-    public static MissingAttributesMetaImpl of(){
+    public static MissingAttributesMeta of(){
         return new MissingAttributesMetaImpl();
     }
     
 
-    public static MissingAttributesMetaImpl of(final MissingAttributesMeta template) {
+    public static MissingAttributesMeta of(final MissingAttributesMeta template) {
         MissingAttributesMetaImpl instance = new MissingAttributesMetaImpl();
         instance.setProductLevel(template.getProductLevel());
         instance.setVariantLevel(template.getVariantLevel());
         instance.setProductTypeIds(template.getProductTypeIds());
         return instance;
     }
+
+    public static MissingAttributesMetaBuilder builder(){
+        return MissingAttributesMetaBuilder.of();
+    }
+    
+    public static MissingAttributesMetaBuilder builder(final MissingAttributesMeta template){
+        return MissingAttributesMetaBuilder.of(template);
+    }
+    
 
     default <T> T withMissingAttributesMeta(Function<MissingAttributesMeta, T> helper) {
         return helper.apply(this);

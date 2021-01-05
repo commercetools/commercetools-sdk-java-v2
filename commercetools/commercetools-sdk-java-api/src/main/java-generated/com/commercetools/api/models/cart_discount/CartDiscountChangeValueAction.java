@@ -30,16 +30,25 @@ public interface CartDiscountChangeValueAction extends CartDiscountUpdateAction 
 
     public void setValue(final CartDiscountValueDraft value);
 
-    public static CartDiscountChangeValueActionImpl of(){
+    public static CartDiscountChangeValueAction of(){
         return new CartDiscountChangeValueActionImpl();
     }
     
 
-    public static CartDiscountChangeValueActionImpl of(final CartDiscountChangeValueAction template) {
+    public static CartDiscountChangeValueAction of(final CartDiscountChangeValueAction template) {
         CartDiscountChangeValueActionImpl instance = new CartDiscountChangeValueActionImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static CartDiscountChangeValueActionBuilder builder(){
+        return CartDiscountChangeValueActionBuilder.of();
+    }
+    
+    public static CartDiscountChangeValueActionBuilder builder(final CartDiscountChangeValueAction template){
+        return CartDiscountChangeValueActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountChangeValueAction(Function<CartDiscountChangeValueAction, T> helper) {
         return helper.apply(this);

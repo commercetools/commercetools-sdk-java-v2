@@ -36,12 +36,12 @@ public interface OrderStateTransitionMessage extends Message {
     
     public void setForce(final Boolean force);
 
-    public static OrderStateTransitionMessageImpl of(){
+    public static OrderStateTransitionMessage of(){
         return new OrderStateTransitionMessageImpl();
     }
     
 
-    public static OrderStateTransitionMessageImpl of(final OrderStateTransitionMessage template) {
+    public static OrderStateTransitionMessage of(final OrderStateTransitionMessage template) {
         OrderStateTransitionMessageImpl instance = new OrderStateTransitionMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -57,6 +57,15 @@ public interface OrderStateTransitionMessage extends Message {
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static OrderStateTransitionMessageBuilder builder(){
+        return OrderStateTransitionMessageBuilder.of();
+    }
+    
+    public static OrderStateTransitionMessageBuilder builder(final OrderStateTransitionMessage template){
+        return OrderStateTransitionMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderStateTransitionMessage(Function<OrderStateTransitionMessage, T> helper) {
         return helper.apply(this);

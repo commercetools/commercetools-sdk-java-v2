@@ -35,17 +35,26 @@ public interface OrderBillingAddressSetMessagePayload extends MessagePayload {
     
     public void setOldAddress(final Address oldAddress);
 
-    public static OrderBillingAddressSetMessagePayloadImpl of(){
+    public static OrderBillingAddressSetMessagePayload of(){
         return new OrderBillingAddressSetMessagePayloadImpl();
     }
     
 
-    public static OrderBillingAddressSetMessagePayloadImpl of(final OrderBillingAddressSetMessagePayload template) {
+    public static OrderBillingAddressSetMessagePayload of(final OrderBillingAddressSetMessagePayload template) {
         OrderBillingAddressSetMessagePayloadImpl instance = new OrderBillingAddressSetMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         instance.setOldAddress(template.getOldAddress());
         return instance;
     }
+
+    public static OrderBillingAddressSetMessagePayloadBuilder builder(){
+        return OrderBillingAddressSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderBillingAddressSetMessagePayloadBuilder builder(final OrderBillingAddressSetMessagePayload template){
+        return OrderBillingAddressSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderBillingAddressSetMessagePayload(Function<OrderBillingAddressSetMessagePayload, T> helper) {
         return helper.apply(this);

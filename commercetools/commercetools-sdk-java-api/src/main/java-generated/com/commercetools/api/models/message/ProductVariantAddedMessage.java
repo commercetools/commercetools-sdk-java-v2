@@ -36,12 +36,12 @@ public interface ProductVariantAddedMessage extends Message {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductVariantAddedMessageImpl of(){
+    public static ProductVariantAddedMessage of(){
         return new ProductVariantAddedMessageImpl();
     }
     
 
-    public static ProductVariantAddedMessageImpl of(final ProductVariantAddedMessage template) {
+    public static ProductVariantAddedMessage of(final ProductVariantAddedMessage template) {
         ProductVariantAddedMessageImpl instance = new ProductVariantAddedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -57,6 +57,15 @@ public interface ProductVariantAddedMessage extends Message {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductVariantAddedMessageBuilder builder(){
+        return ProductVariantAddedMessageBuilder.of();
+    }
+    
+    public static ProductVariantAddedMessageBuilder builder(final ProductVariantAddedMessage template){
+        return ProductVariantAddedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantAddedMessage(Function<ProductVariantAddedMessage, T> helper) {
         return helper.apply(this);

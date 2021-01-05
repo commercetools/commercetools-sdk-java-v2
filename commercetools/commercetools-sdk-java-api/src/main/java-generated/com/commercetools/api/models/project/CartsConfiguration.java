@@ -30,16 +30,25 @@ public interface CartsConfiguration  {
 
     public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
 
-    public static CartsConfigurationImpl of(){
+    public static CartsConfiguration of(){
         return new CartsConfigurationImpl();
     }
     
 
-    public static CartsConfigurationImpl of(final CartsConfiguration template) {
+    public static CartsConfiguration of(final CartsConfiguration template) {
         CartsConfigurationImpl instance = new CartsConfigurationImpl();
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
         return instance;
     }
+
+    public static CartsConfigurationBuilder builder(){
+        return CartsConfigurationBuilder.of();
+    }
+    
+    public static CartsConfigurationBuilder builder(final CartsConfiguration template){
+        return CartsConfigurationBuilder.of(template);
+    }
+    
 
     default <T> T withCartsConfiguration(Function<CartsConfiguration, T> helper) {
         return helper.apply(this);

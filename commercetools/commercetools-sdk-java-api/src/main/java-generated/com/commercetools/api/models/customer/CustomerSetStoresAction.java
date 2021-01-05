@@ -31,16 +31,25 @@ public interface CustomerSetStoresAction extends CustomerUpdateAction {
     public void setStores(final StoreResourceIdentifier ...stores);
     public void setStores(final List<StoreResourceIdentifier> stores);
 
-    public static CustomerSetStoresActionImpl of(){
+    public static CustomerSetStoresAction of(){
         return new CustomerSetStoresActionImpl();
     }
     
 
-    public static CustomerSetStoresActionImpl of(final CustomerSetStoresAction template) {
+    public static CustomerSetStoresAction of(final CustomerSetStoresAction template) {
         CustomerSetStoresActionImpl instance = new CustomerSetStoresActionImpl();
         instance.setStores(template.getStores());
         return instance;
     }
+
+    public static CustomerSetStoresActionBuilder builder(){
+        return CustomerSetStoresActionBuilder.of();
+    }
+    
+    public static CustomerSetStoresActionBuilder builder(final CustomerSetStoresAction template){
+        return CustomerSetStoresActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetStoresAction(Function<CustomerSetStoresAction, T> helper) {
         return helper.apply(this);

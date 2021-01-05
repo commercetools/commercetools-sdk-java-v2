@@ -55,12 +55,12 @@ public interface ExtensionPagedQueryResponse extends com.commercetools.api.model
     public void setResults(final Extension ...results);
     public void setResults(final List<Extension> results);
 
-    public static ExtensionPagedQueryResponseImpl of(){
+    public static ExtensionPagedQueryResponse of(){
         return new ExtensionPagedQueryResponseImpl();
     }
     
 
-    public static ExtensionPagedQueryResponseImpl of(final ExtensionPagedQueryResponse template) {
+    public static ExtensionPagedQueryResponse of(final ExtensionPagedQueryResponse template) {
         ExtensionPagedQueryResponseImpl instance = new ExtensionPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ExtensionPagedQueryResponse extends com.commercetools.api.model
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ExtensionPagedQueryResponseBuilder builder(){
+        return ExtensionPagedQueryResponseBuilder.of();
+    }
+    
+    public static ExtensionPagedQueryResponseBuilder builder(final ExtensionPagedQueryResponse template){
+        return ExtensionPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionPagedQueryResponse(Function<ExtensionPagedQueryResponse, T> helper) {
         return helper.apply(this);

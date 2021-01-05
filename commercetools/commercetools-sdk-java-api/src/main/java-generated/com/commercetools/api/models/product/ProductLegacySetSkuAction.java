@@ -34,17 +34,26 @@ public interface ProductLegacySetSkuAction extends ProductUpdateAction {
     
     public void setVariantId(final Integer variantId);
 
-    public static ProductLegacySetSkuActionImpl of(){
+    public static ProductLegacySetSkuAction of(){
         return new ProductLegacySetSkuActionImpl();
     }
     
 
-    public static ProductLegacySetSkuActionImpl of(final ProductLegacySetSkuAction template) {
+    public static ProductLegacySetSkuAction of(final ProductLegacySetSkuAction template) {
         ProductLegacySetSkuActionImpl instance = new ProductLegacySetSkuActionImpl();
         instance.setSku(template.getSku());
         instance.setVariantId(template.getVariantId());
         return instance;
     }
+
+    public static ProductLegacySetSkuActionBuilder builder(){
+        return ProductLegacySetSkuActionBuilder.of();
+    }
+    
+    public static ProductLegacySetSkuActionBuilder builder(final ProductLegacySetSkuAction template){
+        return ProductLegacySetSkuActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductLegacySetSkuAction(Function<ProductLegacySetSkuAction, T> helper) {
         return helper.apply(this);

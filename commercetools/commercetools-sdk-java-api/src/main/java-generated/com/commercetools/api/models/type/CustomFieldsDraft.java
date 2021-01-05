@@ -40,17 +40,26 @@ public interface CustomFieldsDraft  {
     
     public void setFields(final FieldContainer fields);
 
-    public static CustomFieldsDraftImpl of(){
+    public static CustomFieldsDraft of(){
         return new CustomFieldsDraftImpl();
     }
     
 
-    public static CustomFieldsDraftImpl of(final CustomFieldsDraft template) {
+    public static CustomFieldsDraft of(final CustomFieldsDraft template) {
         CustomFieldsDraftImpl instance = new CustomFieldsDraftImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static CustomFieldsDraftBuilder builder(){
+        return CustomFieldsDraftBuilder.of();
+    }
+    
+    public static CustomFieldsDraftBuilder builder(final CustomFieldsDraft template){
+        return CustomFieldsDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldsDraft(Function<CustomFieldsDraft, T> helper) {
         return helper.apply(this);

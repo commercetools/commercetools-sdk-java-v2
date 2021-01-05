@@ -141,12 +141,12 @@ public interface MyCartDraft  {
     public void setDiscountCodes(final DiscountCodeInfo ...discountCodes);
     public void setDiscountCodes(final List<DiscountCodeInfo> discountCodes);
 
-    public static MyCartDraftImpl of(){
+    public static MyCartDraft of(){
         return new MyCartDraftImpl();
     }
     
 
-    public static MyCartDraftImpl of(final MyCartDraft template) {
+    public static MyCartDraft of(final MyCartDraft template) {
         MyCartDraftImpl instance = new MyCartDraftImpl();
         instance.setCurrency(template.getCurrency());
         instance.setCustomerEmail(template.getCustomerEmail());
@@ -165,6 +165,15 @@ public interface MyCartDraft  {
         instance.setDiscountCodes(template.getDiscountCodes());
         return instance;
     }
+
+    public static MyCartDraftBuilder builder(){
+        return MyCartDraftBuilder.of();
+    }
+    
+    public static MyCartDraftBuilder builder(final MyCartDraft template){
+        return MyCartDraftBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartDraft(Function<MyCartDraft, T> helper) {
         return helper.apply(this);

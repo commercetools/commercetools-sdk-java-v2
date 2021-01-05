@@ -30,16 +30,25 @@ public interface MyCartAddPaymentAction extends MyCartUpdateAction {
 
     public void setPayment(final PaymentResourceIdentifier payment);
 
-    public static MyCartAddPaymentActionImpl of(){
+    public static MyCartAddPaymentAction of(){
         return new MyCartAddPaymentActionImpl();
     }
     
 
-    public static MyCartAddPaymentActionImpl of(final MyCartAddPaymentAction template) {
+    public static MyCartAddPaymentAction of(final MyCartAddPaymentAction template) {
         MyCartAddPaymentActionImpl instance = new MyCartAddPaymentActionImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public static MyCartAddPaymentActionBuilder builder(){
+        return MyCartAddPaymentActionBuilder.of();
+    }
+    
+    public static MyCartAddPaymentActionBuilder builder(final MyCartAddPaymentAction template){
+        return MyCartAddPaymentActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartAddPaymentAction(Function<MyCartAddPaymentAction, T> helper) {
         return helper.apply(this);

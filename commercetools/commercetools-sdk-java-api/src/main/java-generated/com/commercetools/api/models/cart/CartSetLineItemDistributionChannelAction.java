@@ -35,17 +35,26 @@ public interface CartSetLineItemDistributionChannelAction extends CartUpdateActi
     
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-    public static CartSetLineItemDistributionChannelActionImpl of(){
+    public static CartSetLineItemDistributionChannelAction of(){
         return new CartSetLineItemDistributionChannelActionImpl();
     }
     
 
-    public static CartSetLineItemDistributionChannelActionImpl of(final CartSetLineItemDistributionChannelAction template) {
+    public static CartSetLineItemDistributionChannelAction of(final CartSetLineItemDistributionChannelAction template) {
         CartSetLineItemDistributionChannelActionImpl instance = new CartSetLineItemDistributionChannelActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public static CartSetLineItemDistributionChannelActionBuilder builder(){
+        return CartSetLineItemDistributionChannelActionBuilder.of();
+    }
+    
+    public static CartSetLineItemDistributionChannelActionBuilder builder(final CartSetLineItemDistributionChannelAction template){
+        return CartSetLineItemDistributionChannelActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetLineItemDistributionChannelAction(Function<CartSetLineItemDistributionChannelAction, T> helper) {
         return helper.apply(this);

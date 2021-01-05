@@ -37,17 +37,26 @@ public interface MissingImagesCount  {
     
     public void setTotal(final Long total);
 
-    public static MissingImagesCountImpl of(){
+    public static MissingImagesCount of(){
         return new MissingImagesCountImpl();
     }
     
 
-    public static MissingImagesCountImpl of(final MissingImagesCount template) {
+    public static MissingImagesCount of(final MissingImagesCount template) {
         MissingImagesCountImpl instance = new MissingImagesCountImpl();
         instance.setMissingImages(template.getMissingImages());
         instance.setTotal(template.getTotal());
         return instance;
     }
+
+    public static MissingImagesCountBuilder builder(){
+        return MissingImagesCountBuilder.of();
+    }
+    
+    public static MissingImagesCountBuilder builder(final MissingImagesCount template){
+        return MissingImagesCountBuilder.of(template);
+    }
+    
 
     default <T> T withMissingImagesCount(Function<MissingImagesCount, T> helper) {
         return helper.apply(this);

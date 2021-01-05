@@ -33,16 +33,25 @@ public interface MoneyField extends CustomField {
 
     public void setValue(final TypedMoney value);
 
-    public static MoneyFieldImpl of(){
+    public static MoneyField of(){
         return new MoneyFieldImpl();
     }
     
 
-    public static MoneyFieldImpl of(final MoneyField template) {
+    public static MoneyField of(final MoneyField template) {
         MoneyFieldImpl instance = new MoneyFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static MoneyFieldBuilder builder(){
+        return MoneyFieldBuilder.of();
+    }
+    
+    public static MoneyFieldBuilder builder(final MoneyField template){
+        return MoneyFieldBuilder.of(template);
+    }
+    
 
     default <T> T withMoneyField(Function<MoneyField, T> helper) {
         return helper.apply(this);

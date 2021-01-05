@@ -32,16 +32,25 @@ public interface ProductDiscountValueAbsolute extends ProductDiscountValue {
     public void setMoney(final TypedMoney ...money);
     public void setMoney(final List<TypedMoney> money);
 
-    public static ProductDiscountValueAbsoluteImpl of(){
+    public static ProductDiscountValueAbsolute of(){
         return new ProductDiscountValueAbsoluteImpl();
     }
     
 
-    public static ProductDiscountValueAbsoluteImpl of(final ProductDiscountValueAbsolute template) {
+    public static ProductDiscountValueAbsolute of(final ProductDiscountValueAbsolute template) {
         ProductDiscountValueAbsoluteImpl instance = new ProductDiscountValueAbsoluteImpl();
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public static ProductDiscountValueAbsoluteBuilder builder(){
+        return ProductDiscountValueAbsoluteBuilder.of();
+    }
+    
+    public static ProductDiscountValueAbsoluteBuilder builder(final ProductDiscountValueAbsolute template){
+        return ProductDiscountValueAbsoluteBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountValueAbsolute(Function<ProductDiscountValueAbsolute, T> helper) {
         return helper.apply(this);

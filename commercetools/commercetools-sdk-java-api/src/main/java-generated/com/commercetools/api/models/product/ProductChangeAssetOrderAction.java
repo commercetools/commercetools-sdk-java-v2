@@ -48,12 +48,12 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
     public void setAssetOrder(final String ...assetOrder);
     public void setAssetOrder(final List<String> assetOrder);
 
-    public static ProductChangeAssetOrderActionImpl of(){
+    public static ProductChangeAssetOrderAction of(){
         return new ProductChangeAssetOrderActionImpl();
     }
     
 
-    public static ProductChangeAssetOrderActionImpl of(final ProductChangeAssetOrderAction template) {
+    public static ProductChangeAssetOrderAction of(final ProductChangeAssetOrderAction template) {
         ProductChangeAssetOrderActionImpl instance = new ProductChangeAssetOrderActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -61,6 +61,15 @@ public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
         instance.setAssetOrder(template.getAssetOrder());
         return instance;
     }
+
+    public static ProductChangeAssetOrderActionBuilder builder(){
+        return ProductChangeAssetOrderActionBuilder.of();
+    }
+    
+    public static ProductChangeAssetOrderActionBuilder builder(final ProductChangeAssetOrderAction template){
+        return ProductChangeAssetOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductChangeAssetOrderAction(Function<ProductChangeAssetOrderAction, T> helper) {
         return helper.apply(this);

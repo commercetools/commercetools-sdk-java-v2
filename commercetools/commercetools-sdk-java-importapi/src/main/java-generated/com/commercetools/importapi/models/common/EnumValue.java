@@ -34,17 +34,26 @@ public interface EnumValue  {
     
     public void setLabel(final String label);
 
-    public static EnumValueImpl of(){
+    public static EnumValue of(){
         return new EnumValueImpl();
     }
     
 
-    public static EnumValueImpl of(final EnumValue template) {
+    public static EnumValue of(final EnumValue template) {
         EnumValueImpl instance = new EnumValueImpl();
         instance.setKey(template.getKey());
         instance.setLabel(template.getLabel());
         return instance;
     }
+
+    public static EnumValueBuilder builder(){
+        return EnumValueBuilder.of();
+    }
+    
+    public static EnumValueBuilder builder(final EnumValue template){
+        return EnumValueBuilder.of(template);
+    }
+    
 
     default <T> T withEnumValue(Function<EnumValue, T> helper) {
         return helper.apply(this);

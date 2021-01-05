@@ -56,12 +56,12 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
     
     public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
 
-    public static StagedOrderTransitionCustomLineItemStateActionImpl of(){
+    public static StagedOrderTransitionCustomLineItemStateAction of(){
         return new StagedOrderTransitionCustomLineItemStateActionImpl();
     }
     
 
-    public static StagedOrderTransitionCustomLineItemStateActionImpl of(final StagedOrderTransitionCustomLineItemStateAction template) {
+    public static StagedOrderTransitionCustomLineItemStateAction of(final StagedOrderTransitionCustomLineItemStateAction template) {
         StagedOrderTransitionCustomLineItemStateActionImpl instance = new StagedOrderTransitionCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -70,6 +70,15 @@ public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOr
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }
+
+    public static StagedOrderTransitionCustomLineItemStateActionBuilder builder(){
+        return StagedOrderTransitionCustomLineItemStateActionBuilder.of();
+    }
+    
+    public static StagedOrderTransitionCustomLineItemStateActionBuilder builder(final StagedOrderTransitionCustomLineItemStateAction template){
+        return StagedOrderTransitionCustomLineItemStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderTransitionCustomLineItemStateAction(Function<StagedOrderTransitionCustomLineItemStateAction, T> helper) {
         return helper.apply(this);

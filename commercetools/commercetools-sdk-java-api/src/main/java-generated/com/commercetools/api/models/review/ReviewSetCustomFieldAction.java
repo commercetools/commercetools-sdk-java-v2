@@ -35,17 +35,26 @@ public interface ReviewSetCustomFieldAction extends ReviewUpdateAction {
     
     public void setValue(final JsonNode value);
 
-    public static ReviewSetCustomFieldActionImpl of(){
+    public static ReviewSetCustomFieldAction of(){
         return new ReviewSetCustomFieldActionImpl();
     }
     
 
-    public static ReviewSetCustomFieldActionImpl of(final ReviewSetCustomFieldAction template) {
+    public static ReviewSetCustomFieldAction of(final ReviewSetCustomFieldAction template) {
         ReviewSetCustomFieldActionImpl instance = new ReviewSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ReviewSetCustomFieldActionBuilder builder(){
+        return ReviewSetCustomFieldActionBuilder.of();
+    }
+    
+    public static ReviewSetCustomFieldActionBuilder builder(final ReviewSetCustomFieldAction template){
+        return ReviewSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetCustomFieldAction(Function<ReviewSetCustomFieldAction, T> helper) {
         return helper.apply(this);

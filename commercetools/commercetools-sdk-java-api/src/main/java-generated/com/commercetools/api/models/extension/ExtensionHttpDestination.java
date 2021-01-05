@@ -35,17 +35,26 @@ public interface ExtensionHttpDestination extends ExtensionDestination {
     
     public void setAuthentication(final ExtensionHttpDestinationAuthentication authentication);
 
-    public static ExtensionHttpDestinationImpl of(){
+    public static ExtensionHttpDestination of(){
         return new ExtensionHttpDestinationImpl();
     }
     
 
-    public static ExtensionHttpDestinationImpl of(final ExtensionHttpDestination template) {
+    public static ExtensionHttpDestination of(final ExtensionHttpDestination template) {
         ExtensionHttpDestinationImpl instance = new ExtensionHttpDestinationImpl();
         instance.setUrl(template.getUrl());
         instance.setAuthentication(template.getAuthentication());
         return instance;
     }
+
+    public static ExtensionHttpDestinationBuilder builder(){
+        return ExtensionHttpDestinationBuilder.of();
+    }
+    
+    public static ExtensionHttpDestinationBuilder builder(final ExtensionHttpDestination template){
+        return ExtensionHttpDestinationBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionHttpDestination(Function<ExtensionHttpDestination, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface CartAddPaymentAction extends CartUpdateAction {
 
     public void setPayment(final PaymentResourceIdentifier payment);
 
-    public static CartAddPaymentActionImpl of(){
+    public static CartAddPaymentAction of(){
         return new CartAddPaymentActionImpl();
     }
     
 
-    public static CartAddPaymentActionImpl of(final CartAddPaymentAction template) {
+    public static CartAddPaymentAction of(final CartAddPaymentAction template) {
         CartAddPaymentActionImpl instance = new CartAddPaymentActionImpl();
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public static CartAddPaymentActionBuilder builder(){
+        return CartAddPaymentActionBuilder.of();
+    }
+    
+    public static CartAddPaymentActionBuilder builder(final CartAddPaymentAction template){
+        return CartAddPaymentActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartAddPaymentAction(Function<CartAddPaymentAction, T> helper) {
         return helper.apply(this);

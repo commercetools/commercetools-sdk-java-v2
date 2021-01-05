@@ -58,6 +58,7 @@ public interface ReviewUpdateAction extends com.commercetools.api.models.Resourc
 
 
 
+
     default <T> T withReviewUpdateAction(Function<ReviewUpdateAction, T> helper) {
         return helper.apply(this);
     }

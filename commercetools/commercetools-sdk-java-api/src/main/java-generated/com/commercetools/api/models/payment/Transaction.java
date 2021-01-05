@@ -73,12 +73,12 @@ public interface Transaction  {
     
     public void setState(final TransactionState state);
 
-    public static TransactionImpl of(){
+    public static Transaction of(){
         return new TransactionImpl();
     }
     
 
-    public static TransactionImpl of(final Transaction template) {
+    public static Transaction of(final Transaction template) {
         TransactionImpl instance = new TransactionImpl();
         instance.setId(template.getId());
         instance.setTimestamp(template.getTimestamp());
@@ -88,6 +88,15 @@ public interface Transaction  {
         instance.setState(template.getState());
         return instance;
     }
+
+    public static TransactionBuilder builder(){
+        return TransactionBuilder.of();
+    }
+    
+    public static TransactionBuilder builder(final Transaction template){
+        return TransactionBuilder.of(template);
+    }
+    
 
     default <T> T withTransaction(Function<Transaction, T> helper) {
         return helper.apply(this);

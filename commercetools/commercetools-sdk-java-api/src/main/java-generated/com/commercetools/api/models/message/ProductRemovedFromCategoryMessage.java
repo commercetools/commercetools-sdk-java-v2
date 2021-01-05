@@ -36,12 +36,12 @@ public interface ProductRemovedFromCategoryMessage extends Message {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductRemovedFromCategoryMessageImpl of(){
+    public static ProductRemovedFromCategoryMessage of(){
         return new ProductRemovedFromCategoryMessageImpl();
     }
     
 
-    public static ProductRemovedFromCategoryMessageImpl of(final ProductRemovedFromCategoryMessage template) {
+    public static ProductRemovedFromCategoryMessage of(final ProductRemovedFromCategoryMessage template) {
         ProductRemovedFromCategoryMessageImpl instance = new ProductRemovedFromCategoryMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -57,6 +57,15 @@ public interface ProductRemovedFromCategoryMessage extends Message {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductRemovedFromCategoryMessageBuilder builder(){
+        return ProductRemovedFromCategoryMessageBuilder.of();
+    }
+    
+    public static ProductRemovedFromCategoryMessageBuilder builder(final ProductRemovedFromCategoryMessage template){
+        return ProductRemovedFromCategoryMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductRemovedFromCategoryMessage(Function<ProductRemovedFromCategoryMessage, T> helper) {
         return helper.apply(this);

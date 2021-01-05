@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKeyProductTypesKeyByKeyPost, com.commercetools.api.models.product_type.ProductType> {
+public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKeyProductTypesKeyByKeyPost, com.commercetools.api.models.product_type.ProductType> implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductTypesKeyByKeyPost>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductTypesKeyByKeyPost>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductTypesKeyByKeyPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductTypesKeyByKeyPost> {
 
     
     private String projectKey;

@@ -58,12 +58,12 @@ public interface CustomerToken  {
     
     public void setValue(final String value);
 
-    public static CustomerTokenImpl of(){
+    public static CustomerToken of(){
         return new CustomerTokenImpl();
     }
     
 
-    public static CustomerTokenImpl of(final CustomerToken template) {
+    public static CustomerToken of(final CustomerToken template) {
         CustomerTokenImpl instance = new CustomerTokenImpl();
         instance.setId(template.getId());
         instance.setCreatedAt(template.getCreatedAt());
@@ -73,6 +73,15 @@ public interface CustomerToken  {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static CustomerTokenBuilder builder(){
+        return CustomerTokenBuilder.of();
+    }
+    
+    public static CustomerTokenBuilder builder(final CustomerToken template){
+        return CustomerTokenBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerToken(Function<CustomerToken, T> helper) {
         return helper.apply(this);

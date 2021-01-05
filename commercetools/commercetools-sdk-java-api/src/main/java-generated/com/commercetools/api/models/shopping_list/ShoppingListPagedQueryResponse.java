@@ -55,12 +55,12 @@ public interface ShoppingListPagedQueryResponse  {
     public void setResults(final ShoppingList ...results);
     public void setResults(final List<ShoppingList> results);
 
-    public static ShoppingListPagedQueryResponseImpl of(){
+    public static ShoppingListPagedQueryResponse of(){
         return new ShoppingListPagedQueryResponseImpl();
     }
     
 
-    public static ShoppingListPagedQueryResponseImpl of(final ShoppingListPagedQueryResponse template) {
+    public static ShoppingListPagedQueryResponse of(final ShoppingListPagedQueryResponse template) {
         ShoppingListPagedQueryResponseImpl instance = new ShoppingListPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ShoppingListPagedQueryResponse  {
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ShoppingListPagedQueryResponseBuilder builder(){
+        return ShoppingListPagedQueryResponseBuilder.of();
+    }
+    
+    public static ShoppingListPagedQueryResponseBuilder builder(final ShoppingListPagedQueryResponse template){
+        return ShoppingListPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListPagedQueryResponse(Function<ShoppingListPagedQueryResponse, T> helper) {
         return helper.apply(this);

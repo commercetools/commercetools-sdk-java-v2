@@ -34,7 +34,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet, com.commercetools.api.models.product.ProductPagedQueryResponse> implements com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductsGet, com.commercetools.api.models.product.ProductPagedQueryResponse> {
+public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet, com.commercetools.api.models.product.ProductPagedQueryResponse> implements com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductsGet, com.commercetools.api.models.product.ProductPagedQueryResponse>, com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsGet>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsGet>, com.commercetools.api.client.SortableTrait<ByProjectKeyProductsGet>, com.commercetools.api.client.PagingTrait<ByProjectKeyProductsGet>, com.commercetools.api.client.QueryTrait<ByProjectKeyProductsGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductsGet> {
 
     
     private String projectKey;

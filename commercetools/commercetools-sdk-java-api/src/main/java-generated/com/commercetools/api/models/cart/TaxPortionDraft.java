@@ -41,18 +41,27 @@ public interface TaxPortionDraft  {
     
     public void setAmount(final Money amount);
 
-    public static TaxPortionDraftImpl of(){
+    public static TaxPortionDraft of(){
         return new TaxPortionDraftImpl();
     }
     
 
-    public static TaxPortionDraftImpl of(final TaxPortionDraft template) {
+    public static TaxPortionDraft of(final TaxPortionDraft template) {
         TaxPortionDraftImpl instance = new TaxPortionDraftImpl();
         instance.setName(template.getName());
         instance.setRate(template.getRate());
         instance.setAmount(template.getAmount());
         return instance;
     }
+
+    public static TaxPortionDraftBuilder builder(){
+        return TaxPortionDraftBuilder.of();
+    }
+    
+    public static TaxPortionDraftBuilder builder(final TaxPortionDraft template){
+        return TaxPortionDraftBuilder.of(template);
+    }
+    
 
     default <T> T withTaxPortionDraft(Function<TaxPortionDraft, T> helper) {
         return helper.apply(this);

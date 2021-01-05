@@ -43,18 +43,27 @@ public interface ProductSetSkuAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductSetSkuActionImpl of(){
+    public static ProductSetSkuAction of(){
         return new ProductSetSkuActionImpl();
     }
     
 
-    public static ProductSetSkuActionImpl of(final ProductSetSkuAction template) {
+    public static ProductSetSkuAction of(final ProductSetSkuAction template) {
         ProductSetSkuActionImpl instance = new ProductSetSkuActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductSetSkuActionBuilder builder(){
+        return ProductSetSkuActionBuilder.of();
+    }
+    
+    public static ProductSetSkuActionBuilder builder(final ProductSetSkuAction template){
+        return ProductSetSkuActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetSkuAction(Function<ProductSetSkuAction, T> helper) {
         return helper.apply(this);

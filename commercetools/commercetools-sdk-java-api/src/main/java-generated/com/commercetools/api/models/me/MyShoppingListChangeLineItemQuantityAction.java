@@ -34,17 +34,26 @@ public interface MyShoppingListChangeLineItemQuantityAction extends MyShoppingLi
     
     public void setQuantity(final Long quantity);
 
-    public static MyShoppingListChangeLineItemQuantityActionImpl of(){
+    public static MyShoppingListChangeLineItemQuantityAction of(){
         return new MyShoppingListChangeLineItemQuantityActionImpl();
     }
     
 
-    public static MyShoppingListChangeLineItemQuantityActionImpl of(final MyShoppingListChangeLineItemQuantityAction template) {
+    public static MyShoppingListChangeLineItemQuantityAction of(final MyShoppingListChangeLineItemQuantityAction template) {
         MyShoppingListChangeLineItemQuantityActionImpl instance = new MyShoppingListChangeLineItemQuantityActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static MyShoppingListChangeLineItemQuantityActionBuilder builder(){
+        return MyShoppingListChangeLineItemQuantityActionBuilder.of();
+    }
+    
+    public static MyShoppingListChangeLineItemQuantityActionBuilder builder(final MyShoppingListChangeLineItemQuantityAction template){
+        return MyShoppingListChangeLineItemQuantityActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListChangeLineItemQuantityAction(Function<MyShoppingListChangeLineItemQuantityAction, T> helper) {
         return helper.apply(this);

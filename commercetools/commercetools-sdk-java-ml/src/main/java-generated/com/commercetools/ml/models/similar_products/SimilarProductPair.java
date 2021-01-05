@@ -42,17 +42,26 @@ public interface SimilarProductPair  {
     public void setProducts(final SimilarProduct ...products);
     public void setProducts(final List<SimilarProduct> products);
 
-    public static SimilarProductPairImpl of(){
+    public static SimilarProductPair of(){
         return new SimilarProductPairImpl();
     }
     
 
-    public static SimilarProductPairImpl of(final SimilarProductPair template) {
+    public static SimilarProductPair of(final SimilarProductPair template) {
         SimilarProductPairImpl instance = new SimilarProductPairImpl();
         instance.setConfidence(template.getConfidence());
         instance.setProducts(template.getProducts());
         return instance;
     }
+
+    public static SimilarProductPairBuilder builder(){
+        return SimilarProductPairBuilder.of();
+    }
+    
+    public static SimilarProductPairBuilder builder(final SimilarProductPair template){
+        return SimilarProductPairBuilder.of(template);
+    }
+    
 
     default <T> T withSimilarProductPair(Function<SimilarProductPair, T> helper) {
         return helper.apply(this);

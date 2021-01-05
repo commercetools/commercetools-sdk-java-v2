@@ -30,12 +30,12 @@ public interface DeliveryAddedMessage extends Message {
 
     public void setDelivery(final Delivery delivery);
 
-    public static DeliveryAddedMessageImpl of(){
+    public static DeliveryAddedMessage of(){
         return new DeliveryAddedMessageImpl();
     }
     
 
-    public static DeliveryAddedMessageImpl of(final DeliveryAddedMessage template) {
+    public static DeliveryAddedMessage of(final DeliveryAddedMessage template) {
         DeliveryAddedMessageImpl instance = new DeliveryAddedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface DeliveryAddedMessage extends Message {
         instance.setDelivery(template.getDelivery());
         return instance;
     }
+
+    public static DeliveryAddedMessageBuilder builder(){
+        return DeliveryAddedMessageBuilder.of();
+    }
+    
+    public static DeliveryAddedMessageBuilder builder(final DeliveryAddedMessage template){
+        return DeliveryAddedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryAddedMessage(Function<DeliveryAddedMessage, T> helper) {
         return helper.apply(this);

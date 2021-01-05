@@ -94,12 +94,12 @@ public interface ShoppingListLineItem  {
     
     public void setVariantId(final Long variantId);
 
-    public static ShoppingListLineItemImpl of(){
+    public static ShoppingListLineItem of(){
         return new ShoppingListLineItemImpl();
     }
     
 
-    public static ShoppingListLineItemImpl of(final ShoppingListLineItem template) {
+    public static ShoppingListLineItem of(final ShoppingListLineItem template) {
         ShoppingListLineItemImpl instance = new ShoppingListLineItemImpl();
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(template.getCustom());
@@ -114,6 +114,15 @@ public interface ShoppingListLineItem  {
         instance.setVariantId(template.getVariantId());
         return instance;
     }
+
+    public static ShoppingListLineItemBuilder builder(){
+        return ShoppingListLineItemBuilder.of();
+    }
+    
+    public static ShoppingListLineItemBuilder builder(final ShoppingListLineItem template){
+        return ShoppingListLineItemBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListLineItem(Function<ShoppingListLineItem, T> helper) {
         return helper.apply(this);

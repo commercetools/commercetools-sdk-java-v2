@@ -36,12 +36,12 @@ public interface ProductAddedToCategoryMessage extends Message {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductAddedToCategoryMessageImpl of(){
+    public static ProductAddedToCategoryMessage of(){
         return new ProductAddedToCategoryMessageImpl();
     }
     
 
-    public static ProductAddedToCategoryMessageImpl of(final ProductAddedToCategoryMessage template) {
+    public static ProductAddedToCategoryMessage of(final ProductAddedToCategoryMessage template) {
         ProductAddedToCategoryMessageImpl instance = new ProductAddedToCategoryMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -57,6 +57,15 @@ public interface ProductAddedToCategoryMessage extends Message {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductAddedToCategoryMessageBuilder builder(){
+        return ProductAddedToCategoryMessageBuilder.of();
+    }
+    
+    public static ProductAddedToCategoryMessageBuilder builder(final ProductAddedToCategoryMessage template){
+        return ProductAddedToCategoryMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductAddedToCategoryMessage(Function<ProductAddedToCategoryMessage, T> helper) {
         return helper.apply(this);

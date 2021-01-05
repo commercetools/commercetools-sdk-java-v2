@@ -30,12 +30,12 @@ public interface OrderCreatedMessage extends Message {
 
     public void setOrder(final Order order);
 
-    public static OrderCreatedMessageImpl of(){
+    public static OrderCreatedMessage of(){
         return new OrderCreatedMessageImpl();
     }
     
 
-    public static OrderCreatedMessageImpl of(final OrderCreatedMessage template) {
+    public static OrderCreatedMessage of(final OrderCreatedMessage template) {
         OrderCreatedMessageImpl instance = new OrderCreatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface OrderCreatedMessage extends Message {
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public static OrderCreatedMessageBuilder builder(){
+        return OrderCreatedMessageBuilder.of();
+    }
+    
+    public static OrderCreatedMessageBuilder builder(final OrderCreatedMessage template){
+        return OrderCreatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderCreatedMessage(Function<OrderCreatedMessage, T> helper) {
         return helper.apply(this);

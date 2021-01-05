@@ -30,16 +30,25 @@ public interface CartSetCountryAction extends CartUpdateAction {
 
     public void setCountry(final String country);
 
-    public static CartSetCountryActionImpl of(){
+    public static CartSetCountryAction of(){
         return new CartSetCountryActionImpl();
     }
     
 
-    public static CartSetCountryActionImpl of(final CartSetCountryAction template) {
+    public static CartSetCountryAction of(final CartSetCountryAction template) {
         CartSetCountryActionImpl instance = new CartSetCountryActionImpl();
         instance.setCountry(template.getCountry());
         return instance;
     }
+
+    public static CartSetCountryActionBuilder builder(){
+        return CartSetCountryActionBuilder.of();
+    }
+    
+    public static CartSetCountryActionBuilder builder(final CartSetCountryAction template){
+        return CartSetCountryActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCountryAction(Function<CartSetCountryAction, T> helper) {
         return helper.apply(this);

@@ -24,18 +24,27 @@ public interface CentPrecisionMoneyDraft extends TypedMoneyDraft {
 
 
 
-    public static CentPrecisionMoneyDraftImpl of(){
+    public static CentPrecisionMoneyDraft of(){
         return new CentPrecisionMoneyDraftImpl();
     }
     
 
-    public static CentPrecisionMoneyDraftImpl of(final CentPrecisionMoneyDraft template) {
+    public static CentPrecisionMoneyDraft of(final CentPrecisionMoneyDraft template) {
         CentPrecisionMoneyDraftImpl instance = new CentPrecisionMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());
         instance.setCurrencyCode(template.getCurrencyCode());
         instance.setFractionDigits(template.getFractionDigits());
         return instance;
     }
+
+    public static CentPrecisionMoneyDraftBuilder builder(){
+        return CentPrecisionMoneyDraftBuilder.of();
+    }
+    
+    public static CentPrecisionMoneyDraftBuilder builder(final CentPrecisionMoneyDraft template){
+        return CentPrecisionMoneyDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCentPrecisionMoneyDraft(Function<CentPrecisionMoneyDraft, T> helper) {
         return helper.apply(this);

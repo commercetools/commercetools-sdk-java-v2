@@ -51,12 +51,12 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
     public void setItems(final DeliveryItem ...items);
     public void setItems(final List<DeliveryItem> items);
 
-    public static OrderAddParcelToDeliveryActionImpl of(){
+    public static OrderAddParcelToDeliveryAction of(){
         return new OrderAddParcelToDeliveryActionImpl();
     }
     
 
-    public static OrderAddParcelToDeliveryActionImpl of(final OrderAddParcelToDeliveryAction template) {
+    public static OrderAddParcelToDeliveryAction of(final OrderAddParcelToDeliveryAction template) {
         OrderAddParcelToDeliveryActionImpl instance = new OrderAddParcelToDeliveryActionImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setMeasurements(template.getMeasurements());
@@ -64,6 +64,15 @@ public interface OrderAddParcelToDeliveryAction extends OrderUpdateAction {
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public static OrderAddParcelToDeliveryActionBuilder builder(){
+        return OrderAddParcelToDeliveryActionBuilder.of();
+    }
+    
+    public static OrderAddParcelToDeliveryActionBuilder builder(final OrderAddParcelToDeliveryAction template){
+        return OrderAddParcelToDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderAddParcelToDeliveryAction(Function<OrderAddParcelToDeliveryAction, T> helper) {
         return helper.apply(this);

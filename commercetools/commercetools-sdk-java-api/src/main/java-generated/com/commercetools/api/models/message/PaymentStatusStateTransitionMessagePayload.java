@@ -36,17 +36,26 @@ public interface PaymentStatusStateTransitionMessagePayload extends MessagePaylo
     
     public void setForce(final Boolean force);
 
-    public static PaymentStatusStateTransitionMessagePayloadImpl of(){
+    public static PaymentStatusStateTransitionMessagePayload of(){
         return new PaymentStatusStateTransitionMessagePayloadImpl();
     }
     
 
-    public static PaymentStatusStateTransitionMessagePayloadImpl of(final PaymentStatusStateTransitionMessagePayload template) {
+    public static PaymentStatusStateTransitionMessagePayload of(final PaymentStatusStateTransitionMessagePayload template) {
         PaymentStatusStateTransitionMessagePayloadImpl instance = new PaymentStatusStateTransitionMessagePayloadImpl();
         instance.setState(template.getState());
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static PaymentStatusStateTransitionMessagePayloadBuilder builder(){
+        return PaymentStatusStateTransitionMessagePayloadBuilder.of();
+    }
+    
+    public static PaymentStatusStateTransitionMessagePayloadBuilder builder(final PaymentStatusStateTransitionMessagePayload template){
+        return PaymentStatusStateTransitionMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentStatusStateTransitionMessagePayload(Function<PaymentStatusStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);

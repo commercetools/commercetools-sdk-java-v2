@@ -28,16 +28,25 @@ public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
 
     public void setPredicate(final String predicate);
 
-    public static CartDiscountCustomLineItemsTargetImpl of(){
+    public static CartDiscountCustomLineItemsTarget of(){
         return new CartDiscountCustomLineItemsTargetImpl();
     }
     
 
-    public static CartDiscountCustomLineItemsTargetImpl of(final CartDiscountCustomLineItemsTarget template) {
+    public static CartDiscountCustomLineItemsTarget of(final CartDiscountCustomLineItemsTarget template) {
         CartDiscountCustomLineItemsTargetImpl instance = new CartDiscountCustomLineItemsTargetImpl();
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public static CartDiscountCustomLineItemsTargetBuilder builder(){
+        return CartDiscountCustomLineItemsTargetBuilder.of();
+    }
+    
+    public static CartDiscountCustomLineItemsTargetBuilder builder(final CartDiscountCustomLineItemsTarget template){
+        return CartDiscountCustomLineItemsTargetBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountCustomLineItemsTarget(Function<CartDiscountCustomLineItemsTarget, T> helper) {
         return helper.apply(this);

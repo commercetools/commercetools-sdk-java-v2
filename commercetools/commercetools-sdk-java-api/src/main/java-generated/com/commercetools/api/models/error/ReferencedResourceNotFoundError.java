@@ -41,12 +41,12 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
     
     public void setKey(final String key);
 
-    public static ReferencedResourceNotFoundErrorImpl of(){
+    public static ReferencedResourceNotFoundError of(){
         return new ReferencedResourceNotFoundErrorImpl();
     }
     
 
-    public static ReferencedResourceNotFoundErrorImpl of(final ReferencedResourceNotFoundError template) {
+    public static ReferencedResourceNotFoundError of(final ReferencedResourceNotFoundError template) {
         ReferencedResourceNotFoundErrorImpl instance = new ReferencedResourceNotFoundErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setTypeId(template.getTypeId());
@@ -54,6 +54,15 @@ public interface ReferencedResourceNotFoundError extends ErrorObject {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ReferencedResourceNotFoundErrorBuilder builder(){
+        return ReferencedResourceNotFoundErrorBuilder.of();
+    }
+    
+    public static ReferencedResourceNotFoundErrorBuilder builder(final ReferencedResourceNotFoundError template){
+        return ReferencedResourceNotFoundErrorBuilder.of(template);
+    }
+    
 
     default <T> T withReferencedResourceNotFoundError(Function<ReferencedResourceNotFoundError, T> helper) {
         return helper.apply(this);

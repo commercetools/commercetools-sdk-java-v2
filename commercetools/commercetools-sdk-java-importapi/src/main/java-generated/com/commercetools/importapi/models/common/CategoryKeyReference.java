@@ -27,16 +27,25 @@ public interface CategoryKeyReference extends KeyReference {
 
 
 
-    public static CategoryKeyReferenceImpl of(){
+    public static CategoryKeyReference of(){
         return new CategoryKeyReferenceImpl();
     }
     
 
-    public static CategoryKeyReferenceImpl of(final CategoryKeyReference template) {
+    public static CategoryKeyReference of(final CategoryKeyReference template) {
         CategoryKeyReferenceImpl instance = new CategoryKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CategoryKeyReferenceBuilder builder(){
+        return CategoryKeyReferenceBuilder.of();
+    }
+    
+    public static CategoryKeyReferenceBuilder builder(final CategoryKeyReference template){
+        return CategoryKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryKeyReference(Function<CategoryKeyReference, T> helper) {
         return helper.apply(this);

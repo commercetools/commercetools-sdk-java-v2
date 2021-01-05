@@ -31,17 +31,26 @@ public interface NumberAttribute extends Attribute {
 
     public void setValue(final Double value);
 
-    public static NumberAttributeImpl of(){
+    public static NumberAttribute of(){
         return new NumberAttributeImpl();
     }
     
 
-    public static NumberAttributeImpl of(final NumberAttribute template) {
+    public static NumberAttribute of(final NumberAttribute template) {
         NumberAttributeImpl instance = new NumberAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static NumberAttributeBuilder builder(){
+        return NumberAttributeBuilder.of();
+    }
+    
+    public static NumberAttributeBuilder builder(final NumberAttribute template){
+        return NumberAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withNumberAttribute(Function<NumberAttribute, T> helper) {
         return helper.apply(this);

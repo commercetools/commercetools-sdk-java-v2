@@ -77,12 +77,12 @@ public interface ProductSetSelector  {
     
     public void setProductSetLimit(final Long productSetLimit);
 
-    public static ProductSetSelectorImpl of(){
+    public static ProductSetSelector of(){
         return new ProductSetSelectorImpl();
     }
     
 
-    public static ProductSetSelectorImpl of(final ProductSetSelector template) {
+    public static ProductSetSelector of(final ProductSetSelector template) {
         ProductSetSelectorImpl instance = new ProductSetSelectorImpl();
         instance.setProjectKey(template.getProjectKey());
         instance.setProductIds(template.getProductIds());
@@ -92,6 +92,15 @@ public interface ProductSetSelector  {
         instance.setProductSetLimit(template.getProductSetLimit());
         return instance;
     }
+
+    public static ProductSetSelectorBuilder builder(){
+        return ProductSetSelectorBuilder.of();
+    }
+    
+    public static ProductSetSelectorBuilder builder(final ProductSetSelector template){
+        return ProductSetSelectorBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetSelector(Function<ProductSetSelector, T> helper) {
         return helper.apply(this);

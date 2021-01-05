@@ -30,12 +30,12 @@ public interface CustomerAddressAddedMessage extends Message {
 
     public void setAddress(final Address address);
 
-    public static CustomerAddressAddedMessageImpl of(){
+    public static CustomerAddressAddedMessage of(){
         return new CustomerAddressAddedMessageImpl();
     }
     
 
-    public static CustomerAddressAddedMessageImpl of(final CustomerAddressAddedMessage template) {
+    public static CustomerAddressAddedMessage of(final CustomerAddressAddedMessage template) {
         CustomerAddressAddedMessageImpl instance = new CustomerAddressAddedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface CustomerAddressAddedMessage extends Message {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static CustomerAddressAddedMessageBuilder builder(){
+        return CustomerAddressAddedMessageBuilder.of();
+    }
+    
+    public static CustomerAddressAddedMessageBuilder builder(final CustomerAddressAddedMessage template){
+        return CustomerAddressAddedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerAddressAddedMessage(Function<CustomerAddressAddedMessage, T> helper) {
         return helper.apply(this);

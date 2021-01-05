@@ -55,12 +55,12 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
     
     public void setShippingDetailsToRemove(final ItemShippingDetailsDraft shippingDetailsToRemove);
 
-    public static CartRemoveLineItemActionImpl of(){
+    public static CartRemoveLineItemAction of(){
         return new CartRemoveLineItemActionImpl();
     }
     
 
-    public static CartRemoveLineItemActionImpl of(final CartRemoveLineItemAction template) {
+    public static CartRemoveLineItemAction of(final CartRemoveLineItemAction template) {
         CartRemoveLineItemActionImpl instance = new CartRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -69,6 +69,15 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
         instance.setShippingDetailsToRemove(template.getShippingDetailsToRemove());
         return instance;
     }
+
+    public static CartRemoveLineItemActionBuilder builder(){
+        return CartRemoveLineItemActionBuilder.of();
+    }
+    
+    public static CartRemoveLineItemActionBuilder builder(final CartRemoveLineItemAction template){
+        return CartRemoveLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartRemoveLineItemAction(Function<CartRemoveLineItemAction, T> helper) {
         return helper.apply(this);

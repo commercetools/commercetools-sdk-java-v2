@@ -207,12 +207,12 @@ public interface LineItem  {
     
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
-    public static LineItemImpl of(){
+    public static LineItem of(){
         return new LineItemImpl();
     }
     
 
-    public static LineItemImpl of(final LineItem template) {
+    public static LineItem of(final LineItem template) {
         LineItemImpl instance = new LineItemImpl();
         instance.setId(template.getId());
         instance.setProductId(template.getProductId());
@@ -236,6 +236,15 @@ public interface LineItem  {
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static LineItemBuilder builder(){
+        return LineItemBuilder.of();
+    }
+    
+    public static LineItemBuilder builder(final LineItem template){
+        return LineItemBuilder.of(template);
+    }
+    
 
     default <T> T withLineItem(Function<LineItem, T> helper) {
         return helper.apply(this);

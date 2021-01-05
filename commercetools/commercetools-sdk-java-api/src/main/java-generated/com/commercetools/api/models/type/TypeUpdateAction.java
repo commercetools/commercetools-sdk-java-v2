@@ -66,6 +66,7 @@ public interface TypeUpdateAction extends com.commercetools.api.models.ResourceU
 
 
 
+
     default <T> T withTypeUpdateAction(Function<TypeUpdateAction, T> helper) {
         return helper.apply(this);
     }

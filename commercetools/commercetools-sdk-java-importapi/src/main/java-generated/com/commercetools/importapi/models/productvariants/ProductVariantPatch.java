@@ -50,17 +50,26 @@ public interface ProductVariantPatch  {
     
     public void setAttributes(final Attributes attributes);
 
-    public static ProductVariantPatchImpl of(){
+    public static ProductVariantPatch of(){
         return new ProductVariantPatchImpl();
     }
     
 
-    public static ProductVariantPatchImpl of(final ProductVariantPatch template) {
+    public static ProductVariantPatch of(final ProductVariantPatch template) {
         ProductVariantPatchImpl instance = new ProductVariantPatchImpl();
         instance.setProductVariant(template.getProductVariant());
         instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public static ProductVariantPatchBuilder builder(){
+        return ProductVariantPatchBuilder.of();
+    }
+    
+    public static ProductVariantPatchBuilder builder(final ProductVariantPatch template){
+        return ProductVariantPatchBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantPatch(Function<ProductVariantPatch, T> helper) {
         return helper.apply(this);

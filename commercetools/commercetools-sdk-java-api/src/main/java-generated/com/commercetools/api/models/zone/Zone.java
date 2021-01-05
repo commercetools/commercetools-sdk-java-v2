@@ -97,12 +97,12 @@ public interface Zone extends BaseResource, com.commercetools.api.models.DomainR
     public void setLocations(final Location ...locations);
     public void setLocations(final List<Location> locations);
 
-    public static ZoneImpl of(){
+    public static Zone of(){
         return new ZoneImpl();
     }
     
 
-    public static ZoneImpl of(final Zone template) {
+    public static Zone of(final Zone template) {
         ZoneImpl instance = new ZoneImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -116,6 +116,15 @@ public interface Zone extends BaseResource, com.commercetools.api.models.DomainR
         instance.setLocations(template.getLocations());
         return instance;
     }
+
+    public static ZoneBuilder builder(){
+        return ZoneBuilder.of();
+    }
+    
+    public static ZoneBuilder builder(final Zone template){
+        return ZoneBuilder.of(template);
+    }
+    
 
     default <T> T withZone(Function<Zone, T> helper) {
         return helper.apply(this);

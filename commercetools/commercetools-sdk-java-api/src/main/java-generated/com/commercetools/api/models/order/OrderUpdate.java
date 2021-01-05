@@ -37,17 +37,26 @@ public interface OrderUpdate extends com.commercetools.api.models.ResourceUpdate
     public void setActions(final OrderUpdateAction ...actions);
     public void setActions(final List<OrderUpdateAction> actions);
 
-    public static OrderUpdateImpl of(){
+    public static OrderUpdate of(){
         return new OrderUpdateImpl();
     }
     
 
-    public static OrderUpdateImpl of(final OrderUpdate template) {
+    public static OrderUpdate of(final OrderUpdate template) {
         OrderUpdateImpl instance = new OrderUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static OrderUpdateBuilder builder(){
+        return OrderUpdateBuilder.of();
+    }
+    
+    public static OrderUpdateBuilder builder(final OrderUpdate template){
+        return OrderUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withOrderUpdate(Function<OrderUpdate, T> helper) {
         return helper.apply(this);

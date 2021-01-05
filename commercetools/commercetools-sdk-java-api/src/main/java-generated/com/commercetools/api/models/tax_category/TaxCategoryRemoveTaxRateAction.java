@@ -28,16 +28,25 @@ public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction 
 
     public void setTaxRateId(final String taxRateId);
 
-    public static TaxCategoryRemoveTaxRateActionImpl of(){
+    public static TaxCategoryRemoveTaxRateAction of(){
         return new TaxCategoryRemoveTaxRateActionImpl();
     }
     
 
-    public static TaxCategoryRemoveTaxRateActionImpl of(final TaxCategoryRemoveTaxRateAction template) {
+    public static TaxCategoryRemoveTaxRateAction of(final TaxCategoryRemoveTaxRateAction template) {
         TaxCategoryRemoveTaxRateActionImpl instance = new TaxCategoryRemoveTaxRateActionImpl();
         instance.setTaxRateId(template.getTaxRateId());
         return instance;
     }
+
+    public static TaxCategoryRemoveTaxRateActionBuilder builder(){
+        return TaxCategoryRemoveTaxRateActionBuilder.of();
+    }
+    
+    public static TaxCategoryRemoveTaxRateActionBuilder builder(final TaxCategoryRemoveTaxRateAction template){
+        return TaxCategoryRemoveTaxRateActionBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryRemoveTaxRateAction(Function<TaxCategoryRemoveTaxRateAction, T> helper) {
         return helper.apply(this);

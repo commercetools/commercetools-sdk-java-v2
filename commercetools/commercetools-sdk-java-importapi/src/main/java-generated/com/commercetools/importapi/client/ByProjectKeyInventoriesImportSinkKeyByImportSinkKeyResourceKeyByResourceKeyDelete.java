@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete extends ApiMethod<ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete, com.commercetools.importapi.models.importoperations.ImportOperationStatus> {
+public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete extends ApiMethod<ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete, com.commercetools.importapi.models.importoperations.ImportOperationStatus> implements com.commercetools.importapi.client.Secured_by_manage_productsTrait<ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyDelete> {
 
     
     private String projectKey;

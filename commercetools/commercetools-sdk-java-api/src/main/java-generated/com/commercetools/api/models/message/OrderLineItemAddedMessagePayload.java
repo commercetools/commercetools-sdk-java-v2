@@ -36,17 +36,26 @@ public interface OrderLineItemAddedMessagePayload extends MessagePayload {
     
     public void setAddedQuantity(final Long addedQuantity);
 
-    public static OrderLineItemAddedMessagePayloadImpl of(){
+    public static OrderLineItemAddedMessagePayload of(){
         return new OrderLineItemAddedMessagePayloadImpl();
     }
     
 
-    public static OrderLineItemAddedMessagePayloadImpl of(final OrderLineItemAddedMessagePayload template) {
+    public static OrderLineItemAddedMessagePayload of(final OrderLineItemAddedMessagePayload template) {
         OrderLineItemAddedMessagePayloadImpl instance = new OrderLineItemAddedMessagePayloadImpl();
         instance.setLineItem(template.getLineItem());
         instance.setAddedQuantity(template.getAddedQuantity());
         return instance;
     }
+
+    public static OrderLineItemAddedMessagePayloadBuilder builder(){
+        return OrderLineItemAddedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderLineItemAddedMessagePayloadBuilder builder(final OrderLineItemAddedMessagePayload template){
+        return OrderLineItemAddedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderLineItemAddedMessagePayload(Function<OrderLineItemAddedMessagePayload, T> helper) {
         return helper.apply(this);

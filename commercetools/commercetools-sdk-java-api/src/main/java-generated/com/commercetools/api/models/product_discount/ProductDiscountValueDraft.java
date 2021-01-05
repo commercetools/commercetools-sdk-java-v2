@@ -42,6 +42,7 @@ public interface ProductDiscountValueDraft  {
 
 
 
+
     default <T> T withProductDiscountValueDraft(Function<ProductDiscountValueDraft, T> helper) {
         return helper.apply(this);
     }

@@ -29,15 +29,24 @@ public interface LocalizedString  {
     @JsonAnySetter
     public void setValue(String key, String value);
 
-    public static LocalizedStringImpl of(){
+    public static LocalizedString of(){
         return new LocalizedStringImpl();
     }
     
 
-    public static LocalizedStringImpl of(final LocalizedString template) {
+    public static LocalizedString of(final LocalizedString template) {
         LocalizedStringImpl instance = new LocalizedStringImpl();
         return instance;
     }
+
+    public static LocalizedStringBuilder builder(){
+        return LocalizedStringBuilder.of();
+    }
+    
+    public static LocalizedStringBuilder builder(final LocalizedString template){
+        return LocalizedStringBuilder.of(template);
+    }
+    
 
     default <T> T withLocalizedString(Function<LocalizedString, T> helper) {
         return helper.apply(this);

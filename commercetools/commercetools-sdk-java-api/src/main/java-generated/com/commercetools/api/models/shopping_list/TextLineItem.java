@@ -65,12 +65,12 @@ public interface TextLineItem  {
     
     public void setQuantity(final Integer quantity);
 
-    public static TextLineItemImpl of(){
+    public static TextLineItem of(){
         return new TextLineItemImpl();
     }
     
 
-    public static TextLineItemImpl of(final TextLineItem template) {
+    public static TextLineItem of(final TextLineItem template) {
         TextLineItemImpl instance = new TextLineItemImpl();
         instance.setAddedAt(template.getAddedAt());
         instance.setCustom(template.getCustom());
@@ -80,6 +80,15 @@ public interface TextLineItem  {
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public static TextLineItemBuilder builder(){
+        return TextLineItemBuilder.of();
+    }
+    
+    public static TextLineItemBuilder builder(final TextLineItem template){
+        return TextLineItemBuilder.of(template);
+    }
+    
 
     default <T> T withTextLineItem(Function<TextLineItem, T> helper) {
         return helper.apply(this);

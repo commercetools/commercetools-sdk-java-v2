@@ -38,17 +38,26 @@ public interface CategoryAddAssetAction extends CategoryUpdateAction {
     
     public void setPosition(final Integer position);
 
-    public static CategoryAddAssetActionImpl of(){
+    public static CategoryAddAssetAction of(){
         return new CategoryAddAssetActionImpl();
     }
     
 
-    public static CategoryAddAssetActionImpl of(final CategoryAddAssetAction template) {
+    public static CategoryAddAssetAction of(final CategoryAddAssetAction template) {
         CategoryAddAssetActionImpl instance = new CategoryAddAssetActionImpl();
         instance.setAsset(template.getAsset());
         instance.setPosition(template.getPosition());
         return instance;
     }
+
+    public static CategoryAddAssetActionBuilder builder(){
+        return CategoryAddAssetActionBuilder.of();
+    }
+    
+    public static CategoryAddAssetActionBuilder builder(final CategoryAddAssetAction template){
+        return CategoryAddAssetActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryAddAssetAction(Function<CategoryAddAssetAction, T> helper) {
         return helper.apply(this);

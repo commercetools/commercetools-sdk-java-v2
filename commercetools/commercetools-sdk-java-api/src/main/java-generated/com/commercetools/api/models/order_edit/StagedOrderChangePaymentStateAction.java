@@ -29,16 +29,25 @@ public interface StagedOrderChangePaymentStateAction extends StagedOrderUpdateAc
 
     public void setPaymentState(final PaymentState paymentState);
 
-    public static StagedOrderChangePaymentStateActionImpl of(){
+    public static StagedOrderChangePaymentStateAction of(){
         return new StagedOrderChangePaymentStateActionImpl();
     }
     
 
-    public static StagedOrderChangePaymentStateActionImpl of(final StagedOrderChangePaymentStateAction template) {
+    public static StagedOrderChangePaymentStateAction of(final StagedOrderChangePaymentStateAction template) {
         StagedOrderChangePaymentStateActionImpl instance = new StagedOrderChangePaymentStateActionImpl();
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }
+
+    public static StagedOrderChangePaymentStateActionBuilder builder(){
+        return StagedOrderChangePaymentStateActionBuilder.of();
+    }
+    
+    public static StagedOrderChangePaymentStateActionBuilder builder(final StagedOrderChangePaymentStateAction template){
+        return StagedOrderChangePaymentStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderChangePaymentStateAction(Function<StagedOrderChangePaymentStateAction, T> helper) {
         return helper.apply(this);

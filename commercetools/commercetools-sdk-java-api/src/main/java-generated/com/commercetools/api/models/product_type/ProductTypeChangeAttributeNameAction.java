@@ -34,17 +34,26 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     
     public void setNewAttributeName(final String newAttributeName);
 
-    public static ProductTypeChangeAttributeNameActionImpl of(){
+    public static ProductTypeChangeAttributeNameAction of(){
         return new ProductTypeChangeAttributeNameActionImpl();
     }
     
 
-    public static ProductTypeChangeAttributeNameActionImpl of(final ProductTypeChangeAttributeNameAction template) {
+    public static ProductTypeChangeAttributeNameAction of(final ProductTypeChangeAttributeNameAction template) {
         ProductTypeChangeAttributeNameActionImpl instance = new ProductTypeChangeAttributeNameActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setNewAttributeName(template.getNewAttributeName());
         return instance;
     }
+
+    public static ProductTypeChangeAttributeNameActionBuilder builder(){
+        return ProductTypeChangeAttributeNameActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeAttributeNameActionBuilder builder(final ProductTypeChangeAttributeNameAction template){
+        return ProductTypeChangeAttributeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeAttributeNameAction(Function<ProductTypeChangeAttributeNameAction, T> helper) {
         return helper.apply(this);

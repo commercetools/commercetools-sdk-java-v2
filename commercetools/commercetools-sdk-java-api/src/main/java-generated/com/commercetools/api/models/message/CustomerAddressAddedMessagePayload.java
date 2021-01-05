@@ -30,16 +30,25 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
 
     public void setAddress(final Address address);
 
-    public static CustomerAddressAddedMessagePayloadImpl of(){
+    public static CustomerAddressAddedMessagePayload of(){
         return new CustomerAddressAddedMessagePayloadImpl();
     }
     
 
-    public static CustomerAddressAddedMessagePayloadImpl of(final CustomerAddressAddedMessagePayload template) {
+    public static CustomerAddressAddedMessagePayload of(final CustomerAddressAddedMessagePayload template) {
         CustomerAddressAddedMessagePayloadImpl instance = new CustomerAddressAddedMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static CustomerAddressAddedMessagePayloadBuilder builder(){
+        return CustomerAddressAddedMessagePayloadBuilder.of();
+    }
+    
+    public static CustomerAddressAddedMessagePayloadBuilder builder(final CustomerAddressAddedMessagePayload template){
+        return CustomerAddressAddedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerAddressAddedMessagePayload(Function<CustomerAddressAddedMessagePayload, T> helper) {
         return helper.apply(this);

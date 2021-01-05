@@ -47,12 +47,12 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     
     public void setValue(final JsonNode value);
 
-    public static ProductSetProductPriceCustomFieldActionImpl of(){
+    public static ProductSetProductPriceCustomFieldAction of(){
         return new ProductSetProductPriceCustomFieldActionImpl();
     }
     
 
-    public static ProductSetProductPriceCustomFieldActionImpl of(final ProductSetProductPriceCustomFieldAction template) {
+    public static ProductSetProductPriceCustomFieldAction of(final ProductSetProductPriceCustomFieldAction template) {
         ProductSetProductPriceCustomFieldActionImpl instance = new ProductSetProductPriceCustomFieldActionImpl();
         instance.setPriceId(template.getPriceId());
         instance.setStaged(template.getStaged());
@@ -60,6 +60,15 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ProductSetProductPriceCustomFieldActionBuilder builder(){
+        return ProductSetProductPriceCustomFieldActionBuilder.of();
+    }
+    
+    public static ProductSetProductPriceCustomFieldActionBuilder builder(final ProductSetProductPriceCustomFieldAction template){
+        return ProductSetProductPriceCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetProductPriceCustomFieldAction(Function<ProductSetProductPriceCustomFieldAction, T> helper) {
         return helper.apply(this);

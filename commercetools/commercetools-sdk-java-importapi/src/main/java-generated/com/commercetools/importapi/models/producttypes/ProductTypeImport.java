@@ -52,12 +52,12 @@ public interface ProductTypeImport extends ImportResource {
     public void setAttributes(final AttributeDefinition ...attributes);
     public void setAttributes(final List<AttributeDefinition> attributes);
 
-    public static ProductTypeImportImpl of(){
+    public static ProductTypeImport of(){
         return new ProductTypeImportImpl();
     }
     
 
-    public static ProductTypeImportImpl of(final ProductTypeImport template) {
+    public static ProductTypeImport of(final ProductTypeImport template) {
         ProductTypeImportImpl instance = new ProductTypeImportImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -65,6 +65,15 @@ public interface ProductTypeImport extends ImportResource {
         instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public static ProductTypeImportBuilder builder(){
+        return ProductTypeImportBuilder.of();
+    }
+    
+    public static ProductTypeImportBuilder builder(final ProductTypeImport template){
+        return ProductTypeImportBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeImport(Function<ProductTypeImport, T> helper) {
         return helper.apply(this);

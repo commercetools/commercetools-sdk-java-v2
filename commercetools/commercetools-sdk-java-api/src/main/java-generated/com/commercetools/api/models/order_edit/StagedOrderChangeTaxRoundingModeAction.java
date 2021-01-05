@@ -29,16 +29,25 @@ public interface StagedOrderChangeTaxRoundingModeAction extends StagedOrderUpdat
 
     public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
-    public static StagedOrderChangeTaxRoundingModeActionImpl of(){
+    public static StagedOrderChangeTaxRoundingModeAction of(){
         return new StagedOrderChangeTaxRoundingModeActionImpl();
     }
     
 
-    public static StagedOrderChangeTaxRoundingModeActionImpl of(final StagedOrderChangeTaxRoundingModeAction template) {
+    public static StagedOrderChangeTaxRoundingModeAction of(final StagedOrderChangeTaxRoundingModeAction template) {
         StagedOrderChangeTaxRoundingModeActionImpl instance = new StagedOrderChangeTaxRoundingModeActionImpl();
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         return instance;
     }
+
+    public static StagedOrderChangeTaxRoundingModeActionBuilder builder(){
+        return StagedOrderChangeTaxRoundingModeActionBuilder.of();
+    }
+    
+    public static StagedOrderChangeTaxRoundingModeActionBuilder builder(final StagedOrderChangeTaxRoundingModeAction template){
+        return StagedOrderChangeTaxRoundingModeActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderChangeTaxRoundingModeAction(Function<StagedOrderChangeTaxRoundingModeAction, T> helper) {
         return helper.apply(this);

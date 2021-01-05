@@ -93,12 +93,12 @@ public interface QueryPrice  {
     public void setTiers(final PriceTierDraft ...tiers);
     public void setTiers(final List<PriceTierDraft> tiers);
 
-    public static QueryPriceImpl of(){
+    public static QueryPrice of(){
         return new QueryPriceImpl();
     }
     
 
-    public static QueryPriceImpl of(final QueryPrice template) {
+    public static QueryPrice of(final QueryPrice template) {
         QueryPriceImpl instance = new QueryPriceImpl();
         instance.setId(template.getId());
         instance.setValue(template.getValue());
@@ -112,6 +112,15 @@ public interface QueryPrice  {
         instance.setTiers(template.getTiers());
         return instance;
     }
+
+    public static QueryPriceBuilder builder(){
+        return QueryPriceBuilder.of();
+    }
+    
+    public static QueryPriceBuilder builder(final QueryPrice template){
+        return QueryPriceBuilder.of(template);
+    }
+    
 
     default <T> T withQueryPrice(Function<QueryPrice, T> helper) {
         return helper.apply(this);

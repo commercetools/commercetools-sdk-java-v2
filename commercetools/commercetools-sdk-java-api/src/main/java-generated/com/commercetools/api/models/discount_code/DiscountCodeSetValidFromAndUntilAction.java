@@ -39,17 +39,26 @@ public interface DiscountCodeSetValidFromAndUntilAction extends DiscountCodeUpda
     
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static DiscountCodeSetValidFromAndUntilActionImpl of(){
+    public static DiscountCodeSetValidFromAndUntilAction of(){
         return new DiscountCodeSetValidFromAndUntilActionImpl();
     }
     
 
-    public static DiscountCodeSetValidFromAndUntilActionImpl of(final DiscountCodeSetValidFromAndUntilAction template) {
+    public static DiscountCodeSetValidFromAndUntilAction of(final DiscountCodeSetValidFromAndUntilAction template) {
         DiscountCodeSetValidFromAndUntilActionImpl instance = new DiscountCodeSetValidFromAndUntilActionImpl();
         instance.setValidFrom(template.getValidFrom());
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static DiscountCodeSetValidFromAndUntilActionBuilder builder(){
+        return DiscountCodeSetValidFromAndUntilActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetValidFromAndUntilActionBuilder builder(final DiscountCodeSetValidFromAndUntilAction template){
+        return DiscountCodeSetValidFromAndUntilActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetValidFromAndUntilAction(Function<DiscountCodeSetValidFromAndUntilAction, T> helper) {
         return helper.apply(this);

@@ -23,15 +23,24 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
 
 
 
-    public static ProductRevertStagedChangesActionImpl of(){
+    public static ProductRevertStagedChangesAction of(){
         return new ProductRevertStagedChangesActionImpl();
     }
     
 
-    public static ProductRevertStagedChangesActionImpl of(final ProductRevertStagedChangesAction template) {
+    public static ProductRevertStagedChangesAction of(final ProductRevertStagedChangesAction template) {
         ProductRevertStagedChangesActionImpl instance = new ProductRevertStagedChangesActionImpl();
         return instance;
     }
+
+    public static ProductRevertStagedChangesActionBuilder builder(){
+        return ProductRevertStagedChangesActionBuilder.of();
+    }
+    
+    public static ProductRevertStagedChangesActionBuilder builder(final ProductRevertStagedChangesAction template){
+        return ProductRevertStagedChangesActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductRevertStagedChangesAction(Function<ProductRevertStagedChangesAction, T> helper) {
         return helper.apply(this);

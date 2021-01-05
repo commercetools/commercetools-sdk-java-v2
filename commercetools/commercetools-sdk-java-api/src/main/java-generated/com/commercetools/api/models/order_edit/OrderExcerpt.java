@@ -42,18 +42,27 @@ public interface OrderExcerpt  {
     
     public void setVersion(final Integer version);
 
-    public static OrderExcerptImpl of(){
+    public static OrderExcerpt of(){
         return new OrderExcerptImpl();
     }
     
 
-    public static OrderExcerptImpl of(final OrderExcerpt template) {
+    public static OrderExcerpt of(final OrderExcerpt template) {
         OrderExcerptImpl instance = new OrderExcerptImpl();
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setVersion(template.getVersion());
         return instance;
     }
+
+    public static OrderExcerptBuilder builder(){
+        return OrderExcerptBuilder.of();
+    }
+    
+    public static OrderExcerptBuilder builder(final OrderExcerpt template){
+        return OrderExcerptBuilder.of(template);
+    }
+    
 
     default <T> T withOrderExcerpt(Function<OrderExcerpt, T> helper) {
         return helper.apply(this);

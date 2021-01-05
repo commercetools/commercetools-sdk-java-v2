@@ -23,15 +23,24 @@ public interface AttributeLocalizableTextType extends AttributeType {
 
 
 
-    public static AttributeLocalizableTextTypeImpl of(){
+    public static AttributeLocalizableTextType of(){
         return new AttributeLocalizableTextTypeImpl();
     }
     
 
-    public static AttributeLocalizableTextTypeImpl of(final AttributeLocalizableTextType template) {
+    public static AttributeLocalizableTextType of(final AttributeLocalizableTextType template) {
         AttributeLocalizableTextTypeImpl instance = new AttributeLocalizableTextTypeImpl();
         return instance;
     }
+
+    public static AttributeLocalizableTextTypeBuilder builder(){
+        return AttributeLocalizableTextTypeBuilder.of();
+    }
+    
+    public static AttributeLocalizableTextTypeBuilder builder(final AttributeLocalizableTextType template){
+        return AttributeLocalizableTextTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeLocalizableTextType(Function<AttributeLocalizableTextType, T> helper) {
         return helper.apply(this);

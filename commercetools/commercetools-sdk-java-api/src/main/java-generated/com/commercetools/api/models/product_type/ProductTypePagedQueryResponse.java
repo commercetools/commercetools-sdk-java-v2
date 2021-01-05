@@ -55,12 +55,12 @@ public interface ProductTypePagedQueryResponse extends com.commercetools.api.mod
     public void setResults(final ProductType ...results);
     public void setResults(final List<ProductType> results);
 
-    public static ProductTypePagedQueryResponseImpl of(){
+    public static ProductTypePagedQueryResponse of(){
         return new ProductTypePagedQueryResponseImpl();
     }
     
 
-    public static ProductTypePagedQueryResponseImpl of(final ProductTypePagedQueryResponse template) {
+    public static ProductTypePagedQueryResponse of(final ProductTypePagedQueryResponse template) {
         ProductTypePagedQueryResponseImpl instance = new ProductTypePagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface ProductTypePagedQueryResponse extends com.commercetools.api.mod
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static ProductTypePagedQueryResponseBuilder builder(){
+        return ProductTypePagedQueryResponseBuilder.of();
+    }
+    
+    public static ProductTypePagedQueryResponseBuilder builder(final ProductTypePagedQueryResponse template){
+        return ProductTypePagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypePagedQueryResponse(Function<ProductTypePagedQueryResponse, T> helper) {
         return helper.apply(this);

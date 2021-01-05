@@ -37,17 +37,26 @@ public interface DiscountedLineItemPortion  {
     
     public void setDiscountedAmount(final TypedMoney discountedAmount);
 
-    public static DiscountedLineItemPortionImpl of(){
+    public static DiscountedLineItemPortion of(){
         return new DiscountedLineItemPortionImpl();
     }
     
 
-    public static DiscountedLineItemPortionImpl of(final DiscountedLineItemPortion template) {
+    public static DiscountedLineItemPortion of(final DiscountedLineItemPortion template) {
         DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
         instance.setDiscount(template.getDiscount());
         instance.setDiscountedAmount(template.getDiscountedAmount());
         return instance;
     }
+
+    public static DiscountedLineItemPortionBuilder builder(){
+        return DiscountedLineItemPortionBuilder.of();
+    }
+    
+    public static DiscountedLineItemPortionBuilder builder(final DiscountedLineItemPortion template){
+        return DiscountedLineItemPortionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountedLineItemPortion(Function<DiscountedLineItemPortion, T> helper) {
         return helper.apply(this);

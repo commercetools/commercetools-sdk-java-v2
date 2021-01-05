@@ -61,12 +61,12 @@ public interface TypeDraft  {
     public void setFieldDefinitions(final FieldDefinition ...fieldDefinitions);
     public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
-    public static TypeDraftImpl of(){
+    public static TypeDraft of(){
         return new TypeDraftImpl();
     }
     
 
-    public static TypeDraftImpl of(final TypeDraft template) {
+    public static TypeDraft of(final TypeDraft template) {
         TypeDraftImpl instance = new TypeDraftImpl();
         instance.setKey(template.getKey());
         instance.setName(template.getName());
@@ -75,6 +75,15 @@ public interface TypeDraft  {
         instance.setFieldDefinitions(template.getFieldDefinitions());
         return instance;
     }
+
+    public static TypeDraftBuilder builder(){
+        return TypeDraftBuilder.of();
+    }
+    
+    public static TypeDraftBuilder builder(final TypeDraft template){
+        return TypeDraftBuilder.of(template);
+    }
+    
 
     default <T> T withTypeDraft(Function<TypeDraft, T> helper) {
         return helper.apply(this);

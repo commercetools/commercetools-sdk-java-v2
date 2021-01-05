@@ -28,16 +28,25 @@ public interface OrderSetLocaleAction extends OrderUpdateAction {
 
     public void setLocale(final String locale);
 
-    public static OrderSetLocaleActionImpl of(){
+    public static OrderSetLocaleAction of(){
         return new OrderSetLocaleActionImpl();
     }
     
 
-    public static OrderSetLocaleActionImpl of(final OrderSetLocaleAction template) {
+    public static OrderSetLocaleAction of(final OrderSetLocaleAction template) {
         OrderSetLocaleActionImpl instance = new OrderSetLocaleActionImpl();
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public static OrderSetLocaleActionBuilder builder(){
+        return OrderSetLocaleActionBuilder.of();
+    }
+    
+    public static OrderSetLocaleActionBuilder builder(final OrderSetLocaleAction template){
+        return OrderSetLocaleActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderSetLocaleAction(Function<OrderSetLocaleAction, T> helper) {
         return helper.apply(this);

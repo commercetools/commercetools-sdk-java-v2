@@ -143,12 +143,12 @@ public interface PaymentDraft  {
     
     public void setKey(final String key);
 
-    public static PaymentDraftImpl of(){
+    public static PaymentDraft of(){
         return new PaymentDraftImpl();
     }
     
 
-    public static PaymentDraftImpl of(final PaymentDraft template) {
+    public static PaymentDraft of(final PaymentDraft template) {
         PaymentDraftImpl instance = new PaymentDraftImpl();
         instance.setCustomer(template.getCustomer());
         instance.setAnonymousId(template.getAnonymousId());
@@ -167,6 +167,15 @@ public interface PaymentDraft  {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static PaymentDraftBuilder builder(){
+        return PaymentDraftBuilder.of();
+    }
+    
+    public static PaymentDraftBuilder builder(final PaymentDraft template){
+        return PaymentDraftBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentDraft(Function<PaymentDraft, T> helper) {
         return helper.apply(this);

@@ -47,18 +47,27 @@ public interface VariantValues  {
     public void setAttributes(final Attribute ...attributes);
     public void setAttributes(final List<Attribute> attributes);
 
-    public static VariantValuesImpl of(){
+    public static VariantValues of(){
         return new VariantValuesImpl();
     }
     
 
-    public static VariantValuesImpl of(final VariantValues template) {
+    public static VariantValues of(final VariantValues template) {
         VariantValuesImpl instance = new VariantValuesImpl();
         instance.setSku(template.getSku());
         instance.setPrices(template.getPrices());
         instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public static VariantValuesBuilder builder(){
+        return VariantValuesBuilder.of();
+    }
+    
+    public static VariantValuesBuilder builder(final VariantValues template){
+        return VariantValuesBuilder.of(template);
+    }
+    
 
     default <T> T withVariantValues(Function<VariantValues, T> helper) {
         return helper.apply(this);

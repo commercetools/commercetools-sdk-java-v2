@@ -30,12 +30,12 @@ public interface DeliveryRemovedMessage extends Message {
 
     public void setDelivery(final Delivery delivery);
 
-    public static DeliveryRemovedMessageImpl of(){
+    public static DeliveryRemovedMessage of(){
         return new DeliveryRemovedMessageImpl();
     }
     
 
-    public static DeliveryRemovedMessageImpl of(final DeliveryRemovedMessage template) {
+    public static DeliveryRemovedMessage of(final DeliveryRemovedMessage template) {
         DeliveryRemovedMessageImpl instance = new DeliveryRemovedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface DeliveryRemovedMessage extends Message {
         instance.setDelivery(template.getDelivery());
         return instance;
     }
+
+    public static DeliveryRemovedMessageBuilder builder(){
+        return DeliveryRemovedMessageBuilder.of();
+    }
+    
+    public static DeliveryRemovedMessageBuilder builder(final DeliveryRemovedMessage template){
+        return DeliveryRemovedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryRemovedMessage(Function<DeliveryRemovedMessage, T> helper) {
         return helper.apply(this);

@@ -35,17 +35,26 @@ public interface ReferenceAttribute extends Attribute {
 
     public void setValue(final KeyReference value);
 
-    public static ReferenceAttributeImpl of(){
+    public static ReferenceAttribute of(){
         return new ReferenceAttributeImpl();
     }
     
 
-    public static ReferenceAttributeImpl of(final ReferenceAttribute template) {
+    public static ReferenceAttribute of(final ReferenceAttribute template) {
         ReferenceAttributeImpl instance = new ReferenceAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ReferenceAttributeBuilder builder(){
+        return ReferenceAttributeBuilder.of();
+    }
+    
+    public static ReferenceAttributeBuilder builder(final ReferenceAttribute template){
+        return ReferenceAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withReferenceAttribute(Function<ReferenceAttribute, T> helper) {
         return helper.apply(this);

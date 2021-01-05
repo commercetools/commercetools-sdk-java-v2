@@ -37,17 +37,26 @@ public interface ProjectUpdate extends com.commercetools.api.models.ResourceUpda
     public void setActions(final ProjectUpdateAction ...actions);
     public void setActions(final List<ProjectUpdateAction> actions);
 
-    public static ProjectUpdateImpl of(){
+    public static ProjectUpdate of(){
         return new ProjectUpdateImpl();
     }
     
 
-    public static ProjectUpdateImpl of(final ProjectUpdate template) {
+    public static ProjectUpdate of(final ProjectUpdate template) {
         ProjectUpdateImpl instance = new ProjectUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ProjectUpdateBuilder builder(){
+        return ProjectUpdateBuilder.of();
+    }
+    
+    public static ProjectUpdateBuilder builder(final ProjectUpdate template){
+        return ProjectUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withProjectUpdate(Function<ProjectUpdate, T> helper) {
         return helper.apply(this);

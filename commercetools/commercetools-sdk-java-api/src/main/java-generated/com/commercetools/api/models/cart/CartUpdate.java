@@ -37,17 +37,26 @@ public interface CartUpdate extends com.commercetools.api.models.ResourceUpdate<
     public void setActions(final CartUpdateAction ...actions);
     public void setActions(final List<CartUpdateAction> actions);
 
-    public static CartUpdateImpl of(){
+    public static CartUpdate of(){
         return new CartUpdateImpl();
     }
     
 
-    public static CartUpdateImpl of(final CartUpdate template) {
+    public static CartUpdate of(final CartUpdate template) {
         CartUpdateImpl instance = new CartUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static CartUpdateBuilder builder(){
+        return CartUpdateBuilder.of();
+    }
+    
+    public static CartUpdateBuilder builder(final CartUpdate template){
+        return CartUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withCartUpdate(Function<CartUpdate, T> helper) {
         return helper.apply(this);

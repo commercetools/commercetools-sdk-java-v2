@@ -29,17 +29,26 @@ public interface ReferenceExistsError extends ErrorObject {
 
     public void setReferencedBy(final ReferenceTypeId referencedBy);
 
-    public static ReferenceExistsErrorImpl of(){
+    public static ReferenceExistsError of(){
         return new ReferenceExistsErrorImpl();
     }
     
 
-    public static ReferenceExistsErrorImpl of(final ReferenceExistsError template) {
+    public static ReferenceExistsError of(final ReferenceExistsError template) {
         ReferenceExistsErrorImpl instance = new ReferenceExistsErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setReferencedBy(template.getReferencedBy());
         return instance;
     }
+
+    public static ReferenceExistsErrorBuilder builder(){
+        return ReferenceExistsErrorBuilder.of();
+    }
+    
+    public static ReferenceExistsErrorBuilder builder(final ReferenceExistsError template){
+        return ReferenceExistsErrorBuilder.of(template);
+    }
+    
 
     default <T> T withReferenceExistsError(Function<ReferenceExistsError, T> helper) {
         return helper.apply(this);

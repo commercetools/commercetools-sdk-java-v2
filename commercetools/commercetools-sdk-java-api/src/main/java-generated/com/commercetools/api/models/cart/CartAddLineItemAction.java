@@ -94,12 +94,12 @@ public interface CartAddLineItemAction extends CartUpdateAction {
     
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
-    public static CartAddLineItemActionImpl of(){
+    public static CartAddLineItemAction of(){
         return new CartAddLineItemActionImpl();
     }
     
 
-    public static CartAddLineItemActionImpl of(final CartAddLineItemAction template) {
+    public static CartAddLineItemAction of(final CartAddLineItemAction template) {
         CartAddLineItemActionImpl instance = new CartAddLineItemActionImpl();
         instance.setCustom(template.getCustom());
         instance.setDistributionChannel(template.getDistributionChannel());
@@ -114,6 +114,15 @@ public interface CartAddLineItemAction extends CartUpdateAction {
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public static CartAddLineItemActionBuilder builder(){
+        return CartAddLineItemActionBuilder.of();
+    }
+    
+    public static CartAddLineItemActionBuilder builder(final CartAddLineItemAction template){
+        return CartAddLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartAddLineItemAction(Function<CartAddLineItemAction, T> helper) {
         return helper.apply(this);

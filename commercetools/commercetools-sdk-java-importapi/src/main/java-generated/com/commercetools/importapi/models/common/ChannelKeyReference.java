@@ -27,16 +27,25 @@ public interface ChannelKeyReference extends KeyReference {
 
 
 
-    public static ChannelKeyReferenceImpl of(){
+    public static ChannelKeyReference of(){
         return new ChannelKeyReferenceImpl();
     }
     
 
-    public static ChannelKeyReferenceImpl of(final ChannelKeyReference template) {
+    public static ChannelKeyReference of(final ChannelKeyReference template) {
         ChannelKeyReferenceImpl instance = new ChannelKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ChannelKeyReferenceBuilder builder(){
+        return ChannelKeyReferenceBuilder.of();
+    }
+    
+    public static ChannelKeyReferenceBuilder builder(final ChannelKeyReference template){
+        return ChannelKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withChannelKeyReference(Function<ChannelKeyReference, T> helper) {
         return helper.apply(this);

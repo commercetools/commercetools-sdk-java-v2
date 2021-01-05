@@ -36,17 +36,26 @@ public interface ProductStateTransitionMessagePayload extends MessagePayload {
     
     public void setForce(final Boolean force);
 
-    public static ProductStateTransitionMessagePayloadImpl of(){
+    public static ProductStateTransitionMessagePayload of(){
         return new ProductStateTransitionMessagePayloadImpl();
     }
     
 
-    public static ProductStateTransitionMessagePayloadImpl of(final ProductStateTransitionMessagePayload template) {
+    public static ProductStateTransitionMessagePayload of(final ProductStateTransitionMessagePayload template) {
         ProductStateTransitionMessagePayloadImpl instance = new ProductStateTransitionMessagePayloadImpl();
         instance.setState(template.getState());
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static ProductStateTransitionMessagePayloadBuilder builder(){
+        return ProductStateTransitionMessagePayloadBuilder.of();
+    }
+    
+    public static ProductStateTransitionMessagePayloadBuilder builder(final ProductStateTransitionMessagePayload template){
+        return ProductStateTransitionMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductStateTransitionMessagePayload(Function<ProductStateTransitionMessagePayload, T> helper) {
         return helper.apply(this);

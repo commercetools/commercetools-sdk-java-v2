@@ -23,16 +23,25 @@ public interface NoMatchingProductDiscountFoundError extends ErrorObject {
 
 
 
-    public static NoMatchingProductDiscountFoundErrorImpl of(){
+    public static NoMatchingProductDiscountFoundError of(){
         return new NoMatchingProductDiscountFoundErrorImpl();
     }
     
 
-    public static NoMatchingProductDiscountFoundErrorImpl of(final NoMatchingProductDiscountFoundError template) {
+    public static NoMatchingProductDiscountFoundError of(final NoMatchingProductDiscountFoundError template) {
         NoMatchingProductDiscountFoundErrorImpl instance = new NoMatchingProductDiscountFoundErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static NoMatchingProductDiscountFoundErrorBuilder builder(){
+        return NoMatchingProductDiscountFoundErrorBuilder.of();
+    }
+    
+    public static NoMatchingProductDiscountFoundErrorBuilder builder(final NoMatchingProductDiscountFoundError template){
+        return NoMatchingProductDiscountFoundErrorBuilder.of(template);
+    }
+    
 
     default <T> T withNoMatchingProductDiscountFoundError(Function<NoMatchingProductDiscountFoundError, T> helper) {
         return helper.apply(this);

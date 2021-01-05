@@ -30,16 +30,25 @@ public interface CustomerCreatedMessagePayload extends MessagePayload {
 
     public void setCustomer(final Customer customer);
 
-    public static CustomerCreatedMessagePayloadImpl of(){
+    public static CustomerCreatedMessagePayload of(){
         return new CustomerCreatedMessagePayloadImpl();
     }
     
 
-    public static CustomerCreatedMessagePayloadImpl of(final CustomerCreatedMessagePayload template) {
+    public static CustomerCreatedMessagePayload of(final CustomerCreatedMessagePayload template) {
         CustomerCreatedMessagePayloadImpl instance = new CustomerCreatedMessagePayloadImpl();
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public static CustomerCreatedMessagePayloadBuilder builder(){
+        return CustomerCreatedMessagePayloadBuilder.of();
+    }
+    
+    public static CustomerCreatedMessagePayloadBuilder builder(final CustomerCreatedMessagePayload template){
+        return CustomerCreatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerCreatedMessagePayload(Function<CustomerCreatedMessagePayload, T> helper) {
         return helper.apply(this);

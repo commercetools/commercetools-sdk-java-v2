@@ -43,18 +43,27 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     
     public void setStaged(final Boolean staged);
 
-    public static ProductSetAttributeInAllVariantsActionImpl of(){
+    public static ProductSetAttributeInAllVariantsAction of(){
         return new ProductSetAttributeInAllVariantsActionImpl();
     }
     
 
-    public static ProductSetAttributeInAllVariantsActionImpl of(final ProductSetAttributeInAllVariantsAction template) {
+    public static ProductSetAttributeInAllVariantsAction of(final ProductSetAttributeInAllVariantsAction template) {
         ProductSetAttributeInAllVariantsActionImpl instance = new ProductSetAttributeInAllVariantsActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductSetAttributeInAllVariantsActionBuilder builder(){
+        return ProductSetAttributeInAllVariantsActionBuilder.of();
+    }
+    
+    public static ProductSetAttributeInAllVariantsActionBuilder builder(final ProductSetAttributeInAllVariantsAction template){
+        return ProductSetAttributeInAllVariantsActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetAttributeInAllVariantsAction(Function<ProductSetAttributeInAllVariantsAction, T> helper) {
         return helper.apply(this);

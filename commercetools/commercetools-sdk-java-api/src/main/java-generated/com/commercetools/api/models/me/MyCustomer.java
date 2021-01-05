@@ -213,12 +213,12 @@ public interface MyCustomer extends BaseResource, com.commercetools.api.models.D
     public void setStores(final StoreKeyReference ...stores);
     public void setStores(final List<StoreKeyReference> stores);
 
-    public static MyCustomerImpl of(){
+    public static MyCustomer of(){
         return new MyCustomerImpl();
     }
     
 
-    public static MyCustomerImpl of(final MyCustomer template) {
+    public static MyCustomer of(final MyCustomer template) {
         MyCustomerImpl instance = new MyCustomerImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -251,6 +251,15 @@ public interface MyCustomer extends BaseResource, com.commercetools.api.models.D
         instance.setStores(template.getStores());
         return instance;
     }
+
+    public static MyCustomerBuilder builder(){
+        return MyCustomerBuilder.of();
+    }
+    
+    public static MyCustomerBuilder builder(final MyCustomer template){
+        return MyCustomerBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomer(Function<MyCustomer, T> helper) {
         return helper.apply(this);

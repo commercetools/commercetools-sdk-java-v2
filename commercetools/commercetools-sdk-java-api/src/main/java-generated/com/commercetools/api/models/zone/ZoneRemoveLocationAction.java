@@ -30,16 +30,25 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
 
     public void setLocation(final Location location);
 
-    public static ZoneRemoveLocationActionImpl of(){
+    public static ZoneRemoveLocationAction of(){
         return new ZoneRemoveLocationActionImpl();
     }
     
 
-    public static ZoneRemoveLocationActionImpl of(final ZoneRemoveLocationAction template) {
+    public static ZoneRemoveLocationAction of(final ZoneRemoveLocationAction template) {
         ZoneRemoveLocationActionImpl instance = new ZoneRemoveLocationActionImpl();
         instance.setLocation(template.getLocation());
         return instance;
     }
+
+    public static ZoneRemoveLocationActionBuilder builder(){
+        return ZoneRemoveLocationActionBuilder.of();
+    }
+    
+    public static ZoneRemoveLocationActionBuilder builder(final ZoneRemoveLocationAction template){
+        return ZoneRemoveLocationActionBuilder.of(template);
+    }
+    
 
     default <T> T withZoneRemoveLocationAction(Function<ZoneRemoveLocationAction, T> helper) {
         return helper.apply(this);

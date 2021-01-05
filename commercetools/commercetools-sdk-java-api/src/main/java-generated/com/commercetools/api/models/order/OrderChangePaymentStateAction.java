@@ -29,16 +29,25 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
 
     public void setPaymentState(final PaymentState paymentState);
 
-    public static OrderChangePaymentStateActionImpl of(){
+    public static OrderChangePaymentStateAction of(){
         return new OrderChangePaymentStateActionImpl();
     }
     
 
-    public static OrderChangePaymentStateActionImpl of(final OrderChangePaymentStateAction template) {
+    public static OrderChangePaymentStateAction of(final OrderChangePaymentStateAction template) {
         OrderChangePaymentStateActionImpl instance = new OrderChangePaymentStateActionImpl();
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }
+
+    public static OrderChangePaymentStateActionBuilder builder(){
+        return OrderChangePaymentStateActionBuilder.of();
+    }
+    
+    public static OrderChangePaymentStateActionBuilder builder(final OrderChangePaymentStateAction template){
+        return OrderChangePaymentStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderChangePaymentStateAction(Function<OrderChangePaymentStateAction, T> helper) {
         return helper.apply(this);

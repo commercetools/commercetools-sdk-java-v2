@@ -37,17 +37,26 @@ public interface SubscriptionUpdate extends com.commercetools.api.models.Resourc
     public void setActions(final SubscriptionUpdateAction ...actions);
     public void setActions(final List<SubscriptionUpdateAction> actions);
 
-    public static SubscriptionUpdateImpl of(){
+    public static SubscriptionUpdate of(){
         return new SubscriptionUpdateImpl();
     }
     
 
-    public static SubscriptionUpdateImpl of(final SubscriptionUpdate template) {
+    public static SubscriptionUpdate of(final SubscriptionUpdate template) {
         SubscriptionUpdateImpl instance = new SubscriptionUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static SubscriptionUpdateBuilder builder(){
+        return SubscriptionUpdateBuilder.of();
+    }
+    
+    public static SubscriptionUpdateBuilder builder(final SubscriptionUpdate template){
+        return SubscriptionUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withSubscriptionUpdate(Function<SubscriptionUpdate, T> helper) {
         return helper.apply(this);

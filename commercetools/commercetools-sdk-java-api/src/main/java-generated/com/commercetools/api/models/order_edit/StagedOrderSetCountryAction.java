@@ -28,16 +28,25 @@ public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
 
     public void setCountry(final String country);
 
-    public static StagedOrderSetCountryActionImpl of(){
+    public static StagedOrderSetCountryAction of(){
         return new StagedOrderSetCountryActionImpl();
     }
     
 
-    public static StagedOrderSetCountryActionImpl of(final StagedOrderSetCountryAction template) {
+    public static StagedOrderSetCountryAction of(final StagedOrderSetCountryAction template) {
         StagedOrderSetCountryActionImpl instance = new StagedOrderSetCountryActionImpl();
         instance.setCountry(template.getCountry());
         return instance;
     }
+
+    public static StagedOrderSetCountryActionBuilder builder(){
+        return StagedOrderSetCountryActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCountryActionBuilder builder(final StagedOrderSetCountryAction template){
+        return StagedOrderSetCountryActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCountryAction(Function<StagedOrderSetCountryAction, T> helper) {
         return helper.apply(this);

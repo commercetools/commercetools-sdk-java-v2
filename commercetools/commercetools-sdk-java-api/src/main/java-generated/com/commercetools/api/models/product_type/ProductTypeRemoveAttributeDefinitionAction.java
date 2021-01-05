@@ -30,16 +30,25 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
 
     public void setName(final String name);
 
-    public static ProductTypeRemoveAttributeDefinitionActionImpl of(){
+    public static ProductTypeRemoveAttributeDefinitionAction of(){
         return new ProductTypeRemoveAttributeDefinitionActionImpl();
     }
     
 
-    public static ProductTypeRemoveAttributeDefinitionActionImpl of(final ProductTypeRemoveAttributeDefinitionAction template) {
+    public static ProductTypeRemoveAttributeDefinitionAction of(final ProductTypeRemoveAttributeDefinitionAction template) {
         ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(){
+        return ProductTypeRemoveAttributeDefinitionActionBuilder.of();
+    }
+    
+    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(final ProductTypeRemoveAttributeDefinitionAction template){
+        return ProductTypeRemoveAttributeDefinitionActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeRemoveAttributeDefinitionAction(Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
         return helper.apply(this);

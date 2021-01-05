@@ -28,16 +28,25 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
 
     public void setUpdateProductData(final Boolean updateProductData);
 
-    public static MyCartRecalculateActionImpl of(){
+    public static MyCartRecalculateAction of(){
         return new MyCartRecalculateActionImpl();
     }
     
 
-    public static MyCartRecalculateActionImpl of(final MyCartRecalculateAction template) {
+    public static MyCartRecalculateAction of(final MyCartRecalculateAction template) {
         MyCartRecalculateActionImpl instance = new MyCartRecalculateActionImpl();
         instance.setUpdateProductData(template.getUpdateProductData());
         return instance;
     }
+
+    public static MyCartRecalculateActionBuilder builder(){
+        return MyCartRecalculateActionBuilder.of();
+    }
+    
+    public static MyCartRecalculateActionBuilder builder(final MyCartRecalculateAction template){
+        return MyCartRecalculateActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartRecalculateAction(Function<MyCartRecalculateAction, T> helper) {
         return helper.apply(this);

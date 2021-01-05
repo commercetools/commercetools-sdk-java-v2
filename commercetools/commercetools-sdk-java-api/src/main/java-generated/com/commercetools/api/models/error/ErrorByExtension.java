@@ -34,17 +34,26 @@ public interface ErrorByExtension  {
     
     public void setKey(final String key);
 
-    public static ErrorByExtensionImpl of(){
+    public static ErrorByExtension of(){
         return new ErrorByExtensionImpl();
     }
     
 
-    public static ErrorByExtensionImpl of(final ErrorByExtension template) {
+    public static ErrorByExtension of(final ErrorByExtension template) {
         ErrorByExtensionImpl instance = new ErrorByExtensionImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ErrorByExtensionBuilder builder(){
+        return ErrorByExtensionBuilder.of();
+    }
+    
+    public static ErrorByExtensionBuilder builder(final ErrorByExtension template){
+        return ErrorByExtensionBuilder.of(template);
+    }
+    
 
     default <T> T withErrorByExtension(Function<ErrorByExtension, T> helper) {
         return helper.apply(this);

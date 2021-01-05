@@ -35,12 +35,12 @@ public interface OrderBillingAddressSetMessage extends Message {
     
     public void setOldAddress(final Address oldAddress);
 
-    public static OrderBillingAddressSetMessageImpl of(){
+    public static OrderBillingAddressSetMessage of(){
         return new OrderBillingAddressSetMessageImpl();
     }
     
 
-    public static OrderBillingAddressSetMessageImpl of(final OrderBillingAddressSetMessage template) {
+    public static OrderBillingAddressSetMessage of(final OrderBillingAddressSetMessage template) {
         OrderBillingAddressSetMessageImpl instance = new OrderBillingAddressSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -56,6 +56,15 @@ public interface OrderBillingAddressSetMessage extends Message {
         instance.setOldAddress(template.getOldAddress());
         return instance;
     }
+
+    public static OrderBillingAddressSetMessageBuilder builder(){
+        return OrderBillingAddressSetMessageBuilder.of();
+    }
+    
+    public static OrderBillingAddressSetMessageBuilder builder(final OrderBillingAddressSetMessage template){
+        return OrderBillingAddressSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderBillingAddressSetMessage(Function<OrderBillingAddressSetMessage, T> helper) {
         return helper.apply(this);

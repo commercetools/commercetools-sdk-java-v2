@@ -27,16 +27,25 @@ public interface ProductKeyReference extends KeyReference {
 
 
 
-    public static ProductKeyReferenceImpl of(){
+    public static ProductKeyReference of(){
         return new ProductKeyReferenceImpl();
     }
     
 
-    public static ProductKeyReferenceImpl of(final ProductKeyReference template) {
+    public static ProductKeyReference of(final ProductKeyReference template) {
         ProductKeyReferenceImpl instance = new ProductKeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ProductKeyReferenceBuilder builder(){
+        return ProductKeyReferenceBuilder.of();
+    }
+    
+    public static ProductKeyReferenceBuilder builder(final ProductKeyReference template){
+        return ProductKeyReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withProductKeyReference(Function<ProductKeyReference, T> helper) {
         return helper.apply(this);

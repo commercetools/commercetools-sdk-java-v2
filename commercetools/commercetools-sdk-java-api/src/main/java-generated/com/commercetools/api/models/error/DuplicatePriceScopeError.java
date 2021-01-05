@@ -32,17 +32,26 @@ public interface DuplicatePriceScopeError extends ErrorObject {
     public void setConflictingPrices(final Price ...conflictingPrices);
     public void setConflictingPrices(final List<Price> conflictingPrices);
 
-    public static DuplicatePriceScopeErrorImpl of(){
+    public static DuplicatePriceScopeError of(){
         return new DuplicatePriceScopeErrorImpl();
     }
     
 
-    public static DuplicatePriceScopeErrorImpl of(final DuplicatePriceScopeError template) {
+    public static DuplicatePriceScopeError of(final DuplicatePriceScopeError template) {
         DuplicatePriceScopeErrorImpl instance = new DuplicatePriceScopeErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setConflictingPrices(template.getConflictingPrices());
         return instance;
     }
+
+    public static DuplicatePriceScopeErrorBuilder builder(){
+        return DuplicatePriceScopeErrorBuilder.of();
+    }
+    
+    public static DuplicatePriceScopeErrorBuilder builder(final DuplicatePriceScopeError template){
+        return DuplicatePriceScopeErrorBuilder.of(template);
+    }
+    
 
     default <T> T withDuplicatePriceScopeError(Function<DuplicatePriceScopeError, T> helper) {
         return helper.apply(this);

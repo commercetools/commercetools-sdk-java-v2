@@ -30,16 +30,25 @@ public interface ProductCreatedMessagePayload extends MessagePayload {
 
     public void setProductProjection(final ProductProjection productProjection);
 
-    public static ProductCreatedMessagePayloadImpl of(){
+    public static ProductCreatedMessagePayload of(){
         return new ProductCreatedMessagePayloadImpl();
     }
     
 
-    public static ProductCreatedMessagePayloadImpl of(final ProductCreatedMessagePayload template) {
+    public static ProductCreatedMessagePayload of(final ProductCreatedMessagePayload template) {
         ProductCreatedMessagePayloadImpl instance = new ProductCreatedMessagePayloadImpl();
         instance.setProductProjection(template.getProductProjection());
         return instance;
     }
+
+    public static ProductCreatedMessagePayloadBuilder builder(){
+        return ProductCreatedMessagePayloadBuilder.of();
+    }
+    
+    public static ProductCreatedMessagePayloadBuilder builder(final ProductCreatedMessagePayload template){
+        return ProductCreatedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductCreatedMessagePayload(Function<ProductCreatedMessagePayload, T> helper) {
         return helper.apply(this);

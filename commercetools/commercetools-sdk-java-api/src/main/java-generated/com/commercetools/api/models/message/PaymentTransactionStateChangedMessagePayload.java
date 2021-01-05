@@ -35,17 +35,26 @@ public interface PaymentTransactionStateChangedMessagePayload extends MessagePay
     
     public void setState(final TransactionState state);
 
-    public static PaymentTransactionStateChangedMessagePayloadImpl of(){
+    public static PaymentTransactionStateChangedMessagePayload of(){
         return new PaymentTransactionStateChangedMessagePayloadImpl();
     }
     
 
-    public static PaymentTransactionStateChangedMessagePayloadImpl of(final PaymentTransactionStateChangedMessagePayload template) {
+    public static PaymentTransactionStateChangedMessagePayload of(final PaymentTransactionStateChangedMessagePayload template) {
         PaymentTransactionStateChangedMessagePayloadImpl instance = new PaymentTransactionStateChangedMessagePayloadImpl();
         instance.setTransactionId(template.getTransactionId());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static PaymentTransactionStateChangedMessagePayloadBuilder builder(){
+        return PaymentTransactionStateChangedMessagePayloadBuilder.of();
+    }
+    
+    public static PaymentTransactionStateChangedMessagePayloadBuilder builder(final PaymentTransactionStateChangedMessagePayload template){
+        return PaymentTransactionStateChangedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentTransactionStateChangedMessagePayload(Function<PaymentTransactionStateChangedMessagePayload, T> helper) {
         return helper.apply(this);

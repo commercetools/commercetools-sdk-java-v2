@@ -40,18 +40,27 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductSetCategoryOrderHintActionImpl of(){
+    public static ProductSetCategoryOrderHintAction of(){
         return new ProductSetCategoryOrderHintActionImpl();
     }
     
 
-    public static ProductSetCategoryOrderHintActionImpl of(final ProductSetCategoryOrderHintAction template) {
+    public static ProductSetCategoryOrderHintAction of(final ProductSetCategoryOrderHintAction template) {
         ProductSetCategoryOrderHintActionImpl instance = new ProductSetCategoryOrderHintActionImpl();
         instance.setCategoryId(template.getCategoryId());
         instance.setOrderHint(template.getOrderHint());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductSetCategoryOrderHintActionBuilder builder(){
+        return ProductSetCategoryOrderHintActionBuilder.of();
+    }
+    
+    public static ProductSetCategoryOrderHintActionBuilder builder(final ProductSetCategoryOrderHintAction template){
+        return ProductSetCategoryOrderHintActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetCategoryOrderHintAction(Function<ProductSetCategoryOrderHintAction, T> helper) {
         return helper.apply(this);

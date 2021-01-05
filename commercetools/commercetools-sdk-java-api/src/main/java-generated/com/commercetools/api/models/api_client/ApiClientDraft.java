@@ -42,18 +42,27 @@ public interface ApiClientDraft  {
     
     public void setDeleteDaysAfterCreation(final Long deleteDaysAfterCreation);
 
-    public static ApiClientDraftImpl of(){
+    public static ApiClientDraft of(){
         return new ApiClientDraftImpl();
     }
     
 
-    public static ApiClientDraftImpl of(final ApiClientDraft template) {
+    public static ApiClientDraft of(final ApiClientDraft template) {
         ApiClientDraftImpl instance = new ApiClientDraftImpl();
         instance.setName(template.getName());
         instance.setScope(template.getScope());
         instance.setDeleteDaysAfterCreation(template.getDeleteDaysAfterCreation());
         return instance;
     }
+
+    public static ApiClientDraftBuilder builder(){
+        return ApiClientDraftBuilder.of();
+    }
+    
+    public static ApiClientDraftBuilder builder(final ApiClientDraft template){
+        return ApiClientDraftBuilder.of(template);
+    }
+    
 
     default <T> T withApiClientDraft(Function<ApiClientDraft, T> helper) {
         return helper.apply(this);

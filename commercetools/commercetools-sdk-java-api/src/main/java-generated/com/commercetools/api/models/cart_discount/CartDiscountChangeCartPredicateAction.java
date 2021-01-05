@@ -30,16 +30,25 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
 
     public void setCartPredicate(final String cartPredicate);
 
-    public static CartDiscountChangeCartPredicateActionImpl of(){
+    public static CartDiscountChangeCartPredicateAction of(){
         return new CartDiscountChangeCartPredicateActionImpl();
     }
     
 
-    public static CartDiscountChangeCartPredicateActionImpl of(final CartDiscountChangeCartPredicateAction template) {
+    public static CartDiscountChangeCartPredicateAction of(final CartDiscountChangeCartPredicateAction template) {
         CartDiscountChangeCartPredicateActionImpl instance = new CartDiscountChangeCartPredicateActionImpl();
         instance.setCartPredicate(template.getCartPredicate());
         return instance;
     }
+
+    public static CartDiscountChangeCartPredicateActionBuilder builder(){
+        return CartDiscountChangeCartPredicateActionBuilder.of();
+    }
+    
+    public static CartDiscountChangeCartPredicateActionBuilder builder(final CartDiscountChangeCartPredicateAction template){
+        return CartDiscountChangeCartPredicateActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountChangeCartPredicateAction(Function<CartDiscountChangeCartPredicateAction, T> helper) {
         return helper.apply(this);

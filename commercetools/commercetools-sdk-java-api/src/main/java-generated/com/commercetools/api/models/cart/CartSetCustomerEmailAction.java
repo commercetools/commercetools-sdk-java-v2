@@ -28,16 +28,25 @@ public interface CartSetCustomerEmailAction extends CartUpdateAction {
 
     public void setEmail(final String email);
 
-    public static CartSetCustomerEmailActionImpl of(){
+    public static CartSetCustomerEmailAction of(){
         return new CartSetCustomerEmailActionImpl();
     }
     
 
-    public static CartSetCustomerEmailActionImpl of(final CartSetCustomerEmailAction template) {
+    public static CartSetCustomerEmailAction of(final CartSetCustomerEmailAction template) {
         CartSetCustomerEmailActionImpl instance = new CartSetCustomerEmailActionImpl();
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public static CartSetCustomerEmailActionBuilder builder(){
+        return CartSetCustomerEmailActionBuilder.of();
+    }
+    
+    public static CartSetCustomerEmailActionBuilder builder(final CartSetCustomerEmailAction template){
+        return CartSetCustomerEmailActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetCustomerEmailAction(Function<CartSetCustomerEmailAction, T> helper) {
         return helper.apply(this);

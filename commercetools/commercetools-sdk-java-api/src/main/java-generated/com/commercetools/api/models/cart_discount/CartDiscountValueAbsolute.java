@@ -32,16 +32,25 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue {
     public void setMoney(final TypedMoney ...money);
     public void setMoney(final List<TypedMoney> money);
 
-    public static CartDiscountValueAbsoluteImpl of(){
+    public static CartDiscountValueAbsolute of(){
         return new CartDiscountValueAbsoluteImpl();
     }
     
 
-    public static CartDiscountValueAbsoluteImpl of(final CartDiscountValueAbsolute template) {
+    public static CartDiscountValueAbsolute of(final CartDiscountValueAbsolute template) {
         CartDiscountValueAbsoluteImpl instance = new CartDiscountValueAbsoluteImpl();
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public static CartDiscountValueAbsoluteBuilder builder(){
+        return CartDiscountValueAbsoluteBuilder.of();
+    }
+    
+    public static CartDiscountValueAbsoluteBuilder builder(final CartDiscountValueAbsolute template){
+        return CartDiscountValueAbsoluteBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountValueAbsolute(Function<CartDiscountValueAbsolute, T> helper) {
         return helper.apply(this);

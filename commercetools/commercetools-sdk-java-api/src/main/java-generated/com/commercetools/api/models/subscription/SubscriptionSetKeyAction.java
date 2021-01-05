@@ -30,16 +30,25 @@ public interface SubscriptionSetKeyAction extends SubscriptionUpdateAction {
 
     public void setKey(final String key);
 
-    public static SubscriptionSetKeyActionImpl of(){
+    public static SubscriptionSetKeyAction of(){
         return new SubscriptionSetKeyActionImpl();
     }
     
 
-    public static SubscriptionSetKeyActionImpl of(final SubscriptionSetKeyAction template) {
+    public static SubscriptionSetKeyAction of(final SubscriptionSetKeyAction template) {
         SubscriptionSetKeyActionImpl instance = new SubscriptionSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static SubscriptionSetKeyActionBuilder builder(){
+        return SubscriptionSetKeyActionBuilder.of();
+    }
+    
+    public static SubscriptionSetKeyActionBuilder builder(final SubscriptionSetKeyAction template){
+        return SubscriptionSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withSubscriptionSetKeyAction(Function<SubscriptionSetKeyAction, T> helper) {
         return helper.apply(this);

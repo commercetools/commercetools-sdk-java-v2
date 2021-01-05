@@ -46,18 +46,27 @@ public interface MissingAttributesDetails  {
     
     public void setMissingAttributeValues(final Integer missingAttributeValues);
 
-    public static MissingAttributesDetailsImpl of(){
+    public static MissingAttributesDetails of(){
         return new MissingAttributesDetailsImpl();
     }
     
 
-    public static MissingAttributesDetailsImpl of(final MissingAttributesDetails template) {
+    public static MissingAttributesDetails of(final MissingAttributesDetails template) {
         MissingAttributesDetailsImpl instance = new MissingAttributesDetailsImpl();
         instance.setTotal(template.getTotal());
         instance.setMissingAttributeNames(template.getMissingAttributeNames());
         instance.setMissingAttributeValues(template.getMissingAttributeValues());
         return instance;
     }
+
+    public static MissingAttributesDetailsBuilder builder(){
+        return MissingAttributesDetailsBuilder.of();
+    }
+    
+    public static MissingAttributesDetailsBuilder builder(final MissingAttributesDetails template){
+        return MissingAttributesDetailsBuilder.of(template);
+    }
+    
 
     default <T> T withMissingAttributesDetails(Function<MissingAttributesDetails, T> helper) {
         return helper.apply(this);

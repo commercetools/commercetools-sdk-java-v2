@@ -28,17 +28,26 @@ public interface RequiredFieldError extends ErrorObject {
 
     public void setField(final String field);
 
-    public static RequiredFieldErrorImpl of(){
+    public static RequiredFieldError of(){
         return new RequiredFieldErrorImpl();
     }
     
 
-    public static RequiredFieldErrorImpl of(final RequiredFieldError template) {
+    public static RequiredFieldError of(final RequiredFieldError template) {
         RequiredFieldErrorImpl instance = new RequiredFieldErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setField(template.getField());
         return instance;
     }
+
+    public static RequiredFieldErrorBuilder builder(){
+        return RequiredFieldErrorBuilder.of();
+    }
+    
+    public static RequiredFieldErrorBuilder builder(final RequiredFieldError template){
+        return RequiredFieldErrorBuilder.of(template);
+    }
+    
 
     default <T> T withRequiredFieldError(Function<RequiredFieldError, T> helper) {
         return helper.apply(this);

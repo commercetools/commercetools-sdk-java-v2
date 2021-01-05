@@ -34,17 +34,26 @@ public interface AzureEventGridDestination extends Destination {
     
     public void setAccessKey(final String accessKey);
 
-    public static AzureEventGridDestinationImpl of(){
+    public static AzureEventGridDestination of(){
         return new AzureEventGridDestinationImpl();
     }
     
 
-    public static AzureEventGridDestinationImpl of(final AzureEventGridDestination template) {
+    public static AzureEventGridDestination of(final AzureEventGridDestination template) {
         AzureEventGridDestinationImpl instance = new AzureEventGridDestinationImpl();
         instance.setUri(template.getUri());
         instance.setAccessKey(template.getAccessKey());
         return instance;
     }
+
+    public static AzureEventGridDestinationBuilder builder(){
+        return AzureEventGridDestinationBuilder.of();
+    }
+    
+    public static AzureEventGridDestinationBuilder builder(final AzureEventGridDestination template){
+        return AzureEventGridDestinationBuilder.of(template);
+    }
+    
 
     default <T> T withAzureEventGridDestination(Function<AzureEventGridDestination, T> helper) {
         return helper.apply(this);

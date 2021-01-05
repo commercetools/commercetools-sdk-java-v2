@@ -23,15 +23,24 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
 
 
 
-    public static ProductUnpublishActionImpl of(){
+    public static ProductUnpublishAction of(){
         return new ProductUnpublishActionImpl();
     }
     
 
-    public static ProductUnpublishActionImpl of(final ProductUnpublishAction template) {
+    public static ProductUnpublishAction of(final ProductUnpublishAction template) {
         ProductUnpublishActionImpl instance = new ProductUnpublishActionImpl();
         return instance;
     }
+
+    public static ProductUnpublishActionBuilder builder(){
+        return ProductUnpublishActionBuilder.of();
+    }
+    
+    public static ProductUnpublishActionBuilder builder(final ProductUnpublishAction template){
+        return ProductUnpublishActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductUnpublishAction(Function<ProductUnpublishAction, T> helper) {
         return helper.apply(this);

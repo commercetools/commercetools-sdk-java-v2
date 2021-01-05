@@ -48,12 +48,12 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductAddExternalImageActionImpl of(){
+    public static ProductAddExternalImageAction of(){
         return new ProductAddExternalImageActionImpl();
     }
     
 
-    public static ProductAddExternalImageActionImpl of(final ProductAddExternalImageAction template) {
+    public static ProductAddExternalImageAction of(final ProductAddExternalImageAction template) {
         ProductAddExternalImageActionImpl instance = new ProductAddExternalImageActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -61,6 +61,15 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductAddExternalImageActionBuilder builder(){
+        return ProductAddExternalImageActionBuilder.of();
+    }
+    
+    public static ProductAddExternalImageActionBuilder builder(final ProductAddExternalImageAction template){
+        return ProductAddExternalImageActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductAddExternalImageAction(Function<ProductAddExternalImageAction, T> helper) {
         return helper.apply(this);

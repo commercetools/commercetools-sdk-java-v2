@@ -47,12 +47,12 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
     
     public void setTarget(final Reference target);
 
-    public static ReviewRatingSetMessagePayloadImpl of(){
+    public static ReviewRatingSetMessagePayload of(){
         return new ReviewRatingSetMessagePayloadImpl();
     }
     
 
-    public static ReviewRatingSetMessagePayloadImpl of(final ReviewRatingSetMessagePayload template) {
+    public static ReviewRatingSetMessagePayload of(final ReviewRatingSetMessagePayload template) {
         ReviewRatingSetMessagePayloadImpl instance = new ReviewRatingSetMessagePayloadImpl();
         instance.setOldRating(template.getOldRating());
         instance.setNewRating(template.getNewRating());
@@ -60,6 +60,15 @@ public interface ReviewRatingSetMessagePayload extends MessagePayload {
         instance.setTarget(template.getTarget());
         return instance;
     }
+
+    public static ReviewRatingSetMessagePayloadBuilder builder(){
+        return ReviewRatingSetMessagePayloadBuilder.of();
+    }
+    
+    public static ReviewRatingSetMessagePayloadBuilder builder(final ReviewRatingSetMessagePayload template){
+        return ReviewRatingSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withReviewRatingSetMessagePayload(Function<ReviewRatingSetMessagePayload, T> helper) {
         return helper.apply(this);

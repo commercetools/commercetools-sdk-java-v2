@@ -28,16 +28,25 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
 
     public void setLastName(final String lastName);
 
-    public static CustomerSetLastNameActionImpl of(){
+    public static CustomerSetLastNameAction of(){
         return new CustomerSetLastNameActionImpl();
     }
     
 
-    public static CustomerSetLastNameActionImpl of(final CustomerSetLastNameAction template) {
+    public static CustomerSetLastNameAction of(final CustomerSetLastNameAction template) {
         CustomerSetLastNameActionImpl instance = new CustomerSetLastNameActionImpl();
         instance.setLastName(template.getLastName());
         return instance;
     }
+
+    public static CustomerSetLastNameActionBuilder builder(){
+        return CustomerSetLastNameActionBuilder.of();
+    }
+    
+    public static CustomerSetLastNameActionBuilder builder(final CustomerSetLastNameAction template){
+        return CustomerSetLastNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerSetLastNameAction(Function<CustomerSetLastNameAction, T> helper) {
         return helper.apply(this);

@@ -31,16 +31,25 @@ public interface StateAddRolesAction extends StateUpdateAction {
     public void setRoles(final StateRoleEnum ...roles);
     public void setRoles(final List<StateRoleEnum> roles);
 
-    public static StateAddRolesActionImpl of(){
+    public static StateAddRolesAction of(){
         return new StateAddRolesActionImpl();
     }
     
 
-    public static StateAddRolesActionImpl of(final StateAddRolesAction template) {
+    public static StateAddRolesAction of(final StateAddRolesAction template) {
         StateAddRolesActionImpl instance = new StateAddRolesActionImpl();
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public static StateAddRolesActionBuilder builder(){
+        return StateAddRolesActionBuilder.of();
+    }
+    
+    public static StateAddRolesActionBuilder builder(final StateAddRolesAction template){
+        return StateAddRolesActionBuilder.of(template);
+    }
+    
 
     default <T> T withStateAddRolesAction(Function<StateAddRolesAction, T> helper) {
         return helper.apply(this);

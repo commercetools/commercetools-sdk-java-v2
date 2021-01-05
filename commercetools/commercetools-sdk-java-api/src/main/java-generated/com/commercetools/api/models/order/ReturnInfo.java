@@ -46,18 +46,27 @@ public interface ReturnInfo  {
     
     public void setReturnDate(final ZonedDateTime returnDate);
 
-    public static ReturnInfoImpl of(){
+    public static ReturnInfo of(){
         return new ReturnInfoImpl();
     }
     
 
-    public static ReturnInfoImpl of(final ReturnInfo template) {
+    public static ReturnInfo of(final ReturnInfo template) {
         ReturnInfoImpl instance = new ReturnInfoImpl();
         instance.setItems(template.getItems());
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setReturnDate(template.getReturnDate());
         return instance;
     }
+
+    public static ReturnInfoBuilder builder(){
+        return ReturnInfoBuilder.of();
+    }
+    
+    public static ReturnInfoBuilder builder(final ReturnInfo template){
+        return ReturnInfoBuilder.of(template);
+    }
+    
 
     default <T> T withReturnInfo(Function<ReturnInfo, T> helper) {
         return helper.apply(this);

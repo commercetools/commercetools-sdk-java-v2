@@ -30,16 +30,25 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
 
     public void setMessagesConfiguration(final MessageConfigurationDraft messagesConfiguration);
 
-    public static ProjectChangeMessagesConfigurationActionImpl of(){
+    public static ProjectChangeMessagesConfigurationAction of(){
         return new ProjectChangeMessagesConfigurationActionImpl();
     }
     
 
-    public static ProjectChangeMessagesConfigurationActionImpl of(final ProjectChangeMessagesConfigurationAction template) {
+    public static ProjectChangeMessagesConfigurationAction of(final ProjectChangeMessagesConfigurationAction template) {
         ProjectChangeMessagesConfigurationActionImpl instance = new ProjectChangeMessagesConfigurationActionImpl();
         instance.setMessagesConfiguration(template.getMessagesConfiguration());
         return instance;
     }
+
+    public static ProjectChangeMessagesConfigurationActionBuilder builder(){
+        return ProjectChangeMessagesConfigurationActionBuilder.of();
+    }
+    
+    public static ProjectChangeMessagesConfigurationActionBuilder builder(final ProjectChangeMessagesConfigurationAction template){
+        return ProjectChangeMessagesConfigurationActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectChangeMessagesConfigurationAction(Function<ProjectChangeMessagesConfigurationAction, T> helper) {
         return helper.apply(this);

@@ -23,12 +23,12 @@ public interface StagedOrder extends Order {
 
 
 
-    public static StagedOrderImpl of(){
+    public static StagedOrder of(){
         return new StagedOrderImpl();
     }
     
 
-    public static StagedOrderImpl of(final StagedOrder template) {
+    public static StagedOrder of(final StagedOrder template) {
         StagedOrderImpl instance = new StagedOrderImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -73,6 +73,15 @@ public interface StagedOrder extends Order {
         instance.setRefusedGifts(template.getRefusedGifts());
         return instance;
     }
+
+    public static StagedOrderBuilder builder(){
+        return StagedOrderBuilder.of();
+    }
+    
+    public static StagedOrderBuilder builder(final StagedOrder template){
+        return StagedOrderBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrder(Function<StagedOrder, T> helper) {
         return helper.apply(this);

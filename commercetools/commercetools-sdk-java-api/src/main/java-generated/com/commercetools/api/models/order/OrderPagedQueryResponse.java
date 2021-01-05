@@ -55,12 +55,12 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
     public void setResults(final Order ...results);
     public void setResults(final List<Order> results);
 
-    public static OrderPagedQueryResponseImpl of(){
+    public static OrderPagedQueryResponse of(){
         return new OrderPagedQueryResponseImpl();
     }
     
 
-    public static OrderPagedQueryResponseImpl of(final OrderPagedQueryResponse template) {
+    public static OrderPagedQueryResponse of(final OrderPagedQueryResponse template) {
         OrderPagedQueryResponseImpl instance = new OrderPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static OrderPagedQueryResponseBuilder builder(){
+        return OrderPagedQueryResponseBuilder.of();
+    }
+    
+    public static OrderPagedQueryResponseBuilder builder(final OrderPagedQueryResponse template){
+        return OrderPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withOrderPagedQueryResponse(Function<OrderPagedQueryResponse, T> helper) {
         return helper.apply(this);

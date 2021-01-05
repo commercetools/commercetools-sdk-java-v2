@@ -37,17 +37,26 @@ public interface TypeUpdate extends com.commercetools.api.models.ResourceUpdate<
     public void setActions(final TypeUpdateAction ...actions);
     public void setActions(final List<TypeUpdateAction> actions);
 
-    public static TypeUpdateImpl of(){
+    public static TypeUpdate of(){
         return new TypeUpdateImpl();
     }
     
 
-    public static TypeUpdateImpl of(final TypeUpdate template) {
+    public static TypeUpdate of(final TypeUpdate template) {
         TypeUpdateImpl instance = new TypeUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static TypeUpdateBuilder builder(){
+        return TypeUpdateBuilder.of();
+    }
+    
+    public static TypeUpdateBuilder builder(final TypeUpdate template){
+        return TypeUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withTypeUpdate(Function<TypeUpdate, T> helper) {
         return helper.apply(this);

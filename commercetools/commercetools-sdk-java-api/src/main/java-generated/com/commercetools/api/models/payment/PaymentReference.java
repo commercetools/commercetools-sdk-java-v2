@@ -30,17 +30,26 @@ public interface PaymentReference extends Reference {
 
     public void setObj(final Payment obj);
 
-    public static PaymentReferenceImpl of(){
+    public static PaymentReference of(){
         return new PaymentReferenceImpl();
     }
     
 
-    public static PaymentReferenceImpl of(final PaymentReference template) {
+    public static PaymentReference of(final PaymentReference template) {
         PaymentReferenceImpl instance = new PaymentReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static PaymentReferenceBuilder builder(){
+        return PaymentReferenceBuilder.of();
+    }
+    
+    public static PaymentReferenceBuilder builder(final PaymentReference template){
+        return PaymentReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentReference(Function<PaymentReference, T> helper) {
         return helper.apply(this);

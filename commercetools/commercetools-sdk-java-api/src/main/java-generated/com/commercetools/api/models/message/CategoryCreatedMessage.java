@@ -30,12 +30,12 @@ public interface CategoryCreatedMessage extends Message {
 
     public void setCategory(final Category category);
 
-    public static CategoryCreatedMessageImpl of(){
+    public static CategoryCreatedMessage of(){
         return new CategoryCreatedMessageImpl();
     }
     
 
-    public static CategoryCreatedMessageImpl of(final CategoryCreatedMessage template) {
+    public static CategoryCreatedMessage of(final CategoryCreatedMessage template) {
         CategoryCreatedMessageImpl instance = new CategoryCreatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface CategoryCreatedMessage extends Message {
         instance.setCategory(template.getCategory());
         return instance;
     }
+
+    public static CategoryCreatedMessageBuilder builder(){
+        return CategoryCreatedMessageBuilder.of();
+    }
+    
+    public static CategoryCreatedMessageBuilder builder(final CategoryCreatedMessage template){
+        return CategoryCreatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryCreatedMessage(Function<CategoryCreatedMessage, T> helper) {
         return helper.apply(this);

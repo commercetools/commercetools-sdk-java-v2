@@ -23,15 +23,24 @@ public interface CustomFieldDateType extends FieldType {
 
 
 
-    public static CustomFieldDateTypeImpl of(){
+    public static CustomFieldDateType of(){
         return new CustomFieldDateTypeImpl();
     }
     
 
-    public static CustomFieldDateTypeImpl of(final CustomFieldDateType template) {
+    public static CustomFieldDateType of(final CustomFieldDateType template) {
         CustomFieldDateTypeImpl instance = new CustomFieldDateTypeImpl();
         return instance;
     }
+
+    public static CustomFieldDateTypeBuilder builder(){
+        return CustomFieldDateTypeBuilder.of();
+    }
+    
+    public static CustomFieldDateTypeBuilder builder(final CustomFieldDateType template){
+        return CustomFieldDateTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldDateType(Function<CustomFieldDateType, T> helper) {
         return helper.apply(this);

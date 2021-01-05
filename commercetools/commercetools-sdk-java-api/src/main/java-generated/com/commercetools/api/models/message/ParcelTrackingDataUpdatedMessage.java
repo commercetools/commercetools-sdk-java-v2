@@ -41,12 +41,12 @@ public interface ParcelTrackingDataUpdatedMessage extends Message {
     
     public void setTrackingData(final TrackingData trackingData);
 
-    public static ParcelTrackingDataUpdatedMessageImpl of(){
+    public static ParcelTrackingDataUpdatedMessage of(){
         return new ParcelTrackingDataUpdatedMessageImpl();
     }
     
 
-    public static ParcelTrackingDataUpdatedMessageImpl of(final ParcelTrackingDataUpdatedMessage template) {
+    public static ParcelTrackingDataUpdatedMessage of(final ParcelTrackingDataUpdatedMessage template) {
         ParcelTrackingDataUpdatedMessageImpl instance = new ParcelTrackingDataUpdatedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -63,6 +63,15 @@ public interface ParcelTrackingDataUpdatedMessage extends Message {
         instance.setTrackingData(template.getTrackingData());
         return instance;
     }
+
+    public static ParcelTrackingDataUpdatedMessageBuilder builder(){
+        return ParcelTrackingDataUpdatedMessageBuilder.of();
+    }
+    
+    public static ParcelTrackingDataUpdatedMessageBuilder builder(final ParcelTrackingDataUpdatedMessage template){
+        return ParcelTrackingDataUpdatedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withParcelTrackingDataUpdatedMessage(Function<ParcelTrackingDataUpdatedMessage, T> helper) {
         return helper.apply(this);

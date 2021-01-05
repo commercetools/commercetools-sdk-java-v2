@@ -38,18 +38,27 @@ public interface OutOfStockError extends ErrorObject {
     public void setSkus(final String ...skus);
     public void setSkus(final List<String> skus);
 
-    public static OutOfStockErrorImpl of(){
+    public static OutOfStockError of(){
         return new OutOfStockErrorImpl();
     }
     
 
-    public static OutOfStockErrorImpl of(final OutOfStockError template) {
+    public static OutOfStockError of(final OutOfStockError template) {
         OutOfStockErrorImpl instance = new OutOfStockErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setLineItems(template.getLineItems());
         instance.setSkus(template.getSkus());
         return instance;
     }
+
+    public static OutOfStockErrorBuilder builder(){
+        return OutOfStockErrorBuilder.of();
+    }
+    
+    public static OutOfStockErrorBuilder builder(final OutOfStockError template){
+        return OutOfStockErrorBuilder.of(template);
+    }
+    
 
     default <T> T withOutOfStockError(Function<OutOfStockError, T> helper) {
         return helper.apply(this);

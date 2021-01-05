@@ -40,18 +40,27 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
     
     public void setNewKey(final String newKey);
 
-    public static ProductTypeChangeEnumKeyActionImpl of(){
+    public static ProductTypeChangeEnumKeyAction of(){
         return new ProductTypeChangeEnumKeyActionImpl();
     }
     
 
-    public static ProductTypeChangeEnumKeyActionImpl of(final ProductTypeChangeEnumKeyAction template) {
+    public static ProductTypeChangeEnumKeyAction of(final ProductTypeChangeEnumKeyAction template) {
         ProductTypeChangeEnumKeyActionImpl instance = new ProductTypeChangeEnumKeyActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setKey(template.getKey());
         instance.setNewKey(template.getNewKey());
         return instance;
     }
+
+    public static ProductTypeChangeEnumKeyActionBuilder builder(){
+        return ProductTypeChangeEnumKeyActionBuilder.of();
+    }
+    
+    public static ProductTypeChangeEnumKeyActionBuilder builder(final ProductTypeChangeEnumKeyAction template){
+        return ProductTypeChangeEnumKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangeEnumKeyAction(Function<ProductTypeChangeEnumKeyAction, T> helper) {
         return helper.apply(this);

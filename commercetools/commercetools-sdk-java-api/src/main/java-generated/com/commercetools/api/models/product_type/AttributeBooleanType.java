@@ -23,15 +23,24 @@ public interface AttributeBooleanType extends AttributeType {
 
 
 
-    public static AttributeBooleanTypeImpl of(){
+    public static AttributeBooleanType of(){
         return new AttributeBooleanTypeImpl();
     }
     
 
-    public static AttributeBooleanTypeImpl of(final AttributeBooleanType template) {
+    public static AttributeBooleanType of(final AttributeBooleanType template) {
         AttributeBooleanTypeImpl instance = new AttributeBooleanTypeImpl();
         return instance;
     }
+
+    public static AttributeBooleanTypeBuilder builder(){
+        return AttributeBooleanTypeBuilder.of();
+    }
+    
+    public static AttributeBooleanTypeBuilder builder(final AttributeBooleanType template){
+        return AttributeBooleanTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeBooleanType(Function<AttributeBooleanType, T> helper) {
         return helper.apply(this);

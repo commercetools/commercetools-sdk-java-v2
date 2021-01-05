@@ -35,17 +35,26 @@ public interface ShoppingListSetCustomFieldAction extends ShoppingListUpdateActi
     
     public void setValue(final JsonNode value);
 
-    public static ShoppingListSetCustomFieldActionImpl of(){
+    public static ShoppingListSetCustomFieldAction of(){
         return new ShoppingListSetCustomFieldActionImpl();
     }
     
 
-    public static ShoppingListSetCustomFieldActionImpl of(final ShoppingListSetCustomFieldAction template) {
+    public static ShoppingListSetCustomFieldAction of(final ShoppingListSetCustomFieldAction template) {
         ShoppingListSetCustomFieldActionImpl instance = new ShoppingListSetCustomFieldActionImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static ShoppingListSetCustomFieldActionBuilder builder(){
+        return ShoppingListSetCustomFieldActionBuilder.of();
+    }
+    
+    public static ShoppingListSetCustomFieldActionBuilder builder(final ShoppingListSetCustomFieldAction template){
+        return ShoppingListSetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withShoppingListSetCustomFieldAction(Function<ShoppingListSetCustomFieldAction, T> helper) {
         return helper.apply(this);

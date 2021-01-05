@@ -44,6 +44,7 @@ public interface CustomerGroupUpdateAction extends com.commercetools.api.models.
 
 
 
+
     default <T> T withCustomerGroupUpdateAction(Function<CustomerGroupUpdateAction, T> helper) {
         return helper.apply(this);
     }

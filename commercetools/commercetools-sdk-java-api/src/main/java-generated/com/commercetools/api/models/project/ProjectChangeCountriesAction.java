@@ -32,16 +32,25 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
     public void setCountries(final String ...countries);
     public void setCountries(final List<String> countries);
 
-    public static ProjectChangeCountriesActionImpl of(){
+    public static ProjectChangeCountriesAction of(){
         return new ProjectChangeCountriesActionImpl();
     }
     
 
-    public static ProjectChangeCountriesActionImpl of(final ProjectChangeCountriesAction template) {
+    public static ProjectChangeCountriesAction of(final ProjectChangeCountriesAction template) {
         ProjectChangeCountriesActionImpl instance = new ProjectChangeCountriesActionImpl();
         instance.setCountries(template.getCountries());
         return instance;
     }
+
+    public static ProjectChangeCountriesActionBuilder builder(){
+        return ProjectChangeCountriesActionBuilder.of();
+    }
+    
+    public static ProjectChangeCountriesActionBuilder builder(final ProjectChangeCountriesAction template){
+        return ProjectChangeCountriesActionBuilder.of(template);
+    }
+    
 
     default <T> T withProjectChangeCountriesAction(Function<ProjectChangeCountriesAction, T> helper) {
         return helper.apply(this);

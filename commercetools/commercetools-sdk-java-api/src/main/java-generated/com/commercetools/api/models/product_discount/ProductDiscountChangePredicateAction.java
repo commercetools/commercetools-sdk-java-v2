@@ -30,16 +30,25 @@ public interface ProductDiscountChangePredicateAction extends ProductDiscountUpd
 
     public void setPredicate(final String predicate);
 
-    public static ProductDiscountChangePredicateActionImpl of(){
+    public static ProductDiscountChangePredicateAction of(){
         return new ProductDiscountChangePredicateActionImpl();
     }
     
 
-    public static ProductDiscountChangePredicateActionImpl of(final ProductDiscountChangePredicateAction template) {
+    public static ProductDiscountChangePredicateAction of(final ProductDiscountChangePredicateAction template) {
         ProductDiscountChangePredicateActionImpl instance = new ProductDiscountChangePredicateActionImpl();
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public static ProductDiscountChangePredicateActionBuilder builder(){
+        return ProductDiscountChangePredicateActionBuilder.of();
+    }
+    
+    public static ProductDiscountChangePredicateActionBuilder builder(final ProductDiscountChangePredicateAction template){
+        return ProductDiscountChangePredicateActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountChangePredicateAction(Function<ProductDiscountChangePredicateAction, T> helper) {
         return helper.apply(this);

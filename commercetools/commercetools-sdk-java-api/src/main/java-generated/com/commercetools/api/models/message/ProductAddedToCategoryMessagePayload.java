@@ -36,17 +36,26 @@ public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductAddedToCategoryMessagePayloadImpl of(){
+    public static ProductAddedToCategoryMessagePayload of(){
         return new ProductAddedToCategoryMessagePayloadImpl();
     }
     
 
-    public static ProductAddedToCategoryMessagePayloadImpl of(final ProductAddedToCategoryMessagePayload template) {
+    public static ProductAddedToCategoryMessagePayload of(final ProductAddedToCategoryMessagePayload template) {
         ProductAddedToCategoryMessagePayloadImpl instance = new ProductAddedToCategoryMessagePayloadImpl();
         instance.setCategory(template.getCategory());
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductAddedToCategoryMessagePayloadBuilder builder(){
+        return ProductAddedToCategoryMessagePayloadBuilder.of();
+    }
+    
+    public static ProductAddedToCategoryMessagePayloadBuilder builder(final ProductAddedToCategoryMessagePayload template){
+        return ProductAddedToCategoryMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductAddedToCategoryMessagePayload(Function<ProductAddedToCategoryMessagePayload, T> helper) {
         return helper.apply(this);

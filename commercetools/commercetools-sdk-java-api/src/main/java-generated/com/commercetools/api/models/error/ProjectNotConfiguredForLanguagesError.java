@@ -30,17 +30,26 @@ public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
     public void setLanguages(final String ...languages);
     public void setLanguages(final List<String> languages);
 
-    public static ProjectNotConfiguredForLanguagesErrorImpl of(){
+    public static ProjectNotConfiguredForLanguagesError of(){
         return new ProjectNotConfiguredForLanguagesErrorImpl();
     }
     
 
-    public static ProjectNotConfiguredForLanguagesErrorImpl of(final ProjectNotConfiguredForLanguagesError template) {
+    public static ProjectNotConfiguredForLanguagesError of(final ProjectNotConfiguredForLanguagesError template) {
         ProjectNotConfiguredForLanguagesErrorImpl instance = new ProjectNotConfiguredForLanguagesErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setLanguages(template.getLanguages());
         return instance;
     }
+
+    public static ProjectNotConfiguredForLanguagesErrorBuilder builder(){
+        return ProjectNotConfiguredForLanguagesErrorBuilder.of();
+    }
+    
+    public static ProjectNotConfiguredForLanguagesErrorBuilder builder(final ProjectNotConfiguredForLanguagesError template){
+        return ProjectNotConfiguredForLanguagesErrorBuilder.of(template);
+    }
+    
 
     default <T> T withProjectNotConfiguredForLanguagesError(Function<ProjectNotConfiguredForLanguagesError, T> helper) {
         return helper.apply(this);

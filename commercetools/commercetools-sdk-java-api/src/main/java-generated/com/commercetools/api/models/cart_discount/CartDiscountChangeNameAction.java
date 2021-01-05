@@ -30,16 +30,25 @@ public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static CartDiscountChangeNameActionImpl of(){
+    public static CartDiscountChangeNameAction of(){
         return new CartDiscountChangeNameActionImpl();
     }
     
 
-    public static CartDiscountChangeNameActionImpl of(final CartDiscountChangeNameAction template) {
+    public static CartDiscountChangeNameAction of(final CartDiscountChangeNameAction template) {
         CartDiscountChangeNameActionImpl instance = new CartDiscountChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static CartDiscountChangeNameActionBuilder builder(){
+        return CartDiscountChangeNameActionBuilder.of();
+    }
+    
+    public static CartDiscountChangeNameActionBuilder builder(final CartDiscountChangeNameAction template){
+        return CartDiscountChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountChangeNameAction(Function<CartDiscountChangeNameAction, T> helper) {
         return helper.apply(this);

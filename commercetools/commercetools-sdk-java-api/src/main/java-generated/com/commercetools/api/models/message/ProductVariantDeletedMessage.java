@@ -38,12 +38,12 @@ public interface ProductVariantDeletedMessage extends Message {
     public void setRemovedImageUrls(final String ...removedImageUrls);
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-    public static ProductVariantDeletedMessageImpl of(){
+    public static ProductVariantDeletedMessage of(){
         return new ProductVariantDeletedMessageImpl();
     }
     
 
-    public static ProductVariantDeletedMessageImpl of(final ProductVariantDeletedMessage template) {
+    public static ProductVariantDeletedMessage of(final ProductVariantDeletedMessage template) {
         ProductVariantDeletedMessageImpl instance = new ProductVariantDeletedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -59,6 +59,15 @@ public interface ProductVariantDeletedMessage extends Message {
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         return instance;
     }
+
+    public static ProductVariantDeletedMessageBuilder builder(){
+        return ProductVariantDeletedMessageBuilder.of();
+    }
+    
+    public static ProductVariantDeletedMessageBuilder builder(final ProductVariantDeletedMessage template){
+        return ProductVariantDeletedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantDeletedMessage(Function<ProductVariantDeletedMessage, T> helper) {
         return helper.apply(this);

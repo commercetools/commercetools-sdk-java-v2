@@ -50,18 +50,27 @@ public interface MissingDataTaskStatus  {
     
     public void setResult(final MissingAttributesPagedQueryResult result);
 
-    public static MissingDataTaskStatusImpl of(){
+    public static MissingDataTaskStatus of(){
         return new MissingDataTaskStatusImpl();
     }
     
 
-    public static MissingDataTaskStatusImpl of(final MissingDataTaskStatus template) {
+    public static MissingDataTaskStatus of(final MissingDataTaskStatus template) {
         MissingDataTaskStatusImpl instance = new MissingDataTaskStatusImpl();
         instance.setState(template.getState());
         instance.setExpires(template.getExpires());
         instance.setResult(template.getResult());
         return instance;
     }
+
+    public static MissingDataTaskStatusBuilder builder(){
+        return MissingDataTaskStatusBuilder.of();
+    }
+    
+    public static MissingDataTaskStatusBuilder builder(final MissingDataTaskStatus template){
+        return MissingDataTaskStatusBuilder.of(template);
+    }
+    
 
     default <T> T withMissingDataTaskStatus(Function<MissingDataTaskStatus, T> helper) {
         return helper.apply(this);

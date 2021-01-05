@@ -30,16 +30,25 @@ public interface OrderStoreSetMessagePayload extends MessagePayload {
 
     public void setStore(final StoreKeyReference store);
 
-    public static OrderStoreSetMessagePayloadImpl of(){
+    public static OrderStoreSetMessagePayload of(){
         return new OrderStoreSetMessagePayloadImpl();
     }
     
 
-    public static OrderStoreSetMessagePayloadImpl of(final OrderStoreSetMessagePayload template) {
+    public static OrderStoreSetMessagePayload of(final OrderStoreSetMessagePayload template) {
         OrderStoreSetMessagePayloadImpl instance = new OrderStoreSetMessagePayloadImpl();
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public static OrderStoreSetMessagePayloadBuilder builder(){
+        return OrderStoreSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderStoreSetMessagePayloadBuilder builder(final OrderStoreSetMessagePayload template){
+        return OrderStoreSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderStoreSetMessagePayload(Function<OrderStoreSetMessagePayload, T> helper) {
         return helper.apply(this);

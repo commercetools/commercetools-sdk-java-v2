@@ -58,6 +58,7 @@ public interface ShippingMethodUpdateAction extends com.commercetools.api.models
 
 
 
+
     default <T> T withShippingMethodUpdateAction(Function<ShippingMethodUpdateAction, T> helper) {
         return helper.apply(this);
     }

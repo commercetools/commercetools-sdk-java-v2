@@ -36,17 +36,26 @@ public interface Location  {
     
     public void setState(final String state);
 
-    public static LocationImpl of(){
+    public static Location of(){
         return new LocationImpl();
     }
     
 
-    public static LocationImpl of(final Location template) {
+    public static Location of(final Location template) {
         LocationImpl instance = new LocationImpl();
         instance.setCountry(template.getCountry());
         instance.setState(template.getState());
         return instance;
     }
+
+    public static LocationBuilder builder(){
+        return LocationBuilder.of();
+    }
+    
+    public static LocationBuilder builder(final Location template){
+        return LocationBuilder.of(template);
+    }
+    
 
     default <T> T withLocation(Function<Location, T> helper) {
         return helper.apply(this);

@@ -55,12 +55,12 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
     
     public void setShippingDetailsToRemove(final ItemShippingDetailsDraft shippingDetailsToRemove);
 
-    public static StagedOrderRemoveLineItemActionImpl of(){
+    public static StagedOrderRemoveLineItemAction of(){
         return new StagedOrderRemoveLineItemActionImpl();
     }
     
 
-    public static StagedOrderRemoveLineItemActionImpl of(final StagedOrderRemoveLineItemAction template) {
+    public static StagedOrderRemoveLineItemAction of(final StagedOrderRemoveLineItemAction template) {
         StagedOrderRemoveLineItemActionImpl instance = new StagedOrderRemoveLineItemActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -69,6 +69,15 @@ public interface StagedOrderRemoveLineItemAction extends StagedOrderUpdateAction
         instance.setShippingDetailsToRemove(template.getShippingDetailsToRemove());
         return instance;
     }
+
+    public static StagedOrderRemoveLineItemActionBuilder builder(){
+        return StagedOrderRemoveLineItemActionBuilder.of();
+    }
+    
+    public static StagedOrderRemoveLineItemActionBuilder builder(final StagedOrderRemoveLineItemAction template){
+        return StagedOrderRemoveLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderRemoveLineItemAction(Function<StagedOrderRemoveLineItemAction, T> helper) {
         return helper.apply(this);

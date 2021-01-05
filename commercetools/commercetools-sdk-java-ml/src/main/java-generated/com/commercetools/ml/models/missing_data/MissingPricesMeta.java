@@ -37,17 +37,26 @@ public interface MissingPricesMeta  {
     
     public void setVariantLevel(final MissingPricesVariantLevel variantLevel);
 
-    public static MissingPricesMetaImpl of(){
+    public static MissingPricesMeta of(){
         return new MissingPricesMetaImpl();
     }
     
 
-    public static MissingPricesMetaImpl of(final MissingPricesMeta template) {
+    public static MissingPricesMeta of(final MissingPricesMeta template) {
         MissingPricesMetaImpl instance = new MissingPricesMetaImpl();
         instance.setProductLevel(template.getProductLevel());
         instance.setVariantLevel(template.getVariantLevel());
         return instance;
     }
+
+    public static MissingPricesMetaBuilder builder(){
+        return MissingPricesMetaBuilder.of();
+    }
+    
+    public static MissingPricesMetaBuilder builder(final MissingPricesMeta template){
+        return MissingPricesMetaBuilder.of(template);
+    }
+    
 
     default <T> T withMissingPricesMeta(Function<MissingPricesMeta, T> helper) {
         return helper.apply(this);

@@ -34,17 +34,26 @@ public interface OrderCustomerEmailSetMessagePayload extends MessagePayload {
     
     public void setOldEmail(final String oldEmail);
 
-    public static OrderCustomerEmailSetMessagePayloadImpl of(){
+    public static OrderCustomerEmailSetMessagePayload of(){
         return new OrderCustomerEmailSetMessagePayloadImpl();
     }
     
 
-    public static OrderCustomerEmailSetMessagePayloadImpl of(final OrderCustomerEmailSetMessagePayload template) {
+    public static OrderCustomerEmailSetMessagePayload of(final OrderCustomerEmailSetMessagePayload template) {
         OrderCustomerEmailSetMessagePayloadImpl instance = new OrderCustomerEmailSetMessagePayloadImpl();
         instance.setEmail(template.getEmail());
         instance.setOldEmail(template.getOldEmail());
         return instance;
     }
+
+    public static OrderCustomerEmailSetMessagePayloadBuilder builder(){
+        return OrderCustomerEmailSetMessagePayloadBuilder.of();
+    }
+    
+    public static OrderCustomerEmailSetMessagePayloadBuilder builder(final OrderCustomerEmailSetMessagePayload template){
+        return OrderCustomerEmailSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderCustomerEmailSetMessagePayload(Function<OrderCustomerEmailSetMessagePayload, T> helper) {
         return helper.apply(this);

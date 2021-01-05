@@ -50,18 +50,27 @@ public interface MissingImagesTaskStatus  {
     
     public void setResult(final MissingImagesPagedQueryResult result);
 
-    public static MissingImagesTaskStatusImpl of(){
+    public static MissingImagesTaskStatus of(){
         return new MissingImagesTaskStatusImpl();
     }
     
 
-    public static MissingImagesTaskStatusImpl of(final MissingImagesTaskStatus template) {
+    public static MissingImagesTaskStatus of(final MissingImagesTaskStatus template) {
         MissingImagesTaskStatusImpl instance = new MissingImagesTaskStatusImpl();
         instance.setState(template.getState());
         instance.setExpires(template.getExpires());
         instance.setResult(template.getResult());
         return instance;
     }
+
+    public static MissingImagesTaskStatusBuilder builder(){
+        return MissingImagesTaskStatusBuilder.of();
+    }
+    
+    public static MissingImagesTaskStatusBuilder builder(final MissingImagesTaskStatus template){
+        return MissingImagesTaskStatusBuilder.of(template);
+    }
+    
 
     default <T> T withMissingImagesTaskStatus(Function<MissingImagesTaskStatus, T> helper) {
         return helper.apply(this);

@@ -28,16 +28,25 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
 
     public void setName(final String name);
 
-    public static CustomerGroupChangeNameActionImpl of(){
+    public static CustomerGroupChangeNameAction of(){
         return new CustomerGroupChangeNameActionImpl();
     }
     
 
-    public static CustomerGroupChangeNameActionImpl of(final CustomerGroupChangeNameAction template) {
+    public static CustomerGroupChangeNameAction of(final CustomerGroupChangeNameAction template) {
         CustomerGroupChangeNameActionImpl instance = new CustomerGroupChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static CustomerGroupChangeNameActionBuilder builder(){
+        return CustomerGroupChangeNameActionBuilder.of();
+    }
+    
+    public static CustomerGroupChangeNameActionBuilder builder(final CustomerGroupChangeNameAction template){
+        return CustomerGroupChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupChangeNameAction(Function<CustomerGroupChangeNameAction, T> helper) {
         return helper.apply(this);

@@ -23,16 +23,25 @@ public interface ContentionError extends ErrorObject {
 
 
 
-    public static ContentionErrorImpl of(){
+    public static ContentionError of(){
         return new ContentionErrorImpl();
     }
     
 
-    public static ContentionErrorImpl of(final ContentionError template) {
+    public static ContentionError of(final ContentionError template) {
         ContentionErrorImpl instance = new ContentionErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static ContentionErrorBuilder builder(){
+        return ContentionErrorBuilder.of();
+    }
+    
+    public static ContentionErrorBuilder builder(final ContentionError template){
+        return ContentionErrorBuilder.of(template);
+    }
+    
 
     default <T> T withContentionError(Function<ContentionError, T> helper) {
         return helper.apply(this);

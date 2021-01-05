@@ -43,18 +43,27 @@ public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateActio
     
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-    public static StagedOrderAddShoppingListActionImpl of(){
+    public static StagedOrderAddShoppingListAction of(){
         return new StagedOrderAddShoppingListActionImpl();
     }
     
 
-    public static StagedOrderAddShoppingListActionImpl of(final StagedOrderAddShoppingListAction template) {
+    public static StagedOrderAddShoppingListAction of(final StagedOrderAddShoppingListAction template) {
         StagedOrderAddShoppingListActionImpl instance = new StagedOrderAddShoppingListActionImpl();
         instance.setShoppingList(template.getShoppingList());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public static StagedOrderAddShoppingListActionBuilder builder(){
+        return StagedOrderAddShoppingListActionBuilder.of();
+    }
+    
+    public static StagedOrderAddShoppingListActionBuilder builder(final StagedOrderAddShoppingListAction template){
+        return StagedOrderAddShoppingListActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderAddShoppingListAction(Function<StagedOrderAddShoppingListAction, T> helper) {
         return helper.apply(this);

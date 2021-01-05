@@ -131,12 +131,12 @@ public interface MyShoppingList extends BaseResource, com.commercetools.api.mode
     
     public void setAnonymousId(final String anonymousId);
 
-    public static MyShoppingListImpl of(){
+    public static MyShoppingList of(){
         return new MyShoppingListImpl();
     }
     
 
-    public static MyShoppingListImpl of(final MyShoppingList template) {
+    public static MyShoppingList of(final MyShoppingList template) {
         MyShoppingListImpl instance = new MyShoppingListImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -156,6 +156,15 @@ public interface MyShoppingList extends BaseResource, com.commercetools.api.mode
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static MyShoppingListBuilder builder(){
+        return MyShoppingListBuilder.of();
+    }
+    
+    public static MyShoppingListBuilder builder(final MyShoppingList template){
+        return MyShoppingListBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingList(Function<MyShoppingList, T> helper) {
         return helper.apply(this);

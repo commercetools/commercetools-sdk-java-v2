@@ -28,16 +28,25 @@ public interface PaymentSetInterfaceIdAction extends PaymentUpdateAction {
 
     public void setInterfaceId(final String interfaceId);
 
-    public static PaymentSetInterfaceIdActionImpl of(){
+    public static PaymentSetInterfaceIdAction of(){
         return new PaymentSetInterfaceIdActionImpl();
     }
     
 
-    public static PaymentSetInterfaceIdActionImpl of(final PaymentSetInterfaceIdAction template) {
+    public static PaymentSetInterfaceIdAction of(final PaymentSetInterfaceIdAction template) {
         PaymentSetInterfaceIdActionImpl instance = new PaymentSetInterfaceIdActionImpl();
         instance.setInterfaceId(template.getInterfaceId());
         return instance;
     }
+
+    public static PaymentSetInterfaceIdActionBuilder builder(){
+        return PaymentSetInterfaceIdActionBuilder.of();
+    }
+    
+    public static PaymentSetInterfaceIdActionBuilder builder(final PaymentSetInterfaceIdAction template){
+        return PaymentSetInterfaceIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetInterfaceIdAction(Function<PaymentSetInterfaceIdAction, T> helper) {
         return helper.apply(this);

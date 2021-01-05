@@ -180,12 +180,12 @@ public interface DiscountCode extends BaseResource, com.commercetools.api.models
     
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static DiscountCodeImpl of(){
+    public static DiscountCode of(){
         return new DiscountCodeImpl();
     }
     
 
-    public static DiscountCodeImpl of(final DiscountCode template) {
+    public static DiscountCode of(final DiscountCode template) {
         DiscountCodeImpl instance = new DiscountCodeImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -208,6 +208,15 @@ public interface DiscountCode extends BaseResource, com.commercetools.api.models
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static DiscountCodeBuilder builder(){
+        return DiscountCodeBuilder.of();
+    }
+    
+    public static DiscountCodeBuilder builder(final DiscountCode template){
+        return DiscountCodeBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCode(Function<DiscountCode, T> helper) {
         return helper.apply(this);

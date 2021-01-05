@@ -34,18 +34,27 @@ public interface ExtensionNoResponseError extends ErrorObject {
     
     public void setExtensionKey(final String extensionKey);
 
-    public static ExtensionNoResponseErrorImpl of(){
+    public static ExtensionNoResponseError of(){
         return new ExtensionNoResponseErrorImpl();
     }
     
 
-    public static ExtensionNoResponseErrorImpl of(final ExtensionNoResponseError template) {
+    public static ExtensionNoResponseError of(final ExtensionNoResponseError template) {
         ExtensionNoResponseErrorImpl instance = new ExtensionNoResponseErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setExtensionId(template.getExtensionId());
         instance.setExtensionKey(template.getExtensionKey());
         return instance;
     }
+
+    public static ExtensionNoResponseErrorBuilder builder(){
+        return ExtensionNoResponseErrorBuilder.of();
+    }
+    
+    public static ExtensionNoResponseErrorBuilder builder(final ExtensionNoResponseError template){
+        return ExtensionNoResponseErrorBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionNoResponseError(Function<ExtensionNoResponseError, T> helper) {
         return helper.apply(this);

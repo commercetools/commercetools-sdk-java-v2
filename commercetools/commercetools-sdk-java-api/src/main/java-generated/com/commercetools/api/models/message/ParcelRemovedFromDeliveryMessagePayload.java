@@ -36,17 +36,26 @@ public interface ParcelRemovedFromDeliveryMessagePayload extends MessagePayload 
     
     public void setParcel(final Parcel parcel);
 
-    public static ParcelRemovedFromDeliveryMessagePayloadImpl of(){
+    public static ParcelRemovedFromDeliveryMessagePayload of(){
         return new ParcelRemovedFromDeliveryMessagePayloadImpl();
     }
     
 
-    public static ParcelRemovedFromDeliveryMessagePayloadImpl of(final ParcelRemovedFromDeliveryMessagePayload template) {
+    public static ParcelRemovedFromDeliveryMessagePayload of(final ParcelRemovedFromDeliveryMessagePayload template) {
         ParcelRemovedFromDeliveryMessagePayloadImpl instance = new ParcelRemovedFromDeliveryMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setParcel(template.getParcel());
         return instance;
     }
+
+    public static ParcelRemovedFromDeliveryMessagePayloadBuilder builder(){
+        return ParcelRemovedFromDeliveryMessagePayloadBuilder.of();
+    }
+    
+    public static ParcelRemovedFromDeliveryMessagePayloadBuilder builder(final ParcelRemovedFromDeliveryMessagePayload template){
+        return ParcelRemovedFromDeliveryMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withParcelRemovedFromDeliveryMessagePayload(Function<ParcelRemovedFromDeliveryMessagePayload, T> helper) {
         return helper.apply(this);

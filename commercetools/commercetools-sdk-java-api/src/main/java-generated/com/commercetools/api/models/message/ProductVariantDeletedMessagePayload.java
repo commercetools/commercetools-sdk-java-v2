@@ -38,17 +38,26 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
     public void setRemovedImageUrls(final String ...removedImageUrls);
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-    public static ProductVariantDeletedMessagePayloadImpl of(){
+    public static ProductVariantDeletedMessagePayload of(){
         return new ProductVariantDeletedMessagePayloadImpl();
     }
     
 
-    public static ProductVariantDeletedMessagePayloadImpl of(final ProductVariantDeletedMessagePayload template) {
+    public static ProductVariantDeletedMessagePayload of(final ProductVariantDeletedMessagePayload template) {
         ProductVariantDeletedMessagePayloadImpl instance = new ProductVariantDeletedMessagePayloadImpl();
         instance.setVariant(template.getVariant());
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         return instance;
     }
+
+    public static ProductVariantDeletedMessagePayloadBuilder builder(){
+        return ProductVariantDeletedMessagePayloadBuilder.of();
+    }
+    
+    public static ProductVariantDeletedMessagePayloadBuilder builder(final ProductVariantDeletedMessagePayload template){
+        return ProductVariantDeletedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantDeletedMessagePayload(Function<ProductVariantDeletedMessagePayload, T> helper) {
         return helper.apply(this);

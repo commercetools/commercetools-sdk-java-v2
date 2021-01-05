@@ -29,16 +29,25 @@ public interface CategorySetMetaTitleAction extends CategoryUpdateAction {
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
-    public static CategorySetMetaTitleActionImpl of(){
+    public static CategorySetMetaTitleAction of(){
         return new CategorySetMetaTitleActionImpl();
     }
     
 
-    public static CategorySetMetaTitleActionImpl of(final CategorySetMetaTitleAction template) {
+    public static CategorySetMetaTitleAction of(final CategorySetMetaTitleAction template) {
         CategorySetMetaTitleActionImpl instance = new CategorySetMetaTitleActionImpl();
         instance.setMetaTitle(template.getMetaTitle());
         return instance;
     }
+
+    public static CategorySetMetaTitleActionBuilder builder(){
+        return CategorySetMetaTitleActionBuilder.of();
+    }
+    
+    public static CategorySetMetaTitleActionBuilder builder(final CategorySetMetaTitleAction template){
+        return CategorySetMetaTitleActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetMetaTitleAction(Function<CategorySetMetaTitleAction, T> helper) {
         return helper.apply(this);

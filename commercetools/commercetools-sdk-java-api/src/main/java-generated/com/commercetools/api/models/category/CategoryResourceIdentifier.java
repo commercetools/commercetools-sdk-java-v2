@@ -24,17 +24,26 @@ public interface CategoryResourceIdentifier extends ResourceIdentifier {
 
 
 
-    public static CategoryResourceIdentifierImpl of(){
+    public static CategoryResourceIdentifier of(){
         return new CategoryResourceIdentifierImpl();
     }
     
 
-    public static CategoryResourceIdentifierImpl of(final CategoryResourceIdentifier template) {
+    public static CategoryResourceIdentifier of(final CategoryResourceIdentifier template) {
         CategoryResourceIdentifierImpl instance = new CategoryResourceIdentifierImpl();
         instance.setId(template.getId());
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static CategoryResourceIdentifierBuilder builder(){
+        return CategoryResourceIdentifierBuilder.of();
+    }
+    
+    public static CategoryResourceIdentifierBuilder builder(final CategoryResourceIdentifier template){
+        return CategoryResourceIdentifierBuilder.of(template);
+    }
+    
 
     default <T> T withCategoryResourceIdentifier(Function<CategoryResourceIdentifier, T> helper) {
         return helper.apply(this);

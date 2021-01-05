@@ -34,17 +34,26 @@ public interface MyCustomerRemoveAddressAction extends MyCustomerUpdateAction {
     
     public void setAddressKey(final String addressKey);
 
-    public static MyCustomerRemoveAddressActionImpl of(){
+    public static MyCustomerRemoveAddressAction of(){
         return new MyCustomerRemoveAddressActionImpl();
     }
     
 
-    public static MyCustomerRemoveAddressActionImpl of(final MyCustomerRemoveAddressAction template) {
+    public static MyCustomerRemoveAddressAction of(final MyCustomerRemoveAddressAction template) {
         MyCustomerRemoveAddressActionImpl instance = new MyCustomerRemoveAddressActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public static MyCustomerRemoveAddressActionBuilder builder(){
+        return MyCustomerRemoveAddressActionBuilder.of();
+    }
+    
+    public static MyCustomerRemoveAddressActionBuilder builder(final MyCustomerRemoveAddressAction template){
+        return MyCustomerRemoveAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerRemoveAddressAction(Function<MyCustomerRemoveAddressAction, T> helper) {
         return helper.apply(this);

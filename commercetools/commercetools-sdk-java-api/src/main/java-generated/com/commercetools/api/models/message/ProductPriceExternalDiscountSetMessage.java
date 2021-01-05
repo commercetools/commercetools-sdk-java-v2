@@ -59,12 +59,12 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductPriceExternalDiscountSetMessageImpl of(){
+    public static ProductPriceExternalDiscountSetMessage of(){
         return new ProductPriceExternalDiscountSetMessageImpl();
     }
     
 
-    public static ProductPriceExternalDiscountSetMessageImpl of(final ProductPriceExternalDiscountSetMessage template) {
+    public static ProductPriceExternalDiscountSetMessage of(final ProductPriceExternalDiscountSetMessage template) {
         ProductPriceExternalDiscountSetMessageImpl instance = new ProductPriceExternalDiscountSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -84,6 +84,15 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductPriceExternalDiscountSetMessageBuilder builder(){
+        return ProductPriceExternalDiscountSetMessageBuilder.of();
+    }
+    
+    public static ProductPriceExternalDiscountSetMessageBuilder builder(final ProductPriceExternalDiscountSetMessage template){
+        return ProductPriceExternalDiscountSetMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductPriceExternalDiscountSetMessage(Function<ProductPriceExternalDiscountSetMessage, T> helper) {
         return helper.apply(this);

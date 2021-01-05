@@ -38,16 +38,25 @@ public interface ProductVariantPatchRequest extends ImportRequest {
     public void setPatches(final ProductVariantPatch ...patches);
     public void setPatches(final List<ProductVariantPatch> patches);
 
-    public static ProductVariantPatchRequestImpl of(){
+    public static ProductVariantPatchRequest of(){
         return new ProductVariantPatchRequestImpl();
     }
     
 
-    public static ProductVariantPatchRequestImpl of(final ProductVariantPatchRequest template) {
+    public static ProductVariantPatchRequest of(final ProductVariantPatchRequest template) {
         ProductVariantPatchRequestImpl instance = new ProductVariantPatchRequestImpl();
         instance.setPatches(template.getPatches());
         return instance;
     }
+
+    public static ProductVariantPatchRequestBuilder builder(){
+        return ProductVariantPatchRequestBuilder.of();
+    }
+    
+    public static ProductVariantPatchRequestBuilder builder(final ProductVariantPatchRequest template){
+        return ProductVariantPatchRequestBuilder.of(template);
+    }
+    
 
     default <T> T withProductVariantPatchRequest(Function<ProductVariantPatchRequest, T> helper) {
         return helper.apply(this);

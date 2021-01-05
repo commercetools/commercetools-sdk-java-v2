@@ -23,16 +23,25 @@ public interface InvalidInputError extends ErrorObject {
 
 
 
-    public static InvalidInputErrorImpl of(){
+    public static InvalidInputError of(){
         return new InvalidInputErrorImpl();
     }
     
 
-    public static InvalidInputErrorImpl of(final InvalidInputError template) {
+    public static InvalidInputError of(final InvalidInputError template) {
         InvalidInputErrorImpl instance = new InvalidInputErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidInputErrorBuilder builder(){
+        return InvalidInputErrorBuilder.of();
+    }
+    
+    public static InvalidInputErrorBuilder builder(final InvalidInputError template){
+        return InvalidInputErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidInputError(Function<InvalidInputError, T> helper) {
         return helper.apply(this);

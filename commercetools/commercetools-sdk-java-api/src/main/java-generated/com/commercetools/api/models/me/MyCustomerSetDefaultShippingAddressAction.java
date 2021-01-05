@@ -34,17 +34,26 @@ public interface MyCustomerSetDefaultShippingAddressAction extends MyCustomerUpd
     
     public void setAddressKey(final String addressKey);
 
-    public static MyCustomerSetDefaultShippingAddressActionImpl of(){
+    public static MyCustomerSetDefaultShippingAddressAction of(){
         return new MyCustomerSetDefaultShippingAddressActionImpl();
     }
     
 
-    public static MyCustomerSetDefaultShippingAddressActionImpl of(final MyCustomerSetDefaultShippingAddressAction template) {
+    public static MyCustomerSetDefaultShippingAddressAction of(final MyCustomerSetDefaultShippingAddressAction template) {
         MyCustomerSetDefaultShippingAddressActionImpl instance = new MyCustomerSetDefaultShippingAddressActionImpl();
         instance.setAddressId(template.getAddressId());
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public static MyCustomerSetDefaultShippingAddressActionBuilder builder(){
+        return MyCustomerSetDefaultShippingAddressActionBuilder.of();
+    }
+    
+    public static MyCustomerSetDefaultShippingAddressActionBuilder builder(final MyCustomerSetDefaultShippingAddressAction template){
+        return MyCustomerSetDefaultShippingAddressActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyCustomerSetDefaultShippingAddressAction(Function<MyCustomerSetDefaultShippingAddressAction, T> helper) {
         return helper.apply(this);

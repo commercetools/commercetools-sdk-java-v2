@@ -35,17 +35,26 @@ public interface StagedOrderSetCustomLineItemTaxRateAction extends StagedOrderUp
     
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-    public static StagedOrderSetCustomLineItemTaxRateActionImpl of(){
+    public static StagedOrderSetCustomLineItemTaxRateAction of(){
         return new StagedOrderSetCustomLineItemTaxRateActionImpl();
     }
     
 
-    public static StagedOrderSetCustomLineItemTaxRateActionImpl of(final StagedOrderSetCustomLineItemTaxRateAction template) {
+    public static StagedOrderSetCustomLineItemTaxRateAction of(final StagedOrderSetCustomLineItemTaxRateAction template) {
         StagedOrderSetCustomLineItemTaxRateActionImpl instance = new StagedOrderSetCustomLineItemTaxRateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public static StagedOrderSetCustomLineItemTaxRateActionBuilder builder(){
+        return StagedOrderSetCustomLineItemTaxRateActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomLineItemTaxRateActionBuilder builder(final StagedOrderSetCustomLineItemTaxRateAction template){
+        return StagedOrderSetCustomLineItemTaxRateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomLineItemTaxRateAction(Function<StagedOrderSetCustomLineItemTaxRateAction, T> helper) {
         return helper.apply(this);

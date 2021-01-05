@@ -35,17 +35,26 @@ public interface StagedOrderSetParcelMeasurementsAction extends StagedOrderUpdat
     
     public void setMeasurements(final ParcelMeasurements measurements);
 
-    public static StagedOrderSetParcelMeasurementsActionImpl of(){
+    public static StagedOrderSetParcelMeasurementsAction of(){
         return new StagedOrderSetParcelMeasurementsActionImpl();
     }
     
 
-    public static StagedOrderSetParcelMeasurementsActionImpl of(final StagedOrderSetParcelMeasurementsAction template) {
+    public static StagedOrderSetParcelMeasurementsAction of(final StagedOrderSetParcelMeasurementsAction template) {
         StagedOrderSetParcelMeasurementsActionImpl instance = new StagedOrderSetParcelMeasurementsActionImpl();
         instance.setParcelId(template.getParcelId());
         instance.setMeasurements(template.getMeasurements());
         return instance;
     }
+
+    public static StagedOrderSetParcelMeasurementsActionBuilder builder(){
+        return StagedOrderSetParcelMeasurementsActionBuilder.of();
+    }
+    
+    public static StagedOrderSetParcelMeasurementsActionBuilder builder(final StagedOrderSetParcelMeasurementsAction template){
+        return StagedOrderSetParcelMeasurementsActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetParcelMeasurementsAction(Function<StagedOrderSetParcelMeasurementsAction, T> helper) {
         return helper.apply(this);

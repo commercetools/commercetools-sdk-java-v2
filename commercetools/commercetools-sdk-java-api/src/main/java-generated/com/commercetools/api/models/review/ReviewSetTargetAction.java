@@ -33,16 +33,25 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
 
     public void setTarget(final JsonNode target);
 
-    public static ReviewSetTargetActionImpl of(){
+    public static ReviewSetTargetAction of(){
         return new ReviewSetTargetActionImpl();
     }
     
 
-    public static ReviewSetTargetActionImpl of(final ReviewSetTargetAction template) {
+    public static ReviewSetTargetAction of(final ReviewSetTargetAction template) {
         ReviewSetTargetActionImpl instance = new ReviewSetTargetActionImpl();
         instance.setTarget(template.getTarget());
         return instance;
     }
+
+    public static ReviewSetTargetActionBuilder builder(){
+        return ReviewSetTargetActionBuilder.of();
+    }
+    
+    public static ReviewSetTargetActionBuilder builder(final ReviewSetTargetAction template){
+        return ReviewSetTargetActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetTargetAction(Function<ReviewSetTargetAction, T> helper) {
         return helper.apply(this);

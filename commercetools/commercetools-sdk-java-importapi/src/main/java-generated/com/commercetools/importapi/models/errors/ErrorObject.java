@@ -90,6 +90,7 @@ public interface ErrorObject  {
 
 
 
+
     default <T> T withErrorObject(Function<ErrorObject, T> helper) {
         return helper.apply(this);
     }

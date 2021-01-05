@@ -30,16 +30,25 @@ public interface TaxCategoryAddTaxRateAction extends TaxCategoryUpdateAction {
 
     public void setTaxRate(final TaxRateDraft taxRate);
 
-    public static TaxCategoryAddTaxRateActionImpl of(){
+    public static TaxCategoryAddTaxRateAction of(){
         return new TaxCategoryAddTaxRateActionImpl();
     }
     
 
-    public static TaxCategoryAddTaxRateActionImpl of(final TaxCategoryAddTaxRateAction template) {
+    public static TaxCategoryAddTaxRateAction of(final TaxCategoryAddTaxRateAction template) {
         TaxCategoryAddTaxRateActionImpl instance = new TaxCategoryAddTaxRateActionImpl();
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
+
+    public static TaxCategoryAddTaxRateActionBuilder builder(){
+        return TaxCategoryAddTaxRateActionBuilder.of();
+    }
+    
+    public static TaxCategoryAddTaxRateActionBuilder builder(final TaxCategoryAddTaxRateAction template){
+        return TaxCategoryAddTaxRateActionBuilder.of(template);
+    }
+    
 
     default <T> T withTaxCategoryAddTaxRateAction(Function<TaxCategoryAddTaxRateAction, T> helper) {
         return helper.apply(this);

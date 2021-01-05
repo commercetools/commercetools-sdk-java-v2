@@ -41,18 +41,27 @@ public interface MyShoppingListSetTextLineItemCustomFieldAction extends MyShoppi
     
     public void setValue(final JsonNode value);
 
-    public static MyShoppingListSetTextLineItemCustomFieldActionImpl of(){
+    public static MyShoppingListSetTextLineItemCustomFieldAction of(){
         return new MyShoppingListSetTextLineItemCustomFieldActionImpl();
     }
     
 
-    public static MyShoppingListSetTextLineItemCustomFieldActionImpl of(final MyShoppingListSetTextLineItemCustomFieldAction template) {
+    public static MyShoppingListSetTextLineItemCustomFieldAction of(final MyShoppingListSetTextLineItemCustomFieldAction template) {
         MyShoppingListSetTextLineItemCustomFieldActionImpl instance = new MyShoppingListSetTextLineItemCustomFieldActionImpl();
         instance.setTextLineItemId(template.getTextLineItemId());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static MyShoppingListSetTextLineItemCustomFieldActionBuilder builder(){
+        return MyShoppingListSetTextLineItemCustomFieldActionBuilder.of();
+    }
+    
+    public static MyShoppingListSetTextLineItemCustomFieldActionBuilder builder(final MyShoppingListSetTextLineItemCustomFieldAction template){
+        return MyShoppingListSetTextLineItemCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withMyShoppingListSetTextLineItemCustomFieldAction(Function<MyShoppingListSetTextLineItemCustomFieldAction, T> helper) {
         return helper.apply(this);

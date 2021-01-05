@@ -33,16 +33,25 @@ public interface ImageSearchConfigRequest  {
     public void setActions(final ImageSearchConfigUpdateAction ...actions);
     public void setActions(final List<ImageSearchConfigUpdateAction> actions);
 
-    public static ImageSearchConfigRequestImpl of(){
+    public static ImageSearchConfigRequest of(){
         return new ImageSearchConfigRequestImpl();
     }
     
 
-    public static ImageSearchConfigRequestImpl of(final ImageSearchConfigRequest template) {
+    public static ImageSearchConfigRequest of(final ImageSearchConfigRequest template) {
         ImageSearchConfigRequestImpl instance = new ImageSearchConfigRequestImpl();
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static ImageSearchConfigRequestBuilder builder(){
+        return ImageSearchConfigRequestBuilder.of();
+    }
+    
+    public static ImageSearchConfigRequestBuilder builder(final ImageSearchConfigRequest template){
+        return ImageSearchConfigRequestBuilder.of(template);
+    }
+    
 
     default <T> T withImageSearchConfigRequest(Function<ImageSearchConfigRequest, T> helper) {
         return helper.apply(this);

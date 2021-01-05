@@ -35,17 +35,26 @@ public interface PriceTier  {
     
     public void setValue(final TypedMoney value);
 
-    public static PriceTierImpl of(){
+    public static PriceTier of(){
         return new PriceTierImpl();
     }
     
 
-    public static PriceTierImpl of(final PriceTier template) {
+    public static PriceTier of(final PriceTier template) {
         PriceTierImpl instance = new PriceTierImpl();
         instance.setMinimumQuantity(template.getMinimumQuantity());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static PriceTierBuilder builder(){
+        return PriceTierBuilder.of();
+    }
+    
+    public static PriceTierBuilder builder(final PriceTier template){
+        return PriceTierBuilder.of(template);
+    }
+    
 
     default <T> T withPriceTier(Function<PriceTier, T> helper) {
         return helper.apply(this);

@@ -30,16 +30,25 @@ public interface ReviewSetLocaleAction extends ReviewUpdateAction {
 
     public void setLocale(final String locale);
 
-    public static ReviewSetLocaleActionImpl of(){
+    public static ReviewSetLocaleAction of(){
         return new ReviewSetLocaleActionImpl();
     }
     
 
-    public static ReviewSetLocaleActionImpl of(final ReviewSetLocaleAction template) {
+    public static ReviewSetLocaleAction of(final ReviewSetLocaleAction template) {
         ReviewSetLocaleActionImpl instance = new ReviewSetLocaleActionImpl();
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public static ReviewSetLocaleActionBuilder builder(){
+        return ReviewSetLocaleActionBuilder.of();
+    }
+    
+    public static ReviewSetLocaleActionBuilder builder(final ReviewSetLocaleAction template){
+        return ReviewSetLocaleActionBuilder.of(template);
+    }
+    
 
     default <T> T withReviewSetLocaleAction(Function<ReviewSetLocaleAction, T> helper) {
         return helper.apply(this);

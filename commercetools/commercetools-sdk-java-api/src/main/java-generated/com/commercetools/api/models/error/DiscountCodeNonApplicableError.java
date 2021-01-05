@@ -59,12 +59,12 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
     
     public void setValidityCheckTime(final ZonedDateTime validityCheckTime);
 
-    public static DiscountCodeNonApplicableErrorImpl of(){
+    public static DiscountCodeNonApplicableError of(){
         return new DiscountCodeNonApplicableErrorImpl();
     }
     
 
-    public static DiscountCodeNonApplicableErrorImpl of(final DiscountCodeNonApplicableError template) {
+    public static DiscountCodeNonApplicableError of(final DiscountCodeNonApplicableError template) {
         DiscountCodeNonApplicableErrorImpl instance = new DiscountCodeNonApplicableErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setDiscountCode(template.getDiscountCode());
@@ -75,6 +75,15 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
         instance.setValidityCheckTime(template.getValidityCheckTime());
         return instance;
     }
+
+    public static DiscountCodeNonApplicableErrorBuilder builder(){
+        return DiscountCodeNonApplicableErrorBuilder.of();
+    }
+    
+    public static DiscountCodeNonApplicableErrorBuilder builder(final DiscountCodeNonApplicableError template){
+        return DiscountCodeNonApplicableErrorBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeNonApplicableError(Function<DiscountCodeNonApplicableError, T> helper) {
         return helper.apply(this);

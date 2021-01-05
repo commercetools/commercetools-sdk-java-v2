@@ -66,12 +66,12 @@ public interface ReviewRatingStatistics  {
     
     public void setRatingsDistribution(final JsonNode ratingsDistribution);
 
-    public static ReviewRatingStatisticsImpl of(){
+    public static ReviewRatingStatistics of(){
         return new ReviewRatingStatisticsImpl();
     }
     
 
-    public static ReviewRatingStatisticsImpl of(final ReviewRatingStatistics template) {
+    public static ReviewRatingStatistics of(final ReviewRatingStatistics template) {
         ReviewRatingStatisticsImpl instance = new ReviewRatingStatisticsImpl();
         instance.setAverageRating(template.getAverageRating());
         instance.setHighestRating(template.getHighestRating());
@@ -80,6 +80,15 @@ public interface ReviewRatingStatistics  {
         instance.setRatingsDistribution(template.getRatingsDistribution());
         return instance;
     }
+
+    public static ReviewRatingStatisticsBuilder builder(){
+        return ReviewRatingStatisticsBuilder.of();
+    }
+    
+    public static ReviewRatingStatisticsBuilder builder(final ReviewRatingStatistics template){
+        return ReviewRatingStatisticsBuilder.of(template);
+    }
+    
 
     default <T> T withReviewRatingStatistics(Function<ReviewRatingStatistics, T> helper) {
         return helper.apply(this);

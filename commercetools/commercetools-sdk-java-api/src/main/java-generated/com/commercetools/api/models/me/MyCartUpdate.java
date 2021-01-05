@@ -37,17 +37,26 @@ public interface MyCartUpdate extends com.commercetools.api.models.ResourceUpdat
     public void setActions(final MyCartUpdateAction ...actions);
     public void setActions(final List<MyCartUpdateAction> actions);
 
-    public static MyCartUpdateImpl of(){
+    public static MyCartUpdate of(){
         return new MyCartUpdateImpl();
     }
     
 
-    public static MyCartUpdateImpl of(final MyCartUpdate template) {
+    public static MyCartUpdate of(final MyCartUpdate template) {
         MyCartUpdateImpl instance = new MyCartUpdateImpl();
         instance.setVersion(template.getVersion());
         instance.setActions(template.getActions());
         return instance;
     }
+
+    public static MyCartUpdateBuilder builder(){
+        return MyCartUpdateBuilder.of();
+    }
+    
+    public static MyCartUpdateBuilder builder(final MyCartUpdate template){
+        return MyCartUpdateBuilder.of(template);
+    }
+    
 
     default <T> T withMyCartUpdate(Function<MyCartUpdate, T> helper) {
         return helper.apply(this);

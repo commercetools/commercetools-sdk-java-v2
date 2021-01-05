@@ -28,16 +28,25 @@ public interface CartDiscountValueRelative extends CartDiscountValue {
 
     public void setPermyriad(final Long permyriad);
 
-    public static CartDiscountValueRelativeImpl of(){
+    public static CartDiscountValueRelative of(){
         return new CartDiscountValueRelativeImpl();
     }
     
 
-    public static CartDiscountValueRelativeImpl of(final CartDiscountValueRelative template) {
+    public static CartDiscountValueRelative of(final CartDiscountValueRelative template) {
         CartDiscountValueRelativeImpl instance = new CartDiscountValueRelativeImpl();
         instance.setPermyriad(template.getPermyriad());
         return instance;
     }
+
+    public static CartDiscountValueRelativeBuilder builder(){
+        return CartDiscountValueRelativeBuilder.of();
+    }
+    
+    public static CartDiscountValueRelativeBuilder builder(final CartDiscountValueRelative template){
+        return CartDiscountValueRelativeBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountValueRelative(Function<CartDiscountValueRelative, T> helper) {
         return helper.apply(this);

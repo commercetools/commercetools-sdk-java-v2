@@ -30,16 +30,25 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
 
     public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer);
 
-    public static DiscountCodeSetMaxApplicationsPerCustomerActionImpl of(){
+    public static DiscountCodeSetMaxApplicationsPerCustomerAction of(){
         return new DiscountCodeSetMaxApplicationsPerCustomerActionImpl();
     }
     
 
-    public static DiscountCodeSetMaxApplicationsPerCustomerActionImpl of(final DiscountCodeSetMaxApplicationsPerCustomerAction template) {
+    public static DiscountCodeSetMaxApplicationsPerCustomerAction of(final DiscountCodeSetMaxApplicationsPerCustomerAction template) {
         DiscountCodeSetMaxApplicationsPerCustomerActionImpl instance = new DiscountCodeSetMaxApplicationsPerCustomerActionImpl();
         instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
         return instance;
     }
+
+    public static DiscountCodeSetMaxApplicationsPerCustomerActionBuilder builder(){
+        return DiscountCodeSetMaxApplicationsPerCustomerActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetMaxApplicationsPerCustomerActionBuilder builder(final DiscountCodeSetMaxApplicationsPerCustomerAction template){
+        return DiscountCodeSetMaxApplicationsPerCustomerActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetMaxApplicationsPerCustomerAction(Function<DiscountCodeSetMaxApplicationsPerCustomerAction, T> helper) {
         return helper.apply(this);

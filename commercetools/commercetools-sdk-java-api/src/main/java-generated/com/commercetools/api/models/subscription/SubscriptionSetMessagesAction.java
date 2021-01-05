@@ -31,16 +31,25 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     public void setMessages(final MessageSubscription ...messages);
     public void setMessages(final List<MessageSubscription> messages);
 
-    public static SubscriptionSetMessagesActionImpl of(){
+    public static SubscriptionSetMessagesAction of(){
         return new SubscriptionSetMessagesActionImpl();
     }
     
 
-    public static SubscriptionSetMessagesActionImpl of(final SubscriptionSetMessagesAction template) {
+    public static SubscriptionSetMessagesAction of(final SubscriptionSetMessagesAction template) {
         SubscriptionSetMessagesActionImpl instance = new SubscriptionSetMessagesActionImpl();
         instance.setMessages(template.getMessages());
         return instance;
     }
+
+    public static SubscriptionSetMessagesActionBuilder builder(){
+        return SubscriptionSetMessagesActionBuilder.of();
+    }
+    
+    public static SubscriptionSetMessagesActionBuilder builder(final SubscriptionSetMessagesAction template){
+        return SubscriptionSetMessagesActionBuilder.of(template);
+    }
+    
 
     default <T> T withSubscriptionSetMessagesAction(Function<SubscriptionSetMessagesAction, T> helper) {
         return helper.apply(this);

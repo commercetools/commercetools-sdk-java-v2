@@ -33,16 +33,25 @@ public interface RangeFacetResult extends FacetResult {
     public void setRanges(final FacetResultRange ...ranges);
     public void setRanges(final List<FacetResultRange> ranges);
 
-    public static RangeFacetResultImpl of(){
+    public static RangeFacetResult of(){
         return new RangeFacetResultImpl();
     }
     
 
-    public static RangeFacetResultImpl of(final RangeFacetResult template) {
+    public static RangeFacetResult of(final RangeFacetResult template) {
         RangeFacetResultImpl instance = new RangeFacetResultImpl();
         instance.setRanges(template.getRanges());
         return instance;
     }
+
+    public static RangeFacetResultBuilder builder(){
+        return RangeFacetResultBuilder.of();
+    }
+    
+    public static RangeFacetResultBuilder builder(final RangeFacetResult template){
+        return RangeFacetResultBuilder.of(template);
+    }
+    
 
     default <T> T withRangeFacetResult(Function<RangeFacetResult, T> helper) {
         return helper.apply(this);

@@ -30,17 +30,26 @@ public interface OrderReference extends Reference {
 
     public void setObj(final Order obj);
 
-    public static OrderReferenceImpl of(){
+    public static OrderReference of(){
         return new OrderReferenceImpl();
     }
     
 
-    public static OrderReferenceImpl of(final OrderReference template) {
+    public static OrderReference of(final OrderReference template) {
         OrderReferenceImpl instance = new OrderReferenceImpl();
         instance.setId(template.getId());
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public static OrderReferenceBuilder builder(){
+        return OrderReferenceBuilder.of();
+    }
+    
+    public static OrderReferenceBuilder builder(final OrderReference template){
+        return OrderReferenceBuilder.of(template);
+    }
+    
 
     default <T> T withOrderReference(Function<OrderReference, T> helper) {
         return helper.apply(this);

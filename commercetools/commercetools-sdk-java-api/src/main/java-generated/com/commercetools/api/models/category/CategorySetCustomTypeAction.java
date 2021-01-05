@@ -40,17 +40,26 @@ public interface CategorySetCustomTypeAction extends CategoryUpdateAction {
     
     public void setFields(final FieldContainer fields);
 
-    public static CategorySetCustomTypeActionImpl of(){
+    public static CategorySetCustomTypeAction of(){
         return new CategorySetCustomTypeActionImpl();
     }
     
 
-    public static CategorySetCustomTypeActionImpl of(final CategorySetCustomTypeAction template) {
+    public static CategorySetCustomTypeAction of(final CategorySetCustomTypeAction template) {
         CategorySetCustomTypeActionImpl instance = new CategorySetCustomTypeActionImpl();
         instance.setType(template.getType());
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public static CategorySetCustomTypeActionBuilder builder(){
+        return CategorySetCustomTypeActionBuilder.of();
+    }
+    
+    public static CategorySetCustomTypeActionBuilder builder(final CategorySetCustomTypeAction template){
+        return CategorySetCustomTypeActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetCustomTypeAction(Function<CategorySetCustomTypeAction, T> helper) {
         return helper.apply(this);

@@ -23,15 +23,24 @@ public interface CustomFieldBooleanType extends FieldType {
 
 
 
-    public static CustomFieldBooleanTypeImpl of(){
+    public static CustomFieldBooleanType of(){
         return new CustomFieldBooleanTypeImpl();
     }
     
 
-    public static CustomFieldBooleanTypeImpl of(final CustomFieldBooleanType template) {
+    public static CustomFieldBooleanType of(final CustomFieldBooleanType template) {
         CustomFieldBooleanTypeImpl instance = new CustomFieldBooleanTypeImpl();
         return instance;
     }
+
+    public static CustomFieldBooleanTypeBuilder builder(){
+        return CustomFieldBooleanTypeBuilder.of();
+    }
+    
+    public static CustomFieldBooleanTypeBuilder builder(final CustomFieldBooleanType template){
+        return CustomFieldBooleanTypeBuilder.of(template);
+    }
+    
 
     default <T> T withCustomFieldBooleanType(Function<CustomFieldBooleanType, T> helper) {
         return helper.apply(this);

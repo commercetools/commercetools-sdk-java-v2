@@ -28,16 +28,25 @@ public interface CartDiscountChangeIsActiveAction extends CartDiscountUpdateActi
 
     public void setIsActive(final Boolean isActive);
 
-    public static CartDiscountChangeIsActiveActionImpl of(){
+    public static CartDiscountChangeIsActiveAction of(){
         return new CartDiscountChangeIsActiveActionImpl();
     }
     
 
-    public static CartDiscountChangeIsActiveActionImpl of(final CartDiscountChangeIsActiveAction template) {
+    public static CartDiscountChangeIsActiveAction of(final CartDiscountChangeIsActiveAction template) {
         CartDiscountChangeIsActiveActionImpl instance = new CartDiscountChangeIsActiveActionImpl();
         instance.setIsActive(template.getIsActive());
         return instance;
     }
+
+    public static CartDiscountChangeIsActiveActionBuilder builder(){
+        return CartDiscountChangeIsActiveActionBuilder.of();
+    }
+    
+    public static CartDiscountChangeIsActiveActionBuilder builder(final CartDiscountChangeIsActiveAction template){
+        return CartDiscountChangeIsActiveActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountChangeIsActiveAction(Function<CartDiscountChangeIsActiveAction, T> helper) {
         return helper.apply(this);

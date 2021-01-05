@@ -34,17 +34,26 @@ public interface PayloadNotIncluded  {
     
     public void setPayloadType(final String payloadType);
 
-    public static PayloadNotIncludedImpl of(){
+    public static PayloadNotIncluded of(){
         return new PayloadNotIncludedImpl();
     }
     
 
-    public static PayloadNotIncludedImpl of(final PayloadNotIncluded template) {
+    public static PayloadNotIncluded of(final PayloadNotIncluded template) {
         PayloadNotIncludedImpl instance = new PayloadNotIncludedImpl();
         instance.setReason(template.getReason());
         instance.setPayloadType(template.getPayloadType());
         return instance;
     }
+
+    public static PayloadNotIncludedBuilder builder(){
+        return PayloadNotIncludedBuilder.of();
+    }
+    
+    public static PayloadNotIncludedBuilder builder(final PayloadNotIncluded template){
+        return PayloadNotIncludedBuilder.of(template);
+    }
+    
 
     default <T> T withPayloadNotIncluded(Function<PayloadNotIncluded, T> helper) {
         return helper.apply(this);

@@ -31,16 +31,25 @@ public interface SimilarProductSearchRequestMeta  {
 
     public void setSimilarityMeasures(final SimilarityMeasures similarityMeasures);
 
-    public static SimilarProductSearchRequestMetaImpl of(){
+    public static SimilarProductSearchRequestMeta of(){
         return new SimilarProductSearchRequestMetaImpl();
     }
     
 
-    public static SimilarProductSearchRequestMetaImpl of(final SimilarProductSearchRequestMeta template) {
+    public static SimilarProductSearchRequestMeta of(final SimilarProductSearchRequestMeta template) {
         SimilarProductSearchRequestMetaImpl instance = new SimilarProductSearchRequestMetaImpl();
         instance.setSimilarityMeasures(template.getSimilarityMeasures());
         return instance;
     }
+
+    public static SimilarProductSearchRequestMetaBuilder builder(){
+        return SimilarProductSearchRequestMetaBuilder.of();
+    }
+    
+    public static SimilarProductSearchRequestMetaBuilder builder(final SimilarProductSearchRequestMeta template){
+        return SimilarProductSearchRequestMetaBuilder.of(template);
+    }
+    
 
     default <T> T withSimilarProductSearchRequestMeta(Function<SimilarProductSearchRequestMeta, T> helper) {
         return helper.apply(this);

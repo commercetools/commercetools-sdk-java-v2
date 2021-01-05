@@ -55,12 +55,12 @@ public interface SubscriptionPagedQueryResponse extends com.commercetools.api.mo
     public void setResults(final Subscription ...results);
     public void setResults(final List<Subscription> results);
 
-    public static SubscriptionPagedQueryResponseImpl of(){
+    public static SubscriptionPagedQueryResponse of(){
         return new SubscriptionPagedQueryResponseImpl();
     }
     
 
-    public static SubscriptionPagedQueryResponseImpl of(final SubscriptionPagedQueryResponse template) {
+    public static SubscriptionPagedQueryResponse of(final SubscriptionPagedQueryResponse template) {
         SubscriptionPagedQueryResponseImpl instance = new SubscriptionPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface SubscriptionPagedQueryResponse extends com.commercetools.api.mo
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static SubscriptionPagedQueryResponseBuilder builder(){
+        return SubscriptionPagedQueryResponseBuilder.of();
+    }
+    
+    public static SubscriptionPagedQueryResponseBuilder builder(final SubscriptionPagedQueryResponse template){
+        return SubscriptionPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withSubscriptionPagedQueryResponse(Function<SubscriptionPagedQueryResponse, T> helper) {
         return helper.apply(this);

@@ -97,12 +97,12 @@ public interface ProductDiscountDraft  {
     
     public void setValidUntil(final ZonedDateTime validUntil);
 
-    public static ProductDiscountDraftImpl of(){
+    public static ProductDiscountDraft of(){
         return new ProductDiscountDraftImpl();
     }
     
 
-    public static ProductDiscountDraftImpl of(final ProductDiscountDraft template) {
+    public static ProductDiscountDraft of(final ProductDiscountDraft template) {
         ProductDiscountDraftImpl instance = new ProductDiscountDraftImpl();
         instance.setName(template.getName());
         instance.setKey(template.getKey());
@@ -115,6 +115,15 @@ public interface ProductDiscountDraft  {
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public static ProductDiscountDraftBuilder builder(){
+        return ProductDiscountDraftBuilder.of();
+    }
+    
+    public static ProductDiscountDraftBuilder builder(final ProductDiscountDraft template){
+        return ProductDiscountDraftBuilder.of(template);
+    }
+    
 
     default <T> T withProductDiscountDraft(Function<ProductDiscountDraft, T> helper) {
         return helper.apply(this);

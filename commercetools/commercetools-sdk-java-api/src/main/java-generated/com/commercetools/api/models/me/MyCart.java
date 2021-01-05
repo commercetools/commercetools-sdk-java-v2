@@ -258,12 +258,12 @@ public interface MyCart extends BaseResource, com.commercetools.api.models.Domai
     public void setItemShippingAddresses(final Address ...itemShippingAddresses);
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
-    public static MyCartImpl of(){
+    public static MyCart of(){
         return new MyCartImpl();
     }
     
 
-    public static MyCartImpl of(final MyCart template) {
+    public static MyCart of(final MyCart template) {
         MyCartImpl instance = new MyCartImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -300,6 +300,15 @@ public interface MyCart extends BaseResource, com.commercetools.api.models.Domai
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
         return instance;
     }
+
+    public static MyCartBuilder builder(){
+        return MyCartBuilder.of();
+    }
+    
+    public static MyCartBuilder builder(final MyCart template){
+        return MyCartBuilder.of(template);
+    }
+    
 
     default <T> T withMyCart(Function<MyCart, T> helper) {
         return helper.apply(this);

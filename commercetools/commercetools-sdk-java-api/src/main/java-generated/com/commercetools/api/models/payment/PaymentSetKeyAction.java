@@ -32,16 +32,25 @@ public interface PaymentSetKeyAction extends PaymentUpdateAction {
 
     public void setKey(final String key);
 
-    public static PaymentSetKeyActionImpl of(){
+    public static PaymentSetKeyAction of(){
         return new PaymentSetKeyActionImpl();
     }
     
 
-    public static PaymentSetKeyActionImpl of(final PaymentSetKeyAction template) {
+    public static PaymentSetKeyAction of(final PaymentSetKeyAction template) {
         PaymentSetKeyActionImpl instance = new PaymentSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static PaymentSetKeyActionBuilder builder(){
+        return PaymentSetKeyActionBuilder.of();
+    }
+    
+    public static PaymentSetKeyActionBuilder builder(final PaymentSetKeyAction template){
+        return PaymentSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withPaymentSetKeyAction(Function<PaymentSetKeyAction, T> helper) {
         return helper.apply(this);

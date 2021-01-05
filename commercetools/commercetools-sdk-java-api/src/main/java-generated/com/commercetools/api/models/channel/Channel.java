@@ -139,12 +139,12 @@ public interface Channel extends BaseResource, com.commercetools.api.models.Doma
     
     public void setGeoLocation(final GeoJson geoLocation);
 
-    public static ChannelImpl of(){
+    public static Channel of(){
         return new ChannelImpl();
     }
     
 
-    public static ChannelImpl of(final Channel template) {
+    public static Channel of(final Channel template) {
         ChannelImpl instance = new ChannelImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -162,6 +162,15 @@ public interface Channel extends BaseResource, com.commercetools.api.models.Doma
         instance.setGeoLocation(template.getGeoLocation());
         return instance;
     }
+
+    public static ChannelBuilder builder(){
+        return ChannelBuilder.of();
+    }
+    
+    public static ChannelBuilder builder(final Channel template){
+        return ChannelBuilder.of(template);
+    }
+    
 
     default <T> T withChannel(Function<Channel, T> helper) {
         return helper.apply(this);

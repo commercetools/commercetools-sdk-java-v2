@@ -30,16 +30,25 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
 
     public void setMaxApplications(final Long maxApplications);
 
-    public static DiscountCodeSetMaxApplicationsActionImpl of(){
+    public static DiscountCodeSetMaxApplicationsAction of(){
         return new DiscountCodeSetMaxApplicationsActionImpl();
     }
     
 
-    public static DiscountCodeSetMaxApplicationsActionImpl of(final DiscountCodeSetMaxApplicationsAction template) {
+    public static DiscountCodeSetMaxApplicationsAction of(final DiscountCodeSetMaxApplicationsAction template) {
         DiscountCodeSetMaxApplicationsActionImpl instance = new DiscountCodeSetMaxApplicationsActionImpl();
         instance.setMaxApplications(template.getMaxApplications());
         return instance;
     }
+
+    public static DiscountCodeSetMaxApplicationsActionBuilder builder(){
+        return DiscountCodeSetMaxApplicationsActionBuilder.of();
+    }
+    
+    public static DiscountCodeSetMaxApplicationsActionBuilder builder(final DiscountCodeSetMaxApplicationsAction template){
+        return DiscountCodeSetMaxApplicationsActionBuilder.of(template);
+    }
+    
 
     default <T> T withDiscountCodeSetMaxApplicationsAction(Function<DiscountCodeSetMaxApplicationsAction, T> helper) {
         return helper.apply(this);

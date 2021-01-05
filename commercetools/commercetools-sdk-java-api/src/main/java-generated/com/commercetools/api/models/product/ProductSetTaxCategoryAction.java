@@ -31,16 +31,25 @@ public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
 
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
-    public static ProductSetTaxCategoryActionImpl of(){
+    public static ProductSetTaxCategoryAction of(){
         return new ProductSetTaxCategoryActionImpl();
     }
     
 
-    public static ProductSetTaxCategoryActionImpl of(final ProductSetTaxCategoryAction template) {
+    public static ProductSetTaxCategoryAction of(final ProductSetTaxCategoryAction template) {
         ProductSetTaxCategoryActionImpl instance = new ProductSetTaxCategoryActionImpl();
         instance.setTaxCategory(template.getTaxCategory());
         return instance;
     }
+
+    public static ProductSetTaxCategoryActionBuilder builder(){
+        return ProductSetTaxCategoryActionBuilder.of();
+    }
+    
+    public static ProductSetTaxCategoryActionBuilder builder(final ProductSetTaxCategoryAction template){
+        return ProductSetTaxCategoryActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetTaxCategoryAction(Function<ProductSetTaxCategoryAction, T> helper) {
         return helper.apply(this);

@@ -27,16 +27,25 @@ public interface InvalidOperation extends ErrorObject {
 
 
 
-    public static InvalidOperationImpl of(){
+    public static InvalidOperation of(){
         return new InvalidOperationImpl();
     }
     
 
-    public static InvalidOperationImpl of(final InvalidOperation template) {
+    public static InvalidOperation of(final InvalidOperation template) {
         InvalidOperationImpl instance = new InvalidOperationImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidOperationBuilder builder(){
+        return InvalidOperationBuilder.of();
+    }
+    
+    public static InvalidOperationBuilder builder(final InvalidOperation template){
+        return InvalidOperationBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidOperation(Function<InvalidOperation, T> helper) {
         return helper.apply(this);

@@ -36,17 +36,26 @@ public interface StagedOrderTransitionStateAction extends StagedOrderUpdateActio
     
     public void setForce(final Boolean force);
 
-    public static StagedOrderTransitionStateActionImpl of(){
+    public static StagedOrderTransitionStateAction of(){
         return new StagedOrderTransitionStateActionImpl();
     }
     
 
-    public static StagedOrderTransitionStateActionImpl of(final StagedOrderTransitionStateAction template) {
+    public static StagedOrderTransitionStateAction of(final StagedOrderTransitionStateAction template) {
         StagedOrderTransitionStateActionImpl instance = new StagedOrderTransitionStateActionImpl();
         instance.setState(template.getState());
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public static StagedOrderTransitionStateActionBuilder builder(){
+        return StagedOrderTransitionStateActionBuilder.of();
+    }
+    
+    public static StagedOrderTransitionStateActionBuilder builder(final StagedOrderTransitionStateAction template){
+        return StagedOrderTransitionStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderTransitionStateAction(Function<StagedOrderTransitionStateAction, T> helper) {
         return helper.apply(this);

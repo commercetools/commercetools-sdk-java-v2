@@ -28,16 +28,25 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
 
     public void setLocale(final String locale);
 
-    public static StagedOrderSetLocaleActionImpl of(){
+    public static StagedOrderSetLocaleAction of(){
         return new StagedOrderSetLocaleActionImpl();
     }
     
 
-    public static StagedOrderSetLocaleActionImpl of(final StagedOrderSetLocaleAction template) {
+    public static StagedOrderSetLocaleAction of(final StagedOrderSetLocaleAction template) {
         StagedOrderSetLocaleActionImpl instance = new StagedOrderSetLocaleActionImpl();
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public static StagedOrderSetLocaleActionBuilder builder(){
+        return StagedOrderSetLocaleActionBuilder.of();
+    }
+    
+    public static StagedOrderSetLocaleActionBuilder builder(final StagedOrderSetLocaleAction template){
+        return StagedOrderSetLocaleActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetLocaleAction(Function<StagedOrderSetLocaleAction, T> helper) {
         return helper.apply(this);

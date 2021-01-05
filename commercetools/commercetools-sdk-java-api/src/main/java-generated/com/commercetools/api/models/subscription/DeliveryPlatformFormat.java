@@ -23,15 +23,24 @@ public interface DeliveryPlatformFormat extends DeliveryFormat {
 
 
 
-    public static DeliveryPlatformFormatImpl of(){
+    public static DeliveryPlatformFormat of(){
         return new DeliveryPlatformFormatImpl();
     }
     
 
-    public static DeliveryPlatformFormatImpl of(final DeliveryPlatformFormat template) {
+    public static DeliveryPlatformFormat of(final DeliveryPlatformFormat template) {
         DeliveryPlatformFormatImpl instance = new DeliveryPlatformFormatImpl();
         return instance;
     }
+
+    public static DeliveryPlatformFormatBuilder builder(){
+        return DeliveryPlatformFormatBuilder.of();
+    }
+    
+    public static DeliveryPlatformFormatBuilder builder(final DeliveryPlatformFormat template){
+        return DeliveryPlatformFormatBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryPlatformFormat(Function<DeliveryPlatformFormat, T> helper) {
         return helper.apply(this);

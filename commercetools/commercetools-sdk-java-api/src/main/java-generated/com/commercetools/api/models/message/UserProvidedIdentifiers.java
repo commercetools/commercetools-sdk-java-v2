@@ -58,12 +58,12 @@ public interface UserProvidedIdentifiers  {
     
     public void setSlug(final LocalizedString slug);
 
-    public static UserProvidedIdentifiersImpl of(){
+    public static UserProvidedIdentifiers of(){
         return new UserProvidedIdentifiersImpl();
     }
     
 
-    public static UserProvidedIdentifiersImpl of(final UserProvidedIdentifiers template) {
+    public static UserProvidedIdentifiers of(final UserProvidedIdentifiers template) {
         UserProvidedIdentifiersImpl instance = new UserProvidedIdentifiersImpl();
         instance.setKey(template.getKey());
         instance.setExternalId(template.getExternalId());
@@ -73,6 +73,15 @@ public interface UserProvidedIdentifiers  {
         instance.setSlug(template.getSlug());
         return instance;
     }
+
+    public static UserProvidedIdentifiersBuilder builder(){
+        return UserProvidedIdentifiersBuilder.of();
+    }
+    
+    public static UserProvidedIdentifiersBuilder builder(final UserProvidedIdentifiers template){
+        return UserProvidedIdentifiersBuilder.of(template);
+    }
+    
 
     default <T> T withUserProvidedIdentifiers(Function<UserProvidedIdentifiers, T> helper) {
         return helper.apply(this);

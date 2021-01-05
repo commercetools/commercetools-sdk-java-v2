@@ -38,6 +38,7 @@ public interface ImageSearchConfigUpdateAction  {
 
 
 
+
     default <T> T withImageSearchConfigUpdateAction(Function<ImageSearchConfigUpdateAction, T> helper) {
         return helper.apply(this);
     }

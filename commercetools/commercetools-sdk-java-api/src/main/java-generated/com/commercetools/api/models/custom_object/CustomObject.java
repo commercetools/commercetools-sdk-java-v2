@@ -82,12 +82,12 @@ public interface CustomObject extends BaseResource, com.commercetools.api.models
     
     public void setValue(final JsonNode value);
 
-    public static CustomObjectImpl of(){
+    public static CustomObject of(){
         return new CustomObjectImpl();
     }
     
 
-    public static CustomObjectImpl of(final CustomObject template) {
+    public static CustomObject of(final CustomObject template) {
         CustomObjectImpl instance = new CustomObjectImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -100,6 +100,15 @@ public interface CustomObject extends BaseResource, com.commercetools.api.models
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static CustomObjectBuilder builder(){
+        return CustomObjectBuilder.of();
+    }
+    
+    public static CustomObjectBuilder builder(final CustomObject template){
+        return CustomObjectBuilder.of(template);
+    }
+    
 
     default <T> T withCustomObject(Function<CustomObject, T> helper) {
         return helper.apply(this);

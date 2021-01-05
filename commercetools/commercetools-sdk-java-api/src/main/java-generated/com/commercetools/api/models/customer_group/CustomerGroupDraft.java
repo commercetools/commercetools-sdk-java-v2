@@ -42,18 +42,27 @@ public interface CustomerGroupDraft  {
     
     public void setCustom(final CustomFields custom);
 
-    public static CustomerGroupDraftImpl of(){
+    public static CustomerGroupDraft of(){
         return new CustomerGroupDraftImpl();
     }
     
 
-    public static CustomerGroupDraftImpl of(final CustomerGroupDraft template) {
+    public static CustomerGroupDraft of(final CustomerGroupDraft template) {
         CustomerGroupDraftImpl instance = new CustomerGroupDraftImpl();
         instance.setKey(template.getKey());
         instance.setGroupName(template.getGroupName());
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static CustomerGroupDraftBuilder builder(){
+        return CustomerGroupDraftBuilder.of();
+    }
+    
+    public static CustomerGroupDraftBuilder builder(final CustomerGroupDraft template){
+        return CustomerGroupDraftBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerGroupDraft(Function<CustomerGroupDraft, T> helper) {
         return helper.apply(this);

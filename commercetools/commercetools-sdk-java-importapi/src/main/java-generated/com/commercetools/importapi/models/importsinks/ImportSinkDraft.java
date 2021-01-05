@@ -49,18 +49,27 @@ public interface ImportSinkDraft  {
     
     public void setResourceType(final ImportResourceType resourceType);
 
-    public static ImportSinkDraftImpl of(){
+    public static ImportSinkDraft of(){
         return new ImportSinkDraftImpl();
     }
     
 
-    public static ImportSinkDraftImpl of(final ImportSinkDraft template) {
+    public static ImportSinkDraft of(final ImportSinkDraft template) {
         ImportSinkDraftImpl instance = new ImportSinkDraftImpl();
         instance.setVersion(template.getVersion());
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());
         return instance;
     }
+
+    public static ImportSinkDraftBuilder builder(){
+        return ImportSinkDraftBuilder.of();
+    }
+    
+    public static ImportSinkDraftBuilder builder(final ImportSinkDraft template){
+        return ImportSinkDraftBuilder.of(template);
+    }
+    
 
     default <T> T withImportSinkDraft(Function<ImportSinkDraft, T> helper) {
         return helper.apply(this);

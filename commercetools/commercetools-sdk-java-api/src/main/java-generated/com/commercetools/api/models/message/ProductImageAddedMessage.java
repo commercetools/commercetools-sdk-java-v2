@@ -42,12 +42,12 @@ public interface ProductImageAddedMessage extends Message {
     
     public void setStaged(final Boolean staged);
 
-    public static ProductImageAddedMessageImpl of(){
+    public static ProductImageAddedMessage of(){
         return new ProductImageAddedMessageImpl();
     }
     
 
-    public static ProductImageAddedMessageImpl of(final ProductImageAddedMessage template) {
+    public static ProductImageAddedMessage of(final ProductImageAddedMessage template) {
         ProductImageAddedMessageImpl instance = new ProductImageAddedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -64,6 +64,15 @@ public interface ProductImageAddedMessage extends Message {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public static ProductImageAddedMessageBuilder builder(){
+        return ProductImageAddedMessageBuilder.of();
+    }
+    
+    public static ProductImageAddedMessageBuilder builder(final ProductImageAddedMessage template){
+        return ProductImageAddedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withProductImageAddedMessage(Function<ProductImageAddedMessage, T> helper) {
         return helper.apply(this);

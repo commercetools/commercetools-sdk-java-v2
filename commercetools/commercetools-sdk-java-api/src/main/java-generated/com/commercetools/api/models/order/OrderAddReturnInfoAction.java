@@ -45,18 +45,27 @@ public interface OrderAddReturnInfoAction extends OrderUpdateAction {
     
     public void setReturnDate(final ZonedDateTime returnDate);
 
-    public static OrderAddReturnInfoActionImpl of(){
+    public static OrderAddReturnInfoAction of(){
         return new OrderAddReturnInfoActionImpl();
     }
     
 
-    public static OrderAddReturnInfoActionImpl of(final OrderAddReturnInfoAction template) {
+    public static OrderAddReturnInfoAction of(final OrderAddReturnInfoAction template) {
         OrderAddReturnInfoActionImpl instance = new OrderAddReturnInfoActionImpl();
         instance.setReturnTrackingId(template.getReturnTrackingId());
         instance.setItems(template.getItems());
         instance.setReturnDate(template.getReturnDate());
         return instance;
     }
+
+    public static OrderAddReturnInfoActionBuilder builder(){
+        return OrderAddReturnInfoActionBuilder.of();
+    }
+    
+    public static OrderAddReturnInfoActionBuilder builder(final OrderAddReturnInfoAction template){
+        return OrderAddReturnInfoActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderAddReturnInfoAction(Function<OrderAddReturnInfoAction, T> helper) {
         return helper.apply(this);

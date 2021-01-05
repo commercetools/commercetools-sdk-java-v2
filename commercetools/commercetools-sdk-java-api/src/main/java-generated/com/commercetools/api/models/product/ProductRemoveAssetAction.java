@@ -52,12 +52,12 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
     
     public void setAssetKey(final String assetKey);
 
-    public static ProductRemoveAssetActionImpl of(){
+    public static ProductRemoveAssetAction of(){
         return new ProductRemoveAssetActionImpl();
     }
     
 
-    public static ProductRemoveAssetActionImpl of(final ProductRemoveAssetAction template) {
+    public static ProductRemoveAssetAction of(final ProductRemoveAssetAction template) {
         ProductRemoveAssetActionImpl instance = new ProductRemoveAssetActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -66,6 +66,15 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
         instance.setAssetKey(template.getAssetKey());
         return instance;
     }
+
+    public static ProductRemoveAssetActionBuilder builder(){
+        return ProductRemoveAssetActionBuilder.of();
+    }
+    
+    public static ProductRemoveAssetActionBuilder builder(final ProductRemoveAssetAction template){
+        return ProductRemoveAssetActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductRemoveAssetAction(Function<ProductRemoveAssetAction, T> helper) {
         return helper.apply(this);

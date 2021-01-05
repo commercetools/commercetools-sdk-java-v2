@@ -43,18 +43,27 @@ public interface TaxPortion  {
     
     public void setAmount(final TypedMoney amount);
 
-    public static TaxPortionImpl of(){
+    public static TaxPortion of(){
         return new TaxPortionImpl();
     }
     
 
-    public static TaxPortionImpl of(final TaxPortion template) {
+    public static TaxPortion of(final TaxPortion template) {
         TaxPortionImpl instance = new TaxPortionImpl();
         instance.setName(template.getName());
         instance.setRate(template.getRate());
         instance.setAmount(template.getAmount());
         return instance;
     }
+
+    public static TaxPortionBuilder builder(){
+        return TaxPortionBuilder.of();
+    }
+    
+    public static TaxPortionBuilder builder(final TaxPortion template){
+        return TaxPortionBuilder.of(template);
+    }
+    
 
     default <T> T withTaxPortion(Function<TaxPortion, T> helper) {
         return helper.apply(this);

@@ -71,12 +71,12 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
     
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-    public static CartAddCustomLineItemActionImpl of(){
+    public static CartAddCustomLineItemAction of(){
         return new CartAddCustomLineItemActionImpl();
     }
     
 
-    public static CartAddCustomLineItemActionImpl of(final CartAddCustomLineItemAction template) {
+    public static CartAddCustomLineItemAction of(final CartAddCustomLineItemAction template) {
         CartAddCustomLineItemActionImpl instance = new CartAddCustomLineItemActionImpl();
         instance.setMoney(template.getMoney());
         instance.setName(template.getName());
@@ -87,6 +87,15 @@ public interface CartAddCustomLineItemAction extends CartUpdateAction {
         instance.setExternalTaxRate(template.getExternalTaxRate());
         return instance;
     }
+
+    public static CartAddCustomLineItemActionBuilder builder(){
+        return CartAddCustomLineItemActionBuilder.of();
+    }
+    
+    public static CartAddCustomLineItemActionBuilder builder(final CartAddCustomLineItemAction template){
+        return CartAddCustomLineItemActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartAddCustomLineItemAction(Function<CartAddCustomLineItemAction, T> helper) {
         return helper.apply(this);

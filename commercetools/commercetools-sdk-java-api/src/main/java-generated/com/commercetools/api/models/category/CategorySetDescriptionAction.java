@@ -29,16 +29,25 @@ public interface CategorySetDescriptionAction extends CategoryUpdateAction {
 
     public void setDescription(final LocalizedString description);
 
-    public static CategorySetDescriptionActionImpl of(){
+    public static CategorySetDescriptionAction of(){
         return new CategorySetDescriptionActionImpl();
     }
     
 
-    public static CategorySetDescriptionActionImpl of(final CategorySetDescriptionAction template) {
+    public static CategorySetDescriptionAction of(final CategorySetDescriptionAction template) {
         CategorySetDescriptionActionImpl instance = new CategorySetDescriptionActionImpl();
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public static CategorySetDescriptionActionBuilder builder(){
+        return CategorySetDescriptionActionBuilder.of();
+    }
+    
+    public static CategorySetDescriptionActionBuilder builder(final CategorySetDescriptionAction template){
+        return CategorySetDescriptionActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetDescriptionAction(Function<CategorySetDescriptionAction, T> helper) {
         return helper.apply(this);

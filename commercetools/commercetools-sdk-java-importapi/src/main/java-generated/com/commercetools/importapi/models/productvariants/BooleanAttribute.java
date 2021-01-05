@@ -31,17 +31,26 @@ public interface BooleanAttribute extends Attribute {
 
     public void setValue(final Boolean value);
 
-    public static BooleanAttributeImpl of(){
+    public static BooleanAttribute of(){
         return new BooleanAttributeImpl();
     }
     
 
-    public static BooleanAttributeImpl of(final BooleanAttribute template) {
+    public static BooleanAttribute of(final BooleanAttribute template) {
         BooleanAttributeImpl instance = new BooleanAttributeImpl();
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static BooleanAttributeBuilder builder(){
+        return BooleanAttributeBuilder.of();
+    }
+    
+    public static BooleanAttributeBuilder builder(final BooleanAttribute template){
+        return BooleanAttributeBuilder.of(template);
+    }
+    
 
     default <T> T withBooleanAttribute(Function<BooleanAttribute, T> helper) {
         return helper.apply(this);

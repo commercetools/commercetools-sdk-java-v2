@@ -36,18 +36,27 @@ public interface PriceChangedError extends ErrorObject {
     
     public void setShipping(final Boolean shipping);
 
-    public static PriceChangedErrorImpl of(){
+    public static PriceChangedError of(){
         return new PriceChangedErrorImpl();
     }
     
 
-    public static PriceChangedErrorImpl of(final PriceChangedError template) {
+    public static PriceChangedError of(final PriceChangedError template) {
         PriceChangedErrorImpl instance = new PriceChangedErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setLineItems(template.getLineItems());
         instance.setShipping(template.getShipping());
         return instance;
     }
+
+    public static PriceChangedErrorBuilder builder(){
+        return PriceChangedErrorBuilder.of();
+    }
+    
+    public static PriceChangedErrorBuilder builder(final PriceChangedError template){
+        return PriceChangedErrorBuilder.of(template);
+    }
+    
 
     default <T> T withPriceChangedError(Function<PriceChangedError, T> helper) {
         return helper.apply(this);

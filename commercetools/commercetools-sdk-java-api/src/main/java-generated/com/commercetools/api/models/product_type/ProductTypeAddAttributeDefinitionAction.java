@@ -30,16 +30,25 @@ public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpda
 
     public void setAttribute(final AttributeDefinitionDraft attribute);
 
-    public static ProductTypeAddAttributeDefinitionActionImpl of(){
+    public static ProductTypeAddAttributeDefinitionAction of(){
         return new ProductTypeAddAttributeDefinitionActionImpl();
     }
     
 
-    public static ProductTypeAddAttributeDefinitionActionImpl of(final ProductTypeAddAttributeDefinitionAction template) {
+    public static ProductTypeAddAttributeDefinitionAction of(final ProductTypeAddAttributeDefinitionAction template) {
         ProductTypeAddAttributeDefinitionActionImpl instance = new ProductTypeAddAttributeDefinitionActionImpl();
         instance.setAttribute(template.getAttribute());
         return instance;
     }
+
+    public static ProductTypeAddAttributeDefinitionActionBuilder builder(){
+        return ProductTypeAddAttributeDefinitionActionBuilder.of();
+    }
+    
+    public static ProductTypeAddAttributeDefinitionActionBuilder builder(final ProductTypeAddAttributeDefinitionAction template){
+        return ProductTypeAddAttributeDefinitionActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeAddAttributeDefinitionAction(Function<ProductTypeAddAttributeDefinitionAction, T> helper) {
         return helper.apply(this);

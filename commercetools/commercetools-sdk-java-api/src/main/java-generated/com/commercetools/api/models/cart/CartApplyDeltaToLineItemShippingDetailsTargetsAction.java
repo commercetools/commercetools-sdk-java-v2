@@ -38,17 +38,26 @@ public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends Ca
     public void setTargetsDelta(final ItemShippingTarget ...targetsDelta);
     public void setTargetsDelta(final List<ItemShippingTarget> targetsDelta);
 
-    public static CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl of(){
+    public static CartApplyDeltaToLineItemShippingDetailsTargetsAction of(){
         return new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
     }
     
 
-    public static CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl of(final CartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
+    public static CartApplyDeltaToLineItemShippingDetailsTargetsAction of(final CartApplyDeltaToLineItemShippingDetailsTargetsAction template) {
         CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl instance = new CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl();
         instance.setLineItemId(template.getLineItemId());
         instance.setTargetsDelta(template.getTargetsDelta());
         return instance;
     }
+
+    public static CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder(){
+        return CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder.of();
+    }
+    
+    public static CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder builder(final CartApplyDeltaToLineItemShippingDetailsTargetsAction template){
+        return CartApplyDeltaToLineItemShippingDetailsTargetsActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartApplyDeltaToLineItemShippingDetailsTargetsAction(Function<CartApplyDeltaToLineItemShippingDetailsTargetsAction, T> helper) {
         return helper.apply(this);

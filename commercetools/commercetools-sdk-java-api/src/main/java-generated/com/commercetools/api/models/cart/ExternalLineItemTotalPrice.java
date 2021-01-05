@@ -36,17 +36,26 @@ public interface ExternalLineItemTotalPrice  {
     
     public void setTotalPrice(final Money totalPrice);
 
-    public static ExternalLineItemTotalPriceImpl of(){
+    public static ExternalLineItemTotalPrice of(){
         return new ExternalLineItemTotalPriceImpl();
     }
     
 
-    public static ExternalLineItemTotalPriceImpl of(final ExternalLineItemTotalPrice template) {
+    public static ExternalLineItemTotalPrice of(final ExternalLineItemTotalPrice template) {
         ExternalLineItemTotalPriceImpl instance = new ExternalLineItemTotalPriceImpl();
         instance.setPrice(template.getPrice());
         instance.setTotalPrice(template.getTotalPrice());
         return instance;
     }
+
+    public static ExternalLineItemTotalPriceBuilder builder(){
+        return ExternalLineItemTotalPriceBuilder.of();
+    }
+    
+    public static ExternalLineItemTotalPriceBuilder builder(final ExternalLineItemTotalPrice template){
+        return ExternalLineItemTotalPriceBuilder.of(template);
+    }
+    
 
     default <T> T withExternalLineItemTotalPrice(Function<ExternalLineItemTotalPrice, T> helper) {
         return helper.apply(this);

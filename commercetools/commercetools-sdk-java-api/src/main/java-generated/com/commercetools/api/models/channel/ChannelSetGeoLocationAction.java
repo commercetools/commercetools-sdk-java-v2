@@ -29,16 +29,25 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
 
     public void setGeoLocation(final GeoJson geoLocation);
 
-    public static ChannelSetGeoLocationActionImpl of(){
+    public static ChannelSetGeoLocationAction of(){
         return new ChannelSetGeoLocationActionImpl();
     }
     
 
-    public static ChannelSetGeoLocationActionImpl of(final ChannelSetGeoLocationAction template) {
+    public static ChannelSetGeoLocationAction of(final ChannelSetGeoLocationAction template) {
         ChannelSetGeoLocationActionImpl instance = new ChannelSetGeoLocationActionImpl();
         instance.setGeoLocation(template.getGeoLocation());
         return instance;
     }
+
+    public static ChannelSetGeoLocationActionBuilder builder(){
+        return ChannelSetGeoLocationActionBuilder.of();
+    }
+    
+    public static ChannelSetGeoLocationActionBuilder builder(final ChannelSetGeoLocationAction template){
+        return ChannelSetGeoLocationActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelSetGeoLocationAction(Function<ChannelSetGeoLocationAction, T> helper) {
         return helper.apply(this);

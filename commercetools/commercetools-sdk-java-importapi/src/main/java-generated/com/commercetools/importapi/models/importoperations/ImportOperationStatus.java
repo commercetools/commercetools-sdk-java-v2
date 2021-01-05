@@ -52,18 +52,27 @@ public interface ImportOperationStatus  {
     public void setErrors(final ErrorObject ...errors);
     public void setErrors(final List<ErrorObject> errors);
 
-    public static ImportOperationStatusImpl of(){
+    public static ImportOperationStatus of(){
         return new ImportOperationStatusImpl();
     }
     
 
-    public static ImportOperationStatusImpl of(final ImportOperationStatus template) {
+    public static ImportOperationStatus of(final ImportOperationStatus template) {
         ImportOperationStatusImpl instance = new ImportOperationStatusImpl();
         instance.setOperationId(template.getOperationId());
         instance.setState(template.getState());
         instance.setErrors(template.getErrors());
         return instance;
     }
+
+    public static ImportOperationStatusBuilder builder(){
+        return ImportOperationStatusBuilder.of();
+    }
+    
+    public static ImportOperationStatusBuilder builder(final ImportOperationStatus template){
+        return ImportOperationStatusBuilder.of(template);
+    }
+    
 
     default <T> T withImportOperationStatus(Function<ImportOperationStatus, T> helper) {
         return helper.apply(this);

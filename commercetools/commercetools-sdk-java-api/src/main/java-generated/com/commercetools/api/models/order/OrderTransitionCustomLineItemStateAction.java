@@ -56,12 +56,12 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
     
     public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
 
-    public static OrderTransitionCustomLineItemStateActionImpl of(){
+    public static OrderTransitionCustomLineItemStateAction of(){
         return new OrderTransitionCustomLineItemStateActionImpl();
     }
     
 
-    public static OrderTransitionCustomLineItemStateActionImpl of(final OrderTransitionCustomLineItemStateAction template) {
+    public static OrderTransitionCustomLineItemStateAction of(final OrderTransitionCustomLineItemStateAction template) {
         OrderTransitionCustomLineItemStateActionImpl instance = new OrderTransitionCustomLineItemStateActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setQuantity(template.getQuantity());
@@ -70,6 +70,15 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }
+
+    public static OrderTransitionCustomLineItemStateActionBuilder builder(){
+        return OrderTransitionCustomLineItemStateActionBuilder.of();
+    }
+    
+    public static OrderTransitionCustomLineItemStateActionBuilder builder(final OrderTransitionCustomLineItemStateAction template){
+        return OrderTransitionCustomLineItemStateActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderTransitionCustomLineItemStateAction(Function<OrderTransitionCustomLineItemStateAction, T> helper) {
         return helper.apply(this);

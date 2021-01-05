@@ -23,12 +23,12 @@ public interface CustomerEmailVerifiedMessage extends Message {
 
 
 
-    public static CustomerEmailVerifiedMessageImpl of(){
+    public static CustomerEmailVerifiedMessage of(){
         return new CustomerEmailVerifiedMessageImpl();
     }
     
 
-    public static CustomerEmailVerifiedMessageImpl of(final CustomerEmailVerifiedMessage template) {
+    public static CustomerEmailVerifiedMessage of(final CustomerEmailVerifiedMessage template) {
         CustomerEmailVerifiedMessageImpl instance = new CustomerEmailVerifiedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -42,6 +42,15 @@ public interface CustomerEmailVerifiedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         return instance;
     }
+
+    public static CustomerEmailVerifiedMessageBuilder builder(){
+        return CustomerEmailVerifiedMessageBuilder.of();
+    }
+    
+    public static CustomerEmailVerifiedMessageBuilder builder(final CustomerEmailVerifiedMessage template){
+        return CustomerEmailVerifiedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerEmailVerifiedMessage(Function<CustomerEmailVerifiedMessage, T> helper) {
         return helper.apply(this);

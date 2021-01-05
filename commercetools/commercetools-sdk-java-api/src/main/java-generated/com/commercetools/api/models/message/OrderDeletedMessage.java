@@ -30,12 +30,12 @@ public interface OrderDeletedMessage extends Message {
 
     public void setOrder(final Order order);
 
-    public static OrderDeletedMessageImpl of(){
+    public static OrderDeletedMessage of(){
         return new OrderDeletedMessageImpl();
     }
     
 
-    public static OrderDeletedMessageImpl of(final OrderDeletedMessage template) {
+    public static OrderDeletedMessage of(final OrderDeletedMessage template) {
         OrderDeletedMessageImpl instance = new OrderDeletedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -50,6 +50,15 @@ public interface OrderDeletedMessage extends Message {
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public static OrderDeletedMessageBuilder builder(){
+        return OrderDeletedMessageBuilder.of();
+    }
+    
+    public static OrderDeletedMessageBuilder builder(final OrderDeletedMessage template){
+        return OrderDeletedMessageBuilder.of(template);
+    }
+    
 
     default <T> T withOrderDeletedMessage(Function<OrderDeletedMessage, T> helper) {
         return helper.apply(this);

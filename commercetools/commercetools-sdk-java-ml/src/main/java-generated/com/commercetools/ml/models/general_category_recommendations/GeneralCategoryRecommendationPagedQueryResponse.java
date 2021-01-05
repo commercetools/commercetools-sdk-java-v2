@@ -49,12 +49,12 @@ public interface GeneralCategoryRecommendationPagedQueryResponse  {
     public void setResults(final GeneralCategoryRecommendation ...results);
     public void setResults(final List<GeneralCategoryRecommendation> results);
 
-    public static GeneralCategoryRecommendationPagedQueryResponseImpl of(){
+    public static GeneralCategoryRecommendationPagedQueryResponse of(){
         return new GeneralCategoryRecommendationPagedQueryResponseImpl();
     }
     
 
-    public static GeneralCategoryRecommendationPagedQueryResponseImpl of(final GeneralCategoryRecommendationPagedQueryResponse template) {
+    public static GeneralCategoryRecommendationPagedQueryResponse of(final GeneralCategoryRecommendationPagedQueryResponse template) {
         GeneralCategoryRecommendationPagedQueryResponseImpl instance = new GeneralCategoryRecommendationPagedQueryResponseImpl();
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
@@ -62,6 +62,15 @@ public interface GeneralCategoryRecommendationPagedQueryResponse  {
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static GeneralCategoryRecommendationPagedQueryResponseBuilder builder(){
+        return GeneralCategoryRecommendationPagedQueryResponseBuilder.of();
+    }
+    
+    public static GeneralCategoryRecommendationPagedQueryResponseBuilder builder(final GeneralCategoryRecommendationPagedQueryResponse template){
+        return GeneralCategoryRecommendationPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withGeneralCategoryRecommendationPagedQueryResponse(Function<GeneralCategoryRecommendationPagedQueryResponse, T> helper) {
         return helper.apply(this);

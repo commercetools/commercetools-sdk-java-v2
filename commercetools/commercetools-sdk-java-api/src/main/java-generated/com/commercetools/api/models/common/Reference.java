@@ -88,6 +88,7 @@ public interface Reference  {
 
 
 
+
     default <T> T withReference(Function<Reference, T> helper) {
         return helper.apply(this);
     }

@@ -30,16 +30,25 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
 
     public void setAnonymousId(final String anonymousId);
 
-    public static CartSetAnonymousIdActionImpl of(){
+    public static CartSetAnonymousIdAction of(){
         return new CartSetAnonymousIdActionImpl();
     }
     
 
-    public static CartSetAnonymousIdActionImpl of(final CartSetAnonymousIdAction template) {
+    public static CartSetAnonymousIdAction of(final CartSetAnonymousIdAction template) {
         CartSetAnonymousIdActionImpl instance = new CartSetAnonymousIdActionImpl();
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public static CartSetAnonymousIdActionBuilder builder(){
+        return CartSetAnonymousIdActionBuilder.of();
+    }
+    
+    public static CartSetAnonymousIdActionBuilder builder(final CartSetAnonymousIdAction template){
+        return CartSetAnonymousIdActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetAnonymousIdAction(Function<CartSetAnonymousIdAction, T> helper) {
         return helper.apply(this);

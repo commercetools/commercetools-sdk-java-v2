@@ -28,16 +28,25 @@ public interface AzureServiceBusDestination extends Destination {
 
     public void setConnectionString(final String connectionString);
 
-    public static AzureServiceBusDestinationImpl of(){
+    public static AzureServiceBusDestination of(){
         return new AzureServiceBusDestinationImpl();
     }
     
 
-    public static AzureServiceBusDestinationImpl of(final AzureServiceBusDestination template) {
+    public static AzureServiceBusDestination of(final AzureServiceBusDestination template) {
         AzureServiceBusDestinationImpl instance = new AzureServiceBusDestinationImpl();
         instance.setConnectionString(template.getConnectionString());
         return instance;
     }
+
+    public static AzureServiceBusDestinationBuilder builder(){
+        return AzureServiceBusDestinationBuilder.of();
+    }
+    
+    public static AzureServiceBusDestinationBuilder builder(final AzureServiceBusDestination template){
+        return AzureServiceBusDestinationBuilder.of(template);
+    }
+    
 
     default <T> T withAzureServiceBusDestination(Function<AzureServiceBusDestination, T> helper) {
         return helper.apply(this);

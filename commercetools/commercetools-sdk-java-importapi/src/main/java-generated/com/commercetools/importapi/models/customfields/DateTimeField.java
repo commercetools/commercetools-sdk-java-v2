@@ -32,16 +32,25 @@ public interface DateTimeField extends CustomField {
 
     public void setValue(final ZonedDateTime value);
 
-    public static DateTimeFieldImpl of(){
+    public static DateTimeField of(){
         return new DateTimeFieldImpl();
     }
     
 
-    public static DateTimeFieldImpl of(final DateTimeField template) {
+    public static DateTimeField of(final DateTimeField template) {
         DateTimeFieldImpl instance = new DateTimeFieldImpl();
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static DateTimeFieldBuilder builder(){
+        return DateTimeFieldBuilder.of();
+    }
+    
+    public static DateTimeFieldBuilder builder(final DateTimeField template){
+        return DateTimeFieldBuilder.of(template);
+    }
+    
 
     default <T> T withDateTimeField(Function<DateTimeField, T> helper) {
         return helper.apply(this);

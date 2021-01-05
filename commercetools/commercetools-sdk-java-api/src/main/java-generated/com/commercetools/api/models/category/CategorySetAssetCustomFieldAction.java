@@ -47,12 +47,12 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
     
     public void setValue(final JsonNode value);
 
-    public static CategorySetAssetCustomFieldActionImpl of(){
+    public static CategorySetAssetCustomFieldAction of(){
         return new CategorySetAssetCustomFieldActionImpl();
     }
     
 
-    public static CategorySetAssetCustomFieldActionImpl of(final CategorySetAssetCustomFieldAction template) {
+    public static CategorySetAssetCustomFieldAction of(final CategorySetAssetCustomFieldAction template) {
         CategorySetAssetCustomFieldActionImpl instance = new CategorySetAssetCustomFieldActionImpl();
         instance.setAssetId(template.getAssetId());
         instance.setAssetKey(template.getAssetKey());
@@ -60,6 +60,15 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static CategorySetAssetCustomFieldActionBuilder builder(){
+        return CategorySetAssetCustomFieldActionBuilder.of();
+    }
+    
+    public static CategorySetAssetCustomFieldActionBuilder builder(final CategorySetAssetCustomFieldAction template){
+        return CategorySetAssetCustomFieldActionBuilder.of(template);
+    }
+    
 
     default <T> T withCategorySetAssetCustomFieldAction(Function<CategorySetAssetCustomFieldAction, T> helper) {
         return helper.apply(this);

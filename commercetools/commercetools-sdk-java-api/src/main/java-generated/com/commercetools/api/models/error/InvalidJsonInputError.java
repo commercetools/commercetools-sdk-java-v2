@@ -23,16 +23,25 @@ public interface InvalidJsonInputError extends ErrorObject {
 
 
 
-    public static InvalidJsonInputErrorImpl of(){
+    public static InvalidJsonInputError of(){
         return new InvalidJsonInputErrorImpl();
     }
     
 
-    public static InvalidJsonInputErrorImpl of(final InvalidJsonInputError template) {
+    public static InvalidJsonInputError of(final InvalidJsonInputError template) {
         InvalidJsonInputErrorImpl instance = new InvalidJsonInputErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InvalidJsonInputErrorBuilder builder(){
+        return InvalidJsonInputErrorBuilder.of();
+    }
+    
+    public static InvalidJsonInputErrorBuilder builder(final InvalidJsonInputError template){
+        return InvalidJsonInputErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInvalidJsonInputError(Function<InvalidJsonInputError, T> helper) {
         return helper.apply(this);

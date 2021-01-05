@@ -36,17 +36,26 @@ public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
     
     public void setValue(final CustomFieldEnumValue value);
 
-    public static TypeChangeEnumValueLabelActionImpl of(){
+    public static TypeChangeEnumValueLabelAction of(){
         return new TypeChangeEnumValueLabelActionImpl();
     }
     
 
-    public static TypeChangeEnumValueLabelActionImpl of(final TypeChangeEnumValueLabelAction template) {
+    public static TypeChangeEnumValueLabelAction of(final TypeChangeEnumValueLabelAction template) {
         TypeChangeEnumValueLabelActionImpl instance = new TypeChangeEnumValueLabelActionImpl();
         instance.setFieldName(template.getFieldName());
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public static TypeChangeEnumValueLabelActionBuilder builder(){
+        return TypeChangeEnumValueLabelActionBuilder.of();
+    }
+    
+    public static TypeChangeEnumValueLabelActionBuilder builder(final TypeChangeEnumValueLabelAction template){
+        return TypeChangeEnumValueLabelActionBuilder.of(template);
+    }
+    
 
     default <T> T withTypeChangeEnumValueLabelAction(Function<TypeChangeEnumValueLabelAction, T> helper) {
         return helper.apply(this);

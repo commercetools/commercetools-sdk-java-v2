@@ -34,16 +34,25 @@ public interface CartSetShippingRateInputAction extends CartUpdateAction {
 
     public void setShippingRateInput(final ShippingRateInputDraft shippingRateInput);
 
-    public static CartSetShippingRateInputActionImpl of(){
+    public static CartSetShippingRateInputAction of(){
         return new CartSetShippingRateInputActionImpl();
     }
     
 
-    public static CartSetShippingRateInputActionImpl of(final CartSetShippingRateInputAction template) {
+    public static CartSetShippingRateInputAction of(final CartSetShippingRateInputAction template) {
         CartSetShippingRateInputActionImpl instance = new CartSetShippingRateInputActionImpl();
         instance.setShippingRateInput(template.getShippingRateInput());
         return instance;
     }
+
+    public static CartSetShippingRateInputActionBuilder builder(){
+        return CartSetShippingRateInputActionBuilder.of();
+    }
+    
+    public static CartSetShippingRateInputActionBuilder builder(final CartSetShippingRateInputAction template){
+        return CartSetShippingRateInputActionBuilder.of(template);
+    }
+    
 
     default <T> T withCartSetShippingRateInputAction(Function<CartSetShippingRateInputAction, T> helper) {
         return helper.apply(this);

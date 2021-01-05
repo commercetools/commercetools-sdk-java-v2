@@ -38,6 +38,7 @@ public interface GeoJson  {
 
 
 
+
     default <T> T withGeoJson(Function<GeoJson, T> helper) {
         return helper.apply(this);
     }

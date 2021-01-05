@@ -40,12 +40,12 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
     
     public void setConflictingAttributeName(final String conflictingAttributeName);
 
-    public static AttributeDefinitionTypeConflictErrorImpl of(){
+    public static AttributeDefinitionTypeConflictError of(){
         return new AttributeDefinitionTypeConflictErrorImpl();
     }
     
 
-    public static AttributeDefinitionTypeConflictErrorImpl of(final AttributeDefinitionTypeConflictError template) {
+    public static AttributeDefinitionTypeConflictError of(final AttributeDefinitionTypeConflictError template) {
         AttributeDefinitionTypeConflictErrorImpl instance = new AttributeDefinitionTypeConflictErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setConflictingProductTypeId(template.getConflictingProductTypeId());
@@ -53,6 +53,15 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public static AttributeDefinitionTypeConflictErrorBuilder builder(){
+        return AttributeDefinitionTypeConflictErrorBuilder.of();
+    }
+    
+    public static AttributeDefinitionTypeConflictErrorBuilder builder(final AttributeDefinitionTypeConflictError template){
+        return AttributeDefinitionTypeConflictErrorBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeDefinitionTypeConflictError(Function<AttributeDefinitionTypeConflictError, T> helper) {
         return helper.apply(this);

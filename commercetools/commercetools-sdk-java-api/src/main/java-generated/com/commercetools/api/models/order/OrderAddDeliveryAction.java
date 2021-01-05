@@ -47,18 +47,27 @@ public interface OrderAddDeliveryAction extends OrderUpdateAction {
     public void setParcels(final ParcelDraft ...parcels);
     public void setParcels(final List<ParcelDraft> parcels);
 
-    public static OrderAddDeliveryActionImpl of(){
+    public static OrderAddDeliveryAction of(){
         return new OrderAddDeliveryActionImpl();
     }
     
 
-    public static OrderAddDeliveryActionImpl of(final OrderAddDeliveryAction template) {
+    public static OrderAddDeliveryAction of(final OrderAddDeliveryAction template) {
         OrderAddDeliveryActionImpl instance = new OrderAddDeliveryActionImpl();
         instance.setItems(template.getItems());
         instance.setAddress(template.getAddress());
         instance.setParcels(template.getParcels());
         return instance;
     }
+
+    public static OrderAddDeliveryActionBuilder builder(){
+        return OrderAddDeliveryActionBuilder.of();
+    }
+    
+    public static OrderAddDeliveryActionBuilder builder(final OrderAddDeliveryAction template){
+        return OrderAddDeliveryActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderAddDeliveryAction(Function<OrderAddDeliveryAction, T> helper) {
         return helper.apply(this);

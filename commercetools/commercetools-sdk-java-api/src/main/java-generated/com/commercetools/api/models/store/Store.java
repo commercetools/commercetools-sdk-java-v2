@@ -110,12 +110,12 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     public void setSupplyChannels(final ChannelReference ...supplyChannels);
     public void setSupplyChannels(final List<ChannelReference> supplyChannels);
 
-    public static StoreImpl of(){
+    public static Store of(){
         return new StoreImpl();
     }
     
 
-    public static StoreImpl of(final Store template) {
+    public static Store of(final Store template) {
         StoreImpl instance = new StoreImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -130,6 +130,15 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
         instance.setSupplyChannels(template.getSupplyChannels());
         return instance;
     }
+
+    public static StoreBuilder builder(){
+        return StoreBuilder.of();
+    }
+    
+    public static StoreBuilder builder(final Store template){
+        return StoreBuilder.of(template);
+    }
+    
 
     default <T> T withStore(Function<Store, T> helper) {
         return helper.apply(this);

@@ -31,16 +31,25 @@ public interface StoreSetNameAction extends StoreUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static StoreSetNameActionImpl of(){
+    public static StoreSetNameAction of(){
         return new StoreSetNameActionImpl();
     }
     
 
-    public static StoreSetNameActionImpl of(final StoreSetNameAction template) {
+    public static StoreSetNameAction of(final StoreSetNameAction template) {
         StoreSetNameActionImpl instance = new StoreSetNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static StoreSetNameActionBuilder builder(){
+        return StoreSetNameActionBuilder.of();
+    }
+    
+    public static StoreSetNameActionBuilder builder(final StoreSetNameAction template){
+        return StoreSetNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withStoreSetNameAction(Function<StoreSetNameAction, T> helper) {
         return helper.apply(this);

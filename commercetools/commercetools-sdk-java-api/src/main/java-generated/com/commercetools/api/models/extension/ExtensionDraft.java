@@ -62,12 +62,12 @@ public interface ExtensionDraft  {
     
     public void setTimeoutInMs(final Integer timeoutInMs);
 
-    public static ExtensionDraftImpl of(){
+    public static ExtensionDraft of(){
         return new ExtensionDraftImpl();
     }
     
 
-    public static ExtensionDraftImpl of(final ExtensionDraft template) {
+    public static ExtensionDraft of(final ExtensionDraft template) {
         ExtensionDraftImpl instance = new ExtensionDraftImpl();
         instance.setKey(template.getKey());
         instance.setDestination(template.getDestination());
@@ -75,6 +75,15 @@ public interface ExtensionDraft  {
         instance.setTimeoutInMs(template.getTimeoutInMs());
         return instance;
     }
+
+    public static ExtensionDraftBuilder builder(){
+        return ExtensionDraftBuilder.of();
+    }
+    
+    public static ExtensionDraftBuilder builder(final ExtensionDraft template){
+        return ExtensionDraftBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionDraft(Function<ExtensionDraft, T> helper) {
         return helper.apply(this);

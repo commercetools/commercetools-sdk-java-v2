@@ -119,12 +119,12 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
     
     public void setReviewRatingStatistics(final ReviewRatingStatistics reviewRatingStatistics);
 
-    public static ProductImpl of(){
+    public static Product of(){
         return new ProductImpl();
     }
     
 
-    public static ProductImpl of(final Product template) {
+    public static Product of(final Product template) {
         ProductImpl instance = new ProductImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -140,6 +140,15 @@ public interface Product extends BaseResource, com.commercetools.api.models.Doma
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
         return instance;
     }
+
+    public static ProductBuilder builder(){
+        return ProductBuilder.of();
+    }
+    
+    public static ProductBuilder builder(final Product template){
+        return ProductBuilder.of(template);
+    }
+    
 
     default <T> T withProduct(Function<Product, T> helper) {
         return helper.apply(this);

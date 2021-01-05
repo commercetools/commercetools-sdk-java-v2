@@ -23,16 +23,25 @@ public interface AccessDeniedError extends ErrorObject {
 
 
 
-    public static AccessDeniedErrorImpl of(){
+    public static AccessDeniedError of(){
         return new AccessDeniedErrorImpl();
     }
     
 
-    public static AccessDeniedErrorImpl of(final AccessDeniedError template) {
+    public static AccessDeniedError of(final AccessDeniedError template) {
         AccessDeniedErrorImpl instance = new AccessDeniedErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static AccessDeniedErrorBuilder builder(){
+        return AccessDeniedErrorBuilder.of();
+    }
+    
+    public static AccessDeniedErrorBuilder builder(final AccessDeniedError template){
+        return AccessDeniedErrorBuilder.of(template);
+    }
+    
 
     default <T> T withAccessDeniedError(Function<AccessDeniedError, T> helper) {
         return helper.apply(this);

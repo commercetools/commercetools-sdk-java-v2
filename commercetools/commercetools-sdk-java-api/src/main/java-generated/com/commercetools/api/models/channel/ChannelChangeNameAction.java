@@ -30,16 +30,25 @@ public interface ChannelChangeNameAction extends ChannelUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static ChannelChangeNameActionImpl of(){
+    public static ChannelChangeNameAction of(){
         return new ChannelChangeNameActionImpl();
     }
     
 
-    public static ChannelChangeNameActionImpl of(final ChannelChangeNameAction template) {
+    public static ChannelChangeNameAction of(final ChannelChangeNameAction template) {
         ChannelChangeNameActionImpl instance = new ChannelChangeNameActionImpl();
         instance.setName(template.getName());
         return instance;
     }
+
+    public static ChannelChangeNameActionBuilder builder(){
+        return ChannelChangeNameActionBuilder.of();
+    }
+    
+    public static ChannelChangeNameActionBuilder builder(final ChannelChangeNameAction template){
+        return ChannelChangeNameActionBuilder.of(template);
+    }
+    
 
     default <T> T withChannelChangeNameAction(Function<ChannelChangeNameAction, T> helper) {
         return helper.apply(this);

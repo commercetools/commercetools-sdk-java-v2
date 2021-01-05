@@ -29,16 +29,25 @@ public interface AttributeReferenceType extends AttributeType {
 
     public void setReferenceTypeId(final ReferenceTypeId referenceTypeId);
 
-    public static AttributeReferenceTypeImpl of(){
+    public static AttributeReferenceType of(){
         return new AttributeReferenceTypeImpl();
     }
     
 
-    public static AttributeReferenceTypeImpl of(final AttributeReferenceType template) {
+    public static AttributeReferenceType of(final AttributeReferenceType template) {
         AttributeReferenceTypeImpl instance = new AttributeReferenceTypeImpl();
         instance.setReferenceTypeId(template.getReferenceTypeId());
         return instance;
     }
+
+    public static AttributeReferenceTypeBuilder builder(){
+        return AttributeReferenceTypeBuilder.of();
+    }
+    
+    public static AttributeReferenceTypeBuilder builder(final AttributeReferenceType template){
+        return AttributeReferenceTypeBuilder.of(template);
+    }
+    
 
     default <T> T withAttributeReferenceType(Function<AttributeReferenceType, T> helper) {
         return helper.apply(this);

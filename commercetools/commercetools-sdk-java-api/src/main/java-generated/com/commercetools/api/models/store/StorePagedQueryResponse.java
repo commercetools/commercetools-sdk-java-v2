@@ -55,12 +55,12 @@ public interface StorePagedQueryResponse extends com.commercetools.api.models.Re
     public void setResults(final Store ...results);
     public void setResults(final List<Store> results);
 
-    public static StorePagedQueryResponseImpl of(){
+    public static StorePagedQueryResponse of(){
         return new StorePagedQueryResponseImpl();
     }
     
 
-    public static StorePagedQueryResponseImpl of(final StorePagedQueryResponse template) {
+    public static StorePagedQueryResponse of(final StorePagedQueryResponse template) {
         StorePagedQueryResponseImpl instance = new StorePagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface StorePagedQueryResponse extends com.commercetools.api.models.Re
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static StorePagedQueryResponseBuilder builder(){
+        return StorePagedQueryResponseBuilder.of();
+    }
+    
+    public static StorePagedQueryResponseBuilder builder(final StorePagedQueryResponse template){
+        return StorePagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withStorePagedQueryResponse(Function<StorePagedQueryResponse, T> helper) {
         return helper.apply(this);

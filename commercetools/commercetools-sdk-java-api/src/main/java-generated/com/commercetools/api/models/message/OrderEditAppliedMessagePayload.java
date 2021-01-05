@@ -38,17 +38,26 @@ public interface OrderEditAppliedMessagePayload extends MessagePayload {
     
     public void setResult(final OrderEditApplied result);
 
-    public static OrderEditAppliedMessagePayloadImpl of(){
+    public static OrderEditAppliedMessagePayload of(){
         return new OrderEditAppliedMessagePayloadImpl();
     }
     
 
-    public static OrderEditAppliedMessagePayloadImpl of(final OrderEditAppliedMessagePayload template) {
+    public static OrderEditAppliedMessagePayload of(final OrderEditAppliedMessagePayload template) {
         OrderEditAppliedMessagePayloadImpl instance = new OrderEditAppliedMessagePayloadImpl();
         instance.setEdit(template.getEdit());
         instance.setResult(template.getResult());
         return instance;
     }
+
+    public static OrderEditAppliedMessagePayloadBuilder builder(){
+        return OrderEditAppliedMessagePayloadBuilder.of();
+    }
+    
+    public static OrderEditAppliedMessagePayloadBuilder builder(final OrderEditAppliedMessagePayload template){
+        return OrderEditAppliedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditAppliedMessagePayload(Function<OrderEditAppliedMessagePayload, T> helper) {
         return helper.apply(this);

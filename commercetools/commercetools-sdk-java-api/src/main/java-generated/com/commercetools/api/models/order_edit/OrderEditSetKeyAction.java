@@ -30,16 +30,25 @@ public interface OrderEditSetKeyAction extends OrderEditUpdateAction {
 
     public void setKey(final String key);
 
-    public static OrderEditSetKeyActionImpl of(){
+    public static OrderEditSetKeyAction of(){
         return new OrderEditSetKeyActionImpl();
     }
     
 
-    public static OrderEditSetKeyActionImpl of(final OrderEditSetKeyAction template) {
+    public static OrderEditSetKeyAction of(final OrderEditSetKeyAction template) {
         OrderEditSetKeyActionImpl instance = new OrderEditSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static OrderEditSetKeyActionBuilder builder(){
+        return OrderEditSetKeyActionBuilder.of();
+    }
+    
+    public static OrderEditSetKeyActionBuilder builder(final OrderEditSetKeyAction template){
+        return OrderEditSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withOrderEditSetKeyAction(Function<OrderEditSetKeyAction, T> helper) {
         return helper.apply(this);

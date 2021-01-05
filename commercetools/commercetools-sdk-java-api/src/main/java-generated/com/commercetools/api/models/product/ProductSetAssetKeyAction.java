@@ -55,12 +55,12 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
     
     public void setAssetKey(final String assetKey);
 
-    public static ProductSetAssetKeyActionImpl of(){
+    public static ProductSetAssetKeyAction of(){
         return new ProductSetAssetKeyActionImpl();
     }
     
 
-    public static ProductSetAssetKeyActionImpl of(final ProductSetAssetKeyAction template) {
+    public static ProductSetAssetKeyAction of(final ProductSetAssetKeyAction template) {
         ProductSetAssetKeyActionImpl instance = new ProductSetAssetKeyActionImpl();
         instance.setVariantId(template.getVariantId());
         instance.setSku(template.getSku());
@@ -69,6 +69,15 @@ public interface ProductSetAssetKeyAction extends ProductUpdateAction {
         instance.setAssetKey(template.getAssetKey());
         return instance;
     }
+
+    public static ProductSetAssetKeyActionBuilder builder(){
+        return ProductSetAssetKeyActionBuilder.of();
+    }
+    
+    public static ProductSetAssetKeyActionBuilder builder(final ProductSetAssetKeyAction template){
+        return ProductSetAssetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductSetAssetKeyAction(Function<ProductSetAssetKeyAction, T> helper) {
         return helper.apply(this);

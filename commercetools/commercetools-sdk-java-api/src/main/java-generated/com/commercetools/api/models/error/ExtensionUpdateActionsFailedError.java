@@ -44,12 +44,12 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
     
     public void setErrorByExtension(final ErrorByExtension errorByExtension);
 
-    public static ExtensionUpdateActionsFailedErrorImpl of(){
+    public static ExtensionUpdateActionsFailedError of(){
         return new ExtensionUpdateActionsFailedErrorImpl();
     }
     
 
-    public static ExtensionUpdateActionsFailedErrorImpl of(final ExtensionUpdateActionsFailedError template) {
+    public static ExtensionUpdateActionsFailedError of(final ExtensionUpdateActionsFailedError template) {
         ExtensionUpdateActionsFailedErrorImpl instance = new ExtensionUpdateActionsFailedErrorImpl();
         instance.setMessage(template.getMessage());
         instance.setLocalizedMessage(template.getLocalizedMessage());
@@ -57,6 +57,15 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
         instance.setErrorByExtension(template.getErrorByExtension());
         return instance;
     }
+
+    public static ExtensionUpdateActionsFailedErrorBuilder builder(){
+        return ExtensionUpdateActionsFailedErrorBuilder.of();
+    }
+    
+    public static ExtensionUpdateActionsFailedErrorBuilder builder(final ExtensionUpdateActionsFailedError template){
+        return ExtensionUpdateActionsFailedErrorBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionUpdateActionsFailedError(Function<ExtensionUpdateActionsFailedError, T> helper) {
         return helper.apply(this);

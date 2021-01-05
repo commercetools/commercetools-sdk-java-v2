@@ -32,7 +32,7 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrdersEditsByIDDelete, com.commercetools.api.models.order_edit.OrderEdit> {
+public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrdersEditsByIDDelete, com.commercetools.api.models.order_edit.OrderEdit> implements com.commercetools.api.client.VersionedTrait<ByProjectKeyOrdersEditsByIDDelete>, com.commercetools.api.client.ConflictingTrait<ByProjectKeyOrdersEditsByIDDelete>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyOrdersEditsByIDDelete>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyOrdersEditsByIDDelete>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyOrdersEditsByIDDelete> {
 
     
     private String projectKey;

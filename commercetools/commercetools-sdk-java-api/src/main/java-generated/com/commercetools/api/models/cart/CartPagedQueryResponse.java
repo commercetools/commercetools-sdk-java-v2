@@ -55,12 +55,12 @@ public interface CartPagedQueryResponse extends com.commercetools.api.models.Res
     public void setResults(final Cart ...results);
     public void setResults(final List<Cart> results);
 
-    public static CartPagedQueryResponseImpl of(){
+    public static CartPagedQueryResponse of(){
         return new CartPagedQueryResponseImpl();
     }
     
 
-    public static CartPagedQueryResponseImpl of(final CartPagedQueryResponse template) {
+    public static CartPagedQueryResponse of(final CartPagedQueryResponse template) {
         CartPagedQueryResponseImpl instance = new CartPagedQueryResponseImpl();
         instance.setLimit(template.getLimit());
         instance.setCount(template.getCount());
@@ -69,6 +69,15 @@ public interface CartPagedQueryResponse extends com.commercetools.api.models.Res
         instance.setResults(template.getResults());
         return instance;
     }
+
+    public static CartPagedQueryResponseBuilder builder(){
+        return CartPagedQueryResponseBuilder.of();
+    }
+    
+    public static CartPagedQueryResponseBuilder builder(final CartPagedQueryResponse template){
+        return CartPagedQueryResponseBuilder.of(template);
+    }
+    
 
     default <T> T withCartPagedQueryResponse(Function<CartPagedQueryResponse, T> helper) {
         return helper.apply(this);

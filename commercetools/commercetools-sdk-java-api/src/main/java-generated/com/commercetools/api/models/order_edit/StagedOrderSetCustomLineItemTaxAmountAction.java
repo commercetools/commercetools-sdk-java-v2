@@ -35,17 +35,26 @@ public interface StagedOrderSetCustomLineItemTaxAmountAction extends StagedOrder
     
     public void setExternalTaxAmount(final ExternalTaxAmountDraft externalTaxAmount);
 
-    public static StagedOrderSetCustomLineItemTaxAmountActionImpl of(){
+    public static StagedOrderSetCustomLineItemTaxAmountAction of(){
         return new StagedOrderSetCustomLineItemTaxAmountActionImpl();
     }
     
 
-    public static StagedOrderSetCustomLineItemTaxAmountActionImpl of(final StagedOrderSetCustomLineItemTaxAmountAction template) {
+    public static StagedOrderSetCustomLineItemTaxAmountAction of(final StagedOrderSetCustomLineItemTaxAmountAction template) {
         StagedOrderSetCustomLineItemTaxAmountActionImpl instance = new StagedOrderSetCustomLineItemTaxAmountActionImpl();
         instance.setCustomLineItemId(template.getCustomLineItemId());
         instance.setExternalTaxAmount(template.getExternalTaxAmount());
         return instance;
     }
+
+    public static StagedOrderSetCustomLineItemTaxAmountActionBuilder builder(){
+        return StagedOrderSetCustomLineItemTaxAmountActionBuilder.of();
+    }
+    
+    public static StagedOrderSetCustomLineItemTaxAmountActionBuilder builder(final StagedOrderSetCustomLineItemTaxAmountAction template){
+        return StagedOrderSetCustomLineItemTaxAmountActionBuilder.of(template);
+    }
+    
 
     default <T> T withStagedOrderSetCustomLineItemTaxAmountAction(Function<StagedOrderSetCustomLineItemTaxAmountAction, T> helper) {
         return helper.apply(this);

@@ -23,15 +23,24 @@ public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
 
 
 
-    public static CartDiscountShippingCostTargetImpl of(){
+    public static CartDiscountShippingCostTarget of(){
         return new CartDiscountShippingCostTargetImpl();
     }
     
 
-    public static CartDiscountShippingCostTargetImpl of(final CartDiscountShippingCostTarget template) {
+    public static CartDiscountShippingCostTarget of(final CartDiscountShippingCostTarget template) {
         CartDiscountShippingCostTargetImpl instance = new CartDiscountShippingCostTargetImpl();
         return instance;
     }
+
+    public static CartDiscountShippingCostTargetBuilder builder(){
+        return CartDiscountShippingCostTargetBuilder.of();
+    }
+    
+    public static CartDiscountShippingCostTargetBuilder builder(final CartDiscountShippingCostTarget template){
+        return CartDiscountShippingCostTargetBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscountShippingCostTarget(Function<CartDiscountShippingCostTarget, T> helper) {
         return helper.apply(this);

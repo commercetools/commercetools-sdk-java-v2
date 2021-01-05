@@ -38,17 +38,26 @@ public interface ProductTypeChangePlainEnumValueOrderAction extends ProductTypeU
     public void setValues(final AttributePlainEnumValue ...values);
     public void setValues(final List<AttributePlainEnumValue> values);
 
-    public static ProductTypeChangePlainEnumValueOrderActionImpl of(){
+    public static ProductTypeChangePlainEnumValueOrderAction of(){
         return new ProductTypeChangePlainEnumValueOrderActionImpl();
     }
     
 
-    public static ProductTypeChangePlainEnumValueOrderActionImpl of(final ProductTypeChangePlainEnumValueOrderAction template) {
+    public static ProductTypeChangePlainEnumValueOrderAction of(final ProductTypeChangePlainEnumValueOrderAction template) {
         ProductTypeChangePlainEnumValueOrderActionImpl instance = new ProductTypeChangePlainEnumValueOrderActionImpl();
         instance.setAttributeName(template.getAttributeName());
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public static ProductTypeChangePlainEnumValueOrderActionBuilder builder(){
+        return ProductTypeChangePlainEnumValueOrderActionBuilder.of();
+    }
+    
+    public static ProductTypeChangePlainEnumValueOrderActionBuilder builder(final ProductTypeChangePlainEnumValueOrderAction template){
+        return ProductTypeChangePlainEnumValueOrderActionBuilder.of(template);
+    }
+    
 
     default <T> T withProductTypeChangePlainEnumValueOrderAction(Function<ProductTypeChangePlainEnumValueOrderAction, T> helper) {
         return helper.apply(this);

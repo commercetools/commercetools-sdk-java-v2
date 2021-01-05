@@ -30,16 +30,25 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
 
     public void setKey(final String key);
 
-    public static ExtensionSetKeyActionImpl of(){
+    public static ExtensionSetKeyAction of(){
         return new ExtensionSetKeyActionImpl();
     }
     
 
-    public static ExtensionSetKeyActionImpl of(final ExtensionSetKeyAction template) {
+    public static ExtensionSetKeyAction of(final ExtensionSetKeyAction template) {
         ExtensionSetKeyActionImpl instance = new ExtensionSetKeyActionImpl();
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public static ExtensionSetKeyActionBuilder builder(){
+        return ExtensionSetKeyActionBuilder.of();
+    }
+    
+    public static ExtensionSetKeyActionBuilder builder(final ExtensionSetKeyAction template){
+        return ExtensionSetKeyActionBuilder.of(template);
+    }
+    
 
     default <T> T withExtensionSetKeyAction(Function<ExtensionSetKeyAction, T> helper) {
         return helper.apply(this);

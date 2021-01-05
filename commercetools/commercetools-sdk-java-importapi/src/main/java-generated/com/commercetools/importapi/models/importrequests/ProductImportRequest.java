@@ -38,16 +38,25 @@ public interface ProductImportRequest extends ImportRequest {
     public void setResources(final ProductImport ...resources);
     public void setResources(final List<ProductImport> resources);
 
-    public static ProductImportRequestImpl of(){
+    public static ProductImportRequest of(){
         return new ProductImportRequestImpl();
     }
     
 
-    public static ProductImportRequestImpl of(final ProductImportRequest template) {
+    public static ProductImportRequest of(final ProductImportRequest template) {
         ProductImportRequestImpl instance = new ProductImportRequestImpl();
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public static ProductImportRequestBuilder builder(){
+        return ProductImportRequestBuilder.of();
+    }
+    
+    public static ProductImportRequestBuilder builder(final ProductImportRequest template){
+        return ProductImportRequestBuilder.of(template);
+    }
+    
 
     default <T> T withProductImportRequest(Function<ProductImportRequest, T> helper) {
         return helper.apply(this);

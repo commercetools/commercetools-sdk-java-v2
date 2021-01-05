@@ -246,6 +246,7 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
 
 
 
+
     default <T> T withMessage(Function<Message, T> helper) {
         return helper.apply(this);
     }

@@ -41,12 +41,12 @@ public interface ResourceUpdatedDelivery extends SubscriptionDelivery {
     
     public void setModifiedAt(final ZonedDateTime modifiedAt);
 
-    public static ResourceUpdatedDeliveryImpl of(){
+    public static ResourceUpdatedDelivery of(){
         return new ResourceUpdatedDeliveryImpl();
     }
     
 
-    public static ResourceUpdatedDeliveryImpl of(final ResourceUpdatedDelivery template) {
+    public static ResourceUpdatedDelivery of(final ResourceUpdatedDelivery template) {
         ResourceUpdatedDeliveryImpl instance = new ResourceUpdatedDeliveryImpl();
         instance.setProjectKey(template.getProjectKey());
         instance.setResource(template.getResource());
@@ -56,6 +56,15 @@ public interface ResourceUpdatedDelivery extends SubscriptionDelivery {
         instance.setModifiedAt(template.getModifiedAt());
         return instance;
     }
+
+    public static ResourceUpdatedDeliveryBuilder builder(){
+        return ResourceUpdatedDeliveryBuilder.of();
+    }
+    
+    public static ResourceUpdatedDeliveryBuilder builder(final ResourceUpdatedDelivery template){
+        return ResourceUpdatedDeliveryBuilder.of(template);
+    }
+    
 
     default <T> T withResourceUpdatedDelivery(Function<ResourceUpdatedDelivery, T> helper) {
         return helper.apply(this);

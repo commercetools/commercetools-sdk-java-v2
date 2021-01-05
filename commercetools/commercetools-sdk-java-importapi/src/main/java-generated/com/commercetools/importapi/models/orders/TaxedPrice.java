@@ -52,18 +52,27 @@ public interface TaxedPrice  {
     public void setTaxPortions(final TaxPortion ...taxPortions);
     public void setTaxPortions(final List<TaxPortion> taxPortions);
 
-    public static TaxedPriceImpl of(){
+    public static TaxedPrice of(){
         return new TaxedPriceImpl();
     }
     
 
-    public static TaxedPriceImpl of(final TaxedPrice template) {
+    public static TaxedPrice of(final TaxedPrice template) {
         TaxedPriceImpl instance = new TaxedPriceImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
         instance.setTaxPortions(template.getTaxPortions());
         return instance;
     }
+
+    public static TaxedPriceBuilder builder(){
+        return TaxedPriceBuilder.of();
+    }
+    
+    public static TaxedPriceBuilder builder(final TaxedPrice template){
+        return TaxedPriceBuilder.of(template);
+    }
+    
 
     default <T> T withTaxedPrice(Function<TaxedPrice, T> helper) {
         return helper.apply(this);

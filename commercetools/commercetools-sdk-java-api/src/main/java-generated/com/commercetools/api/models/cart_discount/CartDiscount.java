@@ -186,12 +186,12 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
     
     public void setCustom(final CustomFields custom);
 
-    public static CartDiscountImpl of(){
+    public static CartDiscount of(){
         return new CartDiscountImpl();
     }
     
 
-    public static CartDiscountImpl of(final CartDiscount template) {
+    public static CartDiscount of(final CartDiscount template) {
         CartDiscountImpl instance = new CartDiscountImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
@@ -215,6 +215,15 @@ public interface CartDiscount extends BaseResource, com.commercetools.api.models
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public static CartDiscountBuilder builder(){
+        return CartDiscountBuilder.of();
+    }
+    
+    public static CartDiscountBuilder builder(final CartDiscount template){
+        return CartDiscountBuilder.of(template);
+    }
+    
 
     default <T> T withCartDiscount(Function<CartDiscount, T> helper) {
         return helper.apply(this);

@@ -55,12 +55,12 @@ public interface SimilarProductMeta  {
     
     public void setVariantCount(final Long variantCount);
 
-    public static SimilarProductMetaImpl of(){
+    public static SimilarProductMeta of(){
         return new SimilarProductMetaImpl();
     }
     
 
-    public static SimilarProductMetaImpl of(final SimilarProductMeta template) {
+    public static SimilarProductMeta of(final SimilarProductMeta template) {
         SimilarProductMetaImpl instance = new SimilarProductMetaImpl();
         instance.setName(template.getName());
         instance.setDescription(template.getDescription());
@@ -68,6 +68,15 @@ public interface SimilarProductMeta  {
         instance.setVariantCount(template.getVariantCount());
         return instance;
     }
+
+    public static SimilarProductMetaBuilder builder(){
+        return SimilarProductMetaBuilder.of();
+    }
+    
+    public static SimilarProductMetaBuilder builder(final SimilarProductMeta template){
+        return SimilarProductMetaBuilder.of(template);
+    }
+    
 
     default <T> T withSimilarProductMeta(Function<SimilarProductMeta, T> helper) {
         return helper.apply(this);

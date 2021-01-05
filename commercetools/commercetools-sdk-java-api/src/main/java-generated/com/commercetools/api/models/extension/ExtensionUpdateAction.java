@@ -44,6 +44,7 @@ public interface ExtensionUpdateAction extends com.commercetools.api.models.Reso
 
 
 
+
     default <T> T withExtensionUpdateAction(Function<ExtensionUpdateAction, T> helper) {
         return helper.apply(this);
     }

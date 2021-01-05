@@ -37,17 +37,26 @@ public interface MissingPrices  {
     
     public void setVariantId(final Long variantId);
 
-    public static MissingPricesImpl of(){
+    public static MissingPrices of(){
         return new MissingPricesImpl();
     }
     
 
-    public static MissingPricesImpl of(final MissingPrices template) {
+    public static MissingPrices of(final MissingPrices template) {
         MissingPricesImpl instance = new MissingPricesImpl();
         instance.setProduct(template.getProduct());
         instance.setVariantId(template.getVariantId());
         return instance;
     }
+
+    public static MissingPricesBuilder builder(){
+        return MissingPricesBuilder.of();
+    }
+    
+    public static MissingPricesBuilder builder(final MissingPrices template){
+        return MissingPricesBuilder.of(template);
+    }
+    
 
     default <T> T withMissingPrices(Function<MissingPrices, T> helper) {
         return helper.apply(this);

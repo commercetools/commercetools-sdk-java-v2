@@ -23,16 +23,25 @@ public interface InsufficientScopeError extends ErrorObject {
 
 
 
-    public static InsufficientScopeErrorImpl of(){
+    public static InsufficientScopeError of(){
         return new InsufficientScopeErrorImpl();
     }
     
 
-    public static InsufficientScopeErrorImpl of(final InsufficientScopeError template) {
+    public static InsufficientScopeError of(final InsufficientScopeError template) {
         InsufficientScopeErrorImpl instance = new InsufficientScopeErrorImpl();
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public static InsufficientScopeErrorBuilder builder(){
+        return InsufficientScopeErrorBuilder.of();
+    }
+    
+    public static InsufficientScopeErrorBuilder builder(final InsufficientScopeError template){
+        return InsufficientScopeErrorBuilder.of(template);
+    }
+    
 
     default <T> T withInsufficientScopeError(Function<InsufficientScopeError, T> helper) {
         return helper.apply(this);

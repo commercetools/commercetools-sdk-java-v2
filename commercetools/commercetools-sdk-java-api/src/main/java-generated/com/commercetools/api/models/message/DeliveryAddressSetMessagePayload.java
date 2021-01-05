@@ -41,18 +41,27 @@ public interface DeliveryAddressSetMessagePayload extends MessagePayload {
     
     public void setOldAddress(final Address oldAddress);
 
-    public static DeliveryAddressSetMessagePayloadImpl of(){
+    public static DeliveryAddressSetMessagePayload of(){
         return new DeliveryAddressSetMessagePayloadImpl();
     }
     
 
-    public static DeliveryAddressSetMessagePayloadImpl of(final DeliveryAddressSetMessagePayload template) {
+    public static DeliveryAddressSetMessagePayload of(final DeliveryAddressSetMessagePayload template) {
         DeliveryAddressSetMessagePayloadImpl instance = new DeliveryAddressSetMessagePayloadImpl();
         instance.setDeliveryId(template.getDeliveryId());
         instance.setAddress(template.getAddress());
         instance.setOldAddress(template.getOldAddress());
         return instance;
     }
+
+    public static DeliveryAddressSetMessagePayloadBuilder builder(){
+        return DeliveryAddressSetMessagePayloadBuilder.of();
+    }
+    
+    public static DeliveryAddressSetMessagePayloadBuilder builder(final DeliveryAddressSetMessagePayload template){
+        return DeliveryAddressSetMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withDeliveryAddressSetMessagePayload(Function<DeliveryAddressSetMessagePayload, T> helper) {
         return helper.apply(this);

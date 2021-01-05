@@ -30,16 +30,25 @@ public interface CustomerAddressRemovedMessagePayload extends MessagePayload {
 
     public void setAddress(final Address address);
 
-    public static CustomerAddressRemovedMessagePayloadImpl of(){
+    public static CustomerAddressRemovedMessagePayload of(){
         return new CustomerAddressRemovedMessagePayloadImpl();
     }
     
 
-    public static CustomerAddressRemovedMessagePayloadImpl of(final CustomerAddressRemovedMessagePayload template) {
+    public static CustomerAddressRemovedMessagePayload of(final CustomerAddressRemovedMessagePayload template) {
         CustomerAddressRemovedMessagePayloadImpl instance = new CustomerAddressRemovedMessagePayloadImpl();
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public static CustomerAddressRemovedMessagePayloadBuilder builder(){
+        return CustomerAddressRemovedMessagePayloadBuilder.of();
+    }
+    
+    public static CustomerAddressRemovedMessagePayloadBuilder builder(final CustomerAddressRemovedMessagePayload template){
+        return CustomerAddressRemovedMessagePayloadBuilder.of(template);
+    }
+    
 
     default <T> T withCustomerAddressRemovedMessagePayload(Function<CustomerAddressRemovedMessagePayload, T> helper) {
         return helper.apply(this);

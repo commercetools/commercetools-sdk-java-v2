@@ -39,11 +39,6 @@ See the [test code](../commercetools/commercetools-sdk-java-api/src/test/java/co
 For projects in the USA you should specify in addition to the previous parameters the auth and api urls:
 
 ```java
-import com.commercetools.importapi.defaultconfig.ImportApiFactory;
-import com.commercetools.importapi.client.ApiRoot;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import com.commercetools.importapi.defaultconfig.ServiceRegion;
-
 class Main {
     public void main() {
         // ApiRoot config for United States projects

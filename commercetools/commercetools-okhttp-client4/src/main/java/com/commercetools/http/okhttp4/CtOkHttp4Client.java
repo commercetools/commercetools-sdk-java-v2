@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 
 public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
+    public static final int MAX_REQUESTS = 64;
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
             .connectTimeout(120,TimeUnit.SECONDS)
             .writeTimeout(120, TimeUnit.SECONDS)
@@ -27,33 +28,44 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
     private final OkHttpClient okHttpClient;
 
-    public CtOkHttp4Client() {
-        okHttpClient = clientBuilder.get().build();
-    }
-
-    public CtOkHttp4Client(BuilderOptions options) {
-        okHttpClient = options.plus(clientBuilder.get()).build();
-    }
-
-    public CtOkHttp4Client(Supplier<OkHttpClient.Builder> builderSupplier) {
-        okHttpClient = builderSupplier.get().build();
-    }
-
-    public CtOkHttp4Client(int maxRequests, int maxRequestsPerHost) {
-        Dispatcher dispatcher = new Dispatcher();
+    private Dispatcher createDispatcher(final int maxRequests, final int maxRequestsPerHost) {
+        final Dispatcher dispatcher = new Dispatcher();
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
+        return  dispatcher;
+    }
+
+    private Dispatcher createDispatcher(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
+        final Dispatcher dispatcher = new Dispatcher(executor);
+        dispatcher.setMaxRequests(maxRequests);
+        dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
+        return  dispatcher;
+    }
+
+    public CtOkHttp4Client() {
         okHttpClient = clientBuilder.get()
-                .dispatcher(dispatcher)
+                .dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS))
                 .build();
     }
 
-    public CtOkHttp4Client(ExecutorService executor, int maxRequests, int maxRequestsPerHost) {
-        Dispatcher dispatcher = new Dispatcher(executor);
-        dispatcher.setMaxRequests(maxRequests);
-        dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
+    public CtOkHttp4Client(final BuilderOptions options) {
+        okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)))
+                .build();
+    }
+
+    public CtOkHttp4Client(final Supplier<OkHttpClient.Builder> builderSupplier) {
+        okHttpClient = builderSupplier.get().build();
+    }
+
+    public CtOkHttp4Client(final int maxRequests, final int maxRequestsPerHost) {
         okHttpClient = clientBuilder.get()
-                .dispatcher(dispatcher)
+                .dispatcher(createDispatcher(maxRequests, maxRequestsPerHost))
+                .build();
+    }
+
+    public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
+        okHttpClient = clientBuilder.get()
+                .dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost))
                 .build();
     }
 
@@ -62,21 +74,21 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
     private static final byte[] emptyBody = new byte[0];
 
     @Override
-    public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
+    public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {
         return makeRequest(okHttpClient, toRequest(request))
                 .thenApply(CtOkHttp4Client::toResponse);
 
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final Response response) {
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
                 response.headers().toMultimap().entrySet().stream()
                         .flatMap(e -> e.getValue().stream()
                                 .map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value))
                         ).collect(Collectors.toList())
         );
 
-        ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(
+        final ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(
                 response.code(),
                 apiHttpHeaders,
                 Optional.ofNullable(response.body()).map(Utils.wrapToCompletionException(ResponseBody::bytes)).orElse(null),
@@ -113,9 +125,9 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
         return httpRequestBuilder.build();
     }
 
-    private CompletableFuture<Response> makeRequest(OkHttpClient client, Request request) {
-        Call call = client.newCall(request);
-        OkHttpResponseFuture result = new OkHttpResponseFuture();
+    private CompletableFuture<Response> makeRequest(final OkHttpClient client, final Request request) {
+        final Call call = client.newCall(request);
+        final OkHttpResponseFuture result = new OkHttpResponseFuture();
         call.enqueue(result);
         return result.future;
     }
@@ -127,12 +139,12 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
         }
 
         @Override
-        public void onFailure(Call call, IOException e) {
+        public void onFailure(final Call call, final IOException e) {
             future.completeExceptionally(e);
         }
 
         @Override
-        public void onResponse(Call call, Response response) throws IOException {
+        public void onResponse(final Call call, final Response response) throws IOException {
             future.complete(response);
         }
     }

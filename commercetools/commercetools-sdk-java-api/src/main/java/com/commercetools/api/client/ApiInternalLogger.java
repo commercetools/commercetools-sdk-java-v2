@@ -13,20 +13,10 @@ public class ApiInternalLogger extends InternalLogger {
     }
 
     public static InternalLogger getLogger(final ApiHttpRequest httpRequest) {
-        return getLogger(ClientFactory.COMMERCETOOLS + "." + getPathElement(httpRequest) + ".requests." + requestOrCommandScopeSegment(httpRequest));
+        return getLogger(httpRequest, InternalLogger.TOPIC_REQUEST);
     }
 
-    private static String getPathElement(final ApiHttpRequest httpRequest) {
-        final String path = httpRequest.getUri().getPath();
-        final String[] pathElements = path.split("[\\/\\?]");
-        return pathElements.length >= 3 ? pathElements[2] : "project";
-    }
-
-    private static String requestOrCommandScopeSegment(final ApiHttpRequest httpRequest) {
-        return (httpRequest.getMethod() == ApiHttpMethod.GET || isPostSearch(httpRequest)) ? "queries" : "commands";
-    }
-
-    private static boolean isPostSearch(final ApiHttpRequest httpRequest) {
-        return httpRequest.getMethod() == ApiHttpMethod.POST && httpRequest.getUrl().getPath().contains("/product-projections/search");
+    public static InternalLogger getLogger(final ApiHttpRequest httpRequest, final String topic) {
+        return ApiInternalLoggerFactory.get(httpRequest, topic);
     }
 }

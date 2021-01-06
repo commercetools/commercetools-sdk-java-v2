@@ -143,7 +143,10 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
 
     public abstract CompletableFuture<ApiHttpResponse<TResult>> execute();
 
-    public abstract ApiHttpResponse<TResult> executeBlocking();
+    public ApiHttpResponse<TResult> executeBlocking()
+    {
+        return executeBlocking(Duration.ofSeconds(120));
+    };
 
     public abstract ApiHttpResponse<TResult> executeBlocking(Duration timeout);
 }

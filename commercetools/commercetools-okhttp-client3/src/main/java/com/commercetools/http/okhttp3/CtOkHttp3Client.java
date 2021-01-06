@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 
 public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
 
+    public static final int MAX_REQUESTS = 64;
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
             .connectTimeout(120,TimeUnit.SECONDS)
             .writeTimeout(120, TimeUnit.SECONDS)
@@ -28,11 +29,13 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
     private final OkHttpClient okHttpClient;
 
     public CtOkHttp3Client() {
-        okHttpClient = clientBuilder.get().build();
+        okHttpClient = clientBuilder.get()
+                .dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS))
+                .build();
     }
 
     public CtOkHttp3Client(BuilderOptions options) {
-        okHttpClient = options.plus(clientBuilder.get()).build();
+        okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS))).build();
     }
 
     public CtOkHttp3Client(Supplier<OkHttpClient.Builder> builderSupplier) {
@@ -40,21 +43,31 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
     }
 
     public CtOkHttp3Client(int maxRequests, int maxRequestsPerHost) {
-        Dispatcher dispatcher = new Dispatcher();
-        dispatcher.setMaxRequests(maxRequests);
-        dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
+        Dispatcher dispatcher = createDispatcher(maxRequests, maxRequestsPerHost);
         okHttpClient = clientBuilder.get()
                 .dispatcher(dispatcher)
                 .build();
     }
 
+
     public CtOkHttp3Client(ExecutorService executor, int maxRequests, int maxRequestsPerHost) {
-        Dispatcher dispatcher = new Dispatcher(executor);
+        okHttpClient = clientBuilder.get()
+                .dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost))
+                .build();
+    }
+
+    private Dispatcher createDispatcher(final int maxRequests, final int maxRequestsPerHost) {
+        final Dispatcher dispatcher = new Dispatcher();
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
-        okHttpClient = clientBuilder.get()
-                .dispatcher(dispatcher)
-                .build();
+        return dispatcher;
+    }
+
+    private Dispatcher createDispatcher(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
+        final Dispatcher dispatcher = new Dispatcher(executor);
+        dispatcher.setMaxRequests(maxRequests);
+        dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
+        return dispatcher;
     }
 
     private static final String CONTENT_TYPE =  "Content-Type";
@@ -62,21 +75,21 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
     private static final byte[] emptyBody = new byte[0];
 
     @Override
-    public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
+    public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {
         return makeRequest(okHttpClient, toRequest(request))
                 .thenApply(CtOkHttp3Client::toResponse);
 
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final Response response) {
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
                 response.headers().toMultimap().entrySet().stream()
                         .flatMap(e -> e.getValue().stream()
                                 .map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value))
                         ).collect(Collectors.toList())
         );
 
-        ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(
+        final ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(
                 response.code(),
                 apiHttpHeaders,
                 Optional.ofNullable(response.body()).map(Utils.wrapToCompletionException(ResponseBody::bytes)).orElse(null),
@@ -98,13 +111,13 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
             httpRequestBuilder = httpRequestBuilder.header(entry.getKey(), entry.getValue());
         }
 
-        if(apiHttpRequest.getMethod() == null) {
+        if (apiHttpRequest.getMethod() == null) {
             throw new IllegalStateException("apiHttpRequest method should be non null");
         }
 
         //default media type is JSON, if other media type is set as a header, use it
         MediaType mediaType = JSON;
-        if(apiHttpRequest.getHeaders().getHeaders().stream().anyMatch(s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))){
+        if (apiHttpRequest.getHeaders().getHeaders().stream().anyMatch(s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))){
             mediaType = MediaType.parse(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
         }
 
@@ -113,9 +126,9 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
         return httpRequestBuilder.build();
     }
 
-    private CompletableFuture<Response> makeRequest(OkHttpClient client, Request request) {
-        Call call = client.newCall(request);
-        OkHttpResponseFuture result = new OkHttpResponseFuture();
+    private CompletableFuture<Response> makeRequest(final OkHttpClient client, final Request request) {
+        final Call call = client.newCall(request);
+        final OkHttpResponseFuture result = new OkHttpResponseFuture();
         call.enqueue(result);
         return result.future;
     }
@@ -127,12 +140,12 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
         }
 
         @Override
-        public void onFailure(Call call, IOException e) {
+        public void onFailure(final Call call, final IOException e) {
             future.completeExceptionally(e);
         }
 
         @Override
-        public void onResponse(Call call, Response response) throws IOException {
+        public void onResponse(final Call call, final Response response) throws IOException {
             future.complete(response);
         }
     }

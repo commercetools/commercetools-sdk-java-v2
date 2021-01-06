@@ -34,9 +34,9 @@ import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 )
 public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProductDiscountsGet, com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse> implements com.commercetools.api.models.PagedQueryResourceRequest<ByProjectKeyProductDiscountsGet, com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductDiscountsGet>, com.commercetools.api.client.SortableTrait<ByProjectKeyProductDiscountsGet>, com.commercetools.api.client.PagingTrait<ByProjectKeyProductDiscountsGet>, com.commercetools.api.client.QueryTrait<ByProjectKeyProductDiscountsGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductDiscountsGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductDiscountsGet> {
 
-    
+
     private String projectKey;
-    
+
 
     public ByProjectKeyProductDiscountsGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
@@ -55,7 +55,7 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-        
+
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
@@ -63,7 +63,7 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse> executeBlocking(){
         return executeBlocking(Duration.ofSeconds(60));
     }
-    
+
     @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
@@ -79,23 +79,23 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
-    
+
     public List<String> getSort() {
         return this.getQueryParam("sort");
     }
-    
+
     public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
-    
+
     public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
-    
+
     public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
     }
-    
+
     public List<String> getWhere() {
         return this.getQueryParam("where");
     }
@@ -105,27 +105,27 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
     public ByProjectKeyProductDiscountsGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
-    
+
     public ByProjectKeyProductDiscountsGet withSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
-    
+
     public ByProjectKeyProductDiscountsGet withLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
-    
+
     public ByProjectKeyProductDiscountsGet withOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
-    
+
     public ByProjectKeyProductDiscountsGet withWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
-    
+
     public ByProjectKeyProductDiscountsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
-    
+
     @Override
     protected ByProjectKeyProductDiscountsGet copy()
     {

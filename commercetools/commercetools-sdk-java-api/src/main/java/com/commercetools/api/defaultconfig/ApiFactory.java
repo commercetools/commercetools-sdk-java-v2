@@ -1,8 +1,6 @@
 package com.commercetools.api.defaultconfig;
 
-import com.commercetools.api.client.ApiCorrelationIdProvider;
-import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import com.commercetools.api.client.*;
 import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.http.CorrelationIdProvider;
 import io.vrap.rmf.base.client.ApiHttpClient;
@@ -244,6 +242,7 @@ public class ApiFactory {
                         tokenEndpoint,
                         httpClientSupplier.get()
                 ),
+                ApiInternalLoggerFactory::get,
                 middlewares,
                 correlationIdProvider
         );
@@ -268,6 +267,7 @@ public class ApiFactory {
                         tokenEndpoint,
                         httpClientSupplier.get()
                 ),
+                ApiInternalLoggerFactory::get,
                 userAgentSupplier,
                 middlewares,
                 correlationIdProvider

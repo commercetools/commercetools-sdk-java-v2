@@ -19,7 +19,7 @@ public class ClientFactory {
             final VrapHttpClient httpClient,
             final TokenSupplier tokenSupplier
     ) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), new ArrayList<>(), null);
+        return create(apiBaseUrl, httpClient, tokenSupplier, (request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic), new ArrayList<>(), null);
     }
 
     public static ApiHttpClient create(
@@ -28,7 +28,7 @@ public class ClientFactory {
             final TokenSupplier tokenSupplier,
             final Supplier<String> userAgentSupplier
     ) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), userAgentSupplier, new ArrayList<>(), null);
+        return create(apiBaseUrl, httpClient, tokenSupplier, (request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic), userAgentSupplier, new ArrayList<>(), null);
     }
 
     public static ApiHttpClient create(
@@ -37,7 +37,7 @@ public class ClientFactory {
             final TokenSupplier tokenSupplier,
             final List<Middleware> middlewares
     ) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), middlewares, null);
+        return create(apiBaseUrl, httpClient, tokenSupplier, (request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic), middlewares, null);
     }
 
     public static ApiHttpClient create(
@@ -47,7 +47,7 @@ public class ClientFactory {
             final Supplier<String> userAgentSupplier,
             final List<Middleware> middlewares
     ) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), userAgentSupplier, middlewares, null);
+        return create(apiBaseUrl, httpClient, tokenSupplier, (request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic), userAgentSupplier, middlewares, null);
     }
 
     public static ApiHttpClient create(
@@ -57,7 +57,7 @@ public class ClientFactory {
             final List<Middleware> middlewares,
             final CorrelationIdProvider correlationIdProvider
     ) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), middlewares, correlationIdProvider);
+        return create(apiBaseUrl, httpClient, tokenSupplier, (request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic), middlewares, correlationIdProvider);
     }
 
     public static ApiHttpClient create(
@@ -68,7 +68,7 @@ public class ClientFactory {
             final List<Middleware> middlewares,
             final CorrelationIdProvider correlationIdProvider
     ) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, request -> InternalLogger.getLogger(COMMERCETOOLS), userAgentSupplier, middlewares, correlationIdProvider);
+        return create(apiBaseUrl, httpClient, tokenSupplier, (request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic), userAgentSupplier, middlewares, correlationIdProvider);
     }
 
     public static ApiHttpClient create(

@@ -8,6 +8,9 @@ import java.util.function.Supplier;
 public class InternalLogger {
     private final Logger underlyingLogger;
 
+    public static final String TOPIC_REQUEST = "request";
+    public static final String TOPIC_RESPONSE = "response";
+
     protected InternalLogger(final Logger underlyingLogger) {
         this.underlyingLogger = underlyingLogger;
     }

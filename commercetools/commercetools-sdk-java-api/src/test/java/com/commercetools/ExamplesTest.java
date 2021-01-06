@@ -6,15 +6,17 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
+import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
+import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 public class ExamplesTest {
 
-    public void createClient()
-    {
+    public ApiRoot createClient() {
         ApiRoot apiRoot = ApiFactory.create(
                 ClientCredentials.of().withClientId("your-client-id")
                         .withClientSecret("your-client-secret")
@@ -22,6 +24,19 @@ public class ExamplesTest {
                         .build(),
                 ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
                 ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+
+        return apiRoot;
+    }
+
+    public void performRequest() {
+        ApiRoot apiRoot = createClient();
+        final CompletableFuture<ApiHttpResponse<TaxCategoryPagedQueryResponse>> future = apiRoot
+                .withProjectKey("my-project")
+                .taxCategories()
+                .get()
+                .withWhere("name = :name")
+                .withQueryParam("name", "de19")
+                .execute();
     }
 
     public void usage() {

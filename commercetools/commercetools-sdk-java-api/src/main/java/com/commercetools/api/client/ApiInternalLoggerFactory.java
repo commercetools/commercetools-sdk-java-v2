@@ -7,8 +7,8 @@ import io.vrap.rmf.base.client.http.InternalLogger;
 
 public class ApiInternalLoggerFactory {
 
-    public static InternalLogger get(final ApiHttpRequest httpRequest) {
-        return InternalLogger.getLogger(ClientFactory.COMMERCETOOLS + "." + getPathElement(httpRequest) + ".requests." + requestOrCommandScopeSegment(httpRequest));
+    public static InternalLogger get(final ApiHttpRequest httpRequest, final String topic) {
+        return InternalLogger.getLogger(ClientFactory.COMMERCETOOLS + "." + getPathElement(httpRequest) + "." + topic + (topic.equals("request") ? "." + requestOrCommandScopeSegment(httpRequest) : ""));
     }
 
     private static String getPathElement(final ApiHttpRequest httpRequest) {

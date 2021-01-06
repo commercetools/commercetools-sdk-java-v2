@@ -1,9 +1,6 @@
 package io.vrap.rmf.base.client.http;
 
-import io.vrap.rmf.base.client.ApiHttpException;
-import io.vrap.rmf.base.client.ApiHttpHeaders;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 import io.vrap.rmf.base.client.utils.json.JsonException;
 import org.slf4j.Logger;
@@ -23,7 +20,7 @@ public class InternalLoggerMiddleware implements Middleware {
 
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request, Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
-        InternalLogger logger = factory.createFor(request);
+        InternalLogger logger = factory.createFor(request, InternalLogger.TOPIC_REQUEST);
         logger.debug(() -> request);
         logger.trace(() -> {
             final String output;
@@ -51,19 +48,20 @@ public class InternalLoggerMiddleware implements Middleware {
         });
         return next.apply(request).whenComplete(
             (response, throwable) -> {
+                InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
                 if (throwable != null) {
                     if (throwable.getCause() instanceof ApiHttpException) {
                         final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException)throwable.getCause()).getResponse();
-                        logger.error(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(), errorResponse.getStatusCode()));
-                        logger.debug(() -> errorResponse, throwable);
-                        logger.trace(() -> errorResponse.getStatusCode() + "\n" + Optional.ofNullable(errorResponse.getBody()).map(body -> VrapJsonUtils.prettyPrint(errorResponse.getBodyAsString().orElse(""))).orElse("<no body>"));
+                        responseLogger.error(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(), errorResponse.getStatusCode()));
+                        responseLogger.debug(() -> errorResponse, throwable);
+                        responseLogger.trace(() -> errorResponse.getStatusCode() + "\n" + Optional.ofNullable(errorResponse.getBody()).map(body -> VrapJsonUtils.prettyPrint(errorResponse.getBodyAsString().orElse(""))).orElse("<no body>"));
                     } else {
-                        logger.error(throwable::getCause, throwable);
+                        responseLogger.error(throwable::getCause, throwable);
                     }
                 } else {
-                    logger.info(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(), response.getStatusCode()));
-                    logger.debug(() -> response);
-                    logger.trace(() -> response.getStatusCode() + "\n" + Optional.ofNullable(response.getBody()).map(body -> VrapJsonUtils.prettyPrint(response.getBodyAsString().orElse(""))).orElse("<no body>"));
+                    responseLogger.info(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(), response.getStatusCode()));
+                    responseLogger.debug(() -> response);
+                    responseLogger.trace(() -> response.getStatusCode() + "\n" + Optional.ofNullable(response.getBody()).map(body -> VrapJsonUtils.prettyPrint(response.getBodyAsString().orElse(""))).orElse("<no body>"));
                 }
             }
         );

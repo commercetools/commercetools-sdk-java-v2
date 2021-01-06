@@ -63,11 +63,6 @@ public class ByProjectKeyTypesByIDGet extends ApiMethod<ByProjectKeyTypesByIDGet
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.type.Type> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.type.Type> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

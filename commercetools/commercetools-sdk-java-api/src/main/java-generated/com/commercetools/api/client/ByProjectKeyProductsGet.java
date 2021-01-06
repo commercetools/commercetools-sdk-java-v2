@@ -62,11 +62,6 @@ public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet, 
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product.ProductPagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.ProductPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -69,11 +69,6 @@ public class ByProjectKeyMeOrdersPost extends ApiMethod<ByProjectKeyMeOrdersPost
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyOrder> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyOrder> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

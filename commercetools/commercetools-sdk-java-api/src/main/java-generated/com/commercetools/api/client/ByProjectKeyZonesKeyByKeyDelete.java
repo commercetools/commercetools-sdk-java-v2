@@ -63,11 +63,6 @@ public class ByProjectKeyZonesKeyByKeyDelete extends ApiMethod<ByProjectKeyZones
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

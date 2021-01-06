@@ -73,11 +73,6 @@ public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscri
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.Subscription> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

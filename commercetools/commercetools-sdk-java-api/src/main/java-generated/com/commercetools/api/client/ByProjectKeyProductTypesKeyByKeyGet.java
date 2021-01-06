@@ -63,11 +63,6 @@ public class ByProjectKeyProductTypesKeyByKeyGet extends ApiMethod<ByProjectKeyP
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product_type.ProductType> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_type.ProductType> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

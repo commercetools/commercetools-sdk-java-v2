@@ -63,11 +63,6 @@ public class ByProjectKeyReviewsByIDDelete extends ApiMethod<ByProjectKeyReviews
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.review.Review> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -60,11 +60,6 @@ public class ByProjectKeyZonesGet extends ApiMethod<ByProjectKeyZonesGet, com.co
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.zone.ZonePagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.zone.ZonePagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

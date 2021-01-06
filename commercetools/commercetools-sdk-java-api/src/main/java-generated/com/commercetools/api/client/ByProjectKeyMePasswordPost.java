@@ -66,11 +66,6 @@ public class ByProjectKeyMePasswordPost extends ApiMethod<ByProjectKeyMePassword
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

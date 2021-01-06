@@ -60,11 +60,6 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet, 
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.message.MessagePagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.message.MessagePagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -60,11 +60,6 @@ public class ByProjectKeyCategoriesGet extends ApiMethod<ByProjectKeyCategoriesG
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.category.CategoryPagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.category.CategoryPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

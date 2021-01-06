@@ -66,11 +66,6 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends ApiMethod<B
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.custom_object.CustomObject> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

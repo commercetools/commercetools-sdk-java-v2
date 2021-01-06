@@ -63,11 +63,6 @@ public class ByProjectKeyMessagesByIDGet extends ApiMethod<ByProjectKeyMessagesB
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.message.Message> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.message.Message> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -60,11 +60,6 @@ public class ByProjectKeyTaxCategoriesGet extends ApiMethod<ByProjectKeyTaxCateg
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

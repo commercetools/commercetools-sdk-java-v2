@@ -60,11 +60,6 @@ public class ByProjectKeyMissingDataAttributesStatusByTaskIdGet extends ApiMetho
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingDataTaskStatus> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingDataTaskStatus> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

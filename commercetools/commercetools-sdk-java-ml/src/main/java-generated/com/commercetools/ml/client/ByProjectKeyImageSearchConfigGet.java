@@ -60,11 +60,6 @@ public class ByProjectKeyImageSearchConfigGet extends ApiMethod<ByProjectKeyImag
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.ml.models.image_search_config.ImageSearchConfigResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -63,11 +63,6 @@ public class ByProjectKeyCustomerGroupsKeyByKeyDelete extends ApiMethod<ByProjec
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer_group.CustomerGroup> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -64,11 +64,6 @@ public class ByProjectKeyImportSummariesImportSinkKeyByImportSinkKeyGet extends 
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsummaries.ImportSummary> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

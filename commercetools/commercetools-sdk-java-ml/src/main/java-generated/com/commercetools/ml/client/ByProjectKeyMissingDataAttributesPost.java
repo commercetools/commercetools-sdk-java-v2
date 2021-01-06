@@ -66,11 +66,6 @@ public class ByProjectKeyMissingDataAttributesPost extends ApiMethod<ByProjectKe
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.ml.models.common.TaskToken> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.ml.models.common.TaskToken> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -72,11 +72,6 @@ public class ByProjectKeyInventoryByIDPost extends ApiMethod<ByProjectKeyInvento
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.inventory.InventoryEntry> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -63,11 +63,6 @@ public class ByProjectKeyCartDiscountsByIDDelete extends ApiMethod<ByProjectKeyC
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

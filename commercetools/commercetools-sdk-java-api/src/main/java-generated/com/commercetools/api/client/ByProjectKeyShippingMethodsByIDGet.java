@@ -63,11 +63,6 @@ public class ByProjectKeyShippingMethodsByIDGet extends ApiMethod<ByProjectKeySh
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

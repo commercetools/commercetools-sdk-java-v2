@@ -63,11 +63,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsGet extends ApiMethod<ByProj
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.cart.CartPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

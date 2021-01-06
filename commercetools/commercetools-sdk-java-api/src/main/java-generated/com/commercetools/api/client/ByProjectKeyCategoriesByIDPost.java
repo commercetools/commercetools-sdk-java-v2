@@ -72,11 +72,6 @@ public class ByProjectKeyCategoriesByIDPost extends ApiMethod<ByProjectKeyCatego
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

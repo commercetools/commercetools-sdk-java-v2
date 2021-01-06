@@ -79,11 +79,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPost extends ApiMethod<ByP
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerSignInResult> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

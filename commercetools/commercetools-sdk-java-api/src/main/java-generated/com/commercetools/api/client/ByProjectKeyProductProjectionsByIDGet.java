@@ -65,11 +65,6 @@ public class ByProjectKeyProductProjectionsByIDGet extends ApiMethod<ByProjectKe
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product.ProductProjection> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.product.ProductProjection> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

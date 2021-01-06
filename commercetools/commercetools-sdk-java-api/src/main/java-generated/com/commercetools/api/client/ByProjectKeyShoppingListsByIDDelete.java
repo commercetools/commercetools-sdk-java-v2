@@ -63,11 +63,6 @@ public class ByProjectKeyShoppingListsByIDDelete extends ApiMethod<ByProjectKeyS
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.ShoppingList> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

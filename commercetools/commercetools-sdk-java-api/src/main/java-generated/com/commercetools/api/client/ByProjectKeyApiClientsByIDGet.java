@@ -63,11 +63,6 @@ public class ByProjectKeyApiClientsByIDGet extends ApiMethod<ByProjectKeyApiClie
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.api_client.ApiClient> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.api_client.ApiClient> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

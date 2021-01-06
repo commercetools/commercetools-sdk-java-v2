@@ -72,11 +72,6 @@ public class ByProjectKeyPaymentsKeyByKeyPost extends ApiMethod<ByProjectKeyPaym
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.payment.Payment> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

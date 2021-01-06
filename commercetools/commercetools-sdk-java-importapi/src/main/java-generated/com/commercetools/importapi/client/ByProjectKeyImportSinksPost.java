@@ -69,11 +69,6 @@ public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSin
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSink> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

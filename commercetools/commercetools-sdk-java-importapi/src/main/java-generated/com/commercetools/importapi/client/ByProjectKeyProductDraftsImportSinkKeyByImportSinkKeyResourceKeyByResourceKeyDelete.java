@@ -66,11 +66,6 @@ public class ByProjectKeyProductDraftsImportSinkKeyByImportSinkKeyResourceKeyByR
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationStatus> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperationStatus> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

@@ -72,11 +72,6 @@ public class ByProjectKeyChannelsByIDPost extends ApiMethod<ByProjectKeyChannels
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.channel.Channel> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.channel.Channel> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

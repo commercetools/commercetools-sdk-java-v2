@@ -68,11 +68,6 @@ public class ByProjectKeyImageSearchPost extends ApiMethod<ByProjectKeyImageSear
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.ml.models.image_search.ImageSearchResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

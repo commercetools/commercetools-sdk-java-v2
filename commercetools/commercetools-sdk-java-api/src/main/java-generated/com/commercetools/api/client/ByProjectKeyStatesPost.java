@@ -69,11 +69,6 @@ public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost, co
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

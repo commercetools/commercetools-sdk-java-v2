@@ -60,11 +60,6 @@ public class ByProjectKeyStoresGet extends ApiMethod<ByProjectKeyStoresGet, com.
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.store.StorePagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.store.StorePagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

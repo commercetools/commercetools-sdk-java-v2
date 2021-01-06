@@ -69,11 +69,6 @@ public class ByProjectKeyGraphqlPost extends ApiMethod<ByProjectKeyGraphqlPost, 
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.graph_ql.GraphQLResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.graph_ql.GraphQLResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

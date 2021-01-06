@@ -60,11 +60,6 @@ public class ByProjectKeyTypesGet extends ApiMethod<ByProjectKeyTypesGet, com.co
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.type.TypePagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.type.TypePagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

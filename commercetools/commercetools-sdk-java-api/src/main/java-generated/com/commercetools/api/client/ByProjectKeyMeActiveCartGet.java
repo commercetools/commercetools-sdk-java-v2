@@ -57,11 +57,6 @@ public class ByProjectKeyMeActiveCartGet extends ApiMethod<ByProjectKeyMeActiveC
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyCart> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

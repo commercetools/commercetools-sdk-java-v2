@@ -60,11 +60,6 @@ public class ByProjectKeySimilaritiesProductsStatusByTaskIdGet extends ApiMethod
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.ml.models.similar_products.SimilarProductsTaskStatus> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

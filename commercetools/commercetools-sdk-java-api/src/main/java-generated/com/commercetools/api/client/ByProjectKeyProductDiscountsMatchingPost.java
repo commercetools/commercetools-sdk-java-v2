@@ -66,11 +66,6 @@ public class ByProjectKeyProductDiscountsMatchingPost extends ApiMethod<ByProjec
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscount> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

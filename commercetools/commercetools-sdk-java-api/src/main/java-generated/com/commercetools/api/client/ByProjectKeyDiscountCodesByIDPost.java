@@ -72,11 +72,6 @@ public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDis
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.discount_code.DiscountCode> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

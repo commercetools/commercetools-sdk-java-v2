@@ -63,11 +63,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersGet extends ApiMethod<ByPr
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer.CustomerPagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.customer.CustomerPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

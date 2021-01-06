@@ -60,11 +60,6 @@ public class ByProjectKeyMePaymentsGet extends ApiMethod<ByProjectKeyMePaymentsG
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyPaymentPagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyPaymentPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

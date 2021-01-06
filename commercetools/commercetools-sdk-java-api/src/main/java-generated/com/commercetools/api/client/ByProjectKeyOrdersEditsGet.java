@@ -60,11 +60,6 @@ public class ByProjectKeyOrdersEditsGet extends ApiMethod<ByProjectKeyOrdersEdit
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.order_edit.OrderEditPagedQueryResponse> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

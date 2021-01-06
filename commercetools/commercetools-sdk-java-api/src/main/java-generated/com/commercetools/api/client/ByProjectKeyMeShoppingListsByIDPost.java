@@ -72,11 +72,6 @@ public class ByProjectKeyMeShoppingListsByIDPost extends ApiMethod<ByProjectKeyM
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(){
-        return executeBlocking(Duration.ofSeconds(60));
-    }
-    
-    @Override
     public ApiHttpResponse<com.commercetools.api.models.shopping_list.MyShoppingList> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }

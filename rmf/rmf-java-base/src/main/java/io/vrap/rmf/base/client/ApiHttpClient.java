@@ -5,43 +5,22 @@ import io.vrap.rmf.base.client.http.HandlerStack;
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
 
-public class ApiHttpClient extends AutoCloseableService implements VrapHttpClient {
+public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
+    public String CLOSED_MESSAGE = "Client is already closed.";
 
-    public static final String CLOSED_MESSAGE = "Client is already closed.";
-    private final HandlerStack stack;
-    private final URI baseUri;
-    private final ResponseSerializer serializer;
+    public <O> CompletableFuture<ApiHttpResponse<O>> execute(ApiHttpRequest request, Class<O> outputType);
 
-    public ApiHttpClient(final String baseUri, final HandlerStack stack) {
-        this(URI.create(baseUri), stack);
+    public ResponseSerializer getSerializerService();
+
+    public static ApiHttpClient of(final String baseUri, final HandlerStack stack) {
+        return of(URI.create(baseUri), stack, ResponseSerializer.of());
     }
 
-    public ApiHttpClient(final URI baseUri, final HandlerStack stack) {
-        this(baseUri, stack, ResponseSerializer.of());
+    public static ApiHttpClient of(final URI baseUri, final HandlerStack stack) {
+        return of(baseUri, stack, ResponseSerializer.of());
     }
 
-    public ApiHttpClient(final URI baseUri, final HandlerStack stack, ResponseSerializer serializer) {
-        this.stack = stack;
-        this.baseUri = baseUri;
-        this.serializer = serializer;
-    }
-
-    public CompletableFuture<ApiHttpResponse<byte[]>> execute(final ApiHttpRequest request) {
-        rejectExecutionIfClosed(CLOSED_MESSAGE);
-        return stack.invoke(request.resolve(baseUri));
-    }
-
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, Class<O> outputType)
-    {
-        return execute(request).thenApply(response -> serializer.convertResponse(response, outputType));
-    }
-
-    public ResponseSerializer getSerializerService() {
-        return serializer;
-    }
-
-    @Override
-    protected void internalClose() {
-        closeQuietly(stack);
+    public static ApiHttpClient of(final URI baseUri, final HandlerStack stack, ResponseSerializer serializer) {
+        return new ApiHttpClientImpl(baseUri, stack, serializer);
     }
 }

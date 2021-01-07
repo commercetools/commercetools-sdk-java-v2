@@ -6,7 +6,6 @@ import org.junit.Test;
 
 import java.time.Duration;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class ApiMethodTest {
@@ -47,7 +46,7 @@ public class ApiMethodTest {
     }
 
     private ApiHttpClient createClient() {
-        return new ApiHttpClient("", null);
+        return ApiHttpClient.of("", null);
     }
 
     @Test

@@ -29,7 +29,9 @@ public class ApiRoot implements Closeable {
     }
 
     @Override
-    public void close() throws IOException {
-        apiHttpClient.close();
+    public void close() {
+        try {
+            apiHttpClient.close();
+        } catch (final Throwable ignored) { }
     }
 }

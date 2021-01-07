@@ -34,7 +34,7 @@ class Main {
 }
 
 ```
-See the [test code](../commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/ExamplesTest.java#L19)
+See the [test code](../commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/ExamplesTest.java#L22)
 
 For projects in the USA you should specify in addition to the previous parameters the auth and api urls:
 
@@ -69,7 +69,7 @@ final CompletableFuture<ApiHttpResponse<TaxCategoryPagedQueryResponse>> future =
                 .withQueryParam("name", "de19")
                 .execute();
 ```
-See the [test code](../commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/ExamplesTest.java#L31)
+See the [test code](../commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/ExamplesTest.java#L34)
 
 ## Closing the client
 

@@ -1,6 +1,7 @@
 package com.commercetools;
 
 import com.commercetools.api.client.ApiRoot;
+import com.commercetools.api.client.ByProjectKeyTaxCategoriesGet;
 import com.commercetools.api.defaultconfig.ApiFactory;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.*;
@@ -9,6 +10,8 @@ import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import org.assertj.core.api.Assertions;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -133,5 +136,21 @@ public class ExamplesTest {
                 .delete()
                 .withVersion(category.getVersion())
                 .executeBlocking().getBody();
+    }
+
+    @Test
+    public void immutableRequest() {
+        ApiRoot apiRoot = createClient();
+        final ByProjectKeyTaxCategoriesGet taxCategoriesGet = apiRoot
+                .withProjectKey("my-project")
+                .taxCategories()
+                .get()
+                .withWhere("name = :name")
+                .withQueryParam("name", "de19");
+
+        final ByProjectKeyTaxCategoriesGet taxCategoriesGet2 = taxCategoriesGet.withQueryParam("name", "de07");
+
+        Assertions.assertThat(taxCategoriesGet.getQueryParam("name").get(0)).isEqualTo("de19");
+        Assertions.assertThat(taxCategoriesGet2.getQueryParam("name").get(0)).isEqualTo("de07");
     }
 }

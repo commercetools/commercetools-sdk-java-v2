@@ -2,7 +2,6 @@ package io.vrap.rmf.base.client;
 
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
-import org.slf4j.LoggerFactory;
 
 import javax.annotation.Nullable;
 import java.util.ArrayList;
@@ -119,7 +118,7 @@ public class ClientFactory {
         middlewareStack.addAll(middlewares);
         final HandlerStack stack = HandlerStack.create(HttpHandler.create(httpClient), middlewareStack);
 
-        return new ApiHttpClient(
+        return ApiHttpClient.of(
                 apiBaseUrl,
                 stack
         );

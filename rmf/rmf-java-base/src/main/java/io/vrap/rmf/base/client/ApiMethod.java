@@ -70,24 +70,46 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
         this.queryParams =  new ArrayList<>(apiMethod.queryParams);
     }
 
+    /**
+     * adds an additional header with the specified value
+     * @param key header name
+     * @param value header value
+     * @return T
+     */
     public T addHeader(final String key, final String value) {
         T c = copy();
         ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.addHeader(key, value);
         return c;
     }
 
+    /**
+     * removes the specified header
+     * @param key header name
+     * @return T
+     */
     public T withoutHeader(final String key) {
         T c = copy();
         ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.withoutHeader(key);
         return c;
     }
 
+    /**
+     * set the header with the specified value
+     * @param key header name
+     * @param value header value
+     * @return T
+     */
     public T withHeader(final String key, final String value) {
         T c = copy();
         ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.withHeader(key, value);
         return c;
     }
 
+    /**
+     * set the headers
+     * @param headers
+     * @return
+     */
     public T withHeaders(final ApiHttpHeaders headers) {
         T c = copy();
         ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers = headers;
@@ -98,23 +120,47 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
         return this.headers;
     }
 
+    /**
+     * add an additional query parameter
+     * @param key query parameter name
+     * @param value query parameter value
+     * @param <V> value type
+     * @return T
+     */
     public <V> T addQueryParam(final String key, final V value) {
         T c = copy();
         ((ApiMethod<T, TResult>)c).queryParams.add(new ParamEntry<>(key, value.toString()));
         return c;
     }
 
+    /**
+     * set the query parameter with the specified value
+     * @param key query parameter name
+     * @param value query parameter value
+     * @param <V> value type
+     * @return T
+     */
     public <V> T withQueryParam(final String key, final V value) {
         return withoutQueryParam(key).addQueryParam(key, value);
     }
 
+    /**
+     * removes the specified query parameter
+     * @param key query parameter name
+     * @return T
+     */
     public T withoutQueryParam(final String key) {
         T c = copy();
         ((ApiMethod<T, TResult>)c).queryParams = ((ApiMethod<T, TResult>)c).queryParams.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
         return c;
     }
 
-    public <V> T withQueryParams(final List<ParamEntry<String, String>> queryParams) {
+    /**
+     * set the query parameters
+     * @param queryParams list of query parameters
+     * @return T
+     */
+    public T withQueryParams(final List<ParamEntry<String, String>> queryParams) {
         T c = copy();
         ((ApiMethod<T, TResult>)c).queryParams = queryParams;
         return c;

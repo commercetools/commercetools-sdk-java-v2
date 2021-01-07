@@ -2,7 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.store.StoresRemoveSupplyChannelsAction;
+import com.commercetools.api.models.store.StoreRemoveSupplyChannelAction;
 import javax.annotation.Nullable;
 import java.util.*;
 import java.time.ZonedDateTime;
@@ -12,12 +12,12 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class StoresRemoveSupplyChannelsActionBuilder {
+public final class StoreRemoveSupplyChannelActionBuilder {
 
     
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
-    public StoresRemoveSupplyChannelsActionBuilder supplyChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+    public StoreRemoveSupplyChannelActionBuilder supplyChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
@@ -27,16 +27,16 @@ public final class StoresRemoveSupplyChannelsActionBuilder {
         return this.supplyChannel;
     }
 
-    public StoresRemoveSupplyChannelsAction build() {
-        return new StoresRemoveSupplyChannelsActionImpl(supplyChannel);
+    public StoreRemoveSupplyChannelAction build() {
+        return new StoreRemoveSupplyChannelActionImpl(supplyChannel);
     }
 
-    public static StoresRemoveSupplyChannelsActionBuilder of() {
-        return new StoresRemoveSupplyChannelsActionBuilder();
+    public static StoreRemoveSupplyChannelActionBuilder of() {
+        return new StoreRemoveSupplyChannelActionBuilder();
     }
 
-    public static StoresRemoveSupplyChannelsActionBuilder of(final StoresRemoveSupplyChannelsAction template) {
-        StoresRemoveSupplyChannelsActionBuilder builder = new StoresRemoveSupplyChannelsActionBuilder();
+    public static StoreRemoveSupplyChannelActionBuilder of(final StoreRemoveSupplyChannelAction template) {
+        StoreRemoveSupplyChannelActionBuilder builder = new StoreRemoveSupplyChannelActionBuilder();
         builder.supplyChannel = template.getSupplyChannel();
         return builder;
     }

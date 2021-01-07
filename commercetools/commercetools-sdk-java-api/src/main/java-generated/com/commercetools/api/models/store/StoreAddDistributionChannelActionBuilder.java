@@ -2,7 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.store.StoresRemoveDistributionChannelsAction;
+import com.commercetools.api.models.store.StoreAddDistributionChannelAction;
 import javax.annotation.Nullable;
 import java.util.*;
 import java.time.ZonedDateTime;
@@ -12,12 +12,12 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class StoresRemoveDistributionChannelsActionBuilder {
+public final class StoreAddDistributionChannelActionBuilder {
 
     
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
-    public StoresRemoveDistributionChannelsActionBuilder distributionChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+    public StoreAddDistributionChannelActionBuilder distributionChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
@@ -27,16 +27,16 @@ public final class StoresRemoveDistributionChannelsActionBuilder {
         return this.distributionChannel;
     }
 
-    public StoresRemoveDistributionChannelsAction build() {
-        return new StoresRemoveDistributionChannelsActionImpl(distributionChannel);
+    public StoreAddDistributionChannelAction build() {
+        return new StoreAddDistributionChannelActionImpl(distributionChannel);
     }
 
-    public static StoresRemoveDistributionChannelsActionBuilder of() {
-        return new StoresRemoveDistributionChannelsActionBuilder();
+    public static StoreAddDistributionChannelActionBuilder of() {
+        return new StoreAddDistributionChannelActionBuilder();
     }
 
-    public static StoresRemoveDistributionChannelsActionBuilder of(final StoresRemoveDistributionChannelsAction template) {
-        StoresRemoveDistributionChannelsActionBuilder builder = new StoresRemoveDistributionChannelsActionBuilder();
+    public static StoreAddDistributionChannelActionBuilder of(final StoreAddDistributionChannelAction template) {
+        StoreAddDistributionChannelActionBuilder builder = new StoreAddDistributionChannelActionBuilder();
         builder.distributionChannel = template.getDistributionChannel();
         return builder;
     }

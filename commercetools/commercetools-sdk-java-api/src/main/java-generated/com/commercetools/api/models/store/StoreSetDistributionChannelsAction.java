@@ -2,7 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.store.StoresSetDistributionChannelsActionImpl;
+import com.commercetools.api.models.store.StoreSetDistributionChannelsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -19,8 +19,8 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-@JsonDeserialize(as = StoresSetDistributionChannelsActionImpl.class)
-public interface StoresSetDistributionChannelsAction extends StoreUpdateAction {
+@JsonDeserialize(as = StoreSetDistributionChannelsActionImpl.class)
+public interface StoreSetDistributionChannelsAction extends StoreUpdateAction {
 
     
     @Valid
@@ -31,27 +31,27 @@ public interface StoresSetDistributionChannelsAction extends StoreUpdateAction {
     public void setDistributionChannels(final ChannelResourceIdentifier ...distributionChannels);
     public void setDistributionChannels(final List<ChannelResourceIdentifier> distributionChannels);
 
-    public static StoresSetDistributionChannelsAction of(){
-        return new StoresSetDistributionChannelsActionImpl();
+    public static StoreSetDistributionChannelsAction of(){
+        return new StoreSetDistributionChannelsActionImpl();
     }
     
 
-    public static StoresSetDistributionChannelsAction of(final StoresSetDistributionChannelsAction template) {
-        StoresSetDistributionChannelsActionImpl instance = new StoresSetDistributionChannelsActionImpl();
+    public static StoreSetDistributionChannelsAction of(final StoreSetDistributionChannelsAction template) {
+        StoreSetDistributionChannelsActionImpl instance = new StoreSetDistributionChannelsActionImpl();
         instance.setDistributionChannels(template.getDistributionChannels());
         return instance;
     }
 
-    public static StoresSetDistributionChannelsActionBuilder builder(){
-        return StoresSetDistributionChannelsActionBuilder.of();
+    public static StoreSetDistributionChannelsActionBuilder builder(){
+        return StoreSetDistributionChannelsActionBuilder.of();
     }
     
-    public static StoresSetDistributionChannelsActionBuilder builder(final StoresSetDistributionChannelsAction template){
-        return StoresSetDistributionChannelsActionBuilder.of(template);
+    public static StoreSetDistributionChannelsActionBuilder builder(final StoreSetDistributionChannelsAction template){
+        return StoreSetDistributionChannelsActionBuilder.of(template);
     }
     
 
-    default <T> T withStoresSetDistributionChannelsAction(Function<StoresSetDistributionChannelsAction, T> helper) {
+    default <T> T withStoreSetDistributionChannelsAction(Function<StoreSetDistributionChannelsAction, T> helper) {
         return helper.apply(this);
     }
 }

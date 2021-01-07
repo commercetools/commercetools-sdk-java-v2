@@ -21,19 +21,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class StoresSetDistributionChannelsActionImpl implements StoresSetDistributionChannelsAction {
+public final class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDistributionChannelAction {
 
     private String action;
     
-    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
     @JsonCreator
-    StoresSetDistributionChannelsActionImpl(@JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
-        this.distributionChannels = distributionChannels;
-        this.action = "setDistributionChannels";
+    StoreRemoveDistributionChannelActionImpl(@JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+        this.distributionChannel = distributionChannel;
+        this.action = "removeDistributionChannel";
     }
-    public StoresSetDistributionChannelsActionImpl() {
-        this.action = "setDistributionChannels";
+    public StoreRemoveDistributionChannelActionImpl() {
+        this.action = "removeDistributionChannel";
     }
 
     
@@ -42,16 +42,12 @@ public final class StoresSetDistributionChannelsActionImpl implements StoresSetD
     }
     
     
-    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels(){
-        return this.distributionChannels;
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
+        return this.distributionChannel;
     }
 
-    public void setDistributionChannels(final com.commercetools.api.models.channel.ChannelResourceIdentifier ...distributionChannels){
-       this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
-    }
-    
-    public void setDistributionChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels){
-       this.distributionChannels = distributionChannels;
+    public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
+        this.distributionChannel = distributionChannel;
     }
 
     @Override
@@ -60,11 +56,11 @@ public final class StoresSetDistributionChannelsActionImpl implements StoresSetD
     
         if (o == null || getClass() != o.getClass()) return false;
     
-        StoresSetDistributionChannelsActionImpl that = (StoresSetDistributionChannelsActionImpl) o;
+        StoreRemoveDistributionChannelActionImpl that = (StoreRemoveDistributionChannelActionImpl) o;
     
         return new EqualsBuilder()
                 .append(action, that.action)
-                .append(distributionChannels, that.distributionChannels)
+                .append(distributionChannel, that.distributionChannel)
                 .isEquals();
     }
     
@@ -72,7 +68,7 @@ public final class StoresSetDistributionChannelsActionImpl implements StoresSetD
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
             .append(action)
-            .append(distributionChannels)
+            .append(distributionChannel)
             .toHashCode();
     }
 

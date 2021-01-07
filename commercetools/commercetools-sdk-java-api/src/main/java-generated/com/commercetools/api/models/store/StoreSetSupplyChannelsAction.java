@@ -2,7 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.store.StoresSetSupplyChannelsActionImpl;
+import com.commercetools.api.models.store.StoreSetSupplyChannelsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -19,8 +19,8 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-@JsonDeserialize(as = StoresSetSupplyChannelsActionImpl.class)
-public interface StoresSetSupplyChannelsAction extends StoreUpdateAction {
+@JsonDeserialize(as = StoreSetSupplyChannelsActionImpl.class)
+public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
 
     
     @Valid
@@ -31,27 +31,27 @@ public interface StoresSetSupplyChannelsAction extends StoreUpdateAction {
     public void setSupplyChannels(final ChannelResourceIdentifier ...supplyChannels);
     public void setSupplyChannels(final List<ChannelResourceIdentifier> supplyChannels);
 
-    public static StoresSetSupplyChannelsAction of(){
-        return new StoresSetSupplyChannelsActionImpl();
+    public static StoreSetSupplyChannelsAction of(){
+        return new StoreSetSupplyChannelsActionImpl();
     }
     
 
-    public static StoresSetSupplyChannelsAction of(final StoresSetSupplyChannelsAction template) {
-        StoresSetSupplyChannelsActionImpl instance = new StoresSetSupplyChannelsActionImpl();
+    public static StoreSetSupplyChannelsAction of(final StoreSetSupplyChannelsAction template) {
+        StoreSetSupplyChannelsActionImpl instance = new StoreSetSupplyChannelsActionImpl();
         instance.setSupplyChannels(template.getSupplyChannels());
         return instance;
     }
 
-    public static StoresSetSupplyChannelsActionBuilder builder(){
-        return StoresSetSupplyChannelsActionBuilder.of();
+    public static StoreSetSupplyChannelsActionBuilder builder(){
+        return StoreSetSupplyChannelsActionBuilder.of();
     }
     
-    public static StoresSetSupplyChannelsActionBuilder builder(final StoresSetSupplyChannelsAction template){
-        return StoresSetSupplyChannelsActionBuilder.of(template);
+    public static StoreSetSupplyChannelsActionBuilder builder(final StoreSetSupplyChannelsAction template){
+        return StoreSetSupplyChannelsActionBuilder.of(template);
     }
     
 
-    default <T> T withStoresSetSupplyChannelsAction(Function<StoresSetSupplyChannelsAction, T> helper) {
+    default <T> T withStoreSetSupplyChannelsAction(Function<StoreSetSupplyChannelsAction, T> helper) {
         return helper.apply(this);
     }
 }

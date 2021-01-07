@@ -1,13 +1,13 @@
 package com.commercetools.api.models.store;
 
+import com.commercetools.api.models.store.StoreAddDistributionChannelAction;
+import com.commercetools.api.models.store.StoreAddSupplyChannelAction;
+import com.commercetools.api.models.store.StoreRemoveDistributionChannelAction;
+import com.commercetools.api.models.store.StoreRemoveSupplyChannelAction;
+import com.commercetools.api.models.store.StoreSetDistributionChannelsAction;
 import com.commercetools.api.models.store.StoreSetLanguagesAction;
 import com.commercetools.api.models.store.StoreSetNameAction;
-import com.commercetools.api.models.store.StoresAddDistributionChannelsAction;
-import com.commercetools.api.models.store.StoresAddSupplyChannelsAction;
-import com.commercetools.api.models.store.StoresRemoveDistributionChannelsAction;
-import com.commercetools.api.models.store.StoresRemoveSupplyChannelsAction;
-import com.commercetools.api.models.store.StoresSetDistributionChannelsAction;
-import com.commercetools.api.models.store.StoresSetSupplyChannelsAction;
+import com.commercetools.api.models.store.StoreSetSupplyChannelsAction;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;

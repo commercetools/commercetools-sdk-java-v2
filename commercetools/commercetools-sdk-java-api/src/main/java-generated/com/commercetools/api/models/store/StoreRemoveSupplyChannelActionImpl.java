@@ -21,18 +21,18 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class StoresRemoveSupplyChannelsActionImpl implements StoresRemoveSupplyChannelsAction {
+public final class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupplyChannelAction {
 
     private String action;
     
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     @JsonCreator
-    StoresRemoveSupplyChannelsActionImpl(@JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+    StoreRemoveSupplyChannelActionImpl(@JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         this.action = "removeSupplyChannel";
     }
-    public StoresRemoveSupplyChannelsActionImpl() {
+    public StoreRemoveSupplyChannelActionImpl() {
         this.action = "removeSupplyChannel";
     }
 
@@ -56,7 +56,7 @@ public final class StoresRemoveSupplyChannelsActionImpl implements StoresRemoveS
     
         if (o == null || getClass() != o.getClass()) return false;
     
-        StoresRemoveSupplyChannelsActionImpl that = (StoresRemoveSupplyChannelsActionImpl) o;
+        StoreRemoveSupplyChannelActionImpl that = (StoreRemoveSupplyChannelActionImpl) o;
     
         return new EqualsBuilder()
                 .append(action, that.action)

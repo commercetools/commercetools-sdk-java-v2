@@ -2,7 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.store.StoresRemoveSupplyChannelsActionImpl;
+import com.commercetools.api.models.store.StoreAddSupplyChannelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -19,8 +19,8 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-@JsonDeserialize(as = StoresRemoveSupplyChannelsActionImpl.class)
-public interface StoresRemoveSupplyChannelsAction extends StoreUpdateAction {
+@JsonDeserialize(as = StoreAddSupplyChannelActionImpl.class)
+public interface StoreAddSupplyChannelAction extends StoreUpdateAction {
 
     
     @NotNull
@@ -30,27 +30,27 @@ public interface StoresRemoveSupplyChannelsAction extends StoreUpdateAction {
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
-    public static StoresRemoveSupplyChannelsAction of(){
-        return new StoresRemoveSupplyChannelsActionImpl();
+    public static StoreAddSupplyChannelAction of(){
+        return new StoreAddSupplyChannelActionImpl();
     }
     
 
-    public static StoresRemoveSupplyChannelsAction of(final StoresRemoveSupplyChannelsAction template) {
-        StoresRemoveSupplyChannelsActionImpl instance = new StoresRemoveSupplyChannelsActionImpl();
+    public static StoreAddSupplyChannelAction of(final StoreAddSupplyChannelAction template) {
+        StoreAddSupplyChannelActionImpl instance = new StoreAddSupplyChannelActionImpl();
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
 
-    public static StoresRemoveSupplyChannelsActionBuilder builder(){
-        return StoresRemoveSupplyChannelsActionBuilder.of();
+    public static StoreAddSupplyChannelActionBuilder builder(){
+        return StoreAddSupplyChannelActionBuilder.of();
     }
     
-    public static StoresRemoveSupplyChannelsActionBuilder builder(final StoresRemoveSupplyChannelsAction template){
-        return StoresRemoveSupplyChannelsActionBuilder.of(template);
+    public static StoreAddSupplyChannelActionBuilder builder(final StoreAddSupplyChannelAction template){
+        return StoreAddSupplyChannelActionBuilder.of(template);
     }
     
 
-    default <T> T withStoresRemoveSupplyChannelsAction(Function<StoresRemoveSupplyChannelsAction, T> helper) {
+    default <T> T withStoreAddSupplyChannelAction(Function<StoreAddSupplyChannelAction, T> helper) {
         return helper.apply(this);
     }
 }

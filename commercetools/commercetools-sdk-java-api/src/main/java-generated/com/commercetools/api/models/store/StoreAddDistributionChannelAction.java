@@ -2,7 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.store.StoresAddDistributionChannelsActionImpl;
+import com.commercetools.api.models.store.StoreAddDistributionChannelActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -19,8 +19,8 @@ import java.io.IOException;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-@JsonDeserialize(as = StoresAddDistributionChannelsActionImpl.class)
-public interface StoresAddDistributionChannelsAction extends StoreUpdateAction {
+@JsonDeserialize(as = StoreAddDistributionChannelActionImpl.class)
+public interface StoreAddDistributionChannelAction extends StoreUpdateAction {
 
     
     @NotNull
@@ -30,27 +30,27 @@ public interface StoresAddDistributionChannelsAction extends StoreUpdateAction {
 
     public void setDistributionChannel(final ChannelResourceIdentifier distributionChannel);
 
-    public static StoresAddDistributionChannelsAction of(){
-        return new StoresAddDistributionChannelsActionImpl();
+    public static StoreAddDistributionChannelAction of(){
+        return new StoreAddDistributionChannelActionImpl();
     }
     
 
-    public static StoresAddDistributionChannelsAction of(final StoresAddDistributionChannelsAction template) {
-        StoresAddDistributionChannelsActionImpl instance = new StoresAddDistributionChannelsActionImpl();
+    public static StoreAddDistributionChannelAction of(final StoreAddDistributionChannelAction template) {
+        StoreAddDistributionChannelActionImpl instance = new StoreAddDistributionChannelActionImpl();
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
 
-    public static StoresAddDistributionChannelsActionBuilder builder(){
-        return StoresAddDistributionChannelsActionBuilder.of();
+    public static StoreAddDistributionChannelActionBuilder builder(){
+        return StoreAddDistributionChannelActionBuilder.of();
     }
     
-    public static StoresAddDistributionChannelsActionBuilder builder(final StoresAddDistributionChannelsAction template){
-        return StoresAddDistributionChannelsActionBuilder.of(template);
+    public static StoreAddDistributionChannelActionBuilder builder(final StoreAddDistributionChannelAction template){
+        return StoreAddDistributionChannelActionBuilder.of(template);
     }
     
 
-    default <T> T withStoresAddDistributionChannelsAction(Function<StoresAddDistributionChannelsAction, T> helper) {
+    default <T> T withStoreAddDistributionChannelAction(Function<StoreAddDistributionChannelAction, T> helper) {
         return helper.apply(this);
     }
 }

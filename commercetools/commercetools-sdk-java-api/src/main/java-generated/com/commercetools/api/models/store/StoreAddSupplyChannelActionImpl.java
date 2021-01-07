@@ -21,19 +21,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class StoresRemoveDistributionChannelsActionImpl implements StoresRemoveDistributionChannelsAction {
+public final class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAction {
 
     private String action;
     
-    private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
+    private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
     @JsonCreator
-    StoresRemoveDistributionChannelsActionImpl(@JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
-        this.distributionChannel = distributionChannel;
-        this.action = "removeDistributionChannel";
+    StoreAddSupplyChannelActionImpl(@JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+        this.supplyChannel = supplyChannel;
+        this.action = "addSupplyChannel";
     }
-    public StoresRemoveDistributionChannelsActionImpl() {
-        this.action = "removeDistributionChannel";
+    public StoreAddSupplyChannelActionImpl() {
+        this.action = "addSupplyChannel";
     }
 
     
@@ -42,12 +42,12 @@ public final class StoresRemoveDistributionChannelsActionImpl implements StoresR
     }
     
     
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
-        return this.distributionChannel;
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
+        return this.supplyChannel;
     }
 
-    public void setDistributionChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel){
-        this.distributionChannel = distributionChannel;
+    public void setSupplyChannel(final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel){
+        this.supplyChannel = supplyChannel;
     }
 
     @Override
@@ -56,11 +56,11 @@ public final class StoresRemoveDistributionChannelsActionImpl implements StoresR
     
         if (o == null || getClass() != o.getClass()) return false;
     
-        StoresRemoveDistributionChannelsActionImpl that = (StoresRemoveDistributionChannelsActionImpl) o;
+        StoreAddSupplyChannelActionImpl that = (StoreAddSupplyChannelActionImpl) o;
     
         return new EqualsBuilder()
                 .append(action, that.action)
-                .append(distributionChannel, that.distributionChannel)
+                .append(supplyChannel, that.supplyChannel)
                 .isEquals();
     }
     
@@ -68,7 +68,7 @@ public final class StoresRemoveDistributionChannelsActionImpl implements StoresR
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
             .append(action)
-            .append(distributionChannel)
+            .append(supplyChannel)
             .toHashCode();
     }
 

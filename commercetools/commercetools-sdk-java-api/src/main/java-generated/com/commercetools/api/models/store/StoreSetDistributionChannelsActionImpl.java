@@ -21,19 +21,19 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class StoresSetSupplyChannelsActionImpl implements StoresSetSupplyChannelsAction {
+public final class StoreSetDistributionChannelsActionImpl implements StoreSetDistributionChannelsAction {
 
     private String action;
     
-    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
+    private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
 
     @JsonCreator
-    StoresSetSupplyChannelsActionImpl(@JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
-        this.supplyChannels = supplyChannels;
-        this.action = "setSupplyChannels";
+    StoreSetDistributionChannelsActionImpl(@JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels) {
+        this.distributionChannels = distributionChannels;
+        this.action = "setDistributionChannels";
     }
-    public StoresSetSupplyChannelsActionImpl() {
-        this.action = "setSupplyChannels";
+    public StoreSetDistributionChannelsActionImpl() {
+        this.action = "setDistributionChannels";
     }
 
     
@@ -42,16 +42,16 @@ public final class StoresSetSupplyChannelsActionImpl implements StoresSetSupplyC
     }
     
     
-    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
-        return this.supplyChannels;
+    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getDistributionChannels(){
+        return this.distributionChannels;
     }
 
-    public void setSupplyChannels(final com.commercetools.api.models.channel.ChannelResourceIdentifier ...supplyChannels){
-       this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
+    public void setDistributionChannels(final com.commercetools.api.models.channel.ChannelResourceIdentifier ...distributionChannels){
+       this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
     }
     
-    public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
-       this.supplyChannels = supplyChannels;
+    public void setDistributionChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels){
+       this.distributionChannels = distributionChannels;
     }
 
     @Override
@@ -60,11 +60,11 @@ public final class StoresSetSupplyChannelsActionImpl implements StoresSetSupplyC
     
         if (o == null || getClass() != o.getClass()) return false;
     
-        StoresSetSupplyChannelsActionImpl that = (StoresSetSupplyChannelsActionImpl) o;
+        StoreSetDistributionChannelsActionImpl that = (StoreSetDistributionChannelsActionImpl) o;
     
         return new EqualsBuilder()
                 .append(action, that.action)
-                .append(supplyChannels, that.supplyChannels)
+                .append(distributionChannels, that.distributionChannels)
                 .isEquals();
     }
     
@@ -72,7 +72,7 @@ public final class StoresSetSupplyChannelsActionImpl implements StoresSetSupplyC
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
             .append(action)
-            .append(supplyChannels)
+            .append(distributionChannels)
             .toHashCode();
     }
 

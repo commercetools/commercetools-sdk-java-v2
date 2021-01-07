@@ -1,6 +1,6 @@
 # Tuning the client
 
-## Blocking client
+## Blocking execution
 
 In a lot of frameworks there is no support for asynchronous execution and so it is necessary to wait for the responses.
 

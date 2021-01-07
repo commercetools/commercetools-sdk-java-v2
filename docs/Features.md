@@ -49,3 +49,26 @@ The HTTP client abstract itself is a functional interface and can be replaced wi
 ## Model factory methods
 
 Each model has a factory method `::of()` to create a new empty instance. The method `::builder()` returns a new builder instance.
+
+## Middlewares
+
+The client supports middlewares to adjust request and responses while being executed.
+A [middleware](../rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/http/Middleware.java) is a functional interface
+which has the request and the next middleware as an argument and returns a CompletableFuture with the response. The following
+example shows how to add an additional header.
+
+```java
+ApiRoot t = ApiFactory.create(
+        ClientCredentials.of().withClientId(CommercetoolsTestUtils.getClientId())
+                .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                .build(),
+        ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
+        ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
+        Lists.newArrayList(
+                (request, next) -> next.apply(request.addHeader("X-FOO", "Bar"))
+        )
+);
+```
+
+The authentication, logging and other functionality has been implemented in middlewares and is added by default to the HandlerStack
+in the [MiddlewareFactory](../rmf/rmf-java-base/src/main/java/io/vrap/rmf/base/client/MiddlewareFactory.java)

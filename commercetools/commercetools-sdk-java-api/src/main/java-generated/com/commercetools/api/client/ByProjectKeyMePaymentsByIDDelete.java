@@ -88,10 +88,18 @@ public class ByProjectKeyMePaymentsByIDDelete extends ApiMethod<ByProjectKeyMePa
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMePaymentsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyMePaymentsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyMePaymentsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMePaymentsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

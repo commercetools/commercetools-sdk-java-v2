@@ -87,6 +87,10 @@ public class ByProjectKeyStatesPost extends ApiMethod<ByProjectKeyStatesPost, co
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyStatesPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyStatesPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

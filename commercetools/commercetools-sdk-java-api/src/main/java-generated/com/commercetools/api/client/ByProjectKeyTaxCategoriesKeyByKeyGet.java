@@ -84,6 +84,10 @@ public class ByProjectKeyTaxCategoriesKeyByKeyGet extends ApiMethod<ByProjectKey
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyTaxCategoriesKeyByKeyGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyTaxCategoriesKeyByKeyGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

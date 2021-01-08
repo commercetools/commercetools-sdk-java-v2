@@ -92,14 +92,26 @@ public class ByProjectKeyCustomersByIDDelete extends ApiMethod<ByProjectKeyCusto
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCustomersByIDDelete withDataErasure(final Boolean dataErasure){
+        return copy().withQueryParam("dataErasure", dataErasure);
+    }
+    
+    public ByProjectKeyCustomersByIDDelete addDataErasure(final Boolean dataErasure){
         return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyCustomersByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyCustomersByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyCustomersByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomersByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

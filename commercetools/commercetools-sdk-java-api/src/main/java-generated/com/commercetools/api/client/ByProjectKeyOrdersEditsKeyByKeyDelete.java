@@ -88,10 +88,18 @@ public class ByProjectKeyOrdersEditsKeyByKeyDelete extends ApiMethod<ByProjectKe
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyOrdersEditsKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyOrdersEditsKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyOrdersEditsKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyOrdersEditsKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -84,6 +84,10 @@ public class ByProjectKeyCustomersPasswordTokenByPasswordTokenGet extends ApiMet
     public void setPasswordToken(final String passwordToken) { this.passwordToken = passwordToken; }
 
     public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

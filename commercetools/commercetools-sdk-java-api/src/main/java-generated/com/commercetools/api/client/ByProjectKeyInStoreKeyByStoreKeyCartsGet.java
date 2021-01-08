@@ -108,36 +108,69 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjec
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withCustomerId(final String customerId){
+        return copy().withQueryParam("customerId", customerId);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addCustomerId(final String customerId){
         return copy().addQueryParam("customerId", customerId);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withWithTotal(final Boolean withTotal){
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withWhere(final String where){
+        return copy().withQueryParam("where", where);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addWhere(final String where){
         return copy().addQueryParam("where", where);
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet addPredicateVar(final String varName, final String predicateVar){
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
+    
     
     @Override
     protected ByProjectKeyInStoreKeyByStoreKeyCartsGet copy()

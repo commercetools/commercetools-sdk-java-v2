@@ -100,22 +100,42 @@ public class ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImport
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final Double limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final Double offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){
+        return copy().withQueryParam("resourceKey", resourceKey);
+    }
+    
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(final String resourceKey){
         return copy().addQueryParam("resourceKey", resourceKey);
     }
     
     public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
+        return copy().withQueryParam("state", state);
+    }
+    
+    public ByProjectKeyProductVariantPatchesImportSinkKeyByImportSinkKeyImportOperationsGet addState(final ProcessingState state){
         return copy().addQueryParam("state", state);
     }
 

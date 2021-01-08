@@ -87,6 +87,10 @@ public class ByProjectKeyCategoriesPost extends ApiMethod<ByProjectKeyCategories
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCategoriesPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCategoriesPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

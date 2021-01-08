@@ -82,10 +82,18 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyImportSinksGet withLimit(final Double limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyImportSinksGet addLimit(final Double limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyImportSinksGet withOffset(final Double offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyImportSinksGet addOffset(final Double offset){
         return copy().addQueryParam("offset", offset);
     }
 

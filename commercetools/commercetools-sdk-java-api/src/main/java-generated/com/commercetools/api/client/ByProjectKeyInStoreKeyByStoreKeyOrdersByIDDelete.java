@@ -98,14 +98,26 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete extends ApiMethod<
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete withDataErasure(final Boolean dataErasure){
+        return copy().withQueryParam("dataErasure", dataErasure);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete addDataErasure(final Boolean dataErasure){
         return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -98,32 +98,61 @@ public class ByProjectKeyDiscountCodesGet extends ApiMethod<ByProjectKeyDiscount
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyDiscountCodesGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyDiscountCodesGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyDiscountCodesGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyDiscountCodesGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyDiscountCodesGet withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyDiscountCodesGet addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyDiscountCodesGet withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyDiscountCodesGet addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyDiscountCodesGet withWithTotal(final Boolean withTotal){
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+    
+    public ByProjectKeyDiscountCodesGet addWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyDiscountCodesGet withWhere(final String where){
+        return copy().withQueryParam("where", where);
+    }
+    
+    public ByProjectKeyDiscountCodesGet addWhere(final String where){
         return copy().addQueryParam("where", where);
     }
 
     public ByProjectKeyDiscountCodesGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+    
+    public ByProjectKeyDiscountCodesGet addPredicateVar(final String varName, final String predicateVar){
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
+    
     
     @Override
     protected ByProjectKeyDiscountCodesGet copy()

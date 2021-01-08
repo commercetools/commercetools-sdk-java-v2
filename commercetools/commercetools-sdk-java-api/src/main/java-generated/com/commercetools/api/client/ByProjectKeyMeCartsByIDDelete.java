@@ -88,10 +88,18 @@ public class ByProjectKeyMeCartsByIDDelete extends ApiMethod<ByProjectKeyMeCarts
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeCartsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyMeCartsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyMeCartsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMeCartsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -98,32 +98,61 @@ public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet, 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyPaymentsGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyPaymentsGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyPaymentsGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyPaymentsGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyPaymentsGet withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyPaymentsGet addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyPaymentsGet withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyPaymentsGet addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyPaymentsGet withWithTotal(final Boolean withTotal){
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+    
+    public ByProjectKeyPaymentsGet addWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyPaymentsGet withWhere(final String where){
+        return copy().withQueryParam("where", where);
+    }
+    
+    public ByProjectKeyPaymentsGet addWhere(final String where){
         return copy().addQueryParam("where", where);
     }
 
     public ByProjectKeyPaymentsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+    
+    public ByProjectKeyPaymentsGet addPredicateVar(final String varName, final String predicateVar){
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
+    
     
     @Override
     protected ByProjectKeyPaymentsGet copy()

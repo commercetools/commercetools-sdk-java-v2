@@ -98,32 +98,61 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet, 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyChannelsGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyChannelsGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyChannelsGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyChannelsGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyChannelsGet withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyChannelsGet addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyChannelsGet withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyChannelsGet addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyChannelsGet withWithTotal(final Boolean withTotal){
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+    
+    public ByProjectKeyChannelsGet addWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyChannelsGet withWhere(final String where){
+        return copy().withQueryParam("where", where);
+    }
+    
+    public ByProjectKeyChannelsGet addWhere(final String where){
         return copy().addQueryParam("where", where);
     }
 
     public ByProjectKeyChannelsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+    
+    public ByProjectKeyChannelsGet addPredicateVar(final String varName, final String predicateVar){
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
+    
     
     @Override
     protected ByProjectKeyChannelsGet copy()

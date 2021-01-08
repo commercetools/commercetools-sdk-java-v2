@@ -89,6 +89,10 @@ public class ByProjectKeyCustomersPost extends ApiMethod<ByProjectKeyCustomersPo
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomersPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomersPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

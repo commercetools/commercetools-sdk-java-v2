@@ -83,14 +83,26 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<B
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withOrderEditId(final String orderEditId){
+        return copy().withQueryParam("orderEditId", orderEditId);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addOrderEditId(final String orderEditId){
         return copy().addQueryParam("orderEditId", orderEditId);
     }
     
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withCountry(final String country){
+        return copy().withQueryParam("country", country);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addCountry(final String country){
         return copy().addQueryParam("country", country);
     }
     
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final String state){
+        return copy().withQueryParam("state", state);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingOrdereditGet addState(final String state){
         return copy().addQueryParam("state", state);
     }
 

@@ -88,10 +88,18 @@ public class ByProjectKeyMeShoppingListsKeyByKeyDelete extends ApiMethod<ByProje
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyMeShoppingListsKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyMeShoppingListsKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyMeShoppingListsKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMeShoppingListsKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

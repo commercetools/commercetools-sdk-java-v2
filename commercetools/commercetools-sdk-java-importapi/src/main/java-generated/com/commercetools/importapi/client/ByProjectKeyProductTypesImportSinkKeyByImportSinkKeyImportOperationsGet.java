@@ -100,22 +100,42 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperation
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final Double limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final Double offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){
+        return copy().withQueryParam("resourceKey", resourceKey);
+    }
+    
+    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(final String resourceKey){
         return copy().addQueryParam("resourceKey", resourceKey);
     }
     
     public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
+        return copy().withQueryParam("state", state);
+    }
+    
+    public ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyImportOperationsGet addState(final ProcessingState state){
         return copy().addQueryParam("state", state);
     }
 

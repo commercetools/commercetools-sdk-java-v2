@@ -88,10 +88,18 @@ public class ByProjectKeyShippingMethodsByIDDelete extends ApiMethod<ByProjectKe
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyShippingMethodsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyShippingMethodsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyShippingMethodsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyShippingMethodsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

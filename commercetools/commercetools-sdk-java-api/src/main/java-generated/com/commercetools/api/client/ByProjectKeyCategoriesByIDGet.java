@@ -84,6 +84,10 @@ public class ByProjectKeyCategoriesByIDGet extends ApiMethod<ByProjectKeyCategor
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCategoriesByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCategoriesByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

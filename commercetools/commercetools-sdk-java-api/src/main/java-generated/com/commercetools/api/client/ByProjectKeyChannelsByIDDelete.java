@@ -88,10 +88,18 @@ public class ByProjectKeyChannelsByIDDelete extends ApiMethod<ByProjectKeyChanne
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyChannelsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyChannelsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyChannelsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyChannelsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

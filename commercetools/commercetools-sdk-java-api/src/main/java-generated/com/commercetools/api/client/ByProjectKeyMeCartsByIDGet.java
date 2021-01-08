@@ -84,6 +84,10 @@ public class ByProjectKeyMeCartsByIDGet extends ApiMethod<ByProjectKeyMeCartsByI
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeCartsByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMeCartsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

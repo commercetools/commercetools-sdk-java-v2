@@ -87,18 +87,34 @@ public class ByProjectKeyShippingMethodsMatchingLocationGet extends ApiMethod<By
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsMatchingLocationGet withCountry(final String country){
+        return copy().withQueryParam("country", country);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingLocationGet addCountry(final String country){
         return copy().addQueryParam("country", country);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withState(final String state){
+        return copy().withQueryParam("state", state);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingLocationGet addState(final String state){
         return copy().addQueryParam("state", state);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withCurrency(final String currency){
+        return copy().withQueryParam("currency", currency);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingLocationGet addCurrency(final String currency){
         return copy().addQueryParam("currency", currency);
     }
     
     public ByProjectKeyShippingMethodsMatchingLocationGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingLocationGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

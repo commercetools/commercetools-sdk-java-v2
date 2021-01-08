@@ -85,6 +85,10 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByP
     public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyOrdersOrderNumberByOrderNumberGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

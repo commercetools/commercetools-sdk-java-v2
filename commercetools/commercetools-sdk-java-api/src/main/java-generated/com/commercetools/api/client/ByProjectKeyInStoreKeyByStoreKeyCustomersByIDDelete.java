@@ -98,14 +98,26 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete extends ApiMeth
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withDataErasure(final Boolean dataErasure){
+        return copy().withQueryParam("dataErasure", dataErasure);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addDataErasure(final Boolean dataErasure){
         return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

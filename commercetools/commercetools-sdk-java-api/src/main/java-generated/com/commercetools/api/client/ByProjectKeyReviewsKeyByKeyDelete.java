@@ -92,14 +92,26 @@ public class ByProjectKeyReviewsKeyByKeyDelete extends ApiMethod<ByProjectKeyRev
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyReviewsKeyByKeyDelete withDataErasure(final Boolean dataErasure){
+        return copy().withQueryParam("dataErasure", dataErasure);
+    }
+    
+    public ByProjectKeyReviewsKeyByKeyDelete addDataErasure(final Boolean dataErasure){
         return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyReviewsKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyReviewsKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyReviewsKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyReviewsKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

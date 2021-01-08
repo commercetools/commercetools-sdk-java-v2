@@ -93,6 +93,10 @@ public class ByProjectKeyInventoryByIDPost extends ApiMethod<ByProjectKeyInvento
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInventoryByIDPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInventoryByIDPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

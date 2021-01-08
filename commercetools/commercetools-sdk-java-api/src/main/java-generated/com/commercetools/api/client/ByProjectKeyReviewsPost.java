@@ -87,6 +87,10 @@ public class ByProjectKeyReviewsPost extends ApiMethod<ByProjectKeyReviewsPost, 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyReviewsPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyReviewsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -88,10 +88,18 @@ public class ByProjectKeyZonesKeyByKeyDelete extends ApiMethod<ByProjectKeyZones
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyZonesKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyZonesKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyZonesKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyZonesKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

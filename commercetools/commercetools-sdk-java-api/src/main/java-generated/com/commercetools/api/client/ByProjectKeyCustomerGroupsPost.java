@@ -87,6 +87,10 @@ public class ByProjectKeyCustomerGroupsPost extends ApiMethod<ByProjectKeyCustom
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCustomerGroupsPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomerGroupsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

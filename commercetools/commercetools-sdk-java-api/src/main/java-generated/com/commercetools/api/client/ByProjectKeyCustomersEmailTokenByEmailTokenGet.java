@@ -84,6 +84,10 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenGet extends ApiMethod<By
     public void setEmailToken(final String emailToken) { this.emailToken = emailToken; }
 
     public ByProjectKeyCustomersEmailTokenByEmailTokenGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomersEmailTokenByEmailTokenGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

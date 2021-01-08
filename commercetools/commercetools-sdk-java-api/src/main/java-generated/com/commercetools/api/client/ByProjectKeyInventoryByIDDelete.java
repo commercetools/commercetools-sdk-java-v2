@@ -88,10 +88,18 @@ public class ByProjectKeyInventoryByIDDelete extends ApiMethod<ByProjectKeyInven
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyInventoryByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyInventoryByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyInventoryByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInventoryByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

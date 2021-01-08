@@ -90,10 +90,18 @@ public class ByProjectKeyImageSearchPost extends ApiMethod<ByProjectKeyImageSear
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyImageSearchPost withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyImageSearchPost addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyImageSearchPost withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyImageSearchPost addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
 

@@ -98,26 +98,50 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final String productImageUrl){
+        return copy().withQueryParam("productImageUrl", productImageUrl);
+    }
+    
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(final String productImageUrl){
         return copy().addQueryParam("productImageUrl", productImageUrl);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final String productName){
+        return copy().withQueryParam("productName", productName);
+    }
+    
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final String productName){
         return copy().addQueryParam("productName", productName);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final Double confidenceMin){
+        return copy().withQueryParam("confidenceMin", confidenceMin);
+    }
+    
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final Double confidenceMin){
         return copy().addQueryParam("confidenceMin", confidenceMin);
     }
     
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Double confidenceMax){
+        return copy().withQueryParam("confidenceMax", confidenceMax);
+    }
+    
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final Double confidenceMax){
         return copy().addQueryParam("confidenceMax", confidenceMax);
     }
 

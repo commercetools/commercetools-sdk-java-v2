@@ -100,22 +100,42 @@ public class ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final Double limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final Double offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){
+        return copy().withQueryParam("resourceKey", resourceKey);
+    }
+    
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(final String resourceKey){
         return copy().addQueryParam("resourceKey", resourceKey);
     }
     
     public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
+        return copy().withQueryParam("state", state);
+    }
+    
+    public ByProjectKeyProductsImportSinkKeyByImportSinkKeyImportOperationsGet addState(final ProcessingState state){
         return copy().addQueryParam("state", state);
     }
 

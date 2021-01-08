@@ -88,10 +88,18 @@ public class ByProjectKeyStatesByIDDelete extends ApiMethod<ByProjectKeyStatesBy
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyStatesByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyStatesByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyStatesByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyStatesByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -84,6 +84,10 @@ public class ByProjectKeyStatesKeyByKeyGet extends ApiMethod<ByProjectKeyStatesK
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyStatesKeyByKeyGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyStatesKeyByKeyGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

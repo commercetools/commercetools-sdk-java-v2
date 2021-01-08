@@ -112,34 +112,66 @@ public class ByProjectKeyProductsKeyByKeyDelete extends ApiMethod<ByProjectKeyPr
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductsKeyByKeyDelete withPriceCurrency(final String priceCurrency){
+        return copy().withQueryParam("priceCurrency", priceCurrency);
+    }
+    
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCurrency(final String priceCurrency){
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsKeyByKeyDelete withPriceCountry(final String priceCountry){
+        return copy().withQueryParam("priceCountry", priceCountry);
+    }
+    
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCountry(final String priceCountry){
         return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroup(final String priceCustomerGroup){
+        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
+    }
+    
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroup(final String priceCustomerGroup){
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsKeyByKeyDelete withPriceChannel(final String priceChannel){
+        return copy().withQueryParam("priceChannel", priceChannel);
+    }
+    
+    public ByProjectKeyProductsKeyByKeyDelete addPriceChannel(final String priceChannel){
         return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsKeyByKeyDelete withLocaleProjection(final String localeProjection){
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+    
+    public ByProjectKeyProductsKeyByKeyDelete addLocaleProjection(final String localeProjection){
         return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsKeyByKeyDelete withStoreProjection(final String storeProjection){
+        return copy().withQueryParam("storeProjection", storeProjection);
+    }
+    
+    public ByProjectKeyProductsKeyByKeyDelete addStoreProjection(final String storeProjection){
         return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyProductsKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyProductsKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductsKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

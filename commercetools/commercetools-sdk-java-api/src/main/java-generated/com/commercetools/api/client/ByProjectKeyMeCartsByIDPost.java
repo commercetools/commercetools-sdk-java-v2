@@ -93,6 +93,10 @@ public class ByProjectKeyMeCartsByIDPost extends ApiMethod<ByProjectKeyMeCartsBy
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeCartsByIDPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMeCartsByIDPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

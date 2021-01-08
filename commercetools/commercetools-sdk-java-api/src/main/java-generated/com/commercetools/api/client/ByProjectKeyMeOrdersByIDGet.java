@@ -84,6 +84,10 @@ public class ByProjectKeyMeOrdersByIDGet extends ApiMethod<ByProjectKeyMeOrdersB
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeOrdersByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMeOrdersByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

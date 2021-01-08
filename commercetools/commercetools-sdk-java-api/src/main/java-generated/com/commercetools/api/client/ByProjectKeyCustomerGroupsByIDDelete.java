@@ -88,10 +88,18 @@ public class ByProjectKeyCustomerGroupsByIDDelete extends ApiMethod<ByProjectKey
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCustomerGroupsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyCustomerGroupsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyCustomerGroupsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomerGroupsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

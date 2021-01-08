@@ -88,10 +88,18 @@ public class ByProjectKeyMePaymentsKeyByKeyDelete extends ApiMethod<ByProjectKey
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyMePaymentsKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyMePaymentsKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyMePaymentsKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMePaymentsKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

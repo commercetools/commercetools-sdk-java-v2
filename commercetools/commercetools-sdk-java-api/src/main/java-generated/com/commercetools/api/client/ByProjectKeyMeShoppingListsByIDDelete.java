@@ -88,10 +88,18 @@ public class ByProjectKeyMeShoppingListsByIDDelete extends ApiMethod<ByProjectKe
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyMeShoppingListsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyMeShoppingListsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyMeShoppingListsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMeShoppingListsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

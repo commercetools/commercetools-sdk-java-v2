@@ -90,6 +90,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTok
     public void setPasswordToken(final String passwordToken) { this.passwordToken = passwordToken; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenByPasswordTokenGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

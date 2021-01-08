@@ -98,14 +98,26 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends ApiMethod<B
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withDataErasure(final Boolean dataErasure){
+        return copy().withQueryParam("dataErasure", dataErasure);
+    }
+    
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete addDataErasure(final Boolean dataErasure){
         return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyCustomObjectsByContainerByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

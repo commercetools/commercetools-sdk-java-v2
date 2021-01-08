@@ -95,6 +95,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
     public void setCustomerId(final String customerId) { this.customerId = customerId; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

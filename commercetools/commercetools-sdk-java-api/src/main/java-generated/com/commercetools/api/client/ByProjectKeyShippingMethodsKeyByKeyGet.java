@@ -84,6 +84,10 @@ public class ByProjectKeyShippingMethodsKeyByKeyGet extends ApiMethod<ByProjectK
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyShippingMethodsKeyByKeyGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyShippingMethodsKeyByKeyGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

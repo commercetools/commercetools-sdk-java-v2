@@ -88,10 +88,18 @@ public class ByProjectKeyProductDiscountsByIDDelete extends ApiMethod<ByProjectK
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductDiscountsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyProductDiscountsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyProductDiscountsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductDiscountsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

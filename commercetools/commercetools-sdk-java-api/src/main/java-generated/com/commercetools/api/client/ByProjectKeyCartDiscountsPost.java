@@ -87,6 +87,10 @@ public class ByProjectKeyCartDiscountsPost extends ApiMethod<ByProjectKeyCartDis
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyCartDiscountsPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCartDiscountsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

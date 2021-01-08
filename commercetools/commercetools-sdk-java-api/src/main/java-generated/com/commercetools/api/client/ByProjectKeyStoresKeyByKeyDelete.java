@@ -88,10 +88,18 @@ public class ByProjectKeyStoresKeyByKeyDelete extends ApiMethod<ByProjectKeyStor
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyStoresKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyStoresKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyStoresKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyStoresKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -84,6 +84,10 @@ public class ByProjectKeyTaxCategoriesByIDGet extends ApiMethod<ByProjectKeyTaxC
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyTaxCategoriesByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyTaxCategoriesByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

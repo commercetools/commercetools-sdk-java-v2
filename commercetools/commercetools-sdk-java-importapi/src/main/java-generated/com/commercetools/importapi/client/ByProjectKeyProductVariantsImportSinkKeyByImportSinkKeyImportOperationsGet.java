@@ -100,22 +100,42 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperat
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
     public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet withLimit(final Double limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet addLimit(final Double limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet withOffset(final Double offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet addOffset(final Double offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet withResourceKey(final String resourceKey){
+        return copy().withQueryParam("resourceKey", resourceKey);
+    }
+    
+    public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet addResourceKey(final String resourceKey){
         return copy().addQueryParam("resourceKey", resourceKey);
     }
     
     public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
+        return copy().withQueryParam("state", state);
+    }
+    
+    public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet addState(final ProcessingState state){
         return copy().addQueryParam("state", state);
     }
 

@@ -87,6 +87,10 @@ public class ByProjectKeyTaxCategoriesPost extends ApiMethod<ByProjectKeyTaxCate
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyTaxCategoriesPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyTaxCategoriesPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

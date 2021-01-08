@@ -108,30 +108,58 @@ public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsB
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductsByIDGet withPriceCurrency(final String priceCurrency){
+        return copy().withQueryParam("priceCurrency", priceCurrency);
+    }
+    
+    public ByProjectKeyProductsByIDGet addPriceCurrency(final String priceCurrency){
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsByIDGet withPriceCountry(final String priceCountry){
+        return copy().withQueryParam("priceCountry", priceCountry);
+    }
+    
+    public ByProjectKeyProductsByIDGet addPriceCountry(final String priceCountry){
         return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsByIDGet withPriceCustomerGroup(final String priceCustomerGroup){
+        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
+    }
+    
+    public ByProjectKeyProductsByIDGet addPriceCustomerGroup(final String priceCustomerGroup){
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsByIDGet withPriceChannel(final String priceChannel){
+        return copy().withQueryParam("priceChannel", priceChannel);
+    }
+    
+    public ByProjectKeyProductsByIDGet addPriceChannel(final String priceChannel){
         return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsByIDGet withLocaleProjection(final String localeProjection){
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+    
+    public ByProjectKeyProductsByIDGet addLocaleProjection(final String localeProjection){
         return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsByIDGet withStoreProjection(final String storeProjection){
+        return copy().withQueryParam("storeProjection", storeProjection);
+    }
+    
+    public ByProjectKeyProductsByIDGet addStoreProjection(final String storeProjection){
         return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -95,32 +95,61 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductProjectionsSuggestGet withFuzzy(final Boolean fuzzy){
+        return copy().withQueryParam("fuzzy", fuzzy);
+    }
+    
+    public ByProjectKeyProductProjectionsSuggestGet addFuzzy(final Boolean fuzzy){
         return copy().addQueryParam("fuzzy", fuzzy);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withStaged(final Boolean staged){
+        return copy().withQueryParam("staged", staged);
+    }
+    
+    public ByProjectKeyProductProjectionsSuggestGet addStaged(final Boolean staged){
         return copy().addQueryParam("staged", staged);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyProductProjectionsSuggestGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyProductProjectionsSuggestGet addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyProductProjectionsSuggestGet addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final Boolean withTotal){
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+    
+    public ByProjectKeyProductProjectionsSuggestGet addWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
 
     public ByProjectKeyProductProjectionsSuggestGet withSearchKeywords(final String locale, final String searchKeywords){
+        return copy().withQueryParam(String.format("searchKeywords.%s", locale), searchKeywords);
+    }
+    
+    public ByProjectKeyProductProjectionsSuggestGet addSearchKeywords(final String locale, final String searchKeywords){
         return copy().addQueryParam(String.format("searchKeywords.%s", locale), searchKeywords);
     }
+    
     
     @Override
     protected ByProjectKeyProductProjectionsSuggestGet copy()

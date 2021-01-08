@@ -113,30 +113,58 @@ public class ByProjectKeyProductsPost extends ApiMethod<ByProjectKeyProductsPost
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductsPost withPriceCurrency(final String priceCurrency){
+        return copy().withQueryParam("priceCurrency", priceCurrency);
+    }
+    
+    public ByProjectKeyProductsPost addPriceCurrency(final String priceCurrency){
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsPost withPriceCountry(final String priceCountry){
+        return copy().withQueryParam("priceCountry", priceCountry);
+    }
+    
+    public ByProjectKeyProductsPost addPriceCountry(final String priceCountry){
         return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsPost withPriceCustomerGroup(final String priceCustomerGroup){
+        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
+    }
+    
+    public ByProjectKeyProductsPost addPriceCustomerGroup(final String priceCustomerGroup){
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsPost withPriceChannel(final String priceChannel){
+        return copy().withQueryParam("priceChannel", priceChannel);
+    }
+    
+    public ByProjectKeyProductsPost addPriceChannel(final String priceChannel){
         return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsPost withLocaleProjection(final String localeProjection){
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+    
+    public ByProjectKeyProductsPost addLocaleProjection(final String localeProjection){
         return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsPost withStoreProjection(final String storeProjection){
+        return copy().withQueryParam("storeProjection", storeProjection);
+    }
+    
+    public ByProjectKeyProductsPost addStoreProjection(final String storeProjection){
         return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

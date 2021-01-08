@@ -93,6 +93,10 @@ public class ByProjectKeyStoresKeyByKeyPost extends ApiMethod<ByProjectKeyStores
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyStoresKeyByKeyPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyStoresKeyByKeyPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

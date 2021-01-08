@@ -88,10 +88,18 @@ public class ByProjectKeyCustomerGroupsKeyByKeyDelete extends ApiMethod<ByProjec
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCustomerGroupsKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyCustomerGroupsKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyCustomerGroupsKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomerGroupsKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -84,6 +84,10 @@ public class ByProjectKeyChannelsByIDGet extends ApiMethod<ByProjectKeyChannelsB
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyChannelsByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyChannelsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

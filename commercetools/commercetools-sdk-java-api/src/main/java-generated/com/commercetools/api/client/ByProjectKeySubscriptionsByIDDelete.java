@@ -88,10 +88,18 @@ public class ByProjectKeySubscriptionsByIDDelete extends ApiMethod<ByProjectKeyS
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeySubscriptionsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeySubscriptionsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeySubscriptionsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeySubscriptionsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

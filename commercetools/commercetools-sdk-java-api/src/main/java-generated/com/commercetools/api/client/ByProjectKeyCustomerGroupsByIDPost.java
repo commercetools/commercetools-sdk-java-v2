@@ -93,6 +93,10 @@ public class ByProjectKeyCustomerGroupsByIDPost extends ApiMethod<ByProjectKeyCu
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCustomerGroupsByIDPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomerGroupsByIDPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

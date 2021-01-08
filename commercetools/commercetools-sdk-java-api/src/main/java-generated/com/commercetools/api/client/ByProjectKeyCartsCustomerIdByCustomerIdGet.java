@@ -87,6 +87,10 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdGet extends ApiMethod<ByProj
     public void setCustomerId(final String customerId) { this.customerId = customerId; }
 
     public ByProjectKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCartsCustomerIdByCustomerIdGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

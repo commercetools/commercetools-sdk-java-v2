@@ -124,56 +124,109 @@ public class ByProjectKeyProductsGet extends ApiMethod<ByProjectKeyProductsGet, 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductsGet withPriceCurrency(final String priceCurrency){
+        return copy().withQueryParam("priceCurrency", priceCurrency);
+    }
+    
+    public ByProjectKeyProductsGet addPriceCurrency(final String priceCurrency){
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductsGet withPriceCountry(final String priceCountry){
+        return copy().withQueryParam("priceCountry", priceCountry);
+    }
+    
+    public ByProjectKeyProductsGet addPriceCountry(final String priceCountry){
         return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductsGet withPriceCustomerGroup(final String priceCustomerGroup){
+        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
+    }
+    
+    public ByProjectKeyProductsGet addPriceCustomerGroup(final String priceCustomerGroup){
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductsGet withPriceChannel(final String priceChannel){
+        return copy().withQueryParam("priceChannel", priceChannel);
+    }
+    
+    public ByProjectKeyProductsGet addPriceChannel(final String priceChannel){
         return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductsGet withLocaleProjection(final String localeProjection){
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+    
+    public ByProjectKeyProductsGet addLocaleProjection(final String localeProjection){
         return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductsGet withStoreProjection(final String storeProjection){
+        return copy().withQueryParam("storeProjection", storeProjection);
+    }
+    
+    public ByProjectKeyProductsGet addStoreProjection(final String storeProjection){
         return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductsGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductsGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
     
     public ByProjectKeyProductsGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyProductsGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductsGet withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyProductsGet addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductsGet withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyProductsGet addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductsGet withWithTotal(final Boolean withTotal){
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+    
+    public ByProjectKeyProductsGet addWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductsGet withWhere(final String where){
+        return copy().withQueryParam("where", where);
+    }
+    
+    public ByProjectKeyProductsGet addWhere(final String where){
         return copy().addQueryParam("where", where);
     }
 
     public ByProjectKeyProductsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
+    }
+    
+    public ByProjectKeyProductsGet addPredicateVar(final String varName, final String predicateVar){
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
+    
     
     @Override
     protected ByProjectKeyProductsGet copy()

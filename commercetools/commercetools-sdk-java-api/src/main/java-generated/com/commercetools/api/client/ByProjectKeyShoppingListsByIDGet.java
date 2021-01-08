@@ -84,6 +84,10 @@ public class ByProjectKeyShoppingListsByIDGet extends ApiMethod<ByProjectKeyShop
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyShoppingListsByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyShoppingListsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

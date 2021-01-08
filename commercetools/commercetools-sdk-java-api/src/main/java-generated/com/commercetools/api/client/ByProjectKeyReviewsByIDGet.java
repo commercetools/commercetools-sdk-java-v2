@@ -84,6 +84,10 @@ public class ByProjectKeyReviewsByIDGet extends ApiMethod<ByProjectKeyReviewsByI
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyReviewsByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyReviewsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

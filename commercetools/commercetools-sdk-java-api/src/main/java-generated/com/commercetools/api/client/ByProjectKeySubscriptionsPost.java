@@ -91,6 +91,10 @@ public class ByProjectKeySubscriptionsPost extends ApiMethod<ByProjectKeySubscri
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeySubscriptionsPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeySubscriptionsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

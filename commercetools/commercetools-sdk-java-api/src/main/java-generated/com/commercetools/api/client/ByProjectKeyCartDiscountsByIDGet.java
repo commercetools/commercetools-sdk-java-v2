@@ -84,6 +84,10 @@ public class ByProjectKeyCartDiscountsByIDGet extends ApiMethod<ByProjectKeyCart
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCartDiscountsByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCartDiscountsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

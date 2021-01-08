@@ -87,6 +87,10 @@ public class ByProjectKeyMeShoppingListsPost extends ApiMethod<ByProjectKeyMeSho
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyMeShoppingListsPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMeShoppingListsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -103,6 +103,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost 
     public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

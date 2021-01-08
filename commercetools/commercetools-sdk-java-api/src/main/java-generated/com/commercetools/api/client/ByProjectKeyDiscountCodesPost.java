@@ -87,6 +87,10 @@ public class ByProjectKeyDiscountCodesPost extends ApiMethod<ByProjectKeyDiscoun
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyDiscountCodesPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyDiscountCodesPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

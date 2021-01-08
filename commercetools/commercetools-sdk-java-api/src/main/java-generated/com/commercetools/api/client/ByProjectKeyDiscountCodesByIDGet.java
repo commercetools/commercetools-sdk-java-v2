@@ -84,6 +84,10 @@ public class ByProjectKeyDiscountCodesByIDGet extends ApiMethod<ByProjectKeyDisc
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyDiscountCodesByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyDiscountCodesByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

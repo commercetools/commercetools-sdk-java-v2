@@ -93,6 +93,10 @@ public class ByProjectKeySubscriptionsByIDPost extends ApiMethod<ByProjectKeySub
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeySubscriptionsByIDPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeySubscriptionsByIDPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

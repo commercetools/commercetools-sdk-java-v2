@@ -90,6 +90,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet 
     public void setEmailToken(final String emailToken) { this.emailToken = emailToken; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

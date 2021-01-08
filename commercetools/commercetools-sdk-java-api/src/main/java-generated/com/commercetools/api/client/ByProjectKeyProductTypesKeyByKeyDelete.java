@@ -88,10 +88,18 @@ public class ByProjectKeyProductTypesKeyByKeyDelete extends ApiMethod<ByProjectK
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductTypesKeyByKeyDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyProductTypesKeyByKeyDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyProductTypesKeyByKeyDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductTypesKeyByKeyDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

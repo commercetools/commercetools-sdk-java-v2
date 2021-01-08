@@ -93,6 +93,10 @@ public class ByProjectKeyDiscountCodesByIDPost extends ApiMethod<ByProjectKeyDis
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyDiscountCodesByIDPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyDiscountCodesByIDPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

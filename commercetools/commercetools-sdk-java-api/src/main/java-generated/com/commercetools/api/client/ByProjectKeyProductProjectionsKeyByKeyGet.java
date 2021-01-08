@@ -114,34 +114,66 @@ public class ByProjectKeyProductProjectionsKeyByKeyGet extends ApiMethod<ByProje
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductProjectionsKeyByKeyGet withStaged(final Boolean staged){
+        return copy().withQueryParam("staged", staged);
+    }
+    
+    public ByProjectKeyProductProjectionsKeyByKeyGet addStaged(final Boolean staged){
         return copy().addQueryParam("staged", staged);
     }
     
     public ByProjectKeyProductProjectionsKeyByKeyGet withPriceCurrency(final String priceCurrency){
+        return copy().withQueryParam("priceCurrency", priceCurrency);
+    }
+    
+    public ByProjectKeyProductProjectionsKeyByKeyGet addPriceCurrency(final String priceCurrency){
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductProjectionsKeyByKeyGet withPriceCountry(final String priceCountry){
+        return copy().withQueryParam("priceCountry", priceCountry);
+    }
+    
+    public ByProjectKeyProductProjectionsKeyByKeyGet addPriceCountry(final String priceCountry){
         return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductProjectionsKeyByKeyGet withPriceCustomerGroup(final String priceCustomerGroup){
+        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
+    }
+    
+    public ByProjectKeyProductProjectionsKeyByKeyGet addPriceCustomerGroup(final String priceCustomerGroup){
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductProjectionsKeyByKeyGet withPriceChannel(final String priceChannel){
+        return copy().withQueryParam("priceChannel", priceChannel);
+    }
+    
+    public ByProjectKeyProductProjectionsKeyByKeyGet addPriceChannel(final String priceChannel){
         return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductProjectionsKeyByKeyGet withLocaleProjection(final String localeProjection){
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+    
+    public ByProjectKeyProductProjectionsKeyByKeyGet addLocaleProjection(final String localeProjection){
         return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductProjectionsKeyByKeyGet withStoreProjection(final String storeProjection){
+        return copy().withQueryParam("storeProjection", storeProjection);
+    }
+    
+    public ByProjectKeyProductProjectionsKeyByKeyGet addStoreProjection(final String storeProjection){
         return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductProjectionsKeyByKeyGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductProjectionsKeyByKeyGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -88,10 +88,18 @@ public class ByProjectKeyTaxCategoriesByIDDelete extends ApiMethod<ByProjectKeyT
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyTaxCategoriesByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyTaxCategoriesByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyTaxCategoriesByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyTaxCategoriesByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -92,14 +92,26 @@ public class ByProjectKeyReviewsByIDDelete extends ApiMethod<ByProjectKeyReviews
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyReviewsByIDDelete withDataErasure(final Boolean dataErasure){
+        return copy().withQueryParam("dataErasure", dataErasure);
+    }
+    
+    public ByProjectKeyReviewsByIDDelete addDataErasure(final Boolean dataErasure){
         return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyReviewsByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyReviewsByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyReviewsByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyReviewsByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

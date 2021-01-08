@@ -84,6 +84,10 @@ public class ByProjectKeyOrdersEditsKeyByKeyGet extends ApiMethod<ByProjectKeyOr
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyOrdersEditsKeyByKeyGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyOrdersEditsKeyByKeyGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

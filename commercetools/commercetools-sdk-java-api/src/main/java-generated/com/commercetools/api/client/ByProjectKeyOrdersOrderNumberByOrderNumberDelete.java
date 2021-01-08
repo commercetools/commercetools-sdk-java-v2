@@ -92,14 +92,26 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete extends ApiMethod<
     public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withDataErasure(final Boolean dataErasure){
+        return copy().withQueryParam("dataErasure", dataErasure);
+    }
+    
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addDataErasure(final Boolean dataErasure){
         return copy().addQueryParam("dataErasure", dataErasure);
     }
     
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

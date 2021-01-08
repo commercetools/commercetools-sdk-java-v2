@@ -84,6 +84,10 @@ public class ByProjectKeyShippingMethodsByIDGet extends ApiMethod<ByProjectKeySh
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyShippingMethodsByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyShippingMethodsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

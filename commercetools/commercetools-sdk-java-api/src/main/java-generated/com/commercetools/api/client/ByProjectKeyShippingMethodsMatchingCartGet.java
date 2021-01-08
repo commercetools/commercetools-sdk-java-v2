@@ -79,10 +79,18 @@ public class ByProjectKeyShippingMethodsMatchingCartGet extends ApiMethod<ByProj
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsMatchingCartGet withCartId(final String cartId){
+        return copy().withQueryParam("cartId", cartId);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingCartGet addCartId(final String cartId){
         return copy().addQueryParam("cartId", cartId);
     }
     
     public ByProjectKeyShippingMethodsMatchingCartGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyShippingMethodsMatchingCartGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

@@ -150,84 +150,165 @@ public class ByProjectKeyProductProjectionsSearchGet extends ApiMethod<ByProject
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyProductProjectionsSearchGet withFuzzy(final Boolean fuzzy){
+        return copy().withQueryParam("fuzzy", fuzzy);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addFuzzy(final Boolean fuzzy){
         return copy().addQueryParam("fuzzy", fuzzy);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFuzzyLevel(final Double fuzzyLevel){
+        return copy().withQueryParam("fuzzyLevel", fuzzyLevel);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addFuzzyLevel(final Double fuzzyLevel){
         return copy().addQueryParam("fuzzyLevel", fuzzyLevel);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final Boolean markMatchingVariants){
+        return copy().withQueryParam("markMatchingVariants", markMatchingVariants);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final Boolean markMatchingVariants){
         return copy().addQueryParam("markMatchingVariants", markMatchingVariants);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withStaged(final Boolean staged){
+        return copy().withQueryParam("staged", staged);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addStaged(final Boolean staged){
         return copy().addQueryParam("staged", staged);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFilter(final String filter){
+        return copy().withQueryParam("filter", filter);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addFilter(final String filter){
         return copy().addQueryParam("filter", filter);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFilterFacets(final String filterFacets){
+        return copy().withQueryParam("filter.facets", filterFacets);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addFilterFacets(final String filterFacets){
         return copy().addQueryParam("filter.facets", filterFacets);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final String filterQuery){
+        return copy().withQueryParam("filter.query", filterQuery);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final String filterQuery){
         return copy().addQueryParam("filter.query", filterQuery);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withFacet(final String facet){
+        return copy().withQueryParam("facet", facet);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addFacet(final String facet){
         return copy().addQueryParam("facet", facet);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withSort(final String sort){
+        return copy().withQueryParam("sort", sort);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withLimit(final Integer limit){
+        return copy().withQueryParam("limit", limit);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addLimit(final Integer limit){
         return copy().addQueryParam("limit", limit);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withOffset(final Integer offset){
+        return copy().withQueryParam("offset", offset);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withWithTotal(final Boolean withTotal){
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withPriceCurrency(final String priceCurrency){
+        return copy().withQueryParam("priceCurrency", priceCurrency);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addPriceCurrency(final String priceCurrency){
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withPriceCountry(final String priceCountry){
+        return copy().withQueryParam("priceCountry", priceCountry);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addPriceCountry(final String priceCountry){
         return copy().addQueryParam("priceCountry", priceCountry);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withPriceCustomerGroup(final String priceCustomerGroup){
+        return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addPriceCustomerGroup(final String priceCustomerGroup){
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withPriceChannel(final String priceChannel){
+        return copy().withQueryParam("priceChannel", priceChannel);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addPriceChannel(final String priceChannel){
         return copy().addQueryParam("priceChannel", priceChannel);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withLocaleProjection(final String localeProjection){
+        return copy().withQueryParam("localeProjection", localeProjection);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addLocaleProjection(final String localeProjection){
         return copy().addQueryParam("localeProjection", localeProjection);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withStoreProjection(final String storeProjection){
+        return copy().withQueryParam("storeProjection", storeProjection);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addStoreProjection(final String storeProjection){
         return copy().addQueryParam("storeProjection", storeProjection);
     }
     
     public ByProjectKeyProductProjectionsSearchGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 
     public ByProjectKeyProductProjectionsSearchGet withText(final String locale, final String text){
+        return copy().withQueryParam(String.format("text.%s", locale), text);
+    }
+    
+    public ByProjectKeyProductProjectionsSearchGet addText(final String locale, final String text){
         return copy().addQueryParam(String.format("text.%s", locale), text);
     }
+    
     
     @Override
     protected ByProjectKeyProductProjectionsSearchGet copy()

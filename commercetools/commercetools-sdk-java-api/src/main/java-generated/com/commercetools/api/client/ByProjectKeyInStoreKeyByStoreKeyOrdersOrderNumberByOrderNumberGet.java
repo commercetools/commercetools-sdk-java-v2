@@ -95,6 +95,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet e
     public void setOrderNumber(final String orderNumber) { this.orderNumber = orderNumber; }
 
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

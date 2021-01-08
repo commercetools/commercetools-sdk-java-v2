@@ -87,6 +87,10 @@ public class ByProjectKeyInventoryPost extends ApiMethod<ByProjectKeyInventoryPo
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyInventoryPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInventoryPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

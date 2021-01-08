@@ -84,6 +84,10 @@ public class ByProjectKeyCustomerGroupsByIDGet extends ApiMethod<ByProjectKeyCus
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyCustomerGroupsByIDGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomerGroupsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

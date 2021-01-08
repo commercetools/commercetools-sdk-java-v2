@@ -100,6 +100,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost extends ApiMe
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

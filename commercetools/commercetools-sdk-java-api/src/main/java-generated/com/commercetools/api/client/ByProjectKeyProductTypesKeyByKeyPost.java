@@ -93,6 +93,10 @@ public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKey
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyProductTypesKeyByKeyPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyProductTypesKeyByKeyPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

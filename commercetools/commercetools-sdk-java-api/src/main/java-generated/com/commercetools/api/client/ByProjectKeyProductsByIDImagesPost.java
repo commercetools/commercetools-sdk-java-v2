@@ -104,18 +104,34 @@ public class ByProjectKeyProductsByIDImagesPost extends ApiMethod<ByProjectKeyPr
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyProductsByIDImagesPost withFilename(final String filename){
+        return copy().withQueryParam("filename", filename);
+    }
+    
+    public ByProjectKeyProductsByIDImagesPost addFilename(final String filename){
         return copy().addQueryParam("filename", filename);
     }
     
     public ByProjectKeyProductsByIDImagesPost withVariant(final Double variant){
+        return copy().withQueryParam("variant", variant);
+    }
+    
+    public ByProjectKeyProductsByIDImagesPost addVariant(final Double variant){
         return copy().addQueryParam("variant", variant);
     }
     
     public ByProjectKeyProductsByIDImagesPost withSku(final String sku){
+        return copy().withQueryParam("sku", sku);
+    }
+    
+    public ByProjectKeyProductsByIDImagesPost addSku(final String sku){
         return copy().addQueryParam("sku", sku);
     }
     
     public ByProjectKeyProductsByIDImagesPost withStaged(final Boolean staged){
+        return copy().withQueryParam("staged", staged);
+    }
+    
+    public ByProjectKeyProductsByIDImagesPost addStaged(final Boolean staged){
         return copy().addQueryParam("staged", staged);
     }
 

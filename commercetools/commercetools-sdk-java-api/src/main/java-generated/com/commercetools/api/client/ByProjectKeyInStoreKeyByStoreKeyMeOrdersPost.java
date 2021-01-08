@@ -93,6 +93,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost extends ApiMethod<ByPr
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

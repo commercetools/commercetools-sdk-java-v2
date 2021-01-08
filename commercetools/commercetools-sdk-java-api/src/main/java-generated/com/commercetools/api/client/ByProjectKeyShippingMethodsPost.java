@@ -87,6 +87,10 @@ public class ByProjectKeyShippingMethodsPost extends ApiMethod<ByProjectKeyShipp
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyShippingMethodsPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyShippingMethodsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

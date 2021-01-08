@@ -93,6 +93,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet extends ApiMet
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

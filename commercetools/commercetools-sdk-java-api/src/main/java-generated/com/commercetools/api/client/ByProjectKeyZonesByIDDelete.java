@@ -88,10 +88,18 @@ public class ByProjectKeyZonesByIDDelete extends ApiMethod<ByProjectKeyZonesByID
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyZonesByIDDelete withVersion(final Long version){
+        return copy().withQueryParam("version", version);
+    }
+    
+    public ByProjectKeyZonesByIDDelete addVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
     
     public ByProjectKeyZonesByIDDelete withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyZonesByIDDelete addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

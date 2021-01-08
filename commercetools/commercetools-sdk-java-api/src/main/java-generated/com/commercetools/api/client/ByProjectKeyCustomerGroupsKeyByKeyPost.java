@@ -93,6 +93,10 @@ public class ByProjectKeyCustomerGroupsKeyByKeyPost extends ApiMethod<ByProjectK
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyCustomerGroupsKeyByKeyPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomerGroupsKeyByKeyPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

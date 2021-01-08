@@ -84,6 +84,10 @@ public class ByProjectKeyCustomObjectsByContainerGet extends ApiMethod<ByProject
     public void setContainer(final String container) { this.container = container; }
 
     public ByProjectKeyCustomObjectsByContainerGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyCustomObjectsByContainerGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

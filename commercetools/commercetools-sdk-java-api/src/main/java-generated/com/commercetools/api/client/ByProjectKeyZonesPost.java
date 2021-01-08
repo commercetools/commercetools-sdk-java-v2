@@ -87,6 +87,10 @@ public class ByProjectKeyZonesPost extends ApiMethod<ByProjectKeyZonesPost, com.
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyZonesPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyZonesPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

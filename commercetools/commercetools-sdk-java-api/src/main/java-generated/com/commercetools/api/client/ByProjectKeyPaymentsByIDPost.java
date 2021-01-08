@@ -93,6 +93,10 @@ public class ByProjectKeyPaymentsByIDPost extends ApiMethod<ByProjectKeyPayments
     public void setID(final String ID) { this.ID = ID; }
 
     public ByProjectKeyPaymentsByIDPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyPaymentsByIDPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

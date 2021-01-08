@@ -84,6 +84,10 @@ public class ByProjectKeyMePaymentsKeyByKeyGet extends ApiMethod<ByProjectKeyMeP
     public void setKey(final String key) { this.key = key; }
 
     public ByProjectKeyMePaymentsKeyByKeyGet withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyMePaymentsKeyByKeyGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

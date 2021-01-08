@@ -87,6 +87,10 @@ public class ByProjectKeyChannelsPost extends ApiMethod<ByProjectKeyChannelsPost
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
     public ByProjectKeyChannelsPost withExpand(final String expand){
+        return copy().withQueryParam("expand", expand);
+    }
+    
+    public ByProjectKeyChannelsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 

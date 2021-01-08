@@ -9,7 +9,7 @@
 
 This repository contains the commercetools platform and import-api java sdks generated from our api reference.
 
-* [<strong>Javadoc</strong>](https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/index.html)
+* [Getting Started](docs/GettingStarted.md)
 
 ## Installation
 
@@ -103,167 +103,9 @@ dependencies {
 * `commercetools-sdk-java-importapi`: models and request builders for the import API
 * `commercetools-sdk-java-ml`: models and request builders for the machine learning API
 
-## Configuration
+## Documentation
 
-Creating http requests starts from the ApiRoot which  holds information specific to the project. To configure the ApiRoot use the following method:
-
-```java
-import com.commercetools.api.defaultconfig.ApiFactory;
-import com.commercetools.api.client.ApiRoot;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import com.commercetools.api.defaultconfig.ServiceRegion;
-
-class Main {
-    public void main() {
-        // ApiRoot config for Europe projects
-        ApiRoot apiRoot = ApiFactory.create(
-            ClientCredentials.of().withClientId("your-client-id")
-                .withClientSecret("your-client-secret")
-                .withScopes("your-scopes")
-                .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-            ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-    }
-}
-```
-
-```java
-import com.commercetools.importapi.defaultconfig.ImportApiFactory;
-import com.commercetools.importapi.client.ApiRoot;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import com.commercetools.importapi.defaultconfig.ServiceRegion;
-
-class Main {
-    public void main() {
-        // ApiRoot config for United States projects
-        ApiRoot apiRoot = ImportApiFactory.create(
-            ClientCredentials.of().withClientId("your-client-id")
-                .withClientSecret("your-client-secret")
-                .withScopes("your-scopes")
-                .build(),
-            ServiceRegion.GCP_US_CENTRAL1.getOAuthTokenUrl(),
-            ServiceRegion.GCP_US_CENTRAL1.getApiUrl());
-    }
-}
-```
-
-```java
-import com.commercetools.importapi.defaultconfig.ImportApiFactory;
-import com.commercetools.importapi.client.ApiRoot;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import com.commercetools.importapi.defaultconfig.ServiceRegion;
-
-class Main {
-    public void main() {
-        //ApiRoot config for ImportAPI
-        ApiRoot apiRoot = ImportApiFactory.create(
-            ClientCredentials.of().withClientId("your-client-id")
-                .withClientSecret("your-client-secret")
-                .withScopes("your-scopes")
-                .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-            ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-
-    }
-}
-```
-
-## Using SDK
-
-SDK follows a builder pattern when creating requests and model entities. Category resource will be used to demonstrate how to use the SDK. This behaviour is the same for all resources.
-
-```java
-class Main {
-    public void main() {
-        // Create CategoryDraft using builder pattern
-        CategoryDraft categoryDraft = CategoryDraftBuilder.of()
-                .name(
-                    LocalizedStringBuilder.of().addValue("en", "name").build()
-                )
-                .slug(
-                    LocalizedStringBuilder.of().addValue("en", "slug").build()
-                )
-                .description(
-                    LocalizedStringBuilder.of().addValue("en", "description").build()
-                )
-                .externalId("random-id")
-                .key("random-key")
-                .metaDescription(
-                    LocalizedStringBuilder.of().addValue("en", "metaDescription").build()
-                )
-                .orderHint("hint")
-                .build();
-
-        // Use in the previous step configured ApiRoot instance to send and receive a newly created Category
-        Category category = apiRoot.withProjectKey("project-key")
-                .categories()
-                .post(categoryDraft)
-                .executeBlocking()
-                .getBody();
-
-        // Get Category by id
-        Category queriedCategory = apiRoot.withProjectKey("project-key")
-                .categories()
-                .withId(category.getId())
-                .get()
-                .executeBlocking()
-                .getBody();
-
-        // Get Category by key
-        Category queriedCategoryByKey = apiRoot.withProjectKey("project-key")
-                .categories()
-                .withKey(category.getKey())
-                .get()
-                .executeBlocking()
-                .getBody();
-
-        // Query Categories
-        CategoryPagedQueryResponse response = apiRoot.withProjectKey("project-key")
-                .categories()
-                .get()
-                .withWhere("id=" + "\"" + category.getId() + "\"")
-                .executeBlocking().getBody();
-
-        // Delete Category by id
-        Long version = 1L;
-        Category deletedCategory = apiRoot.withProjectKey("project-key")
-                .categories()
-                .withId(category.getId())
-                .delete()
-                .withVersion(version)
-                .executeBlocking()
-                .getBody();
-
-        // Update Category
-        List<CategoryUpdateAction> updateActions = new ArrayList<>();
-        LocalizedString newName = LocalizedString.of();
-        newName.setValue("key-Temp", "value-Temp");
-        updateActions.add(CategoryChangeNameActionBuilder.of()
-                .name(newName)
-                .build());
-
-        CategoryUpdate categoryUpdate = CategoryUpdateBuilder.of()
-                .version(category.getVersion())
-                .actions(updateActions)
-                .build();
-
-        Category updatedCategory = apiRoot.withProjectKey("project-key")
-                .categories()
-                .withId(category.getId())
-                .post(categoryUpdate)
-                .executeBlocking()
-                .getBody();
-
-        // Delete Category by key
-        Category deletedCategoryByKey = apiRoot.withProjectKey("project-key")
-                .categories()
-                .withKey(category.getKey())
-                .delete()
-                .withVersion(category.getVersion())
-                .executeBlocking().getBody();   
-    }
-}
-```
+* [Documentation](docs/Readme.md)
 
 [](definitions for the top badges)
 

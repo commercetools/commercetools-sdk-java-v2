@@ -30,12 +30,12 @@ final ByProjectKeyTaxCategoriesGet taxCategoriesGet = apiRoot
     .taxCategories()
     .get()
     .withWhere("name = :name")
-    .withQueryParam("name", "de19");
+    .withPredicateVar("name", "de19");
 
-final ByProjectKeyTaxCategoriesGet taxCategoriesGet2 = taxCategoriesGet.withQueryParam("name", "de07");
+final ByProjectKeyTaxCategoriesGet taxCategoriesGet2 = taxCategoriesGet.withPredicateVar("name", "de07");
 
-Assertions.assertThat(taxCategoriesGet.getQueryParam("name").get(0)).isEqualTo("de19");
-Assertions.assertThat(taxCategoriesGet2.getQueryParam("name").get(0)).isEqualTo("de07");
+Assertions.assertThat(taxCategoriesGet.getQueryParam("var.name").get(0)).isEqualTo("de19");
+Assertions.assertThat(taxCategoriesGet2.getQueryParam("var.name").get(0)).isEqualTo("de07");
 ```
 
 ## Good defaults for equals() and hashCode()

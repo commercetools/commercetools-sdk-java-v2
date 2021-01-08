@@ -66,7 +66,7 @@ final CompletableFuture<ApiHttpResponse<TaxCategoryPagedQueryResponse>> future =
                 .taxCategories()
                 .get()
                 .withWhere("name = :name")
-                .withQueryParam("name", "de19")
+                .withPredicateVar("name", "de19")
                 .execute();
 ```
 See the [test code](../commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/ExamplesTest.java#L34)

@@ -38,7 +38,7 @@ public class ExamplesTest {
                 .taxCategories()
                 .get()
                 .withWhere("name = :name")
-                .withQueryParam("name", "de19")
+                .withPredicateVar("name", "de19")
                 .execute();
     }
 
@@ -96,7 +96,8 @@ public class ExamplesTest {
         CategoryPagedQueryResponse response = apiRoot.withProjectKey("project-key")
                 .categories()
                 .get()
-                .withWhere("id=" + "\"" + category.getId() + "\"")
+                .withWhere("id = :catId")
+                .withPredicateVar("catId", category.getId())
                 .executeBlocking().getBody();
 
         // Delete Category by id
@@ -146,11 +147,11 @@ public class ExamplesTest {
                 .taxCategories()
                 .get()
                 .withWhere("name = :name")
-                .withQueryParam("name", "de19");
+                .withPredicateVar("name", "de19");
 
-        final ByProjectKeyTaxCategoriesGet taxCategoriesGet2 = taxCategoriesGet.withQueryParam("name", "de07");
+        final ByProjectKeyTaxCategoriesGet taxCategoriesGet2 = taxCategoriesGet.withPredicateVar("name", "de07");
 
-        Assertions.assertThat(taxCategoriesGet.getQueryParam("name").get(0)).isEqualTo("de19");
-        Assertions.assertThat(taxCategoriesGet2.getQueryParam("name").get(0)).isEqualTo("de07");
+        Assertions.assertThat(taxCategoriesGet.getQueryParam("var.name").get(0)).isEqualTo("de19");
+        Assertions.assertThat(taxCategoriesGet2.getQueryParam("var.name").get(0)).isEqualTo("de07");
     }
 }

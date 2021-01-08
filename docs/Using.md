@@ -51,7 +51,8 @@ class Main {
         CategoryPagedQueryResponse response = apiRoot.withProjectKey("project-key")
                 .categories()
                 .get()
-                .withWhere("id=" + "\"" + category.getId() + "\"")
+                .withWhere("id= :catId")
+                .withPredicateVar("catId", category.getId())
                 .executeBlocking().getBody();
 
         // Delete Category by id

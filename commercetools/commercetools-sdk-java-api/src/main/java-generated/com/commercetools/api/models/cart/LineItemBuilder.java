@@ -86,6 +86,9 @@ public final class LineItemBuilder {
     
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
+    
+    @Nullable
+    private java.time.ZonedDateTime lastModifiedAt;
 
     public LineItemBuilder id( final String id) {
         this.id = id;
@@ -196,6 +199,11 @@ public final class LineItemBuilder {
         this.shippingDetails = shippingDetails;
         return this;
     }
+    
+    public LineItemBuilder lastModifiedAt(@Nullable final java.time.ZonedDateTime lastModifiedAt) {
+        this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
 
     
     public String getId(){
@@ -296,9 +304,14 @@ public final class LineItemBuilder {
     public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails(){
         return this.shippingDetails;
     }
+    
+    @Nullable
+    public java.time.ZonedDateTime getLastModifiedAt(){
+        return this.lastModifiedAt;
+    }
 
     public LineItem build() {
-        return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity, priceMode, lineItemMode, custom, shippingDetails);
+        return new LineItemImpl(id, productId, name, productSlug, productType, variant, price, taxedPrice, totalPrice, quantity, addedAt, state, taxRate, supplyChannel, distributionChannel, discountedPricePerQuantity, priceMode, lineItemMode, custom, shippingDetails, lastModifiedAt);
     }
 
     public static LineItemBuilder of() {
@@ -327,6 +340,7 @@ public final class LineItemBuilder {
         builder.lineItemMode = template.getLineItemMode();
         builder.custom = template.getCustom();
         builder.shippingDetails = template.getShippingDetails();
+        builder.lastModifiedAt = template.getLastModifiedAt();
         return builder;
     }
 

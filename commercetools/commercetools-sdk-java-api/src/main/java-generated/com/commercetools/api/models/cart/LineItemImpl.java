@@ -75,9 +75,11 @@ public final class LineItemImpl implements LineItem {
     private com.commercetools.api.models.type.CustomFields custom;
     
     private com.commercetools.api.models.cart.ItemShippingDetails shippingDetails;
+    
+    private java.time.ZonedDateTime lastModifiedAt;
 
     @JsonCreator
-    LineItemImpl(@JsonProperty("id") final String id, @JsonProperty("productId") final String productId, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug, @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType, @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant, @JsonProperty("price") final com.commercetools.api.models.common.Price price, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("quantity") final Long quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("priceMode") final com.commercetools.api.models.cart.LineItemPriceMode priceMode, @JsonProperty("lineItemMode") final com.commercetools.api.models.cart.LineItemMode lineItemMode, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails) {
+    LineItemImpl(@JsonProperty("id") final String id, @JsonProperty("productId") final String productId, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug, @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType, @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant, @JsonProperty("price") final com.commercetools.api.models.common.Price price, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("quantity") final Long quantity, @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt, @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRate taxRate, @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel, @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelReference distributionChannel, @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity, @JsonProperty("priceMode") final com.commercetools.api.models.cart.LineItemPriceMode priceMode, @JsonProperty("lineItemMode") final com.commercetools.api.models.cart.LineItemMode lineItemMode, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
         this.id = id;
         this.productId = productId;
         this.name = name;
@@ -98,6 +100,7 @@ public final class LineItemImpl implements LineItem {
         this.lineItemMode = lineItemMode;
         this.custom = custom;
         this.shippingDetails = shippingDetails;
+        this.lastModifiedAt = lastModifiedAt;
     }
     public LineItemImpl() {
     }
@@ -241,6 +244,15 @@ public final class LineItemImpl implements LineItem {
     public com.commercetools.api.models.cart.ItemShippingDetails getShippingDetails(){
         return this.shippingDetails;
     }
+    
+    /**
+    *  <p>The date when the LineItem was last modified by one of the following actions
+    *  setLineItemShippingDetails, addLineItem, removeLineItem, or changeLineItemQuantity.
+    *  Optional only for backwards compatible reasons. When the LineItem is created lastModifiedAt is set to addedAt.</p>
+    */
+    public java.time.ZonedDateTime getLastModifiedAt(){
+        return this.lastModifiedAt;
+    }
 
     public void setId(final String id){
         this.id = id;
@@ -329,6 +341,10 @@ public final class LineItemImpl implements LineItem {
     public void setShippingDetails(final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails){
         this.shippingDetails = shippingDetails;
     }
+    
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+        this.lastModifiedAt = lastModifiedAt;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -359,6 +375,7 @@ public final class LineItemImpl implements LineItem {
                 .append(lineItemMode, that.lineItemMode)
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
+                .append(lastModifiedAt, that.lastModifiedAt)
                 .isEquals();
     }
     
@@ -385,6 +402,7 @@ public final class LineItemImpl implements LineItem {
             .append(lineItemMode)
             .append(custom)
             .append(shippingDetails)
+            .append(lastModifiedAt)
             .toHashCode();
     }
 

@@ -162,6 +162,14 @@ public interface LineItem  {
     @Valid
     @JsonProperty("shippingDetails")
     public ItemShippingDetails getShippingDetails();
+    /**
+    *  <p>The date when the LineItem was last modified by one of the following actions
+    *  setLineItemShippingDetails, addLineItem, removeLineItem, or changeLineItemQuantity.
+    *  Optional only for backwards compatible reasons. When the LineItem is created lastModifiedAt is set to addedAt.</p>
+    */
+    
+    @JsonProperty("lastModifiedAt")
+    public ZonedDateTime getLastModifiedAt();
 
     public void setId(final String id);
     
@@ -206,6 +214,8 @@ public interface LineItem  {
     public void setCustom(final CustomFields custom);
     
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
+    
+    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     public static LineItem of(){
         return new LineItemImpl();
@@ -234,6 +244,7 @@ public interface LineItem  {
         instance.setLineItemMode(template.getLineItemMode());
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
         return instance;
     }
 

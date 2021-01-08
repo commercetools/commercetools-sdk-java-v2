@@ -1,5 +1,6 @@
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.customer.AnonymousCartSignInMode;
 import com.commercetools.api.models.customer.CustomerSignin;
 import javax.annotation.Nullable;
@@ -23,6 +24,9 @@ public final class CustomerSigninBuilder {
     private String anonymousCartId;
     
     @Nullable
+    private com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart;
+    
+    @Nullable
     private com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
     
     @Nullable
@@ -43,6 +47,11 @@ public final class CustomerSigninBuilder {
     
     public CustomerSigninBuilder anonymousCartId(@Nullable final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
+        return this;
+    }
+    
+    public CustomerSigninBuilder anonymousCart(@Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {
+        this.anonymousCart = anonymousCart;
         return this;
     }
     
@@ -77,6 +86,11 @@ public final class CustomerSigninBuilder {
     }
     
     @Nullable
+    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart(){
+        return this.anonymousCart;
+    }
+    
+    @Nullable
     public com.commercetools.api.models.customer.AnonymousCartSignInMode getAnonymousCartSignInMode(){
         return this.anonymousCartSignInMode;
     }
@@ -92,7 +106,7 @@ public final class CustomerSigninBuilder {
     }
 
     public CustomerSignin build() {
-        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCartSignInMode, anonymousId, updateProductData);
+        return new CustomerSigninImpl(email, password, anonymousCartId, anonymousCart, anonymousCartSignInMode, anonymousId, updateProductData);
     }
 
     public static CustomerSigninBuilder of() {
@@ -104,6 +118,7 @@ public final class CustomerSigninBuilder {
         builder.email = template.getEmail();
         builder.password = template.getPassword();
         builder.anonymousCartId = template.getAnonymousCartId();
+        builder.anonymousCart = template.getAnonymousCart();
         builder.anonymousCartSignInMode = template.getAnonymousCartSignInMode();
         builder.anonymousId = template.getAnonymousId();
         builder.updateProductData = template.getUpdateProductData();

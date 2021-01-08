@@ -1,5 +1,6 @@
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -42,6 +43,8 @@ public final class CustomerDraftImpl implements CustomerDraft {
     
     private String anonymousCartId;
     
+    private com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart;
+    
     private String anonymousId;
     
     private java.time.LocalDate dateOfBirth;
@@ -77,7 +80,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     @JsonCreator
-    CustomerDraftImpl(@JsonProperty("customerNumber") final String customerNumber, @JsonProperty("email") final String email, @JsonProperty("password") final String password, @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName, @JsonProperty("middleName") final String middleName, @JsonProperty("title") final String title, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId, @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress, @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses, @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress, @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses, @JsonProperty("isEmailVerified") final Boolean isEmailVerified, @JsonProperty("externalId") final String externalId, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation, @JsonProperty("key") final String key, @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+    CustomerDraftImpl(@JsonProperty("customerNumber") final String customerNumber, @JsonProperty("email") final String email, @JsonProperty("password") final String password, @JsonProperty("firstName") final String firstName, @JsonProperty("lastName") final String lastName, @JsonProperty("middleName") final String middleName, @JsonProperty("title") final String title, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("anonymousCart") final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth, @JsonProperty("companyName") final String companyName, @JsonProperty("vatId") final String vatId, @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.Address> addresses, @JsonProperty("defaultShippingAddress") final Long defaultShippingAddress, @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses, @JsonProperty("defaultBillingAddress") final Long defaultBillingAddress, @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses, @JsonProperty("isEmailVerified") final Boolean isEmailVerified, @JsonProperty("externalId") final String externalId, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom, @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation, @JsonProperty("key") final String key, @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.customerNumber = customerNumber;
         this.email = email;
         this.password = password;
@@ -86,6 +89,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
         this.middleName = middleName;
         this.title = title;
         this.anonymousCartId = anonymousCartId;
+        this.anonymousCart = anonymousCart;
         this.anonymousId = anonymousId;
         this.dateOfBirth = dateOfBirth;
         this.companyName = companyName;
@@ -156,6 +160,13 @@ public final class CustomerDraftImpl implements CustomerDraft {
     */
     public String getAnonymousCartId(){
         return this.anonymousCartId;
+    }
+    
+    /**
+    *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
+    */
+    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart(){
+        return this.anonymousCart;
     }
     
     /**
@@ -303,6 +314,10 @@ public final class CustomerDraftImpl implements CustomerDraft {
         this.anonymousCartId = anonymousCartId;
     }
     
+    public void setAnonymousCart(final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart){
+        this.anonymousCart = anonymousCart;
+    }
+    
     public void setAnonymousId(final String anonymousId){
         this.anonymousId = anonymousId;
     }
@@ -404,6 +419,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
                 .append(middleName, that.middleName)
                 .append(title, that.title)
                 .append(anonymousCartId, that.anonymousCartId)
+                .append(anonymousCart, that.anonymousCart)
                 .append(anonymousId, that.anonymousId)
                 .append(dateOfBirth, that.dateOfBirth)
                 .append(companyName, that.companyName)
@@ -435,6 +451,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
             .append(middleName)
             .append(title)
             .append(anonymousCartId)
+            .append(anonymousCart)
             .append(anonymousId)
             .append(dateOfBirth)
             .append(companyName)

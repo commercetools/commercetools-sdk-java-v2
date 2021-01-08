@@ -1,5 +1,6 @@
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.customer.AnonymousCartSignInMode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -28,6 +29,8 @@ public final class CustomerSigninImpl implements CustomerSignin {
     
     private String anonymousCartId;
     
+    private com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart;
+    
     private com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode;
     
     private String anonymousId;
@@ -35,10 +38,11 @@ public final class CustomerSigninImpl implements CustomerSignin {
     private Boolean updateProductData;
 
     @JsonCreator
-    CustomerSigninImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("anonymousCartSignInMode") final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("updateProductData") final Boolean updateProductData) {
+    CustomerSigninImpl(@JsonProperty("email") final String email, @JsonProperty("password") final String password, @JsonProperty("anonymousCartId") final String anonymousCartId, @JsonProperty("anonymousCart") final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart, @JsonProperty("anonymousCartSignInMode") final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("updateProductData") final Boolean updateProductData) {
         this.email = email;
         this.password = password;
         this.anonymousCartId = anonymousCartId;
+        this.anonymousCart = anonymousCart;
         this.anonymousCartSignInMode = anonymousCartSignInMode;
         this.anonymousId = anonymousId;
         this.updateProductData = updateProductData;
@@ -59,6 +63,11 @@ public final class CustomerSigninImpl implements CustomerSignin {
     
     public String getAnonymousCartId(){
         return this.anonymousCartId;
+    }
+    
+    
+    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart(){
+        return this.anonymousCart;
     }
     
     
@@ -88,6 +97,10 @@ public final class CustomerSigninImpl implements CustomerSignin {
         this.anonymousCartId = anonymousCartId;
     }
     
+    public void setAnonymousCart(final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart){
+        this.anonymousCart = anonymousCart;
+    }
+    
     public void setAnonymousCartSignInMode(final com.commercetools.api.models.customer.AnonymousCartSignInMode anonymousCartSignInMode){
         this.anonymousCartSignInMode = anonymousCartSignInMode;
     }
@@ -112,6 +125,7 @@ public final class CustomerSigninImpl implements CustomerSignin {
                 .append(email, that.email)
                 .append(password, that.password)
                 .append(anonymousCartId, that.anonymousCartId)
+                .append(anonymousCart, that.anonymousCart)
                 .append(anonymousCartSignInMode, that.anonymousCartSignInMode)
                 .append(anonymousId, that.anonymousId)
                 .append(updateProductData, that.updateProductData)
@@ -124,6 +138,7 @@ public final class CustomerSigninImpl implements CustomerSignin {
             .append(email)
             .append(password)
             .append(anonymousCartId)
+            .append(anonymousCart)
             .append(anonymousCartSignInMode)
             .append(anonymousId)
             .append(updateProductData)

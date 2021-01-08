@@ -1,5 +1,6 @@
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -40,6 +41,9 @@ public final class CustomerDraftBuilder {
     
     @Nullable
     private String anonymousCartId;
+    
+    @Nullable
+    private com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart;
     
     @Nullable
     private String anonymousId;
@@ -129,6 +133,11 @@ public final class CustomerDraftBuilder {
     
     public CustomerDraftBuilder anonymousCartId(@Nullable final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
+        return this;
+    }
+    
+    public CustomerDraftBuilder anonymousCart(@Nullable final com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart) {
+        this.anonymousCart = anonymousCart;
         return this;
     }
     
@@ -278,6 +287,11 @@ public final class CustomerDraftBuilder {
     }
     
     @Nullable
+    public com.commercetools.api.models.cart.CartResourceIdentifier getAnonymousCart(){
+        return this.anonymousCart;
+    }
+    
+    @Nullable
     public String getAnonymousId(){
         return this.anonymousId;
     }
@@ -363,7 +377,7 @@ public final class CustomerDraftBuilder {
     }
 
     public CustomerDraft build() {
-        return new CustomerDraftImpl(customerNumber, email, password, firstName, lastName, middleName, title, anonymousCartId, anonymousId, dateOfBirth, companyName, vatId, addresses, defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified, externalId, customerGroup, custom, locale, salutation, key, stores);
+        return new CustomerDraftImpl(customerNumber, email, password, firstName, lastName, middleName, title, anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses, defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified, externalId, customerGroup, custom, locale, salutation, key, stores);
     }
 
     public static CustomerDraftBuilder of() {
@@ -380,6 +394,7 @@ public final class CustomerDraftBuilder {
         builder.middleName = template.getMiddleName();
         builder.title = template.getTitle();
         builder.anonymousCartId = template.getAnonymousCartId();
+        builder.anonymousCart = template.getAnonymousCart();
         builder.anonymousId = template.getAnonymousId();
         builder.dateOfBirth = template.getDateOfBirth();
         builder.companyName = template.getCompanyName();

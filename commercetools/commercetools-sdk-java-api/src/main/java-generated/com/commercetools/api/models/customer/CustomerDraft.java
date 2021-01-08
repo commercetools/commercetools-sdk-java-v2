@@ -1,5 +1,6 @@
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -68,6 +69,12 @@ public interface CustomerDraft  {
     
     @JsonProperty("anonymousCartId")
     public String getAnonymousCartId();
+    /**
+    *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
+    */
+    @Valid
+    @JsonProperty("anonymousCart")
+    public CartResourceIdentifier getAnonymousCart();
     /**
     *  <p>Identifies carts and orders belonging to an anonymous session that will be assigned to the new customer account.</p>
     */
@@ -181,6 +188,8 @@ public interface CustomerDraft  {
     
     public void setAnonymousCartId(final String anonymousCartId);
     
+    public void setAnonymousCart(final CartResourceIdentifier anonymousCart);
+    
     public void setAnonymousId(final String anonymousId);
     
     public void setDateOfBirth(final LocalDate dateOfBirth);
@@ -238,6 +247,7 @@ public interface CustomerDraft  {
         instance.setMiddleName(template.getMiddleName());
         instance.setTitle(template.getTitle());
         instance.setAnonymousCartId(template.getAnonymousCartId());
+        instance.setAnonymousCart(template.getAnonymousCart());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setDateOfBirth(template.getDateOfBirth());
         instance.setCompanyName(template.getCompanyName());

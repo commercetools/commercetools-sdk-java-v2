@@ -1,5 +1,6 @@
 package com.commercetools.api.models.customer;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.customer.AnonymousCartSignInMode;
 import com.commercetools.api.models.customer.CustomerSigninImpl;
 
@@ -34,6 +35,10 @@ public interface CustomerSignin  {
     @JsonProperty("anonymousCartId")
     public String getAnonymousCartId();
     
+    @Valid
+    @JsonProperty("anonymousCart")
+    public CartResourceIdentifier getAnonymousCart();
+    
     
     @JsonProperty("anonymousCartSignInMode")
     public AnonymousCartSignInMode getAnonymousCartSignInMode();
@@ -52,6 +57,8 @@ public interface CustomerSignin  {
     
     public void setAnonymousCartId(final String anonymousCartId);
     
+    public void setAnonymousCart(final CartResourceIdentifier anonymousCart);
+    
     public void setAnonymousCartSignInMode(final AnonymousCartSignInMode anonymousCartSignInMode);
     
     public void setAnonymousId(final String anonymousId);
@@ -68,6 +75,7 @@ public interface CustomerSignin  {
         instance.setEmail(template.getEmail());
         instance.setPassword(template.getPassword());
         instance.setAnonymousCartId(template.getAnonymousCartId());
+        instance.setAnonymousCart(template.getAnonymousCart());
         instance.setAnonymousCartSignInMode(template.getAnonymousCartSignInMode());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setUpdateProductData(template.getUpdateProductData());

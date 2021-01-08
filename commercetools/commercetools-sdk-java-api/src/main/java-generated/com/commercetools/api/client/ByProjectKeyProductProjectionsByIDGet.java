@@ -144,6 +144,7 @@ public class ByProjectKeyProductProjectionsByIDGet extends ApiMethod<ByProjectKe
     public ByProjectKeyProductProjectionsByIDGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyProductProjectionsByIDGet copy()

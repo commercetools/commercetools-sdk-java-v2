@@ -120,6 +120,10 @@ public class ByProjectKeyStoresGet extends ApiMethod<ByProjectKeyStoresGet, com.
     public ByProjectKeyStoresGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyStoresGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyStoresGet copy()

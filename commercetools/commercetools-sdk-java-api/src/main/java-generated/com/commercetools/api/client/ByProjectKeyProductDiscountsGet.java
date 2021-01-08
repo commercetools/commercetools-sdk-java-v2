@@ -120,6 +120,10 @@ public class ByProjectKeyProductDiscountsGet extends ApiMethod<ByProjectKeyProdu
     public ByProjectKeyProductDiscountsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyProductDiscountsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyProductDiscountsGet copy()

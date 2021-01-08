@@ -120,6 +120,10 @@ public class ByProjectKeySubscriptionsGet extends ApiMethod<ByProjectKeySubscrip
     public ByProjectKeySubscriptionsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeySubscriptionsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeySubscriptionsGet copy()

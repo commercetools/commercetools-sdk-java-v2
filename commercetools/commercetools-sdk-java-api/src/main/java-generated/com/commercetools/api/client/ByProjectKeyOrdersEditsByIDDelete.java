@@ -94,6 +94,7 @@ public class ByProjectKeyOrdersEditsByIDDelete extends ApiMethod<ByProjectKeyOrd
     public ByProjectKeyOrdersEditsByIDDelete withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyOrdersEditsByIDDelete copy()

@@ -120,6 +120,10 @@ public class ByProjectKeyMeShoppingListsGet extends ApiMethod<ByProjectKeyMeShop
     public ByProjectKeyMeShoppingListsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyMeShoppingListsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyMeShoppingListsGet copy()

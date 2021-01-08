@@ -93,6 +93,7 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditGet extends ApiMethod<B
     public ByProjectKeyShippingMethodsMatchingOrdereditGet withState(final String state){
         return copy().addQueryParam("state", state);
     }
+
     
     @Override
     protected ByProjectKeyShippingMethodsMatchingOrdereditGet copy()

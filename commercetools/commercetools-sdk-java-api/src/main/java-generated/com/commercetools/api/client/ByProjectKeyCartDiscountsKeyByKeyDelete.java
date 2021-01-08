@@ -94,6 +94,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyDelete extends ApiMethod<ByProject
     public ByProjectKeyCartDiscountsKeyByKeyDelete withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyCartDiscountsKeyByKeyDelete copy()

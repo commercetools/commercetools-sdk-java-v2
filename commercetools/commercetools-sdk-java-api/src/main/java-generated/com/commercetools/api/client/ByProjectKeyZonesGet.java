@@ -120,6 +120,10 @@ public class ByProjectKeyZonesGet extends ApiMethod<ByProjectKeyZonesGet, com.co
     public ByProjectKeyZonesGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyZonesGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyZonesGet copy()

@@ -120,6 +120,10 @@ public class ByProjectKeyShippingMethodsGet extends ApiMethod<ByProjectKeyShippi
     public ByProjectKeyShippingMethodsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyShippingMethodsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyShippingMethodsGet copy()

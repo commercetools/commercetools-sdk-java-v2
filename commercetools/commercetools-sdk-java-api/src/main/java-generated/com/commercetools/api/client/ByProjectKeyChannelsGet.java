@@ -120,6 +120,10 @@ public class ByProjectKeyChannelsGet extends ApiMethod<ByProjectKeyChannelsGet, 
     public ByProjectKeyChannelsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyChannelsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyChannelsGet copy()

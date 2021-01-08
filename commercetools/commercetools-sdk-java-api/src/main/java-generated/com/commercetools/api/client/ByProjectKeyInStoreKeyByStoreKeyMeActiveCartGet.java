@@ -77,6 +77,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet extends ApiMethod<B
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+
     
     @Override
     protected ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet copy()

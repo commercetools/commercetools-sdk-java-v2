@@ -80,6 +80,7 @@ public class ByProjectKeyMePasswordPost extends ApiMethod<ByProjectKeyMePassword
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+
     
     @Override
     protected ByProjectKeyMePasswordPost copy()

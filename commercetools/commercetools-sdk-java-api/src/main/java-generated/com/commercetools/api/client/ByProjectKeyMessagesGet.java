@@ -120,6 +120,10 @@ public class ByProjectKeyMessagesGet extends ApiMethod<ByProjectKeyMessagesGet, 
     public ByProjectKeyMessagesGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyMessagesGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyMessagesGet copy()

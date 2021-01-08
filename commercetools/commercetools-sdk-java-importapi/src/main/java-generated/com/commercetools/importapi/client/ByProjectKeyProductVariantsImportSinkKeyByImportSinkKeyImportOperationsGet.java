@@ -118,6 +118,7 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperat
     public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
         return copy().addQueryParam("state", state);
     }
+
     
     @Override
     protected ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsGet copy()

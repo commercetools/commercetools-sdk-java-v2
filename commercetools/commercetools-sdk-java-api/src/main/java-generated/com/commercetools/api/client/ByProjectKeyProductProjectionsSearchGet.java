@@ -224,6 +224,10 @@ public class ByProjectKeyProductProjectionsSearchGet extends ApiMethod<ByProject
     public ByProjectKeyProductProjectionsSearchGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
+    public ByProjectKeyProductProjectionsSearchGet withText(final String locale, final String text){
+        return copy().addQueryParam(String.format("text.%s", locale), text);
+    }
     
     @Override
     protected ByProjectKeyProductProjectionsSearchGet copy()

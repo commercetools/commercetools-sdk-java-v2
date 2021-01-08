@@ -89,6 +89,7 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost extends ApiM
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+
     
     @Override
     protected ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyPost copy()

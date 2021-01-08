@@ -95,6 +95,7 @@ public class ByProjectKeyOrdersEditsKeyByKeyPost extends ApiMethod<ByProjectKeyO
     public ByProjectKeyOrdersEditsKeyByKeyPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyOrdersEditsKeyByKeyPost copy()

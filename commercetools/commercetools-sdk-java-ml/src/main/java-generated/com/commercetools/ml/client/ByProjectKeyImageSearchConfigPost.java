@@ -83,6 +83,7 @@ public class ByProjectKeyImageSearchConfigPost extends ApiMethod<ByProjectKeyIma
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+
     
     @Override
     protected ByProjectKeyImageSearchConfigPost copy()

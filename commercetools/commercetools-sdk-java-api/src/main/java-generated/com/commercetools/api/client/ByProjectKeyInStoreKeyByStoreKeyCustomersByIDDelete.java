@@ -108,6 +108,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete extends ApiMeth
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete copy()

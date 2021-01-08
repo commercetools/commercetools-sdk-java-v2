@@ -120,6 +120,7 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
     public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Double confidenceMax){
         return copy().addQueryParam("confidenceMax", confidenceMax);
     }
+
     
     @Override
     protected ByProjectKeyRecommendationsGeneralCategoriesGet copy()

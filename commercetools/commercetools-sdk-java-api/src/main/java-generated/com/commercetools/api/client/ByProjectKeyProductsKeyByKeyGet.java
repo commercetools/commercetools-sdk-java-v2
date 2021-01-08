@@ -134,6 +134,7 @@ public class ByProjectKeyProductsKeyByKeyGet extends ApiMethod<ByProjectKeyProdu
     public ByProjectKeyProductsKeyByKeyGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyProductsKeyByKeyGet copy()

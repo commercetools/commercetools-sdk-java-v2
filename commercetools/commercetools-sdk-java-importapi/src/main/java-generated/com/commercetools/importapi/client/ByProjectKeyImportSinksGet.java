@@ -88,6 +88,7 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
     public ByProjectKeyImportSinksGet withOffset(final Double offset){
         return copy().addQueryParam("offset", offset);
     }
+
     
     @Override
     protected ByProjectKeyImportSinksGet copy()

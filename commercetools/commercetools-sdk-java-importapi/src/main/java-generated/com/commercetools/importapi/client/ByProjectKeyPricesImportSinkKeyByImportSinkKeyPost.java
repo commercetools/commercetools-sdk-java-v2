@@ -89,6 +89,7 @@ public class ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost extends ApiMetho
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+
     
     @Override
     protected ByProjectKeyPricesImportSinkKeyByImportSinkKeyPost copy()

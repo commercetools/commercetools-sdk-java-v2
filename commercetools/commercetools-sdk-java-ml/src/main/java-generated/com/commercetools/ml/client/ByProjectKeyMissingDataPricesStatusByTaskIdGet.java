@@ -77,6 +77,7 @@ public class ByProjectKeyMissingDataPricesStatusByTaskIdGet extends ApiMethod<By
     
     public void setTaskId(final String taskId) { this.taskId = taskId; }
 
+
     
     @Override
     protected ByProjectKeyMissingDataPricesStatusByTaskIdGet copy()

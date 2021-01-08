@@ -80,6 +80,7 @@ public class ByProjectKeySimilaritiesProductsPost extends ApiMethod<ByProjectKey
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+
     
     @Override
     protected ByProjectKeySimilaritiesProductsPost copy()

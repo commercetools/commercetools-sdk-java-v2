@@ -103,6 +103,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost extends ApiMethod
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost copy()

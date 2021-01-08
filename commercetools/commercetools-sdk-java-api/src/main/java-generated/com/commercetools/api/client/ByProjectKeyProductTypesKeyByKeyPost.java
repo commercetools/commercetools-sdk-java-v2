@@ -95,6 +95,7 @@ public class ByProjectKeyProductTypesKeyByKeyPost extends ApiMethod<ByProjectKey
     public ByProjectKeyProductTypesKeyByKeyPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyProductTypesKeyByKeyPost copy()

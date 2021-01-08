@@ -83,6 +83,7 @@ public class ByProjectKeyImportSinksPost extends ApiMethod<ByProjectKeyImportSin
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+
     
     @Override
     protected ByProjectKeyImportSinksPost copy()

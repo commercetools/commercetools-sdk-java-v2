@@ -74,6 +74,7 @@ public class ByProjectKeyGet extends ApiMethod<ByProjectKeyGet, com.commercetool
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+
     
     @Override
     protected ByProjectKeyGet copy()

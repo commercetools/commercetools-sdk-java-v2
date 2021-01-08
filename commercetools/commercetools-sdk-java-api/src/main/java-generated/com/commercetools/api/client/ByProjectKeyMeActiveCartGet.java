@@ -71,6 +71,7 @@ public class ByProjectKeyMeActiveCartGet extends ApiMethod<ByProjectKeyMeActiveC
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+
     
     @Override
     protected ByProjectKeyMeActiveCartGet copy()

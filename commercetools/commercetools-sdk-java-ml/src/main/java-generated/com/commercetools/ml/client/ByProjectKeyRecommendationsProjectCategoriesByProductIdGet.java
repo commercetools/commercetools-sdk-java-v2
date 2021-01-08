@@ -118,6 +118,7 @@ public class ByProjectKeyRecommendationsProjectCategoriesByProductIdGet extends 
     public ByProjectKeyRecommendationsProjectCategoriesByProductIdGet withConfidenceMax(final Double confidenceMax){
         return copy().addQueryParam("confidenceMax", confidenceMax);
     }
+
     
     @Override
     protected ByProjectKeyRecommendationsProjectCategoriesByProductIdGet copy()

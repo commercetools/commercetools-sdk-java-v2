@@ -118,6 +118,7 @@ public class ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsG
     public ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet withState(final ProcessingState state){
         return copy().addQueryParam("state", state);
     }
+
     
     @Override
     protected ByProjectKeyCategoriesImportSinkKeyByImportSinkKeyImportOperationsGet copy()

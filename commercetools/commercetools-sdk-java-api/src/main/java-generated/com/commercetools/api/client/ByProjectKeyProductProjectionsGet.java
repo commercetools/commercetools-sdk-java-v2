@@ -178,6 +178,10 @@ public class ByProjectKeyProductProjectionsGet extends ApiMethod<ByProjectKeyPro
     public ByProjectKeyProductProjectionsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyProductProjectionsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyProductProjectionsGet copy()

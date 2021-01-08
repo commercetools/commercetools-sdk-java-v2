@@ -89,6 +89,7 @@ public class ByProjectKeyTaxCategoriesPost extends ApiMethod<ByProjectKeyTaxCate
     public ByProjectKeyTaxCategoriesPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyTaxCategoriesPost copy()

@@ -80,6 +80,7 @@ public class ByProjectKeyMissingDataPricesPost extends ApiMethod<ByProjectKeyMis
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+
     
     @Override
     protected ByProjectKeyMissingDataPricesPost copy()

@@ -95,6 +95,7 @@ public class ByProjectKeyCustomerGroupsByIDPost extends ApiMethod<ByProjectKeyCu
     public ByProjectKeyCustomerGroupsByIDPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyCustomerGroupsByIDPost copy()

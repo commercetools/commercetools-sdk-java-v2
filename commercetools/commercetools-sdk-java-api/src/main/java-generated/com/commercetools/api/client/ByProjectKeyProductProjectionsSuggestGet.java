@@ -117,6 +117,10 @@ public class ByProjectKeyProductProjectionsSuggestGet extends ApiMethod<ByProjec
     public ByProjectKeyProductProjectionsSuggestGet withWithTotal(final Boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
+
+    public ByProjectKeyProductProjectionsSuggestGet withSearchKeywords(final String locale, final String searchKeywords){
+        return copy().addQueryParam(String.format("searchKeywords.%s", locale), searchKeywords);
+    }
     
     @Override
     protected ByProjectKeyProductProjectionsSuggestGet copy()

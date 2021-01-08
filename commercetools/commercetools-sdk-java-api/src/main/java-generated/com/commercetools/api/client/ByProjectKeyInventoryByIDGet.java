@@ -86,6 +86,7 @@ public class ByProjectKeyInventoryByIDGet extends ApiMethod<ByProjectKeyInventor
     public ByProjectKeyInventoryByIDGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyInventoryByIDGet copy()

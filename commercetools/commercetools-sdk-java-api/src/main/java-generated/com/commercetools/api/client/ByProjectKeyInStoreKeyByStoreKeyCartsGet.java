@@ -134,6 +134,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet extends ApiMethod<ByProjec
     public ByProjectKeyInStoreKeyByStoreKeyCartsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyInStoreKeyByStoreKeyCartsGet copy()

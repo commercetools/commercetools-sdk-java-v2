@@ -95,6 +95,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet extends ApiMet
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet copy()

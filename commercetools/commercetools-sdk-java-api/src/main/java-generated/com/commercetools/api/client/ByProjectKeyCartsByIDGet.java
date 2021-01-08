@@ -87,6 +87,7 @@ public class ByProjectKeyCartsByIDGet extends ApiMethod<ByProjectKeyCartsByIDGet
     public ByProjectKeyCartsByIDGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyCartsByIDGet copy()

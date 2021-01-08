@@ -86,6 +86,7 @@ public class ByProjectKeyStatesKeyByKeyGet extends ApiMethod<ByProjectKeyStatesK
     public ByProjectKeyStatesKeyByKeyGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyStatesKeyByKeyGet copy()

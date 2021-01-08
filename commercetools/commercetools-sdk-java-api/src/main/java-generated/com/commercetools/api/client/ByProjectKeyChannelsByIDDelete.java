@@ -94,6 +94,7 @@ public class ByProjectKeyChannelsByIDDelete extends ApiMethod<ByProjectKeyChanne
     public ByProjectKeyChannelsByIDDelete withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyChannelsByIDDelete copy()

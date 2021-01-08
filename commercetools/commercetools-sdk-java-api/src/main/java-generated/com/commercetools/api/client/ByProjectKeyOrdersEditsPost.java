@@ -89,6 +89,7 @@ public class ByProjectKeyOrdersEditsPost extends ApiMethod<ByProjectKeyOrdersEdi
     public ByProjectKeyOrdersEditsPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyOrdersEditsPost copy()

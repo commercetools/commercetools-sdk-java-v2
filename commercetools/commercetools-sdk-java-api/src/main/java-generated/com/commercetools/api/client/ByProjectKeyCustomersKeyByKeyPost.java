@@ -95,6 +95,7 @@ public class ByProjectKeyCustomersKeyByKeyPost extends ApiMethod<ByProjectKeyCus
     public ByProjectKeyCustomersKeyByKeyPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyCustomersKeyByKeyPost copy()

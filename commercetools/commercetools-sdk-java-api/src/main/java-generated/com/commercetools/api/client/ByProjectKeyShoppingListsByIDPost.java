@@ -95,6 +95,7 @@ public class ByProjectKeyShoppingListsByIDPost extends ApiMethod<ByProjectKeySho
     public ByProjectKeyShoppingListsByIDPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyShoppingListsByIDPost copy()

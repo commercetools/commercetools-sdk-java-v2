@@ -120,6 +120,10 @@ public class ByProjectKeyPaymentsGet extends ApiMethod<ByProjectKeyPaymentsGet, 
     public ByProjectKeyPaymentsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyPaymentsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyPaymentsGet copy()

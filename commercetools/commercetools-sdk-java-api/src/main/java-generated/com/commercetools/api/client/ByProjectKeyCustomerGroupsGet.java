@@ -120,6 +120,10 @@ public class ByProjectKeyCustomerGroupsGet extends ApiMethod<ByProjectKeyCustome
     public ByProjectKeyCustomerGroupsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyCustomerGroupsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyCustomerGroupsGet copy()

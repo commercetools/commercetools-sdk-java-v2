@@ -86,6 +86,7 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperat
     
     public void setId(final String id) { this.id = id; }
 
+
     
     @Override
     protected ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsByIdGet copy()

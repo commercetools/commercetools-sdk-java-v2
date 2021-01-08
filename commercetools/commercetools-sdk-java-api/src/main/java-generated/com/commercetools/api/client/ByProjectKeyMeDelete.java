@@ -80,6 +80,7 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete, com.co
     public ByProjectKeyMeDelete withVersion(final Long version){
         return copy().addQueryParam("version", version);
     }
+
     
     @Override
     protected ByProjectKeyMeDelete copy()

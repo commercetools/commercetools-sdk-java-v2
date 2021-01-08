@@ -89,6 +89,7 @@ public class ByProjectKeyDiscountCodesPost extends ApiMethod<ByProjectKeyDiscoun
     public ByProjectKeyDiscountCodesPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyDiscountCodesPost copy()

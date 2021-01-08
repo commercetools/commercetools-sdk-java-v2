@@ -96,6 +96,7 @@ public class ByProjectKeyImageSearchPost extends ApiMethod<ByProjectKeyImageSear
     public ByProjectKeyImageSearchPost withOffset(final Integer offset){
         return copy().addQueryParam("offset", offset);
     }
+
     
     @Override
     protected ByProjectKeyImageSearchPost copy()

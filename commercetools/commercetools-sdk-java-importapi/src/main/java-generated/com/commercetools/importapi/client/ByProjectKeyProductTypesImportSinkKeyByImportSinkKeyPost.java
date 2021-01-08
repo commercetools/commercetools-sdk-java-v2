@@ -89,6 +89,7 @@ public class ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost extends Ap
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+
     
     @Override
     protected ByProjectKeyProductTypesImportSinkKeyByImportSinkKeyPost copy()

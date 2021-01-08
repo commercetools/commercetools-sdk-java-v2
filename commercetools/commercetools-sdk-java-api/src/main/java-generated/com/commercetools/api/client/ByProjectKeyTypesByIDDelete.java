@@ -94,6 +94,7 @@ public class ByProjectKeyTypesByIDDelete extends ApiMethod<ByProjectKeyTypesByID
     public ByProjectKeyTypesByIDDelete withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyTypesByIDDelete copy()

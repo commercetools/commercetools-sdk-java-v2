@@ -80,6 +80,7 @@ public class ByProjectKeyImportSinksByImportSinkKeyGet extends ApiMethod<ByProje
     
     public void setImportSinkKey(final String importSinkKey) { this.importSinkKey = importSinkKey; }
 
+
     
     @Override
     protected ByProjectKeyImportSinksByImportSinkKeyGet copy()

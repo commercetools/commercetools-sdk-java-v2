@@ -95,6 +95,7 @@ public class ByProjectKeyStatesByIDPost extends ApiMethod<ByProjectKeyStatesByID
     public ByProjectKeyStatesByIDPost withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyStatesByIDPost copy()

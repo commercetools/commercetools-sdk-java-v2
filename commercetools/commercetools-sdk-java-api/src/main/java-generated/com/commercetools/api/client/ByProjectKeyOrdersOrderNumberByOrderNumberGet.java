@@ -87,6 +87,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberGet extends ApiMethod<ByP
     public ByProjectKeyOrdersOrderNumberByOrderNumberGet withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyOrdersOrderNumberByOrderNumberGet copy()

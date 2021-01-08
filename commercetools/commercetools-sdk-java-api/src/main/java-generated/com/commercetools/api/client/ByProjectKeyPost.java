@@ -83,6 +83,7 @@ public class ByProjectKeyPost extends ApiMethod<ByProjectKeyPost, com.commerceto
 
     public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
+
     
     @Override
     protected ByProjectKeyPost copy()

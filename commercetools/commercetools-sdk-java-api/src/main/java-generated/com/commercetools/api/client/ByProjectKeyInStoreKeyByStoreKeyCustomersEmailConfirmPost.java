@@ -89,6 +89,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost extends A
     
     public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
+
     
     @Override
     protected ByProjectKeyInStoreKeyByStoreKeyCustomersEmailConfirmPost copy()

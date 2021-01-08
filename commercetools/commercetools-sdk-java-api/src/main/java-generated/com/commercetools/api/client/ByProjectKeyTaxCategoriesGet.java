@@ -120,6 +120,10 @@ public class ByProjectKeyTaxCategoriesGet extends ApiMethod<ByProjectKeyTaxCateg
     public ByProjectKeyTaxCategoriesGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyTaxCategoriesGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyTaxCategoriesGet copy()

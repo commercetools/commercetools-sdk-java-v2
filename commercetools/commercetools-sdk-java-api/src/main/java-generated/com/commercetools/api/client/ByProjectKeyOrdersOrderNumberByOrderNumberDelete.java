@@ -102,6 +102,7 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete extends ApiMethod<
     public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
+
     
     @Override
     protected ByProjectKeyOrdersOrderNumberByOrderNumberDelete copy()

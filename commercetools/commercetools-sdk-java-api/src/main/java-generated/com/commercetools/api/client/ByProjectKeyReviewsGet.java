@@ -120,6 +120,10 @@ public class ByProjectKeyReviewsGet extends ApiMethod<ByProjectKeyReviewsGet, co
     public ByProjectKeyReviewsGet withWhere(final String where){
         return copy().addQueryParam("where", where);
     }
+
+    public ByProjectKeyReviewsGet withPredicateVar(final String varName, final String predicateVar){
+        return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
+    }
     
     @Override
     protected ByProjectKeyReviewsGet copy()

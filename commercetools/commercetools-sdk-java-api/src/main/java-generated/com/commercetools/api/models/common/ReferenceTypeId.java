@@ -25,41 +25,49 @@ public interface ReferenceTypeId {
     
     ReferenceTypeId CUSTOMER = ReferenceTypeIdEnum.CUSTOMER;
     
+    ReferenceTypeId CUSTOMER_EMAIL_TOKEN = ReferenceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
+    
     ReferenceTypeId CUSTOMER_GROUP = ReferenceTypeIdEnum.CUSTOMER_GROUP;
+    
+    ReferenceTypeId CUSTOMER_PASSWORD_TOKEN = ReferenceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
     
     ReferenceTypeId DISCOUNT_CODE = ReferenceTypeIdEnum.DISCOUNT_CODE;
     
+    ReferenceTypeId EXTENSION = ReferenceTypeIdEnum.EXTENSION;
+    
+    ReferenceTypeId INVENTORY_ENTRY = ReferenceTypeIdEnum.INVENTORY_ENTRY;
+    
     ReferenceTypeId KEY_VALUE_DOCUMENT = ReferenceTypeIdEnum.KEY_VALUE_DOCUMENT;
+    
+    ReferenceTypeId ORDER = ReferenceTypeIdEnum.ORDER;
+    
+    ReferenceTypeId ORDER_EDIT = ReferenceTypeIdEnum.ORDER_EDIT;
     
     ReferenceTypeId PAYMENT = ReferenceTypeIdEnum.PAYMENT;
     
     ReferenceTypeId PRODUCT = ReferenceTypeIdEnum.PRODUCT;
     
-    ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
-    
     ReferenceTypeId PRODUCT_DISCOUNT = ReferenceTypeIdEnum.PRODUCT_DISCOUNT;
     
-    ReferenceTypeId ORDER = ReferenceTypeIdEnum.ORDER;
+    ReferenceTypeId PRODUCT_TYPE = ReferenceTypeIdEnum.PRODUCT_TYPE;
     
     ReferenceTypeId REVIEW = ReferenceTypeIdEnum.REVIEW;
     
-    ReferenceTypeId SHOPPING_LIST = ReferenceTypeIdEnum.SHOPPING_LIST;
-    
     ReferenceTypeId SHIPPING_METHOD = ReferenceTypeIdEnum.SHIPPING_METHOD;
+    
+    ReferenceTypeId SHOPPING_LIST = ReferenceTypeIdEnum.SHOPPING_LIST;
     
     ReferenceTypeId STATE = ReferenceTypeIdEnum.STATE;
     
     ReferenceTypeId STORE = ReferenceTypeIdEnum.STORE;
+    
+    ReferenceTypeId SUBSCRIPTION = ReferenceTypeIdEnum.SUBSCRIPTION;
     
     ReferenceTypeId TAX_CATEGORY = ReferenceTypeIdEnum.TAX_CATEGORY;
     
     ReferenceTypeId TYPE = ReferenceTypeIdEnum.TYPE;
     
     ReferenceTypeId ZONE = ReferenceTypeIdEnum.ZONE;
-    
-    ReferenceTypeId INVENTORY_ENTRY = ReferenceTypeIdEnum.INVENTORY_ENTRY;
-    
-    ReferenceTypeId ORDER_EDIT = ReferenceTypeIdEnum.ORDER_EDIT;
     
     enum ReferenceTypeIdEnum implements ReferenceTypeId {
         CART("cart"),
@@ -72,41 +80,49 @@ public interface ReferenceTypeId {
         
         CUSTOMER("customer"),
         
+        CUSTOMER_EMAIL_TOKEN("customer-email-token"),
+        
         CUSTOMER_GROUP("customer-group"),
+        
+        CUSTOMER_PASSWORD_TOKEN("customer-password-token"),
         
         DISCOUNT_CODE("discount-code"),
         
+        EXTENSION("extension"),
+        
+        INVENTORY_ENTRY("inventory-entry"),
+        
         KEY_VALUE_DOCUMENT("key-value-document"),
+        
+        ORDER("order"),
+        
+        ORDER_EDIT("order-edit"),
         
         PAYMENT("payment"),
         
         PRODUCT("product"),
         
-        PRODUCT_TYPE("product-type"),
-        
         PRODUCT_DISCOUNT("product-discount"),
         
-        ORDER("order"),
+        PRODUCT_TYPE("product-type"),
         
         REVIEW("review"),
         
-        SHOPPING_LIST("shopping-list"),
-        
         SHIPPING_METHOD("shipping-method"),
+        
+        SHOPPING_LIST("shopping-list"),
         
         STATE("state"),
         
         STORE("store"),
         
+        SUBSCRIPTION("subscription"),
+        
         TAX_CATEGORY("tax-category"),
         
         TYPE("type"),
         
-        ZONE("zone"),
-        
-        INVENTORY_ENTRY("inventory-entry"),
-        
-        ORDER_EDIT("order-edit");
+        ZONE("zone");
         private final String jsonName;
 
         private ReferenceTypeIdEnum(final String jsonName) {

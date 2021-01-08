@@ -5,6 +5,7 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.store.StoreImpl;
 
@@ -81,6 +82,10 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelReference> getSupplyChannels();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
 
     public void setId(final String id);
     
@@ -109,6 +114,8 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
     @JsonIgnore
     public void setSupplyChannels(final ChannelReference ...supplyChannels);
     public void setSupplyChannels(final List<ChannelReference> supplyChannels);
+    
+    public void setCustom(final CustomFields custom);
 
     public static Store of(){
         return new StoreImpl();
@@ -128,6 +135,7 @@ public interface Store extends BaseResource, com.commercetools.api.models.Domain
         instance.setLanguages(template.getLanguages());
         instance.setDistributionChannels(template.getDistributionChannels());
         instance.setSupplyChannels(template.getSupplyChannels());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

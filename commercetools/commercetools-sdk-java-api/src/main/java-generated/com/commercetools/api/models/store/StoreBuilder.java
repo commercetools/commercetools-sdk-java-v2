@@ -5,6 +5,7 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import com.commercetools.api.models.store.Store;
 import javax.annotation.Nullable;
@@ -50,6 +51,9 @@ public final class StoreBuilder {
     
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
+    
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
 
     public StoreBuilder id( final String id) {
         this.id = id;
@@ -120,6 +124,11 @@ public final class StoreBuilder {
         this.supplyChannels = supplyChannels;
         return this;
     }
+    
+    public StoreBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
 
     
     public String getId(){
@@ -175,9 +184,14 @@ public final class StoreBuilder {
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels(){
         return this.supplyChannels;
     }
+    
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom(){
+        return this.custom;
+    }
 
     public Store build() {
-        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages, distributionChannels, supplyChannels);
+        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages, distributionChannels, supplyChannels, custom);
     }
 
     public static StoreBuilder of() {
@@ -197,6 +211,7 @@ public final class StoreBuilder {
         builder.languages = template.getLanguages();
         builder.distributionChannels = template.getDistributionChannels();
         builder.supplyChannels = template.getSupplyChannels();
+        builder.custom = template.getCustom();
         return builder;
     }
 

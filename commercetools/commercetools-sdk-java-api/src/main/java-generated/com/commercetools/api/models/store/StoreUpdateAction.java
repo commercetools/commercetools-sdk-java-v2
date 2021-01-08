@@ -4,6 +4,8 @@ import com.commercetools.api.models.store.StoreAddDistributionChannelAction;
 import com.commercetools.api.models.store.StoreAddSupplyChannelAction;
 import com.commercetools.api.models.store.StoreRemoveDistributionChannelAction;
 import com.commercetools.api.models.store.StoreRemoveSupplyChannelAction;
+import com.commercetools.api.models.store.StoreSetCustomFieldAction;
+import com.commercetools.api.models.store.StoreSetCustomTypeAction;
 import com.commercetools.api.models.store.StoreSetDistributionChannelsAction;
 import com.commercetools.api.models.store.StoreSetLanguagesAction;
 import com.commercetools.api.models.store.StoreSetNameAction;
@@ -26,6 +28,8 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddSupplyChannelActionImpl.class, name = "addSupplyChannel"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveDistributionChannelActionImpl.class, name = "removeDistributionChannel"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveSupplyChannelActionImpl.class, name = "removeSupplyChannel"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetCustomFieldActionImpl.class, name = "setCustomField"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetCustomTypeActionImpl.class, name = "setCustomType"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetDistributionChannelsActionImpl.class, name = "setDistributionChannels"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetLanguagesActionImpl.class, name = "setLanguages"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetNameActionImpl.class, name = "setName"),

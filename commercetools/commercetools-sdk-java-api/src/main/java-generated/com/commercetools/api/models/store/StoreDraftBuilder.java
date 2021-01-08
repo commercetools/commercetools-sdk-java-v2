@@ -2,6 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.store.StoreDraft;
 import javax.annotation.Nullable;
 import java.util.*;
@@ -28,6 +29,9 @@ public final class StoreDraftBuilder {
     
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
+    
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     public StoreDraftBuilder key( final String key) {
         this.key = key;
@@ -68,6 +72,11 @@ public final class StoreDraftBuilder {
         this.supplyChannels = supplyChannels;
         return this;
     }
+    
+    public StoreDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
 
     
     public String getKey(){
@@ -93,9 +102,14 @@ public final class StoreDraftBuilder {
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
         return this.supplyChannels;
     }
+    
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+        return this.custom;
+    }
 
     public StoreDraft build() {
-        return new StoreDraftImpl(key, name, languages, distributionChannels, supplyChannels);
+        return new StoreDraftImpl(key, name, languages, distributionChannels, supplyChannels, custom);
     }
 
     public static StoreDraftBuilder of() {
@@ -109,6 +123,7 @@ public final class StoreDraftBuilder {
         builder.languages = template.getLanguages();
         builder.distributionChannels = template.getDistributionChannels();
         builder.supplyChannels = template.getSupplyChannels();
+        builder.custom = template.getCustom();
         return builder;
     }
 

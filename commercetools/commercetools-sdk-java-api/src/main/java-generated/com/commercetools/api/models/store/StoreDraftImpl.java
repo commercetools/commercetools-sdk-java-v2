@@ -2,6 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -32,14 +33,17 @@ public final class StoreDraftImpl implements StoreDraft {
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels;
     
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
+    
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @JsonCreator
-    StoreDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels, @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
+    StoreDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> distributionChannels, @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.name = name;
         this.languages = languages;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
+        this.custom = custom;
     }
     public StoreDraftImpl() {
     }
@@ -78,6 +82,11 @@ public final class StoreDraftImpl implements StoreDraft {
     public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
         return this.supplyChannels;
     }
+    
+    
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+        return this.custom;
+    }
 
     public void setKey(final String key){
         this.key = key;
@@ -110,6 +119,10 @@ public final class StoreDraftImpl implements StoreDraft {
     public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
        this.supplyChannels = supplyChannels;
     }
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom){
+        this.custom = custom;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -125,6 +138,7 @@ public final class StoreDraftImpl implements StoreDraft {
                 .append(languages, that.languages)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
+                .append(custom, that.custom)
                 .isEquals();
     }
     
@@ -136,6 +150,7 @@ public final class StoreDraftImpl implements StoreDraft {
             .append(languages)
             .append(distributionChannels)
             .append(supplyChannels)
+            .append(custom)
             .toHashCode();
     }
 

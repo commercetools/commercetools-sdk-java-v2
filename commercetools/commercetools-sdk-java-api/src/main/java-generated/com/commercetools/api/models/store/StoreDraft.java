@@ -2,6 +2,7 @@ package com.commercetools.api.models.store;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.commercetools.api.models.store.StoreDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
@@ -53,6 +54,10 @@ public interface StoreDraft  {
     @Valid
     @JsonProperty("supplyChannels")
     public List<ChannelResourceIdentifier> getSupplyChannels();
+    
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
 
     public void setKey(final String key);
     
@@ -69,6 +74,8 @@ public interface StoreDraft  {
     @JsonIgnore
     public void setSupplyChannels(final ChannelResourceIdentifier ...supplyChannels);
     public void setSupplyChannels(final List<ChannelResourceIdentifier> supplyChannels);
+    
+    public void setCustom(final CustomFieldsDraft custom);
 
     public static StoreDraft of(){
         return new StoreDraftImpl();
@@ -82,6 +89,7 @@ public interface StoreDraft  {
         instance.setLanguages(template.getLanguages());
         instance.setDistributionChannels(template.getDistributionChannels());
         instance.setSupplyChannels(template.getSupplyChannels());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

@@ -1,15 +1,7 @@
 package com.commercetools.api.models.store;
 
-import com.commercetools.api.models.store.StoreAddDistributionChannelAction;
-import com.commercetools.api.models.store.StoreAddSupplyChannelAction;
-import com.commercetools.api.models.store.StoreRemoveDistributionChannelAction;
-import com.commercetools.api.models.store.StoreRemoveSupplyChannelAction;
-import com.commercetools.api.models.store.StoreSetCustomFieldAction;
-import com.commercetools.api.models.store.StoreSetCustomTypeAction;
-import com.commercetools.api.models.store.StoreSetDistributionChannelsAction;
-import com.commercetools.api.models.store.StoreSetLanguagesAction;
-import com.commercetools.api.models.store.StoreSetNameAction;
-import com.commercetools.api.models.store.StoreSetSupplyChannelsAction;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.fasterxml.jackson.databind.JsonNode;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -29,22 +21,46 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class StoreUpdateActionImpl implements StoreUpdateAction {
+public final class StoreSetCustomFieldActionImpl implements StoreSetCustomFieldAction {
 
     private String action;
+    
+    private String name;
+    
+    private com.fasterxml.jackson.databind.JsonNode value;
 
     @JsonCreator
-    StoreUpdateActionImpl(@JsonProperty("action") final String action) {
-        this.action = action;
+    StoreSetCustomFieldActionImpl(@JsonProperty("name") final String name, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
+        this.name = name;
+        this.value = value;
+        this.action = "setCustomField";
     }
-    public StoreUpdateActionImpl() {
+    public StoreSetCustomFieldActionImpl() {
+        this.action = "setCustomField";
     }
 
     
     public String getAction(){
         return this.action;
     }
+    
+    
+    public String getName(){
+        return this.name;
+    }
+    
+    
+    public com.fasterxml.jackson.databind.JsonNode getValue(){
+        return this.value;
+    }
 
+    public void setName(final String name){
+        this.name = name;
+    }
+    
+    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
+        this.value = value;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -52,10 +68,12 @@ public final class StoreUpdateActionImpl implements StoreUpdateAction {
     
         if (o == null || getClass() != o.getClass()) return false;
     
-        StoreUpdateActionImpl that = (StoreUpdateActionImpl) o;
+        StoreSetCustomFieldActionImpl that = (StoreSetCustomFieldActionImpl) o;
     
         return new EqualsBuilder()
                 .append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
                 .isEquals();
     }
     
@@ -63,6 +81,8 @@ public final class StoreUpdateActionImpl implements StoreUpdateAction {
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
             .append(action)
+            .append(name)
+            .append(value)
             .toHashCode();
     }
 

@@ -5,6 +5,7 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
@@ -48,9 +49,11 @@ public final class StoreImpl implements Store {
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
     
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
+    
+    private com.commercetools.api.models.type.CustomFields custom;
 
     @JsonCreator
-    StoreImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels, @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
+    StoreImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("key") final String key, @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name, @JsonProperty("languages") final java.util.List<String> languages, @JsonProperty("distributionChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels, @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -62,6 +65,7 @@ public final class StoreImpl implements Store {
         this.languages = languages;
         this.distributionChannels = distributionChannels;
         this.supplyChannels = supplyChannels;
+        this.custom = custom;
     }
     public StoreImpl() {
     }
@@ -130,6 +134,11 @@ public final class StoreImpl implements Store {
     public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels(){
         return this.supplyChannels;
     }
+    
+    
+    public com.commercetools.api.models.type.CustomFields getCustom(){
+        return this.custom;
+    }
 
     public void setId(final String id){
         this.id = id;
@@ -186,6 +195,10 @@ public final class StoreImpl implements Store {
     public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels){
        this.supplyChannels = supplyChannels;
     }
+    
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom){
+        this.custom = custom;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -207,6 +220,7 @@ public final class StoreImpl implements Store {
                 .append(languages, that.languages)
                 .append(distributionChannels, that.distributionChannels)
                 .append(supplyChannels, that.supplyChannels)
+                .append(custom, that.custom)
                 .isEquals();
     }
     
@@ -224,6 +238,7 @@ public final class StoreImpl implements Store {
             .append(languages)
             .append(distributionChannels)
             .append(supplyChannels)
+            .append(custom)
             .toHashCode();
     }
 

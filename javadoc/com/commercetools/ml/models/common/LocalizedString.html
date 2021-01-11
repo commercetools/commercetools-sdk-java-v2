@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":18};
+var methods = {"i0":17,"i1":17,"i2":17,"i3":17,"i4":6,"i5":6,"i6":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,23 +123,31 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/LocalizedStringImpl.html" title="class in com.commercetools.ml.models.common">LocalizedStringImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#of--">of</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.ml.models.common">LocalizedStringBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#builder--">builder</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/LocalizedStringImpl.html" title="class in com.commercetools.ml.models.common">LocalizedStringImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#of-com.commercetools.ml.models.common.LocalizedString-">of</a></span>(<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;template)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.ml.models.common">LocalizedStringBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#builder-com.commercetools.ml.models.common.LocalizedString-">builder</a></span>(<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#of--">of</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#of-com.commercetools.ml.models.common.LocalizedString-">of</a></span>(<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#setValue-java.lang.String-java.lang.String-">setValue</a></span>(java.lang.String&nbsp;key,
         java.lang.String&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull java.util.Map&lt;java.lang.String,java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#values--">values</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html#withLocalizedString-java.util.function.Function-">withLocalizedString</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -184,7 +192,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/LocalizedStringImpl.html" title="class in com.commercetools.ml.models.common">LocalizedStringImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.ml.models.common.LocalizedString-">
@@ -193,7 +201,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/LocalizedStringImpl.html" title="class in com.commercetools.ml.models.common">LocalizedStringImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.ml.models.common">LocalizedStringBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.ml.models.common.LocalizedString-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/LocalizedStringBuilder.html" title="class in com.commercetools.ml.models.common">LocalizedStringBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withLocalizedString-java.util.function.Function-">

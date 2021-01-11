@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":18};
+var methods = {"i0":17,"i1":17,"i2":17,"i3":17,"i4":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -128,14 +128,22 @@ extends <a href="../../../../../com/commercetools/ml/models/common/Reference.htm
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/ProductTypeReferenceImpl.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html#of--">of</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/ProductTypeReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html#builder--">builder</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/ProductTypeReferenceImpl.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html#of-com.commercetools.ml.models.common.ProductTypeReference-">of</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;template)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/ProductTypeReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html#builder-com.commercetools.ml.models.common.ProductTypeReference-">builder</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html#of--">of</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html#of-com.commercetools.ml.models.common.ProductTypeReference-">of</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html#withProductTypeReference-java.util.function.Function-">withProductTypeReference</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -167,7 +175,7 @@ extends <a href="../../../../../com/commercetools/ml/models/common/Reference.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReferenceImpl.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.ml.models.common.ProductTypeReference-">
@@ -176,7 +184,25 @@ extends <a href="../../../../../com/commercetools/ml/models/common/Reference.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReferenceImpl.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.ml.models.common.ProductTypeReference-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReferenceBuilder.html" title="class in com.commercetools.ml.models.common">ProductTypeReferenceBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withProductTypeReference-java.util.function.Function-">

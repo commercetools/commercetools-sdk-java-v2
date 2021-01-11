@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":17,"i4":17,"i5":6,"i6":6,"i7":6,"i8":6,"i9":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":17,"i6":17,"i7":6,"i8":6,"i9":6,"i10":6,"i11":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,46 +123,54 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#builder-com.commercetools.api.models.shipping_method.ShippingRateDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#getFreeAbove--">getFreeAbove</a></span>()</code>
 <div class="block">The shipping is free if the order total (the sum of line item prices) exceeds the freeAbove value.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#getPrice--">getPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#getTiers--">getTiers</a></span>()</code>
 <div class="block">A list of shipping rate price tiers.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftImpl</a></code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#of-com.commercetools.api.models.shipping_method.ShippingRateDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#setFreeAbove-com.commercetools.api.models.common.Money-">setFreeAbove</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;freeAbove)</code>&nbsp;</td>
-</tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#setPrice-com.commercetools.api.models.common.Money-">setPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;price)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#of-com.commercetools.api.models.shipping_method.ShippingRateDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#setTiers-java.util.List-">setTiers</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#setFreeAbove-com.commercetools.api.models.common.Money-">setFreeAbove</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;freeAbove)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#setTiers-com.commercetools.api.models.shipping_method.ShippingRatePriceTier...-">setTiers</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#setPrice-com.commercetools.api.models.common.Money-">setPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;price)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#setTiers-java.util.List-">setTiers</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#setTiers-com.commercetools.api.models.shipping_method.ShippingRatePriceTier...-">setTiers</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html#withShippingRateDraft-java.util.function.Function-">withShippingRateDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -258,7 +266,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.shipping_method.ShippingRateDraft-">
@@ -267,7 +275,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.shipping_method.ShippingRateDraft-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingRateDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withShippingRateDraft-java.util.function.Function-">

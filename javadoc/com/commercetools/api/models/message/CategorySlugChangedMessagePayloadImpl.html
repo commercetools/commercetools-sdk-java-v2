@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -155,17 +155,25 @@ implements <a href="../../../../../com/commercetools/api/models/message/Category
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayloadImpl.html#getSlug--">getSlug</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayloadImpl.html#getOldSlug--">getOldSlug</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayloadImpl.html#getSlug--">getSlug</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayloadImpl.html#getType--">getType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayloadImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayloadImpl.html#setOldSlug-com.commercetools.api.models.common.LocalizedString-">setOldSlug</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;oldSlug)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayloadImpl.html#setSlug-com.commercetools.api.models.common.LocalizedString-">setSlug</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</code>&nbsp;</td>
 </tr>
@@ -182,7 +190,7 @@ implements <a href="../../../../../com/commercetools/api/models/message/Category
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.message.<a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">CategorySlugChangedMessagePayload</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#of-com.commercetools.api.models.message.CategorySlugChangedMessagePayload-">of</a>, <a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#withCategorySlugChangedMessagePayload-java.util.function.Function-">withCategorySlugChangedMessagePayload</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#builder-com.commercetools.api.models.message.CategorySlugChangedMessagePayload-">builder</a>, <a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#of-com.commercetools.api.models.message.CategorySlugChangedMessagePayload-">of</a>, <a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#withCategorySlugChangedMessagePayload-java.util.function.Function-">withCategorySlugChangedMessagePayload</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.message.MessagePayload">
@@ -248,6 +256,19 @@ implements <a href="../../../../../com/commercetools/api/models/message/Category
 </dl>
 </li>
 </ul>
+<a name="getOldSlug--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOldSlug</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;getOldSlug()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#getOldSlug--">getOldSlug</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">CategorySlugChangedMessagePayload</a></code></dd>
+</dl>
+</li>
+</ul>
 <a name="setSlug-com.commercetools.api.models.common.LocalizedString-">
 <!--   -->
 </a>
@@ -258,6 +279,19 @@ implements <a href="../../../../../com/commercetools/api/models/message/Category
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#setSlug-com.commercetools.api.models.common.LocalizedString-">setSlug</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">CategorySlugChangedMessagePayload</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="setOldSlug-com.commercetools.api.models.common.LocalizedString-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setOldSlug</h4>
+<pre>public&nbsp;void&nbsp;setOldSlug(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;oldSlug)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html#setOldSlug-com.commercetools.api.models.common.LocalizedString-">setOldSlug</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/message/CategorySlugChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">CategorySlugChangedMessagePayload</a></code></dd>
 </dl>
 </li>
 </ul>

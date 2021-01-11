@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":17,"i8":17,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":17,"i10":17,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,80 +123,88 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/api_client/ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/api_client/ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#builder-com.commercetools.api.models.api_client.ApiClient-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#getCreatedAt--">getCreatedAt</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#getDeleteAt--">getDeleteAt</a></span>()</code>
 <div class="block">If set, the client will be deleted on (or shortly after) this point in time.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#getId--">getId</a></span>()</code>
 <div class="block">The unique ID of the API client.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.time.LocalDate</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#getLastUsedAt--">getLastUsedAt</a></span>()</code>
 <div class="block">The last day this API Client was used to obtain a token.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#getScope--">getScope</a></span>()</code>
 <div class="block">A whitespace separated list of the OAuth scopes.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#getSecret--">getSecret</a></span>()</code>
 <div class="block">The secret is only shown once in the response of creating the API Client.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/api_client/ApiClientImpl.html" title="class in com.commercetools.api.models.api_client">ApiClientImpl</a></code></td>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/api_client/ApiClientImpl.html" title="class in com.commercetools.api.models.api_client">ApiClientImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#of-com.commercetools.api.models.api_client.ApiClient-">of</a></span>(<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setCreatedAt-java.time.ZonedDateTime-">setCreatedAt</a></span>(java.time.ZonedDateTime&nbsp;createdAt)</code>&nbsp;</td>
-</tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setDeleteAt-java.time.ZonedDateTime-">setDeleteAt</a></span>(java.time.ZonedDateTime&nbsp;deleteAt)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#of-com.commercetools.api.models.api_client.ApiClient-">of</a></span>(<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setCreatedAt-java.time.ZonedDateTime-">setCreatedAt</a></span>(java.time.ZonedDateTime&nbsp;createdAt)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setLastUsedAt-java.time.LocalDate-">setLastUsedAt</a></span>(java.time.LocalDate&nbsp;lastUsedAt)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setDeleteAt-java.time.ZonedDateTime-">setDeleteAt</a></span>(java.time.ZonedDateTime&nbsp;deleteAt)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setScope-java.lang.String-">setScope</a></span>(java.lang.String&nbsp;scope)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setLastUsedAt-java.time.LocalDate-">setLastUsedAt</a></span>(java.time.LocalDate&nbsp;lastUsedAt)</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setSecret-java.lang.String-">setSecret</a></span>(java.lang.String&nbsp;secret)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setScope-java.lang.String-">setScope</a></span>(java.lang.String&nbsp;scope)</code>&nbsp;</td>
+</tr>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#setSecret-java.lang.String-">setSecret</a></span>(java.lang.String&nbsp;secret)</code>&nbsp;</td>
+</tr>
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html#withApiClient-java.util.function.Function-">withApiClient</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -358,7 +366,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/api_client/ApiClientImpl.html" title="class in com.commercetools.api.models.api_client">ApiClientImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.api_client.ApiClient-">
@@ -367,7 +375,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/api_client/ApiClientImpl.html" title="class in com.commercetools.api.models.api_client">ApiClientImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/api_client/ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.api_client.ApiClient-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/api_client/ApiClientBuilder.html" title="class in com.commercetools.api.models.api_client">ApiClientBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/api_client/ApiClient.html" title="interface in com.commercetools.api.models.api_client">ApiClient</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withApiClient-java.util.function.Function-">

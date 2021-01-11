@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -112,12 +112,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</dd>
+<dd><a href="../../../../com/commercetools/api/client/DeprecatableTrait.html" title="interface in com.commercetools.api.client">DeprecatableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;, <a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;, <a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">ByProjectKeyProductProjectionsByIDGet</span>
-extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>,<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</pre>
+extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>,<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;
+implements <a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;, <a href="../../../../com/commercetools/api/client/DeprecatableTrait.html" title="interface in com.commercetools.api.client">DeprecatableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</pre>
 <div class="block"><p>Gets the current or staged representation of a product in a catalog by ID.
   When used with an API client that has the view_published_products:{projectKey} scope,
   this endpoint only returns published (current) product projections.</p></div>
@@ -154,7 +155,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#ByProjectKeyProductProjectionsByIDGet-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-java.lang.String-">ByProjectKeyProductProjectionsByIDGet</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#ByProjectKeyProductProjectionsByIDGet-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-java.lang.String-">ByProjectKeyProductProjectionsByIDGet</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                      java.lang.String&nbsp;projectKey,
                                      java.lang.String&nbsp;ID)</code>&nbsp;</td>
 </tr>
@@ -177,102 +178,130 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#addExpand-java.lang.String-">addExpand</a></span>(java.lang.String&nbsp;expand)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#addLocaleProjection-java.lang.String-">addLocaleProjection</a></span>(java.lang.String&nbsp;localeProjection)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#addPriceChannel-java.lang.String-">addPriceChannel</a></span>(java.lang.String&nbsp;priceChannel)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#addPriceCountry-java.lang.String-">addPriceCountry</a></span>(java.lang.String&nbsp;priceCountry)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#addPriceCurrency-java.lang.String-">addPriceCurrency</a></span>(java.lang.String&nbsp;priceCurrency)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#addPriceCustomerGroup-java.lang.String-">addPriceCustomerGroup</a></span>(java.lang.String&nbsp;priceCustomerGroup)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#addStaged-java.lang.Boolean-">addStaged</a></span>(java.lang.Boolean&nbsp;staged)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#addStoreProjection-java.lang.String-">addStoreProjection</a></span>(java.lang.String&nbsp;storeProjection)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#copy--">copy</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#createHttpRequest--">createHttpRequest</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.util.concurrent.CompletableFuture&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#execute--">execute</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#executeBlocking--">executeBlocking</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#executeBlocking-java.time.Duration-">executeBlocking</a></span>(java.time.Duration&nbsp;timeout)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getExpand--">getExpand</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getID--">getID</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getLocaleProjection--">getLocaleProjection</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getPriceChannel--">getPriceChannel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getPriceCountry--">getPriceCountry</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getPriceCurrency--">getPriceCurrency</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getPriceCustomerGroup--">getPriceCustomerGroup</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getProjectKey--">getProjectKey</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getStaged--">getStaged</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#getStoreProjection--">getStoreProjection</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#setID-java.lang.String-">setID</a></span>(java.lang.String&nbsp;ID)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#setProjectKey-java.lang.String-">setProjectKey</a></span>(java.lang.String&nbsp;projectKey)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#withExpand-java.lang.String-">withExpand</a></span>(java.lang.String&nbsp;expand)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#withLocaleProjection-java.lang.String-">withLocaleProjection</a></span>(java.lang.String&nbsp;localeProjection)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#withPriceChannel-java.lang.String-">withPriceChannel</a></span>(java.lang.String&nbsp;priceChannel)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#withPriceCountry-java.lang.String-">withPriceCountry</a></span>(java.lang.String&nbsp;priceCountry)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#withPriceCurrency-java.lang.String-">withPriceCurrency</a></span>(java.lang.String&nbsp;priceCurrency)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#withPriceCustomerGroup-java.lang.String-">withPriceCustomerGroup</a></span>(java.lang.String&nbsp;priceCustomerGroup)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#withStaged-java.lang.Boolean-">withStaged</a></span>(java.lang.Boolean&nbsp;staged)</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html#withStoreProjection-java.lang.String-">withStoreProjection</a></span>(java.lang.String&nbsp;storeProjection)</code>&nbsp;</td>
 </tr>
@@ -282,7 +311,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.vrap.rmf.base.client.<a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a></h3>
-<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam-java.lang.String-V-">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam-java.lang.String-">getFirstQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></code></li>
+<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam-java.lang.String-V-">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking--">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam-java.lang.String-">getFirstQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -311,7 +340,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <ul class="blockList">
 <li class="blockList">
 <h4>ByProjectKeyProductProjectionsByIDGet</h4>
-<pre>public&nbsp;ByProjectKeyProductProjectionsByIDGet(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<pre>public&nbsp;ByProjectKeyProductProjectionsByIDGet(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                              java.lang.String&nbsp;projectKey,
                                              java.lang.String&nbsp;ID)</pre>
 </li>
@@ -343,21 +372,6 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#createHttpRequest--">createHttpRequest</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>,<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="executeBlocking--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>executeBlocking</h4>
-<pre>public&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;executeBlocking()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html#executeBlocking--">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking--">executeBlocking</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>,<a href="../../../../com/commercetools/api/models/product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -425,6 +439,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>getPriceCurrency</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getPriceCurrency()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getPriceCurrency--">getPriceCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="getPriceCountry--">
@@ -434,6 +452,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>getPriceCountry</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getPriceCountry()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getPriceCountry--">getPriceCountry</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="getPriceCustomerGroup--">
@@ -443,6 +465,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>getPriceCustomerGroup</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getPriceCustomerGroup()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getPriceCustomerGroup--">getPriceCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="getPriceChannel--">
@@ -452,6 +478,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>getPriceChannel</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getPriceChannel()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getPriceChannel--">getPriceChannel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="getLocaleProjection--">
@@ -461,6 +491,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>getLocaleProjection</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getLocaleProjection()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getLocaleProjection--">getLocaleProjection</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="getStoreProjection--">
@@ -470,6 +504,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>getStoreProjection</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getStoreProjection()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#getStoreProjection--">getStoreProjection</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="getExpand--">
@@ -479,6 +517,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>getExpand</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getExpand()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html#getExpand--">getExpand</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="setProjectKey-java.lang.String-">
@@ -508,6 +550,15 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;withStaged(java.lang.Boolean&nbsp;staged)</pre>
 </li>
 </ul>
+<a name="addStaged-java.lang.Boolean-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addStaged</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;addStaged(java.lang.Boolean&nbsp;staged)</pre>
+</li>
+</ul>
 <a name="withPriceCurrency-java.lang.String-">
 <!--   -->
 </a>
@@ -515,6 +566,19 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>withPriceCurrency</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;withPriceCurrency(java.lang.String&nbsp;priceCurrency)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCurrency-java.lang.String-">withPriceCurrency</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addPriceCurrency-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPriceCurrency</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;addPriceCurrency(java.lang.String&nbsp;priceCurrency)</pre>
 </li>
 </ul>
 <a name="withPriceCountry-java.lang.String-">
@@ -524,6 +588,19 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>withPriceCountry</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;withPriceCountry(java.lang.String&nbsp;priceCountry)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCountry-java.lang.String-">withPriceCountry</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addPriceCountry-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPriceCountry</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;addPriceCountry(java.lang.String&nbsp;priceCountry)</pre>
 </li>
 </ul>
 <a name="withPriceCustomerGroup-java.lang.String-">
@@ -533,6 +610,19 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>withPriceCustomerGroup</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;withPriceCustomerGroup(java.lang.String&nbsp;priceCustomerGroup)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceCustomerGroup-java.lang.String-">withPriceCustomerGroup</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addPriceCustomerGroup-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPriceCustomerGroup</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;addPriceCustomerGroup(java.lang.String&nbsp;priceCustomerGroup)</pre>
 </li>
 </ul>
 <a name="withPriceChannel-java.lang.String-">
@@ -542,6 +632,19 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>withPriceChannel</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;withPriceChannel(java.lang.String&nbsp;priceChannel)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withPriceChannel-java.lang.String-">withPriceChannel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addPriceChannel-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addPriceChannel</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;addPriceChannel(java.lang.String&nbsp;priceChannel)</pre>
 </li>
 </ul>
 <a name="withLocaleProjection-java.lang.String-">
@@ -551,6 +654,19 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>withLocaleProjection</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;withLocaleProjection(java.lang.String&nbsp;localeProjection)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withLocaleProjection-java.lang.String-">withLocaleProjection</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addLocaleProjection-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addLocaleProjection</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;addLocaleProjection(java.lang.String&nbsp;localeProjection)</pre>
 </li>
 </ul>
 <a name="withStoreProjection-java.lang.String-">
@@ -560,6 +676,19 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>withStoreProjection</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;withStoreProjection(java.lang.String&nbsp;storeProjection)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html#withStoreProjection-java.lang.String-">withStoreProjection</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PriceselectingTrait.html" title="interface in com.commercetools.api.client">PriceselectingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addStoreProjection-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addStoreProjection</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;addStoreProjection(java.lang.String&nbsp;storeProjection)</pre>
 </li>
 </ul>
 <a name="withExpand-java.lang.String-">
@@ -569,6 +698,19 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>withExpand</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;withExpand(java.lang.String&nbsp;expand)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html#withExpand-java.lang.String-">withExpand</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addExpand-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addExpand</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyProductProjectionsByIDGet</a>&nbsp;addExpand(java.lang.String&nbsp;expand)</pre>
 </li>
 </ul>
 <a name="copy--">

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":17,"i3":17,"i4":6,"i5":6,"i6":6,"i7":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,36 +123,44 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#builder-com.commercetools.api.models.shipping_method.ZoneRateDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#getShippingRates--">getShippingRates</a></span>()</code>
 <div class="block">The array must not contain two shipping rates with the same currency.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/zone/ZoneResourceIdentifier.html" title="interface in com.commercetools.api.models.zone">ZoneResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#getZone--">getZone</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateDraftImpl</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateDraftImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#of-com.commercetools.api.models.shipping_method.ZoneRateDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#setShippingRates-java.util.List-">setShippingRates</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&gt;&nbsp;shippingRates)</code>&nbsp;</td>
-</tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#setShippingRates-com.commercetools.api.models.shipping_method.ShippingRateDraft...-">setShippingRates</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>...&nbsp;shippingRates)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#of-com.commercetools.api.models.shipping_method.ZoneRateDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#setZone-com.commercetools.api.models.zone.ZoneResourceIdentifier-">setZone</a></span>(<a href="../../../../../com/commercetools/api/models/zone/ZoneResourceIdentifier.html" title="interface in com.commercetools.api.models.zone">ZoneResourceIdentifier</a>&nbsp;zone)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#setShippingRates-java.util.List-">setShippingRates</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>&gt;&nbsp;shippingRates)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#setShippingRates-com.commercetools.api.models.shipping_method.ShippingRateDraft...-">setShippingRates</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRateDraft</a>...&nbsp;shippingRates)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#setZone-com.commercetools.api.models.zone.ZoneResourceIdentifier-">setZone</a></span>(<a href="../../../../../com/commercetools/api/models/zone/ZoneResourceIdentifier.html" title="interface in com.commercetools.api.models.zone">ZoneResourceIdentifier</a>&nbsp;zone)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html#withZoneRateDraft-java.util.function.Function-">withZoneRateDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -227,7 +235,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateDraftImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.shipping_method.ZoneRateDraft-">
@@ -236,7 +244,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraftImpl.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateDraftBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.shipping_method.ZoneRateDraft-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraftBuilder.html" title="class in com.commercetools.api.models.shipping_method">ZoneRateDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/shipping_method/ZoneRateDraft.html" title="interface in com.commercetools.api.models.shipping_method">ZoneRateDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withZoneRateDraft-java.util.function.Function-">

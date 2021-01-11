@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":17,"i17":17,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":17,"i19":17,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":6,"i36":6,"i37":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -128,168 +128,176 @@ extends <a href="../../../../../com/commercetools/api/models/common/BaseResource
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#builder-com.commercetools.api.models.product_discount.ProductDiscount-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getCreatedAt--">getCreatedAt</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getCreatedBy--">getCreatedBy</a></span>()</code>
 <div class="block">Present on resources created after 1/02/2019 except for events not tracked.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getDescription--">getDescription</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getId--">getId</a></span>()</code>
 <div class="block">The unique ID of the product discount</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getIsActive--">getIsActive</a></span>()</code>
 <div class="block">Only active discount will be applied to product prices.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getKey--">getKey</a></span>()</code>
 <div class="block">User-specific unique identifier for a product discount.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>@NotNull java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getLastModifiedAt--">getLastModifiedAt</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getLastModifiedBy--">getLastModifiedBy</a></span>()</code>
 <div class="block">Present on resources updated after 1/02/2019 except for events not tracked.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getPredicate--">getPredicate</a></span>()</code>
 <div class="block">A valid ProductDiscount Predicate.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getReferences--">getReferences</a></span>()</code>
 <div class="block">The platform will generate this array from the predicate.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getSortOrder--">getSortOrder</a></span>()</code>
 <div class="block">The string contains a number between 0 and 1.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getValidFrom--">getValidFrom</a></span>()</code>
 <div class="block">The time from which the discount should be effective.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getValidUntil--">getValidUntil</a></span>()</code>
 <div class="block">The time from which the discount should be ineffective.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountValue.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountValue</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getValue--">getValue</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#getVersion--">getVersion</a></span>()</code>
 <div class="block">The current version of the product discount.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountImpl</a></code></td>
+<tr id="i18" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#of-com.commercetools.api.models.product_discount.ProductDiscount-">of</a></span>(<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i18" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setCreatedAt-java.time.ZonedDateTime-">setCreatedAt</a></span>(java.time.ZonedDateTime&nbsp;createdAt)</code>&nbsp;</td>
-</tr>
 <tr id="i19" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setCreatedBy-com.commercetools.api.models.common.CreatedBy-">setCreatedBy</a></span>(<a href="../../../../../com/commercetools/api/models/common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#of-com.commercetools.api.models.product_discount.ProductDiscount-">of</a></span>(<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setDescription-com.commercetools.api.models.common.LocalizedString-">setDescription</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setCreatedAt-java.time.ZonedDateTime-">setCreatedAt</a></span>(java.time.ZonedDateTime&nbsp;createdAt)</code>&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setCreatedBy-com.commercetools.api.models.common.CreatedBy-">setCreatedBy</a></span>(<a href="../../../../../com/commercetools/api/models/common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code>&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setIsActive-java.lang.Boolean-">setIsActive</a></span>(java.lang.Boolean&nbsp;isActive)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setDescription-com.commercetools.api.models.common.LocalizedString-">setDescription</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code>&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setLastModifiedAt-java.time.ZonedDateTime-">setLastModifiedAt</a></span>(java.time.ZonedDateTime&nbsp;lastModifiedAt)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setIsActive-java.lang.Boolean-">setIsActive</a></span>(java.lang.Boolean&nbsp;isActive)</code>&nbsp;</td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setLastModifiedBy-com.commercetools.api.models.common.LastModifiedBy-">setLastModifiedBy</a></span>(<a href="../../../../../com/commercetools/api/models/common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setName-com.commercetools.api.models.common.LocalizedString-">setName</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setLastModifiedAt-java.time.ZonedDateTime-">setLastModifiedAt</a></span>(java.time.ZonedDateTime&nbsp;lastModifiedAt)</code>&nbsp;</td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setPredicate-java.lang.String-">setPredicate</a></span>(java.lang.String&nbsp;predicate)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setLastModifiedBy-com.commercetools.api.models.common.LastModifiedBy-">setLastModifiedBy</a></span>(<a href="../../../../../com/commercetools/api/models/common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code>&nbsp;</td>
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setReferences-java.util.List-">setReferences</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&nbsp;references)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setName-com.commercetools.api.models.common.LocalizedString-">setName</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setReferences-com.commercetools.api.models.common.Reference...-">setReferences</a></span>(<a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>...&nbsp;references)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setPredicate-java.lang.String-">setPredicate</a></span>(java.lang.String&nbsp;predicate)</code>&nbsp;</td>
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setSortOrder-java.lang.String-">setSortOrder</a></span>(java.lang.String&nbsp;sortOrder)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setReferences-java.util.List-">setReferences</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&nbsp;references)</code>&nbsp;</td>
 </tr>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setReferences-com.commercetools.api.models.common.Reference...-">setReferences</a></span>(<a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>...&nbsp;references)</code>&nbsp;</td>
 </tr>
 <tr id="i32" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setValidUntil-java.time.ZonedDateTime-">setValidUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setSortOrder-java.lang.String-">setSortOrder</a></span>(java.lang.String&nbsp;sortOrder)</code>&nbsp;</td>
 </tr>
 <tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setValue-com.commercetools.api.models.product_discount.ProductDiscountValue-">setValue</a></span>(<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountValue.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountValue</a>&nbsp;value)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
 </tr>
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setVersion-java.lang.Long-">setVersion</a></span>(java.lang.Long&nbsp;version)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setValidUntil-java.time.ZonedDateTime-">setValidUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
 </tr>
 <tr id="i35" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setValue-com.commercetools.api.models.product_discount.ProductDiscountValue-">setValue</a></span>(<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountValue.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscountValue</a>&nbsp;value)</code>&nbsp;</td>
+</tr>
+<tr id="i36" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#setVersion-java.lang.Long-">setVersion</a></span>(java.lang.Long&nbsp;version)</code>&nbsp;</td>
+</tr>
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html#withProductDiscount-java.util.function.Function-">withProductDiscount</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -694,7 +702,7 @@ extends <a href="../../../../../com/commercetools/api/models/common/BaseResource
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.product_discount.ProductDiscount-">
@@ -703,7 +711,25 @@ extends <a href="../../../../../com/commercetools/api/models/common/BaseResource
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountImpl.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.product_discount.ProductDiscount-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscountBuilder.html" title="class in com.commercetools.api.models.product_discount">ProductDiscountBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/product_discount/ProductDiscount.html" title="interface in com.commercetools.api.models.product_discount">ProductDiscount</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withProductDiscount-java.util.function.Function-">

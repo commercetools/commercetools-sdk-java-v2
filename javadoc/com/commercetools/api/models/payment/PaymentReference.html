@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":17,"i2":17,"i3":6,"i4":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":17,"i4":17,"i5":6,"i6":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -128,22 +128,30 @@ extends <a href="../../../../../com/commercetools/api/models/common/Reference.ht
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html#builder-com.commercetools.api.models.payment.PaymentReference-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/payment/Payment.html" title="interface in com.commercetools.api.models.payment">Payment</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html#getObj--">getObj</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/payment/PaymentReferenceImpl.html" title="class in com.commercetools.api.models.payment">PaymentReferenceImpl</a></code></td>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/payment/PaymentReferenceImpl.html" title="class in com.commercetools.api.models.payment">PaymentReferenceImpl</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html#of-com.commercetools.api.models.payment.PaymentReference-">of</a></span>(<a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html#setObj-com.commercetools.api.models.payment.Payment-">setObj</a></span>(<a href="../../../../../com/commercetools/api/models/payment/Payment.html" title="interface in com.commercetools.api.models.payment">Payment</a>&nbsp;obj)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html#withPaymentReference-java.util.function.Function-">withPaymentReference</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -194,7 +202,7 @@ extends <a href="../../../../../com/commercetools/api/models/common/Reference.ht
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/payment/PaymentReferenceImpl.html" title="class in com.commercetools.api.models.payment">PaymentReferenceImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.payment.PaymentReference-">
@@ -203,7 +211,25 @@ extends <a href="../../../../../com/commercetools/api/models/common/Reference.ht
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/payment/PaymentReferenceImpl.html" title="class in com.commercetools.api.models.payment">PaymentReferenceImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.payment.PaymentReference-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/payment/PaymentReferenceBuilder.html" title="class in com.commercetools.api.models.payment">PaymentReferenceBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/payment/PaymentReference.html" title="interface in com.commercetools.api.models.payment">PaymentReference</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withPaymentReference-java.util.function.Function-">

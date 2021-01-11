@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -112,12 +112,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</dd>
+<dd><a href="../../../../com/commercetools/importapi/client/Secured_by_manage_customersTrait.html" title="interface in com.commercetools.importapi.client">Secured_by_manage_customersTrait</a>&lt;<a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</a>&gt;, <a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</span>
-extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</a>,<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</pre>
+extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</a>,<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;
+implements <a href="../../../../com/commercetools/importapi/client/Secured_by_manage_customersTrait.html" title="interface in com.commercetools.importapi.client">Secured_by_manage_customersTrait</a>&lt;<a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</a>&gt;</pre>
 <div class="block"><p>Creates import request for creating new customers or updating existing ones.</p></div>
 </li>
 </ul>
@@ -152,7 +153,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html#ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-java.lang.String-com.commercetools.importapi.models.importrequests.CustomerImportRequest-">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html#ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-java.lang.String-com.commercetools.importapi.models.importrequests.CustomerImportRequest-">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                                      java.lang.String&nbsp;projectKey,
                                                      java.lang.String&nbsp;importSinkKey,
                                                      <a href="../../../../com/commercetools/importapi/models/importrequests/CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a>&nbsp;customerImportRequest)</code>&nbsp;</td>
@@ -189,25 +190,21 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html#executeBlocking--">executeBlocking</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html#executeBlocking-java.time.Duration-">executeBlocking</a></span>(java.time.Duration&nbsp;timeout)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html#getImportSinkKey--">getImportSinkKey</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html#getProjectKey--">getProjectKey</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html#setImportSinkKey-java.lang.String-">setImportSinkKey</a></span>(java.lang.String&nbsp;importSinkKey)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html#setProjectKey-java.lang.String-">setProjectKey</a></span>(java.lang.String&nbsp;projectKey)</code>&nbsp;</td>
 </tr>
@@ -217,7 +214,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.vrap.rmf.base.client.<a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a></h3>
-<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam-java.lang.String-V-">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam-java.lang.String-">getFirstQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></code></li>
+<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam-java.lang.String-V-">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking--">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam-java.lang.String-">getFirstQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -246,7 +243,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <ul class="blockList">
 <li class="blockList">
 <h4>ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</h4>
-<pre>public&nbsp;ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<pre>public&nbsp;ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                                              java.lang.String&nbsp;projectKey,
                                                              java.lang.String&nbsp;importSinkKey,
                                                              <a href="../../../../com/commercetools/importapi/models/importrequests/CustomerImportRequest.html" title="interface in com.commercetools.importapi.models.importrequests">CustomerImportRequest</a>&nbsp;customerImportRequest)</pre>
@@ -279,21 +276,6 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#createHttpRequest--">createHttpRequest</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</a>,<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="executeBlocking--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>executeBlocking</h4>
-<pre>public&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;&nbsp;executeBlocking()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html#executeBlocking--">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking--">executeBlocking</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/importapi/client/ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost.html" title="class in com.commercetools.importapi.client">ByProjectKeyCustomersImportSinkKeyByImportSinkKeyPost</a>,<a href="../../../../com/commercetools/importapi/models/importrequests/ImportResponse.html" title="interface in com.commercetools.importapi.models.importrequests">ImportResponse</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>

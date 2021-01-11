@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":9,"i3":9,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":9,"i4":9,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,17 +150,25 @@ extends java.lang.Object</pre>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#getSlug--">getSlug</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#getOldSlug--">getOldSlug</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#getSlug--">getSlug</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#of-com.commercetools.api.models.message.ProductSlugChangedMessagePayload-">of</a></span>(<a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessagePayload</a>&nbsp;template)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#of-com.commercetools.api.models.message.ProductSlugChangedMessagePayload-">of</a></span>(<a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayload.html" title="interface in com.commercetools.api.models.message">ProductSlugChangedMessagePayload</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#oldSlug-com.commercetools.api.models.common.LocalizedString-">oldSlug</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;oldSlug)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html#slug-com.commercetools.api.models.common.LocalizedString-">slug</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</code>&nbsp;</td>
 </tr>
@@ -212,6 +220,16 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a>&nbsp;slug(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</pre>
 </li>
 </ul>
+<a name="oldSlug-com.commercetools.api.models.common.LocalizedString-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>oldSlug</h4>
+<pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/message/ProductSlugChangedMessagePayloadBuilder.html" title="class in com.commercetools.api.models.message">ProductSlugChangedMessagePayloadBuilder</a>&nbsp;oldSlug(@Nullable
+                                                       <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;oldSlug)</pre>
+</li>
+</ul>
 <a name="getSlug--">
 <!--   -->
 </a>
@@ -219,6 +237,16 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>getSlug</h4>
 <pre>public&nbsp;<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;getSlug()</pre>
+</li>
+</ul>
+<a name="getOldSlug--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getOldSlug</h4>
+<pre>@Nullable
+public&nbsp;<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;getOldSlug()</pre>
 </li>
 </ul>
 <a name="build--">

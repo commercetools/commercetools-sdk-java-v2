@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":17,"i23":17,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":6,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6,"i42":6,"i43":6,"i44":6,"i45":6,"i46":6,"i47":6,"i48":6,"i49":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":17,"i25":17,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":6,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6,"i42":6,"i43":6,"i44":6,"i45":6,"i46":6,"i47":6,"i48":6,"i49":6,"i50":6,"i51":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,232 +123,240 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderImportDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderImportDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderImportDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderImportDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#builder-com.commercetools.api.models.order.OrderImportDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getBillingAddress--">getBillingAddress</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getCompletedAt--">getCompletedAt</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getCountry--">getCountry</a></span>()</code>
 <div class="block">A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getCustom--">getCustom</a></span>()</code>
 <div class="block">The custom fields.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getCustomerEmail--">getCustomerEmail</a></span>()</code>
 <div class="block">The customer email can be used when no check against existing Customers is desired during order import.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getCustomerGroup--">getCustomerGroup</a></span>()</code>
 <div class="block">Set when the customer is set and the customer is a member of a customer group.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getCustomerId--">getCustomerId</a></span>()</code>
 <div class="block">If given the customer with that ID must exist in the project.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getCustomLineItems--">getCustomLineItems</a></span>()</code>
 <div class="block">If not given <code>lineItems</code> must not be empty.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getInventoryMode--">getInventoryMode</a></span>()</code>
 <div class="block">If not given the mode <code>None</code> will be assigned by default.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getItemShippingAddresses--">getItemShippingAddresses</a></span>()</code>
 <div class="block">Contains addresses for orders with multiple shipping addresses.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/LineItemImportDraft.html" title="interface in com.commercetools.api.models.order">LineItemImportDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getLineItems--">getLineItems</a></span>()</code>
 <div class="block">If not given <code>customLineItems</code> must not be empty.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getOrderNumber--">getOrderNumber</a></span>()</code>
 <div class="block">String that unique identifies an order.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/order/OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getOrderState--">getOrderState</a></span>()</code>
 <div class="block">If not given the <code>Open</code> state will be assigned by default.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/CartOrigin.html" title="interface in com.commercetools.api.models.cart">CartOrigin</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getOrigin--">getOrigin</a></span>()</code>
 <div class="block">The default origin is <code>Customer</code>.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/order/PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getPaymentState--">getPaymentState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/order/ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getShipmentState--">getShipmentState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getShippingAddress--">getShippingAddress</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/order/ShippingInfoImportDraft.html" title="interface in com.commercetools.api.models.order">ShippingInfoImportDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getShippingInfo--">getShippingInfo</a></span>()</code>
 <div class="block">Set if the ShippingMethod is set.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getStore--">getStore</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getTaxedPrice--">getTaxedPrice</a></span>()</code>
 <div class="block">Order Import does not support calculation of taxes.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getTaxRoundingMode--">getTaxRoundingMode</a></span>()</code>
 <div class="block">If not given the tax rounding mode <code>HalfEven</code> will be assigned by default.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#getTotalPrice--">getTotalPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderImportDraftImpl.html" title="class in com.commercetools.api.models.order">OrderImportDraftImpl</a></code></td>
+<tr id="i24" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderImportDraftImpl.html" title="class in com.commercetools.api.models.order">OrderImportDraftImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#of-com.commercetools.api.models.order.OrderImportDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i24" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setBillingAddress-com.commercetools.api.models.common.Address-">setBillingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;billingAddress)</code>&nbsp;</td>
-</tr>
 <tr id="i25" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCompletedAt-java.time.ZonedDateTime-">setCompletedAt</a></span>(java.time.ZonedDateTime&nbsp;completedAt)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#of-com.commercetools.api.models.order.OrderImportDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCountry-java.lang.String-">setCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setBillingAddress-com.commercetools.api.models.common.Address-">setBillingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;billingAddress)</code>&nbsp;</td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCompletedAt-java.time.ZonedDateTime-">setCompletedAt</a></span>(java.time.ZonedDateTime&nbsp;completedAt)</code>&nbsp;</td>
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomerEmail-java.lang.String-">setCustomerEmail</a></span>(java.lang.String&nbsp;customerEmail)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCountry-java.lang.String-">setCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
 </tr>
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomerGroup-com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier-">setCustomerGroup</a></span>(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomerId-java.lang.String-">setCustomerId</a></span>(java.lang.String&nbsp;customerId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomerEmail-java.lang.String-">setCustomerEmail</a></span>(java.lang.String&nbsp;customerEmail)</code>&nbsp;</td>
 </tr>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomLineItems-com.commercetools.api.models.cart.CustomLineItemDraft...-">setCustomLineItems</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>...&nbsp;customLineItems)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomerGroup-com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier-">setCustomerGroup</a></span>(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</code>&nbsp;</td>
 </tr>
 <tr id="i32" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomLineItems-java.util.List-">setCustomLineItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&gt;&nbsp;customLineItems)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomerId-java.lang.String-">setCustomerId</a></span>(java.lang.String&nbsp;customerId)</code>&nbsp;</td>
 </tr>
 <tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setInventoryMode-com.commercetools.api.models.cart.InventoryMode-">setInventoryMode</a></span>(<a href="../../../../../com/commercetools/api/models/cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a>&nbsp;inventoryMode)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomLineItems-com.commercetools.api.models.cart.CustomLineItemDraft...-">setCustomLineItems</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>...&nbsp;customLineItems)</code>&nbsp;</td>
 </tr>
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setItemShippingAddresses-com.commercetools.api.models.common.Address...-">setItemShippingAddresses</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;itemShippingAddresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setCustomLineItems-java.util.List-">setCustomLineItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/CustomLineItemDraft.html" title="interface in com.commercetools.api.models.cart">CustomLineItemDraft</a>&gt;&nbsp;customLineItems)</code>&nbsp;</td>
 </tr>
 <tr id="i35" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setItemShippingAddresses-java.util.List-">setItemShippingAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;itemShippingAddresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setInventoryMode-com.commercetools.api.models.cart.InventoryMode-">setInventoryMode</a></span>(<a href="../../../../../com/commercetools/api/models/cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a>&nbsp;inventoryMode)</code>&nbsp;</td>
 </tr>
 <tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setLineItems-com.commercetools.api.models.order.LineItemImportDraft...-">setLineItems</a></span>(<a href="../../../../../com/commercetools/api/models/order/LineItemImportDraft.html" title="interface in com.commercetools.api.models.order">LineItemImportDraft</a>...&nbsp;lineItems)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setItemShippingAddresses-com.commercetools.api.models.common.Address...-">setItemShippingAddresses</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;itemShippingAddresses)</code>&nbsp;</td>
 </tr>
 <tr id="i37" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setLineItems-java.util.List-">setLineItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/LineItemImportDraft.html" title="interface in com.commercetools.api.models.order">LineItemImportDraft</a>&gt;&nbsp;lineItems)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setItemShippingAddresses-java.util.List-">setItemShippingAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;itemShippingAddresses)</code>&nbsp;</td>
 </tr>
 <tr id="i38" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setOrderNumber-java.lang.String-">setOrderNumber</a></span>(java.lang.String&nbsp;orderNumber)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setLineItems-com.commercetools.api.models.order.LineItemImportDraft...-">setLineItems</a></span>(<a href="../../../../../com/commercetools/api/models/order/LineItemImportDraft.html" title="interface in com.commercetools.api.models.order">LineItemImportDraft</a>...&nbsp;lineItems)</code>&nbsp;</td>
 </tr>
 <tr id="i39" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setOrderState-com.commercetools.api.models.order.OrderState-">setOrderState</a></span>(<a href="../../../../../com/commercetools/api/models/order/OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a>&nbsp;orderState)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setLineItems-java.util.List-">setLineItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/LineItemImportDraft.html" title="interface in com.commercetools.api.models.order">LineItemImportDraft</a>&gt;&nbsp;lineItems)</code>&nbsp;</td>
 </tr>
 <tr id="i40" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setOrigin-com.commercetools.api.models.cart.CartOrigin-">setOrigin</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CartOrigin.html" title="interface in com.commercetools.api.models.cart">CartOrigin</a>&nbsp;origin)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setOrderNumber-java.lang.String-">setOrderNumber</a></span>(java.lang.String&nbsp;orderNumber)</code>&nbsp;</td>
 </tr>
 <tr id="i41" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setPaymentState-com.commercetools.api.models.order.PaymentState-">setPaymentState</a></span>(<a href="../../../../../com/commercetools/api/models/order/PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a>&nbsp;paymentState)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setOrderState-com.commercetools.api.models.order.OrderState-">setOrderState</a></span>(<a href="../../../../../com/commercetools/api/models/order/OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a>&nbsp;orderState)</code>&nbsp;</td>
 </tr>
 <tr id="i42" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setShipmentState-com.commercetools.api.models.order.ShipmentState-">setShipmentState</a></span>(<a href="../../../../../com/commercetools/api/models/order/ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a>&nbsp;shipmentState)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setOrigin-com.commercetools.api.models.cart.CartOrigin-">setOrigin</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CartOrigin.html" title="interface in com.commercetools.api.models.cart">CartOrigin</a>&nbsp;origin)</code>&nbsp;</td>
 </tr>
 <tr id="i43" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setShippingAddress-com.commercetools.api.models.common.Address-">setShippingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setPaymentState-com.commercetools.api.models.order.PaymentState-">setPaymentState</a></span>(<a href="../../../../../com/commercetools/api/models/order/PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a>&nbsp;paymentState)</code>&nbsp;</td>
 </tr>
 <tr id="i44" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setShippingInfo-com.commercetools.api.models.order.ShippingInfoImportDraft-">setShippingInfo</a></span>(<a href="../../../../../com/commercetools/api/models/order/ShippingInfoImportDraft.html" title="interface in com.commercetools.api.models.order">ShippingInfoImportDraft</a>&nbsp;shippingInfo)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setShipmentState-com.commercetools.api.models.order.ShipmentState-">setShipmentState</a></span>(<a href="../../../../../com/commercetools/api/models/order/ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a>&nbsp;shipmentState)</code>&nbsp;</td>
 </tr>
 <tr id="i45" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setStore-com.commercetools.api.models.store.StoreResourceIdentifier-">setStore</a></span>(<a href="../../../../../com/commercetools/api/models/store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&nbsp;store)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setShippingAddress-com.commercetools.api.models.common.Address-">setShippingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</code>&nbsp;</td>
 </tr>
 <tr id="i46" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setTaxedPrice-com.commercetools.api.models.cart.TaxedPriceDraft-">setTaxedPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>&nbsp;taxedPrice)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setShippingInfo-com.commercetools.api.models.order.ShippingInfoImportDraft-">setShippingInfo</a></span>(<a href="../../../../../com/commercetools/api/models/order/ShippingInfoImportDraft.html" title="interface in com.commercetools.api.models.order">ShippingInfoImportDraft</a>&nbsp;shippingInfo)</code>&nbsp;</td>
 </tr>
 <tr id="i47" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setTaxRoundingMode-com.commercetools.api.models.cart.RoundingMode-">setTaxRoundingMode</a></span>(<a href="../../../../../com/commercetools/api/models/cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;taxRoundingMode)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setStore-com.commercetools.api.models.store.StoreResourceIdentifier-">setStore</a></span>(<a href="../../../../../com/commercetools/api/models/store/StoreResourceIdentifier.html" title="interface in com.commercetools.api.models.store">StoreResourceIdentifier</a>&nbsp;store)</code>&nbsp;</td>
 </tr>
 <tr id="i48" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setTotalPrice-com.commercetools.api.models.common.Money-">setTotalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalPrice)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setTaxedPrice-com.commercetools.api.models.cart.TaxedPriceDraft-">setTaxedPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxedPriceDraft.html" title="interface in com.commercetools.api.models.cart">TaxedPriceDraft</a>&nbsp;taxedPrice)</code>&nbsp;</td>
 </tr>
 <tr id="i49" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setTaxRoundingMode-com.commercetools.api.models.cart.RoundingMode-">setTaxRoundingMode</a></span>(<a href="../../../../../com/commercetools/api/models/cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;taxRoundingMode)</code>&nbsp;</td>
+</tr>
+<tr id="i50" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#setTotalPrice-com.commercetools.api.models.common.Money-">setTotalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalPrice)</code>&nbsp;</td>
+</tr>
+<tr id="i51" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html#withOrderImportDraft-java.util.function.Function-">withOrderImportDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -828,7 +836,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderImportDraftImpl.html" title="class in com.commercetools.api.models.order">OrderImportDraftImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.order.OrderImportDraft-">
@@ -837,7 +845,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderImportDraftImpl.html" title="class in com.commercetools.api.models.order">OrderImportDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderImportDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderImportDraftBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.order.OrderImportDraft-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/OrderImportDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderImportDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/order/OrderImportDraft.html" title="interface in com.commercetools.api.models.order">OrderImportDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withOrderImportDraft-java.util.function.Function-">

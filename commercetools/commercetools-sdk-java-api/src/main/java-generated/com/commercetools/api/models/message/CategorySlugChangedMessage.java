@@ -27,8 +27,14 @@ public interface CategorySlugChangedMessage extends Message {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
+    
+    @Valid
+    @JsonProperty("oldSlug")
+    public LocalizedString getOldSlug();
 
     public void setSlug(final LocalizedString slug);
+    
+    public void setOldSlug(final LocalizedString oldSlug);
 
     public static CategorySlugChangedMessage of(){
         return new CategorySlugChangedMessageImpl();
@@ -48,6 +54,7 @@ public interface CategorySlugChangedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setSlug(template.getSlug());
+        instance.setOldSlug(template.getOldSlug());
         return instance;
     }
 

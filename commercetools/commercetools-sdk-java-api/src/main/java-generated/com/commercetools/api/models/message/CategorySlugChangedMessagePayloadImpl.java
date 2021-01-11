@@ -26,10 +26,13 @@ public final class CategorySlugChangedMessagePayloadImpl implements CategorySlug
     private String type;
     
     private com.commercetools.api.models.common.LocalizedString slug;
+    
+    private com.commercetools.api.models.common.LocalizedString oldSlug;
 
     @JsonCreator
-    CategorySlugChangedMessagePayloadImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
+    CategorySlugChangedMessagePayloadImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("oldSlug") final com.commercetools.api.models.common.LocalizedString oldSlug) {
         this.slug = slug;
+        this.oldSlug = oldSlug;
         this.type = "CategorySlugChanged";
     }
     public CategorySlugChangedMessagePayloadImpl() {
@@ -45,9 +48,18 @@ public final class CategorySlugChangedMessagePayloadImpl implements CategorySlug
     public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getOldSlug(){
+        return this.oldSlug;
+    }
 
     public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
         this.slug = slug;
+    }
+    
+    public void setOldSlug(final com.commercetools.api.models.common.LocalizedString oldSlug){
+        this.oldSlug = oldSlug;
     }
 
     @Override
@@ -61,6 +73,7 @@ public final class CategorySlugChangedMessagePayloadImpl implements CategorySlug
         return new EqualsBuilder()
                 .append(type, that.type)
                 .append(slug, that.slug)
+                .append(oldSlug, that.oldSlug)
                 .isEquals();
     }
     
@@ -69,6 +82,7 @@ public final class CategorySlugChangedMessagePayloadImpl implements CategorySlug
         return new HashCodeBuilder(17, 37)
             .append(type)
             .append(slug)
+            .append(oldSlug)
             .toHashCode();
     }
 

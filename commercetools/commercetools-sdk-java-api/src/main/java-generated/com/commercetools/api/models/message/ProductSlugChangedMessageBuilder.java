@@ -46,6 +46,9 @@ public final class ProductSlugChangedMessageBuilder {
     
     
     private com.commercetools.api.models.common.LocalizedString slug;
+    
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString oldSlug;
 
     public ProductSlugChangedMessageBuilder id( final String id) {
         this.id = id;
@@ -99,6 +102,11 @@ public final class ProductSlugChangedMessageBuilder {
     
     public ProductSlugChangedMessageBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
+        return this;
+    }
+    
+    public ProductSlugChangedMessageBuilder oldSlug(@Nullable final com.commercetools.api.models.common.LocalizedString oldSlug) {
+        this.oldSlug = oldSlug;
         return this;
     }
 
@@ -156,9 +164,14 @@ public final class ProductSlugChangedMessageBuilder {
     public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
+    
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getOldSlug(){
+        return this.oldSlug;
+    }
 
     public ProductSlugChangedMessage build() {
-        return new ProductSlugChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, slug);
+        return new ProductSlugChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, slug, oldSlug);
     }
 
     public static ProductSlugChangedMessageBuilder of() {
@@ -178,6 +191,7 @@ public final class ProductSlugChangedMessageBuilder {
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.slug = template.getSlug();
+        builder.oldSlug = template.getOldSlug();
         return builder;
     }
 

@@ -16,9 +16,17 @@ public final class CategorySlugChangedMessagePayloadBuilder {
 
     
     private com.commercetools.api.models.common.LocalizedString slug;
+    
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString oldSlug;
 
     public CategorySlugChangedMessagePayloadBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
+        return this;
+    }
+    
+    public CategorySlugChangedMessagePayloadBuilder oldSlug(@Nullable final com.commercetools.api.models.common.LocalizedString oldSlug) {
+        this.oldSlug = oldSlug;
         return this;
     }
 
@@ -26,9 +34,14 @@ public final class CategorySlugChangedMessagePayloadBuilder {
     public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
+    
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getOldSlug(){
+        return this.oldSlug;
+    }
 
     public CategorySlugChangedMessagePayload build() {
-        return new CategorySlugChangedMessagePayloadImpl(slug);
+        return new CategorySlugChangedMessagePayloadImpl(slug, oldSlug);
     }
 
     public static CategorySlugChangedMessagePayloadBuilder of() {
@@ -38,6 +51,7 @@ public final class CategorySlugChangedMessagePayloadBuilder {
     public static CategorySlugChangedMessagePayloadBuilder of(final CategorySlugChangedMessagePayload template) {
         CategorySlugChangedMessagePayloadBuilder builder = new CategorySlugChangedMessagePayloadBuilder();
         builder.slug = template.getSlug();
+        builder.oldSlug = template.getOldSlug();
         return builder;
     }
 

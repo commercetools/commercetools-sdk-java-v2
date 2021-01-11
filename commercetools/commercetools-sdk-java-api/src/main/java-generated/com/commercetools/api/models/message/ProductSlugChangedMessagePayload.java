@@ -27,8 +27,14 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
+    
+    @Valid
+    @JsonProperty("oldSlug")
+    public LocalizedString getOldSlug();
 
     public void setSlug(final LocalizedString slug);
+    
+    public void setOldSlug(final LocalizedString oldSlug);
 
     public static ProductSlugChangedMessagePayload of(){
         return new ProductSlugChangedMessagePayloadImpl();
@@ -38,6 +44,7 @@ public interface ProductSlugChangedMessagePayload extends MessagePayload {
     public static ProductSlugChangedMessagePayload of(final ProductSlugChangedMessagePayload template) {
         ProductSlugChangedMessagePayloadImpl instance = new ProductSlugChangedMessagePayloadImpl();
         instance.setSlug(template.getSlug());
+        instance.setOldSlug(template.getOldSlug());
         return instance;
     }
 

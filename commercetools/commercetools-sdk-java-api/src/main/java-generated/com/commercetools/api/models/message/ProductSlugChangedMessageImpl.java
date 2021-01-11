@@ -46,9 +46,11 @@ public final class ProductSlugChangedMessageImpl implements ProductSlugChangedMe
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
     
     private com.commercetools.api.models.common.LocalizedString slug;
+    
+    private com.commercetools.api.models.common.LocalizedString oldSlug;
 
     @JsonCreator
-    ProductSlugChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
+    ProductSlugChangedMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("sequenceNumber") final Long sequenceNumber, @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource, @JsonProperty("resourceVersion") final Long resourceVersion, @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers, @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug, @JsonProperty("oldSlug") final com.commercetools.api.models.common.LocalizedString oldSlug) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -60,6 +62,7 @@ public final class ProductSlugChangedMessageImpl implements ProductSlugChangedMe
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.slug = slug;
+        this.oldSlug = oldSlug;
         this.type = "ProductSlugChanged";
     }
     public ProductSlugChangedMessageImpl() {
@@ -125,6 +128,11 @@ public final class ProductSlugChangedMessageImpl implements ProductSlugChangedMe
     public com.commercetools.api.models.common.LocalizedString getSlug(){
         return this.slug;
     }
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getOldSlug(){
+        return this.oldSlug;
+    }
 
     public void setId(final String id){
         this.id = id;
@@ -169,6 +177,10 @@ public final class ProductSlugChangedMessageImpl implements ProductSlugChangedMe
     public void setSlug(final com.commercetools.api.models.common.LocalizedString slug){
         this.slug = slug;
     }
+    
+    public void setOldSlug(final com.commercetools.api.models.common.LocalizedString oldSlug){
+        this.oldSlug = oldSlug;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -191,6 +203,7 @@ public final class ProductSlugChangedMessageImpl implements ProductSlugChangedMe
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(slug, that.slug)
+                .append(oldSlug, that.oldSlug)
                 .isEquals();
     }
     
@@ -209,6 +222,7 @@ public final class ProductSlugChangedMessageImpl implements ProductSlugChangedMe
             .append(type)
             .append(resourceUserProvidedIdentifiers)
             .append(slug)
+            .append(oldSlug)
             .toHashCode();
     }
 

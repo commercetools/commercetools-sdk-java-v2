@@ -47,6 +47,9 @@ public final class CartBuilder {
     
     private java.time.ZonedDateTime lastModifiedAt;
     
+    
+    private String key;
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
     
@@ -151,6 +154,11 @@ public final class CartBuilder {
     
     public CartBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+    
+    public CartBuilder key( final String key) {
+        this.key = key;
         return this;
     }
     
@@ -344,6 +352,11 @@ public final class CartBuilder {
         return this.lastModifiedAt;
     }
     
+    
+    public String getKey(){
+        return this.key;
+    }
+    
     @Nullable
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
@@ -490,7 +503,7 @@ public final class CartBuilder {
     }
 
     public Cart build() {
-        return new CartImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup, country, shippingInfo, discountCodes, custom, paymentInfo, locale, deleteDaysAfterLastModification, refusedGifts, origin, shippingRateInput, itemShippingAddresses);
+        return new CartImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy, customerId, customerEmail, anonymousId, store, lineItems, customLineItems, totalPrice, taxedPrice, cartState, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, customerGroup, country, shippingInfo, discountCodes, custom, paymentInfo, locale, deleteDaysAfterLastModification, refusedGifts, origin, shippingRateInput, itemShippingAddresses);
     }
 
     public static CartBuilder of() {
@@ -503,6 +516,7 @@ public final class CartBuilder {
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
+        builder.key = template.getKey();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
         builder.customerId = template.getCustomerId();

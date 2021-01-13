@@ -50,6 +50,12 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     @JsonProperty("id")
     public String getId();
     /**
+    *  <p>User-specific unique identifier of the cart.</p>
+    */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+    /**
     *  <p>The current version of the cart.</p>
     */
     @NotNull
@@ -228,6 +234,8 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
 
     public void setId(final String id);
     
+    public void setKey(final String key);
+    
     public void setVersion(final Long version);
     
     public void setCreatedAt(final ZonedDateTime createdAt);
@@ -313,6 +321,7 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
         instance.setCustomerId(template.getCustomerId());

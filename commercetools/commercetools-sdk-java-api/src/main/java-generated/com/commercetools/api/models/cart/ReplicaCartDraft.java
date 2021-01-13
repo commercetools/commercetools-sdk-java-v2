@@ -25,8 +25,16 @@ public interface ReplicaCartDraft  {
     @NotNull
     @JsonProperty("reference")
     public JsonNode getReference();
+    /**
+    *  <p>User-specific unique identifier of the cart.</p>
+    */
+    
+    @JsonProperty("key")
+    public String getKey();
 
     public void setReference(final JsonNode reference);
+    
+    public void setKey(final String key);
 
     public static ReplicaCartDraft of(){
         return new ReplicaCartDraftImpl();
@@ -36,6 +44,7 @@ public interface ReplicaCartDraft  {
     public static ReplicaCartDraft of(final ReplicaCartDraft template) {
         ReplicaCartDraftImpl instance = new ReplicaCartDraftImpl();
         instance.setReference(template.getReference());
+        instance.setKey(template.getKey());
         return instance;
     }
 

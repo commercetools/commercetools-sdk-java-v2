@@ -1,6 +1,6 @@
 package com.commercetools.api.models.cart;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import com.commercetools.api.models.cart.CartUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
@@ -20,36 +20,31 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
+public final class CartSetKeyActionImpl implements CartSetKeyAction {
 
-    private com.fasterxml.jackson.databind.JsonNode reference;
+    private String action;
     
     private String key;
 
     @JsonCreator
-    ReplicaCartDraftImpl(@JsonProperty("reference") final com.fasterxml.jackson.databind.JsonNode reference, @JsonProperty("key") final String key) {
-        this.reference = reference;
+    CartSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
+        this.action = "setKey";
     }
-    public ReplicaCartDraftImpl() {
+    public CartSetKeyActionImpl() {
+        this.action = "setKey";
     }
 
     
-    public com.fasterxml.jackson.databind.JsonNode getReference(){
-        return this.reference;
+    public String getAction(){
+        return this.action;
     }
     
-    /**
-    *  <p>User-specific unique identifier of the cart.</p>
-    */
+    
     public String getKey(){
         return this.key;
     }
 
-    public void setReference(final com.fasterxml.jackson.databind.JsonNode reference){
-        this.reference = reference;
-    }
-    
     public void setKey(final String key){
         this.key = key;
     }
@@ -60,10 +55,10 @@ public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
     
         if (o == null || getClass() != o.getClass()) return false;
     
-        ReplicaCartDraftImpl that = (ReplicaCartDraftImpl) o;
+        CartSetKeyActionImpl that = (CartSetKeyActionImpl) o;
     
         return new EqualsBuilder()
-                .append(reference, that.reference)
+                .append(action, that.action)
                 .append(key, that.key)
                 .isEquals();
     }
@@ -71,7 +66,7 @@ public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
-            .append(reference)
+            .append(action)
             .append(key)
             .toHashCode();
     }

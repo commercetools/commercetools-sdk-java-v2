@@ -1,5 +1,6 @@
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.order.OrderState;
 import com.commercetools.api.models.order.PaymentState;
 import com.commercetools.api.models.order.ShipmentState;
@@ -18,6 +19,9 @@ public final class OrderFromCartDraftBuilder {
 
     
     private String id;
+    
+    
+    private com.commercetools.api.models.cart.CartResourceIdentifier cart;
     
     
     private Long version;
@@ -39,6 +43,11 @@ public final class OrderFromCartDraftBuilder {
 
     public OrderFromCartDraftBuilder id( final String id) {
         this.id = id;
+        return this;
+    }
+    
+    public OrderFromCartDraftBuilder cart( final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
+        this.cart = cart;
         return this;
     }
     
@@ -78,6 +87,11 @@ public final class OrderFromCartDraftBuilder {
     }
     
     
+    public com.commercetools.api.models.cart.CartResourceIdentifier getCart(){
+        return this.cart;
+    }
+    
+    
     public Long getVersion(){
         return this.version;
     }
@@ -108,7 +122,7 @@ public final class OrderFromCartDraftBuilder {
     }
 
     public OrderFromCartDraft build() {
-        return new OrderFromCartDraftImpl(id, version, orderNumber, paymentState, shipmentState, orderState, state);
+        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState, state);
     }
 
     public static OrderFromCartDraftBuilder of() {
@@ -118,6 +132,7 @@ public final class OrderFromCartDraftBuilder {
     public static OrderFromCartDraftBuilder of(final OrderFromCartDraft template) {
         OrderFromCartDraftBuilder builder = new OrderFromCartDraftBuilder();
         builder.id = template.getId();
+        builder.cart = template.getCart();
         builder.version = template.getVersion();
         builder.orderNumber = template.getOrderNumber();
         builder.paymentState = template.getPaymentState();

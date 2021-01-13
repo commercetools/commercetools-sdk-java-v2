@@ -52,6 +52,8 @@ public final class CartImpl implements Cart {
     
     private java.time.ZonedDateTime lastModifiedAt;
     
+    private String key;
+    
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
     
     private com.commercetools.api.models.common.CreatedBy createdBy;
@@ -111,11 +113,12 @@ public final class CartImpl implements Cart {
     private java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses;
 
     @JsonCreator
-    CartImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("customerId") final String customerId, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice, @JsonProperty("cartState") final com.commercetools.api.models.cart.CartState cartState, @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress, @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode, @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode, @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode, @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("country") final String country, @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo, @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo, @JsonProperty("locale") final String locale, @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification, @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts, @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin, @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
+    CartImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt, @JsonProperty("key") final String key, @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy, @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy, @JsonProperty("customerId") final String customerId, @JsonProperty("customerEmail") final String customerEmail, @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store, @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems, @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems, @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice, @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice, @JsonProperty("cartState") final com.commercetools.api.models.cart.CartState cartState, @JsonProperty("shippingAddress") final com.commercetools.api.models.common.Address shippingAddress, @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress, @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode, @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode, @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode, @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode, @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup, @JsonProperty("country") final String country, @JsonProperty("shippingInfo") final com.commercetools.api.models.cart.ShippingInfo shippingInfo, @JsonProperty("discountCodes") final java.util.List<com.commercetools.api.models.cart.DiscountCodeInfo> discountCodes, @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom, @JsonProperty("paymentInfo") final com.commercetools.api.models.order.PaymentInfo paymentInfo, @JsonProperty("locale") final String locale, @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification, @JsonProperty("refusedGifts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountReference> refusedGifts, @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin, @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput shippingRateInput, @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
+        this.key = key;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
         this.customerId = customerId;
@@ -171,6 +174,13 @@ public final class CartImpl implements Cart {
     
     public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
+    }
+    
+    /**
+    *  <p>User-specific unique identifier of the cart.</p>
+    */
+    public String getKey(){
+        return this.key;
     }
     
     /**
@@ -376,6 +386,10 @@ public final class CartImpl implements Cart {
         this.lastModifiedAt = lastModifiedAt;
     }
     
+    public void setKey(final String key){
+        this.key = key;
+    }
+    
     public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy){
         this.lastModifiedBy = lastModifiedBy;
     }
@@ -525,6 +539,7 @@ public final class CartImpl implements Cart {
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
                 .append(customerId, that.customerId)
@@ -564,6 +579,7 @@ public final class CartImpl implements Cart {
             .append(version)
             .append(createdAt)
             .append(lastModifiedAt)
+            .append(key)
             .append(lastModifiedBy)
             .append(createdBy)
             .append(customerId)

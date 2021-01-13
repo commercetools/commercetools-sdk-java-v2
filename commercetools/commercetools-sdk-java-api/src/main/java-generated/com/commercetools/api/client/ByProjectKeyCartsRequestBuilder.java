@@ -31,6 +31,9 @@ public class ByProjectKeyCartsRequestBuilder {
     public ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder withCustomerId(String customerId) {
         return new ByProjectKeyCartsCustomerIdByCustomerIdRequestBuilder(apiHttpClient, projectKey, customerId);
     }
+    public ByProjectKeyCartsKeyByKeyRequestBuilder withKey(String key) {
+        return new ByProjectKeyCartsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
+    }
     public ByProjectKeyCartsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyCartsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }

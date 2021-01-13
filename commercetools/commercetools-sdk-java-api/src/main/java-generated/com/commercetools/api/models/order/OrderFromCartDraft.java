@@ -1,5 +1,6 @@
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.order.OrderState;
 import com.commercetools.api.models.order.PaymentState;
 import com.commercetools.api.models.order.ShipmentState;
@@ -30,6 +31,13 @@ public interface OrderFromCartDraft  {
     @NotNull
     @JsonProperty("id")
     public String getId();
+    /**
+    *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
+    */
+    @NotNull
+    @Valid
+    @JsonProperty("cart")
+    public CartResourceIdentifier getCart();
     
     @NotNull
     @JsonProperty("version")
@@ -65,6 +73,8 @@ public interface OrderFromCartDraft  {
 
     public void setId(final String id);
     
+    public void setCart(final CartResourceIdentifier cart);
+    
     public void setVersion(final Long version);
     
     public void setOrderNumber(final String orderNumber);
@@ -85,6 +95,7 @@ public interface OrderFromCartDraft  {
     public static OrderFromCartDraft of(final OrderFromCartDraft template) {
         OrderFromCartDraftImpl instance = new OrderFromCartDraftImpl();
         instance.setId(template.getId());
+        instance.setCart(template.getCart());
         instance.setVersion(template.getVersion());
         instance.setOrderNumber(template.getOrderNumber());
         instance.setPaymentState(template.getPaymentState());

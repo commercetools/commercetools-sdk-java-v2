@@ -1,5 +1,6 @@
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.cart.CartResourceIdentifier;
 import com.commercetools.api.models.order.OrderState;
 import com.commercetools.api.models.order.PaymentState;
 import com.commercetools.api.models.order.ShipmentState;
@@ -27,6 +28,8 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
 
     private String id;
     
+    private com.commercetools.api.models.cart.CartResourceIdentifier cart;
+    
     private Long version;
     
     private String orderNumber;
@@ -40,8 +43,9 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
     @JsonCreator
-    OrderFromCartDraftImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState, @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
+    OrderFromCartDraftImpl(@JsonProperty("id") final String id, @JsonProperty("cart") final com.commercetools.api.models.cart.CartResourceIdentifier cart, @JsonProperty("version") final Long version, @JsonProperty("orderNumber") final String orderNumber, @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState, @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState, @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState, @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.id = id;
+        this.cart = cart;
         this.version = version;
         this.orderNumber = orderNumber;
         this.paymentState = paymentState;
@@ -57,6 +61,13 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
     */
     public String getId(){
         return this.id;
+    }
+    
+    /**
+    *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
+    */
+    public com.commercetools.api.models.cart.CartResourceIdentifier getCart(){
+        return this.cart;
     }
     
     
@@ -101,6 +112,10 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
         this.id = id;
     }
     
+    public void setCart(final com.commercetools.api.models.cart.CartResourceIdentifier cart){
+        this.cart = cart;
+    }
+    
     public void setVersion(final Long version){
         this.version = version;
     }
@@ -135,6 +150,7 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
     
         return new EqualsBuilder()
                 .append(id, that.id)
+                .append(cart, that.cart)
                 .append(version, that.version)
                 .append(orderNumber, that.orderNumber)
                 .append(paymentState, that.paymentState)
@@ -148,6 +164,7 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
     public int hashCode() {
         return new HashCodeBuilder(17, 37)
             .append(id)
+            .append(cart)
             .append(version)
             .append(orderNumber)
             .append(paymentState)

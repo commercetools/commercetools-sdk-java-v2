@@ -36,6 +36,7 @@ import com.commercetools.api.models.cart.CartSetCustomerEmailAction;
 import com.commercetools.api.models.cart.CartSetCustomerGroupAction;
 import com.commercetools.api.models.cart.CartSetCustomerIdAction;
 import com.commercetools.api.models.cart.CartSetDeleteDaysAfterLastModificationAction;
+import com.commercetools.api.models.cart.CartSetKeyAction;
 import com.commercetools.api.models.cart.CartSetLineItemCustomFieldAction;
 import com.commercetools.api.models.cart.CartSetLineItemCustomTypeAction;
 import com.commercetools.api.models.cart.CartSetLineItemDistributionChannelAction;

@@ -30,6 +30,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder withCustomerId(String customerId) {
         return new ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder(apiHttpClient, projectKey, storeKey, customerId);
     }
+    public ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder replicate() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
     public ByProjectKeyInStoreKeyByStoreKeyCartsByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyInStoreKeyByStoreKeyCartsByIDRequestBuilder(apiHttpClient, projectKey, storeKey, ID);
     }

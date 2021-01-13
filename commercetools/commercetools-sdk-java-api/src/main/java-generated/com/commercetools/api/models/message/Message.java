@@ -16,6 +16,7 @@ import com.commercetools.api.models.message.CustomerDateOfBirthSetMessage;
 import com.commercetools.api.models.message.CustomerEmailChangedMessage;
 import com.commercetools.api.models.message.CustomerEmailVerifiedMessage;
 import com.commercetools.api.models.message.CustomerGroupSetMessage;
+import com.commercetools.api.models.message.CustomerPasswordUpdatedMessage;
 import com.commercetools.api.models.message.DeliveryAddedMessage;
 import com.commercetools.api.models.message.DeliveryAddressSetMessage;
 import com.commercetools.api.models.message.DeliveryItemsUpdatedMessage;
@@ -104,6 +105,7 @@ import java.io.IOException;
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailChangedMessageImpl.class, name = "CustomerEmailChanged"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessageImpl.class, name = "CustomerEmailVerified"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupSetMessageImpl.class, name = "CustomerGroupSet"),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerPasswordUpdatedMessageImpl.class, name = "CustomerPasswordUpdated"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddedMessageImpl.class, name = "DeliveryAdded"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddressSetMessageImpl.class, name = "DeliveryAddressSet"),
    @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryItemsUpdatedMessageImpl.class, name = "DeliveryItemsUpdated"),

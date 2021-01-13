@@ -6,21 +6,21 @@ import io.vrap.rmf.base.client.utils.Generated;
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordRequestBuilder {
+public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
     private final String storeKey;
     
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String storeKey) {
+    public ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String storeKey) {
         this.apiHttpClient = apiHttpClient;
         this.projectKey = projectKey;
         this.storeKey = storeKey;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost post(com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
-        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(apiHttpClient, projectKey, storeKey, customerUpdate);
+    public ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost post(com.commercetools.api.models.cart.ReplicaCartDraft replicaCartDraft) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost(apiHttpClient, projectKey, storeKey, replicaCartDraft);
     }
 
 }

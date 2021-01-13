@@ -12,6 +12,7 @@ import com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayload
 import com.commercetools.api.models.message.CustomerEmailChangedMessagePayload;
 import com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayload;
 import com.commercetools.api.models.message.CustomerGroupSetMessagePayload;
+import com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayload;
 import com.commercetools.api.models.message.DeliveryAddedMessagePayload;
 import com.commercetools.api.models.message.DeliveryAddressSetMessagePayload;
 import com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayload;

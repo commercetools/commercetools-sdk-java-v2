@@ -25,44 +25,41 @@ import io.vrap.rmf.base.client.*;
 
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
-/**
-*  <p>Change a customers password</p>
-*/
 @Generated(
     value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
     comments = "https://github.com/vrapio/rmf-codegen"
 )
-public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost, com.commercetools.api.models.customer.Customer> implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost> {
+public class ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost, com.commercetools.api.models.cart.Cart> implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost> {
 
     
     private String projectKey;
     private String storeKey;
     
-    private com.commercetools.api.models.customer.CustomerUpdate customerUpdate;
+    private com.commercetools.api.models.cart.ReplicaCartDraft replicaCartDraft;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
+    public ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.cart.ReplicaCartDraft replicaCartDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
-        this.customerUpdate = customerUpdate;
+        this.replicaCartDraft = replicaCartDraft;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost t) {
+    public ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost(ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost t) {
         super(t);
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
-        this.customerUpdate = t.customerUpdate;
+        this.replicaCartDraft = t.replicaCartDraft;
     }
 
     @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/in-store/key=%s/customers/password", this.projectKey, this.storeKey);
+        String httpRequestPath = String.format("/%s/in-store/key=%s/carts/replicate", this.projectKey, this.storeKey);
         if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerUpdate);
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(replicaCartDraft);
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
     } catch(Exception e) {
         e.printStackTrace();
@@ -72,13 +69,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(Duration timeout){
+    public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(Duration timeout){
         return blockingWait(execute(), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> execute(){
+        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.cart.Cart.class);
     }
 
     public String getProjectKey() {return this.projectKey;}
@@ -92,8 +89,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
 
     
     @Override
-    protected ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost copy()
+    protected ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost copy()
     {
-        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(this);
+        return new ByProjectKeyInStoreKeyByStoreKeyCartsReplicatePost(this);
     }
 }

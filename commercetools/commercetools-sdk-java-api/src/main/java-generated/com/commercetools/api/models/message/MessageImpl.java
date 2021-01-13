@@ -16,6 +16,7 @@ import com.commercetools.api.models.message.CustomerDateOfBirthSetMessage;
 import com.commercetools.api.models.message.CustomerEmailChangedMessage;
 import com.commercetools.api.models.message.CustomerEmailVerifiedMessage;
 import com.commercetools.api.models.message.CustomerGroupSetMessage;
+import com.commercetools.api.models.message.CustomerPasswordUpdatedMessage;
 import com.commercetools.api.models.message.DeliveryAddedMessage;
 import com.commercetools.api.models.message.DeliveryAddressSetMessage;
 import com.commercetools.api.models.message.DeliveryItemsUpdatedMessage;

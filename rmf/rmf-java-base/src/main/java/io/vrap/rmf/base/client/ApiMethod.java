@@ -11,6 +11,8 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+
 public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implements RequestCommand<TResult> {
     public static class ParamEntry<K, V> implements Map.Entry<K, V> {
         protected final K key;
@@ -195,4 +197,17 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
     };
 
     public abstract ApiHttpResponse<TResult> executeBlocking(Duration timeout);
+
+    public CompletableFuture<ApiHttpResponse<byte[]>> send() {
+        return apiHttpClient.execute(createHttpRequest());
+    }
+
+    public ApiHttpResponse<byte[]> sendBlocking()
+    {
+        return sendBlocking(Duration.ofSeconds(120));
+    };
+
+    public ApiHttpResponse<byte[]> sendBlocking(Duration timeout) {
+        return blockingWait(send(), timeout);
+    }
 }

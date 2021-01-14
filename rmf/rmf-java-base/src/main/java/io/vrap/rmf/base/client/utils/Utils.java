@@ -4,6 +4,7 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletionException;
 import java.util.function.Function;
 
@@ -25,6 +26,13 @@ public final class Utils {
             return null;
         }
         return new String(input);
+    }
+
+    public static String bytesToUTF8String(byte[] input) {
+        if (input == null) {
+            return null;
+        }
+        return new String(input, StandardCharsets.UTF_8);
     }
 
     public static <I, O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, Class<O> outputType) {

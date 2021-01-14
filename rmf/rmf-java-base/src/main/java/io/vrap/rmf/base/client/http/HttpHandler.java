@@ -1,9 +1,6 @@
 package io.vrap.rmf.base.client.http;
 
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.AutoCloseableService;
-import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.*;
 
 import java.util.concurrent.CompletableFuture;
 

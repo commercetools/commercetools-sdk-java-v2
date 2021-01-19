@@ -3,7 +3,7 @@ package io.vrap.rmf.base.client.oauth2;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.InternalLogger;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URI;
@@ -58,7 +58,7 @@ public class ClientCredentialsTokenSupplier extends AutoCloseableService impleme
                 })
                 .thenApply(
                         Utils.wrapToCompletionException(
-                                (ApiHttpResponse<byte[]> response) -> VrapJsonUtils.fromJsonByteArray(response.getBody(), AuthenticationToken.class)
+                                (ApiHttpResponse<byte[]> response) -> JsonUtils.fromJsonByteArray(response.getBody(), AuthenticationToken.class)
                         )
                 );
     }

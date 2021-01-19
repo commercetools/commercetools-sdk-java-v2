@@ -2,7 +2,7 @@ package io.vrap.rmf.base.client;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 class ResponseSerializerImpl implements ResponseSerializer {
 
@@ -12,6 +12,6 @@ class ResponseSerializerImpl implements ResponseSerializer {
     }
 
     public byte[] toJsonByteArray(Object value) throws JsonProcessingException {
-        return VrapJsonUtils.getConfiguredObjectMapper().writeValueAsBytes(value);
+        return JsonUtils.getConfiguredObjectMapper().writeValueAsBytes(value);
     }
 }

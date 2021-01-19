@@ -1,7 +1,7 @@
 package io.vrap.rmf.base.client;
 
 import io.vrap.rmf.base.client.error.BaseException;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import javax.annotation.Nullable;
 import java.nio.charset.StandardCharsets;
@@ -48,7 +48,7 @@ public class ApiHttpException extends BaseException {
 
     public <T> T getBodyAs(Class<T> clazz) throws SerializationException {
         try{
-            return VrapJsonUtils.getConfiguredObjectMapper().readValue(body, clazz);
+            return JsonUtils.getConfiguredObjectMapper().readValue(body, clazz);
         }catch (Exception e){
             throw new SerializationException(e.getMessage());
         }
@@ -137,7 +137,7 @@ public class ApiHttpException extends BaseException {
         try {
             return Optional.ofNullable(response)
                     .map(ApiHttpResponse::getBody)
-                    .map(b -> VrapJsonUtils.prettyPrint(new String(b, StandardCharsets.UTF_8)))
+                    .map(b -> JsonUtils.prettyPrint(new String(b, StandardCharsets.UTF_8)))
                     .map(s -> "http response formatted body: " + s + "\n")
                     .orElse("");
         } catch (final Exception e) {
@@ -151,7 +151,7 @@ public class ApiHttpException extends BaseException {
             final Optional<String> stringBodyOfHttpRequestIntentSupplier = Optional.ofNullable(request)
                     .map(ApiHttpRequest::getSecuredBody);
             return Optional.ofNullable(stringBodyOfHttpRequest.orElse(stringBodyOfHttpRequestIntentSupplier.orElse(null)))
-                    .map(VrapJsonUtils::prettyPrint)
+                    .map(JsonUtils::prettyPrint)
                     .map(s -> "http request formatted body: " + s + "\n")
                     .orElse("");
         } catch (final Exception e) {

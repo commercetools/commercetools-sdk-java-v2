@@ -8,7 +8,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -34,7 +34,7 @@ public class ModelSerializationTest {
         String testString = "test-string";
 
         Map<String, JsonNode> fieldContainerValues = new HashMap<>();
-        fieldContainerValues.put(key, VrapJsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
+        fieldContainerValues.put(key, JsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
         FieldContainer fieldContainer = FieldContainerBuilder.of().values(fieldContainerValues).build();
 
         AssetDraft assetDraft = AssetDraftBuilder.of()
@@ -71,7 +71,7 @@ public class ModelSerializationTest {
 
         JsonElement categoryDraftJson = null;
         try{
-            categoryDraftJson = JsonParser.parseString(VrapJsonUtils.toJsonString(categoryDraft));
+            categoryDraftJson = JsonParser.parseString(JsonUtils.toJsonString(categoryDraft));
         }catch (JsonProcessingException e){
             e.printStackTrace();
         }
@@ -100,7 +100,7 @@ public class ModelSerializationTest {
         String testString = "test-string";
 
         Map<String, JsonNode> fieldContainerValues = new HashMap<>();
-        fieldContainerValues.put(key, VrapJsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
+        fieldContainerValues.put(key, JsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
         FieldContainer fieldContainer = FieldContainerBuilder.of().values(fieldContainerValues).build();
 
         CustomFields customFields = CustomFieldsBuilder.of()
@@ -143,8 +143,8 @@ public class ModelSerializationTest {
         try{
             final URL url = Thread.currentThread().getContextClassLoader().getResource("json_examples/category-example.json");
             String categoryExampleJsonString = new String(Files.readAllBytes(Paths.get(url.getPath())));
-            Category exampleCategory = VrapJsonUtils.fromJsonString(categoryExampleJsonString, Category.class);
-            Assert.assertEquals(JsonParser.parseString(VrapJsonUtils.toJsonString(exampleCategory)), JsonParser.parseString(VrapJsonUtils.toJsonString(category)));
+            Category exampleCategory = JsonUtils.fromJsonString(categoryExampleJsonString, Category.class);
+            Assert.assertEquals(JsonParser.parseString(JsonUtils.toJsonString(exampleCategory)), JsonParser.parseString(JsonUtils.toJsonString(category)));
         }catch (IOException e){
             e.printStackTrace();
             Assert.fail(e.getMessage());

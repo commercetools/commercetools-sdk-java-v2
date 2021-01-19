@@ -1,7 +1,7 @@
 package io.vrap.rmf.base.client.utils;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -40,7 +40,7 @@ public final class Utils {
             if (response.getBody() == null) {
                 return (ApiHttpResponse<O>) response;
             }
-            O newBody = VrapJsonUtils.fromJsonByteArray(response.getBody(), outputType);
+            O newBody = JsonUtils.fromJsonByteArray(response.getBody(), outputType);
             return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody);
         } catch (IOException e) {
             throw new RuntimeException(e);

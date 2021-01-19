@@ -41,14 +41,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost extends ApiMethod
     private String storeKey;
     private String ID;
     
-    private com.commercetools.api.models.common.Update update;
+    private com.commercetools.api.models.customer.CustomerUpdate customerUpdate;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String ID, com.commercetools.api.models.common.Update update) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String ID, com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.ID = ID;
-        this.update = update;
+        this.customerUpdate = customerUpdate;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost(ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost t) {
@@ -56,7 +56,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost extends ApiMethod
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
         this.ID = t.ID;
-        this.update = t.update;
+        this.customerUpdate = t.customerUpdate;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost extends ApiMethod
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(update);
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerUpdate);
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
     } catch(Exception e) {
         e.printStackTrace();

@@ -38,20 +38,20 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
     private String projectKey;
     private String storeKey;
     
-    private com.commercetools.api.models.customer.CustomerUpdate customerUpdate;
+    private com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
-        this.customerUpdate = customerUpdate;
+        this.customerChangePassword = customerChangePassword;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost t) {
         super(t);
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
-        this.customerUpdate = t.customerUpdate;
+        this.customerChangePassword = t.customerChangePassword;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost extends ApiMe
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerUpdate);
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerChangePassword);
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
     } catch(Exception e) {
         e.printStackTrace();

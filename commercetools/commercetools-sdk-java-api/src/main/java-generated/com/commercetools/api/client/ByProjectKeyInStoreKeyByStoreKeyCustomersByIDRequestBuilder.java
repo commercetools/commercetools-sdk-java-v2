@@ -25,8 +25,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersByIDRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDGet(apiHttpClient, projectKey, storeKey, ID);
     }
     
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost post(com.commercetools.api.models.common.Update update) {
-        return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost(apiHttpClient, projectKey, storeKey, ID, update);
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost post(com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersByIDPost(apiHttpClient, projectKey, storeKey, ID, customerUpdate);
     }
     
     public ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete delete() {

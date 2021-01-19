@@ -19,8 +19,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordRequestBuilder {
         this.storeKey = storeKey;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost post(com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
-        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(apiHttpClient, projectKey, storeKey, customerUpdate);
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost post(com.commercetools.api.models.customer.CustomerChangePassword customerChangePassword) {
+        return new ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordPost(apiHttpClient, projectKey, storeKey, customerChangePassword);
     }
 
 }

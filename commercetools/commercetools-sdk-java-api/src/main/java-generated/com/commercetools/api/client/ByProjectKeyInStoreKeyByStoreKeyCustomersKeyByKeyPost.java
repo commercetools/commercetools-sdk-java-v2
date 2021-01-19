@@ -40,14 +40,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost extends ApiMe
     private String storeKey;
     private String key;
     
-    private com.commercetools.api.models.common.Update update;
+    private com.commercetools.api.models.customer.CustomerUpdate customerUpdate;
 
-    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String key, com.commercetools.api.models.common.Update update) {
+    public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String key, com.commercetools.api.models.customer.CustomerUpdate customerUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.key = key;
-        this.update = update;
+        this.customerUpdate = customerUpdate;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost(ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost t) {
@@ -55,7 +55,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost extends ApiMe
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
         this.key = t.key;
-        this.update = t.update;
+        this.customerUpdate = t.customerUpdate;
     }
 
     @Override
@@ -66,7 +66,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyPost extends ApiMe
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(update);
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(customerUpdate);
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
     } catch(Exception e) {
         e.printStackTrace();

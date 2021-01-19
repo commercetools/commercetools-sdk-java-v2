@@ -20,45 +20,34 @@ import java.util.function.Function;
 import static java.util.Collections.singletonList;
 
 public class RetryMiddleware implements Middleware, AutoCloseable {
+    @Deprecated
     public static final int DEFAULT_MAX_PARALLEL_REQUESTS = 2;
+
     public static final int DEFAULT_MAX_DELAY = 60000;
     public static final int DEFAULT_INITIAL_DELAY = 200;
     public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = singletonList(503);
     private static final Logger logger = LoggerFactory.getLogger(ClientFactory.COMMERCETOOLS);
 
-    private final ScheduledExecutorService executor;
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
     public RetryMiddleware(final int maxRetries) {
-        this(DEFAULT_MAX_PARALLEL_REQUESTS, maxRetries, DEFAULT_RETRY_STATUS_CODES);
-    }
-
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries) {
-        this(maxParallelRequests, maxRetries, DEFAULT_RETRY_STATUS_CODES);
+        this(maxRetries, DEFAULT_RETRY_STATUS_CODES);
     }
 
     public RetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
-        this(DEFAULT_MAX_PARALLEL_REQUESTS, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
+        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
     }
 
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, List<Integer> statusCodes) {
-        this(maxParallelRequests, maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
-    }
 
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay) {
-        this(DEFAULT_MAX_PARALLEL_REQUESTS, maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
+        this(maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
     }
 
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay) {
-        this(maxParallelRequests, maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
-    }
-
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay, List<Integer> statusCodes) {
-        executor = Executors.newScheduledThreadPool(maxParallelRequests);
+    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, List<Integer> statusCodes) {
         RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = new RetryPolicy<ApiHttpResponse<byte[]>>()
                 .handleIf((response, throwable) -> {
                     if (throwable instanceof ApiHttpException) {
-                       return statusCodes.contains(((ApiHttpException)throwable).getStatusCode());
+                        return statusCodes.contains(((ApiHttpException)throwable).getStatusCode());
                     }
                     return statusCodes.contains(response.getStatusCode());
                 })
@@ -66,7 +55,39 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
                 .withJitter(0.25)
                 .onRetry(event -> logger.info("Retry #" + event.getAttemptCount()))
                 .withMaxRetries(maxRetries);
-        this.failsafeExecutor = Failsafe.with(retryPolicy).with(executor);
+        this.failsafeExecutor = Failsafe.with(retryPolicy);
+    }
+
+    /**
+     * @deprecated max parallel requests are limited by underlying HTTP client
+     */
+    @Deprecated
+    public RetryMiddleware(final int maxParallelRequests, final int maxRetries) {
+        this(maxRetries, DEFAULT_RETRY_STATUS_CODES);
+    }
+
+    /**
+     * @deprecated max parallel requests are limited by underlying HTTP client
+     */
+    @Deprecated
+    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, List<Integer> statusCodes) {
+        this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
+    }
+
+    /**
+     * @deprecated max parallel requests are limited by underlying HTTP client
+     */
+    @Deprecated
+    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay) {
+        this(maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
+    }
+
+    /**
+     * @deprecated max parallel requests are limited by underlying HTTP client
+     */
+    @Deprecated
+    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay, List<Integer> statusCodes) {
+        this(maxRetries, delay, maxDelay, statusCodes);
     }
 
     @Override
@@ -76,6 +97,5 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
 
     @Override
     public void close() {
-        executor.shutdown();
     }
 }

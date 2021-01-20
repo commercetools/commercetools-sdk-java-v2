@@ -29,11 +29,11 @@ task versionTxt()  {
         new File(projectDir, "$buildInfoPath").mkdirs()
         new File(projectDir, "$buildInfoPath/BuildInfo.java").text = """
 package $buildInfoPackage;
+
 public class BuildInfo {
     public static final String VERSION = "$version";
-
 }
-        """
+"""
     }
 }
 

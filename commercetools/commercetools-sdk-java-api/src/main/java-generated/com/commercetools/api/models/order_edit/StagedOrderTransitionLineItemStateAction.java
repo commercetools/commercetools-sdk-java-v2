@@ -1,65 +1,62 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.state.StateResourceIdentifier;
+import java.io.IOException;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.order_edit.StagedOrderTransitionLineItemStateActionImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderTransitionLineItemStateActionImpl;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StagedOrderTransitionLineItemStateActionImpl.class)
 public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpdateAction {
 
-    
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-    
+
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-    
+
     @NotNull
     @Valid
     @JsonProperty("fromState")
     public StateResourceIdentifier getFromState();
-    
+
     @NotNull
     @Valid
     @JsonProperty("toState")
     public StateResourceIdentifier getToState();
-    
-    
+
     @JsonProperty("actualTransitionDate")
     public ZonedDateTime getActualTransitionDate();
 
     public void setLineItemId(final String lineItemId);
-    
+
     public void setQuantity(final Long quantity);
-    
+
     public void setFromState(final StateResourceIdentifier fromState);
-    
+
     public void setToState(final StateResourceIdentifier toState);
-    
+
     public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
 
-    public static StagedOrderTransitionLineItemStateAction of(){
+    public static StagedOrderTransitionLineItemStateAction of() {
         return new StagedOrderTransitionLineItemStateActionImpl();
     }
-    
 
     public static StagedOrderTransitionLineItemStateAction of(final StagedOrderTransitionLineItemStateAction template) {
         StagedOrderTransitionLineItemStateActionImpl instance = new StagedOrderTransitionLineItemStateActionImpl();
@@ -71,16 +68,17 @@ public interface StagedOrderTransitionLineItemStateAction extends StagedOrderUpd
         return instance;
     }
 
-    public static StagedOrderTransitionLineItemStateActionBuilder builder(){
+    public static StagedOrderTransitionLineItemStateActionBuilder builder() {
         return StagedOrderTransitionLineItemStateActionBuilder.of();
     }
-    
-    public static StagedOrderTransitionLineItemStateActionBuilder builder(final StagedOrderTransitionLineItemStateAction template){
+
+    public static StagedOrderTransitionLineItemStateActionBuilder builder(
+            final StagedOrderTransitionLineItemStateAction template) {
         return StagedOrderTransitionLineItemStateActionBuilder.of(template);
     }
-    
 
-    default <T> T withStagedOrderTransitionLineItemStateAction(Function<StagedOrderTransitionLineItemStateAction, T> helper) {
+    default <T> T withStagedOrderTransitionLineItemStateAction(
+            Function<StagedOrderTransitionLineItemStateAction, T> helper) {
         return helper.apply(this);
     }
 }

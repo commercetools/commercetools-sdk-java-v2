@@ -1,81 +1,79 @@
+
 package com.commercetools.ml.models.missing_data;
 
-import com.commercetools.ml.models.missing_data.MissingImagesCount;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.ml.models.missing_data.MissingImagesCount;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingImagesVariantLevelImpl implements MissingImagesVariantLevel {
 
     private Long missingImages;
-    
+
     private Long total;
 
     @JsonCreator
-    MissingImagesVariantLevelImpl(@JsonProperty("missingImages") final Long missingImages, @JsonProperty("total") final Long total) {
+    MissingImagesVariantLevelImpl(@JsonProperty("missingImages") final Long missingImages,
+            @JsonProperty("total") final Long total) {
         this.missingImages = missingImages;
         this.total = total;
     }
+
     public MissingImagesVariantLevelImpl() {
     }
 
     /**
     *  <p>Number of product variants missing images.</p>
     */
-    public Long getMissingImages(){
+    public Long getMissingImages() {
         return this.missingImages;
     }
-    
+
     /**
     *  <p>Number of products scanned.</p>
     */
-    public Long getTotal(){
+    public Long getTotal() {
         return this.total;
     }
 
-    public void setMissingImages(final Long missingImages){
+    public void setMissingImages(final Long missingImages) {
         this.missingImages = missingImages;
     }
-    
-    public void setTotal(final Long total){
+
+    public void setTotal(final Long total) {
         this.total = total;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         MissingImagesVariantLevelImpl that = (MissingImagesVariantLevelImpl) o;
-    
-        return new EqualsBuilder()
-                .append(missingImages, that.missingImages)
-                .append(total, that.total)
-                .isEquals();
+
+        return new EqualsBuilder().append(missingImages, that.missingImages).append(total, that.total).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(missingImages)
-            .append(total)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(missingImages).append(total).toHashCode();
     }
 
 }

@@ -1,41 +1,37 @@
+
 package com.commercetools.ml.models.missing_data;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.missing_data.AttributeCoverage;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributeCoverageBuilder {
 
-    
     private Double names;
-    
-    
+
     private Double values;
 
-    public AttributeCoverageBuilder names( final Double names) {
+    public AttributeCoverageBuilder names(final Double names) {
         this.names = names;
         return this;
     }
-    
-    public AttributeCoverageBuilder values( final Double values) {
+
+    public AttributeCoverageBuilder values(final Double values) {
         this.values = values;
         return this;
     }
 
-    
-    public Double getNames(){
+    public Double getNames() {
         return this.names;
     }
-    
-    
-    public Double getValues(){
+
+    public Double getValues() {
         return this.values;
     }
 

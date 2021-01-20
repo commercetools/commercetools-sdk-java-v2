@@ -1,29 +1,29 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.FieldDefinition;
-import com.commercetools.api.models.type.TypeUpdateAction;
-import com.commercetools.api.models.type.TypeAddFieldDefinitionAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.type.FieldDefinition;
+import com.commercetools.api.models.type.TypeAddFieldDefinitionAction;
+import com.commercetools.api.models.type.TypeUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TypeAddFieldDefinitionActionBuilder {
 
-    
     private com.commercetools.api.models.type.FieldDefinition fieldDefinition;
 
-    public TypeAddFieldDefinitionActionBuilder fieldDefinition( final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {
+    public TypeAddFieldDefinitionActionBuilder fieldDefinition(
+            final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {
         this.fieldDefinition = fieldDefinition;
         return this;
     }
 
-    
-    public com.commercetools.api.models.type.FieldDefinition getFieldDefinition(){
+    public com.commercetools.api.models.type.FieldDefinition getFieldDefinition() {
         return this.fieldDefinition;
     }
 

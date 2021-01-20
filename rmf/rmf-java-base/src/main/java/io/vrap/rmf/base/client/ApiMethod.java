@@ -1,6 +1,8 @@
+
 package io.vrap.rmf.base.client;
 
-import javax.annotation.Nullable;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -11,7 +13,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import javax.annotation.Nullable;
 
 public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implements RequestCommand<TResult> {
     public static class ParamEntry<K, V> implements Map.Entry<K, V> {
@@ -44,11 +46,11 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
             return oldValue;
         }
 
-        public String toUriString()
-        {
+        public String toUriString() {
             try {
                 return key + "=" + URLEncoder.encode(value.toString(), StandardCharsets.UTF_8.toString());
-            } catch (UnsupportedEncodingException e) {
+            }
+            catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
             return "";
@@ -63,13 +65,14 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
         return apiHttpClient;
     }
 
-    public ApiMethod(final ApiHttpClient apiHttpClient){
+    public ApiMethod(final ApiHttpClient apiHttpClient) {
         this.apiHttpClient = apiHttpClient;
     }
-    public ApiMethod(final ApiMethod<T, TResult> apiMethod){
+
+    public ApiMethod(final ApiMethod<T, TResult> apiMethod) {
         this.apiHttpClient = apiMethod.apiHttpClient;
         this.headers = new ApiHttpHeaders(apiMethod.headers);
-        this.queryParams =  new ArrayList<>(apiMethod.queryParams);
+        this.queryParams = new ArrayList<>(apiMethod.queryParams);
     }
 
     /**
@@ -80,7 +83,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public T addHeader(final String key, final String value) {
         T c = copy();
-        ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.addHeader(key, value);
+        ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers.addHeader(key, value);
         return c;
     }
 
@@ -91,7 +94,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public T withoutHeader(final String key) {
         T c = copy();
-        ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.withoutHeader(key);
+        ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers.withoutHeader(key);
         return c;
     }
 
@@ -103,7 +106,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public T withHeader(final String key, final String value) {
         T c = copy();
-        ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers.withHeader(key, value);
+        ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers.withHeader(key, value);
         return c;
     }
 
@@ -114,7 +117,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public T withHeaders(final ApiHttpHeaders headers) {
         T c = copy();
-        ((ApiMethod<T, TResult>)c).headers = ((ApiMethod<T, TResult>)c).headers = headers;
+        ((ApiMethod<T, TResult>) c).headers = ((ApiMethod<T, TResult>) c).headers = headers;
         return c;
     }
 
@@ -131,7 +134,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public <V> T addQueryParam(final String key, final V value) {
         T c = copy();
-        ((ApiMethod<T, TResult>)c).queryParams.add(new ParamEntry<>(key, value.toString()));
+        ((ApiMethod<T, TResult>) c).queryParams.add(new ParamEntry<>(key, value.toString()));
         return c;
     }
 
@@ -153,7 +156,8 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public T withoutQueryParam(final String key) {
         T c = copy();
-        ((ApiMethod<T, TResult>)c).queryParams = ((ApiMethod<T, TResult>)c).queryParams.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
+        ((ApiMethod<T, TResult>) c).queryParams = ((ApiMethod<T, TResult>) c).queryParams.stream().filter(
+            e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
         return c;
     }
 
@@ -164,7 +168,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public T withQueryParams(final List<ParamEntry<String, String>> queryParams) {
         T c = copy();
-        ((ApiMethod<T, TResult>)c).queryParams = queryParams;
+        ((ApiMethod<T, TResult>) c).queryParams = queryParams;
         return c;
     }
 
@@ -181,8 +185,9 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
     }
 
     @Nullable
-    public String getFirstQueryParam(final String key){
-        return this.queryParams.stream().filter(e -> e.getKey().equals(key)).map(Map.Entry::getValue).findFirst().orElse(null);
+    public String getFirstQueryParam(final String key) {
+        return this.queryParams.stream().filter(e -> e.getKey().equals(key)).map(
+            Map.Entry::getValue).findFirst().orElse(null);
     }
 
     protected abstract T copy();
@@ -191,8 +196,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
 
     public abstract CompletableFuture<ApiHttpResponse<TResult>> execute();
 
-    public ApiHttpResponse<TResult> executeBlocking()
-    {
+    public ApiHttpResponse<TResult> executeBlocking() {
         return executeBlocking(Duration.ofSeconds(120));
     };
 
@@ -202,8 +206,7 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
         return apiHttpClient.execute(createHttpRequest());
     }
 
-    public ApiHttpResponse<byte[]> sendBlocking()
-    {
+    public ApiHttpResponse<byte[]> sendBlocking() {
         return sendBlocking(Duration.ofSeconds(120));
     };
 

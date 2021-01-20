@@ -1,67 +1,60 @@
+
 package com.commercetools.api.models.product_discount;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.QueryPrice;
 import com.commercetools.api.models.product_discount.ProductDiscountMatchQuery;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductDiscountMatchQueryBuilder {
 
-    
     private String productId;
-    
-    
+
     private Integer variantId;
-    
-    
+
     private Boolean staged;
-    
-    
+
     private com.commercetools.api.models.common.QueryPrice price;
 
-    public ProductDiscountMatchQueryBuilder productId( final String productId) {
+    public ProductDiscountMatchQueryBuilder productId(final String productId) {
         this.productId = productId;
         return this;
     }
-    
-    public ProductDiscountMatchQueryBuilder variantId( final Integer variantId) {
+
+    public ProductDiscountMatchQueryBuilder variantId(final Integer variantId) {
         this.variantId = variantId;
         return this;
     }
-    
-    public ProductDiscountMatchQueryBuilder staged( final Boolean staged) {
+
+    public ProductDiscountMatchQueryBuilder staged(final Boolean staged) {
         this.staged = staged;
         return this;
     }
-    
-    public ProductDiscountMatchQueryBuilder price( final com.commercetools.api.models.common.QueryPrice price) {
+
+    public ProductDiscountMatchQueryBuilder price(final com.commercetools.api.models.common.QueryPrice price) {
         this.price = price;
         return this;
     }
 
-    
-    public String getProductId(){
+    public String getProductId() {
         return this.productId;
     }
-    
-    
-    public Integer getVariantId(){
+
+    public Integer getVariantId() {
         return this.variantId;
     }
-    
-    
-    public Boolean getStaged(){
+
+    public Boolean getStaged() {
         return this.staged;
     }
-    
-    
-    public com.commercetools.api.models.common.QueryPrice getPrice(){
+
+    public com.commercetools.api.models.common.QueryPrice getPrice() {
         return this.price;
     }
 

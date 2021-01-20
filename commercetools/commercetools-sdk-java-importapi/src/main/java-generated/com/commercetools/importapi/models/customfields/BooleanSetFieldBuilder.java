@@ -1,33 +1,32 @@
+
 package com.commercetools.importapi.models.customfields;
 
-import com.commercetools.importapi.models.customfields.CustomField;
-import com.commercetools.importapi.models.customfields.BooleanSetField;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.customfields.BooleanSetField;
+import com.commercetools.importapi.models.customfields.CustomField;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class BooleanSetFieldBuilder {
 
-    
     private java.util.List<Boolean> value;
 
-    public BooleanSetFieldBuilder value( final Boolean ...value) {
+    public BooleanSetFieldBuilder value(final Boolean... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
-    
-    public BooleanSetFieldBuilder value( final java.util.List<Boolean> value) {
+
+    public BooleanSetFieldBuilder value(final java.util.List<Boolean> value) {
         this.value = value;
         return this;
     }
 
-    
-    public java.util.List<Boolean> getValue(){
+    public java.util.List<Boolean> getValue() {
         return this.value;
     }
 

@@ -1,95 +1,88 @@
+
 package com.commercetools.api.models.shopping_list;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.type.CustomFields;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.shopping_list.TextLineItem;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shopping_list.TextLineItem;
+import com.commercetools.api.models.type.CustomFields;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TextLineItemBuilder {
 
-    
     private java.time.ZonedDateTime addedAt;
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-    
-    
+
     private String id;
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString name;
-    
-    
+
     private Integer quantity;
 
-    public TextLineItemBuilder addedAt( final java.time.ZonedDateTime addedAt) {
+    public TextLineItemBuilder addedAt(final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
-    
+
     public TextLineItemBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
-    
-    public TextLineItemBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+
+    public TextLineItemBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-    
-    public TextLineItemBuilder id( final String id) {
+
+    public TextLineItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    public TextLineItemBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+
+    public TextLineItemBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    public TextLineItemBuilder quantity( final Integer quantity) {
+
+    public TextLineItemBuilder quantity(final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    
-    public java.time.ZonedDateTime getAddedAt(){
+    public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription(){
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
-    
-    
-    public String getId(){
+
+    public String getId() {
         return this.id;
     }
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
-    
-    public Integer getQuantity(){
+
+    public Integer getQuantity() {
         return this.quantity;
     }
 

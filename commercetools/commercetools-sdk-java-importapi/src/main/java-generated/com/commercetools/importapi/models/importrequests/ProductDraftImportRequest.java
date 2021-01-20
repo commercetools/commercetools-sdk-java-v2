@@ -1,28 +1,28 @@
+
 package com.commercetools.importapi.models.importrequests;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importrequests.ImportRequest;
-import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.commercetools.importapi.models.importrequests.ProductDraftImportRequestImpl;
-
+import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>An import request for multiple product draft import resources.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDraftImportRequestImpl.class)
 public interface ProductDraftImportRequest extends ImportRequest {
 
@@ -35,13 +35,13 @@ public interface ProductDraftImportRequest extends ImportRequest {
     public List<ProductDraftImport> getResources();
 
     @JsonIgnore
-    public void setResources(final ProductDraftImport ...resources);
+    public void setResources(final ProductDraftImport... resources);
+
     public void setResources(final List<ProductDraftImport> resources);
 
-    public static ProductDraftImportRequest of(){
+    public static ProductDraftImportRequest of() {
         return new ProductDraftImportRequestImpl();
     }
-    
 
     public static ProductDraftImportRequest of(final ProductDraftImportRequest template) {
         ProductDraftImportRequestImpl instance = new ProductDraftImportRequestImpl();
@@ -49,14 +49,13 @@ public interface ProductDraftImportRequest extends ImportRequest {
         return instance;
     }
 
-    public static ProductDraftImportRequestBuilder builder(){
+    public static ProductDraftImportRequestBuilder builder() {
         return ProductDraftImportRequestBuilder.of();
     }
-    
-    public static ProductDraftImportRequestBuilder builder(final ProductDraftImportRequest template){
+
+    public static ProductDraftImportRequestBuilder builder(final ProductDraftImportRequest template) {
         return ProductDraftImportRequestBuilder.of(template);
     }
-    
 
     default <T> T withProductDraftImportRequest(Function<ProductDraftImportRequest, T> helper) {
         return helper.apply(this);

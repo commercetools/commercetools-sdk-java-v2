@@ -1,9 +1,10 @@
+
 package io.vrap.rmf.base.client.oauth2;
+
+import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.ClientFactory;
-
-import java.util.concurrent.CompletableFuture;
 
 @FunctionalInterface
 public interface TokenSupplier {

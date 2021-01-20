@@ -1,64 +1,63 @@
+
 package com.commercetools.api.models.order_edit;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order_edit.OrderEdit;
 import com.commercetools.api.models.order_edit.OrderEditPagedQueryResponseImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderEditPagedQueryResponseImpl.class)
-public interface OrderEditPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<OrderEdit> {
+public interface OrderEditPagedQueryResponse
+        extends com.commercetools.api.models.ResourcePagedQueryResponse<OrderEdit> {
 
-    
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-    
+
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-    
-    
+
     @JsonProperty("total")
     public Long getTotal();
-    
+
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-    
+
     @NotNull
     @Valid
     @JsonProperty("results")
     public List<OrderEdit> getResults();
 
     public void setLimit(final Long limit);
-    
+
     public void setCount(final Long count);
-    
+
     public void setTotal(final Long total);
-    
+
     public void setOffset(final Long offset);
-    
+
     @JsonIgnore
-    public void setResults(final OrderEdit ...results);
+    public void setResults(final OrderEdit... results);
+
     public void setResults(final List<OrderEdit> results);
 
-    public static OrderEditPagedQueryResponse of(){
+    public static OrderEditPagedQueryResponse of() {
         return new OrderEditPagedQueryResponseImpl();
     }
-    
 
     public static OrderEditPagedQueryResponse of(final OrderEditPagedQueryResponse template) {
         OrderEditPagedQueryResponseImpl instance = new OrderEditPagedQueryResponseImpl();
@@ -70,14 +69,13 @@ public interface OrderEditPagedQueryResponse extends com.commercetools.api.model
         return instance;
     }
 
-    public static OrderEditPagedQueryResponseBuilder builder(){
+    public static OrderEditPagedQueryResponseBuilder builder() {
         return OrderEditPagedQueryResponseBuilder.of();
     }
-    
-    public static OrderEditPagedQueryResponseBuilder builder(final OrderEditPagedQueryResponse template){
+
+    public static OrderEditPagedQueryResponseBuilder builder(final OrderEditPagedQueryResponse template) {
         return OrderEditPagedQueryResponseBuilder.of(template);
     }
-    
 
     default <T> T withOrderEditPagedQueryResponse(Function<OrderEditPagedQueryResponse, T> helper) {
         return helper.apply(this);

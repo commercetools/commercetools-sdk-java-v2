@@ -1,37 +1,34 @@
+
 package com.commercetools.api.models.payment;
 
-import com.commercetools.api.models.payment.PaymentUpdateAction;
-import com.commercetools.api.models.payment.PaymentSetExternalIdActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.payment.PaymentSetExternalIdActionImpl;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentSetExternalIdActionImpl.class)
 public interface PaymentSetExternalIdAction extends PaymentUpdateAction {
 
-    
-    
     @JsonProperty("externalId")
     public String getExternalId();
 
     public void setExternalId(final String externalId);
 
-    public static PaymentSetExternalIdAction of(){
+    public static PaymentSetExternalIdAction of() {
         return new PaymentSetExternalIdActionImpl();
     }
-    
 
     public static PaymentSetExternalIdAction of(final PaymentSetExternalIdAction template) {
         PaymentSetExternalIdActionImpl instance = new PaymentSetExternalIdActionImpl();
@@ -39,14 +36,13 @@ public interface PaymentSetExternalIdAction extends PaymentUpdateAction {
         return instance;
     }
 
-    public static PaymentSetExternalIdActionBuilder builder(){
+    public static PaymentSetExternalIdActionBuilder builder() {
         return PaymentSetExternalIdActionBuilder.of();
     }
-    
-    public static PaymentSetExternalIdActionBuilder builder(final PaymentSetExternalIdAction template){
+
+    public static PaymentSetExternalIdActionBuilder builder(final PaymentSetExternalIdAction template) {
         return PaymentSetExternalIdActionBuilder.of(template);
     }
-    
 
     default <T> T withPaymentSetExternalIdAction(Function<PaymentSetExternalIdAction, T> helper) {
         return helper.apply(this);

@@ -1,39 +1,37 @@
+
 package com.commercetools.api.models.state;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.state.State;
 import com.commercetools.api.models.state.StateReferenceImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StateReferenceImpl.class)
 public interface StateReference extends Reference {
 
-    
     @Valid
     @JsonProperty("obj")
     public State getObj();
 
     public void setObj(final State obj);
 
-    public static StateReference of(){
+    public static StateReference of() {
         return new StateReferenceImpl();
     }
-    
 
     public static StateReference of(final StateReference template) {
         StateReferenceImpl instance = new StateReferenceImpl();
@@ -42,14 +40,13 @@ public interface StateReference extends Reference {
         return instance;
     }
 
-    public static StateReferenceBuilder builder(){
+    public static StateReferenceBuilder builder() {
         return StateReferenceBuilder.of();
     }
-    
-    public static StateReferenceBuilder builder(final StateReference template){
+
+    public static StateReferenceBuilder builder(final StateReference template) {
         return StateReferenceBuilder.of(template);
     }
-    
 
     default <T> T withStateReference(Function<StateReference, T> helper) {
         return helper.apply(this);

@@ -1,109 +1,103 @@
+
 package com.commercetools.api.models.custom_object;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomObjectDraftImpl implements CustomObjectDraft {
 
     private String container;
-    
+
     private String key;
-    
+
     private com.fasterxml.jackson.databind.JsonNode value;
-    
+
     private Long version;
 
     @JsonCreator
-    CustomObjectDraftImpl(@JsonProperty("container") final String container, @JsonProperty("key") final String key, @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value, @JsonProperty("version") final Long version) {
+    CustomObjectDraftImpl(@JsonProperty("container") final String container, @JsonProperty("key") final String key,
+            @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value,
+            @JsonProperty("version") final Long version) {
         this.container = container;
         this.key = key;
         this.value = value;
         this.version = version;
     }
+
     public CustomObjectDraftImpl() {
     }
 
     /**
     *  <p>A namespace to group custom objects.</p>
     */
-    public String getContainer(){
+    public String getContainer() {
         return this.container;
     }
-    
+
     /**
     *  <p>A user-defined key that is unique within the given container.</p>
     */
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
-    public com.fasterxml.jackson.databind.JsonNode getValue(){
+
+    public com.fasterxml.jackson.databind.JsonNode getValue() {
         return this.value;
     }
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
 
-    public void setContainer(final String container){
+    public void setContainer(final String container) {
         this.container = container;
     }
-    
-    public void setKey(final String key){
+
+    public void setKey(final String key) {
         this.key = key;
     }
-    
-    public void setValue(final com.fasterxml.jackson.databind.JsonNode value){
+
+    public void setValue(final com.fasterxml.jackson.databind.JsonNode value) {
         this.value = value;
     }
-    
-    public void setVersion(final Long version){
+
+    public void setVersion(final Long version) {
         this.version = version;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         CustomObjectDraftImpl that = (CustomObjectDraftImpl) o;
-    
-        return new EqualsBuilder()
-                .append(container, that.container)
-                .append(key, that.key)
-                .append(value, that.value)
-                .append(version, that.version)
-                .isEquals();
+
+        return new EqualsBuilder().append(container, that.container).append(key, that.key).append(value,
+            that.value).append(version, that.version).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(container)
-            .append(key)
-            .append(value)
-            .append(version)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(container).append(key).append(value).append(version).toHashCode();
     }
 
 }

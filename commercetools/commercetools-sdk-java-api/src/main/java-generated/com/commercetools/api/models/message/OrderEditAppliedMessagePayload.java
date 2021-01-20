@@ -1,47 +1,45 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.order_edit.OrderEditApplied;
-import com.commercetools.api.models.order_edit.OrderEditReference;
-import com.commercetools.api.models.message.OrderEditAppliedMessagePayloadImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.OrderEditAppliedMessagePayloadImpl;
+import com.commercetools.api.models.order_edit.OrderEditApplied;
+import com.commercetools.api.models.order_edit.OrderEditReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderEditAppliedMessagePayloadImpl.class)
 public interface OrderEditAppliedMessagePayload extends MessagePayload {
 
-    
     @NotNull
     @Valid
     @JsonProperty("edit")
     public OrderEditReference getEdit();
-    
+
     @NotNull
     @Valid
     @JsonProperty("result")
     public OrderEditApplied getResult();
 
     public void setEdit(final OrderEditReference edit);
-    
+
     public void setResult(final OrderEditApplied result);
 
-    public static OrderEditAppliedMessagePayload of(){
+    public static OrderEditAppliedMessagePayload of() {
         return new OrderEditAppliedMessagePayloadImpl();
     }
-    
 
     public static OrderEditAppliedMessagePayload of(final OrderEditAppliedMessagePayload template) {
         OrderEditAppliedMessagePayloadImpl instance = new OrderEditAppliedMessagePayloadImpl();
@@ -50,14 +48,13 @@ public interface OrderEditAppliedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    public static OrderEditAppliedMessagePayloadBuilder builder(){
+    public static OrderEditAppliedMessagePayloadBuilder builder() {
         return OrderEditAppliedMessagePayloadBuilder.of();
     }
-    
-    public static OrderEditAppliedMessagePayloadBuilder builder(final OrderEditAppliedMessagePayload template){
+
+    public static OrderEditAppliedMessagePayloadBuilder builder(final OrderEditAppliedMessagePayload template) {
         return OrderEditAppliedMessagePayloadBuilder.of(template);
     }
-    
 
     default <T> T withOrderEditAppliedMessagePayload(Function<OrderEditAppliedMessagePayload, T> helper) {
         return helper.apply(this);

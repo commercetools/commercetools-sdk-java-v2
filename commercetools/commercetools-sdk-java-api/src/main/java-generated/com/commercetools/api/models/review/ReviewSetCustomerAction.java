@@ -1,24 +1,24 @@
+
 package com.commercetools.api.models.review;
 
-import com.commercetools.api.models.customer.CustomerResourceIdentifier;
-import com.commercetools.api.models.review.ReviewUpdateAction;
-import com.commercetools.api.models.review.ReviewSetCustomerActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.review.ReviewSetCustomerActionImpl;
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReviewSetCustomerActionImpl.class)
 public interface ReviewSetCustomerAction extends ReviewUpdateAction {
 
@@ -32,10 +32,9 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
 
     public void setCustomer(final CustomerResourceIdentifier customer);
 
-    public static ReviewSetCustomerAction of(){
+    public static ReviewSetCustomerAction of() {
         return new ReviewSetCustomerActionImpl();
     }
-    
 
     public static ReviewSetCustomerAction of(final ReviewSetCustomerAction template) {
         ReviewSetCustomerActionImpl instance = new ReviewSetCustomerActionImpl();
@@ -43,14 +42,13 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
         return instance;
     }
 
-    public static ReviewSetCustomerActionBuilder builder(){
+    public static ReviewSetCustomerActionBuilder builder() {
         return ReviewSetCustomerActionBuilder.of();
     }
-    
-    public static ReviewSetCustomerActionBuilder builder(final ReviewSetCustomerAction template){
+
+    public static ReviewSetCustomerActionBuilder builder(final ReviewSetCustomerAction template) {
         return ReviewSetCustomerActionBuilder.of(template);
     }
-    
 
     default <T> T withReviewSetCustomerAction(Function<ReviewSetCustomerAction, T> helper) {
         return helper.apply(this);

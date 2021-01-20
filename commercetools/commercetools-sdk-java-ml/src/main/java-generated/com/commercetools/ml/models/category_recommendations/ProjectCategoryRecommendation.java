@@ -1,25 +1,25 @@
+
 package com.commercetools.ml.models.category_recommendations;
 
-import com.commercetools.ml.models.common.CategoryReference;
-import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationImpl;
+import com.commercetools.ml.models.common.CategoryReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProjectCategoryRecommendationImpl.class)
-public interface ProjectCategoryRecommendation  {
+public interface ProjectCategoryRecommendation {
 
     /**
     *  <p>A category that is recommended for a product.</p>
@@ -28,12 +28,14 @@ public interface ProjectCategoryRecommendation  {
     @Valid
     @JsonProperty("category")
     public CategoryReference getCategory();
+
     /**
     *  <p>Probability score for the category recommendation.</p>
     */
     @NotNull
     @JsonProperty("confidence")
     public Double getConfidence();
+
     /**
     *  <p>Breadcrumb path to the recommended category. This only picks up one language, not all available languages for the category. English is prioritized, but if English data is not available, an arbitrary language is selected. Do not use this to identify a category,use the category ID from the category reference instead.</p>
     */
@@ -42,15 +44,14 @@ public interface ProjectCategoryRecommendation  {
     public String getPath();
 
     public void setCategory(final CategoryReference category);
-    
+
     public void setConfidence(final Double confidence);
-    
+
     public void setPath(final String path);
 
-    public static ProjectCategoryRecommendation of(){
+    public static ProjectCategoryRecommendation of() {
         return new ProjectCategoryRecommendationImpl();
     }
-    
 
     public static ProjectCategoryRecommendation of(final ProjectCategoryRecommendation template) {
         ProjectCategoryRecommendationImpl instance = new ProjectCategoryRecommendationImpl();
@@ -60,14 +61,13 @@ public interface ProjectCategoryRecommendation  {
         return instance;
     }
 
-    public static ProjectCategoryRecommendationBuilder builder(){
+    public static ProjectCategoryRecommendationBuilder builder() {
         return ProjectCategoryRecommendationBuilder.of();
     }
-    
-    public static ProjectCategoryRecommendationBuilder builder(final ProjectCategoryRecommendation template){
+
+    public static ProjectCategoryRecommendationBuilder builder(final ProjectCategoryRecommendation template) {
         return ProjectCategoryRecommendationBuilder.of(template);
     }
-    
 
     default <T> T withProjectCategoryRecommendation(Function<ProjectCategoryRecommendation, T> helper) {
         return helper.apply(this);

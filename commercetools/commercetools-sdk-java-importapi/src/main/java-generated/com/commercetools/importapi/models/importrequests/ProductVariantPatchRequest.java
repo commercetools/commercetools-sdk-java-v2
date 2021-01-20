@@ -1,28 +1,28 @@
+
 package com.commercetools.importapi.models.importrequests;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importrequests.ImportRequest;
-import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
 import com.commercetools.importapi.models.importrequests.ProductVariantPatchRequestImpl;
-
+import com.commercetools.importapi.models.productvariants.ProductVariantPatch;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>An import request for multiple product variant patch resources.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductVariantPatchRequestImpl.class)
 public interface ProductVariantPatchRequest extends ImportRequest {
 
@@ -35,13 +35,13 @@ public interface ProductVariantPatchRequest extends ImportRequest {
     public List<ProductVariantPatch> getPatches();
 
     @JsonIgnore
-    public void setPatches(final ProductVariantPatch ...patches);
+    public void setPatches(final ProductVariantPatch... patches);
+
     public void setPatches(final List<ProductVariantPatch> patches);
 
-    public static ProductVariantPatchRequest of(){
+    public static ProductVariantPatchRequest of() {
         return new ProductVariantPatchRequestImpl();
     }
-    
 
     public static ProductVariantPatchRequest of(final ProductVariantPatchRequest template) {
         ProductVariantPatchRequestImpl instance = new ProductVariantPatchRequestImpl();
@@ -49,14 +49,13 @@ public interface ProductVariantPatchRequest extends ImportRequest {
         return instance;
     }
 
-    public static ProductVariantPatchRequestBuilder builder(){
+    public static ProductVariantPatchRequestBuilder builder() {
         return ProductVariantPatchRequestBuilder.of();
     }
-    
-    public static ProductVariantPatchRequestBuilder builder(final ProductVariantPatchRequest template){
+
+    public static ProductVariantPatchRequestBuilder builder(final ProductVariantPatchRequest template) {
         return ProductVariantPatchRequestBuilder.of(template);
     }
-    
 
     default <T> T withProductVariantPatchRequest(Function<ProductVariantPatchRequest, T> helper) {
         return helper.apply(this);

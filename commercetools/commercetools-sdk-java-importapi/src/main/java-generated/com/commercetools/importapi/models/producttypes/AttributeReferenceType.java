@@ -1,24 +1,24 @@
+
 package com.commercetools.importapi.models.producttypes;
 
-import com.commercetools.importapi.models.common.ReferenceType;
-import com.commercetools.importapi.models.producttypes.AttributeType;
-import com.commercetools.importapi.models.producttypes.AttributeReferenceTypeImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.commercetools.importapi.models.producttypes.AttributeReferenceTypeImpl;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AttributeReferenceTypeImpl.class)
 public interface AttributeReferenceType extends AttributeType {
 
@@ -31,10 +31,9 @@ public interface AttributeReferenceType extends AttributeType {
 
     public void setReferenceTypeId(final ReferenceType referenceTypeId);
 
-    public static AttributeReferenceType of(){
+    public static AttributeReferenceType of() {
         return new AttributeReferenceTypeImpl();
     }
-    
 
     public static AttributeReferenceType of(final AttributeReferenceType template) {
         AttributeReferenceTypeImpl instance = new AttributeReferenceTypeImpl();
@@ -42,14 +41,13 @@ public interface AttributeReferenceType extends AttributeType {
         return instance;
     }
 
-    public static AttributeReferenceTypeBuilder builder(){
+    public static AttributeReferenceTypeBuilder builder() {
         return AttributeReferenceTypeBuilder.of();
     }
-    
-    public static AttributeReferenceTypeBuilder builder(final AttributeReferenceType template){
+
+    public static AttributeReferenceTypeBuilder builder(final AttributeReferenceType template) {
         return AttributeReferenceTypeBuilder.of(template);
     }
-    
 
     default <T> T withAttributeReferenceType(Function<AttributeReferenceType, T> helper) {
         return helper.apply(this);

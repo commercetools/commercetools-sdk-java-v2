@@ -1,45 +1,43 @@
+
 package com.commercetools.api.models.message;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.LineItem;
 import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.message.OrderLineItemAddedMessageImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemAddedMessageImpl.class)
 public interface OrderLineItemAddedMessage extends Message {
 
-    
     @NotNull
     @Valid
     @JsonProperty("lineItem")
     public LineItem getLineItem();
-    
+
     @NotNull
     @JsonProperty("addedQuantity")
     public Long getAddedQuantity();
 
     public void setLineItem(final LineItem lineItem);
-    
+
     public void setAddedQuantity(final Long addedQuantity);
 
-    public static OrderLineItemAddedMessage of(){
+    public static OrderLineItemAddedMessage of() {
         return new OrderLineItemAddedMessageImpl();
     }
-    
 
     public static OrderLineItemAddedMessage of(final OrderLineItemAddedMessage template) {
         OrderLineItemAddedMessageImpl instance = new OrderLineItemAddedMessageImpl();
@@ -58,14 +56,13 @@ public interface OrderLineItemAddedMessage extends Message {
         return instance;
     }
 
-    public static OrderLineItemAddedMessageBuilder builder(){
+    public static OrderLineItemAddedMessageBuilder builder() {
         return OrderLineItemAddedMessageBuilder.of();
     }
-    
-    public static OrderLineItemAddedMessageBuilder builder(final OrderLineItemAddedMessage template){
+
+    public static OrderLineItemAddedMessageBuilder builder(final OrderLineItemAddedMessage template) {
         return OrderLineItemAddedMessageBuilder.of(template);
     }
-    
 
     default <T> T withOrderLineItemAddedMessage(Function<OrderLineItemAddedMessage, T> helper) {
         return helper.apply(this);

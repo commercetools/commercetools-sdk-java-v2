@@ -1,42 +1,43 @@
+
 package com.commercetools.api.models.message;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.message.ProductSlugChangedMessagePayload;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductSlugChangedMessagePayloadBuilder {
 
-    
     private com.commercetools.api.models.common.LocalizedString slug;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString oldSlug;
 
-    public ProductSlugChangedMessagePayloadBuilder slug( final com.commercetools.api.models.common.LocalizedString slug) {
+    public ProductSlugChangedMessagePayloadBuilder slug(
+            final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
-    
-    public ProductSlugChangedMessagePayloadBuilder oldSlug(@Nullable final com.commercetools.api.models.common.LocalizedString oldSlug) {
+
+    public ProductSlugChangedMessagePayloadBuilder oldSlug(
+            @Nullable final com.commercetools.api.models.common.LocalizedString oldSlug) {
         this.oldSlug = oldSlug;
         return this;
     }
 
-    
-    public com.commercetools.api.models.common.LocalizedString getSlug(){
+    public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getOldSlug(){
+    public com.commercetools.api.models.common.LocalizedString getOldSlug() {
         return this.oldSlug;
     }
 

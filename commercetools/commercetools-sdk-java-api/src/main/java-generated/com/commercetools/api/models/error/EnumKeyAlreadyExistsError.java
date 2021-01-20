@@ -1,43 +1,41 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.error.EnumKeyAlreadyExistsErrorImpl;
+import com.commercetools.api.models.error.ErrorObject;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = EnumKeyAlreadyExistsErrorImpl.class)
 public interface EnumKeyAlreadyExistsError extends ErrorObject {
 
-    
     @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();
-    
+
     @NotNull
     @JsonProperty("conflictingAttributeName")
     public String getConflictingAttributeName();
 
     public void setConflictingEnumKey(final String conflictingEnumKey);
-    
+
     public void setConflictingAttributeName(final String conflictingAttributeName);
 
-    public static EnumKeyAlreadyExistsError of(){
+    public static EnumKeyAlreadyExistsError of() {
         return new EnumKeyAlreadyExistsErrorImpl();
     }
-    
 
     public static EnumKeyAlreadyExistsError of(final EnumKeyAlreadyExistsError template) {
         EnumKeyAlreadyExistsErrorImpl instance = new EnumKeyAlreadyExistsErrorImpl();
@@ -47,14 +45,13 @@ public interface EnumKeyAlreadyExistsError extends ErrorObject {
         return instance;
     }
 
-    public static EnumKeyAlreadyExistsErrorBuilder builder(){
+    public static EnumKeyAlreadyExistsErrorBuilder builder() {
         return EnumKeyAlreadyExistsErrorBuilder.of();
     }
-    
-    public static EnumKeyAlreadyExistsErrorBuilder builder(final EnumKeyAlreadyExistsError template){
+
+    public static EnumKeyAlreadyExistsErrorBuilder builder(final EnumKeyAlreadyExistsError template) {
         return EnumKeyAlreadyExistsErrorBuilder.of(template);
     }
-    
 
     default <T> T withEnumKeyAlreadyExistsError(Function<EnumKeyAlreadyExistsError, T> helper) {
         return helper.apply(this);

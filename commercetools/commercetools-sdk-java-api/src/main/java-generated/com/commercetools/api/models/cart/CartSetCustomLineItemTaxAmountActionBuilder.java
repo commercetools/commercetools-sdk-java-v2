@@ -1,42 +1,42 @@
+
 package com.commercetools.api.models.cart;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.cart.CartSetCustomLineItemTaxAmountAction;
 import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.cart.ExternalTaxAmountDraft;
-import com.commercetools.api.models.cart.CartSetCustomLineItemTaxAmountAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartSetCustomLineItemTaxAmountActionBuilder {
 
-    
     private String customLineItemId;
-    
+
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount;
 
-    public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId( final String customLineItemId) {
+    public CartSetCustomLineItemTaxAmountActionBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-    
-    public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(@Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
+
+    public CartSetCustomLineItemTaxAmountActionBuilder externalTaxAmount(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.externalTaxAmount = externalTaxAmount;
         return this;
     }
 
-    
-    public String getCustomLineItemId(){
+    public String getCustomLineItemId() {
         return this.customLineItemId;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount(){
+    public com.commercetools.api.models.cart.ExternalTaxAmountDraft getExternalTaxAmount() {
         return this.externalTaxAmount;
     }
 

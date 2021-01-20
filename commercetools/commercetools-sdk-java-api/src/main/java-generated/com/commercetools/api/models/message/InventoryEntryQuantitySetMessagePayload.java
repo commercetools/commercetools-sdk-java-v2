@@ -1,55 +1,53 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadImpl;
+import com.commercetools.api.models.message.MessagePayload;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryQuantitySetMessagePayloadImpl.class)
 public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload {
 
-    
     @NotNull
     @JsonProperty("oldQuantityOnStock")
     public Long getOldQuantityOnStock();
-    
+
     @NotNull
     @JsonProperty("newQuantityOnStock")
     public Long getNewQuantityOnStock();
-    
+
     @NotNull
     @JsonProperty("oldAvailableQuantity")
     public Long getOldAvailableQuantity();
-    
+
     @NotNull
     @JsonProperty("newAvailableQuantity")
     public Long getNewAvailableQuantity();
 
     public void setOldQuantityOnStock(final Long oldQuantityOnStock);
-    
+
     public void setNewQuantityOnStock(final Long newQuantityOnStock);
-    
+
     public void setOldAvailableQuantity(final Long oldAvailableQuantity);
-    
+
     public void setNewAvailableQuantity(final Long newAvailableQuantity);
 
-    public static InventoryEntryQuantitySetMessagePayload of(){
+    public static InventoryEntryQuantitySetMessagePayload of() {
         return new InventoryEntryQuantitySetMessagePayloadImpl();
     }
-    
 
     public static InventoryEntryQuantitySetMessagePayload of(final InventoryEntryQuantitySetMessagePayload template) {
         InventoryEntryQuantitySetMessagePayloadImpl instance = new InventoryEntryQuantitySetMessagePayloadImpl();
@@ -60,16 +58,17 @@ public interface InventoryEntryQuantitySetMessagePayload extends MessagePayload 
         return instance;
     }
 
-    public static InventoryEntryQuantitySetMessagePayloadBuilder builder(){
+    public static InventoryEntryQuantitySetMessagePayloadBuilder builder() {
         return InventoryEntryQuantitySetMessagePayloadBuilder.of();
     }
-    
-    public static InventoryEntryQuantitySetMessagePayloadBuilder builder(final InventoryEntryQuantitySetMessagePayload template){
+
+    public static InventoryEntryQuantitySetMessagePayloadBuilder builder(
+            final InventoryEntryQuantitySetMessagePayload template) {
         return InventoryEntryQuantitySetMessagePayloadBuilder.of(template);
     }
-    
 
-    default <T> T withInventoryEntryQuantitySetMessagePayload(Function<InventoryEntryQuantitySetMessagePayload, T> helper) {
+    default <T> T withInventoryEntryQuantitySetMessagePayload(
+            Function<InventoryEntryQuantitySetMessagePayload, T> helper) {
         return helper.apply(this);
     }
 }

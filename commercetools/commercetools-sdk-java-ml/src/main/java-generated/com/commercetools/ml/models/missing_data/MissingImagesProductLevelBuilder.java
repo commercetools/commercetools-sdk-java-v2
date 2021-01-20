@@ -1,41 +1,38 @@
+
 package com.commercetools.ml.models.missing_data;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.missing_data.MissingImagesCount;
 import com.commercetools.ml.models.missing_data.MissingImagesProductLevel;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingImagesProductLevelBuilder {
 
-    
     private Long missingImages;
-    
-    
+
     private Long total;
 
-    public MissingImagesProductLevelBuilder missingImages( final Long missingImages) {
+    public MissingImagesProductLevelBuilder missingImages(final Long missingImages) {
         this.missingImages = missingImages;
         return this;
     }
-    
-    public MissingImagesProductLevelBuilder total( final Long total) {
+
+    public MissingImagesProductLevelBuilder total(final Long total) {
         this.total = total;
         return this;
     }
 
-    
-    public Long getMissingImages(){
+    public Long getMissingImages() {
         return this.missingImages;
     }
-    
-    
-    public Long getTotal(){
+
+    public Long getTotal() {
         return this.total;
     }
 

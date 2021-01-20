@@ -1,29 +1,28 @@
+
 package com.commercetools.api.models.zone;
 
-import com.commercetools.api.models.zone.Location;
-import com.commercetools.api.models.zone.ZoneUpdateAction;
-import com.commercetools.api.models.zone.ZoneAddLocationAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.zone.Location;
+import com.commercetools.api.models.zone.ZoneAddLocationAction;
+import com.commercetools.api.models.zone.ZoneUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ZoneAddLocationActionBuilder {
 
-    
     private com.commercetools.api.models.zone.Location location;
 
-    public ZoneAddLocationActionBuilder location( final com.commercetools.api.models.zone.Location location) {
+    public ZoneAddLocationActionBuilder location(final com.commercetools.api.models.zone.Location location) {
         this.location = location;
         return this;
     }
 
-    
-    public com.commercetools.api.models.zone.Location getLocation(){
+    public com.commercetools.api.models.zone.Location getLocation() {
         return this.location;
     }
 

@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.channel;
 
-import com.commercetools.api.models.channel.ChannelUpdateAction;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.channel.ChannelChangeDescriptionActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.channel.ChannelChangeDescriptionActionImpl;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ChannelChangeDescriptionActionImpl.class)
 public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
 
-    
     @NotNull
     @Valid
     @JsonProperty("description")
@@ -30,10 +29,9 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
 
     public void setDescription(final LocalizedString description);
 
-    public static ChannelChangeDescriptionAction of(){
+    public static ChannelChangeDescriptionAction of() {
         return new ChannelChangeDescriptionActionImpl();
     }
-    
 
     public static ChannelChangeDescriptionAction of(final ChannelChangeDescriptionAction template) {
         ChannelChangeDescriptionActionImpl instance = new ChannelChangeDescriptionActionImpl();
@@ -41,14 +39,13 @@ public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
         return instance;
     }
 
-    public static ChannelChangeDescriptionActionBuilder builder(){
+    public static ChannelChangeDescriptionActionBuilder builder() {
         return ChannelChangeDescriptionActionBuilder.of();
     }
-    
-    public static ChannelChangeDescriptionActionBuilder builder(final ChannelChangeDescriptionAction template){
+
+    public static ChannelChangeDescriptionActionBuilder builder(final ChannelChangeDescriptionAction template) {
         return ChannelChangeDescriptionActionBuilder.of(template);
     }
-    
 
     default <T> T withChannelChangeDescriptionAction(Function<ChannelChangeDescriptionAction, T> helper) {
         return helper.apply(this);

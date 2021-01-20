@@ -1,33 +1,32 @@
+
 package com.commercetools.importapi.models.customfields;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.customfields.CustomField;
 import com.commercetools.importapi.models.customfields.StringSetField;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StringSetFieldBuilder {
 
-    
     private java.util.List<String> value;
 
-    public StringSetFieldBuilder value( final String ...value) {
+    public StringSetFieldBuilder value(final String... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
-    
-    public StringSetFieldBuilder value( final java.util.List<String> value) {
+
+    public StringSetFieldBuilder value(final java.util.List<String> value) {
         this.value = value;
         return this;
     }
 
-    
-    public java.util.List<String> getValue(){
+    public java.util.List<String> getValue() {
         return this.value;
     }
 

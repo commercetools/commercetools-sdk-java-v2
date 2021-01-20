@@ -1,55 +1,52 @@
+
 package com.commercetools.api.models.order_edit;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.TaxedPrice;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order_edit.OrderExcerpt;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderExcerptBuilder {
 
-    
     private com.commercetools.api.models.common.TypedMoney totalPrice;
-    
+
     @Nullable
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
-    
-    
+
     private Integer version;
 
-    public OrderExcerptBuilder totalPrice( final com.commercetools.api.models.common.TypedMoney totalPrice) {
+    public OrderExcerptBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
-    
+
     public OrderExcerptBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
         return this;
     }
-    
-    public OrderExcerptBuilder version( final Integer version) {
+
+    public OrderExcerptBuilder version(final Integer version) {
         this.version = version;
         return this;
     }
 
-    
-    public com.commercetools.api.models.common.TypedMoney getTotalPrice(){
+    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
         return this.totalPrice;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice(){
+    public com.commercetools.api.models.cart.TaxedPrice getTaxedPrice() {
         return this.taxedPrice;
     }
-    
-    
-    public Integer getVersion(){
+
+    public Integer getVersion() {
         return this.version;
     }
 

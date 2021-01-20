@@ -1,10 +1,11 @@
-package io.vrap.rmf.base.client;
 
-import org.junit.Assert;
-import org.junit.Test;
+package io.vrap.rmf.base.client;
 
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class ApiHttpRequestTest {
 
@@ -44,7 +45,8 @@ public class ApiHttpRequestTest {
     @Test
     public void testImmutableBody() {
 
-        ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, null, null, "foo".getBytes(StandardCharsets.UTF_8));
+        ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, null, null,
+            "foo".getBytes(StandardCharsets.UTF_8));
 
         ApiHttpRequest newRequest = request.withBody("bar");
 
@@ -54,8 +56,7 @@ public class ApiHttpRequestTest {
     }
 
     @Test
-    public void testImmutableAddHeader()
-    {
+    public void testImmutableAddHeader() {
         ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, null, null, null).withHeader("foo", "foo");
 
         ApiHttpRequest newRequest = request.addHeader("foo", "bar");
@@ -69,8 +70,7 @@ public class ApiHttpRequestTest {
     }
 
     @Test
-    public void testImmutableWithHeader()
-    {
+    public void testImmutableWithHeader() {
         ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, null, null, null).withHeader("foo", "foo");
 
         ApiHttpRequest newRequest = request.withHeader("foo", "bar");
@@ -83,8 +83,7 @@ public class ApiHttpRequestTest {
     }
 
     @Test
-    public void testImmutableWithoutHeader()
-    {
+    public void testImmutableWithoutHeader() {
         ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, null, null, null).withHeader("foo", "foo");
 
         ApiHttpRequest newRequest = request.withoutHeader("foo");
@@ -97,8 +96,7 @@ public class ApiHttpRequestTest {
     }
 
     @Test
-    public void testImmutableWithHeaders()
-    {
+    public void testImmutableWithHeaders() {
         ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, null, null, null).withHeader("foo", "foo");
 
         ApiHttpRequest newRequest = request.withHeaders(new ApiHttpHeaders(ApiHttpHeaders.headerEntry("foo", "bar")));
@@ -111,8 +109,7 @@ public class ApiHttpRequestTest {
     }
 
     @Test
-    public void testImmutableResolve()
-    {
+    public void testImmutableResolve() {
         ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, URI.create("/test"), null, null);
 
         ApiHttpRequest newRequest = request.resolve(URI.create("https://example.com/"));
@@ -122,9 +119,9 @@ public class ApiHttpRequestTest {
         Assert.assertNotEquals(request, newRequest);
     }
 
-    public void testImmutableGetHeaders()
-    {
-        ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, URI.create("/test"), null, null).withHeader("foo", "foo");
+    public void testImmutableGetHeaders() {
+        ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, URI.create("/test"), null, null).withHeader(
+            "foo", "foo");
 
         request.getHeaders().addHeader("foo", "bar");
 

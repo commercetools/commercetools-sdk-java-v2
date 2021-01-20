@@ -1,12 +1,13 @@
-package io.vrap.rmf.base.client;
 
-import org.assertj.core.util.Lists;
-import org.junit.Assert;
-import org.junit.Test;
+package io.vrap.rmf.base.client;
 
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+
+import org.assertj.core.util.Lists;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class ApiMethodTest {
     static class TestApiMethod extends ApiMethod<TestApiMethod, Object> {
@@ -50,8 +51,7 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableWithQueryParam()
-    {
+    public void testImmutableWithQueryParam() {
         TestApiMethod method = new TestApiMethod(createClient());
 
         TestApiMethod newMethod = method.withQueryParam("foo", "bar");
@@ -65,8 +65,7 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableWithoutQueryParam()
-    {
+    public void testImmutableWithoutQueryParam() {
         TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
 
         TestApiMethod newMethod = method.withoutQueryParam("foo");
@@ -80,11 +79,11 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableWithQueryParams()
-    {
+    public void testImmutableWithQueryParams() {
         TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
 
-        TestApiMethod newMethod = method.withQueryParams(Lists.newArrayList(new ApiMethod.ParamEntry<>("fooz", "barz")));
+        TestApiMethod newMethod = method.withQueryParams(
+            Lists.newArrayList(new ApiMethod.ParamEntry<>("fooz", "barz")));
 
         Assert.assertEquals(1, method.getQueryParams().size());
         Assert.assertEquals(1, newMethod.getQueryParams().size());
@@ -96,8 +95,7 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableAddQueryParam()
-    {
+    public void testImmutableAddQueryParam() {
         TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
 
         TestApiMethod newMethod = method.addQueryParam("fooz", "barz");
@@ -113,8 +111,7 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableGetQueryParams()
-    {
+    public void testImmutableGetQueryParams() {
         TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "foo");
 
         final List<ApiMethod.ParamEntry<String, String>> queryParams = method.getQueryParams();
@@ -128,13 +125,11 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableGetQueryParamsByKey()
-    {
+    public void testImmutableGetQueryParamsByKey() {
         TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "foo");
 
         final List<String> queryParams = method.getQueryParam("foo");
         queryParams.add("bar");
-
 
         Assert.assertEquals(1, method.getQueryParams().size());
 
@@ -144,8 +139,7 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableAddHeader()
-    {
+    public void testImmutableAddHeader() {
         TestApiMethod method = new TestApiMethod(createClient()).withHeader("foo", "foo");
 
         TestApiMethod newMethod = method.addHeader("foo", "bar");
@@ -159,8 +153,7 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableWithHeader()
-    {
+    public void testImmutableWithHeader() {
         TestApiMethod method = new TestApiMethod(createClient()).withHeader("foo", "foo");
 
         TestApiMethod newMethod = method.withHeader("foo", "bar");
@@ -173,8 +166,7 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableWithoutHeader()
-    {
+    public void testImmutableWithoutHeader() {
         TestApiMethod method = new TestApiMethod(createClient()).withHeader("foo", "foo");
 
         TestApiMethod newMethod = method.withoutHeader("foo");
@@ -187,8 +179,7 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableWithHeaders()
-    {
+    public void testImmutableWithHeaders() {
         TestApiMethod method = new TestApiMethod(createClient()).withHeader("foo", "foo");
 
         TestApiMethod newMethod = method.withHeaders(new ApiHttpHeaders(ApiHttpHeaders.headerEntry("foo", "bar")));
@@ -201,13 +192,11 @@ public class ApiMethodTest {
     }
 
     @Test
-    public void testImmutableGetHeaders()
-    {
+    public void testImmutableGetHeaders() {
         TestApiMethod method = new TestApiMethod(createClient()).withHeader("foo", "foo");
 
         final ApiHttpHeaders headers1 = method.getHeaders();
         headers1.addHeader("bar", "bar");
-
 
         Assert.assertEquals(1, method.getHeaders().getHeaders().size());
 

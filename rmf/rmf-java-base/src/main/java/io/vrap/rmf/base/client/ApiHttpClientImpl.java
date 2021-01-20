@@ -1,9 +1,10 @@
-package io.vrap.rmf.base.client;
 
-import io.vrap.rmf.base.client.http.HandlerStack;
+package io.vrap.rmf.base.client;
 
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
+
+import io.vrap.rmf.base.client.http.HandlerStack;
 
 public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpClient {
 
@@ -32,8 +33,7 @@ public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpCl
     }
 
     @Override
-    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, Class<O> outputType)
-    {
+    public <O> CompletableFuture<ApiHttpResponse<O>> execute(final ApiHttpRequest request, Class<O> outputType) {
         return execute(request).thenApply(response -> serializer.convertResponse(response, outputType));
     }
 

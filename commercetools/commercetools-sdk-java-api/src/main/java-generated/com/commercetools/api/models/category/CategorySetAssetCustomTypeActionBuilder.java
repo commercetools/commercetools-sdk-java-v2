@@ -1,29 +1,30 @@
+
 package com.commercetools.api.models.category;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.category.CategorySetAssetCustomTypeAction;
 import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.category.CategorySetAssetCustomTypeAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategorySetAssetCustomTypeActionBuilder {
 
     @Nullable
     private String assetId;
-    
+
     @Nullable
     private String assetKey;
-    
+
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-    
+
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode fields;
 
@@ -31,39 +32,41 @@ public final class CategorySetAssetCustomTypeActionBuilder {
         this.assetId = assetId;
         return this;
     }
-    
+
     public CategorySetAssetCustomTypeActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-    
-    public CategorySetAssetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+
+    public CategorySetAssetCustomTypeActionBuilder type(
+            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-    
-    public CategorySetAssetCustomTypeActionBuilder fields(@Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
+
+    public CategorySetAssetCustomTypeActionBuilder fields(
+            @Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
         this.fields = fields;
         return this;
     }
 
     @Nullable
-    public String getAssetId(){
+    public String getAssetId() {
         return this.assetId;
     }
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
-    
+
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getFields(){
+    public com.fasterxml.jackson.databind.JsonNode getFields() {
         return this.fields;
     }
 

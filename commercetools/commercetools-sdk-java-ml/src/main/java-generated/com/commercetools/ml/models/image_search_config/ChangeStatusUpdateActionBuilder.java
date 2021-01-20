@@ -1,29 +1,29 @@
+
 package com.commercetools.ml.models.image_search_config;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction;
 import com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus;
 import com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction;
-import com.commercetools.ml.models.image_search_config.ChangeStatusUpdateAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ChangeStatusUpdateActionBuilder {
 
-    
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
 
-    public ChangeStatusUpdateActionBuilder status( final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
+    public ChangeStatusUpdateActionBuilder status(
+            final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
         this.status = status;
         return this;
     }
 
-    
-    public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus(){
+    public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus() {
         return this.status;
     }
 

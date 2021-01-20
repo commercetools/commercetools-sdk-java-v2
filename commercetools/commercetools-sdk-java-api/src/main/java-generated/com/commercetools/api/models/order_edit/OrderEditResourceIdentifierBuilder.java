@@ -1,22 +1,23 @@
+
 package com.commercetools.api.models.order_edit;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.commercetools.api.models.order_edit.OrderEditResourceIdentifier;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderEditResourceIdentifierBuilder {
 
     @Nullable
     private String id;
-    
+
     @Nullable
     private String key;
 
@@ -24,19 +25,19 @@ public final class OrderEditResourceIdentifierBuilder {
         this.id = id;
         return this;
     }
-    
+
     public OrderEditResourceIdentifierBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
     @Nullable
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
+
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
 

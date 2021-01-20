@@ -1,68 +1,64 @@
+
 package com.commercetools.api.models.message;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.DiscountedPrice;
 import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessageImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductPriceExternalDiscountSetMessageImpl.class)
 public interface ProductPriceExternalDiscountSetMessage extends Message {
 
-    
     @NotNull
     @JsonProperty("variantId")
     public Integer getVariantId();
-    
-    
+
     @JsonProperty("variantKey")
     public String getVariantKey();
-    
-    
+
     @JsonProperty("sku")
     public String getSku();
-    
+
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();
-    
+
     @Valid
     @JsonProperty("discounted")
     public DiscountedPrice getDiscounted();
-    
+
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
 
     public void setVariantId(final Integer variantId);
-    
+
     public void setVariantKey(final String variantKey);
-    
+
     public void setSku(final String sku);
-    
+
     public void setPriceId(final String priceId);
-    
+
     public void setDiscounted(final DiscountedPrice discounted);
-    
+
     public void setStaged(final Boolean staged);
 
-    public static ProductPriceExternalDiscountSetMessage of(){
+    public static ProductPriceExternalDiscountSetMessage of() {
         return new ProductPriceExternalDiscountSetMessageImpl();
     }
-    
 
     public static ProductPriceExternalDiscountSetMessage of(final ProductPriceExternalDiscountSetMessage template) {
         ProductPriceExternalDiscountSetMessageImpl instance = new ProductPriceExternalDiscountSetMessageImpl();
@@ -85,16 +81,17 @@ public interface ProductPriceExternalDiscountSetMessage extends Message {
         return instance;
     }
 
-    public static ProductPriceExternalDiscountSetMessageBuilder builder(){
+    public static ProductPriceExternalDiscountSetMessageBuilder builder() {
         return ProductPriceExternalDiscountSetMessageBuilder.of();
     }
-    
-    public static ProductPriceExternalDiscountSetMessageBuilder builder(final ProductPriceExternalDiscountSetMessage template){
+
+    public static ProductPriceExternalDiscountSetMessageBuilder builder(
+            final ProductPriceExternalDiscountSetMessage template) {
         return ProductPriceExternalDiscountSetMessageBuilder.of(template);
     }
-    
 
-    default <T> T withProductPriceExternalDiscountSetMessage(Function<ProductPriceExternalDiscountSetMessage, T> helper) {
+    default <T> T withProductPriceExternalDiscountSetMessage(
+            Function<ProductPriceExternalDiscountSetMessage, T> helper) {
         return helper.apply(this);
     }
 }

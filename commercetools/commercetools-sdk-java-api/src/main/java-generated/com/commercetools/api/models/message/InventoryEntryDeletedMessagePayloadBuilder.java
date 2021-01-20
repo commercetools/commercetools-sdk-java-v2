@@ -1,42 +1,40 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.InventoryEntryDeletedMessagePayload;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.message.InventoryEntryDeletedMessagePayload;
+import com.commercetools.api.models.message.MessagePayload;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InventoryEntryDeletedMessagePayloadBuilder {
 
-    
     private String sku;
-    
-    
+
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
-    public InventoryEntryDeletedMessagePayloadBuilder sku( final String sku) {
+    public InventoryEntryDeletedMessagePayloadBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
-    
-    public InventoryEntryDeletedMessagePayloadBuilder supplyChannel( final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+
+    public InventoryEntryDeletedMessagePayloadBuilder supplyChannel(
+            final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
 
-    
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
-    
-    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel(){
+
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 

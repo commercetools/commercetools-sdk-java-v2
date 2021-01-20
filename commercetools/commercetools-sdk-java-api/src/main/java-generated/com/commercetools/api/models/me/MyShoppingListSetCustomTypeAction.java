@@ -1,45 +1,43 @@
+
 package com.commercetools.api.models.me;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import com.commercetools.api.models.me.MyShoppingListSetCustomTypeActionImpl;
 import com.commercetools.api.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.me.MyShoppingListSetCustomTypeActionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListSetCustomTypeActionImpl.class)
 public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateAction {
 
-    
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-    
+
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
 
     public void setType(final TypeResourceIdentifier type);
-    
+
     public void setFields(final FieldContainer fields);
 
-    public static MyShoppingListSetCustomTypeAction of(){
+    public static MyShoppingListSetCustomTypeAction of() {
         return new MyShoppingListSetCustomTypeActionImpl();
     }
-    
 
     public static MyShoppingListSetCustomTypeAction of(final MyShoppingListSetCustomTypeAction template) {
         MyShoppingListSetCustomTypeActionImpl instance = new MyShoppingListSetCustomTypeActionImpl();
@@ -48,14 +46,13 @@ public interface MyShoppingListSetCustomTypeAction extends MyShoppingListUpdateA
         return instance;
     }
 
-    public static MyShoppingListSetCustomTypeActionBuilder builder(){
+    public static MyShoppingListSetCustomTypeActionBuilder builder() {
         return MyShoppingListSetCustomTypeActionBuilder.of();
     }
-    
-    public static MyShoppingListSetCustomTypeActionBuilder builder(final MyShoppingListSetCustomTypeAction template){
+
+    public static MyShoppingListSetCustomTypeActionBuilder builder(final MyShoppingListSetCustomTypeAction template) {
         return MyShoppingListSetCustomTypeActionBuilder.of(template);
     }
-    
 
     default <T> T withMyShoppingListSetCustomTypeAction(Function<MyShoppingListSetCustomTypeAction, T> helper) {
         return helper.apply(this);

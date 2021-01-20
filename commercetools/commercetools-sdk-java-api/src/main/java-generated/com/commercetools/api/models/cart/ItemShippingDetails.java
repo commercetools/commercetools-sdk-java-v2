@@ -1,25 +1,25 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.ItemShippingTarget;
-import com.commercetools.api.models.cart.ItemShippingDetailsImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.cart.ItemShippingDetailsImpl;
+import com.commercetools.api.models.cart.ItemShippingTarget;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ItemShippingDetailsImpl.class)
-public interface ItemShippingDetails  {
+public interface ItemShippingDetails {
 
     /**
     *  <p>Used to map what sub-quantity should be shipped to which address.
@@ -29,6 +29,7 @@ public interface ItemShippingDetails  {
     @Valid
     @JsonProperty("targets")
     public List<ItemShippingTarget> getTargets();
+
     /**
     *  <p><code>true</code> if the quantity of the (custom) line item is equal to the sum of the sub-quantities in <code>targets</code>, <code>false</code> otherwise.
     *  A cart cannot be ordered when the value is <code>false</code>.
@@ -39,15 +40,15 @@ public interface ItemShippingDetails  {
     public Boolean getValid();
 
     @JsonIgnore
-    public void setTargets(final ItemShippingTarget ...targets);
+    public void setTargets(final ItemShippingTarget... targets);
+
     public void setTargets(final List<ItemShippingTarget> targets);
-    
+
     public void setValid(final Boolean valid);
 
-    public static ItemShippingDetails of(){
+    public static ItemShippingDetails of() {
         return new ItemShippingDetailsImpl();
     }
-    
 
     public static ItemShippingDetails of(final ItemShippingDetails template) {
         ItemShippingDetailsImpl instance = new ItemShippingDetailsImpl();
@@ -56,14 +57,13 @@ public interface ItemShippingDetails  {
         return instance;
     }
 
-    public static ItemShippingDetailsBuilder builder(){
+    public static ItemShippingDetailsBuilder builder() {
         return ItemShippingDetailsBuilder.of();
     }
-    
-    public static ItemShippingDetailsBuilder builder(final ItemShippingDetails template){
+
+    public static ItemShippingDetailsBuilder builder(final ItemShippingDetails template) {
         return ItemShippingDetailsBuilder.of(template);
     }
-    
 
     default <T> T withItemShippingDetails(Function<ItemShippingDetails, T> helper) {
         return helper.apply(this);

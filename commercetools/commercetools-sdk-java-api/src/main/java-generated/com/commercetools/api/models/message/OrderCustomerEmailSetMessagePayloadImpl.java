@@ -1,88 +1,82 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEmailSetMessagePayload {
 
     private String type;
-    
+
     private String email;
-    
+
     private String oldEmail;
 
     @JsonCreator
-    OrderCustomerEmailSetMessagePayloadImpl(@JsonProperty("email") final String email, @JsonProperty("oldEmail") final String oldEmail) {
+    OrderCustomerEmailSetMessagePayloadImpl(@JsonProperty("email") final String email,
+            @JsonProperty("oldEmail") final String oldEmail) {
         this.email = email;
         this.oldEmail = oldEmail;
         this.type = "OrderCustomerEmailSet";
     }
+
     public OrderCustomerEmailSetMessagePayloadImpl() {
         this.type = "OrderCustomerEmailSet";
     }
 
-    
-    public String getType(){
+    public String getType() {
         return this.type;
     }
-    
-    
-    public String getEmail(){
+
+    public String getEmail() {
         return this.email;
     }
-    
-    
-    public String getOldEmail(){
+
+    public String getOldEmail() {
         return this.oldEmail;
     }
 
-    public void setEmail(final String email){
+    public void setEmail(final String email) {
         this.email = email;
     }
-    
-    public void setOldEmail(final String oldEmail){
+
+    public void setOldEmail(final String oldEmail) {
         this.oldEmail = oldEmail;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         OrderCustomerEmailSetMessagePayloadImpl that = (OrderCustomerEmailSetMessagePayloadImpl) o;
-    
-        return new EqualsBuilder()
-                .append(type, that.type)
-                .append(email, that.email)
-                .append(oldEmail, that.oldEmail)
-                .isEquals();
+
+        return new EqualsBuilder().append(type, that.type).append(email, that.email).append(oldEmail,
+            that.oldEmail).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(type)
-            .append(email)
-            .append(oldEmail)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(email).append(oldEmail).toHashCode();
     }
 
 }

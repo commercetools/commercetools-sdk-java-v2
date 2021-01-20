@@ -1,246 +1,244 @@
+
 package com.commercetools.api.models.shopping_list;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.shopping_list.ShoppingList;
 import com.commercetools.api.models.shopping_list.ShoppingListLineItem;
 import com.commercetools.api.models.shopping_list.TextLineItem;
 import com.commercetools.api.models.type.CustomFields;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.shopping_list.ShoppingList;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ShoppingListBuilder {
 
-    
     private String id;
-    
-    
+
     private Long version;
-    
-    
+
     private java.time.ZonedDateTime createdAt;
-    
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-    
+
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
-    
+
     @Nullable
     private com.commercetools.api.models.customer.CustomerReference customer;
-    
+
     @Nullable
     private Long deleteDaysAfterLastModification;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-    
+
     @Nullable
     private String key;
-    
+
     @Nullable
     private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems;
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString name;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
-    
+
     @Nullable
     private java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems;
-    
+
     @Nullable
     private String anonymousId;
 
-    public ShoppingListBuilder id( final String id) {
+    public ShoppingListBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    public ShoppingListBuilder version( final Long version) {
+
+    public ShoppingListBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    public ShoppingListBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+
+    public ShoppingListBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    
-    public ShoppingListBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+
+    public ShoppingListBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-    
-    public ShoppingListBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+
+    public ShoppingListBuilder lastModifiedBy(
+            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-    
+
     public ShoppingListBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-    
+
     public ShoppingListBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
-    
-    public ShoppingListBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
+
+    public ShoppingListBuilder customer(
+            @Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
-    
+
     public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
-    
-    public ShoppingListBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+
+    public ShoppingListBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-    
+
     public ShoppingListBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-    
-    public ShoppingListBuilder lineItems(@Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItem ...lineItems) {
+
+    public ShoppingListBuilder lineItems(
+            @Nullable final com.commercetools.api.models.shopping_list.ShoppingListLineItem... lineItems) {
         this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
         return this;
     }
-    
-    public ShoppingListBuilder lineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems) {
+
+    public ShoppingListBuilder lineItems(
+            @Nullable final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
-    
-    public ShoppingListBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+
+    public ShoppingListBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
+
     public ShoppingListBuilder slug(@Nullable final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
         return this;
     }
-    
-    public ShoppingListBuilder textLineItems(@Nullable final com.commercetools.api.models.shopping_list.TextLineItem ...textLineItems) {
+
+    public ShoppingListBuilder textLineItems(
+            @Nullable final com.commercetools.api.models.shopping_list.TextLineItem... textLineItems) {
         this.textLineItems = new ArrayList<>(Arrays.asList(textLineItems));
         return this;
     }
-    
-    public ShoppingListBuilder textLineItems(@Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems) {
+
+    public ShoppingListBuilder textLineItems(
+            @Nullable final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems) {
         this.textLineItems = textLineItems;
         return this;
     }
-    
+
     public ShoppingListBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
 
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.time.ZonedDateTime getCreatedAt(){
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.customer.CustomerReference getCustomer(){
+    public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
-    
+
     @Nullable
-    public Long getDeleteDaysAfterLastModification(){
+    public Long getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription(){
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
-    
+
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> getLineItems(){
+    public java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> getLineItems() {
         return this.lineItems;
     }
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getSlug(){
+    public com.commercetools.api.models.common.LocalizedString getSlug() {
         return this.slug;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> getTextLineItems(){
+    public java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> getTextLineItems() {
         return this.textLineItems;
     }
-    
+
     @Nullable
-    public String getAnonymousId(){
+    public String getAnonymousId() {
         return this.anonymousId;
     }
 
     public ShoppingList build() {
-        return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, custom, customer, deleteDaysAfterLastModification, description, key, lineItems, name, slug, textLineItems, anonymousId);
+        return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, custom, customer,
+            deleteDaysAfterLastModification, description, key, lineItems, name, slug, textLineItems, anonymousId);
     }
 
     public static ShoppingListBuilder of() {

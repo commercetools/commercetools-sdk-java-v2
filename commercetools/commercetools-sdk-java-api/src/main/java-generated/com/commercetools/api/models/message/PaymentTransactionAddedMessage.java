@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.payment.Transaction;
-import com.commercetools.api.models.message.PaymentTransactionAddedMessageImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.PaymentTransactionAddedMessageImpl;
+import com.commercetools.api.models.payment.Transaction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentTransactionAddedMessageImpl.class)
 public interface PaymentTransactionAddedMessage extends Message {
 
-    
     @NotNull
     @Valid
     @JsonProperty("transaction")
@@ -30,10 +29,9 @@ public interface PaymentTransactionAddedMessage extends Message {
 
     public void setTransaction(final Transaction transaction);
 
-    public static PaymentTransactionAddedMessage of(){
+    public static PaymentTransactionAddedMessage of() {
         return new PaymentTransactionAddedMessageImpl();
     }
-    
 
     public static PaymentTransactionAddedMessage of(final PaymentTransactionAddedMessage template) {
         PaymentTransactionAddedMessageImpl instance = new PaymentTransactionAddedMessageImpl();
@@ -51,14 +49,13 @@ public interface PaymentTransactionAddedMessage extends Message {
         return instance;
     }
 
-    public static PaymentTransactionAddedMessageBuilder builder(){
+    public static PaymentTransactionAddedMessageBuilder builder() {
         return PaymentTransactionAddedMessageBuilder.of();
     }
-    
-    public static PaymentTransactionAddedMessageBuilder builder(final PaymentTransactionAddedMessage template){
+
+    public static PaymentTransactionAddedMessageBuilder builder(final PaymentTransactionAddedMessage template) {
         return PaymentTransactionAddedMessageBuilder.of(template);
     }
-    
 
     default <T> T withPaymentTransactionAddedMessage(Function<PaymentTransactionAddedMessage, T> helper) {
         return helper.apply(this);

@@ -1,81 +1,77 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategoryUpdateImpl implements CategoryUpdate {
 
     private Long version;
-    
+
     private java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions;
 
     @JsonCreator
-    CategoryUpdateImpl(@JsonProperty("version") final Long version, @JsonProperty("actions") final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
+    CategoryUpdateImpl(@JsonProperty("version") final Long version,
+            @JsonProperty("actions") final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
         this.version = version;
         this.actions = actions;
     }
+
     public CategoryUpdateImpl() {
     }
 
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> getActions() {
         return this.actions;
     }
 
-    public void setVersion(final Long version){
+    public void setVersion(final Long version) {
         this.version = version;
     }
-    
-    public void setActions(final com.commercetools.api.models.category.CategoryUpdateAction ...actions){
-       this.actions = new ArrayList<>(Arrays.asList(actions));
+
+    public void setActions(final com.commercetools.api.models.category.CategoryUpdateAction... actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
     }
-    
-    public void setActions(final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions){
-       this.actions = actions;
+
+    public void setActions(final java.util.List<com.commercetools.api.models.category.CategoryUpdateAction> actions) {
+        this.actions = actions;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         CategoryUpdateImpl that = (CategoryUpdateImpl) o;
-    
-        return new EqualsBuilder()
-                .append(version, that.version)
-                .append(actions, that.actions)
-                .isEquals();
+
+        return new EqualsBuilder().append(version, that.version).append(actions, that.actions).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(version)
-            .append(actions)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(version).append(actions).toHashCode();
     }
 
 }

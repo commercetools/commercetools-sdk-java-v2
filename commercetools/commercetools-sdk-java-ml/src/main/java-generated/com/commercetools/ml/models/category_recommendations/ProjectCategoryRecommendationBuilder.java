@@ -1,54 +1,50 @@
+
 package com.commercetools.ml.models.category_recommendations;
 
-import com.commercetools.ml.models.common.CategoryReference;
-import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendation;
+import com.commercetools.ml.models.common.CategoryReference;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProjectCategoryRecommendationBuilder {
 
-    
     private com.commercetools.ml.models.common.CategoryReference category;
-    
-    
+
     private Double confidence;
-    
-    
+
     private String path;
 
-    public ProjectCategoryRecommendationBuilder category( final com.commercetools.ml.models.common.CategoryReference category) {
+    public ProjectCategoryRecommendationBuilder category(
+            final com.commercetools.ml.models.common.CategoryReference category) {
         this.category = category;
         return this;
     }
-    
-    public ProjectCategoryRecommendationBuilder confidence( final Double confidence) {
+
+    public ProjectCategoryRecommendationBuilder confidence(final Double confidence) {
         this.confidence = confidence;
         return this;
     }
-    
-    public ProjectCategoryRecommendationBuilder path( final String path) {
+
+    public ProjectCategoryRecommendationBuilder path(final String path) {
         this.path = path;
         return this;
     }
 
-    
-    public com.commercetools.ml.models.common.CategoryReference getCategory(){
+    public com.commercetools.ml.models.common.CategoryReference getCategory() {
         return this.category;
     }
-    
-    
-    public Double getConfidence(){
+
+    public Double getConfidence() {
         return this.confidence;
     }
-    
-    
-    public String getPath(){
+
+    public String getPath() {
         return this.path;
     }
 

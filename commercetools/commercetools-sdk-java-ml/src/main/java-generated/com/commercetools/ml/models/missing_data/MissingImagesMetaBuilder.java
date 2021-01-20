@@ -1,55 +1,52 @@
+
 package com.commercetools.ml.models.missing_data;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.ml.models.missing_data.MissingImagesMeta;
 import com.commercetools.ml.models.missing_data.MissingImagesProductLevel;
 import com.commercetools.ml.models.missing_data.MissingImagesVariantLevel;
-import com.commercetools.ml.models.missing_data.MissingImagesMeta;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingImagesMetaBuilder {
 
-    
     private com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel;
-    
-    
+
     private com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel;
-    
-    
+
     private Long threshold;
 
-    public MissingImagesMetaBuilder productLevel( final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel) {
+    public MissingImagesMetaBuilder productLevel(
+            final com.commercetools.ml.models.missing_data.MissingImagesProductLevel productLevel) {
         this.productLevel = productLevel;
         return this;
     }
-    
-    public MissingImagesMetaBuilder variantLevel( final com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel) {
+
+    public MissingImagesMetaBuilder variantLevel(
+            final com.commercetools.ml.models.missing_data.MissingImagesVariantLevel variantLevel) {
         this.variantLevel = variantLevel;
         return this;
     }
-    
-    public MissingImagesMetaBuilder threshold( final Long threshold) {
+
+    public MissingImagesMetaBuilder threshold(final Long threshold) {
         this.threshold = threshold;
         return this;
     }
 
-    
-    public com.commercetools.ml.models.missing_data.MissingImagesProductLevel getProductLevel(){
+    public com.commercetools.ml.models.missing_data.MissingImagesProductLevel getProductLevel() {
         return this.productLevel;
     }
-    
-    
-    public com.commercetools.ml.models.missing_data.MissingImagesVariantLevel getVariantLevel(){
+
+    public com.commercetools.ml.models.missing_data.MissingImagesVariantLevel getVariantLevel() {
         return this.variantLevel;
     }
-    
-    
-    public Long getThreshold(){
+
+    public Long getThreshold() {
         return this.threshold;
     }
 

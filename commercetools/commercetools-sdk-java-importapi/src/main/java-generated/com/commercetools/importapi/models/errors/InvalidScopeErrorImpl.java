@@ -1,32 +1,32 @@
+
 package com.commercetools.importapi.models.errors;
 
-import com.commercetools.importapi.models.errors.ErrorObject;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
 
 /**
 *  <p>The requested scope is invalid, unknown, malformed, or exceeds the scope granted by the resource owner.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InvalidScopeErrorImpl implements InvalidScopeError {
 
     private String code;
-    
+
     private String message;
 
     @JsonCreator
@@ -34,46 +34,42 @@ public final class InvalidScopeErrorImpl implements InvalidScopeError {
         this.message = message;
         this.code = "invalid_scope";
     }
+
     public InvalidScopeErrorImpl() {
         this.code = "invalid_scope";
     }
 
-    
-    public String getCode(){
+    public String getCode() {
         return this.code;
     }
-    
+
     /**
     *  <p>The error's description.</p>
     */
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
 
-    public void setMessage(final String message){
+    public void setMessage(final String message) {
         this.message = message;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         InvalidScopeErrorImpl that = (InvalidScopeErrorImpl) o;
-    
-        return new EqualsBuilder()
-                .append(code, that.code)
-                .append(message, that.message)
-                .isEquals();
+
+        return new EqualsBuilder().append(code, that.code).append(message, that.message).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(code)
-            .append(message)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).toHashCode();
     }
 
 }

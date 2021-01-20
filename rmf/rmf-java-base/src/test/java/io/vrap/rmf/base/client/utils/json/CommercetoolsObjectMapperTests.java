@@ -1,11 +1,13 @@
-package io.vrap.rmf.base.client.utils.json;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import org.junit.Assert;
-import org.junit.Test;
+package io.vrap.rmf.base.client.utils.json;
 
 import java.io.IOException;
 import java.time.*;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+
+import org.junit.Assert;
+import org.junit.Test;
 
 public class CommercetoolsObjectMapperTests {
 

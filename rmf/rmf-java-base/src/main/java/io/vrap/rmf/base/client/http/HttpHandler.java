@@ -1,8 +1,9 @@
+
 package io.vrap.rmf.base.client.http;
 
-import io.vrap.rmf.base.client.*;
-
 import java.util.concurrent.CompletableFuture;
+
+import io.vrap.rmf.base.client.*;
 
 public class HttpHandler extends AutoCloseableService {
     private final VrapHttpClient httpClient;

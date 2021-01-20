@@ -1,25 +1,25 @@
+
 package com.commercetools.api.models.custom_object;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.custom_object.CustomObjectDraftImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.custom_object.CustomObjectDraftImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomObjectDraftImpl.class)
-public interface CustomObjectDraft  {
+public interface CustomObjectDraft {
 
     /**
     *  <p>A namespace to group custom objects.</p>
@@ -27,33 +27,32 @@ public interface CustomObjectDraft  {
     @NotNull
     @JsonProperty("container")
     public String getContainer();
+
     /**
     *  <p>A user-defined key that is unique within the given container.</p>
     */
     @NotNull
     @JsonProperty("key")
     public String getKey();
-    
+
     @NotNull
     @JsonProperty("value")
     public JsonNode getValue();
-    
-    
+
     @JsonProperty("version")
     public Long getVersion();
 
     public void setContainer(final String container);
-    
+
     public void setKey(final String key);
-    
+
     public void setValue(final JsonNode value);
-    
+
     public void setVersion(final Long version);
 
-    public static CustomObjectDraft of(){
+    public static CustomObjectDraft of() {
         return new CustomObjectDraftImpl();
     }
-    
 
     public static CustomObjectDraft of(final CustomObjectDraft template) {
         CustomObjectDraftImpl instance = new CustomObjectDraftImpl();
@@ -64,14 +63,13 @@ public interface CustomObjectDraft  {
         return instance;
     }
 
-    public static CustomObjectDraftBuilder builder(){
+    public static CustomObjectDraftBuilder builder() {
         return CustomObjectDraftBuilder.of();
     }
-    
-    public static CustomObjectDraftBuilder builder(final CustomObjectDraft template){
+
+    public static CustomObjectDraftBuilder builder(final CustomObjectDraft template) {
         return CustomObjectDraftBuilder.of(template);
     }
-    
 
     default <T> T withCustomObjectDraft(Function<CustomObjectDraft, T> helper) {
         return helper.apply(this);

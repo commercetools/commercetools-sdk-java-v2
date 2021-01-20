@@ -1,54 +1,51 @@
+
 package com.commercetools.importapi.models.common;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.AssetDimensions;
 import com.commercetools.importapi.models.common.Image;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImageBuilder {
 
-    
     private String url;
-    
-    
+
     private com.commercetools.importapi.models.common.AssetDimensions dimensions;
-    
+
     @Nullable
     private String label;
 
-    public ImageBuilder url( final String url) {
+    public ImageBuilder url(final String url) {
         this.url = url;
         return this;
     }
-    
-    public ImageBuilder dimensions( final com.commercetools.importapi.models.common.AssetDimensions dimensions) {
+
+    public ImageBuilder dimensions(final com.commercetools.importapi.models.common.AssetDimensions dimensions) {
         this.dimensions = dimensions;
         return this;
     }
-    
+
     public ImageBuilder label(@Nullable final String label) {
         this.label = label;
         return this;
     }
 
-    
-    public String getUrl(){
+    public String getUrl() {
         return this.url;
     }
-    
-    
-    public com.commercetools.importapi.models.common.AssetDimensions getDimensions(){
+
+    public com.commercetools.importapi.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
-    
+
     @Nullable
-    public String getLabel(){
+    public String getLabel() {
         return this.label;
     }
 

@@ -1,56 +1,53 @@
+
 package com.commercetools.api.models.shipping_method;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.shipping_method.CartClassificationTier;
 import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.api.models.shipping_method.ShippingRateTierType;
-import com.commercetools.api.models.shipping_method.CartClassificationTier;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartClassificationTierBuilder {
 
-    
     private String value;
-    
-    
+
     private com.commercetools.api.models.common.Money price;
-    
+
     @Nullable
     private Boolean isMatching;
 
-    public CartClassificationTierBuilder value( final String value) {
+    public CartClassificationTierBuilder value(final String value) {
         this.value = value;
         return this;
     }
-    
-    public CartClassificationTierBuilder price( final com.commercetools.api.models.common.Money price) {
+
+    public CartClassificationTierBuilder price(final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
-    
+
     public CartClassificationTierBuilder isMatching(@Nullable final Boolean isMatching) {
         this.isMatching = isMatching;
         return this;
     }
 
-    
-    public String getValue(){
+    public String getValue() {
         return this.value;
     }
-    
-    
-    public com.commercetools.api.models.common.Money getPrice(){
+
+    public com.commercetools.api.models.common.Money getPrice() {
         return this.price;
     }
-    
+
     @Nullable
-    public Boolean getIsMatching(){
+    public Boolean getIsMatching() {
         return this.isMatching;
     }
 

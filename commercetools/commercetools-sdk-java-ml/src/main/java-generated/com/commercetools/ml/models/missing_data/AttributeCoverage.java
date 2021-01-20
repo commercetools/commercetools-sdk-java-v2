@@ -1,25 +1,24 @@
+
 package com.commercetools.ml.models.missing_data;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.ml.models.missing_data.AttributeCoverageImpl;
-
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.ml.models.missing_data.AttributeCoverageImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AttributeCoverageImpl.class)
-public interface AttributeCoverage  {
+public interface AttributeCoverage {
 
     /**
     *  <p>The percentage of attributes from the product type defined in the product variant. A value of <code>1.0</code> indicates a product variant contains all attributes defined in the product type.</p>
@@ -27,6 +26,7 @@ public interface AttributeCoverage  {
     @NotNull
     @JsonProperty("names")
     public Double getNames();
+
     /**
     *  <p>Represents the percentage of attributes in the product variant that contain values.</p>
     */
@@ -35,13 +35,12 @@ public interface AttributeCoverage  {
     public Double getValues();
 
     public void setNames(final Double names);
-    
+
     public void setValues(final Double values);
 
-    public static AttributeCoverage of(){
+    public static AttributeCoverage of() {
         return new AttributeCoverageImpl();
     }
-    
 
     public static AttributeCoverage of(final AttributeCoverage template) {
         AttributeCoverageImpl instance = new AttributeCoverageImpl();
@@ -50,14 +49,13 @@ public interface AttributeCoverage  {
         return instance;
     }
 
-    public static AttributeCoverageBuilder builder(){
+    public static AttributeCoverageBuilder builder() {
         return AttributeCoverageBuilder.of();
     }
-    
-    public static AttributeCoverageBuilder builder(final AttributeCoverage template){
+
+    public static AttributeCoverageBuilder builder(final AttributeCoverage template) {
         return AttributeCoverageBuilder.of(template);
     }
-    
 
     default <T> T withAttributeCoverage(Function<AttributeCoverage, T> helper) {
         return helper.apply(this);

@@ -1,74 +1,71 @@
+
 package com.commercetools.importapi.models.orders;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
 import com.commercetools.importapi.models.common.Money;
+import com.commercetools.importapi.models.orders.CartClassificationTier;
 import com.commercetools.importapi.models.orders.ShippingRatePriceTier;
 import com.commercetools.importapi.models.orders.ShippingRateTierType;
-import com.commercetools.importapi.models.orders.CartClassificationTier;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartClassificationTierBuilder {
 
-    
     private String value;
-    
-    
+
     private com.commercetools.importapi.models.common.Money price;
-    
-    
+
     private java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers;
-    
+
     @Nullable
     private Boolean isMatching;
 
-    public CartClassificationTierBuilder value( final String value) {
+    public CartClassificationTierBuilder value(final String value) {
         this.value = value;
         return this;
     }
-    
-    public CartClassificationTierBuilder price( final com.commercetools.importapi.models.common.Money price) {
+
+    public CartClassificationTierBuilder price(final com.commercetools.importapi.models.common.Money price) {
         this.price = price;
         return this;
     }
-    
-    public CartClassificationTierBuilder tiers( final com.commercetools.importapi.models.orders.ShippingRatePriceTier ...tiers) {
+
+    public CartClassificationTierBuilder tiers(
+            final com.commercetools.importapi.models.orders.ShippingRatePriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
-    
-    public CartClassificationTierBuilder tiers( final java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers) {
+
+    public CartClassificationTierBuilder tiers(
+            final java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers) {
         this.tiers = tiers;
         return this;
     }
-    
+
     public CartClassificationTierBuilder isMatching(@Nullable final Boolean isMatching) {
         this.isMatching = isMatching;
         return this;
     }
 
-    
-    public String getValue(){
+    public String getValue() {
         return this.value;
     }
-    
-    
-    public com.commercetools.importapi.models.common.Money getPrice(){
+
+    public com.commercetools.importapi.models.common.Money getPrice() {
         return this.price;
     }
-    
-    
-    public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers(){
+
+    public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {
         return this.tiers;
     }
-    
+
     @Nullable
-    public Boolean getIsMatching(){
+    public Boolean getIsMatching() {
         return this.isMatching;
     }
 

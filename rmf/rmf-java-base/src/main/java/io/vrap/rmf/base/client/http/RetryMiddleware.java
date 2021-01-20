@@ -1,14 +1,7 @@
+
 package io.vrap.rmf.base.client.http;
 
-import io.vrap.rmf.base.client.ApiHttpException;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.ClientFactory;
-import net.jodah.failsafe.Failsafe;
-import net.jodah.failsafe.FailsafeExecutor;
-import net.jodah.failsafe.RetryPolicy;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static java.util.Collections.singletonList;
 
 import java.time.temporal.ChronoUnit;
 import java.util.List;
@@ -17,7 +10,17 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 
-import static java.util.Collections.singletonList;
+import net.jodah.failsafe.Failsafe;
+import net.jodah.failsafe.FailsafeExecutor;
+import net.jodah.failsafe.RetryPolicy;
+
+import io.vrap.rmf.base.client.ApiHttpException;
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.ClientFactory;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RetryMiddleware implements Middleware, AutoCloseable {
     @Deprecated
@@ -38,23 +41,19 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
         this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
     }
 
-
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay) {
         this(maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
     }
 
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, List<Integer> statusCodes) {
-        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = new RetryPolicy<ApiHttpResponse<byte[]>>()
-                .handleIf((response, throwable) -> {
-                    if (throwable instanceof ApiHttpException) {
-                        return statusCodes.contains(((ApiHttpException)throwable).getStatusCode());
-                    }
-                    return statusCodes.contains(response.getStatusCode());
-                })
-                .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
-                .withJitter(0.25)
-                .onRetry(event -> logger.info("Retry #" + event.getAttemptCount()))
-                .withMaxRetries(maxRetries);
+        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = new RetryPolicy<ApiHttpResponse<byte[]>>().handleIf(
+            (response, throwable) -> {
+                if (throwable instanceof ApiHttpException) {
+                    return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
+                }
+                return statusCodes.contains(response.getStatusCode());
+            }).withBackoff(delay, maxDelay, ChronoUnit.MILLIS).withJitter(0.25).onRetry(
+                event -> logger.info("Retry #" + event.getAttemptCount())).withMaxRetries(maxRetries);
         this.failsafeExecutor = Failsafe.with(retryPolicy);
     }
 
@@ -86,12 +85,14 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
      * @deprecated max parallel requests are limited by underlying HTTP client
      */
     @Deprecated
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay, List<Integer> statusCodes) {
+    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final long delay, final long maxDelay,
+            List<Integer> statusCodes) {
         this(maxRetries, delay, maxDelay, statusCodes);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request, final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
+    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
+            final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         return failsafeExecutor.getStageAsync(() -> next.apply(request));
     }
 

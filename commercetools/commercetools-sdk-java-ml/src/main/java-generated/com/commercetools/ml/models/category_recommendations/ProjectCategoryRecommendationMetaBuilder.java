@@ -1,59 +1,58 @@
+
 package com.commercetools.ml.models.category_recommendations;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProjectCategoryRecommendationMetaBuilder {
 
     @Nullable
     private String productName;
-    
+
     @Nullable
     private String productImageUrl;
-    
-    
+
     private java.util.List<String> generalCategoryNames;
 
     public ProjectCategoryRecommendationMetaBuilder productName(@Nullable final String productName) {
         this.productName = productName;
         return this;
     }
-    
+
     public ProjectCategoryRecommendationMetaBuilder productImageUrl(@Nullable final String productImageUrl) {
         this.productImageUrl = productImageUrl;
         return this;
     }
-    
-    public ProjectCategoryRecommendationMetaBuilder generalCategoryNames( final String ...generalCategoryNames) {
+
+    public ProjectCategoryRecommendationMetaBuilder generalCategoryNames(final String... generalCategoryNames) {
         this.generalCategoryNames = new ArrayList<>(Arrays.asList(generalCategoryNames));
         return this;
     }
-    
-    public ProjectCategoryRecommendationMetaBuilder generalCategoryNames( final java.util.List<String> generalCategoryNames) {
+
+    public ProjectCategoryRecommendationMetaBuilder generalCategoryNames(
+            final java.util.List<String> generalCategoryNames) {
         this.generalCategoryNames = generalCategoryNames;
         return this;
     }
 
     @Nullable
-    public String getProductName(){
+    public String getProductName() {
         return this.productName;
     }
-    
+
     @Nullable
-    public String getProductImageUrl(){
+    public String getProductImageUrl() {
         return this.productImageUrl;
     }
-    
-    
-    public java.util.List<String> getGeneralCategoryNames(){
+
+    public java.util.List<String> getGeneralCategoryNames() {
         return this.generalCategoryNames;
     }
 

@@ -1,17 +1,17 @@
+
 package com.commercetools.api.models.product_discount;
 
-import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.product_discount.ProductDiscountSetValidUntilAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.product_discount.ProductDiscountSetValidUntilAction;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductDiscountSetValidUntilActionBuilder {
 
     @Nullable
@@ -23,7 +23,7 @@ public final class ProductDiscountSetValidUntilActionBuilder {
     }
 
     @Nullable
-    public java.time.ZonedDateTime getValidUntil(){
+    public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
 

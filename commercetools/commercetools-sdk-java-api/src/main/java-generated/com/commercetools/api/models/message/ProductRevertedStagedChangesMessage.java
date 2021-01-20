@@ -1,39 +1,38 @@
+
 package com.commercetools.api.models.message;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.message.ProductRevertedStagedChangesMessageImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductRevertedStagedChangesMessageImpl.class)
 public interface ProductRevertedStagedChangesMessage extends Message {
 
-    
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
 
     @JsonIgnore
-    public void setRemovedImageUrls(final String ...removedImageUrls);
+    public void setRemovedImageUrls(final String... removedImageUrls);
+
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-    public static ProductRevertedStagedChangesMessage of(){
+    public static ProductRevertedStagedChangesMessage of() {
         return new ProductRevertedStagedChangesMessageImpl();
     }
-    
 
     public static ProductRevertedStagedChangesMessage of(final ProductRevertedStagedChangesMessage template) {
         ProductRevertedStagedChangesMessageImpl instance = new ProductRevertedStagedChangesMessageImpl();
@@ -51,14 +50,14 @@ public interface ProductRevertedStagedChangesMessage extends Message {
         return instance;
     }
 
-    public static ProductRevertedStagedChangesMessageBuilder builder(){
+    public static ProductRevertedStagedChangesMessageBuilder builder() {
         return ProductRevertedStagedChangesMessageBuilder.of();
     }
-    
-    public static ProductRevertedStagedChangesMessageBuilder builder(final ProductRevertedStagedChangesMessage template){
+
+    public static ProductRevertedStagedChangesMessageBuilder builder(
+            final ProductRevertedStagedChangesMessage template) {
         return ProductRevertedStagedChangesMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductRevertedStagedChangesMessage(Function<ProductRevertedStagedChangesMessage, T> helper) {
         return helper.apply(this);

@@ -1,28 +1,28 @@
+
 package com.commercetools.api.models.category;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.category.CategorySetAssetCustomFieldAction;
 import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.category.CategorySetAssetCustomFieldAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategorySetAssetCustomFieldActionBuilder {
 
     @Nullable
     private String assetId;
-    
+
     @Nullable
     private String assetKey;
-    
-    
+
     private String name;
-    
+
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode value;
 
@@ -30,39 +30,39 @@ public final class CategorySetAssetCustomFieldActionBuilder {
         this.assetId = assetId;
         return this;
     }
-    
+
     public CategorySetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-    
-    public CategorySetAssetCustomFieldActionBuilder name( final String name) {
+
+    public CategorySetAssetCustomFieldActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    public CategorySetAssetCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
+
+    public CategorySetAssetCustomFieldActionBuilder value(
+            @Nullable final com.fasterxml.jackson.databind.JsonNode value) {
         this.value = value;
         return this;
     }
 
     @Nullable
-    public String getAssetId(){
+    public String getAssetId() {
         return this.assetId;
     }
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
+
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getValue(){
+    public com.fasterxml.jackson.databind.JsonNode getValue() {
         return this.value;
     }
 

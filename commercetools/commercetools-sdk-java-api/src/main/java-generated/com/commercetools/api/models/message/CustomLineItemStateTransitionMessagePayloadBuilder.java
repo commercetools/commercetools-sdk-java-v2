@@ -1,94 +1,89 @@
+
 package com.commercetools.api.models.message;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload;
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.state.StateReference;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.message.CustomLineItemStateTransitionMessagePayload;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomLineItemStateTransitionMessagePayloadBuilder {
 
-    
     private String customLineItemId;
-    
-    
+
     private java.time.ZonedDateTime transitionDate;
-    
-    
+
     private Long quantity;
-    
-    
+
     private com.commercetools.api.models.state.StateReference fromState;
-    
-    
+
     private com.commercetools.api.models.state.StateReference toState;
 
-    public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId( final String customLineItemId) {
+    public CustomLineItemStateTransitionMessagePayloadBuilder customLineItemId(final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-    
-    public CustomLineItemStateTransitionMessagePayloadBuilder transitionDate( final java.time.ZonedDateTime transitionDate) {
+
+    public CustomLineItemStateTransitionMessagePayloadBuilder transitionDate(
+            final java.time.ZonedDateTime transitionDate) {
         this.transitionDate = transitionDate;
         return this;
     }
-    
-    public CustomLineItemStateTransitionMessagePayloadBuilder quantity( final Long quantity) {
+
+    public CustomLineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-    
-    public CustomLineItemStateTransitionMessagePayloadBuilder fromState( final com.commercetools.api.models.state.StateReference fromState) {
+
+    public CustomLineItemStateTransitionMessagePayloadBuilder fromState(
+            final com.commercetools.api.models.state.StateReference fromState) {
         this.fromState = fromState;
         return this;
     }
-    
-    public CustomLineItemStateTransitionMessagePayloadBuilder toState( final com.commercetools.api.models.state.StateReference toState) {
+
+    public CustomLineItemStateTransitionMessagePayloadBuilder toState(
+            final com.commercetools.api.models.state.StateReference toState) {
         this.toState = toState;
         return this;
     }
 
-    
-    public String getCustomLineItemId(){
+    public String getCustomLineItemId() {
         return this.customLineItemId;
     }
-    
-    
-    public java.time.ZonedDateTime getTransitionDate(){
+
+    public java.time.ZonedDateTime getTransitionDate() {
         return this.transitionDate;
     }
-    
-    
-    public Long getQuantity(){
+
+    public Long getQuantity() {
         return this.quantity;
     }
-    
-    
-    public com.commercetools.api.models.state.StateReference getFromState(){
+
+    public com.commercetools.api.models.state.StateReference getFromState() {
         return this.fromState;
     }
-    
-    
-    public com.commercetools.api.models.state.StateReference getToState(){
+
+    public com.commercetools.api.models.state.StateReference getToState() {
         return this.toState;
     }
 
     public CustomLineItemStateTransitionMessagePayload build() {
-        return new CustomLineItemStateTransitionMessagePayloadImpl(customLineItemId, transitionDate, quantity, fromState, toState);
+        return new CustomLineItemStateTransitionMessagePayloadImpl(customLineItemId, transitionDate, quantity,
+            fromState, toState);
     }
 
     public static CustomLineItemStateTransitionMessagePayloadBuilder of() {
         return new CustomLineItemStateTransitionMessagePayloadBuilder();
     }
 
-    public static CustomLineItemStateTransitionMessagePayloadBuilder of(final CustomLineItemStateTransitionMessagePayload template) {
+    public static CustomLineItemStateTransitionMessagePayloadBuilder of(
+            final CustomLineItemStateTransitionMessagePayload template) {
         CustomLineItemStateTransitionMessagePayloadBuilder builder = new CustomLineItemStateTransitionMessagePayloadBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
         builder.transitionDate = template.getTransitionDate();

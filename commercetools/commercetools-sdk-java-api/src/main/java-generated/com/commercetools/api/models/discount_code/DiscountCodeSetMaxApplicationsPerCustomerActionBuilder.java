@@ -1,28 +1,30 @@
+
 package com.commercetools.api.models.discount_code;
 
-import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder {
 
     @Nullable
     private Long maxApplicationsPerCustomer;
 
-    public DiscountCodeSetMaxApplicationsPerCustomerActionBuilder maxApplicationsPerCustomer(@Nullable final Long maxApplicationsPerCustomer) {
+    public DiscountCodeSetMaxApplicationsPerCustomerActionBuilder maxApplicationsPerCustomer(
+            @Nullable final Long maxApplicationsPerCustomer) {
         this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
         return this;
     }
 
     @Nullable
-    public Long getMaxApplicationsPerCustomer(){
+    public Long getMaxApplicationsPerCustomer() {
         return this.maxApplicationsPerCustomer;
     }
 
@@ -34,7 +36,8 @@ public final class DiscountCodeSetMaxApplicationsPerCustomerActionBuilder {
         return new DiscountCodeSetMaxApplicationsPerCustomerActionBuilder();
     }
 
-    public static DiscountCodeSetMaxApplicationsPerCustomerActionBuilder of(final DiscountCodeSetMaxApplicationsPerCustomerAction template) {
+    public static DiscountCodeSetMaxApplicationsPerCustomerActionBuilder of(
+            final DiscountCodeSetMaxApplicationsPerCustomerAction template) {
         DiscountCodeSetMaxApplicationsPerCustomerActionBuilder builder = new DiscountCodeSetMaxApplicationsPerCustomerActionBuilder();
         builder.maxApplicationsPerCustomer = template.getMaxApplicationsPerCustomer();
         return builder;

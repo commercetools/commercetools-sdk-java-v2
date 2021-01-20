@@ -1,49 +1,45 @@
+
 package com.commercetools.api.models.error;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.MissingTaxRateForCountryErrorImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MissingTaxRateForCountryErrorImpl.class)
 public interface MissingTaxRateForCountryError extends ErrorObject {
 
-    
     @NotNull
     @JsonProperty("taxCategoryId")
     public String getTaxCategoryId();
-    
-    
+
     @JsonProperty("country")
     public String getCountry();
-    
-    
+
     @JsonProperty("state")
     public String getState();
 
     public void setTaxCategoryId(final String taxCategoryId);
-    
+
     public void setCountry(final String country);
-    
+
     public void setState(final String state);
 
-    public static MissingTaxRateForCountryError of(){
+    public static MissingTaxRateForCountryError of() {
         return new MissingTaxRateForCountryErrorImpl();
     }
-    
 
     public static MissingTaxRateForCountryError of(final MissingTaxRateForCountryError template) {
         MissingTaxRateForCountryErrorImpl instance = new MissingTaxRateForCountryErrorImpl();
@@ -54,14 +50,13 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
         return instance;
     }
 
-    public static MissingTaxRateForCountryErrorBuilder builder(){
+    public static MissingTaxRateForCountryErrorBuilder builder() {
         return MissingTaxRateForCountryErrorBuilder.of();
     }
-    
-    public static MissingTaxRateForCountryErrorBuilder builder(final MissingTaxRateForCountryError template){
+
+    public static MissingTaxRateForCountryErrorBuilder builder(final MissingTaxRateForCountryError template) {
         return MissingTaxRateForCountryErrorBuilder.of(template);
     }
-    
 
     default <T> T withMissingTaxRateForCountryError(Function<MissingTaxRateForCountryError, T> helper) {
         return helper.apply(this);

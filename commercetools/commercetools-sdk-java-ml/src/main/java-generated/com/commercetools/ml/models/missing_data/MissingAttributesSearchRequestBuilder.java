@@ -1,51 +1,51 @@
+
 package com.commercetools.ml.models.missing_data;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.missing_data.MissingAttributesSearchRequest;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingAttributesSearchRequestBuilder {
 
     @Nullable
     private Integer limit;
-    
+
     @Nullable
     private Integer offset;
-    
+
     @Nullable
     private Boolean staged;
-    
+
     @Nullable
     private Integer productSetLimit;
-    
+
     @Nullable
     private Boolean includeVariants;
-    
+
     @Nullable
     private Double coverageMin;
-    
+
     @Nullable
     private Double coverageMax;
-    
+
     @Nullable
     private String sortBy;
-    
+
     @Nullable
     private Boolean showMissingAttributeNames;
-    
+
     @Nullable
     private java.util.List<String> productIds;
-    
+
     @Nullable
     private java.util.List<String> productTypeIds;
-    
+
     @Nullable
     private String attributeName;
 
@@ -53,134 +53,136 @@ public final class MissingAttributesSearchRequestBuilder {
         this.limit = limit;
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder offset(@Nullable final Integer offset) {
         this.offset = offset;
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder productSetLimit(@Nullable final Integer productSetLimit) {
         this.productSetLimit = productSetLimit;
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder includeVariants(@Nullable final Boolean includeVariants) {
         this.includeVariants = includeVariants;
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder coverageMin(@Nullable final Double coverageMin) {
         this.coverageMin = coverageMin;
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder coverageMax(@Nullable final Double coverageMax) {
         this.coverageMax = coverageMax;
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder sortBy(@Nullable final String sortBy) {
         this.sortBy = sortBy;
         return this;
     }
-    
-    public MissingAttributesSearchRequestBuilder showMissingAttributeNames(@Nullable final Boolean showMissingAttributeNames) {
+
+    public MissingAttributesSearchRequestBuilder showMissingAttributeNames(
+            @Nullable final Boolean showMissingAttributeNames) {
         this.showMissingAttributeNames = showMissingAttributeNames;
         return this;
     }
-    
-    public MissingAttributesSearchRequestBuilder productIds(@Nullable final String ...productIds) {
+
+    public MissingAttributesSearchRequestBuilder productIds(@Nullable final String... productIds) {
         this.productIds = new ArrayList<>(Arrays.asList(productIds));
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
         this.productIds = productIds;
         return this;
     }
-    
-    public MissingAttributesSearchRequestBuilder productTypeIds(@Nullable final String ...productTypeIds) {
+
+    public MissingAttributesSearchRequestBuilder productTypeIds(@Nullable final String... productTypeIds) {
         this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
         this.productTypeIds = productTypeIds;
         return this;
     }
-    
+
     public MissingAttributesSearchRequestBuilder attributeName(@Nullable final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
 
     @Nullable
-    public Integer getLimit(){
+    public Integer getLimit() {
         return this.limit;
     }
-    
+
     @Nullable
-    public Integer getOffset(){
+    public Integer getOffset() {
         return this.offset;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
-    
+
     @Nullable
-    public Integer getProductSetLimit(){
+    public Integer getProductSetLimit() {
         return this.productSetLimit;
     }
-    
+
     @Nullable
-    public Boolean getIncludeVariants(){
+    public Boolean getIncludeVariants() {
         return this.includeVariants;
     }
-    
+
     @Nullable
-    public Double getCoverageMin(){
+    public Double getCoverageMin() {
         return this.coverageMin;
     }
-    
+
     @Nullable
-    public Double getCoverageMax(){
+    public Double getCoverageMax() {
         return this.coverageMax;
     }
-    
+
     @Nullable
-    public String getSortBy(){
+    public String getSortBy() {
         return this.sortBy;
     }
-    
+
     @Nullable
-    public Boolean getShowMissingAttributeNames(){
+    public Boolean getShowMissingAttributeNames() {
         return this.showMissingAttributeNames;
     }
-    
+
     @Nullable
-    public java.util.List<String> getProductIds(){
+    public java.util.List<String> getProductIds() {
         return this.productIds;
     }
-    
+
     @Nullable
-    public java.util.List<String> getProductTypeIds(){
+    public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }
-    
+
     @Nullable
-    public String getAttributeName(){
+    public String getAttributeName() {
         return this.attributeName;
     }
 
     public MissingAttributesSearchRequest build() {
-        return new MissingAttributesSearchRequestImpl(limit, offset, staged, productSetLimit, includeVariants, coverageMin, coverageMax, sortBy, showMissingAttributeNames, productIds, productTypeIds, attributeName);
+        return new MissingAttributesSearchRequestImpl(limit, offset, staged, productSetLimit, includeVariants,
+            coverageMin, coverageMax, sortBy, showMissingAttributeNames, productIds, productTypeIds, attributeName);
     }
 
     public static MissingAttributesSearchRequestBuilder of() {

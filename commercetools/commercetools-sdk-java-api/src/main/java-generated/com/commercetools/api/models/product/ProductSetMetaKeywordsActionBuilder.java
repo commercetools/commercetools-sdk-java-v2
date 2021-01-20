@@ -1,42 +1,44 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductSetMetaKeywordsAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductSetMetaKeywordsAction;
+import com.commercetools.api.models.product.ProductUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductSetMetaKeywordsActionBuilder {
 
     @Nullable
     private com.commercetools.api.models.common.LocalizedString metaKeywords;
-    
+
     @Nullable
     private Boolean staged;
 
-    public ProductSetMetaKeywordsActionBuilder metaKeywords(@Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+    public ProductSetMetaKeywordsActionBuilder metaKeywords(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
         return this;
     }
-    
+
     public ProductSetMetaKeywordsActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getMetaKeywords(){
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

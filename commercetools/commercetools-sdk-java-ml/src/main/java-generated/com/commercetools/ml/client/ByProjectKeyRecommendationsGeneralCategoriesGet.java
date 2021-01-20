@@ -1,42 +1,35 @@
+
 package com.commercetools.ml.client;
 
-import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
-import java.io.InputStream;
 import java.io.IOException;
-
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.nio.file.Files;
-
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.util.stream.Collectors;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
-
-
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.utils.Utils;
+import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 /**
 *  <p>This endpoint takes arbitrary product names or image URLs and generates recommendations from a general set of categories, which cover a broad range of industries. The full list of supported categories can be found <a href="https://docs.commercetools.com/category_recommendations_supported_categories.txt">here</a>. These are independent of the categories that are actually defined in your project. The main  purpose of this API is to provide a quick way to test the behavior of the category recommendations engine for different names and images. In contrast to the <a href="https://docs.commercetools.com/http-api-projects-categoryrecommendations#project-specific-category-recommendations">project-specific endpoint</a>, this endpoint does not have <a href="https://docs.commercetools.com/http-api-projects-categoryrecommendations#activating-the-api">activation criteria</a> and is enabled for all projects.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<ByProjectKeyRecommendationsGeneralCategoriesGet, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> {
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyRecommendationsGeneralCategoriesGet extends
+        ApiMethod<ByProjectKeyRecommendationsGeneralCategoriesGet, com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> {
 
-    
     private String projectKey;
-    
 
     public ByProjectKeyRecommendationsGeneralCategoriesGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
@@ -52,103 +45,107 @@ public class ByProjectKeyRecommendationsGeneralCategoriesGet extends ApiMethod<B
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/recommendations/general-categories", this.projectKey);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        
+
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> executeBlocking(Duration timeout){
+    public ApiHttpResponse<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse> executeBlocking(
+            Duration timeout) {
         return blockingWait(execute(), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse>> execute() {
+        return apiHttpClient().execute(this.createHttpRequest(),
+            com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
 
     public List<String> getProductImageUrl() {
         return this.getQueryParam("productImageUrl");
     }
-    
+
     public List<String> getProductName() {
         return this.getQueryParam("productName");
     }
-    
+
     public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
-    
+
     public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
-    
+
     public List<String> getConfidenceMin() {
         return this.getQueryParam("confidenceMin");
     }
-    
+
     public List<String> getConfidenceMax() {
         return this.getQueryParam("confidenceMax");
     }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final String productImageUrl){
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductImageUrl(final String productImageUrl) {
         return copy().withQueryParam("productImageUrl", productImageUrl);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(final String productImageUrl){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductImageUrl(final String productImageUrl) {
         return copy().addQueryParam("productImageUrl", productImageUrl);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final String productName){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withProductName(final String productName) {
         return copy().withQueryParam("productName", productName);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final String productName){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addProductName(final String productName) {
         return copy().addQueryParam("productName", productName);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Integer limit){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withLimit(final Integer limit) {
         return copy().withQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Integer limit){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addLimit(final Integer limit) {
         return copy().addQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Integer offset){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withOffset(final Integer offset) {
         return copy().withQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Integer offset){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addOffset(final Integer offset) {
         return copy().addQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final Double confidenceMin){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMin(final Double confidenceMin) {
         return copy().withQueryParam("confidenceMin", confidenceMin);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final Double confidenceMin){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMin(final Double confidenceMin) {
         return copy().addQueryParam("confidenceMin", confidenceMin);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Double confidenceMax){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet withConfidenceMax(final Double confidenceMax) {
         return copy().withQueryParam("confidenceMax", confidenceMax);
     }
-    
-    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final Double confidenceMax){
+
+    public ByProjectKeyRecommendationsGeneralCategoriesGet addConfidenceMax(final Double confidenceMax) {
         return copy().addQueryParam("confidenceMax", confidenceMax);
     }
 
-    
     @Override
-    protected ByProjectKeyRecommendationsGeneralCategoriesGet copy()
-    {
+    protected ByProjectKeyRecommendationsGeneralCategoriesGet copy() {
         return new ByProjectKeyRecommendationsGeneralCategoriesGet(this);
     }
 }

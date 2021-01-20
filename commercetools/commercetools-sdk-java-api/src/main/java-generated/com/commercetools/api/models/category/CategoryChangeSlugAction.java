@@ -1,24 +1,24 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.category.CategoryChangeSlugActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.category.CategoryChangeSlugActionImpl;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategoryChangeSlugActionImpl.class)
 public interface CategoryChangeSlugAction extends CategoryUpdateAction {
 
@@ -33,10 +33,9 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
 
     public void setSlug(final LocalizedString slug);
 
-    public static CategoryChangeSlugAction of(){
+    public static CategoryChangeSlugAction of() {
         return new CategoryChangeSlugActionImpl();
     }
-    
 
     public static CategoryChangeSlugAction of(final CategoryChangeSlugAction template) {
         CategoryChangeSlugActionImpl instance = new CategoryChangeSlugActionImpl();
@@ -44,14 +43,13 @@ public interface CategoryChangeSlugAction extends CategoryUpdateAction {
         return instance;
     }
 
-    public static CategoryChangeSlugActionBuilder builder(){
+    public static CategoryChangeSlugActionBuilder builder() {
         return CategoryChangeSlugActionBuilder.of();
     }
-    
-    public static CategoryChangeSlugActionBuilder builder(final CategoryChangeSlugAction template){
+
+    public static CategoryChangeSlugActionBuilder builder(final CategoryChangeSlugAction template) {
         return CategoryChangeSlugActionBuilder.of(template);
     }
-    
 
     default <T> T withCategoryChangeSlugAction(Function<CategoryChangeSlugAction, T> helper) {
         return helper.apply(this);

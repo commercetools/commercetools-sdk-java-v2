@@ -1,42 +1,40 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.payment.TransactionState;
-import com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayload;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayload;
+import com.commercetools.api.models.payment.TransactionState;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PaymentTransactionStateChangedMessagePayloadBuilder {
 
-    
     private String transactionId;
-    
-    
+
     private com.commercetools.api.models.payment.TransactionState state;
 
-    public PaymentTransactionStateChangedMessagePayloadBuilder transactionId( final String transactionId) {
+    public PaymentTransactionStateChangedMessagePayloadBuilder transactionId(final String transactionId) {
         this.transactionId = transactionId;
         return this;
     }
-    
-    public PaymentTransactionStateChangedMessagePayloadBuilder state( final com.commercetools.api.models.payment.TransactionState state) {
+
+    public PaymentTransactionStateChangedMessagePayloadBuilder state(
+            final com.commercetools.api.models.payment.TransactionState state) {
         this.state = state;
         return this;
     }
 
-    
-    public String getTransactionId(){
+    public String getTransactionId() {
         return this.transactionId;
     }
-    
-    
-    public com.commercetools.api.models.payment.TransactionState getState(){
+
+    public com.commercetools.api.models.payment.TransactionState getState() {
         return this.state;
     }
 
@@ -48,7 +46,8 @@ public final class PaymentTransactionStateChangedMessagePayloadBuilder {
         return new PaymentTransactionStateChangedMessagePayloadBuilder();
     }
 
-    public static PaymentTransactionStateChangedMessagePayloadBuilder of(final PaymentTransactionStateChangedMessagePayload template) {
+    public static PaymentTransactionStateChangedMessagePayloadBuilder of(
+            final PaymentTransactionStateChangedMessagePayload template) {
         PaymentTransactionStateChangedMessagePayloadBuilder builder = new PaymentTransactionStateChangedMessagePayloadBuilder();
         builder.transactionId = template.getTransactionId();
         builder.state = template.getState();

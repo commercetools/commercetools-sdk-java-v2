@@ -1,44 +1,42 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.order.OrderState;
-import com.commercetools.api.models.message.OrderStateChangedMessagePayloadImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.OrderStateChangedMessagePayloadImpl;
+import com.commercetools.api.models.order.OrderState;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderStateChangedMessagePayloadImpl.class)
 public interface OrderStateChangedMessagePayload extends MessagePayload {
 
-    
     @NotNull
     @JsonProperty("orderState")
     public OrderState getOrderState();
-    
+
     @NotNull
     @JsonProperty("oldOrderState")
     public OrderState getOldOrderState();
 
     public void setOrderState(final OrderState orderState);
-    
+
     public void setOldOrderState(final OrderState oldOrderState);
 
-    public static OrderStateChangedMessagePayload of(){
+    public static OrderStateChangedMessagePayload of() {
         return new OrderStateChangedMessagePayloadImpl();
     }
-    
 
     public static OrderStateChangedMessagePayload of(final OrderStateChangedMessagePayload template) {
         OrderStateChangedMessagePayloadImpl instance = new OrderStateChangedMessagePayloadImpl();
@@ -47,14 +45,13 @@ public interface OrderStateChangedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    public static OrderStateChangedMessagePayloadBuilder builder(){
+    public static OrderStateChangedMessagePayloadBuilder builder() {
         return OrderStateChangedMessagePayloadBuilder.of();
     }
-    
-    public static OrderStateChangedMessagePayloadBuilder builder(final OrderStateChangedMessagePayload template){
+
+    public static OrderStateChangedMessagePayloadBuilder builder(final OrderStateChangedMessagePayload template) {
         return OrderStateChangedMessagePayloadBuilder.of(template);
     }
-    
 
     default <T> T withOrderStateChangedMessagePayload(Function<OrderStateChangedMessagePayload, T> helper) {
         return helper.apply(this);

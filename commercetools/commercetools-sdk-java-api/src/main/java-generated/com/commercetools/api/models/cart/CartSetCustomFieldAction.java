@@ -1,44 +1,41 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.cart.CartSetCustomFieldActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.cart.CartSetCustomFieldActionImpl;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartSetCustomFieldActionImpl.class)
 public interface CartSetCustomFieldAction extends CartUpdateAction {
 
-    
     @NotNull
     @JsonProperty("name")
     public String getName();
-    
-    
+
     @JsonProperty("value")
     public JsonNode getValue();
 
     public void setName(final String name);
-    
+
     public void setValue(final JsonNode value);
 
-    public static CartSetCustomFieldAction of(){
+    public static CartSetCustomFieldAction of() {
         return new CartSetCustomFieldActionImpl();
     }
-    
 
     public static CartSetCustomFieldAction of(final CartSetCustomFieldAction template) {
         CartSetCustomFieldActionImpl instance = new CartSetCustomFieldActionImpl();
@@ -47,14 +44,13 @@ public interface CartSetCustomFieldAction extends CartUpdateAction {
         return instance;
     }
 
-    public static CartSetCustomFieldActionBuilder builder(){
+    public static CartSetCustomFieldActionBuilder builder() {
         return CartSetCustomFieldActionBuilder.of();
     }
-    
-    public static CartSetCustomFieldActionBuilder builder(final CartSetCustomFieldAction template){
+
+    public static CartSetCustomFieldActionBuilder builder(final CartSetCustomFieldAction template) {
         return CartSetCustomFieldActionBuilder.of(template);
     }
-    
 
     default <T> T withCartSetCustomFieldAction(Function<CartSetCustomFieldAction, T> helper) {
         return helper.apply(this);

@@ -1,34 +1,32 @@
+
 package com.commercetools.importapi.models.customfields;
 
-import com.commercetools.importapi.models.customfields.CustomField;
 import java.time.ZonedDateTime;
-import com.commercetools.importapi.models.customfields.DateTimeSetField;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.DateTimeSetField;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DateTimeSetFieldBuilder {
 
-    
     private java.util.List<java.time.ZonedDateTime> value;
 
-    public DateTimeSetFieldBuilder value( final java.time.ZonedDateTime ...value) {
+    public DateTimeSetFieldBuilder value(final java.time.ZonedDateTime... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
-    
-    public DateTimeSetFieldBuilder value( final java.util.List<java.time.ZonedDateTime> value) {
+
+    public DateTimeSetFieldBuilder value(final java.util.List<java.time.ZonedDateTime> value) {
         this.value = value;
         return this;
     }
 
-    
-    public java.util.List<java.time.ZonedDateTime> getValue(){
+    public java.util.List<java.time.ZonedDateTime> getValue() {
         return this.value;
     }
 

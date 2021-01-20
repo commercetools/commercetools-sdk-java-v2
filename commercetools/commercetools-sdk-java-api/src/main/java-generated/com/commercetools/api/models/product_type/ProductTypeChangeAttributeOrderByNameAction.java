@@ -1,56 +1,57 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionImpl;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeAttributeOrderByNameActionImpl.class)
 public interface ProductTypeChangeAttributeOrderByNameAction extends ProductTypeUpdateAction {
 
-    
     @NotNull
     @JsonProperty("attributeNames")
     public List<String> getAttributeNames();
 
     @JsonIgnore
-    public void setAttributeNames(final String ...attributeNames);
+    public void setAttributeNames(final String... attributeNames);
+
     public void setAttributeNames(final List<String> attributeNames);
 
-    public static ProductTypeChangeAttributeOrderByNameAction of(){
+    public static ProductTypeChangeAttributeOrderByNameAction of() {
         return new ProductTypeChangeAttributeOrderByNameActionImpl();
     }
-    
 
-    public static ProductTypeChangeAttributeOrderByNameAction of(final ProductTypeChangeAttributeOrderByNameAction template) {
+    public static ProductTypeChangeAttributeOrderByNameAction of(
+            final ProductTypeChangeAttributeOrderByNameAction template) {
         ProductTypeChangeAttributeOrderByNameActionImpl instance = new ProductTypeChangeAttributeOrderByNameActionImpl();
         instance.setAttributeNames(template.getAttributeNames());
         return instance;
     }
 
-    public static ProductTypeChangeAttributeOrderByNameActionBuilder builder(){
+    public static ProductTypeChangeAttributeOrderByNameActionBuilder builder() {
         return ProductTypeChangeAttributeOrderByNameActionBuilder.of();
     }
-    
-    public static ProductTypeChangeAttributeOrderByNameActionBuilder builder(final ProductTypeChangeAttributeOrderByNameAction template){
+
+    public static ProductTypeChangeAttributeOrderByNameActionBuilder builder(
+            final ProductTypeChangeAttributeOrderByNameAction template) {
         return ProductTypeChangeAttributeOrderByNameActionBuilder.of(template);
     }
-    
 
-    default <T> T withProductTypeChangeAttributeOrderByNameAction(Function<ProductTypeChangeAttributeOrderByNameAction, T> helper) {
+    default <T> T withProductTypeChangeAttributeOrderByNameAction(
+            Function<ProductTypeChangeAttributeOrderByNameAction, T> helper) {
         return helper.apply(this);
     }
 }

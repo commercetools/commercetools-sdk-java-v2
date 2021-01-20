@@ -1,48 +1,47 @@
+
 package com.commercetools.api.models.order_edit;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.order_edit.OrderEditPreviewSuccess;
 import com.commercetools.api.models.order_edit.OrderEditResult;
 import com.commercetools.api.models.order_edit.StagedOrder;
-import com.commercetools.api.models.order_edit.OrderEditPreviewSuccess;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderEditPreviewSuccessBuilder {
 
-    
     private com.commercetools.api.models.order_edit.StagedOrder preview;
-    
-    
+
     private java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads;
 
-    public OrderEditPreviewSuccessBuilder preview( final com.commercetools.api.models.order_edit.StagedOrder preview) {
+    public OrderEditPreviewSuccessBuilder preview(final com.commercetools.api.models.order_edit.StagedOrder preview) {
         this.preview = preview;
         return this;
     }
-    
-    public OrderEditPreviewSuccessBuilder messagePayloads( final com.commercetools.api.models.message.MessagePayload ...messagePayloads) {
+
+    public OrderEditPreviewSuccessBuilder messagePayloads(
+            final com.commercetools.api.models.message.MessagePayload... messagePayloads) {
         this.messagePayloads = new ArrayList<>(Arrays.asList(messagePayloads));
         return this;
     }
-    
-    public OrderEditPreviewSuccessBuilder messagePayloads( final java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads) {
+
+    public OrderEditPreviewSuccessBuilder messagePayloads(
+            final java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads) {
         this.messagePayloads = messagePayloads;
         return this;
     }
 
-    
-    public com.commercetools.api.models.order_edit.StagedOrder getPreview(){
+    public com.commercetools.api.models.order_edit.StagedOrder getPreview() {
         return this.preview;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.message.MessagePayload> getMessagePayloads(){
+
+    public java.util.List<com.commercetools.api.models.message.MessagePayload> getMessagePayloads() {
         return this.messagePayloads;
     }
 

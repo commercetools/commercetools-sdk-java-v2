@@ -1,8 +1,9 @@
+
 package io.vrap.rmf.base.client.oauth2;
 
-import io.vrap.rmf.base.client.AuthenticationToken;
-
 import java.util.concurrent.CompletableFuture;
+
+import io.vrap.rmf.base.client.AuthenticationToken;
 
 public class StaticTokenSupplier implements TokenSupplier {
 

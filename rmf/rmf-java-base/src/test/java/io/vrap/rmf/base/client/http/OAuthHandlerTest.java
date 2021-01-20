@@ -1,17 +1,18 @@
+
 package io.vrap.rmf.base.client.http;
+
+import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
 import io.vrap.rmf.base.client.oauth2.StaticTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
-import java.util.concurrent.CompletableFuture;
-
 public class OAuthHandlerTest {
     @Test
-    public void testExpiredToken()
-    {
+    public void testExpiredToken() {
         AuthenticationToken expiredToken = new AuthenticationToken();
         expiredToken.setAccessToken("12345");
         expiredToken.setExpiresIn(10L);
@@ -19,7 +20,6 @@ public class OAuthHandlerTest {
         AuthenticationToken notExpiredToken = new AuthenticationToken();
         notExpiredToken.setAccessToken("123456");
         notExpiredToken.setExpiresIn(310L);
-
 
         OAuthHandler handler = new OAuthHandler(new TokenSupplier() {
             private boolean firstCall = true;

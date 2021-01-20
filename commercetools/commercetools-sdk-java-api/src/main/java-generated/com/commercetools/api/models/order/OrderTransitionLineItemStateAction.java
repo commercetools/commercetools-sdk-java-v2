@@ -1,65 +1,62 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.state.StateResourceIdentifier;
+import java.io.IOException;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.order.OrderTransitionLineItemStateActionImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.order.OrderTransitionLineItemStateActionImpl;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderTransitionLineItemStateActionImpl.class)
 public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
 
-    
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-    
+
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
-    
+
     @NotNull
     @Valid
     @JsonProperty("fromState")
     public StateResourceIdentifier getFromState();
-    
+
     @NotNull
     @Valid
     @JsonProperty("toState")
     public StateResourceIdentifier getToState();
-    
-    
+
     @JsonProperty("actualTransitionDate")
     public ZonedDateTime getActualTransitionDate();
 
     public void setLineItemId(final String lineItemId);
-    
+
     public void setQuantity(final Long quantity);
-    
+
     public void setFromState(final StateResourceIdentifier fromState);
-    
+
     public void setToState(final StateResourceIdentifier toState);
-    
+
     public void setActualTransitionDate(final ZonedDateTime actualTransitionDate);
 
-    public static OrderTransitionLineItemStateAction of(){
+    public static OrderTransitionLineItemStateAction of() {
         return new OrderTransitionLineItemStateActionImpl();
     }
-    
 
     public static OrderTransitionLineItemStateAction of(final OrderTransitionLineItemStateAction template) {
         OrderTransitionLineItemStateActionImpl instance = new OrderTransitionLineItemStateActionImpl();
@@ -71,14 +68,13 @@ public interface OrderTransitionLineItemStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    public static OrderTransitionLineItemStateActionBuilder builder(){
+    public static OrderTransitionLineItemStateActionBuilder builder() {
         return OrderTransitionLineItemStateActionBuilder.of();
     }
-    
-    public static OrderTransitionLineItemStateActionBuilder builder(final OrderTransitionLineItemStateAction template){
+
+    public static OrderTransitionLineItemStateActionBuilder builder(final OrderTransitionLineItemStateAction template) {
         return OrderTransitionLineItemStateActionBuilder.of(template);
     }
-    
 
     default <T> T withOrderTransitionLineItemStateAction(Function<OrderTransitionLineItemStateAction, T> helper) {
         return helper.apply(this);

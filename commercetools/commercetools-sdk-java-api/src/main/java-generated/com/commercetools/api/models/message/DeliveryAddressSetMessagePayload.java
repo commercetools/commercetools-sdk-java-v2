@@ -1,50 +1,48 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadImpl;
+import com.commercetools.api.models.message.MessagePayload;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DeliveryAddressSetMessagePayloadImpl.class)
 public interface DeliveryAddressSetMessagePayload extends MessagePayload {
 
-    
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-    
+
     @Valid
     @JsonProperty("address")
     public Address getAddress();
-    
+
     @Valid
     @JsonProperty("oldAddress")
     public Address getOldAddress();
 
     public void setDeliveryId(final String deliveryId);
-    
+
     public void setAddress(final Address address);
-    
+
     public void setOldAddress(final Address oldAddress);
 
-    public static DeliveryAddressSetMessagePayload of(){
+    public static DeliveryAddressSetMessagePayload of() {
         return new DeliveryAddressSetMessagePayloadImpl();
     }
-    
 
     public static DeliveryAddressSetMessagePayload of(final DeliveryAddressSetMessagePayload template) {
         DeliveryAddressSetMessagePayloadImpl instance = new DeliveryAddressSetMessagePayloadImpl();
@@ -54,14 +52,13 @@ public interface DeliveryAddressSetMessagePayload extends MessagePayload {
         return instance;
     }
 
-    public static DeliveryAddressSetMessagePayloadBuilder builder(){
+    public static DeliveryAddressSetMessagePayloadBuilder builder() {
         return DeliveryAddressSetMessagePayloadBuilder.of();
     }
-    
-    public static DeliveryAddressSetMessagePayloadBuilder builder(final DeliveryAddressSetMessagePayload template){
+
+    public static DeliveryAddressSetMessagePayloadBuilder builder(final DeliveryAddressSetMessagePayload template) {
         return DeliveryAddressSetMessagePayloadBuilder.of(template);
     }
-    
 
     default <T> T withDeliveryAddressSetMessagePayload(Function<DeliveryAddressSetMessagePayload, T> helper) {
         return helper.apply(this);

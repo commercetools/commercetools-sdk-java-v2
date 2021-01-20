@@ -1,85 +1,79 @@
+
 package com.commercetools.api.models.order;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.order.OrderPagedQueryResponse;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderPagedQueryResponseBuilder {
 
-    
     private Long limit;
-    
-    
+
     private Long count;
-    
+
     @Nullable
     private Long total;
-    
-    
+
     private Long offset;
-    
-    
+
     private java.util.List<com.commercetools.api.models.order.Order> results;
 
-    public OrderPagedQueryResponseBuilder limit( final Long limit) {
+    public OrderPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
-    
-    public OrderPagedQueryResponseBuilder count( final Long count) {
+
+    public OrderPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
+
     public OrderPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-    
-    public OrderPagedQueryResponseBuilder offset( final Long offset) {
+
+    public OrderPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
-    
-    public OrderPagedQueryResponseBuilder results( final com.commercetools.api.models.order.Order ...results) {
+
+    public OrderPagedQueryResponseBuilder results(final com.commercetools.api.models.order.Order... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-    
-    public OrderPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.order.Order> results) {
+
+    public OrderPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.order.Order> results) {
         this.results = results;
         return this;
     }
 
-    
-    public Long getLimit(){
+    public Long getLimit() {
         return this.limit;
     }
-    
-    
-    public Long getCount(){
+
+    public Long getCount() {
         return this.count;
     }
-    
+
     @Nullable
-    public Long getTotal(){
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    public Long getOffset(){
+
+    public Long getOffset() {
         return this.offset;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.order.Order> getResults(){
+
+    public java.util.List<com.commercetools.api.models.order.Order> getResults() {
         return this.results;
     }
 

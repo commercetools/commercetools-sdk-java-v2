@@ -1,24 +1,25 @@
+
 package com.commercetools.api.models.payment;
 
-import com.commercetools.api.models.state.StateResourceIdentifier;
-import com.commercetools.api.models.payment.PaymentStatusDraft;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.payment.PaymentStatusDraft;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PaymentStatusDraftBuilder {
 
     @Nullable
     private String interfaceCode;
-    
+
     @Nullable
     private String interfaceText;
-    
+
     @Nullable
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
@@ -26,29 +27,30 @@ public final class PaymentStatusDraftBuilder {
         this.interfaceCode = interfaceCode;
         return this;
     }
-    
+
     public PaymentStatusDraftBuilder interfaceText(@Nullable final String interfaceText) {
         this.interfaceText = interfaceText;
         return this;
     }
-    
-    public PaymentStatusDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
+
+    public PaymentStatusDraftBuilder state(
+            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
         return this;
     }
 
     @Nullable
-    public String getInterfaceCode(){
+    public String getInterfaceCode() {
         return this.interfaceCode;
     }
-    
+
     @Nullable
-    public String getInterfaceText(){
+    public String getInterfaceText() {
         return this.interfaceText;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.state.StateResourceIdentifier getState(){
+    public com.commercetools.api.models.state.StateResourceIdentifier getState() {
         return this.state;
     }
 

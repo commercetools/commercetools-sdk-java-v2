@@ -1,46 +1,43 @@
+
 package com.commercetools.api.models.zone;
 
-import com.commercetools.api.models.zone.ZoneUpdateAction;
-import com.commercetools.api.models.zone.ZoneUpdate;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.zone.ZoneUpdate;
+import com.commercetools.api.models.zone.ZoneUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ZoneUpdateBuilder {
 
-    
     private Long version;
-    
-    
+
     private java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions;
 
-    public ZoneUpdateBuilder version( final Long version) {
+    public ZoneUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    public ZoneUpdateBuilder actions( final com.commercetools.api.models.zone.ZoneUpdateAction ...actions) {
+
+    public ZoneUpdateBuilder actions(final com.commercetools.api.models.zone.ZoneUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-    
-    public ZoneUpdateBuilder actions( final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
+
+    public ZoneUpdateBuilder actions(final java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.zone.ZoneUpdateAction> getActions() {
         return this.actions;
     }
 

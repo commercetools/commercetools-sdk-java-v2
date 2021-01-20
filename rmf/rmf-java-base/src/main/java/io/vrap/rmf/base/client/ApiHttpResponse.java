@@ -1,9 +1,10 @@
-package io.vrap.rmf.base.client;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
+package io.vrap.rmf.base.client;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
+
+import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class ApiHttpResponse<U> extends Base {
 
@@ -76,33 +77,29 @@ public class ApiHttpResponse<U> extends Base {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("statusCode", statusCode)
-                .append("headers", headers)
-                .append("textInterpretedBody", getSecuredBody())
-                .toString();
+        return new ToStringBuilder(this).append("statusCode", statusCode).append("headers", headers).append(
+            "textInterpretedBody", getSecuredBody()).toString();
     }
 
     static String tryToFilter(final String input) {
-        return input.replaceAll("(\"\\w*([Pp]ass|access_token|refresh_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
+        return input.replaceAll("(\"\\w*([Pp]ass|access_token|refresh_token)\\w*\"):\"[^\"]*\"",
+            "$1:\"**removed from output**\"");
     }
 
-    public Optional<String> getBodyAsString()
-    {
+    public Optional<String> getBodyAsString() {
         if (body instanceof byte[]) {
-            return Optional.of(body).map(b -> tryToFilter(new String((byte[])b, StandardCharsets.UTF_8)));
-        } else {
+            return Optional.of(body).map(b -> tryToFilter(new String((byte[]) b, StandardCharsets.UTF_8)));
+        }
+        else {
             return Optional.ofNullable(body.toString());
         }
     }
 
-    public String getSecuredBody()
-    {
+    public String getSecuredBody() {
         return getBodyAsString().orElse("empty body");
     }
 
-    private ApiHttpResponse<U> copy()
-    {
+    private ApiHttpResponse<U> copy() {
         return new ApiHttpResponse<>(this);
     }
 }

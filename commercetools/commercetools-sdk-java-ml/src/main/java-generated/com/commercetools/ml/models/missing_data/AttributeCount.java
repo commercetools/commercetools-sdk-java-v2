@@ -1,25 +1,24 @@
+
 package com.commercetools.ml.models.missing_data;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.ml.models.missing_data.AttributeCountImpl;
-
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.ml.models.missing_data.AttributeCountImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AttributeCountImpl.class)
-public interface AttributeCount  {
+public interface AttributeCount {
 
     /**
     *  <p>Number of attributes defined in the product type.</p>
@@ -27,12 +26,14 @@ public interface AttributeCount  {
     @NotNull
     @JsonProperty("productTypeAttributes")
     public Integer getProductTypeAttributes();
+
     /**
     *  <p>Number of attributes defined in the variant.</p>
     */
     @NotNull
     @JsonProperty("variantAttributes")
     public Integer getVariantAttributes();
+
     /**
     *  <p>Number of attributes missing values in the variant.</p>
     */
@@ -41,15 +42,14 @@ public interface AttributeCount  {
     public Integer getMissingAttributeValues();
 
     public void setProductTypeAttributes(final Integer productTypeAttributes);
-    
+
     public void setVariantAttributes(final Integer variantAttributes);
-    
+
     public void setMissingAttributeValues(final Integer missingAttributeValues);
 
-    public static AttributeCount of(){
+    public static AttributeCount of() {
         return new AttributeCountImpl();
     }
-    
 
     public static AttributeCount of(final AttributeCount template) {
         AttributeCountImpl instance = new AttributeCountImpl();
@@ -59,14 +59,13 @@ public interface AttributeCount  {
         return instance;
     }
 
-    public static AttributeCountBuilder builder(){
+    public static AttributeCountBuilder builder() {
         return AttributeCountBuilder.of();
     }
-    
-    public static AttributeCountBuilder builder(final AttributeCount template){
+
+    public static AttributeCountBuilder builder(final AttributeCount template) {
         return AttributeCountBuilder.of(template);
     }
-    
 
     default <T> T withAttributeCount(Function<AttributeCount, T> helper) {
         return helper.apply(this);

@@ -126,15 +126,18 @@ allprojects {
     apply plugin: 'com.diffplug.spotless'
 
     spotless {
+        def importOrderConfigFile = rootProject.file("src/eclipse/eclipse.importorder")
+        def javaFormatterConfigFile = rootProject.file("src/eclipse/eclipse-formatter-settings.xml")
+
         java {
-            importOrder('java', 'javax', 'com', 'org', 'io')
-            removeUnusedImports()
-            // apply a specific flavor of google-java-format
-            googleJavaFormat('1.8').aosp()
-//            // make sure every file has the following copyright header.
-//            // optionally, Spotless can set copyright years by digging
-//            // through git history (see "license" section below)
-//            licenseHeader '/* (C)$YEAR */'
+            importOrderFile(importOrderConfigFile)
+            eclipse().configFile(javaFormatterConfigFile)
+            if (JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_15)) {
+                // Doesn't work with Java 15 text blocks, see https://github.com/diffplug/spotless/issues/713
+                removeUnusedImports()
+            }
+            trimTrailingWhitespace()
+            endWithNewline()
         }
     }
 }

@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.shopping_list;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
-import com.commercetools.api.models.shopping_list.ShoppingListChangeNameActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shopping_list.ShoppingListChangeNameActionImpl;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListChangeNameActionImpl.class)
 public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
 
-    
     @NotNull
     @Valid
     @JsonProperty("name")
@@ -30,10 +29,9 @@ public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static ShoppingListChangeNameAction of(){
+    public static ShoppingListChangeNameAction of() {
         return new ShoppingListChangeNameActionImpl();
     }
-    
 
     public static ShoppingListChangeNameAction of(final ShoppingListChangeNameAction template) {
         ShoppingListChangeNameActionImpl instance = new ShoppingListChangeNameActionImpl();
@@ -41,14 +39,13 @@ public interface ShoppingListChangeNameAction extends ShoppingListUpdateAction {
         return instance;
     }
 
-    public static ShoppingListChangeNameActionBuilder builder(){
+    public static ShoppingListChangeNameActionBuilder builder() {
         return ShoppingListChangeNameActionBuilder.of();
     }
-    
-    public static ShoppingListChangeNameActionBuilder builder(final ShoppingListChangeNameAction template){
+
+    public static ShoppingListChangeNameActionBuilder builder(final ShoppingListChangeNameAction template) {
         return ShoppingListChangeNameActionBuilder.of(template);
     }
-    
 
     default <T> T withShoppingListChangeNameAction(Function<ShoppingListChangeNameAction, T> helper) {
         return helper.apply(this);

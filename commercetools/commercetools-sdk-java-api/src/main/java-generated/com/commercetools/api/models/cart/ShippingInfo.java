@@ -1,6 +1,16 @@
+
 package com.commercetools.api.models.cart;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import com.commercetools.api.models.cart.DiscountedLineItemPrice;
+import com.commercetools.api.models.cart.ShippingInfoImpl;
 import com.commercetools.api.models.cart.ShippingMethodState;
 import com.commercetools.api.models.cart.TaxedItemPrice;
 import com.commercetools.api.models.common.TypedMoney;
@@ -9,30 +19,20 @@ import com.commercetools.api.models.shipping_method.ShippingMethodReference;
 import com.commercetools.api.models.shipping_method.ShippingRate;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.tax_category.TaxRate;
-import com.commercetools.api.models.cart.ShippingInfoImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShippingInfoImpl.class)
-public interface ShippingInfo  {
+public interface ShippingInfo {
 
-    
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
+
     /**
     *  <p>Determined based on the ShippingRate and its tiered prices, and either the sum of LineItem prices or the <code>shippingRateInput</code> field.</p>
     */
@@ -40,6 +40,7 @@ public interface ShippingInfo  {
     @Valid
     @JsonProperty("price")
     public TypedMoney getPrice();
+
     /**
     *  <p>The shipping rate used to determine the price.</p>
     */
@@ -47,12 +48,14 @@ public interface ShippingInfo  {
     @Valid
     @JsonProperty("shippingRate")
     public ShippingRate getShippingRate();
+
     /**
     *  <p>Set once the <code>taxRate</code> is set.</p>
     */
     @Valid
     @JsonProperty("taxedPrice")
     public TaxedItemPrice getTaxedPrice();
+
     /**
     *  <p>Will be set automatically in the <code>Platform</code> TaxMode once the shipping address is set is set.
     *  For the <code>External</code> tax mode the tax rate has to be set explicitly with the ExternalTaxRateDraft.</p>
@@ -60,26 +63,29 @@ public interface ShippingInfo  {
     @Valid
     @JsonProperty("taxRate")
     public TaxRate getTaxRate();
-    
+
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryReference getTaxCategory();
+
     /**
     *  <p>Not set if custom shipping method is used.</p>
     */
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodReference getShippingMethod();
+
     /**
     *  <p>Deliveries are compilations of information on how the articles are being delivered to the customers.</p>
     */
     @Valid
     @JsonProperty("deliveries")
     public List<Delivery> getDeliveries();
-    
+
     @Valid
     @JsonProperty("discountedPrice")
     public DiscountedLineItemPrice getDiscountedPrice();
+
     /**
     *  <p>Indicates whether the ShippingMethod referenced in this ShippingInfo is allowed for the cart or not.</p>
     */
@@ -88,31 +94,31 @@ public interface ShippingInfo  {
     public ShippingMethodState getShippingMethodState();
 
     public void setShippingMethodName(final String shippingMethodName);
-    
+
     public void setPrice(final TypedMoney price);
-    
+
     public void setShippingRate(final ShippingRate shippingRate);
-    
+
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
-    
+
     public void setTaxRate(final TaxRate taxRate);
-    
+
     public void setTaxCategory(final TaxCategoryReference taxCategory);
-    
+
     public void setShippingMethod(final ShippingMethodReference shippingMethod);
-    
+
     @JsonIgnore
-    public void setDeliveries(final Delivery ...deliveries);
+    public void setDeliveries(final Delivery... deliveries);
+
     public void setDeliveries(final List<Delivery> deliveries);
-    
+
     public void setDiscountedPrice(final DiscountedLineItemPrice discountedPrice);
-    
+
     public void setShippingMethodState(final ShippingMethodState shippingMethodState);
 
-    public static ShippingInfo of(){
+    public static ShippingInfo of() {
         return new ShippingInfoImpl();
     }
-    
 
     public static ShippingInfo of(final ShippingInfo template) {
         ShippingInfoImpl instance = new ShippingInfoImpl();
@@ -129,14 +135,13 @@ public interface ShippingInfo  {
         return instance;
     }
 
-    public static ShippingInfoBuilder builder(){
+    public static ShippingInfoBuilder builder() {
         return ShippingInfoBuilder.of();
     }
-    
-    public static ShippingInfoBuilder builder(final ShippingInfo template){
+
+    public static ShippingInfoBuilder builder(final ShippingInfo template) {
         return ShippingInfoBuilder.of(template);
     }
-    
 
     default <T> T withShippingInfo(Function<ShippingInfo, T> helper) {
         return helper.apply(this);

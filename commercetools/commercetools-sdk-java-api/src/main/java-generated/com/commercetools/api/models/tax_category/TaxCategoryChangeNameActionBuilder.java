@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.tax_category;
 
-import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
-import com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction;
+import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TaxCategoryChangeNameActionBuilder {
 
-    
     private String name;
 
-    public TaxCategoryChangeNameActionBuilder name( final String name) {
+    public TaxCategoryChangeNameActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
-    
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 

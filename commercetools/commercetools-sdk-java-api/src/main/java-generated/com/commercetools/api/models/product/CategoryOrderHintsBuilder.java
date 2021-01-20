@@ -1,26 +1,25 @@
+
 package com.commercetools.api.models.product;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.CategoryOrderHints;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategoryOrderHintsBuilder {
 
-    
     private Map<String, String> values;
 
-    public CategoryOrderHintsBuilder values( final Map<String, String> values){
+    public CategoryOrderHintsBuilder values(final Map<String, String> values) {
         this.values = values;
         return this;
     }
-    
+
     public CategoryOrderHintsBuilder addValue(final String key, final String value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -28,10 +27,8 @@ public final class CategoryOrderHintsBuilder {
         values.put(key, value);
         return this;
     }
-    
 
-    
-    public Map<String, String> getValues(){
+    public Map<String, String> getValues() {
         return this.values;
     }
 

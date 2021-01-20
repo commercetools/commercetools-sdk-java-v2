@@ -1,85 +1,80 @@
+
 package com.commercetools.api.models.subscription;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.subscription.Subscription;
 import com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SubscriptionPagedQueryResponseBuilder {
 
-    
     private Long limit;
-    
-    
+
     private Long count;
-    
+
     @Nullable
     private Long total;
-    
-    
+
     private Long offset;
-    
-    
+
     private java.util.List<com.commercetools.api.models.subscription.Subscription> results;
 
-    public SubscriptionPagedQueryResponseBuilder limit( final Long limit) {
+    public SubscriptionPagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
         return this;
     }
-    
-    public SubscriptionPagedQueryResponseBuilder count( final Long count) {
+
+    public SubscriptionPagedQueryResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
+
     public SubscriptionPagedQueryResponseBuilder total(@Nullable final Long total) {
         this.total = total;
         return this;
     }
-    
-    public SubscriptionPagedQueryResponseBuilder offset( final Long offset) {
+
+    public SubscriptionPagedQueryResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
-    
-    public SubscriptionPagedQueryResponseBuilder results( final com.commercetools.api.models.subscription.Subscription ...results) {
+
+    public SubscriptionPagedQueryResponseBuilder results(
+            final com.commercetools.api.models.subscription.Subscription... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-    
-    public SubscriptionPagedQueryResponseBuilder results( final java.util.List<com.commercetools.api.models.subscription.Subscription> results) {
+
+    public SubscriptionPagedQueryResponseBuilder results(
+            final java.util.List<com.commercetools.api.models.subscription.Subscription> results) {
         this.results = results;
         return this;
     }
 
-    
-    public Long getLimit(){
+    public Long getLimit() {
         return this.limit;
     }
-    
-    
-    public Long getCount(){
+
+    public Long getCount() {
         return this.count;
     }
-    
+
     @Nullable
-    public Long getTotal(){
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    public Long getOffset(){
+
+    public Long getOffset() {
         return this.offset;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.subscription.Subscription> getResults(){
+
+    public java.util.List<com.commercetools.api.models.subscription.Subscription> getResults() {
         return this.results;
     }
 

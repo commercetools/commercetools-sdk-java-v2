@@ -1,16 +1,17 @@
+
 package com.commercetools.api.models.shipping_method;
 
-import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ShippingMethodSetKeyActionBuilder {
 
     @Nullable
@@ -22,7 +23,7 @@ public final class ShippingMethodSetKeyActionBuilder {
     }
 
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
 

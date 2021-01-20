@@ -1,29 +1,28 @@
+
 package com.commercetools.importapi.models.customfields;
 
-import com.commercetools.importapi.models.customfields.CustomField;
 import java.time.LocalDate;
-import com.commercetools.importapi.models.customfields.DateField;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.DateField;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DateFieldBuilder {
 
-    
     private java.time.LocalDate value;
 
-    public DateFieldBuilder value( final java.time.LocalDate value) {
+    public DateFieldBuilder value(final java.time.LocalDate value) {
         this.value = value;
         return this;
     }
 
-    
-    public java.time.LocalDate getValue(){
+    public java.time.LocalDate getValue() {
         return this.value;
     }
 

@@ -1,39 +1,39 @@
+
 package com.commercetools.importapi.models.orders;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>Maps to <code>Order.taxRoundingMode</code>.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface RoundingMode {
 
-    
     RoundingMode HALF_EVEN = RoundingModeEnum.HALF_EVEN;
-    
+
     RoundingMode HALF_UP = RoundingModeEnum.HALF_UP;
-    
+
     RoundingMode HALF_DOWN = RoundingModeEnum.HALF_DOWN;
-    
+
     enum RoundingModeEnum implements RoundingMode {
         HALF_EVEN("HalfEven"),
-        
+
         HALF_UP("HalfUp"),
-        
+
         HALF_DOWN("HalfDown");
         private final String jsonName;
 
         private RoundingModeEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
+
         public String getJsonName() {
             return jsonName;
         }
@@ -41,6 +41,7 @@ public interface RoundingMode {
 
     @JsonValue
     String getJsonName();
+
     String name();
 
     @JsonCreator
@@ -61,7 +62,7 @@ public interface RoundingMode {
     public static Optional<RoundingMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-    
+
     public static RoundingMode[] values() {
         return RoundingModeEnum.values();
     }

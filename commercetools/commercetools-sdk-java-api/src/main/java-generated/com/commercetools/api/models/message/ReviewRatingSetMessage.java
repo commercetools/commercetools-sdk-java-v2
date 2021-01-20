@@ -1,56 +1,52 @@
+
 package com.commercetools.api.models.message;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.message.ReviewRatingSetMessageImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReviewRatingSetMessageImpl.class)
 public interface ReviewRatingSetMessage extends Message {
 
-    
-    
     @JsonProperty("oldRating")
     public Double getOldRating();
-    
-    
+
     @JsonProperty("newRating")
     public Double getNewRating();
-    
+
     @NotNull
     @JsonProperty("includedInStatistics")
     public Boolean getIncludedInStatistics();
-    
+
     @Valid
     @JsonProperty("target")
     public Reference getTarget();
 
     public void setOldRating(final Double oldRating);
-    
+
     public void setNewRating(final Double newRating);
-    
+
     public void setIncludedInStatistics(final Boolean includedInStatistics);
-    
+
     public void setTarget(final Reference target);
 
-    public static ReviewRatingSetMessage of(){
+    public static ReviewRatingSetMessage of() {
         return new ReviewRatingSetMessageImpl();
     }
-    
 
     public static ReviewRatingSetMessage of(final ReviewRatingSetMessage template) {
         ReviewRatingSetMessageImpl instance = new ReviewRatingSetMessageImpl();
@@ -71,14 +67,13 @@ public interface ReviewRatingSetMessage extends Message {
         return instance;
     }
 
-    public static ReviewRatingSetMessageBuilder builder(){
+    public static ReviewRatingSetMessageBuilder builder() {
         return ReviewRatingSetMessageBuilder.of();
     }
-    
-    public static ReviewRatingSetMessageBuilder builder(final ReviewRatingSetMessage template){
+
+    public static ReviewRatingSetMessageBuilder builder(final ReviewRatingSetMessage template) {
         return ReviewRatingSetMessageBuilder.of(template);
     }
-    
 
     default <T> T withReviewRatingSetMessage(Function<ReviewRatingSetMessage, T> helper) {
         return helper.apply(this);

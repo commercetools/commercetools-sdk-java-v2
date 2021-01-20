@@ -1,46 +1,46 @@
+
 package com.commercetools.api.models.me;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.me.MyShoppingListUpdateAction;
 import com.commercetools.api.models.me.MyShoppingListUpdateImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListUpdateImpl.class)
-public interface MyShoppingListUpdate extends com.commercetools.api.models.ResourceUpdate<MyShoppingListUpdate, MyShoppingListUpdateAction> {
+public interface MyShoppingListUpdate
+        extends com.commercetools.api.models.ResourceUpdate<MyShoppingListUpdate, MyShoppingListUpdateAction> {
 
-    
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-    
+
     @NotNull
     @Valid
     @JsonProperty("actions")
     public List<MyShoppingListUpdateAction> getActions();
 
     public void setVersion(final Long version);
-    
+
     @JsonIgnore
-    public void setActions(final MyShoppingListUpdateAction ...actions);
+    public void setActions(final MyShoppingListUpdateAction... actions);
+
     public void setActions(final List<MyShoppingListUpdateAction> actions);
 
-    public static MyShoppingListUpdate of(){
+    public static MyShoppingListUpdate of() {
         return new MyShoppingListUpdateImpl();
     }
-    
 
     public static MyShoppingListUpdate of(final MyShoppingListUpdate template) {
         MyShoppingListUpdateImpl instance = new MyShoppingListUpdateImpl();
@@ -49,14 +49,13 @@ public interface MyShoppingListUpdate extends com.commercetools.api.models.Resou
         return instance;
     }
 
-    public static MyShoppingListUpdateBuilder builder(){
+    public static MyShoppingListUpdateBuilder builder() {
         return MyShoppingListUpdateBuilder.of();
     }
-    
-    public static MyShoppingListUpdateBuilder builder(final MyShoppingListUpdate template){
+
+    public static MyShoppingListUpdateBuilder builder(final MyShoppingListUpdate template) {
         return MyShoppingListUpdateBuilder.of(template);
     }
-    
 
     default <T> T withMyShoppingListUpdate(Function<MyShoppingListUpdate, T> helper) {
         return helper.apply(this);

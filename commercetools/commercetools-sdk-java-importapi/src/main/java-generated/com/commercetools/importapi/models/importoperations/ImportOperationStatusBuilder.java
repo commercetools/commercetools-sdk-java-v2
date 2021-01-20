@@ -1,25 +1,25 @@
+
 package com.commercetools.importapi.models.importoperations;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.commercetools.importapi.models.importoperations.ImportOperationState;
 import com.commercetools.importapi.models.importoperations.ImportOperationStatus;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportOperationStatusBuilder {
 
     @Nullable
     private String operationId;
-    
-    
+
     private com.commercetools.importapi.models.importoperations.ImportOperationState state;
-    
+
     @Nullable
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
@@ -27,34 +27,36 @@ public final class ImportOperationStatusBuilder {
         this.operationId = operationId;
         return this;
     }
-    
-    public ImportOperationStatusBuilder state( final com.commercetools.importapi.models.importoperations.ImportOperationState state) {
+
+    public ImportOperationStatusBuilder state(
+            final com.commercetools.importapi.models.importoperations.ImportOperationState state) {
         this.state = state;
         return this;
     }
-    
-    public ImportOperationStatusBuilder errors(@Nullable final com.commercetools.importapi.models.errors.ErrorObject ...errors) {
+
+    public ImportOperationStatusBuilder errors(
+            @Nullable final com.commercetools.importapi.models.errors.ErrorObject... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
         return this;
     }
-    
-    public ImportOperationStatusBuilder errors(@Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
+
+    public ImportOperationStatusBuilder errors(
+            @Nullable final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors) {
         this.errors = errors;
         return this;
     }
 
     @Nullable
-    public String getOperationId(){
+    public String getOperationId() {
         return this.operationId;
     }
-    
-    
-    public com.commercetools.importapi.models.importoperations.ImportOperationState getState(){
+
+    public com.commercetools.importapi.models.importoperations.ImportOperationState getState() {
         return this.state;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors(){
+    public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;
     }
 

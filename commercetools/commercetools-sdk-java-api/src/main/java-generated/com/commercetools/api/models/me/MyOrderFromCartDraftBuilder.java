@@ -1,41 +1,37 @@
+
 package com.commercetools.api.models.me;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.me.MyOrderFromCartDraft;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyOrderFromCartDraftBuilder {
 
-    
     private String id;
-    
-    
+
     private Long version;
 
-    public MyOrderFromCartDraftBuilder id( final String id) {
+    public MyOrderFromCartDraftBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    public MyOrderFromCartDraftBuilder version( final Long version) {
+
+    public MyOrderFromCartDraftBuilder version(final Long version) {
         this.version = version;
         return this;
     }
 
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
 

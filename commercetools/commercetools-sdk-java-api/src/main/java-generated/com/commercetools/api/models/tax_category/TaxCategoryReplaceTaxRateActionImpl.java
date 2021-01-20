@@ -1,89 +1,83 @@
+
 package com.commercetools.api.models.tax_category;
+
+import java.time.*;
+import java.util.*;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
 import com.commercetools.api.models.tax_category.TaxRateDraft;
-import io.vrap.rmf.base.client.utils.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTaxRateAction {
 
     private String action;
-    
+
     private String taxRateId;
-    
+
     private com.commercetools.api.models.tax_category.TaxRateDraft taxRate;
 
     @JsonCreator
-    TaxCategoryReplaceTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId, @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
+    TaxCategoryReplaceTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId,
+            @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
         this.taxRateId = taxRateId;
         this.taxRate = taxRate;
         this.action = "replaceTaxRate";
     }
+
     public TaxCategoryReplaceTaxRateActionImpl() {
         this.action = "replaceTaxRate";
     }
 
-    
-    public String getAction(){
+    public String getAction() {
         return this.action;
     }
-    
-    
-    public String getTaxRateId(){
+
+    public String getTaxRateId() {
         return this.taxRateId;
     }
-    
-    
-    public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate(){
+
+    public com.commercetools.api.models.tax_category.TaxRateDraft getTaxRate() {
         return this.taxRate;
     }
 
-    public void setTaxRateId(final String taxRateId){
+    public void setTaxRateId(final String taxRateId) {
         this.taxRateId = taxRateId;
     }
-    
-    public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRateDraft taxRate){
+
+    public void setTaxRate(final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
         this.taxRate = taxRate;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         TaxCategoryReplaceTaxRateActionImpl that = (TaxCategoryReplaceTaxRateActionImpl) o;
-    
-        return new EqualsBuilder()
-                .append(action, that.action)
-                .append(taxRateId, that.taxRateId)
-                .append(taxRate, that.taxRate)
-                .isEquals();
+
+        return new EqualsBuilder().append(action, that.action).append(taxRateId, that.taxRateId).append(taxRate,
+            that.taxRate).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(action)
-            .append(taxRateId)
-            .append(taxRate)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(taxRateId).append(taxRate).toHashCode();
     }
 
 }

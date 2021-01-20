@@ -1,49 +1,45 @@
+
 package com.commercetools.api.models.customer;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.api.models.customer.CustomerResetPasswordImpl;
-
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.customer.CustomerResetPasswordImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerResetPasswordImpl.class)
-public interface CustomerResetPassword  {
+public interface CustomerResetPassword {
 
-    
     @NotNull
     @JsonProperty("tokenValue")
     public String getTokenValue();
-    
+
     @NotNull
     @JsonProperty("newPassword")
     public String getNewPassword();
-    
-    
+
     @JsonProperty("version")
     public Long getVersion();
 
     public void setTokenValue(final String tokenValue);
-    
+
     public void setNewPassword(final String newPassword);
-    
+
     public void setVersion(final Long version);
 
-    public static CustomerResetPassword of(){
+    public static CustomerResetPassword of() {
         return new CustomerResetPasswordImpl();
     }
-    
 
     public static CustomerResetPassword of(final CustomerResetPassword template) {
         CustomerResetPasswordImpl instance = new CustomerResetPasswordImpl();
@@ -53,14 +49,13 @@ public interface CustomerResetPassword  {
         return instance;
     }
 
-    public static CustomerResetPasswordBuilder builder(){
+    public static CustomerResetPasswordBuilder builder() {
         return CustomerResetPasswordBuilder.of();
     }
-    
-    public static CustomerResetPasswordBuilder builder(final CustomerResetPassword template){
+
+    public static CustomerResetPasswordBuilder builder(final CustomerResetPassword template) {
         return CustomerResetPasswordBuilder.of(template);
     }
-    
 
     default <T> T withCustomerResetPassword(Function<CustomerResetPassword, T> helper) {
         return helper.apply(this);

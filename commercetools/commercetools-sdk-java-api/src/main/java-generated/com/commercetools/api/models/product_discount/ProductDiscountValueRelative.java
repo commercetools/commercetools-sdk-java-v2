@@ -1,37 +1,35 @@
+
 package com.commercetools.api.models.product_discount;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product_discount.ProductDiscountValue;
 import com.commercetools.api.models.product_discount.ProductDiscountValueRelativeImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueRelativeImpl.class)
 public interface ProductDiscountValueRelative extends ProductDiscountValue {
 
-    
     @NotNull
     @JsonProperty("permyriad")
     public Long getPermyriad();
 
     public void setPermyriad(final Long permyriad);
 
-    public static ProductDiscountValueRelative of(){
+    public static ProductDiscountValueRelative of() {
         return new ProductDiscountValueRelativeImpl();
     }
-    
 
     public static ProductDiscountValueRelative of(final ProductDiscountValueRelative template) {
         ProductDiscountValueRelativeImpl instance = new ProductDiscountValueRelativeImpl();
@@ -39,14 +37,13 @@ public interface ProductDiscountValueRelative extends ProductDiscountValue {
         return instance;
     }
 
-    public static ProductDiscountValueRelativeBuilder builder(){
+    public static ProductDiscountValueRelativeBuilder builder() {
         return ProductDiscountValueRelativeBuilder.of();
     }
-    
-    public static ProductDiscountValueRelativeBuilder builder(final ProductDiscountValueRelative template){
+
+    public static ProductDiscountValueRelativeBuilder builder(final ProductDiscountValueRelative template) {
         return ProductDiscountValueRelativeBuilder.of(template);
     }
-    
 
     default <T> T withProductDiscountValueRelative(Function<ProductDiscountValueRelative, T> helper) {
         return helper.apply(this);

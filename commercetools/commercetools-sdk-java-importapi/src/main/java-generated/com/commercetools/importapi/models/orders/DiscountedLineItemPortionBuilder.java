@@ -1,42 +1,41 @@
+
 package com.commercetools.importapi.models.orders;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.CartDiscountKeyReference;
 import com.commercetools.importapi.models.common.Money;
 import com.commercetools.importapi.models.orders.DiscountedLineItemPortion;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountedLineItemPortionBuilder {
 
-    
     private com.commercetools.importapi.models.common.CartDiscountKeyReference discount;
-    
-    
+
     private com.commercetools.importapi.models.common.Money discountedAmount;
 
-    public DiscountedLineItemPortionBuilder discount( final com.commercetools.importapi.models.common.CartDiscountKeyReference discount) {
+    public DiscountedLineItemPortionBuilder discount(
+            final com.commercetools.importapi.models.common.CartDiscountKeyReference discount) {
         this.discount = discount;
         return this;
     }
-    
-    public DiscountedLineItemPortionBuilder discountedAmount( final com.commercetools.importapi.models.common.Money discountedAmount) {
+
+    public DiscountedLineItemPortionBuilder discountedAmount(
+            final com.commercetools.importapi.models.common.Money discountedAmount) {
         this.discountedAmount = discountedAmount;
         return this;
     }
 
-    
-    public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount(){
+    public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount() {
         return this.discount;
     }
-    
-    
-    public com.commercetools.importapi.models.common.Money getDiscountedAmount(){
+
+    public com.commercetools.importapi.models.common.Money getDiscountedAmount() {
         return this.discountedAmount;
     }
 

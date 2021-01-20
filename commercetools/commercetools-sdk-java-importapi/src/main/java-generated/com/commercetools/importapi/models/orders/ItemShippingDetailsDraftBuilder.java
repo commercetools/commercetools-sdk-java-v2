@@ -1,33 +1,34 @@
+
 package com.commercetools.importapi.models.orders;
 
-import com.commercetools.importapi.models.orders.ItemShippingTarget;
-import com.commercetools.importapi.models.orders.ItemShippingDetailsDraft;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.orders.ItemShippingDetailsDraft;
+import com.commercetools.importapi.models.orders.ItemShippingTarget;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ItemShippingDetailsDraftBuilder {
 
-    
     private java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets;
 
-    public ItemShippingDetailsDraftBuilder targets( final com.commercetools.importapi.models.orders.ItemShippingTarget ...targets) {
+    public ItemShippingDetailsDraftBuilder targets(
+            final com.commercetools.importapi.models.orders.ItemShippingTarget... targets) {
         this.targets = new ArrayList<>(Arrays.asList(targets));
         return this;
     }
-    
-    public ItemShippingDetailsDraftBuilder targets( final java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets) {
+
+    public ItemShippingDetailsDraftBuilder targets(
+            final java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets) {
         this.targets = targets;
         return this;
     }
 
-    
-    public java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> getTargets(){
+    public java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> getTargets() {
         return this.targets;
     }
 

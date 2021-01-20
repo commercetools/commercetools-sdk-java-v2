@@ -1,12 +1,13 @@
+
 package io.vrap.rmf.base.client;
 
-import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import javax.annotation.Nullable;
 
 public class ApiHttpHeaders extends Base {
 
@@ -55,10 +56,7 @@ public class ApiHttpHeaders extends Base {
             if (key.toString().equalsIgnoreCase(AUTHORIZATION)) {
                 return "{key=" + key + ", value=**removed from output**}";
             }
-            return "{" +
-                    "key=" + key +
-                    ", value=" + value +
-                    '}';
+            return "{" + "key=" + key + ", value=" + value + '}';
         }
     }
 
@@ -96,7 +94,7 @@ public class ApiHttpHeaders extends Base {
         this.headers = new ArrayList<>(t.headers);
     }
 
-    public ApiHttpHeaders addHeader(final String key, final String value){
+    public ApiHttpHeaders addHeader(final String key, final String value) {
         ApiHttpHeaders headers = copy();
         headers.headers.add(headerEntry(key, value));
 
@@ -118,16 +116,19 @@ public class ApiHttpHeaders extends Base {
     }
 
     public ApiHttpHeaders withoutHeader(final String key) {
-        return withHeaders(headers.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList()));
+        return withHeaders(
+            headers.stream().filter(e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList()));
     }
 
     @Nullable
-    public String getFirst(final String key){
-        return this.headers.stream().filter(e -> e.getKey().equalsIgnoreCase(key)).map(Map.Entry::getValue).findFirst().orElse(null);
+    public String getFirst(final String key) {
+        return this.headers.stream().filter(e -> e.getKey().equalsIgnoreCase(key)).map(
+            Map.Entry::getValue).findFirst().orElse(null);
     }
 
     public List<String> getHeaderValue(final String key) {
-        return headers.stream().filter(e -> e.getKey().equalsIgnoreCase(key)).map(Map.Entry::getValue).collect(Collectors.toList());
+        return headers.stream().filter(e -> e.getKey().equalsIgnoreCase(key)).map(Map.Entry::getValue).collect(
+            Collectors.toList());
     }
 
     public List<Map.Entry<String, String>> getHeaders(final String key) {
@@ -143,22 +144,18 @@ public class ApiHttpHeaders extends Base {
         return headers.toString();
     }
 
-    private ApiHttpHeaders copy()
-    {
+    private ApiHttpHeaders copy() {
         return new ApiHttpHeaders(this);
     }
 
-    private static List<StringHeaderEntry> mapToHeaderEntries(final List<Map.Entry<String, String>> entries)
-    {
+    private static List<StringHeaderEntry> mapToHeaderEntries(final List<Map.Entry<String, String>> entries) {
         return entries.stream().map(ApiHttpHeaders::mapToHeaderEntry).collect(Collectors.toList());
     }
 
-    private static StringHeaderEntry mapToHeaderEntry(final Map.Entry<String, String> entry)
-    {
+    private static StringHeaderEntry mapToHeaderEntry(final Map.Entry<String, String> entry) {
         if (entry instanceof StringHeaderEntry) {
-            return (StringHeaderEntry)entry;
+            return (StringHeaderEntry) entry;
         }
         return headerEntry(entry.getKey(), entry.getValue());
     }
 }
-

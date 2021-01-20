@@ -1,29 +1,28 @@
+
 package com.commercetools.importapi.models.common;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.commercetools.importapi.models.common.KeyReference;
 import com.commercetools.importapi.models.common.ReferenceType;
-import com.commercetools.importapi.models.common.ChannelKeyReference;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ChannelKeyReferenceBuilder {
 
-    
     private String key;
 
-    public ChannelKeyReferenceBuilder key( final String key) {
+    public ChannelKeyReferenceBuilder key(final String key) {
         this.key = key;
         return this;
     }
 
-    
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
 

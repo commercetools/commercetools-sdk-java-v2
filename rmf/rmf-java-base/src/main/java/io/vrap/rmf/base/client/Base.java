@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;

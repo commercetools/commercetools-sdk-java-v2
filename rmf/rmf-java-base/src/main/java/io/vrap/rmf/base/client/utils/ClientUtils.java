@@ -1,4 +1,7 @@
+
 package io.vrap.rmf.base.client.utils;
+
+import static java.util.stream.Collectors.toList;
 
 import java.time.Duration;
 import java.util.List;
@@ -10,8 +13,6 @@ import java.util.stream.Stream;
 
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.error.RmfTimeoutException;
-
-import static java.util.stream.Collectors.toList;
 
 public class ClientUtils {
     /**
@@ -25,7 +26,8 @@ public class ClientUtils {
      * @return the wrapped value of {@code completionStage}
      * @throws RmfTimeoutException if a timeout occurs
      */
-    public static <T> T blockingWait(final CompletionStage<T> completionStage, final ApiHttpRequest request, final Duration duration) {
+    public static <T> T blockingWait(final CompletionStage<T> completionStage, final ApiHttpRequest request,
+            final Duration duration) {
         return blockingWait(completionStage, request, duration.toMillis(), TimeUnit.MILLISECONDS);
     }
 
@@ -54,7 +56,8 @@ public class ClientUtils {
      * @return the wrapped value of {@code completionStage}
      * @throws RmfTimeoutException if a timeout occurs
      */
-    public static <T> T blockingWait(final CompletionStage<T> completionStage, final long timeout, final TimeUnit unit) {
+    public static <T> T blockingWait(final CompletionStage<T> completionStage, final long timeout,
+            final TimeUnit unit) {
         return blockingWait(completionStage, null, timeout, unit);
     }
 
@@ -70,44 +73,48 @@ public class ClientUtils {
      * @return the wrapped value of {@code completionStage}
      * @throws RmfTimeoutException if a timeout occurs
      */
-    public static <T> T blockingWait(final CompletionStage<T> completionStage, final ApiHttpRequest request, final long timeout, final TimeUnit unit) {
+    public static <T> T blockingWait(final CompletionStage<T> completionStage, final ApiHttpRequest request,
+            final long timeout, final TimeUnit unit) {
         try {
             return completionStage.toCompletableFuture().get(timeout, unit);
-        } catch (InterruptedException | ExecutionException e) {
-            final Throwable cause =
-                    e.getCause() != null && e instanceof ExecutionException
-                            ? e.getCause()
-                            : e;
-            throw cause instanceof RuntimeException? (RuntimeException) cause : new CompletionException(cause);
-        } catch (final TimeoutException e) {
+        }
+        catch (InterruptedException | ExecutionException e) {
+            final Throwable cause = e.getCause() != null && e instanceof ExecutionException ? e.getCause() : e;
+            throw cause instanceof RuntimeException ? (RuntimeException) cause : new CompletionException(cause);
+        }
+        catch (final TimeoutException e) {
             throw new RmfTimeoutException(e);
         }
     }
 
-    public static <T> List<T> blockingWaitForEach(final Stream<? extends CompletionStage<T>> stream, final Duration duration) {
+    public static <T> List<T> blockingWaitForEach(final Stream<? extends CompletionStage<T>> stream,
+            final Duration duration) {
         return blockingWaitForEach(stream, duration.toMillis(), TimeUnit.MILLISECONDS);
     }
 
-    public static <T> List<T> blockingWaitForEach(final Stream<? extends CompletionStage<T>> stream, final long timeout, final TimeUnit unit) {
-        return stream
-                .map(stage -> blockingWait(stage, timeout, unit))
-                .collect(toList());
+    public static <T> List<T> blockingWaitForEach(final Stream<? extends CompletionStage<T>> stream, final long timeout,
+            final TimeUnit unit) {
+        return stream.map(stage -> blockingWait(stage, timeout, unit)).collect(toList());
     }
 
-    public static <T> List<T> blockingWaitForEach(final List<? extends CompletionStage<T>> list, final Duration duration) {
+    public static <T> List<T> blockingWaitForEach(final List<? extends CompletionStage<T>> list,
+            final Duration duration) {
         return blockingWaitForEach(list, duration.toMillis(), TimeUnit.MILLISECONDS);
     }
 
-    public static <T> List<T> blockingWaitForEach(final List<? extends CompletionStage<T>> list, final long timeout, final TimeUnit unit) {
+    public static <T> List<T> blockingWaitForEach(final List<? extends CompletionStage<T>> list, final long timeout,
+            final TimeUnit unit) {
         return blockingWaitForEach(list.stream(), timeout, unit);
     }
 
-    public static <S extends CompletionStage<T>, T> Collector<S, ?, List<T>> blockingWaitForEachCollector(final long timeout, final TimeUnit unit) {
+    public static <S extends CompletionStage<T>, T> Collector<S, ?, List<T>> blockingWaitForEachCollector(
+            final long timeout, final TimeUnit unit) {
         final Function<CompletionStage<T>, T> mapper = stage -> blockingWait(stage, timeout, unit);
         return Collectors.mapping(mapper, toList());
     }
 
-    public static <S extends CompletionStage<T>, T> Collector<S, ?, List<T>> blockingWaitForEachCollector(final Duration duration) {
+    public static <S extends CompletionStage<T>, T> Collector<S, ?, List<T>> blockingWaitForEachCollector(
+            final Duration duration) {
         return blockingWaitForEachCollector(duration.toMillis(), TimeUnit.MILLISECONDS);
     }
 }

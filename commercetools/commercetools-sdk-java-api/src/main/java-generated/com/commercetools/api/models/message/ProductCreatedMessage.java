@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.product.ProductProjection;
-import com.commercetools.api.models.message.ProductCreatedMessageImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductCreatedMessageImpl;
+import com.commercetools.api.models.product.ProductProjection;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductCreatedMessageImpl.class)
 public interface ProductCreatedMessage extends Message {
 
-    
     @NotNull
     @Valid
     @JsonProperty("productProjection")
@@ -30,10 +29,9 @@ public interface ProductCreatedMessage extends Message {
 
     public void setProductProjection(final ProductProjection productProjection);
 
-    public static ProductCreatedMessage of(){
+    public static ProductCreatedMessage of() {
         return new ProductCreatedMessageImpl();
     }
-    
 
     public static ProductCreatedMessage of(final ProductCreatedMessage template) {
         ProductCreatedMessageImpl instance = new ProductCreatedMessageImpl();
@@ -51,14 +49,13 @@ public interface ProductCreatedMessage extends Message {
         return instance;
     }
 
-    public static ProductCreatedMessageBuilder builder(){
+    public static ProductCreatedMessageBuilder builder() {
         return ProductCreatedMessageBuilder.of();
     }
-    
-    public static ProductCreatedMessageBuilder builder(final ProductCreatedMessage template){
+
+    public static ProductCreatedMessageBuilder builder(final ProductCreatedMessage template) {
         return ProductCreatedMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductCreatedMessage(Function<ProductCreatedMessage, T> helper) {
         return helper.apply(this);

@@ -1,4 +1,14 @@
+
 package com.commercetools.api.models.common;
+
+import java.io.IOException;
+import java.time.*;
+import java.time.ZonedDateTime;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart_discount.CartDiscount;
@@ -31,53 +41,38 @@ import com.commercetools.api.models.subscription.Subscription;
 import com.commercetools.api.models.tax_category.TaxCategory;
 import com.commercetools.api.models.type.Type;
 import com.commercetools.api.models.zone.Zone;
-import java.time.ZonedDateTime;
-
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public interface BaseResource  {
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public interface BaseResource {
 
-    
     @NotNull
     @JsonProperty("id")
     public String getId();
-    
+
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-    
+
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-    
+
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     public void setId(final String id);
-    
+
     public void setVersion(final Long version);
-    
+
     public void setCreatedAt(final ZonedDateTime createdAt);
-    
+
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
-
-
 
     default <T> T withBaseResource(Function<BaseResource, T> helper) {
         return helper.apply(this);

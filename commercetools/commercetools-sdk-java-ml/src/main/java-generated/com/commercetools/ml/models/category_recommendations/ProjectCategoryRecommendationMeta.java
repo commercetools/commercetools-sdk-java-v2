@@ -1,38 +1,39 @@
+
 package com.commercetools.ml.models.category_recommendations;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaImpl;
-
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMetaImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProjectCategoryRecommendationMetaImpl.class)
-public interface ProjectCategoryRecommendationMeta  {
+public interface ProjectCategoryRecommendationMeta {
 
     /**
     *  <p>The product name that was used to generate recommendations.</p>
     */
-    
+
     @JsonProperty("productName")
     public String getProductName();
+
     /**
     *  <p>The product image that was used to generate recommendations.</p>
     */
-    
+
     @JsonProperty("productImageUrl")
     public String getProductImageUrl();
+
     /**
     *  <p>Top 5 general categories that were used internally to generate the project-specific categories. These category names are not related to the categories defined in the project, but they provide additional information to understand the project-specific categories in the results section.</p>
     */
@@ -41,17 +42,17 @@ public interface ProjectCategoryRecommendationMeta  {
     public List<String> getGeneralCategoryNames();
 
     public void setProductName(final String productName);
-    
+
     public void setProductImageUrl(final String productImageUrl);
-    
+
     @JsonIgnore
-    public void setGeneralCategoryNames(final String ...generalCategoryNames);
+    public void setGeneralCategoryNames(final String... generalCategoryNames);
+
     public void setGeneralCategoryNames(final List<String> generalCategoryNames);
 
-    public static ProjectCategoryRecommendationMeta of(){
+    public static ProjectCategoryRecommendationMeta of() {
         return new ProjectCategoryRecommendationMetaImpl();
     }
-    
 
     public static ProjectCategoryRecommendationMeta of(final ProjectCategoryRecommendationMeta template) {
         ProjectCategoryRecommendationMetaImpl instance = new ProjectCategoryRecommendationMetaImpl();
@@ -61,14 +62,13 @@ public interface ProjectCategoryRecommendationMeta  {
         return instance;
     }
 
-    public static ProjectCategoryRecommendationMetaBuilder builder(){
+    public static ProjectCategoryRecommendationMetaBuilder builder() {
         return ProjectCategoryRecommendationMetaBuilder.of();
     }
-    
-    public static ProjectCategoryRecommendationMetaBuilder builder(final ProjectCategoryRecommendationMeta template){
+
+    public static ProjectCategoryRecommendationMetaBuilder builder(final ProjectCategoryRecommendationMeta template) {
         return ProjectCategoryRecommendationMetaBuilder.of(template);
     }
-    
 
     default <T> T withProjectCategoryRecommendationMeta(Function<ProjectCategoryRecommendationMeta, T> helper) {
         return helper.apply(this);

@@ -1,33 +1,30 @@
+
 package com.commercetools.api.models.product;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifierImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductResourceIdentifierImpl.class)
 public interface ProductResourceIdentifier extends ResourceIdentifier {
 
-
-
-    public static ProductResourceIdentifier of(){
+    public static ProductResourceIdentifier of() {
         return new ProductResourceIdentifierImpl();
     }
-    
 
     public static ProductResourceIdentifier of(final ProductResourceIdentifier template) {
         ProductResourceIdentifierImpl instance = new ProductResourceIdentifierImpl();
@@ -36,14 +33,13 @@ public interface ProductResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    public static ProductResourceIdentifierBuilder builder(){
+    public static ProductResourceIdentifierBuilder builder() {
         return ProductResourceIdentifierBuilder.of();
     }
-    
-    public static ProductResourceIdentifierBuilder builder(final ProductResourceIdentifier template){
+
+    public static ProductResourceIdentifierBuilder builder(final ProductResourceIdentifier template) {
         return ProductResourceIdentifierBuilder.of(template);
     }
-    
 
     default <T> T withProductResourceIdentifier(Function<ProductResourceIdentifier, T> helper) {
         return helper.apply(this);

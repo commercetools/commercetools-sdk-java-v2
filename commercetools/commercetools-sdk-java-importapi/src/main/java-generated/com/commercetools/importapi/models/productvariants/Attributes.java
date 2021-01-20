@@ -1,25 +1,25 @@
+
 package com.commercetools.importapi.models.productvariants;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.AttributesImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AttributesImpl.class)
-public interface Attributes  {
+public interface Attributes {
 
     /**
     *  <p>The name of the attribute is given by the key and shouldn't be set on the attribute itself.
@@ -33,24 +33,22 @@ public interface Attributes  {
     @JsonAnySetter
     public void setValue(String key, Attribute value);
 
-    public static Attributes of(){
+    public static Attributes of() {
         return new AttributesImpl();
     }
-    
 
     public static Attributes of(final Attributes template) {
         AttributesImpl instance = new AttributesImpl();
         return instance;
     }
 
-    public static AttributesBuilder builder(){
+    public static AttributesBuilder builder() {
         return AttributesBuilder.of();
     }
-    
-    public static AttributesBuilder builder(final Attributes template){
+
+    public static AttributesBuilder builder(final Attributes template) {
         return AttributesBuilder.of(template);
     }
-    
 
     default <T> T withAttributes(Function<Attributes, T> helper) {
         return helper.apply(this);

@@ -1,13 +1,15 @@
+
 package commercetools.product;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.product.*;
 import commercetools.utils.CommercetoolsTestUtils;
+
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class ProductIntegrationTests {
 
@@ -23,11 +25,8 @@ public class ProductIntegrationTests {
     @Test
     public void getById() {
         ProductFixtures.withProduct(product -> {
-            Product queriedProduct = CommercetoolsTestUtils.getProjectRoot()
-                    .products()
-                    .withId(product.getId())
-                    .get()
-                    .executeBlocking().getBody();
+            Product queriedProduct = CommercetoolsTestUtils.getProjectRoot().products().withId(
+                product.getId()).get().executeBlocking().getBody();
             Assert.assertNotNull(queriedProduct);
             Assert.assertEquals(product.getId(), queriedProduct.getId());
         });
@@ -36,31 +35,23 @@ public class ProductIntegrationTests {
     @Test
     public void getByKey() {
         ProductFixtures.withProduct(product -> {
-            Product queriedProduct = CommercetoolsTestUtils.getProjectRoot()
-                    .products()
-                    .withKey(product.getKey())
-                    .get()
-                    .executeBlocking().getBody();
+            Product queriedProduct = CommercetoolsTestUtils.getProjectRoot().products().withKey(
+                product.getKey()).get().executeBlocking().getBody();
             Assert.assertNotNull(queriedProduct);
             Assert.assertEquals(product.getKey(), queriedProduct.getKey());
         });
     }
 
     @Test
-    public void updateById(){
+    public void updateById() {
         ProductFixtures.withUpdateableProduct(product -> {
             List<ProductUpdateAction> updateActions = new ArrayList<>();
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
 
-            Product updatedProduct = CommercetoolsTestUtils.getProjectRoot()
-                    .products()
-                    .withId(product.getId())
-                    .post(ProductUpdateBuilder.of()
-                            .actions(updateActions)
-                            .version(product.getVersion())
-                            .build())
-                    .executeBlocking().getBody();
+            Product updatedProduct = CommercetoolsTestUtils.getProjectRoot().products().withId(product.getId()).post(
+                ProductUpdateBuilder.of().actions(updateActions).version(
+                    product.getVersion()).build()).executeBlocking().getBody();
 
             Assert.assertNotNull(updatedProduct);
 
@@ -69,20 +60,15 @@ public class ProductIntegrationTests {
     }
 
     @Test
-    public void updateByKey(){
+    public void updateByKey() {
         ProductFixtures.withUpdateableProduct(product -> {
             List<ProductUpdateAction> updateActions = new ArrayList<>();
             LocalizedString newName = CommercetoolsTestUtils.randomLocalizedString();
             updateActions.add(ProductChangeNameActionBuilder.of().name(newName).build());
 
-            Product updatedProduct = CommercetoolsTestUtils.getProjectRoot()
-                    .products()
-                    .withKey(product.getKey())
-                    .post(ProductUpdateBuilder.of()
-                            .actions(updateActions)
-                            .version(product.getVersion())
-                            .build())
-                    .executeBlocking().getBody();
+            Product updatedProduct = CommercetoolsTestUtils.getProjectRoot().products().withKey(product.getKey()).post(
+                ProductUpdateBuilder.of().actions(updateActions).version(
+                    product.getVersion()).build()).executeBlocking().getBody();
 
             Assert.assertNotNull(updatedProduct);
 
@@ -93,11 +79,8 @@ public class ProductIntegrationTests {
     @Test
     public void query() {
         ProductFixtures.withProduct(product -> {
-            ProductPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
-                    .products()
-                    .get()
-                    .withWhere("id=" + "\"" + product.getId() + "\"")
-                    .executeBlocking().getBody();
+            ProductPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().products().get().withWhere(
+                "id=" + "\"" + product.getId() + "\"").executeBlocking().getBody();
             Assert.assertEquals(response.getResults().size(), 1);
             Assert.assertEquals(response.getResults().get(0).getId(), product.getId());
         });

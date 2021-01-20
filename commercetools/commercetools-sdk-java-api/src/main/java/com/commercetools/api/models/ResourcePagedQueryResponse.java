@@ -1,9 +1,11 @@
+
 package com.commercetools.api.models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.List;
 
 import javax.validation.constraints.NotNull;
-import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public interface ResourcePagedQueryResponse<T> {
     public Long getLimit();

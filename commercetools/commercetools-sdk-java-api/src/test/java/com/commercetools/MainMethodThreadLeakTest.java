@@ -1,17 +1,19 @@
-package com.commercetools;
 
-import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.defaultconfig.ApiFactory;
-import com.commercetools.api.defaultconfig.ServiceRegion;
-import com.commercetools.api.models.project.Project;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+package com.commercetools;
 
 import java.io.IOException;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+
+import com.commercetools.api.client.ApiRoot;
+import com.commercetools.api.defaultconfig.ApiFactory;
+import com.commercetools.api.defaultconfig.ServiceRegion;
+import com.commercetools.api.models.project.Project;
+
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class MainMethodThreadLeakTest {
 
@@ -21,18 +23,18 @@ public class MainMethodThreadLeakTest {
      * This is necessary, since a unit test cannot cover this termination problem.
      * @param args unused command line parameters
      */
-    public static void main(String[] args) throws InterruptedException, ExecutionException, TimeoutException, IOException {
+    public static void main(String[] args)
+            throws InterruptedException, ExecutionException, TimeoutException, IOException {
         final ApiRoot client = ApiFactory.create(
-                ClientCredentials.of().withClientId(getClientId())
-                        .withClientSecret(getClientSecret())
-                        .withScopes(getScopes())
-                        .build(),
-                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-        final CompletableFuture<ApiHttpResponse<Project>> future = client.withProjectKey(getProjectKey()).get().execute();
+            ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).withScopes(
+                getScopes()).build(),
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        final CompletableFuture<ApiHttpResponse<Project>> future = client.withProjectKey(
+            getProjectKey()).get().execute();
         try {
             future.get(10, TimeUnit.SECONDS);
-        } finally {
+        }
+        finally {
             client.close();
         }
     }

@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.CustomerAddressAddedMessagePayloadImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.CustomerAddressAddedMessagePayloadImpl;
+import com.commercetools.api.models.message.MessagePayload;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerAddressAddedMessagePayloadImpl.class)
 public interface CustomerAddressAddedMessagePayload extends MessagePayload {
 
-    
     @NotNull
     @Valid
     @JsonProperty("address")
@@ -30,10 +29,9 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
 
     public void setAddress(final Address address);
 
-    public static CustomerAddressAddedMessagePayload of(){
+    public static CustomerAddressAddedMessagePayload of() {
         return new CustomerAddressAddedMessagePayloadImpl();
     }
-    
 
     public static CustomerAddressAddedMessagePayload of(final CustomerAddressAddedMessagePayload template) {
         CustomerAddressAddedMessagePayloadImpl instance = new CustomerAddressAddedMessagePayloadImpl();
@@ -41,14 +39,13 @@ public interface CustomerAddressAddedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    public static CustomerAddressAddedMessagePayloadBuilder builder(){
+    public static CustomerAddressAddedMessagePayloadBuilder builder() {
         return CustomerAddressAddedMessagePayloadBuilder.of();
     }
-    
-    public static CustomerAddressAddedMessagePayloadBuilder builder(final CustomerAddressAddedMessagePayload template){
+
+    public static CustomerAddressAddedMessagePayloadBuilder builder(final CustomerAddressAddedMessagePayload template) {
         return CustomerAddressAddedMessagePayloadBuilder.of(template);
     }
-    
 
     default <T> T withCustomerAddressAddedMessagePayload(Function<CustomerAddressAddedMessagePayload, T> helper) {
         return helper.apply(this);

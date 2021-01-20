@@ -1,42 +1,42 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.category.CategoryResourceIdentifier;
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductRemoveFromCategoryAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.category.CategoryResourceIdentifier;
+import com.commercetools.api.models.product.ProductRemoveFromCategoryAction;
+import com.commercetools.api.models.product.ProductUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductRemoveFromCategoryActionBuilder {
 
-    
     private com.commercetools.api.models.category.CategoryResourceIdentifier category;
-    
+
     @Nullable
     private Boolean staged;
 
-    public ProductRemoveFromCategoryActionBuilder category( final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
+    public ProductRemoveFromCategoryActionBuilder category(
+            final com.commercetools.api.models.category.CategoryResourceIdentifier category) {
         this.category = category;
         return this;
     }
-    
+
     public ProductRemoveFromCategoryActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
-    
-    public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory(){
+    public com.commercetools.api.models.category.CategoryResourceIdentifier getCategory() {
         return this.category;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

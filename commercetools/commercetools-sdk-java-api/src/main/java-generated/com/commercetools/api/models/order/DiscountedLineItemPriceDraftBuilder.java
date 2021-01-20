@@ -1,47 +1,46 @@
+
 package com.commercetools.api.models.order;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.DiscountedLineItemPortion;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.order.DiscountedLineItemPriceDraft;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountedLineItemPriceDraftBuilder {
 
-    
     private com.commercetools.api.models.common.Money value;
-    
-    
+
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts;
 
-    public DiscountedLineItemPriceDraftBuilder value( final com.commercetools.api.models.common.Money value) {
+    public DiscountedLineItemPriceDraftBuilder value(final com.commercetools.api.models.common.Money value) {
         this.value = value;
         return this;
     }
-    
-    public DiscountedLineItemPriceDraftBuilder includedDiscounts( final com.commercetools.api.models.cart.DiscountedLineItemPortion ...includedDiscounts) {
+
+    public DiscountedLineItemPriceDraftBuilder includedDiscounts(
+            final com.commercetools.api.models.cart.DiscountedLineItemPortion... includedDiscounts) {
         this.includedDiscounts = new ArrayList<>(Arrays.asList(includedDiscounts));
         return this;
     }
-    
-    public DiscountedLineItemPriceDraftBuilder includedDiscounts( final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
+
+    public DiscountedLineItemPriceDraftBuilder includedDiscounts(
+            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> includedDiscounts) {
         this.includedDiscounts = includedDiscounts;
         return this;
     }
 
-    
-    public com.commercetools.api.models.common.Money getValue(){
+    public com.commercetools.api.models.common.Money getValue() {
         return this.value;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> getIncludedDiscounts(){
+
+    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPortion> getIncludedDiscounts() {
         return this.includedDiscounts;
     }
 

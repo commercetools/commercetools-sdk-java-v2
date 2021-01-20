@@ -1,24 +1,24 @@
+
 package com.commercetools.api.models.inventory;
 
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
-import com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionImpl;
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetSupplyChannelActionImpl.class)
 public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpdateAction {
 
@@ -32,10 +32,9 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 
-    public static InventoryEntrySetSupplyChannelAction of(){
+    public static InventoryEntrySetSupplyChannelAction of() {
         return new InventoryEntrySetSupplyChannelActionImpl();
     }
-    
 
     public static InventoryEntrySetSupplyChannelAction of(final InventoryEntrySetSupplyChannelAction template) {
         InventoryEntrySetSupplyChannelActionImpl instance = new InventoryEntrySetSupplyChannelActionImpl();
@@ -43,14 +42,14 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
         return instance;
     }
 
-    public static InventoryEntrySetSupplyChannelActionBuilder builder(){
+    public static InventoryEntrySetSupplyChannelActionBuilder builder() {
         return InventoryEntrySetSupplyChannelActionBuilder.of();
     }
-    
-    public static InventoryEntrySetSupplyChannelActionBuilder builder(final InventoryEntrySetSupplyChannelAction template){
+
+    public static InventoryEntrySetSupplyChannelActionBuilder builder(
+            final InventoryEntrySetSupplyChannelAction template) {
         return InventoryEntrySetSupplyChannelActionBuilder.of(template);
     }
-    
 
     default <T> T withInventoryEntrySetSupplyChannelAction(Function<InventoryEntrySetSupplyChannelAction, T> helper) {
         return helper.apply(this);

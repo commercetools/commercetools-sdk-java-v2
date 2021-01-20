@@ -1,43 +1,39 @@
+
 package com.commercetools.api.models.customer;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.api.models.customer.CustomerEmailVerifyImpl;
-
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.customer.CustomerEmailVerifyImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerEmailVerifyImpl.class)
-public interface CustomerEmailVerify  {
+public interface CustomerEmailVerify {
 
-    
-    
     @JsonProperty("version")
     public Long getVersion();
-    
+
     @NotNull
     @JsonProperty("tokenValue")
     public String getTokenValue();
 
     public void setVersion(final Long version);
-    
+
     public void setTokenValue(final String tokenValue);
 
-    public static CustomerEmailVerify of(){
+    public static CustomerEmailVerify of() {
         return new CustomerEmailVerifyImpl();
     }
-    
 
     public static CustomerEmailVerify of(final CustomerEmailVerify template) {
         CustomerEmailVerifyImpl instance = new CustomerEmailVerifyImpl();
@@ -46,14 +42,13 @@ public interface CustomerEmailVerify  {
         return instance;
     }
 
-    public static CustomerEmailVerifyBuilder builder(){
+    public static CustomerEmailVerifyBuilder builder() {
         return CustomerEmailVerifyBuilder.of();
     }
-    
-    public static CustomerEmailVerifyBuilder builder(final CustomerEmailVerify template){
+
+    public static CustomerEmailVerifyBuilder builder(final CustomerEmailVerify template) {
         return CustomerEmailVerifyBuilder.of(template);
     }
-    
 
     default <T> T withCustomerEmailVerify(Function<CustomerEmailVerify, T> helper) {
         return helper.apply(this);

@@ -1,3 +1,4 @@
+
 package com.commercetools.api.client;
 
 import io.vrap.rmf.base.client.ApiHttpMethod;
@@ -8,7 +9,8 @@ import io.vrap.rmf.base.client.http.InternalLogger;
 public class ApiInternalLoggerFactory {
 
     public static InternalLogger get(final ApiHttpRequest httpRequest, final String topic) {
-        return InternalLogger.getLogger(ClientFactory.COMMERCETOOLS + "." + getPathElement(httpRequest) + "." + topic + (topic.equals("request") ? "." + requestOrCommandScopeSegment(httpRequest) : ""));
+        return InternalLogger.getLogger(ClientFactory.COMMERCETOOLS + "." + getPathElement(httpRequest) + "." + topic
+                + (topic.equals("request") ? "." + requestOrCommandScopeSegment(httpRequest) : ""));
     }
 
     private static String getPathElement(final ApiHttpRequest httpRequest) {
@@ -22,7 +24,8 @@ public class ApiInternalLoggerFactory {
     }
 
     private static boolean isPostSearch(final ApiHttpRequest httpRequest) {
-        return httpRequest.getMethod() == ApiHttpMethod.POST && httpRequest.getUrl().getPath().contains("/product-projections/search");
+        return httpRequest.getMethod() == ApiHttpMethod.POST
+                && httpRequest.getUrl().getPath().contains("/product-projections/search");
     }
 
 }

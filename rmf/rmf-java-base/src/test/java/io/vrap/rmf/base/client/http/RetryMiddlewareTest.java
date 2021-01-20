@@ -1,17 +1,19 @@
+
 package io.vrap.rmf.base.client.http;
 
-import io.vrap.rmf.base.client.ApiHttpException;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import org.junit.Test;
-import org.assertj.core.api.Assertions;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.ApiHttpException;
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import io.vrap.rmf.base.client.ApiHttpResponse;
+
+import org.assertj.core.api.Assertions;
+import org.junit.Test;
 
 public class RetryMiddlewareTest {
 

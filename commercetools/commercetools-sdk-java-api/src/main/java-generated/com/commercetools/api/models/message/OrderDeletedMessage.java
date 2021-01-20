@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.order.Order;
-import com.commercetools.api.models.message.OrderDeletedMessageImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.OrderDeletedMessageImpl;
+import com.commercetools.api.models.order.Order;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderDeletedMessageImpl.class)
 public interface OrderDeletedMessage extends Message {
 
-    
     @NotNull
     @Valid
     @JsonProperty("order")
@@ -30,10 +29,9 @@ public interface OrderDeletedMessage extends Message {
 
     public void setOrder(final Order order);
 
-    public static OrderDeletedMessage of(){
+    public static OrderDeletedMessage of() {
         return new OrderDeletedMessageImpl();
     }
-    
 
     public static OrderDeletedMessage of(final OrderDeletedMessage template) {
         OrderDeletedMessageImpl instance = new OrderDeletedMessageImpl();
@@ -51,14 +49,13 @@ public interface OrderDeletedMessage extends Message {
         return instance;
     }
 
-    public static OrderDeletedMessageBuilder builder(){
+    public static OrderDeletedMessageBuilder builder() {
         return OrderDeletedMessageBuilder.of();
     }
-    
-    public static OrderDeletedMessageBuilder builder(final OrderDeletedMessage template){
+
+    public static OrderDeletedMessageBuilder builder(final OrderDeletedMessage template) {
         return OrderDeletedMessageBuilder.of(template);
     }
-    
 
     default <T> T withOrderDeletedMessage(Function<OrderDeletedMessage, T> helper) {
         return helper.apply(this);

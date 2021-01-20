@@ -1,145 +1,127 @@
+
 package com.commercetools.api.models.product;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.FacetResultRange;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FacetResultRangeBuilder {
 
-    
     private Double from;
-    
-    
+
     private String fromStr;
-    
-    
+
     private Double to;
-    
-    
+
     private String toStr;
-    
-    
+
     private Long count;
-    
+
     @Nullable
     private Long productCount;
-    
-    
+
     private Long total;
-    
-    
+
     private Double min;
-    
-    
+
     private Double max;
-    
-    
+
     private Double mean;
 
-    public FacetResultRangeBuilder from( final Double from) {
+    public FacetResultRangeBuilder from(final Double from) {
         this.from = from;
         return this;
     }
-    
-    public FacetResultRangeBuilder fromStr( final String fromStr) {
+
+    public FacetResultRangeBuilder fromStr(final String fromStr) {
         this.fromStr = fromStr;
         return this;
     }
-    
-    public FacetResultRangeBuilder to( final Double to) {
+
+    public FacetResultRangeBuilder to(final Double to) {
         this.to = to;
         return this;
     }
-    
-    public FacetResultRangeBuilder toStr( final String toStr) {
+
+    public FacetResultRangeBuilder toStr(final String toStr) {
         this.toStr = toStr;
         return this;
     }
-    
-    public FacetResultRangeBuilder count( final Long count) {
+
+    public FacetResultRangeBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
+
     public FacetResultRangeBuilder productCount(@Nullable final Long productCount) {
         this.productCount = productCount;
         return this;
     }
-    
-    public FacetResultRangeBuilder total( final Long total) {
+
+    public FacetResultRangeBuilder total(final Long total) {
         this.total = total;
         return this;
     }
-    
-    public FacetResultRangeBuilder min( final Double min) {
+
+    public FacetResultRangeBuilder min(final Double min) {
         this.min = min;
         return this;
     }
-    
-    public FacetResultRangeBuilder max( final Double max) {
+
+    public FacetResultRangeBuilder max(final Double max) {
         this.max = max;
         return this;
     }
-    
-    public FacetResultRangeBuilder mean( final Double mean) {
+
+    public FacetResultRangeBuilder mean(final Double mean) {
         this.mean = mean;
         return this;
     }
 
-    
-    public Double getFrom(){
+    public Double getFrom() {
         return this.from;
     }
-    
-    
-    public String getFromStr(){
+
+    public String getFromStr() {
         return this.fromStr;
     }
-    
-    
-    public Double getTo(){
+
+    public Double getTo() {
         return this.to;
     }
-    
-    
-    public String getToStr(){
+
+    public String getToStr() {
         return this.toStr;
     }
-    
-    
-    public Long getCount(){
+
+    public Long getCount() {
         return this.count;
     }
-    
+
     @Nullable
-    public Long getProductCount(){
+    public Long getProductCount() {
         return this.productCount;
     }
-    
-    
-    public Long getTotal(){
+
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    public Double getMin(){
+
+    public Double getMin() {
         return this.min;
     }
-    
-    
-    public Double getMax(){
+
+    public Double getMax() {
         return this.max;
     }
-    
-    
-    public Double getMean(){
+
+    public Double getMean() {
         return this.mean;
     }
 

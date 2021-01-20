@@ -1,25 +1,24 @@
+
 package com.commercetools.ml.models.general_category_recommendations;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationImpl;
-
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = GeneralCategoryRecommendationImpl.class)
-public interface GeneralCategoryRecommendation  {
+public interface GeneralCategoryRecommendation {
 
     /**
     *  <p>An English category name that is recommended for a product.</p>
@@ -27,6 +26,7 @@ public interface GeneralCategoryRecommendation  {
     @NotNull
     @JsonProperty("categoryName")
     public String getCategoryName();
+
     /**
     *  <p>Probability score for the category recommendation.</p>
     */
@@ -35,13 +35,12 @@ public interface GeneralCategoryRecommendation  {
     public Double getConfidence();
 
     public void setCategoryName(final String categoryName);
-    
+
     public void setConfidence(final Double confidence);
 
-    public static GeneralCategoryRecommendation of(){
+    public static GeneralCategoryRecommendation of() {
         return new GeneralCategoryRecommendationImpl();
     }
-    
 
     public static GeneralCategoryRecommendation of(final GeneralCategoryRecommendation template) {
         GeneralCategoryRecommendationImpl instance = new GeneralCategoryRecommendationImpl();
@@ -50,14 +49,13 @@ public interface GeneralCategoryRecommendation  {
         return instance;
     }
 
-    public static GeneralCategoryRecommendationBuilder builder(){
+    public static GeneralCategoryRecommendationBuilder builder() {
         return GeneralCategoryRecommendationBuilder.of();
     }
-    
-    public static GeneralCategoryRecommendationBuilder builder(final GeneralCategoryRecommendation template){
+
+    public static GeneralCategoryRecommendationBuilder builder(final GeneralCategoryRecommendation template) {
         return GeneralCategoryRecommendationBuilder.of(template);
     }
-    
 
     default <T> T withGeneralCategoryRecommendation(Function<GeneralCategoryRecommendation, T> helper) {
         return helper.apply(this);

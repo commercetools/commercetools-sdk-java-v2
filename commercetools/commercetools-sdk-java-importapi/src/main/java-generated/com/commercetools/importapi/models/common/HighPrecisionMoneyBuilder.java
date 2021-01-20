@@ -1,68 +1,63 @@
+
 package com.commercetools.importapi.models.common;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.common.HighPrecisionMoney;
 import com.commercetools.importapi.models.common.MoneyType;
 import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.common.HighPrecisionMoney;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class HighPrecisionMoneyBuilder {
 
     @Nullable
     private Integer fractionDigits;
-    
-    
+
     private Long centAmount;
-    
-    
+
     private String currencyCode;
-    
-    
+
     private Long preciseAmount;
 
     public HighPrecisionMoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
-    
-    public HighPrecisionMoneyBuilder centAmount( final Long centAmount) {
+
+    public HighPrecisionMoneyBuilder centAmount(final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
-    
-    public HighPrecisionMoneyBuilder currencyCode( final String currencyCode) {
+
+    public HighPrecisionMoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
-    
-    public HighPrecisionMoneyBuilder preciseAmount( final Long preciseAmount) {
+
+    public HighPrecisionMoneyBuilder preciseAmount(final Long preciseAmount) {
         this.preciseAmount = preciseAmount;
         return this;
     }
 
     @Nullable
-    public Integer getFractionDigits(){
+    public Integer getFractionDigits() {
         return this.fractionDigits;
     }
-    
-    
-    public Long getCentAmount(){
+
+    public Long getCentAmount() {
         return this.centAmount;
     }
-    
-    
-    public String getCurrencyCode(){
+
+    public String getCurrencyCode() {
         return this.currencyCode;
     }
-    
-    
-    public Long getPreciseAmount(){
+
+    public Long getPreciseAmount() {
         return this.preciseAmount;
     }
 

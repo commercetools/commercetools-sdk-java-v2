@@ -1,55 +1,51 @@
+
 package com.commercetools.importapi.models.common;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.AssetDimensions;
 import com.commercetools.importapi.models.common.AssetSourceImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AssetSourceImpl.class)
-public interface AssetSource  {
+public interface AssetSource {
 
-    
     @NotNull
     @JsonProperty("uri")
     public String getUri();
-    
-    
+
     @JsonProperty("key")
     public String getKey();
-    
+
     @Valid
     @JsonProperty("dimensions")
     public AssetDimensions getDimensions();
-    
-    
+
     @JsonProperty("contentType")
     public String getContentType();
 
     public void setUri(final String uri);
-    
+
     public void setKey(final String key);
-    
+
     public void setDimensions(final AssetDimensions dimensions);
-    
+
     public void setContentType(final String contentType);
 
-    public static AssetSource of(){
+    public static AssetSource of() {
         return new AssetSourceImpl();
     }
-    
 
     public static AssetSource of(final AssetSource template) {
         AssetSourceImpl instance = new AssetSourceImpl();
@@ -60,14 +56,13 @@ public interface AssetSource  {
         return instance;
     }
 
-    public static AssetSourceBuilder builder(){
+    public static AssetSourceBuilder builder() {
         return AssetSourceBuilder.of();
     }
-    
-    public static AssetSourceBuilder builder(final AssetSource template){
+
+    public static AssetSourceBuilder builder(final AssetSource template) {
         return AssetSourceBuilder.of(template);
     }
-    
 
     default <T> T withAssetSource(Function<AssetSource, T> helper) {
         return helper.apply(this);

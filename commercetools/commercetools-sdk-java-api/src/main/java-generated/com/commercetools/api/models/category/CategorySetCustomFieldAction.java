@@ -1,44 +1,41 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.category.CategorySetCustomFieldActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.category.CategorySetCustomFieldActionImpl;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CategorySetCustomFieldActionImpl.class)
 public interface CategorySetCustomFieldAction extends CategoryUpdateAction {
 
-    
     @NotNull
     @JsonProperty("name")
     public String getName();
-    
-    
+
     @JsonProperty("value")
     public JsonNode getValue();
 
     public void setName(final String name);
-    
+
     public void setValue(final JsonNode value);
 
-    public static CategorySetCustomFieldAction of(){
+    public static CategorySetCustomFieldAction of() {
         return new CategorySetCustomFieldActionImpl();
     }
-    
 
     public static CategorySetCustomFieldAction of(final CategorySetCustomFieldAction template) {
         CategorySetCustomFieldActionImpl instance = new CategorySetCustomFieldActionImpl();
@@ -47,14 +44,13 @@ public interface CategorySetCustomFieldAction extends CategoryUpdateAction {
         return instance;
     }
 
-    public static CategorySetCustomFieldActionBuilder builder(){
+    public static CategorySetCustomFieldActionBuilder builder() {
         return CategorySetCustomFieldActionBuilder.of();
     }
-    
-    public static CategorySetCustomFieldActionBuilder builder(final CategorySetCustomFieldAction template){
+
+    public static CategorySetCustomFieldActionBuilder builder(final CategorySetCustomFieldAction template) {
         return CategorySetCustomFieldActionBuilder.of(template);
     }
-    
 
     default <T> T withCategorySetCustomFieldAction(Function<CategorySetCustomFieldAction, T> helper) {
         return helper.apply(this);

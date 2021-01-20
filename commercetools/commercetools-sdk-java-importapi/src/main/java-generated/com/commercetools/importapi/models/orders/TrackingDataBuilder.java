@@ -1,30 +1,30 @@
+
 package com.commercetools.importapi.models.orders;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.orders.TrackingData;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TrackingDataBuilder {
 
     @Nullable
     private String trackingId;
-    
+
     @Nullable
     private String carrier;
-    
+
     @Nullable
     private String provider;
-    
+
     @Nullable
     private String providerTransaction;
-    
+
     @Nullable
     private Boolean isReturn;
 
@@ -32,49 +32,49 @@ public final class TrackingDataBuilder {
         this.trackingId = trackingId;
         return this;
     }
-    
+
     public TrackingDataBuilder carrier(@Nullable final String carrier) {
         this.carrier = carrier;
         return this;
     }
-    
+
     public TrackingDataBuilder provider(@Nullable final String provider) {
         this.provider = provider;
         return this;
     }
-    
+
     public TrackingDataBuilder providerTransaction(@Nullable final String providerTransaction) {
         this.providerTransaction = providerTransaction;
         return this;
     }
-    
+
     public TrackingDataBuilder isReturn(@Nullable final Boolean isReturn) {
         this.isReturn = isReturn;
         return this;
     }
 
     @Nullable
-    public String getTrackingId(){
+    public String getTrackingId() {
         return this.trackingId;
     }
-    
+
     @Nullable
-    public String getCarrier(){
+    public String getCarrier() {
         return this.carrier;
     }
-    
+
     @Nullable
-    public String getProvider(){
+    public String getProvider() {
         return this.provider;
     }
-    
+
     @Nullable
-    public String getProviderTransaction(){
+    public String getProviderTransaction() {
         return this.providerTransaction;
     }
-    
+
     @Nullable
-    public Boolean getIsReturn(){
+    public Boolean getIsReturn() {
         return this.isReturn;
     }
 

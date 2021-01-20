@@ -1,6 +1,5 @@
-package io.vrap.rmf.base.client;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
+package io.vrap.rmf.base.client;
 
 import java.net.MalformedURLException;
 import java.net.URI;
@@ -8,7 +7,9 @@ import java.net.URL;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
-public class ApiHttpRequest extends Base  {
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
+public class ApiHttpRequest extends Base {
 
     private ApiHttpMethod method;
     private URI uri;
@@ -81,19 +82,18 @@ public class ApiHttpRequest extends Base  {
         return body;
     }
 
-    public ApiHttpRequest withBody(final byte[] body)
-    {
+    public ApiHttpRequest withBody(final byte[] body) {
         ApiHttpRequest request = copy();
         request.body = body;
         return request;
     }
 
-    public ApiHttpRequest withBody(final String body)
-    {
+    public ApiHttpRequest withBody(final String body) {
         ApiHttpRequest request = copy();
         if (body == null) {
             request.body = null;
-        } else {
+        }
+        else {
             request.body = body.getBytes(StandardCharsets.UTF_8);
         }
 
@@ -107,7 +107,8 @@ public class ApiHttpRequest extends Base  {
     public URL getUrl() {
         try {
             return uri.toURL();
-        } catch (MalformedURLException e) {
+        }
+        catch (MalformedURLException e) {
             throw new IllegalStateException("Malformed URI", e);
         }
     }
@@ -125,32 +126,27 @@ public class ApiHttpRequest extends Base  {
         return request;
     }
 
-    public ApiHttpRequest resolve(final URI baseUri)
-    {
+    public ApiHttpRequest resolve(final URI baseUri) {
         return withUri(baseUri.resolve(this.uri));
     }
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("method", method)
-                .append("uri", "\"" + uri + "\"")
-                .append("headers", headers)
-                .append("textInterpretedBody", getSecuredBody())
-                .toString();
+        return new ToStringBuilder(this).append("method", method).append("uri", "\"" + uri + "\"").append("headers",
+            headers).append("textInterpretedBody", getSecuredBody()).toString();
     }
 
-    public String getSecuredBody()
-    {
-        return Optional.ofNullable(body).map(b -> tryToFilter(new String(b, StandardCharsets.UTF_8))).orElse("empty body");
+    public String getSecuredBody() {
+        return Optional.ofNullable(body).map(b -> tryToFilter(new String(b, StandardCharsets.UTF_8))).orElse(
+            "empty body");
     }
 
     static String tryToFilter(final String input) {
-        return input.replaceAll("(\"\\w*([Pp]ass|access_token|refresh_token)\\w*\"):\"[^\"]*\"", "$1:\"**removed from output**\"");
+        return input.replaceAll("(\"\\w*([Pp]ass|access_token|refresh_token)\\w*\"):\"[^\"]*\"",
+            "$1:\"**removed from output**\"");
     }
 
-    private ApiHttpRequest copy()
-    {
+    private ApiHttpRequest copy() {
         return new ApiHttpRequest(this);
     }
 }

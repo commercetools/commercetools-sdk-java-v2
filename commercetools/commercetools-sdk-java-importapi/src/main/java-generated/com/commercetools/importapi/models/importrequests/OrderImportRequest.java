@@ -1,28 +1,28 @@
+
 package com.commercetools.importapi.models.importrequests;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importrequests.ImportRequest;
-import com.commercetools.importapi.models.orders.OrderImport;
 import com.commercetools.importapi.models.importrequests.OrderImportRequestImpl;
-
+import com.commercetools.importapi.models.orders.OrderImport;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>An import request for multiple order import resources.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderImportRequestImpl.class)
 public interface OrderImportRequest extends ImportRequest {
 
@@ -35,13 +35,13 @@ public interface OrderImportRequest extends ImportRequest {
     public List<OrderImport> getResources();
 
     @JsonIgnore
-    public void setResources(final OrderImport ...resources);
+    public void setResources(final OrderImport... resources);
+
     public void setResources(final List<OrderImport> resources);
 
-    public static OrderImportRequest of(){
+    public static OrderImportRequest of() {
         return new OrderImportRequestImpl();
     }
-    
 
     public static OrderImportRequest of(final OrderImportRequest template) {
         OrderImportRequestImpl instance = new OrderImportRequestImpl();
@@ -49,14 +49,13 @@ public interface OrderImportRequest extends ImportRequest {
         return instance;
     }
 
-    public static OrderImportRequestBuilder builder(){
+    public static OrderImportRequestBuilder builder() {
         return OrderImportRequestBuilder.of();
     }
-    
-    public static OrderImportRequestBuilder builder(final OrderImportRequest template){
+
+    public static OrderImportRequestBuilder builder(final OrderImportRequest template) {
         return OrderImportRequestBuilder.of(template);
     }
-    
 
     default <T> T withOrderImportRequest(Function<OrderImportRequest, T> helper) {
         return helper.apply(this);

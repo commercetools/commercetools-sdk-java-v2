@@ -1,24 +1,25 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductRemoveVariantAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.product.ProductRemoveVariantAction;
+import com.commercetools.api.models.product.ProductUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductRemoveVariantActionBuilder {
 
     @Nullable
     private Long id;
-    
+
     @Nullable
     private String sku;
-    
+
     @Nullable
     private Boolean staged;
 
@@ -26,29 +27,29 @@ public final class ProductRemoveVariantActionBuilder {
         this.id = id;
         return this;
     }
-    
+
     public ProductRemoveVariantActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
+
     public ProductRemoveVariantActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
     @Nullable
-    public Long getId(){
+    public Long getId() {
         return this.id;
     }
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

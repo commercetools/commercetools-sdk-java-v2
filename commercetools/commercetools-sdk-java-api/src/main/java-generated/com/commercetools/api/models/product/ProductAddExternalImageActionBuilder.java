@@ -1,28 +1,28 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.common.Image;
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductAddExternalImageAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.Image;
+import com.commercetools.api.models.product.ProductAddExternalImageAction;
+import com.commercetools.api.models.product.ProductUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductAddExternalImageActionBuilder {
 
     @Nullable
     private Long variantId;
-    
+
     @Nullable
     private String sku;
-    
-    
+
     private com.commercetools.api.models.common.Image image;
-    
+
     @Nullable
     private Boolean staged;
 
@@ -30,39 +30,38 @@ public final class ProductAddExternalImageActionBuilder {
         this.variantId = variantId;
         return this;
     }
-    
+
     public ProductAddExternalImageActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
-    public ProductAddExternalImageActionBuilder image( final com.commercetools.api.models.common.Image image) {
+
+    public ProductAddExternalImageActionBuilder image(final com.commercetools.api.models.common.Image image) {
         this.image = image;
         return this;
     }
-    
+
     public ProductAddExternalImageActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
-    
-    public com.commercetools.api.models.common.Image getImage(){
+
+    public com.commercetools.api.models.common.Image getImage() {
         return this.image;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

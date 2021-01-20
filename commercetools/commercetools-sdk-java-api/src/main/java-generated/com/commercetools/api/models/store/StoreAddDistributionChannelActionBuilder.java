@@ -1,29 +1,29 @@
+
 package com.commercetools.api.models.store;
 
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.store.StoreAddDistributionChannelAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreAddDistributionChannelAction;
+import com.commercetools.api.models.store.StoreUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StoreAddDistributionChannelActionBuilder {
 
-    
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
 
-    public StoreAddDistributionChannelActionBuilder distributionChannel( final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+    public StoreAddDistributionChannelActionBuilder distributionChannel(
+            final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
 
-    
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
         return this.distributionChannel;
     }
 

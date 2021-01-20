@@ -1,53 +1,51 @@
+
 package com.commercetools.api.models.error;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.error.ErrorByExtension;
 import com.commercetools.api.models.error.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorImpl;
-
 import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ExtensionUpdateActionsFailedErrorImpl.class)
 public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
-    
     @Valid
     @JsonProperty("localizedMessage")
     public LocalizedString getLocalizedMessage();
-    
+
     @Valid
     @JsonProperty("extensionExtraInfo")
     public JsonNode getExtensionExtraInfo();
-    
+
     @NotNull
     @Valid
     @JsonProperty("errorByExtension")
     public ErrorByExtension getErrorByExtension();
 
     public void setLocalizedMessage(final LocalizedString localizedMessage);
-    
+
     public void setExtensionExtraInfo(final JsonNode extensionExtraInfo);
-    
+
     public void setErrorByExtension(final ErrorByExtension errorByExtension);
 
-    public static ExtensionUpdateActionsFailedError of(){
+    public static ExtensionUpdateActionsFailedError of() {
         return new ExtensionUpdateActionsFailedErrorImpl();
     }
-    
 
     public static ExtensionUpdateActionsFailedError of(final ExtensionUpdateActionsFailedError template) {
         ExtensionUpdateActionsFailedErrorImpl instance = new ExtensionUpdateActionsFailedErrorImpl();
@@ -58,14 +56,13 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
         return instance;
     }
 
-    public static ExtensionUpdateActionsFailedErrorBuilder builder(){
+    public static ExtensionUpdateActionsFailedErrorBuilder builder() {
         return ExtensionUpdateActionsFailedErrorBuilder.of();
     }
-    
-    public static ExtensionUpdateActionsFailedErrorBuilder builder(final ExtensionUpdateActionsFailedError template){
+
+    public static ExtensionUpdateActionsFailedErrorBuilder builder(final ExtensionUpdateActionsFailedError template) {
         return ExtensionUpdateActionsFailedErrorBuilder.of(template);
     }
-    
 
     default <T> T withExtensionUpdateActionsFailedError(Function<ExtensionUpdateActionsFailedError, T> helper) {
         return helper.apply(this);

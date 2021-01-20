@@ -1,48 +1,46 @@
+
 package com.commercetools.api.models.inventory;
 
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.io.IOException;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.inventory.InventoryEntryDraftImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.inventory.InventoryEntryDraftImpl;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryDraftImpl.class)
-public interface InventoryEntryDraft  {
+public interface InventoryEntryDraft {
 
-    
     @NotNull
     @JsonProperty("sku")
     public String getSku();
-    
+
     @Valid
     @JsonProperty("supplyChannel")
     public ChannelResourceIdentifier getSupplyChannel();
-    
+
     @NotNull
     @JsonProperty("quantityOnStock")
     public Long getQuantityOnStock();
-    
-    
+
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
-    
-    
+
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
+
     /**
     *  <p>The custom fields.</p>
     */
@@ -51,21 +49,20 @@ public interface InventoryEntryDraft  {
     public CustomFieldsDraft getCustom();
 
     public void setSku(final String sku);
-    
+
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
-    
+
     public void setQuantityOnStock(final Long quantityOnStock);
-    
+
     public void setRestockableInDays(final Long restockableInDays);
-    
+
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
-    
+
     public void setCustom(final CustomFieldsDraft custom);
 
-    public static InventoryEntryDraft of(){
+    public static InventoryEntryDraft of() {
         return new InventoryEntryDraftImpl();
     }
-    
 
     public static InventoryEntryDraft of(final InventoryEntryDraft template) {
         InventoryEntryDraftImpl instance = new InventoryEntryDraftImpl();
@@ -78,14 +75,13 @@ public interface InventoryEntryDraft  {
         return instance;
     }
 
-    public static InventoryEntryDraftBuilder builder(){
+    public static InventoryEntryDraftBuilder builder() {
         return InventoryEntryDraftBuilder.of();
     }
-    
-    public static InventoryEntryDraftBuilder builder(final InventoryEntryDraft template){
+
+    public static InventoryEntryDraftBuilder builder(final InventoryEntryDraft template) {
         return InventoryEntryDraftBuilder.of(template);
     }
-    
 
     default <T> T withInventoryEntryDraft(Function<InventoryEntryDraft, T> helper) {
         return helper.apply(this);

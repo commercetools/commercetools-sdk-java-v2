@@ -1,42 +1,39 @@
+
 package com.commercetools.api.models.extension;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.extension.ExtensionAction;
 import com.commercetools.api.models.extension.ExtensionInput;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionInputBuilder {
 
-    
     private com.commercetools.api.models.extension.ExtensionAction action;
-    
-    
+
     private com.commercetools.api.models.common.Reference resource;
 
-    public ExtensionInputBuilder action( final com.commercetools.api.models.extension.ExtensionAction action) {
+    public ExtensionInputBuilder action(final com.commercetools.api.models.extension.ExtensionAction action) {
         this.action = action;
         return this;
     }
-    
-    public ExtensionInputBuilder resource( final com.commercetools.api.models.common.Reference resource) {
+
+    public ExtensionInputBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
 
-    
-    public com.commercetools.api.models.extension.ExtensionAction getAction(){
+    public com.commercetools.api.models.extension.ExtensionAction getAction() {
         return this.action;
     }
-    
-    
-    public com.commercetools.api.models.common.Reference getResource(){
+
+    public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
 

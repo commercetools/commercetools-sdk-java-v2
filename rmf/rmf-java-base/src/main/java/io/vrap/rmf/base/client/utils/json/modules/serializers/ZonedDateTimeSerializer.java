@@ -1,8 +1,5 @@
-package io.vrap.rmf.base.client.utils.json.modules.serializers;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.SerializerProvider;
-import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
+package io.vrap.rmf.base.client.utils.json.modules.serializers;
 
 import java.io.IOException;
 import java.time.ZoneOffset;
@@ -10,7 +7,11 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 
-public final class ZonedDateTimeSerializer extends StdScalarSerializer<ZonedDateTime>  {
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
+
+public final class ZonedDateTimeSerializer extends StdScalarSerializer<ZonedDateTime> {
 
     static final long serialVersionUID = 0L;
     private static final DateTimeFormatter FORMATTER = new DateTimeFormatterBuilder().appendInstant(3).toFormatter();

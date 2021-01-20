@@ -1,29 +1,29 @@
+
 package com.commercetools.api.models.payment;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.payment.PaymentAddTransactionAction;
 import com.commercetools.api.models.payment.PaymentUpdateAction;
 import com.commercetools.api.models.payment.TransactionDraft;
-import com.commercetools.api.models.payment.PaymentAddTransactionAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PaymentAddTransactionActionBuilder {
 
-    
     private com.commercetools.api.models.payment.TransactionDraft transaction;
 
-    public PaymentAddTransactionActionBuilder transaction( final com.commercetools.api.models.payment.TransactionDraft transaction) {
+    public PaymentAddTransactionActionBuilder transaction(
+            final com.commercetools.api.models.payment.TransactionDraft transaction) {
         this.transaction = transaction;
         return this;
     }
 
-    
-    public com.commercetools.api.models.payment.TransactionDraft getTransaction(){
+    public com.commercetools.api.models.payment.TransactionDraft getTransaction() {
         return this.transaction;
     }
 

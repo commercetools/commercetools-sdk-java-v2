@@ -1,40 +1,35 @@
+
 package com.commerctools.importapi.defaultconfig;
+
+import java.util.UUID;
 
 import com.commercetools.importapi.client.ByProjectKeyRequestBuilder;
 import com.commercetools.importapi.defaultconfig.ImportApiFactory;
 import com.commercetools.importapi.defaultconfig.ServiceRegion;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
+
 import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-
-import java.util.UUID;
 
 public class ImportApiTestUtils {
 
     private static final ByProjectKeyRequestBuilder projectRoot;
 
-    static{
+    static {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
-        if("OFF".equals(logLevel)){
-            projectRoot = ImportApiFactory.createForProject(
-                    getProjectKey(),
-                    ClientCredentials.of().withClientId(getClientId())
-                            .withClientSecret(getClientSecret())
-                            .withScopes(getScopes())
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-        } else {
-            projectRoot = ImportApiFactory.createForProject(
-                    getProjectKey(),
-                    ClientCredentials.of().withClientId(getClientId())
-                            .withClientSecret(getClientSecret())
-                            .withScopes(getScopes())
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        if ("OFF".equals(logLevel)) {
+            projectRoot = ImportApiFactory.createForProject(getProjectKey(),
+                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).withScopes(
+                    getScopes()).build(),
+                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        }
+        else {
+            projectRoot = ImportApiFactory.createForProject(getProjectKey(),
+                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).withScopes(
+                    getScopes()).build(),
+                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
         }
     }
 

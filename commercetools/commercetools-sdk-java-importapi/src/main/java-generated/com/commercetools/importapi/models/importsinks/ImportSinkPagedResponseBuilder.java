@@ -1,72 +1,67 @@
+
 package com.commercetools.importapi.models.importsinks;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.importsinks.ImportSink;
 import com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSinkPagedResponseBuilder {
 
-    
     private Integer limit;
-    
-    
+
     private Long offset;
-    
-    
+
     private Long count;
-    
-    
+
     private java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results;
 
-    public ImportSinkPagedResponseBuilder limit( final Integer limit) {
+    public ImportSinkPagedResponseBuilder limit(final Integer limit) {
         this.limit = limit;
         return this;
     }
-    
-    public ImportSinkPagedResponseBuilder offset( final Long offset) {
+
+    public ImportSinkPagedResponseBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
-    
-    public ImportSinkPagedResponseBuilder count( final Long count) {
+
+    public ImportSinkPagedResponseBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
-    public ImportSinkPagedResponseBuilder results( final com.commercetools.importapi.models.importsinks.ImportSink ...results) {
+
+    public ImportSinkPagedResponseBuilder results(
+            final com.commercetools.importapi.models.importsinks.ImportSink... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-    
-    public ImportSinkPagedResponseBuilder results( final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results) {
+
+    public ImportSinkPagedResponseBuilder results(
+            final java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> results) {
         this.results = results;
         return this;
     }
 
-    
-    public Integer getLimit(){
+    public Integer getLimit() {
         return this.limit;
     }
-    
-    
-    public Long getOffset(){
+
+    public Long getOffset() {
         return this.offset;
     }
-    
-    
-    public Long getCount(){
+
+    public Long getCount() {
         return this.count;
     }
-    
-    
-    public java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> getResults(){
+
+    public java.util.List<com.commercetools.importapi.models.importsinks.ImportSink> getResults() {
         return this.results;
     }
 

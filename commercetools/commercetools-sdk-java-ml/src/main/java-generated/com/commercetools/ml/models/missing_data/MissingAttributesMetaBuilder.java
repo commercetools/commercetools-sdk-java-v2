@@ -1,59 +1,58 @@
+
 package com.commercetools.ml.models.missing_data;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.missing_data.MissingAttributesDetails;
 import com.commercetools.ml.models.missing_data.MissingAttributesMeta;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingAttributesMetaBuilder {
 
-    
     private com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel;
-    
-    
+
     private com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel;
-    
+
     @Nullable
     private java.util.List<String> productTypeIds;
 
-    public MissingAttributesMetaBuilder productLevel( final com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel) {
+    public MissingAttributesMetaBuilder productLevel(
+            final com.commercetools.ml.models.missing_data.MissingAttributesDetails productLevel) {
         this.productLevel = productLevel;
         return this;
     }
-    
-    public MissingAttributesMetaBuilder variantLevel( final com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel) {
+
+    public MissingAttributesMetaBuilder variantLevel(
+            final com.commercetools.ml.models.missing_data.MissingAttributesDetails variantLevel) {
         this.variantLevel = variantLevel;
         return this;
     }
-    
-    public MissingAttributesMetaBuilder productTypeIds(@Nullable final String ...productTypeIds) {
+
+    public MissingAttributesMetaBuilder productTypeIds(@Nullable final String... productTypeIds) {
         this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
-    
+
     public MissingAttributesMetaBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
         this.productTypeIds = productTypeIds;
         return this;
     }
 
-    
-    public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel(){
+    public com.commercetools.ml.models.missing_data.MissingAttributesDetails getProductLevel() {
         return this.productLevel;
     }
-    
-    
-    public com.commercetools.ml.models.missing_data.MissingAttributesDetails getVariantLevel(){
+
+    public com.commercetools.ml.models.missing_data.MissingAttributesDetails getVariantLevel() {
         return this.variantLevel;
     }
-    
+
     @Nullable
-    public java.util.List<String> getProductTypeIds(){
+    public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }
 

@@ -1,46 +1,43 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.TypeUpdateAction;
-import com.commercetools.api.models.type.TypeChangeEnumValueOrderAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.type.TypeChangeEnumValueOrderAction;
+import com.commercetools.api.models.type.TypeUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TypeChangeEnumValueOrderActionBuilder {
 
-    
     private String fieldName;
-    
-    
+
     private java.util.List<String> keys;
 
-    public TypeChangeEnumValueOrderActionBuilder fieldName( final String fieldName) {
+    public TypeChangeEnumValueOrderActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-    
-    public TypeChangeEnumValueOrderActionBuilder keys( final String ...keys) {
+
+    public TypeChangeEnumValueOrderActionBuilder keys(final String... keys) {
         this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
-    
-    public TypeChangeEnumValueOrderActionBuilder keys( final java.util.List<String> keys) {
+
+    public TypeChangeEnumValueOrderActionBuilder keys(final java.util.List<String> keys) {
         this.keys = keys;
         return this;
     }
 
-    
-    public String getFieldName(){
+    public String getFieldName() {
         return this.fieldName;
     }
-    
-    
-    public java.util.List<String> getKeys(){
+
+    public java.util.List<String> getKeys() {
         return this.keys;
     }
 

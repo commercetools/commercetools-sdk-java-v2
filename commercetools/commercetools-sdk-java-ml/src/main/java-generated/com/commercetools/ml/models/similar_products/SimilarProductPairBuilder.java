@@ -1,46 +1,45 @@
+
 package com.commercetools.ml.models.similar_products;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.similar_products.SimilarProduct;
 import com.commercetools.ml.models.similar_products.SimilarProductPair;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SimilarProductPairBuilder {
 
-    
     private Double confidence;
-    
-    
+
     private java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products;
 
-    public SimilarProductPairBuilder confidence( final Double confidence) {
+    public SimilarProductPairBuilder confidence(final Double confidence) {
         this.confidence = confidence;
         return this;
     }
-    
-    public SimilarProductPairBuilder products( final com.commercetools.ml.models.similar_products.SimilarProduct ...products) {
+
+    public SimilarProductPairBuilder products(
+            final com.commercetools.ml.models.similar_products.SimilarProduct... products) {
         this.products = new ArrayList<>(Arrays.asList(products));
         return this;
     }
-    
-    public SimilarProductPairBuilder products( final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products) {
+
+    public SimilarProductPairBuilder products(
+            final java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> products) {
         this.products = products;
         return this;
     }
 
-    
-    public Double getConfidence(){
+    public Double getConfidence() {
         return this.confidence;
     }
-    
-    
-    public java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> getProducts(){
+
+    public java.util.List<com.commercetools.ml.models.similar_products.SimilarProduct> getProducts() {
         return this.products;
     }
 

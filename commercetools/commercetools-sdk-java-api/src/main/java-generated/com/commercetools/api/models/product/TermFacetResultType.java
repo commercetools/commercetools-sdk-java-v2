@@ -1,49 +1,48 @@
+
 package com.commercetools.api.models.product;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface TermFacetResultType {
 
-    
     TermFacetResultType TEXT = TermFacetResultTypeEnum.TEXT;
-    
+
     TermFacetResultType DATE = TermFacetResultTypeEnum.DATE;
-    
+
     TermFacetResultType TIME = TermFacetResultTypeEnum.TIME;
-    
+
     TermFacetResultType DATETIME = TermFacetResultTypeEnum.DATETIME;
-    
+
     TermFacetResultType BOOLEAN = TermFacetResultTypeEnum.BOOLEAN;
-    
+
     TermFacetResultType NUMBER = TermFacetResultTypeEnum.NUMBER;
-    
+
     enum TermFacetResultTypeEnum implements TermFacetResultType {
         TEXT("text"),
-        
+
         DATE("date"),
-        
+
         TIME("time"),
-        
+
         DATETIME("datetime"),
-        
+
         BOOLEAN("boolean"),
-        
+
         NUMBER("number");
         private final String jsonName;
 
         private TermFacetResultTypeEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
+
         public String getJsonName() {
             return jsonName;
         }
@@ -51,6 +50,7 @@ public interface TermFacetResultType {
 
     @JsonValue
     String getJsonName();
+
     String name();
 
     @JsonCreator
@@ -71,7 +71,7 @@ public interface TermFacetResultType {
     public static Optional<TermFacetResultType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-    
+
     public static TermFacetResultType[] values() {
         return TermFacetResultTypeEnum.values();
     }

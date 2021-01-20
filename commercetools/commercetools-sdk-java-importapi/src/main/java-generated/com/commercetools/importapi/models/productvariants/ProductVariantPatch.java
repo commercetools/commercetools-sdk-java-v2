@@ -1,30 +1,30 @@
+
 package com.commercetools.importapi.models.productvariants;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.productvariants.Attributes;
 import com.commercetools.importapi.models.productvariants.ProductVariantPatchImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>Import representation for an update to a product variant. Use this type for importing updates to existing
 *  product variants into a commercetools project.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductVariantPatchImpl.class)
-public interface ProductVariantPatch  {
+public interface ProductVariantPatch {
 
     /**
     *  <p>The product variant to which this patch is applied.</p>
@@ -36,6 +36,7 @@ public interface ProductVariantPatch  {
     @Valid
     @JsonProperty("productVariant")
     public ProductVariantKeyReference getProductVariant();
+
     /**
     *  <p>Maps to <code>ProductVariant.attributes</code>.</p>
     *  <p>Each attribute referenced must be defined
@@ -47,13 +48,12 @@ public interface ProductVariantPatch  {
     public Attributes getAttributes();
 
     public void setProductVariant(final ProductVariantKeyReference productVariant);
-    
+
     public void setAttributes(final Attributes attributes);
 
-    public static ProductVariantPatch of(){
+    public static ProductVariantPatch of() {
         return new ProductVariantPatchImpl();
     }
-    
 
     public static ProductVariantPatch of(final ProductVariantPatch template) {
         ProductVariantPatchImpl instance = new ProductVariantPatchImpl();
@@ -62,14 +62,13 @@ public interface ProductVariantPatch  {
         return instance;
     }
 
-    public static ProductVariantPatchBuilder builder(){
+    public static ProductVariantPatchBuilder builder() {
         return ProductVariantPatchBuilder.of();
     }
-    
-    public static ProductVariantPatchBuilder builder(final ProductVariantPatch template){
+
+    public static ProductVariantPatchBuilder builder(final ProductVariantPatch template) {
         return ProductVariantPatchBuilder.of(template);
     }
-    
 
     default <T> T withProductVariantPatch(Function<ProductVariantPatch, T> helper) {
         return helper.apply(this);

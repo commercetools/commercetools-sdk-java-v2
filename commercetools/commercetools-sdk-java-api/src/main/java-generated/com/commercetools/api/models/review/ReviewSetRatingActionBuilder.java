@@ -1,16 +1,17 @@
+
 package com.commercetools.api.models.review;
 
-import com.commercetools.api.models.review.ReviewUpdateAction;
-import com.commercetools.api.models.review.ReviewSetRatingAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.review.ReviewSetRatingAction;
+import com.commercetools.api.models.review.ReviewUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ReviewSetRatingActionBuilder {
 
     @Nullable
@@ -22,7 +23,7 @@ public final class ReviewSetRatingActionBuilder {
     }
 
     @Nullable
-    public Integer getRating(){
+    public Integer getRating() {
         return this.rating;
     }
 

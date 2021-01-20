@@ -1,42 +1,36 @@
+
 package com.commercetools.importapi.client;
 
-import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
-import java.io.InputStream;
 import java.io.IOException;
-
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.nio.file.Files;
-
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.util.stream.Collectors;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
-
-
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.utils.Utils;
+import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 /**
 *  <p>Retrieves all import sinks of a project key.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSinksGet, com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse> implements com.commercetools.importapi.client.Secured_by_view_import_sinksTrait<ByProjectKeyImportSinksGet> {
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyImportSinksGet extends
+        ApiMethod<ByProjectKeyImportSinksGet, com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>
+        implements com.commercetools.importapi.client.Secured_by_view_import_sinksTrait<ByProjectKeyImportSinksGet> {
 
-    
     private String projectKey;
-    
 
     public ByProjectKeyImportSinksGet(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
@@ -52,55 +46,59 @@ public class ByProjectKeyImportSinksGet extends ApiMethod<ByProjectKeyImportSink
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/import-sinks", this.projectKey);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        
+
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse> executeBlocking(Duration timeout){
+    public ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse> executeBlocking(
+            Duration timeout) {
         return blockingWait(execute(), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>> execute(){
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse>> execute() {
+        return apiHttpClient().execute(this.createHttpRequest(),
+            com.commercetools.importapi.models.importsinks.ImportSinkPagedResponse.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
 
     public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
-    
+
     public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-    public ByProjectKeyImportSinksGet withLimit(final Double limit){
+    public ByProjectKeyImportSinksGet withLimit(final Double limit) {
         return copy().withQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyImportSinksGet addLimit(final Double limit){
+
+    public ByProjectKeyImportSinksGet addLimit(final Double limit) {
         return copy().addQueryParam("limit", limit);
     }
-    
-    public ByProjectKeyImportSinksGet withOffset(final Double offset){
+
+    public ByProjectKeyImportSinksGet withOffset(final Double offset) {
         return copy().withQueryParam("offset", offset);
     }
-    
-    public ByProjectKeyImportSinksGet addOffset(final Double offset){
+
+    public ByProjectKeyImportSinksGet addOffset(final Double offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    
     @Override
-    protected ByProjectKeyImportSinksGet copy()
-    {
+    protected ByProjectKeyImportSinksGet copy() {
         return new ByProjectKeyImportSinksGet(this);
     }
 }

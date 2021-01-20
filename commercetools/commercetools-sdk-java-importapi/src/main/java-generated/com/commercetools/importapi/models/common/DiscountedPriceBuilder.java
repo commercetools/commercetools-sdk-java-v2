@@ -1,42 +1,40 @@
+
 package com.commercetools.importapi.models.common;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.common.DiscountedPrice;
 import com.commercetools.importapi.models.common.ProductDiscountKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.common.DiscountedPrice;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountedPriceBuilder {
 
-    
     private com.commercetools.importapi.models.common.TypedMoney value;
-    
-    
+
     private com.commercetools.importapi.models.common.ProductDiscountKeyReference discount;
 
-    public DiscountedPriceBuilder value( final com.commercetools.importapi.models.common.TypedMoney value) {
+    public DiscountedPriceBuilder value(final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
-    
-    public DiscountedPriceBuilder discount( final com.commercetools.importapi.models.common.ProductDiscountKeyReference discount) {
+
+    public DiscountedPriceBuilder discount(
+            final com.commercetools.importapi.models.common.ProductDiscountKeyReference discount) {
         this.discount = discount;
         return this;
     }
 
-    
-    public com.commercetools.importapi.models.common.TypedMoney getValue(){
+    public com.commercetools.importapi.models.common.TypedMoney getValue() {
         return this.value;
     }
-    
-    
-    public com.commercetools.importapi.models.common.ProductDiscountKeyReference getDiscount(){
+
+    public com.commercetools.importapi.models.common.ProductDiscountKeyReference getDiscount() {
         return this.discount;
     }
 

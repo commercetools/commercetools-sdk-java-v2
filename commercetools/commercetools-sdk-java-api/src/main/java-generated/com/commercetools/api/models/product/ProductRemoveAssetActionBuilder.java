@@ -1,30 +1,31 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductRemoveAssetAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.product.ProductRemoveAssetAction;
+import com.commercetools.api.models.product.ProductUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductRemoveAssetActionBuilder {
 
     @Nullable
     private Long variantId;
-    
+
     @Nullable
     private String sku;
-    
+
     @Nullable
     private Boolean staged;
-    
+
     @Nullable
     private String assetId;
-    
+
     @Nullable
     private String assetKey;
 
@@ -32,49 +33,49 @@ public final class ProductRemoveAssetActionBuilder {
         this.variantId = variantId;
         return this;
     }
-    
+
     public ProductRemoveAssetActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
+
     public ProductRemoveAssetActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-    
+
     public ProductRemoveAssetActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-    
+
     public ProductRemoveAssetActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
 
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
-    
+
     @Nullable
-    public String getAssetId(){
+    public String getAssetId() {
         return this.assetId;
     }
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
 

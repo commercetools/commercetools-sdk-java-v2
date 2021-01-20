@@ -1,25 +1,26 @@
+
 package com.commercetools.ml.models.similar_products;
 
-import com.commercetools.ml.models.common.ProductReference;
-import com.commercetools.ml.models.similar_products.SimilarProductMeta;
-import com.commercetools.ml.models.similar_products.SimilarProduct;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.ml.models.common.ProductReference;
+import com.commercetools.ml.models.similar_products.SimilarProduct;
+import com.commercetools.ml.models.similar_products.SimilarProductMeta;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SimilarProductBuilder {
 
     @Nullable
     private com.commercetools.ml.models.common.ProductReference product;
-    
+
     @Nullable
     private Long variantId;
-    
+
     @Nullable
     private com.commercetools.ml.models.similar_products.SimilarProductMeta meta;
 
@@ -27,29 +28,30 @@ public final class SimilarProductBuilder {
         this.product = product;
         return this;
     }
-    
+
     public SimilarProductBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-    
-    public SimilarProductBuilder meta(@Nullable final com.commercetools.ml.models.similar_products.SimilarProductMeta meta) {
+
+    public SimilarProductBuilder meta(
+            @Nullable final com.commercetools.ml.models.similar_products.SimilarProductMeta meta) {
         this.meta = meta;
         return this;
     }
 
     @Nullable
-    public com.commercetools.ml.models.common.ProductReference getProduct(){
+    public com.commercetools.ml.models.common.ProductReference getProduct() {
         return this.product;
     }
-    
+
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
+
     @Nullable
-    public com.commercetools.ml.models.similar_products.SimilarProductMeta getMeta(){
+    public com.commercetools.ml.models.similar_products.SimilarProductMeta getMeta() {
         return this.meta;
     }
 

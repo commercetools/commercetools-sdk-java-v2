@@ -1,47 +1,47 @@
+
 package com.commercetools.api.models.error;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.OutOfStockErrorImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OutOfStockErrorImpl.class)
 public interface OutOfStockError extends ErrorObject {
 
-    
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();
-    
+
     @NotNull
     @JsonProperty("skus")
     public List<String> getSkus();
 
     @JsonIgnore
-    public void setLineItems(final String ...lineItems);
+    public void setLineItems(final String... lineItems);
+
     public void setLineItems(final List<String> lineItems);
-    
+
     @JsonIgnore
-    public void setSkus(final String ...skus);
+    public void setSkus(final String... skus);
+
     public void setSkus(final List<String> skus);
 
-    public static OutOfStockError of(){
+    public static OutOfStockError of() {
         return new OutOfStockErrorImpl();
     }
-    
 
     public static OutOfStockError of(final OutOfStockError template) {
         OutOfStockErrorImpl instance = new OutOfStockErrorImpl();
@@ -51,14 +51,13 @@ public interface OutOfStockError extends ErrorObject {
         return instance;
     }
 
-    public static OutOfStockErrorBuilder builder(){
+    public static OutOfStockErrorBuilder builder() {
         return OutOfStockErrorBuilder.of();
     }
-    
-    public static OutOfStockErrorBuilder builder(final OutOfStockError template){
+
+    public static OutOfStockErrorBuilder builder(final OutOfStockError template) {
         return OutOfStockErrorBuilder.of(template);
     }
-    
 
     default <T> T withOutOfStockError(Function<OutOfStockError, T> helper) {
         return helper.apply(this);

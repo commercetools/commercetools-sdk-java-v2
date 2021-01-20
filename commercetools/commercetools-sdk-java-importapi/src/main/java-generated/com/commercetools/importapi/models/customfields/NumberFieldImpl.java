@@ -1,32 +1,32 @@
+
 package com.commercetools.importapi.models.customfields;
 
-import com.commercetools.importapi.models.customfields.CustomField;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
 
 /**
 *  <p>A field with a number value.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class NumberFieldImpl implements NumberField {
 
     private String type;
-    
+
     private Double value;
 
     @JsonCreator
@@ -34,6 +34,7 @@ public final class NumberFieldImpl implements NumberField {
         this.value = value;
         this.type = "Number";
     }
+
     public NumberFieldImpl() {
         this.type = "Number";
     }
@@ -41,39 +42,34 @@ public final class NumberFieldImpl implements NumberField {
     /**
     *  <p>The type of this field.</p>
     */
-    public String getType(){
+    public String getType() {
         return this.type;
     }
-    
-    
-    public Double getValue(){
+
+    public Double getValue() {
         return this.value;
     }
 
-    public void setValue(final Double value){
+    public void setValue(final Double value) {
         this.value = value;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         NumberFieldImpl that = (NumberFieldImpl) o;
-    
-        return new EqualsBuilder()
-                .append(type, that.type)
-                .append(value, that.value)
-                .isEquals();
+
+        return new EqualsBuilder().append(type, that.type).append(value, that.value).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(type)
-            .append(value)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(value).toHashCode();
     }
 
 }

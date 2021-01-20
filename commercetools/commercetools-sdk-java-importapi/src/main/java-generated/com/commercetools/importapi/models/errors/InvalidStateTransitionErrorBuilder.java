@@ -1,55 +1,52 @@
+
 package com.commercetools.importapi.models.errors;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.commercetools.importapi.models.errors.InvalidStateTransitionError;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InvalidStateTransitionErrorBuilder {
 
-    
     private String message;
-    
-    
+
     private com.commercetools.importapi.models.common.ProcessingState currentState;
-    
-    
+
     private com.commercetools.importapi.models.common.ProcessingState newState;
 
-    public InvalidStateTransitionErrorBuilder message( final String message) {
+    public InvalidStateTransitionErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    public InvalidStateTransitionErrorBuilder currentState( final com.commercetools.importapi.models.common.ProcessingState currentState) {
+
+    public InvalidStateTransitionErrorBuilder currentState(
+            final com.commercetools.importapi.models.common.ProcessingState currentState) {
         this.currentState = currentState;
         return this;
     }
-    
-    public InvalidStateTransitionErrorBuilder newState( final com.commercetools.importapi.models.common.ProcessingState newState) {
+
+    public InvalidStateTransitionErrorBuilder newState(
+            final com.commercetools.importapi.models.common.ProcessingState newState) {
         this.newState = newState;
         return this;
     }
 
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    public com.commercetools.importapi.models.common.ProcessingState getCurrentState(){
+
+    public com.commercetools.importapi.models.common.ProcessingState getCurrentState() {
         return this.currentState;
     }
-    
-    
-    public com.commercetools.importapi.models.common.ProcessingState getNewState(){
+
+    public com.commercetools.importapi.models.common.ProcessingState getNewState() {
         return this.newState;
     }
 

@@ -1,24 +1,24 @@
+
 package com.commercetools.api.models.review;
 
-import com.commercetools.api.models.review.ReviewUpdateAction;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.review.ReviewSetTargetActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.review.ReviewSetTargetActionImpl;
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReviewSetTargetActionImpl.class)
 public interface ReviewSetTargetAction extends ReviewUpdateAction {
 
@@ -33,10 +33,9 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
 
     public void setTarget(final JsonNode target);
 
-    public static ReviewSetTargetAction of(){
+    public static ReviewSetTargetAction of() {
         return new ReviewSetTargetActionImpl();
     }
-    
 
     public static ReviewSetTargetAction of(final ReviewSetTargetAction template) {
         ReviewSetTargetActionImpl instance = new ReviewSetTargetActionImpl();
@@ -44,14 +43,13 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
         return instance;
     }
 
-    public static ReviewSetTargetActionBuilder builder(){
+    public static ReviewSetTargetActionBuilder builder() {
         return ReviewSetTargetActionBuilder.of();
     }
-    
-    public static ReviewSetTargetActionBuilder builder(final ReviewSetTargetAction template){
+
+    public static ReviewSetTargetActionBuilder builder(final ReviewSetTargetAction template) {
         return ReviewSetTargetActionBuilder.of(template);
     }
-    
 
     default <T> T withReviewSetTargetAction(Function<ReviewSetTargetAction, T> helper) {
         return helper.apply(this);

@@ -1,23 +1,23 @@
+
 package com.commercetools.ml.models.missing_data;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.ml.models.missing_data.MissingPricesProductCount;
 import com.commercetools.ml.models.missing_data.MissingPricesProductLevelImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MissingPricesProductLevelImpl.class)
 public interface MissingPricesProductLevel extends MissingPricesProductCount {
 
@@ -27,6 +27,7 @@ public interface MissingPricesProductLevel extends MissingPricesProductCount {
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
+
     /**
     *  <p>Number of products missing prices.</p>
     */
@@ -35,13 +36,12 @@ public interface MissingPricesProductLevel extends MissingPricesProductCount {
     public Long getMissingPrices();
 
     public void setTotal(final Long total);
-    
+
     public void setMissingPrices(final Long missingPrices);
 
-    public static MissingPricesProductLevel of(){
+    public static MissingPricesProductLevel of() {
         return new MissingPricesProductLevelImpl();
     }
-    
 
     public static MissingPricesProductLevel of(final MissingPricesProductLevel template) {
         MissingPricesProductLevelImpl instance = new MissingPricesProductLevelImpl();
@@ -50,14 +50,13 @@ public interface MissingPricesProductLevel extends MissingPricesProductCount {
         return instance;
     }
 
-    public static MissingPricesProductLevelBuilder builder(){
+    public static MissingPricesProductLevelBuilder builder() {
         return MissingPricesProductLevelBuilder.of();
     }
-    
-    public static MissingPricesProductLevelBuilder builder(final MissingPricesProductLevel template){
+
+    public static MissingPricesProductLevelBuilder builder(final MissingPricesProductLevel template) {
         return MissingPricesProductLevelBuilder.of(template);
     }
-    
 
     default <T> T withMissingPricesProductLevel(Function<MissingPricesProductLevel, T> helper) {
         return helper.apply(this);

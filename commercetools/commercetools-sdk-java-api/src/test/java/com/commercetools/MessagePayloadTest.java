@@ -1,12 +1,15 @@
+
 package com.commercetools;
+
+import java.io.IOException;
 
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.message.OrderCreatedMessagePayload;
+
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
-
-import java.io.IOException;
 
 public class MessagePayloadTest {
 

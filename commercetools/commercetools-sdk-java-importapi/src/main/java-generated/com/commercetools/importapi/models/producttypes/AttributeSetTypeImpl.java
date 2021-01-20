@@ -1,74 +1,70 @@
+
 package com.commercetools.importapi.models.producttypes;
 
-import com.commercetools.importapi.models.producttypes.AttributeType;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributeSetTypeImpl implements AttributeSetType {
 
     private String name;
-    
+
     private com.commercetools.importapi.models.producttypes.AttributeType elementType;
 
     @JsonCreator
-    AttributeSetTypeImpl(@JsonProperty("elementType") final com.commercetools.importapi.models.producttypes.AttributeType elementType) {
+    AttributeSetTypeImpl(
+            @JsonProperty("elementType") final com.commercetools.importapi.models.producttypes.AttributeType elementType) {
         this.elementType = elementType;
         this.name = "set";
     }
+
     public AttributeSetTypeImpl() {
         this.name = "set";
     }
 
-    
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
-    public com.commercetools.importapi.models.producttypes.AttributeType getElementType(){
+
+    public com.commercetools.importapi.models.producttypes.AttributeType getElementType() {
         return this.elementType;
     }
 
-    public void setElementType(final com.commercetools.importapi.models.producttypes.AttributeType elementType){
+    public void setElementType(final com.commercetools.importapi.models.producttypes.AttributeType elementType) {
         this.elementType = elementType;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         AttributeSetTypeImpl that = (AttributeSetTypeImpl) o;
-    
-        return new EqualsBuilder()
-                .append(name, that.name)
-                .append(elementType, that.elementType)
-                .isEquals();
+
+        return new EqualsBuilder().append(name, that.name).append(elementType, that.elementType).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(name)
-            .append(elementType)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(name).append(elementType).toHashCode();
     }
 
 }

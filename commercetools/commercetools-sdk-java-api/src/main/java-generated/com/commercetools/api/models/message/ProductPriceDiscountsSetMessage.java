@@ -1,41 +1,40 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice;
-import com.commercetools.api.models.message.ProductPriceDiscountsSetMessageImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductPriceDiscountsSetMessageImpl;
+import com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductPriceDiscountsSetMessageImpl.class)
 public interface ProductPriceDiscountsSetMessage extends Message {
 
-    
     @NotNull
     @Valid
     @JsonProperty("updatedPrices")
     public List<ProductPriceDiscountsSetUpdatedPrice> getUpdatedPrices();
 
     @JsonIgnore
-    public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice ...updatedPrices);
+    public void setUpdatedPrices(final ProductPriceDiscountsSetUpdatedPrice... updatedPrices);
+
     public void setUpdatedPrices(final List<ProductPriceDiscountsSetUpdatedPrice> updatedPrices);
 
-    public static ProductPriceDiscountsSetMessage of(){
+    public static ProductPriceDiscountsSetMessage of() {
         return new ProductPriceDiscountsSetMessageImpl();
     }
-    
 
     public static ProductPriceDiscountsSetMessage of(final ProductPriceDiscountsSetMessage template) {
         ProductPriceDiscountsSetMessageImpl instance = new ProductPriceDiscountsSetMessageImpl();
@@ -53,14 +52,13 @@ public interface ProductPriceDiscountsSetMessage extends Message {
         return instance;
     }
 
-    public static ProductPriceDiscountsSetMessageBuilder builder(){
+    public static ProductPriceDiscountsSetMessageBuilder builder() {
         return ProductPriceDiscountsSetMessageBuilder.of();
     }
-    
-    public static ProductPriceDiscountsSetMessageBuilder builder(final ProductPriceDiscountsSetMessage template){
+
+    public static ProductPriceDiscountsSetMessageBuilder builder(final ProductPriceDiscountsSetMessage template) {
         return ProductPriceDiscountsSetMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductPriceDiscountsSetMessage(Function<ProductPriceDiscountsSetMessage, T> helper) {
         return helper.apply(this);

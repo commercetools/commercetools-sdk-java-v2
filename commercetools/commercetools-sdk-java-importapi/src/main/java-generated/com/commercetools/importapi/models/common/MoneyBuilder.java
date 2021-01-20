@@ -1,55 +1,52 @@
+
 package com.commercetools.importapi.models.common;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.common.Money;
 import com.commercetools.importapi.models.common.MoneyType;
 import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.common.Money;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MoneyBuilder {
 
     @Nullable
     private Integer fractionDigits;
-    
-    
+
     private Long centAmount;
-    
-    
+
     private String currencyCode;
 
     public MoneyBuilder fractionDigits(@Nullable final Integer fractionDigits) {
         this.fractionDigits = fractionDigits;
         return this;
     }
-    
-    public MoneyBuilder centAmount( final Long centAmount) {
+
+    public MoneyBuilder centAmount(final Long centAmount) {
         this.centAmount = centAmount;
         return this;
     }
-    
-    public MoneyBuilder currencyCode( final String currencyCode) {
+
+    public MoneyBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
 
     @Nullable
-    public Integer getFractionDigits(){
+    public Integer getFractionDigits() {
         return this.fractionDigits;
     }
-    
-    
-    public Long getCentAmount(){
+
+    public Long getCentAmount() {
         return this.centAmount;
     }
-    
-    
-    public String getCurrencyCode(){
+
+    public String getCurrencyCode() {
         return this.currencyCode;
     }
 

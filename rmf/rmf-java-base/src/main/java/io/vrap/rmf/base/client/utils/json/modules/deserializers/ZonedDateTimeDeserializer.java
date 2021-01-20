@@ -1,11 +1,12 @@
+
 package io.vrap.rmf.base.client.utils.json.modules.deserializers;
+
+import java.io.IOException;
+import java.time.ZonedDateTime;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.deser.std.StdScalarDeserializer;
-
-import java.io.IOException;
-import java.time.ZonedDateTime;
 
 public class ZonedDateTimeDeserializer extends StdScalarDeserializer<ZonedDateTime> {
 
@@ -16,7 +17,8 @@ public class ZonedDateTimeDeserializer extends StdScalarDeserializer<ZonedDateTi
     }
 
     @Override
-    public ZonedDateTime deserialize(final JsonParser jsonParser, final DeserializationContext deserializationContext) throws IOException {
+    public ZonedDateTime deserialize(final JsonParser jsonParser, final DeserializationContext deserializationContext)
+            throws IOException {
         return ZonedDateTime.parse(jsonParser.getText());
     }
 }

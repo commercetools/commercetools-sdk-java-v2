@@ -1,25 +1,24 @@
+
 package com.commercetools.api.models.product;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.api.models.product.SuggestionImpl;
-
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.product.SuggestionImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = SuggestionImpl.class)
-public interface Suggestion  {
+public interface Suggestion {
 
     /**
     *  <p>The suggested text.</p>
@@ -30,10 +29,9 @@ public interface Suggestion  {
 
     public void setText(final String text);
 
-    public static Suggestion of(){
+    public static Suggestion of() {
         return new SuggestionImpl();
     }
-    
 
     public static Suggestion of(final Suggestion template) {
         SuggestionImpl instance = new SuggestionImpl();
@@ -41,14 +39,13 @@ public interface Suggestion  {
         return instance;
     }
 
-    public static SuggestionBuilder builder(){
+    public static SuggestionBuilder builder() {
         return SuggestionBuilder.of();
     }
-    
-    public static SuggestionBuilder builder(final Suggestion template){
+
+    public static SuggestionBuilder builder(final Suggestion template) {
         return SuggestionBuilder.of(template);
     }
-    
 
     default <T> T withSuggestion(Function<Suggestion, T> helper) {
         return helper.apply(this);

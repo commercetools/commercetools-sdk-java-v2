@@ -1,12 +1,14 @@
-package commercetools.extension;
 
-import com.commercetools.api.models.extension.*;
-import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.Assert;
+package commercetools.extension;
 
 import java.util.Arrays;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
+
+import com.commercetools.api.models.extension.*;
+import commercetools.utils.CommercetoolsTestUtils;
+
+import org.junit.Assert;
 
 public class ExtensionFixtures {
 
@@ -23,19 +25,13 @@ public class ExtensionFixtures {
     }
 
     public static Extension createExtension() {
-        ExtensionDraft extensionDraft = ExtensionDraftBuilder.of()
-                .key(CommercetoolsTestUtils.randomKey())
-                .destination(ExtensionHttpDestinationBuilder.of().url("http://www.commercetools.com").build())
-                .triggers(Arrays.asList(ExtensionTriggerBuilder.of()
-                        .resourceTypeId(ExtensionResourceTypeId.CART)
-                        .actions(Arrays.asList(ExtensionAction.CREATE))
-                        .build()))
-                .build();
+        ExtensionDraft extensionDraft = ExtensionDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).destination(
+            ExtensionHttpDestinationBuilder.of().url("http://www.commercetools.com").build()).triggers(
+                Arrays.asList(ExtensionTriggerBuilder.of().resourceTypeId(ExtensionResourceTypeId.CART).actions(
+                    Arrays.asList(ExtensionAction.CREATE)).build())).build();
 
-        Extension extension = CommercetoolsTestUtils.getProjectRoot()
-                .extensions()
-                .post(extensionDraft)
-                .executeBlocking().getBody();
+        Extension extension = CommercetoolsTestUtils.getProjectRoot().extensions().post(
+            extensionDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(extension);
         Assert.assertEquals(extension.getKey(), extensionDraft.getKey());
@@ -44,12 +40,8 @@ public class ExtensionFixtures {
     }
 
     public static Extension deleteExtension(final String id, final Long version) {
-        Extension extension = CommercetoolsTestUtils.getProjectRoot()
-                .extensions()
-                .withId(id)
-                .delete()
-                .withVersion(version)
-                .executeBlocking().getBody();
+        Extension extension = CommercetoolsTestUtils.getProjectRoot().extensions().withId(id).delete().withVersion(
+            version).executeBlocking().getBody();
 
         Assert.assertNotNull(extension);
         Assert.assertEquals(extension.getId(), id);

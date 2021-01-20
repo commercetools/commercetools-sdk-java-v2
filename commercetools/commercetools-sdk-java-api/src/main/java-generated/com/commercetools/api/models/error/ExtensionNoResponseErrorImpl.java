@@ -1,102 +1,95 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.error.ErrorObject;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError {
 
     private String code;
-    
+
     private String message;
-    
+
     private String extensionId;
-    
+
     private String extensionKey;
 
     @JsonCreator
-    ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message, @JsonProperty("extensionId") final String extensionId, @JsonProperty("extensionKey") final String extensionKey) {
+    ExtensionNoResponseErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("extensionId") final String extensionId,
+            @JsonProperty("extensionKey") final String extensionKey) {
         this.message = message;
         this.extensionId = extensionId;
         this.extensionKey = extensionKey;
         this.code = "ExtensionNoResponse";
     }
+
     public ExtensionNoResponseErrorImpl() {
         this.code = "ExtensionNoResponse";
     }
 
-    
-    public String getCode(){
+    public String getCode() {
         return this.code;
     }
-    
-    
-    public String getMessage(){
+
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    public String getExtensionId(){
+
+    public String getExtensionId() {
         return this.extensionId;
     }
-    
-    
-    public String getExtensionKey(){
+
+    public String getExtensionKey() {
         return this.extensionKey;
     }
 
-    public void setMessage(final String message){
+    public void setMessage(final String message) {
         this.message = message;
     }
-    
-    public void setExtensionId(final String extensionId){
+
+    public void setExtensionId(final String extensionId) {
         this.extensionId = extensionId;
     }
-    
-    public void setExtensionKey(final String extensionKey){
+
+    public void setExtensionKey(final String extensionKey) {
         this.extensionKey = extensionKey;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         ExtensionNoResponseErrorImpl that = (ExtensionNoResponseErrorImpl) o;
-    
-        return new EqualsBuilder()
-                .append(code, that.code)
-                .append(message, that.message)
-                .append(extensionId, that.extensionId)
-                .append(extensionKey, that.extensionKey)
-                .isEquals();
+
+        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(extensionId,
+            that.extensionId).append(extensionKey, that.extensionKey).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(code)
-            .append(message)
-            .append(extensionId)
-            .append(extensionKey)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(extensionId).append(
+            extensionKey).toHashCode();
     }
 
 }

@@ -1,43 +1,43 @@
+
 package com.commercetools.api.models.custom_object;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.custom_object.CustomObject;
 import com.commercetools.api.models.custom_object.CustomObjectReference;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomObjectReferenceBuilder {
 
-    
     private String id;
-    
+
     @Nullable
     private com.commercetools.api.models.custom_object.CustomObject obj;
 
-    public CustomObjectReferenceBuilder id( final String id) {
+    public CustomObjectReferenceBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    public CustomObjectReferenceBuilder obj(@Nullable final com.commercetools.api.models.custom_object.CustomObject obj) {
+
+    public CustomObjectReferenceBuilder obj(
+            @Nullable final com.commercetools.api.models.custom_object.CustomObject obj) {
         this.obj = obj;
         return this;
     }
 
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.custom_object.CustomObject getObj(){
+    public com.commercetools.api.models.custom_object.CustomObject getObj() {
         return this.obj;
     }
 

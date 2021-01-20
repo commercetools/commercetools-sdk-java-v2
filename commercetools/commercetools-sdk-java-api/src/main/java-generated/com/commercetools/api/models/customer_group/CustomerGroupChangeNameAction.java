@@ -1,37 +1,35 @@
+
 package com.commercetools.api.models.customer_group;
 
-import com.commercetools.api.models.customer_group.CustomerGroupUpdateAction;
-import com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.customer_group.CustomerGroupChangeNameActionImpl;
+import com.commercetools.api.models.customer_group.CustomerGroupUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupChangeNameActionImpl.class)
 public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction {
 
-    
     @NotNull
     @JsonProperty("name")
     public String getName();
 
     public void setName(final String name);
 
-    public static CustomerGroupChangeNameAction of(){
+    public static CustomerGroupChangeNameAction of() {
         return new CustomerGroupChangeNameActionImpl();
     }
-    
 
     public static CustomerGroupChangeNameAction of(final CustomerGroupChangeNameAction template) {
         CustomerGroupChangeNameActionImpl instance = new CustomerGroupChangeNameActionImpl();
@@ -39,14 +37,13 @@ public interface CustomerGroupChangeNameAction extends CustomerGroupUpdateAction
         return instance;
     }
 
-    public static CustomerGroupChangeNameActionBuilder builder(){
+    public static CustomerGroupChangeNameActionBuilder builder() {
         return CustomerGroupChangeNameActionBuilder.of();
     }
-    
-    public static CustomerGroupChangeNameActionBuilder builder(final CustomerGroupChangeNameAction template){
+
+    public static CustomerGroupChangeNameActionBuilder builder(final CustomerGroupChangeNameAction template) {
         return CustomerGroupChangeNameActionBuilder.of(template);
     }
-    
 
     default <T> T withCustomerGroupChangeNameAction(Function<CustomerGroupChangeNameAction, T> helper) {
         return helper.apply(this);

@@ -1,32 +1,29 @@
+
 package com.commercetools.importapi.models.errors;
 
-import com.commercetools.importapi.models.errors.ErrorObject;
-import com.commercetools.importapi.models.errors.AccessDeniedErrorImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.importapi.models.errors.AccessDeniedErrorImpl;
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AccessDeniedErrorImpl.class)
 public interface AccessDeniedError extends ErrorObject {
 
-
-
-    public static AccessDeniedError of(){
+    public static AccessDeniedError of() {
         return new AccessDeniedErrorImpl();
     }
-    
 
     public static AccessDeniedError of(final AccessDeniedError template) {
         AccessDeniedErrorImpl instance = new AccessDeniedErrorImpl();
@@ -34,14 +31,13 @@ public interface AccessDeniedError extends ErrorObject {
         return instance;
     }
 
-    public static AccessDeniedErrorBuilder builder(){
+    public static AccessDeniedErrorBuilder builder() {
         return AccessDeniedErrorBuilder.of();
     }
-    
-    public static AccessDeniedErrorBuilder builder(final AccessDeniedError template){
+
+    public static AccessDeniedErrorBuilder builder(final AccessDeniedError template) {
         return AccessDeniedErrorBuilder.of(template);
     }
-    
 
     default <T> T withAccessDeniedError(Function<AccessDeniedError, T> helper) {
         return helper.apply(this);

@@ -1,36 +1,33 @@
+
 package com.commercetools.importapi.models.common;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.KeyReference;
 import com.commercetools.importapi.models.common.ReferenceType;
 import com.commercetools.importapi.models.common.StoreKeyReferenceImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>References a store by its key.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StoreKeyReferenceImpl.class)
 public interface StoreKeyReference extends KeyReference {
 
-
-
-    public static StoreKeyReference of(){
+    public static StoreKeyReference of() {
         return new StoreKeyReferenceImpl();
     }
-    
 
     public static StoreKeyReference of(final StoreKeyReference template) {
         StoreKeyReferenceImpl instance = new StoreKeyReferenceImpl();
@@ -38,14 +35,13 @@ public interface StoreKeyReference extends KeyReference {
         return instance;
     }
 
-    public static StoreKeyReferenceBuilder builder(){
+    public static StoreKeyReferenceBuilder builder() {
         return StoreKeyReferenceBuilder.of();
     }
-    
-    public static StoreKeyReferenceBuilder builder(final StoreKeyReference template){
+
+    public static StoreKeyReferenceBuilder builder(final StoreKeyReference template) {
         return StoreKeyReferenceBuilder.of(template);
     }
-    
 
     default <T> T withStoreKeyReference(Function<StoreKeyReference, T> helper) {
         return helper.apply(this);

@@ -1,37 +1,37 @@
+
 package com.commercetools.api.models.product;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.product.ProductSetAssetCustomFieldAction;
 import com.commercetools.api.models.product.ProductUpdateAction;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.product.ProductSetAssetCustomFieldAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductSetAssetCustomFieldActionBuilder {
 
     @Nullable
     private Long variantId;
-    
+
     @Nullable
     private String sku;
-    
+
     @Nullable
     private Boolean staged;
-    
+
     @Nullable
     private String assetId;
-    
+
     @Nullable
     private String assetKey;
-    
-    
+
     private String name;
-    
+
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode value;
 
@@ -39,69 +39,69 @@ public final class ProductSetAssetCustomFieldActionBuilder {
         this.variantId = variantId;
         return this;
     }
-    
+
     public ProductSetAssetCustomFieldActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
+
     public ProductSetAssetCustomFieldActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-    
+
     public ProductSetAssetCustomFieldActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-    
+
     public ProductSetAssetCustomFieldActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-    
-    public ProductSetAssetCustomFieldActionBuilder name( final String name) {
+
+    public ProductSetAssetCustomFieldActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    public ProductSetAssetCustomFieldActionBuilder value(@Nullable final com.fasterxml.jackson.databind.JsonNode value) {
+
+    public ProductSetAssetCustomFieldActionBuilder value(
+            @Nullable final com.fasterxml.jackson.databind.JsonNode value) {
         this.value = value;
         return this;
     }
 
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
-    
+
     @Nullable
-    public String getAssetId(){
+    public String getAssetId() {
         return this.assetId;
     }
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
+
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getValue(){
+    public com.fasterxml.jackson.databind.JsonNode getValue() {
         return this.value;
     }
 

@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.inventory.InventoryEntry;
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.inventory.InventoryEntry;
+import com.commercetools.api.models.message.InventoryEntryCreatedMessagePayloadImpl;
+import com.commercetools.api.models.message.MessagePayload;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryCreatedMessagePayloadImpl.class)
 public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
 
-    
     @NotNull
     @Valid
     @JsonProperty("inventoryEntry")
@@ -30,10 +29,9 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
 
     public void setInventoryEntry(final InventoryEntry inventoryEntry);
 
-    public static InventoryEntryCreatedMessagePayload of(){
+    public static InventoryEntryCreatedMessagePayload of() {
         return new InventoryEntryCreatedMessagePayloadImpl();
     }
-    
 
     public static InventoryEntryCreatedMessagePayload of(final InventoryEntryCreatedMessagePayload template) {
         InventoryEntryCreatedMessagePayloadImpl instance = new InventoryEntryCreatedMessagePayloadImpl();
@@ -41,14 +39,14 @@ public interface InventoryEntryCreatedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    public static InventoryEntryCreatedMessagePayloadBuilder builder(){
+    public static InventoryEntryCreatedMessagePayloadBuilder builder() {
         return InventoryEntryCreatedMessagePayloadBuilder.of();
     }
-    
-    public static InventoryEntryCreatedMessagePayloadBuilder builder(final InventoryEntryCreatedMessagePayload template){
+
+    public static InventoryEntryCreatedMessagePayloadBuilder builder(
+            final InventoryEntryCreatedMessagePayload template) {
         return InventoryEntryCreatedMessagePayloadBuilder.of(template);
     }
-    
 
     default <T> T withInventoryEntryCreatedMessagePayload(Function<InventoryEntryCreatedMessagePayload, T> helper) {
         return helper.apply(this);

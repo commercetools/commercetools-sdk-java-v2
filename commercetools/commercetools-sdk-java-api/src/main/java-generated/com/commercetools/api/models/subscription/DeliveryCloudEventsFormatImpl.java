@@ -1,29 +1,29 @@
+
 package com.commercetools.api.models.subscription;
 
-import com.commercetools.api.models.subscription.DeliveryFormat;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.api.models.subscription.DeliveryFormat;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsFormat {
 
     private String type;
-    
+
     private String cloudEventsVersion;
 
     @JsonCreator
@@ -31,44 +31,40 @@ public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsF
         this.cloudEventsVersion = cloudEventsVersion;
         this.type = "CloudEvents";
     }
+
     public DeliveryCloudEventsFormatImpl() {
         this.type = "CloudEvents";
     }
 
-    
-    public String getType(){
+    public String getType() {
         return this.type;
     }
-    
-    
-    public String getCloudEventsVersion(){
+
+    public String getCloudEventsVersion() {
         return this.cloudEventsVersion;
     }
 
-    public void setCloudEventsVersion(final String cloudEventsVersion){
+    public void setCloudEventsVersion(final String cloudEventsVersion) {
         this.cloudEventsVersion = cloudEventsVersion;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         DeliveryCloudEventsFormatImpl that = (DeliveryCloudEventsFormatImpl) o;
-    
-        return new EqualsBuilder()
-                .append(type, that.type)
-                .append(cloudEventsVersion, that.cloudEventsVersion)
-                .isEquals();
+
+        return new EqualsBuilder().append(type, that.type).append(cloudEventsVersion,
+            that.cloudEventsVersion).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(type)
-            .append(cloudEventsVersion)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(cloudEventsVersion).toHashCode();
     }
 
 }

@@ -1,41 +1,39 @@
+
 package com.commercetools.importapi.models.customfields;
 
-import com.commercetools.importapi.models.customfields.CustomField;
+import java.io.IOException;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.importapi.models.customfields.DateTimeFieldImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+
+import com.commercetools.importapi.models.customfields.CustomField;
+import com.commercetools.importapi.models.customfields.DateTimeFieldImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>A field with a date time value.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DateTimeFieldImpl.class)
 public interface DateTimeField extends CustomField {
 
-    
     @NotNull
     @JsonProperty("value")
     public ZonedDateTime getValue();
 
     public void setValue(final ZonedDateTime value);
 
-    public static DateTimeField of(){
+    public static DateTimeField of() {
         return new DateTimeFieldImpl();
     }
-    
 
     public static DateTimeField of(final DateTimeField template) {
         DateTimeFieldImpl instance = new DateTimeFieldImpl();
@@ -43,14 +41,13 @@ public interface DateTimeField extends CustomField {
         return instance;
     }
 
-    public static DateTimeFieldBuilder builder(){
+    public static DateTimeFieldBuilder builder() {
         return DateTimeFieldBuilder.of();
     }
-    
-    public static DateTimeFieldBuilder builder(final DateTimeField template){
+
+    public static DateTimeFieldBuilder builder(final DateTimeField template) {
         return DateTimeFieldBuilder.of(template);
     }
-    
 
     default <T> T withDateTimeField(Function<DateTimeField, T> helper) {
         return helper.apply(this);

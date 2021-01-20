@@ -1,24 +1,24 @@
+
 package com.commercetools.api.models.store;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.store.StoreSetNameActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.store.StoreSetNameActionImpl;
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StoreSetNameActionImpl.class)
 public interface StoreSetNameAction extends StoreUpdateAction {
 
@@ -31,10 +31,9 @@ public interface StoreSetNameAction extends StoreUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static StoreSetNameAction of(){
+    public static StoreSetNameAction of() {
         return new StoreSetNameActionImpl();
     }
-    
 
     public static StoreSetNameAction of(final StoreSetNameAction template) {
         StoreSetNameActionImpl instance = new StoreSetNameActionImpl();
@@ -42,14 +41,13 @@ public interface StoreSetNameAction extends StoreUpdateAction {
         return instance;
     }
 
-    public static StoreSetNameActionBuilder builder(){
+    public static StoreSetNameActionBuilder builder() {
         return StoreSetNameActionBuilder.of();
     }
-    
-    public static StoreSetNameActionBuilder builder(final StoreSetNameAction template){
+
+    public static StoreSetNameActionBuilder builder(final StoreSetNameAction template) {
         return StoreSetNameActionBuilder.of(template);
     }
-    
 
     default <T> T withStoreSetNameAction(Function<StoreSetNameAction, T> helper) {
         return helper.apply(this);

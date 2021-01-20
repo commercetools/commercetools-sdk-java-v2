@@ -1,39 +1,38 @@
+
 package com.commercetools.api.models.extension;
 
-import com.commercetools.api.models.extension.ExtensionUpdateAction;
-import com.commercetools.api.models.extension.ExtensionSetKeyActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.extension.ExtensionSetKeyActionImpl;
+import com.commercetools.api.models.extension.ExtensionUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ExtensionSetKeyActionImpl.class)
 public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
 
     /**
     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
     */
-    
+
     @JsonProperty("key")
     public String getKey();
 
     public void setKey(final String key);
 
-    public static ExtensionSetKeyAction of(){
+    public static ExtensionSetKeyAction of() {
         return new ExtensionSetKeyActionImpl();
     }
-    
 
     public static ExtensionSetKeyAction of(final ExtensionSetKeyAction template) {
         ExtensionSetKeyActionImpl instance = new ExtensionSetKeyActionImpl();
@@ -41,14 +40,13 @@ public interface ExtensionSetKeyAction extends ExtensionUpdateAction {
         return instance;
     }
 
-    public static ExtensionSetKeyActionBuilder builder(){
+    public static ExtensionSetKeyActionBuilder builder() {
         return ExtensionSetKeyActionBuilder.of();
     }
-    
-    public static ExtensionSetKeyActionBuilder builder(final ExtensionSetKeyAction template){
+
+    public static ExtensionSetKeyActionBuilder builder(final ExtensionSetKeyAction template) {
         return ExtensionSetKeyActionBuilder.of(template);
     }
-    
 
     default <T> T withExtensionSetKeyAction(Function<ExtensionSetKeyAction, T> helper) {
         return helper.apply(this);

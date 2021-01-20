@@ -1,37 +1,35 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductRevertStagedVariantChangesActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.product.ProductRevertStagedVariantChangesActionImpl;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductRevertStagedVariantChangesActionImpl.class)
 public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAction {
 
-    
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();
 
     public void setVariantId(final Long variantId);
 
-    public static ProductRevertStagedVariantChangesAction of(){
+    public static ProductRevertStagedVariantChangesAction of() {
         return new ProductRevertStagedVariantChangesActionImpl();
     }
-    
 
     public static ProductRevertStagedVariantChangesAction of(final ProductRevertStagedVariantChangesAction template) {
         ProductRevertStagedVariantChangesActionImpl instance = new ProductRevertStagedVariantChangesActionImpl();
@@ -39,16 +37,17 @@ public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAc
         return instance;
     }
 
-    public static ProductRevertStagedVariantChangesActionBuilder builder(){
+    public static ProductRevertStagedVariantChangesActionBuilder builder() {
         return ProductRevertStagedVariantChangesActionBuilder.of();
     }
-    
-    public static ProductRevertStagedVariantChangesActionBuilder builder(final ProductRevertStagedVariantChangesAction template){
+
+    public static ProductRevertStagedVariantChangesActionBuilder builder(
+            final ProductRevertStagedVariantChangesAction template) {
         return ProductRevertStagedVariantChangesActionBuilder.of(template);
     }
-    
 
-    default <T> T withProductRevertStagedVariantChangesAction(Function<ProductRevertStagedVariantChangesAction, T> helper) {
+    default <T> T withProductRevertStagedVariantChangesAction(
+            Function<ProductRevertStagedVariantChangesAction, T> helper) {
         return helper.apply(this);
     }
 }

@@ -1,43 +1,39 @@
+
 package com.commercetools.api.client;
 
-import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
-import java.io.InputStream;
 import java.io.IOException;
-
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.nio.file.Files;
-
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
-import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.util.stream.Collectors;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import io.vrap.rmf.base.client.*;
-
-
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.utils.Utils;
+import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 /**
 *  <p>Get MyPayment by ID</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
-public class ByProjectKeyMePaymentsByIDGet extends ApiMethod<ByProjectKeyMePaymentsByIDGet, com.commercetools.api.models.me.MyPayment> implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMePaymentsByIDGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePaymentsByIDGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePaymentsByIDGet> {
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+public class ByProjectKeyMePaymentsByIDGet
+        extends ApiMethod<ByProjectKeyMePaymentsByIDGet, com.commercetools.api.models.me.MyPayment>
+        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMePaymentsByIDGet>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMePaymentsByIDGet>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMePaymentsByIDGet> {
 
-    
     private String projectKey;
     private String ID;
-    
 
     public ByProjectKeyMePaymentsByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
@@ -55,46 +51,53 @@ public class ByProjectKeyMePaymentsByIDGet extends ApiMethod<ByProjectKeyMePayme
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/payments/%s", this.projectKey, this.ID);
-        if(!params.isEmpty()){
+        if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        
+
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyPayment> executeBlocking(Duration timeout){
+    public ApiHttpResponse<com.commercetools.api.models.me.MyPayment> executeBlocking(Duration timeout) {
         return blockingWait(execute(), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyPayment>> execute(){
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyPayment>> execute() {
         return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyPayment.class);
     }
 
-    public String getProjectKey() {return this.projectKey;}
-    public String getID() {return this.ID;}
+    public String getProjectKey() {
+        return this.projectKey;
+    }
+
+    public String getID() {
+        return this.ID;
+    }
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
-    
-    public void setID(final String ID) { this.ID = ID; }
+    public void setProjectKey(final String projectKey) {
+        this.projectKey = projectKey;
+    }
 
-    public ByProjectKeyMePaymentsByIDGet withExpand(final String expand){
+    public void setID(final String ID) {
+        this.ID = ID;
+    }
+
+    public ByProjectKeyMePaymentsByIDGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
-    
-    public ByProjectKeyMePaymentsByIDGet addExpand(final String expand){
+
+    public ByProjectKeyMePaymentsByIDGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }
 
-    
     @Override
-    protected ByProjectKeyMePaymentsByIDGet copy()
-    {
+    protected ByProjectKeyMePaymentsByIDGet copy() {
         return new ByProjectKeyMePaymentsByIDGet(this);
     }
 }

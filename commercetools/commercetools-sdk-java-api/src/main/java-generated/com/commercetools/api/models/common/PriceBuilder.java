@@ -1,161 +1,159 @@
+
 package com.commercetools.api.models.common;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.common.PriceTier;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.type.CustomFields;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.common.Price;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PriceBuilder {
 
-    
     private String id;
-    
-    
+
     private com.commercetools.api.models.common.TypedMoney value;
-    
+
     @Nullable
     private String country;
-    
+
     @Nullable
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
-    
+
     @Nullable
     private com.commercetools.api.models.channel.ChannelReference channel;
-    
+
     @Nullable
     private java.time.ZonedDateTime validFrom;
-    
+
     @Nullable
     private java.time.ZonedDateTime validUntil;
-    
+
     @Nullable
     private com.commercetools.api.models.common.DiscountedPrice discounted;
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
-    
+
     @Nullable
     private java.util.List<com.commercetools.api.models.common.PriceTier> tiers;
 
-    public PriceBuilder id( final String id) {
+    public PriceBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    public PriceBuilder value( final com.commercetools.api.models.common.TypedMoney value) {
+
+    public PriceBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
         return this;
     }
-    
+
     public PriceBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
-    
-    public PriceBuilder customerGroup(@Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+
+    public PriceBuilder customerGroup(
+            @Nullable final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
-    
+
     public PriceBuilder channel(@Nullable final com.commercetools.api.models.channel.ChannelReference channel) {
         this.channel = channel;
         return this;
     }
-    
+
     public PriceBuilder validFrom(@Nullable final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
         return this;
     }
-    
+
     public PriceBuilder validUntil(@Nullable final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
         return this;
     }
-    
+
     public PriceBuilder discounted(@Nullable final com.commercetools.api.models.common.DiscountedPrice discounted) {
         this.discounted = discounted;
         return this;
     }
-    
+
     public PriceBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
-    
-    public PriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier ...tiers) {
+
+    public PriceBuilder tiers(@Nullable final com.commercetools.api.models.common.PriceTier... tiers) {
         this.tiers = new ArrayList<>(Arrays.asList(tiers));
         return this;
     }
-    
+
     public PriceBuilder tiers(@Nullable final java.util.List<com.commercetools.api.models.common.PriceTier> tiers) {
         this.tiers = tiers;
         return this;
     }
 
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    public com.commercetools.api.models.common.TypedMoney getValue(){
+
+    public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
-    
+
     @Nullable
-    public String getCountry(){
+    public String getCountry() {
         return this.country;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
         return this.customerGroup;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.channel.ChannelReference getChannel(){
+    public com.commercetools.api.models.channel.ChannelReference getChannel() {
         return this.channel;
     }
-    
+
     @Nullable
-    public java.time.ZonedDateTime getValidFrom(){
+    public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
-    
+
     @Nullable
-    public java.time.ZonedDateTime getValidUntil(){
+    public java.time.ZonedDateTime getValidUntil() {
         return this.validUntil;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
+    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
         return this.discounted;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers(){
+    public java.util.List<com.commercetools.api.models.common.PriceTier> getTiers() {
         return this.tiers;
     }
 
     public Price build() {
-        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom, tiers);
+        return new PriceImpl(id, value, country, customerGroup, channel, validFrom, validUntil, discounted, custom,
+            tiers);
     }
 
     public static PriceBuilder of() {

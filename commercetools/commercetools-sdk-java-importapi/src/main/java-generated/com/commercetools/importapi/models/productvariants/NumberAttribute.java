@@ -1,40 +1,38 @@
+
 package com.commercetools.importapi.models.productvariants;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.NumberAttributeImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>This type represents an attribute which value is a number.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = NumberAttributeImpl.class)
 public interface NumberAttribute extends Attribute {
 
-    
     @NotNull
     @JsonProperty("value")
     public Double getValue();
 
     public void setValue(final Double value);
 
-    public static NumberAttribute of(){
+    public static NumberAttribute of() {
         return new NumberAttributeImpl();
     }
-    
 
     public static NumberAttribute of(final NumberAttribute template) {
         NumberAttributeImpl instance = new NumberAttributeImpl();
@@ -43,14 +41,13 @@ public interface NumberAttribute extends Attribute {
         return instance;
     }
 
-    public static NumberAttributeBuilder builder(){
+    public static NumberAttributeBuilder builder() {
         return NumberAttributeBuilder.of();
     }
-    
-    public static NumberAttributeBuilder builder(final NumberAttribute template){
+
+    public static NumberAttributeBuilder builder(final NumberAttribute template) {
         return NumberAttributeBuilder.of(template);
     }
-    
 
     default <T> T withNumberAttribute(Function<NumberAttribute, T> helper) {
         return helper.apply(this);

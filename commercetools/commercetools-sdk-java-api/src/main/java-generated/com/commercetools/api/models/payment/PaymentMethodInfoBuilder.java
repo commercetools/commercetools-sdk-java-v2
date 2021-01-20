@@ -1,24 +1,25 @@
+
 package com.commercetools.api.models.payment;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.payment.PaymentMethodInfo;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PaymentMethodInfoBuilder {
 
     @Nullable
     private String paymentInterface;
-    
+
     @Nullable
     private String method;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
@@ -26,29 +27,29 @@ public final class PaymentMethodInfoBuilder {
         this.paymentInterface = paymentInterface;
         return this;
     }
-    
+
     public PaymentMethodInfoBuilder method(@Nullable final String method) {
         this.method = method;
         return this;
     }
-    
+
     public PaymentMethodInfoBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
     @Nullable
-    public String getPaymentInterface(){
+    public String getPaymentInterface() {
         return this.paymentInterface;
     }
-    
+
     @Nullable
-    public String getMethod(){
+    public String getMethod() {
         return this.method;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getName(){
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 

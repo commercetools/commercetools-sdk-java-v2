@@ -1,29 +1,28 @@
+
 package com.commercetools.api.models.state;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.state.StateChangeTypeAction;
 import com.commercetools.api.models.state.StateTypeEnum;
 import com.commercetools.api.models.state.StateUpdateAction;
-import com.commercetools.api.models.state.StateChangeTypeAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StateChangeTypeActionBuilder {
 
-    
     private com.commercetools.api.models.state.StateTypeEnum type;
 
-    public StateChangeTypeActionBuilder type( final com.commercetools.api.models.state.StateTypeEnum type) {
+    public StateChangeTypeActionBuilder type(final com.commercetools.api.models.state.StateTypeEnum type) {
         this.type = type;
         return this;
     }
 
-    
-    public com.commercetools.api.models.state.StateTypeEnum getType(){
+    public com.commercetools.api.models.state.StateTypeEnum getType() {
         return this.type;
     }
 

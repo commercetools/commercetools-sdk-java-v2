@@ -1,13 +1,15 @@
+
 package commercetools.zone;
+
+import java.util.function.Consumer;
+import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.zone.Zone;
 import com.commercetools.api.models.zone.ZoneDraft;
 import com.commercetools.api.models.zone.ZoneDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.Assert;
 
-import java.util.function.Consumer;
-import java.util.function.UnaryOperator;
+import org.junit.Assert;
 
 public class ZoneFixtures {
 
@@ -24,16 +26,10 @@ public class ZoneFixtures {
     }
 
     public static Zone createZone() {
-        ZoneDraft zoneDraft = ZoneDraftBuilder.of()
-                .name(CommercetoolsTestUtils.randomString())
-                .key(CommercetoolsTestUtils.randomKey())
-                .description(CommercetoolsTestUtils.randomString())
-                .build();
+        ZoneDraft zoneDraft = ZoneDraftBuilder.of().name(CommercetoolsTestUtils.randomString()).key(
+            CommercetoolsTestUtils.randomKey()).description(CommercetoolsTestUtils.randomString()).build();
 
-        Zone zone = CommercetoolsTestUtils.getProjectRoot()
-                .zones()
-                .post(zoneDraft)
-                .executeBlocking().getBody();
+        Zone zone = CommercetoolsTestUtils.getProjectRoot().zones().post(zoneDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(zone);
         Assert.assertEquals(zoneDraft.getKey(), zone.getKey());
@@ -42,12 +38,8 @@ public class ZoneFixtures {
     }
 
     public static Zone deleteZone(final String id, final Long version) {
-        Zone zone = CommercetoolsTestUtils.getProjectRoot()
-                .zones()
-                .withId(id)
-                .delete()
-                .withVersion(version)
-                .executeBlocking().getBody();
+        Zone zone = CommercetoolsTestUtils.getProjectRoot().zones().withId(id).delete().withVersion(
+            version).executeBlocking().getBody();
 
         Assert.assertNotNull(zone);
         Assert.assertEquals(zone.getId(), id);

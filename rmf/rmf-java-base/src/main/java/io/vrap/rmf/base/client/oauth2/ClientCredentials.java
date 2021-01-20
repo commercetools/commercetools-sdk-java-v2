@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client.oauth2;
 
 public interface ClientCredentials {

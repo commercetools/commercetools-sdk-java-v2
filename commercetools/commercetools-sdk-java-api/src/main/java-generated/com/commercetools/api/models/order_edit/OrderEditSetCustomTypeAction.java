@@ -1,25 +1,25 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.order_edit.OrderEditSetCustomTypeActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.order_edit.OrderEditSetCustomTypeActionImpl;
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderEditSetCustomTypeActionImpl.class)
 public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
 
@@ -30,6 +30,7 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
+
     /**
     *  <p>If set, the custom fields are set to this new value.</p>
     */
@@ -38,13 +39,12 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
     public JsonNode getFields();
 
     public void setType(final TypeResourceIdentifier type);
-    
+
     public void setFields(final JsonNode fields);
 
-    public static OrderEditSetCustomTypeAction of(){
+    public static OrderEditSetCustomTypeAction of() {
         return new OrderEditSetCustomTypeActionImpl();
     }
-    
 
     public static OrderEditSetCustomTypeAction of(final OrderEditSetCustomTypeAction template) {
         OrderEditSetCustomTypeActionImpl instance = new OrderEditSetCustomTypeActionImpl();
@@ -53,14 +53,13 @@ public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
         return instance;
     }
 
-    public static OrderEditSetCustomTypeActionBuilder builder(){
+    public static OrderEditSetCustomTypeActionBuilder builder() {
         return OrderEditSetCustomTypeActionBuilder.of();
     }
-    
-    public static OrderEditSetCustomTypeActionBuilder builder(final OrderEditSetCustomTypeAction template){
+
+    public static OrderEditSetCustomTypeActionBuilder builder(final OrderEditSetCustomTypeAction template) {
         return OrderEditSetCustomTypeActionBuilder.of(template);
     }
-    
 
     default <T> T withOrderEditSetCustomTypeAction(Function<OrderEditSetCustomTypeAction, T> helper) {
         return helper.apply(this);

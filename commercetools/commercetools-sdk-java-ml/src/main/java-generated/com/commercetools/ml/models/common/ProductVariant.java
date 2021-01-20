@@ -1,28 +1,28 @@
+
 package com.commercetools.ml.models.common;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.ml.models.common.ProductReference;
 import com.commercetools.ml.models.common.ProductVariantImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>The product variant that contains the image.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductVariantImpl.class)
-public interface ProductVariant  {
+public interface ProductVariant {
 
     /**
     *  <p>The product that contains this variant.</p>
@@ -31,12 +31,14 @@ public interface ProductVariant  {
     @Valid
     @JsonProperty("product")
     public ProductReference getProduct();
+
     /**
     *  <p>The state of the product variant.</p>
     */
     @NotNull
     @JsonProperty("staged")
     public Boolean getStaged();
+
     /**
     *  <p>The id of the product variant.</p>
     */
@@ -45,15 +47,14 @@ public interface ProductVariant  {
     public Integer getVariantId();
 
     public void setProduct(final ProductReference product);
-    
+
     public void setStaged(final Boolean staged);
-    
+
     public void setVariantId(final Integer variantId);
 
-    public static ProductVariant of(){
+    public static ProductVariant of() {
         return new ProductVariantImpl();
     }
-    
 
     public static ProductVariant of(final ProductVariant template) {
         ProductVariantImpl instance = new ProductVariantImpl();
@@ -63,14 +64,13 @@ public interface ProductVariant  {
         return instance;
     }
 
-    public static ProductVariantBuilder builder(){
+    public static ProductVariantBuilder builder() {
         return ProductVariantBuilder.of();
     }
-    
-    public static ProductVariantBuilder builder(final ProductVariant template){
+
+    public static ProductVariantBuilder builder(final ProductVariant template) {
         return ProductVariantBuilder.of(template);
     }
-    
 
     default <T> T withProductVariant(Function<ProductVariant, T> helper) {
         return helper.apply(this);

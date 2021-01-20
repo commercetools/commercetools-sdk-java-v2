@@ -1,66 +1,65 @@
+
 package com.commercetools.ml.models.missing_data;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.ml.models.missing_data.MissingAttributes;
 import com.commercetools.ml.models.missing_data.MissingAttributesMeta;
 import com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResultImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MissingAttributesPagedQueryResultImpl.class)
-public interface MissingAttributesPagedQueryResult  {
+public interface MissingAttributesPagedQueryResult {
 
-    
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-    
+
     @NotNull
     @JsonProperty("total")
     public Long getTotal();
-    
+
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-    
+
     @NotNull
     @Valid
     @JsonProperty("results")
     public List<MissingAttributes> getResults();
-    
+
     @NotNull
     @Valid
     @JsonProperty("meta")
     public MissingAttributesMeta getMeta();
 
     public void setCount(final Long count);
-    
+
     public void setTotal(final Long total);
-    
+
     public void setOffset(final Long offset);
-    
+
     @JsonIgnore
-    public void setResults(final MissingAttributes ...results);
+    public void setResults(final MissingAttributes... results);
+
     public void setResults(final List<MissingAttributes> results);
-    
+
     public void setMeta(final MissingAttributesMeta meta);
 
-    public static MissingAttributesPagedQueryResult of(){
+    public static MissingAttributesPagedQueryResult of() {
         return new MissingAttributesPagedQueryResultImpl();
     }
-    
 
     public static MissingAttributesPagedQueryResult of(final MissingAttributesPagedQueryResult template) {
         MissingAttributesPagedQueryResultImpl instance = new MissingAttributesPagedQueryResultImpl();
@@ -72,14 +71,13 @@ public interface MissingAttributesPagedQueryResult  {
         return instance;
     }
 
-    public static MissingAttributesPagedQueryResultBuilder builder(){
+    public static MissingAttributesPagedQueryResultBuilder builder() {
         return MissingAttributesPagedQueryResultBuilder.of();
     }
-    
-    public static MissingAttributesPagedQueryResultBuilder builder(final MissingAttributesPagedQueryResult template){
+
+    public static MissingAttributesPagedQueryResultBuilder builder(final MissingAttributesPagedQueryResult template) {
         return MissingAttributesPagedQueryResultBuilder.of(template);
     }
-    
 
     default <T> T withMissingAttributesPagedQueryResult(Function<MissingAttributesPagedQueryResult, T> helper) {
         return helper.apply(this);

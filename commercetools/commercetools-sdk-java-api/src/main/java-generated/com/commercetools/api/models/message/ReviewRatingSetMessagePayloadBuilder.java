@@ -1,28 +1,28 @@
+
 package com.commercetools.api.models.message;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.message.ReviewRatingSetMessagePayload;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ReviewRatingSetMessagePayloadBuilder {
 
     @Nullable
     private Double oldRating;
-    
+
     @Nullable
     private Double newRating;
-    
-    
+
     private Boolean includedInStatistics;
-    
+
     @Nullable
     private com.commercetools.api.models.common.Reference target;
 
@@ -30,39 +30,39 @@ public final class ReviewRatingSetMessagePayloadBuilder {
         this.oldRating = oldRating;
         return this;
     }
-    
+
     public ReviewRatingSetMessagePayloadBuilder newRating(@Nullable final Double newRating) {
         this.newRating = newRating;
         return this;
     }
-    
-    public ReviewRatingSetMessagePayloadBuilder includedInStatistics( final Boolean includedInStatistics) {
+
+    public ReviewRatingSetMessagePayloadBuilder includedInStatistics(final Boolean includedInStatistics) {
         this.includedInStatistics = includedInStatistics;
         return this;
     }
-    
-    public ReviewRatingSetMessagePayloadBuilder target(@Nullable final com.commercetools.api.models.common.Reference target) {
+
+    public ReviewRatingSetMessagePayloadBuilder target(
+            @Nullable final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
 
     @Nullable
-    public Double getOldRating(){
+    public Double getOldRating() {
         return this.oldRating;
     }
-    
+
     @Nullable
-    public Double getNewRating(){
+    public Double getNewRating() {
         return this.newRating;
     }
-    
-    
-    public Boolean getIncludedInStatistics(){
+
+    public Boolean getIncludedInStatistics() {
         return this.includedInStatistics;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.Reference getTarget(){
+    public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
 

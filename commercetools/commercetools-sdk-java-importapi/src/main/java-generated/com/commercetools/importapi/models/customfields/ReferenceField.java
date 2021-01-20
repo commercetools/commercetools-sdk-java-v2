@@ -1,27 +1,27 @@
+
 package com.commercetools.importapi.models.customfields;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.KeyReference;
 import com.commercetools.importapi.models.customfields.CustomField;
 import com.commercetools.importapi.models.customfields.ReferenceFieldImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>A field with a reference value.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReferenceFieldImpl.class)
 public interface ReferenceField extends CustomField {
 
@@ -35,10 +35,9 @@ public interface ReferenceField extends CustomField {
 
     public void setValue(final KeyReference value);
 
-    public static ReferenceField of(){
+    public static ReferenceField of() {
         return new ReferenceFieldImpl();
     }
-    
 
     public static ReferenceField of(final ReferenceField template) {
         ReferenceFieldImpl instance = new ReferenceFieldImpl();
@@ -46,14 +45,13 @@ public interface ReferenceField extends CustomField {
         return instance;
     }
 
-    public static ReferenceFieldBuilder builder(){
+    public static ReferenceFieldBuilder builder() {
         return ReferenceFieldBuilder.of();
     }
-    
-    public static ReferenceFieldBuilder builder(final ReferenceField template){
+
+    public static ReferenceFieldBuilder builder(final ReferenceField template) {
         return ReferenceFieldBuilder.of(template);
     }
-    
 
     default <T> T withReferenceField(Function<ReferenceField, T> helper) {
         return helper.apply(this);

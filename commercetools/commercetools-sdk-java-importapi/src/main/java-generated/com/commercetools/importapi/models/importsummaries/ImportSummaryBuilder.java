@@ -1,41 +1,39 @@
+
 package com.commercetools.importapi.models.importsummaries;
 
-import com.commercetools.importapi.models.importsummaries.OperationStates;
-import com.commercetools.importapi.models.importsummaries.ImportSummary;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.importsummaries.ImportSummary;
+import com.commercetools.importapi.models.importsummaries.OperationStates;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSummaryBuilder {
 
-    
     private com.commercetools.importapi.models.importsummaries.OperationStates states;
-    
-    
+
     private Long total;
 
-    public ImportSummaryBuilder states( final com.commercetools.importapi.models.importsummaries.OperationStates states) {
+    public ImportSummaryBuilder states(
+            final com.commercetools.importapi.models.importsummaries.OperationStates states) {
         this.states = states;
         return this;
     }
-    
-    public ImportSummaryBuilder total( final Long total) {
+
+    public ImportSummaryBuilder total(final Long total) {
         this.total = total;
         return this;
     }
 
-    
-    public com.commercetools.importapi.models.importsummaries.OperationStates getStates(){
+    public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {
         return this.states;
     }
-    
-    
-    public Long getTotal(){
+
+    public Long getTotal() {
         return this.total;
     }
 

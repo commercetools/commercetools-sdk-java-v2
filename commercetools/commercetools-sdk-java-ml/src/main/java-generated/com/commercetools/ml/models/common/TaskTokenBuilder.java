@@ -1,41 +1,37 @@
+
 package com.commercetools.ml.models.common;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.common.TaskToken;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TaskTokenBuilder {
 
-    
     private String taskId;
-    
-    
+
     private String uriPath;
 
-    public TaskTokenBuilder taskId( final String taskId) {
+    public TaskTokenBuilder taskId(final String taskId) {
         this.taskId = taskId;
         return this;
     }
-    
-    public TaskTokenBuilder uriPath( final String uriPath) {
+
+    public TaskTokenBuilder uriPath(final String uriPath) {
         this.uriPath = uriPath;
         return this;
     }
 
-    
-    public String getTaskId(){
+    public String getTaskId() {
         return this.taskId;
     }
-    
-    
-    public String getUriPath(){
+
+    public String getUriPath() {
         return this.uriPath;
     }
 

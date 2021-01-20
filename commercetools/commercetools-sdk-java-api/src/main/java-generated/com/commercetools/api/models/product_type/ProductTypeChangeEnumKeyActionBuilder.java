@@ -1,54 +1,49 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyAction;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductTypeChangeEnumKeyActionBuilder {
 
-    
     private String attributeName;
-    
-    
+
     private String key;
-    
-    
+
     private String newKey;
 
-    public ProductTypeChangeEnumKeyActionBuilder attributeName( final String attributeName) {
+    public ProductTypeChangeEnumKeyActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-    
-    public ProductTypeChangeEnumKeyActionBuilder key( final String key) {
+
+    public ProductTypeChangeEnumKeyActionBuilder key(final String key) {
         this.key = key;
         return this;
     }
-    
-    public ProductTypeChangeEnumKeyActionBuilder newKey( final String newKey) {
+
+    public ProductTypeChangeEnumKeyActionBuilder newKey(final String newKey) {
         this.newKey = newKey;
         return this;
     }
 
-    
-    public String getAttributeName(){
+    public String getAttributeName() {
         return this.attributeName;
     }
-    
-    
-    public String getKey(){
+
+    public String getKey() {
         return this.key;
     }
-    
-    
-    public String getNewKey(){
+
+    public String getNewKey() {
         return this.newKey;
     }
 

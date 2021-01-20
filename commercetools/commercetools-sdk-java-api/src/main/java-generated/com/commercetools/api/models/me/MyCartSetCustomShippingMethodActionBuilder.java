@@ -1,75 +1,76 @@
+
 package com.commercetools.api.models.me;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.me.MyCartSetCustomShippingMethodAction;
 import com.commercetools.api.models.me.MyCartUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.me.MyCartSetCustomShippingMethodAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyCartSetCustomShippingMethodActionBuilder {
 
-    
     private String shippingMethodName;
-    
-    
+
     private com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate;
-    
+
     @Nullable
     private com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory;
-    
+
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-    public MyCartSetCustomShippingMethodActionBuilder shippingMethodName( final String shippingMethodName) {
+    public MyCartSetCustomShippingMethodActionBuilder shippingMethodName(final String shippingMethodName) {
         this.shippingMethodName = shippingMethodName;
         return this;
     }
-    
-    public MyCartSetCustomShippingMethodActionBuilder shippingRate( final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
+
+    public MyCartSetCustomShippingMethodActionBuilder shippingRate(
+            final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
         this.shippingRate = shippingRate;
         return this;
     }
-    
-    public MyCartSetCustomShippingMethodActionBuilder taxCategory(@Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
+
+    public MyCartSetCustomShippingMethodActionBuilder taxCategory(
+            @Nullable final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
-    
-    public MyCartSetCustomShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+
+    public MyCartSetCustomShippingMethodActionBuilder externalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
 
-    
-    public String getShippingMethodName(){
+    public String getShippingMethodName() {
         return this.shippingMethodName;
     }
-    
-    
-    public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate(){
+
+    public com.commercetools.api.models.shipping_method.ShippingRateDraft getShippingRate() {
         return this.shippingRate;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory(){
+    public com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier getTaxCategory() {
         return this.taxCategory;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
     public MyCartSetCustomShippingMethodAction build() {
-        return new MyCartSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory, externalTaxRate);
+        return new MyCartSetCustomShippingMethodActionImpl(shippingMethodName, shippingRate, taxCategory,
+            externalTaxRate);
     }
 
     public static MyCartSetCustomShippingMethodActionBuilder of() {

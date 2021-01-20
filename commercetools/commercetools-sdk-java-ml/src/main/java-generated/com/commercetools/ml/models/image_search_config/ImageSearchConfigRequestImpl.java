@@ -1,69 +1,71 @@
+
 package com.commercetools.ml.models.image_search_config;
 
-import com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImageSearchConfigRequestImpl implements ImageSearchConfigRequest {
 
     private java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions;
 
     @JsonCreator
-    ImageSearchConfigRequestImpl(@JsonProperty("actions") final java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions) {
+    ImageSearchConfigRequestImpl(
+            @JsonProperty("actions") final java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions) {
         this.actions = actions;
     }
+
     public ImageSearchConfigRequestImpl() {
     }
 
     /**
     *  <p>The list of update actions to be performed on the project.</p>
     */
-    public java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> getActions(){
+    public java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> getActions() {
         return this.actions;
     }
 
-    public void setActions(final com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction ...actions){
-       this.actions = new ArrayList<>(Arrays.asList(actions));
+    public void setActions(
+            final com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction... actions) {
+        this.actions = new ArrayList<>(Arrays.asList(actions));
     }
-    
-    public void setActions(final java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions){
-       this.actions = actions;
+
+    public void setActions(
+            final java.util.List<com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction> actions) {
+        this.actions = actions;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         ImageSearchConfigRequestImpl that = (ImageSearchConfigRequestImpl) o;
-    
-        return new EqualsBuilder()
-                .append(actions, that.actions)
-                .isEquals();
+
+        return new EqualsBuilder().append(actions, that.actions).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(actions)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(actions).toHashCode();
     }
 
 }

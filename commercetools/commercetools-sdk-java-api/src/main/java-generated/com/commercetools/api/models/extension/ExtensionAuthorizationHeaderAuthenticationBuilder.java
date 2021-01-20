@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.extension;
 
-import com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication;
-import com.commercetools.api.models.extension.ExtensionAuthorizationHeaderAuthentication;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.extension.ExtensionAuthorizationHeaderAuthentication;
+import com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionAuthorizationHeaderAuthenticationBuilder {
 
-    
     private String headerValue;
 
-    public ExtensionAuthorizationHeaderAuthenticationBuilder headerValue( final String headerValue) {
+    public ExtensionAuthorizationHeaderAuthenticationBuilder headerValue(final String headerValue) {
         this.headerValue = headerValue;
         return this;
     }
 
-    
-    public String getHeaderValue(){
+    public String getHeaderValue() {
         return this.headerValue;
     }
 
@@ -34,7 +33,8 @@ public final class ExtensionAuthorizationHeaderAuthenticationBuilder {
         return new ExtensionAuthorizationHeaderAuthenticationBuilder();
     }
 
-    public static ExtensionAuthorizationHeaderAuthenticationBuilder of(final ExtensionAuthorizationHeaderAuthentication template) {
+    public static ExtensionAuthorizationHeaderAuthenticationBuilder of(
+            final ExtensionAuthorizationHeaderAuthentication template) {
         ExtensionAuthorizationHeaderAuthenticationBuilder builder = new ExtensionAuthorizationHeaderAuthenticationBuilder();
         builder.headerValue = template.getHeaderValue();
         return builder;

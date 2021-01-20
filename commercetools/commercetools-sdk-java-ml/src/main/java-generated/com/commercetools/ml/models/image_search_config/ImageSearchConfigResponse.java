@@ -1,26 +1,26 @@
+
 package com.commercetools.ml.models.image_search_config;
 
-import com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus;
+import java.io.IOException;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.ml.models.image_search_config.ImageSearchConfigResponseImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigResponseImpl;
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImageSearchConfigResponseImpl.class)
-public interface ImageSearchConfigResponse  {
+public interface ImageSearchConfigResponse {
 
     /**
     *  <p>The image search activation status.</p>
@@ -28,19 +28,18 @@ public interface ImageSearchConfigResponse  {
     @NotNull
     @JsonProperty("status")
     public ImageSearchConfigStatus getStatus();
-    
+
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
 
     public void setStatus(final ImageSearchConfigStatus status);
-    
+
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
-    public static ImageSearchConfigResponse of(){
+    public static ImageSearchConfigResponse of() {
         return new ImageSearchConfigResponseImpl();
     }
-    
 
     public static ImageSearchConfigResponse of(final ImageSearchConfigResponse template) {
         ImageSearchConfigResponseImpl instance = new ImageSearchConfigResponseImpl();
@@ -49,14 +48,13 @@ public interface ImageSearchConfigResponse  {
         return instance;
     }
 
-    public static ImageSearchConfigResponseBuilder builder(){
+    public static ImageSearchConfigResponseBuilder builder() {
         return ImageSearchConfigResponseBuilder.of();
     }
-    
-    public static ImageSearchConfigResponseBuilder builder(final ImageSearchConfigResponse template){
+
+    public static ImageSearchConfigResponseBuilder builder(final ImageSearchConfigResponse template) {
         return ImageSearchConfigResponseBuilder.of(template);
     }
-    
 
     default <T> T withImageSearchConfigResponse(Function<ImageSearchConfigResponse, T> helper) {
         return helper.apply(this);

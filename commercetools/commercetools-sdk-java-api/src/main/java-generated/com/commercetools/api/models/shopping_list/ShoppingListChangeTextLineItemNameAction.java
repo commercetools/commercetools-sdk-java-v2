@@ -1,45 +1,43 @@
+
 package com.commercetools.api.models.shopping_list;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
-import com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemNameActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemNameActionImpl;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShoppingListChangeTextLineItemNameActionImpl.class)
 public interface ShoppingListChangeTextLineItemNameAction extends ShoppingListUpdateAction {
 
-    
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();
-    
+
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
 
     public void setTextLineItemId(final String textLineItemId);
-    
+
     public void setName(final LocalizedString name);
 
-    public static ShoppingListChangeTextLineItemNameAction of(){
+    public static ShoppingListChangeTextLineItemNameAction of() {
         return new ShoppingListChangeTextLineItemNameActionImpl();
     }
-    
 
     public static ShoppingListChangeTextLineItemNameAction of(final ShoppingListChangeTextLineItemNameAction template) {
         ShoppingListChangeTextLineItemNameActionImpl instance = new ShoppingListChangeTextLineItemNameActionImpl();
@@ -48,16 +46,17 @@ public interface ShoppingListChangeTextLineItemNameAction extends ShoppingListUp
         return instance;
     }
 
-    public static ShoppingListChangeTextLineItemNameActionBuilder builder(){
+    public static ShoppingListChangeTextLineItemNameActionBuilder builder() {
         return ShoppingListChangeTextLineItemNameActionBuilder.of();
     }
-    
-    public static ShoppingListChangeTextLineItemNameActionBuilder builder(final ShoppingListChangeTextLineItemNameAction template){
+
+    public static ShoppingListChangeTextLineItemNameActionBuilder builder(
+            final ShoppingListChangeTextLineItemNameAction template) {
         return ShoppingListChangeTextLineItemNameActionBuilder.of(template);
     }
-    
 
-    default <T> T withShoppingListChangeTextLineItemNameAction(Function<ShoppingListChangeTextLineItemNameAction, T> helper) {
+    default <T> T withShoppingListChangeTextLineItemNameAction(
+            Function<ShoppingListChangeTextLineItemNameAction, T> helper) {
         return helper.apply(this);
     }
 }

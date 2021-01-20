@@ -1,25 +1,26 @@
+
 package com.commercetools.api.models.category;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.category.CategorySetAssetDescriptionAction;
 import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.category.CategorySetAssetDescriptionAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategorySetAssetDescriptionActionBuilder {
 
     @Nullable
     private String assetId;
-    
+
     @Nullable
     private String assetKey;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
@@ -27,29 +28,30 @@ public final class CategorySetAssetDescriptionActionBuilder {
         this.assetId = assetId;
         return this;
     }
-    
+
     public CategorySetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-    
-    public CategorySetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+
+    public CategorySetAssetDescriptionActionBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
     @Nullable
-    public String getAssetId(){
+    public String getAssetId() {
         return this.assetId;
     }
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription(){
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
 

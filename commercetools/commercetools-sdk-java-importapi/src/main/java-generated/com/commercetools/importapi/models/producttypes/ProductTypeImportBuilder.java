@@ -1,73 +1,70 @@
+
 package com.commercetools.importapi.models.producttypes;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.producttypes.AttributeDefinition;
 import com.commercetools.importapi.models.producttypes.ProductTypeImport;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductTypeImportBuilder {
 
-    
     private String key;
-    
-    
+
     private String name;
-    
-    
+
     private String description;
-    
+
     @Nullable
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes;
 
-    public ProductTypeImportBuilder key( final String key) {
+    public ProductTypeImportBuilder key(final String key) {
         this.key = key;
         return this;
     }
-    
-    public ProductTypeImportBuilder name( final String name) {
+
+    public ProductTypeImportBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    public ProductTypeImportBuilder description( final String description) {
+
+    public ProductTypeImportBuilder description(final String description) {
         this.description = description;
         return this;
     }
-    
-    public ProductTypeImportBuilder attributes(@Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition ...attributes) {
+
+    public ProductTypeImportBuilder attributes(
+            @Nullable final com.commercetools.importapi.models.producttypes.AttributeDefinition... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-    
-    public ProductTypeImportBuilder attributes(@Nullable final java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes) {
+
+    public ProductTypeImportBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> attributes) {
         this.attributes = attributes;
         return this;
     }
 
-    
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    
-    public String getDescription(){
+
+    public String getDescription() {
         return this.description;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes(){
+    public java.util.List<com.commercetools.importapi.models.producttypes.AttributeDefinition> getAttributes() {
         return this.attributes;
     }
 

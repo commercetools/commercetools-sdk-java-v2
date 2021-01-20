@@ -1,54 +1,53 @@
+
 package com.commercetools.api.models.message;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ProductPublishScope;
 import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.message.ProductPublishedMessageImpl;
-
+import com.commercetools.api.models.product.ProductProjection;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductPublishedMessageImpl.class)
 public interface ProductPublishedMessage extends Message {
 
-    
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
-    
+
     @NotNull
     @Valid
     @JsonProperty("productProjection")
     public ProductProjection getProductProjection();
-    
+
     @NotNull
     @JsonProperty("scope")
     public ProductPublishScope getScope();
 
     @JsonIgnore
-    public void setRemovedImageUrls(final String ...removedImageUrls);
+    public void setRemovedImageUrls(final String... removedImageUrls);
+
     public void setRemovedImageUrls(final List<String> removedImageUrls);
-    
+
     public void setProductProjection(final ProductProjection productProjection);
-    
+
     public void setScope(final ProductPublishScope scope);
 
-    public static ProductPublishedMessage of(){
+    public static ProductPublishedMessage of() {
         return new ProductPublishedMessageImpl();
     }
-    
 
     public static ProductPublishedMessage of(final ProductPublishedMessage template) {
         ProductPublishedMessageImpl instance = new ProductPublishedMessageImpl();
@@ -68,14 +67,13 @@ public interface ProductPublishedMessage extends Message {
         return instance;
     }
 
-    public static ProductPublishedMessageBuilder builder(){
+    public static ProductPublishedMessageBuilder builder() {
         return ProductPublishedMessageBuilder.of();
     }
-    
-    public static ProductPublishedMessageBuilder builder(final ProductPublishedMessage template){
+
+    public static ProductPublishedMessageBuilder builder(final ProductPublishedMessage template) {
         return ProductPublishedMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductPublishedMessage(Function<ProductPublishedMessage, T> helper) {
         return helper.apply(this);

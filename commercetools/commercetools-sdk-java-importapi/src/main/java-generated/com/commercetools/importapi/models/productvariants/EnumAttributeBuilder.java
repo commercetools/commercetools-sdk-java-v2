@@ -1,41 +1,40 @@
+
 package com.commercetools.importapi.models.productvariants;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.EnumAttribute;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class EnumAttributeBuilder {
 
     @Nullable
     private String name;
-    
-    
+
     private String value;
 
     public EnumAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-    
-    public EnumAttributeBuilder value( final String value) {
+
+    public EnumAttributeBuilder value(final String value) {
         this.value = value;
         return this;
     }
 
     @Nullable
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
-    public String getValue(){
+
+    public String getValue() {
         return this.value;
     }
 

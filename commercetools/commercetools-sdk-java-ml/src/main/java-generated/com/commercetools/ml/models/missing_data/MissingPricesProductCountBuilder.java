@@ -1,42 +1,39 @@
+
 package com.commercetools.ml.models.missing_data;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.ml.models.missing_data.MissingPricesProductCount;
 import com.commercetools.ml.models.missing_data.MissingPricesProductLevel;
 import com.commercetools.ml.models.missing_data.MissingPricesVariantLevel;
-import com.commercetools.ml.models.missing_data.MissingPricesProductCount;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingPricesProductCountBuilder {
 
-    
     private Long total;
-    
-    
+
     private Long missingPrices;
 
-    public MissingPricesProductCountBuilder total( final Long total) {
+    public MissingPricesProductCountBuilder total(final Long total) {
         this.total = total;
         return this;
     }
-    
-    public MissingPricesProductCountBuilder missingPrices( final Long missingPrices) {
+
+    public MissingPricesProductCountBuilder missingPrices(final Long missingPrices) {
         this.missingPrices = missingPrices;
         return this;
     }
 
-    
-    public Long getTotal(){
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    public Long getMissingPrices(){
+
+    public Long getMissingPrices() {
         return this.missingPrices;
     }
 

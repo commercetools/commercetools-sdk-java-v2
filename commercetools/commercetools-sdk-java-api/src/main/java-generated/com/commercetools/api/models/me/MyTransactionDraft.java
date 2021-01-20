@@ -1,34 +1,35 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.payment.TransactionType;
+import java.io.IOException;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.me.MyTransactionDraftImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.me.MyTransactionDraftImpl;
+import com.commercetools.api.models.payment.TransactionType;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyTransactionDraftImpl.class)
-public interface MyTransactionDraft  {
+public interface MyTransactionDraft {
 
     /**
     *  <p>The time at which the transaction took place.</p>
     */
-    
+
     @JsonProperty("timestamp")
     public ZonedDateTime getTimestamp();
+
     /**
     *  <p>The type of this transaction.
     *  Only the <code>Authorization</code> or <code>Charge</code>
@@ -37,33 +38,33 @@ public interface MyTransactionDraft  {
     @NotNull
     @JsonProperty("type")
     public TransactionType getType();
-    
+
     @NotNull
     @Valid
     @JsonProperty("amount")
     public Money getAmount();
+
     /**
     *  <p>The identifier that is used by the interface that managed the transaction (usually the PSP).
     *  If a matching interaction was logged in the interfaceInteractions array,
     *  the corresponding interaction should be findable with this ID.
     *  The <code>state</code> is set to the <code>Initial</code> TransactionState.</p>
     */
-    
+
     @JsonProperty("interactionId")
     public String getInteractionId();
 
     public void setTimestamp(final ZonedDateTime timestamp);
-    
+
     public void setType(final TransactionType type);
-    
+
     public void setAmount(final Money amount);
-    
+
     public void setInteractionId(final String interactionId);
 
-    public static MyTransactionDraft of(){
+    public static MyTransactionDraft of() {
         return new MyTransactionDraftImpl();
     }
-    
 
     public static MyTransactionDraft of(final MyTransactionDraft template) {
         MyTransactionDraftImpl instance = new MyTransactionDraftImpl();
@@ -74,14 +75,13 @@ public interface MyTransactionDraft  {
         return instance;
     }
 
-    public static MyTransactionDraftBuilder builder(){
+    public static MyTransactionDraftBuilder builder() {
         return MyTransactionDraftBuilder.of();
     }
-    
-    public static MyTransactionDraftBuilder builder(final MyTransactionDraft template){
+
+    public static MyTransactionDraftBuilder builder(final MyTransactionDraft template) {
         return MyTransactionDraftBuilder.of(template);
     }
-    
 
     default <T> T withMyTransactionDraft(Function<MyTransactionDraft, T> helper) {
         return helper.apply(this);

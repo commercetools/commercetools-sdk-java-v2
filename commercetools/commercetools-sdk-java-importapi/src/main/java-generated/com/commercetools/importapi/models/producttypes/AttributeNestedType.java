@@ -1,24 +1,24 @@
+
 package com.commercetools.importapi.models.producttypes;
 
-import com.commercetools.importapi.models.common.ProductTypeKeyReference;
-import com.commercetools.importapi.models.producttypes.AttributeType;
-import com.commercetools.importapi.models.producttypes.AttributeNestedTypeImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.importapi.models.common.ProductTypeKeyReference;
+import com.commercetools.importapi.models.producttypes.AttributeNestedTypeImpl;
+import com.commercetools.importapi.models.producttypes.AttributeType;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AttributeNestedTypeImpl.class)
 public interface AttributeNestedType extends AttributeType {
 
@@ -32,10 +32,9 @@ public interface AttributeNestedType extends AttributeType {
 
     public void setTypeReference(final ProductTypeKeyReference typeReference);
 
-    public static AttributeNestedType of(){
+    public static AttributeNestedType of() {
         return new AttributeNestedTypeImpl();
     }
-    
 
     public static AttributeNestedType of(final AttributeNestedType template) {
         AttributeNestedTypeImpl instance = new AttributeNestedTypeImpl();
@@ -43,14 +42,13 @@ public interface AttributeNestedType extends AttributeType {
         return instance;
     }
 
-    public static AttributeNestedTypeBuilder builder(){
+    public static AttributeNestedTypeBuilder builder() {
         return AttributeNestedTypeBuilder.of();
     }
-    
-    public static AttributeNestedTypeBuilder builder(final AttributeNestedType template){
+
+    public static AttributeNestedTypeBuilder builder(final AttributeNestedType template) {
         return AttributeNestedTypeBuilder.of(template);
     }
-    
 
     default <T> T withAttributeNestedType(Function<AttributeNestedType, T> helper) {
         return helper.apply(this);

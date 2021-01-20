@@ -1,80 +1,78 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.ReturnShipmentState;
-import com.commercetools.api.models.order.ReturnItemDraft;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.order.ReturnItemDraft;
+import com.commercetools.api.models.order.ReturnShipmentState;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ReturnItemDraftBuilder {
 
-    
     private Long quantity;
-    
+
     @Nullable
     private String lineItemId;
-    
+
     @Nullable
     private String customLineItemId;
-    
+
     @Nullable
     private String comment;
-    
-    
+
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
 
-    public ReturnItemDraftBuilder quantity( final Long quantity) {
+    public ReturnItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-    
+
     public ReturnItemDraftBuilder lineItemId(@Nullable final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-    
+
     public ReturnItemDraftBuilder customLineItemId(@Nullable final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-    
+
     public ReturnItemDraftBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
-    
-    public ReturnItemDraftBuilder shipmentState( final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+
+    public ReturnItemDraftBuilder shipmentState(
+            final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
 
-    
-    public Long getQuantity(){
+    public Long getQuantity() {
         return this.quantity;
     }
-    
+
     @Nullable
-    public String getLineItemId(){
+    public String getLineItemId() {
         return this.lineItemId;
     }
-    
+
     @Nullable
-    public String getCustomLineItemId(){
+    public String getCustomLineItemId() {
         return this.customLineItemId;
     }
-    
+
     @Nullable
-    public String getComment(){
+    public String getComment() {
         return this.comment;
     }
-    
-    
-    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
+
+    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
         return this.shipmentState;
     }
 

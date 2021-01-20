@@ -1,86 +1,80 @@
+
 package com.commercetools.ml.models.missing_data;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.missing_data.MissingImages;
 import com.commercetools.ml.models.missing_data.MissingImagesMeta;
 import com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingImagesPagedQueryResultBuilder {
 
-    
     private Long count;
-    
-    
+
     private Long total;
-    
-    
+
     private Long offset;
-    
-    
+
     private java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results;
-    
-    
+
     private com.commercetools.ml.models.missing_data.MissingImagesMeta meta;
 
-    public MissingImagesPagedQueryResultBuilder count( final Long count) {
+    public MissingImagesPagedQueryResultBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
-    public MissingImagesPagedQueryResultBuilder total( final Long total) {
+
+    public MissingImagesPagedQueryResultBuilder total(final Long total) {
         this.total = total;
         return this;
     }
-    
-    public MissingImagesPagedQueryResultBuilder offset( final Long offset) {
+
+    public MissingImagesPagedQueryResultBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
-    
-    public MissingImagesPagedQueryResultBuilder results( final com.commercetools.ml.models.missing_data.MissingImages ...results) {
+
+    public MissingImagesPagedQueryResultBuilder results(
+            final com.commercetools.ml.models.missing_data.MissingImages... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-    
-    public MissingImagesPagedQueryResultBuilder results( final java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results) {
+
+    public MissingImagesPagedQueryResultBuilder results(
+            final java.util.List<com.commercetools.ml.models.missing_data.MissingImages> results) {
         this.results = results;
         return this;
     }
-    
-    public MissingImagesPagedQueryResultBuilder meta( final com.commercetools.ml.models.missing_data.MissingImagesMeta meta) {
+
+    public MissingImagesPagedQueryResultBuilder meta(
+            final com.commercetools.ml.models.missing_data.MissingImagesMeta meta) {
         this.meta = meta;
         return this;
     }
 
-    
-    public Long getCount(){
+    public Long getCount() {
         return this.count;
     }
-    
-    
-    public Long getTotal(){
+
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    public Long getOffset(){
+
+    public Long getOffset() {
         return this.offset;
     }
-    
-    
-    public java.util.List<com.commercetools.ml.models.missing_data.MissingImages> getResults(){
+
+    public java.util.List<com.commercetools.ml.models.missing_data.MissingImages> getResults() {
         return this.results;
     }
-    
-    
-    public com.commercetools.ml.models.missing_data.MissingImagesMeta getMeta(){
+
+    public com.commercetools.ml.models.missing_data.MissingImagesMeta getMeta() {
         return this.meta;
     }
 

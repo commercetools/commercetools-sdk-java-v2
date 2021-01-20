@@ -1,41 +1,37 @@
+
 package com.commercetools.ml.models.general_category_recommendations;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class GeneralCategoryRecommendationBuilder {
 
-    
     private String categoryName;
-    
-    
+
     private Double confidence;
 
-    public GeneralCategoryRecommendationBuilder categoryName( final String categoryName) {
+    public GeneralCategoryRecommendationBuilder categoryName(final String categoryName) {
         this.categoryName = categoryName;
         return this;
     }
-    
-    public GeneralCategoryRecommendationBuilder confidence( final Double confidence) {
+
+    public GeneralCategoryRecommendationBuilder confidence(final Double confidence) {
         this.confidence = confidence;
         return this;
     }
 
-    
-    public String getCategoryName(){
+    public String getCategoryName() {
         return this.categoryName;
     }
-    
-    
-    public Double getConfidence(){
+
+    public Double getConfidence() {
         return this.confidence;
     }
 

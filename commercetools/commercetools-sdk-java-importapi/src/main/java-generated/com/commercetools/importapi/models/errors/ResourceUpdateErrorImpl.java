@@ -1,91 +1,86 @@
+
 package com.commercetools.importapi.models.errors;
 
-import com.commercetools.importapi.models.errors.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.commercetools.importapi.models.errors.ErrorObject;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ResourceUpdateErrorImpl implements ResourceUpdateError {
 
     private String code;
-    
+
     private String message;
-    
+
     private com.fasterxml.jackson.databind.JsonNode resource;
 
     @JsonCreator
-    ResourceUpdateErrorImpl(@JsonProperty("message") final String message, @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
+    ResourceUpdateErrorImpl(@JsonProperty("message") final String message,
+            @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
         this.message = message;
         this.resource = resource;
         this.code = "ResourceUpdate";
     }
+
     public ResourceUpdateErrorImpl() {
         this.code = "ResourceUpdate";
     }
 
-    
-    public String getCode(){
+    public String getCode() {
         return this.code;
     }
-    
+
     /**
     *  <p>The error's description.</p>
     */
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    public com.fasterxml.jackson.databind.JsonNode getResource(){
+
+    public com.fasterxml.jackson.databind.JsonNode getResource() {
         return this.resource;
     }
 
-    public void setMessage(final String message){
+    public void setMessage(final String message) {
         this.message = message;
     }
-    
-    public void setResource(final com.fasterxml.jackson.databind.JsonNode resource){
+
+    public void setResource(final com.fasterxml.jackson.databind.JsonNode resource) {
         this.resource = resource;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         ResourceUpdateErrorImpl that = (ResourceUpdateErrorImpl) o;
-    
-        return new EqualsBuilder()
-                .append(code, that.code)
-                .append(message, that.message)
-                .append(resource, that.resource)
-                .isEquals();
+
+        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(resource,
+            that.resource).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(code)
-            .append(message)
-            .append(resource)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(code).append(message).append(resource).toHashCode();
     }
 
 }

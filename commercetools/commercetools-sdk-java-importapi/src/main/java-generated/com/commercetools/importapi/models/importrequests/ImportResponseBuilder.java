@@ -1,33 +1,34 @@
+
 package com.commercetools.importapi.models.importrequests;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.importoperations.ImportOperationStatus;
 import com.commercetools.importapi.models.importrequests.ImportResponse;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportResponseBuilder {
 
-    
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
 
-    public ImportResponseBuilder operationStatus( final com.commercetools.importapi.models.importoperations.ImportOperationStatus ...operationStatus) {
+    public ImportResponseBuilder operationStatus(
+            final com.commercetools.importapi.models.importoperations.ImportOperationStatus... operationStatus) {
         this.operationStatus = new ArrayList<>(Arrays.asList(operationStatus));
         return this;
     }
-    
-    public ImportResponseBuilder operationStatus( final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus) {
+
+    public ImportResponseBuilder operationStatus(
+            final java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus) {
         this.operationStatus = operationStatus;
         return this;
     }
 
-    
-    public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> getOperationStatus(){
+    public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> getOperationStatus() {
         return this.operationStatus;
     }
 

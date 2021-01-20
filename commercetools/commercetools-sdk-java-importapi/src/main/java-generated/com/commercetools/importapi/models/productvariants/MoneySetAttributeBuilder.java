@@ -1,47 +1,47 @@
+
 package com.commercetools.importapi.models.productvariants;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.MoneySetAttribute;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MoneySetAttributeBuilder {
 
     @Nullable
     private String name;
-    
-    
+
     private java.util.List<com.commercetools.importapi.models.common.TypedMoney> value;
 
     public MoneySetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-    
-    public MoneySetAttributeBuilder value( final com.commercetools.importapi.models.common.TypedMoney ...value) {
+
+    public MoneySetAttributeBuilder value(final com.commercetools.importapi.models.common.TypedMoney... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
-    
-    public MoneySetAttributeBuilder value( final java.util.List<com.commercetools.importapi.models.common.TypedMoney> value) {
+
+    public MoneySetAttributeBuilder value(
+            final java.util.List<com.commercetools.importapi.models.common.TypedMoney> value) {
         this.value = value;
         return this;
     }
 
     @Nullable
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
-    public java.util.List<com.commercetools.importapi.models.common.TypedMoney> getValue(){
+
+    public java.util.List<com.commercetools.importapi.models.common.TypedMoney> getValue() {
         return this.value;
     }
 

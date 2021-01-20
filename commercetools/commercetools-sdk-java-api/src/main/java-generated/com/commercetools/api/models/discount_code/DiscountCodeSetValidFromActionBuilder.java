@@ -1,17 +1,17 @@
+
 package com.commercetools.api.models.discount_code;
 
-import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction;
+import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DiscountCodeSetValidFromActionBuilder {
 
     @Nullable
@@ -23,7 +23,7 @@ public final class DiscountCodeSetValidFromActionBuilder {
     }
 
     @Nullable
-    public java.time.ZonedDateTime getValidFrom(){
+    public java.time.ZonedDateTime getValidFrom() {
         return this.validFrom;
     }
 

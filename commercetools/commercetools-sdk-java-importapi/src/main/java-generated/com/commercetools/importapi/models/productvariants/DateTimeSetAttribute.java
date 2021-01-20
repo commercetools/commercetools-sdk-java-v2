@@ -1,43 +1,42 @@
+
 package com.commercetools.importapi.models.productvariants;
 
-import com.commercetools.importapi.models.productvariants.Attribute;
+import java.io.IOException;
+import java.time.*;
 import java.time.ZonedDateTime;
-import com.commercetools.importapi.models.productvariants.DateTimeSetAttributeImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.DateTimeSetAttributeImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>This type represents an attribute which value is a set of dates with time.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DateTimeSetAttributeImpl.class)
 public interface DateTimeSetAttribute extends Attribute {
 
-    
     @NotNull
     @JsonProperty("value")
     public List<ZonedDateTime> getValue();
 
     @JsonIgnore
-    public void setValue(final ZonedDateTime ...value);
+    public void setValue(final ZonedDateTime... value);
+
     public void setValue(final List<ZonedDateTime> value);
 
-    public static DateTimeSetAttribute of(){
+    public static DateTimeSetAttribute of() {
         return new DateTimeSetAttributeImpl();
     }
-    
 
     public static DateTimeSetAttribute of(final DateTimeSetAttribute template) {
         DateTimeSetAttributeImpl instance = new DateTimeSetAttributeImpl();
@@ -46,14 +45,13 @@ public interface DateTimeSetAttribute extends Attribute {
         return instance;
     }
 
-    public static DateTimeSetAttributeBuilder builder(){
+    public static DateTimeSetAttributeBuilder builder() {
         return DateTimeSetAttributeBuilder.of();
     }
-    
-    public static DateTimeSetAttributeBuilder builder(final DateTimeSetAttribute template){
+
+    public static DateTimeSetAttributeBuilder builder(final DateTimeSetAttribute template) {
         return DateTimeSetAttributeBuilder.of(template);
     }
-    
 
     default <T> T withDateTimeSetAttribute(Function<DateTimeSetAttribute, T> helper) {
         return helper.apply(this);

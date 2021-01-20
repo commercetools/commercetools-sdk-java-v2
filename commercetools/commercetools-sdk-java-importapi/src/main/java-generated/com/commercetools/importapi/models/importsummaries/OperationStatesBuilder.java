@@ -1,111 +1,98 @@
+
 package com.commercetools.importapi.models.importsummaries;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.importsummaries.OperationStates;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OperationStatesBuilder {
 
-    
     private Long ValidationFailed;
-    
-    
+
     private Long Unresolved;
-    
-    
+
     private Long WaitForMasterVariant;
-    
-    
+
     private Long Imported;
-    
-    
+
     private Long Delete;
-    
-    
+
     private Long Deleted;
-    
-    
+
     private Long Rejected;
 
-    public OperationStatesBuilder ValidationFailed( final Long ValidationFailed) {
+    public OperationStatesBuilder ValidationFailed(final Long ValidationFailed) {
         this.ValidationFailed = ValidationFailed;
         return this;
     }
-    
-    public OperationStatesBuilder Unresolved( final Long Unresolved) {
+
+    public OperationStatesBuilder Unresolved(final Long Unresolved) {
         this.Unresolved = Unresolved;
         return this;
     }
-    
-    public OperationStatesBuilder WaitForMasterVariant( final Long WaitForMasterVariant) {
+
+    public OperationStatesBuilder WaitForMasterVariant(final Long WaitForMasterVariant) {
         this.WaitForMasterVariant = WaitForMasterVariant;
         return this;
     }
-    
-    public OperationStatesBuilder Imported( final Long Imported) {
+
+    public OperationStatesBuilder Imported(final Long Imported) {
         this.Imported = Imported;
         return this;
     }
-    
-    public OperationStatesBuilder Delete( final Long Delete) {
+
+    public OperationStatesBuilder Delete(final Long Delete) {
         this.Delete = Delete;
         return this;
     }
-    
-    public OperationStatesBuilder Deleted( final Long Deleted) {
+
+    public OperationStatesBuilder Deleted(final Long Deleted) {
         this.Deleted = Deleted;
         return this;
     }
-    
-    public OperationStatesBuilder Rejected( final Long Rejected) {
+
+    public OperationStatesBuilder Rejected(final Long Rejected) {
         this.Rejected = Rejected;
         return this;
     }
 
-    
-    public Long getValidationFailed(){
+    public Long getValidationFailed() {
         return this.ValidationFailed;
     }
-    
-    
-    public Long getUnresolved(){
+
+    public Long getUnresolved() {
         return this.Unresolved;
     }
-    
-    
-    public Long getWaitForMasterVariant(){
+
+    public Long getWaitForMasterVariant() {
         return this.WaitForMasterVariant;
     }
-    
-    
-    public Long getImported(){
+
+    public Long getImported() {
         return this.Imported;
     }
-    
-    
-    public Long getDelete(){
+
+    public Long getDelete() {
         return this.Delete;
     }
-    
-    
-    public Long getDeleted(){
+
+    public Long getDeleted() {
         return this.Deleted;
     }
-    
-    
-    public Long getRejected(){
+
+    public Long getRejected() {
         return this.Rejected;
     }
 
     public OperationStates build() {
-        return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Delete, Deleted, Rejected);
+        return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Delete, Deleted,
+            Rejected);
     }
 
     public static OperationStatesBuilder of() {

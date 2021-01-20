@@ -1,54 +1,49 @@
+
 package com.commercetools.api.models.extension;
 
-import com.commercetools.api.models.extension.ExtensionDestination;
-import com.commercetools.api.models.extension.ExtensionAWSLambdaDestination;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.extension.ExtensionAWSLambdaDestination;
+import com.commercetools.api.models.extension.ExtensionDestination;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionAWSLambdaDestinationBuilder {
 
-    
     private String arn;
-    
-    
+
     private String accessKey;
-    
-    
+
     private String accessSecret;
 
-    public ExtensionAWSLambdaDestinationBuilder arn( final String arn) {
+    public ExtensionAWSLambdaDestinationBuilder arn(final String arn) {
         this.arn = arn;
         return this;
     }
-    
-    public ExtensionAWSLambdaDestinationBuilder accessKey( final String accessKey) {
+
+    public ExtensionAWSLambdaDestinationBuilder accessKey(final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
-    
-    public ExtensionAWSLambdaDestinationBuilder accessSecret( final String accessSecret) {
+
+    public ExtensionAWSLambdaDestinationBuilder accessSecret(final String accessSecret) {
         this.accessSecret = accessSecret;
         return this;
     }
 
-    
-    public String getArn(){
+    public String getArn() {
         return this.arn;
     }
-    
-    
-    public String getAccessKey(){
+
+    public String getAccessKey() {
         return this.accessKey;
     }
-    
-    
-    public String getAccessSecret(){
+
+    public String getAccessSecret() {
         return this.accessSecret;
     }
 

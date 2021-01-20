@@ -1,41 +1,37 @@
+
 package com.commercetools.importapi.models.common;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.AssetDimensions;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AssetDimensionsBuilder {
 
-    
     private Double w;
-    
-    
+
     private Double h;
 
-    public AssetDimensionsBuilder w( final Double w) {
+    public AssetDimensionsBuilder w(final Double w) {
         this.w = w;
         return this;
     }
-    
-    public AssetDimensionsBuilder h( final Double h) {
+
+    public AssetDimensionsBuilder h(final Double h) {
         this.h = h;
         return this;
     }
 
-    
-    public Double getW(){
+    public Double getW() {
         return this.w;
     }
-    
-    
-    public Double getH(){
+
+    public Double getH() {
         return this.h;
     }
 

@@ -1,47 +1,46 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.DeliveryItem;
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.order.OrderSetDeliveryItemsActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.order.OrderSetDeliveryItemsActionImpl;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderSetDeliveryItemsActionImpl.class)
 public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
 
-    
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-    
+
     @NotNull
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
     public void setDeliveryId(final String deliveryId);
-    
+
     @JsonIgnore
-    public void setItems(final DeliveryItem ...items);
+    public void setItems(final DeliveryItem... items);
+
     public void setItems(final List<DeliveryItem> items);
 
-    public static OrderSetDeliveryItemsAction of(){
+    public static OrderSetDeliveryItemsAction of() {
         return new OrderSetDeliveryItemsActionImpl();
     }
-    
 
     public static OrderSetDeliveryItemsAction of(final OrderSetDeliveryItemsAction template) {
         OrderSetDeliveryItemsActionImpl instance = new OrderSetDeliveryItemsActionImpl();
@@ -50,14 +49,13 @@ public interface OrderSetDeliveryItemsAction extends OrderUpdateAction {
         return instance;
     }
 
-    public static OrderSetDeliveryItemsActionBuilder builder(){
+    public static OrderSetDeliveryItemsActionBuilder builder() {
         return OrderSetDeliveryItemsActionBuilder.of();
     }
-    
-    public static OrderSetDeliveryItemsActionBuilder builder(final OrderSetDeliveryItemsAction template){
+
+    public static OrderSetDeliveryItemsActionBuilder builder(final OrderSetDeliveryItemsAction template) {
         return OrderSetDeliveryItemsActionBuilder.of(template);
     }
-    
 
     default <T> T withOrderSetDeliveryItemsAction(Function<OrderSetDeliveryItemsAction, T> helper) {
         return helper.apply(this);

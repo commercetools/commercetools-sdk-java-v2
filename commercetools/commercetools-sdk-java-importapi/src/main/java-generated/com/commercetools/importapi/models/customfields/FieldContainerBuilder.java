@@ -1,37 +1,37 @@
+
 package com.commercetools.importapi.models.customfields;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.customfields.CustomField;
 import com.commercetools.importapi.models.customfields.FieldContainer;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FieldContainerBuilder {
 
-    
     private Map<String, com.commercetools.importapi.models.customfields.CustomField> values;
 
-    public FieldContainerBuilder values( final Map<String, com.commercetools.importapi.models.customfields.CustomField> values){
+    public FieldContainerBuilder values(
+            final Map<String, com.commercetools.importapi.models.customfields.CustomField> values) {
         this.values = values;
         return this;
     }
-    
-    public FieldContainerBuilder addValue(final String key, final com.commercetools.importapi.models.customfields.CustomField value) {
+
+    public FieldContainerBuilder addValue(final String key,
+            final com.commercetools.importapi.models.customfields.CustomField value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
         values.put(key, value);
         return this;
     }
-    
 
-    
-    public Map<String, com.commercetools.importapi.models.customfields.CustomField> getValues(){
+    public Map<String, com.commercetools.importapi.models.customfields.CustomField> getValues() {
         return this.values;
     }
 

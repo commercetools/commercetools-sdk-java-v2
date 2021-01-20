@@ -1,106 +1,97 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsAction {
 
     private String action;
-    
+
     private String assetId;
-    
+
     private String assetKey;
-    
+
     private java.util.List<String> tags;
 
     @JsonCreator
-    CategorySetAssetTagsActionImpl(@JsonProperty("assetId") final String assetId, @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
+    CategorySetAssetTagsActionImpl(@JsonProperty("assetId") final String assetId,
+            @JsonProperty("assetKey") final String assetKey, @JsonProperty("tags") final java.util.List<String> tags) {
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.tags = tags;
         this.action = "setAssetTags";
     }
+
     public CategorySetAssetTagsActionImpl() {
         this.action = "setAssetTags";
     }
 
-    
-    public String getAction(){
+    public String getAction() {
         return this.action;
     }
-    
-    
-    public String getAssetId(){
+
+    public String getAssetId() {
         return this.assetId;
     }
-    
-    
-    public String getAssetKey(){
+
+    public String getAssetKey() {
         return this.assetKey;
     }
-    
-    
-    public java.util.List<String> getTags(){
+
+    public java.util.List<String> getTags() {
         return this.tags;
     }
 
-    public void setAssetId(final String assetId){
+    public void setAssetId(final String assetId) {
         this.assetId = assetId;
     }
-    
-    public void setAssetKey(final String assetKey){
+
+    public void setAssetKey(final String assetKey) {
         this.assetKey = assetKey;
     }
-    
-    public void setTags(final String ...tags){
-       this.tags = new ArrayList<>(Arrays.asList(tags));
+
+    public void setTags(final String... tags) {
+        this.tags = new ArrayList<>(Arrays.asList(tags));
     }
-    
-    public void setTags(final java.util.List<String> tags){
-       this.tags = tags;
+
+    public void setTags(final java.util.List<String> tags) {
+        this.tags = tags;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         CategorySetAssetTagsActionImpl that = (CategorySetAssetTagsActionImpl) o;
-    
-        return new EqualsBuilder()
-                .append(action, that.action)
-                .append(assetId, that.assetId)
-                .append(assetKey, that.assetKey)
-                .append(tags, that.tags)
-                .isEquals();
+
+        return new EqualsBuilder().append(action, that.action).append(assetId, that.assetId).append(assetKey,
+            that.assetKey).append(tags, that.tags).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(action)
-            .append(assetId)
-            .append(assetKey)
-            .append(tags)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(assetId).append(assetKey).append(tags).toHashCode();
     }
 
 }

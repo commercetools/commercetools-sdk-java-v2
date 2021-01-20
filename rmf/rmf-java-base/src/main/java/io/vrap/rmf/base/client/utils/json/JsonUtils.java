@@ -1,4 +1,10 @@
+
 package io.vrap.rmf.base.client.utils.json;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -6,26 +12,21 @@ import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Iterator;
-import java.util.Map;
 
 public class JsonUtils {
 
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     static {
-        OBJECT_MAPPER
-                .registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
+        OBJECT_MAPPER.registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .registerModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .registerModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
                 .setSerializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
-                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-                .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false).configure(
+                    SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
     }
 
     public static byte[] toJsonByteArray(Object value) throws JsonProcessingException {
@@ -62,21 +63,25 @@ public class JsonUtils {
             Iterator<Map.Entry<String, JsonNode>> fields = node.fields();
             while (fields.hasNext()) {
                 Map.Entry<String, JsonNode> field = fields.next();
-                if (field.getValue().isTextual() && (field.getKey().toLowerCase().contains("pass") || field.getKey().toLowerCase().contains("access_token"))) {
+                if (field.getValue().isTextual() && (field.getKey().toLowerCase().contains("pass")
+                        || field.getKey().toLowerCase().contains("access_token"))) {
                     objectNode.put(field.getKey(), "**removed from output**");
-                } else {
+                }
+                else {
                     secure(field.getValue());
                 }
             }
             return objectNode;
-        } else if (node.isArray()) {
+        }
+        else if (node.isArray()) {
             ArrayNode arrayNode = (ArrayNode) node;
             Iterator<JsonNode> elements = arrayNode.elements();
             while (elements.hasNext()) {
                 secure(elements.next());
             }
             return arrayNode;
-        } else {
+        }
+        else {
             return node;
         }
     }
@@ -100,7 +105,8 @@ public class JsonUtils {
     private static <T> T executing(final SupplierThrowingIOException<T> supplier) {
         try {
             return supplier.get();
-        } catch (final IOException e) {
+        }
+        catch (final IOException e) {
             throw new JsonException(e);
         }
     }

@@ -1,41 +1,39 @@
+
 package com.commercetools.importapi.models.producttypes;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributeLocalizedEnumValueBuilder {
 
-    
     private String key;
-    
-    
+
     private com.commercetools.importapi.models.common.LocalizedString label;
 
-    public AttributeLocalizedEnumValueBuilder key( final String key) {
+    public AttributeLocalizedEnumValueBuilder key(final String key) {
         this.key = key;
         return this;
     }
-    
-    public AttributeLocalizedEnumValueBuilder label( final com.commercetools.importapi.models.common.LocalizedString label) {
+
+    public AttributeLocalizedEnumValueBuilder label(
+            final com.commercetools.importapi.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
 
-    
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
-    public com.commercetools.importapi.models.common.LocalizedString getLabel(){
+
+    public com.commercetools.importapi.models.common.LocalizedString getLabel() {
         return this.label;
     }
 

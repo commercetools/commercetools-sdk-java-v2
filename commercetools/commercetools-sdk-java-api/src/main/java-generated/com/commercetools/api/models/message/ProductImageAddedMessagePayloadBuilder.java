@@ -1,55 +1,50 @@
+
 package com.commercetools.api.models.message;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Image;
 import com.commercetools.api.models.message.MessagePayload;
 import com.commercetools.api.models.message.ProductImageAddedMessagePayload;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductImageAddedMessagePayloadBuilder {
 
-    
     private Long variantId;
-    
-    
+
     private com.commercetools.api.models.common.Image image;
-    
-    
+
     private Boolean staged;
 
-    public ProductImageAddedMessagePayloadBuilder variantId( final Long variantId) {
+    public ProductImageAddedMessagePayloadBuilder variantId(final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-    
-    public ProductImageAddedMessagePayloadBuilder image( final com.commercetools.api.models.common.Image image) {
+
+    public ProductImageAddedMessagePayloadBuilder image(final com.commercetools.api.models.common.Image image) {
         this.image = image;
         return this;
     }
-    
-    public ProductImageAddedMessagePayloadBuilder staged( final Boolean staged) {
+
+    public ProductImageAddedMessagePayloadBuilder staged(final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
-    
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
-    
-    public com.commercetools.api.models.common.Image getImage(){
+
+    public com.commercetools.api.models.common.Image getImage() {
         return this.image;
     }
-    
-    
-    public Boolean getStaged(){
+
+    public Boolean getStaged() {
         return this.staged;
     }
 

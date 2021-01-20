@@ -1,17 +1,18 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.me.MyCustomerUpdateAction;
 import java.time.LocalDate;
-import com.commercetools.api.models.me.MyCustomerSetDateOfBirthAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.me.MyCustomerSetDateOfBirthAction;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyCustomerSetDateOfBirthActionBuilder {
 
     @Nullable
@@ -23,7 +24,7 @@ public final class MyCustomerSetDateOfBirthActionBuilder {
     }
 
     @Nullable
-    public java.time.LocalDate getDateOfBirth(){
+    public java.time.LocalDate getDateOfBirth() {
         return this.dateOfBirth;
     }
 

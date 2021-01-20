@@ -1,44 +1,41 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.state.StateResourceIdentifier;
-import com.commercetools.api.models.product.ProductTransitionStateActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.product.ProductTransitionStateActionImpl;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTransitionStateActionImpl.class)
 public interface ProductTransitionStateAction extends ProductUpdateAction {
 
-    
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();
-    
-    
+
     @JsonProperty("force")
     public Boolean getForce();
 
     public void setState(final StateResourceIdentifier state);
-    
+
     public void setForce(final Boolean force);
 
-    public static ProductTransitionStateAction of(){
+    public static ProductTransitionStateAction of() {
         return new ProductTransitionStateActionImpl();
     }
-    
 
     public static ProductTransitionStateAction of(final ProductTransitionStateAction template) {
         ProductTransitionStateActionImpl instance = new ProductTransitionStateActionImpl();
@@ -47,14 +44,13 @@ public interface ProductTransitionStateAction extends ProductUpdateAction {
         return instance;
     }
 
-    public static ProductTransitionStateActionBuilder builder(){
+    public static ProductTransitionStateActionBuilder builder() {
         return ProductTransitionStateActionBuilder.of();
     }
-    
-    public static ProductTransitionStateActionBuilder builder(final ProductTransitionStateAction template){
+
+    public static ProductTransitionStateActionBuilder builder(final ProductTransitionStateAction template) {
         return ProductTransitionStateActionBuilder.of(template);
     }
-    
 
     default <T> T withProductTransitionStateAction(Function<ProductTransitionStateAction, T> helper) {
         return helper.apply(this);

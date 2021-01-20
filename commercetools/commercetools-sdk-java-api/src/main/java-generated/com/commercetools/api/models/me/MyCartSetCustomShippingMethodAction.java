@@ -1,59 +1,57 @@
+
 package com.commercetools.api.models.me;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.me.MyCartSetCustomShippingMethodActionImpl;
 import com.commercetools.api.models.me.MyCartUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.me.MyCartSetCustomShippingMethodActionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyCartSetCustomShippingMethodActionImpl.class)
 public interface MyCartSetCustomShippingMethodAction extends MyCartUpdateAction {
 
-    
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
-    
+
     @NotNull
     @Valid
     @JsonProperty("shippingRate")
     public ShippingRateDraft getShippingRate();
-    
+
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
-    
+
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
     public void setShippingMethodName(final String shippingMethodName);
-    
+
     public void setShippingRate(final ShippingRateDraft shippingRate);
-    
+
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-    
+
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-    public static MyCartSetCustomShippingMethodAction of(){
+    public static MyCartSetCustomShippingMethodAction of() {
         return new MyCartSetCustomShippingMethodActionImpl();
     }
-    
 
     public static MyCartSetCustomShippingMethodAction of(final MyCartSetCustomShippingMethodAction template) {
         MyCartSetCustomShippingMethodActionImpl instance = new MyCartSetCustomShippingMethodActionImpl();
@@ -64,14 +62,14 @@ public interface MyCartSetCustomShippingMethodAction extends MyCartUpdateAction 
         return instance;
     }
 
-    public static MyCartSetCustomShippingMethodActionBuilder builder(){
+    public static MyCartSetCustomShippingMethodActionBuilder builder() {
         return MyCartSetCustomShippingMethodActionBuilder.of();
     }
-    
-    public static MyCartSetCustomShippingMethodActionBuilder builder(final MyCartSetCustomShippingMethodAction template){
+
+    public static MyCartSetCustomShippingMethodActionBuilder builder(
+            final MyCartSetCustomShippingMethodAction template) {
         return MyCartSetCustomShippingMethodActionBuilder.of(template);
     }
-    
 
     default <T> T withMyCartSetCustomShippingMethodAction(Function<MyCartSetCustomShippingMethodAction, T> helper) {
         return helper.apply(this);

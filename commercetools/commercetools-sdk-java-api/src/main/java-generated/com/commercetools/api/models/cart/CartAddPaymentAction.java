@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.cart;
 
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.payment.PaymentResourceIdentifier;
-import com.commercetools.api.models.cart.CartAddPaymentActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.cart.CartAddPaymentActionImpl;
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.payment.PaymentResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartAddPaymentActionImpl.class)
 public interface CartAddPaymentAction extends CartUpdateAction {
 
-    
     @NotNull
     @Valid
     @JsonProperty("payment")
@@ -30,10 +29,9 @@ public interface CartAddPaymentAction extends CartUpdateAction {
 
     public void setPayment(final PaymentResourceIdentifier payment);
 
-    public static CartAddPaymentAction of(){
+    public static CartAddPaymentAction of() {
         return new CartAddPaymentActionImpl();
     }
-    
 
     public static CartAddPaymentAction of(final CartAddPaymentAction template) {
         CartAddPaymentActionImpl instance = new CartAddPaymentActionImpl();
@@ -41,14 +39,13 @@ public interface CartAddPaymentAction extends CartUpdateAction {
         return instance;
     }
 
-    public static CartAddPaymentActionBuilder builder(){
+    public static CartAddPaymentActionBuilder builder() {
         return CartAddPaymentActionBuilder.of();
     }
-    
-    public static CartAddPaymentActionBuilder builder(final CartAddPaymentAction template){
+
+    public static CartAddPaymentActionBuilder builder(final CartAddPaymentAction template) {
         return CartAddPaymentActionBuilder.of(template);
     }
-    
 
     default <T> T withCartAddPaymentAction(Function<CartAddPaymentAction, T> helper) {
         return helper.apply(this);

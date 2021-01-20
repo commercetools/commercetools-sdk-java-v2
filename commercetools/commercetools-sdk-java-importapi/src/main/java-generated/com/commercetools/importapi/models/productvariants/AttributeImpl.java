@@ -1,4 +1,11 @@
+
 package com.commercetools.importapi.models.productvariants;
+
+import java.time.*;
+import java.util.*;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.productvariants.BooleanAttribute;
 import com.commercetools.importapi.models.productvariants.BooleanSetAttribute;
@@ -22,33 +29,26 @@ import com.commercetools.importapi.models.productvariants.TextAttribute;
 import com.commercetools.importapi.models.productvariants.TextSetAttribute;
 import com.commercetools.importapi.models.productvariants.TimeAttribute;
 import com.commercetools.importapi.models.productvariants.TimeSetAttribute;
-import io.vrap.rmf.base.client.utils.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
-
 
 /**
 *  <p>This type represents the value of an attribute of a product variant.
 *  The name and type property must match the name and type property of an attribute definition of the product type.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributeImpl implements Attribute {
 
     private String name;
-    
+
     private String type;
 
     @JsonCreator
@@ -56,6 +56,7 @@ public final class AttributeImpl implements Attribute {
         this.name = name;
         this.type = type;
     }
+
     public AttributeImpl() {
     }
 
@@ -64,39 +65,34 @@ public final class AttributeImpl implements Attribute {
     *  The name is required if this type is used in a product variant and must not be set when
     *  used in a product variant patch.</p>
     */
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
-    public String getType(){
+
+    public String getType() {
         return this.type;
     }
 
-    public void setName(final String name){
+    public void setName(final String name) {
         this.name = name;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         AttributeImpl that = (AttributeImpl) o;
-    
-        return new EqualsBuilder()
-                .append(name, that.name)
-                .append(type, that.type)
-                .isEquals();
+
+        return new EqualsBuilder().append(name, that.name).append(type, that.type).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(name)
-            .append(type)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(name).append(type).toHashCode();
     }
 
 }

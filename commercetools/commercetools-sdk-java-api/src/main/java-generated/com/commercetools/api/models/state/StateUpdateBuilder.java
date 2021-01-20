@@ -1,46 +1,44 @@
+
 package com.commercetools.api.models.state;
 
-import com.commercetools.api.models.state.StateUpdateAction;
-import com.commercetools.api.models.state.StateUpdate;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.state.StateUpdate;
+import com.commercetools.api.models.state.StateUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StateUpdateBuilder {
 
-    
     private Long version;
-    
-    
+
     private java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions;
 
-    public StateUpdateBuilder version( final Long version) {
+    public StateUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    public StateUpdateBuilder actions( final com.commercetools.api.models.state.StateUpdateAction ...actions) {
+
+    public StateUpdateBuilder actions(final com.commercetools.api.models.state.StateUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-    
-    public StateUpdateBuilder actions( final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions) {
+
+    public StateUpdateBuilder actions(
+            final java.util.List<com.commercetools.api.models.state.StateUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.state.StateUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.state.StateUpdateAction> getActions() {
         return this.actions;
     }
 

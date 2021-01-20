@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.discount_code.DiscountCodeReference;
-import com.commercetools.api.models.me.MyCartUpdateAction;
-import com.commercetools.api.models.me.MyCartRemoveDiscountCodeActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.discount_code.DiscountCodeReference;
+import com.commercetools.api.models.me.MyCartRemoveDiscountCodeActionImpl;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyCartRemoveDiscountCodeActionImpl.class)
 public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
 
-    
     @NotNull
     @Valid
     @JsonProperty("discountCode")
@@ -30,10 +29,9 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
 
     public void setDiscountCode(final DiscountCodeReference discountCode);
 
-    public static MyCartRemoveDiscountCodeAction of(){
+    public static MyCartRemoveDiscountCodeAction of() {
         return new MyCartRemoveDiscountCodeActionImpl();
     }
-    
 
     public static MyCartRemoveDiscountCodeAction of(final MyCartRemoveDiscountCodeAction template) {
         MyCartRemoveDiscountCodeActionImpl instance = new MyCartRemoveDiscountCodeActionImpl();
@@ -41,14 +39,13 @@ public interface MyCartRemoveDiscountCodeAction extends MyCartUpdateAction {
         return instance;
     }
 
-    public static MyCartRemoveDiscountCodeActionBuilder builder(){
+    public static MyCartRemoveDiscountCodeActionBuilder builder() {
         return MyCartRemoveDiscountCodeActionBuilder.of();
     }
-    
-    public static MyCartRemoveDiscountCodeActionBuilder builder(final MyCartRemoveDiscountCodeAction template){
+
+    public static MyCartRemoveDiscountCodeActionBuilder builder(final MyCartRemoveDiscountCodeAction template) {
         return MyCartRemoveDiscountCodeActionBuilder.of(template);
     }
-    
 
     default <T> T withMyCartRemoveDiscountCodeAction(Function<MyCartRemoveDiscountCodeAction, T> helper) {
         return helper.apply(this);

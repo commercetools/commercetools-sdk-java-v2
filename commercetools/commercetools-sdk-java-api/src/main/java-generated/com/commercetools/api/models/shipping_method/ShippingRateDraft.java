@@ -1,32 +1,32 @@
+
 package com.commercetools.api.models.shipping_method;
 
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
-import com.commercetools.api.models.shipping_method.ShippingRateDraftImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.shipping_method.ShippingRateDraftImpl;
+import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ShippingRateDraftImpl.class)
-public interface ShippingRateDraft  {
+public interface ShippingRateDraft {
 
-    
     @NotNull
     @Valid
     @JsonProperty("price")
     public Money getPrice();
+
     /**
     *  <p>The shipping is free if the order total (the sum of line item prices) exceeds the freeAbove value.
     *  Note: <code>freeAbove</code> applies before any Cart or Product discounts, and can cause discounts to apply in invalid scenarios.
@@ -35,6 +35,7 @@ public interface ShippingRateDraft  {
     @Valid
     @JsonProperty("freeAbove")
     public Money getFreeAbove();
+
     /**
     *  <p>A list of shipping rate price tiers.</p>
     */
@@ -43,17 +44,17 @@ public interface ShippingRateDraft  {
     public List<ShippingRatePriceTier> getTiers();
 
     public void setPrice(final Money price);
-    
+
     public void setFreeAbove(final Money freeAbove);
-    
+
     @JsonIgnore
-    public void setTiers(final ShippingRatePriceTier ...tiers);
+    public void setTiers(final ShippingRatePriceTier... tiers);
+
     public void setTiers(final List<ShippingRatePriceTier> tiers);
 
-    public static ShippingRateDraft of(){
+    public static ShippingRateDraft of() {
         return new ShippingRateDraftImpl();
     }
-    
 
     public static ShippingRateDraft of(final ShippingRateDraft template) {
         ShippingRateDraftImpl instance = new ShippingRateDraftImpl();
@@ -63,14 +64,13 @@ public interface ShippingRateDraft  {
         return instance;
     }
 
-    public static ShippingRateDraftBuilder builder(){
+    public static ShippingRateDraftBuilder builder() {
         return ShippingRateDraftBuilder.of();
     }
-    
-    public static ShippingRateDraftBuilder builder(final ShippingRateDraft template){
+
+    public static ShippingRateDraftBuilder builder(final ShippingRateDraft template) {
         return ShippingRateDraftBuilder.of(template);
     }
-    
 
     default <T> T withShippingRateDraft(Function<ShippingRateDraft, T> helper) {
         return helper.apply(this);

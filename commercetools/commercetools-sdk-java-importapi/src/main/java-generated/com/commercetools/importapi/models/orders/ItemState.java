@@ -1,33 +1,33 @@
+
 package com.commercetools.importapi.models.orders;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.StateKeyReference;
 import com.commercetools.importapi.models.orders.ItemStateImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>The item's state.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ItemStateImpl.class)
-public interface ItemState  {
+public interface ItemState {
 
-    
     @NotNull
     @JsonProperty("quantity")
     public Double getQuantity();
+
     /**
     *  <p>Maps to <code>ItemState.state</code>.</p>
     */
@@ -37,13 +37,12 @@ public interface ItemState  {
     public StateKeyReference getState();
 
     public void setQuantity(final Double quantity);
-    
+
     public void setState(final StateKeyReference state);
 
-    public static ItemState of(){
+    public static ItemState of() {
         return new ItemStateImpl();
     }
-    
 
     public static ItemState of(final ItemState template) {
         ItemStateImpl instance = new ItemStateImpl();
@@ -52,14 +51,13 @@ public interface ItemState  {
         return instance;
     }
 
-    public static ItemStateBuilder builder(){
+    public static ItemStateBuilder builder() {
         return ItemStateBuilder.of();
     }
-    
-    public static ItemStateBuilder builder(final ItemState template){
+
+    public static ItemStateBuilder builder(final ItemState template) {
         return ItemStateBuilder.of(template);
     }
-    
 
     default <T> T withItemState(Function<ItemState, T> helper) {
         return helper.apply(this);

@@ -1,42 +1,42 @@
+
 package com.commercetools.ml.models.missing_data;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.missing_data.MissingImagesSearchRequest;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingImagesSearchRequestBuilder {
 
     @Nullable
     private Long limit;
-    
+
     @Nullable
     private Long offset;
-    
+
     @Nullable
     private Boolean staged;
-    
+
     @Nullable
     private Long productSetLimit;
-    
+
     @Nullable
     private Boolean includeVariants;
-    
+
     @Nullable
     private Boolean autoThreshold;
-    
+
     @Nullable
     private Long threshold;
-    
+
     @Nullable
     private java.util.List<String> productIds;
-    
+
     @Nullable
     private java.util.List<String> productTypeIds;
 
@@ -44,104 +44,105 @@ public final class MissingImagesSearchRequestBuilder {
         this.limit = limit;
         return this;
     }
-    
+
     public MissingImagesSearchRequestBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
         return this;
     }
-    
+
     public MissingImagesSearchRequestBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-    
+
     public MissingImagesSearchRequestBuilder productSetLimit(@Nullable final Long productSetLimit) {
         this.productSetLimit = productSetLimit;
         return this;
     }
-    
+
     public MissingImagesSearchRequestBuilder includeVariants(@Nullable final Boolean includeVariants) {
         this.includeVariants = includeVariants;
         return this;
     }
-    
+
     public MissingImagesSearchRequestBuilder autoThreshold(@Nullable final Boolean autoThreshold) {
         this.autoThreshold = autoThreshold;
         return this;
     }
-    
+
     public MissingImagesSearchRequestBuilder threshold(@Nullable final Long threshold) {
         this.threshold = threshold;
         return this;
     }
-    
-    public MissingImagesSearchRequestBuilder productIds(@Nullable final String ...productIds) {
+
+    public MissingImagesSearchRequestBuilder productIds(@Nullable final String... productIds) {
         this.productIds = new ArrayList<>(Arrays.asList(productIds));
         return this;
     }
-    
+
     public MissingImagesSearchRequestBuilder productIds(@Nullable final java.util.List<String> productIds) {
         this.productIds = productIds;
         return this;
     }
-    
-    public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final String ...productTypeIds) {
+
+    public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final String... productTypeIds) {
         this.productTypeIds = new ArrayList<>(Arrays.asList(productTypeIds));
         return this;
     }
-    
+
     public MissingImagesSearchRequestBuilder productTypeIds(@Nullable final java.util.List<String> productTypeIds) {
         this.productTypeIds = productTypeIds;
         return this;
     }
 
     @Nullable
-    public Long getLimit(){
+    public Long getLimit() {
         return this.limit;
     }
-    
+
     @Nullable
-    public Long getOffset(){
+    public Long getOffset() {
         return this.offset;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
-    
+
     @Nullable
-    public Long getProductSetLimit(){
+    public Long getProductSetLimit() {
         return this.productSetLimit;
     }
-    
+
     @Nullable
-    public Boolean getIncludeVariants(){
+    public Boolean getIncludeVariants() {
         return this.includeVariants;
     }
-    
+
     @Nullable
-    public Boolean getAutoThreshold(){
+    public Boolean getAutoThreshold() {
         return this.autoThreshold;
     }
-    
+
     @Nullable
-    public Long getThreshold(){
+    public Long getThreshold() {
         return this.threshold;
     }
-    
+
     @Nullable
-    public java.util.List<String> getProductIds(){
+    public java.util.List<String> getProductIds() {
         return this.productIds;
     }
-    
+
     @Nullable
-    public java.util.List<String> getProductTypeIds(){
+    public java.util.List<String> getProductTypeIds() {
         return this.productTypeIds;
     }
 
     public MissingImagesSearchRequest build() {
-        return new MissingImagesSearchRequestImpl(limit, offset, staged, productSetLimit, includeVariants, autoThreshold, threshold, productIds, productTypeIds);
+        return new MissingImagesSearchRequestImpl(limit, offset, staged, productSetLimit, includeVariants,
+            autoThreshold, threshold, productIds, productTypeIds);
     }
 
     public static MissingImagesSearchRequestBuilder of() {

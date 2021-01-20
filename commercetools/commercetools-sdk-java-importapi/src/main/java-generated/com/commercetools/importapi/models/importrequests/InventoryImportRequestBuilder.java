@@ -1,35 +1,36 @@
+
 package com.commercetools.importapi.models.importrequests;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.ImportResourceType;
 import com.commercetools.importapi.models.importrequests.ImportRequest;
-import com.commercetools.importapi.models.inventories.InventoryImport;
 import com.commercetools.importapi.models.importrequests.InventoryImportRequest;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+import com.commercetools.importapi.models.inventories.InventoryImport;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InventoryImportRequestBuilder {
 
-    
     private java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> resources;
 
-    public InventoryImportRequestBuilder resources( final com.commercetools.importapi.models.inventories.InventoryImport ...resources) {
+    public InventoryImportRequestBuilder resources(
+            final com.commercetools.importapi.models.inventories.InventoryImport... resources) {
         this.resources = new ArrayList<>(Arrays.asList(resources));
         return this;
     }
-    
-    public InventoryImportRequestBuilder resources( final java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> resources) {
+
+    public InventoryImportRequestBuilder resources(
+            final java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> resources) {
         this.resources = resources;
         return this;
     }
 
-    
-    public java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> getResources(){
+    public java.util.List<com.commercetools.importapi.models.inventories.InventoryImport> getResources() {
         return this.resources;
     }
 

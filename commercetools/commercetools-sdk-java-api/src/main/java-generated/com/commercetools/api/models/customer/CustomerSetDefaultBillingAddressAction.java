@@ -1,45 +1,43 @@
+
 package com.commercetools.api.models.customer;
 
-import com.commercetools.api.models.customer.CustomerUpdateAction;
-import com.commercetools.api.models.customer.CustomerSetDefaultBillingAddressActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.customer.CustomerSetDefaultBillingAddressActionImpl;
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerSetDefaultBillingAddressActionImpl.class)
 public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAction {
 
     /**
     *  <p>If not defined, the customer's <code>defaultBillingAddress</code> is unset.</p>
     */
-    
+
     @JsonProperty("addressId")
     public String getAddressId();
-    
-    
+
     @JsonProperty("addressKey")
     public String getAddressKey();
 
     public void setAddressId(final String addressId);
-    
+
     public void setAddressKey(final String addressKey);
 
-    public static CustomerSetDefaultBillingAddressAction of(){
+    public static CustomerSetDefaultBillingAddressAction of() {
         return new CustomerSetDefaultBillingAddressActionImpl();
     }
-    
 
     public static CustomerSetDefaultBillingAddressAction of(final CustomerSetDefaultBillingAddressAction template) {
         CustomerSetDefaultBillingAddressActionImpl instance = new CustomerSetDefaultBillingAddressActionImpl();
@@ -48,16 +46,17 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
         return instance;
     }
 
-    public static CustomerSetDefaultBillingAddressActionBuilder builder(){
+    public static CustomerSetDefaultBillingAddressActionBuilder builder() {
         return CustomerSetDefaultBillingAddressActionBuilder.of();
     }
-    
-    public static CustomerSetDefaultBillingAddressActionBuilder builder(final CustomerSetDefaultBillingAddressAction template){
+
+    public static CustomerSetDefaultBillingAddressActionBuilder builder(
+            final CustomerSetDefaultBillingAddressAction template) {
         return CustomerSetDefaultBillingAddressActionBuilder.of(template);
     }
-    
 
-    default <T> T withCustomerSetDefaultBillingAddressAction(Function<CustomerSetDefaultBillingAddressAction, T> helper) {
+    default <T> T withCustomerSetDefaultBillingAddressAction(
+            Function<CustomerSetDefaultBillingAddressAction, T> helper) {
         return helper.apply(this);
     }
 }

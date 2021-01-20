@@ -1,21 +1,22 @@
-package io.vrap.rmf.base.client.utils;
 
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
+package io.vrap.rmf.base.client.utils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CompletionException;
 import java.util.function.Function;
 
-public final class Utils {
+import io.vrap.rmf.base.client.ApiHttpResponse;
+import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
+public final class Utils {
 
     public static <U, V> Function<U, V> wrapToCompletionException(ExceptionalFunction<U, V> exceptionalFunction) {
         return u -> {
             try {
                 return exceptionalFunction.apply(u);
-            } catch (Exception e) {
+            }
+            catch (Exception e) {
                 throw new CompletionException(e);
             }
         };
@@ -42,7 +43,8 @@ public final class Utils {
             }
             O newBody = JsonUtils.fromJsonByteArray(response.getBody(), outputType);
             return new ApiHttpResponse<>(response.getStatusCode(), response.getHeaders(), newBody);
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

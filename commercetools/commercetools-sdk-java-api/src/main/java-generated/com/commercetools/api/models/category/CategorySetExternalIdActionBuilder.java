@@ -1,16 +1,17 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
-import com.commercetools.api.models.category.CategorySetExternalIdAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.category.CategorySetExternalIdAction;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategorySetExternalIdActionBuilder {
 
     @Nullable
@@ -22,7 +23,7 @@ public final class CategorySetExternalIdActionBuilder {
     }
 
     @Nullable
-    public String getExternalId(){
+    public String getExternalId() {
         return this.externalId;
     }
 

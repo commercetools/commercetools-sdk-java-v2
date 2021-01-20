@@ -1,86 +1,80 @@
+
 package com.commercetools.ml.models.similar_products;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.similar_products.SimilarProductPair;
 import com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta;
 import com.commercetools.ml.models.similar_products.SimilarProductsPagedQueryResult;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SimilarProductsPagedQueryResultBuilder {
 
-    
     private Long count;
-    
-    
+
     private Long total;
-    
-    
+
     private Long offset;
-    
-    
+
     private java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> results;
-    
-    
+
     private com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta meta;
 
-    public SimilarProductsPagedQueryResultBuilder count( final Long count) {
+    public SimilarProductsPagedQueryResultBuilder count(final Long count) {
         this.count = count;
         return this;
     }
-    
-    public SimilarProductsPagedQueryResultBuilder total( final Long total) {
+
+    public SimilarProductsPagedQueryResultBuilder total(final Long total) {
         this.total = total;
         return this;
     }
-    
-    public SimilarProductsPagedQueryResultBuilder offset( final Long offset) {
+
+    public SimilarProductsPagedQueryResultBuilder offset(final Long offset) {
         this.offset = offset;
         return this;
     }
-    
-    public SimilarProductsPagedQueryResultBuilder results( final com.commercetools.ml.models.similar_products.SimilarProductPair ...results) {
+
+    public SimilarProductsPagedQueryResultBuilder results(
+            final com.commercetools.ml.models.similar_products.SimilarProductPair... results) {
         this.results = new ArrayList<>(Arrays.asList(results));
         return this;
     }
-    
-    public SimilarProductsPagedQueryResultBuilder results( final java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> results) {
+
+    public SimilarProductsPagedQueryResultBuilder results(
+            final java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> results) {
         this.results = results;
         return this;
     }
-    
-    public SimilarProductsPagedQueryResultBuilder meta( final com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta meta) {
+
+    public SimilarProductsPagedQueryResultBuilder meta(
+            final com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta meta) {
         this.meta = meta;
         return this;
     }
 
-    
-    public Long getCount(){
+    public Long getCount() {
         return this.count;
     }
-    
-    
-    public Long getTotal(){
+
+    public Long getTotal() {
         return this.total;
     }
-    
-    
-    public Long getOffset(){
+
+    public Long getOffset() {
         return this.offset;
     }
-    
-    
-    public java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> getResults(){
+
+    public java.util.List<com.commercetools.ml.models.similar_products.SimilarProductPair> getResults() {
         return this.results;
     }
-    
-    
-    public com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta getMeta(){
+
+    public com.commercetools.ml.models.similar_products.SimilarProductSearchRequestMeta getMeta() {
         return this.meta;
     }
 

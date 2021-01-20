@@ -1,41 +1,40 @@
+
 package com.commercetools.api.models.category;
 
-import com.commercetools.api.models.category.CategoryUpdateAction;
-import com.commercetools.api.models.category.CategorySetAssetKeyAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.category.CategorySetAssetKeyAction;
+import com.commercetools.api.models.category.CategoryUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CategorySetAssetKeyActionBuilder {
 
-    
     private String assetId;
-    
+
     @Nullable
     private String assetKey;
 
-    public CategorySetAssetKeyActionBuilder assetId( final String assetId) {
+    public CategorySetAssetKeyActionBuilder assetId(final String assetId) {
         this.assetId = assetId;
         return this;
     }
-    
+
     public CategorySetAssetKeyActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
 
-    
-    public String getAssetId(){
+    public String getAssetId() {
         return this.assetId;
     }
-    
+
     @Nullable
-    public String getAssetKey(){
+    public String getAssetKey() {
         return this.assetKey;
     }
 

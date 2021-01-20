@@ -1,41 +1,38 @@
+
 package com.commercetools.api.models.shopping_list;
 
-import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
-import com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemQuantityAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.shopping_list.ShoppingListChangeLineItemQuantityAction;
+import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ShoppingListChangeLineItemQuantityActionBuilder {
 
-    
     private String lineItemId;
-    
-    
+
     private Long quantity;
 
-    public ShoppingListChangeLineItemQuantityActionBuilder lineItemId( final String lineItemId) {
+    public ShoppingListChangeLineItemQuantityActionBuilder lineItemId(final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-    
-    public ShoppingListChangeLineItemQuantityActionBuilder quantity( final Long quantity) {
+
+    public ShoppingListChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    
-    public String getLineItemId(){
+    public String getLineItemId() {
         return this.lineItemId;
     }
-    
-    
-    public Long getQuantity(){
+
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -47,7 +44,8 @@ public final class ShoppingListChangeLineItemQuantityActionBuilder {
         return new ShoppingListChangeLineItemQuantityActionBuilder();
     }
 
-    public static ShoppingListChangeLineItemQuantityActionBuilder of(final ShoppingListChangeLineItemQuantityAction template) {
+    public static ShoppingListChangeLineItemQuantityActionBuilder of(
+            final ShoppingListChangeLineItemQuantityAction template) {
         ShoppingListChangeLineItemQuantityActionBuilder builder = new ShoppingListChangeLineItemQuantityActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.quantity = template.getQuantity();

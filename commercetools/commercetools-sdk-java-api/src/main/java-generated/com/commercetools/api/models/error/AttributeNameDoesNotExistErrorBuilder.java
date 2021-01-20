@@ -1,41 +1,38 @@
+
 package com.commercetools.api.models.error;
 
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.AttributeNameDoesNotExistError;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.error.AttributeNameDoesNotExistError;
+import com.commercetools.api.models.error.ErrorObject;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributeNameDoesNotExistErrorBuilder {
 
-    
     private String message;
-    
-    
+
     private String invalidAttributeName;
 
-    public AttributeNameDoesNotExistErrorBuilder message( final String message) {
+    public AttributeNameDoesNotExistErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    public AttributeNameDoesNotExistErrorBuilder invalidAttributeName( final String invalidAttributeName) {
+
+    public AttributeNameDoesNotExistErrorBuilder invalidAttributeName(final String invalidAttributeName) {
         this.invalidAttributeName = invalidAttributeName;
         return this;
     }
 
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    public String getInvalidAttributeName(){
+
+    public String getInvalidAttributeName() {
         return this.invalidAttributeName;
     }
 

@@ -1,32 +1,29 @@
+
 package com.commercetools.api.models.common;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.ClientLogging;
 import com.commercetools.api.models.common.LastModifiedByImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = LastModifiedByImpl.class)
 public interface LastModifiedBy extends ClientLogging {
 
-
-
-    public static LastModifiedBy of(){
+    public static LastModifiedBy of() {
         return new LastModifiedByImpl();
     }
-    
 
     public static LastModifiedBy of(final LastModifiedBy template) {
         LastModifiedByImpl instance = new LastModifiedByImpl();
@@ -37,14 +34,13 @@ public interface LastModifiedBy extends ClientLogging {
         return instance;
     }
 
-    public static LastModifiedByBuilder builder(){
+    public static LastModifiedByBuilder builder() {
         return LastModifiedByBuilder.of();
     }
-    
-    public static LastModifiedByBuilder builder(final LastModifiedBy template){
+
+    public static LastModifiedByBuilder builder(final LastModifiedBy template) {
         return LastModifiedByBuilder.of(template);
     }
-    
 
     default <T> T withLastModifiedBy(Function<LastModifiedBy, T> helper) {
         return helper.apply(this);

@@ -1,15 +1,15 @@
+
 package io.vrap.rmf.base.client;
+
+import java.nio.charset.StandardCharsets;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.nio.charset.StandardCharsets;
-
 public class ApiHttpResponseTest {
 
     @Test
-    public void testImmutableStatusCode()
-    {
+    public void testImmutableStatusCode() {
         ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(200, null, null, null);
 
         ApiHttpResponse<byte[]> newResponse = response.withStatusCode(201);
@@ -21,8 +21,7 @@ public class ApiHttpResponseTest {
     }
 
     @Test
-    public void testImmutableMessage()
-    {
+    public void testImmutableMessage() {
         ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(200, null, null, "foo");
 
         ApiHttpResponse<byte[]> newResponse = response.withMessage("bar");
@@ -33,9 +32,9 @@ public class ApiHttpResponseTest {
     }
 
     @Test
-    public void testImmutableBody()
-    {
-        ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(200, null, "foo".getBytes(StandardCharsets.UTF_8),null);
+    public void testImmutableBody() {
+        ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(200, null, "foo".getBytes(StandardCharsets.UTF_8),
+            null);
 
         ApiHttpResponse<byte[]> newResponse = response.withBody("bar".getBytes(StandardCharsets.UTF_8));
 
@@ -45,9 +44,9 @@ public class ApiHttpResponseTest {
     }
 
     @Test
-    public void testImmutableHeaders()
-    {
-        ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(200, new ApiHttpHeaders(ApiHttpHeaders.headerEntry("foo", "foo")), null,null);
+    public void testImmutableHeaders() {
+        ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(200,
+            new ApiHttpHeaders(ApiHttpHeaders.headerEntry("foo", "foo")), null, null);
 
         ApiHttpResponse<byte[]> newResponse = response.withHeaders(response.getHeaders().withHeader("foo", "bar"));
 
@@ -57,9 +56,9 @@ public class ApiHttpResponseTest {
     }
 
     @Test
-    public void testImmutableGetHeaders()
-    {
-        ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(200, new ApiHttpHeaders(ApiHttpHeaders.headerEntry("foo", "foo")), null, null);
+    public void testImmutableGetHeaders() {
+        ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(200,
+            new ApiHttpHeaders(ApiHttpHeaders.headerEntry("foo", "foo")), null, null);
 
         response.getHeaders().addHeader("foo", "bar");
 

@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client.error;
 
 public class BaseException extends RuntimeException {

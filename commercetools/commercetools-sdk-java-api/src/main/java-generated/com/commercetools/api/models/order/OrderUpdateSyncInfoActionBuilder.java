@@ -1,56 +1,55 @@
+
 package com.commercetools.api.models.order;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.order.OrderUpdateAction;
-import java.time.ZonedDateTime;
 import com.commercetools.api.models.order.OrderUpdateSyncInfoAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderUpdateSyncInfoActionBuilder {
 
-    
     private com.commercetools.api.models.channel.ChannelResourceIdentifier channel;
-    
+
     @Nullable
     private String externalId;
-    
+
     @Nullable
     private java.time.ZonedDateTime syncedAt;
 
-    public OrderUpdateSyncInfoActionBuilder channel( final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
+    public OrderUpdateSyncInfoActionBuilder channel(
+            final com.commercetools.api.models.channel.ChannelResourceIdentifier channel) {
         this.channel = channel;
         return this;
     }
-    
+
     public OrderUpdateSyncInfoActionBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
         return this;
     }
-    
+
     public OrderUpdateSyncInfoActionBuilder syncedAt(@Nullable final java.time.ZonedDateTime syncedAt) {
         this.syncedAt = syncedAt;
         return this;
     }
 
-    
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel(){
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getChannel() {
         return this.channel;
     }
-    
+
     @Nullable
-    public String getExternalId(){
+    public String getExternalId() {
         return this.externalId;
     }
-    
+
     @Nullable
-    public java.time.ZonedDateTime getSyncedAt(){
+    public java.time.ZonedDateTime getSyncedAt() {
         return this.syncedAt;
     }
 

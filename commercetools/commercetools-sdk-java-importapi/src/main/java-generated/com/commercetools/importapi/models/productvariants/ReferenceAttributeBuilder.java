@@ -1,42 +1,41 @@
+
 package com.commercetools.importapi.models.productvariants;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.KeyReference;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.ReferenceAttribute;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ReferenceAttributeBuilder {
 
     @Nullable
     private String name;
-    
-    
+
     private com.commercetools.importapi.models.common.KeyReference value;
 
     public ReferenceAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-    
-    public ReferenceAttributeBuilder value( final com.commercetools.importapi.models.common.KeyReference value) {
+
+    public ReferenceAttributeBuilder value(final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
         return this;
     }
 
     @Nullable
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
-    public com.commercetools.importapi.models.common.KeyReference getValue(){
+
+    public com.commercetools.importapi.models.common.KeyReference getValue() {
         return this.value;
     }
 

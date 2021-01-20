@@ -1,60 +1,58 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.ReturnItem;
 import java.time.ZonedDateTime;
-import com.commercetools.api.models.order.ReturnInfo;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.order.ReturnInfo;
+import com.commercetools.api.models.order.ReturnItem;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ReturnInfoBuilder {
 
-    
     private java.util.List<com.commercetools.api.models.order.ReturnItem> items;
-    
+
     @Nullable
     private String returnTrackingId;
-    
+
     @Nullable
     private java.time.ZonedDateTime returnDate;
 
-    public ReturnInfoBuilder items( final com.commercetools.api.models.order.ReturnItem ...items) {
+    public ReturnInfoBuilder items(final com.commercetools.api.models.order.ReturnItem... items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
-    
-    public ReturnInfoBuilder items( final java.util.List<com.commercetools.api.models.order.ReturnItem> items) {
+
+    public ReturnInfoBuilder items(final java.util.List<com.commercetools.api.models.order.ReturnItem> items) {
         this.items = items;
         return this;
     }
-    
+
     public ReturnInfoBuilder returnTrackingId(@Nullable final String returnTrackingId) {
         this.returnTrackingId = returnTrackingId;
         return this;
     }
-    
+
     public ReturnInfoBuilder returnDate(@Nullable final java.time.ZonedDateTime returnDate) {
         this.returnDate = returnDate;
         return this;
     }
 
-    
-    public java.util.List<com.commercetools.api.models.order.ReturnItem> getItems(){
+    public java.util.List<com.commercetools.api.models.order.ReturnItem> getItems() {
         return this.items;
     }
-    
+
     @Nullable
-    public String getReturnTrackingId(){
+    public String getReturnTrackingId() {
         return this.returnTrackingId;
     }
-    
+
     @Nullable
-    public java.time.ZonedDateTime getReturnDate(){
+    public java.time.ZonedDateTime getReturnDate() {
         return this.returnDate;
     }
 

@@ -1,36 +1,33 @@
+
 package com.commercetools.importapi.models.common;
 
-import com.commercetools.importapi.models.common.KeyReference;
-import com.commercetools.importapi.models.common.ReferenceType;
-import com.commercetools.importapi.models.common.ProductVariantKeyReferenceImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.common.ProductVariantKeyReferenceImpl;
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>References a product variant by its key.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductVariantKeyReferenceImpl.class)
 public interface ProductVariantKeyReference extends KeyReference {
 
-
-
-    public static ProductVariantKeyReference of(){
+    public static ProductVariantKeyReference of() {
         return new ProductVariantKeyReferenceImpl();
     }
-    
 
     public static ProductVariantKeyReference of(final ProductVariantKeyReference template) {
         ProductVariantKeyReferenceImpl instance = new ProductVariantKeyReferenceImpl();
@@ -38,14 +35,13 @@ public interface ProductVariantKeyReference extends KeyReference {
         return instance;
     }
 
-    public static ProductVariantKeyReferenceBuilder builder(){
+    public static ProductVariantKeyReferenceBuilder builder() {
         return ProductVariantKeyReferenceBuilder.of();
     }
-    
-    public static ProductVariantKeyReferenceBuilder builder(final ProductVariantKeyReference template){
+
+    public static ProductVariantKeyReferenceBuilder builder(final ProductVariantKeyReference template) {
         return ProductVariantKeyReferenceBuilder.of(template);
     }
-    
 
     default <T> T withProductVariantKeyReference(Function<ProductVariantKeyReference, T> helper) {
         return helper.apply(this);

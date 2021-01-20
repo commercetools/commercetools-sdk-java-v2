@@ -1,47 +1,46 @@
+
 package com.commercetools.importapi.models.errors;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.errors.DuplicateAttributeValuesError;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.commercetools.importapi.models.productvariants.Attribute;
-import com.commercetools.importapi.models.errors.DuplicateAttributeValuesError;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DuplicateAttributeValuesErrorBuilder {
 
-    
     private String message;
-    
-    
+
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
-    public DuplicateAttributeValuesErrorBuilder message( final String message) {
+    public DuplicateAttributeValuesErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    public DuplicateAttributeValuesErrorBuilder attributes( final com.commercetools.importapi.models.productvariants.Attribute ...attributes) {
+
+    public DuplicateAttributeValuesErrorBuilder attributes(
+            final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-    
-    public DuplicateAttributeValuesErrorBuilder attributes( final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
+
+    public DuplicateAttributeValuesErrorBuilder attributes(
+            final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
 
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
-    
-    public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes(){
+
+    public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
         return this.attributes;
     }
 

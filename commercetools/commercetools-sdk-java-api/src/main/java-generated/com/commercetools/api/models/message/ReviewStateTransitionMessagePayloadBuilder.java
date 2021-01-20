@@ -1,100 +1,93 @@
+
 package com.commercetools.api.models.message;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.message.ReviewStateTransitionMessagePayload;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+import com.commercetools.api.models.state.StateReference;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ReviewStateTransitionMessagePayloadBuilder {
 
-    
     private com.commercetools.api.models.state.StateReference oldState;
-    
-    
+
     private com.commercetools.api.models.state.StateReference newState;
-    
-    
+
     private Boolean oldIncludedInStatistics;
-    
-    
+
     private Boolean newIncludedInStatistics;
-    
-    
+
     private com.commercetools.api.models.common.Reference target;
-    
-    
+
     private Boolean force;
 
-    public ReviewStateTransitionMessagePayloadBuilder oldState( final com.commercetools.api.models.state.StateReference oldState) {
+    public ReviewStateTransitionMessagePayloadBuilder oldState(
+            final com.commercetools.api.models.state.StateReference oldState) {
         this.oldState = oldState;
         return this;
     }
-    
-    public ReviewStateTransitionMessagePayloadBuilder newState( final com.commercetools.api.models.state.StateReference newState) {
+
+    public ReviewStateTransitionMessagePayloadBuilder newState(
+            final com.commercetools.api.models.state.StateReference newState) {
         this.newState = newState;
         return this;
     }
-    
-    public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics( final Boolean oldIncludedInStatistics) {
+
+    public ReviewStateTransitionMessagePayloadBuilder oldIncludedInStatistics(final Boolean oldIncludedInStatistics) {
         this.oldIncludedInStatistics = oldIncludedInStatistics;
         return this;
     }
-    
-    public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics( final Boolean newIncludedInStatistics) {
+
+    public ReviewStateTransitionMessagePayloadBuilder newIncludedInStatistics(final Boolean newIncludedInStatistics) {
         this.newIncludedInStatistics = newIncludedInStatistics;
         return this;
     }
-    
-    public ReviewStateTransitionMessagePayloadBuilder target( final com.commercetools.api.models.common.Reference target) {
+
+    public ReviewStateTransitionMessagePayloadBuilder target(
+            final com.commercetools.api.models.common.Reference target) {
         this.target = target;
         return this;
     }
-    
-    public ReviewStateTransitionMessagePayloadBuilder force( final Boolean force) {
+
+    public ReviewStateTransitionMessagePayloadBuilder force(final Boolean force) {
         this.force = force;
         return this;
     }
 
-    
-    public com.commercetools.api.models.state.StateReference getOldState(){
+    public com.commercetools.api.models.state.StateReference getOldState() {
         return this.oldState;
     }
-    
-    
-    public com.commercetools.api.models.state.StateReference getNewState(){
+
+    public com.commercetools.api.models.state.StateReference getNewState() {
         return this.newState;
     }
-    
-    
-    public Boolean getOldIncludedInStatistics(){
+
+    public Boolean getOldIncludedInStatistics() {
         return this.oldIncludedInStatistics;
     }
-    
-    
-    public Boolean getNewIncludedInStatistics(){
+
+    public Boolean getNewIncludedInStatistics() {
         return this.newIncludedInStatistics;
     }
-    
-    
-    public com.commercetools.api.models.common.Reference getTarget(){
+
+    public com.commercetools.api.models.common.Reference getTarget() {
         return this.target;
     }
-    
-    
-    public Boolean getForce(){
+
+    public Boolean getForce() {
         return this.force;
     }
 
     public ReviewStateTransitionMessagePayload build() {
-        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics, newIncludedInStatistics, target, force);
+        return new ReviewStateTransitionMessagePayloadImpl(oldState, newState, oldIncludedInStatistics,
+            newIncludedInStatistics, target, force);
     }
 
     public static ReviewStateTransitionMessagePayloadBuilder of() {

@@ -1,33 +1,30 @@
+
 package com.commercetools.api.models.order;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.commercetools.api.models.order.OrderResourceIdentifierImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderResourceIdentifierImpl.class)
 public interface OrderResourceIdentifier extends ResourceIdentifier {
 
-
-
-    public static OrderResourceIdentifier of(){
+    public static OrderResourceIdentifier of() {
         return new OrderResourceIdentifierImpl();
     }
-    
 
     public static OrderResourceIdentifier of(final OrderResourceIdentifier template) {
         OrderResourceIdentifierImpl instance = new OrderResourceIdentifierImpl();
@@ -36,14 +33,13 @@ public interface OrderResourceIdentifier extends ResourceIdentifier {
         return instance;
     }
 
-    public static OrderResourceIdentifierBuilder builder(){
+    public static OrderResourceIdentifierBuilder builder() {
         return OrderResourceIdentifierBuilder.of();
     }
-    
-    public static OrderResourceIdentifierBuilder builder(final OrderResourceIdentifier template){
+
+    public static OrderResourceIdentifierBuilder builder(final OrderResourceIdentifier template) {
         return OrderResourceIdentifierBuilder.of(template);
     }
-    
 
     default <T> T withOrderResourceIdentifier(Function<OrderResourceIdentifier, T> helper) {
         return helper.apply(this);

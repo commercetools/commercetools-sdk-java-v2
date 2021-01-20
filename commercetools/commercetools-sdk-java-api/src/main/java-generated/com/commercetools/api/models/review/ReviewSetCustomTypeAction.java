@@ -1,25 +1,25 @@
+
 package com.commercetools.api.models.review;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+import com.commercetools.api.models.review.ReviewSetCustomTypeActionImpl;
 import com.commercetools.api.models.review.ReviewUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.commercetools.api.models.review.ReviewSetCustomTypeActionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReviewSetCustomTypeActionImpl.class)
 public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
 
@@ -29,6 +29,7 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
+
     /**
     *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
     *  Sets the CustomFields to this value.</p>
@@ -38,13 +39,12 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
     public FieldContainer getFields();
 
     public void setType(final TypeResourceIdentifier type);
-    
+
     public void setFields(final FieldContainer fields);
 
-    public static ReviewSetCustomTypeAction of(){
+    public static ReviewSetCustomTypeAction of() {
         return new ReviewSetCustomTypeActionImpl();
     }
-    
 
     public static ReviewSetCustomTypeAction of(final ReviewSetCustomTypeAction template) {
         ReviewSetCustomTypeActionImpl instance = new ReviewSetCustomTypeActionImpl();
@@ -53,14 +53,13 @@ public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
         return instance;
     }
 
-    public static ReviewSetCustomTypeActionBuilder builder(){
+    public static ReviewSetCustomTypeActionBuilder builder() {
         return ReviewSetCustomTypeActionBuilder.of();
     }
-    
-    public static ReviewSetCustomTypeActionBuilder builder(final ReviewSetCustomTypeAction template){
+
+    public static ReviewSetCustomTypeActionBuilder builder(final ReviewSetCustomTypeAction template) {
         return ReviewSetCustomTypeActionBuilder.of(template);
     }
-    
 
     default <T> T withReviewSetCustomTypeAction(Function<ReviewSetCustomTypeAction, T> helper) {
         return helper.apply(this);

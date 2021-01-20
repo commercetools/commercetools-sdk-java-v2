@@ -1,47 +1,46 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.ItemState;
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.order.OrderImportLineItemStateActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.order.ItemState;
+import com.commercetools.api.models.order.OrderImportLineItemStateActionImpl;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderImportLineItemStateActionImpl.class)
 public interface OrderImportLineItemStateAction extends OrderUpdateAction {
 
-    
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-    
+
     @NotNull
     @Valid
     @JsonProperty("state")
     public List<ItemState> getState();
 
     public void setLineItemId(final String lineItemId);
-    
+
     @JsonIgnore
-    public void setState(final ItemState ...state);
+    public void setState(final ItemState... state);
+
     public void setState(final List<ItemState> state);
 
-    public static OrderImportLineItemStateAction of(){
+    public static OrderImportLineItemStateAction of() {
         return new OrderImportLineItemStateActionImpl();
     }
-    
 
     public static OrderImportLineItemStateAction of(final OrderImportLineItemStateAction template) {
         OrderImportLineItemStateActionImpl instance = new OrderImportLineItemStateActionImpl();
@@ -50,14 +49,13 @@ public interface OrderImportLineItemStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    public static OrderImportLineItemStateActionBuilder builder(){
+    public static OrderImportLineItemStateActionBuilder builder() {
         return OrderImportLineItemStateActionBuilder.of();
     }
-    
-    public static OrderImportLineItemStateActionBuilder builder(final OrderImportLineItemStateAction template){
+
+    public static OrderImportLineItemStateActionBuilder builder(final OrderImportLineItemStateAction template) {
         return OrderImportLineItemStateActionBuilder.of(template);
     }
-    
 
     default <T> T withOrderImportLineItemStateAction(Function<OrderImportLineItemStateAction, T> helper) {
         return helper.apply(this);

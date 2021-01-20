@@ -1,45 +1,43 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.cart.ExternalTaxRateDraft;
-import com.commercetools.api.models.me.MyCartUpdateAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
-import com.commercetools.api.models.me.MyCartSetShippingMethodActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.me.MyCartSetShippingMethodActionImpl;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyCartSetShippingMethodActionImpl.class)
 public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
 
-    
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();
-    
+
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
     public void setShippingMethod(final ShippingMethodResourceIdentifier shippingMethod);
-    
+
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
-    public static MyCartSetShippingMethodAction of(){
+    public static MyCartSetShippingMethodAction of() {
         return new MyCartSetShippingMethodActionImpl();
     }
-    
 
     public static MyCartSetShippingMethodAction of(final MyCartSetShippingMethodAction template) {
         MyCartSetShippingMethodActionImpl instance = new MyCartSetShippingMethodActionImpl();
@@ -48,14 +46,13 @@ public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
         return instance;
     }
 
-    public static MyCartSetShippingMethodActionBuilder builder(){
+    public static MyCartSetShippingMethodActionBuilder builder() {
         return MyCartSetShippingMethodActionBuilder.of();
     }
-    
-    public static MyCartSetShippingMethodActionBuilder builder(final MyCartSetShippingMethodAction template){
+
+    public static MyCartSetShippingMethodActionBuilder builder(final MyCartSetShippingMethodAction template) {
         return MyCartSetShippingMethodActionBuilder.of(template);
     }
-    
 
     default <T> T withMyCartSetShippingMethodAction(Function<MyCartSetShippingMethodAction, T> helper) {
         return helper.apply(this);

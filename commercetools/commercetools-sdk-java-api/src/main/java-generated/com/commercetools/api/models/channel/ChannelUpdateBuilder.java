@@ -1,46 +1,44 @@
+
 package com.commercetools.api.models.channel;
 
-import com.commercetools.api.models.channel.ChannelUpdateAction;
-import com.commercetools.api.models.channel.ChannelUpdate;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.channel.ChannelUpdate;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ChannelUpdateBuilder {
 
-    
     private Long version;
-    
-    
+
     private java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions;
 
-    public ChannelUpdateBuilder version( final Long version) {
+    public ChannelUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    public ChannelUpdateBuilder actions( final com.commercetools.api.models.channel.ChannelUpdateAction ...actions) {
+
+    public ChannelUpdateBuilder actions(final com.commercetools.api.models.channel.ChannelUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-    
-    public ChannelUpdateBuilder actions( final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
+
+    public ChannelUpdateBuilder actions(
+            final java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.channel.ChannelUpdateAction> getActions() {
         return this.actions;
     }
 

@@ -1,82 +1,76 @@
+
 package com.commercetools.api.models.type;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.FieldDefinition;
 import com.commercetools.api.models.type.FieldType;
 import com.commercetools.api.models.type.TypeTextInputHint;
-import com.commercetools.api.models.type.FieldDefinition;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FieldDefinitionBuilder {
 
-    
     private com.commercetools.api.models.type.FieldType type;
-    
-    
+
     private String name;
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString label;
-    
-    
+
     private Boolean required;
-    
+
     @Nullable
     private com.commercetools.api.models.type.TypeTextInputHint inputHint;
 
-    public FieldDefinitionBuilder type( final com.commercetools.api.models.type.FieldType type) {
+    public FieldDefinitionBuilder type(final com.commercetools.api.models.type.FieldType type) {
         this.type = type;
         return this;
     }
-    
-    public FieldDefinitionBuilder name( final String name) {
+
+    public FieldDefinitionBuilder name(final String name) {
         this.name = name;
         return this;
     }
-    
-    public FieldDefinitionBuilder label( final com.commercetools.api.models.common.LocalizedString label) {
+
+    public FieldDefinitionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
-    
-    public FieldDefinitionBuilder required( final Boolean required) {
+
+    public FieldDefinitionBuilder required(final Boolean required) {
         this.required = required;
         return this;
     }
-    
-    public FieldDefinitionBuilder inputHint(@Nullable final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
+
+    public FieldDefinitionBuilder inputHint(
+            @Nullable final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
         this.inputHint = inputHint;
         return this;
     }
 
-    
-    public com.commercetools.api.models.type.FieldType getType(){
+    public com.commercetools.api.models.type.FieldType getType() {
         return this.type;
     }
-    
-    
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getLabel(){
+
+    public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
     }
-    
-    
-    public Boolean getRequired(){
+
+    public Boolean getRequired() {
         return this.required;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.type.TypeTextInputHint getInputHint(){
+    public com.commercetools.api.models.type.TypeTextInputHint getInputHint() {
         return this.inputHint;
     }
 

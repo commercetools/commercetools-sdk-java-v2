@@ -1,27 +1,27 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductRemoveImageAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.product.ProductRemoveImageAction;
+import com.commercetools.api.models.product.ProductUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductRemoveImageActionBuilder {
 
     @Nullable
     private Long variantId;
-    
+
     @Nullable
     private String sku;
-    
-    
+
     private String imageUrl;
-    
+
     @Nullable
     private Boolean staged;
 
@@ -29,39 +29,38 @@ public final class ProductRemoveImageActionBuilder {
         this.variantId = variantId;
         return this;
     }
-    
+
     public ProductRemoveImageActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
-    public ProductRemoveImageActionBuilder imageUrl( final String imageUrl) {
+
+    public ProductRemoveImageActionBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
-    
+
     public ProductRemoveImageActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
-    
-    public String getImageUrl(){
+
+    public String getImageUrl() {
         return this.imageUrl;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

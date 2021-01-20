@@ -1,40 +1,41 @@
+
 package com.commercetools.ml.models.similar_products;
 
-import com.commercetools.ml.models.similar_products.ProductSetSelector;
-import com.commercetools.ml.models.similar_products.SimilarityMeasures;
-import com.commercetools.ml.models.similar_products.SimilarProductSearchRequest;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.ml.models.similar_products.ProductSetSelector;
+import com.commercetools.ml.models.similar_products.SimilarProductSearchRequest;
+import com.commercetools.ml.models.similar_products.SimilarityMeasures;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SimilarProductSearchRequestBuilder {
 
     @Nullable
     private Long limit;
-    
+
     @Nullable
     private Long offset;
-    
+
     @Nullable
     private String language;
-    
+
     @Nullable
     private String currencyCode;
-    
+
     @Nullable
     private com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures;
-    
+
     @Nullable
     private java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors;
-    
+
     @Nullable
     private Double confidenceMin;
-    
+
     @Nullable
     private Double confidenceMax;
 
@@ -42,89 +43,93 @@ public final class SimilarProductSearchRequestBuilder {
         this.limit = limit;
         return this;
     }
-    
+
     public SimilarProductSearchRequestBuilder offset(@Nullable final Long offset) {
         this.offset = offset;
         return this;
     }
-    
+
     public SimilarProductSearchRequestBuilder language(@Nullable final String language) {
         this.language = language;
         return this;
     }
-    
+
     public SimilarProductSearchRequestBuilder currencyCode(@Nullable final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
-    
-    public SimilarProductSearchRequestBuilder similarityMeasures(@Nullable final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
+
+    public SimilarProductSearchRequestBuilder similarityMeasures(
+            @Nullable final com.commercetools.ml.models.similar_products.SimilarityMeasures similarityMeasures) {
         this.similarityMeasures = similarityMeasures;
         return this;
     }
-    
-    public SimilarProductSearchRequestBuilder productSetSelectors(@Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector ...productSetSelectors) {
+
+    public SimilarProductSearchRequestBuilder productSetSelectors(
+            @Nullable final com.commercetools.ml.models.similar_products.ProductSetSelector... productSetSelectors) {
         this.productSetSelectors = new ArrayList<>(Arrays.asList(productSetSelectors));
         return this;
     }
-    
-    public SimilarProductSearchRequestBuilder productSetSelectors(@Nullable final java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors) {
+
+    public SimilarProductSearchRequestBuilder productSetSelectors(
+            @Nullable final java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> productSetSelectors) {
         this.productSetSelectors = productSetSelectors;
         return this;
     }
-    
+
     public SimilarProductSearchRequestBuilder confidenceMin(@Nullable final Double confidenceMin) {
         this.confidenceMin = confidenceMin;
         return this;
     }
-    
+
     public SimilarProductSearchRequestBuilder confidenceMax(@Nullable final Double confidenceMax) {
         this.confidenceMax = confidenceMax;
         return this;
     }
 
     @Nullable
-    public Long getLimit(){
+    public Long getLimit() {
         return this.limit;
     }
-    
+
     @Nullable
-    public Long getOffset(){
+    public Long getOffset() {
         return this.offset;
     }
-    
+
     @Nullable
-    public String getLanguage(){
+    public String getLanguage() {
         return this.language;
     }
-    
+
     @Nullable
-    public String getCurrencyCode(){
+    public String getCurrencyCode() {
         return this.currencyCode;
     }
-    
+
     @Nullable
-    public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures(){
+    public com.commercetools.ml.models.similar_products.SimilarityMeasures getSimilarityMeasures() {
         return this.similarityMeasures;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> getProductSetSelectors(){
+    public java.util.List<com.commercetools.ml.models.similar_products.ProductSetSelector> getProductSetSelectors() {
         return this.productSetSelectors;
     }
-    
+
     @Nullable
-    public Double getConfidenceMin(){
+    public Double getConfidenceMin() {
         return this.confidenceMin;
     }
-    
+
     @Nullable
-    public Double getConfidenceMax(){
+    public Double getConfidenceMax() {
         return this.confidenceMax;
     }
 
     public SimilarProductSearchRequest build() {
-        return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures, productSetSelectors, confidenceMin, confidenceMax);
+        return new SimilarProductSearchRequestImpl(limit, offset, language, currencyCode, similarityMeasures,
+            productSetSelectors, confidenceMin, confidenceMax);
     }
 
     public static SimilarProductSearchRequestBuilder of() {

@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -7,8 +8,7 @@ public interface ResponseSerializer {
 
     byte[] toJsonByteArray(Object value) throws JsonProcessingException;
 
-    static ResponseSerializer of()
-    {
+    static ResponseSerializer of() {
         return new ResponseSerializerImpl();
     }
 }

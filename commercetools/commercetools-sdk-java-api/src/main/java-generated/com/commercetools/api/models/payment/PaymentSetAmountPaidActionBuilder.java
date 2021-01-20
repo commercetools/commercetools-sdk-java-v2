@@ -1,17 +1,18 @@
+
 package com.commercetools.api.models.payment;
 
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.payment.PaymentUpdateAction;
-import com.commercetools.api.models.payment.PaymentSetAmountPaidAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.payment.PaymentSetAmountPaidAction;
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PaymentSetAmountPaidActionBuilder {
 
     @Nullable
@@ -23,7 +24,7 @@ public final class PaymentSetAmountPaidActionBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Money getAmount(){
+    public com.commercetools.api.models.common.Money getAmount() {
         return this.amount;
     }
 

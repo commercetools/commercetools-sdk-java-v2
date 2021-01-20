@@ -1,47 +1,46 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.product.ProductVariant;
-import com.commercetools.api.models.message.ProductVariantDeletedMessageImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductVariantDeletedMessageImpl;
+import com.commercetools.api.models.product.ProductVariant;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductVariantDeletedMessageImpl.class)
 public interface ProductVariantDeletedMessage extends Message {
 
-    
     @NotNull
     @Valid
     @JsonProperty("variant")
     public ProductVariant getVariant();
-    
+
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();
 
     public void setVariant(final ProductVariant variant);
-    
+
     @JsonIgnore
-    public void setRemovedImageUrls(final String ...removedImageUrls);
+    public void setRemovedImageUrls(final String... removedImageUrls);
+
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
-    public static ProductVariantDeletedMessage of(){
+    public static ProductVariantDeletedMessage of() {
         return new ProductVariantDeletedMessageImpl();
     }
-    
 
     public static ProductVariantDeletedMessage of(final ProductVariantDeletedMessage template) {
         ProductVariantDeletedMessageImpl instance = new ProductVariantDeletedMessageImpl();
@@ -60,14 +59,13 @@ public interface ProductVariantDeletedMessage extends Message {
         return instance;
     }
 
-    public static ProductVariantDeletedMessageBuilder builder(){
+    public static ProductVariantDeletedMessageBuilder builder() {
         return ProductVariantDeletedMessageBuilder.of();
     }
-    
-    public static ProductVariantDeletedMessageBuilder builder(final ProductVariantDeletedMessage template){
+
+    public static ProductVariantDeletedMessageBuilder builder(final ProductVariantDeletedMessage template) {
         return ProductVariantDeletedMessageBuilder.of(template);
     }
-    
 
     default <T> T withProductVariantDeletedMessage(Function<ProductVariantDeletedMessage, T> helper) {
         return helper.apply(this);

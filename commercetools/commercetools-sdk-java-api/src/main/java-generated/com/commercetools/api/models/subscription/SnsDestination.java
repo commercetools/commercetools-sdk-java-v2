@@ -1,49 +1,47 @@
+
 package com.commercetools.api.models.subscription;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.subscription.Destination;
 import com.commercetools.api.models.subscription.SnsDestinationImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = SnsDestinationImpl.class)
 public interface SnsDestination extends Destination {
 
-    
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();
-    
+
     @NotNull
     @JsonProperty("accessSecret")
     public String getAccessSecret();
-    
+
     @NotNull
     @JsonProperty("topicArn")
     public String getTopicArn();
 
     public void setAccessKey(final String accessKey);
-    
+
     public void setAccessSecret(final String accessSecret);
-    
+
     public void setTopicArn(final String topicArn);
 
-    public static SnsDestination of(){
+    public static SnsDestination of() {
         return new SnsDestinationImpl();
     }
-    
 
     public static SnsDestination of(final SnsDestination template) {
         SnsDestinationImpl instance = new SnsDestinationImpl();
@@ -53,14 +51,13 @@ public interface SnsDestination extends Destination {
         return instance;
     }
 
-    public static SnsDestinationBuilder builder(){
+    public static SnsDestinationBuilder builder() {
         return SnsDestinationBuilder.of();
     }
-    
-    public static SnsDestinationBuilder builder(final SnsDestination template){
+
+    public static SnsDestinationBuilder builder(final SnsDestination template) {
         return SnsDestinationBuilder.of(template);
     }
-    
 
     default <T> T withSnsDestination(Function<SnsDestination, T> helper) {
         return helper.apply(this);

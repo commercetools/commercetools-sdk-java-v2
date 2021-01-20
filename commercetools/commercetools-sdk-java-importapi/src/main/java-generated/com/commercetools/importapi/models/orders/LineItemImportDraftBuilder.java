@@ -1,162 +1,164 @@
+
 package com.commercetools.importapi.models.orders;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.ChannelKeyReference;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.orders.ItemShippingDetailsDraft;
 import com.commercetools.importapi.models.orders.ItemState;
+import com.commercetools.importapi.models.orders.LineItemImportDraft;
 import com.commercetools.importapi.models.orders.LineItemPrice;
 import com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft;
 import com.commercetools.importapi.models.prices.TaxRate;
-import com.commercetools.importapi.models.orders.LineItemImportDraft;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class LineItemImportDraftBuilder {
 
     @Nullable
     private com.commercetools.importapi.models.common.ProductKeyReference product;
-    
-    
+
     private com.commercetools.importapi.models.common.LocalizedString name;
-    
-    
+
     private com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant;
-    
-    
+
     private com.commercetools.importapi.models.orders.LineItemPrice price;
-    
-    
+
     private Double quantity;
-    
+
     @Nullable
     private java.util.List<com.commercetools.importapi.models.orders.ItemState> state;
-    
+
     @Nullable
     private com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel;
-    
+
     @Nullable
     private com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel;
-    
+
     @Nullable
     private com.commercetools.importapi.models.prices.TaxRate taxRate;
-    
+
     @Nullable
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
-    public LineItemImportDraftBuilder product(@Nullable final com.commercetools.importapi.models.common.ProductKeyReference product) {
+    public LineItemImportDraftBuilder product(
+            @Nullable final com.commercetools.importapi.models.common.ProductKeyReference product) {
         this.product = product;
         return this;
     }
-    
-    public LineItemImportDraftBuilder name( final com.commercetools.importapi.models.common.LocalizedString name) {
+
+    public LineItemImportDraftBuilder name(final com.commercetools.importapi.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    public LineItemImportDraftBuilder variant( final com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant) {
+
+    public LineItemImportDraftBuilder variant(
+            final com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft variant) {
         this.variant = variant;
         return this;
     }
-    
-    public LineItemImportDraftBuilder price( final com.commercetools.importapi.models.orders.LineItemPrice price) {
+
+    public LineItemImportDraftBuilder price(final com.commercetools.importapi.models.orders.LineItemPrice price) {
         this.price = price;
         return this;
     }
-    
-    public LineItemImportDraftBuilder quantity( final Double quantity) {
+
+    public LineItemImportDraftBuilder quantity(final Double quantity) {
         this.quantity = quantity;
         return this;
     }
-    
-    public LineItemImportDraftBuilder state(@Nullable final com.commercetools.importapi.models.orders.ItemState ...state) {
+
+    public LineItemImportDraftBuilder state(
+            @Nullable final com.commercetools.importapi.models.orders.ItemState... state) {
         this.state = new ArrayList<>(Arrays.asList(state));
         return this;
     }
-    
-    public LineItemImportDraftBuilder state(@Nullable final java.util.List<com.commercetools.importapi.models.orders.ItemState> state) {
+
+    public LineItemImportDraftBuilder state(
+            @Nullable final java.util.List<com.commercetools.importapi.models.orders.ItemState> state) {
         this.state = state;
         return this;
     }
-    
-    public LineItemImportDraftBuilder supplyChannel(@Nullable final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
+
+    public LineItemImportDraftBuilder supplyChannel(
+            @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
-    
-    public LineItemImportDraftBuilder distributionChannel(@Nullable final com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel) {
+
+    public LineItemImportDraftBuilder distributionChannel(
+            @Nullable final com.commercetools.importapi.models.common.ChannelKeyReference distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
-    
-    public LineItemImportDraftBuilder taxRate(@Nullable final com.commercetools.importapi.models.prices.TaxRate taxRate) {
+
+    public LineItemImportDraftBuilder taxRate(
+            @Nullable final com.commercetools.importapi.models.prices.TaxRate taxRate) {
         this.taxRate = taxRate;
         return this;
     }
-    
-    public LineItemImportDraftBuilder shippingDetails(@Nullable final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails) {
+
+    public LineItemImportDraftBuilder shippingDetails(
+            @Nullable final com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
 
     @Nullable
-    public com.commercetools.importapi.models.common.ProductKeyReference getProduct(){
+    public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {
         return this.product;
     }
-    
-    
-    public com.commercetools.importapi.models.common.LocalizedString getName(){
+
+    public com.commercetools.importapi.models.common.LocalizedString getName() {
         return this.name;
     }
-    
-    
-    public com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft getVariant(){
+
+    public com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft getVariant() {
         return this.variant;
     }
-    
-    
-    public com.commercetools.importapi.models.orders.LineItemPrice getPrice(){
+
+    public com.commercetools.importapi.models.orders.LineItemPrice getPrice() {
         return this.price;
     }
-    
-    
-    public Double getQuantity(){
+
+    public Double getQuantity() {
         return this.quantity;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.importapi.models.orders.ItemState> getState(){
+    public java.util.List<com.commercetools.importapi.models.orders.ItemState> getState() {
         return this.state;
     }
-    
+
     @Nullable
-    public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel(){
+    public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
         return this.supplyChannel;
     }
-    
+
     @Nullable
-    public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel(){
+    public com.commercetools.importapi.models.common.ChannelKeyReference getDistributionChannel() {
         return this.distributionChannel;
     }
-    
+
     @Nullable
-    public com.commercetools.importapi.models.prices.TaxRate getTaxRate(){
+    public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
         return this.taxRate;
     }
-    
+
     @Nullable
-    public com.commercetools.importapi.models.orders.ItemShippingDetailsDraft getShippingDetails(){
+    public com.commercetools.importapi.models.orders.ItemShippingDetailsDraft getShippingDetails() {
         return this.shippingDetails;
     }
 
     public LineItemImportDraft build() {
-        return new LineItemImportDraftImpl(product, name, variant, price, quantity, state, supplyChannel, distributionChannel, taxRate, shippingDetails);
+        return new LineItemImportDraftImpl(product, name, variant, price, quantity, state, supplyChannel,
+            distributionChannel, taxRate, shippingDetails);
     }
 
     public static LineItemImportDraftBuilder of() {

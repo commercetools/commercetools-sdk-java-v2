@@ -1,24 +1,24 @@
+
 package com.commercetools.api.models.project;
 
-import com.commercetools.api.models.project.ExternalOAuth;
-import com.commercetools.api.models.project.ProjectUpdateAction;
-import com.commercetools.api.models.project.ProjectSetExternalOAuthActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.project.ExternalOAuth;
+import com.commercetools.api.models.project.ProjectSetExternalOAuthActionImpl;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProjectSetExternalOAuthActionImpl.class)
 public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
 
@@ -32,10 +32,9 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
 
     public void setExternalOAuth(final ExternalOAuth externalOAuth);
 
-    public static ProjectSetExternalOAuthAction of(){
+    public static ProjectSetExternalOAuthAction of() {
         return new ProjectSetExternalOAuthActionImpl();
     }
-    
 
     public static ProjectSetExternalOAuthAction of(final ProjectSetExternalOAuthAction template) {
         ProjectSetExternalOAuthActionImpl instance = new ProjectSetExternalOAuthActionImpl();
@@ -43,14 +42,13 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
         return instance;
     }
 
-    public static ProjectSetExternalOAuthActionBuilder builder(){
+    public static ProjectSetExternalOAuthActionBuilder builder() {
         return ProjectSetExternalOAuthActionBuilder.of();
     }
-    
-    public static ProjectSetExternalOAuthActionBuilder builder(final ProjectSetExternalOAuthAction template){
+
+    public static ProjectSetExternalOAuthActionBuilder builder(final ProjectSetExternalOAuthAction template) {
         return ProjectSetExternalOAuthActionBuilder.of(template);
     }
-    
 
     default <T> T withProjectSetExternalOAuthAction(Function<ProjectSetExternalOAuthAction, T> helper) {
         return helper.apply(this);

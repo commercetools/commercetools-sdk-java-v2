@@ -1,29 +1,28 @@
+
 package com.commercetools.api.models.product_discount;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
-import com.commercetools.api.models.product_discount.ProductDiscountChangeNameAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_discount.ProductDiscountChangeNameAction;
+import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductDiscountChangeNameActionBuilder {
 
-    
     private com.commercetools.api.models.common.LocalizedString name;
 
-    public ProductDiscountChangeNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+    public ProductDiscountChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 

@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client.utils;
 
 /**
@@ -6,6 +7,6 @@ package io.vrap.rmf.base.client.utils;
  * @param <R> the output type
  */
 @FunctionalInterface
-public interface ExceptionalFunction<T, R>  {
+public interface ExceptionalFunction<T, R> {
     R apply(T t) throws Exception;
 }

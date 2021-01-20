@@ -1,197 +1,191 @@
+
 package com.commercetools.api.models.store;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.type.CustomFields;
-import java.time.ZonedDateTime;
 import com.commercetools.api.models.store.Store;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+import com.commercetools.api.models.type.CustomFields;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StoreBuilder {
 
-    
     private String id;
-    
-    
+
     private Long version;
-    
-    
+
     private java.time.ZonedDateTime createdAt;
-    
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-    
+
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-    
-    
+
     private String key;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
-    
+
     @Nullable
     private java.util.List<String> languages;
-    
-    
+
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels;
-    
+
     @Nullable
     private java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels;
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
-    public StoreBuilder id( final String id) {
+    public StoreBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    public StoreBuilder version( final Long version) {
+
+    public StoreBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    public StoreBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+
+    public StoreBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    
-    public StoreBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+
+    public StoreBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-    
-    public StoreBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+
+    public StoreBuilder lastModifiedBy(
+            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-    
+
     public StoreBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-    
-    public StoreBuilder key( final String key) {
+
+    public StoreBuilder key(final String key) {
         this.key = key;
         return this;
     }
-    
+
     public StoreBuilder name(@Nullable final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    public StoreBuilder languages(@Nullable final String ...languages) {
+
+    public StoreBuilder languages(@Nullable final String... languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
-    
+
     public StoreBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
-    
-    public StoreBuilder distributionChannels( final com.commercetools.api.models.channel.ChannelReference ...distributionChannels) {
+
+    public StoreBuilder distributionChannels(
+            final com.commercetools.api.models.channel.ChannelReference... distributionChannels) {
         this.distributionChannels = new ArrayList<>(Arrays.asList(distributionChannels));
         return this;
     }
-    
-    public StoreBuilder distributionChannels( final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
+
+    public StoreBuilder distributionChannels(
+            final java.util.List<com.commercetools.api.models.channel.ChannelReference> distributionChannels) {
         this.distributionChannels = distributionChannels;
         return this;
     }
-    
-    public StoreBuilder supplyChannels(@Nullable final com.commercetools.api.models.channel.ChannelReference ...supplyChannels) {
+
+    public StoreBuilder supplyChannels(
+            @Nullable final com.commercetools.api.models.channel.ChannelReference... supplyChannels) {
         this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
         return this;
     }
-    
-    public StoreBuilder supplyChannels(@Nullable final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
+
+    public StoreBuilder supplyChannels(
+            @Nullable final java.util.List<com.commercetools.api.models.channel.ChannelReference> supplyChannels) {
         this.supplyChannels = supplyChannels;
         return this;
     }
-    
+
     public StoreBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.time.ZonedDateTime getCreatedAt(){
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
-    
-    
-    public String getKey(){
+
+    public String getKey() {
         return this.key;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getName(){
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
+
     @Nullable
-    public java.util.List<String> getLanguages(){
+    public java.util.List<String> getLanguages() {
         return this.languages;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels(){
+
+    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getDistributionChannels() {
         return this.distributionChannels;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels(){
+    public java.util.List<com.commercetools.api.models.channel.ChannelReference> getSupplyChannels() {
         return this.supplyChannels;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     public Store build() {
-        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages, distributionChannels, supplyChannels, custom);
+        return new StoreImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, languages,
+            distributionChannels, supplyChannels, custom);
     }
 
     public static StoreBuilder of() {

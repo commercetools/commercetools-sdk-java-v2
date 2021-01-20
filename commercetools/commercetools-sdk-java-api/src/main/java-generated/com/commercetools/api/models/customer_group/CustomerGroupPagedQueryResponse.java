@@ -1,64 +1,63 @@
+
 package com.commercetools.api.models.customer_group;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.customer_group.CustomerGroup;
 import com.commercetools.api.models.customer_group.CustomerGroupPagedQueryResponseImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupPagedQueryResponseImpl.class)
-public interface CustomerGroupPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<CustomerGroup> {
+public interface CustomerGroupPagedQueryResponse
+        extends com.commercetools.api.models.ResourcePagedQueryResponse<CustomerGroup> {
 
-    
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-    
+
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-    
-    
+
     @JsonProperty("total")
     public Long getTotal();
-    
+
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-    
+
     @NotNull
     @Valid
     @JsonProperty("results")
     public List<CustomerGroup> getResults();
 
     public void setLimit(final Long limit);
-    
+
     public void setCount(final Long count);
-    
+
     public void setTotal(final Long total);
-    
+
     public void setOffset(final Long offset);
-    
+
     @JsonIgnore
-    public void setResults(final CustomerGroup ...results);
+    public void setResults(final CustomerGroup... results);
+
     public void setResults(final List<CustomerGroup> results);
 
-    public static CustomerGroupPagedQueryResponse of(){
+    public static CustomerGroupPagedQueryResponse of() {
         return new CustomerGroupPagedQueryResponseImpl();
     }
-    
 
     public static CustomerGroupPagedQueryResponse of(final CustomerGroupPagedQueryResponse template) {
         CustomerGroupPagedQueryResponseImpl instance = new CustomerGroupPagedQueryResponseImpl();
@@ -70,14 +69,13 @@ public interface CustomerGroupPagedQueryResponse extends com.commercetools.api.m
         return instance;
     }
 
-    public static CustomerGroupPagedQueryResponseBuilder builder(){
+    public static CustomerGroupPagedQueryResponseBuilder builder() {
         return CustomerGroupPagedQueryResponseBuilder.of();
     }
-    
-    public static CustomerGroupPagedQueryResponseBuilder builder(final CustomerGroupPagedQueryResponse template){
+
+    public static CustomerGroupPagedQueryResponseBuilder builder(final CustomerGroupPagedQueryResponse template) {
         return CustomerGroupPagedQueryResponseBuilder.of(template);
     }
-    
 
     default <T> T withCustomerGroupPagedQueryResponse(Function<CustomerGroupPagedQueryResponse, T> helper) {
         return helper.apply(this);

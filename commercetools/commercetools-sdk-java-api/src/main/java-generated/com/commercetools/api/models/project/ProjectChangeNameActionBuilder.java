@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.project;
 
-import com.commercetools.api.models.project.ProjectUpdateAction;
-import com.commercetools.api.models.project.ProjectChangeNameAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.project.ProjectChangeNameAction;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProjectChangeNameActionBuilder {
 
-    
     private String name;
 
-    public ProjectChangeNameActionBuilder name( final String name) {
+    public ProjectChangeNameActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
-    
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 

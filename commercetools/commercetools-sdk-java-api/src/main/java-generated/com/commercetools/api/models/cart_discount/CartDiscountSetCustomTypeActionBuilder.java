@@ -1,43 +1,46 @@
+
 package com.commercetools.api.models.cart_discount;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeAction;
 import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CartDiscountSetCustomTypeActionBuilder {
 
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-    
+
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode fields;
 
-    public CartDiscountSetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    public CartDiscountSetCustomTypeActionBuilder type(
+            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-    
-    public CartDiscountSetCustomTypeActionBuilder fields(@Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
+
+    public CartDiscountSetCustomTypeActionBuilder fields(
+            @Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
         this.fields = fields;
         return this;
     }
 
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
         return this.type;
     }
-    
+
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getFields(){
+    public com.fasterxml.jackson.databind.JsonNode getFields() {
         return this.fields;
     }
 

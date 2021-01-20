@@ -1,45 +1,43 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.order.Parcel;
-import com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessageImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ParcelRemovedFromDeliveryMessageImpl;
+import com.commercetools.api.models.order.Parcel;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ParcelRemovedFromDeliveryMessageImpl.class)
 public interface ParcelRemovedFromDeliveryMessage extends Message {
 
-    
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();
-    
+
     @NotNull
     @Valid
     @JsonProperty("parcel")
     public Parcel getParcel();
 
     public void setDeliveryId(final String deliveryId);
-    
+
     public void setParcel(final Parcel parcel);
 
-    public static ParcelRemovedFromDeliveryMessage of(){
+    public static ParcelRemovedFromDeliveryMessage of() {
         return new ParcelRemovedFromDeliveryMessageImpl();
     }
-    
 
     public static ParcelRemovedFromDeliveryMessage of(final ParcelRemovedFromDeliveryMessage template) {
         ParcelRemovedFromDeliveryMessageImpl instance = new ParcelRemovedFromDeliveryMessageImpl();
@@ -58,14 +56,13 @@ public interface ParcelRemovedFromDeliveryMessage extends Message {
         return instance;
     }
 
-    public static ParcelRemovedFromDeliveryMessageBuilder builder(){
+    public static ParcelRemovedFromDeliveryMessageBuilder builder() {
         return ParcelRemovedFromDeliveryMessageBuilder.of();
     }
-    
-    public static ParcelRemovedFromDeliveryMessageBuilder builder(final ParcelRemovedFromDeliveryMessage template){
+
+    public static ParcelRemovedFromDeliveryMessageBuilder builder(final ParcelRemovedFromDeliveryMessage template) {
         return ParcelRemovedFromDeliveryMessageBuilder.of(template);
     }
-    
 
     default <T> T withParcelRemovedFromDeliveryMessage(Function<ParcelRemovedFromDeliveryMessage, T> helper) {
         return helper.apply(this);

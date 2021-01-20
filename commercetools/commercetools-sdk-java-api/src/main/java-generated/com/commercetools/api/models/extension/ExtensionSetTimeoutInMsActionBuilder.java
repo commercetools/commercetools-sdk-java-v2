@@ -1,16 +1,17 @@
+
 package com.commercetools.api.models.extension;
 
-import com.commercetools.api.models.extension.ExtensionUpdateAction;
-import com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction;
+import com.commercetools.api.models.extension.ExtensionUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionSetTimeoutInMsActionBuilder {
 
     @Nullable
@@ -22,7 +23,7 @@ public final class ExtensionSetTimeoutInMsActionBuilder {
     }
 
     @Nullable
-    public Integer getTimeoutInMs(){
+    public Integer getTimeoutInMs() {
         return this.timeoutInMs;
     }
 

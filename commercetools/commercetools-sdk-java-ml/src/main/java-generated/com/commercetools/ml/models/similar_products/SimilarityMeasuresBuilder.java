@@ -1,30 +1,30 @@
+
 package com.commercetools.ml.models.similar_products;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.similar_products.SimilarityMeasures;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SimilarityMeasuresBuilder {
 
     @Nullable
     private Long name;
-    
+
     @Nullable
     private Long description;
-    
+
     @Nullable
     private Long attribute;
-    
+
     @Nullable
     private Long variantCount;
-    
+
     @Nullable
     private Long price;
 
@@ -32,49 +32,49 @@ public final class SimilarityMeasuresBuilder {
         this.name = name;
         return this;
     }
-    
+
     public SimilarityMeasuresBuilder description(@Nullable final Long description) {
         this.description = description;
         return this;
     }
-    
+
     public SimilarityMeasuresBuilder attribute(@Nullable final Long attribute) {
         this.attribute = attribute;
         return this;
     }
-    
+
     public SimilarityMeasuresBuilder variantCount(@Nullable final Long variantCount) {
         this.variantCount = variantCount;
         return this;
     }
-    
+
     public SimilarityMeasuresBuilder price(@Nullable final Long price) {
         this.price = price;
         return this;
     }
 
     @Nullable
-    public Long getName(){
+    public Long getName() {
         return this.name;
     }
-    
+
     @Nullable
-    public Long getDescription(){
+    public Long getDescription() {
         return this.description;
     }
-    
+
     @Nullable
-    public Long getAttribute(){
+    public Long getAttribute() {
         return this.attribute;
     }
-    
+
     @Nullable
-    public Long getVariantCount(){
+    public Long getVariantCount() {
         return this.variantCount;
     }
-    
+
     @Nullable
-    public Long getPrice(){
+    public Long getPrice() {
         return this.price;
     }
 

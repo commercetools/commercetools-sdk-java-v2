@@ -1,41 +1,37 @@
+
 package com.commercetools.api.models.shipping_method;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.shipping_method.PriceFunction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class PriceFunctionBuilder {
 
-    
     private String currencyCode;
-    
-    
+
     private String function;
 
-    public PriceFunctionBuilder currencyCode( final String currencyCode) {
+    public PriceFunctionBuilder currencyCode(final String currencyCode) {
         this.currencyCode = currencyCode;
         return this;
     }
-    
-    public PriceFunctionBuilder function( final String function) {
+
+    public PriceFunctionBuilder function(final String function) {
         this.function = function;
         return this;
     }
 
-    
-    public String getCurrencyCode(){
+    public String getCurrencyCode() {
         return this.currencyCode;
     }
-    
-    
-    public String getFunction(){
+
+    public String getFunction() {
         return this.function;
     }
 

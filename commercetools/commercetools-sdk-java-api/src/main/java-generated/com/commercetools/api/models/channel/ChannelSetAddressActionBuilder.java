@@ -1,17 +1,18 @@
+
 package com.commercetools.api.models.channel;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.channel.ChannelSetAddressAction;
 import com.commercetools.api.models.channel.ChannelUpdateAction;
 import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.channel.ChannelSetAddressAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ChannelSetAddressActionBuilder {
 
     @Nullable
@@ -23,7 +24,7 @@ public final class ChannelSetAddressActionBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.common.Address getAddress(){
+    public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 

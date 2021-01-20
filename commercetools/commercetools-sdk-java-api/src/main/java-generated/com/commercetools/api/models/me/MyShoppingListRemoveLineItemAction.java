@@ -1,43 +1,40 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.me.MyShoppingListUpdateAction;
-import com.commercetools.api.models.me.MyShoppingListRemoveLineItemActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.me.MyShoppingListRemoveLineItemActionImpl;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListRemoveLineItemActionImpl.class)
 public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdateAction {
 
-    
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();
-    
-    
+
     @JsonProperty("quantity")
     public Long getQuantity();
 
     public void setLineItemId(final String lineItemId);
-    
+
     public void setQuantity(final Long quantity);
 
-    public static MyShoppingListRemoveLineItemAction of(){
+    public static MyShoppingListRemoveLineItemAction of() {
         return new MyShoppingListRemoveLineItemActionImpl();
     }
-    
 
     public static MyShoppingListRemoveLineItemAction of(final MyShoppingListRemoveLineItemAction template) {
         MyShoppingListRemoveLineItemActionImpl instance = new MyShoppingListRemoveLineItemActionImpl();
@@ -46,14 +43,13 @@ public interface MyShoppingListRemoveLineItemAction extends MyShoppingListUpdate
         return instance;
     }
 
-    public static MyShoppingListRemoveLineItemActionBuilder builder(){
+    public static MyShoppingListRemoveLineItemActionBuilder builder() {
         return MyShoppingListRemoveLineItemActionBuilder.of();
     }
-    
-    public static MyShoppingListRemoveLineItemActionBuilder builder(final MyShoppingListRemoveLineItemAction template){
+
+    public static MyShoppingListRemoveLineItemActionBuilder builder(final MyShoppingListRemoveLineItemAction template) {
         return MyShoppingListRemoveLineItemActionBuilder.of(template);
     }
-    
 
     default <T> T withMyShoppingListRemoveLineItemAction(Function<MyShoppingListRemoveLineItemAction, T> helper) {
         return helper.apply(this);

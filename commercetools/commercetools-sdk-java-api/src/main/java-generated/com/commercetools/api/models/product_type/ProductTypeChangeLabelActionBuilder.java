@@ -1,42 +1,39 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeLabelAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product_type.ProductTypeChangeLabelAction;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductTypeChangeLabelActionBuilder {
 
-    
     private String attributeName;
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString label;
 
-    public ProductTypeChangeLabelActionBuilder attributeName( final String attributeName) {
+    public ProductTypeChangeLabelActionBuilder attributeName(final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-    
-    public ProductTypeChangeLabelActionBuilder label( final com.commercetools.api.models.common.LocalizedString label) {
+
+    public ProductTypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
 
-    
-    public String getAttributeName(){
+    public String getAttributeName() {
         return this.attributeName;
     }
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getLabel(){
+
+    public com.commercetools.api.models.common.LocalizedString getLabel() {
         return this.label;
     }
 

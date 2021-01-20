@@ -1,16 +1,17 @@
+
 package com.commercetools.api.models.order_edit;
 
-import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
-import com.commercetools.api.models.order_edit.OrderEditSetKeyAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.order_edit.OrderEditSetKeyAction;
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderEditSetKeyActionBuilder {
 
     @Nullable
@@ -22,7 +23,7 @@ public final class OrderEditSetKeyActionBuilder {
     }
 
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
 

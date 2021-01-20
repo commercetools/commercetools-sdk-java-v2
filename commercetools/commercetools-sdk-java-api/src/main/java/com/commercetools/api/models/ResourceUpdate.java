@@ -1,3 +1,4 @@
+
 package com.commercetools.api.models;
 
 import java.util.List;

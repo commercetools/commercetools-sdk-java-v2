@@ -1,81 +1,72 @@
+
 package com.commercetools.importapi.models.importsinks;
 
-import com.commercetools.importapi.models.common.ImportResourceType;
 import java.time.ZonedDateTime;
-import com.commercetools.importapi.models.importsinks.ImportSink;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.common.ImportResourceType;
+import com.commercetools.importapi.models.importsinks.ImportSink;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImportSinkBuilder {
 
-    
     private String key;
-    
-    
+
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
-    
-    
+
     private Long version;
-    
-    
+
     private java.time.ZonedDateTime createdAt;
-    
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
 
-    public ImportSinkBuilder key( final String key) {
+    public ImportSinkBuilder key(final String key) {
         this.key = key;
         return this;
     }
-    
-    public ImportSinkBuilder resourceType( final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
+
+    public ImportSinkBuilder resourceType(
+            final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
         this.resourceType = resourceType;
         return this;
     }
-    
-    public ImportSinkBuilder version( final Long version) {
+
+    public ImportSinkBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    public ImportSinkBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+
+    public ImportSinkBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    
-    public ImportSinkBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+
+    public ImportSinkBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
 
-    
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
-    
-    public com.commercetools.importapi.models.common.ImportResourceType getResourceType(){
+
+    public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
         return this.resourceType;
     }
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.time.ZonedDateTime getCreatedAt(){
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 

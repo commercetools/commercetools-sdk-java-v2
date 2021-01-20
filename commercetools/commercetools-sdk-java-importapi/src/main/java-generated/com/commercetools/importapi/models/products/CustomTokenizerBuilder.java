@@ -1,33 +1,32 @@
+
 package com.commercetools.importapi.models.products;
 
-import com.commercetools.importapi.models.products.SuggestTokenizer;
-import com.commercetools.importapi.models.products.CustomTokenizer;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.products.CustomTokenizer;
+import com.commercetools.importapi.models.products.SuggestTokenizer;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomTokenizerBuilder {
 
-    
     private java.util.List<String> inputs;
 
-    public CustomTokenizerBuilder inputs( final String ...inputs) {
+    public CustomTokenizerBuilder inputs(final String... inputs) {
         this.inputs = new ArrayList<>(Arrays.asList(inputs));
         return this;
     }
-    
-    public CustomTokenizerBuilder inputs( final java.util.List<String> inputs) {
+
+    public CustomTokenizerBuilder inputs(final java.util.List<String> inputs) {
         this.inputs = inputs;
         return this;
     }
 
-    
-    public java.util.List<String> getInputs(){
+    public java.util.List<String> getInputs() {
         return this.inputs;
     }
 

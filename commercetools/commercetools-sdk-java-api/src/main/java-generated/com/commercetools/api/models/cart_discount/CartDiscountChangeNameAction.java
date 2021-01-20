@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.cart_discount;
 
-import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.cart_discount.CartDiscountChangeNameActionImpl;
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.common.LocalizedString;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeNameActionImpl.class)
 public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
 
-    
     @NotNull
     @Valid
     @JsonProperty("name")
@@ -30,10 +29,9 @@ public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
 
     public void setName(final LocalizedString name);
 
-    public static CartDiscountChangeNameAction of(){
+    public static CartDiscountChangeNameAction of() {
         return new CartDiscountChangeNameActionImpl();
     }
-    
 
     public static CartDiscountChangeNameAction of(final CartDiscountChangeNameAction template) {
         CartDiscountChangeNameActionImpl instance = new CartDiscountChangeNameActionImpl();
@@ -41,14 +39,13 @@ public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
         return instance;
     }
 
-    public static CartDiscountChangeNameActionBuilder builder(){
+    public static CartDiscountChangeNameActionBuilder builder() {
         return CartDiscountChangeNameActionBuilder.of();
     }
-    
-    public static CartDiscountChangeNameActionBuilder builder(final CartDiscountChangeNameAction template){
+
+    public static CartDiscountChangeNameActionBuilder builder(final CartDiscountChangeNameAction template) {
         return CartDiscountChangeNameActionBuilder.of(template);
     }
-    
 
     default <T> T withCartDiscountChangeNameAction(Function<CartDiscountChangeNameAction, T> helper) {
         return helper.apply(this);

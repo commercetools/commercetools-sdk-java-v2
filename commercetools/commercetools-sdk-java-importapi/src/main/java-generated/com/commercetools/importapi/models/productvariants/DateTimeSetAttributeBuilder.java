@@ -1,47 +1,45 @@
+
 package com.commercetools.importapi.models.productvariants;
 
-import com.commercetools.importapi.models.productvariants.Attribute;
 import java.time.ZonedDateTime;
-import com.commercetools.importapi.models.productvariants.DateTimeSetAttribute;
-import javax.annotation.Nullable;
 import java.util.*;
-import java.time.ZonedDateTime;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.DateTimeSetAttribute;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class DateTimeSetAttributeBuilder {
 
     @Nullable
     private String name;
-    
-    
+
     private java.util.List<java.time.ZonedDateTime> value;
 
     public DateTimeSetAttributeBuilder name(@Nullable final String name) {
         this.name = name;
         return this;
     }
-    
-    public DateTimeSetAttributeBuilder value( final java.time.ZonedDateTime ...value) {
+
+    public DateTimeSetAttributeBuilder value(final java.time.ZonedDateTime... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
         return this;
     }
-    
-    public DateTimeSetAttributeBuilder value( final java.util.List<java.time.ZonedDateTime> value) {
+
+    public DateTimeSetAttributeBuilder value(final java.util.List<java.time.ZonedDateTime> value) {
         this.value = value;
         return this;
     }
 
     @Nullable
-    public String getName(){
+    public String getName() {
         return this.name;
     }
-    
-    
-    public java.util.List<java.time.ZonedDateTime> getValue(){
+
+    public java.util.List<java.time.ZonedDateTime> getValue() {
         return this.value;
     }
 

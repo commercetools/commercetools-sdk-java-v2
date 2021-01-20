@@ -1,23 +1,23 @@
+
 package com.commercetools.ml.models.missing_data;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.ml.models.missing_data.MissingImagesCount;
 import com.commercetools.ml.models.missing_data.MissingImagesProductLevelImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = MissingImagesProductLevelImpl.class)
 public interface MissingImagesProductLevel extends MissingImagesCount {
 
@@ -27,6 +27,7 @@ public interface MissingImagesProductLevel extends MissingImagesCount {
     @NotNull
     @JsonProperty("missingImages")
     public Long getMissingImages();
+
     /**
     *  <p>Number of products scanned.</p>
     */
@@ -35,13 +36,12 @@ public interface MissingImagesProductLevel extends MissingImagesCount {
     public Long getTotal();
 
     public void setMissingImages(final Long missingImages);
-    
+
     public void setTotal(final Long total);
 
-    public static MissingImagesProductLevel of(){
+    public static MissingImagesProductLevel of() {
         return new MissingImagesProductLevelImpl();
     }
-    
 
     public static MissingImagesProductLevel of(final MissingImagesProductLevel template) {
         MissingImagesProductLevelImpl instance = new MissingImagesProductLevelImpl();
@@ -50,14 +50,13 @@ public interface MissingImagesProductLevel extends MissingImagesCount {
         return instance;
     }
 
-    public static MissingImagesProductLevelBuilder builder(){
+    public static MissingImagesProductLevelBuilder builder() {
         return MissingImagesProductLevelBuilder.of();
     }
-    
-    public static MissingImagesProductLevelBuilder builder(final MissingImagesProductLevel template){
+
+    public static MissingImagesProductLevelBuilder builder(final MissingImagesProductLevel template) {
         return MissingImagesProductLevelBuilder.of(template);
     }
-    
 
     default <T> T withMissingImagesProductLevel(Function<MissingImagesProductLevel, T> helper) {
         return helper.apply(this);

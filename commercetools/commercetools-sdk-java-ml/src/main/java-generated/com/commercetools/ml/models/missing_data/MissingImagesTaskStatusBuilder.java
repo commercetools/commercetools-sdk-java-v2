@@ -1,56 +1,51 @@
+
 package com.commercetools.ml.models.missing_data;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.common.TaskStatusEnum;
 import com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult;
-import java.time.ZonedDateTime;
 import com.commercetools.ml.models.missing_data.MissingImagesTaskStatus;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MissingImagesTaskStatusBuilder {
 
-    
     private com.commercetools.ml.models.common.TaskStatusEnum state;
-    
-    
+
     private java.time.ZonedDateTime expires;
-    
-    
+
     private com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult result;
 
-    public MissingImagesTaskStatusBuilder state( final com.commercetools.ml.models.common.TaskStatusEnum state) {
+    public MissingImagesTaskStatusBuilder state(final com.commercetools.ml.models.common.TaskStatusEnum state) {
         this.state = state;
         return this;
     }
-    
-    public MissingImagesTaskStatusBuilder expires( final java.time.ZonedDateTime expires) {
+
+    public MissingImagesTaskStatusBuilder expires(final java.time.ZonedDateTime expires) {
         this.expires = expires;
         return this;
     }
-    
-    public MissingImagesTaskStatusBuilder result( final com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult result) {
+
+    public MissingImagesTaskStatusBuilder result(
+            final com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult result) {
         this.result = result;
         return this;
     }
 
-    
-    public com.commercetools.ml.models.common.TaskStatusEnum getState(){
+    public com.commercetools.ml.models.common.TaskStatusEnum getState() {
         return this.state;
     }
-    
-    
-    public java.time.ZonedDateTime getExpires(){
+
+    public java.time.ZonedDateTime getExpires() {
         return this.expires;
     }
-    
-    
-    public com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult getResult(){
+
+    public com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult getResult() {
         return this.result;
     }
 

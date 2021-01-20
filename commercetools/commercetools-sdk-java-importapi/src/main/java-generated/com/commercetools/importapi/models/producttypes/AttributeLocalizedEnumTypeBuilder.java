@@ -1,34 +1,35 @@
+
 package com.commercetools.importapi.models.producttypes;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumType;
 import com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue;
 import com.commercetools.importapi.models.producttypes.AttributeType;
-import com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumType;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AttributeLocalizedEnumTypeBuilder {
 
-    
     private java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values;
 
-    public AttributeLocalizedEnumTypeBuilder values( final com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue ...values) {
+    public AttributeLocalizedEnumTypeBuilder values(
+            final com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue... values) {
         this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
-    
-    public AttributeLocalizedEnumTypeBuilder values( final java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values) {
+
+    public AttributeLocalizedEnumTypeBuilder values(
+            final java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values) {
         this.values = values;
         return this;
     }
 
-    
-    public java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> getValues(){
+    public java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> getValues() {
         return this.values;
     }
 

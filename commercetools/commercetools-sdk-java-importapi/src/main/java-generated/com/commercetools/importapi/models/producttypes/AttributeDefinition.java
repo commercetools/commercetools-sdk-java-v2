@@ -1,84 +1,79 @@
+
 package com.commercetools.importapi.models.producttypes;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.producttypes.AttributeConstraintEnum;
+import com.commercetools.importapi.models.producttypes.AttributeDefinitionImpl;
 import com.commercetools.importapi.models.producttypes.AttributeType;
 import com.commercetools.importapi.models.producttypes.TextInputHint;
-import com.commercetools.importapi.models.producttypes.AttributeDefinitionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AttributeDefinitionImpl.class)
-public interface AttributeDefinition  {
+public interface AttributeDefinition {
 
-    
     @NotNull
     @Valid
     @JsonProperty("type")
     public AttributeType getType();
-    
+
     @NotNull
     @JsonProperty("name")
     public String getName();
-    
+
     @NotNull
     @Valid
     @JsonProperty("label")
     public LocalizedString getLabel();
-    
+
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
-    
-    
+
     @JsonProperty("attributeConstraint")
     public AttributeConstraintEnum getAttributeConstraint();
-    
+
     @Valid
     @JsonProperty("inputTip")
     public LocalizedString getInputTip();
-    
-    
+
     @JsonProperty("inputHint")
     public TextInputHint getInputHint();
-    
-    
+
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
 
     public void setType(final AttributeType type);
-    
+
     public void setName(final String name);
-    
+
     public void setLabel(final LocalizedString label);
-    
+
     public void setIsRequired(final Boolean isRequired);
-    
+
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
-    
+
     public void setInputTip(final LocalizedString inputTip);
-    
+
     public void setInputHint(final TextInputHint inputHint);
-    
+
     public void setIsSearchable(final Boolean isSearchable);
 
-    public static AttributeDefinition of(){
+    public static AttributeDefinition of() {
         return new AttributeDefinitionImpl();
     }
-    
 
     public static AttributeDefinition of(final AttributeDefinition template) {
         AttributeDefinitionImpl instance = new AttributeDefinitionImpl();
@@ -93,14 +88,13 @@ public interface AttributeDefinition  {
         return instance;
     }
 
-    public static AttributeDefinitionBuilder builder(){
+    public static AttributeDefinitionBuilder builder() {
         return AttributeDefinitionBuilder.of();
     }
-    
-    public static AttributeDefinitionBuilder builder(final AttributeDefinition template){
+
+    public static AttributeDefinitionBuilder builder(final AttributeDefinition template) {
         return AttributeDefinitionBuilder.of(template);
     }
-    
 
     default <T> T withAttributeDefinition(Function<AttributeDefinition, T> helper) {
         return helper.apply(this);

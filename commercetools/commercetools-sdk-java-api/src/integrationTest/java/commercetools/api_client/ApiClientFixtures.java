@@ -1,6 +1,7 @@
+
 package commercetools.api_client;
 
-
+import java.util.function.Consumer;
 
 import com.commercetools.api.models.api_client.ApiClient;
 import com.commercetools.api.models.api_client.ApiClientDraft;
@@ -8,8 +9,6 @@ import com.commercetools.api.models.api_client.ApiClientDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;
-
-import java.util.function.Consumer;
 
 public class ApiClientFixtures {
 
@@ -20,15 +19,11 @@ public class ApiClientFixtures {
     }
 
     public static ApiClient createApiClient() {
-        ApiClientDraft apiClientDraft = ApiClientDraftBuilder.of()
-                .name(CommercetoolsTestUtils.randomString())
-                .scope("manage_project:" + CommercetoolsTestUtils.getProjectKey())
-                .build();
+        ApiClientDraft apiClientDraft = ApiClientDraftBuilder.of().name(CommercetoolsTestUtils.randomString()).scope(
+            "manage_project:" + CommercetoolsTestUtils.getProjectKey()).build();
 
-        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot()
-                .apiClients()
-                .post(apiClientDraft)
-                .executeBlocking().getBody();
+        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot().apiClients().post(
+            apiClientDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(apiClient);
 
@@ -36,11 +31,8 @@ public class ApiClientFixtures {
     }
 
     public static ApiClient deleteApiClient(final String id) {
-        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot()
-                .apiClients()
-                .withId(id)
-                .delete()
-                .executeBlocking().getBody();
+        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot().apiClients().withId(
+            id).delete().executeBlocking().getBody();
 
         Assert.assertNotNull(apiClient);
         Assert.assertNotNull(apiClient.getId(), id);

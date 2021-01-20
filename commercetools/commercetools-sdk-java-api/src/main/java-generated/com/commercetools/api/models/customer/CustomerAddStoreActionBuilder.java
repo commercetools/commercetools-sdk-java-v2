@@ -1,29 +1,28 @@
+
 package com.commercetools.api.models.customer;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.customer.CustomerAddStoreAction;
 import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
-import com.commercetools.api.models.customer.CustomerAddStoreAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomerAddStoreActionBuilder {
 
-    
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
-    public CustomerAddStoreActionBuilder store( final com.commercetools.api.models.store.StoreResourceIdentifier store) {
+    public CustomerAddStoreActionBuilder store(final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
         return this;
     }
 
-    
-    public com.commercetools.api.models.store.StoreResourceIdentifier getStore(){
+    public com.commercetools.api.models.store.StoreResourceIdentifier getStore() {
         return this.store;
     }
 

@@ -1,33 +1,32 @@
+
 package com.commercetools.api.models.cart;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ShippingMethodState {
 
-    
     ShippingMethodState DOES_NOT_MATCH_CART = ShippingMethodStateEnum.DOES_NOT_MATCH_CART;
-    
+
     ShippingMethodState MATCHES_CART = ShippingMethodStateEnum.MATCHES_CART;
-    
+
     enum ShippingMethodStateEnum implements ShippingMethodState {
         DOES_NOT_MATCH_CART("DoesNotMatchCart"),
-        
+
         MATCHES_CART("MatchesCart");
         private final String jsonName;
 
         private ShippingMethodStateEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
+
         public String getJsonName() {
             return jsonName;
         }
@@ -35,6 +34,7 @@ public interface ShippingMethodState {
 
     @JsonValue
     String getJsonName();
+
     String name();
 
     @JsonCreator
@@ -55,7 +55,7 @@ public interface ShippingMethodState {
     public static Optional<ShippingMethodState> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-    
+
     public static ShippingMethodState[] values() {
         return ShippingMethodStateEnum.values();
     }

@@ -1,25 +1,25 @@
+
 package com.commercetools.ml.models.image_search_config;
 
-import com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction;
-import com.commercetools.ml.models.image_search_config.ImageSearchConfigRequestImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigRequestImpl;
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ImageSearchConfigRequestImpl.class)
-public interface ImageSearchConfigRequest  {
+public interface ImageSearchConfigRequest {
 
     /**
     *  <p>The list of update actions to be performed on the project.</p>
@@ -30,13 +30,13 @@ public interface ImageSearchConfigRequest  {
     public List<ImageSearchConfigUpdateAction> getActions();
 
     @JsonIgnore
-    public void setActions(final ImageSearchConfigUpdateAction ...actions);
+    public void setActions(final ImageSearchConfigUpdateAction... actions);
+
     public void setActions(final List<ImageSearchConfigUpdateAction> actions);
 
-    public static ImageSearchConfigRequest of(){
+    public static ImageSearchConfigRequest of() {
         return new ImageSearchConfigRequestImpl();
     }
-    
 
     public static ImageSearchConfigRequest of(final ImageSearchConfigRequest template) {
         ImageSearchConfigRequestImpl instance = new ImageSearchConfigRequestImpl();
@@ -44,14 +44,13 @@ public interface ImageSearchConfigRequest  {
         return instance;
     }
 
-    public static ImageSearchConfigRequestBuilder builder(){
+    public static ImageSearchConfigRequestBuilder builder() {
         return ImageSearchConfigRequestBuilder.of();
     }
-    
-    public static ImageSearchConfigRequestBuilder builder(final ImageSearchConfigRequest template){
+
+    public static ImageSearchConfigRequestBuilder builder(final ImageSearchConfigRequest template) {
         return ImageSearchConfigRequestBuilder.of(template);
     }
-    
 
     default <T> T withImageSearchConfigRequest(Function<ImageSearchConfigRequest, T> helper) {
         return helper.apply(this);

@@ -1,60 +1,56 @@
+
 package com.commercetools.importapi.models.orders;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.common.Money;
 import com.commercetools.importapi.models.orders.TaxPortion;
 import com.commercetools.importapi.models.orders.TaxedPrice;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TaxedPriceBuilder {
 
-    
     private com.commercetools.importapi.models.common.Money totalNet;
-    
-    
+
     private com.commercetools.importapi.models.common.Money totalGross;
-    
-    
+
     private java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions;
 
-    public TaxedPriceBuilder totalNet( final com.commercetools.importapi.models.common.Money totalNet) {
+    public TaxedPriceBuilder totalNet(final com.commercetools.importapi.models.common.Money totalNet) {
         this.totalNet = totalNet;
         return this;
     }
-    
-    public TaxedPriceBuilder totalGross( final com.commercetools.importapi.models.common.Money totalGross) {
+
+    public TaxedPriceBuilder totalGross(final com.commercetools.importapi.models.common.Money totalGross) {
         this.totalGross = totalGross;
         return this;
     }
-    
-    public TaxedPriceBuilder taxPortions( final com.commercetools.importapi.models.orders.TaxPortion ...taxPortions) {
+
+    public TaxedPriceBuilder taxPortions(final com.commercetools.importapi.models.orders.TaxPortion... taxPortions) {
         this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
         return this;
     }
-    
-    public TaxedPriceBuilder taxPortions( final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
+
+    public TaxedPriceBuilder taxPortions(
+            final java.util.List<com.commercetools.importapi.models.orders.TaxPortion> taxPortions) {
         this.taxPortions = taxPortions;
         return this;
     }
 
-    
-    public com.commercetools.importapi.models.common.Money getTotalNet(){
+    public com.commercetools.importapi.models.common.Money getTotalNet() {
         return this.totalNet;
     }
-    
-    
-    public com.commercetools.importapi.models.common.Money getTotalGross(){
+
+    public com.commercetools.importapi.models.common.Money getTotalGross() {
         return this.totalGross;
     }
-    
-    
-    public java.util.List<com.commercetools.importapi.models.orders.TaxPortion> getTaxPortions(){
+
+    public java.util.List<com.commercetools.importapi.models.orders.TaxPortion> getTaxPortions() {
         return this.taxPortions;
     }
 

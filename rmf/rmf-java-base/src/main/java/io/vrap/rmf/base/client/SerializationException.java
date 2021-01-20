@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client;
 
 public class SerializationException extends RuntimeException {

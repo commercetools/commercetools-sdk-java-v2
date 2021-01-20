@@ -1,105 +1,98 @@
+
 package com.commercetools.api.models.product;
+
+import java.time.*;
+import java.util.*;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.PriceDraft;
 import com.commercetools.api.models.product.ProductUpdateAction;
-import io.vrap.rmf.base.client.utils.Generated;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductChangePriceActionImpl implements ProductChangePriceAction {
 
     private String action;
-    
+
     private String priceId;
-    
+
     private com.commercetools.api.models.common.PriceDraft price;
-    
+
     private Boolean staged;
 
     @JsonCreator
-    ProductChangePriceActionImpl(@JsonProperty("priceId") final String priceId, @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price, @JsonProperty("staged") final Boolean staged) {
+    ProductChangePriceActionImpl(@JsonProperty("priceId") final String priceId,
+            @JsonProperty("price") final com.commercetools.api.models.common.PriceDraft price,
+            @JsonProperty("staged") final Boolean staged) {
         this.priceId = priceId;
         this.price = price;
         this.staged = staged;
         this.action = "changePrice";
     }
+
     public ProductChangePriceActionImpl() {
         this.action = "changePrice";
     }
 
-    
-    public String getAction(){
+    public String getAction() {
         return this.action;
     }
-    
+
     /**
     *  <p>ID of the <a href="#price">Price</a></p>
     */
-    public String getPriceId(){
+    public String getPriceId() {
         return this.priceId;
     }
-    
-    
-    public com.commercetools.api.models.common.PriceDraft getPrice(){
+
+    public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
-    
-    
-    public Boolean getStaged(){
+
+    public Boolean getStaged() {
         return this.staged;
     }
 
-    public void setPriceId(final String priceId){
+    public void setPriceId(final String priceId) {
         this.priceId = priceId;
     }
-    
-    public void setPrice(final com.commercetools.api.models.common.PriceDraft price){
+
+    public void setPrice(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
     }
-    
-    public void setStaged(final Boolean staged){
+
+    public void setStaged(final Boolean staged) {
         this.staged = staged;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         ProductChangePriceActionImpl that = (ProductChangePriceActionImpl) o;
-    
-        return new EqualsBuilder()
-                .append(action, that.action)
-                .append(priceId, that.priceId)
-                .append(price, that.price)
-                .append(staged, that.staged)
-                .isEquals();
+
+        return new EqualsBuilder().append(action, that.action).append(priceId, that.priceId).append(price,
+            that.price).append(staged, that.staged).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(action)
-            .append(priceId)
-            .append(price)
-            .append(staged)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(priceId).append(price).append(staged).toHashCode();
     }
 
 }

@@ -1,15 +1,16 @@
+
 package io.vrap.rmf.base.client;
 
 public class TokenIntrospection {
-    
+
     private boolean active;
-    
+
     private String scope;
-    
+
     private Long exp;
 
     public TokenIntrospection() {
-        
+
     }
 
     public boolean isActive() {

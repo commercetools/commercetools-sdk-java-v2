@@ -1,45 +1,43 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.state.StateReference;
-import com.commercetools.api.models.message.PaymentStatusStateTransitionMessageImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.PaymentStatusStateTransitionMessageImpl;
+import com.commercetools.api.models.state.StateReference;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PaymentStatusStateTransitionMessageImpl.class)
 public interface PaymentStatusStateTransitionMessage extends Message {
 
-    
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateReference getState();
-    
+
     @NotNull
     @JsonProperty("force")
     public Boolean getForce();
 
     public void setState(final StateReference state);
-    
+
     public void setForce(final Boolean force);
 
-    public static PaymentStatusStateTransitionMessage of(){
+    public static PaymentStatusStateTransitionMessage of() {
         return new PaymentStatusStateTransitionMessageImpl();
     }
-    
 
     public static PaymentStatusStateTransitionMessage of(final PaymentStatusStateTransitionMessage template) {
         PaymentStatusStateTransitionMessageImpl instance = new PaymentStatusStateTransitionMessageImpl();
@@ -58,14 +56,14 @@ public interface PaymentStatusStateTransitionMessage extends Message {
         return instance;
     }
 
-    public static PaymentStatusStateTransitionMessageBuilder builder(){
+    public static PaymentStatusStateTransitionMessageBuilder builder() {
         return PaymentStatusStateTransitionMessageBuilder.of();
     }
-    
-    public static PaymentStatusStateTransitionMessageBuilder builder(final PaymentStatusStateTransitionMessage template){
+
+    public static PaymentStatusStateTransitionMessageBuilder builder(
+            final PaymentStatusStateTransitionMessage template) {
         return PaymentStatusStateTransitionMessageBuilder.of(template);
     }
-    
 
     default <T> T withPaymentStatusStateTransitionMessage(Function<PaymentStatusStateTransitionMessage, T> helper) {
         return helper.apply(this);

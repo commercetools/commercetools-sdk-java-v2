@@ -1,25 +1,25 @@
+
 package com.commercetools.api.models.product;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.time.*;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FacetResultsImpl implements FacetResults {
 
     private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
@@ -28,11 +28,11 @@ public final class FacetResultsImpl implements FacetResults {
     FacetResultsImpl(@JsonProperty("values") final Map<String, com.fasterxml.jackson.databind.JsonNode> values) {
         this.values = values;
     }
+
     public FacetResultsImpl() {
     }
 
-    
-    public Map<String,com.fasterxml.jackson.databind.JsonNode> values() {
+    public Map<String, com.fasterxml.jackson.databind.JsonNode> values() {
         return values;
     }
 
@@ -45,22 +45,20 @@ public final class FacetResultsImpl implements FacetResults {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         FacetResultsImpl that = (FacetResultsImpl) o;
-    
-        return new EqualsBuilder()
-                .append(values, that.values)
-                .isEquals();
+
+        return new EqualsBuilder().append(values, that.values).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(values)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(values).toHashCode();
     }
 
 }

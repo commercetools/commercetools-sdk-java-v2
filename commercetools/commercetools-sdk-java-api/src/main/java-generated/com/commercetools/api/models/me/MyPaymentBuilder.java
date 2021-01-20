@@ -1,133 +1,127 @@
+
 package com.commercetools.api.models.me;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.me.MyPayment;
 import com.commercetools.api.models.payment.PaymentMethodInfo;
 import com.commercetools.api.models.payment.Transaction;
 import com.commercetools.api.models.type.CustomFields;
-import com.commercetools.api.models.me.MyPayment;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyPaymentBuilder {
 
-    
     private String id;
-    
-    
+
     private Long version;
-    
+
     @Nullable
     private com.commercetools.api.models.customer.CustomerReference customer;
-    
+
     @Nullable
     private String anonymousId;
-    
-    
+
     private com.commercetools.api.models.common.TypedMoney amountPlanned;
-    
-    
+
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
-    
-    
+
     private java.util.List<com.commercetools.api.models.payment.Transaction> transactions;
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
-    public MyPaymentBuilder id( final String id) {
+    public MyPaymentBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    public MyPaymentBuilder version( final Long version) {
+
+    public MyPaymentBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
+
     public MyPaymentBuilder customer(@Nullable final com.commercetools.api.models.customer.CustomerReference customer) {
         this.customer = customer;
         return this;
     }
-    
+
     public MyPaymentBuilder anonymousId(@Nullable final String anonymousId) {
         this.anonymousId = anonymousId;
         return this;
     }
-    
-    public MyPaymentBuilder amountPlanned( final com.commercetools.api.models.common.TypedMoney amountPlanned) {
+
+    public MyPaymentBuilder amountPlanned(final com.commercetools.api.models.common.TypedMoney amountPlanned) {
         this.amountPlanned = amountPlanned;
         return this;
     }
-    
-    public MyPaymentBuilder paymentMethodInfo( final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
+
+    public MyPaymentBuilder paymentMethodInfo(
+            final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
         return this;
     }
-    
-    public MyPaymentBuilder transactions( final com.commercetools.api.models.payment.Transaction ...transactions) {
+
+    public MyPaymentBuilder transactions(final com.commercetools.api.models.payment.Transaction... transactions) {
         this.transactions = new ArrayList<>(Arrays.asList(transactions));
         return this;
     }
-    
-    public MyPaymentBuilder transactions( final java.util.List<com.commercetools.api.models.payment.Transaction> transactions) {
+
+    public MyPaymentBuilder transactions(
+            final java.util.List<com.commercetools.api.models.payment.Transaction> transactions) {
         this.transactions = transactions;
         return this;
     }
-    
+
     public MyPaymentBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.customer.CustomerReference getCustomer(){
+    public com.commercetools.api.models.customer.CustomerReference getCustomer() {
         return this.customer;
     }
-    
+
     @Nullable
-    public String getAnonymousId(){
+    public String getAnonymousId() {
         return this.anonymousId;
     }
-    
-    
-    public com.commercetools.api.models.common.TypedMoney getAmountPlanned(){
+
+    public com.commercetools.api.models.common.TypedMoney getAmountPlanned() {
         return this.amountPlanned;
     }
-    
-    
-    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
+
+    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions(){
+
+    public java.util.List<com.commercetools.api.models.payment.Transaction> getTransactions() {
         return this.transactions;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom(){
+    public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
     }
 
     public MyPayment build() {
-        return new MyPaymentImpl(id, version, customer, anonymousId, amountPlanned, paymentMethodInfo, transactions, custom);
+        return new MyPaymentImpl(id, version, customer, anonymousId, amountPlanned, paymentMethodInfo, transactions,
+            custom);
     }
 
     public static MyPaymentBuilder of() {

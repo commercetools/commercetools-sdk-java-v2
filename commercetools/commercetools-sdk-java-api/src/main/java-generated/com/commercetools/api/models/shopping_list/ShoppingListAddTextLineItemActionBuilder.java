@@ -1,83 +1,84 @@
+
 package com.commercetools.api.models.shopping_list;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shopping_list.ShoppingListAddTextLineItemAction;
 import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
 import com.commercetools.api.models.type.CustomFieldsDraft;
-import java.time.ZonedDateTime;
-import com.commercetools.api.models.shopping_list.ShoppingListAddTextLineItemAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ShoppingListAddTextLineItemActionBuilder {
 
-    
     private com.commercetools.api.models.common.LocalizedString name;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
-    
+
     @Nullable
     private Long quantity;
-    
+
     @Nullable
     private java.time.ZonedDateTime addedAt;
-    
+
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    public ShoppingListAddTextLineItemActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+    public ShoppingListAddTextLineItemActionBuilder name(
+            final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-    
-    public ShoppingListAddTextLineItemActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
+
+    public ShoppingListAddTextLineItemActionBuilder description(
+            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
-    
+
     public ShoppingListAddTextLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-    
+
     public ShoppingListAddTextLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
-    
-    public ShoppingListAddTextLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+
+    public ShoppingListAddTextLineItemActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
 
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription(){
+    public com.commercetools.api.models.common.LocalizedString getDescription() {
         return this.description;
     }
-    
+
     @Nullable
-    public Long getQuantity(){
+    public Long getQuantity() {
         return this.quantity;
     }
-    
+
     @Nullable
-    public java.time.ZonedDateTime getAddedAt(){
+    public java.time.ZonedDateTime getAddedAt() {
         return this.addedAt;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
         return this.custom;
     }
 

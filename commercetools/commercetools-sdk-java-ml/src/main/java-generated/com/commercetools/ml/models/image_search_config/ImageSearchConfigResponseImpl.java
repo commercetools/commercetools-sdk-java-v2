@@ -1,80 +1,78 @@
+
 package com.commercetools.ml.models.image_search_config;
 
-import com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus;
+import java.time.*;
 import java.time.ZonedDateTime;
-import io.vrap.rmf.base.client.utils.Generated;
+import java.util.*;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
 
+import com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
+
+import io.vrap.rmf.base.client.utils.Generated;
+
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImageSearchConfigResponseImpl implements ImageSearchConfigResponse {
 
     private com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status;
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
 
     @JsonCreator
-    ImageSearchConfigResponseImpl(@JsonProperty("status") final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status, @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
+    ImageSearchConfigResponseImpl(
+            @JsonProperty("status") final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status,
+            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
         this.status = status;
         this.lastModifiedAt = lastModifiedAt;
     }
+
     public ImageSearchConfigResponseImpl() {
     }
 
     /**
     *  <p>The image search activation status.</p>
     */
-    public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus(){
+    public com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus getStatus() {
         return this.status;
     }
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
 
-    public void setStatus(final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status){
+    public void setStatus(final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
         this.status = status;
     }
-    
-    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt){
+
+    public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-    
-        if (o == null || getClass() != o.getClass()) return false;
-    
+        if (this == o)
+            return true;
+
+        if (o == null || getClass() != o.getClass())
+            return false;
+
         ImageSearchConfigResponseImpl that = (ImageSearchConfigResponseImpl) o;
-    
-        return new EqualsBuilder()
-                .append(status, that.status)
-                .append(lastModifiedAt, that.lastModifiedAt)
-                .isEquals();
+
+        return new EqualsBuilder().append(status, that.status).append(lastModifiedAt, that.lastModifiedAt).isEquals();
     }
-    
+
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37)
-            .append(status)
-            .append(lastModifiedAt)
-            .toHashCode();
+        return new HashCodeBuilder(17, 37).append(status).append(lastModifiedAt).toHashCode();
     }
 
 }

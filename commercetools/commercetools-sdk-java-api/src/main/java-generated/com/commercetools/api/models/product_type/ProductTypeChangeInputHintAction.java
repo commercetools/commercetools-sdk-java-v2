@@ -1,44 +1,42 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.TextInputHint;
-import com.commercetools.api.models.product_type.ProductTypeChangeInputHintActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.product_type.ProductTypeChangeInputHintActionImpl;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.TextInputHint;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeInputHintActionImpl.class)
 public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateAction {
 
-    
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-    
+
     @NotNull
     @JsonProperty("newValue")
     public TextInputHint getNewValue();
 
     public void setAttributeName(final String attributeName);
-    
+
     public void setNewValue(final TextInputHint newValue);
 
-    public static ProductTypeChangeInputHintAction of(){
+    public static ProductTypeChangeInputHintAction of() {
         return new ProductTypeChangeInputHintActionImpl();
     }
-    
 
     public static ProductTypeChangeInputHintAction of(final ProductTypeChangeInputHintAction template) {
         ProductTypeChangeInputHintActionImpl instance = new ProductTypeChangeInputHintActionImpl();
@@ -47,14 +45,13 @@ public interface ProductTypeChangeInputHintAction extends ProductTypeUpdateActio
         return instance;
     }
 
-    public static ProductTypeChangeInputHintActionBuilder builder(){
+    public static ProductTypeChangeInputHintActionBuilder builder() {
         return ProductTypeChangeInputHintActionBuilder.of();
     }
-    
-    public static ProductTypeChangeInputHintActionBuilder builder(final ProductTypeChangeInputHintAction template){
+
+    public static ProductTypeChangeInputHintActionBuilder builder(final ProductTypeChangeInputHintAction template) {
         return ProductTypeChangeInputHintActionBuilder.of(template);
     }
-    
 
     default <T> T withProductTypeChangeInputHintAction(Function<ProductTypeChangeInputHintAction, T> helper) {
         return helper.apply(this);

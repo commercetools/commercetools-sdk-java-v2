@@ -1,16 +1,17 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.order.OrderSetLocaleAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.order.OrderSetLocaleAction;
+import com.commercetools.api.models.order.OrderUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderSetLocaleActionBuilder {
 
     @Nullable
@@ -22,7 +23,7 @@ public final class OrderSetLocaleActionBuilder {
     }
 
     @Nullable
-    public String getLocale(){
+    public String getLocale() {
         return this.locale;
     }
 

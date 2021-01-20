@@ -1,4 +1,13 @@
+
 package commercetools.product;
+
+import java.time.ZonedDateTime;
+import java.time.temporal.ChronoUnit;
+import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.function.Consumer;
+import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.category.Category;
 import com.commercetools.api.models.category.CategoryResourceIdentifierBuilder;
@@ -21,16 +30,10 @@ import commercetools.channel.ChannelFixtures;
 import commercetools.customer_group.CustomerGroupFixtures;
 import commercetools.tax_category.TaxCategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import org.junit.Assert;
 
-import java.time.ZonedDateTime;
-import java.time.temporal.ChronoUnit;
-import java.util.*;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
-import java.util.function.Consumer;
-import java.util.function.UnaryOperator;
+import io.vrap.rmf.base.client.ApiHttpResponse;
+
+import org.junit.Assert;
 
 public class ProductFixtures {
 
@@ -50,16 +53,11 @@ public class ProductFixtures {
     public static Product createProduct() {
         String randomKey = CommercetoolsTestUtils.randomKey();
 
-        ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of()
-                .key(CommercetoolsTestUtils.randomKey())
-                .name(CommercetoolsTestUtils.randomString())
-                .description(CommercetoolsTestUtils.randomString())
-                .build();
+        ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).name(
+            CommercetoolsTestUtils.randomString()).description(CommercetoolsTestUtils.randomString()).build();
 
-        ProductType productType = CommercetoolsTestUtils.getProjectRoot()
-                .productTypes()
-                .post(productTypeDraft)
-                .executeBlocking().getBody();
+        ProductType productType = CommercetoolsTestUtils.getProjectRoot().productTypes().post(
+            productTypeDraft).executeBlocking().getBody();
 
         Category category = CategoryFixtures.createCategory();
 
@@ -69,162 +67,102 @@ public class ProductFixtures {
         CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
         Channel channel = ChannelFixtures.createChannel();
 
+        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectRoot().productDiscounts().get().withWhere(
+            "sortOrder=\"0.3\"").executeBlocking().getBody();
 
-        ProductDiscountPagedQueryResponse existing = CommercetoolsTestUtils.getProjectRoot()
-                .productDiscounts()
-                .get()
-                .withWhere("sortOrder=\"0.3\"")
-                .executeBlocking()
-                .getBody();
-
-        if(existing.getCount() != 0) {
+        if (existing.getCount() != 0) {
             String productDiscountId = existing.getResults().get(0).getId();
             Long productDiscountVersion = existing.getResults().get(0).getVersion();
-            CommercetoolsTestUtils.getProjectRoot()
-                    .productDiscounts()
-                    .withId(productDiscountId)
-                    .delete()
-                    .withVersion(productDiscountVersion)
-                    .executeBlocking();
+            CommercetoolsTestUtils.getProjectRoot().productDiscounts().withId(productDiscountId).delete().withVersion(
+                productDiscountVersion).executeBlocking();
         }
 
-        ProductDiscountDraft productDiscountDraft =  ProductDiscountDraftBuilder.of()
-                .name(CommercetoolsTestUtils.randomLocalizedString())
-                .key(CommercetoolsTestUtils.randomKey())
-                .sortOrder("0.3")
-                .predicate("product.key=\"" + randomKey + "\"")
-                .value(ProductDiscountValueExternalDraftBuilder.of().build())
-                .isActive(true)
-                .build();
+        ProductDiscountDraft productDiscountDraft = ProductDiscountDraftBuilder.of().name(
+            CommercetoolsTestUtils.randomLocalizedString()).key(CommercetoolsTestUtils.randomKey()).sortOrder(
+                "0.3").predicate("product.key=\"" + randomKey + "\"").value(
+                    ProductDiscountValueExternalDraftBuilder.of().build()).isActive(true).build();
 
-        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectRoot()
-                .productDiscounts()
-                .post(productDiscountDraft)
-                .executeBlocking().getBody();
+        ProductDiscount productDiscount = CommercetoolsTestUtils.getProjectRoot().productDiscounts().post(
+            productDiscountDraft).executeBlocking().getBody();
 
-        PriceDraft priceDraft = PriceDraftBuilder.of()
-                .value(CentPrecisionMoneyDraftBuilder.of().centAmount(100L).currencyCode("EUR").build())
-                .country("DE")
-                .customerGroup(CustomerGroupResourceIdentifierBuilder.of()
-                        .id(customerGroup.getId())
-                        .build())
-                .channel(ChannelResourceIdentifierBuilder.of().id(channel.getId()).build())
-                .discounted(DiscountedPriceBuilder.of()
-                        .value(CentPrecisionMoneyDraftBuilder.of()
-                                .centAmount(200L)
-                                .currencyCode("EUR")
-                                .build())
-                        .discount(ProductDiscountReferenceBuilder.of()
-                                .id(productDiscount.getId())
-                                .build())
-                        .build())
-                .validFrom(ZonedDateTime.now())
-                .validUntil(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
-                .tiers(Arrays.asList(PriceTierDraftBuilder.of()
-                        .minimumQuantity(10L)
-                        .value(CentPrecisionMoneyDraftBuilder.of()
-                                .centAmount(100L)
-                                .currencyCode("EUR")
-                                .build())
-                        .build()))
-                .build();
+        PriceDraft priceDraft = PriceDraftBuilder.of().value(
+            CentPrecisionMoneyDraftBuilder.of().centAmount(100L).currencyCode("EUR").build()).country(
+                "DE").customerGroup(
+                    CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build()).channel(
+                        ChannelResourceIdentifierBuilder.of().id(channel.getId()).build()).discounted(
+                            DiscountedPriceBuilder.of().value(
+                                CentPrecisionMoneyDraftBuilder.of().centAmount(200L).currencyCode(
+                                    "EUR").build()).discount(
+                                        ProductDiscountReferenceBuilder.of().id(
+                                            productDiscount.getId()).build()).build()).validFrom(
+                                                ZonedDateTime.now()).validUntil(
+                                                    ZonedDateTime.now().plus(1, ChronoUnit.HOURS)).tiers(
+                                                        Arrays.asList(
+                                                            PriceTierDraftBuilder.of().minimumQuantity(10L).value(
+                                                                CentPrecisionMoneyDraftBuilder.of().centAmount(
+                                                                    100L).currencyCode(
+                                                                        "EUR").build()).build())).build();
 
-        ProductVariantDraft productVariantDraft = ProductVariantDraftBuilder.of()
-                .sku(CommercetoolsTestUtils.randomString())
-                .key(CommercetoolsTestUtils.randomKey())
-                .prices(Arrays.asList(priceDraft))
-                .images(Arrays.asList(ImageBuilder.of()
-                        .url("http://www.google.com")
-                        .dimensions(ImageDimensionsBuilder.of()
-                                .w(100)
-                                .h(100)
-                                .build())
-                        .label(CommercetoolsTestUtils.randomString()).build()))
-                .assets(Arrays.asList(AssetDraftBuilder.of()
-                        .key(CommercetoolsTestUtils.randomKey())
-                        .sources(Arrays.asList(AssetSourceBuilder.of()
-                                .uri("http://www.google.com")
-                                .key(CommercetoolsTestUtils.randomKey())
-                                .dimensions(AssetDimensionsBuilder.of()
-                                        .h(10)
-                                        .w(10)
-                                        .build())
-                                .contentType("application/json")
-                                .build()))
-                        .name(CommercetoolsTestUtils.randomLocalizedString())
-                        .build()))
-                .build();
+        ProductVariantDraft productVariantDraft = ProductVariantDraftBuilder.of().sku(
+            CommercetoolsTestUtils.randomString()).key(CommercetoolsTestUtils.randomKey()).prices(
+                Arrays.asList(priceDraft)).images(
+                    Arrays.asList(ImageBuilder.of().url("http://www.google.com").dimensions(
+                        ImageDimensionsBuilder.of().w(100).h(100).build()).label(
+                            CommercetoolsTestUtils.randomString()).build())).assets(
+                                Arrays.asList(AssetDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).sources(
+                                    Arrays.asList(AssetSourceBuilder.of().uri("http://www.google.com").key(
+                                        CommercetoolsTestUtils.randomKey()).dimensions(
+                                            AssetDimensionsBuilder.of().h(10).w(10).build()).contentType(
+                                                "application/json").build())).name(
+                                                    CommercetoolsTestUtils.randomLocalizedString()).build())).build();
 
         TaxCategory taxCategory = TaxCategoryFixtures.createTaxCategory();
 
-        StateDraft stateDraft = StateDraftBuilder.of()
-                .type(StateTypeEnum.PRODUCT_STATE)
-                .key(CommercetoolsTestUtils.randomKey())
-                .build();
+        StateDraft stateDraft = StateDraftBuilder.of().type(StateTypeEnum.PRODUCT_STATE).key(
+            CommercetoolsTestUtils.randomKey()).build();
 
-        State state = CommercetoolsTestUtils.getProjectRoot()
-                .states()
-                .post(stateDraft)
-                .executeBlocking().getBody();
+        State state = CommercetoolsTestUtils.getProjectRoot().states().post(stateDraft).executeBlocking().getBody();
 
-        ProductDraft productDraft = ProductDraftBuilder.of()
-                .key(randomKey)
-                .name(CommercetoolsTestUtils.randomLocalizedString())
-                .productType(ProductTypeResourceIdentifierBuilder.of()
-                        .id(productType.getId())
-                        .build())
-                .slug(CommercetoolsTestUtils.randomLocalizedString())
-                .description(CommercetoolsTestUtils.randomLocalizedString())
-                .categories(Arrays.asList(CategoryResourceIdentifierBuilder.of()
-                        .id(category.getId())
-                        .build()))
-                .categoryOrderHints(CategoryOrderHintsBuilder.of()
-                    .values(orderHint)
-                    .build())
-                .metaTitle(CommercetoolsTestUtils.randomLocalizedString())
-                .metaDescription(CommercetoolsTestUtils.randomLocalizedString())
-                .metaKeywords(CommercetoolsTestUtils.randomLocalizedString())
-                .variants(Arrays.asList(productVariantDraft))
-                .taxCategory(TaxCategoryResourceIdentifierBuilder.of().id(taxCategory.getId()).build())
-                .state(StateResourceIdentifierBuilder.of()
-                        .id(state.getId())
-                        .build())
-                .publish(false)
-                .build();
+        ProductDraft productDraft = ProductDraftBuilder.of().key(randomKey).name(
+            CommercetoolsTestUtils.randomLocalizedString()).productType(
+                ProductTypeResourceIdentifierBuilder.of().id(productType.getId()).build()).slug(
+                    CommercetoolsTestUtils.randomLocalizedString()).description(
+                        CommercetoolsTestUtils.randomLocalizedString()).categories(
+                            Arrays.asList(CategoryResourceIdentifierBuilder.of().id(
+                                category.getId()).build())).categoryOrderHints(
+                                    CategoryOrderHintsBuilder.of().values(orderHint).build()).metaTitle(
+                                        CommercetoolsTestUtils.randomLocalizedString()).metaDescription(
+                                            CommercetoolsTestUtils.randomLocalizedString()).metaKeywords(
+                                                CommercetoolsTestUtils.randomLocalizedString()).variants(
+                                                    Arrays.asList(productVariantDraft)).taxCategory(
+                                                        TaxCategoryResourceIdentifierBuilder.of().id(
+                                                            taxCategory.getId()).build()).state(
+                                                                StateResourceIdentifierBuilder.of().id(
+                                                                    state.getId()).build()).publish(false).build();
 
-        Product product = CommercetoolsTestUtils.getProjectRoot()
-                .products()
-                .post(productDraft)
-                .executeBlocking().getBody();
+        Product product = CommercetoolsTestUtils.getProjectRoot().products().post(
+            productDraft).executeBlocking().getBody();
         Assert.assertNotNull(product);
         Assert.assertEquals(product.getKey(), productDraft.getKey());
 
         return product;
     }
 
-    public static Product deleteProduct(Product product)
-    {
+    public static Product deleteProduct(Product product) {
         Product rProduct = null;
         try {
-            rProduct = CompletableFuture.completedFuture(product)
-                    .thenComposeAsync(
-                            product1 -> {
-                                if (product1.getMasterData().getPublished()) {
-                                    return CommercetoolsTestUtils.getProjectRoot().products().withId(product1.getId()).post(
-                                            ProductUpdateBuilder.of().version(product1.getVersion()).actions(ProductUnpublishAction.of()).build()
-                                    ).execute().thenApply(ApiHttpResponse::getBody);
-                                }
-                                return CompletableFuture.completedFuture(product1);
-                            }
-                    ).thenComposeAsync(
-                    product1 -> CommercetoolsTestUtils.getProjectRoot()
-                            .products()
-                            .withId(product1.getId())
-                            .delete()
-                            .withVersion(product1.getVersion())
-                            .execute()
-            ).get().getBody();
-        } catch (Exception e) {}
+            rProduct = CompletableFuture.completedFuture(product).thenComposeAsync(product1 -> {
+                if (product1.getMasterData().getPublished()) {
+                    return CommercetoolsTestUtils.getProjectRoot().products().withId(product1.getId()).post(
+                        ProductUpdateBuilder.of().version(product1.getVersion()).actions(
+                            ProductUnpublishAction.of()).build()).execute().thenApply(ApiHttpResponse::getBody);
+                }
+                return CompletableFuture.completedFuture(product1);
+            }).thenComposeAsync(product1 -> CommercetoolsTestUtils.getProjectRoot().products().withId(
+                product1.getId()).delete().withVersion(product1.getVersion()).execute()).get().getBody();
+        }
+        catch (Exception e) {
+        }
 
         Assert.assertNotNull(rProduct);
         Assert.assertEquals(rProduct.getId(), product.getId());
@@ -234,26 +172,21 @@ public class ProductFixtures {
     public static Product deleteProductById(final String id, final Long version) {
         Product product = null;
         try {
-            product = CommercetoolsTestUtils.getProjectRoot().products().withId(id).get().execute()
-                    .thenComposeAsync(
-                            productApiHttpResponse -> {
-                                Product product1 = productApiHttpResponse.getBody();
-                                if (product1.getMasterData().getPublished()) {
-                                    return CommercetoolsTestUtils.getProjectRoot().products().withId(product1.getId()).post(
-                                            ProductUpdateBuilder.of().version(product1.getVersion()).actions(ProductUnpublishAction.of()).build()
-                                    ).execute();
-                                }
-                                return CompletableFuture.completedFuture(productApiHttpResponse);
-                            }
-                    ).thenComposeAsync(
-                            productApiHttpResponse -> CommercetoolsTestUtils.getProjectRoot()
-                                    .products()
-                                    .withId(productApiHttpResponse.getBody().getId())
-                                    .delete()
-                                    .withVersion(productApiHttpResponse.getBody().getVersion())
-                                    .execute()
-                    ).get().getBody();
-        } catch (Exception e) {}
+            product = CommercetoolsTestUtils.getProjectRoot().products().withId(id).get().execute().thenComposeAsync(
+                productApiHttpResponse -> {
+                    Product product1 = productApiHttpResponse.getBody();
+                    if (product1.getMasterData().getPublished()) {
+                        return CommercetoolsTestUtils.getProjectRoot().products().withId(product1.getId()).post(
+                            ProductUpdateBuilder.of().version(product1.getVersion()).actions(
+                                ProductUnpublishAction.of()).build()).execute();
+                    }
+                    return CompletableFuture.completedFuture(productApiHttpResponse);
+                }).thenComposeAsync(productApiHttpResponse -> CommercetoolsTestUtils.getProjectRoot().products().withId(
+                    productApiHttpResponse.getBody().getId()).delete().withVersion(
+                        productApiHttpResponse.getBody().getVersion()).execute()).get().getBody();
+        }
+        catch (Exception e) {
+        }
 
         Assert.assertNotNull(product);
         Assert.assertEquals(product.getId(), id);
@@ -261,12 +194,8 @@ public class ProductFixtures {
     }
 
     public static Product deleteProductByKey(final String key, final Long version) {
-        Product product = CommercetoolsTestUtils.getProjectRoot()
-                .products()
-                .withKey(key)
-                .delete()
-                .withVersion(version)
-                .executeBlocking().getBody();
+        Product product = CommercetoolsTestUtils.getProjectRoot().products().withKey(key).delete().withVersion(
+            version).executeBlocking().getBody();
         Assert.assertNotNull(product);
         Assert.assertEquals(product.getKey(), key);
         return product;

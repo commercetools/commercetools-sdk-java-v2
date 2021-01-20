@@ -1,12 +1,13 @@
-package io.vrap.rmf.base.client.utils.json.modules.serializers;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.SerializerProvider;
-import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
+package io.vrap.rmf.base.client.utils.json.modules.serializers;
 
 import java.io.IOException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.databind.SerializerProvider;
+import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
 
 public final class LocalTimeSerializer extends StdScalarSerializer<LocalTime> {
 
@@ -20,5 +21,5 @@ public final class LocalTimeSerializer extends StdScalarSerializer<LocalTime> {
     public void serialize(LocalTime value, JsonGenerator gen, SerializerProvider arg2) throws IOException {
         gen.writeString(DateTimeFormatter.ISO_TIME.format(value));
     }
-    
+
 }

@@ -1,28 +1,28 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.common.PriceDraft;
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductAddPriceAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.PriceDraft;
+import com.commercetools.api.models.product.ProductAddPriceAction;
+import com.commercetools.api.models.product.ProductUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductAddPriceActionBuilder {
 
     @Nullable
     private Long variantId;
-    
+
     @Nullable
     private String sku;
-    
-    
+
     private com.commercetools.api.models.common.PriceDraft price;
-    
+
     @Nullable
     private Boolean staged;
 
@@ -30,39 +30,38 @@ public final class ProductAddPriceActionBuilder {
         this.variantId = variantId;
         return this;
     }
-    
+
     public ProductAddPriceActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
-    public ProductAddPriceActionBuilder price( final com.commercetools.api.models.common.PriceDraft price) {
+
+    public ProductAddPriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
         return this;
     }
-    
+
     public ProductAddPriceActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
-    
-    public com.commercetools.api.models.common.PriceDraft getPrice(){
+
+    public com.commercetools.api.models.common.PriceDraft getPrice() {
         return this.price;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

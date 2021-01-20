@@ -1,75 +1,76 @@
+
 package com.commercetools.api.models.error;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.error.ErrorByExtension;
 import com.commercetools.api.models.error.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.commercetools.api.models.error.ExtensionUpdateActionsFailedError;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+import com.fasterxml.jackson.databind.JsonNode;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ExtensionUpdateActionsFailedErrorBuilder {
 
-    
     private String message;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedMessage;
-    
+
     @Nullable
     private com.fasterxml.jackson.databind.JsonNode extensionExtraInfo;
-    
-    
+
     private com.commercetools.api.models.error.ErrorByExtension errorByExtension;
 
-    public ExtensionUpdateActionsFailedErrorBuilder message( final String message) {
+    public ExtensionUpdateActionsFailedErrorBuilder message(final String message) {
         this.message = message;
         return this;
     }
-    
-    public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(@Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
+
+    public ExtensionUpdateActionsFailedErrorBuilder localizedMessage(
+            @Nullable final com.commercetools.api.models.common.LocalizedString localizedMessage) {
         this.localizedMessage = localizedMessage;
         return this;
     }
-    
-    public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(@Nullable final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo) {
+
+    public ExtensionUpdateActionsFailedErrorBuilder extensionExtraInfo(
+            @Nullable final com.fasterxml.jackson.databind.JsonNode extensionExtraInfo) {
         this.extensionExtraInfo = extensionExtraInfo;
         return this;
     }
-    
-    public ExtensionUpdateActionsFailedErrorBuilder errorByExtension( final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
+
+    public ExtensionUpdateActionsFailedErrorBuilder errorByExtension(
+            final com.commercetools.api.models.error.ErrorByExtension errorByExtension) {
         this.errorByExtension = errorByExtension;
         return this;
     }
 
-    
-    public String getMessage(){
+    public String getMessage() {
         return this.message;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage(){
+    public com.commercetools.api.models.common.LocalizedString getLocalizedMessage() {
         return this.localizedMessage;
     }
-    
+
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo(){
+    public com.fasterxml.jackson.databind.JsonNode getExtensionExtraInfo() {
         return this.extensionExtraInfo;
     }
-    
-    
-    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension(){
+
+    public com.commercetools.api.models.error.ErrorByExtension getErrorByExtension() {
         return this.errorByExtension;
     }
 
     public ExtensionUpdateActionsFailedError build() {
-        return new ExtensionUpdateActionsFailedErrorImpl(message, localizedMessage, extensionExtraInfo, errorByExtension);
+        return new ExtensionUpdateActionsFailedErrorImpl(message, localizedMessage, extensionExtraInfo,
+            errorByExtension);
     }
 
     public static ExtensionUpdateActionsFailedErrorBuilder of() {

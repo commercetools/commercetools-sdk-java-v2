@@ -1,41 +1,40 @@
+
 package com.commercetools.api.models.cart_discount;
 
-import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteDraftImpl;
+import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
+import com.commercetools.api.models.common.Money;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueAbsoluteDraftImpl.class)
 public interface CartDiscountValueAbsoluteDraft extends CartDiscountValueDraft {
 
-    
     @NotNull
     @Valid
     @JsonProperty("money")
     public List<Money> getMoney();
 
     @JsonIgnore
-    public void setMoney(final Money ...money);
+    public void setMoney(final Money... money);
+
     public void setMoney(final List<Money> money);
 
-    public static CartDiscountValueAbsoluteDraft of(){
+    public static CartDiscountValueAbsoluteDraft of() {
         return new CartDiscountValueAbsoluteDraftImpl();
     }
-    
 
     public static CartDiscountValueAbsoluteDraft of(final CartDiscountValueAbsoluteDraft template) {
         CartDiscountValueAbsoluteDraftImpl instance = new CartDiscountValueAbsoluteDraftImpl();
@@ -43,14 +42,13 @@ public interface CartDiscountValueAbsoluteDraft extends CartDiscountValueDraft {
         return instance;
     }
 
-    public static CartDiscountValueAbsoluteDraftBuilder builder(){
+    public static CartDiscountValueAbsoluteDraftBuilder builder() {
         return CartDiscountValueAbsoluteDraftBuilder.of();
     }
-    
-    public static CartDiscountValueAbsoluteDraftBuilder builder(final CartDiscountValueAbsoluteDraft template){
+
+    public static CartDiscountValueAbsoluteDraftBuilder builder(final CartDiscountValueAbsoluteDraft template) {
         return CartDiscountValueAbsoluteDraftBuilder.of(template);
     }
-    
 
     default <T> T withCartDiscountValueAbsoluteDraft(Function<CartDiscountValueAbsoluteDraft, T> helper) {
         return helper.apply(this);

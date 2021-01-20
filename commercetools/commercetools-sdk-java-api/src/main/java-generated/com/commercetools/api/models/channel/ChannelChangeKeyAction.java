@@ -1,37 +1,35 @@
+
 package com.commercetools.api.models.channel;
 
-import com.commercetools.api.models.channel.ChannelUpdateAction;
-import com.commercetools.api.models.channel.ChannelChangeKeyActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.channel.ChannelChangeKeyActionImpl;
+import com.commercetools.api.models.channel.ChannelUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ChannelChangeKeyActionImpl.class)
 public interface ChannelChangeKeyAction extends ChannelUpdateAction {
 
-    
     @NotNull
     @JsonProperty("key")
     public String getKey();
 
     public void setKey(final String key);
 
-    public static ChannelChangeKeyAction of(){
+    public static ChannelChangeKeyAction of() {
         return new ChannelChangeKeyActionImpl();
     }
-    
 
     public static ChannelChangeKeyAction of(final ChannelChangeKeyAction template) {
         ChannelChangeKeyActionImpl instance = new ChannelChangeKeyActionImpl();
@@ -39,14 +37,13 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
         return instance;
     }
 
-    public static ChannelChangeKeyActionBuilder builder(){
+    public static ChannelChangeKeyActionBuilder builder() {
         return ChannelChangeKeyActionBuilder.of();
     }
-    
-    public static ChannelChangeKeyActionBuilder builder(final ChannelChangeKeyAction template){
+
+    public static ChannelChangeKeyActionBuilder builder(final ChannelChangeKeyAction template) {
         return ChannelChangeKeyActionBuilder.of(template);
     }
-    
 
     default <T> T withChannelChangeKeyAction(Function<ChannelChangeKeyAction, T> helper) {
         return helper.apply(this);

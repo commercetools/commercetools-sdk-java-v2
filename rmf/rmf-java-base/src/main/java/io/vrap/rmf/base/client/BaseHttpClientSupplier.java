@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client;
 
 import java.util.function.Supplier;
@@ -12,6 +13,6 @@ public abstract class BaseHttpClientSupplier implements HttpClientSupplier {
      * The {@link VrapHttpClient} provider method
      * @return HttpClient implementation
      */
-     public abstract VrapHttpClient get();
+    public abstract VrapHttpClient get();
 
 }

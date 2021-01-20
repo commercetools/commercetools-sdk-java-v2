@@ -1,49 +1,46 @@
+
 package com.commercetools.api.models.graph_ql;
 
-import com.commercetools.api.models.graph_ql.GraphQLVariablesMap;
-import com.commercetools.api.models.graph_ql.GraphQLRequestImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.graph_ql.GraphQLRequestImpl;
+import com.commercetools.api.models.graph_ql.GraphQLVariablesMap;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = GraphQLRequestImpl.class)
-public interface GraphQLRequest  {
+public interface GraphQLRequest {
 
-    
     @NotNull
     @JsonProperty("query")
     public String getQuery();
-    
-    
+
     @JsonProperty("operationName")
     public String getOperationName();
-    
+
     @Valid
     @JsonProperty("variables")
     public GraphQLVariablesMap getVariables();
 
     public void setQuery(final String query);
-    
+
     public void setOperationName(final String operationName);
-    
+
     public void setVariables(final GraphQLVariablesMap variables);
 
-    public static GraphQLRequest of(){
+    public static GraphQLRequest of() {
         return new GraphQLRequestImpl();
     }
-    
 
     public static GraphQLRequest of(final GraphQLRequest template) {
         GraphQLRequestImpl instance = new GraphQLRequestImpl();
@@ -53,14 +50,13 @@ public interface GraphQLRequest  {
         return instance;
     }
 
-    public static GraphQLRequestBuilder builder(){
+    public static GraphQLRequestBuilder builder() {
         return GraphQLRequestBuilder.of();
     }
-    
-    public static GraphQLRequestBuilder builder(final GraphQLRequest template){
+
+    public static GraphQLRequestBuilder builder(final GraphQLRequest template) {
         return GraphQLRequestBuilder.of(template);
     }
-    
 
     default <T> T withGraphQLRequest(Function<GraphQLRequest, T> helper) {
         return helper.apply(this);

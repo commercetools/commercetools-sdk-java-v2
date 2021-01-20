@@ -1,43 +1,40 @@
+
 package com.commercetools.api.models.product_type;
 
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.commercetools.api.models.product_type.AttributePlainEnumValueImpl;
-
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.product_type.AttributePlainEnumValueImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AttributePlainEnumValueImpl.class)
-public interface AttributePlainEnumValue  {
+public interface AttributePlainEnumValue {
 
-    
     @NotNull
     @JsonProperty("key")
     public String getKey();
-    
+
     @NotNull
     @JsonProperty("label")
     public String getLabel();
 
     public void setKey(final String key);
-    
+
     public void setLabel(final String label);
 
-    public static AttributePlainEnumValue of(){
+    public static AttributePlainEnumValue of() {
         return new AttributePlainEnumValueImpl();
     }
-    
 
     public static AttributePlainEnumValue of(final AttributePlainEnumValue template) {
         AttributePlainEnumValueImpl instance = new AttributePlainEnumValueImpl();
@@ -46,14 +43,13 @@ public interface AttributePlainEnumValue  {
         return instance;
     }
 
-    public static AttributePlainEnumValueBuilder builder(){
+    public static AttributePlainEnumValueBuilder builder() {
         return AttributePlainEnumValueBuilder.of();
     }
-    
-    public static AttributePlainEnumValueBuilder builder(final AttributePlainEnumValue template){
+
+    public static AttributePlainEnumValueBuilder builder(final AttributePlainEnumValue template) {
         return AttributePlainEnumValueBuilder.of(template);
     }
-    
 
     default <T> T withAttributePlainEnumValue(Function<AttributePlainEnumValue, T> helper) {
         return helper.apply(this);

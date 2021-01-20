@@ -1,37 +1,34 @@
+
 package com.commercetools.api.models.order_edit;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetLocaleActionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetLocaleActionImpl.class)
 public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
 
-    
-    
     @JsonProperty("locale")
     public String getLocale();
 
     public void setLocale(final String locale);
 
-    public static StagedOrderSetLocaleAction of(){
+    public static StagedOrderSetLocaleAction of() {
         return new StagedOrderSetLocaleActionImpl();
     }
-    
 
     public static StagedOrderSetLocaleAction of(final StagedOrderSetLocaleAction template) {
         StagedOrderSetLocaleActionImpl instance = new StagedOrderSetLocaleActionImpl();
@@ -39,14 +36,13 @@ public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
         return instance;
     }
 
-    public static StagedOrderSetLocaleActionBuilder builder(){
+    public static StagedOrderSetLocaleActionBuilder builder() {
         return StagedOrderSetLocaleActionBuilder.of();
     }
-    
-    public static StagedOrderSetLocaleActionBuilder builder(final StagedOrderSetLocaleAction template){
+
+    public static StagedOrderSetLocaleActionBuilder builder(final StagedOrderSetLocaleAction template) {
         return StagedOrderSetLocaleActionBuilder.of(template);
     }
-    
 
     default <T> T withStagedOrderSetLocaleAction(Function<StagedOrderSetLocaleAction, T> helper) {
         return helper.apply(this);

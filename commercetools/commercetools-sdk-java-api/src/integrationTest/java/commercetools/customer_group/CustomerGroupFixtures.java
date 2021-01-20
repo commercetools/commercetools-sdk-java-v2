@@ -1,13 +1,15 @@
+
 package commercetools.customer_group;
+
+import java.util.function.Consumer;
+import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.customer_group.CustomerGroup;
 import com.commercetools.api.models.customer_group.CustomerGroupDraft;
 import com.commercetools.api.models.customer_group.CustomerGroupDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-import org.junit.Assert;
 
-import java.util.function.Consumer;
-import java.util.function.UnaryOperator;
+import org.junit.Assert;
 
 public class CustomerGroupFixtures {
 
@@ -24,15 +26,11 @@ public class CustomerGroupFixtures {
     }
 
     public static CustomerGroup createCustomerGroup() {
-        CustomerGroupDraft customerGroupDraft = CustomerGroupDraftBuilder.of()
-                .key(CommercetoolsTestUtils.randomKey())
-                .groupName(CommercetoolsTestUtils.randomString())
-                .build();
+        CustomerGroupDraft customerGroupDraft = CustomerGroupDraftBuilder.of().key(
+            CommercetoolsTestUtils.randomKey()).groupName(CommercetoolsTestUtils.randomString()).build();
 
-        CustomerGroup customerGroup = CommercetoolsTestUtils.getProjectRoot()
-                .customerGroups()
-                .post(customerGroupDraft)
-                .executeBlocking().getBody();
+        CustomerGroup customerGroup = CommercetoolsTestUtils.getProjectRoot().customerGroups().post(
+            customerGroupDraft).executeBlocking().getBody();
 
         Assert.assertNotNull(customerGroup);
         Assert.assertEquals(customerGroup.getKey(), customerGroupDraft.getKey());
@@ -41,12 +39,8 @@ public class CustomerGroupFixtures {
     }
 
     public static CustomerGroup deleteCustomerGroup(final String id, final Long version) {
-        CustomerGroup customerGroup = CommercetoolsTestUtils.getProjectRoot()
-                .customerGroups()
-                .withId(id)
-                .delete()
-                .withVersion(version)
-                .executeBlocking().getBody();
+        CustomerGroup customerGroup = CommercetoolsTestUtils.getProjectRoot().customerGroups().withId(
+            id).delete().withVersion(version).executeBlocking().getBody();
 
         Assert.assertNotNull(customerGroup);
         Assert.assertEquals(customerGroup.getId(), id);

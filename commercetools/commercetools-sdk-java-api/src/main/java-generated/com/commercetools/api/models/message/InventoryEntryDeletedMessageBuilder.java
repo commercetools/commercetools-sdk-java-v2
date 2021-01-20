@@ -1,177 +1,165 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.InventoryEntryDeletedMessage;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.channel.ChannelReference;
+import com.commercetools.api.models.message.InventoryEntryDeletedMessage;
+import com.commercetools.api.models.message.Message;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class InventoryEntryDeletedMessageBuilder {
 
-    
     private String id;
-    
-    
+
     private Long version;
-    
-    
+
     private java.time.ZonedDateTime createdAt;
-    
-    
+
     private java.time.ZonedDateTime lastModifiedAt;
-    
+
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-    
+
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-    
-    
+
     private Long sequenceNumber;
-    
-    
+
     private com.commercetools.api.models.common.Reference resource;
-    
-    
+
     private Long resourceVersion;
-    
+
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
-    
-    
+
     private String sku;
-    
-    
+
     private com.commercetools.api.models.channel.ChannelReference supplyChannel;
 
-    public InventoryEntryDeletedMessageBuilder id( final String id) {
+    public InventoryEntryDeletedMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder version( final Long version) {
+
+    public InventoryEntryDeletedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder createdAt( final java.time.ZonedDateTime createdAt) {
+
+    public InventoryEntryDeletedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
+
+    public InventoryEntryDeletedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+
+    public InventoryEntryDeletedMessageBuilder lastModifiedBy(
+            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
+
+    public InventoryEntryDeletedMessageBuilder createdBy(
+            @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder sequenceNumber( final Long sequenceNumber) {
+
+    public InventoryEntryDeletedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder resource( final com.commercetools.api.models.common.Reference resource) {
+
+    public InventoryEntryDeletedMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder resourceVersion( final Long resourceVersion) {
+
+    public InventoryEntryDeletedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder resourceUserProvidedIdentifiers(@Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
+
+    public InventoryEntryDeletedMessageBuilder resourceUserProvidedIdentifiers(
+            @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder sku( final String sku) {
+
+    public InventoryEntryDeletedMessageBuilder sku(final String sku) {
         this.sku = sku;
         return this;
     }
-    
-    public InventoryEntryDeletedMessageBuilder supplyChannel( final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
+
+    public InventoryEntryDeletedMessageBuilder supplyChannel(
+            final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
 
-    
-    public String getId(){
+    public String getId() {
         return this.id;
     }
-    
-    
-    public Long getVersion(){
+
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.time.ZonedDateTime getCreatedAt(){
+
+    public java.time.ZonedDateTime getCreatedAt() {
         return this.createdAt;
     }
-    
-    
-    public java.time.ZonedDateTime getLastModifiedAt(){
+
+    public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
         return this.lastModifiedBy;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
         return this.createdBy;
     }
-    
-    
-    public Long getSequenceNumber(){
+
+    public Long getSequenceNumber() {
         return this.sequenceNumber;
     }
-    
-    
-    public com.commercetools.api.models.common.Reference getResource(){
+
+    public com.commercetools.api.models.common.Reference getResource() {
         return this.resource;
     }
-    
-    
-    public Long getResourceVersion(){
+
+    public Long getResourceVersion() {
         return this.resourceVersion;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers(){
+    public com.commercetools.api.models.message.UserProvidedIdentifiers getResourceUserProvidedIdentifiers() {
         return this.resourceUserProvidedIdentifiers;
     }
-    
-    
-    public String getSku(){
+
+    public String getSku() {
         return this.sku;
     }
-    
-    
-    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel(){
+
+    public com.commercetools.api.models.channel.ChannelReference getSupplyChannel() {
         return this.supplyChannel;
     }
 
     public InventoryEntryDeletedMessage build() {
-        return new InventoryEntryDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, supplyChannel);
+        return new InventoryEntryDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, sku, supplyChannel);
     }
 
     public static InventoryEntryDeletedMessageBuilder of() {

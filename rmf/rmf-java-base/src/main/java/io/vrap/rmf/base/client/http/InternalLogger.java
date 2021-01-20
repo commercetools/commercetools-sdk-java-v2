@@ -1,9 +1,10 @@
+
 package io.vrap.rmf.base.client.http;
+
+import java.util.function.Supplier;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.util.function.Supplier;
 
 public class InternalLogger {
     private final Logger underlyingLogger;

@@ -1,37 +1,35 @@
+
 package com.commercetools.api.models.inventory;
 
-import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
-import com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityActionImpl;
+import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryRemoveQuantityActionImpl.class)
 public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdateAction {
 
-    
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();
 
     public void setQuantity(final Long quantity);
 
-    public static InventoryEntryRemoveQuantityAction of(){
+    public static InventoryEntryRemoveQuantityAction of() {
         return new InventoryEntryRemoveQuantityActionImpl();
     }
-    
 
     public static InventoryEntryRemoveQuantityAction of(final InventoryEntryRemoveQuantityAction template) {
         InventoryEntryRemoveQuantityActionImpl instance = new InventoryEntryRemoveQuantityActionImpl();
@@ -39,14 +37,13 @@ public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdate
         return instance;
     }
 
-    public static InventoryEntryRemoveQuantityActionBuilder builder(){
+    public static InventoryEntryRemoveQuantityActionBuilder builder() {
         return InventoryEntryRemoveQuantityActionBuilder.of();
     }
-    
-    public static InventoryEntryRemoveQuantityActionBuilder builder(final InventoryEntryRemoveQuantityAction template){
+
+    public static InventoryEntryRemoveQuantityActionBuilder builder(final InventoryEntryRemoveQuantityAction template) {
         return InventoryEntryRemoveQuantityActionBuilder.of(template);
     }
-    
 
     default <T> T withInventoryEntryRemoveQuantityAction(Function<InventoryEntryRemoveQuantityAction, T> helper) {
         return helper.apply(this);

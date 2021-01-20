@@ -1,93 +1,98 @@
+
 package com.commercetools.api.models.subscription;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.subscription.ChangeSubscription;
 import com.commercetools.api.models.subscription.DeliveryFormat;
 import com.commercetools.api.models.subscription.Destination;
 import com.commercetools.api.models.subscription.MessageSubscription;
 import com.commercetools.api.models.subscription.SubscriptionDraft;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class SubscriptionDraftBuilder {
 
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
-    
-    
+
     private com.commercetools.api.models.subscription.Destination destination;
-    
+
     @Nullable
     private String key;
-    
+
     @Nullable
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
-    
+
     @Nullable
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
-    public SubscriptionDraftBuilder changes(@Nullable final com.commercetools.api.models.subscription.ChangeSubscription ...changes) {
+    public SubscriptionDraftBuilder changes(
+            @Nullable final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
         return this;
     }
-    
-    public SubscriptionDraftBuilder changes(@Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
+
+    public SubscriptionDraftBuilder changes(
+            @Nullable final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
         return this;
     }
-    
-    public SubscriptionDraftBuilder destination( final com.commercetools.api.models.subscription.Destination destination) {
+
+    public SubscriptionDraftBuilder destination(
+            final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
         return this;
     }
-    
+
     public SubscriptionDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-    
-    public SubscriptionDraftBuilder messages(@Nullable final com.commercetools.api.models.subscription.MessageSubscription ...messages) {
+
+    public SubscriptionDraftBuilder messages(
+            @Nullable final com.commercetools.api.models.subscription.MessageSubscription... messages) {
         this.messages = new ArrayList<>(Arrays.asList(messages));
         return this;
     }
-    
-    public SubscriptionDraftBuilder messages(@Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
+
+    public SubscriptionDraftBuilder messages(
+            @Nullable final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
         this.messages = messages;
         return this;
     }
-    
-    public SubscriptionDraftBuilder format(@Nullable final com.commercetools.api.models.subscription.DeliveryFormat format) {
+
+    public SubscriptionDraftBuilder format(
+            @Nullable final com.commercetools.api.models.subscription.DeliveryFormat format) {
         this.format = format;
         return this;
     }
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges(){
+    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
         return this.changes;
     }
-    
-    
-    public com.commercetools.api.models.subscription.Destination getDestination(){
+
+    public com.commercetools.api.models.subscription.Destination getDestination() {
         return this.destination;
     }
-    
+
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
+
     @Nullable
-    public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages(){
+    public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
         return this.messages;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.subscription.DeliveryFormat getFormat(){
+    public com.commercetools.api.models.subscription.DeliveryFormat getFormat() {
         return this.format;
     }
 

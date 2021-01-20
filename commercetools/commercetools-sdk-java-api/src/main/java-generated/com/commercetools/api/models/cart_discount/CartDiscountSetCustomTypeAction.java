@@ -1,25 +1,25 @@
+
 package com.commercetools.api.models.cart_discount;
 
-import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeActionImpl;
+import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = CartDiscountSetCustomTypeActionImpl.class)
 public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateAction {
 
@@ -29,6 +29,7 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
+
     /**
     *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
     *  Sets the custom fields to this value.</p>
@@ -38,13 +39,12 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
     public JsonNode getFields();
 
     public void setType(final TypeResourceIdentifier type);
-    
+
     public void setFields(final JsonNode fields);
 
-    public static CartDiscountSetCustomTypeAction of(){
+    public static CartDiscountSetCustomTypeAction of() {
         return new CartDiscountSetCustomTypeActionImpl();
     }
-    
 
     public static CartDiscountSetCustomTypeAction of(final CartDiscountSetCustomTypeAction template) {
         CartDiscountSetCustomTypeActionImpl instance = new CartDiscountSetCustomTypeActionImpl();
@@ -53,14 +53,13 @@ public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateActio
         return instance;
     }
 
-    public static CartDiscountSetCustomTypeActionBuilder builder(){
+    public static CartDiscountSetCustomTypeActionBuilder builder() {
         return CartDiscountSetCustomTypeActionBuilder.of();
     }
-    
-    public static CartDiscountSetCustomTypeActionBuilder builder(final CartDiscountSetCustomTypeAction template){
+
+    public static CartDiscountSetCustomTypeActionBuilder builder(final CartDiscountSetCustomTypeAction template) {
         return CartDiscountSetCustomTypeActionBuilder.of(template);
     }
-    
 
     default <T> T withCartDiscountSetCustomTypeAction(Function<CartDiscountSetCustomTypeAction, T> helper) {
         return helper.apply(this);

@@ -1,11 +1,7 @@
+
 package io.vrap.rmf.base.client.http;
 
-import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.error.UnauthorizedException;
-import io.vrap.rmf.base.client.oauth2.StaticTokenSupplier;
-import org.assertj.core.api.Assertions;
-import org.junit.Assert;
-import org.junit.Test;
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.net.URI;
 import java.time.Duration;
@@ -14,30 +10,31 @@ import java.util.concurrent.CompletionException;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.UnauthorizedException;
+import io.vrap.rmf.base.client.oauth2.StaticTokenSupplier;
+
+import org.assertj.core.api.Assertions;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class OAuthMiddlewareTest {
 
     @Test
-    public void testAddToken()
-    {
+    public void testAddToken() {
         AuthenticationToken token = new AuthenticationToken();
         token.setAccessToken("12345");
 
-        OAuthMiddleware middleware = new OAuthMiddleware(
-                new OAuthHandler(new StaticTokenSupplier(token))
-        );
+        OAuthMiddleware middleware = new OAuthMiddleware(new OAuthHandler(new StaticTokenSupplier(token)));
 
-        final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(), "".getBytes());
+        final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
+            "".getBytes());
 
         AtomicReference<String> authorizationHeader = new AtomicReference<>();
-        blockingWait(
-            middleware.invoke(request, request1 -> {
-                    authorizationHeader.set(request1.getHeaders().getHeaders(ApiHttpHeaders.AUTHORIZATION).get(0).getValue());
-                    return CompletableFuture.completedFuture(new ApiHttpResponse<>(200, new ApiHttpHeaders(), "".getBytes()));
-            }),
-            Duration.ofSeconds(1)
-        );
+        blockingWait(middleware.invoke(request, request1 -> {
+            authorizationHeader.set(request1.getHeaders().getHeaders(ApiHttpHeaders.AUTHORIZATION).get(0).getValue());
+            return CompletableFuture.completedFuture(new ApiHttpResponse<>(200, new ApiHttpHeaders(), "".getBytes()));
+        }), Duration.ofSeconds(1));
         Assertions.assertThat(authorizationHeader.get()).isEqualTo("Bearer 12345");
     }
 
@@ -46,9 +43,7 @@ public class OAuthMiddlewareTest {
         AuthenticationToken token = new AuthenticationToken();
         token.setAccessToken("12345");
 
-        OAuthMiddleware middleware = new OAuthMiddleware(
-                new OAuthHandler(new StaticTokenSupplier(token))
-        );
+        OAuthMiddleware middleware = new OAuthMiddleware(new OAuthHandler(new StaticTokenSupplier(token)));
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -66,9 +61,7 @@ public class OAuthMiddlewareTest {
         AuthenticationToken token = new AuthenticationToken();
         token.setAccessToken("12345");
 
-        OAuthMiddleware middleware = new OAuthMiddleware(
-                new OAuthHandler(new StaticTokenSupplier(token))
-        );
+        OAuthMiddleware middleware = new OAuthMiddleware(new OAuthHandler(new StaticTokenSupplier(token)));
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -89,9 +82,7 @@ public class OAuthMiddlewareTest {
         AuthenticationToken token = new AuthenticationToken();
         token.setAccessToken("12345");
 
-        OAuthMiddleware middleware = new OAuthMiddleware(
-                new OAuthHandler(new StaticTokenSupplier(token))
-        );
+        OAuthMiddleware middleware = new OAuthMiddleware(new OAuthHandler(new StaticTokenSupplier(token)));
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();

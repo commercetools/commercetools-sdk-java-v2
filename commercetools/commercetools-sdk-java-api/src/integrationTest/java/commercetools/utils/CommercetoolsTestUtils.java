@@ -1,4 +1,7 @@
+
 package commercetools.utils;
+
+import java.util.UUID;
 
 import com.commercetools.api.client.ByProjectKeyRequestBuilder;
 import com.commercetools.api.defaultconfig.ApiFactory;
@@ -8,32 +11,23 @@ import com.commercetools.api.models.common.LocalizedStringImpl;
 
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
-import java.util.UUID;
-
 public class CommercetoolsTestUtils {
 
     private static final ByProjectKeyRequestBuilder projectRoot;
 
-    static{
+    static {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
-        if("OFF".equals(logLevel)){
-            projectRoot = ApiFactory.createForProject(
-                    getProjectKey(),
-                    ClientCredentials.of().withClientId(getClientId())
-                        .withClientSecret(getClientSecret())
-                        .withScopes(getScopes())
-                        .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-        }else{
-            projectRoot = ApiFactory.createForProject(
-                    getProjectKey(),
-                    ClientCredentials.of().withClientId(getClientId())
-                            .withClientSecret(getClientSecret())
-                            .withScopes(getScopes())
-                            .build(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(),
-                    ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        if ("OFF".equals(logLevel)) {
+            projectRoot = ApiFactory.createForProject(getProjectKey(),
+                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).withScopes(
+                    getScopes()).build(),
+                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+        }
+        else {
+            projectRoot = ApiFactory.createForProject(getProjectKey(),
+                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).withScopes(
+                    getScopes()).build(),
+                ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
         }
     }
 

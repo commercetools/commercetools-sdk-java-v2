@@ -1,86 +1,81 @@
+
 package com.commercetools.api.models.cart_discount;
 
-import com.commercetools.api.models.cart_discount.CartDiscountTarget;
-import com.commercetools.api.models.cart_discount.SelectionMode;
-import com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.cart_discount.CartDiscountTarget;
+import com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTarget;
+import com.commercetools.api.models.cart_discount.SelectionMode;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MultiBuyCustomLineItemsTargetBuilder {
 
-    
     private String predicate;
-    
-    
+
     private Integer triggerQuantity;
-    
-    
+
     private Integer discountedQuantity;
-    
+
     @Nullable
     private Integer maxOccurrence;
-    
-    
+
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
-    public MultiBuyCustomLineItemsTargetBuilder predicate( final String predicate) {
+    public MultiBuyCustomLineItemsTargetBuilder predicate(final String predicate) {
         this.predicate = predicate;
         return this;
     }
-    
-    public MultiBuyCustomLineItemsTargetBuilder triggerQuantity( final Integer triggerQuantity) {
+
+    public MultiBuyCustomLineItemsTargetBuilder triggerQuantity(final Integer triggerQuantity) {
         this.triggerQuantity = triggerQuantity;
         return this;
     }
-    
-    public MultiBuyCustomLineItemsTargetBuilder discountedQuantity( final Integer discountedQuantity) {
+
+    public MultiBuyCustomLineItemsTargetBuilder discountedQuantity(final Integer discountedQuantity) {
         this.discountedQuantity = discountedQuantity;
         return this;
     }
-    
+
     public MultiBuyCustomLineItemsTargetBuilder maxOccurrence(@Nullable final Integer maxOccurrence) {
         this.maxOccurrence = maxOccurrence;
         return this;
     }
-    
-    public MultiBuyCustomLineItemsTargetBuilder selectionMode( final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {
+
+    public MultiBuyCustomLineItemsTargetBuilder selectionMode(
+            final com.commercetools.api.models.cart_discount.SelectionMode selectionMode) {
         this.selectionMode = selectionMode;
         return this;
     }
 
-    
-    public String getPredicate(){
+    public String getPredicate() {
         return this.predicate;
     }
-    
-    
-    public Integer getTriggerQuantity(){
+
+    public Integer getTriggerQuantity() {
         return this.triggerQuantity;
     }
-    
-    
-    public Integer getDiscountedQuantity(){
+
+    public Integer getDiscountedQuantity() {
         return this.discountedQuantity;
     }
-    
+
     @Nullable
-    public Integer getMaxOccurrence(){
+    public Integer getMaxOccurrence() {
         return this.maxOccurrence;
     }
-    
-    
-    public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode(){
+
+    public com.commercetools.api.models.cart_discount.SelectionMode getSelectionMode() {
         return this.selectionMode;
     }
 
     public MultiBuyCustomLineItemsTarget build() {
-        return new MultiBuyCustomLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence, selectionMode);
+        return new MultiBuyCustomLineItemsTargetImpl(predicate, triggerQuantity, discountedQuantity, maxOccurrence,
+            selectionMode);
     }
 
     public static MultiBuyCustomLineItemsTargetBuilder of() {

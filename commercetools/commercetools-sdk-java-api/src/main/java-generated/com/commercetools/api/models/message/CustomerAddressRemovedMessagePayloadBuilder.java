@@ -1,29 +1,29 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.CustomerAddressRemovedMessagePayload;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.CustomerAddressRemovedMessagePayload;
+import com.commercetools.api.models.message.MessagePayload;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class CustomerAddressRemovedMessagePayloadBuilder {
 
-    
     private com.commercetools.api.models.common.Address address;
 
-    public CustomerAddressRemovedMessagePayloadBuilder address( final com.commercetools.api.models.common.Address address) {
+    public CustomerAddressRemovedMessagePayloadBuilder address(
+            final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
 
-    
-    public com.commercetools.api.models.common.Address getAddress(){
+    public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
 

@@ -1,27 +1,28 @@
+
 package com.commercetools.api.models.product;
 
-import com.commercetools.api.models.product.ProductUpdateAction;
-import com.commercetools.api.models.product.ProductSetProductVariantKeyAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.product.ProductSetProductVariantKeyAction;
+import com.commercetools.api.models.product.ProductUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ProductSetProductVariantKeyActionBuilder {
 
     @Nullable
     private Long variantId;
-    
+
     @Nullable
     private String sku;
-    
+
     @Nullable
     private String key;
-    
+
     @Nullable
     private Boolean staged;
 
@@ -29,39 +30,39 @@ public final class ProductSetProductVariantKeyActionBuilder {
         this.variantId = variantId;
         return this;
     }
-    
+
     public ProductSetProductVariantKeyActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-    
+
     public ProductSetProductVariantKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-    
+
     public ProductSetProductVariantKeyActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
     @Nullable
-    public Long getVariantId(){
+    public Long getVariantId() {
         return this.variantId;
     }
-    
+
     @Nullable
-    public String getSku(){
+    public String getSku() {
         return this.sku;
     }
-    
+
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
-    
+
     @Nullable
-    public Boolean getStaged(){
+    public Boolean getStaged() {
         return this.staged;
     }
 

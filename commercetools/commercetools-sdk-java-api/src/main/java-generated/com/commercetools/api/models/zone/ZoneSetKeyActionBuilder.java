@@ -1,16 +1,17 @@
+
 package com.commercetools.api.models.zone;
 
-import com.commercetools.api.models.zone.ZoneUpdateAction;
-import com.commercetools.api.models.zone.ZoneSetKeyAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.zone.ZoneSetKeyAction;
+import com.commercetools.api.models.zone.ZoneUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ZoneSetKeyActionBuilder {
 
     @Nullable
@@ -22,7 +23,7 @@ public final class ZoneSetKeyActionBuilder {
     }
 
     @Nullable
-    public String getKey(){
+    public String getKey() {
         return this.key;
     }
 

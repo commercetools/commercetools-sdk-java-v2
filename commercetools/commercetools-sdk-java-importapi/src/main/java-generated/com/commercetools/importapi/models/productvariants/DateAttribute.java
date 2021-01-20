@@ -1,41 +1,39 @@
+
 package com.commercetools.importapi.models.productvariants;
 
-import com.commercetools.importapi.models.productvariants.Attribute;
+import java.io.IOException;
+import java.time.*;
 import java.time.LocalDate;
-import com.commercetools.importapi.models.productvariants.DateAttributeImpl;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+
+import com.commercetools.importapi.models.productvariants.Attribute;
+import com.commercetools.importapi.models.productvariants.DateAttributeImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>This type represents an attribute which value is a date.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DateAttributeImpl.class)
 public interface DateAttribute extends Attribute {
 
-    
     @NotNull
     @JsonProperty("value")
     public LocalDate getValue();
 
     public void setValue(final LocalDate value);
 
-    public static DateAttribute of(){
+    public static DateAttribute of() {
         return new DateAttributeImpl();
     }
-    
 
     public static DateAttribute of(final DateAttribute template) {
         DateAttributeImpl instance = new DateAttributeImpl();
@@ -44,14 +42,13 @@ public interface DateAttribute extends Attribute {
         return instance;
     }
 
-    public static DateAttributeBuilder builder(){
+    public static DateAttributeBuilder builder() {
         return DateAttributeBuilder.of();
     }
-    
-    public static DateAttributeBuilder builder(final DateAttribute template){
+
+    public static DateAttributeBuilder builder(final DateAttribute template) {
         return DateAttributeBuilder.of(template);
     }
-    
 
     default <T> T withDateAttribute(Function<DateAttribute, T> helper) {
         return helper.apply(this);

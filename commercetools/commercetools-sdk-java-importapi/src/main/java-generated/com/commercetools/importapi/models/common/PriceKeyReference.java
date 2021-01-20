@@ -1,36 +1,33 @@
+
 package com.commercetools.importapi.models.common;
 
-import com.commercetools.importapi.models.common.KeyReference;
-import com.commercetools.importapi.models.common.ReferenceType;
-import com.commercetools.importapi.models.common.PriceKeyReferenceImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+
+import com.commercetools.importapi.models.common.KeyReference;
+import com.commercetools.importapi.models.common.PriceKeyReferenceImpl;
+import com.commercetools.importapi.models.common.ReferenceType;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>References a price by its key.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PriceKeyReferenceImpl.class)
 public interface PriceKeyReference extends KeyReference {
 
-
-
-    public static PriceKeyReference of(){
+    public static PriceKeyReference of() {
         return new PriceKeyReferenceImpl();
     }
-    
 
     public static PriceKeyReference of(final PriceKeyReference template) {
         PriceKeyReferenceImpl instance = new PriceKeyReferenceImpl();
@@ -38,14 +35,13 @@ public interface PriceKeyReference extends KeyReference {
         return instance;
     }
 
-    public static PriceKeyReferenceBuilder builder(){
+    public static PriceKeyReferenceBuilder builder() {
         return PriceKeyReferenceBuilder.of();
     }
-    
-    public static PriceKeyReferenceBuilder builder(final PriceKeyReference template){
+
+    public static PriceKeyReferenceBuilder builder(final PriceKeyReference template) {
         return PriceKeyReferenceBuilder.of(template);
     }
-    
 
     default <T> T withPriceKeyReference(Function<PriceKeyReference, T> helper) {
         return helper.apply(this);

@@ -1,46 +1,43 @@
+
 package com.commercetools.api.models.type;
 
-import com.commercetools.api.models.type.TypeUpdateAction;
-import com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction;
+import com.commercetools.api.models.type.TypeUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class TypeChangeLocalizedEnumValueOrderActionBuilder {
 
-    
     private String fieldName;
-    
-    
+
     private java.util.List<String> keys;
 
-    public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName( final String fieldName) {
+    public TypeChangeLocalizedEnumValueOrderActionBuilder fieldName(final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-    
-    public TypeChangeLocalizedEnumValueOrderActionBuilder keys( final String ...keys) {
+
+    public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final String... keys) {
         this.keys = new ArrayList<>(Arrays.asList(keys));
         return this;
     }
-    
-    public TypeChangeLocalizedEnumValueOrderActionBuilder keys( final java.util.List<String> keys) {
+
+    public TypeChangeLocalizedEnumValueOrderActionBuilder keys(final java.util.List<String> keys) {
         this.keys = keys;
         return this;
     }
 
-    
-    public String getFieldName(){
+    public String getFieldName() {
         return this.fieldName;
     }
-    
-    
-    public java.util.List<String> getKeys(){
+
+    public java.util.List<String> getKeys() {
         return this.keys;
     }
 
@@ -52,7 +49,8 @@ public final class TypeChangeLocalizedEnumValueOrderActionBuilder {
         return new TypeChangeLocalizedEnumValueOrderActionBuilder();
     }
 
-    public static TypeChangeLocalizedEnumValueOrderActionBuilder of(final TypeChangeLocalizedEnumValueOrderAction template) {
+    public static TypeChangeLocalizedEnumValueOrderActionBuilder of(
+            final TypeChangeLocalizedEnumValueOrderAction template) {
         TypeChangeLocalizedEnumValueOrderActionBuilder builder = new TypeChangeLocalizedEnumValueOrderActionBuilder();
         builder.fieldName = template.getFieldName();
         builder.keys = template.getKeys();

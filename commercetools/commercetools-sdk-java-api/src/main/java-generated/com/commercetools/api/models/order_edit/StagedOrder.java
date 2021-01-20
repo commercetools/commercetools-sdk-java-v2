@@ -1,32 +1,29 @@
+
 package com.commercetools.api.models.order_edit;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.order_edit.StagedOrderImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = StagedOrderImpl.class)
 public interface StagedOrder extends Order {
 
-
-
-    public static StagedOrder of(){
+    public static StagedOrder of() {
         return new StagedOrderImpl();
     }
-    
 
     public static StagedOrder of(final StagedOrder template) {
         StagedOrderImpl instance = new StagedOrderImpl();
@@ -74,14 +71,13 @@ public interface StagedOrder extends Order {
         return instance;
     }
 
-    public static StagedOrderBuilder builder(){
+    public static StagedOrderBuilder builder() {
         return StagedOrderBuilder.of();
     }
-    
-    public static StagedOrderBuilder builder(final StagedOrder template){
+
+    public static StagedOrderBuilder builder(final StagedOrder template) {
         return StagedOrderBuilder.of(template);
     }
-    
 
     default <T> T withStagedOrder(Function<StagedOrder, T> helper) {
         return helper.apply(this);

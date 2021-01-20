@@ -1,37 +1,36 @@
+
 package com.commercetools.api.models.cart;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonValue;
 import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface LineItemPriceMode {
 
-    
     LineItemPriceMode PLATFORM = LineItemPriceModeEnum.PLATFORM;
-    
+
     LineItemPriceMode EXTERNAL_TOTAL = LineItemPriceModeEnum.EXTERNAL_TOTAL;
-    
+
     LineItemPriceMode EXTERNAL_PRICE = LineItemPriceModeEnum.EXTERNAL_PRICE;
-    
+
     enum LineItemPriceModeEnum implements LineItemPriceMode {
         PLATFORM("Platform"),
-        
+
         EXTERNAL_TOTAL("ExternalTotal"),
-        
+
         EXTERNAL_PRICE("ExternalPrice");
         private final String jsonName;
 
         private LineItemPriceModeEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
+
         public String getJsonName() {
             return jsonName;
         }
@@ -39,6 +38,7 @@ public interface LineItemPriceMode {
 
     @JsonValue
     String getJsonName();
+
     String name();
 
     @JsonCreator
@@ -59,7 +59,7 @@ public interface LineItemPriceMode {
     public static Optional<LineItemPriceMode> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-    
+
     public static LineItemPriceMode[] values() {
         return LineItemPriceModeEnum.values();
     }

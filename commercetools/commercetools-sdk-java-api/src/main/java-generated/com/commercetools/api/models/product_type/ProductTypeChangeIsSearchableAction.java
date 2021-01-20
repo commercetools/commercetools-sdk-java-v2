@@ -1,43 +1,41 @@
+
 package com.commercetools.api.models.product_type;
 
-import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableActionImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableActionImpl;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeIsSearchableActionImpl.class)
 public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAction {
 
-    
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();
-    
+
     @NotNull
     @JsonProperty("isSearchable")
     public Boolean getIsSearchable();
 
     public void setAttributeName(final String attributeName);
-    
+
     public void setIsSearchable(final Boolean isSearchable);
 
-    public static ProductTypeChangeIsSearchableAction of(){
+    public static ProductTypeChangeIsSearchableAction of() {
         return new ProductTypeChangeIsSearchableActionImpl();
     }
-    
 
     public static ProductTypeChangeIsSearchableAction of(final ProductTypeChangeIsSearchableAction template) {
         ProductTypeChangeIsSearchableActionImpl instance = new ProductTypeChangeIsSearchableActionImpl();
@@ -46,14 +44,14 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
         return instance;
     }
 
-    public static ProductTypeChangeIsSearchableActionBuilder builder(){
+    public static ProductTypeChangeIsSearchableActionBuilder builder() {
         return ProductTypeChangeIsSearchableActionBuilder.of();
     }
-    
-    public static ProductTypeChangeIsSearchableActionBuilder builder(final ProductTypeChangeIsSearchableAction template){
+
+    public static ProductTypeChangeIsSearchableActionBuilder builder(
+            final ProductTypeChangeIsSearchableAction template) {
         return ProductTypeChangeIsSearchableActionBuilder.of(template);
     }
-    
 
     default <T> T withProductTypeChangeIsSearchableAction(Function<ProductTypeChangeIsSearchableAction, T> helper) {
         return helper.apply(this);

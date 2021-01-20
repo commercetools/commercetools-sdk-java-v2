@@ -1,23 +1,21 @@
-package com.commercetools.api.client;
 
-import io.vrap.rmf.base.client.ApiHttpClient;
+package com.commercetools.api.client;
 
 import java.io.Closeable;
 import java.io.IOException;
-import java.util.List;
 import java.util.Arrays;
+import java.util.List;
+
+import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ApiRoot implements Closeable {
 
     private final ApiHttpClient apiHttpClient;
 
     private ApiRoot(final ApiHttpClient apiHttpClient) {
-       this.apiHttpClient = apiHttpClient;
+        this.apiHttpClient = apiHttpClient;
     }
 
     public static ApiRoot fromClient(final ApiHttpClient apiHttpClient) {
@@ -32,6 +30,8 @@ public class ApiRoot implements Closeable {
     public void close() {
         try {
             apiHttpClient.close();
-        } catch (final Throwable ignored) { }
+        }
+        catch (final Throwable ignored) {
+        }
     }
 }

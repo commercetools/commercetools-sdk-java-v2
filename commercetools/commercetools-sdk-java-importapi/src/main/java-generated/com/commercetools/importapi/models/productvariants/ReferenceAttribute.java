@@ -1,27 +1,27 @@
+
 package com.commercetools.importapi.models.productvariants;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.KeyReference;
 import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.ReferenceAttributeImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>This type represents an attribute which value is a key reference.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ReferenceAttributeImpl.class)
 public interface ReferenceAttribute extends Attribute {
 
@@ -35,10 +35,9 @@ public interface ReferenceAttribute extends Attribute {
 
     public void setValue(final KeyReference value);
 
-    public static ReferenceAttribute of(){
+    public static ReferenceAttribute of() {
         return new ReferenceAttributeImpl();
     }
-    
 
     public static ReferenceAttribute of(final ReferenceAttribute template) {
         ReferenceAttributeImpl instance = new ReferenceAttributeImpl();
@@ -47,14 +46,13 @@ public interface ReferenceAttribute extends Attribute {
         return instance;
     }
 
-    public static ReferenceAttributeBuilder builder(){
+    public static ReferenceAttributeBuilder builder() {
         return ReferenceAttributeBuilder.of();
     }
-    
-    public static ReferenceAttributeBuilder builder(final ReferenceAttribute template){
+
+    public static ReferenceAttributeBuilder builder(final ReferenceAttribute template) {
         return ReferenceAttributeBuilder.of(template);
     }
-    
 
     default <T> T withReferenceAttribute(Function<ReferenceAttribute, T> helper) {
         return helper.apply(this);

@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client.oauth2;
 
 import io.vrap.rmf.base.client.ApiHttpException;
@@ -13,7 +14,8 @@ public class AuthException extends ApiHttpException {
         super(statusCode, body, headers, message, null);
     }
 
-    public AuthException(final int statusCode, final String body, final ApiHttpHeaders headers, final String message, final ApiHttpResponse<byte[]> response) {
+    public AuthException(final int statusCode, final String body, final ApiHttpHeaders headers, final String message,
+            final ApiHttpResponse<byte[]> response) {
         super(statusCode, body, headers, message, response);
     }
 }

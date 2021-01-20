@@ -1,26 +1,26 @@
+
 package com.commercetools.importapi.models.orders;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.CartDiscountKeyReference;
 import com.commercetools.importapi.models.common.Money;
 import com.commercetools.importapi.models.orders.DiscountedLineItemPortionImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = DiscountedLineItemPortionImpl.class)
-public interface DiscountedLineItemPortion  {
+public interface DiscountedLineItemPortion {
 
     /**
     *  <p>References a cart discount by its key.</p>
@@ -29,20 +29,19 @@ public interface DiscountedLineItemPortion  {
     @Valid
     @JsonProperty("discount")
     public CartDiscountKeyReference getDiscount();
-    
+
     @NotNull
     @Valid
     @JsonProperty("discountedAmount")
     public Money getDiscountedAmount();
 
     public void setDiscount(final CartDiscountKeyReference discount);
-    
+
     public void setDiscountedAmount(final Money discountedAmount);
 
-    public static DiscountedLineItemPortion of(){
+    public static DiscountedLineItemPortion of() {
         return new DiscountedLineItemPortionImpl();
     }
-    
 
     public static DiscountedLineItemPortion of(final DiscountedLineItemPortion template) {
         DiscountedLineItemPortionImpl instance = new DiscountedLineItemPortionImpl();
@@ -51,14 +50,13 @@ public interface DiscountedLineItemPortion  {
         return instance;
     }
 
-    public static DiscountedLineItemPortionBuilder builder(){
+    public static DiscountedLineItemPortionBuilder builder() {
         return DiscountedLineItemPortionBuilder.of();
     }
-    
-    public static DiscountedLineItemPortionBuilder builder(final DiscountedLineItemPortion template){
+
+    public static DiscountedLineItemPortionBuilder builder(final DiscountedLineItemPortion template) {
         return DiscountedLineItemPortionBuilder.of(template);
     }
-    
 
     default <T> T withDiscountedLineItemPortion(Function<DiscountedLineItemPortion, T> helper) {
         return helper.apply(this);

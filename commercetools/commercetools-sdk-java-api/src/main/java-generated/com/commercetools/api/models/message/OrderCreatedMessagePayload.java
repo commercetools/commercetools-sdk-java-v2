@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.order.Order;
-import com.commercetools.api.models.message.OrderCreatedMessagePayloadImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.OrderCreatedMessagePayloadImpl;
+import com.commercetools.api.models.order.Order;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderCreatedMessagePayloadImpl.class)
 public interface OrderCreatedMessagePayload extends MessagePayload {
 
-    
     @NotNull
     @Valid
     @JsonProperty("order")
@@ -30,10 +29,9 @@ public interface OrderCreatedMessagePayload extends MessagePayload {
 
     public void setOrder(final Order order);
 
-    public static OrderCreatedMessagePayload of(){
+    public static OrderCreatedMessagePayload of() {
         return new OrderCreatedMessagePayloadImpl();
     }
-    
 
     public static OrderCreatedMessagePayload of(final OrderCreatedMessagePayload template) {
         OrderCreatedMessagePayloadImpl instance = new OrderCreatedMessagePayloadImpl();
@@ -41,14 +39,13 @@ public interface OrderCreatedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    public static OrderCreatedMessagePayloadBuilder builder(){
+    public static OrderCreatedMessagePayloadBuilder builder() {
         return OrderCreatedMessagePayloadBuilder.of();
     }
-    
-    public static OrderCreatedMessagePayloadBuilder builder(final OrderCreatedMessagePayload template){
+
+    public static OrderCreatedMessagePayloadBuilder builder(final OrderCreatedMessagePayload template) {
         return OrderCreatedMessagePayloadBuilder.of(template);
     }
-    
 
     default <T> T withOrderCreatedMessagePayload(Function<OrderCreatedMessagePayload, T> helper) {
         return helper.apply(this);

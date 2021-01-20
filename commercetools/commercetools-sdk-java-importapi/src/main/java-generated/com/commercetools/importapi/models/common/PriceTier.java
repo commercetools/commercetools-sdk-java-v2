@@ -1,28 +1,28 @@
+
 package com.commercetools.importapi.models.common;
 
-import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.common.PriceTierImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+
+import com.commercetools.importapi.models.common.PriceTierImpl;
+import com.commercetools.importapi.models.common.TypedMoney;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>A price tier is selected instead of the default price when a certain quantity of the ProductVariant is added to a cart and ordered.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = PriceTierImpl.class)
-public interface PriceTier  {
+public interface PriceTier {
 
     /**
     *  <p>The minimum quantity this price tier is valid for.</p>
@@ -30,6 +30,7 @@ public interface PriceTier  {
     @NotNull
     @JsonProperty("minimumQuantity")
     public Long getMinimumQuantity();
+
     /**
     *  <p>The currency of a price tier is always the same as the currency of the base Price.</p>
     */
@@ -39,13 +40,12 @@ public interface PriceTier  {
     public TypedMoney getValue();
 
     public void setMinimumQuantity(final Long minimumQuantity);
-    
+
     public void setValue(final TypedMoney value);
 
-    public static PriceTier of(){
+    public static PriceTier of() {
         return new PriceTierImpl();
     }
-    
 
     public static PriceTier of(final PriceTier template) {
         PriceTierImpl instance = new PriceTierImpl();
@@ -54,14 +54,13 @@ public interface PriceTier  {
         return instance;
     }
 
-    public static PriceTierBuilder builder(){
+    public static PriceTierBuilder builder() {
         return PriceTierBuilder.of();
     }
-    
-    public static PriceTierBuilder builder(final PriceTier template){
+
+    public static PriceTierBuilder builder(final PriceTier template) {
         return PriceTierBuilder.of(template);
     }
-    
 
     default <T> T withPriceTier(Function<PriceTier, T> helper) {
         return helper.apply(this);

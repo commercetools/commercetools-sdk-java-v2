@@ -1,46 +1,44 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.me.MyCustomerUpdateAction;
-import com.commercetools.api.models.me.MyCustomerUpdate;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.me.MyCustomerUpdate;
+import com.commercetools.api.models.me.MyCustomerUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyCustomerUpdateBuilder {
 
-    
     private Long version;
-    
-    
+
     private java.util.List<com.commercetools.api.models.me.MyCustomerUpdateAction> actions;
 
-    public MyCustomerUpdateBuilder version( final Long version) {
+    public MyCustomerUpdateBuilder version(final Long version) {
         this.version = version;
         return this;
     }
-    
-    public MyCustomerUpdateBuilder actions( final com.commercetools.api.models.me.MyCustomerUpdateAction ...actions) {
+
+    public MyCustomerUpdateBuilder actions(final com.commercetools.api.models.me.MyCustomerUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-    
-    public MyCustomerUpdateBuilder actions( final java.util.List<com.commercetools.api.models.me.MyCustomerUpdateAction> actions) {
+
+    public MyCustomerUpdateBuilder actions(
+            final java.util.List<com.commercetools.api.models.me.MyCustomerUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    
-    public Long getVersion(){
+    public Long getVersion() {
         return this.version;
     }
-    
-    
-    public java.util.List<com.commercetools.api.models.me.MyCustomerUpdateAction> getActions(){
+
+    public java.util.List<com.commercetools.api.models.me.MyCustomerUpdateAction> getActions() {
         return this.actions;
     }
 

@@ -1,38 +1,35 @@
+
 package com.commercetools.importapi.models.errors;
 
-import com.commercetools.importapi.models.errors.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.commercetools.importapi.models.errors.ResourceDeletionErrorImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.importapi.models.errors.ErrorObject;
+import com.commercetools.importapi.models.errors.ResourceDeletionErrorImpl;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ResourceDeletionErrorImpl.class)
 public interface ResourceDeletionError extends ErrorObject {
 
-    
-    
     @JsonProperty("resource")
     public JsonNode getResource();
 
     public void setResource(final JsonNode resource);
 
-    public static ResourceDeletionError of(){
+    public static ResourceDeletionError of() {
         return new ResourceDeletionErrorImpl();
     }
-    
 
     public static ResourceDeletionError of(final ResourceDeletionError template) {
         ResourceDeletionErrorImpl instance = new ResourceDeletionErrorImpl();
@@ -41,14 +38,13 @@ public interface ResourceDeletionError extends ErrorObject {
         return instance;
     }
 
-    public static ResourceDeletionErrorBuilder builder(){
+    public static ResourceDeletionErrorBuilder builder() {
         return ResourceDeletionErrorBuilder.of();
     }
-    
-    public static ResourceDeletionErrorBuilder builder(final ResourceDeletionError template){
+
+    public static ResourceDeletionErrorBuilder builder(final ResourceDeletionError template) {
         return ResourceDeletionErrorBuilder.of(template);
     }
-    
 
     default <T> T withResourceDeletionError(Function<ResourceDeletionError, T> helper) {
         return helper.apply(this);

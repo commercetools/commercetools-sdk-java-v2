@@ -1,44 +1,42 @@
+
 package com.commercetools.api.models.message;
 
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.order.ReturnShipmentState;
-import com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageImpl;
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
-import io.vrap.rmf.base.client.Accessor;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.OrderReturnShipmentStateChangedMessageImpl;
+import com.commercetools.api.models.order.ReturnShipmentState;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+
+import io.vrap.rmf.base.client.Accessor;
+import io.vrap.rmf.base.client.utils.Generated;
+
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = OrderReturnShipmentStateChangedMessageImpl.class)
 public interface OrderReturnShipmentStateChangedMessage extends Message {
 
-    
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();
-    
+
     @NotNull
     @JsonProperty("returnShipmentState")
     public ReturnShipmentState getReturnShipmentState();
 
     public void setReturnItemId(final String returnItemId);
-    
+
     public void setReturnShipmentState(final ReturnShipmentState returnShipmentState);
 
-    public static OrderReturnShipmentStateChangedMessage of(){
+    public static OrderReturnShipmentStateChangedMessage of() {
         return new OrderReturnShipmentStateChangedMessageImpl();
     }
-    
 
     public static OrderReturnShipmentStateChangedMessage of(final OrderReturnShipmentStateChangedMessage template) {
         OrderReturnShipmentStateChangedMessageImpl instance = new OrderReturnShipmentStateChangedMessageImpl();
@@ -57,16 +55,17 @@ public interface OrderReturnShipmentStateChangedMessage extends Message {
         return instance;
     }
 
-    public static OrderReturnShipmentStateChangedMessageBuilder builder(){
+    public static OrderReturnShipmentStateChangedMessageBuilder builder() {
         return OrderReturnShipmentStateChangedMessageBuilder.of();
     }
-    
-    public static OrderReturnShipmentStateChangedMessageBuilder builder(final OrderReturnShipmentStateChangedMessage template){
+
+    public static OrderReturnShipmentStateChangedMessageBuilder builder(
+            final OrderReturnShipmentStateChangedMessage template) {
         return OrderReturnShipmentStateChangedMessageBuilder.of(template);
     }
-    
 
-    default <T> T withOrderReturnShipmentStateChangedMessage(Function<OrderReturnShipmentStateChangedMessage, T> helper) {
+    default <T> T withOrderReturnShipmentStateChangedMessage(
+            Function<OrderReturnShipmentStateChangedMessage, T> helper) {
         return helper.apply(this);
     }
 }

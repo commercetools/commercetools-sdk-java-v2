@@ -1,3 +1,4 @@
+
 package com.commercetools.api.models;
 
 import com.commercetools.api.models.cart.CartReference;
@@ -76,7 +77,8 @@ public interface ReferenceConverter {
             T resourceIdentifier = clazz.newInstance();
             resourceIdentifier.setId(reference.getId());
             return resourceIdentifier;
-        } catch (InstantiationException | IllegalAccessException ignored) {
+        }
+        catch (InstantiationException | IllegalAccessException ignored) {
         }
         return null;
     }

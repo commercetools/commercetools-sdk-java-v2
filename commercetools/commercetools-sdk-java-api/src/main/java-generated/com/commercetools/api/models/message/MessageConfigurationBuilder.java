@@ -1,41 +1,39 @@
+
 package com.commercetools.api.models.message;
 
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.message.MessageConfiguration;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MessageConfigurationBuilder {
 
-    
     private Boolean enabled;
-    
+
     @Nullable
     private Integer deleteDaysAfterCreation;
 
-    public MessageConfigurationBuilder enabled( final Boolean enabled) {
+    public MessageConfigurationBuilder enabled(final Boolean enabled) {
         this.enabled = enabled;
         return this;
     }
-    
+
     public MessageConfigurationBuilder deleteDaysAfterCreation(@Nullable final Integer deleteDaysAfterCreation) {
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
         return this;
     }
 
-    
-    public Boolean getEnabled(){
+    public Boolean getEnabled() {
         return this.enabled;
     }
-    
+
     @Nullable
-    public Integer getDeleteDaysAfterCreation(){
+    public Integer getDeleteDaysAfterCreation() {
         return this.deleteDaysAfterCreation;
     }
 

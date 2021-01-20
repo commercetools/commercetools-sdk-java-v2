@@ -1,10 +1,11 @@
-package io.vrap.rmf.base.client;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
+package io.vrap.rmf.base.client;
 
 import java.time.ZonedDateTime;
 import java.util.Optional;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class AuthenticationToken {
 
@@ -50,7 +51,8 @@ public class AuthenticationToken {
     }
 
     public void setExpiresIn(Long expiresIn) {
-        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn).map(seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5)).orElse(null);
+        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn).map(
+            seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5)).orElse(null);
         this.expiresIn = expiresIn;
     }
 

@@ -1,28 +1,27 @@
+
 package com.commercetools.api.models.order;
 
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.order.OrderRemoveDeliveryAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.order.OrderRemoveDeliveryAction;
+import com.commercetools.api.models.order.OrderUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderRemoveDeliveryActionBuilder {
 
-    
     private String deliveryId;
 
-    public OrderRemoveDeliveryActionBuilder deliveryId( final String deliveryId) {
+    public OrderRemoveDeliveryActionBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
 
-    
-    public String getDeliveryId(){
+    public String getDeliveryId() {
         return this.deliveryId;
     }
 

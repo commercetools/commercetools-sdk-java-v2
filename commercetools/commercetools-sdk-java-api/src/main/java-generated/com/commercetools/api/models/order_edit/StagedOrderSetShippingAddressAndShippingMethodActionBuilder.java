@@ -1,57 +1,59 @@
+
 package com.commercetools.api.models.order_edit;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndShippingMethodAction;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class StagedOrderSetShippingAddressAndShippingMethodActionBuilder {
 
-    
     private com.commercetools.api.models.common.Address address;
-    
+
     @Nullable
     private com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod;
-    
+
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address( final com.commercetools.api.models.common.Address address) {
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder address(
+            final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
-    
-    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(@Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
+
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder shippingMethod(
+            @Nullable final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod) {
         this.shippingMethod = shippingMethod;
         return this;
     }
-    
-    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+
+    public StagedOrderSetShippingAddressAndShippingMethodActionBuilder externalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
 
-    
-    public com.commercetools.api.models.common.Address getAddress(){
+    public com.commercetools.api.models.common.Address getAddress() {
         return this.address;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod(){
+    public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {
         return this.shippingMethod;
     }
-    
+
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
     }
 
@@ -63,7 +65,8 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionBuilder {
         return new StagedOrderSetShippingAddressAndShippingMethodActionBuilder();
     }
 
-    public static StagedOrderSetShippingAddressAndShippingMethodActionBuilder of(final StagedOrderSetShippingAddressAndShippingMethodAction template) {
+    public static StagedOrderSetShippingAddressAndShippingMethodActionBuilder of(
+            final StagedOrderSetShippingAddressAndShippingMethodAction template) {
         StagedOrderSetShippingAddressAndShippingMethodActionBuilder builder = new StagedOrderSetShippingAddressAndShippingMethodActionBuilder();
         builder.address = template.getAddress();
         builder.shippingMethod = template.getShippingMethod();

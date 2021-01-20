@@ -1,3 +1,4 @@
+
 package io.vrap.rmf.base.client.oauth2;
 
 import java.util.Objects;
@@ -7,7 +8,8 @@ public class ClientCredentialsBuilder {
     private String clientSecret;
     private String scopes;
 
-    public ClientCredentialsBuilder() {}
+    public ClientCredentialsBuilder() {
+    }
 
     public ClientCredentialsBuilder withClientId(final String clientId) {
         this.clientId = clientId;

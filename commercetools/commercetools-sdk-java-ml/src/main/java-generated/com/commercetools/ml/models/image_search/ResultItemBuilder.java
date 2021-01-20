@@ -1,46 +1,45 @@
+
 package com.commercetools.ml.models.image_search;
+
+import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
 
 import com.commercetools.ml.models.common.ProductVariant;
 import com.commercetools.ml.models.image_search.ResultItem;
-import javax.annotation.Nullable;
-import java.util.*;
-import java.time.ZonedDateTime;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ResultItemBuilder {
 
-    
     private String imageUrl;
-    
-    
+
     private java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants;
 
-    public ResultItemBuilder imageUrl( final String imageUrl) {
+    public ResultItemBuilder imageUrl(final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
-    
-    public ResultItemBuilder productVariants( final com.commercetools.ml.models.common.ProductVariant ...productVariants) {
+
+    public ResultItemBuilder productVariants(
+            final com.commercetools.ml.models.common.ProductVariant... productVariants) {
         this.productVariants = new ArrayList<>(Arrays.asList(productVariants));
         return this;
     }
-    
-    public ResultItemBuilder productVariants( final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
+
+    public ResultItemBuilder productVariants(
+            final java.util.List<com.commercetools.ml.models.common.ProductVariant> productVariants) {
         this.productVariants = productVariants;
         return this;
     }
 
-    
-    public String getImageUrl(){
+    public String getImageUrl() {
         return this.imageUrl;
     }
-    
-    
-    public java.util.List<com.commercetools.ml.models.common.ProductVariant> getProductVariants(){
+
+    public java.util.List<com.commercetools.ml.models.common.ProductVariant> getProductVariants() {
         return this.productVariants;
     }
 

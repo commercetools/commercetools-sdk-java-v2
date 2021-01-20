@@ -1,42 +1,40 @@
+
 package com.commercetools.api.models.me;
 
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.me.MyShoppingListUpdateAction;
-import com.commercetools.api.models.me.MyShoppingListChangeTextLineItemNameAction;
-import javax.annotation.Nullable;
-import java.util.*;
 import java.time.ZonedDateTime;
+import java.util.*;
+
+import javax.annotation.Nullable;
+
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.me.MyShoppingListChangeTextLineItemNameAction;
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class MyShoppingListChangeTextLineItemNameActionBuilder {
 
-    
     private String textLineItemId;
-    
-    
+
     private com.commercetools.api.models.common.LocalizedString name;
 
-    public MyShoppingListChangeTextLineItemNameActionBuilder textLineItemId( final String textLineItemId) {
+    public MyShoppingListChangeTextLineItemNameActionBuilder textLineItemId(final String textLineItemId) {
         this.textLineItemId = textLineItemId;
         return this;
     }
-    
-    public MyShoppingListChangeTextLineItemNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
+
+    public MyShoppingListChangeTextLineItemNameActionBuilder name(
+            final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
 
-    
-    public String getTextLineItemId(){
+    public String getTextLineItemId() {
         return this.textLineItemId;
     }
-    
-    
-    public com.commercetools.api.models.common.LocalizedString getName(){
+
+    public com.commercetools.api.models.common.LocalizedString getName() {
         return this.name;
     }
 
@@ -48,7 +46,8 @@ public final class MyShoppingListChangeTextLineItemNameActionBuilder {
         return new MyShoppingListChangeTextLineItemNameActionBuilder();
     }
 
-    public static MyShoppingListChangeTextLineItemNameActionBuilder of(final MyShoppingListChangeTextLineItemNameAction template) {
+    public static MyShoppingListChangeTextLineItemNameActionBuilder of(
+            final MyShoppingListChangeTextLineItemNameAction template) {
         MyShoppingListChangeTextLineItemNameActionBuilder builder = new MyShoppingListChangeTextLineItemNameActionBuilder();
         builder.textLineItemId = template.getTextLineItemId();
         builder.name = template.getName();

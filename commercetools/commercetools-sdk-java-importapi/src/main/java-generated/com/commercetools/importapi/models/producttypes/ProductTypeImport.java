@@ -1,27 +1,27 @@
+
 package com.commercetools.importapi.models.producttypes;
+
+import java.io.IOException;
+import java.time.*;
+import java.util.*;
+import java.util.function.Function;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.producttypes.AttributeDefinition;
 import com.commercetools.importapi.models.producttypes.ProductTypeImportImpl;
-
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-import io.vrap.rmf.base.client.utils.Generated;
+
 import io.vrap.rmf.base.client.Accessor;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import java.util.*;
-import java.time.*;
-import java.util.function.Function;
-import java.io.IOException;
+import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>Import representation for a product type.</p>
 */
-@Generated(
-    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
-    comments = "https://github.com/vrapio/rmf-codegen"
-)
+@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = ProductTypeImportImpl.class)
 public interface ProductTypeImport extends ImportResource {
 
@@ -31,12 +31,14 @@ public interface ProductTypeImport extends ImportResource {
     @NotNull
     @JsonProperty("name")
     public String getName();
+
     /**
     *  <p>Maps to <code>ProductType.description</code>.</p>
     */
     @NotNull
     @JsonProperty("description")
     public String getDescription();
+
     /**
     *  <p>The product type's attributes.</p>
     */
@@ -45,17 +47,17 @@ public interface ProductTypeImport extends ImportResource {
     public List<AttributeDefinition> getAttributes();
 
     public void setName(final String name);
-    
+
     public void setDescription(final String description);
-    
+
     @JsonIgnore
-    public void setAttributes(final AttributeDefinition ...attributes);
+    public void setAttributes(final AttributeDefinition... attributes);
+
     public void setAttributes(final List<AttributeDefinition> attributes);
 
-    public static ProductTypeImport of(){
+    public static ProductTypeImport of() {
         return new ProductTypeImportImpl();
     }
-    
 
     public static ProductTypeImport of(final ProductTypeImport template) {
         ProductTypeImportImpl instance = new ProductTypeImportImpl();
@@ -66,14 +68,13 @@ public interface ProductTypeImport extends ImportResource {
         return instance;
     }
 
-    public static ProductTypeImportBuilder builder(){
+    public static ProductTypeImportBuilder builder() {
         return ProductTypeImportBuilder.of();
     }
-    
-    public static ProductTypeImportBuilder builder(final ProductTypeImport template){
+
+    public static ProductTypeImportBuilder builder(final ProductTypeImport template) {
         return ProductTypeImportBuilder.of(template);
     }
-    
 
     default <T> T withProductTypeImport(Function<ProductTypeImport, T> helper) {
         return helper.apply(this);

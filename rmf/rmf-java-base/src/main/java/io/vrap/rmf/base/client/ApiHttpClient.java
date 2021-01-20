@@ -1,9 +1,10 @@
-package io.vrap.rmf.base.client;
 
-import io.vrap.rmf.base.client.http.HandlerStack;
+package io.vrap.rmf.base.client;
 
 import java.net.URI;
 import java.util.concurrent.CompletableFuture;
+
+import io.vrap.rmf.base.client.http.HandlerStack;
 
 public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
     public String CLOSED_MESSAGE = "Client is already closed.";

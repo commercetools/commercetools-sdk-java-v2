@@ -1,15 +1,18 @@
+
 package com.commercetools;
+
+import java.io.IOException;
 
 import com.commercetools.api.models.cart.CartOrigin;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.customer.CustomerReference;
+
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
+
 import org.json.JSONException;
-import org.skyscreamer.jsonassert.*;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.io.IOException;
+import org.skyscreamer.jsonassert.*;
 
 public class EnumTest {
     @Test

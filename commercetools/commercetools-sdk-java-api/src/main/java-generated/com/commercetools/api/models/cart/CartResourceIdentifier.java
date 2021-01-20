@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartResourceIdentifierImpl.class)
 public interface CartResourceIdentifier extends ResourceIdentifier {
 
+    String CART = "cart";
+
     public static CartResourceIdentifier of() {
         return new CartResourceIdentifierImpl();
     }

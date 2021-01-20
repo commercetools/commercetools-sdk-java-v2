@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountSetDescriptionActionImpl.class)
 public interface CartDiscountSetDescriptionAction extends CartDiscountUpdateAction {
 
+    String SET_DESCRIPTION = "setDescription";
+
     /**
     *  <p>If the <code>description</code> parameter is not included, the field will be emptied.</p>
     */

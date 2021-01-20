@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TimeFieldImpl.class)
 public interface TimeField extends CustomField {
 
+    String TIME = "Time";
+
     @NotNull
     @JsonProperty("value")
     public LocalTime getValue();

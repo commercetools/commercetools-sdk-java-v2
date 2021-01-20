@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderAddShoppingListActionImpl.class)
 public interface StagedOrderAddShoppingListAction extends StagedOrderUpdateAction {
 
+    String ADD_SHOPPING_LIST = "addShoppingList";
+
     @NotNull
     @Valid
     @JsonProperty("shoppingList")

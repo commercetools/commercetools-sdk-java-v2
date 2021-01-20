@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetLineItemDistributionChannelActionImpl.class)
 public interface StagedOrderSetLineItemDistributionChannelAction extends StagedOrderUpdateAction {
 
+    String SET_LINE_ITEM_DISTRIBUTION_CHANNEL = "setLineItemDistributionChannel";
+
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();

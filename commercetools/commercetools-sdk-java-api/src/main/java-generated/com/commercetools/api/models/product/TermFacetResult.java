@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TermFacetResultImpl.class)
 public interface TermFacetResult extends FacetResult {
 
+    String TERMS = "terms";
+
     @NotNull
     @JsonProperty("dataType")
     public TermFacetResultType getDataType();

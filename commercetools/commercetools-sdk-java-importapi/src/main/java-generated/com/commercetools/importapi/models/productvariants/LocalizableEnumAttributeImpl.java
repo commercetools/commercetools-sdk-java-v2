@@ -36,11 +36,11 @@ public final class LocalizableEnumAttributeImpl implements LocalizableEnumAttrib
     LocalizableEnumAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final String value) {
         this.name = name;
         this.value = value;
-        this.type = "lenum";
+        this.type = LocalizableEnumAttribute.LENUM;
     }
 
     public LocalizableEnumAttributeImpl() {
-        this.type = "lenum";
+        this.type = LocalizableEnumAttribute.LENUM;
     }
 
     /**

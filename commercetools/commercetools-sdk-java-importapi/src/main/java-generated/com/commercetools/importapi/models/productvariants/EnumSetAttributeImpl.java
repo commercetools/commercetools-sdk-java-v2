@@ -37,11 +37,11 @@ public final class EnumSetAttributeImpl implements EnumSetAttribute {
             @JsonProperty("value") final java.util.List<String> value) {
         this.name = name;
         this.value = value;
-        this.type = "enum-set";
+        this.type = EnumSetAttribute.ENUM_SET;
     }
 
     public EnumSetAttributeImpl() {
-        this.type = "enum-set";
+        this.type = EnumSetAttribute.ENUM_SET;
     }
 
     /**

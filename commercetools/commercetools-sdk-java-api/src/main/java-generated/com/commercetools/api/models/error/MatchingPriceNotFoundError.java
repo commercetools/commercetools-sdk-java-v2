@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MatchingPriceNotFoundErrorImpl.class)
 public interface MatchingPriceNotFoundError extends ErrorObject {
 
+    String MATCHING_PRICE_NOT_FOUND = "MatchingPriceNotFound";
+
     @NotNull
     @JsonProperty("productId")
     public String getProductId();

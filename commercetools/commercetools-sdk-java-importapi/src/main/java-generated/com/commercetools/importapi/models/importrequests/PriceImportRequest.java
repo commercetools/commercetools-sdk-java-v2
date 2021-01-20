@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceImportRequestImpl.class)
 public interface PriceImportRequest extends ImportRequest {
 
+    String PRICE = "price";
+
     /**
     *  <p>The price import resources of this request.</p>
     */

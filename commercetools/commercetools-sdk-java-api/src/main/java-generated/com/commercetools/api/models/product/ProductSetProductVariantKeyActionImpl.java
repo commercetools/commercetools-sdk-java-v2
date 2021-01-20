@@ -40,11 +40,11 @@ public final class ProductSetProductVariantKeyActionImpl implements ProductSetPr
         this.sku = sku;
         this.key = key;
         this.staged = staged;
-        this.action = "setProductVariantKey";
+        this.action = ProductSetProductVariantKeyAction.SET_PRODUCT_VARIANT_KEY;
     }
 
     public ProductSetProductVariantKeyActionImpl() {
-        this.action = "setProductVariantKey";
+        this.action = ProductSetProductVariantKeyAction.SET_PRODUCT_VARIANT_KEY;
     }
 
     public String getAction() {

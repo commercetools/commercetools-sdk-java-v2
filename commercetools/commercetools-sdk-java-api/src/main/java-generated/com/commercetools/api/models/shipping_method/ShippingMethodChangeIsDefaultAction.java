@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodChangeIsDefaultActionImpl.class)
 public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdateAction {
 
+    String CHANGE_IS_DEFAULT = "changeIsDefault";
+
     /**
     *  <p>Only one ShippingMethod in a project can be default.</p>
     */

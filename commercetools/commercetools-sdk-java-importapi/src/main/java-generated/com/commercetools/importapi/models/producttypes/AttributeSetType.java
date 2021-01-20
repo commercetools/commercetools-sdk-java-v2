@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeSetTypeImpl.class)
 public interface AttributeSetType extends AttributeType {
 
+    String SET = "set";
+
     @NotNull
     @Valid
     @JsonProperty("elementType")

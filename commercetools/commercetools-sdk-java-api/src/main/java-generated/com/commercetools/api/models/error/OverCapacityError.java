@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OverCapacityErrorImpl.class)
 public interface OverCapacityError extends ErrorObject {
 
+    String OVER_CAPACITY = "OverCapacity";
+
     public static OverCapacityError of() {
         return new OverCapacityErrorImpl();
     }

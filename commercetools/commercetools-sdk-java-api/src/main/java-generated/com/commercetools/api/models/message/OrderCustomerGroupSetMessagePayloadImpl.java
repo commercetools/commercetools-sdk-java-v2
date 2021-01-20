@@ -35,11 +35,11 @@ public final class OrderCustomerGroupSetMessagePayloadImpl implements OrderCusto
             @JsonProperty("oldCustomerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference oldCustomerGroup) {
         this.customerGroup = customerGroup;
         this.oldCustomerGroup = oldCustomerGroup;
-        this.type = "OrderCustomerGroupSet";
+        this.type = OrderCustomerGroupSetMessagePayload.ORDER_CUSTOMER_GROUP_SET;
     }
 
     public OrderCustomerGroupSetMessagePayloadImpl() {
-        this.type = "OrderCustomerGroupSet";
+        this.type = OrderCustomerGroupSetMessagePayload.ORDER_CUSTOMER_GROUP_SET;
     }
 
     public String getType() {

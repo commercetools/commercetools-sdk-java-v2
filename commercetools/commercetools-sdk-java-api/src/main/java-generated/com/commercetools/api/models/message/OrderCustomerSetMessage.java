@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomerSetMessageImpl.class)
 public interface OrderCustomerSetMessage extends Message {
 
+    String ORDER_CUSTOMER_SET = "OrderCustomerSet";
+
     @Valid
     @JsonProperty("customer")
     public CustomerReference getCustomer();

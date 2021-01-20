@@ -33,11 +33,11 @@ public final class MoneyFieldImpl implements MoneyField {
     @JsonCreator
     MoneyFieldImpl(@JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value) {
         this.value = value;
-        this.type = "Money";
+        this.type = MoneyField.MONEY;
     }
 
     public MoneyFieldImpl() {
-        this.type = "Money";
+        this.type = MoneyField.MONEY;
     }
 
     /**

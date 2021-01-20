@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SnsDestinationImpl.class)
 public interface SnsDestination extends Destination {
 
+    String SNS = "SNS";
+
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();

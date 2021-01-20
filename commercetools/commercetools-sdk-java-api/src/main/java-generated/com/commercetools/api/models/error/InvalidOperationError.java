@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidOperationErrorImpl.class)
 public interface InvalidOperationError extends ErrorObject {
 
+    String INVALID_OPERATION = "InvalidOperation";
+
     public static InvalidOperationError of() {
         return new InvalidOperationErrorImpl();
     }

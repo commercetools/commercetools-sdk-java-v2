@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = FilteredFacetResultImpl.class)
 public interface FilteredFacetResult extends FacetResult {
 
+    String FILTER = "filter";
+
     @NotNull
     @JsonProperty("count")
     public Long getCount();

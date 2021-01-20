@@ -29,11 +29,11 @@ public final class CustomerSetCustomerNumberActionImpl implements CustomerSetCus
     @JsonCreator
     CustomerSetCustomerNumberActionImpl(@JsonProperty("customerNumber") final String customerNumber) {
         this.customerNumber = customerNumber;
-        this.action = "setCustomerNumber";
+        this.action = CustomerSetCustomerNumberAction.SET_CUSTOMER_NUMBER;
     }
 
     public CustomerSetCustomerNumberActionImpl() {
-        this.action = "setCustomerNumber";
+        this.action = CustomerSetCustomerNumberAction.SET_CUSTOMER_NUMBER;
     }
 
     public String getAction() {

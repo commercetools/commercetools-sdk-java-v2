@@ -29,11 +29,11 @@ public final class QueryTimedOutErrorImpl implements QueryTimedOutError {
     @JsonCreator
     QueryTimedOutErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "QueryTimedOut";
+        this.code = QueryTimedOutError.QUERY_TIMED_OUT;
     }
 
     public QueryTimedOutErrorImpl() {
-        this.code = "QueryTimedOut";
+        this.code = QueryTimedOutError.QUERY_TIMED_OUT;
     }
 
     public String getCode() {

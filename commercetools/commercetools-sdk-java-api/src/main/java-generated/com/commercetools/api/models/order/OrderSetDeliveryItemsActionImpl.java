@@ -34,11 +34,11 @@ public final class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryIt
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.deliveryId = deliveryId;
         this.items = items;
-        this.action = "setDeliveryItems";
+        this.action = OrderSetDeliveryItemsAction.SET_DELIVERY_ITEMS;
     }
 
     public OrderSetDeliveryItemsActionImpl() {
-        this.action = "setDeliveryItems";
+        this.action = OrderSetDeliveryItemsAction.SET_DELIVERY_ITEMS;
     }
 
     public String getAction() {

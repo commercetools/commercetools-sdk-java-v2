@@ -46,11 +46,11 @@ public final class ResourceCreatedDeliveryImpl implements ResourceCreatedDeliver
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.version = version;
         this.modifiedAt = modifiedAt;
-        this.notificationType = "ResourceCreated";
+        this.notificationType = ResourceCreatedDelivery.RESOURCE_CREATED;
     }
 
     public ResourceCreatedDeliveryImpl() {
-        this.notificationType = "ResourceCreated";
+        this.notificationType = ResourceCreatedDelivery.RESOURCE_CREATED;
     }
 
     public String getProjectKey() {

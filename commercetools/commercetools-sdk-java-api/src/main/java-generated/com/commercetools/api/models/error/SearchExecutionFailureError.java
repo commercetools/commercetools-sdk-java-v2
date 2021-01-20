@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SearchExecutionFailureErrorImpl.class)
 public interface SearchExecutionFailureError extends ErrorObject {
 
+    String SEARCH_EXECUTION_FAILURE = "SearchExecutionFailure";
+
     public static SearchExecutionFailureError of() {
         return new SearchExecutionFailureErrorImpl();
     }

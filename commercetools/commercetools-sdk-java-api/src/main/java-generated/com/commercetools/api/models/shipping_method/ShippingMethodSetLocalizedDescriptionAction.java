@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodSetLocalizedDescriptionActionImpl.class)
 public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMethodUpdateAction {
 
+    String SET_LOCALIZED_DESCRIPTION = "setLocalizedDescription";
+
     @JsonProperty("localizedDescription")
     public String getLocalizedDescription();
 

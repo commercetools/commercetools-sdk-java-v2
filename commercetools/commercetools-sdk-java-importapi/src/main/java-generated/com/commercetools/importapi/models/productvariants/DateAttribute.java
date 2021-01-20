@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DateAttributeImpl.class)
 public interface DateAttribute extends Attribute {
 
+    String DATE = "date";
+
     @NotNull
     @JsonProperty("value")
     public LocalDate getValue();

@@ -34,11 +34,11 @@ public final class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeEr
             @JsonProperty("conflictingPrices") final java.util.List<com.commercetools.api.models.common.Price> conflictingPrices) {
         this.message = message;
         this.conflictingPrices = conflictingPrices;
-        this.code = "DuplicatePriceScope";
+        this.code = DuplicatePriceScopeError.DUPLICATE_PRICE_SCOPE;
     }
 
     public DuplicatePriceScopeErrorImpl() {
-        this.code = "DuplicatePriceScope";
+        this.code = DuplicatePriceScopeError.DUPLICATE_PRICE_SCOPE;
     }
 
     public String getCode() {

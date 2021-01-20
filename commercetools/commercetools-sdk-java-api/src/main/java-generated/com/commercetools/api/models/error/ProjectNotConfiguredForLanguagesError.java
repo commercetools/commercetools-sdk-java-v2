@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectNotConfiguredForLanguagesErrorImpl.class)
 public interface ProjectNotConfiguredForLanguagesError extends ErrorObject {
 
+    String PROJECT_NOT_CONFIGURED_FOR_LANGUAGES = "ProjectNotConfiguredForLanguages";
+
     @JsonProperty("languages")
     public List<String> getLanguages();
 

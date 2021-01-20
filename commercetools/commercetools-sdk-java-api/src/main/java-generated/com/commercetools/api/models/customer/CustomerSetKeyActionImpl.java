@@ -29,11 +29,11 @@ public final class CustomerSetKeyActionImpl implements CustomerSetKeyAction {
     @JsonCreator
     CustomerSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "setKey";
+        this.action = CustomerSetKeyAction.SET_KEY;
     }
 
     public CustomerSetKeyActionImpl() {
-        this.action = "setKey";
+        this.action = CustomerSetKeyAction.SET_KEY;
     }
 
     public String getAction() {

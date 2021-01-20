@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRevertStagedVariantChangesActionImpl.class)
 public interface ProductRevertStagedVariantChangesAction extends ProductUpdateAction {
 
+    String REVERT_STAGED_VARIANT_CHANGES = "revertStagedVariantChanges";
+
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();

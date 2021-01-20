@@ -30,11 +30,11 @@ public final class ChannelSetAddressActionImpl implements ChannelSetAddressActio
     @JsonCreator
     ChannelSetAddressActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.address = address;
-        this.action = "setAddress";
+        this.action = ChannelSetAddressAction.SET_ADDRESS;
     }
 
     public ChannelSetAddressActionImpl() {
-        this.action = "setAddress";
+        this.action = ChannelSetAddressAction.SET_ADDRESS;
     }
 
     public String getAction() {

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountResourceIdentifierImpl.class)
 public interface ProductDiscountResourceIdentifier extends ResourceIdentifier {
 
+    String PRODUCT_DISCOUNT = "product-discount";
+
     public static ProductDiscountResourceIdentifier of() {
         return new ProductDiscountResourceIdentifierImpl();
     }

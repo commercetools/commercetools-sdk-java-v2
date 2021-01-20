@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountChangeValueActionImpl.class)
 public interface ProductDiscountChangeValueAction extends ProductDiscountUpdateAction {
 
+    String CHANGE_VALUE = "changeValue";
+
     @NotNull
     @Valid
     @JsonProperty("value")

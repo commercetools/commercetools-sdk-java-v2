@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = GenericErrorImpl.class)
 public interface GenericError extends ErrorObject {
 
+    String GENERIC = "Generic";
+
     public static GenericError of() {
         return new GenericErrorImpl();
     }

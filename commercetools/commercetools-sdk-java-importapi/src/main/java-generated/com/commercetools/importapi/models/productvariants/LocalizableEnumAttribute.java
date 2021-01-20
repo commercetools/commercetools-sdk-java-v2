@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizableEnumAttributeImpl.class)
 public interface LocalizableEnumAttribute extends Attribute {
 
+    String LENUM = "lenum";
+
     @NotNull
     @JsonProperty("value")
     public String getValue();

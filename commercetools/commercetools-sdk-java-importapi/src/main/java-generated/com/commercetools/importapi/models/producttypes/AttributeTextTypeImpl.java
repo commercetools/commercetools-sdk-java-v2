@@ -26,7 +26,7 @@ public final class AttributeTextTypeImpl implements AttributeTextType {
 
     @JsonCreator
     AttributeTextTypeImpl() {
-        this.name = "text";
+        this.name = AttributeTextType.TEXT;
     }
 
     public String getName() {

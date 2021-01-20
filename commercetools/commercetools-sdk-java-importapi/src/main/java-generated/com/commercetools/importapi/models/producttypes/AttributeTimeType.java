@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeTimeTypeImpl.class)
 public interface AttributeTimeType extends AttributeType {
 
+    String TIME = "time";
+
     public static AttributeTimeType of() {
         return new AttributeTimeTypeImpl();
     }

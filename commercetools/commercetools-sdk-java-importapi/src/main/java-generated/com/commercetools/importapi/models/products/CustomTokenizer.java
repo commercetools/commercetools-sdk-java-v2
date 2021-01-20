@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomTokenizerImpl.class)
 public interface CustomTokenizer extends SuggestTokenizer {
 
+    String CUSTOM = "custom";
+
     @NotNull
     @JsonProperty("inputs")
     public List<String> getInputs();

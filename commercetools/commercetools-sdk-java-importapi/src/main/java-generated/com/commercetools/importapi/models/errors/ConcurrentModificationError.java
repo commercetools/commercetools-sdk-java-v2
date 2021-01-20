@@ -27,6 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
 public interface ConcurrentModificationError extends ErrorObject {
 
+    String CONCURRENT_MODIFICATION = "ConcurrentModification";
+
     /**
     *  <p>The version specified in the failed request.</p>
     */

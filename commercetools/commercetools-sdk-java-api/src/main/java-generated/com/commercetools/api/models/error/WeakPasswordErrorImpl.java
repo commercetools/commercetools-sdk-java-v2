@@ -29,11 +29,11 @@ public final class WeakPasswordErrorImpl implements WeakPasswordError {
     @JsonCreator
     WeakPasswordErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "WeakPassword";
+        this.code = WeakPasswordError.WEAK_PASSWORD;
     }
 
     public WeakPasswordErrorImpl() {
-        this.code = "WeakPassword";
+        this.code = WeakPasswordError.WEAK_PASSWORD;
     }
 
     public String getCode() {

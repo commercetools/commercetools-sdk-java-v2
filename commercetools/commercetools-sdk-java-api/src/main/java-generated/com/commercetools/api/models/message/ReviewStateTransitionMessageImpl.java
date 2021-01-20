@@ -90,11 +90,11 @@ public final class ReviewStateTransitionMessageImpl implements ReviewStateTransi
         this.newIncludedInStatistics = newIncludedInStatistics;
         this.target = target;
         this.force = force;
-        this.type = "ReviewStateTransition";
+        this.type = ReviewStateTransitionMessage.REVIEW_STATE_TRANSITION;
     }
 
     public ReviewStateTransitionMessageImpl() {
-        this.type = "ReviewStateTransition";
+        this.type = ReviewStateTransitionMessage.REVIEW_STATE_TRANSITION;
     }
 
     public String getId() {

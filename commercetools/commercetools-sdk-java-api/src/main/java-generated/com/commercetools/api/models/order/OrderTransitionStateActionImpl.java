@@ -35,11 +35,11 @@ public final class OrderTransitionStateActionImpl implements OrderTransitionStat
             @JsonProperty("force") final Boolean force) {
         this.state = state;
         this.force = force;
-        this.action = "transitionState";
+        this.action = OrderTransitionStateAction.TRANSITION_STATE;
     }
 
     public OrderTransitionStateActionImpl() {
-        this.action = "transitionState";
+        this.action = OrderTransitionStateAction.TRANSITION_STATE;
     }
 
     public String getAction() {

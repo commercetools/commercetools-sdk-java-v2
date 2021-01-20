@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountShippingCostTargetImpl.class)
 public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
 
+    String SHIPPING = "shipping";
+
     public static CartDiscountShippingCostTarget of() {
         return new CartDiscountShippingCostTargetImpl();
     }

@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditAppliedImpl.class)
 public interface OrderEditApplied extends OrderEditResult {
 
+    String APPLIED = "Applied";
+
     @NotNull
     @JsonProperty("appliedAt")
     public ZonedDateTime getAppliedAt();

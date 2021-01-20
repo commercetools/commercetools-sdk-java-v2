@@ -30,11 +30,11 @@ public final class CartDiscountSetValidFromActionImpl implements CartDiscountSet
     @JsonCreator
     CartDiscountSetValidFromActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
-        this.action = "setValidFrom";
+        this.action = CartDiscountSetValidFromAction.SET_VALID_FROM;
     }
 
     public CartDiscountSetValidFromActionImpl() {
-        this.action = "setValidFrom";
+        this.action = CartDiscountSetValidFromAction.SET_VALID_FROM;
     }
 
     public String getAction() {

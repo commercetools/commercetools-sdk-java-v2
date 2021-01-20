@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicateFieldWithConflictingResourceErrorImpl.class)
 public interface DuplicateFieldWithConflictingResourceError extends ErrorObject {
 
+    String DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE = "DuplicateFieldWithConflictingResource";
+
     @NotNull
     @JsonProperty("field")
     public String getField();

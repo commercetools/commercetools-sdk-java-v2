@@ -69,11 +69,11 @@ public final class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage 
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.delivery = delivery;
-        this.type = "DeliveryRemoved";
+        this.type = DeliveryRemovedMessage.DELIVERY_REMOVED;
     }
 
     public DeliveryRemovedMessageImpl() {
-        this.type = "DeliveryRemoved";
+        this.type = DeliveryRemovedMessage.DELIVERY_REMOVED;
     }
 
     public String getId() {

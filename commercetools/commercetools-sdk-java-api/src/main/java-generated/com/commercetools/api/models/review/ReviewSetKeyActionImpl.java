@@ -29,11 +29,11 @@ public final class ReviewSetKeyActionImpl implements ReviewSetKeyAction {
     @JsonCreator
     ReviewSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "setKey";
+        this.action = ReviewSetKeyAction.SET_KEY;
     }
 
     public ReviewSetKeyActionImpl() {
-        this.action = "setKey";
+        this.action = ReviewSetKeyAction.SET_KEY;
     }
 
     public String getAction() {

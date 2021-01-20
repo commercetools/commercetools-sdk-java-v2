@@ -39,11 +39,11 @@ public final class ProductRemoveImageActionImpl implements ProductRemoveImageAct
         this.sku = sku;
         this.imageUrl = imageUrl;
         this.staged = staged;
-        this.action = "removeImage";
+        this.action = ProductRemoveImageAction.REMOVE_IMAGE;
     }
 
     public ProductRemoveImageActionImpl() {
-        this.action = "removeImage";
+        this.action = ProductRemoveImageAction.REMOVE_IMAGE;
     }
 
     public String getAction() {

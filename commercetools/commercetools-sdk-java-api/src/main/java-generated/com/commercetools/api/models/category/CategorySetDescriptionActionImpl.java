@@ -31,11 +31,11 @@ public final class CategorySetDescriptionActionImpl implements CategorySetDescri
     CategorySetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
-        this.action = "setDescription";
+        this.action = CategorySetDescriptionAction.SET_DESCRIPTION;
     }
 
     public CategorySetDescriptionActionImpl() {
-        this.action = "setDescription";
+        this.action = CategorySetDescriptionAction.SET_DESCRIPTION;
     }
 
     public String getAction() {

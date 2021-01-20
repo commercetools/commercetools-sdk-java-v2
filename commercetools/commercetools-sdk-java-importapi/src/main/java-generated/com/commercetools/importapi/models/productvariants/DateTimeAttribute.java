@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DateTimeAttributeImpl.class)
 public interface DateTimeAttribute extends Attribute {
 
+    String DATETIME = "datetime";
+
     @NotNull
     @JsonProperty("value")
     public ZonedDateTime getValue();

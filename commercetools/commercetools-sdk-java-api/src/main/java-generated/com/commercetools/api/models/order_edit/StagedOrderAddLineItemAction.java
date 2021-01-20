@@ -28,6 +28,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderAddLineItemActionImpl.class)
 public interface StagedOrderAddLineItemAction extends StagedOrderUpdateAction {
 
+    String ADD_LINE_ITEM = "addLineItem";
+
     @Valid
     @JsonProperty("custom")
     public CustomFieldsDraft getCustom();

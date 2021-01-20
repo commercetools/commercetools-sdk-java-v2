@@ -57,11 +57,11 @@ public final class CartAddCustomLineItemActionImpl implements CartAddCustomLineI
         this.taxCategory = taxCategory;
         this.custom = custom;
         this.externalTaxRate = externalTaxRate;
-        this.action = "addCustomLineItem";
+        this.action = CartAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM;
     }
 
     public CartAddCustomLineItemActionImpl() {
-        this.action = "addCustomLineItem";
+        this.action = CartAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM;
     }
 
     public String getAction() {

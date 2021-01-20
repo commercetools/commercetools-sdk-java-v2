@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeIsSearchableActionImpl.class)
 public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAction {
 
+    String CHANGE_IS_SEARCHABLE = "changeIsSearchable";
+
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

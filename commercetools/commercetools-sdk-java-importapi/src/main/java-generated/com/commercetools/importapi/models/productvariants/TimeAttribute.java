@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TimeAttributeImpl.class)
 public interface TimeAttribute extends Attribute {
 
+    String TIME = "time";
+
     @NotNull
     @JsonProperty("value")
     public LocalTime getValue();

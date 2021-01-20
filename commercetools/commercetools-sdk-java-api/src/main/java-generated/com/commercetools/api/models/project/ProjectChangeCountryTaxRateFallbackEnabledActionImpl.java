@@ -31,11 +31,11 @@ public final class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
     ProjectChangeCountryTaxRateFallbackEnabledActionImpl(
             @JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
         this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
-        this.action = "changeCountryTaxRateFallbackEnabled";
+        this.action = ProjectChangeCountryTaxRateFallbackEnabledAction.CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED;
     }
 
     public ProjectChangeCountryTaxRateFallbackEnabledActionImpl() {
-        this.action = "changeCountryTaxRateFallbackEnabled";
+        this.action = ProjectChangeCountryTaxRateFallbackEnabledAction.CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED;
     }
 
     public String getAction() {

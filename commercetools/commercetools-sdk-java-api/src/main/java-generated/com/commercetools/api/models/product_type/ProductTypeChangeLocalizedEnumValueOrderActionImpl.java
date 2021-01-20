@@ -35,11 +35,11 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionImpl
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributeLocalizedEnumValue> values) {
         this.attributeName = attributeName;
         this.values = values;
-        this.action = "changeLocalizedEnumValueOrder";
+        this.action = ProductTypeChangeLocalizedEnumValueOrderAction.CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }
 
     public ProductTypeChangeLocalizedEnumValueOrderActionImpl() {
-        this.action = "changeLocalizedEnumValueOrder";
+        this.action = ProductTypeChangeLocalizedEnumValueOrderAction.CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }
 
     public String getAction() {

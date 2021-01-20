@@ -29,11 +29,11 @@ public final class CategoryChangeOrderHintActionImpl implements CategoryChangeOr
     @JsonCreator
     CategoryChangeOrderHintActionImpl(@JsonProperty("orderHint") final String orderHint) {
         this.orderHint = orderHint;
-        this.action = "changeOrderHint";
+        this.action = CategoryChangeOrderHintAction.CHANGE_ORDER_HINT;
     }
 
     public CategoryChangeOrderHintActionImpl() {
-        this.action = "changeOrderHint";
+        this.action = CategoryChangeOrderHintAction.CHANGE_ORDER_HINT;
     }
 
     public String getAction() {

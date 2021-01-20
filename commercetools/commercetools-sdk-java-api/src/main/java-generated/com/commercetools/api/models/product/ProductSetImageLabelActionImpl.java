@@ -43,11 +43,11 @@ public final class ProductSetImageLabelActionImpl implements ProductSetImageLabe
         this.imageUrl = imageUrl;
         this.label = label;
         this.staged = staged;
-        this.action = "setImageLabel";
+        this.action = ProductSetImageLabelAction.SET_IMAGE_LABEL;
     }
 
     public ProductSetImageLabelActionImpl() {
-        this.action = "setImageLabel";
+        this.action = ProductSetImageLabelAction.SET_IMAGE_LABEL;
     }
 
     public String getAction() {

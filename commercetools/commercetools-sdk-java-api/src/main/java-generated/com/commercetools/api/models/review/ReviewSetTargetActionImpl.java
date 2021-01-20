@@ -30,11 +30,11 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
     @JsonCreator
     ReviewSetTargetActionImpl(@JsonProperty("target") final com.fasterxml.jackson.databind.JsonNode target) {
         this.target = target;
-        this.action = "setTarget";
+        this.action = ReviewSetTargetAction.SET_TARGET;
     }
 
     public ReviewSetTargetActionImpl() {
-        this.action = "setTarget";
+        this.action = ReviewSetTargetAction.SET_TARGET;
     }
 
     public String getAction() {

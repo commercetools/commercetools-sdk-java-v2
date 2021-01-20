@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentStatusInterfaceCodeSetMessagePayloadImpl.class)
 public interface PaymentStatusInterfaceCodeSetMessagePayload extends MessagePayload {
 
+    String PAYMENT_STATUS_INTERFACE_CODE_SET = "PaymentStatusInterfaceCodeSet";
+
     @NotNull
     @JsonProperty("paymentId")
     public String getPaymentId();

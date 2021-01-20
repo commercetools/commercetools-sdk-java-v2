@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelRemoveRolesActionImpl.class)
 public interface ChannelRemoveRolesAction extends ChannelUpdateAction {
 
+    String REMOVE_ROLES = "removeRoles";
+
     @NotNull
     @JsonProperty("roles")
     public List<ChannelRoleEnum> getRoles();

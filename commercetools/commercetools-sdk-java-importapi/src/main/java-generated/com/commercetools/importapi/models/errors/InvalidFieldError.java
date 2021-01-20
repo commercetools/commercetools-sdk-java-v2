@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidFieldErrorImpl.class)
 public interface InvalidFieldError extends ErrorObject {
 
+    String INVALID_FIELD = "InvalidField";
+
     /**
     *  <p>The name of the field.</p>
     */

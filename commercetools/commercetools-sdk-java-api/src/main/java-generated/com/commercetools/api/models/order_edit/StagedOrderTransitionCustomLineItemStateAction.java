@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderTransitionCustomLineItemStateActionImpl.class)
 public interface StagedOrderTransitionCustomLineItemStateAction extends StagedOrderUpdateAction {
 
+    String TRANSITION_CUSTOM_LINE_ITEM_STATE = "transitionCustomLineItemState";
+
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();

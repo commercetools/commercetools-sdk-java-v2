@@ -31,11 +31,11 @@ public final class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChan
     StoreAddSupplyChannelActionImpl(
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
-        this.action = "addSupplyChannel";
+        this.action = StoreAddSupplyChannelAction.ADD_SUPPLY_CHANNEL;
     }
 
     public StoreAddSupplyChannelActionImpl() {
-        this.action = "addSupplyChannel";
+        this.action = StoreAddSupplyChannelAction.ADD_SUPPLY_CHANNEL;
     }
 
     public String getAction() {

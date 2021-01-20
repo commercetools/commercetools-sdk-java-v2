@@ -35,11 +35,11 @@ public final class StagedOrderImportCustomLineItemStateActionImpl
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.customLineItemId = customLineItemId;
         this.state = state;
-        this.action = "importCustomLineItemState";
+        this.action = StagedOrderImportCustomLineItemStateAction.IMPORT_CUSTOM_LINE_ITEM_STATE;
     }
 
     public StagedOrderImportCustomLineItemStateActionImpl() {
-        this.action = "importCustomLineItemState";
+        this.action = StagedOrderImportCustomLineItemStateAction.IMPORT_CUSTOM_LINE_ITEM_STATE;
     }
 
     public String getAction() {

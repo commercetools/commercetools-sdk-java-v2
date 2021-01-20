@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelKeyReferenceImpl.class)
 public interface ChannelKeyReference extends KeyReference {
 
+    String CHANNEL = "channel";
+
     public static ChannelKeyReference of() {
         return new ChannelKeyReferenceImpl();
     }

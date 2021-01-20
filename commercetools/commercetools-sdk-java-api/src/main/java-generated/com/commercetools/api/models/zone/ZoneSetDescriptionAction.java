@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneSetDescriptionActionImpl.class)
 public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
 
+    String SET_DESCRIPTION = "setDescription";
+
     @JsonProperty("description")
     public String getDescription();
 

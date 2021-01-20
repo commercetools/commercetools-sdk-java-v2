@@ -29,11 +29,11 @@ public final class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError {
     @JsonCreator
     EnumValueIsUsedErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "EnumValueIsUsed";
+        this.code = EnumValueIsUsedError.ENUM_VALUE_IS_USED;
     }
 
     public EnumValueIsUsedErrorImpl() {
-        this.code = "EnumValueIsUsed";
+        this.code = EnumValueIsUsedError.ENUM_VALUE_IS_USED;
     }
 
     public String getCode() {

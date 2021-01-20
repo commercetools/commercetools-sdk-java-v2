@@ -79,11 +79,11 @@ public final class OrderDiscountCodeStateSetMessageImpl implements OrderDiscount
         this.discountCode = discountCode;
         this.state = state;
         this.oldState = oldState;
-        this.type = "OrderDiscountCodeStateSet";
+        this.type = OrderDiscountCodeStateSetMessage.ORDER_DISCOUNT_CODE_STATE_SET;
     }
 
     public OrderDiscountCodeStateSetMessageImpl() {
-        this.type = "OrderDiscountCodeStateSet";
+        this.type = OrderDiscountCodeStateSetMessage.ORDER_DISCOUNT_CODE_STATE_SET;
     }
 
     public String getId() {

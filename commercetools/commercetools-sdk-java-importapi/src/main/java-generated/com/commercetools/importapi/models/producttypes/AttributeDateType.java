@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeDateTypeImpl.class)
 public interface AttributeDateType extends AttributeType {
 
+    String DATE = "date";
+
     public static AttributeDateType of() {
         return new AttributeDateTypeImpl();
     }

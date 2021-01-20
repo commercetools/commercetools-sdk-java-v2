@@ -29,11 +29,11 @@ public final class InventoryEntryChangeQuantityActionImpl implements InventoryEn
     @JsonCreator
     InventoryEntryChangeQuantityActionImpl(@JsonProperty("quantity") final Long quantity) {
         this.quantity = quantity;
-        this.action = "changeQuantity";
+        this.action = InventoryEntryChangeQuantityAction.CHANGE_QUANTITY;
     }
 
     public InventoryEntryChangeQuantityActionImpl() {
-        this.action = "changeQuantity";
+        this.action = InventoryEntryChangeQuantityAction.CHANGE_QUANTITY;
     }
 
     public String getAction() {

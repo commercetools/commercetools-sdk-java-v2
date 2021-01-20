@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductLegacySetSkuActionImpl.class)
 public interface ProductLegacySetSkuAction extends ProductUpdateAction {
 
+    String LEGACY_SET_SKU = "legacySetSku";
+
     @JsonProperty("sku")
     public String getSku();
 

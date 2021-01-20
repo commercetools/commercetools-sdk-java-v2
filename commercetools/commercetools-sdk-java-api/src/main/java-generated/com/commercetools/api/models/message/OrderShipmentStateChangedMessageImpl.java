@@ -74,11 +74,11 @@ public final class OrderShipmentStateChangedMessageImpl implements OrderShipment
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.shipmentState = shipmentState;
         this.oldShipmentState = oldShipmentState;
-        this.type = "OrderShipmentStateChanged";
+        this.type = OrderShipmentStateChangedMessage.ORDER_SHIPMENT_STATE_CHANGED;
     }
 
     public OrderShipmentStateChangedMessageImpl() {
-        this.type = "OrderShipmentStateChanged";
+        this.type = OrderShipmentStateChangedMessage.ORDER_SHIPMENT_STATE_CHANGED;
     }
 
     public String getId() {

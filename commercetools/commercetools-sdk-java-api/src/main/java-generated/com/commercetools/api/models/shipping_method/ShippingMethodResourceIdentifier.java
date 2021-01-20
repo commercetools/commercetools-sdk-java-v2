@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodResourceIdentifierImpl.class)
 public interface ShippingMethodResourceIdentifier extends ResourceIdentifier {
 
+    String SHIPPING_METHOD = "shipping-method";
+
     public static ShippingMethodResourceIdentifier of() {
         return new ShippingMethodResourceIdentifierImpl();
     }

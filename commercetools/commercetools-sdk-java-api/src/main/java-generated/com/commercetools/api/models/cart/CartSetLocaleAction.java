@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetLocaleActionImpl.class)
 public interface CartSetLocaleAction extends CartUpdateAction {
 
+    String SET_LOCALE = "setLocale";
+
     @JsonProperty("locale")
     public String getLocale();
 

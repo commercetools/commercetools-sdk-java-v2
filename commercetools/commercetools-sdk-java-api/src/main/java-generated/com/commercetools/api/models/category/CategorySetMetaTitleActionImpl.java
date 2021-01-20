@@ -31,11 +31,11 @@ public final class CategorySetMetaTitleActionImpl implements CategorySetMetaTitl
     CategorySetMetaTitleActionImpl(
             @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
-        this.action = "setMetaTitle";
+        this.action = CategorySetMetaTitleAction.SET_META_TITLE;
     }
 
     public CategorySetMetaTitleActionImpl() {
-        this.action = "setMetaTitle";
+        this.action = CategorySetMetaTitleAction.SET_META_TITLE;
     }
 
     public String getAction() {

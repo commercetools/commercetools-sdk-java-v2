@@ -31,11 +31,11 @@ public final class ProductRevertedStagedChangesMessagePayloadImpl
     ProductRevertedStagedChangesMessagePayloadImpl(
             @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
-        this.type = "ProductRevertedStagedChanges";
+        this.type = ProductRevertedStagedChangesMessagePayload.PRODUCT_REVERTED_STAGED_CHANGES;
     }
 
     public ProductRevertedStagedChangesMessagePayloadImpl() {
-        this.type = "ProductRevertedStagedChanges";
+        this.type = ProductRevertedStagedChangesMessagePayload.PRODUCT_REVERTED_STAGED_CHANGES;
     }
 
     public String getType() {

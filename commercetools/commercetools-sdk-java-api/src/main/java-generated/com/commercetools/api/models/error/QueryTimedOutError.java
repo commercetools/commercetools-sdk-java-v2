@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QueryTimedOutErrorImpl.class)
 public interface QueryTimedOutError extends ErrorObject {
 
+    String QUERY_TIMED_OUT = "QueryTimedOut";
+
     public static QueryTimedOutError of() {
         return new QueryTimedOutErrorImpl();
     }

@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionUpdateActionsFailedErrorImpl.class)
 public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
+    String EXTENSION_UPDATE_ACTIONS_FAILED = "ExtensionUpdateActionsFailed";
+
     @Valid
     @JsonProperty("localizedMessage")
     public LocalizedString getLocalizedMessage();

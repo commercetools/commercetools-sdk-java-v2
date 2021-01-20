@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodChangeTaxCategoryActionImpl.class)
 public interface ShippingMethodChangeTaxCategoryAction extends ShippingMethodUpdateAction {
 
+    String CHANGE_TAX_CATEGORY = "changeTaxCategory";
+
     @NotNull
     @Valid
     @JsonProperty("taxCategory")

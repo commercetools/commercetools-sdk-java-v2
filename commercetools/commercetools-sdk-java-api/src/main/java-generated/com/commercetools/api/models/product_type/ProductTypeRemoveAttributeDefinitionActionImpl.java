@@ -30,11 +30,11 @@ public final class ProductTypeRemoveAttributeDefinitionActionImpl
     @JsonCreator
     ProductTypeRemoveAttributeDefinitionActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
-        this.action = "removeAttributeDefinition";
+        this.action = ProductTypeRemoveAttributeDefinitionAction.REMOVE_ATTRIBUTE_DEFINITION;
     }
 
     public ProductTypeRemoveAttributeDefinitionActionImpl() {
-        this.action = "removeAttributeDefinition";
+        this.action = ProductTypeRemoveAttributeDefinitionAction.REMOVE_ATTRIBUTE_DEFINITION;
     }
 
     public String getAction() {

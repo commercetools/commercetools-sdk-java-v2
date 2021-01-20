@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
 public interface InventoryEntryReference extends Reference {
 
+    String INVENTORY_ENTRY = "inventory-entry";
+
     @Valid
     @JsonProperty("obj")
     public InventoryEntry getObj();

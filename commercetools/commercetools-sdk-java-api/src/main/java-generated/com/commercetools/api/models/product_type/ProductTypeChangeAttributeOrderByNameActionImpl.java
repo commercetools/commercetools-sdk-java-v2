@@ -31,11 +31,11 @@ public final class ProductTypeChangeAttributeOrderByNameActionImpl
     ProductTypeChangeAttributeOrderByNameActionImpl(
             @JsonProperty("attributeNames") final java.util.List<String> attributeNames) {
         this.attributeNames = attributeNames;
-        this.action = "changeAttributeOrderByName";
+        this.action = ProductTypeChangeAttributeOrderByNameAction.CHANGE_ATTRIBUTE_ORDER_BY_NAME;
     }
 
     public ProductTypeChangeAttributeOrderByNameActionImpl() {
-        this.action = "changeAttributeOrderByName";
+        this.action = ProductTypeChangeAttributeOrderByNameAction.CHANGE_ATTRIBUTE_ORDER_BY_NAME;
     }
 
     public String getAction() {

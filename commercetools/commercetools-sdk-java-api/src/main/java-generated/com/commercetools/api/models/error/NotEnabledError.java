@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = NotEnabledErrorImpl.class)
 public interface NotEnabledError extends ErrorObject {
 
+    String NOT_ENABLED = "NotEnabled";
+
     public static NotEnabledError of() {
         return new NotEnabledErrorImpl();
     }

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SubscriptionSetChangesActionImpl.class)
 public interface SubscriptionSetChangesAction extends SubscriptionUpdateAction {
 
+    String SET_CHANGES = "setChanges";
+
     @Valid
     @JsonProperty("changes")
     public List<ChangeSubscription> getChanges();

@@ -30,11 +30,11 @@ public final class AttributeSetTypeImpl implements AttributeSetType {
     AttributeSetTypeImpl(
             @JsonProperty("elementType") final com.commercetools.api.models.product_type.AttributeType elementType) {
         this.elementType = elementType;
-        this.name = "set";
+        this.name = AttributeSetType.SET;
     }
 
     public AttributeSetTypeImpl() {
-        this.name = "set";
+        this.name = AttributeSetType.SET;
     }
 
     public String getName() {

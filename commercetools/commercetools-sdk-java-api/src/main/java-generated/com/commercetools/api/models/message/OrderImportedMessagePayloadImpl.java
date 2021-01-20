@@ -30,11 +30,11 @@ public final class OrderImportedMessagePayloadImpl implements OrderImportedMessa
     @JsonCreator
     OrderImportedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.api.models.order.Order order) {
         this.order = order;
-        this.type = "OrderImported";
+        this.type = OrderImportedMessagePayload.ORDER_IMPORTED;
     }
 
     public OrderImportedMessagePayloadImpl() {
-        this.type = "OrderImported";
+        this.type = OrderImportedMessagePayload.ORDER_IMPORTED;
     }
 
     public String getType() {

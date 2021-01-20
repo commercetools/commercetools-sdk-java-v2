@@ -31,11 +31,11 @@ public final class CustomerSetCustomerGroupActionImpl implements CustomerSetCust
     CustomerSetCustomerGroupActionImpl(
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
-        this.action = "setCustomerGroup";
+        this.action = CustomerSetCustomerGroupAction.SET_CUSTOMER_GROUP;
     }
 
     public CustomerSetCustomerGroupActionImpl() {
-        this.action = "setCustomerGroup";
+        this.action = CustomerSetCustomerGroupAction.SET_CUSTOMER_GROUP;
     }
 
     public String getAction() {

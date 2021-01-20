@@ -33,11 +33,11 @@ public final class ShoppingListChangeLineItemQuantityActionImpl implements Shopp
             @JsonProperty("quantity") final Long quantity) {
         this.lineItemId = lineItemId;
         this.quantity = quantity;
-        this.action = "changeLineItemQuantity";
+        this.action = ShoppingListChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY;
     }
 
     public ShoppingListChangeLineItemQuantityActionImpl() {
-        this.action = "changeLineItemQuantity";
+        this.action = ShoppingListChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY;
     }
 
     public String getAction() {

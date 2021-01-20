@@ -31,11 +31,11 @@ public final class StoreRemoveDistributionChannelActionImpl implements StoreRemo
     StoreRemoveDistributionChannelActionImpl(
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
-        this.action = "removeDistributionChannel";
+        this.action = StoreRemoveDistributionChannelAction.REMOVE_DISTRIBUTION_CHANNEL;
     }
 
     public StoreRemoveDistributionChannelActionImpl() {
-        this.action = "removeDistributionChannel";
+        this.action = StoreRemoveDistributionChannelAction.REMOVE_DISTRIBUTION_CHANNEL;
     }
 
     public String getAction() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetLocaleActionImpl.class)
 public interface StagedOrderSetLocaleAction extends StagedOrderUpdateAction {
 
+    String SET_LOCALE = "setLocale";
+
     @JsonProperty("locale")
     public String getLocale();
 

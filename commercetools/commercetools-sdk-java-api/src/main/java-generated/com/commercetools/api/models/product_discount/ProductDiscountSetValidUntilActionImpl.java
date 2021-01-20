@@ -30,11 +30,11 @@ public final class ProductDiscountSetValidUntilActionImpl implements ProductDisc
     @JsonCreator
     ProductDiscountSetValidUntilActionImpl(@JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
         this.validUntil = validUntil;
-        this.action = "setValidUntil";
+        this.action = ProductDiscountSetValidUntilAction.SET_VALID_UNTIL;
     }
 
     public ProductDiscountSetValidUntilActionImpl() {
-        this.action = "setValidUntil";
+        this.action = ProductDiscountSetValidUntilAction.SET_VALID_UNTIL;
     }
 
     public String getAction() {

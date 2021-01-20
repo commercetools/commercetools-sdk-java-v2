@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryChangeQuantityActionImpl.class)
 public interface InventoryEntryChangeQuantityAction extends InventoryEntryUpdateAction {
 
+    String CHANGE_QUANTITY = "changeQuantity";
+
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();

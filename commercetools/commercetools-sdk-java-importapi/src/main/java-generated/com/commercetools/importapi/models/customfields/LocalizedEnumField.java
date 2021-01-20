@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizedEnumFieldImpl.class)
 public interface LocalizedEnumField extends CustomField {
 
+    String LOCALIZED_ENUM = "LocalizedEnum";
+
     @NotNull
     @JsonProperty("value")
     public String getValue();

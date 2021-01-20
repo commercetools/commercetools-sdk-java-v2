@@ -29,11 +29,11 @@ public final class ShippingMethodChangeIsDefaultActionImpl implements ShippingMe
     @JsonCreator
     ShippingMethodChangeIsDefaultActionImpl(@JsonProperty("isDefault") final Boolean isDefault) {
         this.isDefault = isDefault;
-        this.action = "changeIsDefault";
+        this.action = ShippingMethodChangeIsDefaultAction.CHANGE_IS_DEFAULT;
     }
 
     public ShippingMethodChangeIsDefaultActionImpl() {
-        this.action = "changeIsDefault";
+        this.action = ShippingMethodChangeIsDefaultAction.CHANGE_IS_DEFAULT;
     }
 
     public String getAction() {

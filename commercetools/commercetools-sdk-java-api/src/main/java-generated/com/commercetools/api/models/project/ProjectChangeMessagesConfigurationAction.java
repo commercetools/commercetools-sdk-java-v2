@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeMessagesConfigurationActionImpl.class)
 public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateAction {
 
+    String CHANGE_MESSAGES_CONFIGURATION = "changeMessagesConfiguration";
+
     @NotNull
     @Valid
     @JsonProperty("messagesConfiguration")

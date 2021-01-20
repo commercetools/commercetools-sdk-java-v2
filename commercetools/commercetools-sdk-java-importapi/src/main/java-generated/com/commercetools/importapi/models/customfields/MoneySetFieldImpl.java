@@ -34,11 +34,11 @@ public final class MoneySetFieldImpl implements MoneySetField {
     MoneySetFieldImpl(
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.Money> value) {
         this.value = value;
-        this.type = "MoneySet";
+        this.type = MoneySetField.MONEY_SET;
     }
 
     public MoneySetFieldImpl() {
-        this.type = "MoneySet";
+        this.type = MoneySetField.MONEY_SET;
     }
 
     /**

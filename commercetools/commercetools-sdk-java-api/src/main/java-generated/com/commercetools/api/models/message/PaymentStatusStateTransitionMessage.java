@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentStatusStateTransitionMessageImpl.class)
 public interface PaymentStatusStateTransitionMessage extends Message {
 
+    String PAYMENT_STATUS_STATE_TRANSITION = "PaymentStatusStateTransition";
+
     @NotNull
     @Valid
     @JsonProperty("state")

@@ -31,11 +31,11 @@ public final class OrderEditSetStagedActionsActionImpl implements OrderEditSetSt
     OrderEditSetStagedActionsActionImpl(
             @JsonProperty("stagedActions") final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
         this.stagedActions = stagedActions;
-        this.action = "setStagedActions";
+        this.action = OrderEditSetStagedActionsAction.SET_STAGED_ACTIONS;
     }
 
     public OrderEditSetStagedActionsActionImpl() {
-        this.action = "setStagedActions";
+        this.action = OrderEditSetStagedActionsAction.SET_STAGED_ACTIONS;
     }
 
     public String getAction() {

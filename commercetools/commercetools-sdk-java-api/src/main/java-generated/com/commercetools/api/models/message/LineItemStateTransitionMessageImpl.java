@@ -86,11 +86,11 @@ public final class LineItemStateTransitionMessageImpl implements LineItemStateTr
         this.quantity = quantity;
         this.fromState = fromState;
         this.toState = toState;
-        this.type = "LineItemStateTransition";
+        this.type = LineItemStateTransitionMessage.LINE_ITEM_STATE_TRANSITION;
     }
 
     public LineItemStateTransitionMessageImpl() {
-        this.type = "LineItemStateTransition";
+        this.type = LineItemStateTransitionMessage.LINE_ITEM_STATE_TRANSITION;
     }
 
     public String getId() {

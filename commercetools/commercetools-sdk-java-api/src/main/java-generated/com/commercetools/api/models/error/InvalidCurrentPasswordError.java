@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidCurrentPasswordErrorImpl.class)
 public interface InvalidCurrentPasswordError extends ErrorObject {
 
+    String INVALID_CURRENT_PASSWORD = "InvalidCurrentPassword";
+
     public static InvalidCurrentPasswordError of() {
         return new InvalidCurrentPasswordErrorImpl();
     }

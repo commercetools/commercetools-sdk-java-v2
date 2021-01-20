@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeAttributeOrderByNameActionImpl.class)
 public interface ProductTypeChangeAttributeOrderByNameAction extends ProductTypeUpdateAction {
 
+    String CHANGE_ATTRIBUTE_ORDER_BY_NAME = "changeAttributeOrderByName";
+
     @NotNull
     @JsonProperty("attributeNames")
     public List<String> getAttributeNames();

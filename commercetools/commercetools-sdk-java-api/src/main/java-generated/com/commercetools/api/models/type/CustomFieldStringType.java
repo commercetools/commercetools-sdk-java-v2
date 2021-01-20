@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldStringTypeImpl.class)
 public interface CustomFieldStringType extends FieldType {
 
+    String STRING = "String";
+
     public static CustomFieldStringType of() {
         return new CustomFieldStringTypeImpl();
     }

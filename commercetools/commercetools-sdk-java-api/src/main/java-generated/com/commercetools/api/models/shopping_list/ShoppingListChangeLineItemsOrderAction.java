@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListChangeLineItemsOrderActionImpl.class)
 public interface ShoppingListChangeLineItemsOrderAction extends ShoppingListUpdateAction {
 
+    String CHANGE_LINE_ITEMS_ORDER = "changeLineItemsOrder";
+
     @NotNull
     @JsonProperty("lineItemOrder")
     public List<String> getLineItemOrder();

@@ -29,11 +29,11 @@ public final class ClassificationShippingRateInputDraftImpl implements Classific
     @JsonCreator
     ClassificationShippingRateInputDraftImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.type = "Classification";
+        this.type = ClassificationShippingRateInputDraft.CLASSIFICATION;
     }
 
     public ClassificationShippingRateInputDraftImpl() {
-        this.type = "Classification";
+        this.type = ClassificationShippingRateInputDraft.CLASSIFICATION;
     }
 
     public String getType() {

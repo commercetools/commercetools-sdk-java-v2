@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerEmailVerifiedMessageImpl.class)
 public interface CustomerEmailVerifiedMessage extends Message {
 
+    String CUSTOMER_EMAIL_VERIFIED = "CustomerEmailVerified";
+
     public static CustomerEmailVerifiedMessage of() {
         return new CustomerEmailVerifiedMessageImpl();
     }

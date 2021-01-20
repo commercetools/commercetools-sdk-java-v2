@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySetAssetCustomFieldActionImpl.class)
 public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction {
 
+    String SET_ASSET_CUSTOM_FIELD = "setAssetCustomField";
+
     @JsonProperty("assetId")
     public String getAssetId();
 

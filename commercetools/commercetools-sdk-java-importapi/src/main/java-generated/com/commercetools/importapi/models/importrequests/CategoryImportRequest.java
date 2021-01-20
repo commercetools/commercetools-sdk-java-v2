@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryImportRequestImpl.class)
 public interface CategoryImportRequest extends ImportRequest {
 
+    String CATEGORY = "category";
+
     /**
     *  <p>The category import resources of this request.</p>
     */

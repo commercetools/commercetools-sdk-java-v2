@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountValueRelativeDraftImpl.class)
 public interface CartDiscountValueRelativeDraft extends CartDiscountValueDraft {
 
+    String RELATIVE = "relative";
+
     @NotNull
     @JsonProperty("permyriad")
     public Long getPermyriad();

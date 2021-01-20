@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditAddStagedActionActionImpl.class)
 public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
 
+    String ADD_STAGED_ACTION = "addStagedAction";
+
     @NotNull
     @Valid
     @JsonProperty("stagedAction")

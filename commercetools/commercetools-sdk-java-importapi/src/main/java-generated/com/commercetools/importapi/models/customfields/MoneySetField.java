@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MoneySetFieldImpl.class)
 public interface MoneySetField extends CustomField {
 
+    String MONEY_SET = "MoneySet";
+
     @NotNull
     @Valid
     @JsonProperty("value")

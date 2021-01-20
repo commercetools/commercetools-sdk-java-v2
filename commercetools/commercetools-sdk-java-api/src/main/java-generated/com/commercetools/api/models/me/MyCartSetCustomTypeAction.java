@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartSetCustomTypeActionImpl.class)
 public interface MyCartSetCustomTypeAction extends MyCartUpdateAction {
 
+    String SET_CUSTOM_TYPE = "setCustomType";
+
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();

@@ -26,7 +26,7 @@ public final class AttributeTimeTypeImpl implements AttributeTimeType {
 
     @JsonCreator
     AttributeTimeTypeImpl() {
-        this.name = "time";
+        this.name = AttributeTimeType.TIME;
     }
 
     public String getName() {

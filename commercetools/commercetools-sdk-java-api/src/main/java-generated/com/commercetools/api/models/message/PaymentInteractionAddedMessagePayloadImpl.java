@@ -31,11 +31,11 @@ public final class PaymentInteractionAddedMessagePayloadImpl implements PaymentI
     PaymentInteractionAddedMessagePayloadImpl(
             @JsonProperty("interaction") final com.commercetools.api.models.type.CustomFields interaction) {
         this.interaction = interaction;
-        this.type = "PaymentInteractionAdded";
+        this.type = PaymentInteractionAddedMessagePayload.PAYMENT_INTERACTION_ADDED;
     }
 
     public PaymentInteractionAddedMessagePayloadImpl() {
-        this.type = "PaymentInteractionAdded";
+        this.type = PaymentInteractionAddedMessagePayload.PAYMENT_INTERACTION_ADDED;
     }
 
     public String getType() {

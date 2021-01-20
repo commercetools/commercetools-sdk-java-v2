@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InternalConstraintViolatedErrorImpl.class)
 public interface InternalConstraintViolatedError extends ErrorObject {
 
+    String INTERNAL_CONSTRAINT_VIOLATED = "InternalConstraintViolated";
+
     public static InternalConstraintViolatedError of() {
         return new InternalConstraintViolatedErrorImpl();
     }

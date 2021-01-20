@@ -31,11 +31,11 @@ public final class ShippingMethodChangeTaxCategoryActionImpl implements Shipping
     ShippingMethodChangeTaxCategoryActionImpl(
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
-        this.action = "changeTaxCategory";
+        this.action = ShippingMethodChangeTaxCategoryAction.CHANGE_TAX_CATEGORY;
     }
 
     public ShippingMethodChangeTaxCategoryActionImpl() {
-        this.action = "changeTaxCategory";
+        this.action = ShippingMethodChangeTaxCategoryAction.CHANGE_TAX_CATEGORY;
     }
 
     public String getAction() {

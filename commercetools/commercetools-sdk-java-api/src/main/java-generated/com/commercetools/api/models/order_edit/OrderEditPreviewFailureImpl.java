@@ -31,11 +31,11 @@ public final class OrderEditPreviewFailureImpl implements OrderEditPreviewFailur
     OrderEditPreviewFailureImpl(
             @JsonProperty("errors") final java.util.List<com.commercetools.api.models.error.ErrorObject> errors) {
         this.errors = errors;
-        this.type = "PreviewFailure";
+        this.type = OrderEditPreviewFailure.PREVIEW_FAILURE;
     }
 
     public OrderEditPreviewFailureImpl() {
-        this.type = "PreviewFailure";
+        this.type = OrderEditPreviewFailure.PREVIEW_FAILURE;
     }
 
     public String getType() {

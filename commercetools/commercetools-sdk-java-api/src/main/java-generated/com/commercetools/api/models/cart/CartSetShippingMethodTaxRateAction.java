@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetShippingMethodTaxRateActionImpl.class)
 public interface CartSetShippingMethodTaxRateAction extends CartUpdateAction {
 
+    String SET_SHIPPING_METHOD_TAX_RATE = "setShippingMethodTaxRate";
+
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();

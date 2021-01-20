@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupSetKeyActionImpl.class)
 public interface CustomerGroupSetKeyAction extends CustomerGroupUpdateAction {
 
+    String SET_KEY = "setKey";
+
     /**
     *  <p>User-specific unique identifier for the customer group.</p>
     */

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateSetTransitionsActionImpl.class)
 public interface StateSetTransitionsAction extends StateUpdateAction {
 
+    String SET_TRANSITIONS = "setTransitions";
+
     @Valid
     @JsonProperty("transitions")
     public List<StateResourceIdentifier> getTransitions();

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderDiscountCodeRemovedMessagePayloadImpl.class)
 public interface OrderDiscountCodeRemovedMessagePayload extends MessagePayload {
 
+    String ORDER_DISCOUNT_CODE_REMOVED = "OrderDiscountCodeRemoved";
+
     @NotNull
     @Valid
     @JsonProperty("discountCode")

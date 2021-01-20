@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceNotFoundErrorImpl.class)
 public interface ResourceNotFoundError extends ErrorObject {
 
+    String RESOURCE_NOT_FOUND = "ResourceNotFound";
+
     public static ResourceNotFoundError of() {
         return new ResourceNotFoundErrorImpl();
     }

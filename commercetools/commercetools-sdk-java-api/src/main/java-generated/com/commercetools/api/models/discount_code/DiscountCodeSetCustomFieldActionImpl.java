@@ -34,11 +34,11 @@ public final class DiscountCodeSetCustomFieldActionImpl implements DiscountCodeS
             @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
         this.name = name;
         this.value = value;
-        this.action = "setCustomField";
+        this.action = DiscountCodeSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public DiscountCodeSetCustomFieldActionImpl() {
-        this.action = "setCustomField";
+        this.action = DiscountCodeSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public String getAction() {

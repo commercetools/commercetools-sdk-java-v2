@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LineItemReturnItemImpl.class)
 public interface LineItemReturnItem extends ReturnItem {
 
+    String LINE_ITEM_RETURN_ITEM = "LineItemReturnItem";
+
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();

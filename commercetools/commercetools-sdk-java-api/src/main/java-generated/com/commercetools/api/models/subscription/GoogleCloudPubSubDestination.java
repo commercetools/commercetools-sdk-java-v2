@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = GoogleCloudPubSubDestinationImpl.class)
 public interface GoogleCloudPubSubDestination extends Destination {
 
+    String GOOGLE_CLOUD_PUB_SUB = "GoogleCloudPubSub";
+
     @NotNull
     @JsonProperty("projectId")
     public String getProjectId();

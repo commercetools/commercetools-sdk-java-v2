@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldBooleanTypeImpl.class)
 public interface CustomFieldBooleanType extends FieldType {
 
+    String BOOLEAN = "Boolean";
+
     public static CustomFieldBooleanType of() {
         return new CustomFieldBooleanTypeImpl();
     }

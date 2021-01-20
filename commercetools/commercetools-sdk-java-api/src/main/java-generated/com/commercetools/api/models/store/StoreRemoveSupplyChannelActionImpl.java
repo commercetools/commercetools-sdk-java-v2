@@ -31,11 +31,11 @@ public final class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupp
     StoreRemoveSupplyChannelActionImpl(
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
-        this.action = "removeSupplyChannel";
+        this.action = StoreRemoveSupplyChannelAction.REMOVE_SUPPLY_CHANNEL;
     }
 
     public StoreRemoveSupplyChannelActionImpl() {
-        this.action = "removeSupplyChannel";
+        this.action = StoreRemoveSupplyChannelAction.REMOVE_SUPPLY_CHANNEL;
     }
 
     public String getAction() {

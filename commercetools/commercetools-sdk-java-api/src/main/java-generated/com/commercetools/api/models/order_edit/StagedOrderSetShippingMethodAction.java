@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingMethodAction extends StagedOrderUpdateAction {
 
+    String SET_SHIPPING_METHOD = "setShippingMethod";
+
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();

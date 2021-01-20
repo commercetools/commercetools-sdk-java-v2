@@ -31,11 +31,11 @@ public final class OrderChangeOrderStateActionImpl implements OrderChangeOrderSt
     OrderChangeOrderStateActionImpl(
             @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
-        this.action = "changeOrderState";
+        this.action = OrderChangeOrderStateAction.CHANGE_ORDER_STATE;
     }
 
     public OrderChangeOrderStateActionImpl() {
-        this.action = "changeOrderState";
+        this.action = OrderChangeOrderStateAction.CHANGE_ORDER_STATE;
     }
 
     public String getAction() {

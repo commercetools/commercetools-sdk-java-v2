@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderChangeShipmentStateActionImpl.class)
 public interface StagedOrderChangeShipmentStateAction extends StagedOrderUpdateAction {
 
+    String CHANGE_SHIPMENT_STATE = "changeShipmentState";
+
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
 

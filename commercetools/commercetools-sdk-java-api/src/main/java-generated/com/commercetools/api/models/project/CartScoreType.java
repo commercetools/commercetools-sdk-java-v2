@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartScoreTypeImpl.class)
 public interface CartScoreType extends ShippingRateInputType {
 
+    String CART_SCORE = "CartScore";
+
     public static CartScoreType of() {
         return new CartScoreTypeImpl();
     }

@@ -34,11 +34,11 @@ public final class MyShoppingListSetCustomFieldActionImpl implements MyShoppingL
             @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
         this.name = name;
         this.value = value;
-        this.action = "setCustomField";
+        this.action = MyShoppingListSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public MyShoppingListSetCustomFieldActionImpl() {
-        this.action = "setCustomField";
+        this.action = MyShoppingListSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public String getAction() {

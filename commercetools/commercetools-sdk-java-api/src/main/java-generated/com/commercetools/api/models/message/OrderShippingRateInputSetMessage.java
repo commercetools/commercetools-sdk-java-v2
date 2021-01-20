@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderShippingRateInputSetMessageImpl.class)
 public interface OrderShippingRateInputSetMessage extends Message {
 
+    String ORDER_SHIPPING_RATE_INPUT_SET = "OrderShippingRateInputSet";
+
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInput getShippingRateInput();

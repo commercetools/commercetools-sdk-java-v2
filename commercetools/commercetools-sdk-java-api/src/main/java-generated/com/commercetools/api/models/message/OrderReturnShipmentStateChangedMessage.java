@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderReturnShipmentStateChangedMessageImpl.class)
 public interface OrderReturnShipmentStateChangedMessage extends Message {
 
+    String ORDER_RETURN_SHIPMENT_STATE_CHANGED = "OrderReturnShipmentStateChanged";
+
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();

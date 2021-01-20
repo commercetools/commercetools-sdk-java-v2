@@ -29,11 +29,11 @@ public final class CustomerGroupSetKeyActionImpl implements CustomerGroupSetKeyA
     @JsonCreator
     CustomerGroupSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "setKey";
+        this.action = CustomerGroupSetKeyAction.SET_KEY;
     }
 
     public CustomerGroupSetKeyActionImpl() {
-        this.action = "setKey";
+        this.action = CustomerGroupSetKeyAction.SET_KEY;
     }
 
     public String getAction() {

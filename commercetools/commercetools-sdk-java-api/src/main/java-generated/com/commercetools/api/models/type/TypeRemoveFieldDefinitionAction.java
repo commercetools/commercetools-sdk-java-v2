@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeRemoveFieldDefinitionActionImpl.class)
 public interface TypeRemoveFieldDefinitionAction extends TypeUpdateAction {
 
+    String REMOVE_FIELD_DEFINITION = "removeFieldDefinition";
+
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();

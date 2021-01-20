@@ -35,11 +35,11 @@ public final class RequiredFieldErrorImpl implements RequiredFieldError {
     RequiredFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field) {
         this.message = message;
         this.field = field;
-        this.code = "RequiredField";
+        this.code = RequiredFieldError.REQUIRED_FIELD;
     }
 
     public RequiredFieldErrorImpl() {
-        this.code = "RequiredField";
+        this.code = RequiredFieldError.REQUIRED_FIELD;
     }
 
     public String getCode() {

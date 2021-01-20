@@ -34,11 +34,11 @@ public final class StagedOrderSetCustomFieldActionImpl implements StagedOrderSet
             @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
         this.name = name;
         this.value = value;
-        this.action = "setCustomField";
+        this.action = StagedOrderSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public StagedOrderSetCustomFieldActionImpl() {
-        this.action = "setCustomField";
+        this.action = StagedOrderSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public String getAction() {

@@ -34,11 +34,11 @@ public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryRep
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
         this.taxRateId = taxRateId;
         this.taxRate = taxRate;
-        this.action = "replaceTaxRate";
+        this.action = TaxCategoryReplaceTaxRateAction.REPLACE_TAX_RATE;
     }
 
     public TaxCategoryReplaceTaxRateActionImpl() {
-        this.action = "replaceTaxRate";
+        this.action = TaxCategoryReplaceTaxRateAction.REPLACE_TAX_RATE;
     }
 
     public String getAction() {

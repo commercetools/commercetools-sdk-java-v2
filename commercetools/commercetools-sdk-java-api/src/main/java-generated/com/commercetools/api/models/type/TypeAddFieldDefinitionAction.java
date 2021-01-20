@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeAddFieldDefinitionActionImpl.class)
 public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
 
+    String ADD_FIELD_DEFINITION = "addFieldDefinition";
+
     @NotNull
     @Valid
     @JsonProperty("fieldDefinition")

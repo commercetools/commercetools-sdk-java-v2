@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeCountryTaxRateFallbackEnabledActionImpl.class)
 public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends ProjectUpdateAction {
 
+    String CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED = "changeCountryTaxRateFallbackEnabled";
+
     /**
     *  <p>default value is <code>false</code></p>
     */

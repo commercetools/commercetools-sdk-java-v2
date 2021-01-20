@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetDateOfBirthActionImpl.class)
 public interface CustomerSetDateOfBirthAction extends CustomerUpdateAction {
 
+    String SET_DATE_OF_BIRTH = "setDateOfBirth";
+
     /**
     *  <p>If not defined, the date of birth is unset.</p>
     */

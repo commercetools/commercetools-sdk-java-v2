@@ -31,11 +31,11 @@ public final class CustomerCreatedMessagePayloadImpl implements CustomerCreatedM
     CustomerCreatedMessagePayloadImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer) {
         this.customer = customer;
-        this.type = "CustomerCreated";
+        this.type = CustomerCreatedMessagePayload.CUSTOMER_CREATED;
     }
 
     public CustomerCreatedMessagePayloadImpl() {
-        this.type = "CustomerCreated";
+        this.type = CustomerCreatedMessagePayload.CUSTOMER_CREATED;
     }
 
     public String getType() {

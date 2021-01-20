@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelSetCustomTypeActionImpl.class)
 public interface ChannelSetCustomTypeAction extends ChannelUpdateAction {
 
+    String SET_CUSTOM_TYPE = "setCustomType";
+
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();

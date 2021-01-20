@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MaxResourceLimitExceededErrorImpl.class)
 public interface MaxResourceLimitExceededError extends ErrorObject {
 
+    String MAX_RESOURCE_LIMIT_EXCEEDED = "MaxResourceLimitExceeded";
+
     @NotNull
     @JsonProperty("exceededResource")
     public ReferenceTypeId getExceededResource();

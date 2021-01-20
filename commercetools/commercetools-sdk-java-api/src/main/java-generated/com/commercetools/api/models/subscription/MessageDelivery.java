@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MessageDeliveryImpl.class)
 public interface MessageDelivery extends SubscriptionDelivery {
 
+    String MESSAGE = "Message";
+
     @NotNull
     @JsonProperty("id")
     public String getId();

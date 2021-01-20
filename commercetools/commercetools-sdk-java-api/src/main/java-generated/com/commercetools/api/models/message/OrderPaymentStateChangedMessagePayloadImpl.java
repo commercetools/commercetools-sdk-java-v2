@@ -35,11 +35,11 @@ public final class OrderPaymentStateChangedMessagePayloadImpl implements OrderPa
             @JsonProperty("oldPaymentState") final com.commercetools.api.models.order.PaymentState oldPaymentState) {
         this.paymentState = paymentState;
         this.oldPaymentState = oldPaymentState;
-        this.type = "OrderPaymentStateChanged";
+        this.type = OrderPaymentStateChangedMessagePayload.ORDER_PAYMENT_STATE_CHANGED;
     }
 
     public OrderPaymentStateChangedMessagePayloadImpl() {
-        this.type = "OrderPaymentStateChanged";
+        this.type = OrderPaymentStateChangedMessagePayload.ORDER_PAYMENT_STATE_CHANGED;
     }
 
     public String getType() {

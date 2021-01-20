@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeDefinitionTypeConflictErrorImpl.class)
 public interface AttributeDefinitionTypeConflictError extends ErrorObject {
 
+    String ATTRIBUTE_DEFINITION_TYPE_CONFLICT = "AttributeDefinitionTypeConflict";
+
     @NotNull
     @JsonProperty("conflictingProductTypeId")
     public String getConflictingProductTypeId();

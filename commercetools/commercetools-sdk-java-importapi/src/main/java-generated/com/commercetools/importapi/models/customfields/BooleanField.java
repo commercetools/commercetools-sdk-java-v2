@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BooleanFieldImpl.class)
 public interface BooleanField extends CustomField {
 
+    String BOOLEAN = "Boolean";
+
     @NotNull
     @JsonProperty("value")
     public Boolean getValue();

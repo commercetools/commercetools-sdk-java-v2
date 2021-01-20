@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountSetKeyActionImpl.class)
 public interface CartDiscountSetKeyAction extends CartDiscountUpdateAction {
 
+    String SET_KEY = "setKey";
+
     /**
     *  <p>If <code>key</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
     */

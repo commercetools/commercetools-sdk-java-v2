@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderChangeTaxCalculationModeActionImpl.class)
 public interface StagedOrderChangeTaxCalculationModeAction extends StagedOrderUpdateAction {
 
+    String CHANGE_TAX_CALCULATION_MODE = "changeTaxCalculationMode";
+
     @NotNull
     @JsonProperty("taxCalculationMode")
     public TaxCalculationMode getTaxCalculationMode();

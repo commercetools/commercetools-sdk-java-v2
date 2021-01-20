@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeAddAttributeDefinitionActionImpl.class)
 public interface ProductTypeAddAttributeDefinitionAction extends ProductTypeUpdateAction {
 
+    String ADD_ATTRIBUTE_DEFINITION = "addAttributeDefinition";
+
     @NotNull
     @Valid
     @JsonProperty("attribute")

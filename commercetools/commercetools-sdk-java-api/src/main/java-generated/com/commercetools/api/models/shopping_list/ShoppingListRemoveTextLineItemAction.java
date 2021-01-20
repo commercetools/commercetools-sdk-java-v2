@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListRemoveTextLineItemActionImpl.class)
 public interface ShoppingListRemoveTextLineItemAction extends ShoppingListUpdateAction {
 
+    String REMOVE_TEXT_LINE_ITEM = "removeTextLineItem";
+
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();

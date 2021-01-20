@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldReferenceTypeImpl.class)
 public interface CustomFieldReferenceType extends FieldType {
 
+    String REFERENCE = "Reference";
+
     @NotNull
     @JsonProperty("referenceTypeId")
     public ReferenceTypeId getReferenceTypeId();

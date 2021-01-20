@@ -46,11 +46,11 @@ public final class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLi
         this.discountedQuantity = discountedQuantity;
         this.maxOccurrence = maxOccurrence;
         this.selectionMode = selectionMode;
-        this.type = "multiBuyCustomLineItems";
+        this.type = MultiBuyCustomLineItemsTarget.MULTI_BUY_CUSTOM_LINE_ITEMS;
     }
 
     public MultiBuyCustomLineItemsTargetImpl() {
-        this.type = "multiBuyCustomLineItems";
+        this.type = MultiBuyCustomLineItemsTarget.MULTI_BUY_CUSTOM_LINE_ITEMS;
     }
 
     public String getType() {

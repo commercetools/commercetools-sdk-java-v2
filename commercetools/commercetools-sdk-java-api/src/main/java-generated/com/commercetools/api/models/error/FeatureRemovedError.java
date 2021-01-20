@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = FeatureRemovedErrorImpl.class)
 public interface FeatureRemovedError extends ErrorObject {
 
+    String FEATURE_REMOVED = "FeatureRemoved";
+
     public static FeatureRemovedError of() {
         return new FeatureRemovedErrorImpl();
     }

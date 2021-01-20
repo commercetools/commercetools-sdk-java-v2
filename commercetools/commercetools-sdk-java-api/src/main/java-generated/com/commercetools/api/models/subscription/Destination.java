@@ -22,12 +22,12 @@ import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureEventGridDestinationImpl.class, name = "EventGrid"),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureServiceBusDestinationImpl.class, name = "AzureServiceBus"),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationImpl.class, name = "GoogleCloudPubSub"),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.IronMqDestinationImpl.class, name = "IronMQ"),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SnsDestinationImpl.class, name = "SNS"),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SqsDestinationImpl.class, name = "SQS") })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureEventGridDestinationImpl.class, name = AzureEventGridDestination.EVENT_GRID),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureServiceBusDestinationImpl.class, name = AzureServiceBusDestination.AZURE_SERVICE_BUS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationImpl.class, name = GoogleCloudPubSubDestination.GOOGLE_CLOUD_PUB_SUB),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.IronMqDestinationImpl.class, name = IronMqDestination.IRON_MQ),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SnsDestinationImpl.class, name = SnsDestination.SNS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SqsDestinationImpl.class, name = SqsDestination.SQS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = DestinationImpl.class, visible = true)
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface Destination {

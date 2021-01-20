@@ -33,11 +33,11 @@ public final class InvalidOperationImpl implements InvalidOperation {
     @JsonCreator
     InvalidOperationImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "InvalidOperation";
+        this.code = InvalidOperation.INVALID_OPERATION;
     }
 
     public InvalidOperationImpl() {
-        this.code = "InvalidOperation";
+        this.code = InvalidOperation.INVALID_OPERATION;
     }
 
     public String getCode() {

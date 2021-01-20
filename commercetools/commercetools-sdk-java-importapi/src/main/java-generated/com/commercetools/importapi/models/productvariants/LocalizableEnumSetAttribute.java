@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizableEnumSetAttributeImpl.class)
 public interface LocalizableEnumSetAttribute extends Attribute {
 
+    String LENUM_SET = "lenum-set";
+
     @NotNull
     @JsonProperty("value")
     public List<String> getValue();

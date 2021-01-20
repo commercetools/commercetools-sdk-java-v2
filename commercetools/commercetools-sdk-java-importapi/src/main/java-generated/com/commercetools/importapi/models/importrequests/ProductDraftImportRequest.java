@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDraftImportRequestImpl.class)
 public interface ProductDraftImportRequest extends ImportRequest {
 
+    String PRODUCT_DRAFT = "product-draft";
+
     /**
     *  <p>The product draft import resources of this request.</p>
     */

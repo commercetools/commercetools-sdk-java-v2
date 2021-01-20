@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PendingOperationErrorImpl.class)
 public interface PendingOperationError extends ErrorObject {
 
+    String PENDING_OPERATION = "PendingOperation";
+
     public static PendingOperationError of() {
         return new PendingOperationErrorImpl();
     }

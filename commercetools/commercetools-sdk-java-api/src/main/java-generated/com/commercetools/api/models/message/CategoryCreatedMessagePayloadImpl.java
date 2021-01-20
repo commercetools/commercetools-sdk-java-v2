@@ -31,11 +31,11 @@ public final class CategoryCreatedMessagePayloadImpl implements CategoryCreatedM
     CategoryCreatedMessagePayloadImpl(
             @JsonProperty("category") final com.commercetools.api.models.category.Category category) {
         this.category = category;
-        this.type = "CategoryCreated";
+        this.type = CategoryCreatedMessagePayload.CATEGORY_CREATED;
     }
 
     public CategoryCreatedMessagePayloadImpl() {
-        this.type = "CategoryCreated";
+        this.type = CategoryCreatedMessagePayload.CATEGORY_CREATED;
     }
 
     public String getType() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryChangeOrderHintActionImpl.class)
 public interface CategoryChangeOrderHintAction extends CategoryUpdateAction {
 
+    String CHANGE_ORDER_HINT = "changeOrderHint";
+
     @NotNull
     @JsonProperty("orderHint")
     public String getOrderHint();

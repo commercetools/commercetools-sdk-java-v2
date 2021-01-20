@@ -73,11 +73,11 @@ public final class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentSt
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.paymentId = paymentId;
         this.interfaceCode = interfaceCode;
-        this.type = "PaymentStatusInterfaceCodeSet";
+        this.type = PaymentStatusInterfaceCodeSetMessage.PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
 
     public PaymentStatusInterfaceCodeSetMessageImpl() {
-        this.type = "PaymentStatusInterfaceCodeSet";
+        this.type = PaymentStatusInterfaceCodeSetMessage.PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
 
     public String getId() {

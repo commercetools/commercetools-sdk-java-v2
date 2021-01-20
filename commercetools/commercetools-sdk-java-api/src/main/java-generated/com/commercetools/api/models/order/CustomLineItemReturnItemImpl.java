@@ -56,11 +56,11 @@ public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnI
         this.lastModifiedAt = lastModifiedAt;
         this.createdAt = createdAt;
         this.customLineItemId = customLineItemId;
-        this.type = "CustomLineItemReturnItem";
+        this.type = CustomLineItemReturnItem.CUSTOM_LINE_ITEM_RETURN_ITEM;
     }
 
     public CustomLineItemReturnItemImpl() {
-        this.type = "CustomLineItemReturnItem";
+        this.type = CustomLineItemReturnItem.CUSTOM_LINE_ITEM_RETURN_ITEM;
     }
 
     public String getId() {

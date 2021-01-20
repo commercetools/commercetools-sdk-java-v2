@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountCustomLineItemsTargetImpl.class)
 public interface CartDiscountCustomLineItemsTarget extends CartDiscountTarget {
 
+    String CUSTOM_LINE_ITEMS = "customLineItems";
+
     @NotNull
     @JsonProperty("predicate")
     public String getPredicate();

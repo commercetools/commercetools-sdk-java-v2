@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryCreatedMessageImpl.class)
 public interface InventoryEntryCreatedMessage extends Message {
 
+    String INVENTORY_ENTRY_CREATED = "InventoryEntryCreated";
+
     @NotNull
     @Valid
     @JsonProperty("inventoryEntry")

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = WeakPasswordErrorImpl.class)
 public interface WeakPasswordError extends ErrorObject {
 
+    String WEAK_PASSWORD = "WeakPassword";
+
     public static WeakPasswordError of() {
         return new WeakPasswordErrorImpl();
     }

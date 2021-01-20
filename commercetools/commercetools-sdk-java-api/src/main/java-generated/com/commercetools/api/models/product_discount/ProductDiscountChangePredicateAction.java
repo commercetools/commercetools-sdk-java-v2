@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountChangePredicateActionImpl.class)
 public interface ProductDiscountChangePredicateAction extends ProductDiscountUpdateAction {
 
+    String CHANGE_PREDICATE = "changePredicate";
+
     /**
     *  <p>A valid ProductDiscount Predicate.</p>
     */

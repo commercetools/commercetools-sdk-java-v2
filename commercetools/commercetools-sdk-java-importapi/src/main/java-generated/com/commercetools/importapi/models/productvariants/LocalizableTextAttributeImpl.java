@@ -37,11 +37,11 @@ public final class LocalizableTextAttributeImpl implements LocalizableTextAttrib
             @JsonProperty("value") final com.commercetools.importapi.models.common.LocalizedString value) {
         this.name = name;
         this.value = value;
-        this.type = "ltext";
+        this.type = LocalizableTextAttribute.LTEXT;
     }
 
     public LocalizableTextAttributeImpl() {
-        this.type = "ltext";
+        this.type = LocalizableTextAttribute.LTEXT;
     }
 
     /**

@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditAppliedMessagePayloadImpl.class)
 public interface OrderEditAppliedMessagePayload extends MessagePayload {
 
+    String ORDER_EDIT_APPLIED = "OrderEditApplied";
+
     @NotNull
     @Valid
     @JsonProperty("edit")

@@ -29,11 +29,11 @@ public final class ProductDiscountValueRelativeImpl implements ProductDiscountVa
     @JsonCreator
     ProductDiscountValueRelativeImpl(@JsonProperty("permyriad") final Long permyriad) {
         this.permyriad = permyriad;
-        this.type = "relative";
+        this.type = ProductDiscountValueRelative.RELATIVE;
     }
 
     public ProductDiscountValueRelativeImpl() {
-        this.type = "relative";
+        this.type = ProductDiscountValueRelative.RELATIVE;
     }
 
     public String getType() {

@@ -41,11 +41,11 @@ public final class InventoryEntryQuantitySetMessagePayloadImpl implements Invent
         this.newQuantityOnStock = newQuantityOnStock;
         this.oldAvailableQuantity = oldAvailableQuantity;
         this.newAvailableQuantity = newAvailableQuantity;
-        this.type = "InventoryEntryQuantitySet";
+        this.type = InventoryEntryQuantitySetMessagePayload.INVENTORY_ENTRY_QUANTITY_SET;
     }
 
     public InventoryEntryQuantitySetMessagePayloadImpl() {
-        this.type = "InventoryEntryQuantitySet";
+        this.type = InventoryEntryQuantitySetMessagePayload.INVENTORY_ENTRY_QUANTITY_SET;
     }
 
     public String getType() {

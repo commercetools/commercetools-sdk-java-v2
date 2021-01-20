@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategorySetDescriptionActionImpl.class)
 public interface TaxCategorySetDescriptionAction extends TaxCategoryUpdateAction {
 
+    String SET_DESCRIPTION = "setDescription";
+
     @JsonProperty("description")
     public String getDescription();
 

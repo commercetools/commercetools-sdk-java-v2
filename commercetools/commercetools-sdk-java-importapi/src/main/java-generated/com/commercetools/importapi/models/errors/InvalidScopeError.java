@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidScopeErrorImpl.class)
 public interface InvalidScopeError extends ErrorObject {
 
+    String INVALID_SCOPE = "invalid_scope";
+
     public static InvalidScopeError of() {
         return new InvalidScopeErrorImpl();
     }

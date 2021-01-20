@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneResourceIdentifierImpl.class)
 public interface ZoneResourceIdentifier extends ResourceIdentifier {
 
+    String ZONE = "zone";
+
     public static ZoneResourceIdentifier of() {
         return new ZoneResourceIdentifierImpl();
     }

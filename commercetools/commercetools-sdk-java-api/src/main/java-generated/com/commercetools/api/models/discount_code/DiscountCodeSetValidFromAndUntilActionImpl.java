@@ -34,11 +34,11 @@ public final class DiscountCodeSetValidFromAndUntilActionImpl implements Discoun
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
         this.validFrom = validFrom;
         this.validUntil = validUntil;
-        this.action = "setValidFromAndUntil";
+        this.action = DiscountCodeSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL;
     }
 
     public DiscountCodeSetValidFromAndUntilActionImpl() {
-        this.action = "setValidFromAndUntil";
+        this.action = DiscountCodeSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL;
     }
 
     public String getAction() {

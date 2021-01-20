@@ -34,11 +34,11 @@ public final class StagedOrderSetParcelMeasurementsActionImpl implements StagedO
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.parcelId = parcelId;
         this.measurements = measurements;
-        this.action = "setParcelMeasurements";
+        this.action = StagedOrderSetParcelMeasurementsAction.SET_PARCEL_MEASUREMENTS;
     }
 
     public StagedOrderSetParcelMeasurementsActionImpl() {
-        this.action = "setParcelMeasurements";
+        this.action = StagedOrderSetParcelMeasurementsAction.SET_PARCEL_MEASUREMENTS;
     }
 
     public String getAction() {

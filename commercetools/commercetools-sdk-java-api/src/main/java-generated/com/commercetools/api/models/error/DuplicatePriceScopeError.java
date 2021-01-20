@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicatePriceScopeErrorImpl.class)
 public interface DuplicatePriceScopeError extends ErrorObject {
 
+    String DUPLICATE_PRICE_SCOPE = "DuplicatePriceScope";
+
     @NotNull
     @Valid
     @JsonProperty("conflictingPrices")

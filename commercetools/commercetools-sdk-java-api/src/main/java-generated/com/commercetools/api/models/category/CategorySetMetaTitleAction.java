@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySetMetaTitleActionImpl.class)
 public interface CategorySetMetaTitleAction extends CategoryUpdateAction {
 
+    String SET_META_TITLE = "setMetaTitle";
+
     @Valid
     @JsonProperty("metaTitle")
     public LocalizedString getMetaTitle();

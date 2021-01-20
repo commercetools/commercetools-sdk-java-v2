@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RequiredFieldErrorImpl.class)
 public interface RequiredFieldError extends ErrorObject {
 
+    String REQUIRED_FIELD = "RequiredField";
+
     @NotNull
     @JsonProperty("field")
     public String getField();

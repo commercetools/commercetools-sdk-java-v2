@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateKeyReferenceImpl.class)
 public interface StateKeyReference extends KeyReference {
 
+    String STATE = "state";
+
     public static StateKeyReference of() {
         return new StateKeyReferenceImpl();
     }

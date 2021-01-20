@@ -33,11 +33,11 @@ public final class OrderCustomerEmailSetMessagePayloadImpl implements OrderCusto
             @JsonProperty("oldEmail") final String oldEmail) {
         this.email = email;
         this.oldEmail = oldEmail;
-        this.type = "OrderCustomerEmailSet";
+        this.type = OrderCustomerEmailSetMessagePayload.ORDER_CUSTOMER_EMAIL_SET;
     }
 
     public OrderCustomerEmailSetMessagePayloadImpl() {
-        this.type = "OrderCustomerEmailSet";
+        this.type = OrderCustomerEmailSetMessagePayload.ORDER_CUSTOMER_EMAIL_SET;
     }
 
     public String getType() {

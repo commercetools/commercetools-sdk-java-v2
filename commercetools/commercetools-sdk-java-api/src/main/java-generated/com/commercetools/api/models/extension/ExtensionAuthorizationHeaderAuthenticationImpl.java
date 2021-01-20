@@ -30,11 +30,11 @@ public final class ExtensionAuthorizationHeaderAuthenticationImpl
     @JsonCreator
     ExtensionAuthorizationHeaderAuthenticationImpl(@JsonProperty("headerValue") final String headerValue) {
         this.headerValue = headerValue;
-        this.type = "AuthorizationHeader";
+        this.type = ExtensionAuthorizationHeaderAuthentication.AUTHORIZATION_HEADER;
     }
 
     public ExtensionAuthorizationHeaderAuthenticationImpl() {
-        this.type = "AuthorizationHeader";
+        this.type = ExtensionAuthorizationHeaderAuthentication.AUTHORIZATION_HEADER;
     }
 
     public String getType() {

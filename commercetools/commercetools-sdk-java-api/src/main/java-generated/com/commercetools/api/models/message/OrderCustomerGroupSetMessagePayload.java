@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomerGroupSetMessagePayloadImpl.class)
 public interface OrderCustomerGroupSetMessagePayload extends MessagePayload {
 
+    String ORDER_CUSTOMER_GROUP_SET = "OrderCustomerGroupSet";
+
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupReference getCustomerGroup();

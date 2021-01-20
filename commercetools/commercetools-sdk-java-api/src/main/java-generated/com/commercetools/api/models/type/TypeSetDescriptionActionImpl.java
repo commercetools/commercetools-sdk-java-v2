@@ -31,11 +31,11 @@ public final class TypeSetDescriptionActionImpl implements TypeSetDescriptionAct
     TypeSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
-        this.action = "setDescription";
+        this.action = TypeSetDescriptionAction.SET_DESCRIPTION;
     }
 
     public TypeSetDescriptionActionImpl() {
-        this.action = "setDescription";
+        this.action = TypeSetDescriptionAction.SET_DESCRIPTION;
     }
 
     public String getAction() {

@@ -31,11 +31,11 @@ public final class ProductCreatedMessagePayloadImpl implements ProductCreatedMes
     ProductCreatedMessagePayloadImpl(
             @JsonProperty("productProjection") final com.commercetools.api.models.product.ProductProjection productProjection) {
         this.productProjection = productProjection;
-        this.type = "ProductCreated";
+        this.type = ProductCreatedMessagePayload.PRODUCT_CREATED;
     }
 
     public ProductCreatedMessagePayloadImpl() {
-        this.type = "ProductCreated";
+        this.type = ProductCreatedMessagePayload.PRODUCT_CREATED;
     }
 
     public String getType() {

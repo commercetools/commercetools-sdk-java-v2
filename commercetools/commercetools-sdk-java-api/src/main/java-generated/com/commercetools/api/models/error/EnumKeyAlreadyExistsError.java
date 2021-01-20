@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = EnumKeyAlreadyExistsErrorImpl.class)
 public interface EnumKeyAlreadyExistsError extends ErrorObject {
 
+    String ENUM_KEY_ALREADY_EXISTS = "EnumKeyAlreadyExists";
+
     @NotNull
     @JsonProperty("conflictingEnumKey")
     public String getConflictingEnumKey();

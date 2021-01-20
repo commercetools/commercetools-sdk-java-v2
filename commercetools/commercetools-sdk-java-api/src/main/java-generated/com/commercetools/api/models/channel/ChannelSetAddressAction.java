@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelSetAddressActionImpl.class)
 public interface ChannelSetAddressAction extends ChannelUpdateAction {
 
+    String SET_ADDRESS = "setAddress";
+
     @Valid
     @JsonProperty("address")
     public Address getAddress();

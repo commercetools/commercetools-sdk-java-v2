@@ -31,11 +31,11 @@ public final class MyShoppingListSetDescriptionActionImpl implements MyShoppingL
     MyShoppingListSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
-        this.action = "setDescription";
+        this.action = MyShoppingListSetDescriptionAction.SET_DESCRIPTION;
     }
 
     public MyShoppingListSetDescriptionActionImpl() {
-        this.action = "setDescription";
+        this.action = MyShoppingListSetDescriptionAction.SET_DESCRIPTION;
     }
 
     public String getAction() {

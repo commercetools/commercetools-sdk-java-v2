@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionAuthorizationHeaderAuthenticationImpl.class)
 public interface ExtensionAuthorizationHeaderAuthentication extends ExtensionHttpDestinationAuthentication {
 
+    String AUTHORIZATION_HEADER = "AuthorizationHeader";
+
     @NotNull
     @JsonProperty("headerValue")
     public String getHeaderValue();

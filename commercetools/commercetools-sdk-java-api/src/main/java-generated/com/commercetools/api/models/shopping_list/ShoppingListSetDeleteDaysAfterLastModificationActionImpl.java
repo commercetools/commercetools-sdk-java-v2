@@ -31,11 +31,11 @@ public final class ShoppingListSetDeleteDaysAfterLastModificationActionImpl
     ShoppingListSetDeleteDaysAfterLastModificationActionImpl(
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
-        this.action = "setDeleteDaysAfterLastModification";
+        this.action = ShoppingListSetDeleteDaysAfterLastModificationAction.SET_DELETE_DAYS_AFTER_LAST_MODIFICATION;
     }
 
     public ShoppingListSetDeleteDaysAfterLastModificationActionImpl() {
-        this.action = "setDeleteDaysAfterLastModification";
+        this.action = ShoppingListSetDeleteDaysAfterLastModificationAction.SET_DELETE_DAYS_AFTER_LAST_MODIFICATION;
     }
 
     public String getAction() {

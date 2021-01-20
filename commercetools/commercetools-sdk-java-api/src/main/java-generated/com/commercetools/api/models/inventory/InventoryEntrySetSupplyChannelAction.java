@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntrySetSupplyChannelActionImpl.class)
 public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpdateAction {
 
+    String SET_SUPPLY_CHANNEL = "setSupplyChannel";
+
     /**
     *  <p>If absent, the supply channel is removed.
     *  This action will fail if an entry with the combination of sku and supplyChannel already exists.</p>

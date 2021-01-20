@@ -69,11 +69,11 @@ public final class OrderStoreSetMessageImpl implements OrderStoreSetMessage {
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.store = store;
-        this.type = "OrderStoreSet";
+        this.type = OrderStoreSetMessage.ORDER_STORE_SET;
     }
 
     public OrderStoreSetMessageImpl() {
-        this.type = "OrderStoreSet";
+        this.type = OrderStoreSetMessage.ORDER_STORE_SET;
     }
 
     public String getId() {

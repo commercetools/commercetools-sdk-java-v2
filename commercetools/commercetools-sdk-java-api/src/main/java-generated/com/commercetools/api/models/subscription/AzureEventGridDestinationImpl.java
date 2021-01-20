@@ -33,11 +33,11 @@ public final class AzureEventGridDestinationImpl implements AzureEventGridDestin
             @JsonProperty("accessKey") final String accessKey) {
         this.uri = uri;
         this.accessKey = accessKey;
-        this.type = "EventGrid";
+        this.type = AzureEventGridDestination.EVENT_GRID;
     }
 
     public AzureEventGridDestinationImpl() {
-        this.type = "EventGrid";
+        this.type = AzureEventGridDestination.EVENT_GRID;
     }
 
     public String getType() {

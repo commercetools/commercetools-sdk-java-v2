@@ -30,11 +30,11 @@ public final class StateChangeTypeActionImpl implements StateChangeTypeAction {
     @JsonCreator
     StateChangeTypeActionImpl(@JsonProperty("type") final com.commercetools.api.models.state.StateTypeEnum type) {
         this.type = type;
-        this.action = "changeType";
+        this.action = StateChangeTypeAction.CHANGE_TYPE;
     }
 
     public StateChangeTypeActionImpl() {
-        this.action = "changeType";
+        this.action = StateChangeTypeAction.CHANGE_TYPE;
     }
 
     public String getAction() {

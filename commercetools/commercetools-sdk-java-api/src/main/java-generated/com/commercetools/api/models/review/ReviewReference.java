@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewReferenceImpl.class)
 public interface ReviewReference extends Reference {
 
+    String REVIEW = "review";
+
     @Valid
     @JsonProperty("obj")
     public Review getObj();

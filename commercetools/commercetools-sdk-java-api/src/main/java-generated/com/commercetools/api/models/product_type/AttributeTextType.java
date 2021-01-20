@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeTextTypeImpl.class)
 public interface AttributeTextType extends AttributeType {
 
+    String TEXT = "text";
+
     public static AttributeTextType of() {
         return new AttributeTextTypeImpl();
     }

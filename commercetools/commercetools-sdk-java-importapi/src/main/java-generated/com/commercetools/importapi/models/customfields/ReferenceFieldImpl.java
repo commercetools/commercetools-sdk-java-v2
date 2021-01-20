@@ -33,11 +33,11 @@ public final class ReferenceFieldImpl implements ReferenceField {
     @JsonCreator
     ReferenceFieldImpl(@JsonProperty("value") final com.commercetools.importapi.models.common.KeyReference value) {
         this.value = value;
-        this.type = "Reference";
+        this.type = ReferenceField.REFERENCE;
     }
 
     public ReferenceFieldImpl() {
-        this.type = "Reference";
+        this.type = ReferenceField.REFERENCE;
     }
 
     /**

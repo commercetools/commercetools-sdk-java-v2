@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderChangeCustomLineItemMoneyActionImpl.class)
 public interface StagedOrderChangeCustomLineItemMoneyAction extends StagedOrderUpdateAction {
 
+    String CHANGE_CUSTOM_LINE_ITEM_MONEY = "changeCustomLineItemMoney";
+
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();

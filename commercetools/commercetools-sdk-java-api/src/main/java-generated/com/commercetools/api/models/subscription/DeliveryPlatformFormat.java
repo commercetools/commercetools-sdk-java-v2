@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryPlatformFormatImpl.class)
 public interface DeliveryPlatformFormat extends DeliveryFormat {
 
+    String PLATFORM = "Platform";
+
     public static DeliveryPlatformFormat of() {
         return new DeliveryPlatformFormatImpl();
     }

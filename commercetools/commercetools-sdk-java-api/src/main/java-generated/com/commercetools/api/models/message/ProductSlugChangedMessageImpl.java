@@ -73,11 +73,11 @@ public final class ProductSlugChangedMessageImpl implements ProductSlugChangedMe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.slug = slug;
         this.oldSlug = oldSlug;
-        this.type = "ProductSlugChanged";
+        this.type = ProductSlugChangedMessage.PRODUCT_SLUG_CHANGED;
     }
 
     public ProductSlugChangedMessageImpl() {
-        this.type = "ProductSlugChanged";
+        this.type = ProductSlugChangedMessage.PRODUCT_SLUG_CHANGED;
     }
 
     public String getId() {

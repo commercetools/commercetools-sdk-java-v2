@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SqsDestinationImpl.class)
 public interface SqsDestination extends Destination {
 
+    String SQS = "SQS";
+
     @NotNull
     @JsonProperty("accessKey")
     public String getAccessKey();

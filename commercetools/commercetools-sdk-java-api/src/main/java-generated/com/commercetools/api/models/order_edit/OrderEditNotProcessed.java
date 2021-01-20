@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditNotProcessedImpl.class)
 public interface OrderEditNotProcessed extends OrderEditResult {
 
+    String NOT_PROCESSED = "NotProcessed";
+
     public static OrderEditNotProcessed of() {
         return new OrderEditNotProcessedImpl();
     }

@@ -29,11 +29,11 @@ public final class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocal
     @JsonCreator
     StagedOrderSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
-        this.action = "setLocale";
+        this.action = StagedOrderSetLocaleAction.SET_LOCALE;
     }
 
     public StagedOrderSetLocaleActionImpl() {
-        this.action = "setLocale";
+        this.action = StagedOrderSetLocaleAction.SET_LOCALE;
     }
 
     public String getAction() {

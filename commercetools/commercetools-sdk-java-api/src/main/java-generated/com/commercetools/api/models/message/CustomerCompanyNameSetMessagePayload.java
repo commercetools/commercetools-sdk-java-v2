@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerCompanyNameSetMessagePayloadImpl.class)
 public interface CustomerCompanyNameSetMessagePayload extends MessagePayload {
 
+    String CUSTOMER_COMPANY_NAME_SET = "CustomerCompanyNameSet";
+
     @NotNull
     @JsonProperty("companyName")
     public String getCompanyName();

@@ -30,11 +30,11 @@ public final class CategoryChangeNameActionImpl implements CategoryChangeNameAct
     @JsonCreator
     CategoryChangeNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
-        this.action = "changeName";
+        this.action = CategoryChangeNameAction.CHANGE_NAME;
     }
 
     public CategoryChangeNameActionImpl() {
-        this.action = "changeName";
+        this.action = CategoryChangeNameAction.CHANGE_NAME;
     }
 
     public String getAction() {

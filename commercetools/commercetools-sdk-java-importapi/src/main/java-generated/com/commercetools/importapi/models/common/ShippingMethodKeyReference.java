@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodKeyReferenceImpl.class)
 public interface ShippingMethodKeyReference extends KeyReference {
 
+    String SHIPPING_METHOD = "shipping-method";
+
     public static ShippingMethodKeyReference of() {
         return new ShippingMethodKeyReferenceImpl();
     }

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ClassificationShippingRateInputImpl.class)
 public interface ClassificationShippingRateInput extends ShippingRateInput {
 
+    String CLASSIFICATION = "Classification";
+
     @NotNull
     @JsonProperty("key")
     public String getKey();

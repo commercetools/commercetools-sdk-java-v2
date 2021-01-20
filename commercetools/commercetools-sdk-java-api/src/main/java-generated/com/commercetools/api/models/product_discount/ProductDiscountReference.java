@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountReferenceImpl.class)
 public interface ProductDiscountReference extends Reference {
 
+    String PRODUCT_DISCOUNT = "product-discount";
+
     @Valid
     @JsonProperty("obj")
     public ProductDiscount getObj();

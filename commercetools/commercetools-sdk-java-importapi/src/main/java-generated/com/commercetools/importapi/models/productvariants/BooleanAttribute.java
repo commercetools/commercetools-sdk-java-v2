@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = BooleanAttributeImpl.class)
 public interface BooleanAttribute extends Attribute {
 
+    String BOOLEAN = "boolean";
+
     @NotNull
     @JsonProperty("value")
     public Boolean getValue();

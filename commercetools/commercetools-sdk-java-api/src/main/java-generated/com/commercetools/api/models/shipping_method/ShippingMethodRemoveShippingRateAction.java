@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodRemoveShippingRateActionImpl.class)
 public interface ShippingMethodRemoveShippingRateAction extends ShippingMethodUpdateAction {
 
+    String REMOVE_SHIPPING_RATE = "removeShippingRate";
+
     @NotNull
     @Valid
     @JsonProperty("zone")

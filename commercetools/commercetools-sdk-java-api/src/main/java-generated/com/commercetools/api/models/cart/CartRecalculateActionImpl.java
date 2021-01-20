@@ -29,11 +29,11 @@ public final class CartRecalculateActionImpl implements CartRecalculateAction {
     @JsonCreator
     CartRecalculateActionImpl(@JsonProperty("updateProductData") final Boolean updateProductData) {
         this.updateProductData = updateProductData;
-        this.action = "recalculate";
+        this.action = CartRecalculateAction.RECALCULATE;
     }
 
     public CartRecalculateActionImpl() {
-        this.action = "recalculate";
+        this.action = CartRecalculateAction.RECALCULATE;
     }
 
     public String getAction() {

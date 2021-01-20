@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductAddExternalImageActionImpl.class)
 public interface ProductAddExternalImageAction extends ProductUpdateAction {
 
+    String ADD_EXTERNAL_IMAGE = "addExternalImage";
+
     @JsonProperty("variantId")
     public Long getVariantId();
 

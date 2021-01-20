@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReferenceExistsErrorImpl.class)
 public interface ReferenceExistsError extends ErrorObject {
 
+    String REFERENCE_EXISTS = "ReferenceExists";
+
     @JsonProperty("referencedBy")
     public ReferenceTypeId getReferencedBy();
 

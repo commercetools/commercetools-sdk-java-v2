@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCountryActionImpl.class)
 public interface StagedOrderSetCountryAction extends StagedOrderUpdateAction {
 
+    String SET_COUNTRY = "setCountry";
+
     @JsonProperty("country")
     public String getCountry();
 

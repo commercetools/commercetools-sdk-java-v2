@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryRemoveAssetActionImpl.class)
 public interface CategoryRemoveAssetAction extends CategoryUpdateAction {
 
+    String REMOVE_ASSET = "removeAsset";
+
     @JsonProperty("assetId")
     public String getAssetId();
 

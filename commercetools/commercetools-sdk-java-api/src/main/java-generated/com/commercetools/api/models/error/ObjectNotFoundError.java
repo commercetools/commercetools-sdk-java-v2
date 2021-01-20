@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ObjectNotFoundErrorImpl.class)
 public interface ObjectNotFoundError extends ErrorObject {
 
+    String OBJECT_NOT_FOUND = "ObjectNotFound";
+
     public static ObjectNotFoundError of() {
         return new ObjectNotFoundErrorImpl();
     }

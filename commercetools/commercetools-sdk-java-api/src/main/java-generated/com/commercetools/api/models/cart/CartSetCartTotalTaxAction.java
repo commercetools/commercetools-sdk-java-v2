@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCartTotalTaxActionImpl.class)
 public interface CartSetCartTotalTaxAction extends CartUpdateAction {
 
+    String SET_CART_TOTAL_TAX = "setCartTotalTax";
+
     /**
     *  <p>The total gross amount of the cart (totalNet + taxes).</p>
     */

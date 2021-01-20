@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LanguageUsedInStoresErrorImpl.class)
 public interface LanguageUsedInStoresError extends ErrorObject {
 
+    String LANGUAGE_USED_IN_STORES = "LanguageUsedInStores";
+
     public static LanguageUsedInStoresError of() {
         return new LanguageUsedInStoresErrorImpl();
     }

@@ -44,11 +44,11 @@ public final class ExtensionBadResponseErrorImpl implements ExtensionBadResponse
         this.localizedMessage = localizedMessage;
         this.extensionExtraInfo = extensionExtraInfo;
         this.errorByExtension = errorByExtension;
-        this.code = "ExtensionBadResponse";
+        this.code = ExtensionBadResponseError.EXTENSION_BAD_RESPONSE;
     }
 
     public ExtensionBadResponseErrorImpl() {
-        this.code = "ExtensionBadResponse";
+        this.code = ExtensionBadResponseError.EXTENSION_BAD_RESPONSE;
     }
 
     public String getCode() {

@@ -36,11 +36,11 @@ public final class TimeAttributeImpl implements TimeAttribute {
     TimeAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.time.LocalTime value) {
         this.name = name;
         this.value = value;
-        this.type = "time";
+        this.type = TimeAttribute.TIME;
     }
 
     public TimeAttributeImpl() {
-        this.type = "time";
+        this.type = TimeAttribute.TIME;
     }
 
     /**

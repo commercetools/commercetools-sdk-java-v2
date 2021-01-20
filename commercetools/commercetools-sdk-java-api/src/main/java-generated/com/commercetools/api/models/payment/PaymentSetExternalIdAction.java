@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetExternalIdActionImpl.class)
 public interface PaymentSetExternalIdAction extends PaymentUpdateAction {
 
+    String SET_EXTERNAL_ID = "setExternalId";
+
     @JsonProperty("externalId")
     public String getExternalId();
 

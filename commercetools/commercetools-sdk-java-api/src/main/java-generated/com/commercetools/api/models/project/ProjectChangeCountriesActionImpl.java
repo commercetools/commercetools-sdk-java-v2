@@ -29,11 +29,11 @@ public final class ProjectChangeCountriesActionImpl implements ProjectChangeCoun
     @JsonCreator
     ProjectChangeCountriesActionImpl(@JsonProperty("countries") final java.util.List<String> countries) {
         this.countries = countries;
-        this.action = "changeCountries";
+        this.action = ProjectChangeCountriesAction.CHANGE_COUNTRIES;
     }
 
     public ProjectChangeCountriesActionImpl() {
-        this.action = "changeCountries";
+        this.action = ProjectChangeCountriesAction.CHANGE_COUNTRIES;
     }
 
     public String getAction() {

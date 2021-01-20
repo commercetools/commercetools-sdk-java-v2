@@ -34,11 +34,11 @@ public final class StagedOrderSetParcelTrackingDataActionImpl implements StagedO
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
         this.parcelId = parcelId;
         this.trackingData = trackingData;
-        this.action = "setParcelTrackingData";
+        this.action = StagedOrderSetParcelTrackingDataAction.SET_PARCEL_TRACKING_DATA;
     }
 
     public StagedOrderSetParcelTrackingDataActionImpl() {
-        this.action = "setParcelTrackingData";
+        this.action = StagedOrderSetParcelTrackingDataAction.SET_PARCEL_TRACKING_DATA;
     }
 
     public String getAction() {

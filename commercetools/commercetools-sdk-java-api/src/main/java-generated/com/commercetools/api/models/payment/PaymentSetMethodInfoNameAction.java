@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetMethodInfoNameActionImpl.class)
 public interface PaymentSetMethodInfoNameAction extends PaymentUpdateAction {
 
+    String SET_METHOD_INFO_NAME = "setMethodInfoName";
+
     /**
     *  <p>If not provided, the name is unset.</p>
     */

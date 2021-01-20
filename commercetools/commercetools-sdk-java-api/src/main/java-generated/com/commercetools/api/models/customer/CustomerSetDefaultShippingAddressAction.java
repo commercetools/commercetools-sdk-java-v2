@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetDefaultShippingAddressActionImpl.class)
 public interface CustomerSetDefaultShippingAddressAction extends CustomerUpdateAction {
 
+    String SET_DEFAULT_SHIPPING_ADDRESS = "setDefaultShippingAddress";
+
     /**
     *  <p>If not defined, the customer's <code>defaultShippingAddress</code> is unset.</p>
     */

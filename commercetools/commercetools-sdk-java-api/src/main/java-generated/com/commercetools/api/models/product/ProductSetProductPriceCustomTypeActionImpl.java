@@ -43,11 +43,11 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
         this.staged = staged;
         this.type = type;
         this.fields = fields;
-        this.action = "setProductPriceCustomType";
+        this.action = ProductSetProductPriceCustomTypeAction.SET_PRODUCT_PRICE_CUSTOM_TYPE;
     }
 
     public ProductSetProductPriceCustomTypeActionImpl() {
-        this.action = "setProductPriceCustomType";
+        this.action = ProductSetProductPriceCustomTypeAction.SET_PRODUCT_PRICE_CUSTOM_TYPE;
     }
 
     public String getAction() {

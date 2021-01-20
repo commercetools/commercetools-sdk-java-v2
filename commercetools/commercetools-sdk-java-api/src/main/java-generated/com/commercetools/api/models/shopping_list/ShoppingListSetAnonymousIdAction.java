@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetAnonymousIdActionImpl.class)
 public interface ShoppingListSetAnonymousIdAction extends ShoppingListUpdateAction {
 
+    String SET_ANONYMOUS_ID = "setAnonymousId";
+
     /**
     *  <p>Anonymous ID of the anonymous customer that this shopping list belongs to.
     *  If this field is not set any existing <code>anonymousId</code> is removed.</p>

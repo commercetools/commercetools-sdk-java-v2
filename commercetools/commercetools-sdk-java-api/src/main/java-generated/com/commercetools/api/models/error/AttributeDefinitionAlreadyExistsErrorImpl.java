@@ -41,11 +41,11 @@ public final class AttributeDefinitionAlreadyExistsErrorImpl implements Attribut
         this.conflictingProductTypeId = conflictingProductTypeId;
         this.conflictingProductTypeName = conflictingProductTypeName;
         this.conflictingAttributeName = conflictingAttributeName;
-        this.code = "AttributeDefinitionAlreadyExists";
+        this.code = AttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS;
     }
 
     public AttributeDefinitionAlreadyExistsErrorImpl() {
-        this.code = "AttributeDefinitionAlreadyExists";
+        this.code = AttributeDefinitionAlreadyExistsError.ATTRIBUTE_DEFINITION_ALREADY_EXISTS;
     }
 
     public String getCode() {

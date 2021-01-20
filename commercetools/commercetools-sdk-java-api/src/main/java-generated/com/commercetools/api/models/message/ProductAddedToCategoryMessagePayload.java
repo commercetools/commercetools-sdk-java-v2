@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductAddedToCategoryMessagePayloadImpl.class)
 public interface ProductAddedToCategoryMessagePayload extends MessagePayload {
 
+    String PRODUCT_ADDED_TO_CATEGORY = "ProductAddedToCategory";
+
     @NotNull
     @Valid
     @JsonProperty("category")

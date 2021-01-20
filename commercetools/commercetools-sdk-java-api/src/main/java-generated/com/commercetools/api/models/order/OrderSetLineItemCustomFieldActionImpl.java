@@ -38,11 +38,11 @@ public final class OrderSetLineItemCustomFieldActionImpl implements OrderSetLine
         this.lineItemId = lineItemId;
         this.name = name;
         this.value = value;
-        this.action = "setLineItemCustomField";
+        this.action = OrderSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public OrderSetLineItemCustomFieldActionImpl() {
-        this.action = "setLineItemCustomField";
+        this.action = OrderSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public String getAction() {

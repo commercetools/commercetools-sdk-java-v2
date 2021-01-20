@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = EnumValuesMustMatchErrorImpl.class)
 public interface EnumValuesMustMatchError extends ErrorObject {
 
+    String ENUM_VALUES_MUST_MATCH = "EnumValuesMustMatch";
+
     public static EnumValuesMustMatchError of() {
         return new EnumValuesMustMatchErrorImpl();
     }

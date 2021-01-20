@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReferencedResourceNotFoundErrorImpl.class)
 public interface ReferencedResourceNotFoundError extends ErrorObject {
 
+    String REFERENCED_RESOURCE_NOT_FOUND = "ReferencedResourceNotFound";
+
     @NotNull
     @JsonProperty("typeId")
     public ReferenceTypeId getTypeId();

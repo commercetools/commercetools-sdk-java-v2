@@ -29,11 +29,11 @@ public final class ProductRevertStagedVariantChangesActionImpl implements Produc
     @JsonCreator
     ProductRevertStagedVariantChangesActionImpl(@JsonProperty("variantId") final Long variantId) {
         this.variantId = variantId;
-        this.action = "revertStagedVariantChanges";
+        this.action = ProductRevertStagedVariantChangesAction.REVERT_STAGED_VARIANT_CHANGES;
     }
 
     public ProductRevertStagedVariantChangesActionImpl() {
-        this.action = "revertStagedVariantChanges";
+        this.action = ProductRevertStagedVariantChangesAction.REVERT_STAGED_VARIANT_CHANGES;
     }
 
     public String getAction() {

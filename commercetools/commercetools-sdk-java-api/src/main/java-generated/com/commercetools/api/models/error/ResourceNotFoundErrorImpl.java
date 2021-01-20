@@ -29,11 +29,11 @@ public final class ResourceNotFoundErrorImpl implements ResourceNotFoundError {
     @JsonCreator
     ResourceNotFoundErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "ResourceNotFound";
+        this.code = ResourceNotFoundError.RESOURCE_NOT_FOUND;
     }
 
     public ResourceNotFoundErrorImpl() {
-        this.code = "ResourceNotFound";
+        this.code = ResourceNotFoundError.RESOURCE_NOT_FOUND;
     }
 
     public String getCode() {

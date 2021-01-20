@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SubscriptionChangeDestinationActionImpl.class)
 public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateAction {
 
+    String CHANGE_DESTINATION = "changeDestination";
+
     @NotNull
     @Valid
     @JsonProperty("destination")

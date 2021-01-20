@@ -35,11 +35,11 @@ public final class PaymentTransitionStateActionImpl implements PaymentTransition
             @JsonProperty("force") final Boolean force) {
         this.state = state;
         this.force = force;
-        this.action = "transitionState";
+        this.action = PaymentTransitionStateAction.TRANSITION_STATE;
     }
 
     public PaymentTransitionStateActionImpl() {
-        this.action = "transitionState";
+        this.action = PaymentTransitionStateAction.TRANSITION_STATE;
     }
 
     public String getAction() {

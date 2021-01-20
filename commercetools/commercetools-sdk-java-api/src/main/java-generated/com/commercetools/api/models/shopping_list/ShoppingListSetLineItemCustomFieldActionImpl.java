@@ -38,11 +38,11 @@ public final class ShoppingListSetLineItemCustomFieldActionImpl implements Shopp
         this.lineItemId = lineItemId;
         this.name = name;
         this.value = value;
-        this.action = "setLineItemCustomField";
+        this.action = ShoppingListSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public ShoppingListSetLineItemCustomFieldActionImpl() {
-        this.action = "setLineItemCustomField";
+        this.action = ShoppingListSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public String getAction() {

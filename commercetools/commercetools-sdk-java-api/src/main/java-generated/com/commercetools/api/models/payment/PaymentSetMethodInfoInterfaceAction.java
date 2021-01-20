@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetMethodInfoInterfaceActionImpl.class)
 public interface PaymentSetMethodInfoInterfaceAction extends PaymentUpdateAction {
 
+    String SET_METHOD_INFO_INTERFACE = "setMethodInfoInterface";
+
     @NotNull
     @JsonProperty("interface")
     public String getInterface();

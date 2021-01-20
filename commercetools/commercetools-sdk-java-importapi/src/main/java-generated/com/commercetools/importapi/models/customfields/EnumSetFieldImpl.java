@@ -32,11 +32,11 @@ public final class EnumSetFieldImpl implements EnumSetField {
     @JsonCreator
     EnumSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
         this.value = value;
-        this.type = "EnumSet";
+        this.type = EnumSetField.ENUM_SET;
     }
 
     public EnumSetFieldImpl() {
-        this.type = "EnumSet";
+        this.type = EnumSetField.ENUM_SET;
     }
 
     /**

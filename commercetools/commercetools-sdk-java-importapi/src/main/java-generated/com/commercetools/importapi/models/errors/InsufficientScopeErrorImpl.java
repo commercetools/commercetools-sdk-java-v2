@@ -29,11 +29,11 @@ public final class InsufficientScopeErrorImpl implements InsufficientScopeError 
     @JsonCreator
     InsufficientScopeErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "insufficient_scope";
+        this.code = InsufficientScopeError.INSUFFICIENT_SCOPE;
     }
 
     public InsufficientScopeErrorImpl() {
-        this.code = "insufficient_scope";
+        this.code = InsufficientScopeError.INSUFFICIENT_SCOPE;
     }
 
     public String getCode() {

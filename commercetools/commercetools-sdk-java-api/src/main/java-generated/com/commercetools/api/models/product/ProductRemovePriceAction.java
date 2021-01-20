@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRemovePriceActionImpl.class)
 public interface ProductRemovePriceAction extends ProductUpdateAction {
 
+    String REMOVE_PRICE = "removePrice";
+
     /**
     *  <p>ID of the <a href="#price">Price</a></p>
     */

@@ -29,11 +29,11 @@ public final class ReviewSetRatingActionImpl implements ReviewSetRatingAction {
     @JsonCreator
     ReviewSetRatingActionImpl(@JsonProperty("rating") final Integer rating) {
         this.rating = rating;
-        this.action = "setRating";
+        this.action = ReviewSetRatingAction.SET_RATING;
     }
 
     public ReviewSetRatingActionImpl() {
-        this.action = "setRating";
+        this.action = ReviewSetRatingAction.SET_RATING;
     }
 
     public String getAction() {

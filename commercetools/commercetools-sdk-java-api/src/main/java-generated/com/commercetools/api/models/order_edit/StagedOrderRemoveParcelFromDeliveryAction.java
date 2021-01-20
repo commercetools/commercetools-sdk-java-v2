@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderRemoveParcelFromDeliveryActionImpl.class)
 public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUpdateAction {
 
+    String REMOVE_PARCEL_FROM_DELIVERY = "removeParcelFromDelivery";
+
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();

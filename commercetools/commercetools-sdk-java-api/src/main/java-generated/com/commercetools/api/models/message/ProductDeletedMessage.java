@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDeletedMessageImpl.class)
 public interface ProductDeletedMessage extends Message {
 
+    String PRODUCT_DELETED = "ProductDeleted";
+
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();

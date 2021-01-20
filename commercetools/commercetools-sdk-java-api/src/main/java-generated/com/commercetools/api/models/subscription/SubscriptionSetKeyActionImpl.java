@@ -29,11 +29,11 @@ public final class SubscriptionSetKeyActionImpl implements SubscriptionSetKeyAct
     @JsonCreator
     SubscriptionSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "setKey";
+        this.action = SubscriptionSetKeyAction.SET_KEY;
     }
 
     public SubscriptionSetKeyActionImpl() {
-        this.action = "setKey";
+        this.action = SubscriptionSetKeyAction.SET_KEY;
     }
 
     public String getAction() {

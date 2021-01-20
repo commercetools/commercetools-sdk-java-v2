@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeNameActionImpl.class)
 public interface ProductTypeChangeNameAction extends ProductTypeUpdateAction {
 
+    String CHANGE_NAME = "changeName";
+
     @NotNull
     @JsonProperty("name")
     public String getName();

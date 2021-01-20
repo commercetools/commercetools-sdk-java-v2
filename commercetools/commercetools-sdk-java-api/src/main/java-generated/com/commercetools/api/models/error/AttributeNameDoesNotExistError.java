@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeNameDoesNotExistErrorImpl.class)
 public interface AttributeNameDoesNotExistError extends ErrorObject {
 
+    String ATTRIBUTE_NAME_DOES_NOT_EXIST = "AttributeNameDoesNotExist";
+
     @NotNull
     @JsonProperty("invalidAttributeName")
     public String getInvalidAttributeName();

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectSetShippingRateInputTypeActionImpl.class)
 public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateAction {
 
+    String SET_SHIPPING_RATE_INPUT_TYPE = "setShippingRateInputType";
+
     /**
     *  <p>If not set, removes existing shippingRateInputType.</p>
     */

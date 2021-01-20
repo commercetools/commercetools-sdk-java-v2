@@ -38,11 +38,11 @@ public final class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryIte
         this.deliveryId = deliveryId;
         this.items = items;
         this.oldItems = oldItems;
-        this.type = "DeliveryItemsUpdated";
+        this.type = DeliveryItemsUpdatedMessagePayload.DELIVERY_ITEMS_UPDATED;
     }
 
     public DeliveryItemsUpdatedMessagePayloadImpl() {
-        this.type = "DeliveryItemsUpdated";
+        this.type = DeliveryItemsUpdatedMessagePayload.DELIVERY_ITEMS_UPDATED;
     }
 
     public String getType() {

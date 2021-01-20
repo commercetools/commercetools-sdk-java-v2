@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerDateOfBirthSetMessagePayloadImpl.class)
 public interface CustomerDateOfBirthSetMessagePayload extends MessagePayload {
 
+    String CUSTOMER_DATE_OF_BIRTH_SET = "CustomerDateOfBirthSet";
+
     @NotNull
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();

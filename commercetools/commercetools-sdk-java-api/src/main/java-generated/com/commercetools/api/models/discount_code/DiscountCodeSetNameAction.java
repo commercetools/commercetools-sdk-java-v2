@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeSetNameActionImpl.class)
 public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
 
+    String SET_NAME = "setName";
+
     /**
     *  <p>If the <code>name</code> parameter is not included, the field will be emptied.</p>
     */

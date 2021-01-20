@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MultiBuyLineItemsTargetImpl.class)
 public interface MultiBuyLineItemsTarget extends CartDiscountTarget {
 
+    String MULTI_BUY_LINE_ITEMS = "multiBuyLineItems";
+
     /**
     *  <p>A valid line item target predicate. The discount will be applied to line items that are matched by the predicate.</p>
     */

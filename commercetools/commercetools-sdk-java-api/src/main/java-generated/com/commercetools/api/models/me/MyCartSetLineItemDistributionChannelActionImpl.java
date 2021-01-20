@@ -35,11 +35,11 @@ public final class MyCartSetLineItemDistributionChannelActionImpl
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.lineItemId = lineItemId;
         this.distributionChannel = distributionChannel;
-        this.action = "setLineItemDistributionChannel";
+        this.action = MyCartSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
 
     public MyCartSetLineItemDistributionChannelActionImpl() {
-        this.action = "setLineItemDistributionChannel";
+        this.action = MyCartSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
 
     public String getAction() {

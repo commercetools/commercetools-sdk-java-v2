@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductChangeAssetOrderActionImpl.class)
 public interface ProductChangeAssetOrderAction extends ProductUpdateAction {
 
+    String CHANGE_ASSET_ORDER = "changeAssetOrder";
+
     @JsonProperty("variantId")
     public Long getVariantId();
 

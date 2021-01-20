@@ -36,11 +36,11 @@ public final class TextSetAttributeImpl implements TextSetAttribute {
             @JsonProperty("value") final java.util.List<String> value) {
         this.name = name;
         this.value = value;
-        this.type = "text-set";
+        this.type = TextSetAttribute.TEXT_SET;
     }
 
     public TextSetAttributeImpl() {
-        this.type = "text-set";
+        this.type = TextSetAttribute.TEXT_SET;
     }
 
     /**

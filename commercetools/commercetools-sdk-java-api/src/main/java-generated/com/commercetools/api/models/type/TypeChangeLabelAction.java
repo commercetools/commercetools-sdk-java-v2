@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeLabelActionImpl.class)
 public interface TypeChangeLabelAction extends TypeUpdateAction {
 
+    String CHANGE_LABEL = "changeLabel";
+
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldNumberTypeImpl.class)
 public interface CustomFieldNumberType extends FieldType {
 
+    String NUMBER = "Number";
+
     public static CustomFieldNumberType of() {
         return new CustomFieldNumberTypeImpl();
     }

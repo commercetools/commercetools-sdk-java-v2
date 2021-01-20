@@ -47,11 +47,11 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
         this.specifiedVersion = specifiedVersion;
         this.currentVersion = currentVersion;
         this.conflictedResource = conflictedResource;
-        this.code = "ConcurrentModification";
+        this.code = ConcurrentModificationError.CONCURRENT_MODIFICATION;
     }
 
     public ConcurrentModificationErrorImpl() {
-        this.code = "ConcurrentModification";
+        this.code = ConcurrentModificationError.CONCURRENT_MODIFICATION;
     }
 
     public String getCode() {

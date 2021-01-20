@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeChangeGroupsActionImpl.class)
 public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction {
 
+    String CHANGE_GROUPS = "changeGroups";
+
     /**
     *  <p>The groups to which this discount code shall belong to.
     *  Use empty array to remove the code from all groups.</p>

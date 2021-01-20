@@ -36,11 +36,11 @@ public final class OrderSetCustomTypeActionImpl implements OrderSetCustomTypeAct
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "setCustomType";
+        this.action = OrderSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public OrderSetCustomTypeActionImpl() {
-        this.action = "setCustomType";
+        this.action = OrderSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

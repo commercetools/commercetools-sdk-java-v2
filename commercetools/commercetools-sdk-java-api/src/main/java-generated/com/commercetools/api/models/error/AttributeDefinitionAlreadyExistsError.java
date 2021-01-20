@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeDefinitionAlreadyExistsErrorImpl.class)
 public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
 
+    String ATTRIBUTE_DEFINITION_ALREADY_EXISTS = "AttributeDefinitionAlreadyExists";
+
     @NotNull
     @JsonProperty("conflictingProductTypeId")
     public String getConflictingProductTypeId();

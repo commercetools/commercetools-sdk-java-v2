@@ -35,11 +35,11 @@ public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderS
             @JsonProperty("oldShippingRateInput") final com.commercetools.api.models.cart.ShippingRateInput oldShippingRateInput) {
         this.shippingRateInput = shippingRateInput;
         this.oldShippingRateInput = oldShippingRateInput;
-        this.type = "OrderShippingRateInputSet";
+        this.type = OrderShippingRateInputSetMessagePayload.ORDER_SHIPPING_RATE_INPUT_SET;
     }
 
     public OrderShippingRateInputSetMessagePayloadImpl() {
-        this.type = "OrderShippingRateInputSet";
+        this.type = OrderShippingRateInputSetMessagePayload.ORDER_SHIPPING_RATE_INPUT_SET;
     }
 
     public String getType() {

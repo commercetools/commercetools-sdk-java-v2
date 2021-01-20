@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeReferenceImpl.class)
 public interface ProductTypeReference extends Reference {
 
+    String PRODUCT_TYPE = "product-type";
+
     @Valid
     @JsonProperty("obj")
     public ProductType getObj();

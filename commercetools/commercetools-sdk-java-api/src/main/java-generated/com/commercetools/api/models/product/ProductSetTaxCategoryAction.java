@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetTaxCategoryActionImpl.class)
 public interface ProductSetTaxCategoryAction extends ProductUpdateAction {
 
+    String SET_TAX_CATEGORY = "setTaxCategory";
+
     /**
     *  <p>If left blank or set to <code>null</code>, the tax category is unset/removed.</p>
     */

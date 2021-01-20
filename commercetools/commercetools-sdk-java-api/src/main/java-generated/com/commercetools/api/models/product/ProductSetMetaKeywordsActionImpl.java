@@ -35,11 +35,11 @@ public final class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKey
             @JsonProperty("staged") final Boolean staged) {
         this.metaKeywords = metaKeywords;
         this.staged = staged;
-        this.action = "setMetaKeywords";
+        this.action = ProductSetMetaKeywordsAction.SET_META_KEYWORDS;
     }
 
     public ProductSetMetaKeywordsActionImpl() {
-        this.action = "setMetaKeywords";
+        this.action = ProductSetMetaKeywordsAction.SET_META_KEYWORDS;
     }
 
     public String getAction() {

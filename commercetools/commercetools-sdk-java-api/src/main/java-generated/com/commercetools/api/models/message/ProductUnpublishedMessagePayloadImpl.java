@@ -26,7 +26,7 @@ public final class ProductUnpublishedMessagePayloadImpl implements ProductUnpubl
 
     @JsonCreator
     ProductUnpublishedMessagePayloadImpl() {
-        this.type = "ProductUnpublished";
+        this.type = ProductUnpublishedMessagePayload.PRODUCT_UNPUBLISHED;
     }
 
     public String getType() {

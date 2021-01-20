@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SyntaxErrorErrorImpl.class)
 public interface SyntaxErrorError extends ErrorObject {
 
+    String SYNTAX_ERROR = "SyntaxError";
+
     public static SyntaxErrorError of() {
         return new SyntaxErrorErrorImpl();
     }

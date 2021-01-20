@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeEnumValueLabelActionImpl.class)
 public interface TypeChangeEnumValueLabelAction extends TypeUpdateAction {
 
+    String CHANGE_ENUM_VALUE_LABEL = "changeEnumValueLabel";
+
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();

@@ -69,11 +69,11 @@ public final class CustomerDateOfBirthSetMessageImpl implements CustomerDateOfBi
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.dateOfBirth = dateOfBirth;
-        this.type = "CustomerDateOfBirthSet";
+        this.type = CustomerDateOfBirthSetMessage.CUSTOMER_DATE_OF_BIRTH_SET;
     }
 
     public CustomerDateOfBirthSetMessageImpl() {
-        this.type = "CustomerDateOfBirthSet";
+        this.type = CustomerDateOfBirthSetMessage.CUSTOMER_DATE_OF_BIRTH_SET;
     }
 
     public String getId() {

@@ -34,11 +34,11 @@ public final class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocaliz
             @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
         this.fieldName = fieldName;
         this.value = value;
-        this.action = "addLocalizedEnumValue";
+        this.action = TypeAddLocalizedEnumValueAction.ADD_LOCALIZED_ENUM_VALUE;
     }
 
     public TypeAddLocalizedEnumValueActionImpl() {
-        this.action = "addLocalizedEnumValue";
+        this.action = TypeAddLocalizedEnumValueAction.ADD_LOCALIZED_ENUM_VALUE;
     }
 
     public String getAction() {

@@ -36,11 +36,11 @@ public final class MyCartSetShippingMethodActionImpl implements MyCartSetShippin
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.shippingMethod = shippingMethod;
         this.externalTaxRate = externalTaxRate;
-        this.action = "setShippingMethod";
+        this.action = MyCartSetShippingMethodAction.SET_SHIPPING_METHOD;
     }
 
     public MyCartSetShippingMethodActionImpl() {
-        this.action = "setShippingMethod";
+        this.action = MyCartSetShippingMethodAction.SET_SHIPPING_METHOD;
     }
 
     public String getAction() {

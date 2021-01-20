@@ -29,11 +29,11 @@ public final class CustomTokenizerImpl implements CustomTokenizer {
     @JsonCreator
     CustomTokenizerImpl(@JsonProperty("inputs") final java.util.List<String> inputs) {
         this.inputs = inputs;
-        this.type = "custom";
+        this.type = CustomTokenizer.CUSTOM;
     }
 
     public CustomTokenizerImpl() {
-        this.type = "custom";
+        this.type = CustomTokenizer.CUSTOM;
     }
 
     public String getType() {

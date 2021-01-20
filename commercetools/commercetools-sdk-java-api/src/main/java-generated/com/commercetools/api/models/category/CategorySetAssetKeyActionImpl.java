@@ -33,11 +33,11 @@ public final class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyA
             @JsonProperty("assetKey") final String assetKey) {
         this.assetId = assetId;
         this.assetKey = assetKey;
-        this.action = "setAssetKey";
+        this.action = CategorySetAssetKeyAction.SET_ASSET_KEY;
     }
 
     public CategorySetAssetKeyActionImpl() {
-        this.action = "setAssetKey";
+        this.action = CategorySetAssetKeyAction.SET_ASSET_KEY;
     }
 
     public String getAction() {

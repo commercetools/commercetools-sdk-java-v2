@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryRemoveTaxRateActionImpl.class)
 public interface TaxCategoryRemoveTaxRateAction extends TaxCategoryUpdateAction {
 
+    String REMOVE_TAX_RATE = "removeTaxRate";
+
     @NotNull
     @JsonProperty("taxRateId")
     public String getTaxRateId();

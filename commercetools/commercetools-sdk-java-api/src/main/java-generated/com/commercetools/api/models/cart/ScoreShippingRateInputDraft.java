@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ScoreShippingRateInputDraftImpl.class)
 public interface ScoreShippingRateInputDraft extends ShippingRateInputDraft {
 
+    String SCORE = "Score";
+
     @NotNull
     @JsonProperty("score")
     public Double getScore();

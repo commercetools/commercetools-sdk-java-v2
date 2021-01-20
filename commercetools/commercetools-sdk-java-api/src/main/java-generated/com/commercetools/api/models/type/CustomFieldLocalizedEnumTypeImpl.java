@@ -31,11 +31,11 @@ public final class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocali
     CustomFieldLocalizedEnumTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldLocalizedEnumValue> values) {
         this.values = values;
-        this.name = "LocalizedEnum";
+        this.name = CustomFieldLocalizedEnumType.LOCALIZED_ENUM;
     }
 
     public CustomFieldLocalizedEnumTypeImpl() {
-        this.name = "LocalizedEnum";
+        this.name = CustomFieldLocalizedEnumType.LOCALIZED_ENUM;
     }
 
     public String getName() {

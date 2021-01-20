@@ -39,11 +39,11 @@ public final class StagedOrderSetCustomLineItemCustomFieldActionImpl
         this.customLineItemId = customLineItemId;
         this.name = name;
         this.value = value;
-        this.action = "setCustomLineItemCustomField";
+        this.action = StagedOrderSetCustomLineItemCustomFieldAction.SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public StagedOrderSetCustomLineItemCustomFieldActionImpl() {
-        this.action = "setCustomLineItemCustomField";
+        this.action = StagedOrderSetCustomLineItemCustomFieldAction.SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public String getAction() {

@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartRemoveLineItemActionImpl.class)
 public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
 
+    String REMOVE_LINE_ITEM = "removeLineItem";
+
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();

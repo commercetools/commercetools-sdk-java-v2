@@ -69,11 +69,11 @@ public final class CustomerCreatedMessageImpl implements CustomerCreatedMessage 
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customer = customer;
-        this.type = "CustomerCreated";
+        this.type = CustomerCreatedMessage.CUSTOMER_CREATED;
     }
 
     public CustomerCreatedMessageImpl() {
-        this.type = "CustomerCreated";
+        this.type = CustomerCreatedMessage.CUSTOMER_CREATED;
     }
 
     public String getId() {

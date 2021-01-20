@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetAuthorizationActionImpl.class)
 public interface PaymentSetAuthorizationAction extends PaymentUpdateAction {
 
+    String SET_AUTHORIZATION = "setAuthorization";
+
     @Valid
     @JsonProperty("amount")
     public Money getAmount();

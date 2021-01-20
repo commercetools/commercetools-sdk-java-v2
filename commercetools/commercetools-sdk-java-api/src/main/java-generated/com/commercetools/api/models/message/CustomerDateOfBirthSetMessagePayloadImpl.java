@@ -30,11 +30,11 @@ public final class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerD
     @JsonCreator
     CustomerDateOfBirthSetMessagePayloadImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
-        this.type = "CustomerDateOfBirthSet";
+        this.type = CustomerDateOfBirthSetMessagePayload.CUSTOMER_DATE_OF_BIRTH_SET;
     }
 
     public CustomerDateOfBirthSetMessagePayloadImpl() {
-        this.type = "CustomerDateOfBirthSet";
+        this.type = CustomerDateOfBirthSetMessagePayload.CUSTOMER_DATE_OF_BIRTH_SET;
     }
 
     public String getType() {

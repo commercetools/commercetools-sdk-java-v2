@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartSetShippingAddressActionImpl.class)
 public interface MyCartSetShippingAddressAction extends MyCartUpdateAction {
 
+    String SET_SHIPPING_ADDRESS = "setShippingAddress";
+
     @Valid
     @JsonProperty("address")
     public Address getAddress();

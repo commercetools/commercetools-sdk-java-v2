@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderStateChangedMessagePayloadImpl.class)
 public interface OrderStateChangedMessagePayload extends MessagePayload {
 
+    String ORDER_STATE_CHANGED = "OrderStateChanged";
+
     @NotNull
     @JsonProperty("orderState")
     public OrderState getOrderState();

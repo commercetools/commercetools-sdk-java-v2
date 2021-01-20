@@ -29,11 +29,11 @@ public final class CartRemoveCustomLineItemActionImpl implements CartRemoveCusto
     @JsonCreator
     CartRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
         this.customLineItemId = customLineItemId;
-        this.action = "removeCustomLineItem";
+        this.action = CartRemoveCustomLineItemAction.REMOVE_CUSTOM_LINE_ITEM;
     }
 
     public CartRemoveCustomLineItemActionImpl() {
-        this.action = "removeCustomLineItem";
+        this.action = CartRemoveCustomLineItemAction.REMOVE_CUSTOM_LINE_ITEM;
     }
 
     public String getAction() {

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListResourceIdentifierImpl.class)
 public interface ShoppingListResourceIdentifier extends ResourceIdentifier {
 
+    String SHOPPING_LIST = "shopping-list";
+
     public static ShoppingListResourceIdentifier of() {
         return new ShoppingListResourceIdentifierImpl();
     }

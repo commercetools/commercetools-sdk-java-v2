@@ -36,11 +36,11 @@ public final class MyCustomerSetCustomTypeActionImpl implements MyCustomerSetCus
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "setCustomType";
+        this.action = MyCustomerSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public MyCustomerSetCustomTypeActionImpl() {
-        this.action = "setCustomType";
+        this.action = MyCustomerSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

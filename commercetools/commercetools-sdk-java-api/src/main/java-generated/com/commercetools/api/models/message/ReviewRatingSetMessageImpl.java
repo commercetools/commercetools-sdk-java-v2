@@ -80,11 +80,11 @@ public final class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage 
         this.newRating = newRating;
         this.includedInStatistics = includedInStatistics;
         this.target = target;
-        this.type = "ReviewRatingSet";
+        this.type = ReviewRatingSetMessage.REVIEW_RATING_SET;
     }
 
     public ReviewRatingSetMessageImpl() {
-        this.type = "ReviewRatingSet";
+        this.type = ReviewRatingSetMessage.REVIEW_RATING_SET;
     }
 
     public String getId() {

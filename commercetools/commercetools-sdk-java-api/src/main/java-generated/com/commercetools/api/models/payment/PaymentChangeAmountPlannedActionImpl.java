@@ -31,11 +31,11 @@ public final class PaymentChangeAmountPlannedActionImpl implements PaymentChange
     PaymentChangeAmountPlannedActionImpl(
             @JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
         this.amount = amount;
-        this.action = "changeAmountPlanned";
+        this.action = PaymentChangeAmountPlannedAction.CHANGE_AMOUNT_PLANNED;
     }
 
     public PaymentChangeAmountPlannedActionImpl() {
-        this.action = "changeAmountPlanned";
+        this.action = PaymentChangeAmountPlannedAction.CHANGE_AMOUNT_PLANNED;
     }
 
     public String getAction() {

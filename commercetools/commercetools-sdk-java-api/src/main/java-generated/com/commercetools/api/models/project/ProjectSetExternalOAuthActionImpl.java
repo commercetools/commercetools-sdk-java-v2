@@ -31,11 +31,11 @@ public final class ProjectSetExternalOAuthActionImpl implements ProjectSetExtern
     ProjectSetExternalOAuthActionImpl(
             @JsonProperty("externalOAuth") final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
         this.externalOAuth = externalOAuth;
-        this.action = "setExternalOAuth";
+        this.action = ProjectSetExternalOAuthAction.SET_EXTERNAL_O_AUTH;
     }
 
     public ProjectSetExternalOAuthActionImpl() {
-        this.action = "setExternalOAuth";
+        this.action = ProjectSetExternalOAuthAction.SET_EXTERNAL_O_AUTH;
     }
 
     public String getAction() {

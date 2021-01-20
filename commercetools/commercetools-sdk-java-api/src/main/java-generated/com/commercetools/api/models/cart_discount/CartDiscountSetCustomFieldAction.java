@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountSetCustomFieldActionImpl.class)
 public interface CartDiscountSetCustomFieldAction extends CartDiscountUpdateAction {
 
+    String SET_CUSTOM_FIELD = "setCustomField";
+
     @NotNull
     @JsonProperty("name")
     public String getName();

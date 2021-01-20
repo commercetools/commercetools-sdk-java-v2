@@ -43,11 +43,11 @@ public final class MyCartChangeLineItemQuantityActionImpl implements MyCartChang
         this.quantity = quantity;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
-        this.action = "changeLineItemQuantity";
+        this.action = MyCartChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY;
     }
 
     public MyCartChangeLineItemQuantityActionImpl() {
-        this.action = "changeLineItemQuantity";
+        this.action = MyCartChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY;
     }
 
     public String getAction() {

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeSetDescriptionActionImpl.class)
 public interface TypeSetDescriptionAction extends TypeUpdateAction {
 
+    String SET_DESCRIPTION = "setDescription";
+
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();

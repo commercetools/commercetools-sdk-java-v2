@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceUpdatedDeliveryImpl.class)
 public interface ResourceUpdatedDelivery extends SubscriptionDelivery {
 
+    String RESOURCE_UPDATED = "ResourceUpdated";
+
     @NotNull
     @JsonProperty("version")
     public Long getVersion();

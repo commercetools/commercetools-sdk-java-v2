@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelSetGeoLocationActionImpl.class)
 public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
 
+    String SET_GEO_LOCATION = "setGeoLocation";
+
     @Valid
     @JsonProperty("geoLocation")
     public GeoJson getGeoLocation();

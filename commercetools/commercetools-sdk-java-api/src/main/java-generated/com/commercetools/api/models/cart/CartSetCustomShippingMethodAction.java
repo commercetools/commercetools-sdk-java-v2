@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomShippingMethodActionImpl.class)
 public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
 
+    String SET_CUSTOM_SHIPPING_METHOD = "setCustomShippingMethod";
+
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();

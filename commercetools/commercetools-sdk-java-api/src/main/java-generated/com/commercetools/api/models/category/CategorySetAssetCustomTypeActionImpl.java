@@ -43,11 +43,11 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
         this.assetKey = assetKey;
         this.type = type;
         this.fields = fields;
-        this.action = "setAssetCustomType";
+        this.action = CategorySetAssetCustomTypeAction.SET_ASSET_CUSTOM_TYPE;
     }
 
     public CategorySetAssetCustomTypeActionImpl() {
-        this.action = "setAssetCustomType";
+        this.action = CategorySetAssetCustomTypeAction.SET_ASSET_CUSTOM_TYPE;
     }
 
     public String getAction() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategorySetKeyActionImpl.class)
 public interface TaxCategorySetKeyAction extends TaxCategoryUpdateAction {
 
+    String SET_KEY = "setKey";
+
     /**
     *  <p>If <code>key</code> is absent or <code>null</code>, it is removed if it exists.</p>
     */

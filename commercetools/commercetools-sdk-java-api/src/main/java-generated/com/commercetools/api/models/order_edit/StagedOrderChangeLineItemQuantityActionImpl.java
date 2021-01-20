@@ -43,11 +43,11 @@ public final class StagedOrderChangeLineItemQuantityActionImpl implements Staged
         this.quantity = quantity;
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
-        this.action = "changeLineItemQuantity";
+        this.action = StagedOrderChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY;
     }
 
     public StagedOrderChangeLineItemQuantityActionImpl() {
-        this.action = "changeLineItemQuantity";
+        this.action = StagedOrderChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY;
     }
 
     public String getAction() {

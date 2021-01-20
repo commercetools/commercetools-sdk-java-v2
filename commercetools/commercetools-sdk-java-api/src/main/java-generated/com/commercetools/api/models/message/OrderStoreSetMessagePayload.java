@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderStoreSetMessagePayloadImpl.class)
 public interface OrderStoreSetMessagePayload extends MessagePayload {
 
+    String ORDER_STORE_SET = "OrderStoreSet";
+
     @NotNull
     @Valid
     @JsonProperty("store")

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductCreatedMessageImpl.class)
 public interface ProductCreatedMessage extends Message {
 
+    String PRODUCT_CREATED = "ProductCreated";
+
     @NotNull
     @Valid
     @JsonProperty("productProjection")

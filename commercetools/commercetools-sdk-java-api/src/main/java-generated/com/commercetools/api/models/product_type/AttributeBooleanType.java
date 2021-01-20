@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeBooleanTypeImpl.class)
 public interface AttributeBooleanType extends AttributeType {
 
+    String BOOLEAN = "boolean";
+
     public static AttributeBooleanType of() {
         return new AttributeBooleanTypeImpl();
     }

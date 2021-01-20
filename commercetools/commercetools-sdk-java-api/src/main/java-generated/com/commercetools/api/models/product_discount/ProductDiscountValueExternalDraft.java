@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountValueExternalDraftImpl.class)
 public interface ProductDiscountValueExternalDraft extends ProductDiscountValueDraft {
 
+    String EXTERNAL = "external";
+
     public static ProductDiscountValueExternalDraft of() {
         return new ProductDiscountValueExternalDraftImpl();
     }

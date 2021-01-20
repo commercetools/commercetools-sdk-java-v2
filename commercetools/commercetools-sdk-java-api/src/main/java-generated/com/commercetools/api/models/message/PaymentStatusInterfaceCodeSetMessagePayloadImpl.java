@@ -34,11 +34,11 @@ public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl
             @JsonProperty("interfaceCode") final String interfaceCode) {
         this.paymentId = paymentId;
         this.interfaceCode = interfaceCode;
-        this.type = "PaymentStatusInterfaceCodeSet";
+        this.type = PaymentStatusInterfaceCodeSetMessagePayload.PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
 
     public PaymentStatusInterfaceCodeSetMessagePayloadImpl() {
-        this.type = "PaymentStatusInterfaceCodeSet";
+        this.type = PaymentStatusInterfaceCodeSetMessagePayload.PAYMENT_STATUS_INTERFACE_CODE_SET;
     }
 
     public String getType() {

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetShippingRateInputActionImpl.class)
 public interface StagedOrderSetShippingRateInputAction extends StagedOrderUpdateAction {
 
+    String SET_SHIPPING_RATE_INPUT = "setShippingRateInput";
+
     @Valid
     @JsonProperty("shippingRateInput")
     public ShippingRateInputDraft getShippingRateInput();

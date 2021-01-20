@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeCountriesActionImpl.class)
 public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
 
+    String CHANGE_COUNTRIES = "changeCountries";
+
     /**
     *  <p>A two-digit country code as per country code.</p>
     */

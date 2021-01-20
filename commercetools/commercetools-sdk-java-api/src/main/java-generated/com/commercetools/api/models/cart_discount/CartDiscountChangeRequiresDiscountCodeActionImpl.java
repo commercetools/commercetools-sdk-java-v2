@@ -31,11 +31,11 @@ public final class CartDiscountChangeRequiresDiscountCodeActionImpl
     CartDiscountChangeRequiresDiscountCodeActionImpl(
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode) {
         this.requiresDiscountCode = requiresDiscountCode;
-        this.action = "changeRequiresDiscountCode";
+        this.action = CartDiscountChangeRequiresDiscountCodeAction.CHANGE_REQUIRES_DISCOUNT_CODE;
     }
 
     public CartDiscountChangeRequiresDiscountCodeActionImpl() {
-        this.action = "changeRequiresDiscountCode";
+        this.action = CartDiscountChangeRequiresDiscountCodeAction.CHANGE_REQUIRES_DISCOUNT_CODE;
     }
 
     public String getAction() {

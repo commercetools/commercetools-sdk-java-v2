@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountSetCustomTypeActionImpl.class)
 public interface CartDiscountSetCustomTypeAction extends CartDiscountUpdateAction {
 
+    String SET_CUSTOM_TYPE = "setCustomType";
+
     /**
     *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
     */

@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeKeyReferenceImpl.class)
 public interface TypeKeyReference extends KeyReference {
 
+    String TYPE = "type";
+
     public static TypeKeyReference of() {
         return new TypeKeyReferenceImpl();
     }

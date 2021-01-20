@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MoneySetAttributeImpl.class)
 public interface MoneySetAttribute extends Attribute {
 
+    String MONEY_SET = "money-set";
+
     @NotNull
     @Valid
     @JsonProperty("value")

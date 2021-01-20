@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartReferenceImpl.class)
 public interface CartReference extends Reference {
 
+    String CART = "cart";
+
     @Valid
     @JsonProperty("obj")
     public Cart getObj();

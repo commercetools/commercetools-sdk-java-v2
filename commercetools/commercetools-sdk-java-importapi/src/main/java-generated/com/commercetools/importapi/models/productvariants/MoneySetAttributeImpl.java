@@ -37,11 +37,11 @@ public final class MoneySetAttributeImpl implements MoneySetAttribute {
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.TypedMoney> value) {
         this.name = name;
         this.value = value;
-        this.type = "money-set";
+        this.type = MoneySetAttribute.MONEY_SET;
     }
 
     public MoneySetAttributeImpl() {
-        this.type = "money-set";
+        this.type = MoneySetAttribute.MONEY_SET;
     }
 
     /**

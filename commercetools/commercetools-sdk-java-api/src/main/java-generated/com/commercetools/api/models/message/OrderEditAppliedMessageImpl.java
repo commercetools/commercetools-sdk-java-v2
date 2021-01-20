@@ -74,11 +74,11 @@ public final class OrderEditAppliedMessageImpl implements OrderEditAppliedMessag
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.edit = edit;
         this.result = result;
-        this.type = "OrderEditApplied";
+        this.type = OrderEditAppliedMessage.ORDER_EDIT_APPLIED;
     }
 
     public OrderEditAppliedMessageImpl() {
-        this.type = "OrderEditApplied";
+        this.type = OrderEditAppliedMessage.ORDER_EDIT_APPLIED;
     }
 
     public String getId() {

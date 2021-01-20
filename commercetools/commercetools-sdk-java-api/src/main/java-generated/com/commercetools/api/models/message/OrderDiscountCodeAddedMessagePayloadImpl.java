@@ -31,11 +31,11 @@ public final class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDisc
     OrderDiscountCodeAddedMessagePayloadImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
-        this.type = "OrderDiscountCodeAdded";
+        this.type = OrderDiscountCodeAddedMessagePayload.ORDER_DISCOUNT_CODE_ADDED;
     }
 
     public OrderDiscountCodeAddedMessagePayloadImpl() {
-        this.type = "OrderDiscountCodeAdded";
+        this.type = OrderDiscountCodeAddedMessagePayload.ORDER_DISCOUNT_CODE_ADDED;
     }
 
     public String getType() {

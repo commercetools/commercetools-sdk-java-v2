@@ -26,7 +26,7 @@ public final class AttributeBooleanTypeImpl implements AttributeBooleanType {
 
     @JsonCreator
     AttributeBooleanTypeImpl() {
-        this.name = "boolean";
+        this.name = AttributeBooleanType.BOOLEAN;
     }
 
     public String getName() {

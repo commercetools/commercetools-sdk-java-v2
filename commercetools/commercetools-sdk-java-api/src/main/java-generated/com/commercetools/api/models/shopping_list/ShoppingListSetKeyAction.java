@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetKeyActionImpl.class)
 public interface ShoppingListSetKeyAction extends ShoppingListUpdateAction {
 
+    String SET_KEY = "setKey";
+
     /**
     *  <p>User-specific unique identifier for the shopping list.</p>
     */

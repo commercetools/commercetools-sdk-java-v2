@@ -38,11 +38,11 @@ public final class CustomerChangeAddressActionImpl implements CustomerChangeAddr
         this.addressId = addressId;
         this.addressKey = addressKey;
         this.address = address;
-        this.action = "changeAddress";
+        this.action = CustomerChangeAddressAction.CHANGE_ADDRESS;
     }
 
     public CustomerChangeAddressActionImpl() {
-        this.action = "changeAddress";
+        this.action = CustomerChangeAddressAction.CHANGE_ADDRESS;
     }
 
     public String getAction() {

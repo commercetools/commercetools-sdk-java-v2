@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetParcelMeasurementsActionImpl.class)
 public interface OrderSetParcelMeasurementsAction extends OrderUpdateAction {
 
+    String SET_PARCEL_MEASUREMENTS = "setParcelMeasurements";
+
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();

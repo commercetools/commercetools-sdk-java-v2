@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TextSetAttributeImpl.class)
 public interface TextSetAttribute extends Attribute {
 
+    String TEXT_SET = "text-set";
+
     @NotNull
     @JsonProperty("value")
     public List<String> getValue();

@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderDiscountCodeStateSetMessagePayloadImpl.class)
 public interface OrderDiscountCodeStateSetMessagePayload extends MessagePayload {
 
+    String ORDER_DISCOUNT_CODE_STATE_SET = "OrderDiscountCodeStateSet";
+
     @NotNull
     @Valid
     @JsonProperty("discountCode")

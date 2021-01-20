@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = NumberSetFieldImpl.class)
 public interface NumberSetField extends CustomField {
 
+    String NUMBER_SET = "NumberSet";
+
     @NotNull
     @JsonProperty("value")
     public List<Double> getValue();

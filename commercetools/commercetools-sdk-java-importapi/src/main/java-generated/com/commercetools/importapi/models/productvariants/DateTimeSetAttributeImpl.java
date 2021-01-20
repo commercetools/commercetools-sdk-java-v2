@@ -37,11 +37,11 @@ public final class DateTimeSetAttributeImpl implements DateTimeSetAttribute {
             @JsonProperty("value") final java.util.List<java.time.ZonedDateTime> value) {
         this.name = name;
         this.value = value;
-        this.type = "datetime-set";
+        this.type = DateTimeSetAttribute.DATETIME_SET;
     }
 
     public DateTimeSetAttributeImpl() {
-        this.type = "datetime-set";
+        this.type = DateTimeSetAttribute.DATETIME_SET;
     }
 
     /**

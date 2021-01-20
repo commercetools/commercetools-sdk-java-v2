@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerReferenceImpl.class)
 public interface CustomerReference extends Reference {
 
+    String CUSTOMER = "customer";
+
     @Valid
     @JsonProperty("obj")
     public Customer getObj();

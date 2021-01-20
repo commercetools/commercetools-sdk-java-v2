@@ -34,11 +34,11 @@ public final class OrderSetParcelMeasurementsActionImpl implements OrderSetParce
             @JsonProperty("measurements") final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.parcelId = parcelId;
         this.measurements = measurements;
-        this.action = "setParcelMeasurements";
+        this.action = OrderSetParcelMeasurementsAction.SET_PARCEL_MEASUREMENTS;
     }
 
     public OrderSetParcelMeasurementsActionImpl() {
-        this.action = "setParcelMeasurements";
+        this.action = OrderSetParcelMeasurementsAction.SET_PARCEL_MEASUREMENTS;
     }
 
     public String getAction() {

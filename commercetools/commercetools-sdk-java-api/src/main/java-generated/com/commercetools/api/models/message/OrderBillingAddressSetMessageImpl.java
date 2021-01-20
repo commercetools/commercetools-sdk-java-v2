@@ -73,11 +73,11 @@ public final class OrderBillingAddressSetMessageImpl implements OrderBillingAddr
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.address = address;
         this.oldAddress = oldAddress;
-        this.type = "OrderBillingAddressSet";
+        this.type = OrderBillingAddressSetMessage.ORDER_BILLING_ADDRESS_SET;
     }
 
     public OrderBillingAddressSetMessageImpl() {
-        this.type = "OrderBillingAddressSet";
+        this.type = OrderBillingAddressSetMessage.ORDER_BILLING_ADDRESS_SET;
     }
 
     public String getId() {

@@ -69,11 +69,11 @@ public final class CustomerAddressChangedMessageImpl implements CustomerAddressC
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.address = address;
-        this.type = "CustomerAddressChanged";
+        this.type = CustomerAddressChangedMessage.CUSTOMER_ADDRESS_CHANGED;
     }
 
     public CustomerAddressChangedMessageImpl() {
-        this.type = "CustomerAddressChanged";
+        this.type = CustomerAddressChangedMessage.CUSTOMER_ADDRESS_CHANGED;
     }
 
     public String getId() {

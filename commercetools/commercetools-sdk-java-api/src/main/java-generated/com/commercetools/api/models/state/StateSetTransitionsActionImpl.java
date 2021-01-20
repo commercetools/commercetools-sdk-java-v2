@@ -31,11 +31,11 @@ public final class StateSetTransitionsActionImpl implements StateSetTransitionsA
     StateSetTransitionsActionImpl(
             @JsonProperty("transitions") final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
         this.transitions = transitions;
-        this.action = "setTransitions";
+        this.action = StateSetTransitionsAction.SET_TRANSITIONS;
     }
 
     public StateSetTransitionsActionImpl() {
-        this.action = "setTransitions";
+        this.action = StateSetTransitionsAction.SET_TRANSITIONS;
     }
 
     public String getAction() {

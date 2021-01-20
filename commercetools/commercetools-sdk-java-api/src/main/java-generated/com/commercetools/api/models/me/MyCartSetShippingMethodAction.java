@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartSetShippingMethodActionImpl.class)
 public interface MyCartSetShippingMethodAction extends MyCartUpdateAction {
 
+    String SET_SHIPPING_METHOD = "setShippingMethod";
+
     @Valid
     @JsonProperty("shippingMethod")
     public ShippingMethodResourceIdentifier getShippingMethod();

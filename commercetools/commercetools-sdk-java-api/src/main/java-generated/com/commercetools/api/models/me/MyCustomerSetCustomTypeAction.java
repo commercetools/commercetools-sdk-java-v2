@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCustomerSetCustomTypeActionImpl.class)
 public interface MyCustomerSetCustomTypeAction extends MyCustomerUpdateAction {
 
+    String SET_CUSTOM_TYPE = "setCustomType";
+
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();

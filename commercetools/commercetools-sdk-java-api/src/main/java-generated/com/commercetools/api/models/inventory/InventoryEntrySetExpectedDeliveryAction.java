@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntrySetExpectedDeliveryActionImpl.class)
 public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryUpdateAction {
 
+    String SET_EXPECTED_DELIVERY = "setExpectedDelivery";
+
     @JsonProperty("expectedDelivery")
     public ZonedDateTime getExpectedDelivery();
 

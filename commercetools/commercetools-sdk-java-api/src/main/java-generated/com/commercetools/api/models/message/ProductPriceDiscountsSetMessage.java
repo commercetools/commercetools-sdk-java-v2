@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPriceDiscountsSetMessageImpl.class)
 public interface ProductPriceDiscountsSetMessage extends Message {
 
+    String PRODUCT_PRICE_DISCOUNTS_SET = "ProductPriceDiscountsSet";
+
     @NotNull
     @Valid
     @JsonProperty("updatedPrices")

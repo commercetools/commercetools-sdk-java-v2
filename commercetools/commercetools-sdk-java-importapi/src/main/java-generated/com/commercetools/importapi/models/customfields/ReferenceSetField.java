@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReferenceSetFieldImpl.class)
 public interface ReferenceSetField extends CustomField {
 
+    String REFERENCE_SET = "ReferenceSet";
+
     @NotNull
     @Valid
     @JsonProperty("value")

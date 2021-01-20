@@ -73,11 +73,11 @@ public final class InventoryEntryDeletedMessageImpl implements InventoryEntryDel
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.sku = sku;
         this.supplyChannel = supplyChannel;
-        this.type = "InventoryEntryDeleted";
+        this.type = InventoryEntryDeletedMessage.INVENTORY_ENTRY_DELETED;
     }
 
     public InventoryEntryDeletedMessageImpl() {
-        this.type = "InventoryEntryDeleted";
+        this.type = InventoryEntryDeletedMessage.INVENTORY_ENTRY_DELETED;
     }
 
     public String getId() {

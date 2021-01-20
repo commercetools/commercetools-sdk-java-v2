@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetShippingRateInputActionImpl.class)
 public interface CartSetShippingRateInputAction extends CartUpdateAction {
 
+    String SET_SHIPPING_RATE_INPUT = "setShippingRateInput";
+
     /**
     *  <p>Based on the definition of ShippingRateInputType.
     *  If CartClassification is defined, it must be ClassificationShippingRateInput.

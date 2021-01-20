@@ -29,11 +29,11 @@ public final class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedEr
     @JsonCreator
     ExternalOAuthFailedErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "ExternalOAuthFailed";
+        this.code = ExternalOAuthFailedError.EXTERNAL_O_AUTH_FAILED;
     }
 
     public ExternalOAuthFailedErrorImpl() {
-        this.code = "ExternalOAuthFailed";
+        this.code = ExternalOAuthFailedError.EXTERNAL_O_AUTH_FAILED;
     }
 
     public String getCode() {

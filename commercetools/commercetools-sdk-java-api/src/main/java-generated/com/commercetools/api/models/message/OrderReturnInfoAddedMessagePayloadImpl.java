@@ -31,11 +31,11 @@ public final class OrderReturnInfoAddedMessagePayloadImpl implements OrderReturn
     OrderReturnInfoAddedMessagePayloadImpl(
             @JsonProperty("returnInfo") final com.commercetools.api.models.order.ReturnInfo returnInfo) {
         this.returnInfo = returnInfo;
-        this.type = "ReturnInfoAdded";
+        this.type = OrderReturnInfoAddedMessagePayload.RETURN_INFO_ADDED;
     }
 
     public OrderReturnInfoAddedMessagePayloadImpl() {
-        this.type = "ReturnInfoAdded";
+        this.type = OrderReturnInfoAddedMessagePayload.RETURN_INFO_ADDED;
     }
 
     public String getType() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceSizeLimitExceededErrorImpl.class)
 public interface ResourceSizeLimitExceededError extends ErrorObject {
 
+    String RESOURCE_SIZE_LIMIT_EXCEEDED = "ResourceSizeLimitExceeded";
+
     public static ResourceSizeLimitExceededError of() {
         return new ResourceSizeLimitExceededErrorImpl();
     }

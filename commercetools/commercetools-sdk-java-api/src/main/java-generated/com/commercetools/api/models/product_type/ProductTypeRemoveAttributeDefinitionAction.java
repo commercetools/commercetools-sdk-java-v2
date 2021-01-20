@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)
 public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {
 
+    String REMOVE_ATTRIBUTE_DEFINITION = "removeAttributeDefinition";
+
     /**
     *  <p>The name of the attribute to remove.</p>
     */

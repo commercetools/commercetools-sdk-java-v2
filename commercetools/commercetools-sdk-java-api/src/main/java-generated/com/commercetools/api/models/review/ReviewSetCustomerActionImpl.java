@@ -31,11 +31,11 @@ public final class ReviewSetCustomerActionImpl implements ReviewSetCustomerActio
     ReviewSetCustomerActionImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
-        this.action = "setCustomer";
+        this.action = ReviewSetCustomerAction.SET_CUSTOMER;
     }
 
     public ReviewSetCustomerActionImpl() {
-        this.action = "setCustomer";
+        this.action = ReviewSetCustomerAction.SET_CUSTOMER;
     }
 
     public String getAction() {

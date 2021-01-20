@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = EnumFieldImpl.class)
 public interface EnumField extends CustomField {
 
+    String ENUM = "Enum";
+
     @NotNull
     @JsonProperty("value")
     public String getValue();

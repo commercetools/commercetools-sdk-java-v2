@@ -64,11 +64,11 @@ public final class CustomerEmailVerifiedMessageImpl implements CustomerEmailVeri
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.type = "CustomerEmailVerified";
+        this.type = CustomerEmailVerifiedMessage.CUSTOMER_EMAIL_VERIFIED;
     }
 
     public CustomerEmailVerifiedMessageImpl() {
-        this.type = "CustomerEmailVerified";
+        this.type = CustomerEmailVerifiedMessage.CUSTOMER_EMAIL_VERIFIED;
     }
 
     public String getId() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OutOfStockErrorImpl.class)
 public interface OutOfStockError extends ErrorObject {
 
+    String OUT_OF_STOCK = "OutOfStock";
+
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();

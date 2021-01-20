@@ -29,11 +29,11 @@ public final class CartDiscountChangeCartPredicateActionImpl implements CartDisc
     @JsonCreator
     CartDiscountChangeCartPredicateActionImpl(@JsonProperty("cartPredicate") final String cartPredicate) {
         this.cartPredicate = cartPredicate;
-        this.action = "changeCartPredicate";
+        this.action = CartDiscountChangeCartPredicateAction.CHANGE_CART_PREDICATE;
     }
 
     public CartDiscountChangeCartPredicateActionImpl() {
-        this.action = "changeCartPredicate";
+        this.action = CartDiscountChangeCartPredicateAction.CHANGE_CART_PREDICATE;
     }
 
     public String getAction() {

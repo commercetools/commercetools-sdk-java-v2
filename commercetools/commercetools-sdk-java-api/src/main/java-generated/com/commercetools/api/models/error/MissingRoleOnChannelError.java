@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MissingRoleOnChannelErrorImpl.class)
 public interface MissingRoleOnChannelError extends ErrorObject {
 
+    String MISSING_ROLE_ON_CHANNEL = "MissingRoleOnChannel";
+
     @Valid
     @JsonProperty("channel")
     public ChannelResourceIdentifier getChannel();

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeKeyActionImpl.class)
 public interface TypeChangeKeyAction extends TypeUpdateAction {
 
+    String CHANGE_KEY = "changeKey";
+
     @NotNull
     @JsonProperty("key")
     public String getKey();

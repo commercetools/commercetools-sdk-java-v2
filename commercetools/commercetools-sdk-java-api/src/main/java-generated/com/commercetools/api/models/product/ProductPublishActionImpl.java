@@ -30,11 +30,11 @@ public final class ProductPublishActionImpl implements ProductPublishAction {
     @JsonCreator
     ProductPublishActionImpl(@JsonProperty("scope") final com.commercetools.api.models.cart.ProductPublishScope scope) {
         this.scope = scope;
-        this.action = "publish";
+        this.action = ProductPublishAction.PUBLISH;
     }
 
     public ProductPublishActionImpl() {
-        this.action = "publish";
+        this.action = ProductPublishAction.PUBLISH;
     }
 
     public String getAction() {

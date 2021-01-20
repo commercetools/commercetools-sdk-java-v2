@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartAddCustomLineItemActionImpl.class)
 public interface CartAddCustomLineItemAction extends CartUpdateAction {
 
+    String ADD_CUSTOM_LINE_ITEM = "addCustomLineItem";
+
     @NotNull
     @Valid
     @JsonProperty("money")

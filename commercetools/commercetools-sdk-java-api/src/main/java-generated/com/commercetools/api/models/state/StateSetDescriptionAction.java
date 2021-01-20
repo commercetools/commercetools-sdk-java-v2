@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateSetDescriptionActionImpl.class)
 public interface StateSetDescriptionAction extends StateUpdateAction {
 
+    String SET_DESCRIPTION = "setDescription";
+
     @NotNull
     @Valid
     @JsonProperty("description")

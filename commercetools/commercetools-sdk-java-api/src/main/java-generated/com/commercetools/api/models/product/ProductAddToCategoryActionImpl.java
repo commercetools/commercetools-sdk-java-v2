@@ -38,11 +38,11 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
         this.category = category;
         this.orderHint = orderHint;
         this.staged = staged;
-        this.action = "addToCategory";
+        this.action = ProductAddToCategoryAction.ADD_TO_CATEGORY;
     }
 
     public ProductAddToCategoryActionImpl() {
-        this.action = "addToCategory";
+        this.action = ProductAddToCategoryAction.ADD_TO_CATEGORY;
     }
 
     public String getAction() {

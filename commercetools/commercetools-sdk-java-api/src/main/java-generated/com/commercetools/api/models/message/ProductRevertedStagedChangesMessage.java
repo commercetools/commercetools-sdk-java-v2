@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRevertedStagedChangesMessageImpl.class)
 public interface ProductRevertedStagedChangesMessage extends Message {
 
+    String PRODUCT_REVERTED_STAGED_CHANGES = "ProductRevertedStagedChanges";
+
     @NotNull
     @JsonProperty("removedImageUrls")
     public List<String> getRemovedImageUrls();

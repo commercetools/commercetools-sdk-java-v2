@@ -36,11 +36,11 @@ public final class DateAttributeImpl implements DateAttribute {
     DateAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final java.time.LocalDate value) {
         this.name = name;
         this.value = value;
-        this.type = "date";
+        this.type = DateAttribute.DATE;
     }
 
     public DateAttributeImpl() {
-        this.type = "date";
+        this.type = DateAttribute.DATE;
     }
 
     /**

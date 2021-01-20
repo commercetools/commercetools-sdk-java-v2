@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeSetInputTipActionImpl.class)
 public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
 
+    String SET_INPUT_TIP = "setInputTip";
+
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

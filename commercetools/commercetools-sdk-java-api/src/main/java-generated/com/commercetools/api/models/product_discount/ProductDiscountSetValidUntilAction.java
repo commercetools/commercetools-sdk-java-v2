@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountSetValidUntilActionImpl.class)
 public interface ProductDiscountSetValidUntilAction extends ProductDiscountUpdateAction {
 
+    String SET_VALID_UNTIL = "setValidUntil";
+
     /**
     *  <p>The time from which the discount should be ineffective.
     *  Please take Eventual Consistency into account for calculated undiscounted values.</p>

@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductAddVariantActionImpl.class)
 public interface ProductAddVariantAction extends ProductUpdateAction {
 
+    String ADD_VARIANT = "addVariant";
+
     @JsonProperty("sku")
     public String getSku();
 

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntrySetRestockableInDaysActionImpl.class)
 public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntryUpdateAction {
 
+    String SET_RESTOCKABLE_IN_DAYS = "setRestockableInDays";
+
     @JsonProperty("restockableInDays")
     public Long getRestockableInDays();
 

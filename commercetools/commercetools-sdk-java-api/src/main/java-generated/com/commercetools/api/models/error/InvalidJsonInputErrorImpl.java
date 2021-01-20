@@ -29,11 +29,11 @@ public final class InvalidJsonInputErrorImpl implements InvalidJsonInputError {
     @JsonCreator
     InvalidJsonInputErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "InvalidJsonInput";
+        this.code = InvalidJsonInputError.INVALID_JSON_INPUT;
     }
 
     public InvalidJsonInputErrorImpl() {
-        this.code = "InvalidJsonInput";
+        this.code = InvalidJsonInputError.INVALID_JSON_INPUT;
     }
 
     public String getCode() {

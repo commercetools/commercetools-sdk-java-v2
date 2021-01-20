@@ -35,11 +35,11 @@ public final class ProductAddedToCategoryMessagePayloadImpl implements ProductAd
             @JsonProperty("staged") final Boolean staged) {
         this.category = category;
         this.staged = staged;
-        this.type = "ProductAddedToCategory";
+        this.type = ProductAddedToCategoryMessagePayload.PRODUCT_ADDED_TO_CATEGORY;
     }
 
     public ProductAddedToCategoryMessagePayloadImpl() {
-        this.type = "ProductAddedToCategory";
+        this.type = ProductAddedToCategoryMessagePayload.PRODUCT_ADDED_TO_CATEGORY;
     }
 
     public String getType() {

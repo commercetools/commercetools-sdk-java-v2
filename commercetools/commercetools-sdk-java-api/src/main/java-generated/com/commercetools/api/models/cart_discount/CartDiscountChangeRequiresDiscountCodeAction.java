@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountChangeRequiresDiscountCodeActionImpl.class)
 public interface CartDiscountChangeRequiresDiscountCodeAction extends CartDiscountUpdateAction {
 
+    String CHANGE_REQUIRES_DISCOUNT_CODE = "changeRequiresDiscountCode";
+
     @NotNull
     @JsonProperty("requiresDiscountCode")
     public Boolean getRequiresDiscountCode();

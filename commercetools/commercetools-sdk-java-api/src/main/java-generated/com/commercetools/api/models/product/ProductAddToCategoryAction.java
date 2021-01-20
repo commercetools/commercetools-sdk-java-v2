@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductAddToCategoryActionImpl.class)
 public interface ProductAddToCategoryAction extends ProductUpdateAction {
 
+    String ADD_TO_CATEGORY = "addToCategory";
+
     @NotNull
     @Valid
     @JsonProperty("category")

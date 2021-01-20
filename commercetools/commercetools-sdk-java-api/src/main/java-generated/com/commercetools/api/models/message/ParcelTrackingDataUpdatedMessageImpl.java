@@ -77,11 +77,11 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
         this.deliveryId = deliveryId;
         this.parcelId = parcelId;
         this.trackingData = trackingData;
-        this.type = "ParcelTrackingDataUpdated";
+        this.type = ParcelTrackingDataUpdatedMessage.PARCEL_TRACKING_DATA_UPDATED;
     }
 
     public ParcelTrackingDataUpdatedMessageImpl() {
-        this.type = "ParcelTrackingDataUpdated";
+        this.type = ParcelTrackingDataUpdatedMessage.PARCEL_TRACKING_DATA_UPDATED;
     }
 
     public String getId() {

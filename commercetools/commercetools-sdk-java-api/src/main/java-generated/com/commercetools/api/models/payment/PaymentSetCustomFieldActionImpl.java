@@ -34,11 +34,11 @@ public final class PaymentSetCustomFieldActionImpl implements PaymentSetCustomFi
             @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
         this.name = name;
         this.value = value;
-        this.action = "setCustomField";
+        this.action = PaymentSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public PaymentSetCustomFieldActionImpl() {
-        this.action = "setCustomField";
+        this.action = PaymentSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public String getAction() {

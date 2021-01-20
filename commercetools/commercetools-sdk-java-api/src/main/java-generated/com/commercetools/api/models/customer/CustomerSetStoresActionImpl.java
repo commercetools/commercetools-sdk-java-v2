@@ -31,11 +31,11 @@ public final class CustomerSetStoresActionImpl implements CustomerSetStoresActio
     CustomerSetStoresActionImpl(
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.stores = stores;
-        this.action = "setStores";
+        this.action = CustomerSetStoresAction.SET_STORES;
     }
 
     public CustomerSetStoresActionImpl() {
-        this.action = "setStores";
+        this.action = CustomerSetStoresAction.SET_STORES;
     }
 
     public String getAction() {

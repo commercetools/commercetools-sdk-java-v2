@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ContentionErrorImpl.class)
 public interface ContentionError extends ErrorObject {
 
+    String CONTENTION = "Contention";
+
     public static ContentionError of() {
         return new ContentionErrorImpl();
     }

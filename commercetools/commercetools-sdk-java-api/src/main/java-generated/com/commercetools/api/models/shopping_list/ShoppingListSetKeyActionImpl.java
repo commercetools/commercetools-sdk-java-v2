@@ -29,11 +29,11 @@ public final class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAct
     @JsonCreator
     ShoppingListSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "setKey";
+        this.action = ShoppingListSetKeyAction.SET_KEY;
     }
 
     public ShoppingListSetKeyActionImpl() {
-        this.action = "setKey";
+        this.action = ShoppingListSetKeyAction.SET_KEY;
     }
 
     public String getAction() {

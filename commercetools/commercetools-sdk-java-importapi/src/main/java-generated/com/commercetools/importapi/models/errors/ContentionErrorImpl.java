@@ -29,11 +29,11 @@ public final class ContentionErrorImpl implements ContentionError {
     @JsonCreator
     ContentionErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "Contention";
+        this.code = ContentionError.CONTENTION;
     }
 
     public ContentionErrorImpl() {
-        this.code = "Contention";
+        this.code = ContentionError.CONTENTION;
     }
 
     public String getCode() {

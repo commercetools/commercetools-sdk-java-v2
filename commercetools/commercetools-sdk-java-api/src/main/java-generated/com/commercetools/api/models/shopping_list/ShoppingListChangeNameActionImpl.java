@@ -31,11 +31,11 @@ public final class ShoppingListChangeNameActionImpl implements ShoppingListChang
     ShoppingListChangeNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
-        this.action = "changeName";
+        this.action = ShoppingListChangeNameAction.CHANGE_NAME;
     }
 
     public ShoppingListChangeNameActionImpl() {
-        this.action = "changeName";
+        this.action = ShoppingListChangeNameAction.CHANGE_NAME;
     }
 
     public String getAction() {

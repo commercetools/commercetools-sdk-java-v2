@@ -31,11 +31,11 @@ public final class CategorySetMetaKeywordsActionImpl implements CategorySetMetaK
     CategorySetMetaKeywordsActionImpl(
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords) {
         this.metaKeywords = metaKeywords;
-        this.action = "setMetaKeywords";
+        this.action = CategorySetMetaKeywordsAction.SET_META_KEYWORDS;
     }
 
     public CategorySetMetaKeywordsActionImpl() {
-        this.action = "setMetaKeywords";
+        this.action = CategorySetMetaKeywordsAction.SET_META_KEYWORDS;
     }
 
     public String getAction() {

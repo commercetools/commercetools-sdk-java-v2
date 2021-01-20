@@ -31,11 +31,11 @@ public final class CustomFieldReferenceTypeImpl implements CustomFieldReferenceT
     CustomFieldReferenceTypeImpl(
             @JsonProperty("referenceTypeId") final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
-        this.name = "Reference";
+        this.name = CustomFieldReferenceType.REFERENCE;
     }
 
     public CustomFieldReferenceTypeImpl() {
-        this.name = "Reference";
+        this.name = CustomFieldReferenceType.REFERENCE;
     }
 
     public String getName() {

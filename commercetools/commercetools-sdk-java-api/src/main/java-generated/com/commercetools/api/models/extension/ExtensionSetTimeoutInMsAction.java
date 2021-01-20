@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionSetTimeoutInMsActionImpl.class)
 public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
 
+    String SET_TIMEOUT_IN_MS = "setTimeoutInMs";
+
     /**
     *  <p>The maximum time the commercetools platform waits for a response from the extension.
     *  The maximum value is 2000 ms (2 seconds).

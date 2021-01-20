@@ -33,11 +33,11 @@ public final class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetA
             @JsonProperty("assetKey") final String assetKey) {
         this.assetId = assetId;
         this.assetKey = assetKey;
-        this.action = "removeAsset";
+        this.action = CategoryRemoveAssetAction.REMOVE_ASSET;
     }
 
     public CategoryRemoveAssetActionImpl() {
-        this.action = "removeAsset";
+        this.action = CategoryRemoveAssetAction.REMOVE_ASSET;
     }
 
     public String getAction() {

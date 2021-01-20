@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSetCustomTypeActionImpl.class)
 public interface StoreSetCustomTypeAction extends StoreUpdateAction {
 
+    String SET_CUSTOM_TYPE = "setCustomType";
+
     /**
     *  <p>If set, the custom type is reset to this value.
     *  If absent, the custom type and any existing custom fields are removed.</p>

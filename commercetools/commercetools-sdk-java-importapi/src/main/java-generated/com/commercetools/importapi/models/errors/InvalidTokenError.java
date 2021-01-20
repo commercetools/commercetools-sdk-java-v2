@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidTokenErrorImpl.class)
 public interface InvalidTokenError extends ErrorObject {
 
+    String INVALID_TOKEN = "invalid_token";
+
     public static InvalidTokenError of() {
         return new InvalidTokenErrorImpl();
     }

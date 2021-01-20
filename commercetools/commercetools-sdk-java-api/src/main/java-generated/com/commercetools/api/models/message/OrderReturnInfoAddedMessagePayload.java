@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderReturnInfoAddedMessagePayloadImpl.class)
 public interface OrderReturnInfoAddedMessagePayload extends MessagePayload {
 
+    String RETURN_INFO_ADDED = "ReturnInfoAdded";
+
     @NotNull
     @Valid
     @JsonProperty("returnInfo")

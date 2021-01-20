@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryItemsUpdatedMessageImpl.class)
 public interface DeliveryItemsUpdatedMessage extends Message {
 
+    String DELIVERY_ITEMS_UPDATED = "DeliveryItemsUpdated";
+
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();

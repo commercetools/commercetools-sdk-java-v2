@@ -42,11 +42,11 @@ public final class ProductAddExternalImageActionImpl implements ProductAddExtern
         this.sku = sku;
         this.image = image;
         this.staged = staged;
-        this.action = "addExternalImage";
+        this.action = ProductAddExternalImageAction.ADD_EXTERNAL_IMAGE;
     }
 
     public ProductAddExternalImageActionImpl() {
-        this.action = "addExternalImage";
+        this.action = ProductAddExternalImageAction.ADD_EXTERNAL_IMAGE;
     }
 
     public String getAction() {

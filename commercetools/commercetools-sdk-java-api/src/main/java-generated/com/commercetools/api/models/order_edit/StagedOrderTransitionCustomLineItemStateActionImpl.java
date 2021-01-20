@@ -48,11 +48,11 @@ public final class StagedOrderTransitionCustomLineItemStateActionImpl
         this.fromState = fromState;
         this.toState = toState;
         this.actualTransitionDate = actualTransitionDate;
-        this.action = "transitionCustomLineItemState";
+        this.action = StagedOrderTransitionCustomLineItemStateAction.TRANSITION_CUSTOM_LINE_ITEM_STATE;
     }
 
     public StagedOrderTransitionCustomLineItemStateActionImpl() {
-        this.action = "transitionCustomLineItemState";
+        this.action = StagedOrderTransitionCustomLineItemStateAction.TRANSITION_CUSTOM_LINE_ITEM_STATE;
     }
 
     public String getAction() {

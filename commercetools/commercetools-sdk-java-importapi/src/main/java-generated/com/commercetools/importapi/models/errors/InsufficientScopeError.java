@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InsufficientScopeErrorImpl.class)
 public interface InsufficientScopeError extends ErrorObject {
 
+    String INSUFFICIENT_SCOPE = "insufficient_scope";
+
     public static InsufficientScopeError of() {
         return new InsufficientScopeErrorImpl();
     }

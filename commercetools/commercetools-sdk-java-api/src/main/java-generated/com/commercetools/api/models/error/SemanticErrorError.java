@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SemanticErrorErrorImpl.class)
 public interface SemanticErrorError extends ErrorObject {
 
+    String SEMANTIC_ERROR = "SemanticError";
+
     public static SemanticErrorError of() {
         return new SemanticErrorErrorImpl();
     }

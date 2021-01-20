@@ -38,11 +38,11 @@ public final class ParcelTrackingDataUpdatedMessagePayloadImpl implements Parcel
         this.deliveryId = deliveryId;
         this.parcelId = parcelId;
         this.trackingData = trackingData;
-        this.type = "ParcelTrackingDataUpdated";
+        this.type = ParcelTrackingDataUpdatedMessagePayload.PARCEL_TRACKING_DATA_UPDATED;
     }
 
     public ParcelTrackingDataUpdatedMessagePayloadImpl() {
-        this.type = "ParcelTrackingDataUpdated";
+        this.type = ParcelTrackingDataUpdatedMessagePayload.PARCEL_TRACKING_DATA_UPDATED;
     }
 
     public String getType() {

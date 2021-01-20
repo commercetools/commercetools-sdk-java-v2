@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldLocalizedStringTypeImpl.class)
 public interface CustomFieldLocalizedStringType extends FieldType {
 
+    String LOCALIZED_STRING = "LocalizedString";
+
     public static CustomFieldLocalizedStringType of() {
         return new CustomFieldLocalizedStringTypeImpl();
     }

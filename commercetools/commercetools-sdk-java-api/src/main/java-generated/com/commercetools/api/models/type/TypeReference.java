@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeReferenceImpl.class)
 public interface TypeReference extends Reference {
 
+    String TYPE = "type";
+
     @Valid
     @JsonProperty("obj")
     public Type getObj();

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderBillingAddressSetMessagePayloadImpl.class)
 public interface OrderBillingAddressSetMessagePayload extends MessagePayload {
 
+    String ORDER_BILLING_ADDRESS_SET = "OrderBillingAddressSet";
+
     @Valid
     @JsonProperty("address")
     public Address getAddress();

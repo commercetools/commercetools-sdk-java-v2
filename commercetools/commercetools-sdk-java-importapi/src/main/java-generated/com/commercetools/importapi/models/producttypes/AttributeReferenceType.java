@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeReferenceTypeImpl.class)
 public interface AttributeReferenceType extends AttributeType {
 
+    String REFERENCE = "reference";
+
     /**
     *  <p>The type of the referenced resource.</p>
     */

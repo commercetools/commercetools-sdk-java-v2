@@ -29,11 +29,11 @@ public final class NoMatchingProductDiscountFoundErrorImpl implements NoMatching
     @JsonCreator
     NoMatchingProductDiscountFoundErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "NoMatchingProductDiscountFound";
+        this.code = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND;
     }
 
     public NoMatchingProductDiscountFoundErrorImpl() {
-        this.code = "NoMatchingProductDiscountFound";
+        this.code = NoMatchingProductDiscountFoundError.NO_MATCHING_PRODUCT_DISCOUNT_FOUND;
     }
 
     public String getCode() {

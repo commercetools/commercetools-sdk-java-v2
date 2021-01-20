@@ -31,11 +31,11 @@ public final class CartDiscountChangeValueActionImpl implements CartDiscountChan
     CartDiscountChangeValueActionImpl(
             @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
         this.value = value;
-        this.action = "changeValue";
+        this.action = CartDiscountChangeValueAction.CHANGE_VALUE;
     }
 
     public CartDiscountChangeValueActionImpl() {
-        this.action = "changeValue";
+        this.action = CartDiscountChangeValueAction.CHANGE_VALUE;
     }
 
     public String getAction() {

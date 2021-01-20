@@ -37,11 +37,11 @@ public final class MoneyAttributeImpl implements MoneyAttribute {
             @JsonProperty("value") final com.commercetools.importapi.models.common.TypedMoney value) {
         this.name = name;
         this.value = value;
-        this.type = "money";
+        this.type = MoneyAttribute.MONEY;
     }
 
     public MoneyAttributeImpl() {
-        this.type = "money";
+        this.type = MoneyAttribute.MONEY;
     }
 
     /**

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = WhitespaceTokenizerImpl.class)
 public interface WhitespaceTokenizer extends SuggestTokenizer {
 
+    String WHITESPACE = "whitespace";
+
     public static WhitespaceTokenizer of() {
         return new WhitespaceTokenizerImpl();
     }

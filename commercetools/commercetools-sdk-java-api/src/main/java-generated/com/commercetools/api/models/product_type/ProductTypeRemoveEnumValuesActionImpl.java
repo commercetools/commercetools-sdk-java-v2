@@ -33,11 +33,11 @@ public final class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeR
             @JsonProperty("keys") final java.util.List<String> keys) {
         this.attributeName = attributeName;
         this.keys = keys;
-        this.action = "removeEnumValues";
+        this.action = ProductTypeRemoveEnumValuesAction.REMOVE_ENUM_VALUES;
     }
 
     public ProductTypeRemoveEnumValuesActionImpl() {
-        this.action = "removeEnumValues";
+        this.action = ProductTypeRemoveEnumValuesAction.REMOVE_ENUM_VALUES;
     }
 
     public String getAction() {

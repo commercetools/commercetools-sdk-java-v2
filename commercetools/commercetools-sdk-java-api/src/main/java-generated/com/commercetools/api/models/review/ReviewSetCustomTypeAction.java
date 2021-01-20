@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewSetCustomTypeActionImpl.class)
 public interface ReviewSetCustomTypeAction extends ReviewUpdateAction {
 
+    String SET_CUSTOM_TYPE = "setCustomType";
+
     /**
     *  <p>If absent, the custom type and any existing custom fields are removed.</p>
     */

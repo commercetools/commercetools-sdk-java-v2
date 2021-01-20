@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeNonApplicableErrorImpl.class)
 public interface DiscountCodeNonApplicableError extends ErrorObject {
 
+    String DISCOUNT_CODE_NON_APPLICABLE = "DiscountCodeNonApplicable";
+
     @JsonProperty("discountCode")
     public String getDiscountCode();
 

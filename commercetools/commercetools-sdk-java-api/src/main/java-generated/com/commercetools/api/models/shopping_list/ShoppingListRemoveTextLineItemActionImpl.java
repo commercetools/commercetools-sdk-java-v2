@@ -33,11 +33,11 @@ public final class ShoppingListRemoveTextLineItemActionImpl implements ShoppingL
             @JsonProperty("quantity") final Long quantity) {
         this.textLineItemId = textLineItemId;
         this.quantity = quantity;
-        this.action = "removeTextLineItem";
+        this.action = ShoppingListRemoveTextLineItemAction.REMOVE_TEXT_LINE_ITEM;
     }
 
     public ShoppingListRemoveTextLineItemActionImpl() {
-        this.action = "removeTextLineItem";
+        this.action = ShoppingListRemoveTextLineItemAction.REMOVE_TEXT_LINE_ITEM;
     }
 
     public String getAction() {

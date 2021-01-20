@@ -77,11 +77,11 @@ public final class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdat
         this.deliveryId = deliveryId;
         this.items = items;
         this.oldItems = oldItems;
-        this.type = "DeliveryItemsUpdated";
+        this.type = DeliveryItemsUpdatedMessage.DELIVERY_ITEMS_UPDATED;
     }
 
     public DeliveryItemsUpdatedMessageImpl() {
-        this.type = "DeliveryItemsUpdated";
+        this.type = DeliveryItemsUpdatedMessage.DELIVERY_ITEMS_UPDATED;
     }
 
     public String getId() {

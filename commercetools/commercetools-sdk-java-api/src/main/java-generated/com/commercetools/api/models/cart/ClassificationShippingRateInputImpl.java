@@ -34,11 +34,11 @@ public final class ClassificationShippingRateInputImpl implements Classification
             @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
         this.key = key;
         this.label = label;
-        this.type = "Classification";
+        this.type = ClassificationShippingRateInput.CLASSIFICATION;
     }
 
     public ClassificationShippingRateInputImpl() {
-        this.type = "Classification";
+        this.type = ClassificationShippingRateInput.CLASSIFICATION;
     }
 
     public String getType() {

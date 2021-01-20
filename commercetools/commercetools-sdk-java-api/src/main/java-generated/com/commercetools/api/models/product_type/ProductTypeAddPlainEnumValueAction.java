@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeAddPlainEnumValueActionImpl.class)
 public interface ProductTypeAddPlainEnumValueAction extends ProductTypeUpdateAction {
 
+    String ADD_PLAIN_ENUM_VALUE = "addPlainEnumValue";
+
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

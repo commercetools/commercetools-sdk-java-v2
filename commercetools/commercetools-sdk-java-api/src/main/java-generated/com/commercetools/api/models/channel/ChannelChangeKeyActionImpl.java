@@ -29,11 +29,11 @@ public final class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction 
     @JsonCreator
     ChannelChangeKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "changeKey";
+        this.action = ChannelChangeKeyAction.CHANGE_KEY;
     }
 
     public ChannelChangeKeyActionImpl() {
-        this.action = "changeKey";
+        this.action = ChannelChangeKeyAction.CHANGE_KEY;
     }
 
     public String getAction() {

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetSlugActionImpl.class)
 public interface ShoppingListSetSlugAction extends ShoppingListUpdateAction {
 
+    String SET_SLUG = "setSlug";
+
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();

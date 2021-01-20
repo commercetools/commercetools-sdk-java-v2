@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodDoesNotMatchCartErrorImpl.class)
 public interface ShippingMethodDoesNotMatchCartError extends ErrorObject {
 
+    String SHIPPING_METHOD_DOES_NOT_MATCH_CART = "ShippingMethodDoesNotMatchCart";
+
     public static ShippingMethodDoesNotMatchCartError of() {
         return new ShippingMethodDoesNotMatchCartErrorImpl();
     }

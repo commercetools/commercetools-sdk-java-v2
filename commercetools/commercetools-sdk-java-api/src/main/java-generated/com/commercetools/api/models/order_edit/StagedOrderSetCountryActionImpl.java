@@ -29,11 +29,11 @@ public final class StagedOrderSetCountryActionImpl implements StagedOrderSetCoun
     @JsonCreator
     StagedOrderSetCountryActionImpl(@JsonProperty("country") final String country) {
         this.country = country;
-        this.action = "setCountry";
+        this.action = StagedOrderSetCountryAction.SET_COUNTRY;
     }
 
     public StagedOrderSetCountryActionImpl() {
-        this.action = "setCountry";
+        this.action = StagedOrderSetCountryAction.SET_COUNTRY;
     }
 
     public String getAction() {

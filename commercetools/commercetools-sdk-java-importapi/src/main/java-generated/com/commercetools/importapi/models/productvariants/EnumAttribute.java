@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = EnumAttributeImpl.class)
 public interface EnumAttribute extends Attribute {
 
+    String ENUM = "enum";
+
     @NotNull
     @JsonProperty("value")
     public String getValue();

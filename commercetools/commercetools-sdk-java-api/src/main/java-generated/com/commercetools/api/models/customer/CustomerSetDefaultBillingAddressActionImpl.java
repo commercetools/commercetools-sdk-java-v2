@@ -33,11 +33,11 @@ public final class CustomerSetDefaultBillingAddressActionImpl implements Custome
             @JsonProperty("addressKey") final String addressKey) {
         this.addressId = addressId;
         this.addressKey = addressKey;
-        this.action = "setDefaultBillingAddress";
+        this.action = CustomerSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS;
     }
 
     public CustomerSetDefaultBillingAddressActionImpl() {
-        this.action = "setDefaultBillingAddress";
+        this.action = CustomerSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS;
     }
 
     public String getAction() {

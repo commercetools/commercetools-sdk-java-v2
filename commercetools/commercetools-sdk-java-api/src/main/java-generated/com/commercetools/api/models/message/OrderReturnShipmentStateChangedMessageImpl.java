@@ -74,11 +74,11 @@ public final class OrderReturnShipmentStateChangedMessageImpl implements OrderRe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.returnItemId = returnItemId;
         this.returnShipmentState = returnShipmentState;
-        this.type = "OrderReturnShipmentStateChanged";
+        this.type = OrderReturnShipmentStateChangedMessage.ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }
 
     public OrderReturnShipmentStateChangedMessageImpl() {
-        this.type = "OrderReturnShipmentStateChanged";
+        this.type = OrderReturnShipmentStateChangedMessage.ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }
 
     public String getId() {

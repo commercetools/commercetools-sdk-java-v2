@@ -87,11 +87,11 @@ public final class CustomLineItemStateTransitionMessageImpl implements CustomLin
         this.quantity = quantity;
         this.fromState = fromState;
         this.toState = toState;
-        this.type = "CustomLineItemStateTransition";
+        this.type = CustomLineItemStateTransitionMessage.CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }
 
     public CustomLineItemStateTransitionMessageImpl() {
-        this.type = "CustomLineItemStateTransition";
+        this.type = CustomLineItemStateTransitionMessage.CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }
 
     public String getId() {

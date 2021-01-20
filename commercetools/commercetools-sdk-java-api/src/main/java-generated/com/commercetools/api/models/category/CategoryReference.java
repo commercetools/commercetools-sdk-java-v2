@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryReferenceImpl.class)
 public interface CategoryReference extends Reference {
 
+    String CATEGORY = "category";
+
     @Valid
     @JsonProperty("obj")
     public Category getObj();

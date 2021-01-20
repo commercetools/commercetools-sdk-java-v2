@@ -44,11 +44,11 @@ public final class StagedOrderSetCustomShippingMethodActionImpl implements Stage
         this.shippingRate = shippingRate;
         this.taxCategory = taxCategory;
         this.externalTaxRate = externalTaxRate;
-        this.action = "setCustomShippingMethod";
+        this.action = StagedOrderSetCustomShippingMethodAction.SET_CUSTOM_SHIPPING_METHOD;
     }
 
     public StagedOrderSetCustomShippingMethodActionImpl() {
-        this.action = "setCustomShippingMethod";
+        this.action = StagedOrderSetCustomShippingMethodAction.SET_CUSTOM_SHIPPING_METHOD;
     }
 
     public String getAction() {

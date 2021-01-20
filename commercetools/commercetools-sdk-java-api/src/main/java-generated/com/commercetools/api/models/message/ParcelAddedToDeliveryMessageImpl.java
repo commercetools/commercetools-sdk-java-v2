@@ -74,11 +74,11 @@ public final class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeli
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.delivery = delivery;
         this.parcel = parcel;
-        this.type = "ParcelAddedToDelivery";
+        this.type = ParcelAddedToDeliveryMessage.PARCEL_ADDED_TO_DELIVERY;
     }
 
     public ParcelAddedToDeliveryMessageImpl() {
-        this.type = "ParcelAddedToDelivery";
+        this.type = ParcelAddedToDeliveryMessage.PARCEL_ADDED_TO_DELIVERY;
     }
 
     public String getId() {

@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryKeyReferenceImpl.class)
 public interface CategoryKeyReference extends KeyReference {
 
+    String CATEGORY = "category";
+
     public static CategoryKeyReference of() {
         return new CategoryKeyReferenceImpl();
     }

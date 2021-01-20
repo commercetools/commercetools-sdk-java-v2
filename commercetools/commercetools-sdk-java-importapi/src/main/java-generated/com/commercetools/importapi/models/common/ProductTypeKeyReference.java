@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeKeyReferenceImpl.class)
 public interface ProductTypeKeyReference extends KeyReference {
 
+    String PRODUCT_TYPE = "product-type";
+
     public static ProductTypeKeyReference of() {
         return new ProductTypeKeyReferenceImpl();
     }

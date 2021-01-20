@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderAddReturnInfoActionImpl.class)
 public interface OrderAddReturnInfoAction extends OrderUpdateAction {
 
+    String ADD_RETURN_INFO = "addReturnInfo";
+
     @JsonProperty("returnTrackingId")
     public String getReturnTrackingId();
 

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetSearchKeywordsActionImpl.class)
 public interface ProductSetSearchKeywordsAction extends ProductUpdateAction {
 
+    String SET_SEARCH_KEYWORDS = "setSearchKeywords";
+
     @NotNull
     @Valid
     @JsonProperty("searchKeywords")

@@ -37,11 +37,11 @@ public final class DateSetAttributeImpl implements DateSetAttribute {
             @JsonProperty("value") final java.util.List<java.time.LocalDate> value) {
         this.name = name;
         this.value = value;
-        this.type = "date-set";
+        this.type = DateSetAttribute.DATE_SET;
     }
 
     public DateSetAttributeImpl() {
-        this.type = "date-set";
+        this.type = DateSetAttribute.DATE_SET;
     }
 
     /**

@@ -36,11 +36,11 @@ public final class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSe
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "setCustomType";
+        this.action = DiscountCodeSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public DiscountCodeSetCustomTypeActionImpl() {
-        this.action = "setCustomType";
+        this.action = DiscountCodeSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

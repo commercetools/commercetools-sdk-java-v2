@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetReturnShipmentStateActionImpl.class)
 public interface StagedOrderSetReturnShipmentStateAction extends StagedOrderUpdateAction {
 
+    String SET_RETURN_SHIPMENT_STATE = "setReturnShipmentState";
+
     @NotNull
     @JsonProperty("returnItemId")
     public String getReturnItemId();

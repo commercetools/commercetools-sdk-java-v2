@@ -30,11 +30,11 @@ public final class DiscountCodeSetValidFromActionImpl implements DiscountCodeSet
     @JsonCreator
     DiscountCodeSetValidFromActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
-        this.action = "setValidFrom";
+        this.action = DiscountCodeSetValidFromAction.SET_VALID_FROM;
     }
 
     public DiscountCodeSetValidFromActionImpl() {
-        this.action = "setValidFrom";
+        this.action = DiscountCodeSetValidFromAction.SET_VALID_FROM;
     }
 
     public String getAction() {

@@ -34,11 +34,11 @@ public final class ParcelRemovedFromDeliveryMessagePayloadImpl implements Parcel
             @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
         this.deliveryId = deliveryId;
         this.parcel = parcel;
-        this.type = "ParcelRemovedFromDelivery";
+        this.type = ParcelRemovedFromDeliveryMessagePayload.PARCEL_REMOVED_FROM_DELIVERY;
     }
 
     public ParcelRemovedFromDeliveryMessagePayloadImpl() {
-        this.type = "ParcelRemovedFromDelivery";
+        this.type = ParcelRemovedFromDeliveryMessagePayload.PARCEL_REMOVED_FROM_DELIVERY;
     }
 
     public String getType() {

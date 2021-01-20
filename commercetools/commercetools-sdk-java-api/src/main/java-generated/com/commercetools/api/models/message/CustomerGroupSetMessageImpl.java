@@ -69,11 +69,11 @@ public final class CustomerGroupSetMessageImpl implements CustomerGroupSetMessag
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customerGroup = customerGroup;
-        this.type = "CustomerGroupSet";
+        this.type = CustomerGroupSetMessage.CUSTOMER_GROUP_SET;
     }
 
     public CustomerGroupSetMessageImpl() {
-        this.type = "CustomerGroupSet";
+        this.type = CustomerGroupSetMessage.CUSTOMER_GROUP_SET;
     }
 
     public String getId() {

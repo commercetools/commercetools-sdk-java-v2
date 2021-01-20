@@ -29,11 +29,11 @@ public final class IronMqDestinationImpl implements IronMqDestination {
     @JsonCreator
     IronMqDestinationImpl(@JsonProperty("uri") final String uri) {
         this.uri = uri;
-        this.type = "IronMQ";
+        this.type = IronMqDestination.IRON_MQ;
     }
 
     public IronMqDestinationImpl() {
-        this.type = "IronMQ";
+        this.type = IronMqDestination.IRON_MQ;
     }
 
     public String getType() {

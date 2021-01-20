@@ -36,11 +36,11 @@ public final class ShippingMethodRemoveShippingRateActionImpl implements Shippin
             @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
         this.zone = zone;
         this.shippingRate = shippingRate;
-        this.action = "removeShippingRate";
+        this.action = ShippingMethodRemoveShippingRateAction.REMOVE_SHIPPING_RATE;
     }
 
     public ShippingMethodRemoveShippingRateActionImpl() {
-        this.action = "removeShippingRate";
+        this.action = ShippingMethodRemoveShippingRateAction.REMOVE_SHIPPING_RATE;
     }
 
     public String getAction() {

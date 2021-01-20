@@ -29,11 +29,11 @@ public final class CustomerSetLocaleActionImpl implements CustomerSetLocaleActio
     @JsonCreator
     CustomerSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
-        this.action = "setLocale";
+        this.action = CustomerSetLocaleAction.SET_LOCALE;
     }
 
     public CustomerSetLocaleActionImpl() {
-        this.action = "setLocale";
+        this.action = CustomerSetLocaleAction.SET_LOCALE;
     }
 
     public String getAction() {

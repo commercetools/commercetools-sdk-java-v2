@@ -34,11 +34,11 @@ public final class CartSetCustomFieldActionImpl implements CartSetCustomFieldAct
             @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
         this.name = name;
         this.value = value;
-        this.action = "setCustomField";
+        this.action = CartSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public CartSetCustomFieldActionImpl() {
-        this.action = "setCustomField";
+        this.action = CartSetCustomFieldAction.SET_CUSTOM_FIELD;
     }
 
     public String getAction() {

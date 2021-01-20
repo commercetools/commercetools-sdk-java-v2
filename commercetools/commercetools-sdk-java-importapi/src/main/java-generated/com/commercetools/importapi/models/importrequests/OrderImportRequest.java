@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderImportRequestImpl.class)
 public interface OrderImportRequest extends ImportRequest {
 
+    String ORDER = "order";
+
     /**
     *  <p>The order import resources of this request.</p>
     */

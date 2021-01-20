@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomerEmailSetMessageImpl.class)
 public interface OrderCustomerEmailSetMessage extends Message {
 
+    String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
+
     @JsonProperty("email")
     public String getEmail();
 

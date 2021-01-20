@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewRatingSetMessagePayloadImpl.class)
 public interface ReviewRatingSetMessagePayload extends MessagePayload {
 
+    String REVIEW_RATING_SET = "ReviewRatingSet";
+
     @JsonProperty("oldRating")
     public Double getOldRating();
 

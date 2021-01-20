@@ -40,11 +40,11 @@ public final class StagedOrderAddShoppingListActionImpl implements StagedOrderAd
         this.shoppingList = shoppingList;
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
-        this.action = "addShoppingList";
+        this.action = StagedOrderAddShoppingListAction.ADD_SHOPPING_LIST;
     }
 
     public StagedOrderAddShoppingListActionImpl() {
-        this.action = "addShoppingList";
+        this.action = StagedOrderAddShoppingListAction.ADD_SHOPPING_LIST;
     }
 
     public String getAction() {

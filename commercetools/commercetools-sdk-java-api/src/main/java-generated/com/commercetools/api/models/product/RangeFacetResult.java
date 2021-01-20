@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = RangeFacetResultImpl.class)
 public interface RangeFacetResult extends FacetResult {
 
+    String RANGE = "range";
+
     @NotNull
     @Valid
     @JsonProperty("ranges")

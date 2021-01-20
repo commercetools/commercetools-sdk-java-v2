@@ -29,11 +29,11 @@ public final class OrderEditSetCommentActionImpl implements OrderEditSetCommentA
     @JsonCreator
     OrderEditSetCommentActionImpl(@JsonProperty("comment") final String comment) {
         this.comment = comment;
-        this.action = "setComment";
+        this.action = OrderEditSetCommentAction.SET_COMMENT;
     }
 
     public OrderEditSetCommentActionImpl() {
-        this.action = "setComment";
+        this.action = OrderEditSetCommentAction.SET_COMMENT;
     }
 
     public String getAction() {

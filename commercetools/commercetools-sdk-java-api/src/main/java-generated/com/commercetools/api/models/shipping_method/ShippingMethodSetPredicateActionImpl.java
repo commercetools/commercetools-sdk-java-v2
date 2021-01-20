@@ -29,11 +29,11 @@ public final class ShippingMethodSetPredicateActionImpl implements ShippingMetho
     @JsonCreator
     ShippingMethodSetPredicateActionImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
-        this.action = "setPredicate";
+        this.action = ShippingMethodSetPredicateAction.SET_PREDICATE;
     }
 
     public ShippingMethodSetPredicateActionImpl() {
-        this.action = "setPredicate";
+        this.action = ShippingMethodSetPredicateAction.SET_PREDICATE;
     }
 
     public String getAction() {

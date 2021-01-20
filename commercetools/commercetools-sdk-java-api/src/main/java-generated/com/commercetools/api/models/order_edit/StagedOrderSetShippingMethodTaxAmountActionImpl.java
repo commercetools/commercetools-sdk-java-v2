@@ -32,11 +32,11 @@ public final class StagedOrderSetShippingMethodTaxAmountActionImpl
     StagedOrderSetShippingMethodTaxAmountActionImpl(
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.externalTaxAmount = externalTaxAmount;
-        this.action = "setShippingMethodTaxAmount";
+        this.action = StagedOrderSetShippingMethodTaxAmountAction.SET_SHIPPING_METHOD_TAX_AMOUNT;
     }
 
     public StagedOrderSetShippingMethodTaxAmountActionImpl() {
-        this.action = "setShippingMethodTaxAmount";
+        this.action = StagedOrderSetShippingMethodTaxAmountAction.SET_SHIPPING_METHOD_TAX_AMOUNT;
     }
 
     public String getAction() {

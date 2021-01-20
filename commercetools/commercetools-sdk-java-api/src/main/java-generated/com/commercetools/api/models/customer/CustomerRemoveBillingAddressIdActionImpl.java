@@ -33,11 +33,11 @@ public final class CustomerRemoveBillingAddressIdActionImpl implements CustomerR
             @JsonProperty("addressKey") final String addressKey) {
         this.addressId = addressId;
         this.addressKey = addressKey;
-        this.action = "removeBillingAddressId";
+        this.action = CustomerRemoveBillingAddressIdAction.REMOVE_BILLING_ADDRESS_ID;
     }
 
     public CustomerRemoveBillingAddressIdActionImpl() {
-        this.action = "removeBillingAddressId";
+        this.action = CustomerRemoveBillingAddressIdAction.REMOVE_BILLING_ADDRESS_ID;
     }
 
     public String getAction() {

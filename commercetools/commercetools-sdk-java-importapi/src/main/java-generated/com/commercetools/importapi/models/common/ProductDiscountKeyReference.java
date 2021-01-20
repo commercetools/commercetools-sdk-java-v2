@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountKeyReferenceImpl.class)
 public interface ProductDiscountKeyReference extends KeyReference {
 
+    String PRODUCT_DISCOUNT = "product-discount";
+
     public static ProductDiscountKeyReference of() {
         return new ProductDiscountKeyReferenceImpl();
     }

@@ -33,11 +33,11 @@ public final class MyCustomerSetDefaultBillingAddressActionImpl implements MyCus
             @JsonProperty("addressKey") final String addressKey) {
         this.addressId = addressId;
         this.addressKey = addressKey;
-        this.action = "setDefaultBillingAddress";
+        this.action = MyCustomerSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS;
     }
 
     public MyCustomerSetDefaultBillingAddressActionImpl() {
-        this.action = "setDefaultBillingAddress";
+        this.action = MyCustomerSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS;
     }
 
     public String getAction() {

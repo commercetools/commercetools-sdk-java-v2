@@ -34,11 +34,11 @@ public final class ShoppingListChangeTextLineItemQuantityActionImpl
             @JsonProperty("quantity") final Long quantity) {
         this.textLineItemId = textLineItemId;
         this.quantity = quantity;
-        this.action = "changeTextLineItemQuantity";
+        this.action = ShoppingListChangeTextLineItemQuantityAction.CHANGE_TEXT_LINE_ITEM_QUANTITY;
     }
 
     public ShoppingListChangeTextLineItemQuantityActionImpl() {
-        this.action = "changeTextLineItemQuantity";
+        this.action = ShoppingListChangeTextLineItemQuantityAction.CHANGE_TEXT_LINE_ITEM_QUANTITY;
     }
 
     public String getAction() {

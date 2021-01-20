@@ -31,11 +31,11 @@ public final class ShoppingListChangeTextLineItemsOrderActionImpl
     ShoppingListChangeTextLineItemsOrderActionImpl(
             @JsonProperty("textLineItemOrder") final java.util.List<String> textLineItemOrder) {
         this.textLineItemOrder = textLineItemOrder;
-        this.action = "changeTextLineItemsOrder";
+        this.action = ShoppingListChangeTextLineItemsOrderAction.CHANGE_TEXT_LINE_ITEMS_ORDER;
     }
 
     public ShoppingListChangeTextLineItemsOrderActionImpl() {
-        this.action = "changeTextLineItemsOrder";
+        this.action = ShoppingListChangeTextLineItemsOrderAction.CHANGE_TEXT_LINE_ITEMS_ORDER;
     }
 
     public String getAction() {

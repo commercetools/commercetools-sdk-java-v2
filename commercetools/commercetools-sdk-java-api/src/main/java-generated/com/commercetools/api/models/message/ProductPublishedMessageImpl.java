@@ -78,11 +78,11 @@ public final class ProductPublishedMessageImpl implements ProductPublishedMessag
         this.removedImageUrls = removedImageUrls;
         this.productProjection = productProjection;
         this.scope = scope;
-        this.type = "ProductPublished";
+        this.type = ProductPublishedMessage.PRODUCT_PUBLISHED;
     }
 
     public ProductPublishedMessageImpl() {
-        this.type = "ProductPublished";
+        this.type = ProductPublishedMessage.PRODUCT_PUBLISHED;
     }
 
     public String getId() {

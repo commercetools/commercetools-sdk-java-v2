@@ -40,11 +40,11 @@ public final class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpd
         this.channel = channel;
         this.externalId = externalId;
         this.syncedAt = syncedAt;
-        this.action = "updateSyncInfo";
+        this.action = StagedOrderUpdateSyncInfoAction.UPDATE_SYNC_INFO;
     }
 
     public StagedOrderUpdateSyncInfoActionImpl() {
-        this.action = "updateSyncInfo";
+        this.action = StagedOrderUpdateSyncInfoAction.UPDATE_SYNC_INFO;
     }
 
     public String getAction() {

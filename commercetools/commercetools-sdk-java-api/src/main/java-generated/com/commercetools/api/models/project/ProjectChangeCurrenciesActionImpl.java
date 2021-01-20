@@ -29,11 +29,11 @@ public final class ProjectChangeCurrenciesActionImpl implements ProjectChangeCur
     @JsonCreator
     ProjectChangeCurrenciesActionImpl(@JsonProperty("currencies") final java.util.List<String> currencies) {
         this.currencies = currencies;
-        this.action = "changeCurrencies";
+        this.action = ProjectChangeCurrenciesAction.CHANGE_CURRENCIES;
     }
 
     public ProjectChangeCurrenciesActionImpl() {
-        this.action = "changeCurrencies";
+        this.action = ProjectChangeCurrenciesAction.CHANGE_CURRENCIES;
     }
 
     public String getAction() {

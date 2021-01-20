@@ -29,11 +29,11 @@ public final class CategorySetKeyActionImpl implements CategorySetKeyAction {
     @JsonCreator
     CategorySetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "setKey";
+        this.action = CategorySetKeyAction.SET_KEY;
     }
 
     public CategorySetKeyActionImpl() {
-        this.action = "setKey";
+        this.action = CategorySetKeyAction.SET_KEY;
     }
 
     public String getAction() {

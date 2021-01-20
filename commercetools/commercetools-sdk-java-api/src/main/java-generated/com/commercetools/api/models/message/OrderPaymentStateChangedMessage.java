@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderPaymentStateChangedMessageImpl.class)
 public interface OrderPaymentStateChangedMessage extends Message {
 
+    String ORDER_PAYMENT_STATE_CHANGED = "OrderPaymentStateChanged";
+
     @NotNull
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();

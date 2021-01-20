@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditPreviewFailureImpl.class)
 public interface OrderEditPreviewFailure extends OrderEditResult {
 
+    String PREVIEW_FAILURE = "PreviewFailure";
+
     @NotNull
     @Valid
     @JsonProperty("errors")

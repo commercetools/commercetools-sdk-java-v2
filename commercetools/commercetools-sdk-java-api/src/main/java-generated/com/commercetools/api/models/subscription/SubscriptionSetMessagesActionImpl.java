@@ -31,11 +31,11 @@ public final class SubscriptionSetMessagesActionImpl implements SubscriptionSetM
     SubscriptionSetMessagesActionImpl(
             @JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
         this.messages = messages;
-        this.action = "setMessages";
+        this.action = SubscriptionSetMessagesAction.SET_MESSAGES;
     }
 
     public SubscriptionSetMessagesActionImpl() {
-        this.action = "setMessages";
+        this.action = SubscriptionSetMessagesAction.SET_MESSAGES;
     }
 
     public String getAction() {

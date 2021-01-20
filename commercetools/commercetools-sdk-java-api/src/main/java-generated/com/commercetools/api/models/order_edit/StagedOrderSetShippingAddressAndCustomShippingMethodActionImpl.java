@@ -51,11 +51,11 @@ public final class StagedOrderSetShippingAddressAndCustomShippingMethodActionImp
         this.shippingRate = shippingRate;
         this.taxCategory = taxCategory;
         this.externalTaxRate = externalTaxRate;
-        this.action = "setShippingAddressAndCustomShippingMethod";
+        this.action = StagedOrderSetShippingAddressAndCustomShippingMethodAction.SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD;
     }
 
     public StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl() {
-        this.action = "setShippingAddressAndCustomShippingMethod";
+        this.action = StagedOrderSetShippingAddressAndCustomShippingMethodAction.SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD;
     }
 
     public String getAction() {

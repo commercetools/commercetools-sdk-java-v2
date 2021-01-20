@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetAttributeInAllVariantsActionImpl.class)
 public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAction {
 
+    String SET_ATTRIBUTE_IN_ALL_VARIANTS = "setAttributeInAllVariants";
+
     @NotNull
     @JsonProperty("name")
     public String getName();

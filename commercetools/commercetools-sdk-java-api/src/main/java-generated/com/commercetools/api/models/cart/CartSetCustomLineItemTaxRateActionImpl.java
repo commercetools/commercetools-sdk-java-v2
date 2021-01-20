@@ -34,11 +34,11 @@ public final class CartSetCustomLineItemTaxRateActionImpl implements CartSetCust
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.customLineItemId = customLineItemId;
         this.externalTaxRate = externalTaxRate;
-        this.action = "setCustomLineItemTaxRate";
+        this.action = CartSetCustomLineItemTaxRateAction.SET_CUSTOM_LINE_ITEM_TAX_RATE;
     }
 
     public CartSetCustomLineItemTaxRateActionImpl() {
-        this.action = "setCustomLineItemTaxRate";
+        this.action = CartSetCustomLineItemTaxRateAction.SET_CUSTOM_LINE_ITEM_TAX_RATE;
     }
 
     public String getAction() {

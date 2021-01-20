@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderAddDeliveryActionImpl.class)
 public interface OrderAddDeliveryAction extends OrderUpdateAction {
 
+    String ADD_DELIVERY = "addDelivery";
+
     @Valid
     @JsonProperty("items")
     public List<DeliveryItem> getItems();

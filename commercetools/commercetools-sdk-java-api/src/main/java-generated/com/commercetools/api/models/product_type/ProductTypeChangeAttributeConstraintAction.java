@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeAttributeConstraintActionImpl.class)
 public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeUpdateAction {
 
+    String CHANGE_ATTRIBUTE_CONSTRAINT = "changeAttributeConstraint";
+
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

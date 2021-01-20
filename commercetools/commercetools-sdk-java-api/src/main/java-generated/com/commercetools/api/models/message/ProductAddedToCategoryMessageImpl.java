@@ -73,11 +73,11 @@ public final class ProductAddedToCategoryMessageImpl implements ProductAddedToCa
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.category = category;
         this.staged = staged;
-        this.type = "ProductAddedToCategory";
+        this.type = ProductAddedToCategoryMessage.PRODUCT_ADDED_TO_CATEGORY;
     }
 
     public ProductAddedToCategoryMessageImpl() {
-        this.type = "ProductAddedToCategory";
+        this.type = ProductAddedToCategoryMessage.PRODUCT_ADDED_TO_CATEGORY;
     }
 
     public String getId() {

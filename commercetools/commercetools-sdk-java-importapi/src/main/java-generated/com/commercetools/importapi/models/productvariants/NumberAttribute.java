@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = NumberAttributeImpl.class)
 public interface NumberAttribute extends Attribute {
 
+    String NUMBER = "number";
+
     @NotNull
     @JsonProperty("value")
     public Double getValue();

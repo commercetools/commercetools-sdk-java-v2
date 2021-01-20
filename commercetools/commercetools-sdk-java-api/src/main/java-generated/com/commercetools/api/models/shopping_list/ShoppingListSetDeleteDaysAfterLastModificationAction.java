@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetDeleteDaysAfterLastModificationActionImpl.class)
 public interface ShoppingListSetDeleteDaysAfterLastModificationAction extends ShoppingListUpdateAction {
 
+    String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
+
     @JsonProperty("deleteDaysAfterLastModification")
     public Long getDeleteDaysAfterLastModification();
 

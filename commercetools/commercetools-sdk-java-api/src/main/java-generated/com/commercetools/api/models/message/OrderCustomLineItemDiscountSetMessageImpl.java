@@ -79,11 +79,11 @@ public final class OrderCustomLineItemDiscountSetMessageImpl implements OrderCus
         this.customLineItemId = customLineItemId;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.taxedPrice = taxedPrice;
-        this.type = "OrderCustomLineItemDiscountSet";
+        this.type = OrderCustomLineItemDiscountSetMessage.ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
     }
 
     public OrderCustomLineItemDiscountSetMessageImpl() {
-        this.type = "OrderCustomLineItemDiscountSet";
+        this.type = OrderCustomLineItemDiscountSetMessage.ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
     }
 
     public String getId() {

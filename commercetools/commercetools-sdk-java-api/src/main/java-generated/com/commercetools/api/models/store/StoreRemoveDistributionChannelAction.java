@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreRemoveDistributionChannelActionImpl.class)
 public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction {
 
+    String REMOVE_DISTRIBUTION_CHANNEL = "removeDistributionChannel";
+
     @NotNull
     @Valid
     @JsonProperty("distributionChannel")

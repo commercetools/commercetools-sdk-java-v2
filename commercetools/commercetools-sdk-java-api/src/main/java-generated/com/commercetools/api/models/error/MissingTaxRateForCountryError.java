@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MissingTaxRateForCountryErrorImpl.class)
 public interface MissingTaxRateForCountryError extends ErrorObject {
 
+    String MISSING_TAX_RATE_FOR_COUNTRY = "MissingTaxRateForCountry";
+
     @NotNull
     @JsonProperty("taxCategoryId")
     public String getTaxCategoryId();

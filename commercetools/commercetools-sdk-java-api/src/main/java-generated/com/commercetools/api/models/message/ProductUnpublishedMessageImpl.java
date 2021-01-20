@@ -64,11 +64,11 @@ public final class ProductUnpublishedMessageImpl implements ProductUnpublishedMe
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
-        this.type = "ProductUnpublished";
+        this.type = ProductUnpublishedMessage.PRODUCT_UNPUBLISHED;
     }
 
     public ProductUnpublishedMessageImpl() {
-        this.type = "ProductUnpublished";
+        this.type = ProductUnpublishedMessage.PRODUCT_UNPUBLISHED;
     }
 
     public String getId() {

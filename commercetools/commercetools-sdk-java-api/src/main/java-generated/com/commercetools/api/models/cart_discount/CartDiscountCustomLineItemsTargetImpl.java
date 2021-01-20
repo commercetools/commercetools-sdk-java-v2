@@ -29,11 +29,11 @@ public final class CartDiscountCustomLineItemsTargetImpl implements CartDiscount
     @JsonCreator
     CartDiscountCustomLineItemsTargetImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
-        this.type = "customLineItems";
+        this.type = CartDiscountCustomLineItemsTarget.CUSTOM_LINE_ITEMS;
     }
 
     public CartDiscountCustomLineItemsTargetImpl() {
-        this.type = "customLineItems";
+        this.type = CartDiscountCustomLineItemsTarget.CUSTOM_LINE_ITEMS;
     }
 
     public String getType() {

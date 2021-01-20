@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomLineItemCustomTypeActionImpl.class)
 public interface CartSetCustomLineItemCustomTypeAction extends CartUpdateAction {
 
+    String SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE = "setCustomLineItemCustomType";
+
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();

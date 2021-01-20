@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartChangeTaxModeActionImpl.class)
 public interface CartChangeTaxModeAction extends CartUpdateAction {
 
+    String CHANGE_TAX_MODE = "changeTaxMode";
+
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();

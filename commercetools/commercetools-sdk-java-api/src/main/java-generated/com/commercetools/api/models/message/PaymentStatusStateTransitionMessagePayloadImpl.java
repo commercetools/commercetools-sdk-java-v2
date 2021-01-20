@@ -36,11 +36,11 @@ public final class PaymentStatusStateTransitionMessagePayloadImpl
             @JsonProperty("force") final Boolean force) {
         this.state = state;
         this.force = force;
-        this.type = "PaymentStatusStateTransition";
+        this.type = PaymentStatusStateTransitionMessagePayload.PAYMENT_STATUS_STATE_TRANSITION;
     }
 
     public PaymentStatusStateTransitionMessagePayloadImpl() {
-        this.type = "PaymentStatusStateTransition";
+        this.type = PaymentStatusStateTransitionMessagePayload.PAYMENT_STATUS_STATE_TRANSITION;
     }
 
     public String getType() {

@@ -29,11 +29,11 @@ public final class ObjectNotFoundErrorImpl implements ObjectNotFoundError {
     @JsonCreator
     ObjectNotFoundErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "ObjectNotFound";
+        this.code = ObjectNotFoundError.OBJECT_NOT_FOUND;
     }
 
     public ObjectNotFoundErrorImpl() {
-        this.code = "ObjectNotFound";
+        this.code = ObjectNotFoundError.OBJECT_NOT_FOUND;
     }
 
     public String getCode() {

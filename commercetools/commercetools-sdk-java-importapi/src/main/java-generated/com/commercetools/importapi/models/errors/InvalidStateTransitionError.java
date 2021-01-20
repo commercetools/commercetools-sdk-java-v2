@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidStateTransitionErrorImpl.class)
 public interface InvalidStateTransitionError extends ErrorObject {
 
+    String INVALID_TRANSITION = "InvalidTransition";
+
     /**
     *  <p>This enumeration describes the processing state of an import operation.</p>
     */

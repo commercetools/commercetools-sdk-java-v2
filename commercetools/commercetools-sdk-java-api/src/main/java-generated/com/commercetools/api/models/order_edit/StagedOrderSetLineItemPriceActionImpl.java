@@ -34,11 +34,11 @@ public final class StagedOrderSetLineItemPriceActionImpl implements StagedOrderS
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice) {
         this.lineItemId = lineItemId;
         this.externalPrice = externalPrice;
-        this.action = "setLineItemPrice";
+        this.action = StagedOrderSetLineItemPriceAction.SET_LINE_ITEM_PRICE;
     }
 
     public StagedOrderSetLineItemPriceActionImpl() {
-        this.action = "setLineItemPrice";
+        this.action = StagedOrderSetLineItemPriceAction.SET_LINE_ITEM_PRICE;
     }
 
     public String getAction() {

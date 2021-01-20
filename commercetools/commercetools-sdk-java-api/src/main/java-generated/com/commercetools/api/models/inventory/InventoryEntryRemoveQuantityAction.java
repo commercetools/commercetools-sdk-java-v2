@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryRemoveQuantityActionImpl.class)
 public interface InventoryEntryRemoveQuantityAction extends InventoryEntryUpdateAction {
 
+    String REMOVE_QUANTITY = "removeQuantity";
+
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();

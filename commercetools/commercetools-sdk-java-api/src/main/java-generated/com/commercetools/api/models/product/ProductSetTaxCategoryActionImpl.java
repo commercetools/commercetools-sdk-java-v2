@@ -31,11 +31,11 @@ public final class ProductSetTaxCategoryActionImpl implements ProductSetTaxCateg
     ProductSetTaxCategoryActionImpl(
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory) {
         this.taxCategory = taxCategory;
-        this.action = "setTaxCategory";
+        this.action = ProductSetTaxCategoryAction.SET_TAX_CATEGORY;
     }
 
     public ProductSetTaxCategoryActionImpl() {
-        this.action = "setTaxCategory";
+        this.action = ProductSetTaxCategoryAction.SET_TAX_CATEGORY;
     }
 
     public String getAction() {

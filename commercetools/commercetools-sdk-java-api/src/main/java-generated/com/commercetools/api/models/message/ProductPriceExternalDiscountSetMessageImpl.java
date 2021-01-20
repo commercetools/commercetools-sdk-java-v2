@@ -88,11 +88,11 @@ public final class ProductPriceExternalDiscountSetMessageImpl implements Product
         this.priceId = priceId;
         this.discounted = discounted;
         this.staged = staged;
-        this.type = "ProductPriceExternalDiscountSet";
+        this.type = ProductPriceExternalDiscountSetMessage.PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
     public ProductPriceExternalDiscountSetMessageImpl() {
-        this.type = "ProductPriceExternalDiscountSet";
+        this.type = ProductPriceExternalDiscountSetMessage.PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
     public String getId() {

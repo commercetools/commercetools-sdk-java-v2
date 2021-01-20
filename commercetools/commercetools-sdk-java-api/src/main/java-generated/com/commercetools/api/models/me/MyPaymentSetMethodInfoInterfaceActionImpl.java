@@ -29,11 +29,11 @@ public final class MyPaymentSetMethodInfoInterfaceActionImpl implements MyPaymen
     @JsonCreator
     MyPaymentSetMethodInfoInterfaceActionImpl(@JsonProperty("interface") final String _interface) {
         this._interface = _interface;
-        this.action = "setMethodInfoInterface";
+        this.action = MyPaymentSetMethodInfoInterfaceAction.SET_METHOD_INFO_INTERFACE;
     }
 
     public MyPaymentSetMethodInfoInterfaceActionImpl() {
-        this.action = "setMethodInfoInterface";
+        this.action = MyPaymentSetMethodInfoInterfaceAction.SET_METHOD_INFO_INTERFACE;
     }
 
     public String getAction() {

@@ -73,11 +73,11 @@ public final class OrderLineItemAddedMessageImpl implements OrderLineItemAddedMe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.lineItem = lineItem;
         this.addedQuantity = addedQuantity;
-        this.type = "OrderLineItemAdded";
+        this.type = OrderLineItemAddedMessage.ORDER_LINE_ITEM_ADDED;
     }
 
     public OrderLineItemAddedMessageImpl() {
-        this.type = "OrderLineItemAdded";
+        this.type = OrderLineItemAddedMessage.ORDER_LINE_ITEM_ADDED;
     }
 
     public String getId() {

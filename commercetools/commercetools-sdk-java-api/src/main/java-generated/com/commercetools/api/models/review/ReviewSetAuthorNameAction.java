@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewSetAuthorNameActionImpl.class)
 public interface ReviewSetAuthorNameAction extends ReviewUpdateAction {
 
+    String SET_AUTHOR_NAME = "setAuthorName";
+
     /**
     *  <p>If <code>authorName</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
     */

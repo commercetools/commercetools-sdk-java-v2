@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetStoresActionImpl.class)
 public interface CustomerSetStoresAction extends CustomerUpdateAction {
 
+    String SET_STORES = "setStores";
+
     @Valid
     @JsonProperty("stores")
     public List<StoreResourceIdentifier> getStores();

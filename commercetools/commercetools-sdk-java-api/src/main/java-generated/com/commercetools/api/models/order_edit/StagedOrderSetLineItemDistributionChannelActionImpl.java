@@ -35,11 +35,11 @@ public final class StagedOrderSetLineItemDistributionChannelActionImpl
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.lineItemId = lineItemId;
         this.distributionChannel = distributionChannel;
-        this.action = "setLineItemDistributionChannel";
+        this.action = StagedOrderSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
 
     public StagedOrderSetLineItemDistributionChannelActionImpl() {
-        this.action = "setLineItemDistributionChannel";
+        this.action = StagedOrderSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
 
     public String getAction() {

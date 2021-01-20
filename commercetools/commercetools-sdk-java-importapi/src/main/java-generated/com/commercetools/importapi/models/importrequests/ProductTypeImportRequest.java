@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeImportRequestImpl.class)
 public interface ProductTypeImportRequest extends ImportRequest {
 
+    String PRODUCT_TYPE = "product-type";
+
     /**
     *  <p>The product type import resources of this request.</p>
     */

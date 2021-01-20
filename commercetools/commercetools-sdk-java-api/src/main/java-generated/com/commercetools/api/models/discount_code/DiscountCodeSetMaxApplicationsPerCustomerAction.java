@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeSetMaxApplicationsPerCustomerActionImpl.class)
 public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends DiscountCodeUpdateAction {
 
+    String SET_MAX_APPLICATIONS_PER_CUSTOMER = "setMaxApplicationsPerCustomer";
+
     /**
     *  <p>If the <code>maxApplicationsPerCustomer</code> parameter is not included, the field will be emptied.</p>
     */

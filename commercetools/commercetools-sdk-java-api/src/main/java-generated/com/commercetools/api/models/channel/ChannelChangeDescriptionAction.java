@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelChangeDescriptionActionImpl.class)
 public interface ChannelChangeDescriptionAction extends ChannelUpdateAction {
 
+    String CHANGE_DESCRIPTION = "changeDescription";
+
     @NotNull
     @Valid
     @JsonProperty("description")

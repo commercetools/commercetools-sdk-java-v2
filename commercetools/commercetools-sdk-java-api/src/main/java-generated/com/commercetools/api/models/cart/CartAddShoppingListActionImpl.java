@@ -40,11 +40,11 @@ public final class CartAddShoppingListActionImpl implements CartAddShoppingListA
         this.shoppingList = shoppingList;
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
-        this.action = "addShoppingList";
+        this.action = CartAddShoppingListAction.ADD_SHOPPING_LIST;
     }
 
     public CartAddShoppingListActionImpl() {
-        this.action = "addShoppingList";
+        this.action = CartAddShoppingListAction.ADD_SHOPPING_LIST;
     }
 
     public String getAction() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicateEnumValuesErrorImpl.class)
 public interface DuplicateEnumValuesError extends ErrorObject {
 
+    String DUPLICATE_ENUM_VALUES = "DuplicateEnumValues";
+
     @NotNull
     @JsonProperty("duplicates")
     public List<String> getDuplicates();

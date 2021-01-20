@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceUpdateErrorImpl.class)
 public interface ResourceUpdateError extends ErrorObject {
 
+    String RESOURCE_UPDATE = "ResourceUpdate";
+
     @JsonProperty("resource")
     public JsonNode getResource();
 

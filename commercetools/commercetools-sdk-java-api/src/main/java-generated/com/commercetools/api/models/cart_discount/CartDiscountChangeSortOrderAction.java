@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountChangeSortOrderActionImpl.class)
 public interface CartDiscountChangeSortOrderAction extends CartDiscountUpdateAction {
 
+    String CHANGE_SORT_ORDER = "changeSortOrder";
+
     /**
     *  <p>The string must contain a number between 0 and 1.
     *  A discount with greater sortOrder is prioritized higher than a discount with lower sortOrder.</p>

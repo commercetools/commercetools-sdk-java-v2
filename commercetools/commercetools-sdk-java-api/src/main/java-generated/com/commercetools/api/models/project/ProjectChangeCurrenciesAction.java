@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeCurrenciesActionImpl.class)
 public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
 
+    String CHANGE_CURRENCIES = "changeCurrencies";
+
     /**
     *  <p>A three-digit currency code as per currency code.</p>
     */

@@ -31,11 +31,11 @@ public final class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugA
     ShoppingListSetSlugActionImpl(
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
-        this.action = "setSlug";
+        this.action = ShoppingListSetSlugAction.SET_SLUG;
     }
 
     public ShoppingListSetSlugActionImpl() {
-        this.action = "setSlug";
+        this.action = ShoppingListSetSlugAction.SET_SLUG;
     }
 
     public String getAction() {

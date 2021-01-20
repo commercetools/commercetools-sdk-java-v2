@@ -34,11 +34,11 @@ public final class CartDiscountSetValidFromAndUntilActionImpl implements CartDis
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil) {
         this.validFrom = validFrom;
         this.validUntil = validUntil;
-        this.action = "setValidFromAndUntil";
+        this.action = CartDiscountSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL;
     }
 
     public CartDiscountSetValidFromAndUntilActionImpl() {
-        this.action = "setValidFromAndUntil";
+        this.action = CartDiscountSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL;
     }
 
     public String getAction() {

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateChangeTypeActionImpl.class)
 public interface StateChangeTypeAction extends StateUpdateAction {
 
+    String CHANGE_TYPE = "changeType";
+
     @NotNull
     @JsonProperty("type")
     public StateTypeEnum getType();

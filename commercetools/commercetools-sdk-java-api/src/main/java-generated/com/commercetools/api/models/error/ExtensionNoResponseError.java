@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionNoResponseErrorImpl.class)
 public interface ExtensionNoResponseError extends ErrorObject {
 
+    String EXTENSION_NO_RESPONSE = "ExtensionNoResponse";
+
     @NotNull
     @JsonProperty("extensionId")
     public String getExtensionId();

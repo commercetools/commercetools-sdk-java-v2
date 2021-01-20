@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeRemoveEnumValuesActionImpl.class)
 public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateAction {
 
+    String REMOVE_ENUM_VALUES = "removeEnumValues";
+
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

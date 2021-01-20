@@ -29,11 +29,11 @@ public final class AccessDeniedErrorImpl implements AccessDeniedError {
     @JsonCreator
     AccessDeniedErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "access_denied";
+        this.code = AccessDeniedError.ACCESS_DENIED;
     }
 
     public AccessDeniedErrorImpl() {
-        this.code = "access_denied";
+        this.code = AccessDeniedError.ACCESS_DENIED;
     }
 
     public String getCode() {

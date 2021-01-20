@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProjectChangeLanguagesActionImpl.class)
 public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
 
+    String CHANGE_LANGUAGES = "changeLanguages";
+
     /**
     *  <p>.</p>
     */

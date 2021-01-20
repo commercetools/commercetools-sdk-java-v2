@@ -31,11 +31,11 @@ public final class ProductDiscountValueAbsoluteDraftImpl implements ProductDisco
     ProductDiscountValueAbsoluteDraftImpl(
             @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
-        this.type = "absolute";
+        this.type = ProductDiscountValueAbsoluteDraft.ABSOLUTE;
     }
 
     public ProductDiscountValueAbsoluteDraftImpl() {
-        this.type = "absolute";
+        this.type = ProductDiscountValueAbsoluteDraft.ABSOLUTE;
     }
 
     public String getType() {

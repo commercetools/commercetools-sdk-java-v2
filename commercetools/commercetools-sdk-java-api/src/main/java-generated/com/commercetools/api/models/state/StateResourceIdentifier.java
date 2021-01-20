@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateResourceIdentifierImpl.class)
 public interface StateResourceIdentifier extends ResourceIdentifier {
 
+    String STATE = "state";
+
     public static StateResourceIdentifier of() {
         return new StateResourceIdentifierImpl();
     }

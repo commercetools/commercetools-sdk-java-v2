@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetStatusInterfaceTextActionImpl.class)
 public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction {
 
+    String SET_STATUS_INTERFACE_TEXT = "setStatusInterfaceText";
+
     @NotNull
     @JsonProperty("interfaceText")
     public String getInterfaceText();

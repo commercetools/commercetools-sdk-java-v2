@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelReferenceImpl.class)
 public interface ChannelReference extends Reference {
 
+    String CHANNEL = "channel";
+
     @Valid
     @JsonProperty("obj")
     public Channel getObj();

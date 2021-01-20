@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomLineItemReturnItemImpl.class)
 public interface CustomLineItemReturnItem extends ReturnItem {
 
+    String CUSTOM_LINE_ITEM_RETURN_ITEM = "CustomLineItemReturnItem";
+
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();

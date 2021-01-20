@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountSetValidFromActionImpl.class)
 public interface ProductDiscountSetValidFromAction extends ProductDiscountUpdateAction {
 
+    String SET_VALID_FROM = "setValidFrom";
+
     /**
     *  <p>The time from which the discount should be effective.
     *  Please take Eventual Consistency into account for calculated product discount values.</p>

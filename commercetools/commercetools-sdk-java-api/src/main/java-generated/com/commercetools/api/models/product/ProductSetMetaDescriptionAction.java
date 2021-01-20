@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetMetaDescriptionActionImpl.class)
 public interface ProductSetMetaDescriptionAction extends ProductUpdateAction {
 
+    String SET_META_DESCRIPTION = "setMetaDescription";
+
     @Valid
     @JsonProperty("metaDescription")
     public LocalizedString getMetaDescription();

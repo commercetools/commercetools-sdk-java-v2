@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryResourceIdentifierImpl.class)
 public interface InventoryEntryResourceIdentifier extends ResourceIdentifier {
 
+    String INVENTORY_ENTRY = "inventory-entry";
+
     public static InventoryEntryResourceIdentifier of() {
         return new InventoryEntryResourceIdentifierImpl();
     }

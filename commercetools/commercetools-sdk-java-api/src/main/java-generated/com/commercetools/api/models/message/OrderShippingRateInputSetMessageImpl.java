@@ -74,11 +74,11 @@ public final class OrderShippingRateInputSetMessageImpl implements OrderShipping
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.shippingRateInput = shippingRateInput;
         this.oldShippingRateInput = oldShippingRateInput;
-        this.type = "OrderShippingRateInputSet";
+        this.type = OrderShippingRateInputSetMessage.ORDER_SHIPPING_RATE_INPUT_SET;
     }
 
     public OrderShippingRateInputSetMessageImpl() {
-        this.type = "OrderShippingRateInputSet";
+        this.type = OrderShippingRateInputSetMessage.ORDER_SHIPPING_RATE_INPUT_SET;
     }
 
     public String getId() {

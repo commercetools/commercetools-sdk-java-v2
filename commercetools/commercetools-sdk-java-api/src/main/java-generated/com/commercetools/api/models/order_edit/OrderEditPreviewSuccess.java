@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditPreviewSuccessImpl.class)
 public interface OrderEditPreviewSuccess extends OrderEditResult {
 
+    String PREVIEW_SUCCESS = "PreviewSuccess";
+
     @NotNull
     @Valid
     @JsonProperty("preview")

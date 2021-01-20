@@ -34,11 +34,11 @@ public final class CartSetLineItemTotalPriceActionImpl implements CartSetLineIte
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.lineItemId = lineItemId;
         this.externalTotalPrice = externalTotalPrice;
-        this.action = "setLineItemTotalPrice";
+        this.action = CartSetLineItemTotalPriceAction.SET_LINE_ITEM_TOTAL_PRICE;
     }
 
     public CartSetLineItemTotalPriceActionImpl() {
-        this.action = "setLineItemTotalPrice";
+        this.action = CartSetLineItemTotalPriceAction.SET_LINE_ITEM_TOTAL_PRICE;
     }
 
     public String getAction() {

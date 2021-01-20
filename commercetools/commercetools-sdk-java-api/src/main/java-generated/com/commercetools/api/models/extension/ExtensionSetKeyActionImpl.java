@@ -29,11 +29,11 @@ public final class ExtensionSetKeyActionImpl implements ExtensionSetKeyAction {
     @JsonCreator
     ExtensionSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "setKey";
+        this.action = ExtensionSetKeyAction.SET_KEY;
     }
 
     public ExtensionSetKeyActionImpl() {
-        this.action = "setKey";
+        this.action = ExtensionSetKeyAction.SET_KEY;
     }
 
     public String getAction() {

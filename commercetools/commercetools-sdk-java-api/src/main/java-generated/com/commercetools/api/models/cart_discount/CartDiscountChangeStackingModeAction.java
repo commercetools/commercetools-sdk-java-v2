@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountChangeStackingModeActionImpl.class)
 public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdateAction {
 
+    String CHANGE_STACKING_MODE = "changeStackingMode";
+
     @NotNull
     @JsonProperty("stackingMode")
     public StackingMode getStackingMode();

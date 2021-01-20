@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneRemoveLocationActionImpl.class)
 public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
 
+    String REMOVE_LOCATION = "removeLocation";
+
     @NotNull
     @Valid
     @JsonProperty("location")

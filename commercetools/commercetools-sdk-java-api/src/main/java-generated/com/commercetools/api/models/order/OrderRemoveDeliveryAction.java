@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderRemoveDeliveryActionImpl.class)
 public interface OrderRemoveDeliveryAction extends OrderUpdateAction {
 
+    String REMOVE_DELIVERY = "removeDelivery";
+
     @NotNull
     @JsonProperty("deliveryId")
     public String getDeliveryId();

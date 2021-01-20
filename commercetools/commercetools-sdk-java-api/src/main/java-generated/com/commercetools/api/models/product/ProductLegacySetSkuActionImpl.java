@@ -33,11 +33,11 @@ public final class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuA
             @JsonProperty("variantId") final Integer variantId) {
         this.sku = sku;
         this.variantId = variantId;
-        this.action = "legacySetSku";
+        this.action = ProductLegacySetSkuAction.LEGACY_SET_SKU;
     }
 
     public ProductLegacySetSkuActionImpl() {
-        this.action = "legacySetSku";
+        this.action = ProductLegacySetSkuAction.LEGACY_SET_SKU;
     }
 
     public String getAction() {

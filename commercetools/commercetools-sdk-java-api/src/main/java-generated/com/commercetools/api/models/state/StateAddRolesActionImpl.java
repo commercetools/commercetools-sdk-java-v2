@@ -31,11 +31,11 @@ public final class StateAddRolesActionImpl implements StateAddRolesAction {
     StateAddRolesActionImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
-        this.action = "addRoles";
+        this.action = StateAddRolesAction.ADD_ROLES;
     }
 
     public StateAddRolesActionImpl() {
-        this.action = "addRoles";
+        this.action = StateAddRolesAction.ADD_ROLES;
     }
 
     public String getAction() {

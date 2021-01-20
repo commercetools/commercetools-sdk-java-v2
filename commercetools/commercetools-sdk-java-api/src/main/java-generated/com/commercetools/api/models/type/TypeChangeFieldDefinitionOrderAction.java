@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeFieldDefinitionOrderActionImpl.class)
 public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
 
+    String CHANGE_FIELD_DEFINITION_ORDER = "changeFieldDefinitionOrder";
+
     @NotNull
     @JsonProperty("fieldNames")
     public List<String> getFieldNames();

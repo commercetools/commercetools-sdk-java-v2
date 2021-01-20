@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StringSetFieldImpl.class)
 public interface StringSetField extends CustomField {
 
+    String STRING_SET = "StringSet";
+
     @NotNull
     @JsonProperty("value")
     public List<String> getValue();

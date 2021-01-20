@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidInputImpl.class)
 public interface InvalidInput extends ErrorObject {
 
+    String INVALID_INPUT = "InvalidInput";
+
     public static InvalidInput of() {
         return new InvalidInputImpl();
     }

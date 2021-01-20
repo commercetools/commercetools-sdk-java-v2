@@ -48,11 +48,11 @@ public final class StagedOrderRemoveLineItemActionImpl implements StagedOrderRem
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.shippingDetailsToRemove = shippingDetailsToRemove;
-        this.action = "removeLineItem";
+        this.action = StagedOrderRemoveLineItemAction.REMOVE_LINE_ITEM;
     }
 
     public StagedOrderRemoveLineItemActionImpl() {
-        this.action = "removeLineItem";
+        this.action = StagedOrderRemoveLineItemAction.REMOVE_LINE_ITEM;
     }
 
     public String getAction() {

@@ -34,11 +34,11 @@ public final class StagedOrderSetReturnShipmentStateActionImpl implements Staged
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
         this.returnItemId = returnItemId;
         this.shipmentState = shipmentState;
-        this.action = "setReturnShipmentState";
+        this.action = StagedOrderSetReturnShipmentStateAction.SET_RETURN_SHIPMENT_STATE;
     }
 
     public StagedOrderSetReturnShipmentStateActionImpl() {
-        this.action = "setReturnShipmentState";
+        this.action = StagedOrderSetReturnShipmentStateAction.SET_RETURN_SHIPMENT_STATE;
     }
 
     public String getAction() {

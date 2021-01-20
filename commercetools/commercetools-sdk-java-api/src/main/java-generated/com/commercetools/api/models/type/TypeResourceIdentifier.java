@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeResourceIdentifierImpl.class)
 public interface TypeResourceIdentifier extends ResourceIdentifier {
 
+    String TYPE = "type";
+
     public static TypeResourceIdentifier of() {
         return new TypeResourceIdentifierImpl();
     }

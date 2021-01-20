@@ -29,11 +29,11 @@ public final class ProjectChangeLanguagesActionImpl implements ProjectChangeLang
     @JsonCreator
     ProjectChangeLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
         this.languages = languages;
-        this.action = "changeLanguages";
+        this.action = ProjectChangeLanguagesAction.CHANGE_LANGUAGES;
     }
 
     public ProjectChangeLanguagesActionImpl() {
-        this.action = "changeLanguages";
+        this.action = ProjectChangeLanguagesAction.CHANGE_LANGUAGES;
     }
 
     public String getAction() {

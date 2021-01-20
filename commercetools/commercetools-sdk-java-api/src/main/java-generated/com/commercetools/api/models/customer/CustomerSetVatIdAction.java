@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetVatIdActionImpl.class)
 public interface CustomerSetVatIdAction extends CustomerUpdateAction {
 
+    String SET_VAT_ID = "setVatId";
+
     /**
     *  <p>If not defined, the vat Id is unset.</p>
     */

@@ -34,11 +34,11 @@ public final class CartSetLineItemTaxAmountActionImpl implements CartSetLineItem
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.lineItemId = lineItemId;
         this.externalTaxAmount = externalTaxAmount;
-        this.action = "setLineItemTaxAmount";
+        this.action = CartSetLineItemTaxAmountAction.SET_LINE_ITEM_TAX_AMOUNT;
     }
 
     public CartSetLineItemTaxAmountActionImpl() {
-        this.action = "setLineItemTaxAmount";
+        this.action = CartSetLineItemTaxAmountAction.SET_LINE_ITEM_TAX_AMOUNT;
     }
 
     public String getAction() {

@@ -34,11 +34,11 @@ public final class OrderSetParcelTrackingDataActionImpl implements OrderSetParce
             @JsonProperty("trackingData") final com.commercetools.api.models.order.TrackingData trackingData) {
         this.parcelId = parcelId;
         this.trackingData = trackingData;
-        this.action = "setParcelTrackingData";
+        this.action = OrderSetParcelTrackingDataAction.SET_PARCEL_TRACKING_DATA;
     }
 
     public OrderSetParcelTrackingDataActionImpl() {
-        this.action = "setParcelTrackingData";
+        this.action = OrderSetParcelTrackingDataAction.SET_PARCEL_TRACKING_DATA;
     }
 
     public String getAction() {

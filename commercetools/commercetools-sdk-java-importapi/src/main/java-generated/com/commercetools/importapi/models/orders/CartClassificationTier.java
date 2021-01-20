@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartClassificationTierImpl.class)
 public interface CartClassificationTier extends ShippingRatePriceTier {
 
+    String CART_CLASSIFICATION = "CartClassification";
+
     @NotNull
     @JsonProperty("value")
     public String getValue();

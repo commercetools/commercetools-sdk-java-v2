@@ -47,11 +47,11 @@ public final class StagedOrderTransitionLineItemStateActionImpl implements Stage
         this.fromState = fromState;
         this.toState = toState;
         this.actualTransitionDate = actualTransitionDate;
-        this.action = "transitionLineItemState";
+        this.action = StagedOrderTransitionLineItemStateAction.TRANSITION_LINE_ITEM_STATE;
     }
 
     public StagedOrderTransitionLineItemStateActionImpl() {
-        this.action = "transitionLineItemState";
+        this.action = StagedOrderTransitionLineItemStateAction.TRANSITION_LINE_ITEM_STATE;
     }
 
     public String getAction() {

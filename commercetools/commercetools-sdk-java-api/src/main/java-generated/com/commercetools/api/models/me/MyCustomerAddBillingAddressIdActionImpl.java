@@ -33,11 +33,11 @@ public final class MyCustomerAddBillingAddressIdActionImpl implements MyCustomer
             @JsonProperty("addressKey") final String addressKey) {
         this.addressId = addressId;
         this.addressKey = addressKey;
-        this.action = "addBillingAddressId";
+        this.action = MyCustomerAddBillingAddressIdAction.ADD_BILLING_ADDRESS_ID;
     }
 
     public MyCustomerAddBillingAddressIdActionImpl() {
-        this.action = "addBillingAddressId";
+        this.action = MyCustomerAddBillingAddressIdAction.ADD_BILLING_ADDRESS_ID;
     }
 
     public String getAction() {

@@ -44,11 +44,11 @@ public final class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrd
         this.measurements = measurements;
         this.trackingData = trackingData;
         this.items = items;
-        this.action = "addParcelToDelivery";
+        this.action = StagedOrderAddParcelToDeliveryAction.ADD_PARCEL_TO_DELIVERY;
     }
 
     public StagedOrderAddParcelToDeliveryActionImpl() {
-        this.action = "addParcelToDelivery";
+        this.action = StagedOrderAddParcelToDeliveryAction.ADD_PARCEL_TO_DELIVERY;
     }
 
     public String getAction() {

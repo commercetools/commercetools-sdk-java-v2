@@ -31,11 +31,11 @@ public final class MyCartRemovePaymentActionImpl implements MyCartRemovePaymentA
     MyCartRemovePaymentActionImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
         this.payment = payment;
-        this.action = "removePayment";
+        this.action = MyCartRemovePaymentAction.REMOVE_PAYMENT;
     }
 
     public MyCartRemovePaymentActionImpl() {
-        this.action = "removePayment";
+        this.action = MyCartRemovePaymentAction.REMOVE_PAYMENT;
     }
 
     public String getAction() {

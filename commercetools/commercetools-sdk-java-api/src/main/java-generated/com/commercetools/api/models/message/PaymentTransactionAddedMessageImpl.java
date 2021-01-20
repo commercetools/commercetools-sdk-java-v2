@@ -69,11 +69,11 @@ public final class PaymentTransactionAddedMessageImpl implements PaymentTransact
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.transaction = transaction;
-        this.type = "PaymentTransactionAdded";
+        this.type = PaymentTransactionAddedMessage.PAYMENT_TRANSACTION_ADDED;
     }
 
     public PaymentTransactionAddedMessageImpl() {
-        this.type = "PaymentTransactionAdded";
+        this.type = PaymentTransactionAddedMessage.PAYMENT_TRANSACTION_ADDED;
     }
 
     public String getId() {

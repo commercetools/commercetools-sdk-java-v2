@@ -34,11 +34,11 @@ public final class OrderSetDeliveryAddressActionImpl implements OrderSetDelivery
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.deliveryId = deliveryId;
         this.address = address;
-        this.action = "setDeliveryAddress";
+        this.action = OrderSetDeliveryAddressAction.SET_DELIVERY_ADDRESS;
     }
 
     public OrderSetDeliveryAddressActionImpl() {
-        this.action = "setDeliveryAddress";
+        this.action = OrderSetDeliveryAddressAction.SET_DELIVERY_ADDRESS;
     }
 
     public String getAction() {

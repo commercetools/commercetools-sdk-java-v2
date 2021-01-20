@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetOrderTotalTaxActionImpl.class)
 public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateAction {
 
+    String SET_ORDER_TOTAL_TAX = "setOrderTotalTax";
+
     @NotNull
     @Valid
     @JsonProperty("externalTotalGross")

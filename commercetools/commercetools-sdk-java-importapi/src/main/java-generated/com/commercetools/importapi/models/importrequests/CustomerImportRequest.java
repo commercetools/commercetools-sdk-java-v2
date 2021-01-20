@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerImportRequestImpl.class)
 public interface CustomerImportRequest extends ImportRequest {
 
+    String CUSTOMER = "customer";
+
     /**
     *  <p>The customer import resources of this request.</p>
     */

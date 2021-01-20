@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductStateTransitionMessageImpl.class)
 public interface ProductStateTransitionMessage extends Message {
 
+    String PRODUCT_STATE_TRANSITION = "ProductStateTransition";
+
     @NotNull
     @Valid
     @JsonProperty("state")

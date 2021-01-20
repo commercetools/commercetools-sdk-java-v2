@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionAWSLambdaDestinationImpl.class)
 public interface ExtensionAWSLambdaDestination extends ExtensionDestination {
 
+    String AWS_LAMBDA = "AWSLambda";
+
     @NotNull
     @JsonProperty("arn")
     public String getArn();

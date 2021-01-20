@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomerGroupActionImpl.class)
 public interface CartSetCustomerGroupAction extends CartUpdateAction {
 
+    String SET_CUSTOMER_GROUP = "setCustomerGroup";
+
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();

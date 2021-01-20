@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreReferenceImpl.class)
 public interface StoreReference extends Reference {
 
+    String STORE = "store";
+
     @Valid
     @JsonProperty("obj")
     public Store getObj();

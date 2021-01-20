@@ -29,11 +29,11 @@ public final class CustomerSetSalutationActionImpl implements CustomerSetSalutat
     @JsonCreator
     CustomerSetSalutationActionImpl(@JsonProperty("salutation") final String salutation) {
         this.salutation = salutation;
-        this.action = "setSalutation";
+        this.action = CustomerSetSalutationAction.SET_SALUTATION;
     }
 
     public CustomerSetSalutationActionImpl() {
-        this.action = "setSalutation";
+        this.action = CustomerSetSalutationAction.SET_SALUTATION;
     }
 
     public String getAction() {

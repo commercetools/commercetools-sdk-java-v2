@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetCustomerActionImpl.class)
 public interface PaymentSetCustomerAction extends PaymentUpdateAction {
 
+    String SET_CUSTOMER = "setCustomer";
+
     /**
     *  <p>A reference to the customer this payment belongs to.</p>
     */

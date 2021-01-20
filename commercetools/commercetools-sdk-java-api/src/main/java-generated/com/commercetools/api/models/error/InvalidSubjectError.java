@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidSubjectErrorImpl.class)
 public interface InvalidSubjectError extends ErrorObject {
 
+    String INVALID_SUBJECT = "InvalidSubject";
+
     public static InvalidSubjectError of() {
         return new InvalidSubjectErrorImpl();
     }

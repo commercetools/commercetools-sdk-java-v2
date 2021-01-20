@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = GeoJsonPointImpl.class)
 public interface GeoJsonPoint extends GeoJson {
 
+    String POINT = "Point";
+
     @NotNull
     @JsonProperty("coordinates")
     public List<Double> getCoordinates();

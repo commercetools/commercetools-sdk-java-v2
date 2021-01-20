@@ -44,11 +44,11 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl
         this.field = field;
         this.duplicateValue = duplicateValue;
         this.conflictingResource = conflictingResource;
-        this.code = "DuplicateFieldWithConflictingResource";
+        this.code = DuplicateFieldWithConflictingResourceError.DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE;
     }
 
     public DuplicateFieldWithConflictingResourceErrorImpl() {
-        this.code = "DuplicateFieldWithConflictingResource";
+        this.code = DuplicateFieldWithConflictingResourceError.DUPLICATE_FIELD_WITH_CONFLICTING_RESOURCE;
     }
 
     public String getCode() {

@@ -31,11 +31,11 @@ public final class DiscountCodeChangeCartDiscountsActionImpl implements Discount
     DiscountCodeChangeCartDiscountsActionImpl(
             @JsonProperty("cartDiscounts") final java.util.List<com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier> cartDiscounts) {
         this.cartDiscounts = cartDiscounts;
-        this.action = "changeCartDiscounts";
+        this.action = DiscountCodeChangeCartDiscountsAction.CHANGE_CART_DISCOUNTS;
     }
 
     public DiscountCodeChangeCartDiscountsActionImpl() {
-        this.action = "changeCartDiscounts";
+        this.action = DiscountCodeChangeCartDiscountsAction.CHANGE_CART_DISCOUNTS;
     }
 
     public String getAction() {

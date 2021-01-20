@@ -36,11 +36,11 @@ public final class ProductChangeMasterVariantActionImpl implements ProductChange
         this.variantId = variantId;
         this.sku = sku;
         this.staged = staged;
-        this.action = "changeMasterVariant";
+        this.action = ProductChangeMasterVariantAction.CHANGE_MASTER_VARIANT;
     }
 
     public ProductChangeMasterVariantActionImpl() {
-        this.action = "changeMasterVariant";
+        this.action = ProductChangeMasterVariantAction.CHANGE_MASTER_VARIANT;
     }
 
     public String getAction() {

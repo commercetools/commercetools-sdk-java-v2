@@ -37,11 +37,11 @@ public final class PriceChangedErrorImpl implements PriceChangedError {
         this.message = message;
         this.lineItems = lineItems;
         this.shipping = shipping;
-        this.code = "PriceChanged";
+        this.code = PriceChangedError.PRICE_CHANGED;
     }
 
     public PriceChangedErrorImpl() {
-        this.code = "PriceChanged";
+        this.code = PriceChangedError.PRICE_CHANGED;
     }
 
     public String getCode() {

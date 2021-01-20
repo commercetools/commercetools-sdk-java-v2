@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupKeyReferenceImpl.class)
 public interface CustomerGroupKeyReference extends KeyReference {
 
+    String CUSTOMER_GROUP = "customer-group";
+
     public static CustomerGroupKeyReference of() {
         return new CustomerGroupKeyReferenceImpl();
     }

@@ -29,11 +29,11 @@ public final class CartDiscountValueRelativeImpl implements CartDiscountValueRel
     @JsonCreator
     CartDiscountValueRelativeImpl(@JsonProperty("permyriad") final Long permyriad) {
         this.permyriad = permyriad;
-        this.type = "relative";
+        this.type = CartDiscountValueRelative.RELATIVE;
     }
 
     public CartDiscountValueRelativeImpl() {
-        this.type = "relative";
+        this.type = CartDiscountValueRelative.RELATIVE;
     }
 
     public String getType() {

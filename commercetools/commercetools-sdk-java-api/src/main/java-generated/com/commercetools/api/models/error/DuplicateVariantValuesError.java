@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicateVariantValuesErrorImpl.class)
 public interface DuplicateVariantValuesError extends ErrorObject {
 
+    String DUPLICATE_VARIANT_VALUES = "DuplicateVariantValues";
+
     @NotNull
     @Valid
     @JsonProperty("variantValues")

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DiscountCodeSetCartPredicateActionImpl.class)
 public interface DiscountCodeSetCartPredicateAction extends DiscountCodeUpdateAction {
 
+    String SET_CART_PREDICATE = "setCartPredicate";
+
     /**
     *  <p>If the <code>cartPredicate</code> parameter is not included, the field will be emptied.</p>
     */

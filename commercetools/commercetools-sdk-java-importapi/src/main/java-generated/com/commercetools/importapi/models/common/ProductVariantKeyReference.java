@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductVariantKeyReferenceImpl.class)
 public interface ProductVariantKeyReference extends KeyReference {
 
+    String PRODUCT_VARIANT = "product-variant";
+
     public static ProductVariantKeyReference of() {
         return new ProductVariantKeyReferenceImpl();
     }

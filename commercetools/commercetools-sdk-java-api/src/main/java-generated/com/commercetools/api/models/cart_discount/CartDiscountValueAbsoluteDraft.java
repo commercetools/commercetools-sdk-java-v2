@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountValueAbsoluteDraftImpl.class)
 public interface CartDiscountValueAbsoluteDraft extends CartDiscountValueDraft {
 
+    String ABSOLUTE = "absolute";
+
     @NotNull
     @Valid
     @JsonProperty("money")

@@ -39,11 +39,11 @@ public final class MyShoppingListSetTextLineItemCustomFieldActionImpl
         this.textLineItemId = textLineItemId;
         this.name = name;
         this.value = value;
-        this.action = "setTextLineItemCustomField";
+        this.action = MyShoppingListSetTextLineItemCustomFieldAction.SET_TEXT_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public MyShoppingListSetTextLineItemCustomFieldActionImpl() {
-        this.action = "setTextLineItemCustomField";
+        this.action = MyShoppingListSetTextLineItemCustomFieldAction.SET_TEXT_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public String getAction() {

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountSetValidFromAndUntilActionImpl.class)
 public interface CartDiscountSetValidFromAndUntilAction extends CartDiscountUpdateAction {
 
+    String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
+
     /**
     *  <p>If absent, the field with the value is removed in case a value was set before.</p>
     */

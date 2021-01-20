@@ -31,11 +31,11 @@ public final class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxR
     CartChangeTaxRoundingModeActionImpl(
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
-        this.action = "changeTaxRoundingMode";
+        this.action = CartChangeTaxRoundingModeAction.CHANGE_TAX_ROUNDING_MODE;
     }
 
     public CartChangeTaxRoundingModeActionImpl() {
-        this.action = "changeTaxRoundingMode";
+        this.action = CartChangeTaxRoundingModeAction.CHANGE_TAX_ROUNDING_MODE;
     }
 
     public String getAction() {

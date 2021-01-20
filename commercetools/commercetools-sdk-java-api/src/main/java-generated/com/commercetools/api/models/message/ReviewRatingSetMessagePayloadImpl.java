@@ -42,11 +42,11 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
         this.newRating = newRating;
         this.includedInStatistics = includedInStatistics;
         this.target = target;
-        this.type = "ReviewRatingSet";
+        this.type = ReviewRatingSetMessagePayload.REVIEW_RATING_SET;
     }
 
     public ReviewRatingSetMessagePayloadImpl() {
-        this.type = "ReviewRatingSet";
+        this.type = ReviewRatingSetMessagePayload.REVIEW_RATING_SET;
     }
 
     public String getType() {

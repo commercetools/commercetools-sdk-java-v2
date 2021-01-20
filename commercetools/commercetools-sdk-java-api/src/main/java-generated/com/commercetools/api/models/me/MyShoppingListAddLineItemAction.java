@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyShoppingListAddLineItemActionImpl.class)
 public interface MyShoppingListAddLineItemAction extends MyShoppingListUpdateAction {
 
+    String ADD_LINE_ITEM = "addLineItem";
+
     @JsonProperty("sku")
     public String getSku();
 

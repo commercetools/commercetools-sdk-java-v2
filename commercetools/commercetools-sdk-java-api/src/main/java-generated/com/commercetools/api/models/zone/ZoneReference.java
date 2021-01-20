@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ZoneReferenceImpl.class)
 public interface ZoneReference extends Reference {
 
+    String ZONE = "zone";
+
     @Valid
     @JsonProperty("obj")
     public Zone getObj();

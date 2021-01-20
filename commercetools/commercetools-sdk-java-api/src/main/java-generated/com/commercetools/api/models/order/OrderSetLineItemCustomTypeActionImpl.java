@@ -39,11 +39,11 @@ public final class OrderSetLineItemCustomTypeActionImpl implements OrderSetLineI
         this.lineItemId = lineItemId;
         this.type = type;
         this.fields = fields;
-        this.action = "setLineItemCustomType";
+        this.action = OrderSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public OrderSetLineItemCustomTypeActionImpl() {
-        this.action = "setLineItemCustomType";
+        this.action = OrderSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public String getAction() {

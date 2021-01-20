@@ -36,11 +36,11 @@ public final class BooleanSetAttributeImpl implements BooleanSetAttribute {
             @JsonProperty("value") final java.util.List<Boolean> value) {
         this.name = name;
         this.value = value;
-        this.type = "boolean-set";
+        this.type = BooleanSetAttribute.BOOLEAN_SET;
     }
 
     public BooleanSetAttributeImpl() {
-        this.type = "boolean-set";
+        this.type = BooleanSetAttribute.BOOLEAN_SET;
     }
 
     /**

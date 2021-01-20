@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyShoppingListSetTextLineItemCustomFieldActionImpl.class)
 public interface MyShoppingListSetTextLineItemCustomFieldAction extends MyShoppingListUpdateAction {
 
+    String SET_TEXT_LINE_ITEM_CUSTOM_FIELD = "setTextLineItemCustomField";
+
     @NotNull
     @JsonProperty("textLineItemId")
     public String getTextLineItemId();

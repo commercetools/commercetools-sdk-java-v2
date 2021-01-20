@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionAzureFunctionsAuthenticationImpl.class)
 public interface ExtensionAzureFunctionsAuthentication extends ExtensionHttpDestinationAuthentication {
 
+    String AZURE_FUNCTIONS = "AzureFunctions";
+
     @NotNull
     @JsonProperty("key")
     public String getKey();

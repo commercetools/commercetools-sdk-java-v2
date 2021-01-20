@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderSetCustomFieldActionImpl.class)
 public interface OrderSetCustomFieldAction extends OrderUpdateAction {
 
+    String SET_CUSTOM_FIELD = "setCustomField";
+
     @NotNull
     @JsonProperty("name")
     public String getName();

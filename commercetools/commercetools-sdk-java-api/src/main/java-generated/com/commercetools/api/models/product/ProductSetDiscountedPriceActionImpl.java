@@ -38,11 +38,11 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
         this.priceId = priceId;
         this.staged = staged;
         this.discounted = discounted;
-        this.action = "setDiscountedPrice";
+        this.action = ProductSetDiscountedPriceAction.SET_DISCOUNTED_PRICE;
     }
 
     public ProductSetDiscountedPriceActionImpl() {
-        this.action = "setDiscountedPrice";
+        this.action = ProductSetDiscountedPriceAction.SET_DISCOUNTED_PRICE;
     }
 
     public String getAction() {

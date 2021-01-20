@@ -74,11 +74,11 @@ public final class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemoved
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.deliveryId = deliveryId;
         this.parcel = parcel;
-        this.type = "ParcelRemovedFromDelivery";
+        this.type = ParcelRemovedFromDeliveryMessage.PARCEL_REMOVED_FROM_DELIVERY;
     }
 
     public ParcelRemovedFromDeliveryMessageImpl() {
-        this.type = "ParcelRemovedFromDelivery";
+        this.type = ParcelRemovedFromDeliveryMessage.PARCEL_REMOVED_FROM_DELIVERY;
     }
 
     public String getId() {

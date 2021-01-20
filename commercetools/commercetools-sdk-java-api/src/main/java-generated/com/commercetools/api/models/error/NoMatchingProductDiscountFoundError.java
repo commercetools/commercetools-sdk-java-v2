@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = NoMatchingProductDiscountFoundErrorImpl.class)
 public interface NoMatchingProductDiscountFoundError extends ErrorObject {
 
+    String NO_MATCHING_PRODUCT_DISCOUNT_FOUND = "NoMatchingProductDiscountFound";
+
     public static NoMatchingProductDiscountFoundError of() {
         return new NoMatchingProductDiscountFoundErrorImpl();
     }

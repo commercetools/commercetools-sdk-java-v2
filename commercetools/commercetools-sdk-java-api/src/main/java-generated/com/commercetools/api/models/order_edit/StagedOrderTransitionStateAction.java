@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderTransitionStateActionImpl.class)
 public interface StagedOrderTransitionStateAction extends StagedOrderUpdateAction {
 
+    String TRANSITION_STATE = "transitionState";
+
     @NotNull
     @Valid
     @JsonProperty("state")

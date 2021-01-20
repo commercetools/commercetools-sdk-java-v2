@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRemovedFromCategoryMessagePayloadImpl.class)
 public interface ProductRemovedFromCategoryMessagePayload extends MessagePayload {
 
+    String PRODUCT_REMOVED_FROM_CATEGORY = "ProductRemovedFromCategory";
+
     @NotNull
     @Valid
     @JsonProperty("category")

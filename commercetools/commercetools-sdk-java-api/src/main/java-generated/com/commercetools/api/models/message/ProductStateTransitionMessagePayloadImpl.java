@@ -35,11 +35,11 @@ public final class ProductStateTransitionMessagePayloadImpl implements ProductSt
             @JsonProperty("force") final Boolean force) {
         this.state = state;
         this.force = force;
-        this.type = "ProductStateTransition";
+        this.type = ProductStateTransitionMessagePayload.PRODUCT_STATE_TRANSITION;
     }
 
     public ProductStateTransitionMessagePayloadImpl() {
-        this.type = "ProductStateTransition";
+        this.type = ProductStateTransitionMessagePayload.PRODUCT_STATE_TRANSITION;
     }
 
     public String getType() {

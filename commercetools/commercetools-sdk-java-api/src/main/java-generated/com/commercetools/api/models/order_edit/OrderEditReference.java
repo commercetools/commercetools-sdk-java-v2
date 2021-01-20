@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditReferenceImpl.class)
 public interface OrderEditReference extends Reference {
 
+    String ORDER_EDIT = "order-edit";
+
     @Valid
     @JsonProperty("obj")
     public OrderEdit getObj();

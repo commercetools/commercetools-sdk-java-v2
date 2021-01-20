@@ -34,11 +34,11 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
             @JsonProperty("position") final Integer position) {
         this.asset = asset;
         this.position = position;
-        this.action = "addAsset";
+        this.action = CategoryAddAssetAction.ADD_ASSET;
     }
 
     public CategoryAddAssetActionImpl() {
-        this.action = "addAsset";
+        this.action = CategoryAddAssetAction.ADD_ASSET;
     }
 
     public String getAction() {

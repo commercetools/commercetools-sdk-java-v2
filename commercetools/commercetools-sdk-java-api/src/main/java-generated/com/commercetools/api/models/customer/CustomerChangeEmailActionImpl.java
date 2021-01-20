@@ -29,11 +29,11 @@ public final class CustomerChangeEmailActionImpl implements CustomerChangeEmailA
     @JsonCreator
     CustomerChangeEmailActionImpl(@JsonProperty("email") final String email) {
         this.email = email;
-        this.action = "changeEmail";
+        this.action = CustomerChangeEmailAction.CHANGE_EMAIL;
     }
 
     public CustomerChangeEmailActionImpl() {
-        this.action = "changeEmail";
+        this.action = CustomerChangeEmailAction.CHANGE_EMAIL;
     }
 
     public String getAction() {

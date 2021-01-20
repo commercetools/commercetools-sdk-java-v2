@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewSetTargetActionImpl.class)
 public interface ReviewSetTargetAction extends ReviewUpdateAction {
 
+    String SET_TARGET = "setTarget";
+
     /**
     *  <p>Identifies the target of the review.
     *  Can be a Product or a Channel.

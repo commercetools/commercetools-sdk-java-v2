@@ -33,11 +33,11 @@ public final class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSub
             @JsonProperty("topic") final String topic) {
         this.projectId = projectId;
         this.topic = topic;
-        this.type = "GoogleCloudPubSub";
+        this.type = GoogleCloudPubSubDestination.GOOGLE_CLOUD_PUB_SUB;
     }
 
     public GoogleCloudPubSubDestinationImpl() {
-        this.type = "GoogleCloudPubSub";
+        this.type = GoogleCloudPubSubDestination.GOOGLE_CLOUD_PUB_SUB;
     }
 
     public String getType() {

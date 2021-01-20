@@ -33,11 +33,11 @@ public final class ProductRemovePriceActionImpl implements ProductRemovePriceAct
             @JsonProperty("staged") final Boolean staged) {
         this.priceId = priceId;
         this.staged = staged;
-        this.action = "removePrice";
+        this.action = ProductRemovePriceAction.REMOVE_PRICE;
     }
 
     public ProductRemovePriceActionImpl() {
-        this.action = "removePrice";
+        this.action = ProductRemovePriceAction.REMOVE_PRICE;
     }
 
     public String getAction() {

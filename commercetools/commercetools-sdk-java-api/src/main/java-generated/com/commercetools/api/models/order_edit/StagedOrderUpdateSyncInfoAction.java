@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderUpdateSyncInfoActionImpl.class)
 public interface StagedOrderUpdateSyncInfoAction extends StagedOrderUpdateAction {
 
+    String UPDATE_SYNC_INFO = "updateSyncInfo";
+
     @NotNull
     @Valid
     @JsonProperty("channel")

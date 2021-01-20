@@ -33,11 +33,11 @@ public final class MyShoppingListRemoveLineItemActionImpl implements MyShoppingL
             @JsonProperty("quantity") final Long quantity) {
         this.lineItemId = lineItemId;
         this.quantity = quantity;
-        this.action = "removeLineItem";
+        this.action = MyShoppingListRemoveLineItemAction.REMOVE_LINE_ITEM;
     }
 
     public MyShoppingListRemoveLineItemActionImpl() {
-        this.action = "removeLineItem";
+        this.action = MyShoppingListRemoveLineItemAction.REMOVE_LINE_ITEM;
     }
 
     public String getAction() {

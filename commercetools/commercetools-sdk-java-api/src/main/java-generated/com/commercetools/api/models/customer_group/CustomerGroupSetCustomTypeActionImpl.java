@@ -36,11 +36,11 @@ public final class CustomerGroupSetCustomTypeActionImpl implements CustomerGroup
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "setCustomType";
+        this.action = CustomerGroupSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public CustomerGroupSetCustomTypeActionImpl() {
-        this.action = "setCustomType";
+        this.action = CustomerGroupSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

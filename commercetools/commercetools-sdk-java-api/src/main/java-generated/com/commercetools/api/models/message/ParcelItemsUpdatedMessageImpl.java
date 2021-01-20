@@ -80,11 +80,11 @@ public final class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMe
         this.deliveryId = deliveryId;
         this.items = items;
         this.oldItems = oldItems;
-        this.type = "ParcelItemsUpdated";
+        this.type = ParcelItemsUpdatedMessage.PARCEL_ITEMS_UPDATED;
     }
 
     public ParcelItemsUpdatedMessageImpl() {
-        this.type = "ParcelItemsUpdated";
+        this.type = ParcelItemsUpdatedMessage.PARCEL_ITEMS_UPDATED;
     }
 
     public String getId() {

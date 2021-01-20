@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceChangedErrorImpl.class)
 public interface PriceChangedError extends ErrorObject {
 
+    String PRICE_CHANGED = "PriceChanged";
+
     @NotNull
     @JsonProperty("lineItems")
     public List<String> getLineItems();

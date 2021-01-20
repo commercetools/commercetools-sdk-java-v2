@@ -31,11 +31,11 @@ public final class StateSetDescriptionActionImpl implements StateSetDescriptionA
     StateSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
-        this.action = "setDescription";
+        this.action = StateSetDescriptionAction.SET_DESCRIPTION;
     }
 
     public StateSetDescriptionActionImpl() {
-        this.action = "setDescription";
+        this.action = StateSetDescriptionAction.SET_DESCRIPTION;
     }
 
     public String getAction() {

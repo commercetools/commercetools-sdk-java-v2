@@ -33,11 +33,11 @@ public final class CartChangeCustomLineItemQuantityActionImpl implements CartCha
             @JsonProperty("quantity") final Long quantity) {
         this.customLineItemId = customLineItemId;
         this.quantity = quantity;
-        this.action = "changeCustomLineItemQuantity";
+        this.action = CartChangeCustomLineItemQuantityAction.CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }
 
     public CartChangeCustomLineItemQuantityActionImpl() {
-        this.action = "changeCustomLineItemQuantity";
+        this.action = CartChangeCustomLineItemQuantityAction.CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }
 
     public String getAction() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetAnonymousIdActionImpl.class)
 public interface PaymentSetAnonymousIdAction extends PaymentUpdateAction {
 
+    String SET_ANONYMOUS_ID = "setAnonymousId";
+
     /**
     *  <p>Anonymous ID of the anonymous customer that this payment belongs to.
     *  If this field is not set any existing <code>anonymousId</code> is removed.</p>

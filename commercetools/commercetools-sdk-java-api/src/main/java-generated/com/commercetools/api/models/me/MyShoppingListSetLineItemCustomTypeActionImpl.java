@@ -39,11 +39,11 @@ public final class MyShoppingListSetLineItemCustomTypeActionImpl implements MySh
         this.lineItemId = lineItemId;
         this.type = type;
         this.fields = fields;
-        this.action = "setLineItemCustomType";
+        this.action = MyShoppingListSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public MyShoppingListSetLineItemCustomTypeActionImpl() {
-        this.action = "setLineItemCustomType";
+        this.action = MyShoppingListSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public String getAction() {

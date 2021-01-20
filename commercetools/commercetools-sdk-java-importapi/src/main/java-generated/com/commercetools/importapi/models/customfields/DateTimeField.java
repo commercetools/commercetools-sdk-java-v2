@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DateTimeFieldImpl.class)
 public interface DateTimeField extends CustomField {
 
+    String DATE_TIME = "DateTime";
+
     @NotNull
     @JsonProperty("value")
     public ZonedDateTime getValue();

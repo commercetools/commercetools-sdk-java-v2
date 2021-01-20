@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetKeyActionImpl.class)
 public interface PaymentSetKeyAction extends PaymentUpdateAction {
 
+    String SET_KEY = "setKey";
+
     /**
     *  <p>User-specific unique identifier for the payment (max.
     *  256 characters).

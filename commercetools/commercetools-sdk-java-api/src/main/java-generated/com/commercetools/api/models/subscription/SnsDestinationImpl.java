@@ -36,11 +36,11 @@ public final class SnsDestinationImpl implements SnsDestination {
         this.accessKey = accessKey;
         this.accessSecret = accessSecret;
         this.topicArn = topicArn;
-        this.type = "SNS";
+        this.type = SnsDestination.SNS;
     }
 
     public SnsDestinationImpl() {
-        this.type = "SNS";
+        this.type = SnsDestination.SNS;
     }
 
     public String getType() {

@@ -30,11 +30,11 @@ public final class PaymentSetAmountPaidActionImpl implements PaymentSetAmountPai
     @JsonCreator
     PaymentSetAmountPaidActionImpl(@JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
         this.amount = amount;
-        this.action = "setAmountPaid";
+        this.action = PaymentSetAmountPaidAction.SET_AMOUNT_PAID;
     }
 
     public PaymentSetAmountPaidActionImpl() {
-        this.action = "setAmountPaid";
+        this.action = PaymentSetAmountPaidAction.SET_AMOUNT_PAID;
     }
 
     public String getAction() {

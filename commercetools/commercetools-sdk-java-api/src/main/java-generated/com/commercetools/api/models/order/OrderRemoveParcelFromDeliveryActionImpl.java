@@ -29,11 +29,11 @@ public final class OrderRemoveParcelFromDeliveryActionImpl implements OrderRemov
     @JsonCreator
     OrderRemoveParcelFromDeliveryActionImpl(@JsonProperty("parcelId") final String parcelId) {
         this.parcelId = parcelId;
-        this.action = "removeParcelFromDelivery";
+        this.action = OrderRemoveParcelFromDeliveryAction.REMOVE_PARCEL_FROM_DELIVERY;
     }
 
     public OrderRemoveParcelFromDeliveryActionImpl() {
-        this.action = "removeParcelFromDelivery";
+        this.action = OrderRemoveParcelFromDeliveryAction.REMOVE_PARCEL_FROM_DELIVERY;
     }
 
     public String getAction() {

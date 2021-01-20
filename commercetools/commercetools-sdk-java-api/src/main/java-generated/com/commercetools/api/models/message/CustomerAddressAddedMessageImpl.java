@@ -69,11 +69,11 @@ public final class CustomerAddressAddedMessageImpl implements CustomerAddressAdd
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.address = address;
-        this.type = "CustomerAddressAdded";
+        this.type = CustomerAddressAddedMessage.CUSTOMER_ADDRESS_ADDED;
     }
 
     public CustomerAddressAddedMessageImpl() {
-        this.type = "CustomerAddressAdded";
+        this.type = CustomerAddressAddedMessage.CUSTOMER_ADDRESS_ADDED;
     }
 
     public String getId() {

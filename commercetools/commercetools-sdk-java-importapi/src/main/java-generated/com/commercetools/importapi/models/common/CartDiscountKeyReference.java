@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountKeyReferenceImpl.class)
 public interface CartDiscountKeyReference extends KeyReference {
 
+    String CART_DISCOUNT = "cart-discount";
+
     public static CartDiscountKeyReference of() {
         return new CartDiscountKeyReferenceImpl();
     }

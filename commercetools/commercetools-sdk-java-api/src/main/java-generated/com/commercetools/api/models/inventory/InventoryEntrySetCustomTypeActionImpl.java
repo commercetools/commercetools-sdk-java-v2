@@ -36,11 +36,11 @@ public final class InventoryEntrySetCustomTypeActionImpl implements InventoryEnt
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "setCustomType";
+        this.action = InventoryEntrySetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public InventoryEntrySetCustomTypeActionImpl() {
-        this.action = "setCustomType";
+        this.action = InventoryEntrySetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

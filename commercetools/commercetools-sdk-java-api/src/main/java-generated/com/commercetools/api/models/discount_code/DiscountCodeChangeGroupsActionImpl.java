@@ -29,11 +29,11 @@ public final class DiscountCodeChangeGroupsActionImpl implements DiscountCodeCha
     @JsonCreator
     DiscountCodeChangeGroupsActionImpl(@JsonProperty("groups") final java.util.List<String> groups) {
         this.groups = groups;
-        this.action = "changeGroups";
+        this.action = DiscountCodeChangeGroupsAction.CHANGE_GROUPS;
     }
 
     public DiscountCodeChangeGroupsActionImpl() {
-        this.action = "changeGroups";
+        this.action = DiscountCodeChangeGroupsAction.CHANGE_GROUPS;
     }
 
     public String getAction() {

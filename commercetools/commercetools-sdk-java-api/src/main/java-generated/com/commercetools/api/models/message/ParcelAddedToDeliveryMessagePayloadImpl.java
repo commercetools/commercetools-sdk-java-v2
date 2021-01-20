@@ -36,11 +36,11 @@ public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAdde
             @JsonProperty("parcel") final com.commercetools.api.models.order.Parcel parcel) {
         this.delivery = delivery;
         this.parcel = parcel;
-        this.type = "ParcelAddedToDelivery";
+        this.type = ParcelAddedToDeliveryMessagePayload.PARCEL_ADDED_TO_DELIVERY;
     }
 
     public ParcelAddedToDeliveryMessagePayloadImpl() {
-        this.type = "ParcelAddedToDelivery";
+        this.type = ParcelAddedToDeliveryMessagePayload.PARCEL_ADDED_TO_DELIVERY;
     }
 
     public String getType() {

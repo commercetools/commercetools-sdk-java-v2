@@ -35,11 +35,11 @@ public final class OrderSetCustomLineItemShippingDetailsActionImpl
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.customLineItemId = customLineItemId;
         this.shippingDetails = shippingDetails;
-        this.action = "setCustomLineItemShippingDetails";
+        this.action = OrderSetCustomLineItemShippingDetailsAction.SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS;
     }
 
     public OrderSetCustomLineItemShippingDetailsActionImpl() {
-        this.action = "setCustomLineItemShippingDetails";
+        this.action = OrderSetCustomLineItemShippingDetailsAction.SET_CUSTOM_LINE_ITEM_SHIPPING_DETAILS;
     }
 
     public String getAction() {

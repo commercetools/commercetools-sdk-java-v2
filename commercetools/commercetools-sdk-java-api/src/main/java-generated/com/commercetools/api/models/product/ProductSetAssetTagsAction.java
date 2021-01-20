@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetAssetTagsActionImpl.class)
 public interface ProductSetAssetTagsAction extends ProductUpdateAction {
 
+    String SET_ASSET_TAGS = "setAssetTags";
+
     @JsonProperty("variantId")
     public Long getVariantId();
 

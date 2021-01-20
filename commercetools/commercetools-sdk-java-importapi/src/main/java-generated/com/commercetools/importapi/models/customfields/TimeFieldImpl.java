@@ -33,11 +33,11 @@ public final class TimeFieldImpl implements TimeField {
     @JsonCreator
     TimeFieldImpl(@JsonProperty("value") final java.time.LocalTime value) {
         this.value = value;
-        this.type = "Time";
+        this.type = TimeField.TIME;
     }
 
     public TimeFieldImpl() {
-        this.type = "Time";
+        this.type = TimeField.TIME;
     }
 
     /**

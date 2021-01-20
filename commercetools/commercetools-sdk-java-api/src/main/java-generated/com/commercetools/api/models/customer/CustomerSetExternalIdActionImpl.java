@@ -29,11 +29,11 @@ public final class CustomerSetExternalIdActionImpl implements CustomerSetExterna
     @JsonCreator
     CustomerSetExternalIdActionImpl(@JsonProperty("externalId") final String externalId) {
         this.externalId = externalId;
-        this.action = "setExternalId";
+        this.action = CustomerSetExternalIdAction.SET_EXTERNAL_ID;
     }
 
     public CustomerSetExternalIdActionImpl() {
-        this.action = "setExternalId";
+        this.action = CustomerSetExternalIdAction.SET_EXTERNAL_ID;
     }
 
     public String getAction() {

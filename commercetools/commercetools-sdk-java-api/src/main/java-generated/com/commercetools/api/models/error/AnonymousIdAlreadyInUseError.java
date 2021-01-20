@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AnonymousIdAlreadyInUseErrorImpl.class)
 public interface AnonymousIdAlreadyInUseError extends ErrorObject {
 
+    String ANONYMOUS_ID_ALREADY_IN_USE = "AnonymousIdAlreadyInUse";
+
     public static AnonymousIdAlreadyInUseError of() {
         return new AnonymousIdAlreadyInUseErrorImpl();
     }

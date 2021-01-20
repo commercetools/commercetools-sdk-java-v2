@@ -41,11 +41,11 @@ public final class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDel
         this.items = items;
         this.address = address;
         this.parcels = parcels;
-        this.action = "addDelivery";
+        this.action = StagedOrderAddDeliveryAction.ADD_DELIVERY;
     }
 
     public StagedOrderAddDeliveryActionImpl() {
-        this.action = "addDelivery";
+        this.action = StagedOrderAddDeliveryAction.ADD_DELIVERY;
     }
 
     public String getAction() {

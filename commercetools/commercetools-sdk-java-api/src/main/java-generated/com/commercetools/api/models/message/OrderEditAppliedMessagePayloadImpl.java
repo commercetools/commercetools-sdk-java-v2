@@ -36,11 +36,11 @@ public final class OrderEditAppliedMessagePayloadImpl implements OrderEditApplie
             @JsonProperty("result") final com.commercetools.api.models.order_edit.OrderEditApplied result) {
         this.edit = edit;
         this.result = result;
-        this.type = "OrderEditApplied";
+        this.type = OrderEditAppliedMessagePayload.ORDER_EDIT_APPLIED;
     }
 
     public OrderEditAppliedMessagePayloadImpl() {
-        this.type = "OrderEditApplied";
+        this.type = OrderEditAppliedMessagePayload.ORDER_EDIT_APPLIED;
     }
 
     public String getType() {

@@ -29,11 +29,11 @@ public final class ProductTypeChangeDescriptionActionImpl implements ProductType
     @JsonCreator
     ProductTypeChangeDescriptionActionImpl(@JsonProperty("description") final String description) {
         this.description = description;
-        this.action = "changeDescription";
+        this.action = ProductTypeChangeDescriptionAction.CHANGE_DESCRIPTION;
     }
 
     public ProductTypeChangeDescriptionActionImpl() {
-        this.action = "changeDescription";
+        this.action = ProductTypeChangeDescriptionAction.CHANGE_DESCRIPTION;
     }
 
     public String getAction() {

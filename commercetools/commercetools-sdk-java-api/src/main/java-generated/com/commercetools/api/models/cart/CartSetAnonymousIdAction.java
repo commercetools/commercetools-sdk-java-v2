@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetAnonymousIdActionImpl.class)
 public interface CartSetAnonymousIdAction extends CartUpdateAction {
 
+    String SET_ANONYMOUS_ID = "setAnonymousId";
+
     /**
     *  <p>If not set, any existing anonymous ID will be removed.</p>
     */

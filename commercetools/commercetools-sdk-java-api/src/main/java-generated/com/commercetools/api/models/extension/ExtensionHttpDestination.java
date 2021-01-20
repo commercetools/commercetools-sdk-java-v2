@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionHttpDestinationImpl.class)
 public interface ExtensionHttpDestination extends ExtensionDestination {
 
+    String HTTP = "HTTP";
+
     @NotNull
     @JsonProperty("url")
     public String getUrl();

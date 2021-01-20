@@ -26,7 +26,7 @@ public final class AttributeDateTimeTypeImpl implements AttributeDateTimeType {
 
     @JsonCreator
     AttributeDateTimeTypeImpl() {
-        this.name = "datetime";
+        this.name = AttributeDateTimeType.DATETIME;
     }
 
     public String getName() {

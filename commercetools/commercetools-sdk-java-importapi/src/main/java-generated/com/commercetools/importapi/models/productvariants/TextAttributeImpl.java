@@ -35,11 +35,11 @@ public final class TextAttributeImpl implements TextAttribute {
     TextAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final String value) {
         this.name = name;
         this.value = value;
-        this.type = "text";
+        this.type = TextAttribute.TEXT;
     }
 
     public TextAttributeImpl() {
-        this.type = "text";
+        this.type = TextAttribute.TEXT;
     }
 
     /**

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChangeStatusUpdateActionImpl.class)
 public interface ChangeStatusUpdateAction extends ImageSearchConfigUpdateAction {
 
+    String CHANGE_STATUS = "changeStatus";
+
     @NotNull
     @JsonProperty("status")
     public ImageSearchConfigStatus getStatus();

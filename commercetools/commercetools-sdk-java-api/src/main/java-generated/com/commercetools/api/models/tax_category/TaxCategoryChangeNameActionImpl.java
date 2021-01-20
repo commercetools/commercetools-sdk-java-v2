@@ -29,11 +29,11 @@ public final class TaxCategoryChangeNameActionImpl implements TaxCategoryChangeN
     @JsonCreator
     TaxCategoryChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
-        this.action = "changeName";
+        this.action = TaxCategoryChangeNameAction.CHANGE_NAME;
     }
 
     public TaxCategoryChangeNameActionImpl() {
-        this.action = "changeName";
+        this.action = TaxCategoryChangeNameAction.CHANGE_NAME;
     }
 
     public String getAction() {

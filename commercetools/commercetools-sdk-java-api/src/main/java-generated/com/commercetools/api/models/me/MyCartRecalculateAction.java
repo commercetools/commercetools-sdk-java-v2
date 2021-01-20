@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartRecalculateActionImpl.class)
 public interface MyCartRecalculateAction extends MyCartUpdateAction {
 
+    String RECALCULATE = "recalculate";
+
     @JsonProperty("updateProductData")
     public Boolean getUpdateProductData();
 

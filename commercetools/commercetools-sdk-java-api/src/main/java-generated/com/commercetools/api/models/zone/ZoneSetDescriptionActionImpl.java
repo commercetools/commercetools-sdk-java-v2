@@ -29,11 +29,11 @@ public final class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAct
     @JsonCreator
     ZoneSetDescriptionActionImpl(@JsonProperty("description") final String description) {
         this.description = description;
-        this.action = "setDescription";
+        this.action = ZoneSetDescriptionAction.SET_DESCRIPTION;
     }
 
     public ZoneSetDescriptionActionImpl() {
-        this.action = "setDescription";
+        this.action = ZoneSetDescriptionAction.SET_DESCRIPTION;
     }
 
     public String getAction() {

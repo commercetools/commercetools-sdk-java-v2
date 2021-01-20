@@ -40,11 +40,11 @@ public final class MissingTaxRateForCountryErrorImpl implements MissingTaxRateFo
         this.taxCategoryId = taxCategoryId;
         this.country = country;
         this.state = state;
-        this.code = "MissingTaxRateForCountry";
+        this.code = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY;
     }
 
     public MissingTaxRateForCountryErrorImpl() {
-        this.code = "MissingTaxRateForCountry";
+        this.code = MissingTaxRateForCountryError.MISSING_TAX_RATE_FOR_COUNTRY;
     }
 
     public String getCode() {

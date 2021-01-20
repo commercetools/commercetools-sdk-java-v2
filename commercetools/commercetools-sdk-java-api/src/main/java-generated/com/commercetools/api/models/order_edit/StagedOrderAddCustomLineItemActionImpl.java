@@ -57,11 +57,11 @@ public final class StagedOrderAddCustomLineItemActionImpl implements StagedOrder
         this.taxCategory = taxCategory;
         this.custom = custom;
         this.externalTaxRate = externalTaxRate;
-        this.action = "addCustomLineItem";
+        this.action = StagedOrderAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM;
     }
 
     public StagedOrderAddCustomLineItemActionImpl() {
-        this.action = "addCustomLineItem";
+        this.action = StagedOrderAddCustomLineItemAction.ADD_CUSTOM_LINE_ITEM;
     }
 
     public String getAction() {

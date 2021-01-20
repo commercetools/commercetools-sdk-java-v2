@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetProductPriceCustomTypeActionImpl.class)
 public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAction {
 
+    String SET_PRODUCT_PRICE_CUSTOM_TYPE = "setProductPriceCustomType";
+
     @NotNull
     @JsonProperty("priceId")
     public String getPriceId();

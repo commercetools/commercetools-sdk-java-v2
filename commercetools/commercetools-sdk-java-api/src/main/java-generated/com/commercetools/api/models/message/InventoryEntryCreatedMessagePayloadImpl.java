@@ -31,11 +31,11 @@ public final class InventoryEntryCreatedMessagePayloadImpl implements InventoryE
     InventoryEntryCreatedMessagePayloadImpl(
             @JsonProperty("inventoryEntry") final com.commercetools.api.models.inventory.InventoryEntry inventoryEntry) {
         this.inventoryEntry = inventoryEntry;
-        this.type = "InventoryEntryCreated";
+        this.type = InventoryEntryCreatedMessagePayload.INVENTORY_ENTRY_CREATED;
     }
 
     public InventoryEntryCreatedMessagePayloadImpl() {
-        this.type = "InventoryEntryCreated";
+        this.type = InventoryEntryCreatedMessagePayload.INVENTORY_ENTRY_CREATED;
     }
 
     public String getType() {

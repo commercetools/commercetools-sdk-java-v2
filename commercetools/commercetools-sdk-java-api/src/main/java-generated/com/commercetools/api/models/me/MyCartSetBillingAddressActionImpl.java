@@ -31,11 +31,11 @@ public final class MyCartSetBillingAddressActionImpl implements MyCartSetBilling
     MyCartSetBillingAddressActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.address = address;
-        this.action = "setBillingAddress";
+        this.action = MyCartSetBillingAddressAction.SET_BILLING_ADDRESS;
     }
 
     public MyCartSetBillingAddressActionImpl() {
-        this.action = "setBillingAddress";
+        this.action = MyCartSetBillingAddressAction.SET_BILLING_ADDRESS;
     }
 
     public String getAction() {

@@ -30,11 +30,11 @@ public final class StateSetNameActionImpl implements StateSetNameAction {
     @JsonCreator
     StateSetNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
-        this.action = "setName";
+        this.action = StateSetNameAction.SET_NAME;
     }
 
     public StateSetNameActionImpl() {
-        this.action = "setName";
+        this.action = StateSetNameAction.SET_NAME;
     }
 
     public String getAction() {

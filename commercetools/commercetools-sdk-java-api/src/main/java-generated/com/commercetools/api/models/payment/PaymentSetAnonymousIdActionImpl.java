@@ -29,11 +29,11 @@ public final class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymou
     @JsonCreator
     PaymentSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
         this.anonymousId = anonymousId;
-        this.action = "setAnonymousId";
+        this.action = PaymentSetAnonymousIdAction.SET_ANONYMOUS_ID;
     }
 
     public PaymentSetAnonymousIdActionImpl() {
-        this.action = "setAnonymousId";
+        this.action = PaymentSetAnonymousIdAction.SET_ANONYMOUS_ID;
     }
 
     public String getAction() {

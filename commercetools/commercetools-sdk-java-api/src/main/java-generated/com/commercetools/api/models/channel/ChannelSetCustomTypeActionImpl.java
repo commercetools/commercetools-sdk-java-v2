@@ -36,11 +36,11 @@ public final class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTyp
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "setCustomType";
+        this.action = ChannelSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public ChannelSetCustomTypeActionImpl() {
-        this.action = "setCustomType";
+        this.action = ChannelSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

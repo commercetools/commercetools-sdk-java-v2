@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryQuantitySetMessageImpl.class)
 public interface InventoryEntryQuantitySetMessage extends Message {
 
+    String INVENTORY_ENTRY_QUANTITY_SET = "InventoryEntryQuantitySet";
+
     @NotNull
     @JsonProperty("oldQuantityOnStock")
     public Long getOldQuantityOnStock();

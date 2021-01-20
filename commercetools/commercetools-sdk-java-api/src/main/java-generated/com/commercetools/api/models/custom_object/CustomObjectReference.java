@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomObjectReferenceImpl.class)
 public interface CustomObjectReference extends Reference {
 
+    String KEY_VALUE_DOCUMENT = "key-value-document";
+
     @Valid
     @JsonProperty("obj")
     public CustomObject getObj();

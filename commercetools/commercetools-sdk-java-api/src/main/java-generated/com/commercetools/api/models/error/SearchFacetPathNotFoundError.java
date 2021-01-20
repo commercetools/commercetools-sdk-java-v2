@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = SearchFacetPathNotFoundErrorImpl.class)
 public interface SearchFacetPathNotFoundError extends ErrorObject {
 
+    String SEARCH_FACET_PATH_NOT_FOUND = "SearchFacetPathNotFound";
+
     public static SearchFacetPathNotFoundError of() {
         return new SearchFacetPathNotFoundErrorImpl();
     }

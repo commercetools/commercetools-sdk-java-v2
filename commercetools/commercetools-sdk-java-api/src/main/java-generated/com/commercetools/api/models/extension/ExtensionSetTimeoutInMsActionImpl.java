@@ -29,11 +29,11 @@ public final class ExtensionSetTimeoutInMsActionImpl implements ExtensionSetTime
     @JsonCreator
     ExtensionSetTimeoutInMsActionImpl(@JsonProperty("timeoutInMs") final Integer timeoutInMs) {
         this.timeoutInMs = timeoutInMs;
-        this.action = "setTimeoutInMs";
+        this.action = ExtensionSetTimeoutInMsAction.SET_TIMEOUT_IN_MS;
     }
 
     public ExtensionSetTimeoutInMsActionImpl() {
-        this.action = "setTimeoutInMs";
+        this.action = ExtensionSetTimeoutInMsAction.SET_TIMEOUT_IN_MS;
     }
 
     public String getAction() {

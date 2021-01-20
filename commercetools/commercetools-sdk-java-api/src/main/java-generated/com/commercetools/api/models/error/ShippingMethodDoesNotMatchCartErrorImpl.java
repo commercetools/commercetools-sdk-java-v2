@@ -29,11 +29,11 @@ public final class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMe
     @JsonCreator
     ShippingMethodDoesNotMatchCartErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "ShippingMethodDoesNotMatchCart";
+        this.code = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART;
     }
 
     public ShippingMethodDoesNotMatchCartErrorImpl() {
-        this.code = "ShippingMethodDoesNotMatchCart";
+        this.code = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART;
     }
 
     public String getCode() {

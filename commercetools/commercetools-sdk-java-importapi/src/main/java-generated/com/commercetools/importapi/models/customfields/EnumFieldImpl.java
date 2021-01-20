@@ -32,11 +32,11 @@ public final class EnumFieldImpl implements EnumField {
     @JsonCreator
     EnumFieldImpl(@JsonProperty("value") final String value) {
         this.value = value;
-        this.type = "Enum";
+        this.type = EnumField.ENUM;
     }
 
     public EnumFieldImpl() {
-        this.type = "Enum";
+        this.type = EnumField.ENUM;
     }
 
     /**

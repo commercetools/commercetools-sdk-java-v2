@@ -29,11 +29,11 @@ public final class CustomerPasswordUpdatedMessagePayloadImpl implements Customer
     @JsonCreator
     CustomerPasswordUpdatedMessagePayloadImpl(@JsonProperty("reset") final Boolean reset) {
         this.reset = reset;
-        this.type = "CustomerPasswordUpdated";
+        this.type = CustomerPasswordUpdatedMessagePayload.CUSTOMER_PASSWORD_UPDATED;
     }
 
     public CustomerPasswordUpdatedMessagePayloadImpl() {
-        this.type = "CustomerPasswordUpdated";
+        this.type = CustomerPasswordUpdatedMessagePayload.CUSTOMER_PASSWORD_UPDATED;
     }
 
     public String getType() {

@@ -36,11 +36,11 @@ public final class ProductSetCategoryOrderHintActionImpl implements ProductSetCa
         this.categoryId = categoryId;
         this.orderHint = orderHint;
         this.staged = staged;
-        this.action = "setCategoryOrderHint";
+        this.action = ProductSetCategoryOrderHintAction.SET_CATEGORY_ORDER_HINT;
     }
 
     public ProductSetCategoryOrderHintActionImpl() {
-        this.action = "setCategoryOrderHint";
+        this.action = ProductSetCategoryOrderHintAction.SET_CATEGORY_ORDER_HINT;
     }
 
     public String getAction() {

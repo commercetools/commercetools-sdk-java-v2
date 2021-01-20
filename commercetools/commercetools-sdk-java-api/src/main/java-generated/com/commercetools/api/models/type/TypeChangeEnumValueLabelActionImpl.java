@@ -34,11 +34,11 @@ public final class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumV
             @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldEnumValue value) {
         this.fieldName = fieldName;
         this.value = value;
-        this.action = "changeEnumValueLabel";
+        this.action = TypeChangeEnumValueLabelAction.CHANGE_ENUM_VALUE_LABEL;
     }
 
     public TypeChangeEnumValueLabelActionImpl() {
-        this.action = "changeEnumValueLabel";
+        this.action = TypeChangeEnumValueLabelAction.CHANGE_ENUM_VALUE_LABEL;
     }
 
     public String getAction() {

@@ -37,11 +37,11 @@ public final class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistEr
         this.message = message;
         this.conflictingEnumKey = conflictingEnumKey;
         this.conflictingAttributeName = conflictingAttributeName;
-        this.code = "EnumKeyDoesNotExist";
+        this.code = EnumKeyDoesNotExistError.ENUM_KEY_DOES_NOT_EXIST;
     }
 
     public EnumKeyDoesNotExistErrorImpl() {
-        this.code = "EnumKeyDoesNotExist";
+        this.code = EnumKeyDoesNotExistError.ENUM_KEY_DOES_NOT_EXIST;
     }
 
     public String getCode() {

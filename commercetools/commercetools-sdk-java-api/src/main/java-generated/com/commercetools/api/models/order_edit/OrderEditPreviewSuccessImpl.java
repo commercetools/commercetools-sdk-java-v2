@@ -36,11 +36,11 @@ public final class OrderEditPreviewSuccessImpl implements OrderEditPreviewSucces
             @JsonProperty("messagePayloads") final java.util.List<com.commercetools.api.models.message.MessagePayload> messagePayloads) {
         this.preview = preview;
         this.messagePayloads = messagePayloads;
-        this.type = "PreviewSuccess";
+        this.type = OrderEditPreviewSuccess.PREVIEW_SUCCESS;
     }
 
     public OrderEditPreviewSuccessImpl() {
-        this.type = "PreviewSuccess";
+        this.type = OrderEditPreviewSuccess.PREVIEW_SUCCESS;
     }
 
     public String getType() {

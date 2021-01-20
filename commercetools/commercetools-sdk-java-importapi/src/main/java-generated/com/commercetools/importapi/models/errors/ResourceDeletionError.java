@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceDeletionErrorImpl.class)
 public interface ResourceDeletionError extends ErrorObject {
 
+    String RESOURCE_DELETION = "ResourceDeletion";
+
     @JsonProperty("resource")
     public JsonNode getResource();
 

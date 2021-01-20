@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionBadResponseErrorImpl.class)
 public interface ExtensionBadResponseError extends ErrorObject {
 
+    String EXTENSION_BAD_RESPONSE = "ExtensionBadResponse";
+
     @Valid
     @JsonProperty("localizedMessage")
     public LocalizedString getLocalizedMessage();

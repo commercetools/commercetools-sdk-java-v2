@@ -39,11 +39,11 @@ public final class OrderEditAppliedImpl implements OrderEditApplied {
         this.appliedAt = appliedAt;
         this.excerptBeforeEdit = excerptBeforeEdit;
         this.excerptAfterEdit = excerptAfterEdit;
-        this.type = "Applied";
+        this.type = OrderEditApplied.APPLIED;
     }
 
     public OrderEditAppliedImpl() {
-        this.type = "Applied";
+        this.type = OrderEditApplied.APPLIED;
     }
 
     public String getType() {

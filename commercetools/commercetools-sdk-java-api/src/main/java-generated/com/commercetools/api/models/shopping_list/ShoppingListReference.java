@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListReferenceImpl.class)
 public interface ShoppingListReference extends Reference {
 
+    String SHOPPING_LIST = "shopping-list";
+
     @Valid
     @JsonProperty("obj")
     public ShoppingList getObj();

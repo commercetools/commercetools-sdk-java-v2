@@ -31,11 +31,11 @@ public final class CartDiscountChangeTargetActionImpl implements CartDiscountCha
     CartDiscountChangeTargetActionImpl(
             @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.target = target;
-        this.action = "changeTarget";
+        this.action = CartDiscountChangeTargetAction.CHANGE_TARGET;
     }
 
     public CartDiscountChangeTargetActionImpl() {
-        this.action = "changeTarget";
+        this.action = CartDiscountChangeTargetAction.CHANGE_TARGET;
     }
 
     public String getAction() {

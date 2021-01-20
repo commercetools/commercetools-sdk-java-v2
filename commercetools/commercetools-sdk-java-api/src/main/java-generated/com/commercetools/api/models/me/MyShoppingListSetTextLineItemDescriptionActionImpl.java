@@ -35,11 +35,11 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
         this.textLineItemId = textLineItemId;
         this.description = description;
-        this.action = "setTextLineItemDescription";
+        this.action = MyShoppingListSetTextLineItemDescriptionAction.SET_TEXT_LINE_ITEM_DESCRIPTION;
     }
 
     public MyShoppingListSetTextLineItemDescriptionActionImpl() {
-        this.action = "setTextLineItemDescription";
+        this.action = MyShoppingListSetTextLineItemDescriptionAction.SET_TEXT_LINE_ITEM_DESCRIPTION;
     }
 
     public String getAction() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetCategoryOrderHintActionImpl.class)
 public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
 
+    String SET_CATEGORY_ORDER_HINT = "setCategoryOrderHint";
+
     @NotNull
     @JsonProperty("categoryId")
     public String getCategoryId();

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetKeyActionImpl.class)
 public interface ProductSetKeyAction extends ProductUpdateAction {
 
+    String SET_KEY = "setKey";
+
     /**
     *  <p>User-specific unique identifier for the product.
     *  If left blank or set to <code>null</code>, the product key is unset/removed.</p>

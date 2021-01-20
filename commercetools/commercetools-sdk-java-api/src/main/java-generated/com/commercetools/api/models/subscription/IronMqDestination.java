@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = IronMqDestinationImpl.class)
 public interface IronMqDestination extends Destination {
 
+    String IRON_MQ = "IronMQ";
+
     @NotNull
     @JsonProperty("uri")
     public String getUri();

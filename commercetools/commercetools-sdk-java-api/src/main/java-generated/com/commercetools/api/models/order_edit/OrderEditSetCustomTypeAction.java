@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditSetCustomTypeActionImpl.class)
 public interface OrderEditSetCustomTypeAction extends OrderEditUpdateAction {
 
+    String SET_CUSTOM_TYPE = "setCustomType";
+
     /**
     *  <p>If set, the custom type is set to this new value.
     *  If absent, the custom type and any existing custom fields are removed.</p>

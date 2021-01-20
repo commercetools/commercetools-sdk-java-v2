@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeAddEnumValueActionImpl.class)
 public interface TypeAddEnumValueAction extends TypeUpdateAction {
 
+    String ADD_ENUM_VALUE = "addEnumValue";
+
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();

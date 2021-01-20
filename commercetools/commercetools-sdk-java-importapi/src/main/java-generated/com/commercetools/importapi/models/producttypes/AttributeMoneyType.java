@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeMoneyTypeImpl.class)
 public interface AttributeMoneyType extends AttributeType {
 
+    String MONEY = "money";
+
     public static AttributeMoneyType of() {
         return new AttributeMoneyTypeImpl();
     }

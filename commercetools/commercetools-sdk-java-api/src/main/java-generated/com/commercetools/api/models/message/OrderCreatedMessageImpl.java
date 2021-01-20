@@ -69,11 +69,11 @@ public final class OrderCreatedMessageImpl implements OrderCreatedMessage {
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.order = order;
-        this.type = "OrderCreated";
+        this.type = OrderCreatedMessage.ORDER_CREATED;
     }
 
     public OrderCreatedMessageImpl() {
-        this.type = "OrderCreated";
+        this.type = OrderCreatedMessage.ORDER_CREATED;
     }
 
     public String getId() {

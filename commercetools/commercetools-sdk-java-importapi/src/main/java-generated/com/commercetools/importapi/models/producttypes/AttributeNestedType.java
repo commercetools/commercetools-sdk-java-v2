@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeNestedTypeImpl.class)
 public interface AttributeNestedType extends AttributeType {
 
+    String NESTED = "nested";
+
     /**
     *  <p>References a product type by its key.</p>
     */

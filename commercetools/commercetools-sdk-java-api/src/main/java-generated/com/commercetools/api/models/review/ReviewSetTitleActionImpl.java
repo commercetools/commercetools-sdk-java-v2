@@ -29,11 +29,11 @@ public final class ReviewSetTitleActionImpl implements ReviewSetTitleAction {
     @JsonCreator
     ReviewSetTitleActionImpl(@JsonProperty("title") final String title) {
         this.title = title;
-        this.action = "setTitle";
+        this.action = ReviewSetTitleAction.SET_TITLE;
     }
 
     public ReviewSetTitleActionImpl() {
-        this.action = "setTitle";
+        this.action = ReviewSetTitleAction.SET_TITLE;
     }
 
     public String getAction() {

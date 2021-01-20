@@ -70,11 +70,11 @@ public final class ProductPriceDiscountsSetMessageImpl implements ProductPriceDi
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.updatedPrices = updatedPrices;
-        this.type = "ProductPriceDiscountsSet";
+        this.type = ProductPriceDiscountsSetMessage.PRODUCT_PRICE_DISCOUNTS_SET;
     }
 
     public ProductPriceDiscountsSetMessageImpl() {
-        this.type = "ProductPriceDiscountsSet";
+        this.type = ProductPriceDiscountsSetMessage.PRODUCT_PRICE_DISCOUNTS_SET;
     }
 
     public String getId() {

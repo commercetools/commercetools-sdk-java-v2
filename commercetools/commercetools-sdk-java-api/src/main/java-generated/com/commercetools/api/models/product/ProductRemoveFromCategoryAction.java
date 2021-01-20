@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRemoveFromCategoryActionImpl.class)
 public interface ProductRemoveFromCategoryAction extends ProductUpdateAction {
 
+    String REMOVE_FROM_CATEGORY = "removeFromCategory";
+
     @NotNull
     @Valid
     @JsonProperty("category")

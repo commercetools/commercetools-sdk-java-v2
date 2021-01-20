@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryCloudEventsFormatImpl.class)
 public interface DeliveryCloudEventsFormat extends DeliveryFormat {
 
+    String CLOUD_EVENTS = "CloudEvents";
+
     @NotNull
     @JsonProperty("cloudEventsVersion")
     public String getCloudEventsVersion();

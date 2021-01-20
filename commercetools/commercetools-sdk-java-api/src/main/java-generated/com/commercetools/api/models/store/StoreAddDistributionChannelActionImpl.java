@@ -31,11 +31,11 @@ public final class StoreAddDistributionChannelActionImpl implements StoreAddDist
     StoreAddDistributionChannelActionImpl(
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
-        this.action = "addDistributionChannel";
+        this.action = StoreAddDistributionChannelAction.ADD_DISTRIBUTION_CHANNEL;
     }
 
     public StoreAddDistributionChannelActionImpl() {
-        this.action = "addDistributionChannel";
+        this.action = StoreAddDistributionChannelAction.ADD_DISTRIBUTION_CHANNEL;
     }
 
     public String getAction() {

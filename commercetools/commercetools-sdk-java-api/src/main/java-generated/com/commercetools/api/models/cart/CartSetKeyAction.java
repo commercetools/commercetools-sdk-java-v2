@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetKeyActionImpl.class)
 public interface CartSetKeyAction extends CartUpdateAction {
 
+    String SET_KEY = "setKey";
+
     @JsonProperty("key")
     public String getKey();
 

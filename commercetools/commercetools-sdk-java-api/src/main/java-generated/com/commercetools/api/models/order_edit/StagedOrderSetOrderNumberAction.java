@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetOrderNumberActionImpl.class)
 public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction {
 
+    String SET_ORDER_NUMBER = "setOrderNumber";
+
     @JsonProperty("orderNumber")
     public String getOrderNumber();
 

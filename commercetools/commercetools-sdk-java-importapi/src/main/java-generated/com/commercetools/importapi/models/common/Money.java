@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MoneyImpl.class)
 public interface Money extends TypedMoney {
 
+    String CENT_PRECISION = "centPrecision";
+
     public static Money of() {
         return new MoneyImpl();
     }

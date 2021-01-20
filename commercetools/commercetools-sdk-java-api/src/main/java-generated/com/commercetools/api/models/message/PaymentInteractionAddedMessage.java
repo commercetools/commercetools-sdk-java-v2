@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentInteractionAddedMessageImpl.class)
 public interface PaymentInteractionAddedMessage extends Message {
 
+    String PAYMENT_INTERACTION_ADDED = "PaymentInteractionAdded";
+
     @NotNull
     @Valid
     @JsonProperty("interaction")

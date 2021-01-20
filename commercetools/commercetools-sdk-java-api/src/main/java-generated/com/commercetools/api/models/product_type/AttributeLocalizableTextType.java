@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeLocalizableTextTypeImpl.class)
 public interface AttributeLocalizableTextType extends AttributeType {
 
+    String LTEXT = "ltext";
+
     public static AttributeLocalizableTextType of() {
         return new AttributeLocalizableTextTypeImpl();
     }

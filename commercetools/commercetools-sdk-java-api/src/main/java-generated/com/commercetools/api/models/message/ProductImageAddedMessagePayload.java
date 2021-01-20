@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductImageAddedMessagePayloadImpl.class)
 public interface ProductImageAddedMessagePayload extends MessagePayload {
 
+    String PRODUCT_IMAGE_ADDED = "ProductImageAdded";
+
     @NotNull
     @JsonProperty("variantId")
     public Long getVariantId();

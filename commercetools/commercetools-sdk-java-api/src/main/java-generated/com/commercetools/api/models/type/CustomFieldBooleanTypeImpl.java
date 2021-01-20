@@ -26,7 +26,7 @@ public final class CustomFieldBooleanTypeImpl implements CustomFieldBooleanType 
 
     @JsonCreator
     CustomFieldBooleanTypeImpl() {
-        this.name = "Boolean";
+        this.name = CustomFieldBooleanType.BOOLEAN;
     }
 
     public String getName() {

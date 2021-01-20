@@ -32,11 +32,11 @@ public final class BooleanSetFieldImpl implements BooleanSetField {
     @JsonCreator
     BooleanSetFieldImpl(@JsonProperty("value") final java.util.List<Boolean> value) {
         this.value = value;
-        this.type = "BooleanSet";
+        this.type = BooleanSetField.BOOLEAN_SET;
     }
 
     public BooleanSetFieldImpl() {
-        this.type = "BooleanSet";
+        this.type = BooleanSetField.BOOLEAN_SET;
     }
 
     /**

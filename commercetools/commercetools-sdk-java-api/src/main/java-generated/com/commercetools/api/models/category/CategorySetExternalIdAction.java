@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySetExternalIdActionImpl.class)
 public interface CategorySetExternalIdAction extends CategoryUpdateAction {
 
+    String SET_EXTERNAL_ID = "setExternalId";
+
     /**
     *  <p>If not defined, the external ID is unset.</p>
     */

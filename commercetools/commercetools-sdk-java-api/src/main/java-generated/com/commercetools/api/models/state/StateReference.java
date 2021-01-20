@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateReferenceImpl.class)
 public interface StateReference extends Reference {
 
+    String STATE = "state";
+
     @Valid
     @JsonProperty("obj")
     public State getObj();

@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewStateTransitionMessagePayloadImpl.class)
 public interface ReviewStateTransitionMessagePayload extends MessagePayload {
 
+    String REVIEW_STATE_TRANSITION = "ReviewStateTransition";
+
     @NotNull
     @Valid
     @JsonProperty("oldState")

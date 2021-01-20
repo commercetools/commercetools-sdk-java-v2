@@ -38,11 +38,11 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
         this.variantId = variantId;
         this.image = image;
         this.staged = staged;
-        this.type = "ProductImageAdded";
+        this.type = ProductImageAddedMessagePayload.PRODUCT_IMAGE_ADDED;
     }
 
     public ProductImageAddedMessagePayloadImpl() {
-        this.type = "ProductImageAdded";
+        this.type = ProductImageAddedMessagePayload.PRODUCT_IMAGE_ADDED;
     }
 
     public String getType() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetProductVariantKeyActionImpl.class)
 public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
 
+    String SET_PRODUCT_VARIANT_KEY = "setProductVariantKey";
+
     @JsonProperty("variantId")
     public Long getVariantId();
 

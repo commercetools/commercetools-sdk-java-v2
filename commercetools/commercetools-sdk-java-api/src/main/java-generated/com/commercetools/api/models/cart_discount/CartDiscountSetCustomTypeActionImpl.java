@@ -36,11 +36,11 @@ public final class CartDiscountSetCustomTypeActionImpl implements CartDiscountSe
             @JsonProperty("fields") final com.fasterxml.jackson.databind.JsonNode fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "setCustomType";
+        this.action = CartDiscountSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public CartDiscountSetCustomTypeActionImpl() {
-        this.action = "setCustomType";
+        this.action = CartDiscountSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

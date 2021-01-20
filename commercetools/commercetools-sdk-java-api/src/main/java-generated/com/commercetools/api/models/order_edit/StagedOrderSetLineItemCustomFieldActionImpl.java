@@ -38,11 +38,11 @@ public final class StagedOrderSetLineItemCustomFieldActionImpl implements Staged
         this.lineItemId = lineItemId;
         this.name = name;
         this.value = value;
-        this.action = "setLineItemCustomField";
+        this.action = StagedOrderSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public StagedOrderSetLineItemCustomFieldActionImpl() {
-        this.action = "setLineItemCustomField";
+        this.action = StagedOrderSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public String getAction() {

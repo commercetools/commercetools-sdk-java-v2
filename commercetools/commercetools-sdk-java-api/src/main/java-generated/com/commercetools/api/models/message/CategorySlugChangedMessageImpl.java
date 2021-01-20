@@ -73,11 +73,11 @@ public final class CategorySlugChangedMessageImpl implements CategorySlugChanged
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.slug = slug;
         this.oldSlug = oldSlug;
-        this.type = "CategorySlugChanged";
+        this.type = CategorySlugChangedMessage.CATEGORY_SLUG_CHANGED;
     }
 
     public CategorySlugChangedMessageImpl() {
-        this.type = "CategorySlugChanged";
+        this.type = CategorySlugChangedMessage.CATEGORY_SLUG_CHANGED;
     }
 
     public String getId() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductRemoveImageActionImpl.class)
 public interface ProductRemoveImageAction extends ProductUpdateAction {
 
+    String REMOVE_IMAGE = "removeImage";
+
     @JsonProperty("variantId")
     public Long getVariantId();
 

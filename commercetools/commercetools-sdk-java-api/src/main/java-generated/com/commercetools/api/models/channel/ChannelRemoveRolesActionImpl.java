@@ -31,11 +31,11 @@ public final class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAct
     ChannelRemoveRolesActionImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
         this.roles = roles;
-        this.action = "removeRoles";
+        this.action = ChannelRemoveRolesAction.REMOVE_ROLES;
     }
 
     public ChannelRemoveRolesActionImpl() {
-        this.action = "removeRoles";
+        this.action = ChannelRemoveRolesAction.REMOVE_ROLES;
     }
 
     public String getAction() {

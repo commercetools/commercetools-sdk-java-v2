@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentResourceIdentifierImpl.class)
 public interface PaymentResourceIdentifier extends ResourceIdentifier {
 
+    String PAYMENT = "payment";
+
     public static PaymentResourceIdentifier of() {
         return new PaymentResourceIdentifierImpl();
     }

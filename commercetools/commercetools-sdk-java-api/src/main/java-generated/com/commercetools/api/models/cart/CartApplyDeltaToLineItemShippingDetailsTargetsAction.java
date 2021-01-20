@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class)
 public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends CartUpdateAction {
 
+    String APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS = "applyDeltaToLineItemShippingDetailsTargets";
+
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();

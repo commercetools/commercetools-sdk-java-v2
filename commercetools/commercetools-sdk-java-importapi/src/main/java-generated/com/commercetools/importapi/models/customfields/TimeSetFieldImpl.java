@@ -33,11 +33,11 @@ public final class TimeSetFieldImpl implements TimeSetField {
     @JsonCreator
     TimeSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.LocalTime> value) {
         this.value = value;
-        this.type = "TimeSet";
+        this.type = TimeSetField.TIME_SET;
     }
 
     public TimeSetFieldImpl() {
-        this.type = "TimeSet";
+        this.type = TimeSetField.TIME_SET;
     }
 
     /**

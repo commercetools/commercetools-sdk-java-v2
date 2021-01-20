@@ -81,11 +81,11 @@ public final class InventoryEntryQuantitySetMessageImpl implements InventoryEntr
         this.newQuantityOnStock = newQuantityOnStock;
         this.oldAvailableQuantity = oldAvailableQuantity;
         this.newAvailableQuantity = newAvailableQuantity;
-        this.type = "InventoryEntryQuantitySet";
+        this.type = InventoryEntryQuantitySetMessage.INVENTORY_ENTRY_QUANTITY_SET;
     }
 
     public InventoryEntryQuantitySetMessageImpl() {
-        this.type = "InventoryEntryQuantitySet";
+        this.type = InventoryEntryQuantitySetMessage.INVENTORY_ENTRY_QUANTITY_SET;
     }
 
     public String getId() {

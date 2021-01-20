@@ -34,11 +34,11 @@ public final class PaymentChangeTransactionInteractionIdActionImpl
             @JsonProperty("interactionId") final String interactionId) {
         this.transactionId = transactionId;
         this.interactionId = interactionId;
-        this.action = "changeTransactionInteractionId";
+        this.action = PaymentChangeTransactionInteractionIdAction.CHANGE_TRANSACTION_INTERACTION_ID;
     }
 
     public PaymentChangeTransactionInteractionIdActionImpl() {
-        this.action = "changeTransactionInteractionId";
+        this.action = PaymentChangeTransactionInteractionIdAction.CHANGE_TRANSACTION_INTERACTION_ID;
     }
 
     public String getAction() {

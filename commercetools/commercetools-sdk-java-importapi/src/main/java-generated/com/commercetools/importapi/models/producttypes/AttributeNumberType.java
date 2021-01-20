@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AttributeNumberTypeImpl.class)
 public interface AttributeNumberType extends AttributeType {
 
+    String NUMBER = "number";
+
     public static AttributeNumberType of() {
         return new AttributeNumberTypeImpl();
     }

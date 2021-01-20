@@ -44,11 +44,11 @@ public final class CartSetCustomShippingMethodActionImpl implements CartSetCusto
         this.shippingRate = shippingRate;
         this.taxCategory = taxCategory;
         this.externalTaxRate = externalTaxRate;
-        this.action = "setCustomShippingMethod";
+        this.action = CartSetCustomShippingMethodAction.SET_CUSTOM_SHIPPING_METHOD;
     }
 
     public CartSetCustomShippingMethodActionImpl() {
-        this.action = "setCustomShippingMethod";
+        this.action = CartSetCustomShippingMethodAction.SET_CUSTOM_SHIPPING_METHOD;
     }
 
     public String getAction() {

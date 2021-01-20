@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AzureServiceBusDestinationImpl.class)
 public interface AzureServiceBusDestination extends Destination {
 
+    String AZURE_SERVICE_BUS = "AzureServiceBus";
+
     @NotNull
     @JsonProperty("connectionString")
     public String getConnectionString();

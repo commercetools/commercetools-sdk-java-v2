@@ -69,11 +69,11 @@ public final class OrderImportedMessageImpl implements OrderImportedMessage {
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.order = order;
-        this.type = "OrderImported";
+        this.type = OrderImportedMessage.ORDER_IMPORTED;
     }
 
     public OrderImportedMessageImpl() {
-        this.type = "OrderImported";
+        this.type = OrderImportedMessage.ORDER_IMPORTED;
     }
 
     public String getId() {

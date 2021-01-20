@@ -40,11 +40,11 @@ public final class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderD
         this.discountCode = discountCode;
         this.state = state;
         this.oldState = oldState;
-        this.type = "OrderDiscountCodeStateSet";
+        this.type = OrderDiscountCodeStateSetMessagePayload.ORDER_DISCOUNT_CODE_STATE_SET;
     }
 
     public OrderDiscountCodeStateSetMessagePayloadImpl() {
-        this.type = "OrderDiscountCodeStateSet";
+        this.type = OrderDiscountCodeStateSetMessagePayload.ORDER_DISCOUNT_CODE_STATE_SET;
     }
 
     public String getType() {

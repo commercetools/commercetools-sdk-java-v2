@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupSetCustomTypeActionImpl.class)
 public interface CustomerGroupSetCustomTypeAction extends CustomerGroupUpdateAction {
 
+    String SET_CUSTOM_TYPE = "setCustomType";
+
     /**
     *  <p>If absent, the custom type and any existing CustomFields are removed.</p>
     */

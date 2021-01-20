@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreResourceIdentifierImpl.class)
 public interface StoreResourceIdentifier extends ResourceIdentifier {
 
+    String STORE = "store";
+
     public static StoreResourceIdentifier of() {
         return new StoreResourceIdentifierImpl();
     }

@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = NumberSetAttributeImpl.class)
 public interface NumberSetAttribute extends Attribute {
 
+    String NUMBER_SET = "number-set";
+
     @NotNull
     @JsonProperty("value")
     public List<Double> getValue();

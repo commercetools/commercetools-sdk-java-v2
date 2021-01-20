@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DeliveryRemovedMessageImpl.class)
 public interface DeliveryRemovedMessage extends Message {
 
+    String DELIVERY_REMOVED = "DeliveryRemoved";
+
     @NotNull
     @Valid
     @JsonProperty("delivery")

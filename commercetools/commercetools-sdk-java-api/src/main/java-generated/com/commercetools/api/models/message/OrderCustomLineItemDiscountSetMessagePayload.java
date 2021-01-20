@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderCustomLineItemDiscountSetMessagePayloadImpl.class)
 public interface OrderCustomLineItemDiscountSetMessagePayload extends MessagePayload {
 
+    String ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET = "OrderCustomLineItemDiscountSet";
+
     @NotNull
     @JsonProperty("customLineItemId")
     public String getCustomLineItemId();

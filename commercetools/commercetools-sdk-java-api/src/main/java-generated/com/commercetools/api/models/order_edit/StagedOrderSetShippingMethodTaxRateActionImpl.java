@@ -31,11 +31,11 @@ public final class StagedOrderSetShippingMethodTaxRateActionImpl implements Stag
     StagedOrderSetShippingMethodTaxRateActionImpl(
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
-        this.action = "setShippingMethodTaxRate";
+        this.action = StagedOrderSetShippingMethodTaxRateAction.SET_SHIPPING_METHOD_TAX_RATE;
     }
 
     public StagedOrderSetShippingMethodTaxRateActionImpl() {
-        this.action = "setShippingMethodTaxRate";
+        this.action = StagedOrderSetShippingMethodTaxRateAction.SET_SHIPPING_METHOD_TAX_RATE;
     }
 
     public String getAction() {

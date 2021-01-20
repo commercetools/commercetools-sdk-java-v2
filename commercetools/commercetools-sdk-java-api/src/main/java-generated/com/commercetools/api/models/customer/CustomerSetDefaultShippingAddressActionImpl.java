@@ -33,11 +33,11 @@ public final class CustomerSetDefaultShippingAddressActionImpl implements Custom
             @JsonProperty("addressKey") final String addressKey) {
         this.addressId = addressId;
         this.addressKey = addressKey;
-        this.action = "setDefaultShippingAddress";
+        this.action = CustomerSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS;
     }
 
     public CustomerSetDefaultShippingAddressActionImpl() {
-        this.action = "setDefaultShippingAddress";
+        this.action = CustomerSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS;
     }
 
     public String getAction() {

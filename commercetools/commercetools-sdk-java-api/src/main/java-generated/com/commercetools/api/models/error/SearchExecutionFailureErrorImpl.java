@@ -29,11 +29,11 @@ public final class SearchExecutionFailureErrorImpl implements SearchExecutionFai
     @JsonCreator
     SearchExecutionFailureErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "SearchExecutionFailure";
+        this.code = SearchExecutionFailureError.SEARCH_EXECUTION_FAILURE;
     }
 
     public SearchExecutionFailureErrorImpl() {
-        this.code = "SearchExecutionFailure";
+        this.code = SearchExecutionFailureError.SEARCH_EXECUTION_FAILURE;
     }
 
     public String getCode() {

@@ -31,11 +31,11 @@ public final class MyCartAddPaymentActionImpl implements MyCartAddPaymentAction 
     MyCartAddPaymentActionImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
         this.payment = payment;
-        this.action = "addPayment";
+        this.action = MyCartAddPaymentAction.ADD_PAYMENT;
     }
 
     public MyCartAddPaymentActionImpl() {
-        this.action = "addPayment";
+        this.action = MyCartAddPaymentAction.ADD_PAYMENT;
     }
 
     public String getAction() {

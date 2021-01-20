@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSetNameActionImpl.class)
 public interface StoreSetNameAction extends StoreUpdateAction {
 
+    String SET_NAME = "setName";
+
     /**
     *  <p>The updated name of the store</p>
     */

@@ -26,7 +26,7 @@ public final class CustomFieldNumberTypeImpl implements CustomFieldNumberType {
 
     @JsonCreator
     CustomFieldNumberTypeImpl() {
-        this.name = "Number";
+        this.name = CustomFieldNumberType.NUMBER;
     }
 
     public String getName() {

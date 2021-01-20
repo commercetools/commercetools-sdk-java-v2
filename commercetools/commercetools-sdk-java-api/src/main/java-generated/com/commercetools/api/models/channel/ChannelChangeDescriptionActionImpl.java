@@ -31,11 +31,11 @@ public final class ChannelChangeDescriptionActionImpl implements ChannelChangeDe
     ChannelChangeDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
-        this.action = "changeDescription";
+        this.action = ChannelChangeDescriptionAction.CHANGE_DESCRIPTION;
     }
 
     public ChannelChangeDescriptionActionImpl() {
-        this.action = "changeDescription";
+        this.action = ChannelChangeDescriptionAction.CHANGE_DESCRIPTION;
     }
 
     public String getAction() {

@@ -68,11 +68,11 @@ public final class CustomerPasswordUpdatedMessageImpl implements CustomerPasswor
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.reset = reset;
-        this.type = "CustomerPasswordUpdated";
+        this.type = CustomerPasswordUpdatedMessage.CUSTOMER_PASSWORD_UPDATED;
     }
 
     public CustomerPasswordUpdatedMessageImpl() {
-        this.type = "CustomerPasswordUpdated";
+        this.type = CustomerPasswordUpdatedMessage.CUSTOMER_PASSWORD_UPDATED;
     }
 
     public String getId() {

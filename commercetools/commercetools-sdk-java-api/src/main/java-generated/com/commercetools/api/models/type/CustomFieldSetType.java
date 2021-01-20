@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldSetTypeImpl.class)
 public interface CustomFieldSetType extends FieldType {
 
+    String SET = "Set";
+
     @NotNull
     @Valid
     @JsonProperty("elementType")

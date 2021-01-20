@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySlugChangedMessageImpl.class)
 public interface CategorySlugChangedMessage extends Message {
 
+    String CATEGORY_SLUG_CHANGED = "CategorySlugChanged";
+
     @NotNull
     @Valid
     @JsonProperty("slug")

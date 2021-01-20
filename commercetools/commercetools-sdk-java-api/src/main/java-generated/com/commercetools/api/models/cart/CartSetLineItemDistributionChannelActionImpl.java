@@ -34,11 +34,11 @@ public final class CartSetLineItemDistributionChannelActionImpl implements CartS
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.lineItemId = lineItemId;
         this.distributionChannel = distributionChannel;
-        this.action = "setLineItemDistributionChannel";
+        this.action = CartSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
 
     public CartSetLineItemDistributionChannelActionImpl() {
-        this.action = "setLineItemDistributionChannel";
+        this.action = CartSetLineItemDistributionChannelAction.SET_LINE_ITEM_DISTRIBUTION_CHANNEL;
     }
 
     public String getAction() {

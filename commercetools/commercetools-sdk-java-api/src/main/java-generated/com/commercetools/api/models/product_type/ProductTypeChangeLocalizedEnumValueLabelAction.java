@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeChangeLocalizedEnumValueLabelActionImpl.class)
 public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductTypeUpdateAction {
 
+    String CHANGE_LOCALIZED_ENUM_VALUE_LABEL = "changeLocalizedEnumValueLabel";
+
     @NotNull
     @JsonProperty("attributeName")
     public String getAttributeName();

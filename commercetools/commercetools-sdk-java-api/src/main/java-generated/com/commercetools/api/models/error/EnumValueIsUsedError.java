@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = EnumValueIsUsedErrorImpl.class)
 public interface EnumValueIsUsedError extends ErrorObject {
 
+    String ENUM_VALUE_IS_USED = "EnumValueIsUsed";
+
     public static EnumValueIsUsedError of() {
         return new EnumValueIsUsedErrorImpl();
     }

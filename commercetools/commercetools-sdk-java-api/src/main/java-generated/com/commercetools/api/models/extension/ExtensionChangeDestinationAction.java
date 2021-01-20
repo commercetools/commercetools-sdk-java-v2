@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExtensionChangeDestinationActionImpl.class)
 public interface ExtensionChangeDestinationAction extends ExtensionUpdateAction {
 
+    String CHANGE_DESTINATION = "changeDestination";
+
     @NotNull
     @Valid
     @JsonProperty("destination")

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategorySetAssetSourcesActionImpl.class)
 public interface CategorySetAssetSourcesAction extends CategoryUpdateAction {
 
+    String SET_ASSET_SOURCES = "setAssetSources";
+
     @JsonProperty("assetId")
     public String getAssetId();
 

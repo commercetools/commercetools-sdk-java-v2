@@ -33,11 +33,11 @@ public final class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumV
             @JsonProperty("keys") final java.util.List<String> keys) {
         this.fieldName = fieldName;
         this.keys = keys;
-        this.action = "changeEnumValueOrder";
+        this.action = TypeChangeEnumValueOrderAction.CHANGE_ENUM_VALUE_ORDER;
     }
 
     public TypeChangeEnumValueOrderActionImpl() {
-        this.action = "changeEnumValueOrder";
+        this.action = TypeChangeEnumValueOrderAction.CHANGE_ENUM_VALUE_ORDER;
     }
 
     public String getAction() {

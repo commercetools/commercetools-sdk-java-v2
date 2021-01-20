@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DateFieldImpl.class)
 public interface DateField extends CustomField {
 
+    String DATE = "Date";
+
     @NotNull
     @JsonProperty("value")
     public LocalDate getValue();

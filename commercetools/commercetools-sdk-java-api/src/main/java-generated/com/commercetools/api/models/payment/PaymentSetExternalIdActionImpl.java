@@ -29,11 +29,11 @@ public final class PaymentSetExternalIdActionImpl implements PaymentSetExternalI
     @JsonCreator
     PaymentSetExternalIdActionImpl(@JsonProperty("externalId") final String externalId) {
         this.externalId = externalId;
-        this.action = "setExternalId";
+        this.action = PaymentSetExternalIdAction.SET_EXTERNAL_ID;
     }
 
     public PaymentSetExternalIdActionImpl() {
-        this.action = "setExternalId";
+        this.action = PaymentSetExternalIdAction.SET_EXTERNAL_ID;
     }
 
     public String getAction() {

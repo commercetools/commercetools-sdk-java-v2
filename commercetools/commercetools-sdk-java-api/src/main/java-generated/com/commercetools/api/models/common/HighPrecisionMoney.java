@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = HighPrecisionMoneyImpl.class)
 public interface HighPrecisionMoney extends TypedMoney {
 
+    String HIGH_PRECISION = "highPrecision";
+
     @NotNull
     @JsonProperty("preciseAmount")
     public Long getPreciseAmount();

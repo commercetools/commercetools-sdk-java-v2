@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderDeletedMessageImpl.class)
 public interface OrderDeletedMessage extends Message {
 
+    String ORDER_DELETED = "OrderDeleted";
+
     @NotNull
     @Valid
     @JsonProperty("order")

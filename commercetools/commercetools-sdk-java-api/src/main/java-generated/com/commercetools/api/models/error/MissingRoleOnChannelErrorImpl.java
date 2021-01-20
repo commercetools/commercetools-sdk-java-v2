@@ -39,11 +39,11 @@ public final class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannel
         this.message = message;
         this.channel = channel;
         this.missingRole = missingRole;
-        this.code = "MissingRoleOnChannel";
+        this.code = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL;
     }
 
     public MissingRoleOnChannelErrorImpl() {
-        this.code = "MissingRoleOnChannel";
+        this.code = MissingRoleOnChannelError.MISSING_ROLE_ON_CHANNEL;
     }
 
     public String getCode() {

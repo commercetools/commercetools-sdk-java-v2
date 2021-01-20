@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductUnpublishActionImpl.class)
 public interface ProductUnpublishAction extends ProductUpdateAction {
 
+    String UNPUBLISH = "unpublish";
+
     public static ProductUnpublishAction of() {
         return new ProductUnpublishActionImpl();
     }

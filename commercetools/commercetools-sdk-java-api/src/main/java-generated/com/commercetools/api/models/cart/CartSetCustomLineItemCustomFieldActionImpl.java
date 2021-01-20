@@ -38,11 +38,11 @@ public final class CartSetCustomLineItemCustomFieldActionImpl implements CartSet
         this.customLineItemId = customLineItemId;
         this.name = name;
         this.value = value;
-        this.action = "setCustomLineItemCustomField";
+        this.action = CartSetCustomLineItemCustomFieldAction.SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public CartSetCustomLineItemCustomFieldActionImpl() {
-        this.action = "setCustomLineItemCustomField";
+        this.action = CartSetCustomLineItemCustomFieldAction.SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public String getAction() {

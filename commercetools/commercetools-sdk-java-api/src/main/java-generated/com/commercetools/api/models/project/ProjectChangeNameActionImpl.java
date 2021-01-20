@@ -29,11 +29,11 @@ public final class ProjectChangeNameActionImpl implements ProjectChangeNameActio
     @JsonCreator
     ProjectChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
-        this.action = "changeName";
+        this.action = ProjectChangeNameAction.CHANGE_NAME;
     }
 
     public ProjectChangeNameActionImpl() {
-        this.action = "changeName";
+        this.action = ProjectChangeNameAction.CHANGE_NAME;
     }
 
     public String getAction() {

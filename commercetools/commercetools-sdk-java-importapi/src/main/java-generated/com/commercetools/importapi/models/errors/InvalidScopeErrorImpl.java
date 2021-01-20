@@ -32,11 +32,11 @@ public final class InvalidScopeErrorImpl implements InvalidScopeError {
     @JsonCreator
     InvalidScopeErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "invalid_scope";
+        this.code = InvalidScopeError.INVALID_SCOPE;
     }
 
     public InvalidScopeErrorImpl() {
-        this.code = "invalid_scope";
+        this.code = InvalidScopeError.INVALID_SCOPE;
     }
 
     public String getCode() {

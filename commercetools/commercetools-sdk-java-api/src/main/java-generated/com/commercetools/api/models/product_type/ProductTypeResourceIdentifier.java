@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTypeResourceIdentifierImpl.class)
 public interface ProductTypeResourceIdentifier extends ResourceIdentifier {
 
+    String PRODUCT_TYPE = "product-type";
+
     public static ProductTypeResourceIdentifier of() {
         return new ProductTypeResourceIdentifierImpl();
     }

@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartValueTierImpl.class)
 public interface CartValueTier extends ShippingRatePriceTier {
 
+    String CART_VALUE = "CartValue";
+
     @NotNull
     @JsonProperty("minimumCentAmount")
     public Long getMinimumCentAmount();

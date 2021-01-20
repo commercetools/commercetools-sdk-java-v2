@@ -31,11 +31,11 @@ public final class ShippingMethodRemoveZoneActionImpl implements ShippingMethodR
     ShippingMethodRemoveZoneActionImpl(
             @JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
-        this.action = "removeZone";
+        this.action = ShippingMethodRemoveZoneAction.REMOVE_ZONE;
     }
 
     public ShippingMethodRemoveZoneActionImpl() {
-        this.action = "removeZone";
+        this.action = ShippingMethodRemoveZoneAction.REMOVE_ZONE;
     }
 
     public String getAction() {

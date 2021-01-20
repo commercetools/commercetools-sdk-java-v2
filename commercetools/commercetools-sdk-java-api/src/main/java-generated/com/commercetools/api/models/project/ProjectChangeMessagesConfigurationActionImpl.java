@@ -31,11 +31,11 @@ public final class ProjectChangeMessagesConfigurationActionImpl implements Proje
     ProjectChangeMessagesConfigurationActionImpl(
             @JsonProperty("messagesConfiguration") final com.commercetools.api.models.message.MessageConfigurationDraft messagesConfiguration) {
         this.messagesConfiguration = messagesConfiguration;
-        this.action = "changeMessagesConfiguration";
+        this.action = ProjectChangeMessagesConfigurationAction.CHANGE_MESSAGES_CONFIGURATION;
     }
 
     public ProjectChangeMessagesConfigurationActionImpl() {
-        this.action = "changeMessagesConfiguration";
+        this.action = ProjectChangeMessagesConfigurationAction.CHANGE_MESSAGES_CONFIGURATION;
     }
 
     public String getAction() {

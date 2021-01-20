@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryReferenceImpl.class)
 public interface TaxCategoryReference extends Reference {
 
+    String TAX_CATEGORY = "tax-category";
+
     @Valid
     @JsonProperty("obj")
     public TaxCategory getObj();

@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCartSetLineItemShippingDetailsActionImpl.class)
 public interface MyCartSetLineItemShippingDetailsAction extends MyCartUpdateAction {
 
+    String SET_LINE_ITEM_SHIPPING_DETAILS = "setLineItemShippingDetails";
+
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();

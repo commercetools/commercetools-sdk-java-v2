@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerGroupResourceIdentifierImpl.class)
 public interface CustomerGroupResourceIdentifier extends ResourceIdentifier {
 
+    String CUSTOMER_GROUP = "customer-group";
+
     public static CustomerGroupResourceIdentifier of() {
         return new CustomerGroupResourceIdentifierImpl();
     }

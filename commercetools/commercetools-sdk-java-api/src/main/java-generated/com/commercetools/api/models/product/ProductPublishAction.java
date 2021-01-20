@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductPublishActionImpl.class)
 public interface ProductPublishAction extends ProductUpdateAction {
 
+    String PUBLISH = "publish";
+
     @JsonProperty("scope")
     public ProductPublishScope getScope();
 

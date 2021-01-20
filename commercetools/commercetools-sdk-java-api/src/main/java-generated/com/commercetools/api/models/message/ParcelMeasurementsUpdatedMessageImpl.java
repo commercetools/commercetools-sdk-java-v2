@@ -77,11 +77,11 @@ public final class ParcelMeasurementsUpdatedMessageImpl implements ParcelMeasure
         this.deliveryId = deliveryId;
         this.parcelId = parcelId;
         this.measurements = measurements;
-        this.type = "ParcelMeasurementsUpdated";
+        this.type = ParcelMeasurementsUpdatedMessage.PARCEL_MEASUREMENTS_UPDATED;
     }
 
     public ParcelMeasurementsUpdatedMessageImpl() {
-        this.type = "ParcelMeasurementsUpdated";
+        this.type = ParcelMeasurementsUpdatedMessage.PARCEL_MEASUREMENTS_UPDATED;
     }
 
     public String getId() {

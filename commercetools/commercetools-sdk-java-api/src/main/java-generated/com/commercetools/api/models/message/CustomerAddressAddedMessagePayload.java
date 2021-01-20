@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerAddressAddedMessagePayloadImpl.class)
 public interface CustomerAddressAddedMessagePayload extends MessagePayload {
 
+    String CUSTOMER_ADDRESS_ADDED = "CustomerAddressAdded";
+
     @NotNull
     @Valid
     @JsonProperty("address")

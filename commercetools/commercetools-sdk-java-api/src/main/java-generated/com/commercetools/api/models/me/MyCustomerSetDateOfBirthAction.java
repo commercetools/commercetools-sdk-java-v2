@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCustomerSetDateOfBirthActionImpl.class)
 public interface MyCustomerSetDateOfBirthAction extends MyCustomerUpdateAction {
 
+    String SET_DATE_OF_BIRTH = "setDateOfBirth";
+
     @JsonProperty("dateOfBirth")
     public LocalDate getDateOfBirth();
 

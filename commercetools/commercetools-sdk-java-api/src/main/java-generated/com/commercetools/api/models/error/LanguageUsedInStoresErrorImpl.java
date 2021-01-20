@@ -29,11 +29,11 @@ public final class LanguageUsedInStoresErrorImpl implements LanguageUsedInStores
     @JsonCreator
     LanguageUsedInStoresErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "LanguageUsedInStores";
+        this.code = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES;
     }
 
     public LanguageUsedInStoresErrorImpl() {
-        this.code = "LanguageUsedInStores";
+        this.code = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES;
     }
 
     public String getCode() {

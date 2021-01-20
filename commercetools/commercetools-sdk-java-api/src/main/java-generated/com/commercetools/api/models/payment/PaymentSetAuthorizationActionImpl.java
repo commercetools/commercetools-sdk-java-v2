@@ -35,11 +35,11 @@ public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthor
             @JsonProperty("until") final java.time.ZonedDateTime until) {
         this.amount = amount;
         this.until = until;
-        this.action = "setAuthorization";
+        this.action = PaymentSetAuthorizationAction.SET_AUTHORIZATION;
     }
 
     public PaymentSetAuthorizationActionImpl() {
-        this.action = "setAuthorization";
+        this.action = PaymentSetAuthorizationAction.SET_AUTHORIZATION;
     }
 
     public String getAction() {

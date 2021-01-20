@@ -48,11 +48,11 @@ public final class ProductSetAssetSourcesActionImpl implements ProductSetAssetSo
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.sources = sources;
-        this.action = "setAssetSources";
+        this.action = ProductSetAssetSourcesAction.SET_ASSET_SOURCES;
     }
 
     public ProductSetAssetSourcesActionImpl() {
-        this.action = "setAssetSources";
+        this.action = ProductSetAssetSourcesAction.SET_ASSET_SOURCES;
     }
 
     public String getAction() {

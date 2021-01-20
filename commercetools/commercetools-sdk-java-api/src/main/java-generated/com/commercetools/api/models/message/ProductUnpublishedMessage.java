@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductUnpublishedMessageImpl.class)
 public interface ProductUnpublishedMessage extends Message {
 
+    String PRODUCT_UNPUBLISHED = "ProductUnpublished";
+
     public static ProductUnpublishedMessage of() {
         return new ProductUnpublishedMessageImpl();
     }

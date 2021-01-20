@@ -34,11 +34,11 @@ public final class OrderImportLineItemStateActionImpl implements OrderImportLine
             @JsonProperty("state") final java.util.List<com.commercetools.api.models.order.ItemState> state) {
         this.lineItemId = lineItemId;
         this.state = state;
-        this.action = "importLineItemState";
+        this.action = OrderImportLineItemStateAction.IMPORT_LINE_ITEM_STATE;
     }
 
     public OrderImportLineItemStateActionImpl() {
-        this.action = "importLineItemState";
+        this.action = OrderImportLineItemStateAction.IMPORT_LINE_ITEM_STATE;
     }
 
     public String getAction() {

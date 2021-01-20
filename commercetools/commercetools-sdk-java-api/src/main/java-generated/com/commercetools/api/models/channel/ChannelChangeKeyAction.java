@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ChannelChangeKeyActionImpl.class)
 public interface ChannelChangeKeyAction extends ChannelUpdateAction {
 
+    String CHANGE_KEY = "changeKey";
+
     @NotNull
     @JsonProperty("key")
     public String getKey();

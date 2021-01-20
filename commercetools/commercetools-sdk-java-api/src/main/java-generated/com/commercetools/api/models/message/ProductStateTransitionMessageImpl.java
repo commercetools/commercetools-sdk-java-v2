@@ -73,11 +73,11 @@ public final class ProductStateTransitionMessageImpl implements ProductStateTran
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.state = state;
         this.force = force;
-        this.type = "ProductStateTransition";
+        this.type = ProductStateTransitionMessage.PRODUCT_STATE_TRANSITION;
     }
 
     public ProductStateTransitionMessageImpl() {
-        this.type = "ProductStateTransition";
+        this.type = ProductStateTransitionMessage.PRODUCT_STATE_TRANSITION;
     }
 
     public String getId() {

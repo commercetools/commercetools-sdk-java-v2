@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditResourceIdentifierImpl.class)
 public interface OrderEditResourceIdentifier extends ResourceIdentifier {
 
+    String ORDER_EDIT = "order-edit";
+
     public static OrderEditResourceIdentifier of() {
         return new OrderEditResourceIdentifierImpl();
     }

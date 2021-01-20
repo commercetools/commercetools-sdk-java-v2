@@ -41,11 +41,11 @@ public final class ProductSetProductPriceCustomFieldActionImpl implements Produc
         this.staged = staged;
         this.name = name;
         this.value = value;
-        this.action = "setProductPriceCustomField";
+        this.action = ProductSetProductPriceCustomFieldAction.SET_PRODUCT_PRICE_CUSTOM_FIELD;
     }
 
     public ProductSetProductPriceCustomFieldActionImpl() {
-        this.action = "setProductPriceCustomField";
+        this.action = ProductSetProductPriceCustomFieldAction.SET_PRODUCT_PRICE_CUSTOM_FIELD;
     }
 
     public String getAction() {

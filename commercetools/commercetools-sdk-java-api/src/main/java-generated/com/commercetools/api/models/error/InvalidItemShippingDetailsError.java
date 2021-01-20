@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidItemShippingDetailsErrorImpl.class)
 public interface InvalidItemShippingDetailsError extends ErrorObject {
 
+    String INVALID_ITEM_SHIPPING_DETAILS = "InvalidItemShippingDetails";
+
     @NotNull
     @JsonProperty("subject")
     public String getSubject();

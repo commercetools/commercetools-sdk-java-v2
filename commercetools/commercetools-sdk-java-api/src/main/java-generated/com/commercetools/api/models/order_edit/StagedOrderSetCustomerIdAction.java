@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetCustomerIdActionImpl.class)
 public interface StagedOrderSetCustomerIdAction extends StagedOrderUpdateAction {
 
+    String SET_CUSTOMER_ID = "setCustomerId";
+
     @JsonProperty("customerId")
     public String getCustomerId();
 

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductChangeMasterVariantActionImpl.class)
 public interface ProductChangeMasterVariantAction extends ProductUpdateAction {
 
+    String CHANGE_MASTER_VARIANT = "changeMasterVariant";
+
     @JsonProperty("variantId")
     public Long getVariantId();
 

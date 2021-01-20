@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PriceKeyReferenceImpl.class)
 public interface PriceKeyReference extends KeyReference {
 
+    String PRICE = "price";
+
     public static PriceKeyReference of() {
         return new PriceKeyReferenceImpl();
     }

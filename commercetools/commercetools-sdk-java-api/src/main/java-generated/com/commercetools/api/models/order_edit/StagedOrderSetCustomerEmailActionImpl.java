@@ -29,11 +29,11 @@ public final class StagedOrderSetCustomerEmailActionImpl implements StagedOrderS
     @JsonCreator
     StagedOrderSetCustomerEmailActionImpl(@JsonProperty("email") final String email) {
         this.email = email;
-        this.action = "setCustomerEmail";
+        this.action = StagedOrderSetCustomerEmailAction.SET_CUSTOMER_EMAIL;
     }
 
     public StagedOrderSetCustomerEmailActionImpl() {
-        this.action = "setCustomerEmail";
+        this.action = StagedOrderSetCustomerEmailAction.SET_CUSTOMER_EMAIL;
     }
 
     public String getAction() {

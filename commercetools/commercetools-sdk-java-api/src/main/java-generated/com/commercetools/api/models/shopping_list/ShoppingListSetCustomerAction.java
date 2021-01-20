@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShoppingListSetCustomerActionImpl.class)
 public interface ShoppingListSetCustomerAction extends ShoppingListUpdateAction {
 
+    String SET_CUSTOMER = "setCustomer";
+
     @Valid
     @JsonProperty("customer")
     public CustomerResourceIdentifier getCustomer();

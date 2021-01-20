@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryChangeParentActionImpl.class)
 public interface CategoryChangeParentAction extends CategoryUpdateAction {
 
+    String CHANGE_PARENT = "changeParent";
+
     @NotNull
     @Valid
     @JsonProperty("parent")

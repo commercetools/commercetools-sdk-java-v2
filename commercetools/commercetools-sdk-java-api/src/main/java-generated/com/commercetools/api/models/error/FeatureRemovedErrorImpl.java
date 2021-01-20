@@ -29,11 +29,11 @@ public final class FeatureRemovedErrorImpl implements FeatureRemovedError {
     @JsonCreator
     FeatureRemovedErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = "FeatureRemoved";
+        this.code = FeatureRemovedError.FEATURE_REMOVED;
     }
 
     public FeatureRemovedErrorImpl() {
-        this.code = "FeatureRemoved";
+        this.code = FeatureRemovedError.FEATURE_REMOVED;
     }
 
     public String getCode() {

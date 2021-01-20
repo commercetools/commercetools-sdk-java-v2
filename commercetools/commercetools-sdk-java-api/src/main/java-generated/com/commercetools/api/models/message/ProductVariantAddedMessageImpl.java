@@ -73,11 +73,11 @@ public final class ProductVariantAddedMessageImpl implements ProductVariantAdded
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.variant = variant;
         this.staged = staged;
-        this.type = "ProductVariantAdded";
+        this.type = ProductVariantAddedMessage.PRODUCT_VARIANT_ADDED;
     }
 
     public ProductVariantAddedMessageImpl() {
-        this.type = "ProductVariantAdded";
+        this.type = ProductVariantAddedMessage.PRODUCT_VARIANT_ADDED;
     }
 
     public String getId() {

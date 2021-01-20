@@ -37,11 +37,11 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
         this.message = message;
         this.extensionId = extensionId;
         this.extensionKey = extensionKey;
-        this.code = "ExtensionNoResponse";
+        this.code = ExtensionNoResponseError.EXTENSION_NO_RESPONSE;
     }
 
     public ExtensionNoResponseErrorImpl() {
-        this.code = "ExtensionNoResponse";
+        this.code = ExtensionNoResponseError.EXTENSION_NO_RESPONSE;
     }
 
     public String getCode() {

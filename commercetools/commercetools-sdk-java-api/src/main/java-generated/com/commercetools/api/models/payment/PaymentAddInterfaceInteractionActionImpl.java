@@ -36,11 +36,11 @@ public final class PaymentAddInterfaceInteractionActionImpl implements PaymentAd
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "addInterfaceInteraction";
+        this.action = PaymentAddInterfaceInteractionAction.ADD_INTERFACE_INTERACTION;
     }
 
     public PaymentAddInterfaceInteractionActionImpl() {
-        this.action = "addInterfaceInteraction";
+        this.action = PaymentAddInterfaceInteractionAction.ADD_INTERFACE_INTERACTION;
     }
 
     public String getAction() {

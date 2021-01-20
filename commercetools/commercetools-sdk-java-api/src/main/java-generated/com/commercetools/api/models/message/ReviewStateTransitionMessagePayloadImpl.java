@@ -52,11 +52,11 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
         this.newIncludedInStatistics = newIncludedInStatistics;
         this.target = target;
         this.force = force;
-        this.type = "ReviewStateTransition";
+        this.type = ReviewStateTransitionMessagePayload.REVIEW_STATE_TRANSITION;
     }
 
     public ReviewStateTransitionMessagePayloadImpl() {
-        this.type = "ReviewStateTransition";
+        this.type = ReviewStateTransitionMessagePayload.REVIEW_STATE_TRANSITION;
     }
 
     public String getType() {

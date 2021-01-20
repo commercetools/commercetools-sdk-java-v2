@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetParcelItemsActionImpl.class)
 public interface StagedOrderSetParcelItemsAction extends StagedOrderUpdateAction {
 
+    String SET_PARCEL_ITEMS = "setParcelItems";
+
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();

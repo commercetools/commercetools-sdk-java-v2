@@ -44,11 +44,11 @@ public final class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSe
         this.customerGroup = customerGroup;
         this.oldCustomer = oldCustomer;
         this.oldCustomerGroup = oldCustomerGroup;
-        this.type = "OrderCustomerSet";
+        this.type = OrderCustomerSetMessagePayload.ORDER_CUSTOMER_SET;
     }
 
     public OrderCustomerSetMessagePayloadImpl() {
-        this.type = "OrderCustomerSet";
+        this.type = OrderCustomerSetMessagePayload.ORDER_CUSTOMER_SET;
     }
 
     public String getType() {

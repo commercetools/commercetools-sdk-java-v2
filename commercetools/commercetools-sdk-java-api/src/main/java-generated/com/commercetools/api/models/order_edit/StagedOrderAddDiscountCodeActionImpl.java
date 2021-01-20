@@ -29,11 +29,11 @@ public final class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAd
     @JsonCreator
     StagedOrderAddDiscountCodeActionImpl(@JsonProperty("code") final String code) {
         this.code = code;
-        this.action = "addDiscountCode";
+        this.action = StagedOrderAddDiscountCodeAction.ADD_DISCOUNT_CODE;
     }
 
     public StagedOrderAddDiscountCodeActionImpl() {
-        this.action = "addDiscountCode";
+        this.action = StagedOrderAddDiscountCodeAction.ADD_DISCOUNT_CODE;
     }
 
     public String getAction() {

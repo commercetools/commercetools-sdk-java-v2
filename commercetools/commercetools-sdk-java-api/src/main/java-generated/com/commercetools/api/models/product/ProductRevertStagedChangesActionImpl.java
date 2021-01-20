@@ -26,7 +26,7 @@ public final class ProductRevertStagedChangesActionImpl implements ProductRevert
 
     @JsonCreator
     ProductRevertStagedChangesActionImpl() {
-        this.action = "revertStagedChanges";
+        this.action = ProductRevertStagedChangesAction.REVERT_STAGED_CHANGES;
     }
 
     public String getAction() {

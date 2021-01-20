@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AzureEventGridDestinationImpl.class)
 public interface AzureEventGridDestination extends Destination {
 
+    String EVENT_GRID = "EventGrid";
+
     @NotNull
     @JsonProperty("uri")
     public String getUri();

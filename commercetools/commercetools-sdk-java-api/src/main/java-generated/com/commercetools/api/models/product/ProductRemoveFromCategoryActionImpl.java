@@ -35,11 +35,11 @@ public final class ProductRemoveFromCategoryActionImpl implements ProductRemoveF
             @JsonProperty("staged") final Boolean staged) {
         this.category = category;
         this.staged = staged;
-        this.action = "removeFromCategory";
+        this.action = ProductRemoveFromCategoryAction.REMOVE_FROM_CATEGORY;
     }
 
     public ProductRemoveFromCategoryActionImpl() {
-        this.action = "removeFromCategory";
+        this.action = ProductRemoveFromCategoryAction.REMOVE_FROM_CATEGORY;
     }
 
     public String getAction() {

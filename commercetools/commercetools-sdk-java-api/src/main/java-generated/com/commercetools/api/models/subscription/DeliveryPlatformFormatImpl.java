@@ -26,7 +26,7 @@ public final class DeliveryPlatformFormatImpl implements DeliveryPlatformFormat 
 
     @JsonCreator
     DeliveryPlatformFormatImpl() {
-        this.type = "Platform";
+        this.type = DeliveryPlatformFormat.PLATFORM;
     }
 
     public String getType() {

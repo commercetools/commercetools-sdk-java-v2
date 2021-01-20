@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductTransitionStateActionImpl.class)
 public interface ProductTransitionStateAction extends ProductUpdateAction {
 
+    String TRANSITION_STATE = "transitionState";
+
     @Valid
     @JsonProperty("state")
     public StateResourceIdentifier getState();

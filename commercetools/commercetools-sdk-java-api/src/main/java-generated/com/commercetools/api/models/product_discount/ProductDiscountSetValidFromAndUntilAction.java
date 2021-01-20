@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountSetValidFromAndUntilActionImpl.class)
 public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscountUpdateAction {
 
+    String SET_VALID_FROM_AND_UNTIL = "setValidFromAndUntil";
+
     @JsonProperty("validFrom")
     public ZonedDateTime getValidFrom();
 

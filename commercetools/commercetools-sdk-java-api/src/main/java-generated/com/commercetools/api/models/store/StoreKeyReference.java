@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreKeyReferenceImpl.class)
 public interface StoreKeyReference extends KeyReference {
 
+    String STORE = "store";
+
     public static StoreKeyReference of() {
         return new StoreKeyReferenceImpl();
     }

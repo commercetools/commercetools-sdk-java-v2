@@ -66,11 +66,11 @@ public final class MessageDeliveryImpl implements MessageDelivery {
         this.sequenceNumber = sequenceNumber;
         this.resourceVersion = resourceVersion;
         this.payloadNotIncluded = payloadNotIncluded;
-        this.notificationType = "Message";
+        this.notificationType = MessageDelivery.MESSAGE;
     }
 
     public MessageDeliveryImpl() {
-        this.notificationType = "Message";
+        this.notificationType = MessageDelivery.MESSAGE;
     }
 
     public String getProjectKey() {

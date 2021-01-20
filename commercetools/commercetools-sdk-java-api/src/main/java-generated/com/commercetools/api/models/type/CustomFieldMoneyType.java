@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldMoneyTypeImpl.class)
 public interface CustomFieldMoneyType extends FieldType {
 
+    String MONEY = "Money";
+
     public static CustomFieldMoneyType of() {
         return new CustomFieldMoneyTypeImpl();
     }

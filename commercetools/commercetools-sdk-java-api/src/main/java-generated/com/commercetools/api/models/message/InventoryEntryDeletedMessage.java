@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryDeletedMessageImpl.class)
 public interface InventoryEntryDeletedMessage extends Message {
 
+    String INVENTORY_ENTRY_DELETED = "InventoryEntryDeleted";
+
     @NotNull
     @JsonProperty("sku")
     public String getSku();

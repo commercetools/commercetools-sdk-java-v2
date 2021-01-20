@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductSetImageLabelActionImpl.class)
 public interface ProductSetImageLabelAction extends ProductUpdateAction {
 
+    String SET_IMAGE_LABEL = "setImageLabel";
+
     @JsonProperty("sku")
     public String getSku();
 

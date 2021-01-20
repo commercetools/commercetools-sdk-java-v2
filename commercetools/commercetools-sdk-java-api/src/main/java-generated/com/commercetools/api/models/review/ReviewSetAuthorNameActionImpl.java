@@ -29,11 +29,11 @@ public final class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameA
     @JsonCreator
     ReviewSetAuthorNameActionImpl(@JsonProperty("authorName") final String authorName) {
         this.authorName = authorName;
-        this.action = "setAuthorName";
+        this.action = ReviewSetAuthorNameAction.SET_AUTHOR_NAME;
     }
 
     public ReviewSetAuthorNameActionImpl() {
-        this.action = "setAuthorName";
+        this.action = ReviewSetAuthorNameAction.SET_AUTHOR_NAME;
     }
 
     public String getAction() {

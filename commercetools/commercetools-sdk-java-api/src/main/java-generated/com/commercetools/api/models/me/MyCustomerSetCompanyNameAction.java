@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCustomerSetCompanyNameActionImpl.class)
 public interface MyCustomerSetCompanyNameAction extends MyCustomerUpdateAction {
 
+    String SET_COMPANY_NAME = "setCompanyName";
+
     @JsonProperty("companyName")
     public String getCompanyName();
 

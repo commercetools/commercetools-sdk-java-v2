@@ -30,11 +30,11 @@ public final class OrderCreatedMessagePayloadImpl implements OrderCreatedMessage
     @JsonCreator
     OrderCreatedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.api.models.order.Order order) {
         this.order = order;
-        this.type = "OrderCreated";
+        this.type = OrderCreatedMessagePayload.ORDER_CREATED;
     }
 
     public OrderCreatedMessagePayloadImpl() {
-        this.type = "OrderCreated";
+        this.type = OrderCreatedMessagePayload.ORDER_CREATED;
     }
 
     public String getType() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductDiscountChangeIsActiveActionImpl.class)
 public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpdateAction {
 
+    String CHANGE_IS_ACTIVE = "changeIsActive";
+
     @NotNull
     @JsonProperty("isActive")
     public Boolean getIsActive();

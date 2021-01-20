@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomFieldDateTypeImpl.class)
 public interface CustomFieldDateType extends FieldType {
 
+    String DATE = "Date";
+
     public static CustomFieldDateType of() {
         return new CustomFieldDateTypeImpl();
     }

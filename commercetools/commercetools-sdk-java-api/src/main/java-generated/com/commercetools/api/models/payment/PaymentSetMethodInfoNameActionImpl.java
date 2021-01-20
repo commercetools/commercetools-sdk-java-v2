@@ -31,11 +31,11 @@ public final class PaymentSetMethodInfoNameActionImpl implements PaymentSetMetho
     PaymentSetMethodInfoNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
-        this.action = "setMethodInfoName";
+        this.action = PaymentSetMethodInfoNameAction.SET_METHOD_INFO_NAME;
     }
 
     public PaymentSetMethodInfoNameActionImpl() {
-        this.action = "setMethodInfoName";
+        this.action = PaymentSetMethodInfoNameAction.SET_METHOD_INFO_NAME;
     }
 
     public String getAction() {

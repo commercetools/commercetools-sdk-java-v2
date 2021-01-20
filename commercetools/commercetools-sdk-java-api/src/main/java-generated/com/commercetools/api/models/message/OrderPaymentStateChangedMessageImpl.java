@@ -74,11 +74,11 @@ public final class OrderPaymentStateChangedMessageImpl implements OrderPaymentSt
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.paymentState = paymentState;
         this.oldPaymentState = oldPaymentState;
-        this.type = "OrderPaymentStateChanged";
+        this.type = OrderPaymentStateChangedMessage.ORDER_PAYMENT_STATE_CHANGED;
     }
 
     public OrderPaymentStateChangedMessageImpl() {
-        this.type = "OrderPaymentStateChanged";
+        this.type = OrderPaymentStateChangedMessage.ORDER_PAYMENT_STATE_CHANGED;
     }
 
     public String getId() {

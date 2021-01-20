@@ -36,11 +36,11 @@ public final class OrderEditSetCustomTypeActionImpl implements OrderEditSetCusto
             @JsonProperty("fields") final com.fasterxml.jackson.databind.JsonNode fields) {
         this.type = type;
         this.fields = fields;
-        this.action = "setCustomType";
+        this.action = OrderEditSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public OrderEditSetCustomTypeActionImpl() {
-        this.action = "setCustomType";
+        this.action = OrderEditSetCustomTypeAction.SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

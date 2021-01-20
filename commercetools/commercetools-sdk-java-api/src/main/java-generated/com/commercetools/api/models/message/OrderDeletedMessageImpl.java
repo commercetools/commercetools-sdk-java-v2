@@ -69,11 +69,11 @@ public final class OrderDeletedMessageImpl implements OrderDeletedMessage {
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.order = order;
-        this.type = "OrderDeleted";
+        this.type = OrderDeletedMessage.ORDER_DELETED;
     }
 
     public OrderDeletedMessageImpl() {
-        this.type = "OrderDeleted";
+        this.type = OrderDeletedMessage.ORDER_DELETED;
     }
 
     public String getId() {

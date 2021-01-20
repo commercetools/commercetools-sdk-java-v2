@@ -29,11 +29,11 @@ public final class StagedOrderRemoveCustomLineItemActionImpl implements StagedOr
     @JsonCreator
     StagedOrderRemoveCustomLineItemActionImpl(@JsonProperty("customLineItemId") final String customLineItemId) {
         this.customLineItemId = customLineItemId;
-        this.action = "removeCustomLineItem";
+        this.action = StagedOrderRemoveCustomLineItemAction.REMOVE_CUSTOM_LINE_ITEM;
     }
 
     public StagedOrderRemoveCustomLineItemActionImpl() {
-        this.action = "removeCustomLineItem";
+        this.action = StagedOrderRemoveCustomLineItemAction.REMOVE_CUSTOM_LINE_ITEM;
     }
 
     public String getAction() {

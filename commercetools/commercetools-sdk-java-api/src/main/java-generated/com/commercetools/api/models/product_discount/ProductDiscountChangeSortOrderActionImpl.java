@@ -29,11 +29,11 @@ public final class ProductDiscountChangeSortOrderActionImpl implements ProductDi
     @JsonCreator
     ProductDiscountChangeSortOrderActionImpl(@JsonProperty("sortOrder") final String sortOrder) {
         this.sortOrder = sortOrder;
-        this.action = "changeSortOrder";
+        this.action = ProductDiscountChangeSortOrderAction.CHANGE_SORT_ORDER;
     }
 
     public ProductDiscountChangeSortOrderActionImpl() {
-        this.action = "changeSortOrder";
+        this.action = ProductDiscountChangeSortOrderAction.CHANGE_SORT_ORDER;
     }
 
     public String getAction() {

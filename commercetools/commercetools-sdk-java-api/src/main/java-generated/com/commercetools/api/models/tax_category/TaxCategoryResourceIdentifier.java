@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryResourceIdentifierImpl.class)
 public interface TaxCategoryResourceIdentifier extends ResourceIdentifier {
 
+    String TAX_CATEGORY = "tax-category";
+
     public static TaxCategoryResourceIdentifier of() {
         return new TaxCategoryResourceIdentifierImpl();
     }

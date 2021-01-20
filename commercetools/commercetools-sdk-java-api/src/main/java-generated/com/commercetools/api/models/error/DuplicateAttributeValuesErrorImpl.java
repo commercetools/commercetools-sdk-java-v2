@@ -34,11 +34,11 @@ public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttribu
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.message = message;
         this.attributes = attributes;
-        this.code = "DuplicateAttributeValues";
+        this.code = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES;
     }
 
     public DuplicateAttributeValuesErrorImpl() {
-        this.code = "DuplicateAttributeValues";
+        this.code = DuplicateAttributeValuesError.DUPLICATE_ATTRIBUTE_VALUES;
     }
 
     public String getCode() {

@@ -73,11 +73,11 @@ public final class OrderStateTransitionMessageImpl implements OrderStateTransiti
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.state = state;
         this.force = force;
-        this.type = "OrderStateTransition";
+        this.type = OrderStateTransitionMessage.ORDER_STATE_TRANSITION;
     }
 
     public OrderStateTransitionMessageImpl() {
-        this.type = "OrderStateTransition";
+        this.type = OrderStateTransitionMessage.ORDER_STATE_TRANSITION;
     }
 
     public String getId() {

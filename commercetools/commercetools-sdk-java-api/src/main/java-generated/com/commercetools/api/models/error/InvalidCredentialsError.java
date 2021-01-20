@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InvalidCredentialsErrorImpl.class)
 public interface InvalidCredentialsError extends ErrorObject {
 
+    String INVALID_CREDENTIALS = "InvalidCredentials";
+
     public static InvalidCredentialsError of() {
         return new InvalidCredentialsErrorImpl();
     }

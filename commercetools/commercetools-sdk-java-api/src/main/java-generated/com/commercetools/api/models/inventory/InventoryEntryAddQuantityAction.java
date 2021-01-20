@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryEntryAddQuantityActionImpl.class)
 public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAction {
 
+    String ADD_QUANTITY = "addQuantity";
+
     @NotNull
     @JsonProperty("quantity")
     public Long getQuantity();

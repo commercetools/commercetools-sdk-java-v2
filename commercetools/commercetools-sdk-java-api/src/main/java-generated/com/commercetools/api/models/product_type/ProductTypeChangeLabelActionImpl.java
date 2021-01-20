@@ -34,11 +34,11 @@ public final class ProductTypeChangeLabelActionImpl implements ProductTypeChange
             @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label) {
         this.attributeName = attributeName;
         this.label = label;
-        this.action = "changeLabel";
+        this.action = ProductTypeChangeLabelAction.CHANGE_LABEL;
     }
 
     public ProductTypeChangeLabelActionImpl() {
-        this.action = "changeLabel";
+        this.action = ProductTypeChangeLabelAction.CHANGE_LABEL;
     }
 
     public String getAction() {

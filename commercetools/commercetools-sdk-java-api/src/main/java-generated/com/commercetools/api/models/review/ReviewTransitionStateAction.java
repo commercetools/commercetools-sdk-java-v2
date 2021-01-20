@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ReviewTransitionStateActionImpl.class)
 public interface ReviewTransitionStateAction extends ReviewUpdateAction {
 
+    String TRANSITION_STATE = "transitionState";
+
     @NotNull
     @Valid
     @JsonProperty("state")

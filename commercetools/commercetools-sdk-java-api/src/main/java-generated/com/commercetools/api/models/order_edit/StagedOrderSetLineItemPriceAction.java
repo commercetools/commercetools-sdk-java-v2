@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StagedOrderSetLineItemPriceActionImpl.class)
 public interface StagedOrderSetLineItemPriceAction extends StagedOrderUpdateAction {
 
+    String SET_LINE_ITEM_PRICE = "setLineItemPrice";
+
     @NotNull
     @JsonProperty("lineItemId")
     public String getLineItemId();

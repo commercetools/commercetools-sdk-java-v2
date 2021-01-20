@@ -31,11 +31,11 @@ public final class ShoppingListSetCustomerActionImpl implements ShoppingListSetC
     ShoppingListSetCustomerActionImpl(
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerResourceIdentifier customer) {
         this.customer = customer;
-        this.action = "setCustomer";
+        this.action = ShoppingListSetCustomerAction.SET_CUSTOMER;
     }
 
     public ShoppingListSetCustomerActionImpl() {
-        this.action = "setCustomer";
+        this.action = ShoppingListSetCustomerAction.SET_CUSTOMER;
     }
 
     public String getAction() {

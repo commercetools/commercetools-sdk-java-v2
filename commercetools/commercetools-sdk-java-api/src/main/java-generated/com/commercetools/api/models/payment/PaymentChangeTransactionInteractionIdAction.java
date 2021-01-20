@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentChangeTransactionInteractionIdActionImpl.class)
 public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpdateAction {
 
+    String CHANGE_TRANSACTION_INTERACTION_ID = "changeTransactionInteractionId";
+
     @NotNull
     @JsonProperty("transactionId")
     public String getTransactionId();

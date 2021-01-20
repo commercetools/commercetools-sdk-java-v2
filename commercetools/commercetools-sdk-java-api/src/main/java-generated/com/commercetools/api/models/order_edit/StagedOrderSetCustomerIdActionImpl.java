@@ -29,11 +29,11 @@ public final class StagedOrderSetCustomerIdActionImpl implements StagedOrderSetC
     @JsonCreator
     StagedOrderSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
         this.customerId = customerId;
-        this.action = "setCustomerId";
+        this.action = StagedOrderSetCustomerIdAction.SET_CUSTOMER_ID;
     }
 
     public StagedOrderSetCustomerIdActionImpl() {
-        this.action = "setCustomerId";
+        this.action = StagedOrderSetCustomerIdAction.SET_CUSTOMER_ID;
     }
 
     public String getAction() {

@@ -30,11 +30,11 @@ public final class PaymentSetAmountRefundedActionImpl implements PaymentSetAmoun
     @JsonCreator
     PaymentSetAmountRefundedActionImpl(@JsonProperty("amount") final com.commercetools.api.models.common.Money amount) {
         this.amount = amount;
-        this.action = "setAmountRefunded";
+        this.action = PaymentSetAmountRefundedAction.SET_AMOUNT_REFUNDED;
     }
 
     public PaymentSetAmountRefundedActionImpl() {
-        this.action = "setAmountRefunded";
+        this.action = PaymentSetAmountRefundedAction.SET_AMOUNT_REFUNDED;
     }
 
     public String getAction() {

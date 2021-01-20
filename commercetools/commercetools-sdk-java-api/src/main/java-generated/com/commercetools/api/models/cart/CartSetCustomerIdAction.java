@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartSetCustomerIdActionImpl.class)
 public interface CartSetCustomerIdAction extends CartUpdateAction {
 
+    String SET_CUSTOMER_ID = "setCustomerId";
+
     /**
     *  <p>If set, a customer with the given ID must exist in the project.</p>
     */

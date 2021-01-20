@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = LocalizableTextSetAttributeImpl.class)
 public interface LocalizableTextSetAttribute extends Attribute {
 
+    String LTEXT_SET = "ltext-set";
+
     @NotNull
     @Valid
     @JsonProperty("value")

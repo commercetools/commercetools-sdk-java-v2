@@ -26,7 +26,7 @@ public final class AttributeMoneyTypeImpl implements AttributeMoneyType {
 
     @JsonCreator
     AttributeMoneyTypeImpl() {
-        this.name = "money";
+        this.name = AttributeMoneyType.MONEY;
     }
 
     public String getName() {

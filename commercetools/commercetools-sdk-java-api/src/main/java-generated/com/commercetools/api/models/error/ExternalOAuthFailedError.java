@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ExternalOAuthFailedErrorImpl.class)
 public interface ExternalOAuthFailedError extends ErrorObject {
 
+    String EXTERNAL_O_AUTH_FAILED = "ExternalOAuthFailed";
+
     public static ExternalOAuthFailedError of() {
         return new ExternalOAuthFailedErrorImpl();
     }

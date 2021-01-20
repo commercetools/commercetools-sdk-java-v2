@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceCreationErrorImpl.class)
 public interface ResourceCreationError extends ErrorObject {
 
+    String RESOURCE_CREATION = "ResourceCreation";
+
     @JsonProperty("resource")
     public JsonNode getResource();
 

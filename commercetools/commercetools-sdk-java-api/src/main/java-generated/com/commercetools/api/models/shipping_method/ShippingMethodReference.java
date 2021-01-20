@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ShippingMethodReferenceImpl.class)
 public interface ShippingMethodReference extends Reference {
 
+    String SHIPPING_METHOD = "shipping-method";
+
     @Valid
     @JsonProperty("obj")
     public ShippingMethod getObj();

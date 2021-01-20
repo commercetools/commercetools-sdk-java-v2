@@ -46,11 +46,11 @@ public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarge
         this.discountedQuantity = discountedQuantity;
         this.maxOccurrence = maxOccurrence;
         this.selectionMode = selectionMode;
-        this.type = "multiBuyLineItems";
+        this.type = MultiBuyLineItemsTarget.MULTI_BUY_LINE_ITEMS;
     }
 
     public MultiBuyLineItemsTargetImpl() {
-        this.type = "multiBuyLineItems";
+        this.type = MultiBuyLineItemsTarget.MULTI_BUY_LINE_ITEMS;
     }
 
     public String getType() {

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryChangeNameActionImpl.class)
 public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
 
+    String CHANGE_NAME = "changeName";
+
     @NotNull
     @JsonProperty("name")
     public String getName();

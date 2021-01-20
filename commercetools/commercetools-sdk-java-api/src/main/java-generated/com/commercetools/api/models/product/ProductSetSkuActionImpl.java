@@ -36,11 +36,11 @@ public final class ProductSetSkuActionImpl implements ProductSetSkuAction {
         this.variantId = variantId;
         this.sku = sku;
         this.staged = staged;
-        this.action = "setSku";
+        this.action = ProductSetSkuAction.SET_SKU;
     }
 
     public ProductSetSkuActionImpl() {
-        this.action = "setSku";
+        this.action = ProductSetSkuAction.SET_SKU;
     }
 
     public String getAction() {

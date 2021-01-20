@@ -73,11 +73,11 @@ public final class ProductVariantDeletedMessageImpl implements ProductVariantDel
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.variant = variant;
         this.removedImageUrls = removedImageUrls;
-        this.type = "ProductVariantDeleted";
+        this.type = ProductVariantDeletedMessage.PRODUCT_VARIANT_DELETED;
     }
 
     public ProductVariantDeletedMessageImpl() {
-        this.type = "ProductVariantDeleted";
+        this.type = ProductVariantDeletedMessage.PRODUCT_VARIANT_DELETED;
     }
 
     public String getId() {

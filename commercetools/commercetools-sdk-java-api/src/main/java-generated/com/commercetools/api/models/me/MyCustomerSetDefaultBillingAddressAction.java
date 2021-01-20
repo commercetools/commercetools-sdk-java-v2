@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCustomerSetDefaultBillingAddressActionImpl.class)
 public interface MyCustomerSetDefaultBillingAddressAction extends MyCustomerUpdateAction {
 
+    String SET_DEFAULT_BILLING_ADDRESS = "setDefaultBillingAddress";
+
     @JsonProperty("addressId")
     public String getAddressId();
 

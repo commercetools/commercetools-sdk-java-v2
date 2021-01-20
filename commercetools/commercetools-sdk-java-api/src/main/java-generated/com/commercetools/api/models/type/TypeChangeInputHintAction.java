@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TypeChangeInputHintActionImpl.class)
 public interface TypeChangeInputHintAction extends TypeUpdateAction {
 
+    String CHANGE_INPUT_HINT = "changeInputHint";
+
     @NotNull
     @JsonProperty("fieldName")
     public String getFieldName();

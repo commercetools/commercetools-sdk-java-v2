@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ResourceDeletedDeliveryImpl.class)
 public interface ResourceDeletedDelivery extends SubscriptionDelivery {
 
+    String RESOURCE_DELETED = "ResourceDeleted";
+
     @NotNull
     @JsonProperty("version")
     public Long getVersion();

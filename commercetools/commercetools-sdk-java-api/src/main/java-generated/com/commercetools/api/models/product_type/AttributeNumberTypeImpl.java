@@ -26,7 +26,7 @@ public final class AttributeNumberTypeImpl implements AttributeNumberType {
 
     @JsonCreator
     AttributeNumberTypeImpl() {
-        this.name = "number";
+        this.name = AttributeNumberType.NUMBER;
     }
 
     public String getName() {

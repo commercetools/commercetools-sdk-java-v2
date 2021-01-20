@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductVariantImportRequestImpl.class)
 public interface ProductVariantImportRequest extends ImportRequest {
 
+    String PRODUCT_VARIANT = "product-variant";
+
     /**
     *  <p>The product variant import resources of this request.</p>
     */

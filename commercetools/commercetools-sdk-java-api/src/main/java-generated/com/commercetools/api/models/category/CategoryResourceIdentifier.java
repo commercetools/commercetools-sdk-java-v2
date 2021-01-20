@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CategoryResourceIdentifierImpl.class)
 public interface CategoryResourceIdentifier extends ResourceIdentifier {
 
+    String CATEGORY = "category";
+
     public static CategoryResourceIdentifier of() {
         return new CategoryResourceIdentifierImpl();
     }

@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderEditSetCommentActionImpl.class)
 public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
 
+    String SET_COMMENT = "setComment";
+
     @JsonProperty("comment")
     public String getComment();
 

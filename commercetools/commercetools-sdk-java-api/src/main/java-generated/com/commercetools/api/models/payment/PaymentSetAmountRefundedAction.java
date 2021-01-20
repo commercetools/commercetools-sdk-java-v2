@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = PaymentSetAmountRefundedActionImpl.class)
 public interface PaymentSetAmountRefundedAction extends PaymentUpdateAction {
 
+    String SET_AMOUNT_REFUNDED = "setAmountRefunded";
+
     @Valid
     @JsonProperty("amount")
     public Money getAmount();

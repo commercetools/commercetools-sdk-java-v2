@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = ProductMoveImageToPositionActionImpl.class)
 public interface ProductMoveImageToPositionAction extends ProductUpdateAction {
 
+    String MOVE_IMAGE_TO_POSITION = "moveImageToPosition";
+
     @JsonProperty("variantId")
     public Long getVariantId();
 

@@ -29,11 +29,11 @@ public final class PaymentSetKeyActionImpl implements PaymentSetKeyAction {
     @JsonCreator
     PaymentSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = "setKey";
+        this.action = PaymentSetKeyAction.SET_KEY;
     }
 
     public PaymentSetKeyActionImpl() {
-        this.action = "setKey";
+        this.action = PaymentSetKeyAction.SET_KEY;
     }
 
     public String getAction() {

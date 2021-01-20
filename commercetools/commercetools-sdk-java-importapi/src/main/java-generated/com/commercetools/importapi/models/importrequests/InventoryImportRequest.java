@@ -26,6 +26,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = InventoryImportRequestImpl.class)
 public interface InventoryImportRequest extends ImportRequest {
 
+    String INVENTORY = "inventory";
+
     /**
     *  <p>The inventory import resources of this request.</p>
     */

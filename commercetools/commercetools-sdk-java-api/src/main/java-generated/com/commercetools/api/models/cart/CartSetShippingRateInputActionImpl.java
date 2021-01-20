@@ -31,11 +31,11 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
     CartSetShippingRateInputActionImpl(
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
-        this.action = "setShippingRateInput";
+        this.action = CartSetShippingRateInputAction.SET_SHIPPING_RATE_INPUT;
     }
 
     public CartSetShippingRateInputActionImpl() {
-        this.action = "setShippingRateInput";
+        this.action = CartSetShippingRateInputAction.SET_SHIPPING_RATE_INPUT;
     }
 
     public String getAction() {

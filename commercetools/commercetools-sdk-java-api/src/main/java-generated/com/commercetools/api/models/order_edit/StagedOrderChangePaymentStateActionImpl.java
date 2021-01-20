@@ -31,11 +31,11 @@ public final class StagedOrderChangePaymentStateActionImpl implements StagedOrde
     StagedOrderChangePaymentStateActionImpl(
             @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState) {
         this.paymentState = paymentState;
-        this.action = "changePaymentState";
+        this.action = StagedOrderChangePaymentStateAction.CHANGE_PAYMENT_STATE;
     }
 
     public StagedOrderChangePaymentStateActionImpl() {
-        this.action = "changePaymentState";
+        this.action = StagedOrderChangePaymentStateAction.CHANGE_PAYMENT_STATE;
     }
 
     public String getAction() {

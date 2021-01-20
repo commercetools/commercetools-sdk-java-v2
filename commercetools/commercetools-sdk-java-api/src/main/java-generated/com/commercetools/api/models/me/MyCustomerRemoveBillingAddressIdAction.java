@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = MyCustomerRemoveBillingAddressIdActionImpl.class)
 public interface MyCustomerRemoveBillingAddressIdAction extends MyCustomerUpdateAction {
 
+    String REMOVE_BILLING_ADDRESS_ID = "removeBillingAddressId";
+
     @JsonProperty("addressId")
     public String getAddressId();
 

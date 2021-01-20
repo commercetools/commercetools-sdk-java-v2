@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = TaxCategoryKeyReferenceImpl.class)
 public interface TaxCategoryKeyReference extends KeyReference {
 
+    String TAX_CATEGORY = "tax-category";
+
     public static TaxCategoryKeyReference of() {
         return new TaxCategoryKeyReferenceImpl();
     }

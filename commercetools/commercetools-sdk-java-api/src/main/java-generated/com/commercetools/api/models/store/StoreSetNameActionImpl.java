@@ -30,11 +30,11 @@ public final class StoreSetNameActionImpl implements StoreSetNameAction {
     @JsonCreator
     StoreSetNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
-        this.action = "setName";
+        this.action = StoreSetNameAction.SET_NAME;
     }
 
     public StoreSetNameActionImpl() {
-        this.action = "setName";
+        this.action = StoreSetNameAction.SET_NAME;
     }
 
     public String getAction() {

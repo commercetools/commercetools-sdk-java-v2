@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartRecalculateActionImpl.class)
 public interface CartRecalculateAction extends CartUpdateAction {
 
+    String RECALCULATE = "recalculate";
+
     /**
     *  <p>If set to <code>true</code>, the line item product data (<code>name</code>, <code>variant</code> and <code>productType</code>) will also be updated.
     *  If set to <code>false</code>,

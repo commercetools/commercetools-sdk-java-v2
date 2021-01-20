@@ -69,11 +69,11 @@ public final class OrderReturnInfoAddedMessageImpl implements OrderReturnInfoAdd
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.returnInfo = returnInfo;
-        this.type = "ReturnInfoAdded";
+        this.type = OrderReturnInfoAddedMessage.RETURN_INFO_ADDED;
     }
 
     public OrderReturnInfoAddedMessageImpl() {
-        this.type = "ReturnInfoAdded";
+        this.type = OrderReturnInfoAddedMessage.RETURN_INFO_ADDED;
     }
 
     public String getId() {

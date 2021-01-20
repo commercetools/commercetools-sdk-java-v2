@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartChangeTaxRoundingModeActionImpl.class)
 public interface CartChangeTaxRoundingModeAction extends CartUpdateAction {
 
+    String CHANGE_TAX_ROUNDING_MODE = "changeTaxRoundingMode";
+
     @NotNull
     @JsonProperty("taxRoundingMode")
     public RoundingMode getTaxRoundingMode();

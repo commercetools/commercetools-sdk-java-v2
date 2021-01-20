@@ -29,11 +29,11 @@ public final class ZoneChangeNameActionImpl implements ZoneChangeNameAction {
     @JsonCreator
     ZoneChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
-        this.action = "changeName";
+        this.action = ZoneChangeNameAction.CHANGE_NAME;
     }
 
     public ZoneChangeNameActionImpl() {
-        this.action = "changeName";
+        this.action = ZoneChangeNameAction.CHANGE_NAME;
     }
 
     public String getAction() {

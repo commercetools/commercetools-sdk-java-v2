@@ -24,6 +24,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartScoreTierImpl.class)
 public interface CartScoreTier extends ShippingRatePriceTier {
 
+    String CART_SCORE = "CartScore";
+
     @NotNull
     @JsonProperty("score")
     public Double getScore();

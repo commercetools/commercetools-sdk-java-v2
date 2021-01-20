@@ -35,11 +35,11 @@ public final class OrderReturnShipmentStateChangedMessagePayloadImpl
             @JsonProperty("returnShipmentState") final com.commercetools.api.models.order.ReturnShipmentState returnShipmentState) {
         this.returnItemId = returnItemId;
         this.returnShipmentState = returnShipmentState;
-        this.type = "OrderReturnShipmentStateChanged";
+        this.type = OrderReturnShipmentStateChangedMessagePayload.ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }
 
     public OrderReturnShipmentStateChangedMessagePayloadImpl() {
-        this.type = "OrderReturnShipmentStateChanged";
+        this.type = OrderReturnShipmentStateChangedMessagePayload.ORDER_RETURN_SHIPMENT_STATE_CHANGED;
     }
 
     public String getType() {

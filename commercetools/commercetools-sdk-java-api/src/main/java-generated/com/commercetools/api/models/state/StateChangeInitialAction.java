@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateChangeInitialActionImpl.class)
 public interface StateChangeInitialAction extends StateUpdateAction {
 
+    String CHANGE_INITIAL = "changeInitial";
+
     @NotNull
     @JsonProperty("initial")
     public Boolean getInitial();

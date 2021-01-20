@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartRemovePaymentActionImpl.class)
 public interface CartRemovePaymentAction extends CartUpdateAction {
 
+    String REMOVE_PAYMENT = "removePayment";
+
     @NotNull
     @Valid
     @JsonProperty("payment")

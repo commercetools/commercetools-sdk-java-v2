@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = QueryComplexityLimitExceededErrorImpl.class)
 public interface QueryComplexityLimitExceededError extends ErrorObject {
 
+    String QUERY_COMPLEXITY_LIMIT_EXCEEDED = "QueryComplexityLimitExceeded";
+
     public static QueryComplexityLimitExceededError of() {
         return new QueryComplexityLimitExceededErrorImpl();
     }

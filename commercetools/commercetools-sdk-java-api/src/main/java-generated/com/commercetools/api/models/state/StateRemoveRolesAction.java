@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StateRemoveRolesActionImpl.class)
 public interface StateRemoveRolesAction extends StateUpdateAction {
 
+    String REMOVE_ROLES = "removeRoles";
+
     @NotNull
     @JsonProperty("roles")
     public List<StateRoleEnum> getRoles();

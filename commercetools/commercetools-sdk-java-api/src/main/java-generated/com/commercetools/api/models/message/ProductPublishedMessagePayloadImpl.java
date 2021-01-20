@@ -39,11 +39,11 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
         this.removedImageUrls = removedImageUrls;
         this.productProjection = productProjection;
         this.scope = scope;
-        this.type = "ProductPublished";
+        this.type = ProductPublishedMessagePayload.PRODUCT_PUBLISHED;
     }
 
     public ProductPublishedMessagePayloadImpl() {
-        this.type = "ProductPublished";
+        this.type = ProductPublishedMessagePayload.PRODUCT_PUBLISHED;
     }
 
     public String getType() {

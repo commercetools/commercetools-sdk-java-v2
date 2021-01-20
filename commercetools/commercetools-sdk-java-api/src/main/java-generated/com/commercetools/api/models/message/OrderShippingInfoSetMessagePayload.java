@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = OrderShippingInfoSetMessagePayloadImpl.class)
 public interface OrderShippingInfoSetMessagePayload extends MessagePayload {
 
+    String ORDER_SHIPPING_INFO_SET = "OrderShippingInfoSet";
+
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();

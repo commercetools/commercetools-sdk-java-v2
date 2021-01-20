@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = AccessDeniedErrorImpl.class)
 public interface AccessDeniedError extends ErrorObject {
 
+    String ACCESS_DENIED = "access_denied";
+
     public static AccessDeniedError of() {
         return new AccessDeniedErrorImpl();
     }

@@ -36,11 +36,11 @@ public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImp
             @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
         this.customLineItemId = customLineItemId;
         this.targetsDelta = targetsDelta;
-        this.action = "applyDeltaToCustomLineItemShippingDetailsTargets";
+        this.action = CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
 
     public CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl() {
-        this.action = "applyDeltaToCustomLineItemShippingDetailsTargets";
+        this.action = CartApplyDeltaToCustomLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_CUSTOM_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
 
     public String getAction() {

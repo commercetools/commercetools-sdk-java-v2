@@ -31,11 +31,11 @@ public final class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedM
     DeliveryRemovedMessagePayloadImpl(
             @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;
-        this.type = "DeliveryRemoved";
+        this.type = DeliveryRemovedMessagePayload.DELIVERY_REMOVED;
     }
 
     public DeliveryRemovedMessagePayloadImpl() {
-        this.type = "DeliveryRemoved";
+        this.type = DeliveryRemovedMessagePayload.DELIVERY_REMOVED;
     }
 
     public String getType() {

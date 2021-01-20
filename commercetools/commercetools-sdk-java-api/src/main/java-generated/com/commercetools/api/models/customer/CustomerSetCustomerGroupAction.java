@@ -22,6 +22,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CustomerSetCustomerGroupActionImpl.class)
 public interface CustomerSetCustomerGroupAction extends CustomerUpdateAction {
 
+    String SET_CUSTOMER_GROUP = "setCustomerGroup";
+
     /**
     *  <p>If not defined, the customer group is unset.</p>
     */

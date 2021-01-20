@@ -21,6 +21,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = StoreSetLanguagesActionImpl.class)
 public interface StoreSetLanguagesAction extends StoreUpdateAction {
 
+    String SET_LANGUAGES = "setLanguages";
+
     @JsonProperty("languages")
     public List<String> getLanguages();
 

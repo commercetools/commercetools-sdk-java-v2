@@ -23,6 +23,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = CartDiscountValueGiftLineItemDraftImpl.class)
 public interface CartDiscountValueGiftLineItemDraft extends CartDiscountValueDraft {
 
+    String GIFT_LINE_ITEM = "giftLineItem";
+
     @NotNull
     @Valid
     @JsonProperty("product")

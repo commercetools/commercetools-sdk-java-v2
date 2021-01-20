@@ -77,11 +77,11 @@ public final class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMe
         this.deliveryId = deliveryId;
         this.address = address;
         this.oldAddress = oldAddress;
-        this.type = "DeliveryAddressSet";
+        this.type = DeliveryAddressSetMessage.DELIVERY_ADDRESS_SET;
     }
 
     public DeliveryAddressSetMessageImpl() {
-        this.type = "DeliveryAddressSet";
+        this.type = DeliveryAddressSetMessage.DELIVERY_ADDRESS_SET;
     }
 
     public String getId() {

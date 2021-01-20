@@ -25,6 +25,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonDeserialize(as = DuplicateFieldErrorImpl.class)
 public interface DuplicateFieldError extends ErrorObject {
 
+    String DUPLICATE_FIELD = "DuplicateField";
+
     /**
     *  <p>The name of the field.</p>
     */

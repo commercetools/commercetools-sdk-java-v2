@@ -31,11 +31,11 @@ public final class DiscountCodeSetMaxApplicationsPerCustomerActionImpl
     DiscountCodeSetMaxApplicationsPerCustomerActionImpl(
             @JsonProperty("maxApplicationsPerCustomer") final Long maxApplicationsPerCustomer) {
         this.maxApplicationsPerCustomer = maxApplicationsPerCustomer;
-        this.action = "setMaxApplicationsPerCustomer";
+        this.action = DiscountCodeSetMaxApplicationsPerCustomerAction.SET_MAX_APPLICATIONS_PER_CUSTOMER;
     }
 
     public DiscountCodeSetMaxApplicationsPerCustomerActionImpl() {
-        this.action = "setMaxApplicationsPerCustomer";
+        this.action = DiscountCodeSetMaxApplicationsPerCustomerAction.SET_MAX_APPLICATIONS_PER_CUSTOMER;
     }
 
     public String getAction() {

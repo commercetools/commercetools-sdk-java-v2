@@ -19,6 +19,7 @@ plugins {
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
+    id "com.diffplug.spotless" version "5.9.0"
     id 'com.jfrog.bintray' version '1.8.3'
 
     id 'com.softeq.gradle.itest' version '1.0.4'
@@ -118,6 +119,23 @@ def pomConfig = {
         connection "scm:git:$scmHttpsUrl"
         developerConnection "scm:git:$scmSshUrl"
         url "$scmProjectUrl"
+    }
+}
+
+allprojects {
+    apply plugin: 'com.diffplug.spotless'
+
+    spotless {
+        java {
+            importOrder('java', 'javax', 'com', 'org', 'io')
+            removeUnusedImports()
+            // apply a specific flavor of google-java-format
+            googleJavaFormat('1.8').aosp()
+//            // make sure every file has the following copyright header.
+//            // optionally, Spotless can set copyright years by digging
+//            // through git history (see "license" section below)
+//            licenseHeader '/* (C)$YEAR */'
+        }
     }
 }
 
@@ -246,6 +264,7 @@ subprojects { project ->
     }
 
     sourceCompatibility = 1.8
+    targetCompatibility = 1.8
 }
 
 def exportedProjects= [

@@ -26,7 +26,7 @@ public final class ProductDiscountValueExternalImpl implements ProductDiscountVa
 
     @JsonCreator
     ProductDiscountValueExternalImpl() {
-        this.type = ProductDiscountValueExternal.EXTERNAL;
+        this.type = EXTERNAL;
     }
 
     public String getType() {

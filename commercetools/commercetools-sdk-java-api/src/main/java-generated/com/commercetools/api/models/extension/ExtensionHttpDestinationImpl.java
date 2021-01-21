@@ -34,11 +34,11 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
             @JsonProperty("authentication") final com.commercetools.api.models.extension.ExtensionHttpDestinationAuthentication authentication) {
         this.url = url;
         this.authentication = authentication;
-        this.type = ExtensionHttpDestination.HTTP;
+        this.type = HTTP;
     }
 
     public ExtensionHttpDestinationImpl() {
-        this.type = ExtensionHttpDestination.HTTP;
+        this.type = HTTP;
     }
 
     public String getType() {

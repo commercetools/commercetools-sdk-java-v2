@@ -29,11 +29,11 @@ public final class QueryComplexityLimitExceededErrorImpl implements QueryComplex
     @JsonCreator
     QueryComplexityLimitExceededErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = QueryComplexityLimitExceededError.QUERY_COMPLEXITY_LIMIT_EXCEEDED;
+        this.code = QUERY_COMPLEXITY_LIMIT_EXCEEDED;
     }
 
     public QueryComplexityLimitExceededErrorImpl() {
-        this.code = QueryComplexityLimitExceededError.QUERY_COMPLEXITY_LIMIT_EXCEEDED;
+        this.code = QUERY_COMPLEXITY_LIMIT_EXCEEDED;
     }
 
     public String getCode() {

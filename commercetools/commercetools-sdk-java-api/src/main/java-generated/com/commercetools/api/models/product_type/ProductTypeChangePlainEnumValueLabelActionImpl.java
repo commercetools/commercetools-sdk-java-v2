@@ -35,11 +35,11 @@ public final class ProductTypeChangePlainEnumValueLabelActionImpl
             @JsonProperty("newValue") final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {
         this.attributeName = attributeName;
         this.newValue = newValue;
-        this.action = ProductTypeChangePlainEnumValueLabelAction.CHANGE_PLAIN_ENUM_VALUE_LABEL;
+        this.action = CHANGE_PLAIN_ENUM_VALUE_LABEL;
     }
 
     public ProductTypeChangePlainEnumValueLabelActionImpl() {
-        this.action = ProductTypeChangePlainEnumValueLabelAction.CHANGE_PLAIN_ENUM_VALUE_LABEL;
+        this.action = CHANGE_PLAIN_ENUM_VALUE_LABEL;
     }
 
     public String getAction() {

@@ -37,11 +37,11 @@ public final class LocalizableEnumSetAttributeImpl implements LocalizableEnumSet
             @JsonProperty("value") final java.util.List<String> value) {
         this.name = name;
         this.value = value;
-        this.type = LocalizableEnumSetAttribute.LENUM_SET;
+        this.type = LENUM_SET;
     }
 
     public LocalizableEnumSetAttributeImpl() {
-        this.type = LocalizableEnumSetAttribute.LENUM_SET;
+        this.type = LENUM_SET;
     }
 
     /**

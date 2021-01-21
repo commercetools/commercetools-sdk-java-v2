@@ -32,11 +32,11 @@ public final class LocalizedEnumFieldImpl implements LocalizedEnumField {
     @JsonCreator
     LocalizedEnumFieldImpl(@JsonProperty("value") final String value) {
         this.value = value;
-        this.type = LocalizedEnumField.LOCALIZED_ENUM;
+        this.type = LOCALIZED_ENUM;
     }
 
     public LocalizedEnumFieldImpl() {
-        this.type = LocalizedEnumField.LOCALIZED_ENUM;
+        this.type = LOCALIZED_ENUM;
     }
 
     /**

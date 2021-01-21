@@ -34,11 +34,11 @@ public final class ProductDeletedMessagePayloadImpl implements ProductDeletedMes
             @JsonProperty("currentProjection") final com.commercetools.api.models.product.ProductProjection currentProjection) {
         this.removedImageUrls = removedImageUrls;
         this.currentProjection = currentProjection;
-        this.type = ProductDeletedMessagePayload.PRODUCT_DELETED;
+        this.type = PRODUCT_DELETED;
     }
 
     public ProductDeletedMessagePayloadImpl() {
-        this.type = ProductDeletedMessagePayload.PRODUCT_DELETED;
+        this.type = PRODUCT_DELETED;
     }
 
     public String getType() {

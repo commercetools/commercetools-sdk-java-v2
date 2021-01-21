@@ -45,11 +45,11 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
         this.staged = staged;
         this.asset = asset;
         this.position = position;
-        this.action = ProductAddAssetAction.ADD_ASSET;
+        this.action = ADD_ASSET;
     }
 
     public ProductAddAssetActionImpl() {
-        this.action = ProductAddAssetAction.ADD_ASSET;
+        this.action = ADD_ASSET;
     }
 
     public String getAction() {

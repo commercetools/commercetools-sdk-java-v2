@@ -34,11 +34,11 @@ public final class ReferenceSetFieldImpl implements ReferenceSetField {
     ReferenceSetFieldImpl(
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
         this.value = value;
-        this.type = ReferenceSetField.REFERENCE_SET;
+        this.type = REFERENCE_SET;
     }
 
     public ReferenceSetFieldImpl() {
-        this.type = ReferenceSetField.REFERENCE_SET;
+        this.type = REFERENCE_SET;
     }
 
     /**

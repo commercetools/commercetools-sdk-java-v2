@@ -37,11 +37,11 @@ public final class LocalizableTextSetAttributeImpl implements LocalizableTextSet
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.LocalizedString> value) {
         this.name = name;
         this.value = value;
-        this.type = LocalizableTextSetAttribute.LTEXT_SET;
+        this.type = LTEXT_SET;
     }
 
     public LocalizableTextSetAttributeImpl() {
-        this.type = LocalizableTextSetAttribute.LTEXT_SET;
+        this.type = LTEXT_SET;
     }
 
     /**

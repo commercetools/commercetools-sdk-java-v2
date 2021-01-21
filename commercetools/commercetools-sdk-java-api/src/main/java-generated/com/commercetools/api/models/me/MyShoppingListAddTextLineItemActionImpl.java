@@ -49,11 +49,11 @@ public final class MyShoppingListAddTextLineItemActionImpl implements MyShopping
         this.quantity = quantity;
         this.addedAt = addedAt;
         this.custom = custom;
-        this.action = MyShoppingListAddTextLineItemAction.ADD_TEXT_LINE_ITEM;
+        this.action = ADD_TEXT_LINE_ITEM;
     }
 
     public MyShoppingListAddTextLineItemActionImpl() {
-        this.action = MyShoppingListAddTextLineItemAction.ADD_TEXT_LINE_ITEM;
+        this.action = ADD_TEXT_LINE_ITEM;
     }
 
     public String getAction() {

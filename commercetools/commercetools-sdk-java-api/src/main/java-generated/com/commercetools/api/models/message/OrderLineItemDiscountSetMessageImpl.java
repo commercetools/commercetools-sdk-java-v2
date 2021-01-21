@@ -84,11 +84,11 @@ public final class OrderLineItemDiscountSetMessageImpl implements OrderLineItemD
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
-        this.type = OrderLineItemDiscountSetMessage.ORDER_LINE_ITEM_DISCOUNT_SET;
+        this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
     public OrderLineItemDiscountSetMessageImpl() {
-        this.type = OrderLineItemDiscountSetMessage.ORDER_LINE_ITEM_DISCOUNT_SET;
+        this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
     public String getId() {

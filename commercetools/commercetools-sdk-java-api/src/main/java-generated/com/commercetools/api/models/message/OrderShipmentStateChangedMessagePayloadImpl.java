@@ -35,11 +35,11 @@ public final class OrderShipmentStateChangedMessagePayloadImpl implements OrderS
             @JsonProperty("oldShipmentState") final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
         this.shipmentState = shipmentState;
         this.oldShipmentState = oldShipmentState;
-        this.type = OrderShipmentStateChangedMessagePayload.ORDER_SHIPMENT_STATE_CHANGED;
+        this.type = ORDER_SHIPMENT_STATE_CHANGED;
     }
 
     public OrderShipmentStateChangedMessagePayloadImpl() {
-        this.type = OrderShipmentStateChangedMessagePayload.ORDER_SHIPMENT_STATE_CHANGED;
+        this.type = ORDER_SHIPMENT_STATE_CHANGED;
     }
 
     public String getType() {

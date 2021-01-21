@@ -29,11 +29,11 @@ public final class MyCustomerSetTitleActionImpl implements MyCustomerSetTitleAct
     @JsonCreator
     MyCustomerSetTitleActionImpl(@JsonProperty("title") final String title) {
         this.title = title;
-        this.action = MyCustomerSetTitleAction.SET_TITLE;
+        this.action = SET_TITLE;
     }
 
     public MyCustomerSetTitleActionImpl() {
-        this.action = MyCustomerSetTitleAction.SET_TITLE;
+        this.action = SET_TITLE;
     }
 
     public String getAction() {

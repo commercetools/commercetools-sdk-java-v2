@@ -29,11 +29,11 @@ public final class CategoryChangeAssetOrderActionImpl implements CategoryChangeA
     @JsonCreator
     CategoryChangeAssetOrderActionImpl(@JsonProperty("assetOrder") final java.util.List<String> assetOrder) {
         this.assetOrder = assetOrder;
-        this.action = CategoryChangeAssetOrderAction.CHANGE_ASSET_ORDER;
+        this.action = CHANGE_ASSET_ORDER;
     }
 
     public CategoryChangeAssetOrderActionImpl() {
-        this.action = CategoryChangeAssetOrderAction.CHANGE_ASSET_ORDER;
+        this.action = CHANGE_ASSET_ORDER;
     }
 
     public String getAction() {

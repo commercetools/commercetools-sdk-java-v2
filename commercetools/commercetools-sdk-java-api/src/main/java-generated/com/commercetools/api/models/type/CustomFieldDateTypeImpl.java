@@ -26,7 +26,7 @@ public final class CustomFieldDateTypeImpl implements CustomFieldDateType {
 
     @JsonCreator
     CustomFieldDateTypeImpl() {
-        this.name = CustomFieldDateType.DATE;
+        this.name = DATE;
     }
 
     public String getName() {

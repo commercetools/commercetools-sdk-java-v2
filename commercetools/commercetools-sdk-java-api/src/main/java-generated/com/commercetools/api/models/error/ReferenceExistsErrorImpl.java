@@ -34,11 +34,11 @@ public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
             @JsonProperty("referencedBy") final com.commercetools.api.models.common.ReferenceTypeId referencedBy) {
         this.message = message;
         this.referencedBy = referencedBy;
-        this.code = ReferenceExistsError.REFERENCE_EXISTS;
+        this.code = REFERENCE_EXISTS;
     }
 
     public ReferenceExistsErrorImpl() {
-        this.code = ReferenceExistsError.REFERENCE_EXISTS;
+        this.code = REFERENCE_EXISTS;
     }
 
     public String getCode() {

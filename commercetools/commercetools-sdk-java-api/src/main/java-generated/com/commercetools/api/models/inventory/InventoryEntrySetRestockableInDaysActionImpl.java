@@ -29,11 +29,11 @@ public final class InventoryEntrySetRestockableInDaysActionImpl implements Inven
     @JsonCreator
     InventoryEntrySetRestockableInDaysActionImpl(@JsonProperty("restockableInDays") final Long restockableInDays) {
         this.restockableInDays = restockableInDays;
-        this.action = InventoryEntrySetRestockableInDaysAction.SET_RESTOCKABLE_IN_DAYS;
+        this.action = SET_RESTOCKABLE_IN_DAYS;
     }
 
     public InventoryEntrySetRestockableInDaysActionImpl() {
-        this.action = InventoryEntrySetRestockableInDaysAction.SET_RESTOCKABLE_IN_DAYS;
+        this.action = SET_RESTOCKABLE_IN_DAYS;
     }
 
     public String getAction() {

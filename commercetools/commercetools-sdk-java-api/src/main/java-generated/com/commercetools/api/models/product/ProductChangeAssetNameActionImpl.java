@@ -48,11 +48,11 @@ public final class ProductChangeAssetNameActionImpl implements ProductChangeAsse
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.name = name;
-        this.action = ProductChangeAssetNameAction.CHANGE_ASSET_NAME;
+        this.action = CHANGE_ASSET_NAME;
     }
 
     public ProductChangeAssetNameActionImpl() {
-        this.action = ProductChangeAssetNameAction.CHANGE_ASSET_NAME;
+        this.action = CHANGE_ASSET_NAME;
     }
 
     public String getAction() {

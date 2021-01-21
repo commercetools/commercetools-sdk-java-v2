@@ -29,11 +29,11 @@ public final class PaymentSetMethodInfoMethodActionImpl implements PaymentSetMet
     @JsonCreator
     PaymentSetMethodInfoMethodActionImpl(@JsonProperty("method") final String method) {
         this.method = method;
-        this.action = PaymentSetMethodInfoMethodAction.SET_METHOD_INFO_METHOD;
+        this.action = SET_METHOD_INFO_METHOD;
     }
 
     public PaymentSetMethodInfoMethodActionImpl() {
-        this.action = PaymentSetMethodInfoMethodAction.SET_METHOD_INFO_METHOD;
+        this.action = SET_METHOD_INFO_METHOD;
     }
 
     public String getAction() {

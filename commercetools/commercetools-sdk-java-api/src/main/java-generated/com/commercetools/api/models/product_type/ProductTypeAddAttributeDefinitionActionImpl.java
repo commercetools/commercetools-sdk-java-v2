@@ -31,11 +31,11 @@ public final class ProductTypeAddAttributeDefinitionActionImpl implements Produc
     ProductTypeAddAttributeDefinitionActionImpl(
             @JsonProperty("attribute") final com.commercetools.api.models.product_type.AttributeDefinitionDraft attribute) {
         this.attribute = attribute;
-        this.action = ProductTypeAddAttributeDefinitionAction.ADD_ATTRIBUTE_DEFINITION;
+        this.action = ADD_ATTRIBUTE_DEFINITION;
     }
 
     public ProductTypeAddAttributeDefinitionActionImpl() {
-        this.action = ProductTypeAddAttributeDefinitionAction.ADD_ATTRIBUTE_DEFINITION;
+        this.action = ADD_ATTRIBUTE_DEFINITION;
     }
 
     public String getAction() {

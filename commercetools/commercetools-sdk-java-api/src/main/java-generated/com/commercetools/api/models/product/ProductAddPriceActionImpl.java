@@ -41,11 +41,11 @@ public final class ProductAddPriceActionImpl implements ProductAddPriceAction {
         this.sku = sku;
         this.price = price;
         this.staged = staged;
-        this.action = ProductAddPriceAction.ADD_PRICE;
+        this.action = ADD_PRICE;
     }
 
     public ProductAddPriceActionImpl() {
-        this.action = ProductAddPriceAction.ADD_PRICE;
+        this.action = ADD_PRICE;
     }
 
     public String getAction() {

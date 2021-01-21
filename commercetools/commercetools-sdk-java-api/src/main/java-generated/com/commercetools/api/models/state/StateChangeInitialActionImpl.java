@@ -29,11 +29,11 @@ public final class StateChangeInitialActionImpl implements StateChangeInitialAct
     @JsonCreator
     StateChangeInitialActionImpl(@JsonProperty("initial") final Boolean initial) {
         this.initial = initial;
-        this.action = StateChangeInitialAction.CHANGE_INITIAL;
+        this.action = CHANGE_INITIAL;
     }
 
     public StateChangeInitialActionImpl() {
-        this.action = StateChangeInitialAction.CHANGE_INITIAL;
+        this.action = CHANGE_INITIAL;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class InvalidCredentialsErrorImpl implements InvalidCredentialsErro
     @JsonCreator
     InvalidCredentialsErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = InvalidCredentialsError.INVALID_CREDENTIALS;
+        this.code = INVALID_CREDENTIALS;
     }
 
     public InvalidCredentialsErrorImpl() {
-        this.code = InvalidCredentialsError.INVALID_CREDENTIALS;
+        this.code = INVALID_CREDENTIALS;
     }
 
     public String getCode() {

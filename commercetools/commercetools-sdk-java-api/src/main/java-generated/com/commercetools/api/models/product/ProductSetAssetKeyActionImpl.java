@@ -43,11 +43,11 @@ public final class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAct
         this.staged = staged;
         this.assetId = assetId;
         this.assetKey = assetKey;
-        this.action = ProductSetAssetKeyAction.SET_ASSET_KEY;
+        this.action = SET_ASSET_KEY;
     }
 
     public ProductSetAssetKeyActionImpl() {
-        this.action = ProductSetAssetKeyAction.SET_ASSET_KEY;
+        this.action = SET_ASSET_KEY;
     }
 
     public String getAction() {

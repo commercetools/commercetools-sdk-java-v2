@@ -29,11 +29,11 @@ public final class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPass
     @JsonCreator
     InvalidCurrentPasswordErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = InvalidCurrentPasswordError.INVALID_CURRENT_PASSWORD;
+        this.code = INVALID_CURRENT_PASSWORD;
     }
 
     public InvalidCurrentPasswordErrorImpl() {
-        this.code = InvalidCurrentPasswordError.INVALID_CURRENT_PASSWORD;
+        this.code = INVALID_CURRENT_PASSWORD;
     }
 
     public String getCode() {

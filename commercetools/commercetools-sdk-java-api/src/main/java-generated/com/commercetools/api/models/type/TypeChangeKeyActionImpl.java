@@ -29,11 +29,11 @@ public final class TypeChangeKeyActionImpl implements TypeChangeKeyAction {
     @JsonCreator
     TypeChangeKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = TypeChangeKeyAction.CHANGE_KEY;
+        this.action = CHANGE_KEY;
     }
 
     public TypeChangeKeyActionImpl() {
-        this.action = TypeChangeKeyAction.CHANGE_KEY;
+        this.action = CHANGE_KEY;
     }
 
     public String getAction() {

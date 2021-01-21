@@ -31,11 +31,11 @@ public final class StagedOrderChangeOrderStateActionImpl implements StagedOrderC
     StagedOrderChangeOrderStateActionImpl(
             @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
-        this.action = StagedOrderChangeOrderStateAction.CHANGE_ORDER_STATE;
+        this.action = CHANGE_ORDER_STATE;
     }
 
     public StagedOrderChangeOrderStateActionImpl() {
-        this.action = StagedOrderChangeOrderStateAction.CHANGE_ORDER_STATE;
+        this.action = CHANGE_ORDER_STATE;
     }
 
     public String getAction() {

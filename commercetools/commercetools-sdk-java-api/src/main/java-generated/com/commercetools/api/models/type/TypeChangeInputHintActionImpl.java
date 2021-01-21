@@ -34,11 +34,11 @@ public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintA
             @JsonProperty("inputHint") final com.commercetools.api.models.type.TypeTextInputHint inputHint) {
         this.fieldName = fieldName;
         this.inputHint = inputHint;
-        this.action = TypeChangeInputHintAction.CHANGE_INPUT_HINT;
+        this.action = CHANGE_INPUT_HINT;
     }
 
     public TypeChangeInputHintActionImpl() {
-        this.action = TypeChangeInputHintAction.CHANGE_INPUT_HINT;
+        this.action = CHANGE_INPUT_HINT;
     }
 
     public String getAction() {

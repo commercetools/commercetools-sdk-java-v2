@@ -79,11 +79,11 @@ public final class StagedOrderAddLineItemActionImpl implements StagedOrderAddLin
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.shippingDetails = shippingDetails;
-        this.action = StagedOrderAddLineItemAction.ADD_LINE_ITEM;
+        this.action = ADD_LINE_ITEM;
     }
 
     public StagedOrderAddLineItemActionImpl() {
-        this.action = StagedOrderAddLineItemAction.ADD_LINE_ITEM;
+        this.action = ADD_LINE_ITEM;
     }
 
     public String getAction() {

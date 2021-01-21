@@ -77,11 +77,11 @@ public final class ProductImageAddedMessageImpl implements ProductImageAddedMess
         this.variantId = variantId;
         this.image = image;
         this.staged = staged;
-        this.type = ProductImageAddedMessage.PRODUCT_IMAGE_ADDED;
+        this.type = PRODUCT_IMAGE_ADDED;
     }
 
     public ProductImageAddedMessageImpl() {
-        this.type = ProductImageAddedMessage.PRODUCT_IMAGE_ADDED;
+        this.type = PRODUCT_IMAGE_ADDED;
     }
 
     public String getId() {

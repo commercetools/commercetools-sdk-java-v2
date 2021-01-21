@@ -35,11 +35,11 @@ public final class OrderStateTransitionMessagePayloadImpl implements OrderStateT
             @JsonProperty("force") final Boolean force) {
         this.state = state;
         this.force = force;
-        this.type = OrderStateTransitionMessagePayload.ORDER_STATE_TRANSITION;
+        this.type = ORDER_STATE_TRANSITION;
     }
 
     public OrderStateTransitionMessagePayloadImpl() {
-        this.type = OrderStateTransitionMessagePayload.ORDER_STATE_TRANSITION;
+        this.type = ORDER_STATE_TRANSITION;
     }
 
     public String getType() {

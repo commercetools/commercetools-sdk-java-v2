@@ -38,11 +38,11 @@ public final class ProductSetAttributeInAllVariantsActionImpl implements Product
         this.name = name;
         this.value = value;
         this.staged = staged;
-        this.action = ProductSetAttributeInAllVariantsAction.SET_ATTRIBUTE_IN_ALL_VARIANTS;
+        this.action = SET_ATTRIBUTE_IN_ALL_VARIANTS;
     }
 
     public ProductSetAttributeInAllVariantsActionImpl() {
-        this.action = ProductSetAttributeInAllVariantsAction.SET_ATTRIBUTE_IN_ALL_VARIANTS;
+        this.action = SET_ATTRIBUTE_IN_ALL_VARIANTS;
     }
 
     public String getAction() {

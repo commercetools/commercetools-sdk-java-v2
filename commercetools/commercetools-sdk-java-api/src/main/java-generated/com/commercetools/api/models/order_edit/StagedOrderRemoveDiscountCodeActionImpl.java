@@ -31,11 +31,11 @@ public final class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrde
     StagedOrderRemoveDiscountCodeActionImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
-        this.action = StagedOrderRemoveDiscountCodeAction.REMOVE_DISCOUNT_CODE;
+        this.action = REMOVE_DISCOUNT_CODE;
     }
 
     public StagedOrderRemoveDiscountCodeActionImpl() {
-        this.action = StagedOrderRemoveDiscountCodeAction.REMOVE_DISCOUNT_CODE;
+        this.action = REMOVE_DISCOUNT_CODE;
     }
 
     public String getAction() {

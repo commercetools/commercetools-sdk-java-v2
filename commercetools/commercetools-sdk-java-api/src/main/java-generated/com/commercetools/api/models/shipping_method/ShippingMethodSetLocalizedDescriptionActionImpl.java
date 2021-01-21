@@ -31,11 +31,11 @@ public final class ShippingMethodSetLocalizedDescriptionActionImpl
     ShippingMethodSetLocalizedDescriptionActionImpl(
             @JsonProperty("localizedDescription") final String localizedDescription) {
         this.localizedDescription = localizedDescription;
-        this.action = ShippingMethodSetLocalizedDescriptionAction.SET_LOCALIZED_DESCRIPTION;
+        this.action = SET_LOCALIZED_DESCRIPTION;
     }
 
     public ShippingMethodSetLocalizedDescriptionActionImpl() {
-        this.action = ShippingMethodSetLocalizedDescriptionAction.SET_LOCALIZED_DESCRIPTION;
+        this.action = SET_LOCALIZED_DESCRIPTION;
     }
 
     public String getAction() {

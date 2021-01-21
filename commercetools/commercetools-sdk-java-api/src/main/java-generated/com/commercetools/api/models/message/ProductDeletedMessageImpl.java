@@ -73,11 +73,11 @@ public final class ProductDeletedMessageImpl implements ProductDeletedMessage {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.removedImageUrls = removedImageUrls;
         this.currentProjection = currentProjection;
-        this.type = ProductDeletedMessage.PRODUCT_DELETED;
+        this.type = PRODUCT_DELETED;
     }
 
     public ProductDeletedMessageImpl() {
-        this.type = ProductDeletedMessage.PRODUCT_DELETED;
+        this.type = PRODUCT_DELETED;
     }
 
     public String getId() {

@@ -29,11 +29,11 @@ public final class DiscountCodeSetCartPredicateActionImpl implements DiscountCod
     @JsonCreator
     DiscountCodeSetCartPredicateActionImpl(@JsonProperty("cartPredicate") final String cartPredicate) {
         this.cartPredicate = cartPredicate;
-        this.action = DiscountCodeSetCartPredicateAction.SET_CART_PREDICATE;
+        this.action = SET_CART_PREDICATE;
     }
 
     public DiscountCodeSetCartPredicateActionImpl() {
-        this.action = DiscountCodeSetCartPredicateAction.SET_CART_PREDICATE;
+        this.action = SET_CART_PREDICATE;
     }
 
     public String getAction() {

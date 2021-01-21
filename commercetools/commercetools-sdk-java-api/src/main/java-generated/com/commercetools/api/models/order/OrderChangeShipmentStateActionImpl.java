@@ -31,11 +31,11 @@ public final class OrderChangeShipmentStateActionImpl implements OrderChangeShip
     OrderChangeShipmentStateActionImpl(
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState) {
         this.shipmentState = shipmentState;
-        this.action = OrderChangeShipmentStateAction.CHANGE_SHIPMENT_STATE;
+        this.action = CHANGE_SHIPMENT_STATE;
     }
 
     public OrderChangeShipmentStateActionImpl() {
-        this.action = OrderChangeShipmentStateAction.CHANGE_SHIPMENT_STATE;
+        this.action = CHANGE_SHIPMENT_STATE;
     }
 
     public String getAction() {

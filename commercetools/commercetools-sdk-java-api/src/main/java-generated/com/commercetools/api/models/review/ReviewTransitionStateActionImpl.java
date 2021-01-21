@@ -35,11 +35,11 @@ public final class ReviewTransitionStateActionImpl implements ReviewTransitionSt
             @JsonProperty("force") final Boolean force) {
         this.state = state;
         this.force = force;
-        this.action = ReviewTransitionStateAction.TRANSITION_STATE;
+        this.action = TRANSITION_STATE;
     }
 
     public ReviewTransitionStateActionImpl() {
-        this.action = ReviewTransitionStateAction.TRANSITION_STATE;
+        this.action = TRANSITION_STATE;
     }
 
     public String getAction() {

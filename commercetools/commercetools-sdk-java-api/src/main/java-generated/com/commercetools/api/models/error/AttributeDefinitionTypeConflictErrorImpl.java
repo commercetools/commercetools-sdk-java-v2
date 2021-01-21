@@ -41,11 +41,11 @@ public final class AttributeDefinitionTypeConflictErrorImpl implements Attribute
         this.conflictingProductTypeId = conflictingProductTypeId;
         this.conflictingProductTypeName = conflictingProductTypeName;
         this.conflictingAttributeName = conflictingAttributeName;
-        this.code = AttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT;
+        this.code = ATTRIBUTE_DEFINITION_TYPE_CONFLICT;
     }
 
     public AttributeDefinitionTypeConflictErrorImpl() {
-        this.code = AttributeDefinitionTypeConflictError.ATTRIBUTE_DEFINITION_TYPE_CONFLICT;
+        this.code = ATTRIBUTE_DEFINITION_TYPE_CONFLICT;
     }
 
     public String getCode() {

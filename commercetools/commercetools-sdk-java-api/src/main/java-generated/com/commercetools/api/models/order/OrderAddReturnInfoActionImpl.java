@@ -39,11 +39,11 @@ public final class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAct
         this.returnTrackingId = returnTrackingId;
         this.items = items;
         this.returnDate = returnDate;
-        this.action = OrderAddReturnInfoAction.ADD_RETURN_INFO;
+        this.action = ADD_RETURN_INFO;
     }
 
     public OrderAddReturnInfoActionImpl() {
-        this.action = OrderAddReturnInfoAction.ADD_RETURN_INFO;
+        this.action = ADD_RETURN_INFO;
     }
 
     public String getAction() {

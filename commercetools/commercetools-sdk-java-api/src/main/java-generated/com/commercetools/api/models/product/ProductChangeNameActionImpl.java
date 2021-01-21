@@ -34,11 +34,11 @@ public final class ProductChangeNameActionImpl implements ProductChangeNameActio
             @JsonProperty("staged") final Boolean staged) {
         this.name = name;
         this.staged = staged;
-        this.action = ProductChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public ProductChangeNameActionImpl() {
-        this.action = ProductChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberA
     @JsonCreator
     OrderSetOrderNumberActionImpl(@JsonProperty("orderNumber") final String orderNumber) {
         this.orderNumber = orderNumber;
-        this.action = OrderSetOrderNumberAction.SET_ORDER_NUMBER;
+        this.action = SET_ORDER_NUMBER;
     }
 
     public OrderSetOrderNumberActionImpl() {
-        this.action = OrderSetOrderNumberAction.SET_ORDER_NUMBER;
+        this.action = SET_ORDER_NUMBER;
     }
 
     public String getAction() {

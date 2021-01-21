@@ -31,11 +31,11 @@ public final class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefin
     TypeAddFieldDefinitionActionImpl(
             @JsonProperty("fieldDefinition") final com.commercetools.api.models.type.FieldDefinition fieldDefinition) {
         this.fieldDefinition = fieldDefinition;
-        this.action = TypeAddFieldDefinitionAction.ADD_FIELD_DEFINITION;
+        this.action = ADD_FIELD_DEFINITION;
     }
 
     public TypeAddFieldDefinitionActionImpl() {
-        this.action = TypeAddFieldDefinitionAction.ADD_FIELD_DEFINITION;
+        this.action = ADD_FIELD_DEFINITION;
     }
 
     public String getAction() {

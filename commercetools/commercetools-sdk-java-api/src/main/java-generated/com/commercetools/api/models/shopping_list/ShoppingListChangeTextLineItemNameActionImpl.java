@@ -34,11 +34,11 @@ public final class ShoppingListChangeTextLineItemNameActionImpl implements Shopp
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.textLineItemId = textLineItemId;
         this.name = name;
-        this.action = ShoppingListChangeTextLineItemNameAction.CHANGE_TEXT_LINE_ITEM_NAME;
+        this.action = CHANGE_TEXT_LINE_ITEM_NAME;
     }
 
     public ShoppingListChangeTextLineItemNameActionImpl() {
-        this.action = ShoppingListChangeTextLineItemNameAction.CHANGE_TEXT_LINE_ITEM_NAME;
+        this.action = CHANGE_TEXT_LINE_ITEM_NAME;
     }
 
     public String getAction() {

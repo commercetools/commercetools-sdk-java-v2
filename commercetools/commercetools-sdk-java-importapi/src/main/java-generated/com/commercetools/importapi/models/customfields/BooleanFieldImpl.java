@@ -32,11 +32,11 @@ public final class BooleanFieldImpl implements BooleanField {
     @JsonCreator
     BooleanFieldImpl(@JsonProperty("value") final Boolean value) {
         this.value = value;
-        this.type = BooleanField.BOOLEAN;
+        this.type = BOOLEAN;
     }
 
     public BooleanFieldImpl() {
-        this.type = BooleanField.BOOLEAN;
+        this.type = BOOLEAN;
     }
 
     /**

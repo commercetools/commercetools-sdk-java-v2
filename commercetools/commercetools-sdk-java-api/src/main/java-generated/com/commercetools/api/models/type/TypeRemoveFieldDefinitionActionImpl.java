@@ -29,11 +29,11 @@ public final class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFiel
     @JsonCreator
     TypeRemoveFieldDefinitionActionImpl(@JsonProperty("fieldName") final String fieldName) {
         this.fieldName = fieldName;
-        this.action = TypeRemoveFieldDefinitionAction.REMOVE_FIELD_DEFINITION;
+        this.action = REMOVE_FIELD_DEFINITION;
     }
 
     public TypeRemoveFieldDefinitionActionImpl() {
-        this.action = TypeRemoveFieldDefinitionAction.REMOVE_FIELD_DEFINITION;
+        this.action = REMOVE_FIELD_DEFINITION;
     }
 
     public String getAction() {

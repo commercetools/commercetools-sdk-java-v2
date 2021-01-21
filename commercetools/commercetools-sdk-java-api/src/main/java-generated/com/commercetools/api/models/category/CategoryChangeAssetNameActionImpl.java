@@ -38,11 +38,11 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.name = name;
-        this.action = CategoryChangeAssetNameAction.CHANGE_ASSET_NAME;
+        this.action = CHANGE_ASSET_NAME;
     }
 
     public CategoryChangeAssetNameActionImpl() {
-        this.action = CategoryChangeAssetNameAction.CHANGE_ASSET_NAME;
+        this.action = CHANGE_ASSET_NAME;
     }
 
     public String getAction() {

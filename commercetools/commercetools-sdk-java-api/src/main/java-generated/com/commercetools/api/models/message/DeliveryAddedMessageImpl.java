@@ -69,11 +69,11 @@ public final class DeliveryAddedMessageImpl implements DeliveryAddedMessage {
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.delivery = delivery;
-        this.type = DeliveryAddedMessage.DELIVERY_ADDED;
+        this.type = DELIVERY_ADDED;
     }
 
     public DeliveryAddedMessageImpl() {
-        this.type = DeliveryAddedMessage.DELIVERY_ADDED;
+        this.type = DELIVERY_ADDED;
     }
 
     public String getId() {

@@ -34,11 +34,11 @@ public final class EditPreviewFailedErrorImpl implements EditPreviewFailedError 
             @JsonProperty("result") final com.commercetools.api.models.order_edit.OrderEditPreviewFailure result) {
         this.message = message;
         this.result = result;
-        this.code = EditPreviewFailedError.EDIT_PREVIEW_FAILED;
+        this.code = EDIT_PREVIEW_FAILED;
     }
 
     public EditPreviewFailedErrorImpl() {
-        this.code = EditPreviewFailedError.EDIT_PREVIEW_FAILED;
+        this.code = EDIT_PREVIEW_FAILED;
     }
 
     public String getCode() {

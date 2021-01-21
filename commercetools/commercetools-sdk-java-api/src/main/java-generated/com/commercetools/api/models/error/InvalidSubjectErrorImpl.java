@@ -29,11 +29,11 @@ public final class InvalidSubjectErrorImpl implements InvalidSubjectError {
     @JsonCreator
     InvalidSubjectErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = InvalidSubjectError.INVALID_SUBJECT;
+        this.code = INVALID_SUBJECT;
     }
 
     public InvalidSubjectErrorImpl() {
-        this.code = InvalidSubjectError.INVALID_SUBJECT;
+        this.code = INVALID_SUBJECT;
     }
 
     public String getCode() {

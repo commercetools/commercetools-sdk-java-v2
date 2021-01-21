@@ -36,11 +36,11 @@ public final class StagedOrderSetShippingMethodActionImpl implements StagedOrder
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.shippingMethod = shippingMethod;
         this.externalTaxRate = externalTaxRate;
-        this.action = StagedOrderSetShippingMethodAction.SET_SHIPPING_METHOD;
+        this.action = SET_SHIPPING_METHOD;
     }
 
     public StagedOrderSetShippingMethodActionImpl() {
-        this.action = StagedOrderSetShippingMethodAction.SET_SHIPPING_METHOD;
+        this.action = SET_SHIPPING_METHOD;
     }
 
     public String getAction() {

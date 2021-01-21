@@ -37,11 +37,11 @@ public final class DateTimeAttributeImpl implements DateTimeAttribute {
             @JsonProperty("value") final java.time.ZonedDateTime value) {
         this.name = name;
         this.value = value;
-        this.type = DateTimeAttribute.DATETIME;
+        this.type = DATETIME;
     }
 
     public DateTimeAttributeImpl() {
-        this.type = DateTimeAttribute.DATETIME;
+        this.type = DATETIME;
     }
 
     /**

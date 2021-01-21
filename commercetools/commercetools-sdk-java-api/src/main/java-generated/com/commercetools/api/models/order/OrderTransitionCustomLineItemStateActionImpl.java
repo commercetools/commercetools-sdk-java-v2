@@ -47,11 +47,11 @@ public final class OrderTransitionCustomLineItemStateActionImpl implements Order
         this.fromState = fromState;
         this.toState = toState;
         this.actualTransitionDate = actualTransitionDate;
-        this.action = OrderTransitionCustomLineItemStateAction.TRANSITION_CUSTOM_LINE_ITEM_STATE;
+        this.action = TRANSITION_CUSTOM_LINE_ITEM_STATE;
     }
 
     public OrderTransitionCustomLineItemStateActionImpl() {
-        this.action = OrderTransitionCustomLineItemStateAction.TRANSITION_CUSTOM_LINE_ITEM_STATE;
+        this.action = TRANSITION_CUSTOM_LINE_ITEM_STATE;
     }
 
     public String getAction() {

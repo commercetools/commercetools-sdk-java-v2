@@ -31,11 +31,11 @@ public final class PaymentAddTransactionActionImpl implements PaymentAddTransact
     PaymentAddTransactionActionImpl(
             @JsonProperty("transaction") final com.commercetools.api.models.payment.TransactionDraft transaction) {
         this.transaction = transaction;
-        this.action = PaymentAddTransactionAction.ADD_TRANSACTION;
+        this.action = ADD_TRANSACTION;
     }
 
     public PaymentAddTransactionActionImpl() {
-        this.action = PaymentAddTransactionAction.ADD_TRANSACTION;
+        this.action = ADD_TRANSACTION;
     }
 
     public String getAction() {

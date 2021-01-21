@@ -31,11 +31,11 @@ public final class ExtensionChangeDestinationActionImpl implements ExtensionChan
     ExtensionChangeDestinationActionImpl(
             @JsonProperty("destination") final com.commercetools.api.models.extension.ExtensionDestination destination) {
         this.destination = destination;
-        this.action = ExtensionChangeDestinationAction.CHANGE_DESTINATION;
+        this.action = CHANGE_DESTINATION;
     }
 
     public ExtensionChangeDestinationActionImpl() {
-        this.action = ExtensionChangeDestinationAction.CHANGE_DESTINATION;
+        this.action = CHANGE_DESTINATION;
     }
 
     public String getAction() {

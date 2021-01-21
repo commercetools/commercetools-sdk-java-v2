@@ -31,11 +31,11 @@ public final class AttributeEnumTypeImpl implements AttributeEnumType {
     AttributeEnumTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
         this.values = values;
-        this.name = AttributeEnumType.ENUM;
+        this.name = ENUM;
     }
 
     public AttributeEnumTypeImpl() {
-        this.name = AttributeEnumType.ENUM;
+        this.name = ENUM;
     }
 
     public String getName() {

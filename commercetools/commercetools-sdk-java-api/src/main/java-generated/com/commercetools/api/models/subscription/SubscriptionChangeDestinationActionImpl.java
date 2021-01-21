@@ -31,11 +31,11 @@ public final class SubscriptionChangeDestinationActionImpl implements Subscripti
     SubscriptionChangeDestinationActionImpl(
             @JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
-        this.action = SubscriptionChangeDestinationAction.CHANGE_DESTINATION;
+        this.action = CHANGE_DESTINATION;
     }
 
     public SubscriptionChangeDestinationActionImpl() {
-        this.action = SubscriptionChangeDestinationAction.CHANGE_DESTINATION;
+        this.action = CHANGE_DESTINATION;
     }
 
     public String getAction() {

@@ -35,11 +35,11 @@ public final class StagedOrderChangeCustomLineItemMoneyActionImpl
             @JsonProperty("money") final com.commercetools.api.models.common.Money money) {
         this.customLineItemId = customLineItemId;
         this.money = money;
-        this.action = StagedOrderChangeCustomLineItemMoneyAction.CHANGE_CUSTOM_LINE_ITEM_MONEY;
+        this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }
 
     public StagedOrderChangeCustomLineItemMoneyActionImpl() {
-        this.action = StagedOrderChangeCustomLineItemMoneyAction.CHANGE_CUSTOM_LINE_ITEM_MONEY;
+        this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }
 
     public String getAction() {

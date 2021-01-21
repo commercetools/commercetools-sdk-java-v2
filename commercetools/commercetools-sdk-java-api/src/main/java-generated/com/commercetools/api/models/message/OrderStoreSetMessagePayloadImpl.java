@@ -31,11 +31,11 @@ public final class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessa
     OrderStoreSetMessagePayloadImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
         this.store = store;
-        this.type = OrderStoreSetMessagePayload.ORDER_STORE_SET;
+        this.type = ORDER_STORE_SET;
     }
 
     public OrderStoreSetMessagePayloadImpl() {
-        this.type = OrderStoreSetMessagePayload.ORDER_STORE_SET;
+        this.type = ORDER_STORE_SET;
     }
 
     public String getType() {

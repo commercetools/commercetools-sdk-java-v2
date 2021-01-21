@@ -33,11 +33,11 @@ public final class ProductTypeChangeIsSearchableActionImpl implements ProductTyp
             @JsonProperty("isSearchable") final Boolean isSearchable) {
         this.attributeName = attributeName;
         this.isSearchable = isSearchable;
-        this.action = ProductTypeChangeIsSearchableAction.CHANGE_IS_SEARCHABLE;
+        this.action = CHANGE_IS_SEARCHABLE;
     }
 
     public ProductTypeChangeIsSearchableActionImpl() {
-        this.action = ProductTypeChangeIsSearchableAction.CHANGE_IS_SEARCHABLE;
+        this.action = CHANGE_IS_SEARCHABLE;
     }
 
     public String getAction() {

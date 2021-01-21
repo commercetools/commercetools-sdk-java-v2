@@ -30,11 +30,11 @@ public final class CategoryChangeSlugActionImpl implements CategoryChangeSlugAct
     @JsonCreator
     CategoryChangeSlugActionImpl(@JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
         this.slug = slug;
-        this.action = CategoryChangeSlugAction.CHANGE_SLUG;
+        this.action = CHANGE_SLUG;
     }
 
     public CategoryChangeSlugActionImpl() {
-        this.action = CategoryChangeSlugAction.CHANGE_SLUG;
+        this.action = CHANGE_SLUG;
     }
 
     public String getAction() {

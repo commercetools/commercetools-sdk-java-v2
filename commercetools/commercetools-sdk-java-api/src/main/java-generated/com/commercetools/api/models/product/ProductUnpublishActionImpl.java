@@ -26,7 +26,7 @@ public final class ProductUnpublishActionImpl implements ProductUnpublishAction 
 
     @JsonCreator
     ProductUnpublishActionImpl() {
-        this.action = ProductUnpublishAction.UNPUBLISH;
+        this.action = UNPUBLISH;
     }
 
     public String getAction() {

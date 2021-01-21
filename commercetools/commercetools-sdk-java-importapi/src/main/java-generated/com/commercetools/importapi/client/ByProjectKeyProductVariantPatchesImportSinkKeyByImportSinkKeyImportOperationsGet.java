@@ -22,7 +22,6 @@ import com.commercetools.importapi.models.common.ProcessingState;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 /**
 *  <p>Retrieves all product-variant-patches import operations of an import sink key.</p>

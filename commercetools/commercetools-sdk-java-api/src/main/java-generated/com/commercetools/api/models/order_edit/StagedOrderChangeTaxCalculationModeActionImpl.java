@@ -31,11 +31,11 @@ public final class StagedOrderChangeTaxCalculationModeActionImpl implements Stag
     StagedOrderChangeTaxCalculationModeActionImpl(
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode) {
         this.taxCalculationMode = taxCalculationMode;
-        this.action = StagedOrderChangeTaxCalculationModeAction.CHANGE_TAX_CALCULATION_MODE;
+        this.action = CHANGE_TAX_CALCULATION_MODE;
     }
 
     public StagedOrderChangeTaxCalculationModeActionImpl() {
-        this.action = StagedOrderChangeTaxCalculationModeAction.CHANGE_TAX_CALCULATION_MODE;
+        this.action = CHANGE_TAX_CALCULATION_MODE;
     }
 
     public String getAction() {

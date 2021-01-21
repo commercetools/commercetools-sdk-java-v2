@@ -31,11 +31,11 @@ public final class DiscountCodeSetDescriptionActionImpl implements DiscountCodeS
     DiscountCodeSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
-        this.action = DiscountCodeSetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public DiscountCodeSetDescriptionActionImpl() {
-        this.action = DiscountCodeSetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public String getAction() {

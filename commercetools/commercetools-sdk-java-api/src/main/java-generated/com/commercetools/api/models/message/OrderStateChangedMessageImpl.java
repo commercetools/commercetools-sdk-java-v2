@@ -73,11 +73,11 @@ public final class OrderStateChangedMessageImpl implements OrderStateChangedMess
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.orderState = orderState;
         this.oldOrderState = oldOrderState;
-        this.type = OrderStateChangedMessage.ORDER_STATE_CHANGED;
+        this.type = ORDER_STATE_CHANGED;
     }
 
     public OrderStateChangedMessageImpl() {
-        this.type = OrderStateChangedMessage.ORDER_STATE_CHANGED;
+        this.type = ORDER_STATE_CHANGED;
     }
 
     public String getId() {

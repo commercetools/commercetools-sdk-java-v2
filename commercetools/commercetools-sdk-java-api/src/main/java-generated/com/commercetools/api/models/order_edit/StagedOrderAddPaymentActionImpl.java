@@ -31,11 +31,11 @@ public final class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaym
     StagedOrderAddPaymentActionImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.PaymentResourceIdentifier payment) {
         this.payment = payment;
-        this.action = StagedOrderAddPaymentAction.ADD_PAYMENT;
+        this.action = ADD_PAYMENT;
     }
 
     public StagedOrderAddPaymentActionImpl() {
-        this.action = StagedOrderAddPaymentAction.ADD_PAYMENT;
+        this.action = ADD_PAYMENT;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountC
     @JsonCreator
     MyCartAddDiscountCodeActionImpl(@JsonProperty("code") final String code) {
         this.code = code;
-        this.action = MyCartAddDiscountCodeAction.ADD_DISCOUNT_CODE;
+        this.action = ADD_DISCOUNT_CODE;
     }
 
     public MyCartAddDiscountCodeActionImpl() {
-        this.action = MyCartAddDiscountCodeAction.ADD_DISCOUNT_CODE;
+        this.action = ADD_DISCOUNT_CODE;
     }
 
     public String getAction() {

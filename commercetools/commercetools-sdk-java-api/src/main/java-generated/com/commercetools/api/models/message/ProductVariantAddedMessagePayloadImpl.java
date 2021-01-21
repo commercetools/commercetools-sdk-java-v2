@@ -35,11 +35,11 @@ public final class ProductVariantAddedMessagePayloadImpl implements ProductVaria
             @JsonProperty("staged") final Boolean staged) {
         this.variant = variant;
         this.staged = staged;
-        this.type = ProductVariantAddedMessagePayload.PRODUCT_VARIANT_ADDED;
+        this.type = PRODUCT_VARIANT_ADDED;
     }
 
     public ProductVariantAddedMessagePayloadImpl() {
-        this.type = ProductVariantAddedMessagePayload.PRODUCT_VARIANT_ADDED;
+        this.type = PRODUCT_VARIANT_ADDED;
     }
 
     public String getType() {

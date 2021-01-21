@@ -31,11 +31,11 @@ public final class InventoryEntrySetExpectedDeliveryActionImpl implements Invent
     InventoryEntrySetExpectedDeliveryActionImpl(
             @JsonProperty("expectedDelivery") final java.time.ZonedDateTime expectedDelivery) {
         this.expectedDelivery = expectedDelivery;
-        this.action = InventoryEntrySetExpectedDeliveryAction.SET_EXPECTED_DELIVERY;
+        this.action = SET_EXPECTED_DELIVERY;
     }
 
     public InventoryEntrySetExpectedDeliveryActionImpl() {
-        this.action = InventoryEntrySetExpectedDeliveryAction.SET_EXPECTED_DELIVERY;
+        this.action = SET_EXPECTED_DELIVERY;
     }
 
     public String getAction() {

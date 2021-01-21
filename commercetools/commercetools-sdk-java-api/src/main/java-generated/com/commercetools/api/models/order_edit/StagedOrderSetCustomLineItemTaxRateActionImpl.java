@@ -34,11 +34,11 @@ public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements Stag
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.customLineItemId = customLineItemId;
         this.externalTaxRate = externalTaxRate;
-        this.action = StagedOrderSetCustomLineItemTaxRateAction.SET_CUSTOM_LINE_ITEM_TAX_RATE;
+        this.action = SET_CUSTOM_LINE_ITEM_TAX_RATE;
     }
 
     public StagedOrderSetCustomLineItemTaxRateActionImpl() {
-        this.action = StagedOrderSetCustomLineItemTaxRateAction.SET_CUSTOM_LINE_ITEM_TAX_RATE;
+        this.action = SET_CUSTOM_LINE_ITEM_TAX_RATE;
     }
 
     public String getAction() {

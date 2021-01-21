@@ -34,11 +34,11 @@ public final class CartChangeCustomLineItemMoneyActionImpl implements CartChange
             @JsonProperty("money") final com.commercetools.api.models.common.Money money) {
         this.customLineItemId = customLineItemId;
         this.money = money;
-        this.action = CartChangeCustomLineItemMoneyAction.CHANGE_CUSTOM_LINE_ITEM_MONEY;
+        this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }
 
     public CartChangeCustomLineItemMoneyActionImpl() {
-        this.action = CartChangeCustomLineItemMoneyAction.CHANGE_CUSTOM_LINE_ITEM_MONEY;
+        this.action = CHANGE_CUSTOM_LINE_ITEM_MONEY;
     }
 
     public String getAction() {

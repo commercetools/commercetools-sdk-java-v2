@@ -39,11 +39,11 @@ public final class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddR
         this.returnTrackingId = returnTrackingId;
         this.items = items;
         this.returnDate = returnDate;
-        this.action = StagedOrderAddReturnInfoAction.ADD_RETURN_INFO;
+        this.action = ADD_RETURN_INFO;
     }
 
     public StagedOrderAddReturnInfoActionImpl() {
-        this.action = StagedOrderAddReturnInfoAction.ADD_RETURN_INFO;
+        this.action = ADD_RETURN_INFO;
     }
 
     public String getAction() {

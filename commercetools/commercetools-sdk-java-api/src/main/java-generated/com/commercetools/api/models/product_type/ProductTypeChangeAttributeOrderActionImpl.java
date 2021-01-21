@@ -31,11 +31,11 @@ public final class ProductTypeChangeAttributeOrderActionImpl implements ProductT
     ProductTypeChangeAttributeOrderActionImpl(
             @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_type.AttributeDefinition> attributes) {
         this.attributes = attributes;
-        this.action = ProductTypeChangeAttributeOrderAction.CHANGE_ATTRIBUTE_ORDER;
+        this.action = CHANGE_ATTRIBUTE_ORDER;
     }
 
     public ProductTypeChangeAttributeOrderActionImpl() {
-        this.action = ProductTypeChangeAttributeOrderAction.CHANGE_ATTRIBUTE_ORDER;
+        this.action = CHANGE_ATTRIBUTE_ORDER;
     }
 
     public String getAction() {

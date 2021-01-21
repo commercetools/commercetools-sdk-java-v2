@@ -42,11 +42,11 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
         this.field = field;
         this.duplicateValue = duplicateValue;
         this.conflictingResource = conflictingResource;
-        this.code = DuplicateFieldError.DUPLICATE_FIELD;
+        this.code = DUPLICATE_FIELD;
     }
 
     public DuplicateFieldErrorImpl() {
-        this.code = DuplicateFieldError.DUPLICATE_FIELD;
+        this.code = DUPLICATE_FIELD;
     }
 
     public String getCode() {

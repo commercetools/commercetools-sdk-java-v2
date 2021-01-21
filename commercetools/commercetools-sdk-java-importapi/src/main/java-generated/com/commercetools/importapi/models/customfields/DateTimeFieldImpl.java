@@ -33,11 +33,11 @@ public final class DateTimeFieldImpl implements DateTimeField {
     @JsonCreator
     DateTimeFieldImpl(@JsonProperty("value") final java.time.ZonedDateTime value) {
         this.value = value;
-        this.type = DateTimeField.DATE_TIME;
+        this.type = DATE_TIME;
     }
 
     public DateTimeFieldImpl() {
-        this.type = DateTimeField.DATE_TIME;
+        this.type = DATE_TIME;
     }
 
     /**

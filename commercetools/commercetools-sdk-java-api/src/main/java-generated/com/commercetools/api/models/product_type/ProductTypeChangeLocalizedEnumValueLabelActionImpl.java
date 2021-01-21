@@ -35,11 +35,11 @@ public final class ProductTypeChangeLocalizedEnumValueLabelActionImpl
             @JsonProperty("newValue") final com.commercetools.api.models.product_type.AttributeLocalizedEnumValue newValue) {
         this.attributeName = attributeName;
         this.newValue = newValue;
-        this.action = ProductTypeChangeLocalizedEnumValueLabelAction.CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
+        this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }
 
     public ProductTypeChangeLocalizedEnumValueLabelActionImpl() {
-        this.action = ProductTypeChangeLocalizedEnumValueLabelAction.CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
+        this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }
 
     public String getAction() {

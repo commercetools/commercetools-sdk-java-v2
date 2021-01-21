@@ -29,11 +29,11 @@ public final class ZoneSetKeyActionImpl implements ZoneSetKeyAction {
     @JsonCreator
     ZoneSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = ZoneSetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public ZoneSetKeyActionImpl() {
-        this.action = ZoneSetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public String getAction() {

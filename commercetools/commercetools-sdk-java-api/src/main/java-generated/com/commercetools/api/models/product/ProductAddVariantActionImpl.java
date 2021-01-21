@@ -56,11 +56,11 @@ public final class ProductAddVariantActionImpl implements ProductAddVariantActio
         this.attributes = attributes;
         this.staged = staged;
         this.assets = assets;
-        this.action = ProductAddVariantAction.ADD_VARIANT;
+        this.action = ADD_VARIANT;
     }
 
     public ProductAddVariantActionImpl() {
-        this.action = ProductAddVariantAction.ADD_VARIANT;
+        this.action = ADD_VARIANT;
     }
 
     public String getAction() {

@@ -34,11 +34,11 @@ public final class PaymentChangeTransactionTimestampActionImpl implements Paymen
             @JsonProperty("timestamp") final java.time.ZonedDateTime timestamp) {
         this.transactionId = transactionId;
         this.timestamp = timestamp;
-        this.action = PaymentChangeTransactionTimestampAction.CHANGE_TRANSACTION_TIMESTAMP;
+        this.action = CHANGE_TRANSACTION_TIMESTAMP;
     }
 
     public PaymentChangeTransactionTimestampActionImpl() {
-        this.action = PaymentChangeTransactionTimestampAction.CHANGE_TRANSACTION_TIMESTAMP;
+        this.action = CHANGE_TRANSACTION_TIMESTAMP;
     }
 
     public String getAction() {

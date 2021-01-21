@@ -47,11 +47,11 @@ public final class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsA
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.tags = tags;
-        this.action = ProductSetAssetTagsAction.SET_ASSET_TAGS;
+        this.action = SET_ASSET_TAGS;
     }
 
     public ProductSetAssetTagsActionImpl() {
-        this.action = ProductSetAssetTagsAction.SET_ASSET_TAGS;
+        this.action = SET_ASSET_TAGS;
     }
 
     public String getAction() {

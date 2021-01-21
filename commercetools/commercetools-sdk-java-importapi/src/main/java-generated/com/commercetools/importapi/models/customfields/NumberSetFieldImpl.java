@@ -32,11 +32,11 @@ public final class NumberSetFieldImpl implements NumberSetField {
     @JsonCreator
     NumberSetFieldImpl(@JsonProperty("value") final java.util.List<Double> value) {
         this.value = value;
-        this.type = NumberSetField.NUMBER_SET;
+        this.type = NUMBER_SET;
     }
 
     public NumberSetFieldImpl() {
-        this.type = NumberSetField.NUMBER_SET;
+        this.type = NUMBER_SET;
     }
 
     /**

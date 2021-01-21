@@ -29,11 +29,11 @@ public final class StagedOrderSetOrderNumberActionImpl implements StagedOrderSet
     @JsonCreator
     StagedOrderSetOrderNumberActionImpl(@JsonProperty("orderNumber") final String orderNumber) {
         this.orderNumber = orderNumber;
-        this.action = StagedOrderSetOrderNumberAction.SET_ORDER_NUMBER;
+        this.action = SET_ORDER_NUMBER;
     }
 
     public StagedOrderSetOrderNumberActionImpl() {
-        this.action = StagedOrderSetOrderNumberAction.SET_ORDER_NUMBER;
+        this.action = SET_ORDER_NUMBER;
     }
 
     public String getAction() {

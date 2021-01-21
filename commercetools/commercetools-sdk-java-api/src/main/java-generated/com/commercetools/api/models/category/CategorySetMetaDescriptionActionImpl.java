@@ -31,11 +31,11 @@ public final class CategorySetMetaDescriptionActionImpl implements CategorySetMe
     CategorySetMetaDescriptionActionImpl(
             @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription) {
         this.metaDescription = metaDescription;
-        this.action = CategorySetMetaDescriptionAction.SET_META_DESCRIPTION;
+        this.action = SET_META_DESCRIPTION;
     }
 
     public CategorySetMetaDescriptionActionImpl() {
-        this.action = CategorySetMetaDescriptionAction.SET_META_DESCRIPTION;
+        this.action = SET_META_DESCRIPTION;
     }
 
     public String getAction() {

@@ -39,11 +39,11 @@ public final class CartSetLineItemCustomTypeActionImpl implements CartSetLineIte
         this.lineItemId = lineItemId;
         this.type = type;
         this.fields = fields;
-        this.action = CartSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public CartSetLineItemCustomTypeActionImpl() {
-        this.action = CartSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public String getAction() {

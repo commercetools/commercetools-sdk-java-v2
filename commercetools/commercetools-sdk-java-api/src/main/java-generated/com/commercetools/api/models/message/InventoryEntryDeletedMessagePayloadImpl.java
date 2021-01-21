@@ -34,11 +34,11 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelReference supplyChannel) {
         this.sku = sku;
         this.supplyChannel = supplyChannel;
-        this.type = InventoryEntryDeletedMessagePayload.INVENTORY_ENTRY_DELETED;
+        this.type = INVENTORY_ENTRY_DELETED;
     }
 
     public InventoryEntryDeletedMessagePayloadImpl() {
-        this.type = InventoryEntryDeletedMessagePayload.INVENTORY_ENTRY_DELETED;
+        this.type = INVENTORY_ENTRY_DELETED;
     }
 
     public String getType() {

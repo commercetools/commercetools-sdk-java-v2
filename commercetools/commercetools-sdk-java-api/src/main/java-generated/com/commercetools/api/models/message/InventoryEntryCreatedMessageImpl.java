@@ -69,11 +69,11 @@ public final class InventoryEntryCreatedMessageImpl implements InventoryEntryCre
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.inventoryEntry = inventoryEntry;
-        this.type = InventoryEntryCreatedMessage.INVENTORY_ENTRY_CREATED;
+        this.type = INVENTORY_ENTRY_CREATED;
     }
 
     public InventoryEntryCreatedMessageImpl() {
-        this.type = InventoryEntryCreatedMessage.INVENTORY_ENTRY_CREATED;
+        this.type = INVENTORY_ENTRY_CREATED;
     }
 
     public String getId() {

@@ -29,11 +29,11 @@ public final class GeoJsonPointImpl implements GeoJsonPoint {
     @JsonCreator
     GeoJsonPointImpl(@JsonProperty("coordinates") final java.util.List<Double> coordinates) {
         this.coordinates = coordinates;
-        this.type = GeoJsonPoint.POINT;
+        this.type = POINT;
     }
 
     public GeoJsonPointImpl() {
-        this.type = GeoJsonPoint.POINT;
+        this.type = POINT;
     }
 
     public String getType() {

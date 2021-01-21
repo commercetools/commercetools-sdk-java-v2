@@ -38,11 +38,11 @@ public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantVa
             @JsonProperty("variantValues") final com.commercetools.importapi.models.errors.VariantValues variantValues) {
         this.message = message;
         this.variantValues = variantValues;
-        this.code = DuplicateVariantValuesError.DUPLICATE_VARIANT_VALUES;
+        this.code = DUPLICATE_VARIANT_VALUES;
     }
 
     public DuplicateVariantValuesErrorImpl() {
-        this.code = DuplicateVariantValuesError.DUPLICATE_VARIANT_VALUES;
+        this.code = DUPLICATE_VARIANT_VALUES;
     }
 
     public String getCode() {

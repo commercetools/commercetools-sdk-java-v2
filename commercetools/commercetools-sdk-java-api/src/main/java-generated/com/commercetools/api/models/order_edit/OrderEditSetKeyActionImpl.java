@@ -29,11 +29,11 @@ public final class OrderEditSetKeyActionImpl implements OrderEditSetKeyAction {
     @JsonCreator
     OrderEditSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = OrderEditSetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public OrderEditSetKeyActionImpl() {
-        this.action = OrderEditSetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public String getAction() {

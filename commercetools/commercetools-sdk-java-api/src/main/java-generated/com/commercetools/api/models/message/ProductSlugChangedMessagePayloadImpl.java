@@ -35,11 +35,11 @@ public final class ProductSlugChangedMessagePayloadImpl implements ProductSlugCh
             @JsonProperty("oldSlug") final com.commercetools.api.models.common.LocalizedString oldSlug) {
         this.slug = slug;
         this.oldSlug = oldSlug;
-        this.type = ProductSlugChangedMessagePayload.PRODUCT_SLUG_CHANGED;
+        this.type = PRODUCT_SLUG_CHANGED;
     }
 
     public ProductSlugChangedMessagePayloadImpl() {
-        this.type = ProductSlugChangedMessagePayload.PRODUCT_SLUG_CHANGED;
+        this.type = PRODUCT_SLUG_CHANGED;
     }
 
     public String getType() {

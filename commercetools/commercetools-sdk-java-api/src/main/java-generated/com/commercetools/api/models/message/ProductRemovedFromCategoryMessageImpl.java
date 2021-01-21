@@ -74,11 +74,11 @@ public final class ProductRemovedFromCategoryMessageImpl implements ProductRemov
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.category = category;
         this.staged = staged;
-        this.type = ProductRemovedFromCategoryMessage.PRODUCT_REMOVED_FROM_CATEGORY;
+        this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }
 
     public ProductRemovedFromCategoryMessageImpl() {
-        this.type = ProductRemovedFromCategoryMessage.PRODUCT_REMOVED_FROM_CATEGORY;
+        this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }
 
     public String getId() {

@@ -31,11 +31,11 @@ public final class InventoryEntrySetSupplyChannelActionImpl implements Inventory
     InventoryEntrySetSupplyChannelActionImpl(
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
-        this.action = InventoryEntrySetSupplyChannelAction.SET_SUPPLY_CHANNEL;
+        this.action = SET_SUPPLY_CHANNEL;
     }
 
     public InventoryEntrySetSupplyChannelActionImpl() {
-        this.action = InventoryEntrySetSupplyChannelAction.SET_SUPPLY_CHANNEL;
+        this.action = SET_SUPPLY_CHANNEL;
     }
 
     public String getAction() {

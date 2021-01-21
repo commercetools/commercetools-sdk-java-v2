@@ -31,11 +31,11 @@ public final class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSe
     CustomerGroupSetMessagePayloadImpl(
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
-        this.type = CustomerGroupSetMessagePayload.CUSTOMER_GROUP_SET;
+        this.type = CUSTOMER_GROUP_SET;
     }
 
     public CustomerGroupSetMessagePayloadImpl() {
-        this.type = CustomerGroupSetMessagePayload.CUSTOMER_GROUP_SET;
+        this.type = CUSTOMER_GROUP_SET;
     }
 
     public String getType() {

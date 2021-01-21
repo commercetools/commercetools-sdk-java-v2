@@ -31,11 +31,11 @@ public final class CartDiscountSetDescriptionActionImpl implements CartDiscountS
     CartDiscountSetDescriptionActionImpl(
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
-        this.action = CartDiscountSetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public CartDiscountSetDescriptionActionImpl() {
-        this.action = CartDiscountSetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public String getAction() {

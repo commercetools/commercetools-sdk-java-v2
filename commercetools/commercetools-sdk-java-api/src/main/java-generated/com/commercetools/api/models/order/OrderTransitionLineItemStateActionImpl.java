@@ -47,11 +47,11 @@ public final class OrderTransitionLineItemStateActionImpl implements OrderTransi
         this.fromState = fromState;
         this.toState = toState;
         this.actualTransitionDate = actualTransitionDate;
-        this.action = OrderTransitionLineItemStateAction.TRANSITION_LINE_ITEM_STATE;
+        this.action = TRANSITION_LINE_ITEM_STATE;
     }
 
     public OrderTransitionLineItemStateActionImpl() {
-        this.action = OrderTransitionLineItemStateAction.TRANSITION_LINE_ITEM_STATE;
+        this.action = TRANSITION_LINE_ITEM_STATE;
     }
 
     public String getAction() {

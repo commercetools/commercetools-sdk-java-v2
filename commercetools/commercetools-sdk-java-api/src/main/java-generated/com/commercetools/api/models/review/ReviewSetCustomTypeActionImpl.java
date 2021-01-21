@@ -36,11 +36,11 @@ public final class ReviewSetCustomTypeActionImpl implements ReviewSetCustomTypeA
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = ReviewSetCustomTypeAction.SET_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_TYPE;
     }
 
     public ReviewSetCustomTypeActionImpl() {
-        this.action = ReviewSetCustomTypeAction.SET_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

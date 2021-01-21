@@ -30,11 +30,11 @@ public final class CustomerAddAddressActionImpl implements CustomerAddAddressAct
     @JsonCreator
     CustomerAddAddressActionImpl(@JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.address = address;
-        this.action = CustomerAddAddressAction.ADD_ADDRESS;
+        this.action = ADD_ADDRESS;
     }
 
     public CustomerAddAddressActionImpl() {
-        this.action = CustomerAddAddressAction.ADD_ADDRESS;
+        this.action = ADD_ADDRESS;
     }
 
     public String getAction() {

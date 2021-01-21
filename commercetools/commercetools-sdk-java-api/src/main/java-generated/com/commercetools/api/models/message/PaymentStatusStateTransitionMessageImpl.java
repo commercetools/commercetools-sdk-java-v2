@@ -74,11 +74,11 @@ public final class PaymentStatusStateTransitionMessageImpl implements PaymentSta
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.state = state;
         this.force = force;
-        this.type = PaymentStatusStateTransitionMessage.PAYMENT_STATUS_STATE_TRANSITION;
+        this.type = PAYMENT_STATUS_STATE_TRANSITION;
     }
 
     public PaymentStatusStateTransitionMessageImpl() {
-        this.type = PaymentStatusStateTransitionMessage.PAYMENT_STATUS_STATE_TRANSITION;
+        this.type = PAYMENT_STATUS_STATE_TRANSITION;
     }
 
     public String getId() {

@@ -31,11 +31,11 @@ public final class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessa
     DeliveryAddedMessagePayloadImpl(
             @JsonProperty("delivery") final com.commercetools.api.models.order.Delivery delivery) {
         this.delivery = delivery;
-        this.type = DeliveryAddedMessagePayload.DELIVERY_ADDED;
+        this.type = DELIVERY_ADDED;
     }
 
     public DeliveryAddedMessagePayloadImpl() {
-        this.type = DeliveryAddedMessagePayload.DELIVERY_ADDED;
+        this.type = DELIVERY_ADDED;
     }
 
     public String getType() {

@@ -34,11 +34,11 @@ public final class LocalizedStringFieldImpl implements LocalizedStringField {
     LocalizedStringFieldImpl(
             @JsonProperty("value") final com.commercetools.importapi.models.common.LocalizedString value) {
         this.value = value;
-        this.type = LocalizedStringField.LOCALIZED_STRING;
+        this.type = LOCALIZED_STRING;
     }
 
     public LocalizedStringFieldImpl() {
-        this.type = LocalizedStringField.LOCALIZED_STRING;
+        this.type = LOCALIZED_STRING;
     }
 
     /**

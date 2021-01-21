@@ -29,11 +29,11 @@ public final class ShippingMethodSetDescriptionActionImpl implements ShippingMet
     @JsonCreator
     ShippingMethodSetDescriptionActionImpl(@JsonProperty("description") final String description) {
         this.description = description;
-        this.action = ShippingMethodSetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public ShippingMethodSetDescriptionActionImpl() {
-        this.action = ShippingMethodSetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public String getAction() {

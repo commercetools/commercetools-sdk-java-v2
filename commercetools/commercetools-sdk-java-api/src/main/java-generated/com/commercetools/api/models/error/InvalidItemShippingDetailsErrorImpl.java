@@ -36,11 +36,11 @@ public final class InvalidItemShippingDetailsErrorImpl implements InvalidItemShi
         this.message = message;
         this.subject = subject;
         this.itemId = itemId;
-        this.code = InvalidItemShippingDetailsError.INVALID_ITEM_SHIPPING_DETAILS;
+        this.code = INVALID_ITEM_SHIPPING_DETAILS;
     }
 
     public InvalidItemShippingDetailsErrorImpl() {
-        this.code = InvalidItemShippingDetailsError.INVALID_ITEM_SHIPPING_DETAILS;
+        this.code = INVALID_ITEM_SHIPPING_DETAILS;
     }
 
     public String getCode() {

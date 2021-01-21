@@ -31,11 +31,11 @@ public final class CartUpdateItemShippingAddressActionImpl implements CartUpdate
     CartUpdateItemShippingAddressActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.address = address;
-        this.action = CartUpdateItemShippingAddressAction.UPDATE_ITEM_SHIPPING_ADDRESS;
+        this.action = UPDATE_ITEM_SHIPPING_ADDRESS;
     }
 
     public CartUpdateItemShippingAddressActionImpl() {
-        this.action = CartUpdateItemShippingAddressAction.UPDATE_ITEM_SHIPPING_ADDRESS;
+        this.action = UPDATE_ITEM_SHIPPING_ADDRESS;
     }
 
     public String getAction() {

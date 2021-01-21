@@ -29,11 +29,11 @@ public final class ShoppingListSetAnonymousIdActionImpl implements ShoppingListS
     @JsonCreator
     ShoppingListSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
         this.anonymousId = anonymousId;
-        this.action = ShoppingListSetAnonymousIdAction.SET_ANONYMOUS_ID;
+        this.action = SET_ANONYMOUS_ID;
     }
 
     public ShoppingListSetAnonymousIdActionImpl() {
-        this.action = ShoppingListSetAnonymousIdAction.SET_ANONYMOUS_ID;
+        this.action = SET_ANONYMOUS_ID;
     }
 
     public String getAction() {

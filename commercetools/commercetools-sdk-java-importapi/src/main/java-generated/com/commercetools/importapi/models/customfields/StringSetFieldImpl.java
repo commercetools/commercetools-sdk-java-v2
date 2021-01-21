@@ -32,11 +32,11 @@ public final class StringSetFieldImpl implements StringSetField {
     @JsonCreator
     StringSetFieldImpl(@JsonProperty("value") final java.util.List<String> value) {
         this.value = value;
-        this.type = StringSetField.STRING_SET;
+        this.type = STRING_SET;
     }
 
     public StringSetFieldImpl() {
-        this.type = StringSetField.STRING_SET;
+        this.type = STRING_SET;
     }
 
     /**

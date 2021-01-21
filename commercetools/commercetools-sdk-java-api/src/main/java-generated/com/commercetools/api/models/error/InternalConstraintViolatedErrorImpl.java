@@ -29,11 +29,11 @@ public final class InternalConstraintViolatedErrorImpl implements InternalConstr
     @JsonCreator
     InternalConstraintViolatedErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = InternalConstraintViolatedError.INTERNAL_CONSTRAINT_VIOLATED;
+        this.code = INTERNAL_CONSTRAINT_VIOLATED;
     }
 
     public InternalConstraintViolatedErrorImpl() {
-        this.code = InternalConstraintViolatedError.INTERNAL_CONSTRAINT_VIOLATED;
+        this.code = INTERNAL_CONSTRAINT_VIOLATED;
     }
 
     public String getCode() {

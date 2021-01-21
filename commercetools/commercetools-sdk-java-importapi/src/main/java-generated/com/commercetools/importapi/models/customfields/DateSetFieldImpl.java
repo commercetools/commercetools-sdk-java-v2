@@ -33,11 +33,11 @@ public final class DateSetFieldImpl implements DateSetField {
     @JsonCreator
     DateSetFieldImpl(@JsonProperty("value") final java.util.List<java.time.LocalDate> value) {
         this.value = value;
-        this.type = DateSetField.DATE_SET;
+        this.type = DATE_SET;
     }
 
     public DateSetFieldImpl() {
-        this.type = DateSetField.DATE_SET;
+        this.type = DATE_SET;
     }
 
     /**

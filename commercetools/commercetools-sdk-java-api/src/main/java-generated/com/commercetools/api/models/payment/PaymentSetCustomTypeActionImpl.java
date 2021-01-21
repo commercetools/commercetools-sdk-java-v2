@@ -36,11 +36,11 @@ public final class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTyp
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = PaymentSetCustomTypeAction.SET_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_TYPE;
     }
 
     public PaymentSetCustomTypeActionImpl() {
-        this.action = PaymentSetCustomTypeAction.SET_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

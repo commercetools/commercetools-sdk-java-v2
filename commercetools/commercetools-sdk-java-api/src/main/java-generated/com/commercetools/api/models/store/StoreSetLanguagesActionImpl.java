@@ -29,11 +29,11 @@ public final class StoreSetLanguagesActionImpl implements StoreSetLanguagesActio
     @JsonCreator
     StoreSetLanguagesActionImpl(@JsonProperty("languages") final java.util.List<String> languages) {
         this.languages = languages;
-        this.action = StoreSetLanguagesAction.SET_LANGUAGES;
+        this.action = SET_LANGUAGES;
     }
 
     public StoreSetLanguagesActionImpl() {
-        this.action = StoreSetLanguagesAction.SET_LANGUAGES;
+        this.action = SET_LANGUAGES;
     }
 
     public String getAction() {

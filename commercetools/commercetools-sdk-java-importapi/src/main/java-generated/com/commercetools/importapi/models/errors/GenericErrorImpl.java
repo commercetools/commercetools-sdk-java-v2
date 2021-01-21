@@ -29,11 +29,11 @@ public final class GenericErrorImpl implements GenericError {
     @JsonCreator
     GenericErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = GenericError.GENERIC;
+        this.code = GENERIC;
     }
 
     public GenericErrorImpl() {
-        this.code = GenericError.GENERIC;
+        this.code = GENERIC;
     }
 
     public String getCode() {

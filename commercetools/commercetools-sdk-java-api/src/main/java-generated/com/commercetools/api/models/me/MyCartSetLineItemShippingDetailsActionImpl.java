@@ -34,11 +34,11 @@ public final class MyCartSetLineItemShippingDetailsActionImpl implements MyCartS
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.lineItemId = lineItemId;
         this.shippingDetails = shippingDetails;
-        this.action = MyCartSetLineItemShippingDetailsAction.SET_LINE_ITEM_SHIPPING_DETAILS;
+        this.action = SET_LINE_ITEM_SHIPPING_DETAILS;
     }
 
     public MyCartSetLineItemShippingDetailsActionImpl() {
-        this.action = MyCartSetLineItemShippingDetailsAction.SET_LINE_ITEM_SHIPPING_DETAILS;
+        this.action = SET_LINE_ITEM_SHIPPING_DETAILS;
     }
 
     public String getAction() {

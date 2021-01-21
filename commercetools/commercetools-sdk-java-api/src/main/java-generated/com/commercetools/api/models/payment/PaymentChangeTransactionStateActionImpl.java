@@ -34,11 +34,11 @@ public final class PaymentChangeTransactionStateActionImpl implements PaymentCha
             @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
         this.transactionId = transactionId;
         this.state = state;
-        this.action = PaymentChangeTransactionStateAction.CHANGE_TRANSACTION_STATE;
+        this.action = CHANGE_TRANSACTION_STATE;
     }
 
     public PaymentChangeTransactionStateActionImpl() {
-        this.action = PaymentChangeTransactionStateAction.CHANGE_TRANSACTION_STATE;
+        this.action = CHANGE_TRANSACTION_STATE;
     }
 
     public String getAction() {

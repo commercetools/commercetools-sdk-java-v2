@@ -31,11 +31,11 @@ public final class AttributeNestedTypeImpl implements AttributeNestedType {
     AttributeNestedTypeImpl(
             @JsonProperty("typeReference") final com.commercetools.importapi.models.common.ProductTypeKeyReference typeReference) {
         this.typeReference = typeReference;
-        this.name = AttributeNestedType.NESTED;
+        this.name = NESTED;
     }
 
     public AttributeNestedTypeImpl() {
-        this.name = AttributeNestedType.NESTED;
+        this.name = NESTED;
     }
 
     public String getName() {

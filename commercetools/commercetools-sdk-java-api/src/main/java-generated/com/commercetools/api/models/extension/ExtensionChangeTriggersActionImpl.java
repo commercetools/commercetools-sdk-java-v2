@@ -31,11 +31,11 @@ public final class ExtensionChangeTriggersActionImpl implements ExtensionChangeT
     ExtensionChangeTriggersActionImpl(
             @JsonProperty("triggers") final java.util.List<com.commercetools.api.models.extension.ExtensionTrigger> triggers) {
         this.triggers = triggers;
-        this.action = ExtensionChangeTriggersAction.CHANGE_TRIGGERS;
+        this.action = CHANGE_TRIGGERS;
     }
 
     public ExtensionChangeTriggersActionImpl() {
-        this.action = ExtensionChangeTriggersAction.CHANGE_TRIGGERS;
+        this.action = CHANGE_TRIGGERS;
     }
 
     public String getAction() {

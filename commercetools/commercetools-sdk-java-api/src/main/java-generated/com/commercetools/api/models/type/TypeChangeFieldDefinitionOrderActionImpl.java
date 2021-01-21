@@ -29,11 +29,11 @@ public final class TypeChangeFieldDefinitionOrderActionImpl implements TypeChang
     @JsonCreator
     TypeChangeFieldDefinitionOrderActionImpl(@JsonProperty("fieldNames") final java.util.List<String> fieldNames) {
         this.fieldNames = fieldNames;
-        this.action = TypeChangeFieldDefinitionOrderAction.CHANGE_FIELD_DEFINITION_ORDER;
+        this.action = CHANGE_FIELD_DEFINITION_ORDER;
     }
 
     public TypeChangeFieldDefinitionOrderActionImpl() {
-        this.action = TypeChangeFieldDefinitionOrderAction.CHANGE_FIELD_DEFINITION_ORDER;
+        this.action = CHANGE_FIELD_DEFINITION_ORDER;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class NotEnabledErrorImpl implements NotEnabledError {
     @JsonCreator
     NotEnabledErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = NotEnabledError.NOT_ENABLED;
+        this.code = NOT_ENABLED;
     }
 
     public NotEnabledErrorImpl() {
-        this.code = NotEnabledError.NOT_ENABLED;
+        this.code = NOT_ENABLED;
     }
 
     public String getCode() {

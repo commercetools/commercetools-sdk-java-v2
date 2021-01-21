@@ -29,11 +29,11 @@ public final class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLim
     @JsonCreator
     ResourceSizeLimitExceededErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = ResourceSizeLimitExceededError.RESOURCE_SIZE_LIMIT_EXCEEDED;
+        this.code = RESOURCE_SIZE_LIMIT_EXCEEDED;
     }
 
     public ResourceSizeLimitExceededErrorImpl() {
-        this.code = ResourceSizeLimitExceededError.RESOURCE_SIZE_LIMIT_EXCEEDED;
+        this.code = RESOURCE_SIZE_LIMIT_EXCEEDED;
     }
 
     public String getCode() {

@@ -35,11 +35,11 @@ public final class BooleanAttributeImpl implements BooleanAttribute {
     BooleanAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Boolean value) {
         this.name = name;
         this.value = value;
-        this.type = BooleanAttribute.BOOLEAN;
+        this.type = BOOLEAN;
     }
 
     public BooleanAttributeImpl() {
-        this.type = BooleanAttribute.BOOLEAN;
+        this.type = BOOLEAN;
     }
 
     /**

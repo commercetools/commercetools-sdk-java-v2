@@ -34,11 +34,11 @@ public final class MaxResourceLimitExceededErrorImpl implements MaxResourceLimit
             @JsonProperty("exceededResource") final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {
         this.message = message;
         this.exceededResource = exceededResource;
-        this.code = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED;
+        this.code = MAX_RESOURCE_LIMIT_EXCEEDED;
     }
 
     public MaxResourceLimitExceededErrorImpl() {
-        this.code = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED;
+        this.code = MAX_RESOURCE_LIMIT_EXCEEDED;
     }
 
     public String getCode() {

@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 /**
 *  <p>You can use the product projections query endpoint to get the current or staged representations of Products.

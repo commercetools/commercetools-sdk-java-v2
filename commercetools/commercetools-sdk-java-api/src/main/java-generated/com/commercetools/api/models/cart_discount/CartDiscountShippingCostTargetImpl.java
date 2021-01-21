@@ -26,7 +26,7 @@ public final class CartDiscountShippingCostTargetImpl implements CartDiscountShi
 
     @JsonCreator
     CartDiscountShippingCostTargetImpl() {
-        this.type = CartDiscountShippingCostTarget.SHIPPING;
+        this.type = SHIPPING;
     }
 
     public String getType() {

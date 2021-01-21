@@ -30,11 +30,11 @@ public final class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOf
     @JsonCreator
     CustomerSetDateOfBirthActionImpl(@JsonProperty("dateOfBirth") final java.time.LocalDate dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
-        this.action = CustomerSetDateOfBirthAction.SET_DATE_OF_BIRTH;
+        this.action = SET_DATE_OF_BIRTH;
     }
 
     public CustomerSetDateOfBirthActionImpl() {
-        this.action = CustomerSetDateOfBirthAction.SET_DATE_OF_BIRTH;
+        this.action = SET_DATE_OF_BIRTH;
     }
 
     public String getAction() {

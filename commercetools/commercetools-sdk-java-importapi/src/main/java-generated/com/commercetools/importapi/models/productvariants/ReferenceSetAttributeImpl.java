@@ -37,11 +37,11 @@ public final class ReferenceSetAttributeImpl implements ReferenceSetAttribute {
             @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.KeyReference> value) {
         this.name = name;
         this.value = value;
-        this.type = ReferenceSetAttribute.REFERENCE_SET;
+        this.type = REFERENCE_SET;
     }
 
     public ReferenceSetAttributeImpl() {
-        this.type = ReferenceSetAttribute.REFERENCE_SET;
+        this.type = REFERENCE_SET;
     }
 
     /**

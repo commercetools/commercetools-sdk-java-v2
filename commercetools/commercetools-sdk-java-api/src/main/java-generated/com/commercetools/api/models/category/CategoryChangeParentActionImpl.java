@@ -31,11 +31,11 @@ public final class CategoryChangeParentActionImpl implements CategoryChangeParen
     CategoryChangeParentActionImpl(
             @JsonProperty("parent") final com.commercetools.api.models.category.CategoryResourceIdentifier parent) {
         this.parent = parent;
-        this.action = CategoryChangeParentAction.CHANGE_PARENT;
+        this.action = CHANGE_PARENT;
     }
 
     public CategoryChangeParentActionImpl() {
-        this.action = CategoryChangeParentAction.CHANGE_PARENT;
+        this.action = CHANGE_PARENT;
     }
 
     public String getAction() {

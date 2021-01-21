@@ -33,11 +33,11 @@ public final class AttributeNameDoesNotExistErrorImpl implements AttributeNameDo
             @JsonProperty("invalidAttributeName") final String invalidAttributeName) {
         this.message = message;
         this.invalidAttributeName = invalidAttributeName;
-        this.code = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST;
+        this.code = ATTRIBUTE_NAME_DOES_NOT_EXIST;
     }
 
     public AttributeNameDoesNotExistErrorImpl() {
-        this.code = AttributeNameDoesNotExistError.ATTRIBUTE_NAME_DOES_NOT_EXIST;
+        this.code = ATTRIBUTE_NAME_DOES_NOT_EXIST;
     }
 
     public String getCode() {

@@ -35,11 +35,11 @@ public final class NumberAttributeImpl implements NumberAttribute {
     NumberAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final Double value) {
         this.name = name;
         this.value = value;
-        this.type = NumberAttribute.NUMBER;
+        this.type = NUMBER;
     }
 
     public NumberAttributeImpl() {
-        this.type = NumberAttribute.NUMBER;
+        this.type = NUMBER;
     }
 
     /**

@@ -36,11 +36,11 @@ public final class NumberSetAttributeImpl implements NumberSetAttribute {
             @JsonProperty("value") final java.util.List<Double> value) {
         this.name = name;
         this.value = value;
-        this.type = NumberSetAttribute.NUMBER_SET;
+        this.type = NUMBER_SET;
     }
 
     public NumberSetAttributeImpl() {
-        this.type = NumberSetAttribute.NUMBER_SET;
+        this.type = NUMBER_SET;
     }
 
     /**

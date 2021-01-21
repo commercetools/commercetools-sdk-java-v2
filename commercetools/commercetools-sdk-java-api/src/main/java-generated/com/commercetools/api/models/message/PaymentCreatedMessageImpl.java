@@ -69,11 +69,11 @@ public final class PaymentCreatedMessageImpl implements PaymentCreatedMessage {
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.payment = payment;
-        this.type = PaymentCreatedMessage.PAYMENT_CREATED;
+        this.type = PAYMENT_CREATED;
     }
 
     public PaymentCreatedMessageImpl() {
-        this.type = PaymentCreatedMessage.PAYMENT_CREATED;
+        this.type = PAYMENT_CREATED;
     }
 
     public String getId() {

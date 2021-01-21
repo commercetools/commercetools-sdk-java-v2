@@ -29,11 +29,11 @@ public final class CustomFieldSetTypeImpl implements CustomFieldSetType {
     @JsonCreator
     CustomFieldSetTypeImpl(@JsonProperty("elementType") final com.commercetools.api.models.type.FieldType elementType) {
         this.elementType = elementType;
-        this.name = CustomFieldSetType.SET;
+        this.name = SET;
     }
 
     public CustomFieldSetTypeImpl() {
-        this.name = CustomFieldSetType.SET;
+        this.name = SET;
     }
 
     public String getName() {

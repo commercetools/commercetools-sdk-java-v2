@@ -40,11 +40,11 @@ public final class SqsDestinationImpl implements SqsDestination {
         this.accessSecret = accessSecret;
         this.queueUrl = queueUrl;
         this.region = region;
-        this.type = SqsDestination.SQS;
+        this.type = SQS;
     }
 
     public SqsDestinationImpl() {
-        this.type = SqsDestination.SQS;
+        this.type = SQS;
     }
 
     public String getType() {

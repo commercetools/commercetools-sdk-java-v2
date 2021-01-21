@@ -43,11 +43,11 @@ public final class ProductRemoveAssetActionImpl implements ProductRemoveAssetAct
         this.staged = staged;
         this.assetId = assetId;
         this.assetKey = assetKey;
-        this.action = ProductRemoveAssetAction.REMOVE_ASSET;
+        this.action = REMOVE_ASSET;
     }
 
     public ProductRemoveAssetActionImpl() {
-        this.action = ProductRemoveAssetAction.REMOVE_ASSET;
+        this.action = REMOVE_ASSET;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class InvalidOperationErrorImpl implements InvalidOperationError {
     @JsonCreator
     InvalidOperationErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = InvalidOperationError.INVALID_OPERATION;
+        this.code = INVALID_OPERATION;
     }
 
     public InvalidOperationErrorImpl() {
-        this.code = InvalidOperationError.INVALID_OPERATION;
+        this.code = INVALID_OPERATION;
     }
 
     public String getCode() {

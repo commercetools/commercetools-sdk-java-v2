@@ -31,11 +31,11 @@ public final class ProductDiscountValueAbsoluteImpl implements ProductDiscountVa
     ProductDiscountValueAbsoluteImpl(
             @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.TypedMoney> money) {
         this.money = money;
-        this.type = ProductDiscountValueAbsolute.ABSOLUTE;
+        this.type = ABSOLUTE;
     }
 
     public ProductDiscountValueAbsoluteImpl() {
-        this.type = ProductDiscountValueAbsolute.ABSOLUTE;
+        this.type = ABSOLUTE;
     }
 
     public String getType() {

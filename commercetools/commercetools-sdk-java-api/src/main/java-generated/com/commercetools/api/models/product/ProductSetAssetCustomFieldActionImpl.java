@@ -52,11 +52,11 @@ public final class ProductSetAssetCustomFieldActionImpl implements ProductSetAss
         this.assetKey = assetKey;
         this.name = name;
         this.value = value;
-        this.action = ProductSetAssetCustomFieldAction.SET_ASSET_CUSTOM_FIELD;
+        this.action = SET_ASSET_CUSTOM_FIELD;
     }
 
     public ProductSetAssetCustomFieldActionImpl() {
-        this.action = ProductSetAssetCustomFieldAction.SET_ASSET_CUSTOM_FIELD;
+        this.action = SET_ASSET_CUSTOM_FIELD;
     }
 
     public String getAction() {

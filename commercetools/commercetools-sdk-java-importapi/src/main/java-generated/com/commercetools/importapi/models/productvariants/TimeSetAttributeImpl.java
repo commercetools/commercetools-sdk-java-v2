@@ -37,11 +37,11 @@ public final class TimeSetAttributeImpl implements TimeSetAttribute {
             @JsonProperty("value") final java.util.List<java.time.LocalTime> value) {
         this.name = name;
         this.value = value;
-        this.type = TimeSetAttribute.TIME_SET;
+        this.type = TIME_SET;
     }
 
     public TimeSetAttributeImpl() {
-        this.type = TimeSetAttribute.TIME_SET;
+        this.type = TIME_SET;
     }
 
     /**

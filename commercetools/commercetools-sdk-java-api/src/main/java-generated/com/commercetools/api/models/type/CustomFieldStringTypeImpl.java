@@ -26,7 +26,7 @@ public final class CustomFieldStringTypeImpl implements CustomFieldStringType {
 
     @JsonCreator
     CustomFieldStringTypeImpl() {
-        this.name = CustomFieldStringType.STRING;
+        this.name = STRING;
     }
 
     public String getName() {

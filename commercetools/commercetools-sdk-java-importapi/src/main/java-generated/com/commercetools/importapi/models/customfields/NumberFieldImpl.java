@@ -32,11 +32,11 @@ public final class NumberFieldImpl implements NumberField {
     @JsonCreator
     NumberFieldImpl(@JsonProperty("value") final Double value) {
         this.value = value;
-        this.type = NumberField.NUMBER;
+        this.type = NUMBER;
     }
 
     public NumberFieldImpl() {
-        this.type = NumberField.NUMBER;
+        this.type = NUMBER;
     }
 
     /**

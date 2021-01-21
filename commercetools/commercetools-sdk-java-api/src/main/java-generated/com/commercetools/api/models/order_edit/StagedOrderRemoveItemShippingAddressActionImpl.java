@@ -30,11 +30,11 @@ public final class StagedOrderRemoveItemShippingAddressActionImpl
     @JsonCreator
     StagedOrderRemoveItemShippingAddressActionImpl(@JsonProperty("addressKey") final String addressKey) {
         this.addressKey = addressKey;
-        this.action = StagedOrderRemoveItemShippingAddressAction.REMOVE_ITEM_SHIPPING_ADDRESS;
+        this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }
 
     public StagedOrderRemoveItemShippingAddressActionImpl() {
-        this.action = StagedOrderRemoveItemShippingAddressAction.REMOVE_ITEM_SHIPPING_ADDRESS;
+        this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }
 
     public String getAction() {

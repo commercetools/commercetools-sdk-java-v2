@@ -36,11 +36,11 @@ public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTag
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.tags = tags;
-        this.action = CategorySetAssetTagsAction.SET_ASSET_TAGS;
+        this.action = SET_ASSET_TAGS;
     }
 
     public CategorySetAssetTagsActionImpl() {
-        this.action = CategorySetAssetTagsAction.SET_ASSET_TAGS;
+        this.action = SET_ASSET_TAGS;
     }
 
     public String getAction() {

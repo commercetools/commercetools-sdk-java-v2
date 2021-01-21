@@ -35,11 +35,11 @@ public final class ProductRemovedFromCategoryMessagePayloadImpl implements Produ
             @JsonProperty("staged") final Boolean staged) {
         this.category = category;
         this.staged = staged;
-        this.type = ProductRemovedFromCategoryMessagePayload.PRODUCT_REMOVED_FROM_CATEGORY;
+        this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }
 
     public ProductRemovedFromCategoryMessagePayloadImpl() {
-        this.type = ProductRemovedFromCategoryMessagePayload.PRODUCT_REMOVED_FROM_CATEGORY;
+        this.type = PRODUCT_REMOVED_FROM_CATEGORY;
     }
 
     public String getType() {

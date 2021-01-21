@@ -29,11 +29,11 @@ public final class CartRemoveItemShippingAddressActionImpl implements CartRemove
     @JsonCreator
     CartRemoveItemShippingAddressActionImpl(@JsonProperty("addressKey") final String addressKey) {
         this.addressKey = addressKey;
-        this.action = CartRemoveItemShippingAddressAction.REMOVE_ITEM_SHIPPING_ADDRESS;
+        this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }
 
     public CartRemoveItemShippingAddressActionImpl() {
-        this.action = CartRemoveItemShippingAddressAction.REMOVE_ITEM_SHIPPING_ADDRESS;
+        this.action = REMOVE_ITEM_SHIPPING_ADDRESS;
     }
 
     public String getAction() {

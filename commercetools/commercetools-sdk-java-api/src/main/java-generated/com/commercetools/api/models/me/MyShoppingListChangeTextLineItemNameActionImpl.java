@@ -35,11 +35,11 @@ public final class MyShoppingListChangeTextLineItemNameActionImpl
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.textLineItemId = textLineItemId;
         this.name = name;
-        this.action = MyShoppingListChangeTextLineItemNameAction.CHANGE_TEXT_LINE_ITEM_NAME;
+        this.action = CHANGE_TEXT_LINE_ITEM_NAME;
     }
 
     public MyShoppingListChangeTextLineItemNameActionImpl() {
-        this.action = MyShoppingListChangeTextLineItemNameAction.CHANGE_TEXT_LINE_ITEM_NAME;
+        this.action = CHANGE_TEXT_LINE_ITEM_NAME;
     }
 
     public String getAction() {

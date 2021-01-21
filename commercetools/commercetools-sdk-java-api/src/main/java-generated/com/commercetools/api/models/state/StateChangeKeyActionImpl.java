@@ -29,11 +29,11 @@ public final class StateChangeKeyActionImpl implements StateChangeKeyAction {
     @JsonCreator
     StateChangeKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = StateChangeKeyAction.CHANGE_KEY;
+        this.action = CHANGE_KEY;
     }
 
     public StateChangeKeyActionImpl() {
-        this.action = StateChangeKeyAction.CHANGE_KEY;
+        this.action = CHANGE_KEY;
     }
 
     public String getAction() {

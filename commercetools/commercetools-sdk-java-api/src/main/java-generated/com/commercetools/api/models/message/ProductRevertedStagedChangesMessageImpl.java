@@ -69,11 +69,11 @@ public final class ProductRevertedStagedChangesMessageImpl implements ProductRev
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.removedImageUrls = removedImageUrls;
-        this.type = ProductRevertedStagedChangesMessage.PRODUCT_REVERTED_STAGED_CHANGES;
+        this.type = PRODUCT_REVERTED_STAGED_CHANGES;
     }
 
     public ProductRevertedStagedChangesMessageImpl() {
-        this.type = ProductRevertedStagedChangesMessage.PRODUCT_REVERTED_STAGED_CHANGES;
+        this.type = PRODUCT_REVERTED_STAGED_CHANGES;
     }
 
     public String getId() {

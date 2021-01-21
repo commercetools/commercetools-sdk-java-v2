@@ -26,7 +26,7 @@ public final class AttributeLocalizableTextTypeImpl implements AttributeLocaliza
 
     @JsonCreator
     AttributeLocalizableTextTypeImpl() {
-        this.name = AttributeLocalizableTextType.LTEXT;
+        this.name = LTEXT;
     }
 
     public String getName() {

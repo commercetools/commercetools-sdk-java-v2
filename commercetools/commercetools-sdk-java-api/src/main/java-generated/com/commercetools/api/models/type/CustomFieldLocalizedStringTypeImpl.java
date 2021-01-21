@@ -26,7 +26,7 @@ public final class CustomFieldLocalizedStringTypeImpl implements CustomFieldLoca
 
     @JsonCreator
     CustomFieldLocalizedStringTypeImpl() {
-        this.name = CustomFieldLocalizedStringType.LOCALIZED_STRING;
+        this.name = LOCALIZED_STRING;
     }
 
     public String getName() {

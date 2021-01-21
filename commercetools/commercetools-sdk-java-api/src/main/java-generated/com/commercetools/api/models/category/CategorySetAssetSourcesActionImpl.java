@@ -38,11 +38,11 @@ public final class CategorySetAssetSourcesActionImpl implements CategorySetAsset
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.sources = sources;
-        this.action = CategorySetAssetSourcesAction.SET_ASSET_SOURCES;
+        this.action = SET_ASSET_SOURCES;
     }
 
     public CategorySetAssetSourcesActionImpl() {
-        this.action = CategorySetAssetSourcesAction.SET_ASSET_SOURCES;
+        this.action = SET_ASSET_SOURCES;
     }
 
     public String getAction() {

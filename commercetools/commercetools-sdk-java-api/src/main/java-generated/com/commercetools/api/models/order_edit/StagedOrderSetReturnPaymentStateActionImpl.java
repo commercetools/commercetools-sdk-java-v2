@@ -34,11 +34,11 @@ public final class StagedOrderSetReturnPaymentStateActionImpl implements StagedO
             @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
         this.returnItemId = returnItemId;
         this.paymentState = paymentState;
-        this.action = StagedOrderSetReturnPaymentStateAction.SET_RETURN_PAYMENT_STATE;
+        this.action = SET_RETURN_PAYMENT_STATE;
     }
 
     public StagedOrderSetReturnPaymentStateActionImpl() {
-        this.action = StagedOrderSetReturnPaymentStateAction.SET_RETURN_PAYMENT_STATE;
+        this.action = SET_RETURN_PAYMENT_STATE;
     }
 
     public String getAction() {

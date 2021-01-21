@@ -41,11 +41,11 @@ public final class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction 
         this.items = items;
         this.address = address;
         this.parcels = parcels;
-        this.action = OrderAddDeliveryAction.ADD_DELIVERY;
+        this.action = ADD_DELIVERY;
     }
 
     public OrderAddDeliveryActionImpl() {
-        this.action = OrderAddDeliveryAction.ADD_DELIVERY;
+        this.action = ADD_DELIVERY;
     }
 
     public String getAction() {

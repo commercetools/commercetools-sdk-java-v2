@@ -35,11 +35,11 @@ public final class ProductSetDescriptionActionImpl implements ProductSetDescript
             @JsonProperty("staged") final Boolean staged) {
         this.description = description;
         this.staged = staged;
-        this.action = ProductSetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public ProductSetDescriptionActionImpl() {
-        this.action = ProductSetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public String getAction() {

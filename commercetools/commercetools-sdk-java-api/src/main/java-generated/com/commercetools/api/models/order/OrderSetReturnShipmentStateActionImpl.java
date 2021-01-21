@@ -34,11 +34,11 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
         this.returnItemId = returnItemId;
         this.shipmentState = shipmentState;
-        this.action = OrderSetReturnShipmentStateAction.SET_RETURN_SHIPMENT_STATE;
+        this.action = SET_RETURN_SHIPMENT_STATE;
     }
 
     public OrderSetReturnShipmentStateActionImpl() {
-        this.action = OrderSetReturnShipmentStateAction.SET_RETURN_SHIPMENT_STATE;
+        this.action = SET_RETURN_SHIPMENT_STATE;
     }
 
     public String getAction() {

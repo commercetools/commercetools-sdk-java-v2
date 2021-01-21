@@ -26,7 +26,7 @@ public final class OrderEditNotProcessedImpl implements OrderEditNotProcessed {
 
     @JsonCreator
     OrderEditNotProcessedImpl() {
-        this.type = OrderEditNotProcessed.NOT_PROCESSED;
+        this.type = NOT_PROCESSED;
     }
 
     public String getType() {

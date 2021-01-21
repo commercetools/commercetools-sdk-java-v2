@@ -74,11 +74,11 @@ public final class PaymentTransactionStateChangedMessageImpl implements PaymentT
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.transactionId = transactionId;
         this.state = state;
-        this.type = PaymentTransactionStateChangedMessage.PAYMENT_TRANSACTION_STATE_CHANGED;
+        this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }
 
     public PaymentTransactionStateChangedMessageImpl() {
-        this.type = PaymentTransactionStateChangedMessage.PAYMENT_TRANSACTION_STATE_CHANGED;
+        this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }
 
     public String getId() {

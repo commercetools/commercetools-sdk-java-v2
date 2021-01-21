@@ -29,11 +29,11 @@ public final class ReviewSetTextActionImpl implements ReviewSetTextAction {
     @JsonCreator
     ReviewSetTextActionImpl(@JsonProperty("text") final String text) {
         this.text = text;
-        this.action = ReviewSetTextAction.SET_TEXT;
+        this.action = SET_TEXT;
     }
 
     public ReviewSetTextActionImpl() {
-        this.action = ReviewSetTextAction.SET_TEXT;
+        this.action = SET_TEXT;
     }
 
     public String getAction() {

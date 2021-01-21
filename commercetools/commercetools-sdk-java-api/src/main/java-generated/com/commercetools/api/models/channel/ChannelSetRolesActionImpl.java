@@ -31,11 +31,11 @@ public final class ChannelSetRolesActionImpl implements ChannelSetRolesAction {
     ChannelSetRolesActionImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.channel.ChannelRoleEnum> roles) {
         this.roles = roles;
-        this.action = ChannelSetRolesAction.SET_ROLES;
+        this.action = SET_ROLES;
     }
 
     public ChannelSetRolesActionImpl() {
-        this.action = ChannelSetRolesAction.SET_ROLES;
+        this.action = SET_ROLES;
     }
 
     public String getAction() {

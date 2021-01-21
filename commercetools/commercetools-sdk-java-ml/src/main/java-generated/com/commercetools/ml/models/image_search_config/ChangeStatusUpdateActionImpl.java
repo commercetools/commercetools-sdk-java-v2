@@ -31,11 +31,11 @@ public final class ChangeStatusUpdateActionImpl implements ChangeStatusUpdateAct
     ChangeStatusUpdateActionImpl(
             @JsonProperty("status") final com.commercetools.ml.models.image_search_config.ImageSearchConfigStatus status) {
         this.status = status;
-        this.action = ChangeStatusUpdateAction.CHANGE_STATUS;
+        this.action = CHANGE_STATUS;
     }
 
     public ChangeStatusUpdateActionImpl() {
-        this.action = ChangeStatusUpdateAction.CHANGE_STATUS;
+        this.action = CHANGE_STATUS;
     }
 
     public String getAction() {

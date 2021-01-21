@@ -49,11 +49,11 @@ public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDeliver
         this.version = version;
         this.oldVersion = oldVersion;
         this.modifiedAt = modifiedAt;
-        this.notificationType = ResourceUpdatedDelivery.RESOURCE_UPDATED;
+        this.notificationType = RESOURCE_UPDATED;
     }
 
     public ResourceUpdatedDeliveryImpl() {
-        this.notificationType = ResourceUpdatedDelivery.RESOURCE_UPDATED;
+        this.notificationType = RESOURCE_UPDATED;
     }
 
     public String getProjectKey() {

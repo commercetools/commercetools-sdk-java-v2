@@ -38,11 +38,11 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
         this.priceId = priceId;
         this.price = price;
         this.staged = staged;
-        this.action = ProductChangePriceAction.CHANGE_PRICE;
+        this.action = CHANGE_PRICE;
     }
 
     public ProductChangePriceActionImpl() {
-        this.action = ProductChangePriceAction.CHANGE_PRICE;
+        this.action = CHANGE_PRICE;
     }
 
     public String getAction() {

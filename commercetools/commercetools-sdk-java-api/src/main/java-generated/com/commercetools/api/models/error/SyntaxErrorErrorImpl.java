@@ -29,11 +29,11 @@ public final class SyntaxErrorErrorImpl implements SyntaxErrorError {
     @JsonCreator
     SyntaxErrorErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = SyntaxErrorError.SYNTAX_ERROR;
+        this.code = SYNTAX_ERROR;
     }
 
     public SyntaxErrorErrorImpl() {
-        this.code = SyntaxErrorError.SYNTAX_ERROR;
+        this.code = SYNTAX_ERROR;
     }
 
     public String getCode() {

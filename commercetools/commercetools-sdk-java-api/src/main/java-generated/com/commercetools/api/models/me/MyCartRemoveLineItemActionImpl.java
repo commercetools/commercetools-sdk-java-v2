@@ -48,11 +48,11 @@ public final class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineIte
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.shippingDetailsToRemove = shippingDetailsToRemove;
-        this.action = MyCartRemoveLineItemAction.REMOVE_LINE_ITEM;
+        this.action = REMOVE_LINE_ITEM;
     }
 
     public MyCartRemoveLineItemActionImpl() {
-        this.action = MyCartRemoveLineItemAction.REMOVE_LINE_ITEM;
+        this.action = REMOVE_LINE_ITEM;
     }
 
     public String getAction() {

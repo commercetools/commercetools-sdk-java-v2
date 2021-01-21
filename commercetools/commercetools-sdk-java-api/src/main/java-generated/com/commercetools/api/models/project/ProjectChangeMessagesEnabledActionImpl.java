@@ -29,11 +29,11 @@ public final class ProjectChangeMessagesEnabledActionImpl implements ProjectChan
     @JsonCreator
     ProjectChangeMessagesEnabledActionImpl(@JsonProperty("messagesEnabled") final Boolean messagesEnabled) {
         this.messagesEnabled = messagesEnabled;
-        this.action = ProjectChangeMessagesEnabledAction.CHANGE_MESSAGES_ENABLED;
+        this.action = CHANGE_MESSAGES_ENABLED;
     }
 
     public ProjectChangeMessagesEnabledActionImpl() {
-        this.action = ProjectChangeMessagesEnabledAction.CHANGE_MESSAGES_ENABLED;
+        this.action = CHANGE_MESSAGES_ENABLED;
     }
 
     public String getAction() {

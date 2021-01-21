@@ -40,11 +40,11 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadImpl
         this.customLineItemId = customLineItemId;
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.taxedPrice = taxedPrice;
-        this.type = OrderCustomLineItemDiscountSetMessagePayload.ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
+        this.type = ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
     }
 
     public OrderCustomLineItemDiscountSetMessagePayloadImpl() {
-        this.type = OrderCustomLineItemDiscountSetMessagePayload.ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
+        this.type = ORDER_CUSTOM_LINE_ITEM_DISCOUNT_SET;
     }
 
     public String getType() {

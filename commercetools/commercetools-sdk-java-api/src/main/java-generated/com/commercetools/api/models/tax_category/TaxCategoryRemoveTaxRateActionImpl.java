@@ -29,11 +29,11 @@ public final class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemo
     @JsonCreator
     TaxCategoryRemoveTaxRateActionImpl(@JsonProperty("taxRateId") final String taxRateId) {
         this.taxRateId = taxRateId;
-        this.action = TaxCategoryRemoveTaxRateAction.REMOVE_TAX_RATE;
+        this.action = REMOVE_TAX_RATE;
     }
 
     public TaxCategoryRemoveTaxRateActionImpl() {
-        this.action = TaxCategoryRemoveTaxRateAction.REMOVE_TAX_RATE;
+        this.action = REMOVE_TAX_RATE;
     }
 
     public String getAction() {

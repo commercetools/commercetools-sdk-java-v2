@@ -69,11 +69,11 @@ public final class OrderDiscountCodeAddedMessageImpl implements OrderDiscountCod
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.discountCode = discountCode;
-        this.type = OrderDiscountCodeAddedMessage.ORDER_DISCOUNT_CODE_ADDED;
+        this.type = ORDER_DISCOUNT_CODE_ADDED;
     }
 
     public OrderDiscountCodeAddedMessageImpl() {
-        this.type = OrderDiscountCodeAddedMessage.ORDER_DISCOUNT_CODE_ADDED;
+        this.type = ORDER_DISCOUNT_CODE_ADDED;
     }
 
     public String getId() {

@@ -73,11 +73,11 @@ public final class OrderShippingInfoSetMessageImpl implements OrderShippingInfoS
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.shippingInfo = shippingInfo;
         this.oldShippingInfo = oldShippingInfo;
-        this.type = OrderShippingInfoSetMessage.ORDER_SHIPPING_INFO_SET;
+        this.type = ORDER_SHIPPING_INFO_SET;
     }
 
     public OrderShippingInfoSetMessageImpl() {
-        this.type = OrderShippingInfoSetMessage.ORDER_SHIPPING_INFO_SET;
+        this.type = ORDER_SHIPPING_INFO_SET;
     }
 
     public String getId() {

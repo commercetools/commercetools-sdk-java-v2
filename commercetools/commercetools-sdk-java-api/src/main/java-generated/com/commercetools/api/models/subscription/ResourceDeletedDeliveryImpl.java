@@ -50,11 +50,11 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
         this.version = version;
         this.modifiedAt = modifiedAt;
         this.dataErasure = dataErasure;
-        this.notificationType = ResourceDeletedDelivery.RESOURCE_DELETED;
+        this.notificationType = RESOURCE_DELETED;
     }
 
     public ResourceDeletedDeliveryImpl() {
-        this.notificationType = ResourceDeletedDelivery.RESOURCE_DELETED;
+        this.notificationType = RESOURCE_DELETED;
     }
 
     public String getProjectKey() {

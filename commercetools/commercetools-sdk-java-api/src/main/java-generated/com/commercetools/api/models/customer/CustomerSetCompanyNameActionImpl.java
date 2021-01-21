@@ -29,11 +29,11 @@ public final class CustomerSetCompanyNameActionImpl implements CustomerSetCompan
     @JsonCreator
     CustomerSetCompanyNameActionImpl(@JsonProperty("companyName") final String companyName) {
         this.companyName = companyName;
-        this.action = CustomerSetCompanyNameAction.SET_COMPANY_NAME;
+        this.action = SET_COMPANY_NAME;
     }
 
     public CustomerSetCompanyNameActionImpl() {
-        this.action = CustomerSetCompanyNameAction.SET_COMPANY_NAME;
+        this.action = SET_COMPANY_NAME;
     }
 
     public String getAction() {

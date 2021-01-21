@@ -34,11 +34,11 @@ public final class ProductTypeAddPlainEnumValueActionImpl implements ProductType
             @JsonProperty("value") final com.commercetools.api.models.product_type.AttributePlainEnumValue value) {
         this.attributeName = attributeName;
         this.value = value;
-        this.action = ProductTypeAddPlainEnumValueAction.ADD_PLAIN_ENUM_VALUE;
+        this.action = ADD_PLAIN_ENUM_VALUE;
     }
 
     public ProductTypeAddPlainEnumValueActionImpl() {
-        this.action = ProductTypeAddPlainEnumValueAction.ADD_PLAIN_ENUM_VALUE;
+        this.action = ADD_PLAIN_ENUM_VALUE;
     }
 
     public String getAction() {

@@ -31,11 +31,11 @@ public final class ProductDiscountChangeNameActionImpl implements ProductDiscoun
     ProductDiscountChangeNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
-        this.action = ProductDiscountChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public ProductDiscountChangeNameActionImpl() {
-        this.action = ProductDiscountChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public String getAction() {

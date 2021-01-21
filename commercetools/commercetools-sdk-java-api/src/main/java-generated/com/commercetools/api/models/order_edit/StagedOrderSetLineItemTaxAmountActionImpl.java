@@ -34,11 +34,11 @@ public final class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOr
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.lineItemId = lineItemId;
         this.externalTaxAmount = externalTaxAmount;
-        this.action = StagedOrderSetLineItemTaxAmountAction.SET_LINE_ITEM_TAX_AMOUNT;
+        this.action = SET_LINE_ITEM_TAX_AMOUNT;
     }
 
     public StagedOrderSetLineItemTaxAmountActionImpl() {
-        this.action = StagedOrderSetLineItemTaxAmountAction.SET_LINE_ITEM_TAX_AMOUNT;
+        this.action = SET_LINE_ITEM_TAX_AMOUNT;
     }
 
     public String getAction() {

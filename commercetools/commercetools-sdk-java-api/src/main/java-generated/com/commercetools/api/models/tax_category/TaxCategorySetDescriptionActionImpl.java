@@ -29,11 +29,11 @@ public final class TaxCategorySetDescriptionActionImpl implements TaxCategorySet
     @JsonCreator
     TaxCategorySetDescriptionActionImpl(@JsonProperty("description") final String description) {
         this.description = description;
-        this.action = TaxCategorySetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public TaxCategorySetDescriptionActionImpl() {
-        this.action = TaxCategorySetDescriptionAction.SET_DESCRIPTION;
+        this.action = SET_DESCRIPTION;
     }
 
     public String getAction() {

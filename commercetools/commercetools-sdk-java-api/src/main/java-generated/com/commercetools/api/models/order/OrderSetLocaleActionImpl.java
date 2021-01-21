@@ -29,11 +29,11 @@ public final class OrderSetLocaleActionImpl implements OrderSetLocaleAction {
     @JsonCreator
     OrderSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
-        this.action = OrderSetLocaleAction.SET_LOCALE;
+        this.action = SET_LOCALE;
     }
 
     public OrderSetLocaleActionImpl() {
-        this.action = OrderSetLocaleAction.SET_LOCALE;
+        this.action = SET_LOCALE;
     }
 
     public String getAction() {

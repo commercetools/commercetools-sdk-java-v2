@@ -34,11 +34,11 @@ public final class ProductTypeSetInputTipActionImpl implements ProductTypeSetInp
             @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip) {
         this.attributeName = attributeName;
         this.inputTip = inputTip;
-        this.action = ProductTypeSetInputTipAction.SET_INPUT_TIP;
+        this.action = SET_INPUT_TIP;
     }
 
     public ProductTypeSetInputTipActionImpl() {
-        this.action = ProductTypeSetInputTipAction.SET_INPUT_TIP;
+        this.action = SET_INPUT_TIP;
     }
 
     public String getAction() {

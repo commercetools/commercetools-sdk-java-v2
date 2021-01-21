@@ -29,11 +29,11 @@ public final class CustomerCompanyNameSetMessagePayloadImpl implements CustomerC
     @JsonCreator
     CustomerCompanyNameSetMessagePayloadImpl(@JsonProperty("companyName") final String companyName) {
         this.companyName = companyName;
-        this.type = CustomerCompanyNameSetMessagePayload.CUSTOMER_COMPANY_NAME_SET;
+        this.type = CUSTOMER_COMPANY_NAME_SET;
     }
 
     public CustomerCompanyNameSetMessagePayloadImpl() {
-        this.type = CustomerCompanyNameSetMessagePayload.CUSTOMER_COMPANY_NAME_SET;
+        this.type = CUSTOMER_COMPANY_NAME_SET;
     }
 
     public String getType() {

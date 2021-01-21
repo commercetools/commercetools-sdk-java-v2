@@ -31,11 +31,11 @@ public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectS
     ProjectSetShippingRateInputTypeActionImpl(
             @JsonProperty("shippingRateInputType") final com.commercetools.api.models.project.ShippingRateInputType shippingRateInputType) {
         this.shippingRateInputType = shippingRateInputType;
-        this.action = ProjectSetShippingRateInputTypeAction.SET_SHIPPING_RATE_INPUT_TYPE;
+        this.action = SET_SHIPPING_RATE_INPUT_TYPE;
     }
 
     public ProjectSetShippingRateInputTypeActionImpl() {
-        this.action = ProjectSetShippingRateInputTypeAction.SET_SHIPPING_RATE_INPUT_TYPE;
+        this.action = SET_SHIPPING_RATE_INPUT_TYPE;
     }
 
     public String getAction() {

@@ -31,11 +31,11 @@ public final class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocat
     ChannelSetGeoLocationActionImpl(
             @JsonProperty("geoLocation") final com.commercetools.api.models.common.GeoJson geoLocation) {
         this.geoLocation = geoLocation;
-        this.action = ChannelSetGeoLocationAction.SET_GEO_LOCATION;
+        this.action = SET_GEO_LOCATION;
     }
 
     public ChannelSetGeoLocationActionImpl() {
-        this.action = ChannelSetGeoLocationAction.SET_GEO_LOCATION;
+        this.action = SET_GEO_LOCATION;
     }
 
     public String getAction() {

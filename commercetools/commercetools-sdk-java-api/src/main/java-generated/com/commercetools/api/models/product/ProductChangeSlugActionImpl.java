@@ -34,11 +34,11 @@ public final class ProductChangeSlugActionImpl implements ProductChangeSlugActio
             @JsonProperty("staged") final Boolean staged) {
         this.slug = slug;
         this.staged = staged;
-        this.action = ProductChangeSlugAction.CHANGE_SLUG;
+        this.action = CHANGE_SLUG;
     }
 
     public ProductChangeSlugActionImpl() {
-        this.action = ProductChangeSlugAction.CHANGE_SLUG;
+        this.action = CHANGE_SLUG;
     }
 
     public String getAction() {

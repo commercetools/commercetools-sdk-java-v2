@@ -48,11 +48,11 @@ public final class ProductSetAssetDescriptionActionImpl implements ProductSetAss
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.description = description;
-        this.action = ProductSetAssetDescriptionAction.SET_ASSET_DESCRIPTION;
+        this.action = SET_ASSET_DESCRIPTION;
     }
 
     public ProductSetAssetDescriptionActionImpl() {
-        this.action = ProductSetAssetDescriptionAction.SET_ASSET_DESCRIPTION;
+        this.action = SET_ASSET_DESCRIPTION;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class MyCartSetCountryActionImpl implements MyCartSetCountryAction 
     @JsonCreator
     MyCartSetCountryActionImpl(@JsonProperty("country") final String country) {
         this.country = country;
-        this.action = MyCartSetCountryAction.SET_COUNTRY;
+        this.action = SET_COUNTRY;
     }
 
     public MyCartSetCountryActionImpl() {
-        this.action = MyCartSetCountryAction.SET_COUNTRY;
+        this.action = SET_COUNTRY;
     }
 
     public String getAction() {

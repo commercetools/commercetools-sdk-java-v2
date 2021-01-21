@@ -32,11 +32,11 @@ public final class StringFieldImpl implements StringField {
     @JsonCreator
     StringFieldImpl(@JsonProperty("value") final String value) {
         this.value = value;
-        this.type = StringField.STRING;
+        this.type = STRING;
     }
 
     public StringFieldImpl() {
-        this.type = StringField.STRING;
+        this.type = STRING;
     }
 
     /**

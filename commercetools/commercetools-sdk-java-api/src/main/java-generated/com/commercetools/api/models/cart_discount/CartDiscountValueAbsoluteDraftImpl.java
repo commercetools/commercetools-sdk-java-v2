@@ -31,11 +31,11 @@ public final class CartDiscountValueAbsoluteDraftImpl implements CartDiscountVal
     CartDiscountValueAbsoluteDraftImpl(
             @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
-        this.type = CartDiscountValueAbsoluteDraft.ABSOLUTE;
+        this.type = ABSOLUTE;
     }
 
     public CartDiscountValueAbsoluteDraftImpl() {
-        this.type = CartDiscountValueAbsoluteDraft.ABSOLUTE;
+        this.type = ABSOLUTE;
     }
 
     public String getType() {

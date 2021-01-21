@@ -73,11 +73,11 @@ public final class CartAddLineItemActionImpl implements CartAddLineItemAction {
         this.externalPrice = externalPrice;
         this.externalTotalPrice = externalTotalPrice;
         this.shippingDetails = shippingDetails;
-        this.action = CartAddLineItemAction.ADD_LINE_ITEM;
+        this.action = ADD_LINE_ITEM;
     }
 
     public CartAddLineItemActionImpl() {
-        this.action = CartAddLineItemAction.ADD_LINE_ITEM;
+        this.action = ADD_LINE_ITEM;
     }
 
     public String getAction() {

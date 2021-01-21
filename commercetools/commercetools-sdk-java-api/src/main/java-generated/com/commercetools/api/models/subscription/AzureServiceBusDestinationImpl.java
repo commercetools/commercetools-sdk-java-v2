@@ -29,11 +29,11 @@ public final class AzureServiceBusDestinationImpl implements AzureServiceBusDest
     @JsonCreator
     AzureServiceBusDestinationImpl(@JsonProperty("connectionString") final String connectionString) {
         this.connectionString = connectionString;
-        this.type = AzureServiceBusDestination.AZURE_SERVICE_BUS;
+        this.type = AZURE_SERVICE_BUS;
     }
 
     public AzureServiceBusDestinationImpl() {
-        this.type = AzureServiceBusDestination.AZURE_SERVICE_BUS;
+        this.type = AZURE_SERVICE_BUS;
     }
 
     public String getType() {

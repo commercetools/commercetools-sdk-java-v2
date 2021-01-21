@@ -31,11 +31,11 @@ public final class OrderSetStoreActionImpl implements OrderSetStoreAction {
     OrderSetStoreActionImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
-        this.action = OrderSetStoreAction.SET_STORE;
+        this.action = SET_STORE;
     }
 
     public OrderSetStoreActionImpl() {
-        this.action = OrderSetStoreAction.SET_STORE;
+        this.action = SET_STORE;
     }
 
     public String getAction() {

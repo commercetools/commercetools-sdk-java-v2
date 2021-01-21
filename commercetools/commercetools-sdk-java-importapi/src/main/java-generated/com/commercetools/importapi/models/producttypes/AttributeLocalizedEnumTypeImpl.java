@@ -31,11 +31,11 @@ public final class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedE
     AttributeLocalizedEnumTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumValue> values) {
         this.values = values;
-        this.name = AttributeLocalizedEnumType.LENUM;
+        this.name = LENUM;
     }
 
     public AttributeLocalizedEnumTypeImpl() {
-        this.name = AttributeLocalizedEnumType.LENUM;
+        this.name = LENUM;
     }
 
     public String getName() {

@@ -40,11 +40,11 @@ public final class MyShoppingListSetTextLineItemCustomTypeActionImpl
         this.textLineItemId = textLineItemId;
         this.type = type;
         this.fields = fields;
-        this.action = MyShoppingListSetTextLineItemCustomTypeAction.SET_TEXT_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_TEXT_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public MyShoppingListSetTextLineItemCustomTypeActionImpl() {
-        this.action = MyShoppingListSetTextLineItemCustomTypeAction.SET_TEXT_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_TEXT_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public String getAction() {

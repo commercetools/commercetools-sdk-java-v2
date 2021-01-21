@@ -30,11 +30,11 @@ public final class ZoneAddLocationActionImpl implements ZoneAddLocationAction {
     @JsonCreator
     ZoneAddLocationActionImpl(@JsonProperty("location") final com.commercetools.api.models.zone.Location location) {
         this.location = location;
-        this.action = ZoneAddLocationAction.ADD_LOCATION;
+        this.action = ADD_LOCATION;
     }
 
     public ZoneAddLocationActionImpl() {
-        this.action = ZoneAddLocationAction.ADD_LOCATION;
+        this.action = ADD_LOCATION;
     }
 
     public String getAction() {

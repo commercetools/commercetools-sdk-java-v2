@@ -35,11 +35,11 @@ public final class PaymentTransactionStateChangedMessagePayloadImpl
             @JsonProperty("state") final com.commercetools.api.models.payment.TransactionState state) {
         this.transactionId = transactionId;
         this.state = state;
-        this.type = PaymentTransactionStateChangedMessagePayload.PAYMENT_TRANSACTION_STATE_CHANGED;
+        this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }
 
     public PaymentTransactionStateChangedMessagePayloadImpl() {
-        this.type = PaymentTransactionStateChangedMessagePayload.PAYMENT_TRANSACTION_STATE_CHANGED;
+        this.type = PAYMENT_TRANSACTION_STATE_CHANGED;
     }
 
     public String getType() {

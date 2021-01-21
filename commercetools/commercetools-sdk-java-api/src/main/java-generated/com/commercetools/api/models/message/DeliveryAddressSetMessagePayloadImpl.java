@@ -38,11 +38,11 @@ public final class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddre
         this.deliveryId = deliveryId;
         this.address = address;
         this.oldAddress = oldAddress;
-        this.type = DeliveryAddressSetMessagePayload.DELIVERY_ADDRESS_SET;
+        this.type = DELIVERY_ADDRESS_SET;
     }
 
     public DeliveryAddressSetMessagePayloadImpl() {
-        this.type = DeliveryAddressSetMessagePayload.DELIVERY_ADDRESS_SET;
+        this.type = DELIVERY_ADDRESS_SET;
     }
 
     public String getType() {

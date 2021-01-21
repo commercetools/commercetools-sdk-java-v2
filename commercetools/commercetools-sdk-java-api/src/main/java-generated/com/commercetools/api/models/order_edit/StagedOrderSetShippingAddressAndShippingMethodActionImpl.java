@@ -42,11 +42,11 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl
         this.address = address;
         this.shippingMethod = shippingMethod;
         this.externalTaxRate = externalTaxRate;
-        this.action = StagedOrderSetShippingAddressAndShippingMethodAction.SET_SHIPPING_ADDRESS_AND_SHIPPING_METHOD;
+        this.action = SET_SHIPPING_ADDRESS_AND_SHIPPING_METHOD;
     }
 
     public StagedOrderSetShippingAddressAndShippingMethodActionImpl() {
-        this.action = StagedOrderSetShippingAddressAndShippingMethodAction.SET_SHIPPING_ADDRESS_AND_SHIPPING_METHOD;
+        this.action = SET_SHIPPING_ADDRESS_AND_SHIPPING_METHOD;
     }
 
     public String getAction() {

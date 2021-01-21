@@ -34,11 +34,11 @@ public final class TypeChangeLocalizedEnumValueLabelActionImpl implements TypeCh
             @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldLocalizedEnumValue value) {
         this.fieldName = fieldName;
         this.value = value;
-        this.action = TypeChangeLocalizedEnumValueLabelAction.CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
+        this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }
 
     public TypeChangeLocalizedEnumValueLabelActionImpl() {
-        this.action = TypeChangeLocalizedEnumValueLabelAction.CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
+        this.action = CHANGE_LOCALIZED_ENUM_VALUE_LABEL;
     }
 
     public String getAction() {

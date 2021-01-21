@@ -31,11 +31,11 @@ public final class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreA
     CustomerRemoveStoreActionImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
-        this.action = CustomerRemoveStoreAction.REMOVE_STORE;
+        this.action = REMOVE_STORE;
     }
 
     public CustomerRemoveStoreActionImpl() {
-        this.action = CustomerRemoveStoreAction.REMOVE_STORE;
+        this.action = REMOVE_STORE;
     }
 
     public String getAction() {

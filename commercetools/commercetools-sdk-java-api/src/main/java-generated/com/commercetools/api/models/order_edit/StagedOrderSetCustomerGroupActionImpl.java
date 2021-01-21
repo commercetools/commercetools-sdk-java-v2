@@ -31,11 +31,11 @@ public final class StagedOrderSetCustomerGroupActionImpl implements StagedOrderS
     StagedOrderSetCustomerGroupActionImpl(
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup) {
         this.customerGroup = customerGroup;
-        this.action = StagedOrderSetCustomerGroupAction.SET_CUSTOMER_GROUP;
+        this.action = SET_CUSTOMER_GROUP;
     }
 
     public StagedOrderSetCustomerGroupActionImpl() {
-        this.action = StagedOrderSetCustomerGroupAction.SET_CUSTOMER_GROUP;
+        this.action = SET_CUSTOMER_GROUP;
     }
 
     public String getAction() {

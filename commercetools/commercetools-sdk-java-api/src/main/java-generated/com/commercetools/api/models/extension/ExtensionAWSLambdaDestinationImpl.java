@@ -37,11 +37,11 @@ public final class ExtensionAWSLambdaDestinationImpl implements ExtensionAWSLamb
         this.arn = arn;
         this.accessKey = accessKey;
         this.accessSecret = accessSecret;
-        this.type = ExtensionAWSLambdaDestination.AWS_LAMBDA;
+        this.type = AWS_LAMBDA;
     }
 
     public ExtensionAWSLambdaDestinationImpl() {
-        this.type = ExtensionAWSLambdaDestination.AWS_LAMBDA;
+        this.type = AWS_LAMBDA;
     }
 
     public String getType() {

@@ -70,11 +70,11 @@ public final class OrderDiscountCodeRemovedMessageImpl implements OrderDiscountC
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.discountCode = discountCode;
-        this.type = OrderDiscountCodeRemovedMessage.ORDER_DISCOUNT_CODE_REMOVED;
+        this.type = ORDER_DISCOUNT_CODE_REMOVED;
     }
 
     public OrderDiscountCodeRemovedMessageImpl() {
-        this.type = OrderDiscountCodeRemovedMessage.ORDER_DISCOUNT_CODE_REMOVED;
+        this.type = ORDER_DISCOUNT_CODE_REMOVED;
     }
 
     public String getId() {

@@ -33,11 +33,11 @@ public final class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectN
             @JsonProperty("languages") final java.util.List<String> languages) {
         this.message = message;
         this.languages = languages;
-        this.code = ProjectNotConfiguredForLanguagesError.PROJECT_NOT_CONFIGURED_FOR_LANGUAGES;
+        this.code = PROJECT_NOT_CONFIGURED_FOR_LANGUAGES;
     }
 
     public ProjectNotConfiguredForLanguagesErrorImpl() {
-        this.code = ProjectNotConfiguredForLanguagesError.PROJECT_NOT_CONFIGURED_FOR_LANGUAGES;
+        this.code = PROJECT_NOT_CONFIGURED_FOR_LANGUAGES;
     }
 
     public String getCode() {

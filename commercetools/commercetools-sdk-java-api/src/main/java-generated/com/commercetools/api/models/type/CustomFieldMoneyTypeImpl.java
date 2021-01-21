@@ -26,7 +26,7 @@ public final class CustomFieldMoneyTypeImpl implements CustomFieldMoneyType {
 
     @JsonCreator
     CustomFieldMoneyTypeImpl() {
-        this.name = CustomFieldMoneyType.MONEY;
+        this.name = MONEY;
     }
 
     public String getName() {

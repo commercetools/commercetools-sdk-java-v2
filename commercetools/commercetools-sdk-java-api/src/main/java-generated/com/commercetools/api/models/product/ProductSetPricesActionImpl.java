@@ -41,11 +41,11 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
         this.sku = sku;
         this.prices = prices;
         this.staged = staged;
-        this.action = ProductSetPricesAction.SET_PRICES;
+        this.action = SET_PRICES;
     }
 
     public ProductSetPricesActionImpl() {
-        this.action = ProductSetPricesAction.SET_PRICES;
+        this.action = SET_PRICES;
     }
 
     public String getAction() {

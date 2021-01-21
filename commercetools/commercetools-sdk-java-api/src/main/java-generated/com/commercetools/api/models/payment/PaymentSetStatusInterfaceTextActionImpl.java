@@ -29,11 +29,11 @@ public final class PaymentSetStatusInterfaceTextActionImpl implements PaymentSet
     @JsonCreator
     PaymentSetStatusInterfaceTextActionImpl(@JsonProperty("interfaceText") final String interfaceText) {
         this.interfaceText = interfaceText;
-        this.action = PaymentSetStatusInterfaceTextAction.SET_STATUS_INTERFACE_TEXT;
+        this.action = SET_STATUS_INTERFACE_TEXT;
     }
 
     public PaymentSetStatusInterfaceTextActionImpl() {
-        this.action = PaymentSetStatusInterfaceTextAction.SET_STATUS_INTERFACE_TEXT;
+        this.action = SET_STATUS_INTERFACE_TEXT;
     }
 
     public String getAction() {

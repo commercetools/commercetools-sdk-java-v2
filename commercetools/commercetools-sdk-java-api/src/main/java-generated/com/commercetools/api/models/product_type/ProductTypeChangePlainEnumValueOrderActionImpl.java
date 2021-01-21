@@ -35,11 +35,11 @@ public final class ProductTypeChangePlainEnumValueOrderActionImpl
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.product_type.AttributePlainEnumValue> values) {
         this.attributeName = attributeName;
         this.values = values;
-        this.action = ProductTypeChangePlainEnumValueOrderAction.CHANGE_PLAIN_ENUM_VALUE_ORDER;
+        this.action = CHANGE_PLAIN_ENUM_VALUE_ORDER;
     }
 
     public ProductTypeChangePlainEnumValueOrderActionImpl() {
-        this.action = ProductTypeChangePlainEnumValueOrderAction.CHANGE_PLAIN_ENUM_VALUE_ORDER;
+        this.action = CHANGE_PLAIN_ENUM_VALUE_ORDER;
     }
 
     public String getAction() {

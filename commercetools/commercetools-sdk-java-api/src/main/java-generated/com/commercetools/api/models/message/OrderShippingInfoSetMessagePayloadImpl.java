@@ -35,11 +35,11 @@ public final class OrderShippingInfoSetMessagePayloadImpl implements OrderShippi
             @JsonProperty("oldShippingInfo") final com.commercetools.api.models.cart.ShippingInfo oldShippingInfo) {
         this.shippingInfo = shippingInfo;
         this.oldShippingInfo = oldShippingInfo;
-        this.type = OrderShippingInfoSetMessagePayload.ORDER_SHIPPING_INFO_SET;
+        this.type = ORDER_SHIPPING_INFO_SET;
     }
 
     public OrderShippingInfoSetMessagePayloadImpl() {
-        this.type = OrderShippingInfoSetMessagePayload.ORDER_SHIPPING_INFO_SET;
+        this.type = ORDER_SHIPPING_INFO_SET;
     }
 
     public String getType() {

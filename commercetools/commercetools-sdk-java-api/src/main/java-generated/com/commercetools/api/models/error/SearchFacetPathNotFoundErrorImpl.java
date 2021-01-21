@@ -29,11 +29,11 @@ public final class SearchFacetPathNotFoundErrorImpl implements SearchFacetPathNo
     @JsonCreator
     SearchFacetPathNotFoundErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = SearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND;
+        this.code = SEARCH_FACET_PATH_NOT_FOUND;
     }
 
     public SearchFacetPathNotFoundErrorImpl() {
-        this.code = SearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND;
+        this.code = SEARCH_FACET_PATH_NOT_FOUND;
     }
 
     public String getCode() {

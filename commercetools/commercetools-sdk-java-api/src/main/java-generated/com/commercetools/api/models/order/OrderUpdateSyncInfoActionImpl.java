@@ -40,11 +40,11 @@ public final class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoA
         this.channel = channel;
         this.externalId = externalId;
         this.syncedAt = syncedAt;
-        this.action = OrderUpdateSyncInfoAction.UPDATE_SYNC_INFO;
+        this.action = UPDATE_SYNC_INFO;
     }
 
     public OrderUpdateSyncInfoActionImpl() {
-        this.action = OrderUpdateSyncInfoAction.UPDATE_SYNC_INFO;
+        this.action = UPDATE_SYNC_INFO;
     }
 
     public String getAction() {

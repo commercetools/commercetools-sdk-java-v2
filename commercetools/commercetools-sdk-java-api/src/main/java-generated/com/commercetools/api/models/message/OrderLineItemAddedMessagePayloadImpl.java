@@ -35,11 +35,11 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
             @JsonProperty("addedQuantity") final Long addedQuantity) {
         this.lineItem = lineItem;
         this.addedQuantity = addedQuantity;
-        this.type = OrderLineItemAddedMessagePayload.ORDER_LINE_ITEM_ADDED;
+        this.type = ORDER_LINE_ITEM_ADDED;
     }
 
     public OrderLineItemAddedMessagePayloadImpl() {
-        this.type = OrderLineItemAddedMessagePayload.ORDER_LINE_ITEM_ADDED;
+        this.type = ORDER_LINE_ITEM_ADDED;
     }
 
     public String getType() {

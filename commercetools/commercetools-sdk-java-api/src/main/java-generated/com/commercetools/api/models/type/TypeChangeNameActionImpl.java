@@ -30,11 +30,11 @@ public final class TypeChangeNameActionImpl implements TypeChangeNameAction {
     @JsonCreator
     TypeChangeNameActionImpl(@JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
-        this.action = TypeChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public TypeChangeNameActionImpl() {
-        this.action = TypeChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public String getAction() {

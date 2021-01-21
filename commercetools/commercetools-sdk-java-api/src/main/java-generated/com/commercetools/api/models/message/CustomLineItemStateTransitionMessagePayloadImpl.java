@@ -48,11 +48,11 @@ public final class CustomLineItemStateTransitionMessagePayloadImpl
         this.quantity = quantity;
         this.fromState = fromState;
         this.toState = toState;
-        this.type = CustomLineItemStateTransitionMessagePayload.CUSTOM_LINE_ITEM_STATE_TRANSITION;
+        this.type = CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }
 
     public CustomLineItemStateTransitionMessagePayloadImpl() {
-        this.type = CustomLineItemStateTransitionMessagePayload.CUSTOM_LINE_ITEM_STATE_TRANSITION;
+        this.type = CUSTOM_LINE_ITEM_STATE_TRANSITION;
     }
 
     public String getType() {

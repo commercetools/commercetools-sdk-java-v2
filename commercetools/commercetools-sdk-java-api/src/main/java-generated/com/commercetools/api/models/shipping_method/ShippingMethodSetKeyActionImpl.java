@@ -29,11 +29,11 @@ public final class ShippingMethodSetKeyActionImpl implements ShippingMethodSetKe
     @JsonCreator
     ShippingMethodSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = ShippingMethodSetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public ShippingMethodSetKeyActionImpl() {
-        this.action = ShippingMethodSetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public String getAction() {

@@ -31,11 +31,11 @@ public final class CustomerAddressRemovedMessagePayloadImpl implements CustomerA
     CustomerAddressRemovedMessagePayloadImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.address = address;
-        this.type = CustomerAddressRemovedMessagePayload.CUSTOMER_ADDRESS_REMOVED;
+        this.type = CUSTOMER_ADDRESS_REMOVED;
     }
 
     public CustomerAddressRemovedMessagePayloadImpl() {
-        this.type = CustomerAddressRemovedMessagePayload.CUSTOMER_ADDRESS_REMOVED;
+        this.type = CUSTOMER_ADDRESS_REMOVED;
     }
 
     public String getType() {

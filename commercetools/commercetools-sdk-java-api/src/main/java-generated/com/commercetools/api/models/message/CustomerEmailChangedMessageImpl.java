@@ -68,11 +68,11 @@ public final class CustomerEmailChangedMessageImpl implements CustomerEmailChang
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.email = email;
-        this.type = CustomerEmailChangedMessage.CUSTOMER_EMAIL_CHANGED;
+        this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
     public CustomerEmailChangedMessageImpl() {
-        this.type = CustomerEmailChangedMessage.CUSTOMER_EMAIL_CHANGED;
+        this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
     public String getId() {

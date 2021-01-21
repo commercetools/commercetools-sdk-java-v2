@@ -37,11 +37,11 @@ public final class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExists
         this.message = message;
         this.conflictingEnumKey = conflictingEnumKey;
         this.conflictingAttributeName = conflictingAttributeName;
-        this.code = EnumKeyAlreadyExistsError.ENUM_KEY_ALREADY_EXISTS;
+        this.code = ENUM_KEY_ALREADY_EXISTS;
     }
 
     public EnumKeyAlreadyExistsErrorImpl() {
-        this.code = EnumKeyAlreadyExistsError.ENUM_KEY_ALREADY_EXISTS;
+        this.code = ENUM_KEY_ALREADY_EXISTS;
     }
 
     public String getCode() {

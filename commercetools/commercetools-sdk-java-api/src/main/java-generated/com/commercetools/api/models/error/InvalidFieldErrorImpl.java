@@ -41,11 +41,11 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
         this.field = field;
         this.invalidValue = invalidValue;
         this.allowedValues = allowedValues;
-        this.code = InvalidFieldError.INVALID_FIELD;
+        this.code = INVALID_FIELD;
     }
 
     public InvalidFieldErrorImpl() {
-        this.code = InvalidFieldError.INVALID_FIELD;
+        this.code = INVALID_FIELD;
     }
 
     public String getCode() {

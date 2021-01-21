@@ -73,11 +73,11 @@ public final class OrderShippingAddressSetMessageImpl implements OrderShippingAd
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.address = address;
         this.oldAddress = oldAddress;
-        this.type = OrderShippingAddressSetMessage.ORDER_SHIPPING_ADDRESS_SET;
+        this.type = ORDER_SHIPPING_ADDRESS_SET;
     }
 
     public OrderShippingAddressSetMessageImpl() {
-        this.type = OrderShippingAddressSetMessage.ORDER_SHIPPING_ADDRESS_SET;
+        this.type = ORDER_SHIPPING_ADDRESS_SET;
     }
 
     public String getId() {

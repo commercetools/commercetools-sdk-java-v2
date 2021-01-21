@@ -31,11 +31,11 @@ public final class StagedOrderAddItemShippingAddressActionImpl implements Staged
     StagedOrderAddItemShippingAddressActionImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.address = address;
-        this.action = StagedOrderAddItemShippingAddressAction.ADD_ITEM_SHIPPING_ADDRESS;
+        this.action = ADD_ITEM_SHIPPING_ADDRESS;
     }
 
     public StagedOrderAddItemShippingAddressActionImpl() {
-        this.action = StagedOrderAddItemShippingAddressAction.ADD_ITEM_SHIPPING_ADDRESS;
+        this.action = ADD_ITEM_SHIPPING_ADDRESS;
     }
 
     public String getAction() {

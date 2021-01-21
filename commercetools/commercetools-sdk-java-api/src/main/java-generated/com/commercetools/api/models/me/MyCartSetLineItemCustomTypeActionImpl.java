@@ -39,11 +39,11 @@ public final class MyCartSetLineItemCustomTypeActionImpl implements MyCartSetLin
         this.lineItemId = lineItemId;
         this.type = type;
         this.fields = fields;
-        this.action = MyCartSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public MyCartSetLineItemCustomTypeActionImpl() {
-        this.action = MyCartSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public String getAction() {

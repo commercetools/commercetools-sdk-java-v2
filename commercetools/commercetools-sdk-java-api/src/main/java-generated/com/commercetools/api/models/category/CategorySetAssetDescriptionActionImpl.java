@@ -38,11 +38,11 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.description = description;
-        this.action = CategorySetAssetDescriptionAction.SET_ASSET_DESCRIPTION;
+        this.action = SET_ASSET_DESCRIPTION;
     }
 
     public CategorySetAssetDescriptionActionImpl() {
-        this.action = CategorySetAssetDescriptionAction.SET_ASSET_DESCRIPTION;
+        this.action = SET_ASSET_DESCRIPTION;
     }
 
     public String getAction() {

@@ -44,11 +44,11 @@ public final class CartDiscountValueGiftLineItemDraftImpl implements CartDiscoun
         this.variantId = variantId;
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
-        this.type = CartDiscountValueGiftLineItemDraft.GIFT_LINE_ITEM;
+        this.type = GIFT_LINE_ITEM;
     }
 
     public CartDiscountValueGiftLineItemDraftImpl() {
-        this.type = CartDiscountValueGiftLineItemDraft.GIFT_LINE_ITEM;
+        this.type = GIFT_LINE_ITEM;
     }
 
     public String getType() {

@@ -49,11 +49,11 @@ public final class ShoppingListAddTextLineItemActionImpl implements ShoppingList
         this.quantity = quantity;
         this.addedAt = addedAt;
         this.custom = custom;
-        this.action = ShoppingListAddTextLineItemAction.ADD_TEXT_LINE_ITEM;
+        this.action = ADD_TEXT_LINE_ITEM;
     }
 
     public ShoppingListAddTextLineItemActionImpl() {
-        this.action = ShoppingListAddTextLineItemAction.ADD_TEXT_LINE_ITEM;
+        this.action = ADD_TEXT_LINE_ITEM;
     }
 
     public String getAction() {

@@ -34,11 +34,11 @@ public final class ResourceUpdateErrorImpl implements ResourceUpdateError {
             @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
         this.message = message;
         this.resource = resource;
-        this.code = ResourceUpdateError.RESOURCE_UPDATE;
+        this.code = RESOURCE_UPDATE;
     }
 
     public ResourceUpdateErrorImpl() {
-        this.code = ResourceUpdateError.RESOURCE_UPDATE;
+        this.code = RESOURCE_UPDATE;
     }
 
     public String getCode() {

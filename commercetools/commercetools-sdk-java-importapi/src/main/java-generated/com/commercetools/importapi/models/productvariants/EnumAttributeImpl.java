@@ -36,11 +36,11 @@ public final class EnumAttributeImpl implements EnumAttribute {
     EnumAttributeImpl(@JsonProperty("name") final String name, @JsonProperty("value") final String value) {
         this.name = name;
         this.value = value;
-        this.type = EnumAttribute.ENUM;
+        this.type = ENUM;
     }
 
     public EnumAttributeImpl() {
-        this.type = EnumAttribute.ENUM;
+        this.type = ENUM;
     }
 
     /**

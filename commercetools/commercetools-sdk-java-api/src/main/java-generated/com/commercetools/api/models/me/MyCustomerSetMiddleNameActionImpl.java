@@ -29,11 +29,11 @@ public final class MyCustomerSetMiddleNameActionImpl implements MyCustomerSetMid
     @JsonCreator
     MyCustomerSetMiddleNameActionImpl(@JsonProperty("middleName") final String middleName) {
         this.middleName = middleName;
-        this.action = MyCustomerSetMiddleNameAction.SET_MIDDLE_NAME;
+        this.action = SET_MIDDLE_NAME;
     }
 
     public MyCustomerSetMiddleNameActionImpl() {
-        this.action = MyCustomerSetMiddleNameAction.SET_MIDDLE_NAME;
+        this.action = SET_MIDDLE_NAME;
     }
 
     public String getAction() {

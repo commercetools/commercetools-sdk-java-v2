@@ -30,11 +30,11 @@ public final class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAct
     @JsonCreator
     ZoneRemoveLocationActionImpl(@JsonProperty("location") final com.commercetools.api.models.zone.Location location) {
         this.location = location;
-        this.action = ZoneRemoveLocationAction.REMOVE_LOCATION;
+        this.action = REMOVE_LOCATION;
     }
 
     public ZoneRemoveLocationActionImpl() {
-        this.action = ZoneRemoveLocationAction.REMOVE_LOCATION;
+        this.action = REMOVE_LOCATION;
     }
 
     public String getAction() {

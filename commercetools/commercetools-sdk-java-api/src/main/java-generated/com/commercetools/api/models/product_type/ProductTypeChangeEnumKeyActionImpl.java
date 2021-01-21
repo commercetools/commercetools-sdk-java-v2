@@ -36,11 +36,11 @@ public final class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChan
         this.attributeName = attributeName;
         this.key = key;
         this.newKey = newKey;
-        this.action = ProductTypeChangeEnumKeyAction.CHANGE_ENUM_KEY;
+        this.action = CHANGE_ENUM_KEY;
     }
 
     public ProductTypeChangeEnumKeyActionImpl() {
-        this.action = ProductTypeChangeEnumKeyAction.CHANGE_ENUM_KEY;
+        this.action = CHANGE_ENUM_KEY;
     }
 
     public String getAction() {

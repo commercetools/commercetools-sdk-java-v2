@@ -69,11 +69,11 @@ public final class ProductCreatedMessageImpl implements ProductCreatedMessage {
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.productProjection = productProjection;
-        this.type = ProductCreatedMessage.PRODUCT_CREATED;
+        this.type = PRODUCT_CREATED;
     }
 
     public ProductCreatedMessageImpl() {
-        this.type = ProductCreatedMessage.PRODUCT_CREATED;
+        this.type = PRODUCT_CREATED;
     }
 
     public String getId() {

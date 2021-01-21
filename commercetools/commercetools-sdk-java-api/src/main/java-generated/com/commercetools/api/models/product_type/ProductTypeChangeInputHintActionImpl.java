@@ -34,11 +34,11 @@ public final class ProductTypeChangeInputHintActionImpl implements ProductTypeCh
             @JsonProperty("newValue") final com.commercetools.api.models.product_type.TextInputHint newValue) {
         this.attributeName = attributeName;
         this.newValue = newValue;
-        this.action = ProductTypeChangeInputHintAction.CHANGE_INPUT_HINT;
+        this.action = CHANGE_INPUT_HINT;
     }
 
     public ProductTypeChangeInputHintActionImpl() {
-        this.action = ProductTypeChangeInputHintAction.CHANGE_INPUT_HINT;
+        this.action = CHANGE_INPUT_HINT;
     }
 
     public String getAction() {

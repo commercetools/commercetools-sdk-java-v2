@@ -29,11 +29,11 @@ public final class ProductTypeChangeNameActionImpl implements ProductTypeChangeN
     @JsonCreator
     ProductTypeChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
-        this.action = ProductTypeChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public ProductTypeChangeNameActionImpl() {
-        this.action = ProductTypeChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public String getAction() {

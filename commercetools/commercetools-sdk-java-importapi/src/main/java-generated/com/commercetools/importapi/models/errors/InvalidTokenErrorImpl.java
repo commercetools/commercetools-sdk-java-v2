@@ -29,11 +29,11 @@ public final class InvalidTokenErrorImpl implements InvalidTokenError {
     @JsonCreator
     InvalidTokenErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = InvalidTokenError.INVALID_TOKEN;
+        this.code = INVALID_TOKEN;
     }
 
     public InvalidTokenErrorImpl() {
-        this.code = InvalidTokenError.INVALID_TOKEN;
+        this.code = INVALID_TOKEN;
     }
 
     public String getCode() {

@@ -44,11 +44,11 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
-        this.type = OrderLineItemDiscountSetMessagePayload.ORDER_LINE_ITEM_DISCOUNT_SET;
+        this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
     public OrderLineItemDiscountSetMessagePayloadImpl() {
-        this.type = OrderLineItemDiscountSetMessagePayload.ORDER_LINE_ITEM_DISCOUNT_SET;
+        this.type = ORDER_LINE_ITEM_DISCOUNT_SET;
     }
 
     public String getType() {

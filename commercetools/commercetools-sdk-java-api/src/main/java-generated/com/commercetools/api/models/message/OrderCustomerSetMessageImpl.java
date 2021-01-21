@@ -82,11 +82,11 @@ public final class OrderCustomerSetMessageImpl implements OrderCustomerSetMessag
         this.customerGroup = customerGroup;
         this.oldCustomer = oldCustomer;
         this.oldCustomerGroup = oldCustomerGroup;
-        this.type = OrderCustomerSetMessage.ORDER_CUSTOMER_SET;
+        this.type = ORDER_CUSTOMER_SET;
     }
 
     public OrderCustomerSetMessageImpl() {
-        this.type = OrderCustomerSetMessage.ORDER_CUSTOMER_SET;
+        this.type = ORDER_CUSTOMER_SET;
     }
 
     public String getId() {

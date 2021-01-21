@@ -29,11 +29,11 @@ public final class CartSetCustomerIdActionImpl implements CartSetCustomerIdActio
     @JsonCreator
     CartSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
         this.customerId = customerId;
-        this.action = CartSetCustomerIdAction.SET_CUSTOMER_ID;
+        this.action = SET_CUSTOMER_ID;
     }
 
     public CartSetCustomerIdActionImpl() {
-        this.action = CartSetCustomerIdAction.SET_CUSTOMER_ID;
+        this.action = SET_CUSTOMER_ID;
     }
 
     public String getAction() {

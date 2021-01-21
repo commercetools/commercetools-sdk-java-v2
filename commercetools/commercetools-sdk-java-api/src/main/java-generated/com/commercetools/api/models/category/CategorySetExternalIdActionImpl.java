@@ -29,11 +29,11 @@ public final class CategorySetExternalIdActionImpl implements CategorySetExterna
     @JsonCreator
     CategorySetExternalIdActionImpl(@JsonProperty("externalId") final String externalId) {
         this.externalId = externalId;
-        this.action = CategorySetExternalIdAction.SET_EXTERNAL_ID;
+        this.action = SET_EXTERNAL_ID;
     }
 
     public CategorySetExternalIdActionImpl() {
-        this.action = CategorySetExternalIdAction.SET_EXTERNAL_ID;
+        this.action = SET_EXTERNAL_ID;
     }
 
     public String getAction() {

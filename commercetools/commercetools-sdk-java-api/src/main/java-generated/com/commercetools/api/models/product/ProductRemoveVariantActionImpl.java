@@ -36,11 +36,11 @@ public final class ProductRemoveVariantActionImpl implements ProductRemoveVarian
         this.id = id;
         this.sku = sku;
         this.staged = staged;
-        this.action = ProductRemoveVariantAction.REMOVE_VARIANT;
+        this.action = REMOVE_VARIANT;
     }
 
     public ProductRemoveVariantActionImpl() {
-        this.action = ProductRemoveVariantAction.REMOVE_VARIANT;
+        this.action = REMOVE_VARIANT;
     }
 
     public String getAction() {

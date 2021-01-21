@@ -39,11 +39,11 @@ public final class StagedOrderSetLineItemCustomTypeActionImpl implements StagedO
         this.lineItemId = lineItemId;
         this.type = type;
         this.fields = fields;
-        this.action = StagedOrderSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public StagedOrderSetLineItemCustomTypeActionImpl() {
-        this.action = StagedOrderSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public String getAction() {

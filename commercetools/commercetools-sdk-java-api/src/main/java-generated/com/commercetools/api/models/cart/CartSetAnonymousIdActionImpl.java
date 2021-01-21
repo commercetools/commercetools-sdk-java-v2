@@ -29,11 +29,11 @@ public final class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAct
     @JsonCreator
     CartSetAnonymousIdActionImpl(@JsonProperty("anonymousId") final String anonymousId) {
         this.anonymousId = anonymousId;
-        this.action = CartSetAnonymousIdAction.SET_ANONYMOUS_ID;
+        this.action = SET_ANONYMOUS_ID;
     }
 
     public CartSetAnonymousIdActionImpl() {
-        this.action = CartSetAnonymousIdAction.SET_ANONYMOUS_ID;
+        this.action = SET_ANONYMOUS_ID;
     }
 
     public String getAction() {

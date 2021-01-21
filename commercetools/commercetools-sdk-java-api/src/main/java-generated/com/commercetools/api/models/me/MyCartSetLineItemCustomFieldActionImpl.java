@@ -38,11 +38,11 @@ public final class MyCartSetLineItemCustomFieldActionImpl implements MyCartSetLi
         this.lineItemId = lineItemId;
         this.name = name;
         this.value = value;
-        this.action = MyCartSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD;
+        this.action = SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public MyCartSetLineItemCustomFieldActionImpl() {
-        this.action = MyCartSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD;
+        this.action = SET_LINE_ITEM_CUSTOM_FIELD;
     }
 
     public String getAction() {

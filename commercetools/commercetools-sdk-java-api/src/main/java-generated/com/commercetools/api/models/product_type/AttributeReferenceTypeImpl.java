@@ -31,11 +31,11 @@ public final class AttributeReferenceTypeImpl implements AttributeReferenceType 
     AttributeReferenceTypeImpl(
             @JsonProperty("referenceTypeId") final com.commercetools.api.models.common.ReferenceTypeId referenceTypeId) {
         this.referenceTypeId = referenceTypeId;
-        this.name = AttributeReferenceType.REFERENCE;
+        this.name = REFERENCE;
     }
 
     public AttributeReferenceTypeImpl() {
-        this.name = AttributeReferenceType.REFERENCE;
+        this.name = REFERENCE;
     }
 
     public String getName() {

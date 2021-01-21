@@ -33,11 +33,11 @@ public final class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesEr
             @JsonProperty("duplicates") final java.util.List<String> duplicates) {
         this.message = message;
         this.duplicates = duplicates;
-        this.code = DuplicateEnumValuesError.DUPLICATE_ENUM_VALUES;
+        this.code = DUPLICATE_ENUM_VALUES;
     }
 
     public DuplicateEnumValuesErrorImpl() {
-        this.code = DuplicateEnumValuesError.DUPLICATE_ENUM_VALUES;
+        this.code = DUPLICATE_ENUM_VALUES;
     }
 
     public String getCode() {

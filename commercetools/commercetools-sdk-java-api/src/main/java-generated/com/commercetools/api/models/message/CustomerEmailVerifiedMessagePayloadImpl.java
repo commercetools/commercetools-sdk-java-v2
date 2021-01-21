@@ -26,7 +26,7 @@ public final class CustomerEmailVerifiedMessagePayloadImpl implements CustomerEm
 
     @JsonCreator
     CustomerEmailVerifiedMessagePayloadImpl() {
-        this.type = CustomerEmailVerifiedMessagePayload.CUSTOMER_EMAIL_VERIFIED;
+        this.type = CUSTOMER_EMAIL_VERIFIED;
     }
 
     public String getType() {

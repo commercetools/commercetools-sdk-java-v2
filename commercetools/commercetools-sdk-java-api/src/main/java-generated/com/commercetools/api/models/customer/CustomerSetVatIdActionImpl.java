@@ -29,11 +29,11 @@ public final class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction 
     @JsonCreator
     CustomerSetVatIdActionImpl(@JsonProperty("vatId") final String vatId) {
         this.vatId = vatId;
-        this.action = CustomerSetVatIdAction.SET_VAT_ID;
+        this.action = SET_VAT_ID;
     }
 
     public CustomerSetVatIdActionImpl() {
-        this.action = CustomerSetVatIdAction.SET_VAT_ID;
+        this.action = SET_VAT_ID;
     }
 
     public String getAction() {

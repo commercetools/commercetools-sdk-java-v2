@@ -69,11 +69,11 @@ public final class CategoryCreatedMessageImpl implements CategoryCreatedMessage 
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.category = category;
-        this.type = CategoryCreatedMessage.CATEGORY_CREATED;
+        this.type = CATEGORY_CREATED;
     }
 
     public CategoryCreatedMessageImpl() {
-        this.type = CategoryCreatedMessage.CATEGORY_CREATED;
+        this.type = CATEGORY_CREATED;
     }
 
     public String getId() {

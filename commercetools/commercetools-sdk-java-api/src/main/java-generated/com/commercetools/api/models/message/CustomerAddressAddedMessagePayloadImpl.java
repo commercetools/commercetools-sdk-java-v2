@@ -31,11 +31,11 @@ public final class CustomerAddressAddedMessagePayloadImpl implements CustomerAdd
     CustomerAddressAddedMessagePayloadImpl(
             @JsonProperty("address") final com.commercetools.api.models.common.Address address) {
         this.address = address;
-        this.type = CustomerAddressAddedMessagePayload.CUSTOMER_ADDRESS_ADDED;
+        this.type = CUSTOMER_ADDRESS_ADDED;
     }
 
     public CustomerAddressAddedMessagePayloadImpl() {
-        this.type = CustomerAddressAddedMessagePayload.CUSTOMER_ADDRESS_ADDED;
+        this.type = CUSTOMER_ADDRESS_ADDED;
     }
 
     public String getType() {

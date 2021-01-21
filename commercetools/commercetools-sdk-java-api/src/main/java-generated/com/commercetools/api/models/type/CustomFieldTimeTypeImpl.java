@@ -26,7 +26,7 @@ public final class CustomFieldTimeTypeImpl implements CustomFieldTimeType {
 
     @JsonCreator
     CustomFieldTimeTypeImpl() {
-        this.name = CustomFieldTimeType.TIME;
+        this.name = TIME;
     }
 
     public String getName() {

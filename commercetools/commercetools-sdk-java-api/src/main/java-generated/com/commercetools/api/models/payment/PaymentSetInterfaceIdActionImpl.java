@@ -29,11 +29,11 @@ public final class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfac
     @JsonCreator
     PaymentSetInterfaceIdActionImpl(@JsonProperty("interfaceId") final String interfaceId) {
         this.interfaceId = interfaceId;
-        this.action = PaymentSetInterfaceIdAction.SET_INTERFACE_ID;
+        this.action = SET_INTERFACE_ID;
     }
 
     public PaymentSetInterfaceIdActionImpl() {
-        this.action = PaymentSetInterfaceIdAction.SET_INTERFACE_ID;
+        this.action = SET_INTERFACE_ID;
     }
 
     public String getAction() {

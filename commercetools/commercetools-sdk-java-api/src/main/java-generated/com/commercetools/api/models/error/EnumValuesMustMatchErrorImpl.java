@@ -29,11 +29,11 @@ public final class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchEr
     @JsonCreator
     EnumValuesMustMatchErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = EnumValuesMustMatchError.ENUM_VALUES_MUST_MATCH;
+        this.code = ENUM_VALUES_MUST_MATCH;
     }
 
     public EnumValuesMustMatchErrorImpl() {
-        this.code = EnumValuesMustMatchError.ENUM_VALUES_MUST_MATCH;
+        this.code = ENUM_VALUES_MUST_MATCH;
     }
 
     public String getCode() {

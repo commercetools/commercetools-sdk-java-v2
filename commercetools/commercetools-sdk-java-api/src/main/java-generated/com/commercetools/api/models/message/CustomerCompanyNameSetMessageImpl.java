@@ -68,11 +68,11 @@ public final class CustomerCompanyNameSetMessageImpl implements CustomerCompanyN
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.companyName = companyName;
-        this.type = CustomerCompanyNameSetMessage.CUSTOMER_COMPANY_NAME_SET;
+        this.type = CUSTOMER_COMPANY_NAME_SET;
     }
 
     public CustomerCompanyNameSetMessageImpl() {
-        this.type = CustomerCompanyNameSetMessage.CUSTOMER_COMPANY_NAME_SET;
+        this.type = CUSTOMER_COMPANY_NAME_SET;
     }
 
     public String getId() {

@@ -34,11 +34,11 @@ public final class StagedOrderChangeCustomLineItemQuantityActionImpl
             @JsonProperty("quantity") final Double quantity) {
         this.customLineItemId = customLineItemId;
         this.quantity = quantity;
-        this.action = StagedOrderChangeCustomLineItemQuantityAction.CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
+        this.action = CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }
 
     public StagedOrderChangeCustomLineItemQuantityActionImpl() {
-        this.action = StagedOrderChangeCustomLineItemQuantityAction.CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
+        this.action = CHANGE_CUSTOM_LINE_ITEM_QUANTITY;
     }
 
     public String getAction() {

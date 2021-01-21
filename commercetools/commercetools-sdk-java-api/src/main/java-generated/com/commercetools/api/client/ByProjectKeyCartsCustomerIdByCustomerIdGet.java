@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 /**
 *  <p>Retrieves the active cart of the customer that has been modified most recently.

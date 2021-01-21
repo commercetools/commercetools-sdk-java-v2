@@ -53,11 +53,11 @@ public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNon
         this.validFrom = validFrom;
         this.validUntil = validUntil;
         this.validityCheckTime = validityCheckTime;
-        this.code = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE;
+        this.code = DISCOUNT_CODE_NON_APPLICABLE;
     }
 
     public DiscountCodeNonApplicableErrorImpl() {
-        this.code = DiscountCodeNonApplicableError.DISCOUNT_CODE_NON_APPLICABLE;
+        this.code = DISCOUNT_CODE_NON_APPLICABLE;
     }
 
     public String getCode() {

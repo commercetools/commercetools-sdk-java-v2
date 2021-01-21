@@ -35,11 +35,11 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
             @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
         this.variant = variant;
         this.removedImageUrls = removedImageUrls;
-        this.type = ProductVariantDeletedMessagePayload.PRODUCT_VARIANT_DELETED;
+        this.type = PRODUCT_VARIANT_DELETED;
     }
 
     public ProductVariantDeletedMessagePayloadImpl() {
-        this.type = ProductVariantDeletedMessagePayload.PRODUCT_VARIANT_DELETED;
+        this.type = PRODUCT_VARIANT_DELETED;
     }
 
     public String getType() {

@@ -26,7 +26,7 @@ public final class ProductDiscountValueExternalDraftImpl implements ProductDisco
 
     @JsonCreator
     ProductDiscountValueExternalDraftImpl() {
-        this.type = ProductDiscountValueExternalDraft.EXTERNAL;
+        this.type = EXTERNAL;
     }
 
     public String getType() {

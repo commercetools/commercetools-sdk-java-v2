@@ -34,11 +34,11 @@ public final class CategorySetCustomFieldActionImpl implements CategorySetCustom
             @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
         this.name = name;
         this.value = value;
-        this.action = CategorySetCustomFieldAction.SET_CUSTOM_FIELD;
+        this.action = SET_CUSTOM_FIELD;
     }
 
     public CategorySetCustomFieldActionImpl() {
-        this.action = CategorySetCustomFieldAction.SET_CUSTOM_FIELD;
+        this.action = SET_CUSTOM_FIELD;
     }
 
     public String getAction() {

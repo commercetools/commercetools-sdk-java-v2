@@ -29,11 +29,11 @@ public final class ProductDiscountValueRelativeDraftImpl implements ProductDisco
     @JsonCreator
     ProductDiscountValueRelativeDraftImpl(@JsonProperty("permyriad") final Long permyriad) {
         this.permyriad = permyriad;
-        this.type = ProductDiscountValueRelativeDraft.RELATIVE;
+        this.type = RELATIVE;
     }
 
     public ProductDiscountValueRelativeDraftImpl() {
-        this.type = ProductDiscountValueRelativeDraft.RELATIVE;
+        this.type = RELATIVE;
     }
 
     public String getType() {

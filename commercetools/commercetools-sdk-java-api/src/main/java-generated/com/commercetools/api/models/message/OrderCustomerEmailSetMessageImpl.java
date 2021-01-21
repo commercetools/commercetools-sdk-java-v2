@@ -71,11 +71,11 @@ public final class OrderCustomerEmailSetMessageImpl implements OrderCustomerEmai
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.email = email;
         this.oldEmail = oldEmail;
-        this.type = OrderCustomerEmailSetMessage.ORDER_CUSTOMER_EMAIL_SET;
+        this.type = ORDER_CUSTOMER_EMAIL_SET;
     }
 
     public OrderCustomerEmailSetMessageImpl() {
-        this.type = OrderCustomerEmailSetMessage.ORDER_CUSTOMER_EMAIL_SET;
+        this.type = ORDER_CUSTOMER_EMAIL_SET;
     }
 
     public String getId() {

@@ -36,11 +36,11 @@ public final class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderS
             @JsonProperty("externalTaxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
         this.externalTotalGross = externalTotalGross;
         this.externalTaxPortions = externalTaxPortions;
-        this.action = StagedOrderSetOrderTotalTaxAction.SET_ORDER_TOTAL_TAX;
+        this.action = SET_ORDER_TOTAL_TAX;
     }
 
     public StagedOrderSetOrderTotalTaxActionImpl() {
-        this.action = StagedOrderSetOrderTotalTaxAction.SET_ORDER_TOTAL_TAX;
+        this.action = SET_ORDER_TOTAL_TAX;
     }
 
     public String getAction() {

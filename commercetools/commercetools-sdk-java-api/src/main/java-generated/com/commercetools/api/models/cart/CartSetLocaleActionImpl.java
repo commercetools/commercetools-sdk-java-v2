@@ -29,11 +29,11 @@ public final class CartSetLocaleActionImpl implements CartSetLocaleAction {
     @JsonCreator
     CartSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
-        this.action = CartSetLocaleAction.SET_LOCALE;
+        this.action = SET_LOCALE;
     }
 
     public CartSetLocaleActionImpl() {
-        this.action = CartSetLocaleAction.SET_LOCALE;
+        this.action = SET_LOCALE;
     }
 
     public String getAction() {

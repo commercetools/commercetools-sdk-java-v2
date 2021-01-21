@@ -31,11 +31,11 @@ public final class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZ
     ShippingMethodAddZoneActionImpl(
             @JsonProperty("zone") final com.commercetools.api.models.zone.ZoneResourceIdentifier zone) {
         this.zone = zone;
-        this.action = ShippingMethodAddZoneAction.ADD_ZONE;
+        this.action = ADD_ZONE;
     }
 
     public ShippingMethodAddZoneActionImpl() {
-        this.action = ShippingMethodAddZoneAction.ADD_ZONE;
+        this.action = ADD_ZONE;
     }
 
     public String getAction() {

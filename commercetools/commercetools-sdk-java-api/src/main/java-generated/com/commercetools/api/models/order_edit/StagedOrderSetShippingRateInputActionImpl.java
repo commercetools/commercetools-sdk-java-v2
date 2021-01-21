@@ -31,11 +31,11 @@ public final class StagedOrderSetShippingRateInputActionImpl implements StagedOr
     StagedOrderSetShippingRateInputActionImpl(
             @JsonProperty("shippingRateInput") final com.commercetools.api.models.cart.ShippingRateInputDraft shippingRateInput) {
         this.shippingRateInput = shippingRateInput;
-        this.action = StagedOrderSetShippingRateInputAction.SET_SHIPPING_RATE_INPUT;
+        this.action = SET_SHIPPING_RATE_INPUT;
     }
 
     public StagedOrderSetShippingRateInputActionImpl() {
-        this.action = StagedOrderSetShippingRateInputAction.SET_SHIPPING_RATE_INPUT;
+        this.action = SET_SHIPPING_RATE_INPUT;
     }
 
     public String getAction() {

@@ -30,11 +30,11 @@ public final class OrderDeletedMessagePayloadImpl implements OrderDeletedMessage
     @JsonCreator
     OrderDeletedMessagePayloadImpl(@JsonProperty("order") final com.commercetools.api.models.order.Order order) {
         this.order = order;
-        this.type = OrderDeletedMessagePayload.ORDER_DELETED;
+        this.type = ORDER_DELETED;
     }
 
     public OrderDeletedMessagePayloadImpl() {
-        this.type = OrderDeletedMessagePayload.ORDER_DELETED;
+        this.type = ORDER_DELETED;
     }
 
     public String getType() {

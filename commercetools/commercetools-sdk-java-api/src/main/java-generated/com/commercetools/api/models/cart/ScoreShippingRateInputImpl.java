@@ -29,11 +29,11 @@ public final class ScoreShippingRateInputImpl implements ScoreShippingRateInput 
     @JsonCreator
     ScoreShippingRateInputImpl(@JsonProperty("score") final Double score) {
         this.score = score;
-        this.type = ScoreShippingRateInput.SCORE;
+        this.type = SCORE;
     }
 
     public ScoreShippingRateInputImpl() {
-        this.type = ScoreShippingRateInput.SCORE;
+        this.type = SCORE;
     }
 
     public String getType() {

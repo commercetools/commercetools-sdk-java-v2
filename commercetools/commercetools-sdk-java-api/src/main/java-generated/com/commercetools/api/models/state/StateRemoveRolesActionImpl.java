@@ -31,11 +31,11 @@ public final class StateRemoveRolesActionImpl implements StateRemoveRolesAction 
     StateRemoveRolesActionImpl(
             @JsonProperty("roles") final java.util.List<com.commercetools.api.models.state.StateRoleEnum> roles) {
         this.roles = roles;
-        this.action = StateRemoveRolesAction.REMOVE_ROLES;
+        this.action = REMOVE_ROLES;
     }
 
     public StateRemoveRolesActionImpl() {
-        this.action = StateRemoveRolesAction.REMOVE_ROLES;
+        this.action = REMOVE_ROLES;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class PendingOperationErrorImpl implements PendingOperationError {
     @JsonCreator
     PendingOperationErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = PendingOperationError.PENDING_OPERATION;
+        this.code = PENDING_OPERATION;
     }
 
     public PendingOperationErrorImpl() {
-        this.code = PendingOperationError.PENDING_OPERATION;
+        this.code = PENDING_OPERATION;
     }
 
     public String getCode() {

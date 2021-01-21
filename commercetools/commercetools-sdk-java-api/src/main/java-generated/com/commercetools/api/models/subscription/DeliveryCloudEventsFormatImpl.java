@@ -29,11 +29,11 @@ public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsF
     @JsonCreator
     DeliveryCloudEventsFormatImpl(@JsonProperty("cloudEventsVersion") final String cloudEventsVersion) {
         this.cloudEventsVersion = cloudEventsVersion;
-        this.type = DeliveryCloudEventsFormat.CLOUD_EVENTS;
+        this.type = CLOUD_EVENTS;
     }
 
     public DeliveryCloudEventsFormatImpl() {
-        this.type = DeliveryCloudEventsFormat.CLOUD_EVENTS;
+        this.type = CLOUD_EVENTS;
     }
 
     public String getType() {

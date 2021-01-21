@@ -29,11 +29,11 @@ public final class CustomerGroupChangeNameActionImpl implements CustomerGroupCha
     @JsonCreator
     CustomerGroupChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
-        this.action = CustomerGroupChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public CustomerGroupChangeNameActionImpl() {
-        this.action = CustomerGroupChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class ScoreShippingRateInputDraftImpl implements ScoreShippingRateI
     @JsonCreator
     ScoreShippingRateInputDraftImpl(@JsonProperty("score") final Double score) {
         this.score = score;
-        this.type = ScoreShippingRateInputDraft.SCORE;
+        this.type = SCORE;
     }
 
     public ScoreShippingRateInputDraftImpl() {
-        this.type = ScoreShippingRateInputDraft.SCORE;
+        this.type = SCORE;
     }
 
     public String getType() {

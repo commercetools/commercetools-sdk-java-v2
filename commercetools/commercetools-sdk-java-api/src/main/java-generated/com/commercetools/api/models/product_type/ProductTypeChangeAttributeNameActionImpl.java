@@ -33,11 +33,11 @@ public final class ProductTypeChangeAttributeNameActionImpl implements ProductTy
             @JsonProperty("newAttributeName") final String newAttributeName) {
         this.attributeName = attributeName;
         this.newAttributeName = newAttributeName;
-        this.action = ProductTypeChangeAttributeNameAction.CHANGE_ATTRIBUTE_NAME;
+        this.action = CHANGE_ATTRIBUTE_NAME;
     }
 
     public ProductTypeChangeAttributeNameActionImpl() {
-        this.action = ProductTypeChangeAttributeNameAction.CHANGE_ATTRIBUTE_NAME;
+        this.action = CHANGE_ATTRIBUTE_NAME;
     }
 
     public String getAction() {

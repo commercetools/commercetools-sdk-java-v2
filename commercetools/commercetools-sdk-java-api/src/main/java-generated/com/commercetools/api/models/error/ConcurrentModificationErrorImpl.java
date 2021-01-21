@@ -33,11 +33,11 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
             @JsonProperty("currentVersion") final Long currentVersion) {
         this.message = message;
         this.currentVersion = currentVersion;
-        this.code = ConcurrentModificationError.CONCURRENT_MODIFICATION;
+        this.code = CONCURRENT_MODIFICATION;
     }
 
     public ConcurrentModificationErrorImpl() {
-        this.code = ConcurrentModificationError.CONCURRENT_MODIFICATION;
+        this.code = CONCURRENT_MODIFICATION;
     }
 
     public String getCode() {

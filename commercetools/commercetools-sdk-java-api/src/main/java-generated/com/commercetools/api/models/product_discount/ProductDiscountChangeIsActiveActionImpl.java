@@ -29,11 +29,11 @@ public final class ProductDiscountChangeIsActiveActionImpl implements ProductDis
     @JsonCreator
     ProductDiscountChangeIsActiveActionImpl(@JsonProperty("isActive") final Boolean isActive) {
         this.isActive = isActive;
-        this.action = ProductDiscountChangeIsActiveAction.CHANGE_IS_ACTIVE;
+        this.action = CHANGE_IS_ACTIVE;
     }
 
     public ProductDiscountChangeIsActiveActionImpl() {
-        this.action = ProductDiscountChangeIsActiveAction.CHANGE_IS_ACTIVE;
+        this.action = CHANGE_IS_ACTIVE;
     }
 
     public String getAction() {

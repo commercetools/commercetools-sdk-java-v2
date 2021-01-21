@@ -30,11 +30,11 @@ public final class ProductDiscountSetValidFromActionImpl implements ProductDisco
     @JsonCreator
     ProductDiscountSetValidFromActionImpl(@JsonProperty("validFrom") final java.time.ZonedDateTime validFrom) {
         this.validFrom = validFrom;
-        this.action = ProductDiscountSetValidFromAction.SET_VALID_FROM;
+        this.action = SET_VALID_FROM;
     }
 
     public ProductDiscountSetValidFromActionImpl() {
-        this.action = ProductDiscountSetValidFromAction.SET_VALID_FROM;
+        this.action = SET_VALID_FROM;
     }
 
     public String getAction() {

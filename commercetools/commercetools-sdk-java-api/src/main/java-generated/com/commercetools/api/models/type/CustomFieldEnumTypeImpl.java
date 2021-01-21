@@ -31,11 +31,11 @@ public final class CustomFieldEnumTypeImpl implements CustomFieldEnumType {
     CustomFieldEnumTypeImpl(
             @JsonProperty("values") final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
         this.values = values;
-        this.name = CustomFieldEnumType.ENUM;
+        this.name = ENUM;
     }
 
     public CustomFieldEnumTypeImpl() {
-        this.name = CustomFieldEnumType.ENUM;
+        this.name = ENUM;
     }
 
     public String getName() {

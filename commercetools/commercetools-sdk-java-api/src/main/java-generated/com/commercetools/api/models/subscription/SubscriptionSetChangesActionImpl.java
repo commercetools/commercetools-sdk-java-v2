@@ -31,11 +31,11 @@ public final class SubscriptionSetChangesActionImpl implements SubscriptionSetCh
     SubscriptionSetChangesActionImpl(
             @JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
         this.changes = changes;
-        this.action = SubscriptionSetChangesAction.SET_CHANGES;
+        this.action = SET_CHANGES;
     }
 
     public SubscriptionSetChangesActionImpl() {
-        this.action = SubscriptionSetChangesAction.SET_CHANGES;
+        this.action = SET_CHANGES;
     }
 
     public String getAction() {

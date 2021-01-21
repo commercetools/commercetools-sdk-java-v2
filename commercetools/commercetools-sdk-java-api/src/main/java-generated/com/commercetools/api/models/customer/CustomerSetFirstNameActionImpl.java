@@ -29,11 +29,11 @@ public final class CustomerSetFirstNameActionImpl implements CustomerSetFirstNam
     @JsonCreator
     CustomerSetFirstNameActionImpl(@JsonProperty("firstName") final String firstName) {
         this.firstName = firstName;
-        this.action = CustomerSetFirstNameAction.SET_FIRST_NAME;
+        this.action = SET_FIRST_NAME;
     }
 
     public CustomerSetFirstNameActionImpl() {
-        this.action = CustomerSetFirstNameAction.SET_FIRST_NAME;
+        this.action = SET_FIRST_NAME;
     }
 
     public String getAction() {

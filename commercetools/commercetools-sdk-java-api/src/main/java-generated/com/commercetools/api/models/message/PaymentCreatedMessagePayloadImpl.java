@@ -31,11 +31,11 @@ public final class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMes
     PaymentCreatedMessagePayloadImpl(
             @JsonProperty("payment") final com.commercetools.api.models.payment.Payment payment) {
         this.payment = payment;
-        this.type = PaymentCreatedMessagePayload.PAYMENT_CREATED;
+        this.type = PAYMENT_CREATED;
     }
 
     public PaymentCreatedMessagePayloadImpl() {
-        this.type = PaymentCreatedMessagePayload.PAYMENT_CREATED;
+        this.type = PAYMENT_CREATED;
     }
 
     public String getType() {

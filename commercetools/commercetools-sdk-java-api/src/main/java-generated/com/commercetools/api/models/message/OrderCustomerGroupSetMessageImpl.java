@@ -73,11 +73,11 @@ public final class OrderCustomerGroupSetMessageImpl implements OrderCustomerGrou
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customerGroup = customerGroup;
         this.oldCustomerGroup = oldCustomerGroup;
-        this.type = OrderCustomerGroupSetMessage.ORDER_CUSTOMER_GROUP_SET;
+        this.type = ORDER_CUSTOMER_GROUP_SET;
     }
 
     public OrderCustomerGroupSetMessageImpl() {
-        this.type = OrderCustomerGroupSetMessage.ORDER_CUSTOMER_GROUP_SET;
+        this.type = ORDER_CUSTOMER_GROUP_SET;
     }
 
     public String getId() {

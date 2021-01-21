@@ -29,11 +29,11 @@ public final class ProductDiscountChangePredicateActionImpl implements ProductDi
     @JsonCreator
     ProductDiscountChangePredicateActionImpl(@JsonProperty("predicate") final String predicate) {
         this.predicate = predicate;
-        this.action = ProductDiscountChangePredicateAction.CHANGE_PREDICATE;
+        this.action = CHANGE_PREDICATE;
     }
 
     public ProductDiscountChangePredicateActionImpl() {
-        this.action = ProductDiscountChangePredicateAction.CHANGE_PREDICATE;
+        this.action = CHANGE_PREDICATE;
     }
 
     public String getAction() {

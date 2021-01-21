@@ -33,11 +33,11 @@ public final class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeCh
             @JsonProperty("keys") final java.util.List<String> keys) {
         this.fieldName = fieldName;
         this.keys = keys;
-        this.action = TypeChangeLocalizedEnumValueOrderAction.CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
+        this.action = CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }
 
     public TypeChangeLocalizedEnumValueOrderActionImpl() {
-        this.action = TypeChangeLocalizedEnumValueOrderAction.CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
+        this.action = CHANGE_LOCALIZED_ENUM_VALUE_ORDER;
     }
 
     public String getAction() {

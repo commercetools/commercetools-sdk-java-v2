@@ -34,11 +34,11 @@ public final class ResourceNotFoundErrorImpl implements ResourceNotFoundError {
             @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
         this.message = message;
         this.resource = resource;
-        this.code = ResourceNotFoundError.RESOURCE_NOT_FOUND;
+        this.code = RESOURCE_NOT_FOUND;
     }
 
     public ResourceNotFoundErrorImpl() {
-        this.code = ResourceNotFoundError.RESOURCE_NOT_FOUND;
+        this.code = RESOURCE_NOT_FOUND;
     }
 
     public String getCode() {

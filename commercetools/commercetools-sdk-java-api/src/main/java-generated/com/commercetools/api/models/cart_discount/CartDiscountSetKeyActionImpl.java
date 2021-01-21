@@ -29,11 +29,11 @@ public final class CartDiscountSetKeyActionImpl implements CartDiscountSetKeyAct
     @JsonCreator
     CartDiscountSetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = CartDiscountSetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public CartDiscountSetKeyActionImpl() {
-        this.action = CartDiscountSetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public String getAction() {

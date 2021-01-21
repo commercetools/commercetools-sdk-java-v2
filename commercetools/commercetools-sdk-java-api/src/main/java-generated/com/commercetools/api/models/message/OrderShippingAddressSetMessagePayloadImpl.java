@@ -35,11 +35,11 @@ public final class OrderShippingAddressSetMessagePayloadImpl implements OrderShi
             @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress) {
         this.address = address;
         this.oldAddress = oldAddress;
-        this.type = OrderShippingAddressSetMessagePayload.ORDER_SHIPPING_ADDRESS_SET;
+        this.type = ORDER_SHIPPING_ADDRESS_SET;
     }
 
     public OrderShippingAddressSetMessagePayloadImpl() {
-        this.type = OrderShippingAddressSetMessagePayload.ORDER_SHIPPING_ADDRESS_SET;
+        this.type = ORDER_SHIPPING_ADDRESS_SET;
     }
 
     public String getType() {

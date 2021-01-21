@@ -37,11 +37,11 @@ public final class OutOfStockErrorImpl implements OutOfStockError {
         this.message = message;
         this.lineItems = lineItems;
         this.skus = skus;
-        this.code = OutOfStockError.OUT_OF_STOCK;
+        this.code = OUT_OF_STOCK;
     }
 
     public OutOfStockErrorImpl() {
-        this.code = OutOfStockError.OUT_OF_STOCK;
+        this.code = OUT_OF_STOCK;
     }
 
     public String getCode() {

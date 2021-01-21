@@ -29,11 +29,11 @@ public final class ShippingMethodChangeNameActionImpl implements ShippingMethodC
     @JsonCreator
     ShippingMethodChangeNameActionImpl(@JsonProperty("name") final String name) {
         this.name = name;
-        this.action = ShippingMethodChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public ShippingMethodChangeNameActionImpl() {
-        this.action = ShippingMethodChangeNameAction.CHANGE_NAME;
+        this.action = CHANGE_NAME;
     }
 
     public String getAction() {

@@ -29,11 +29,11 @@ public final class ReviewSetLocaleActionImpl implements ReviewSetLocaleAction {
     @JsonCreator
     ReviewSetLocaleActionImpl(@JsonProperty("locale") final String locale) {
         this.locale = locale;
-        this.action = ReviewSetLocaleAction.SET_LOCALE;
+        this.action = SET_LOCALE;
     }
 
     public ReviewSetLocaleActionImpl() {
-        this.action = ReviewSetLocaleAction.SET_LOCALE;
+        this.action = SET_LOCALE;
     }
 
     public String getAction() {

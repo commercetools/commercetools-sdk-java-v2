@@ -39,11 +39,11 @@ public final class ShoppingListSetLineItemCustomTypeActionImpl implements Shoppi
         this.lineItemId = lineItemId;
         this.type = type;
         this.fields = fields;
-        this.action = ShoppingListSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public ShoppingListSetLineItemCustomTypeActionImpl() {
-        this.action = ShoppingListSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public String getAction() {

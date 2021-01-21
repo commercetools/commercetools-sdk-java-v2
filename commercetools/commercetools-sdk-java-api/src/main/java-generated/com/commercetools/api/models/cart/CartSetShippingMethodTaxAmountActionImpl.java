@@ -31,11 +31,11 @@ public final class CartSetShippingMethodTaxAmountActionImpl implements CartSetSh
     CartSetShippingMethodTaxAmountActionImpl(
             @JsonProperty("externalTaxAmount") final com.commercetools.api.models.cart.ExternalTaxAmountDraft externalTaxAmount) {
         this.externalTaxAmount = externalTaxAmount;
-        this.action = CartSetShippingMethodTaxAmountAction.SET_SHIPPING_METHOD_TAX_AMOUNT;
+        this.action = SET_SHIPPING_METHOD_TAX_AMOUNT;
     }
 
     public CartSetShippingMethodTaxAmountActionImpl() {
-        this.action = CartSetShippingMethodTaxAmountAction.SET_SHIPPING_METHOD_TAX_AMOUNT;
+        this.action = SET_SHIPPING_METHOD_TAX_AMOUNT;
     }
 
     public String getAction() {

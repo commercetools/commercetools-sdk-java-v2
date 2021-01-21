@@ -56,11 +56,11 @@ public final class LineItemReturnItemImpl implements LineItemReturnItem {
         this.lastModifiedAt = lastModifiedAt;
         this.createdAt = createdAt;
         this.lineItemId = lineItemId;
-        this.type = LineItemReturnItem.LINE_ITEM_RETURN_ITEM;
+        this.type = LINE_ITEM_RETURN_ITEM;
     }
 
     public LineItemReturnItemImpl() {
-        this.type = LineItemReturnItem.LINE_ITEM_RETURN_ITEM;
+        this.type = LINE_ITEM_RETURN_ITEM;
     }
 
     public String getId() {

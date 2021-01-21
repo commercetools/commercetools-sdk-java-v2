@@ -31,11 +31,11 @@ public final class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameA
     DiscountCodeSetNameActionImpl(
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
-        this.action = DiscountCodeSetNameAction.SET_NAME;
+        this.action = SET_NAME;
     }
 
     public DiscountCodeSetNameActionImpl() {
-        this.action = DiscountCodeSetNameAction.SET_NAME;
+        this.action = SET_NAME;
     }
 
     public String getAction() {

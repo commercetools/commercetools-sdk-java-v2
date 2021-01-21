@@ -35,11 +35,11 @@ public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearc
             @JsonProperty("staged") final Boolean staged) {
         this.searchKeywords = searchKeywords;
         this.staged = staged;
-        this.action = ProductSetSearchKeywordsAction.SET_SEARCH_KEYWORDS;
+        this.action = SET_SEARCH_KEYWORDS;
     }
 
     public ProductSetSearchKeywordsActionImpl() {
-        this.action = ProductSetSearchKeywordsAction.SET_SEARCH_KEYWORDS;
+        this.action = SET_SEARCH_KEYWORDS;
     }
 
     public String getAction() {

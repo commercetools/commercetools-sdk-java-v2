@@ -45,11 +45,11 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
         this.name = name;
         this.value = value;
         this.staged = staged;
-        this.action = ProductSetAttributeAction.SET_ATTRIBUTE;
+        this.action = SET_ATTRIBUTE;
     }
 
     public ProductSetAttributeActionImpl() {
-        this.action = ProductSetAttributeAction.SET_ATTRIBUTE;
+        this.action = SET_ATTRIBUTE;
     }
 
     public String getAction() {

@@ -31,11 +31,11 @@ public final class OrderDiscountCodeRemovedMessagePayloadImpl implements OrderDi
     OrderDiscountCodeRemovedMessagePayloadImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
-        this.type = OrderDiscountCodeRemovedMessagePayload.ORDER_DISCOUNT_CODE_REMOVED;
+        this.type = ORDER_DISCOUNT_CODE_REMOVED;
     }
 
     public OrderDiscountCodeRemovedMessagePayloadImpl() {
-        this.type = OrderDiscountCodeRemovedMessagePayload.ORDER_DISCOUNT_CODE_REMOVED;
+        this.type = ORDER_DISCOUNT_CODE_REMOVED;
     }
 
     public String getType() {

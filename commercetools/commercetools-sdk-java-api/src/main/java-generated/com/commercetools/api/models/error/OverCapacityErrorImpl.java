@@ -29,11 +29,11 @@ public final class OverCapacityErrorImpl implements OverCapacityError {
     @JsonCreator
     OverCapacityErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = OverCapacityError.OVER_CAPACITY;
+        this.code = OVER_CAPACITY;
     }
 
     public OverCapacityErrorImpl() {
-        this.code = OverCapacityError.OVER_CAPACITY;
+        this.code = OVER_CAPACITY;
     }
 
     public String getCode() {

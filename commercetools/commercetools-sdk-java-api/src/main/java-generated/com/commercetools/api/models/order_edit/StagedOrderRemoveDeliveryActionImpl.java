@@ -29,11 +29,11 @@ public final class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRem
     @JsonCreator
     StagedOrderRemoveDeliveryActionImpl(@JsonProperty("deliveryId") final String deliveryId) {
         this.deliveryId = deliveryId;
-        this.action = StagedOrderRemoveDeliveryAction.REMOVE_DELIVERY;
+        this.action = REMOVE_DELIVERY;
     }
 
     public StagedOrderRemoveDeliveryActionImpl() {
-        this.action = StagedOrderRemoveDeliveryAction.REMOVE_DELIVERY;
+        this.action = REMOVE_DELIVERY;
     }
 
     public String getAction() {

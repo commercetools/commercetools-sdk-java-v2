@@ -31,11 +31,11 @@ public final class StagedOrderChangeTaxRoundingModeActionImpl implements StagedO
     StagedOrderChangeTaxRoundingModeActionImpl(
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
-        this.action = StagedOrderChangeTaxRoundingModeAction.CHANGE_TAX_ROUNDING_MODE;
+        this.action = CHANGE_TAX_ROUNDING_MODE;
     }
 
     public StagedOrderChangeTaxRoundingModeActionImpl() {
-        this.action = StagedOrderChangeTaxRoundingModeAction.CHANGE_TAX_ROUNDING_MODE;
+        this.action = CHANGE_TAX_ROUNDING_MODE;
     }
 
     public String getAction() {

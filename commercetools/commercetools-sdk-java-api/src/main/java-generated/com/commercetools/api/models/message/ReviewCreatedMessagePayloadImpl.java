@@ -30,11 +30,11 @@ public final class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessa
     @JsonCreator
     ReviewCreatedMessagePayloadImpl(@JsonProperty("review") final com.commercetools.api.models.review.Review review) {
         this.review = review;
-        this.type = ReviewCreatedMessagePayload.REVIEW_CREATED;
+        this.type = REVIEW_CREATED;
     }
 
     public ReviewCreatedMessagePayloadImpl() {
-        this.type = ReviewCreatedMessagePayload.REVIEW_CREATED;
+        this.type = REVIEW_CREATED;
     }
 
     public String getType() {

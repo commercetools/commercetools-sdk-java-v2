@@ -34,11 +34,11 @@ public final class ResourceCreationErrorImpl implements ResourceCreationError {
             @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
         this.message = message;
         this.resource = resource;
-        this.code = ResourceCreationError.RESOURCE_CREATION;
+        this.code = RESOURCE_CREATION;
     }
 
     public ResourceCreationErrorImpl() {
-        this.code = ResourceCreationError.RESOURCE_CREATION;
+        this.code = RESOURCE_CREATION;
     }
 
     public String getCode() {

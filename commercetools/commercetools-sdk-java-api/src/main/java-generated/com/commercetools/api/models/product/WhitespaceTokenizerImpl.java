@@ -26,7 +26,7 @@ public final class WhitespaceTokenizerImpl implements WhitespaceTokenizer {
 
     @JsonCreator
     WhitespaceTokenizerImpl() {
-        this.type = WhitespaceTokenizer.WHITESPACE;
+        this.type = WHITESPACE;
     }
 
     public String getType() {

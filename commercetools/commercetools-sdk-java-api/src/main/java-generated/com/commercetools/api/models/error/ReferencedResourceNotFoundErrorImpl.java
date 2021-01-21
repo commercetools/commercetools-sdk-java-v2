@@ -41,11 +41,11 @@ public final class ReferencedResourceNotFoundErrorImpl implements ReferencedReso
         this.typeId = typeId;
         this.id = id;
         this.key = key;
-        this.code = ReferencedResourceNotFoundError.REFERENCED_RESOURCE_NOT_FOUND;
+        this.code = REFERENCED_RESOURCE_NOT_FOUND;
     }
 
     public ReferencedResourceNotFoundErrorImpl() {
-        this.code = ReferencedResourceNotFoundError.REFERENCED_RESOURCE_NOT_FOUND;
+        this.code = REFERENCED_RESOURCE_NOT_FOUND;
     }
 
     public String getCode() {

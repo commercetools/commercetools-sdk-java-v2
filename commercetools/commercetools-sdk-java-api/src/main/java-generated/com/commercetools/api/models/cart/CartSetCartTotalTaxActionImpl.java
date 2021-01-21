@@ -36,11 +36,11 @@ public final class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxA
             @JsonProperty("externalTaxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions) {
         this.externalTotalGross = externalTotalGross;
         this.externalTaxPortions = externalTaxPortions;
-        this.action = CartSetCartTotalTaxAction.SET_CART_TOTAL_TAX;
+        this.action = SET_CART_TOTAL_TAX;
     }
 
     public CartSetCartTotalTaxActionImpl() {
-        this.action = CartSetCartTotalTaxAction.SET_CART_TOTAL_TAX;
+        this.action = SET_CART_TOTAL_TAX;
     }
 
     public String getAction() {

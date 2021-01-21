@@ -35,11 +35,11 @@ public final class StagedOrderTransitionStateActionImpl implements StagedOrderTr
             @JsonProperty("force") final Boolean force) {
         this.state = state;
         this.force = force;
-        this.action = StagedOrderTransitionStateAction.TRANSITION_STATE;
+        this.action = TRANSITION_STATE;
     }
 
     public StagedOrderTransitionStateActionImpl() {
-        this.action = StagedOrderTransitionStateAction.TRANSITION_STATE;
+        this.action = TRANSITION_STATE;
     }
 
     public String getAction() {

@@ -69,11 +69,11 @@ public final class CustomerAddressRemovedMessageImpl implements CustomerAddressR
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.address = address;
-        this.type = CustomerAddressRemovedMessage.CUSTOMER_ADDRESS_REMOVED;
+        this.type = CUSTOMER_ADDRESS_REMOVED;
     }
 
     public CustomerAddressRemovedMessageImpl() {
-        this.type = CustomerAddressRemovedMessage.CUSTOMER_ADDRESS_REMOVED;
+        this.type = CUSTOMER_ADDRESS_REMOVED;
     }
 
     public String getId() {

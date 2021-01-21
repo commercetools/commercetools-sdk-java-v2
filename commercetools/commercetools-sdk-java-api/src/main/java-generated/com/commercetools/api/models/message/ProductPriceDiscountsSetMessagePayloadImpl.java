@@ -31,11 +31,11 @@ public final class ProductPriceDiscountsSetMessagePayloadImpl implements Product
     ProductPriceDiscountsSetMessagePayloadImpl(
             @JsonProperty("updatedPrices") final java.util.List<com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice> updatedPrices) {
         this.updatedPrices = updatedPrices;
-        this.type = ProductPriceDiscountsSetMessagePayload.PRODUCT_PRICE_DISCOUNTS_SET;
+        this.type = PRODUCT_PRICE_DISCOUNTS_SET;
     }
 
     public ProductPriceDiscountsSetMessagePayloadImpl() {
-        this.type = ProductPriceDiscountsSetMessagePayload.PRODUCT_PRICE_DISCOUNTS_SET;
+        this.type = PRODUCT_PRICE_DISCOUNTS_SET;
     }
 
     public String getType() {

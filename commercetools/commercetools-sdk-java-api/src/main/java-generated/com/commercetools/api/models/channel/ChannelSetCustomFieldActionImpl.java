@@ -34,11 +34,11 @@ public final class ChannelSetCustomFieldActionImpl implements ChannelSetCustomFi
             @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
         this.name = name;
         this.value = value;
-        this.action = ChannelSetCustomFieldAction.SET_CUSTOM_FIELD;
+        this.action = SET_CUSTOM_FIELD;
     }
 
     public ChannelSetCustomFieldActionImpl() {
-        this.action = ChannelSetCustomFieldAction.SET_CUSTOM_FIELD;
+        this.action = SET_CUSTOM_FIELD;
     }
 
     public String getAction() {

@@ -34,11 +34,11 @@ public final class InventoryEntrySetCustomFieldActionImpl implements InventoryEn
             @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
         this.name = name;
         this.value = value;
-        this.action = InventoryEntrySetCustomFieldAction.SET_CUSTOM_FIELD;
+        this.action = SET_CUSTOM_FIELD;
     }
 
     public InventoryEntrySetCustomFieldActionImpl() {
-        this.action = InventoryEntrySetCustomFieldAction.SET_CUSTOM_FIELD;
+        this.action = SET_CUSTOM_FIELD;
     }
 
     public String getAction() {

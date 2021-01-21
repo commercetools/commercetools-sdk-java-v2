@@ -29,11 +29,11 @@ public final class ExtensionAzureFunctionsAuthenticationImpl implements Extensio
     @JsonCreator
     ExtensionAzureFunctionsAuthenticationImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.type = ExtensionAzureFunctionsAuthentication.AZURE_FUNCTIONS;
+        this.type = AZURE_FUNCTIONS;
     }
 
     public ExtensionAzureFunctionsAuthenticationImpl() {
-        this.type = ExtensionAzureFunctionsAuthentication.AZURE_FUNCTIONS;
+        this.type = AZURE_FUNCTIONS;
     }
 
     public String getType() {

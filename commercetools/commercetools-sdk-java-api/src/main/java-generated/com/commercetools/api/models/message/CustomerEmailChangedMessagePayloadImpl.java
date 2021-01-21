@@ -29,11 +29,11 @@ public final class CustomerEmailChangedMessagePayloadImpl implements CustomerEma
     @JsonCreator
     CustomerEmailChangedMessagePayloadImpl(@JsonProperty("email") final String email) {
         this.email = email;
-        this.type = CustomerEmailChangedMessagePayload.CUSTOMER_EMAIL_CHANGED;
+        this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
     public CustomerEmailChangedMessagePayloadImpl() {
-        this.type = CustomerEmailChangedMessagePayload.CUSTOMER_EMAIL_CHANGED;
+        this.type = CUSTOMER_EMAIL_CHANGED;
     }
 
     public String getType() {

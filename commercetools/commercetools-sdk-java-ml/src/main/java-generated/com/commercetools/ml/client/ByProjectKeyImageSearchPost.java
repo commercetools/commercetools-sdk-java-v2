@@ -20,7 +20,6 @@ import java.util.stream.Collectors;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.VrapJsonUtils;
 
 /**
 *  <p>Accepts an image file and returns similar products from product catalogue.</p>

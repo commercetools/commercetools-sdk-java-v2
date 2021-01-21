@@ -40,11 +40,11 @@ public final class StagedOrderSetCustomLineItemCustomTypeActionImpl
         this.customLineItemId = customLineItemId;
         this.type = type;
         this.fields = fields;
-        this.action = StagedOrderSetCustomLineItemCustomTypeAction.SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public StagedOrderSetCustomLineItemCustomTypeActionImpl() {
-        this.action = StagedOrderSetCustomLineItemCustomTypeAction.SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE;
     }
 
     public String getAction() {

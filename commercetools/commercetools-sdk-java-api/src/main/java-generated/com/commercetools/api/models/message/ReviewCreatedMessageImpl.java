@@ -69,11 +69,11 @@ public final class ReviewCreatedMessageImpl implements ReviewCreatedMessage {
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.review = review;
-        this.type = ReviewCreatedMessage.REVIEW_CREATED;
+        this.type = REVIEW_CREATED;
     }
 
     public ReviewCreatedMessageImpl() {
-        this.type = ReviewCreatedMessage.REVIEW_CREATED;
+        this.type = REVIEW_CREATED;
     }
 
     public String getId() {

@@ -37,11 +37,11 @@ public final class ReferenceAttributeImpl implements ReferenceAttribute {
             @JsonProperty("value") final com.commercetools.importapi.models.common.KeyReference value) {
         this.name = name;
         this.value = value;
-        this.type = ReferenceAttribute.REFERENCE;
+        this.type = REFERENCE;
     }
 
     public ReferenceAttributeImpl() {
-        this.type = ReferenceAttribute.REFERENCE;
+        this.type = REFERENCE;
     }
 
     /**

@@ -36,11 +36,11 @@ public final class MyShoppingListSetCustomTypeActionImpl implements MyShoppingLi
             @JsonProperty("fields") final com.commercetools.api.models.type.FieldContainer fields) {
         this.type = type;
         this.fields = fields;
-        this.action = MyShoppingListSetCustomTypeAction.SET_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_TYPE;
     }
 
     public MyShoppingListSetCustomTypeActionImpl() {
-        this.action = MyShoppingListSetCustomTypeAction.SET_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

@@ -30,11 +30,11 @@ public final class MyShoppingListChangeLineItemsOrderActionImpl implements MySho
     MyShoppingListChangeLineItemsOrderActionImpl(
             @JsonProperty("lineItemOrder") final java.util.List<String> lineItemOrder) {
         this.lineItemOrder = lineItemOrder;
-        this.action = MyShoppingListChangeLineItemsOrderAction.CHANGE_LINE_ITEMS_ORDER;
+        this.action = CHANGE_LINE_ITEMS_ORDER;
     }
 
     public MyShoppingListChangeLineItemsOrderActionImpl() {
-        this.action = MyShoppingListChangeLineItemsOrderAction.CHANGE_LINE_ITEMS_ORDER;
+        this.action = CHANGE_LINE_ITEMS_ORDER;
     }
 
     public String getAction() {

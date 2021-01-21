@@ -50,11 +50,11 @@ public final class MyShoppingListAddLineItemActionImpl implements MyShoppingList
         this.quantity = quantity;
         this.addedAt = addedAt;
         this.custom = custom;
-        this.action = MyShoppingListAddLineItemAction.ADD_LINE_ITEM;
+        this.action = ADD_LINE_ITEM;
     }
 
     public MyShoppingListAddLineItemActionImpl() {
-        this.action = MyShoppingListAddLineItemAction.ADD_LINE_ITEM;
+        this.action = ADD_LINE_ITEM;
     }
 
     public String getAction() {

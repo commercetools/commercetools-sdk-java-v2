@@ -34,11 +34,11 @@ public final class ResourceDeletionErrorImpl implements ResourceDeletionError {
             @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
         this.message = message;
         this.resource = resource;
-        this.code = ResourceDeletionError.RESOURCE_DELETION;
+        this.code = RESOURCE_DELETION;
     }
 
     public ResourceDeletionErrorImpl() {
-        this.code = ResourceDeletionError.RESOURCE_DELETION;
+        this.code = RESOURCE_DELETION;
     }
 
     public String getCode() {

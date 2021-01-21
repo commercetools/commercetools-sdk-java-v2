@@ -35,11 +35,11 @@ public final class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
             @JsonProperty("targetsDelta") final java.util.List<com.commercetools.api.models.cart.ItemShippingTarget> targetsDelta) {
         this.lineItemId = lineItemId;
         this.targetsDelta = targetsDelta;
-        this.action = CartApplyDeltaToLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
+        this.action = APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
 
     public CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl() {
-        this.action = CartApplyDeltaToLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
+        this.action = APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS;
     }
 
     public String getAction() {

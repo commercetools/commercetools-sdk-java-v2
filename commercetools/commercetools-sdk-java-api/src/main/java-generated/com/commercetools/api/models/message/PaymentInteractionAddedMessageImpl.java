@@ -69,11 +69,11 @@ public final class PaymentInteractionAddedMessageImpl implements PaymentInteract
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.interaction = interaction;
-        this.type = PaymentInteractionAddedMessage.PAYMENT_INTERACTION_ADDED;
+        this.type = PAYMENT_INTERACTION_ADDED;
     }
 
     public PaymentInteractionAddedMessageImpl() {
-        this.type = PaymentInteractionAddedMessage.PAYMENT_INTERACTION_ADDED;
+        this.type = PAYMENT_INTERACTION_ADDED;
     }
 
     public String getId() {

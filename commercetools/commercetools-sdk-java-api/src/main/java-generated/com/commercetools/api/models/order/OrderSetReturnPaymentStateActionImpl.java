@@ -34,11 +34,11 @@ public final class OrderSetReturnPaymentStateActionImpl implements OrderSetRetur
             @JsonProperty("paymentState") final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
         this.returnItemId = returnItemId;
         this.paymentState = paymentState;
-        this.action = OrderSetReturnPaymentStateAction.SET_RETURN_PAYMENT_STATE;
+        this.action = SET_RETURN_PAYMENT_STATE;
     }
 
     public OrderSetReturnPaymentStateActionImpl() {
-        this.action = OrderSetReturnPaymentStateAction.SET_RETURN_PAYMENT_STATE;
+        this.action = SET_RETURN_PAYMENT_STATE;
     }
 
     public String getAction() {

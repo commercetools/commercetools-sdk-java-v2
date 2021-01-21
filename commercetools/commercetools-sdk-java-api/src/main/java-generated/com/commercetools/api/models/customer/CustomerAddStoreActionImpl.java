@@ -31,11 +31,11 @@ public final class CustomerAddStoreActionImpl implements CustomerAddStoreAction 
     CustomerAddStoreActionImpl(
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.store = store;
-        this.action = CustomerAddStoreAction.ADD_STORE;
+        this.action = ADD_STORE;
     }
 
     public CustomerAddStoreActionImpl() {
-        this.action = CustomerAddStoreAction.ADD_STORE;
+        this.action = ADD_STORE;
     }
 
     public String getAction() {

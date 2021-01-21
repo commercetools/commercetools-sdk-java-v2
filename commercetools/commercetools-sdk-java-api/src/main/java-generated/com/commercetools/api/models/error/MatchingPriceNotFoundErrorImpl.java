@@ -53,11 +53,11 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
         this.country = country;
         this.customerGroup = customerGroup;
         this.channel = channel;
-        this.code = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND;
+        this.code = MATCHING_PRICE_NOT_FOUND;
     }
 
     public MatchingPriceNotFoundErrorImpl() {
-        this.code = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND;
+        this.code = MATCHING_PRICE_NOT_FOUND;
     }
 
     public String getCode() {

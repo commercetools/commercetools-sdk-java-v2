@@ -29,11 +29,11 @@ public final class DiscountCodeSetMaxApplicationsActionImpl implements DiscountC
     @JsonCreator
     DiscountCodeSetMaxApplicationsActionImpl(@JsonProperty("maxApplications") final Long maxApplications) {
         this.maxApplications = maxApplications;
-        this.action = DiscountCodeSetMaxApplicationsAction.SET_MAX_APPLICATIONS;
+        this.action = SET_MAX_APPLICATIONS;
     }
 
     public DiscountCodeSetMaxApplicationsActionImpl() {
-        this.action = DiscountCodeSetMaxApplicationsAction.SET_MAX_APPLICATIONS;
+        this.action = SET_MAX_APPLICATIONS;
     }
 
     public String getAction() {

@@ -35,11 +35,11 @@ public final class ProductTypeChangeAttributeConstraintActionImpl
             @JsonProperty("newValue") final com.commercetools.api.models.product_type.AttributeConstraintEnumDraft newValue) {
         this.attributeName = attributeName;
         this.newValue = newValue;
-        this.action = ProductTypeChangeAttributeConstraintAction.CHANGE_ATTRIBUTE_CONSTRAINT;
+        this.action = CHANGE_ATTRIBUTE_CONSTRAINT;
     }
 
     public ProductTypeChangeAttributeConstraintActionImpl() {
-        this.action = ProductTypeChangeAttributeConstraintAction.CHANGE_ATTRIBUTE_CONSTRAINT;
+        this.action = CHANGE_ATTRIBUTE_CONSTRAINT;
     }
 
     public String getAction() {

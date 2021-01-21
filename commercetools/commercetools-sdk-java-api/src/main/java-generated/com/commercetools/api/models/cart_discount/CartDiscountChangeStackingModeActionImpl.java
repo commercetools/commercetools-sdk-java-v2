@@ -31,11 +31,11 @@ public final class CartDiscountChangeStackingModeActionImpl implements CartDisco
     CartDiscountChangeStackingModeActionImpl(
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode) {
         this.stackingMode = stackingMode;
-        this.action = CartDiscountChangeStackingModeAction.CHANGE_STACKING_MODE;
+        this.action = CHANGE_STACKING_MODE;
     }
 
     public CartDiscountChangeStackingModeActionImpl() {
-        this.action = CartDiscountChangeStackingModeAction.CHANGE_STACKING_MODE;
+        this.action = CHANGE_STACKING_MODE;
     }
 
     public String getAction() {

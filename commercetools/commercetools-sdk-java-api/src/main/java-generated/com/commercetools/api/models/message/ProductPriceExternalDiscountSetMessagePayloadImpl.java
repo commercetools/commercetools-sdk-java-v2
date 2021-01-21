@@ -50,11 +50,11 @@ public final class ProductPriceExternalDiscountSetMessagePayloadImpl
         this.priceId = priceId;
         this.discounted = discounted;
         this.staged = staged;
-        this.type = ProductPriceExternalDiscountSetMessagePayload.PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
+        this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
     public ProductPriceExternalDiscountSetMessagePayloadImpl() {
-        this.type = ProductPriceExternalDiscountSetMessagePayload.PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
+        this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
     public String getType() {

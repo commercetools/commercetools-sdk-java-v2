@@ -38,11 +38,11 @@ public final class InvalidStateTransitionErrorImpl implements InvalidStateTransi
         this.message = message;
         this.currentState = currentState;
         this.newState = newState;
-        this.code = InvalidStateTransitionError.INVALID_TRANSITION;
+        this.code = INVALID_TRANSITION;
     }
 
     public InvalidStateTransitionErrorImpl() {
-        this.code = InvalidStateTransitionError.INVALID_TRANSITION;
+        this.code = INVALID_TRANSITION;
     }
 
     public String getCode() {

@@ -29,11 +29,11 @@ public final class OrderSetCustomerEmailActionImpl implements OrderSetCustomerEm
     @JsonCreator
     OrderSetCustomerEmailActionImpl(@JsonProperty("email") final String email) {
         this.email = email;
-        this.action = OrderSetCustomerEmailAction.SET_CUSTOMER_EMAIL;
+        this.action = SET_CUSTOMER_EMAIL;
     }
 
     public OrderSetCustomerEmailActionImpl() {
-        this.action = OrderSetCustomerEmailAction.SET_CUSTOMER_EMAIL;
+        this.action = SET_CUSTOMER_EMAIL;
     }
 
     public String getAction() {

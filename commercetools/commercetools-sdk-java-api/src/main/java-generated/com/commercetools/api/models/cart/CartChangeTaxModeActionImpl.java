@@ -30,11 +30,11 @@ public final class CartChangeTaxModeActionImpl implements CartChangeTaxModeActio
     @JsonCreator
     CartChangeTaxModeActionImpl(@JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
-        this.action = CartChangeTaxModeAction.CHANGE_TAX_MODE;
+        this.action = CHANGE_TAX_MODE;
     }
 
     public CartChangeTaxModeActionImpl() {
-        this.action = CartChangeTaxModeAction.CHANGE_TAX_MODE;
+        this.action = CHANGE_TAX_MODE;
     }
 
     public String getAction() {

@@ -31,11 +31,11 @@ public final class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscoun
     CartRemoveDiscountCodeActionImpl(
             @JsonProperty("discountCode") final com.commercetools.api.models.discount_code.DiscountCodeReference discountCode) {
         this.discountCode = discountCode;
-        this.action = CartRemoveDiscountCodeAction.REMOVE_DISCOUNT_CODE;
+        this.action = REMOVE_DISCOUNT_CODE;
     }
 
     public CartRemoveDiscountCodeActionImpl() {
-        this.action = CartRemoveDiscountCodeAction.REMOVE_DISCOUNT_CODE;
+        this.action = REMOVE_DISCOUNT_CODE;
     }
 
     public String getAction() {

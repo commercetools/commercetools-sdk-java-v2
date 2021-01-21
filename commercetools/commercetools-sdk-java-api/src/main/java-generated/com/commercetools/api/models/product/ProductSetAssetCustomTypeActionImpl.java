@@ -53,11 +53,11 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
         this.assetKey = assetKey;
         this.type = type;
         this.fields = fields;
-        this.action = ProductSetAssetCustomTypeAction.SET_ASSET_CUSTOM_TYPE;
+        this.action = SET_ASSET_CUSTOM_TYPE;
     }
 
     public ProductSetAssetCustomTypeActionImpl() {
-        this.action = ProductSetAssetCustomTypeAction.SET_ASSET_CUSTOM_TYPE;
+        this.action = SET_ASSET_CUSTOM_TYPE;
     }
 
     public String getAction() {

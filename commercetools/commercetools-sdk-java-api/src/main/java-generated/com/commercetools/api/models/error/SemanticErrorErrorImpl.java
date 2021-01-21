@@ -29,11 +29,11 @@ public final class SemanticErrorErrorImpl implements SemanticErrorError {
     @JsonCreator
     SemanticErrorErrorImpl(@JsonProperty("message") final String message) {
         this.message = message;
-        this.code = SemanticErrorError.SEMANTIC_ERROR;
+        this.code = SEMANTIC_ERROR;
     }
 
     public SemanticErrorErrorImpl() {
-        this.code = SemanticErrorError.SEMANTIC_ERROR;
+        this.code = SEMANTIC_ERROR;
     }
 
     public String getCode() {

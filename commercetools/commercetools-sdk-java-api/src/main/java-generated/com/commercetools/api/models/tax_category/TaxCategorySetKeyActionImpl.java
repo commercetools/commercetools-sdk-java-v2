@@ -29,11 +29,11 @@ public final class TaxCategorySetKeyActionImpl implements TaxCategorySetKeyActio
     @JsonCreator
     TaxCategorySetKeyActionImpl(@JsonProperty("key") final String key) {
         this.key = key;
-        this.action = TaxCategorySetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public TaxCategorySetKeyActionImpl() {
-        this.action = TaxCategorySetKeyAction.SET_KEY;
+        this.action = SET_KEY;
     }
 
     public String getAction() {

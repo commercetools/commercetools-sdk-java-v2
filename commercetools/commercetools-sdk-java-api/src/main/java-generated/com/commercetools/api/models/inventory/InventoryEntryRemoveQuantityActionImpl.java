@@ -29,11 +29,11 @@ public final class InventoryEntryRemoveQuantityActionImpl implements InventoryEn
     @JsonCreator
     InventoryEntryRemoveQuantityActionImpl(@JsonProperty("quantity") final Long quantity) {
         this.quantity = quantity;
-        this.action = InventoryEntryRemoveQuantityAction.REMOVE_QUANTITY;
+        this.action = REMOVE_QUANTITY;
     }
 
     public InventoryEntryRemoveQuantityActionImpl() {
-        this.action = InventoryEntryRemoveQuantityAction.REMOVE_QUANTITY;
+        this.action = REMOVE_QUANTITY;
     }
 
     public String getAction() {

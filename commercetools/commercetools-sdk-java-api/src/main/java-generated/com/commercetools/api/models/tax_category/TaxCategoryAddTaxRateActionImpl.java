@@ -31,11 +31,11 @@ public final class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxR
     TaxCategoryAddTaxRateActionImpl(
             @JsonProperty("taxRate") final com.commercetools.api.models.tax_category.TaxRateDraft taxRate) {
         this.taxRate = taxRate;
-        this.action = TaxCategoryAddTaxRateAction.ADD_TAX_RATE;
+        this.action = ADD_TAX_RATE;
     }
 
     public TaxCategoryAddTaxRateActionImpl() {
-        this.action = TaxCategoryAddTaxRateAction.ADD_TAX_RATE;
+        this.action = ADD_TAX_RATE;
     }
 
     public String getAction() {

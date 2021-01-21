@@ -36,11 +36,11 @@ public final class StoreSetCustomTypeActionImpl implements StoreSetCustomTypeAct
             @JsonProperty("fields") final com.fasterxml.jackson.databind.JsonNode fields) {
         this.type = type;
         this.fields = fields;
-        this.action = StoreSetCustomTypeAction.SET_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_TYPE;
     }
 
     public StoreSetCustomTypeActionImpl() {
-        this.action = StoreSetCustomTypeAction.SET_CUSTOM_TYPE;
+        this.action = SET_CUSTOM_TYPE;
     }
 
     public String getAction() {

@@ -36,11 +36,11 @@ public final class ShippingMethodAddShippingRateActionImpl implements ShippingMe
             @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate) {
         this.zone = zone;
         this.shippingRate = shippingRate;
-        this.action = ShippingMethodAddShippingRateAction.ADD_SHIPPING_RATE;
+        this.action = ADD_SHIPPING_RATE;
     }
 
     public ShippingMethodAddShippingRateActionImpl() {
-        this.action = ShippingMethodAddShippingRateAction.ADD_SHIPPING_RATE;
+        this.action = ADD_SHIPPING_RATE;
     }
 
     public String getAction() {

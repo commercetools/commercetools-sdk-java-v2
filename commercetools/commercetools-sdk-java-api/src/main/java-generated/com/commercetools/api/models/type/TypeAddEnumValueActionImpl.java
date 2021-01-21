@@ -34,11 +34,11 @@ public final class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction 
             @JsonProperty("value") final com.commercetools.api.models.type.CustomFieldEnumValue value) {
         this.fieldName = fieldName;
         this.value = value;
-        this.action = TypeAddEnumValueAction.ADD_ENUM_VALUE;
+        this.action = ADD_ENUM_VALUE;
     }
 
     public TypeAddEnumValueActionImpl() {
-        this.action = TypeAddEnumValueAction.ADD_ENUM_VALUE;
+        this.action = ADD_ENUM_VALUE;
     }
 
     public String getAction() {

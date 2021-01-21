@@ -44,11 +44,11 @@ public final class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpd
         this.localizedMessage = localizedMessage;
         this.extensionExtraInfo = extensionExtraInfo;
         this.errorByExtension = errorByExtension;
-        this.code = ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED;
+        this.code = EXTENSION_UPDATE_ACTIONS_FAILED;
     }
 
     public ExtensionUpdateActionsFailedErrorImpl() {
-        this.code = ExtensionUpdateActionsFailedError.EXTENSION_UPDATE_ACTIONS_FAILED;
+        this.code = EXTENSION_UPDATE_ACTIONS_FAILED;
     }
 
     public String getCode() {

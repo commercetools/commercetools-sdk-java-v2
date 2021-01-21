@@ -40,11 +40,11 @@ public final class ProductChangeAssetOrderActionImpl implements ProductChangeAss
         this.sku = sku;
         this.staged = staged;
         this.assetOrder = assetOrder;
-        this.action = ProductChangeAssetOrderAction.CHANGE_ASSET_ORDER;
+        this.action = CHANGE_ASSET_ORDER;
     }
 
     public ProductChangeAssetOrderActionImpl() {
-        this.action = ProductChangeAssetOrderAction.CHANGE_ASSET_ORDER;
+        this.action = CHANGE_ASSET_ORDER;
     }
 
     public String getAction() {

@@ -34,11 +34,11 @@ public final class StagedOrderSetDeliveryItemsActionImpl implements StagedOrderS
             @JsonProperty("items") final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.deliveryId = deliveryId;
         this.items = items;
-        this.action = StagedOrderSetDeliveryItemsAction.SET_DELIVERY_ITEMS;
+        this.action = SET_DELIVERY_ITEMS;
     }
 
     public StagedOrderSetDeliveryItemsActionImpl() {
-        this.action = StagedOrderSetDeliveryItemsAction.SET_DELIVERY_ITEMS;
+        this.action = SET_DELIVERY_ITEMS;
     }
 
     public String getAction() {

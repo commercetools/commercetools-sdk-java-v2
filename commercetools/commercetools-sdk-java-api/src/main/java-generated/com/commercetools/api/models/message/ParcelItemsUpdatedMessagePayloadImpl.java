@@ -42,11 +42,11 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
         this.deliveryId = deliveryId;
         this.items = items;
         this.oldItems = oldItems;
-        this.type = ParcelItemsUpdatedMessagePayload.PARCEL_ITEMS_UPDATED;
+        this.type = PARCEL_ITEMS_UPDATED;
     }
 
     public ParcelItemsUpdatedMessagePayloadImpl() {
-        this.type = ParcelItemsUpdatedMessagePayload.PARCEL_ITEMS_UPDATED;
+        this.type = PARCEL_ITEMS_UPDATED;
     }
 
     public String getType() {

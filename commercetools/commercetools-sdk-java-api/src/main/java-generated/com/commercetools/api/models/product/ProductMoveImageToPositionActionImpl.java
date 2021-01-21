@@ -43,11 +43,11 @@ public final class ProductMoveImageToPositionActionImpl implements ProductMoveIm
         this.imageUrl = imageUrl;
         this.position = position;
         this.staged = staged;
-        this.action = ProductMoveImageToPositionAction.MOVE_IMAGE_TO_POSITION;
+        this.action = MOVE_IMAGE_TO_POSITION;
     }
 
     public ProductMoveImageToPositionActionImpl() {
-        this.action = ProductMoveImageToPositionAction.MOVE_IMAGE_TO_POSITION;
+        this.action = MOVE_IMAGE_TO_POSITION;
     }
 
     public String getAction() {

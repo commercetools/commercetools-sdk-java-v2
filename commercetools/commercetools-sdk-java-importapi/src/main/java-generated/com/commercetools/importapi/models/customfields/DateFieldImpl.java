@@ -33,11 +33,11 @@ public final class DateFieldImpl implements DateField {
     @JsonCreator
     DateFieldImpl(@JsonProperty("value") final java.time.LocalDate value) {
         this.value = value;
-        this.type = DateField.DATE;
+        this.type = DATE;
     }
 
     public DateFieldImpl() {
-        this.type = DateField.DATE;
+        this.type = DATE;
     }
 
     /**

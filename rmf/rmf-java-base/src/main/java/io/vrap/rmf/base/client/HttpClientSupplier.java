@@ -9,11 +9,11 @@ import io.vrap.rmf.base.client.error.BaseException;
 public interface HttpClientSupplier extends Supplier<VrapHttpClient> {
 
     static Supplier<VrapHttpClient> of() {
-        ServiceLoader<BaseHttpClientSupplier> loader = ServiceLoader.load(BaseHttpClientSupplier.class,
-            BaseHttpClientSupplier.class.getClassLoader());
-        BaseHttpClientSupplier httpClientFactory = loader.iterator().next();
+        ServiceLoader<HttpClientSupplier> loader = ServiceLoader.load(HttpClientSupplier.class,
+            HttpClientSupplier.class.getClassLoader());
+        HttpClientSupplier httpClientFactory = loader.iterator().next();
         if (httpClientFactory == null) {
-            throw new BaseException(new NoClassDefFoundError(BaseHttpClientSupplier.class.getCanonicalName()));
+            throw new BaseException(new NoClassDefFoundError(HttpClientSupplier.class.getCanonicalName()));
         }
         return httpClientFactory;
     }

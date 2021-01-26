@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.product;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -8,7 +9,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.ProductSetAssetCustomFieldAction;
 import com.commercetools.api.models.product.ProductUpdateAction;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -33,7 +33,7 @@ public final class ProductSetAssetCustomFieldActionBuilder {
     private String name;
 
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     public ProductSetAssetCustomFieldActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
@@ -65,8 +65,7 @@ public final class ProductSetAssetCustomFieldActionBuilder {
         return this;
     }
 
-    public ProductSetAssetCustomFieldActionBuilder value(
-            @Nullable final com.fasterxml.jackson.databind.JsonNode value) {
+    public ProductSetAssetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
@@ -101,7 +100,7 @@ public final class ProductSetAssetCustomFieldActionBuilder {
     }
 
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 

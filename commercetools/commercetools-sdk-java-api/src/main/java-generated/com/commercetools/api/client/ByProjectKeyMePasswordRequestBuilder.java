@@ -15,8 +15,8 @@ public class ByProjectKeyMePasswordRequestBuilder {
         this.projectKey = projectKey;
     }
 
-    public ByProjectKeyMePasswordPost post(com.fasterxml.jackson.databind.JsonNode jsonNode) {
-        return new ByProjectKeyMePasswordPost(apiHttpClient, projectKey, jsonNode);
+    public ByProjectKeyMePasswordPost post(Object obj) {
+        return new ByProjectKeyMePasswordPost(apiHttpClient, projectKey, obj);
     }
 
     public ByProjectKeyMePasswordResetRequestBuilder reset() {

@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.review;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -25,10 +25,10 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
 
     private String action;
 
-    private com.fasterxml.jackson.databind.JsonNode target;
+    private java.lang.Object target;
 
     @JsonCreator
-    ReviewSetTargetActionImpl(@JsonProperty("target") final com.fasterxml.jackson.databind.JsonNode target) {
+    ReviewSetTargetActionImpl(@JsonProperty("target") final java.lang.Object target) {
         this.target = target;
         this.action = SET_TARGET;
     }
@@ -46,11 +46,11 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
     *  Can be a Product or a Channel.
     *  If <code>target</code> is absent or <code>null</code>, this field will be removed if it exists.</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getTarget() {
+    public java.lang.Object getTarget() {
         return this.target;
     }
 
-    public void setTarget(final com.fasterxml.jackson.databind.JsonNode target) {
+    public void setTarget(final java.lang.Object target) {
         this.target = target;
     }
 

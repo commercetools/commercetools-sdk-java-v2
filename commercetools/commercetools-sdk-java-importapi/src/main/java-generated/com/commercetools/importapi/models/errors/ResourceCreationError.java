@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.errors;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.importapi.models.errors.ErrorObject;
 import com.commercetools.importapi.models.errors.ResourceCreationErrorImpl;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -25,9 +25,9 @@ public interface ResourceCreationError extends ErrorObject {
     String RESOURCE_CREATION = "ResourceCreation";
 
     @JsonProperty("resource")
-    public JsonNode getResource();
+    public Object getResource();
 
-    public void setResource(final JsonNode resource);
+    public void setResource(final Object resource);
 
     public static ResourceCreationError of() {
         return new ResourceCreationErrorImpl();

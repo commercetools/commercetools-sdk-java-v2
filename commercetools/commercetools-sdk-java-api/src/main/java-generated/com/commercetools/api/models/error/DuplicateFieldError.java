@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -13,7 +14,6 @@ import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.error.DuplicateFieldErrorImpl;
 import com.commercetools.api.models.error.ErrorObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -29,7 +29,7 @@ public interface DuplicateFieldError extends ErrorObject {
     public String getField();
 
     @JsonProperty("duplicateValue")
-    public JsonNode getDuplicateValue();
+    public Object getDuplicateValue();
 
     @Valid
     @JsonProperty("conflictingResource")
@@ -37,7 +37,7 @@ public interface DuplicateFieldError extends ErrorObject {
 
     public void setField(final String field);
 
-    public void setDuplicateValue(final JsonNode duplicateValue);
+    public void setDuplicateValue(final Object duplicateValue);
 
     public void setConflictingResource(final Reference conflictingResource);
 

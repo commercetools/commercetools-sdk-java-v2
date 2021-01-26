@@ -29,19 +29,18 @@ public class ByProjectKeyMeLoginPost
 
     private String projectKey;
 
-    private com.fasterxml.jackson.databind.JsonNode jsonNode;
+    private Object obj;
 
-    public ByProjectKeyMeLoginPost(final ApiHttpClient apiHttpClient, String projectKey,
-            com.fasterxml.jackson.databind.JsonNode jsonNode) {
+    public ByProjectKeyMeLoginPost(final ApiHttpClient apiHttpClient, String projectKey, Object obj) {
         super(apiHttpClient);
         this.projectKey = projectKey;
-        this.jsonNode = jsonNode;
+        this.obj = obj;
     }
 
     public ByProjectKeyMeLoginPost(ByProjectKeyMeLoginPost t) {
         super(t);
         this.projectKey = t.projectKey;
-        this.jsonNode = t.jsonNode;
+        this.obj = t.obj;
     }
 
     @Override
@@ -52,7 +51,7 @@ public class ByProjectKeyMeLoginPost
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(jsonNode);
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(obj);
             return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {

@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Utils;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyProductProjectionsSuggestGet
-        extends ApiMethod<ByProjectKeyProductProjectionsSuggestGet, com.fasterxml.jackson.databind.JsonNode>
+        extends ApiMethod<ByProjectKeyProductProjectionsSuggestGet, java.lang.Object>
         implements com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSuggestGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSuggestGet>,
@@ -53,13 +53,13 @@ public class ByProjectKeyProductProjectionsSuggestGet
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(Duration timeout) {
+    public ApiHttpResponse<java.lang.Object> executeBlocking(Duration timeout) {
         return blockingWait(execute(), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
+    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute() {
+        return apiHttpClient().execute(this.createHttpRequest(), java.lang.Object.class);
     }
 
     public String getProjectKey() {

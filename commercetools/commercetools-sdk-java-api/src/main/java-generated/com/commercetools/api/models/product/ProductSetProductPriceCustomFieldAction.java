@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.product.ProductSetProductPriceCustomFieldActionImpl;
 import com.commercetools.api.models.product.ProductUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -36,7 +36,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
     public String getName();
 
     @JsonProperty("value")
-    public JsonNode getValue();
+    public Object getValue();
 
     public void setPriceId(final String priceId);
 
@@ -44,7 +44,7 @@ public interface ProductSetProductPriceCustomFieldAction extends ProductUpdateAc
 
     public void setName(final String name);
 
-    public void setValue(final JsonNode value);
+    public void setValue(final Object value);
 
     public static ProductSetProductPriceCustomFieldAction of() {
         return new ProductSetProductPriceCustomFieldActionImpl();

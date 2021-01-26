@@ -15,8 +15,8 @@ public class ByProjectKeyMeLoginRequestBuilder {
         this.projectKey = projectKey;
     }
 
-    public ByProjectKeyMeLoginPost post(com.fasterxml.jackson.databind.JsonNode jsonNode) {
-        return new ByProjectKeyMeLoginPost(apiHttpClient, projectKey, jsonNode);
+    public ByProjectKeyMeLoginPost post(Object obj) {
+        return new ByProjectKeyMeLoginPost(apiHttpClient, projectKey, obj);
     }
 
 }

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -13,7 +14,6 @@ import com.commercetools.api.models.category.CategorySetAssetCustomTypeActionImp
 import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -44,7 +44,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
     */
     @Valid
     @JsonProperty("fields")
-    public JsonNode getFields();
+    public Object getFields();
 
     public void setAssetId(final String assetId);
 
@@ -52,7 +52,7 @@ public interface CategorySetAssetCustomTypeAction extends CategoryUpdateAction {
 
     public void setType(final TypeResourceIdentifier type);
 
-    public void setFields(final JsonNode fields);
+    public void setFields(final Object fields);
 
     public static CategorySetAssetCustomTypeAction of() {
         return new CategorySetAssetCustomTypeActionImpl();

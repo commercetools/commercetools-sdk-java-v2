@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.custom_object;
 
+import java.lang.Object;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -15,7 +16,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -42,7 +42,7 @@ public final class CustomObjectImpl implements CustomObject {
 
     private String key;
 
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     @JsonCreator
     CustomObjectImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
@@ -51,7 +51,7 @@ public final class CustomObjectImpl implements CustomObject {
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("container") final String container, @JsonProperty("key") final String key,
-            @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
+            @JsonProperty("value") final java.lang.Object value) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -101,7 +101,7 @@ public final class CustomObjectImpl implements CustomObject {
         return this.key;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 
@@ -137,7 +137,7 @@ public final class CustomObjectImpl implements CustomObject {
         this.key = key;
     }
 
-    public void setValue(final com.fasterxml.jackson.databind.JsonNode value) {
+    public void setValue(final java.lang.Object value) {
         this.value = value;
     }
 

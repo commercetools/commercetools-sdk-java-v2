@@ -2,6 +2,7 @@
 package com.commercetools.api.models.store;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -13,7 +14,6 @@ import com.commercetools.api.models.store.StoreSetCustomTypeActionImpl;
 import com.commercetools.api.models.store.StoreUpdateAction;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -39,11 +39,11 @@ public interface StoreSetCustomTypeAction extends StoreUpdateAction {
     */
     @Valid
     @JsonProperty("fields")
-    public JsonNode getFields();
+    public Object getFields();
 
     public void setType(final TypeResourceIdentifier type);
 
-    public void setFields(final JsonNode fields);
+    public void setFields(final Object fields);
 
     public static StoreSetCustomTypeAction of() {
         return new StoreSetCustomTypeActionImpl();

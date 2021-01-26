@@ -1,6 +1,7 @@
 
 package com.commercetools.importapi.models.errors;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -36,13 +36,13 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
 
     private Long currentVersion;
 
-    private com.fasterxml.jackson.databind.JsonNode conflictedResource;
+    private java.lang.Object conflictedResource;
 
     @JsonCreator
     ConcurrentModificationErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("specifiedVersion") final Long specifiedVersion,
             @JsonProperty("currentVersion") final Long currentVersion,
-            @JsonProperty("conflictedResource") final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
+            @JsonProperty("conflictedResource") final java.lang.Object conflictedResource) {
         this.message = message;
         this.specifiedVersion = specifiedVersion;
         this.currentVersion = currentVersion;
@@ -82,7 +82,7 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
     /**
     *  <p>The conflicted resource.</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getConflictedResource() {
+    public java.lang.Object getConflictedResource() {
         return this.conflictedResource;
     }
 
@@ -98,7 +98,7 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
         this.currentVersion = currentVersion;
     }
 
-    public void setConflictedResource(final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
+    public void setConflictedResource(final java.lang.Object conflictedResource) {
         this.conflictedResource = conflictedResource;
     }
 

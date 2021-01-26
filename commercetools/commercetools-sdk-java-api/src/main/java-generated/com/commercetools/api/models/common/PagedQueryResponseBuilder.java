@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.common;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -9,7 +10,6 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.PagedQueryResponse;
 import com.commercetools.api.models.product.FacetResults;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -31,7 +31,7 @@ public final class PagedQueryResponseBuilder {
     private com.commercetools.api.models.product.FacetResults facets;
 
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode meta;
+    private java.lang.Object meta;
 
     public PagedQueryResponseBuilder limit(final Long limit) {
         this.limit = limit;
@@ -69,7 +69,7 @@ public final class PagedQueryResponseBuilder {
         return this;
     }
 
-    public PagedQueryResponseBuilder meta(@Nullable final com.fasterxml.jackson.databind.JsonNode meta) {
+    public PagedQueryResponseBuilder meta(@Nullable final java.lang.Object meta) {
         this.meta = meta;
         return this;
     }
@@ -101,7 +101,7 @@ public final class PagedQueryResponseBuilder {
     }
 
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getMeta() {
+    public java.lang.Object getMeta() {
         return this.meta;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -13,7 +14,6 @@ import com.commercetools.api.models.product.ProductSetAssetCustomTypeActionImpl;
 import com.commercetools.api.models.product.ProductUpdateAction;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -53,7 +53,7 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
     */
     @Valid
     @JsonProperty("fields")
-    public JsonNode getFields();
+    public Object getFields();
 
     public void setVariantId(final Long variantId);
 
@@ -67,7 +67,7 @@ public interface ProductSetAssetCustomTypeAction extends ProductUpdateAction {
 
     public void setType(final TypeResourceIdentifier type);
 
-    public void setFields(final JsonNode fields);
+    public void setFields(final Object fields);
 
     public static ProductSetAssetCustomTypeAction of() {
         return new ProductSetAssetCustomTypeActionImpl();

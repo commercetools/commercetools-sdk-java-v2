@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.cart_discount;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -9,7 +10,6 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeAction;
 import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -20,7 +20,7 @@ public final class CartDiscountSetCustomTypeActionBuilder {
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode fields;
+    private java.lang.Object fields;
 
     public CartDiscountSetCustomTypeActionBuilder type(
             @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
@@ -28,8 +28,7 @@ public final class CartDiscountSetCustomTypeActionBuilder {
         return this;
     }
 
-    public CartDiscountSetCustomTypeActionBuilder fields(
-            @Nullable final com.fasterxml.jackson.databind.JsonNode fields) {
+    public CartDiscountSetCustomTypeActionBuilder fields(@Nullable final java.lang.Object fields) {
         this.fields = fields;
         return this;
     }
@@ -40,7 +39,7 @@ public final class CartDiscountSetCustomTypeActionBuilder {
     }
 
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getFields() {
+    public java.lang.Object getFields() {
         return this.fields;
     }
 

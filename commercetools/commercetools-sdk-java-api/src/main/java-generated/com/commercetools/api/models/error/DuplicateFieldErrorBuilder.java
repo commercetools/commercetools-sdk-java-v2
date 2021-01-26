@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.error;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -9,7 +10,6 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.error.DuplicateFieldError;
 import com.commercetools.api.models.error.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -22,7 +22,7 @@ public final class DuplicateFieldErrorBuilder {
     private String field;
 
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode duplicateValue;
+    private java.lang.Object duplicateValue;
 
     @Nullable
     private com.commercetools.api.models.common.Reference conflictingResource;
@@ -37,8 +37,7 @@ public final class DuplicateFieldErrorBuilder {
         return this;
     }
 
-    public DuplicateFieldErrorBuilder duplicateValue(
-            @Nullable final com.fasterxml.jackson.databind.JsonNode duplicateValue) {
+    public DuplicateFieldErrorBuilder duplicateValue(@Nullable final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;
         return this;
     }
@@ -59,7 +58,7 @@ public final class DuplicateFieldErrorBuilder {
     }
 
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getDuplicateValue() {
+    public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
     }
 

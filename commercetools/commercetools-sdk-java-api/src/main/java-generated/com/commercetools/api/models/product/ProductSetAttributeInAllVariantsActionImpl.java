@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.product;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,14 +27,13 @@ public final class ProductSetAttributeInAllVariantsActionImpl implements Product
 
     private String name;
 
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     private Boolean staged;
 
     @JsonCreator
     ProductSetAttributeInAllVariantsActionImpl(@JsonProperty("name") final String name,
-            @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value,
-            @JsonProperty("staged") final Boolean staged) {
+            @JsonProperty("value") final java.lang.Object value, @JsonProperty("staged") final Boolean staged) {
         this.name = name;
         this.value = value;
         this.staged = staged;
@@ -56,7 +55,7 @@ public final class ProductSetAttributeInAllVariantsActionImpl implements Product
     /**
     *  <p>The same update behavior as for Set Attribute applies.</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 
@@ -68,7 +67,7 @@ public final class ProductSetAttributeInAllVariantsActionImpl implements Product
         this.name = name;
     }
 
-    public void setValue(final com.fasterxml.jackson.databind.JsonNode value) {
+    public void setValue(final java.lang.Object value) {
         this.value = value;
     }
 

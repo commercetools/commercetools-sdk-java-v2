@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.graph_ql;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,12 +27,12 @@ public final class GraphQLErrorImpl implements GraphQLError {
 
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations;
 
-    private java.util.List<com.fasterxml.jackson.databind.JsonNode> path;
+    private java.util.List<java.lang.Object> path;
 
     @JsonCreator
     GraphQLErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("locations") final java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations,
-            @JsonProperty("path") final java.util.List<com.fasterxml.jackson.databind.JsonNode> path) {
+            @JsonProperty("path") final java.util.List<java.lang.Object> path) {
         this.message = message;
         this.locations = locations;
         this.path = path;
@@ -49,7 +49,7 @@ public final class GraphQLErrorImpl implements GraphQLError {
         return this.locations;
     }
 
-    public java.util.List<com.fasterxml.jackson.databind.JsonNode> getPath() {
+    public java.util.List<java.lang.Object> getPath() {
         return this.path;
     }
 
@@ -66,11 +66,11 @@ public final class GraphQLErrorImpl implements GraphQLError {
         this.locations = locations;
     }
 
-    public void setPath(final com.fasterxml.jackson.databind.JsonNode... path) {
+    public void setPath(final java.lang.Object... path) {
         this.path = new ArrayList<>(Arrays.asList(path));
     }
 
-    public void setPath(final java.util.List<com.fasterxml.jackson.databind.JsonNode> path) {
+    public void setPath(final java.util.List<java.lang.Object> path) {
         this.path = path;
     }
 

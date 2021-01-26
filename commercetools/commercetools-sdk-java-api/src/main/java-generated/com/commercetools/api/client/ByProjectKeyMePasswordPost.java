@@ -30,19 +30,18 @@ public class ByProjectKeyMePasswordPost
 
     private String projectKey;
 
-    private com.fasterxml.jackson.databind.JsonNode jsonNode;
+    private Object obj;
 
-    public ByProjectKeyMePasswordPost(final ApiHttpClient apiHttpClient, String projectKey,
-            com.fasterxml.jackson.databind.JsonNode jsonNode) {
+    public ByProjectKeyMePasswordPost(final ApiHttpClient apiHttpClient, String projectKey, Object obj) {
         super(apiHttpClient);
         this.projectKey = projectKey;
-        this.jsonNode = jsonNode;
+        this.obj = obj;
     }
 
     public ByProjectKeyMePasswordPost(ByProjectKeyMePasswordPost t) {
         super(t);
         this.projectKey = t.projectKey;
-        this.jsonNode = t.jsonNode;
+        this.obj = t.obj;
     }
 
     @Override
@@ -53,7 +52,7 @@ public class ByProjectKeyMePasswordPost
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(jsonNode);
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(obj);
             return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {

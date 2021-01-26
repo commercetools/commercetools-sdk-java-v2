@@ -2,6 +2,7 @@
 package com.commercetools.api.models.review;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -18,7 +19,6 @@ import com.commercetools.api.models.review.ReviewImpl;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -92,7 +92,7 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     */
 
     @JsonProperty("target")
-    public JsonNode getTarget();
+    public Object getTarget();
 
     /**
     *  <p>Indicates if this review is taken into account in the ratings statistics of the target.
@@ -149,7 +149,7 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
 
     public void setText(final String text);
 
-    public void setTarget(final JsonNode target);
+    public void setTarget(final Object target);
 
     public void setIncludedInStatistics(final Boolean includedInStatistics);
 

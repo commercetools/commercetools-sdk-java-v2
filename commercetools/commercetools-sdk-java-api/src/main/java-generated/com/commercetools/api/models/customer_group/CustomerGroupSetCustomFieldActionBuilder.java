@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.customer_group;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -8,7 +9,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldAction;
 import com.commercetools.api.models.customer_group.CustomerGroupUpdateAction;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,15 +18,14 @@ public final class CustomerGroupSetCustomFieldActionBuilder {
     private String name;
 
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     public CustomerGroupSetCustomFieldActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
-    public CustomerGroupSetCustomFieldActionBuilder value(
-            @Nullable final com.fasterxml.jackson.databind.JsonNode value) {
+    public CustomerGroupSetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
@@ -36,7 +35,7 @@ public final class CustomerGroupSetCustomFieldActionBuilder {
     }
 
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 

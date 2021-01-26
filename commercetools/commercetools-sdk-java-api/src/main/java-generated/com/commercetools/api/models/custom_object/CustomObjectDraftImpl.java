@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.custom_object;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -11,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -26,14 +26,13 @@ public final class CustomObjectDraftImpl implements CustomObjectDraft {
 
     private String key;
 
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     private Long version;
 
     @JsonCreator
     CustomObjectDraftImpl(@JsonProperty("container") final String container, @JsonProperty("key") final String key,
-            @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value,
-            @JsonProperty("version") final Long version) {
+            @JsonProperty("value") final java.lang.Object value, @JsonProperty("version") final Long version) {
         this.container = container;
         this.key = key;
         this.value = value;
@@ -57,7 +56,7 @@ public final class CustomObjectDraftImpl implements CustomObjectDraft {
         return this.key;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 
@@ -73,7 +72,7 @@ public final class CustomObjectDraftImpl implements CustomObjectDraft {
         this.key = key;
     }
 
-    public void setValue(final com.fasterxml.jackson.databind.JsonNode value) {
+    public void setValue(final java.lang.Object value) {
         this.value = value;
     }
 

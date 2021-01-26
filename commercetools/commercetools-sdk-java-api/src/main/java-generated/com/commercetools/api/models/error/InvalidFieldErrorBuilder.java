@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.error;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -8,7 +9,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.InvalidFieldError;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,10 +19,10 @@ public final class InvalidFieldErrorBuilder {
 
     private String field;
 
-    private com.fasterxml.jackson.databind.JsonNode invalidValue;
+    private java.lang.Object invalidValue;
 
     @Nullable
-    private java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues;
+    private java.util.List<java.lang.Object> allowedValues;
 
     public InvalidFieldErrorBuilder message(final String message) {
         this.message = message;
@@ -34,19 +34,17 @@ public final class InvalidFieldErrorBuilder {
         return this;
     }
 
-    public InvalidFieldErrorBuilder invalidValue(final com.fasterxml.jackson.databind.JsonNode invalidValue) {
+    public InvalidFieldErrorBuilder invalidValue(final java.lang.Object invalidValue) {
         this.invalidValue = invalidValue;
         return this;
     }
 
-    public InvalidFieldErrorBuilder allowedValues(
-            @Nullable final com.fasterxml.jackson.databind.JsonNode... allowedValues) {
+    public InvalidFieldErrorBuilder allowedValues(@Nullable final java.lang.Object... allowedValues) {
         this.allowedValues = new ArrayList<>(Arrays.asList(allowedValues));
         return this;
     }
 
-    public InvalidFieldErrorBuilder allowedValues(
-            @Nullable final java.util.List<com.fasterxml.jackson.databind.JsonNode> allowedValues) {
+    public InvalidFieldErrorBuilder allowedValues(@Nullable final java.util.List<java.lang.Object> allowedValues) {
         this.allowedValues = allowedValues;
         return this;
     }
@@ -59,12 +57,12 @@ public final class InvalidFieldErrorBuilder {
         return this.field;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getInvalidValue() {
+    public java.lang.Object getInvalidValue() {
         return this.invalidValue;
     }
 
     @Nullable
-    public java.util.List<com.fasterxml.jackson.databind.JsonNode> getAllowedValues() {
+    public java.util.List<java.lang.Object> getAllowedValues() {
         return this.allowedValues;
     }
 

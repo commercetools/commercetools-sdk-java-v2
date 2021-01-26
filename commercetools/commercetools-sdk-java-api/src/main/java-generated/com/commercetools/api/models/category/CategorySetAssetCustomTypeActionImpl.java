@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.category;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -13,7 +14,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -32,13 +32,13 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
-    private com.fasterxml.jackson.databind.JsonNode fields;
+    private java.lang.Object fields;
 
     @JsonCreator
     CategorySetAssetCustomTypeActionImpl(@JsonProperty("assetId") final String assetId,
             @JsonProperty("assetKey") final String assetKey,
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
-            @JsonProperty("fields") final com.fasterxml.jackson.databind.JsonNode fields) {
+            @JsonProperty("fields") final java.lang.Object fields) {
         this.assetId = assetId;
         this.assetKey = assetKey;
         this.type = type;
@@ -73,7 +73,7 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
     /**
     *  <p>If set, the custom fields are set to this new value.</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getFields() {
+    public java.lang.Object getFields() {
         return this.fields;
     }
 
@@ -89,7 +89,7 @@ public final class CategorySetAssetCustomTypeActionImpl implements CategorySetAs
         this.type = type;
     }
 
-    public void setFields(final com.fasterxml.jackson.databind.JsonNode fields) {
+    public void setFields(final java.lang.Object fields) {
         this.fields = fields;
     }
 

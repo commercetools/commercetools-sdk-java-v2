@@ -1,6 +1,7 @@
 
 package com.commercetools.importapi.models.errors;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -8,7 +9,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.importapi.models.errors.ConcurrentModificationError;
 import com.commercetools.importapi.models.errors.ErrorObject;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,7 +23,7 @@ public final class ConcurrentModificationErrorBuilder {
     private Long currentVersion;
 
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode conflictedResource;
+    private java.lang.Object conflictedResource;
 
     public ConcurrentModificationErrorBuilder message(final String message) {
         this.message = message;
@@ -40,8 +40,7 @@ public final class ConcurrentModificationErrorBuilder {
         return this;
     }
 
-    public ConcurrentModificationErrorBuilder conflictedResource(
-            @Nullable final com.fasterxml.jackson.databind.JsonNode conflictedResource) {
+    public ConcurrentModificationErrorBuilder conflictedResource(@Nullable final java.lang.Object conflictedResource) {
         this.conflictedResource = conflictedResource;
         return this;
     }
@@ -60,7 +59,7 @@ public final class ConcurrentModificationErrorBuilder {
     }
 
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getConflictedResource() {
+    public java.lang.Object getConflictedResource() {
         return this.conflictedResource;
     }
 

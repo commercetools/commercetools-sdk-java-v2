@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.cart_discount;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,11 +27,11 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
 
     private String name;
 
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     @JsonCreator
     CartDiscountSetCustomFieldActionImpl(@JsonProperty("name") final String name,
-            @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
+            @JsonProperty("value") final java.lang.Object value) {
         this.name = name;
         this.value = value;
         this.action = SET_CUSTOM_FIELD;
@@ -55,7 +55,7 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
     *  If <code>value</code> is provided, set the <code>value</code> of the field defined by the <code>name</code>.
     *  The FieldDefinition determines the format for the <code>value</code> to be provided.</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 
@@ -63,7 +63,7 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
         this.name = name;
     }
 
-    public void setValue(final com.fasterxml.jackson.databind.JsonNode value) {
+    public void setValue(final java.lang.Object value) {
         this.value = value;
     }
 

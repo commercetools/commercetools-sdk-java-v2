@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.review;
 
+import java.lang.Object;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -18,7 +19,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -53,7 +53,7 @@ public final class ReviewImpl implements Review {
 
     private String text;
 
-    private com.fasterxml.jackson.databind.JsonNode target;
+    private java.lang.Object target;
 
     private Boolean includedInStatistics;
 
@@ -74,7 +74,7 @@ public final class ReviewImpl implements Review {
             @JsonProperty("key") final String key, @JsonProperty("uniquenessValue") final String uniquenessValue,
             @JsonProperty("locale") final String locale, @JsonProperty("authorName") final String authorName,
             @JsonProperty("title") final String title, @JsonProperty("text") final String text,
-            @JsonProperty("target") final com.fasterxml.jackson.databind.JsonNode target,
+            @JsonProperty("target") final java.lang.Object target,
             @JsonProperty("includedInStatistics") final Boolean includedInStatistics,
             @JsonProperty("rating") final Integer rating,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
@@ -170,7 +170,7 @@ public final class ReviewImpl implements Review {
     *  <p>Identifies the target of the review.
     *  Can be a Product or a Channel</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getTarget() {
+    public java.lang.Object getTarget() {
         return this.target;
     }
 
@@ -253,7 +253,7 @@ public final class ReviewImpl implements Review {
         this.text = text;
     }
 
-    public void setTarget(final com.fasterxml.jackson.databind.JsonNode target) {
+    public void setTarget(final java.lang.Object target) {
         this.target = target;
     }
 

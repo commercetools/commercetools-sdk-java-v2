@@ -1,6 +1,7 @@
 
 package com.commercetools.importapi.models.errors;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -32,11 +32,11 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
 
     private String field;
 
-    private com.fasterxml.jackson.databind.JsonNode duplicateValue;
+    private java.lang.Object duplicateValue;
 
     @JsonCreator
     DuplicateFieldErrorImpl(@JsonProperty("message") final String message, @JsonProperty("field") final String field,
-            @JsonProperty("duplicateValue") final com.fasterxml.jackson.databind.JsonNode duplicateValue) {
+            @JsonProperty("duplicateValue") final java.lang.Object duplicateValue) {
         this.message = message;
         this.field = field;
         this.duplicateValue = duplicateValue;
@@ -68,7 +68,7 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
     /**
     *  <p>The offending duplicate value.</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getDuplicateValue() {
+    public java.lang.Object getDuplicateValue() {
         return this.duplicateValue;
     }
 
@@ -80,7 +80,7 @@ public final class DuplicateFieldErrorImpl implements DuplicateFieldError {
         this.field = field;
     }
 
-    public void setDuplicateValue(final com.fasterxml.jackson.databind.JsonNode duplicateValue) {
+    public void setDuplicateValue(final java.lang.Object duplicateValue) {
         this.duplicateValue = duplicateValue;
     }
 

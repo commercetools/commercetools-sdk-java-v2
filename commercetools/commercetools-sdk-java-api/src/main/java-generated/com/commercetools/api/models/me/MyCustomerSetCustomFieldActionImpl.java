@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.me;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,11 +27,11 @@ public final class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCu
 
     private String name;
 
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     @JsonCreator
     MyCustomerSetCustomFieldActionImpl(@JsonProperty("name") final String name,
-            @JsonProperty("value") final com.fasterxml.jackson.databind.JsonNode value) {
+            @JsonProperty("value") final java.lang.Object value) {
         this.name = name;
         this.value = value;
         this.action = SET_CUSTOM_FIELD;
@@ -49,7 +49,7 @@ public final class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCu
         return this.name;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 
@@ -57,7 +57,7 @@ public final class MyCustomerSetCustomFieldActionImpl implements MyCustomerSetCu
         this.name = name;
     }
 
-    public void setValue(final com.fasterxml.jackson.databind.JsonNode value) {
+    public void setValue(final java.lang.Object value) {
         this.value = value;
     }
 

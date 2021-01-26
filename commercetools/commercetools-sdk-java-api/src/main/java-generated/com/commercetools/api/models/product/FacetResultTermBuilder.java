@@ -1,27 +1,27 @@
 
 package com.commercetools.api.models.product;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.FacetResultTerm;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FacetResultTermBuilder {
 
-    private com.fasterxml.jackson.databind.JsonNode term;
+    private java.lang.Object term;
 
     private Long count;
 
     @Nullable
     private Long productCount;
 
-    public FacetResultTermBuilder term(final com.fasterxml.jackson.databind.JsonNode term) {
+    public FacetResultTermBuilder term(final java.lang.Object term) {
         this.term = term;
         return this;
     }
@@ -36,7 +36,7 @@ public final class FacetResultTermBuilder {
         return this;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getTerm() {
+    public java.lang.Object getTerm() {
         return this.term;
     }
 

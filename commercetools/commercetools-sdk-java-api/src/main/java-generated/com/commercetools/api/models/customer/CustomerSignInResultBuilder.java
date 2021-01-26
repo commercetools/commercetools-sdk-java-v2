@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.customer;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -8,7 +9,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.customer.Customer;
 import com.commercetools.api.models.customer.CustomerSignInResult;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,14 +18,14 @@ public final class CustomerSignInResultBuilder {
     private com.commercetools.api.models.customer.Customer customer;
 
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode cart;
+    private java.lang.Object cart;
 
     public CustomerSignInResultBuilder customer(final com.commercetools.api.models.customer.Customer customer) {
         this.customer = customer;
         return this;
     }
 
-    public CustomerSignInResultBuilder cart(@Nullable final com.fasterxml.jackson.databind.JsonNode cart) {
+    public CustomerSignInResultBuilder cart(@Nullable final java.lang.Object cart) {
         this.cart = cart;
         return this;
     }
@@ -35,7 +35,7 @@ public final class CustomerSignInResultBuilder {
     }
 
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getCart() {
+    public java.lang.Object getCart() {
         return this.cart;
     }
 

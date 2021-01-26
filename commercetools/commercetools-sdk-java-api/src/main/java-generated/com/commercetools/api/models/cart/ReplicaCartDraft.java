@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -11,7 +12,6 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ReplicaCartDraftImpl;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -23,7 +23,7 @@ public interface ReplicaCartDraft {
 
     @NotNull
     @JsonProperty("reference")
-    public JsonNode getReference();
+    public Object getReference();
 
     /**
     *  <p>User-specific unique identifier of the cart.</p>
@@ -32,7 +32,7 @@ public interface ReplicaCartDraft {
     @JsonProperty("key")
     public String getKey();
 
-    public void setReference(final JsonNode reference);
+    public void setReference(final Object reference);
 
     public void setKey(final String key);
 

@@ -1,6 +1,7 @@
 
 package com.commercetools.importapi.models.errors;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -27,11 +27,11 @@ public final class ResourceDeletionErrorImpl implements ResourceDeletionError {
 
     private String message;
 
-    private com.fasterxml.jackson.databind.JsonNode resource;
+    private java.lang.Object resource;
 
     @JsonCreator
     ResourceDeletionErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("resource") final com.fasterxml.jackson.databind.JsonNode resource) {
+            @JsonProperty("resource") final java.lang.Object resource) {
         this.message = message;
         this.resource = resource;
         this.code = RESOURCE_DELETION;
@@ -52,7 +52,7 @@ public final class ResourceDeletionErrorImpl implements ResourceDeletionError {
         return this.message;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getResource() {
+    public java.lang.Object getResource() {
         return this.resource;
     }
 
@@ -60,7 +60,7 @@ public final class ResourceDeletionErrorImpl implements ResourceDeletionError {
         this.message = message;
     }
 
-    public void setResource(final com.fasterxml.jackson.databind.JsonNode resource) {
+    public void setResource(final java.lang.Object resource) {
         this.resource = resource;
     }
 

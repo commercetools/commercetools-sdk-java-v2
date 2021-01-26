@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.common;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -13,7 +14,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -36,14 +36,14 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
 
     private com.commercetools.api.models.product.FacetResults facets;
 
-    private com.fasterxml.jackson.databind.JsonNode meta;
+    private java.lang.Object meta;
 
     @JsonCreator
     PagedQueryResponseImpl(@JsonProperty("limit") final Long limit, @JsonProperty("count") final Long count,
             @JsonProperty("total") final Long total, @JsonProperty("offset") final Long offset,
             @JsonProperty("results") final java.util.List<com.commercetools.api.models.common.BaseResource> results,
             @JsonProperty("facets") final com.commercetools.api.models.product.FacetResults facets,
-            @JsonProperty("meta") final com.fasterxml.jackson.databind.JsonNode meta) {
+            @JsonProperty("meta") final java.lang.Object meta) {
         this.limit = limit;
         this.count = count;
         this.total = total;
@@ -80,7 +80,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
         return this.facets;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getMeta() {
+    public java.lang.Object getMeta() {
         return this.meta;
     }
 
@@ -112,7 +112,7 @@ public final class PagedQueryResponseImpl implements PagedQueryResponse {
         this.facets = facets;
     }
 
-    public void setMeta(final com.fasterxml.jackson.databind.JsonNode meta) {
+    public void setMeta(final java.lang.Object meta) {
         this.meta = meta;
     }
 

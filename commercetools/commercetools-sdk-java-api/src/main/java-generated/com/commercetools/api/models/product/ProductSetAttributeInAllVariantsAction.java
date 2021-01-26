@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.product.ProductSetAttributeInAllVariantsActionImpl;
 import com.commercetools.api.models.product.ProductUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -33,14 +33,14 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     */
 
     @JsonProperty("value")
-    public JsonNode getValue();
+    public Object getValue();
 
     @JsonProperty("staged")
     public Boolean getStaged();
 
     public void setName(final String name);
 
-    public void setValue(final JsonNode value);
+    public void setValue(final Object value);
 
     public void setStaged(final Boolean staged);
 

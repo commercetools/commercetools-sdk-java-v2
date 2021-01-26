@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.graph_ql;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -23,12 +23,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class GraphQLResponseImpl implements GraphQLResponse {
 
-    private com.fasterxml.jackson.databind.JsonNode data;
+    private java.lang.Object data;
 
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors;
 
     @JsonCreator
-    GraphQLResponseImpl(@JsonProperty("data") final com.fasterxml.jackson.databind.JsonNode data,
+    GraphQLResponseImpl(@JsonProperty("data") final java.lang.Object data,
             @JsonProperty("errors") final java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> errors) {
         this.data = data;
         this.errors = errors;
@@ -37,7 +37,7 @@ public final class GraphQLResponseImpl implements GraphQLResponse {
     public GraphQLResponseImpl() {
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getData() {
+    public java.lang.Object getData() {
         return this.data;
     }
 
@@ -45,7 +45,7 @@ public final class GraphQLResponseImpl implements GraphQLResponse {
         return this.errors;
     }
 
-    public void setData(final com.fasterxml.jackson.databind.JsonNode data) {
+    public void setData(final java.lang.Object data) {
         this.data = data;
     }
 

@@ -2,6 +2,7 @@
 package com.commercetools.api.models.custom_object;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -15,7 +16,6 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.custom_object.CustomObjectImpl;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -62,7 +62,7 @@ public interface CustomObject extends BaseResource, com.commercetools.api.models
 
     @NotNull
     @JsonProperty("value")
-    public JsonNode getValue();
+    public Object getValue();
 
     public void setId(final String id);
 
@@ -80,7 +80,7 @@ public interface CustomObject extends BaseResource, com.commercetools.api.models
 
     public void setKey(final String key);
 
-    public void setValue(final JsonNode value);
+    public void setValue(final Object value);
 
     public static CustomObject of() {
         return new CustomObjectImpl();

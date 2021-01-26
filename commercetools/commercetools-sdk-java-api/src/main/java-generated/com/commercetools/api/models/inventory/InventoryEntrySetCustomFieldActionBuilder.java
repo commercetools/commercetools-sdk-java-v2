@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.inventory;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -8,7 +9,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction;
 import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -18,15 +18,14 @@ public final class InventoryEntrySetCustomFieldActionBuilder {
     private String name;
 
     @Nullable
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     public InventoryEntrySetCustomFieldActionBuilder name(final String name) {
         this.name = name;
         return this;
     }
 
-    public InventoryEntrySetCustomFieldActionBuilder value(
-            @Nullable final com.fasterxml.jackson.databind.JsonNode value) {
+    public InventoryEntrySetCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
@@ -36,7 +35,7 @@ public final class InventoryEntrySetCustomFieldActionBuilder {
     }
 
     @Nullable
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 

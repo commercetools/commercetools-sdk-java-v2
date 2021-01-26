@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.InvalidFieldErrorImpl;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -30,19 +30,19 @@ public interface InvalidFieldError extends ErrorObject {
 
     @NotNull
     @JsonProperty("invalidValue")
-    public JsonNode getInvalidValue();
+    public Object getInvalidValue();
 
     @JsonProperty("allowedValues")
-    public List<JsonNode> getAllowedValues();
+    public List<Object> getAllowedValues();
 
     public void setField(final String field);
 
-    public void setInvalidValue(final JsonNode invalidValue);
+    public void setInvalidValue(final Object invalidValue);
 
     @JsonIgnore
-    public void setAllowedValues(final JsonNode... allowedValues);
+    public void setAllowedValues(final Object... allowedValues);
 
-    public void setAllowedValues(final List<JsonNode> allowedValues);
+    public void setAllowedValues(final List<Object> allowedValues);
 
     public static InvalidFieldError of() {
         return new InvalidFieldErrorImpl();

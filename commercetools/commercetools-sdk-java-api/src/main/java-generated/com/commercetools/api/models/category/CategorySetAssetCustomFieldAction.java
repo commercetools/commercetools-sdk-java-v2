@@ -2,6 +2,7 @@
 package com.commercetools.api.models.category;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.category.CategorySetAssetCustomFieldActionImpl;
 import com.commercetools.api.models.category.CategoryUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -35,7 +35,7 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
     public String getName();
 
     @JsonProperty("value")
-    public JsonNode getValue();
+    public Object getValue();
 
     public void setAssetId(final String assetId);
 
@@ -43,7 +43,7 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
 
     public void setName(final String name);
 
-    public void setValue(final JsonNode value);
+    public void setValue(final Object value);
 
     public static CategorySetAssetCustomFieldAction of() {
         return new CategorySetAssetCustomFieldActionImpl();

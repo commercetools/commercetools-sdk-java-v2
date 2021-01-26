@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.custom_object;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -10,7 +11,6 @@ import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.custom_object.CustomObject;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -35,7 +35,7 @@ public final class CustomObjectBuilder {
 
     private String key;
 
-    private com.fasterxml.jackson.databind.JsonNode value;
+    private java.lang.Object value;
 
     public CustomObjectBuilder id(final String id) {
         this.id = id;
@@ -78,7 +78,7 @@ public final class CustomObjectBuilder {
         return this;
     }
 
-    public CustomObjectBuilder value(final com.fasterxml.jackson.databind.JsonNode value) {
+    public CustomObjectBuilder value(final java.lang.Object value) {
         this.value = value;
         return this;
     }
@@ -117,7 +117,7 @@ public final class CustomObjectBuilder {
         return this.key;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getValue() {
+    public java.lang.Object getValue() {
         return this.value;
     }
 

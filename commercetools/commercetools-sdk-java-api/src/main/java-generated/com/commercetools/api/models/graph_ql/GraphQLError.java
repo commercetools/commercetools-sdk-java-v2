@@ -2,6 +2,7 @@
 package com.commercetools.api.models.graph_ql;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.graph_ql.GraphQLErrorImpl;
 import com.commercetools.api.models.graph_ql.GraphQLErrorLocation;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -33,7 +33,7 @@ public interface GraphQLError {
 
     @NotNull
     @JsonProperty("path")
-    public List<JsonNode> getPath();
+    public List<Object> getPath();
 
     public void setMessage(final String message);
 
@@ -43,9 +43,9 @@ public interface GraphQLError {
     public void setLocations(final List<GraphQLErrorLocation> locations);
 
     @JsonIgnore
-    public void setPath(final JsonNode... path);
+    public void setPath(final Object... path);
 
-    public void setPath(final List<JsonNode> path);
+    public void setPath(final List<Object> path);
 
     public static GraphQLError of() {
         return new GraphQLErrorImpl();

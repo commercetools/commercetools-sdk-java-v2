@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.store;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -13,7 +14,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -28,12 +28,12 @@ public final class StoreSetCustomTypeActionImpl implements StoreSetCustomTypeAct
 
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
 
-    private com.fasterxml.jackson.databind.JsonNode fields;
+    private java.lang.Object fields;
 
     @JsonCreator
     StoreSetCustomTypeActionImpl(
             @JsonProperty("type") final com.commercetools.api.models.type.TypeResourceIdentifier type,
-            @JsonProperty("fields") final com.fasterxml.jackson.databind.JsonNode fields) {
+            @JsonProperty("fields") final java.lang.Object fields) {
         this.type = type;
         this.fields = fields;
         this.action = SET_CUSTOM_TYPE;
@@ -59,7 +59,7 @@ public final class StoreSetCustomTypeActionImpl implements StoreSetCustomTypeAct
     *  <p>A valid JSON object, based on the FieldDefinitions of the Type
     *  Sets the custom field to this value.</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getFields() {
+    public java.lang.Object getFields() {
         return this.fields;
     }
 
@@ -67,7 +67,7 @@ public final class StoreSetCustomTypeActionImpl implements StoreSetCustomTypeAct
         this.type = type;
     }
 
-    public void setFields(final com.fasterxml.jackson.databind.JsonNode fields) {
+    public void setFields(final java.lang.Object fields) {
         this.fields = fields;
     }
 

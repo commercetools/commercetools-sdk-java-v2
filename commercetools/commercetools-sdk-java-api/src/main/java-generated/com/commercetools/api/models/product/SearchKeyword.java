@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -11,7 +12,6 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.product.SearchKeywordImpl;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -26,11 +26,11 @@ public interface SearchKeyword {
     public String getText();
 
     @JsonProperty("suggestTokenizer")
-    public JsonNode getSuggestTokenizer();
+    public Object getSuggestTokenizer();
 
     public void setText(final String text);
 
-    public void setSuggestTokenizer(final JsonNode suggestTokenizer);
+    public void setSuggestTokenizer(final Object suggestTokenizer);
 
     public static SearchKeyword of() {
         return new SearchKeywordImpl();

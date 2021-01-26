@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.type;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -11,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -22,21 +22,21 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FieldContainerImpl implements FieldContainer {
 
-    private Map<String, com.fasterxml.jackson.databind.JsonNode> values;
+    private Map<String, java.lang.Object> values;
 
     @JsonCreator
-    FieldContainerImpl(@JsonProperty("values") final Map<String, com.fasterxml.jackson.databind.JsonNode> values) {
+    FieldContainerImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
     }
 
     public FieldContainerImpl() {
     }
 
-    public Map<String, com.fasterxml.jackson.databind.JsonNode> values() {
+    public Map<String, java.lang.Object> values() {
         return values;
     }
 
-    public void setValue(String key, com.fasterxml.jackson.databind.JsonNode value) {
+    public void setValue(String key, java.lang.Object value) {
         if (values == null) {
             values = new HashMap<>();
         }

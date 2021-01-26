@@ -2,6 +2,7 @@
 package com.commercetools.api.models.cart_discount;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.cart_discount.CartDiscountSetCustomFieldActionImpl;
 import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -36,11 +36,11 @@ public interface CartDiscountSetCustomFieldAction extends CartDiscountUpdateActi
     */
 
     @JsonProperty("value")
-    public JsonNode getValue();
+    public Object getValue();
 
     public void setName(final String name);
 
-    public void setValue(final JsonNode value);
+    public void setValue(final Object value);
 
     public static CartDiscountSetCustomFieldAction of() {
         return new CartDiscountSetCustomFieldActionImpl();

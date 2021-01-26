@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.review;
 
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
@@ -11,7 +12,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
@@ -30,13 +30,13 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
 
     private Integer count;
 
-    private com.fasterxml.jackson.databind.JsonNode ratingsDistribution;
+    private java.lang.Object ratingsDistribution;
 
     @JsonCreator
     ReviewRatingStatisticsImpl(@JsonProperty("averageRating") final Double averageRating,
             @JsonProperty("highestRating") final Double highestRating,
             @JsonProperty("lowestRating") final Double lowestRating, @JsonProperty("count") final Integer count,
-            @JsonProperty("ratingsDistribution") final com.fasterxml.jackson.databind.JsonNode ratingsDistribution) {
+            @JsonProperty("ratingsDistribution") final java.lang.Object ratingsDistribution) {
         this.averageRating = averageRating;
         this.highestRating = highestRating;
         this.lowestRating = lowestRating;
@@ -81,7 +81,7 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
     *  The keys are the different ratings and the values are the count of reviews having this rating.
     *  Only the used ratings appear in this object.</p>
     */
-    public com.fasterxml.jackson.databind.JsonNode getRatingsDistribution() {
+    public java.lang.Object getRatingsDistribution() {
         return this.ratingsDistribution;
     }
 
@@ -101,7 +101,7 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
         this.count = count;
     }
 
-    public void setRatingsDistribution(final com.fasterxml.jackson.databind.JsonNode ratingsDistribution) {
+    public void setRatingsDistribution(final java.lang.Object ratingsDistribution) {
         this.ratingsDistribution = ratingsDistribution;
     }
 

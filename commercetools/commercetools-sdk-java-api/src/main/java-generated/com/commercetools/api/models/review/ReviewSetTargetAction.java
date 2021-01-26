@@ -2,6 +2,7 @@
 package com.commercetools.api.models.review;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,7 +13,6 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.review.ReviewSetTargetActionImpl;
 import com.commercetools.api.models.review.ReviewUpdateAction;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -31,9 +31,9 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     */
     @NotNull
     @JsonProperty("target")
-    public JsonNode getTarget();
+    public Object getTarget();
 
-    public void setTarget(final JsonNode target);
+    public void setTarget(final Object target);
 
     public static ReviewSetTargetAction of() {
         return new ReviewSetTargetActionImpl();

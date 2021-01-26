@@ -2,6 +2,7 @@
 package com.commercetools.api.models.error;
 
 import java.io.IOException;
+import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -14,7 +15,6 @@ import com.commercetools.api.models.error.ErrorByExtension;
 import com.commercetools.api.models.error.ErrorObject;
 import com.commercetools.api.models.error.ExtensionUpdateActionsFailedErrorImpl;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.Accessor;
@@ -32,7 +32,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
     @Valid
     @JsonProperty("extensionExtraInfo")
-    public JsonNode getExtensionExtraInfo();
+    public Object getExtensionExtraInfo();
 
     @NotNull
     @Valid
@@ -41,7 +41,7 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
 
     public void setLocalizedMessage(final LocalizedString localizedMessage);
 
-    public void setExtensionExtraInfo(final JsonNode extensionExtraInfo);
+    public void setExtensionExtraInfo(final Object extensionExtraInfo);
 
     public void setErrorByExtension(final ErrorByExtension errorByExtension);
 

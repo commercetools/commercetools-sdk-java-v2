@@ -1,6 +1,7 @@
 
 package com.commercetools.api.models.graph_ql;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
@@ -8,7 +9,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.graph_ql.GraphQLError;
 import com.commercetools.api.models.graph_ql.GraphQLErrorLocation;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -19,7 +19,7 @@ public final class GraphQLErrorBuilder {
 
     private java.util.List<com.commercetools.api.models.graph_ql.GraphQLErrorLocation> locations;
 
-    private java.util.List<com.fasterxml.jackson.databind.JsonNode> path;
+    private java.util.List<java.lang.Object> path;
 
     public GraphQLErrorBuilder message(final String message) {
         this.message = message;
@@ -38,12 +38,12 @@ public final class GraphQLErrorBuilder {
         return this;
     }
 
-    public GraphQLErrorBuilder path(final com.fasterxml.jackson.databind.JsonNode... path) {
+    public GraphQLErrorBuilder path(final java.lang.Object... path) {
         this.path = new ArrayList<>(Arrays.asList(path));
         return this;
     }
 
-    public GraphQLErrorBuilder path(final java.util.List<com.fasterxml.jackson.databind.JsonNode> path) {
+    public GraphQLErrorBuilder path(final java.util.List<java.lang.Object> path) {
         this.path = path;
         return this;
     }
@@ -56,7 +56,7 @@ public final class GraphQLErrorBuilder {
         return this.locations;
     }
 
-    public java.util.List<com.fasterxml.jackson.databind.JsonNode> getPath() {
+    public java.util.List<java.lang.Object> getPath() {
         return this.path;
     }
 

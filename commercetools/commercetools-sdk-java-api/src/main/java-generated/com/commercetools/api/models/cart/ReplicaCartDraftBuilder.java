@@ -1,25 +1,25 @@
 
 package com.commercetools.api.models.cart;
 
+import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.ReplicaCartDraft;
-import com.fasterxml.jackson.databind.JsonNode;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ReplicaCartDraftBuilder {
 
-    private com.fasterxml.jackson.databind.JsonNode reference;
+    private java.lang.Object reference;
 
     @Nullable
     private String key;
 
-    public ReplicaCartDraftBuilder reference(final com.fasterxml.jackson.databind.JsonNode reference) {
+    public ReplicaCartDraftBuilder reference(final java.lang.Object reference) {
         this.reference = reference;
         return this;
     }
@@ -29,7 +29,7 @@ public final class ReplicaCartDraftBuilder {
         return this;
     }
 
-    public com.fasterxml.jackson.databind.JsonNode getReference() {
+    public java.lang.Object getReference() {
         return this.reference;
     }
 

@@ -35,7 +35,7 @@ public class ModelSerializationTest {
         String id = "test-id";
         String testString = "test-string";
 
-        Map<String, JsonNode> fieldContainerValues = new HashMap<>();
+        Map<String, Object> fieldContainerValues = new HashMap<>();
         fieldContainerValues.put(key, JsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
         FieldContainer fieldContainer = FieldContainerBuilder.of().values(fieldContainerValues).build();
 
@@ -89,7 +89,7 @@ public class ModelSerializationTest {
         String id = "test-id";
         String testString = "test-string";
 
-        Map<String, JsonNode> fieldContainerValues = new HashMap<>();
+        Map<String, Object> fieldContainerValues = new HashMap<>();
         fieldContainerValues.put(key, JsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
         FieldContainer fieldContainer = FieldContainerBuilder.of().values(fieldContainerValues).build();
 

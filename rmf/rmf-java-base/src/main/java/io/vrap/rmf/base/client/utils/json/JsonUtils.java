@@ -5,14 +5,17 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.ServiceLoader;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;
+import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import io.vrap.rmf.base.client.HttpClientSupplier;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
 
@@ -21,9 +24,13 @@ public class JsonUtils {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     static {
+        ServiceLoader<SimpleModule> loader = ServiceLoader.load(SimpleModule.class,
+            SimpleModule.class.getClassLoader());
+
         OBJECT_MAPPER.registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .registerModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .registerModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
+                .registerModules(loader)
                 .setSerializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false).configure(
                     SerializationFeature.FAIL_ON_EMPTY_BEANS, false);

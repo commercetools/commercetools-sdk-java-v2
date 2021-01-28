@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":17,"i15":17,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":17,"i13":17,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,138 +123,130 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraftBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraftBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#builder-com.commercetools.api.models.discount_code.DiscountCodeDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifier</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getCartDiscounts--">getCartDiscounts</a></span>()</code>
 <div class="block">The referenced matching cart discounts can be applied to the cart once the discount code is added.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getCartPredicate--">getCartPredicate</a></span>()</code>
 <div class="block">The discount code can only be applied to carts that match this predicate.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getCode--">getCode</a></span>()</code>
 <div class="block">Unique identifier of this discount code.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getCustom--">getCustom</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getDescription--">getDescription</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getGroups--">getGroups</a></span>()</code>
 <div class="block">The groups to which this discount code shall belong to.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getIsActive--">getIsActive</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getMaxApplications--">getMaxApplications</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getMaxApplicationsPerCustomer--">getMaxApplicationsPerCustomer</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getValidFrom--">getValidFrom</a></span>()</code>
 <div class="block">The time from which the discount can be applied on a cart.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#getValidUntil--">getValidUntil</a></span>()</code>
 <div class="block">The time until the discount can be applied on a cart.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a></code></td>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraftImpl.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a></code></td>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraftImpl.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#of-com.commercetools.api.models.discount_code.DiscountCodeDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setCartDiscounts-com.commercetools.api.models.cart_discount.CartDiscountResourceIdentifier...-">setCartDiscounts</a></span>(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifier</a>...&nbsp;cartDiscounts)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setCartDiscounts-java.util.List-">setCartDiscounts</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountResourceIdentifier.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountResourceIdentifier</a>&gt;&nbsp;cartDiscounts)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setCartPredicate-java.lang.String-">setCartPredicate</a></span>(java.lang.String&nbsp;cartPredicate)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setCode-java.lang.String-">setCode</a></span>(java.lang.String&nbsp;code)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setDescription-com.commercetools.api.models.common.LocalizedString-">setDescription</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setGroups-java.util.List-">setGroups</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;groups)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setGroups-java.lang.String...-">setGroups</a></span>(java.lang.String...&nbsp;groups)</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setIsActive-java.lang.Boolean-">setIsActive</a></span>(java.lang.Boolean&nbsp;isActive)</code>&nbsp;</td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setMaxApplications-java.lang.Long-">setMaxApplications</a></span>(java.lang.Long&nbsp;maxApplications)</code>&nbsp;</td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setMaxApplicationsPerCustomer-java.lang.Long-">setMaxApplicationsPerCustomer</a></span>(java.lang.Long&nbsp;maxApplicationsPerCustomer)</code>&nbsp;</td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setName-com.commercetools.api.models.common.LocalizedString-">setName</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#setValidUntil-java.time.ZonedDateTime-">setValidUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html#withDiscountCodeDraft-java.util.function.Function-">withDiscountCodeDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -530,7 +522,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraftImpl.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftImpl</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.discount_code.DiscountCodeDraft-">
@@ -539,25 +531,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraftBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftBuilder</a>&nbsp;builder()</pre>
-</li>
-</ul>
-<a name="builder-com.commercetools.api.models.discount_code.DiscountCodeDraft-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraftBuilder.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraftImpl.html" title="class in com.commercetools.api.models.discount_code">DiscountCodeDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/discount_code/DiscountCodeDraft.html" title="interface in com.commercetools.api.models.discount_code">DiscountCodeDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withDiscountCodeDraft-java.util.function.Function-">

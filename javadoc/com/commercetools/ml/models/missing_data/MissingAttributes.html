@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":17,"i10":17,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":17,"i8":17,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,92 +123,84 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#builder-com.commercetools.ml.models.missing_data.MissingAttributes-">builder</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCount.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#getAttributeCount--">getAttributeCount</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#getAttributeCoverage--">getAttributeCoverage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#getMissingAttributeNames--">getMissingAttributeNames</a></span>()</code>
 <div class="block">The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#getMissingAttributeValues--">getMissingAttributeValues</a></span>()</code>
 <div class="block">The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/ml/models/common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#getProduct--">getProduct</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#getProductType--">getProductType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.Integer</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#getVariantId--">getVariantId</a></span>()</code>
 <div class="block">ID of a ProductVariant.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a></code></td>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a></code></td>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#of-com.commercetools.ml.models.missing_data.MissingAttributes-">of</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setAttributeCount-com.commercetools.ml.models.missing_data.AttributeCount-">setAttributeCount</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCount.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCount</a>&nbsp;attributeCount)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setAttributeCoverage-com.commercetools.ml.models.missing_data.AttributeCoverage-">setAttributeCoverage</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a>&nbsp;attributeCoverage)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setMissingAttributeNames-java.util.List-">setMissingAttributeNames</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;missingAttributeNames)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setMissingAttributeNames-java.lang.String...-">setMissingAttributeNames</a></span>(java.lang.String...&nbsp;missingAttributeNames)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setMissingAttributeValues-java.util.List-">setMissingAttributeValues</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;missingAttributeValues)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setMissingAttributeValues-java.lang.String...-">setMissingAttributeValues</a></span>(java.lang.String...&nbsp;missingAttributeValues)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setProduct-com.commercetools.ml.models.common.ProductReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a>&nbsp;product)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setProductType-com.commercetools.ml.models.common.ProductTypeReference-">setProductType</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;productType)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setVariantId-java.lang.Integer-">setVariantId</a></span>(java.lang.Integer&nbsp;variantId)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#withMissingAttributes-java.util.function.Function-">withMissingAttributes</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -388,7 +380,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesImpl</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.ml.models.missing_data.MissingAttributes-">
@@ -397,25 +389,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a>&nbsp;builder()</pre>
-</li>
-</ul>
-<a name="builder-com.commercetools.ml.models.missing_data.MissingAttributes-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingAttributesImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withMissingAttributes-java.util.function.Function-">

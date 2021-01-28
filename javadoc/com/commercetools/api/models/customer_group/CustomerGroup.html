@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":17,"i12":17,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":17,"i10":17,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -128,104 +128,96 @@ extends <a href="../../../../../com/commercetools/api/models/common/BaseResource
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#builder-com.commercetools.api.models.customer_group.CustomerGroup-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getCreatedAt--">getCreatedAt</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getCreatedBy--">getCreatedBy</a></span>()</code>
 <div class="block">Present on resources created after 1/02/2019 except for events not tracked.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getCustom--">getCustom</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getId--">getId</a></span>()</code>
 <div class="block">The unique ID of the customer group.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getKey--">getKey</a></span>()</code>
 <div class="block">User-specific unique identifier for the customer group.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getLastModifiedAt--">getLastModifiedAt</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getLastModifiedBy--">getLastModifiedBy</a></span>()</code>
 <div class="block">Present on resources updated after 1/02/2019 except for events not tracked.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#getVersion--">getVersion</a></span>()</code>
 <div class="block">The current version of the customer group.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a></code></td>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupImpl.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a></code></td>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupImpl.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#of-com.commercetools.api.models.customer_group.CustomerGroup-">of</a></span>(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setCreatedAt-java.time.ZonedDateTime-">setCreatedAt</a></span>(java.time.ZonedDateTime&nbsp;createdAt)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setCreatedBy-com.commercetools.api.models.common.CreatedBy-">setCreatedBy</a></span>(<a href="../../../../../com/commercetools/api/models/common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setCustom-com.commercetools.api.models.type.CustomFields-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setLastModifiedAt-java.time.ZonedDateTime-">setLastModifiedAt</a></span>(java.time.ZonedDateTime&nbsp;lastModifiedAt)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setLastModifiedBy-com.commercetools.api.models.common.LastModifiedBy-">setLastModifiedBy</a></span>(<a href="../../../../../com/commercetools/api/models/common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#setVersion-java.lang.Long-">setVersion</a></span>(java.lang.Long&nbsp;version)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html#withCustomerGroup-java.util.function.Function-">withCustomerGroup</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -475,7 +467,7 @@ extends <a href="../../../../../com/commercetools/api/models/common/BaseResource
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupImpl.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupImpl</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.customer_group.CustomerGroup-">
@@ -484,25 +476,7 @@ extends <a href="../../../../../com/commercetools/api/models/common/BaseResource
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupBuilder</a>&nbsp;builder()</pre>
-</li>
-</ul>
-<a name="builder-com.commercetools.api.models.customer_group.CustomerGroup-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroupImpl.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withCustomerGroup-java.util.function.Function-">

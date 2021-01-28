@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":17,"i7":17,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;, <a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -128,58 +128,50 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryActionBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryActionBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#builder-com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryAction-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#getDeliveryId--">getDeliveryId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#getItems--">getItems</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/order/ParcelMeasurements.html" title="interface in com.commercetools.api.models.order">ParcelMeasurements</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#getMeasurements--">getMeasurements</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/order/TrackingData.html" title="interface in com.commercetools.api.models.order">TrackingData</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#getTrackingData--">getTrackingData</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryActionImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a></code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryActionImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#of-com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#setDeliveryId-java.lang.String-">setDeliveryId</a></span>(java.lang.String&nbsp;deliveryId)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#setItems-com.commercetools.api.models.order.DeliveryItem...-">setItems</a></span>(<a href="../../../../../com/commercetools/api/models/order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>...&nbsp;items)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#setItems-java.util.List-">setItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/DeliveryItem.html" title="interface in com.commercetools.api.models.order">DeliveryItem</a>&gt;&nbsp;items)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#setMeasurements-com.commercetools.api.models.order.ParcelMeasurements-">setMeasurements</a></span>(<a href="../../../../../com/commercetools/api/models/order/ParcelMeasurements.html" title="interface in com.commercetools.api.models.order">ParcelMeasurements</a>&nbsp;measurements)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#setTrackingData-com.commercetools.api.models.order.TrackingData-">setTrackingData</a></span>(<a href="../../../../../com/commercetools/api/models/order/TrackingData.html" title="interface in com.commercetools.api.models.order">TrackingData</a>&nbsp;trackingData)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html#withStagedOrderAddParcelToDeliveryAction-java.util.function.Function-">withStagedOrderAddParcelToDeliveryAction</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -190,13 +182,6 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.order.<a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html#getAction--">getAction</a>, <a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html#withStagedOrderUpdateAction-java.util.function.Function-">withStagedOrderUpdateAction</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
 </ul>
 </li>
 </ul>
@@ -303,7 +288,7 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryActionImpl</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryAction-">
@@ -312,25 +297,7 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryActionBuilder</a>&nbsp;builder()</pre>
-</li>
-</ul>
-<a name="builder-com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryAction-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryActionBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryActionImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddParcelToDeliveryAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddParcelToDeliveryAction</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withStagedOrderAddParcelToDeliveryAction-java.util.function.Function-">

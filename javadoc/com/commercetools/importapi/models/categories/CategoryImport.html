@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":17,"i14":17,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":17,"i12":17,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -129,134 +129,126 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#builder-com.commercetools.importapi.models.categories.CategoryImport-">builder</a></span>(<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getAssets--">getAssets</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getCustom--">getCustom</a></span>()</code>
 <div class="block">The custom fields for this category.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getDescription--">getDescription</a></span>()</code>
 <div class="block">Maps to <code>Category.description</code>.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getExternalId--">getExternalId</a></span>()</code>
 <div class="block">Maps to <code>Category.externalId</code>.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getMetaDescription--">getMetaDescription</a></span>()</code>
 <div class="block">Maps to <code>Category.metaDescription</code>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getMetaKeywords--">getMetaKeywords</a></span>()</code>
 <div class="block">Maps to <code>Category.metaKeywords</code>.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getMetaTitle--">getMetaTitle</a></span>()</code>
 <div class="block">Maps to <code>Category.metaTitle</code>.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getName--">getName</a></span>()</code>
 <div class="block">Maps to <code>Category.name</code>.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getOrderHint--">getOrderHint</a></span>()</code>
 <div class="block">Maps to <code>Category.orderHint</code>.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getParent--">getParent</a></span>()</code>
 <div class="block">Maps to <code>Category.parent</code>.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#getSlug--">getSlug</a></span>()</code>
 <div class="block">Maps to <code>Category.slug</code>.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></code></td>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportImpl.html" title="class in com.commercetools.importapi.models.categories">CategoryImportImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a></code></td>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportImpl.html" title="class in com.commercetools.importapi.models.categories">CategoryImportImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#of-com.commercetools.importapi.models.categories.CategoryImport-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setAssets-com.commercetools.importapi.models.common.Asset...-">setAssets</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>...&nbsp;assets)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setAssets-java.util.List-">setAssets</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;&nbsp;assets)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setCustom-com.commercetools.importapi.models.customfields.Custom-">setCustom</a></span>(<a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setDescription-com.commercetools.importapi.models.common.LocalizedString-">setDescription</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setExternalId-java.lang.String-">setExternalId</a></span>(java.lang.String&nbsp;externalId)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setMetaDescription-com.commercetools.importapi.models.common.LocalizedString-">setMetaDescription</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setMetaKeywords-com.commercetools.importapi.models.common.LocalizedString-">setMetaKeywords</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setMetaTitle-com.commercetools.importapi.models.common.LocalizedString-">setMetaTitle</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setName-com.commercetools.importapi.models.common.LocalizedString-">setName</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setOrderHint-java.lang.String-">setOrderHint</a></span>(java.lang.String&nbsp;orderHint)</code>&nbsp;</td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setParent-com.commercetools.importapi.models.common.CategoryKeyReference-">setParent</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&nbsp;parent)</code>&nbsp;</td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#setSlug-com.commercetools.importapi.models.common.LocalizedString-">setSlug</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</code>&nbsp;</td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html#withCategoryImport-java.util.function.Function-">withCategoryImport</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -266,7 +258,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.importapi.models.common.<a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></h3>
-<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#builder-com.commercetools.importapi.models.common.ImportResource-">builder</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#getKey--">getKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of-com.commercetools.importapi.models.common.ImportResource-">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#setKey-java.lang.String-">setKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#withImportResource-java.util.function.Function-">withImportResource</a></code></li>
+<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#getKey--">getKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of-com.commercetools.importapi.models.common.ImportResource-">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#setKey-java.lang.String-">setKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#withImportResource-java.util.function.Function-">withImportResource</a></code></li>
 </ul>
 </li>
 </ul>
@@ -520,7 +512,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportImpl.html" title="class in com.commercetools.importapi.models.categories">CategoryImportImpl</a>&nbsp;of()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of--">of</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -533,29 +525,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a>&nbsp;builder()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#builder--">builder</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="builder-com.commercetools.importapi.models.categories.CategoryImport-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportBuilder.html" title="class in com.commercetools.importapi.models.categories">CategoryImportBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImportImpl.html" title="class in com.commercetools.importapi.models.categories">CategoryImportImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/categories/CategoryImport.html" title="interface in com.commercetools.importapi.models.categories">CategoryImport</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withCategoryImport-java.util.function.Function-">

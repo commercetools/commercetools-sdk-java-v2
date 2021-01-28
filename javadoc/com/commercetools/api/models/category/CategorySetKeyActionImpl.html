@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetKeyAction</a>, <a href="../../../../../com/commercetools/api/models/category/CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/category/CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>&gt;</dd>
+<dd><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetKeyAction</a>, <a href="../../../../../com/commercetools/api/models/category/CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></dd>
 </dl>
 <hr>
 <br>
@@ -150,24 +150,16 @@ implements <a href="../../../../../com/commercetools/api/models/category/Categor
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyActionImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyActionImpl.html#getAction--">getAction</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyActionImpl.html#getKey--">getKey</a></span>()</code>
 <div class="block">User-defined unique identifier for the category.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyActionImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyActionImpl.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
@@ -177,14 +169,14 @@ implements <a href="../../../../../com/commercetools/api/models/category/Categor
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.category.CategorySetKeyAction">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.category.<a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetKeyAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#builder-com.commercetools.api.models.category.CategorySetKeyAction-">builder</a>, <a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#of-com.commercetools.api.models.category.CategorySetKeyAction-">of</a>, <a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#withCategorySetKeyAction-java.util.function.Function-">withCategorySetKeyAction</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#of-com.commercetools.api.models.category.CategorySetKeyAction-">of</a>, <a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#withCategorySetKeyAction-java.util.function.Function-">withCategorySetKeyAction</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.category.CategoryUpdateAction">
@@ -192,13 +184,6 @@ implements <a href="../../../../../com/commercetools/api/models/category/Categor
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.category.<a href="../../../../../com/commercetools/api/models/category/CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/category/CategoryUpdateAction.html#withCategoryUpdateAction-java.util.function.Function-">withCategoryUpdateAction</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
 </ul>
 </li>
 </ul>
@@ -241,8 +226,6 @@ implements <a href="../../../../../com/commercetools/api/models/category/Categor
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/category/CategoryUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/category/CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a></code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/category/CategoryUpdateAction.html" title="interface in com.commercetools.api.models.category">CategoryUpdateAction</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -265,39 +248,13 @@ implements <a href="../../../../../com/commercetools/api/models/category/Categor
 <a name="setKey-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>setKey</h4>
 <pre>public&nbsp;void&nbsp;setKey(java.lang.String&nbsp;key)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html#setKey-java.lang.String-">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/category/CategorySetKeyAction.html" title="interface in com.commercetools.api.models.category">CategorySetKeyAction</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="equals-java.lang.Object-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>equals</h4>
-<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
-</dl>
-</li>
-</ul>
-<a name="hashCode--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>hashCode</h4>
-<pre>public&nbsp;int&nbsp;hashCode()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

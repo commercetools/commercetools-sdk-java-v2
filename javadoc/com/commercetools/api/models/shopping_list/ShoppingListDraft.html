@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":17,"i13":17,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":17,"i11":17,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,120 +123,112 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#builder-com.commercetools.api.models.shopping_list.ShoppingListDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getAnonymousId--">getAnonymousId</a></span>()</code>
 <div class="block">Identifies shopping lists belonging to an anonymous session (the customer has not signed up/in yet).</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getCustom--">getCustom</a></span>()</code>
 <div class="block">The custom fields.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getCustomer--">getCustomer</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getDeleteDaysAfterLastModification--">getDeleteDaysAfterLastModification</a></span>()</code>
 <div class="block">The shopping list will be deleted automatically if it hasn't been modified for the specified amount of days.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getDescription--">getDescription</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getKey--">getKey</a></span>()</code>
 <div class="block">User-specific unique identifier for the shopping list.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getLineItems--">getLineItems</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getName--">getName</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getSlug--">getSlug</a></span>()</code>
 <div class="block">Human-readable identifiers usually used as deep-link URL to the related shopping list.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#getTextLineItems--">getTextLineItems</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a></code></td>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraftImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListDraftImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a></code></td>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraftImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListDraftImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#of-com.commercetools.api.models.shopping_list.ShoppingListDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setAnonymousId-java.lang.String-">setAnonymousId</a></span>(java.lang.String&nbsp;anonymousId)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setCustomer-com.commercetools.api.models.customer.CustomerResourceIdentifier-">setCustomer</a></span>(<a href="../../../../../com/commercetools/api/models/customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a>&nbsp;customer)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setDeleteDaysAfterLastModification-java.lang.Long-">setDeleteDaysAfterLastModification</a></span>(java.lang.Long&nbsp;deleteDaysAfterLastModification)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setDescription-com.commercetools.api.models.common.LocalizedString-">setDescription</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setLineItems-java.util.List-">setLineItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>&gt;&nbsp;lineItems)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setLineItems-com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft...-">setLineItems</a></span>(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListLineItemDraft</a>...&nbsp;lineItems)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setName-com.commercetools.api.models.common.LocalizedString-">setName</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setSlug-com.commercetools.api.models.common.LocalizedString-">setSlug</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setTextLineItems-java.util.List-">setTextLineItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>&gt;&nbsp;textLineItems)</code>&nbsp;</td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#setTextLineItems-com.commercetools.api.models.shopping_list.TextLineItemDraft...-">setTextLineItems</a></span>(<a href="../../../../../com/commercetools/api/models/shopping_list/TextLineItemDraft.html" title="interface in com.commercetools.api.models.shopping_list">TextLineItemDraft</a>...&nbsp;textLineItems)</code>&nbsp;</td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html#withShoppingListDraft-java.util.function.Function-">withShoppingListDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -474,7 +466,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraftImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListDraftImpl</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.shopping_list.ShoppingListDraft-">
@@ -483,25 +475,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListDraftBuilder</a>&nbsp;builder()</pre>
-</li>
-</ul>
-<a name="builder-com.commercetools.api.models.shopping_list.ShoppingListDraft-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraftImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListDraft.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withShoppingListDraft-java.util.function.Function-">

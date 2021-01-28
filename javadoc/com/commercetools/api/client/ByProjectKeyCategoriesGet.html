@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</li>
+<li><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>com.commercetools.api.client.ByProjectKeyCategoriesGet</li>
@@ -110,15 +110,10 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
-<dl>
-<dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../com/commercetools/api/client/DeprecatableTrait.html" title="interface in com.commercetools.api.client">DeprecatableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;, <a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</dd>
-</dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">ByProjectKeyCategoriesGet</span>
-extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;
-implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;, <a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;, <a href="../../../../com/commercetools/api/client/DeprecatableTrait.html" title="interface in com.commercetools.api.client">DeprecatableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</pre>
+extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</pre>
 <div class="block"><p>Query categories</p></div>
 </li>
 </ul>
@@ -153,7 +148,7 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#ByProjectKeyCategoriesGet-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-">ByProjectKeyCategoriesGet</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#ByProjectKeyCategoriesGet-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-">ByProjectKeyCategoriesGet</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                          java.lang.String&nbsp;projectKey)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -175,108 +170,74 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#addExpand-java.lang.String-">addExpand</a></span>(java.lang.String&nbsp;expand)</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#addLimit-java.lang.Integer-">addLimit</a></span>(java.lang.Integer&nbsp;limit)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#addOffset-java.lang.Integer-">addOffset</a></span>(java.lang.Integer&nbsp;offset)</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#addPredicateVar-java.lang.String-java.lang.String-">addPredicateVar</a></span>(java.lang.String&nbsp;varName,
-               java.lang.String&nbsp;predicateVar)</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#addSort-java.lang.String-">addSort</a></span>(java.lang.String&nbsp;sort)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#addWhere-java.lang.String-">addWhere</a></span>(java.lang.String&nbsp;where)</code>&nbsp;</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#addWithTotal-java.lang.Boolean-">addWithTotal</a></span>(java.lang.Boolean&nbsp;withTotal)</code>&nbsp;</td>
-</tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>protected <a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#copy--">copy</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#createHttpRequest--">createHttpRequest</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.util.concurrent.CompletableFuture&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#execute--">execute</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#executeBlocking--">executeBlocking</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#executeBlocking-java.time.Duration-">executeBlocking</a></span>(java.time.Duration&nbsp;timeout)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#getExpand--">getExpand</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#getLimit--">getLimit</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#getOffset--">getOffset</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#getProjectKey--">getProjectKey</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#getSort--">getSort</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#getWhere--">getWhere</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#getWithTotal--">getWithTotal</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#setProjectKey-java.lang.String-">setProjectKey</a></span>(java.lang.String&nbsp;projectKey)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#withExpand-java.lang.String-">withExpand</a></span>(java.lang.String&nbsp;expand)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#withLimit-java.lang.Integer-">withLimit</a></span>(java.lang.Integer&nbsp;limit)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#withOffset-java.lang.Integer-">withOffset</a></span>(java.lang.Integer&nbsp;offset)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
-<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#withPredicateVar-java.lang.String-java.lang.String-">withPredicateVar</a></span>(java.lang.String&nbsp;varName,
-                java.lang.String&nbsp;predicateVar)</code>&nbsp;</td>
-</tr>
-<tr id="i23" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#withSort-java.lang.String-">withSort</a></span>(java.lang.String&nbsp;sort)</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#withWhere-java.lang.String-">withWhere</a></span>(java.lang.String&nbsp;where)</code>&nbsp;</td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html#withWithTotal-java.lang.Boolean-">withWithTotal</a></span>(java.lang.Boolean&nbsp;withTotal)</code>&nbsp;</td>
 </tr>
@@ -286,7 +247,7 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.vrap.rmf.base.client.<a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a></h3>
-<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam-java.lang.String-V-">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking--">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam-java.lang.String-">getFirstQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></code></li>
+<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam-java.lang.String-V-">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -294,13 +255,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
 <code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.io.vrap.rmf.base.client.RequestCommand">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;io.vrap.rmf.base.client.<a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a></h3>
-<code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html#executeBlocking--">executeBlocking</a></code></li>
 </ul>
 </li>
 </ul>
@@ -322,7 +276,7 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <ul class="blockList">
 <li class="blockList">
 <h4>ByProjectKeyCategoriesGet</h4>
-<pre>public&nbsp;ByProjectKeyCategoriesGet(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<pre>public&nbsp;ByProjectKeyCategoriesGet(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                  java.lang.String&nbsp;projectKey)</pre>
 </li>
 </ul>
@@ -350,10 +304,15 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>createHttpRequest</h4>
 <pre>public&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;createHttpRequest()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#createHttpRequest--">createHttpRequest</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
+</li>
+</ul>
+<a name="executeBlocking--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>executeBlocking</h4>
+<pre>public&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;&nbsp;executeBlocking()</pre>
 </li>
 </ul>
 <a name="executeBlocking-java.time.Duration-">
@@ -363,12 +322,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>executeBlocking</h4>
 <pre>public&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;&nbsp;executeBlocking(java.time.Duration&nbsp;timeout)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html#executeBlocking-java.time.Duration-">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking-java.time.Duration-">executeBlocking</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="execute--">
@@ -378,12 +331,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>execute</h4>
 <pre>public&nbsp;java.util.concurrent.CompletableFuture&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;&gt;&nbsp;execute()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html#execute--">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute--">execute</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="getProjectKey--">
@@ -402,10 +349,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>getExpand</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getExpand()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html#getExpand--">getExpand</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="getSort--">
@@ -415,10 +358,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>getSort</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getSort()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/SortableTrait.html#getSort--">getSort</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="getLimit--">
@@ -428,10 +367,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>getLimit</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getLimit()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/PagingTrait.html#getLimit--">getLimit</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="getOffset--">
@@ -441,10 +376,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>getOffset</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getOffset()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/PagingTrait.html#getOffset--">getOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="getWithTotal--">
@@ -454,10 +385,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>getWithTotal</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getWithTotal()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/PagingTrait.html#getWithTotal--">getWithTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="getWhere--">
@@ -467,10 +394,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>getWhere</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getWhere()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/QueryTrait.html#getWhere--">getWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 <a name="setProjectKey-java.lang.String-">
@@ -489,21 +412,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>withExpand</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;withExpand(java.lang.String&nbsp;expand)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html#withExpand-java.lang.String-">withExpand</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html#withExpand-java.lang.String-">withExpand</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="addExpand-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addExpand</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;addExpand(java.lang.String&nbsp;expand)</pre>
 </li>
 </ul>
 <a name="withSort-java.lang.String-">
@@ -513,21 +421,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>withSort</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;withSort(java.lang.String&nbsp;sort)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/SortableTrait.html#withSort-java.lang.String-">withSort</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/SortableTrait.html" title="interface in com.commercetools.api.client">SortableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html#withSort-java.lang.String-">withSort</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="addSort-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addSort</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;addSort(java.lang.String&nbsp;sort)</pre>
 </li>
 </ul>
 <a name="withLimit-java.lang.Integer-">
@@ -537,21 +430,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>withLimit</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;withLimit(java.lang.Integer&nbsp;limit)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/PagingTrait.html#withLimit-java.lang.Integer-">withLimit</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html#withLimit-java.lang.Integer-">withLimit</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="addLimit-java.lang.Integer-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addLimit</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;addLimit(java.lang.Integer&nbsp;limit)</pre>
 </li>
 </ul>
 <a name="withOffset-java.lang.Integer-">
@@ -561,21 +439,6 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>withOffset</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;withOffset(java.lang.Integer&nbsp;offset)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/PagingTrait.html#withOffset-java.lang.Integer-">withOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html#withOffset-java.lang.Integer-">withOffset</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="addOffset-java.lang.Integer-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addOffset</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;addOffset(java.lang.Integer&nbsp;offset)</pre>
 </li>
 </ul>
 <a name="withWithTotal-java.lang.Boolean-">
@@ -585,78 +448,15 @@ implements <a href="../../../../com/commercetools/api/models/PagedQueryResourceR
 <li class="blockList">
 <h4>withWithTotal</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;withWithTotal(java.lang.Boolean&nbsp;withTotal)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/PagingTrait.html#withWithTotal-java.lang.Boolean-">withWithTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/PagingTrait.html" title="interface in com.commercetools.api.client">PagingTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html#withWithTotal-java.lang.Boolean-">withWithTotal</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="addWithTotal-java.lang.Boolean-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addWithTotal</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;addWithTotal(java.lang.Boolean&nbsp;withTotal)</pre>
 </li>
 </ul>
 <a name="withWhere-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>withWhere</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;withWhere(java.lang.String&nbsp;where)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/client/QueryTrait.html#withWhere-java.lang.String-">withWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/QueryTrait.html" title="interface in com.commercetools.api.client">QueryTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&gt;</code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html#withWhere-java.lang.String-">withWhere</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/models/PagedQueryResourceRequest.html" title="interface in com.commercetools.api.models">PagedQueryResourceRequest</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
-</li>
-</ul>
-<a name="addWhere-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addWhere</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;addWhere(java.lang.String&nbsp;where)</pre>
-</li>
-</ul>
-<a name="withPredicateVar-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>withPredicateVar</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;withPredicateVar(java.lang.String&nbsp;varName,
-                                                  java.lang.String&nbsp;predicateVar)</pre>
-</li>
-</ul>
-<a name="addPredicateVar-java.lang.String-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addPredicateVar</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;addPredicateVar(java.lang.String&nbsp;varName,
-                                                 java.lang.String&nbsp;predicateVar)</pre>
-</li>
-</ul>
-<a name="copy--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>copy</h4>
-<pre>protected&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>&nbsp;copy()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#copy--">copy</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyCategoriesGet.html" title="class in com.commercetools.api.client">ByProjectKeyCategoriesGet</a>,<a href="../../../../com/commercetools/api/models/category/CategoryPagedQueryResponse.html" title="interface in com.commercetools.api.models.category">CategoryPagedQueryResponse</a>&gt;</code></dd>
-</dl>
 </li>
 </ul>
 </li>

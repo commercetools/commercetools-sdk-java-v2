@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderSetShippingAddressAction</a>, <a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a>&gt;</dd>
+<dd><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderSetShippingAddressAction</a>, <a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></dd>
 </dl>
 <hr>
 <br>
@@ -150,22 +150,14 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetSh
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressActionImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressActionImpl.html#getAction--">getAction</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressActionImpl.html#getAddress--">getAddress</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressActionImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressActionImpl.html#setAddress-com.commercetools.api.models.common.Address-">setAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</code>&nbsp;</td>
 </tr>
@@ -175,14 +167,14 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetSh
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.order.OrderSetShippingAddressAction">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.order.<a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderSetShippingAddressAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#builder-com.commercetools.api.models.order.OrderSetShippingAddressAction-">builder</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#of-com.commercetools.api.models.order.OrderSetShippingAddressAction-">of</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#withOrderSetShippingAddressAction-java.util.function.Function-">withOrderSetShippingAddressAction</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#of-com.commercetools.api.models.order.OrderSetShippingAddressAction-">of</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#withOrderSetShippingAddressAction-java.util.function.Function-">withOrderSetShippingAddressAction</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.order.OrderUpdateAction">
@@ -190,13 +182,6 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetSh
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.order.<a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html#withOrderUpdateAction-java.util.function.Function-">withOrderUpdateAction</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
 </ul>
 </li>
 </ul>
@@ -239,8 +224,6 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetSh
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></code></dd>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -260,39 +243,13 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetSh
 <a name="setAddress-com.commercetools.api.models.common.Address-">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>setAddress</h4>
 <pre>public&nbsp;void&nbsp;setAddress(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html#setAddress-com.commercetools.api.models.common.Address-">setAddress</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/order/OrderSetShippingAddressAction.html" title="interface in com.commercetools.api.models.order">OrderSetShippingAddressAction</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="equals-java.lang.Object-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>equals</h4>
-<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
-</dl>
-</li>
-</ul>
-<a name="hashCode--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>hashCode</h4>
-<pre>public&nbsp;int&nbsp;hashCode()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

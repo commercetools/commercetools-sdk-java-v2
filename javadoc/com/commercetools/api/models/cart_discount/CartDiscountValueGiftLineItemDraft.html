@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":17,"i7":17,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":6,"i10":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -128,58 +128,46 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#getDistributionChannel--">getDistributionChannel</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#builder-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#getDistributionChannel--">getDistributionChannel</a></span>()</code>
-<div class="block">The channel must have the role <code>ProductDistribution</code></div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a></code></td>
+<td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#getProduct--">getProduct</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#getSupplyChannel--">getSupplyChannel</a></span>()</code>
-<div class="block">The channel must have the role <code>InventorySupply</code></div>
-</td>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#getSupplyChannel--">getSupplyChannel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#getVariantId--">getVariantId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraftImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraftImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a></code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraftImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraftImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#of-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#setDistributionChannel-com.commercetools.api.models.channel.ChannelReference-">setDistributionChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;distributionChannel)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#setProduct-com.commercetools.api.models.product.ProductReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#setDistributionChannel-com.commercetools.api.models.channel.ChannelResourceIdentifier-">setDistributionChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;distributionChannel)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#setSupplyChannel-com.commercetools.api.models.channel.ChannelReference-">setSupplyChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#setProduct-com.commercetools.api.models.product.ProductResourceIdentifier-">setProduct</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a>&nbsp;product)</code>&nbsp;</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#setSupplyChannel-com.commercetools.api.models.channel.ChannelResourceIdentifier-">setSupplyChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</code>&nbsp;</td>
-</tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#setVariantId-java.lang.Long-">setVariantId</a></span>(java.lang.Long&nbsp;variantId)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html#withCartDiscountValueGiftLineItemDraft-java.util.function.Function-">withCartDiscountValueGiftLineItemDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -213,7 +201,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <h4>getProduct</h4>
 <pre>@NotNull
  @Valid
-@NotNull @Valid <a href="../../../../../com/commercetools/api/models/product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a>&nbsp;getProduct()</pre>
+@NotNull @Valid <a href="../../../../../com/commercetools/api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;getProduct()</pre>
 </li>
 </ul>
 <a name="getVariantId--">
@@ -233,8 +221,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <li class="blockList">
 <h4>getSupplyChannel</h4>
 <pre>@Valid
-@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;getSupplyChannel()</pre>
-<div class="block"><p>The channel must have the role <code>InventorySupply</code></p></div>
+@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;getSupplyChannel()</pre>
 </li>
 </ul>
 <a name="getDistributionChannel--">
@@ -244,17 +231,16 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <li class="blockList">
 <h4>getDistributionChannel</h4>
 <pre>@Valid
-@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;getDistributionChannel()</pre>
-<div class="block"><p>The channel must have the role <code>ProductDistribution</code></p></div>
+@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;getDistributionChannel()</pre>
 </li>
 </ul>
-<a name="setProduct-com.commercetools.api.models.product.ProductResourceIdentifier-">
+<a name="setProduct-com.commercetools.api.models.product.ProductReference-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setProduct</h4>
-<pre>void&nbsp;setProduct(<a href="../../../../../com/commercetools/api/models/product/ProductResourceIdentifier.html" title="interface in com.commercetools.api.models.product">ProductResourceIdentifier</a>&nbsp;product)</pre>
+<pre>void&nbsp;setProduct(<a href="../../../../../com/commercetools/api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</pre>
 </li>
 </ul>
 <a name="setVariantId-java.lang.Long-">
@@ -266,22 +252,22 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <pre>void&nbsp;setVariantId(java.lang.Long&nbsp;variantId)</pre>
 </li>
 </ul>
-<a name="setSupplyChannel-com.commercetools.api.models.channel.ChannelResourceIdentifier-">
+<a name="setSupplyChannel-com.commercetools.api.models.channel.ChannelReference-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setSupplyChannel</h4>
-<pre>void&nbsp;setSupplyChannel(<a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</pre>
+<pre>void&nbsp;setSupplyChannel(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</pre>
 </li>
 </ul>
-<a name="setDistributionChannel-com.commercetools.api.models.channel.ChannelResourceIdentifier-">
+<a name="setDistributionChannel-com.commercetools.api.models.channel.ChannelReference-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setDistributionChannel</h4>
-<pre>void&nbsp;setDistributionChannel(<a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;distributionChannel)</pre>
+<pre>void&nbsp;setDistributionChannel(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;distributionChannel)</pre>
 </li>
 </ul>
 <a name="of--">
@@ -290,7 +276,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraftImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraftImpl</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft-">
@@ -299,25 +285,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraftBuilder</a>&nbsp;builder()</pre>
-</li>
-</ul>
-<a name="builder-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemDraft-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraftImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withCartDiscountValueGiftLineItemDraft-java.util.function.Function-">

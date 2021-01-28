@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":17,"i10":17,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":17,"i8":17,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -130,104 +130,96 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#builder-com.commercetools.importapi.models.productvariants.ProductVariantImport-">builder</a></span>(<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#getAssets--">getAssets</a></span>()</code>
 <div class="block">Maps to <code>ProductVariant.assets</code>.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#getAttributes--">getAttributes</a></span>()</code>
 <div class="block">Maps to <code>ProductVariant.attributes</code>.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#getImages--">getImages</a></span>()</code>
 <div class="block">Maps to <code>ProductVariant.images</code>.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#getIsMasterVariant--">getIsMasterVariant</a></span>()</code>
 <div class="block">Maps to <code>ProductVariant.isMasterVariant</code>.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#getProduct--">getProduct</a></span>()</code>
 <div class="block">The product in which this product variant is contained.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#getPublish--">getPublish</a></span>()</code>
 <div class="block">If there were updates, only the updates will be published to <code>staged</code> and <code>current</code> projection.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#getSku--">getSku</a></span>()</code>
 <div class="block">Maps to <code>ProductVariant.sku</code>.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a></code></td>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImportImpl.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a></code></td>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImportImpl.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#of-com.commercetools.importapi.models.productvariants.ProductVariantImport-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setAssets-com.commercetools.importapi.models.common.Asset...-">setAssets</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>...&nbsp;assets)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setAssets-java.util.List-">setAssets</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Asset.html" title="interface in com.commercetools.importapi.models.common">Asset</a>&gt;&nbsp;assets)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setAttributes-com.commercetools.importapi.models.productvariants.Attribute...-">setAttributes</a></span>(<a href="../../../../../com/commercetools/importapi/models/productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>...&nbsp;attributes)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setAttributes-java.util.List-">setAttributes</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;attributes)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setImages-com.commercetools.importapi.models.common.Image...-">setImages</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>...&nbsp;images)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setImages-java.util.List-">setImages</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Image.html" title="interface in com.commercetools.importapi.models.common">Image</a>&gt;&nbsp;images)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setIsMasterVariant-java.lang.Boolean-">setIsMasterVariant</a></span>(java.lang.Boolean&nbsp;isMasterVariant)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setProduct-com.commercetools.importapi.models.common.ProductKeyReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setPublish-java.lang.Boolean-">setPublish</a></span>(java.lang.Boolean&nbsp;publish)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#setSku-java.lang.String-">setSku</a></span>(java.lang.String&nbsp;sku)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html#withProductVariantImport-java.util.function.Function-">withProductVariantImport</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -237,7 +229,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.importapi.models.common.<a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></h3>
-<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#builder-com.commercetools.importapi.models.common.ImportResource-">builder</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#getKey--">getKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of-com.commercetools.importapi.models.common.ImportResource-">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#setKey-java.lang.String-">setKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#withImportResource-java.util.function.Function-">withImportResource</a></code></li>
+<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#getKey--">getKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of-com.commercetools.importapi.models.common.ImportResource-">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#setKey-java.lang.String-">setKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#withImportResource-java.util.function.Function-">withImportResource</a></code></li>
 </ul>
 </li>
 </ul>
@@ -431,7 +423,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImportImpl.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportImpl</a>&nbsp;of()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of--">of</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -444,29 +436,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a>&nbsp;builder()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#builder--">builder</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="builder-com.commercetools.importapi.models.productvariants.ProductVariantImport-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImportImpl.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/productvariants/ProductVariantImport.html" title="interface in com.commercetools.importapi.models.productvariants">ProductVariantImport</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withProductVariantImport-java.util.function.Function-">

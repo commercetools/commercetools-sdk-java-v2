@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":17,"i24":17,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":6,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6,"i42":6,"i43":6,"i44":6,"i45":6,"i46":6,"i47":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":17,"i22":17,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":6,"i36":6,"i37":6,"i38":6,"i39":6,"i40":6,"i41":6,"i42":6,"i43":6,"i44":6,"i45":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -129,236 +129,228 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#builder-com.commercetools.importapi.models.customers.CustomerImport-">builder</a></span>(<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getAddresses--">getAddresses</a></span>()</code>
 <div class="block">Maps to <code>Customer.addresses</code>.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getBillingAddresses--">getBillingAddresses</a></span>()</code>
 <div class="block">Maps to <code>Customer.billingAddresses</code>.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getCompanyName--">getCompanyName</a></span>()</code>
 <div class="block">Maps to <code>Customer.companyName</code>.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getCustom--">getCustom</a></span>()</code>
 <div class="block">The custom fields for this Customer.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getCustomerGroup--">getCustomerGroup</a></span>()</code>
 <div class="block">References a customer group by its key.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getCustomerNumber--">getCustomerNumber</a></span>()</code>
 <div class="block">Maps to <code>Customer.customerNumber</code>.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.time.LocalDate</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getDateOfBirth--">getDateOfBirth</a></span>()</code>
 <div class="block">Maps to <code>Customer.dateOfBirth</code>.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getDefaultBillingAddress--">getDefaultBillingAddress</a></span>()</code>
 <div class="block">Maps to <code>Customer.defaultBillingAddress</code>.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getDefaultShippingAddress--">getDefaultShippingAddress</a></span>()</code>
 <div class="block">Maps to <code>Customer.defaultShippingAddress</code>.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getEmail--">getEmail</a></span>()</code>
 <div class="block">Maps to <code>Customer.email</code>.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getExternalId--">getExternalId</a></span>()</code>
 <div class="block">Maps to <code>Customer.externalId</code>.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getFirstName--">getFirstName</a></span>()</code>
 <div class="block">Maps to <code>Customer.firstName</code>.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getIsEmailVerified--">getIsEmailVerified</a></span>()</code>
 <div class="block">Maps to <code>Customer.isEmailVerified</code>.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getLastName--">getLastName</a></span>()</code>
 <div class="block">Maps to <code>Customer.lastName</code>.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getLocale--">getLocale</a></span>()</code>
 <div class="block">Maps to <code>Customer.locale</code>.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getMiddleName--">getMiddleName</a></span>()</code>
 <div class="block">Maps to <code>Customer.middleName</code>.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getPassword--">getPassword</a></span>()</code>
 <div class="block">Maps to <code>Customer.password</code>.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getSalutation--">getSalutation</a></span>()</code>
 <div class="block">Maps to <code>Customer.salutation</code>.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getShippingAddresses--">getShippingAddresses</a></span>()</code>
 <div class="block">Maps to <code>Customer.shippingAddresses</code>.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getTitle--">getTitle</a></span>()</code>
 <div class="block">Maps to <code>Customer.title</code>.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#getVatId--">getVatId</a></span>()</code>
 <div class="block">Maps to <code>Customer.vatId</code>.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a></code></td>
+<tr id="i21" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportImpl.html" title="class in com.commercetools.importapi.models.customers">CustomerImportImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a></code></td>
+<tr id="i22" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportImpl.html" title="class in com.commercetools.importapi.models.customers">CustomerImportImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#of-com.commercetools.importapi.models.customers.CustomerImport-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setAddresses-com.commercetools.importapi.models.common.Address...-">setAddresses</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>...&nbsp;addresses)</code>&nbsp;</td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setAddresses-java.util.List-">setAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&gt;&nbsp;addresses)</code>&nbsp;</td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setBillingAddresses-com.commercetools.importapi.models.common.Address-">setBillingAddresses</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&nbsp;billingAddresses)</code>&nbsp;</td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setCompanyName-java.lang.String-">setCompanyName</a></span>(java.lang.String&nbsp;companyName)</code>&nbsp;</td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setCustom-com.commercetools.importapi.models.customfields.Custom-">setCustom</a></span>(<a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setCustomerGroup-com.commercetools.importapi.models.common.CustomerGroupKeyReference-">setCustomerGroup</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</code>&nbsp;</td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setCustomerNumber-java.lang.String-">setCustomerNumber</a></span>(java.lang.String&nbsp;customerNumber)</code>&nbsp;</td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setDateOfBirth-java.time.LocalDate-">setDateOfBirth</a></span>(java.time.LocalDate&nbsp;dateOfBirth)</code>&nbsp;</td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setDefaultBillingAddress-com.commercetools.importapi.models.common.Address-">setDefaultBillingAddress</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&nbsp;defaultBillingAddress)</code>&nbsp;</td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setDefaultShippingAddress-com.commercetools.importapi.models.common.Address-">setDefaultShippingAddress</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&nbsp;defaultShippingAddress)</code>&nbsp;</td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setEmail-java.lang.String-">setEmail</a></span>(java.lang.String&nbsp;email)</code>&nbsp;</td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setExternalId-java.lang.String-">setExternalId</a></span>(java.lang.String&nbsp;externalId)</code>&nbsp;</td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setFirstName-java.lang.String-">setFirstName</a></span>(java.lang.String&nbsp;firstName)</code>&nbsp;</td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setIsEmailVerified-java.lang.Boolean-">setIsEmailVerified</a></span>(java.lang.Boolean&nbsp;isEmailVerified)</code>&nbsp;</td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setLastName-java.lang.String-">setLastName</a></span>(java.lang.String&nbsp;lastName)</code>&nbsp;</td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setLocale-java.lang.String-">setLocale</a></span>(java.lang.String&nbsp;locale)</code>&nbsp;</td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setMiddleName-java.lang.String-">setMiddleName</a></span>(java.lang.String&nbsp;middleName)</code>&nbsp;</td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setPassword-java.lang.String-">setPassword</a></span>(java.lang.String&nbsp;password)</code>&nbsp;</td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setSalutation-java.lang.String-">setSalutation</a></span>(java.lang.String&nbsp;salutation)</code>&nbsp;</td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setShippingAddresses-com.commercetools.importapi.models.common.Address-">setShippingAddresses</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/Address.html" title="interface in com.commercetools.importapi.models.common">Address</a>&nbsp;shippingAddresses)</code>&nbsp;</td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setTitle-java.lang.String-">setTitle</a></span>(java.lang.String&nbsp;title)</code>&nbsp;</td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#setVatId-java.lang.String-">setVatId</a></span>(java.lang.String&nbsp;vatId)</code>&nbsp;</td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html#withCustomerImport-java.util.function.Function-">withCustomerImport</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -368,7 +360,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.importapi.models.common.<a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></h3>
-<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#builder-com.commercetools.importapi.models.common.ImportResource-">builder</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#getKey--">getKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of-com.commercetools.importapi.models.common.ImportResource-">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#setKey-java.lang.String-">setKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#withImportResource-java.util.function.Function-">withImportResource</a></code></li>
+<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#getKey--">getKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of-com.commercetools.importapi.models.common.ImportResource-">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#setKey-java.lang.String-">setKey</a>, <a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#withImportResource-java.util.function.Function-">withImportResource</a></code></li>
 </ul>
 </li>
 </ul>
@@ -810,7 +802,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportImpl.html" title="class in com.commercetools.importapi.models.customers">CustomerImportImpl</a>&nbsp;of()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#of--">of</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -823,29 +815,7 @@ extends <a href="../../../../../com/commercetools/importapi/models/common/Import
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>&nbsp;builder()</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html#builder--">builder</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="builder-com.commercetools.importapi.models.customers.CustomerImport-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImportImpl.html" title="class in com.commercetools.importapi.models.customers">CustomerImportImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/customers/CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withCustomerImport-java.util.function.Function-">

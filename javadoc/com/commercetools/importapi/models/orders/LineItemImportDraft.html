@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":17,"i13":17,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":17,"i11":17,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -126,124 +126,116 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#builder-com.commercetools.importapi.models.orders.LineItemImportDraft-">builder</a></span>(<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getDistributionChannel--">getDistributionChannel</a></span>()</code>
 <div class="block">References a distribution channel.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getName--">getName</a></span>()</code>
 <div class="block">Maps to <code>LineItem.name</code>.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getPrice--">getPrice</a></span>()</code>
 <div class="block">Maps to <code>LineItem.price</code>.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getProduct--">getProduct</a></span>()</code>
 <div class="block">Maps to <code>LineItem.productId</code>.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getQuantity--">getQuantity</a></span>()</code>
 <div class="block">Maps to <code>LineItem.quantity</code>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/orders/ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getShippingDetails--">getShippingDetails</a></span>()</code>
 <div class="block">Maps to LineItem.shippingDetails.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/orders/ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getState--">getState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getSupplyChannel--">getSupplyChannel</a></span>()</code>
 <div class="block">References a supply channel.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/importapi/models/prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getTaxRate--">getTaxRate</a></span>()</code>
 <div class="block">Maps to <code>LineItem.taxRate</code>.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/importapi/models/orders/LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#getVariant--">getVariant</a></span>()</code>
 <div class="block">Maps to <code>ProductVariantImportDraft</code>.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></td>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a></code></td>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#of-com.commercetools.importapi.models.orders.LineItemImportDraft-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setDistributionChannel-com.commercetools.importapi.models.common.ChannelKeyReference-">setDistributionChannel</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;distributionChannel)</code>&nbsp;</td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setName-com.commercetools.importapi.models.common.LocalizedString-">setName</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setPrice-com.commercetools.importapi.models.orders.LineItemPrice-">setPrice</a></span>(<a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a>&nbsp;price)</code>&nbsp;</td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setProduct-com.commercetools.importapi.models.common.ProductKeyReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</code>&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setQuantity-java.lang.Double-">setQuantity</a></span>(java.lang.Double&nbsp;quantity)</code>&nbsp;</td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setShippingDetails-com.commercetools.importapi.models.orders.ItemShippingDetailsDraft-">setShippingDetails</a></span>(<a href="../../../../../com/commercetools/importapi/models/orders/ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</code>&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setState-com.commercetools.importapi.models.orders.ItemState...-">setState</a></span>(<a href="../../../../../com/commercetools/importapi/models/orders/ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>...&nbsp;state)</code>&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setState-java.util.List-">setState</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/orders/ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;&nbsp;state)</code>&nbsp;</td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setSupplyChannel-com.commercetools.importapi.models.common.ChannelKeyReference-">setSupplyChannel</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;supplyChannel)</code>&nbsp;</td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setTaxRate-com.commercetools.importapi.models.prices.TaxRate-">setTaxRate</a></span>(<a href="../../../../../com/commercetools/importapi/models/prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a>&nbsp;taxRate)</code>&nbsp;</td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#setVariant-com.commercetools.importapi.models.orders.LineItemProductVariantImportDraft-">setVariant</a></span>(<a href="../../../../../com/commercetools/importapi/models/orders/LineItemProductVariantImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemProductVariantImportDraft</a>&nbsp;variant)</code>&nbsp;</td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html#withLineItemImportDraft-java.util.function.Function-">withLineItemImportDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -485,7 +477,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftImpl</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.importapi.models.orders.LineItemImportDraft-">
@@ -494,25 +486,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a>&nbsp;builder()</pre>
-</li>
-</ul>
-<a name="builder-com.commercetools.importapi.models.orders.LineItemImportDraft-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraftImpl.html" title="class in com.commercetools.importapi.models.orders">LineItemImportDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/orders/LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withLineItemImportDraft-java.util.function.Function-">

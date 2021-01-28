@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":17,"i7":17,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":6,"i10":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,62 +123,54 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMetaBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductMetaBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#builder--">builder</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMetaBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductMetaBuilder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#builder-com.commercetools.ml.models.similar_products.SimilarProductMeta-">builder</a></span>(<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#getDescription--">getDescription</a></span>()</code>
 <div class="block">Localized product description used for similarity estimation.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#getName--">getName</a></span>()</code>
 <div class="block">Localized product name used for similarity estimation.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/ml/models/common/Money.html" title="interface in com.commercetools.ml.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#getPrice--">getPrice</a></span>()</code>
 <div class="block">The product price in cents using the currency defined in SimilarProductSearchRequest If multiple prices exist, the median value is taken as a representative amount.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#getVariantCount--">getVariantCount</a></span>()</code>
 <div class="block">Total number of variants associated with the product.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMetaImpl.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductMetaImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a></code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMetaImpl.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductMetaImpl</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#of-com.commercetools.ml.models.similar_products.SimilarProductMeta-">of</a></span>(<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#setDescription-com.commercetools.ml.models.common.LocalizedString-">setDescription</a></span>(<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;description)</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#setName-com.commercetools.ml.models.common.LocalizedString-">setName</a></span>(<a href="../../../../../com/commercetools/ml/models/common/LocalizedString.html" title="interface in com.commercetools.ml.models.common">LocalizedString</a>&nbsp;name)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#setPrice-com.commercetools.ml.models.common.Money-">setPrice</a></span>(<a href="../../../../../com/commercetools/ml/models/common/Money.html" title="interface in com.commercetools.ml.models.common">Money</a>&nbsp;price)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#setVariantCount-java.lang.Long-">setVariantCount</a></span>(java.lang.Long&nbsp;variantCount)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html#withSimilarProductMeta-java.util.function.Function-">withSimilarProductMeta</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -282,7 +274,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMetaImpl.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductMetaImpl</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.ml.models.similar_products.SimilarProductMeta-">
@@ -291,25 +283,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a>&nbsp;template)</pre>
-</li>
-</ul>
-<a name="builder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMetaBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductMetaBuilder</a>&nbsp;builder()</pre>
-</li>
-</ul>
-<a name="builder-com.commercetools.ml.models.similar_products.SimilarProductMeta-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>builder</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMetaBuilder.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductMetaBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMetaImpl.html" title="class in com.commercetools.ml.models.similar_products">SimilarProductMetaImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/similar_products/SimilarProductMeta.html" title="interface in com.commercetools.ml.models.similar_products">SimilarProductMeta</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withSimilarProductMeta-java.util.function.Function-">

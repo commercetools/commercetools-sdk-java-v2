@@ -31,25 +31,37 @@ public class CustomerFixtures {
         deleteCustomer(customer.getId(), customer.getVersion());
     }
 
-    public static Customer createCustomer() {
+    public static Customer createStoreCustomer() {
 
         Store store = StoreFixtures.createStore();
         CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
-        CustomerDraft customerDraft = CustomerDraftBuilder.of()
-                .email("test-email-" + CommercetoolsTestUtils.randomString() + "@test.com")
-                .key(CommercetoolsTestUtils.randomKey())
-                .password(CommercetoolsTestUtils.randomString())
-                .stores(Arrays.asList(StoreResourceIdentifierBuilder.of().id(store.getId()).build()))
-                .customerGroup(CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build())
-                .addresses(Arrays.asList(AddressBuilder.of().country("DE").build()))
-                .build();
+        CustomerDraft customerDraft = CustomerDraftBuilder.of().email(
+                "test-email-" + CommercetoolsTestUtils.randomString() + "@test.com").key(
+                CommercetoolsTestUtils.randomKey()).password(CommercetoolsTestUtils.randomString()).stores(
+                Arrays.asList(StoreResourceIdentifierBuilder.of().id(store.getId()).build())).customerGroup(
+                CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build()).addresses(
+                Arrays.asList(AddressBuilder.of().country("DE").build())).build();
 
-        Customer customer = CommercetoolsTestUtils.getProjectRoot()
-                .customers()
-                .post(customerDraft)
-                .executeBlocking()
-                .getBody()
-                .getCustomer();
+        Customer customer = CommercetoolsTestUtils.getProjectRoot().customers().post(
+                customerDraft).executeBlocking().getBody().getCustomer();
+
+        Assert.assertNotNull(customer);
+        Assert.assertEquals(customer.getKey(), customerDraft.getKey());
+
+        return customer;
+    }
+
+    public static Customer createCustomer() {
+
+        CustomerGroup customerGroup = CustomerGroupFixtures.createCustomerGroup();
+        CustomerDraft customerDraft = CustomerDraftBuilder.of().email(
+                "test-email-" + CommercetoolsTestUtils.randomString() + "@test.com").key(
+                CommercetoolsTestUtils.randomKey()).password(CommercetoolsTestUtils.randomString()).customerGroup(
+                CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build()).addresses(
+                Arrays.asList(AddressBuilder.of().country("DE").build())).build();
+
+        Customer customer = CommercetoolsTestUtils.getProjectRoot().customers().post(
+                customerDraft).executeBlocking().getBody().getCustomer();
 
         Assert.assertNotNull(customer);
         Assert.assertEquals(customer.getKey(), customerDraft.getKey());

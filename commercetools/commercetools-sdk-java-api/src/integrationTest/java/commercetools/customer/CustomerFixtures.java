@@ -41,7 +41,7 @@ public class CustomerFixtures {
                 .password(CommercetoolsTestUtils.randomString())
                 .stores(Arrays.asList(StoreResourceIdentifierBuilder.of().id(store.getId()).build()))
                 .customerGroup(CustomerGroupResourceIdentifierBuilder.of().id(customerGroup.getId()).build())
-                .addresses(Arrays.asList(AddressBuilder.of().country("DEU").build()))
+                .addresses(Arrays.asList(AddressBuilder.of().country("DE").build()))
                 .build();
 
         Customer customer = CommercetoolsTestUtils.getProjectRoot()

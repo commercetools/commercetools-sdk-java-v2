@@ -30,8 +30,7 @@ public class JsonUtils {
         OBJECT_MAPPER.registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .registerModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .registerModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
-                .registerModules(loader)
-                .setSerializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
+                .registerModules(loader).setSerializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false).configure(
                     SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
     }

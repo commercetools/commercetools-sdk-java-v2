@@ -18,7 +18,6 @@ public class OAuthMiddleware  implements Middleware, AutoCloseable {
     private final OAuthHandler authHandler;
     private final Logger logger = LoggerFactory.getLogger(TokenSupplier.LOGGER_AUTH);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
-    private final ScheduledExecutorService executor = Executors.newScheduledThreadPool(1);
 
     public OAuthMiddleware(final OAuthHandler oAuthHandler)
     {
@@ -38,7 +37,7 @@ public class OAuthMiddleware  implements Middleware, AutoCloseable {
                 })
                 .withMaxRetries(maxRetries);
         this.authHandler = oauthHandler;
-        this.failsafeExecutor = Failsafe.with(retry).with(executor);
+        this.failsafeExecutor = Failsafe.with(retry);
     }
 
     @Override
@@ -53,7 +52,6 @@ public class OAuthMiddleware  implements Middleware, AutoCloseable {
 
     @Override
     public void close() {
-        executor.shutdown();
         authHandler.close();
     }
 }

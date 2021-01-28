@@ -22,7 +22,6 @@ import static java.util.Collections.singletonList;
 public class RetryMiddleware implements Middleware, AutoCloseable {
     Logger logger = LoggerFactory.getLogger(ClientFactory.COMMERCETOOLS);
 
-    private final ScheduledExecutorService executor = Executors.newScheduledThreadPool(2);
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 
     public RetryMiddleware(final int maxRetries) {
@@ -48,7 +47,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
                 .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
                 .onRetry(event -> logger.info("Retry #" + event.getAttemptCount()))
                 .withMaxRetries(maxRetries);
-        this.failsafeExecutor = Failsafe.with(retryPolicy).with(executor);
+        this.failsafeExecutor = Failsafe.with(retryPolicy);
     }
 
     @Override
@@ -58,6 +57,5 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
 
     @Override
     public void close() {
-        executor.shutdown();
     }
 }

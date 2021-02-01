@@ -9,7 +9,6 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.PagedQueryResponse;
-import com.commercetools.api.models.product.FacetResults;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -26,9 +25,6 @@ public final class PagedQueryResponseBuilder {
     private Long offset;
 
     private java.util.List<com.commercetools.api.models.common.BaseResource> results;
-
-    @Nullable
-    private com.commercetools.api.models.product.FacetResults facets;
 
     @Nullable
     private java.lang.Object meta;
@@ -64,11 +60,6 @@ public final class PagedQueryResponseBuilder {
         return this;
     }
 
-    public PagedQueryResponseBuilder facets(@Nullable final com.commercetools.api.models.product.FacetResults facets) {
-        this.facets = facets;
-        return this;
-    }
-
     public PagedQueryResponseBuilder meta(@Nullable final java.lang.Object meta) {
         this.meta = meta;
         return this;
@@ -96,17 +87,12 @@ public final class PagedQueryResponseBuilder {
     }
 
     @Nullable
-    public com.commercetools.api.models.product.FacetResults getFacets() {
-        return this.facets;
-    }
-
-    @Nullable
     public java.lang.Object getMeta() {
         return this.meta;
     }
 
     public PagedQueryResponse build() {
-        return new PagedQueryResponseImpl(limit, count, total, offset, results, facets, meta);
+        return new PagedQueryResponseImpl(limit, count, total, offset, results, meta);
     }
 
     public static PagedQueryResponseBuilder of() {
@@ -120,7 +106,6 @@ public final class PagedQueryResponseBuilder {
         builder.total = template.getTotal();
         builder.offset = template.getOffset();
         builder.results = template.getResults();
-        builder.facets = template.getFacets();
         builder.meta = template.getMeta();
         return builder;
     }

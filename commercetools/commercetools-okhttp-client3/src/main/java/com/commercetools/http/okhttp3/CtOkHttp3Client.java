@@ -12,15 +12,15 @@ import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import okhttp3.*;
+import okhttp3.internal.http.RealResponseBody;
+import okio.GzipSource;
+import okio.Okio;
 
 import io.vrap.rmf.base.client.ApiHttpHeaders;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.utils.Utils;
-import okhttp3.internal.http.RealResponseBody;
-import okio.GzipSource;
-import okio.Okio;
 
 public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
 
@@ -169,14 +169,10 @@ public class CtOkHttp3Client implements VrapHttpClient, AutoCloseable {
             }
 
             GzipSource responseBody = new GzipSource(response.body().source());
-            Headers strippedHeaders = response.headers().newBuilder()
-                    .removeAll("Content-Encoding")
-                    .removeAll("Content-Length")
-                    .build();
-            return response.newBuilder()
-                    .headers(strippedHeaders)
-                    .body(new RealResponseBody(strippedHeaders, Okio.buffer(responseBody)))
-                    .build();
+            Headers strippedHeaders = response.headers().newBuilder().removeAll("Content-Encoding").removeAll(
+                "Content-Length").build();
+            return response.newBuilder().headers(strippedHeaders).body(
+                new RealResponseBody(strippedHeaders, Okio.buffer(responseBody))).build();
         }
     }
 }

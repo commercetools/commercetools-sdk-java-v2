@@ -12,7 +12,12 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
+import javax.validation.constraints.NotNull;
+
 import okhttp3.*;
+import okhttp3.internal.http.RealResponseBody;
+import okio.GzipSource;
+import okio.Okio;
 
 import io.vrap.rmf.base.client.ApiHttpHeaders;
 import io.vrap.rmf.base.client.ApiHttpHeaders.HeaderEntry;
@@ -20,11 +25,6 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.utils.Utils;
-import okhttp3.internal.http.RealResponseBody;
-import okio.GzipSource;
-import okio.Okio;
-
-import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -33,7 +33,8 @@ import javax.validation.constraints.NotNull;
 public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder().connectTimeout(120,
-        TimeUnit.SECONDS).writeTimeout(120, TimeUnit.SECONDS).readTimeout(120, TimeUnit.SECONDS).addInterceptor(new UnzippingInterceptor());
+        TimeUnit.SECONDS).writeTimeout(120, TimeUnit.SECONDS).readTimeout(120, TimeUnit.SECONDS).addInterceptor(
+            new UnzippingInterceptor());
 
     private final OkHttpClient okHttpClient;
 
@@ -165,15 +166,11 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
             }
 
             GzipSource gzipSource = new GzipSource(responseBody.source());
-            Headers strippedHeaders = response.headers().newBuilder()
-                    .removeAll("Content-Encoding")
-                    .removeAll("Content-Length")
-                    .build();
+            Headers strippedHeaders = response.headers().newBuilder().removeAll("Content-Encoding").removeAll(
+                "Content-Length").build();
             String contentType = response.header("Content-Type");
-            return response.newBuilder()
-                    .headers(strippedHeaders)
-                    .body(new RealResponseBody(contentType, -1L, Okio.buffer(gzipSource)))
-                    .build();
+            return response.newBuilder().headers(strippedHeaders).body(
+                new RealResponseBody(contentType, -1L, Okio.buffer(gzipSource))).build();
         }
     }
 }

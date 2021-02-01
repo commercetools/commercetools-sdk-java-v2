@@ -22,15 +22,11 @@ public class MiddlewareFactory {
             final InternalLoggerFactory internalLoggerFactory, final Supplier<String> userAgent) {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
         return asList(
-                (request, next) ->
-                    next.apply(
-                        request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent.get())
-                                .withHeader(ApiHttpHeaders.ACCEPT_ENCODING, "gzip")
-                    ),
-                new ErrorMiddleware(),
-                new InternalLoggerMiddleware(internalLoggerFactory),
-                new OAuthMiddleware(oAuthHandler)
-        );
+            (request,
+                    next) -> next.apply(request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent.get()).withHeader(
+                        ApiHttpHeaders.ACCEPT_ENCODING, "gzip")),
+            new ErrorMiddleware(), new InternalLoggerMiddleware(internalLoggerFactory),
+            new OAuthMiddleware(oAuthHandler));
     }
 
     public static String buildUserAgent() {

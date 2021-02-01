@@ -3,5 +3,7 @@ dependencies {
     api project(":rmf:rmf-java-base")
     api "com.squareup.okhttp3:okhttp:4.0.1"
 
+    implementation "javax.validation:validation-api:${versions.validation}"
+
     testImplementation "junit:junit:${versions.junit}"
 }

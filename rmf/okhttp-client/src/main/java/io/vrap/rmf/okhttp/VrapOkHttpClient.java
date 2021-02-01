@@ -20,6 +20,11 @@ import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.utils.Utils;
+import okhttp3.internal.http.RealResponseBody;
+import okio.GzipSource;
+import okio.Okio;
+
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -28,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Utils;
 public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
     private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder().connectTimeout(120,
-        TimeUnit.SECONDS).writeTimeout(120, TimeUnit.SECONDS).readTimeout(120, TimeUnit.SECONDS);
+        TimeUnit.SECONDS).writeTimeout(120, TimeUnit.SECONDS).readTimeout(120, TimeUnit.SECONDS).addInterceptor(new UnzippingInterceptor());
 
     private final OkHttpClient okHttpClient;
 
@@ -139,5 +144,36 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
         okHttpClient.connectionPool().evictAll();
         if (okHttpClient.cache() != null)
             Objects.requireNonNull(okHttpClient.cache()).close();
+    }
+
+    private static class UnzippingInterceptor implements Interceptor {
+        @Override
+        @NotNull
+        public Response intercept(Chain chain) throws IOException {
+            Response response = chain.proceed(chain.request());
+            return unzip(response);
+        }
+
+        private Response unzip(final Response response) throws IOException {
+            if (!"gzip".equalsIgnoreCase(response.header("Content-Encoding"))) {
+                return response;
+            }
+
+            ResponseBody responseBody = response.body();
+            if (responseBody == null) {
+                return response;
+            }
+
+            GzipSource gzipSource = new GzipSource(responseBody.source());
+            Headers strippedHeaders = response.headers().newBuilder()
+                    .removeAll("Content-Encoding")
+                    .removeAll("Content-Length")
+                    .build();
+            String contentType = response.header("Content-Type");
+            return response.newBuilder()
+                    .headers(strippedHeaders)
+                    .body(new RealResponseBody(contentType, -1L, Okio.buffer(gzipSource)))
+                    .build();
+        }
     }
 }

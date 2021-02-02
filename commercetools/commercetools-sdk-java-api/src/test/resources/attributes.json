@@ -1,0 +1,158 @@
+{
+    "attributes": [
+        {
+            "name": "emptyArray",
+            "value": []
+        },
+        {
+            "name": "text",
+            "value": "foo"
+        },
+        {
+            "name": "ltext",
+            "value": { "en": "foo" }
+        },
+        {
+            "name": "integer",
+            "value": 10
+        },
+        {
+            "name": "double",
+            "value": 11.0
+        },
+        {
+            "name": "enum",
+            "value": {
+                "key": "foo",
+                "label": "foo"
+            }
+        },
+        {
+            "name": "lenum",
+            "value": {
+                "key": "foo",
+                "label": {
+                    "en": "foo"
+                }
+            }
+        },
+        {
+            "name": "money",
+            "value": {
+                "currencyCode": "EUR",
+                "centAmount": 100
+            }
+        },
+        {
+            "name": "reference",
+            "value": {
+                "typeId": "product",
+                "id": "12345"
+            }
+        },
+        {
+            "name": "date",
+            "value": "2020-01-01"
+        },
+        {
+            "name": "time",
+            "value": "13:15:00.123"
+        },
+        {
+            "name": "datetime",
+            "value": "2020-01-01T13:15:00.123Z"
+        },
+        {
+            "name": "boolean",
+            "value": true
+        },
+        {
+            "name": "set-text",
+            "value": ["foo"]
+        },
+        {
+            "name": "set-ltext",
+            "value": [{ "en": "foo" }]
+        },
+        {
+            "name": "set-integer",
+            "value": [10]
+        },
+        {
+            "name": "set-double",
+            "value": [11.0]
+        },
+        {
+            "name": "set-enum",
+            "value": [{
+                "key": "foo",
+                "label": "foo"
+            }]
+        },
+        {
+            "name": "set-lenum",
+            "value": [{
+                "key": "foo",
+                "label": {
+                    "en": "foo"
+                }
+            }]
+        },
+        {
+            "name": "set-money",
+            "value": [{
+                "currencyCode": "EUR",
+                "centAmount": 100
+            }]
+        },
+        {
+            "name": "set-reference",
+            "value": [{
+                "typeId": "product",
+                "id": "12345"
+            }]
+        },
+        {
+            "name": "set-date",
+            "value": ["2020-01-01"]
+        },
+        {
+            "name": "set-datetime",
+            "value": ["2020-01-01T13:15:00.123Z"]
+        },
+        {
+            "name": "set-time",
+            "value": ["13:15:00.123"]
+        },
+        {
+            "name": "set-boolean",
+            "value": [true]
+        },
+        {
+            "name": "nested",
+            "value": [
+                {
+                    "name": "nested-enum",
+                    "value": {
+                        "key": "foo",
+                        "label": "foo"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "set-nested",
+            "value": [
+                [
+                    {
+                        "name": "set-nested-enum",
+                        "value": {
+                            "key": "foo",
+                            "label": "foo"
+                        }
+                    }
+                ]
+            ]
+        }
+    ]
+}

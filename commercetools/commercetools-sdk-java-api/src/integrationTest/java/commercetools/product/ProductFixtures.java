@@ -18,10 +18,7 @@ import com.commercetools.api.models.customer_group.CustomerGroup;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder;
 import com.commercetools.api.models.product.*;
 import com.commercetools.api.models.product_discount.*;
-import com.commercetools.api.models.product_type.ProductType;
-import com.commercetools.api.models.product_type.ProductTypeDraft;
-import com.commercetools.api.models.product_type.ProductTypeDraftBuilder;
-import com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder;
+import com.commercetools.api.models.product_type.*;
 import com.commercetools.api.models.state.*;
 import com.commercetools.api.models.tax_category.TaxCategory;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierBuilder;
@@ -53,8 +50,48 @@ public class ProductFixtures {
     public static Product createProduct() {
         String randomKey = CommercetoolsTestUtils.randomKey();
 
-        ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).name(
-            CommercetoolsTestUtils.randomString()).description(CommercetoolsTestUtils.randomString()).build();
+
+        ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of()
+                .key(CommercetoolsTestUtils.randomKey())
+                .name(CommercetoolsTestUtils.randomString())
+                .description(CommercetoolsTestUtils.randomString())
+                .attributes(AttributeDefinitionDraftBuilder.of()
+                                .name("test-text")
+                                .label(LocalizedStringBuilder.of().addValue("en", "test-text").build())
+                                .isRequired(false)
+                                .type(AttributeTextTypeBuilder.of().build())
+                                .build(),
+                        AttributeDefinitionDraftBuilder.of()
+                                .name("test-number")
+                                .label(LocalizedStringBuilder.of().addValue("en", "test-number").build())
+                                .isRequired(false)
+                                .type(AttributeNumberTypeBuilder.of().build())
+                                .build(),
+                        AttributeDefinitionDraftBuilder.of()
+                                .name("test-enum")
+                                .label(LocalizedStringBuilder.of().addValue("en", "test-enum").build())
+                                .isRequired(false)
+                                .type(AttributeEnumTypeBuilder.of().values(AttributePlainEnumValueBuilder.of()
+                                        .key("test")
+                                        .label("test")
+                                        .build()
+                                        )
+                                    .build())
+                                .build(),
+                        AttributeDefinitionDraftBuilder.of()
+                                .name("test-set-text")
+                                .label(LocalizedStringBuilder.of().addValue("en", "test-set-text").build())
+                                .isRequired(false)
+                                .type(AttributeSetTypeBuilder.of().elementType(AttributeTextTypeBuilder.of().build()).build())
+                                .build(),
+                        AttributeDefinitionDraftBuilder.of()
+                                .name("test-set-number")
+                                .label(LocalizedStringBuilder.of().addValue("en", "test-set-number").build())
+                                .isRequired(false)
+                                .type(AttributeSetTypeBuilder.of().elementType(AttributeNumberTypeBuilder.of().build()).build())
+                                .build()
+                )
+                .build();
 
         ProductType productType = CommercetoolsTestUtils.getProjectRoot().productTypes().post(
             productTypeDraft).executeBlocking().getBody();
@@ -103,18 +140,41 @@ public class ProductFixtures {
                                                                     100L).currencyCode(
                                                                         "EUR").build()).build())).build();
 
-        ProductVariantDraft productVariantDraft = ProductVariantDraftBuilder.of().sku(
-            CommercetoolsTestUtils.randomString()).key(CommercetoolsTestUtils.randomKey()).prices(
-                Arrays.asList(priceDraft)).images(
-                    Arrays.asList(ImageBuilder.of().url("http://www.google.com").dimensions(
+        ProductVariantDraft productVariantDraft = ProductVariantDraftBuilder.of()
+                .sku(CommercetoolsTestUtils.randomString())
+                .key(CommercetoolsTestUtils.randomKey())
+                .prices(Arrays.asList(priceDraft))
+                .images(Arrays.asList(ImageBuilder.of().url("http://www.google.com").dimensions(
                         ImageDimensionsBuilder.of().w(100).h(100).build()).label(
-                            CommercetoolsTestUtils.randomString()).build())).assets(
-                                Arrays.asList(AssetDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).sources(
+                            CommercetoolsTestUtils.randomString()).build()))
+                .assets(Arrays.asList(AssetDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).sources(
                                     Arrays.asList(AssetSourceBuilder.of().uri("http://www.google.com").key(
                                         CommercetoolsTestUtils.randomKey()).dimensions(
                                             AssetDimensionsBuilder.of().h(10).w(10).build()).contentType(
                                                 "application/json").build())).name(
-                                                    CommercetoolsTestUtils.randomLocalizedString()).build())).build();
+                                                    CommercetoolsTestUtils.randomLocalizedString()).build()))
+                .attributes(AttributeBuilder.of()
+                                .name("test-text")
+                                .value("foo")
+                                .build(),
+                        AttributeBuilder.of()
+                                .name("test-number")
+                                .value(10)
+                                .build(),
+                        AttributeBuilder.of()
+                                .name("test-enum")
+                                .value("test")
+                                .build(),
+                        AttributeBuilder.of()
+                                .name("test-set-text")
+                                .value(Collections.singletonList("foo"))
+                                .build(),
+                        AttributeBuilder.of()
+                                .name("test-set-number")
+                                .value(Collections.singletonList(11))
+                                .build()
+                        )
+                .build();
 
         TaxCategory taxCategory = TaxCategoryFixtures.createTaxCategory();
 
@@ -133,8 +193,8 @@ public class ProductFixtures {
                                     CategoryOrderHintsBuilder.of().values(orderHint).build()).metaTitle(
                                         CommercetoolsTestUtils.randomLocalizedString()).metaDescription(
                                             CommercetoolsTestUtils.randomLocalizedString()).metaKeywords(
-                                                CommercetoolsTestUtils.randomLocalizedString()).variants(
-                                                    Arrays.asList(productVariantDraft)).taxCategory(
+                                                CommercetoolsTestUtils.randomLocalizedString()).masterVariant(
+                                                    productVariantDraft).taxCategory(
                                                         TaxCategoryResourceIdentifierBuilder.of().id(
                                                             taxCategory.getId()).build()).state(
                                                                 StateResourceIdentifierBuilder.of().id(

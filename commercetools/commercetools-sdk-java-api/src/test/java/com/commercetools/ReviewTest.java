@@ -1,16 +1,19 @@
+
 package com.commercetools;
+
+import static com.commercetools.TestUtils.stringFromResource;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import java.io.IOException;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.review.Review;
+
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
+
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
-
-import java.io.IOException;
-
-import static com.commercetools.TestUtils.stringFromResource;
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class ReviewTest {
 

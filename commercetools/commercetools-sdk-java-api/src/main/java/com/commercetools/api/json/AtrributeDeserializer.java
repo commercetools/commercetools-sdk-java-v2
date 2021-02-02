@@ -24,14 +24,13 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.JsonNodeType;
 
-
 public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
 
     private static Pattern p = Pattern.compile("^[0-9]");
-    private static Pattern dateTime = Pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
+    private static Pattern dateTime = Pattern.compile(
+        "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
     private static Pattern date = Pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}");
     private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
-
 
     @Override
     public AttributeImpl deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
@@ -42,82 +41,110 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
         AttributeBuilder builder = Attribute.builder();
         builder.name(node.get("name").asText());
 
-        return (AttributeImpl) builder.value(p.getCodec().treeAsTokens(valueNode).readValueAs(typeRef(valueNode))).build();
+        return (AttributeImpl) builder.value(
+            p.getCodec().treeAsTokens(valueNode).readValueAs(typeRef(valueNode))).build();
     }
 
     private TypeReference<?> typeRef(JsonNode valueNode) {
         JsonNodeType valueNodeType = valueNode.getNodeType();
         switch (valueNodeType) {
             case BOOLEAN:
-                return new TypeReference<Boolean>() {};
+                return new TypeReference<Boolean>() {
+                };
             case NUMBER:
-                return new TypeReference<Double>() {};
+                return new TypeReference<Double>() {
+                };
             case STRING:
                 String val = valueNode.asText();
                 if (p.matcher(val).find()) {
                     if (dateTime.matcher(val).find()) {
-                        return new TypeReference<ZonedDateTime>() {};
+                        return new TypeReference<ZonedDateTime>() {
+                        };
                     }
                     if (date.matcher(val).matches()) {
-                        return new TypeReference<LocalDate>() {};
+                        return new TypeReference<LocalDate>() {
+                        };
                     }
                     if (time.matcher(val).matches()) {
-                        return new TypeReference<LocalTime>() {};
+                        return new TypeReference<LocalTime>() {
+                        };
                     }
                 }
-                return new TypeReference<String>() {};
+                return new TypeReference<String>() {
+                };
             case OBJECT:
                 if (valueNode.has("key")) {
                     JsonNode label = valueNode.get("label");
                     if (label.getNodeType() == JsonNodeType.OBJECT) {
-                        return new TypeReference<AttributeLocalizedEnumValue>() {};
+                        return new TypeReference<AttributeLocalizedEnumValue>() {
+                        };
                     }
-                    return new TypeReference<AttributePlainEnumValue>() {};
+                    return new TypeReference<AttributePlainEnumValue>() {
+                    };
                 }
                 if (valueNode.has("currencyCode")) {
-                    return new TypeReference<TypedMoney>() {};
+                    return new TypeReference<TypedMoney>() {
+                    };
                 }
                 if (valueNode.has("typeId")) {
-                    return new TypeReference<Reference>() {};
+                    return new TypeReference<Reference>() {
+                    };
                 }
                 if (valueNode.has("value")) {
-                    return new TypeReference<Attribute>() {};
+                    return new TypeReference<Attribute>() {
+                    };
                 }
-                return new TypeReference<LocalizedString>() {};
+                return new TypeReference<LocalizedString>() {
+                };
             case ARRAY:
                 JsonNode first = valueNode.get(0);
                 switch (elemType(first)) {
                     case STRING:
-                        return new TypeReference<List<String>>() {};
+                        return new TypeReference<List<String>>() {
+                        };
                     case DATE:
-                        return new TypeReference<List<LocalDate>>() {};
+                        return new TypeReference<List<LocalDate>>() {
+                        };
                     case DATETIME:
-                        return new TypeReference<List<ZonedDateTime>>() {};
+                        return new TypeReference<List<ZonedDateTime>>() {
+                        };
                     case TIME:
-                        return new TypeReference<List<LocalTime>>() {};
+                        return new TypeReference<List<LocalTime>>() {
+                        };
                     case NUMBER:
-                        return new TypeReference<List<Double>>() {};
+                        return new TypeReference<List<Double>>() {
+                        };
                     case BOOLEAN:
-                        return new TypeReference<List<Boolean>>() {};
+                        return new TypeReference<List<Boolean>>() {
+                        };
                     case ENUM:
-                        return new TypeReference<List<AttributePlainEnumValue>>() {};
+                        return new TypeReference<List<AttributePlainEnumValue>>() {
+                        };
                     case LOCALIZED_ENUM:
-                        return new TypeReference<List<AttributeLocalizedEnumValue>>() {};
+                        return new TypeReference<List<AttributeLocalizedEnumValue>>() {
+                        };
                     case LOCALIZED_STRING:
-                        return new TypeReference<List<LocalizedString>>() {};
+                        return new TypeReference<List<LocalizedString>>() {
+                        };
                     case MONEY:
-                        return new TypeReference<List<TypedMoney>>() {};
+                        return new TypeReference<List<TypedMoney>>() {
+                        };
                     case REFERENCE:
-                        return new TypeReference<List<Reference>>() {};
+                        return new TypeReference<List<Reference>>() {
+                        };
                     case NESTED:
-                        return new TypeReference<List<Attribute>>() {};
+                        return new TypeReference<List<Attribute>>() {
+                        };
                     case SET_NESTED:
-                        return new TypeReference<List<List<Attribute>>>() {};
+                        return new TypeReference<List<List<Attribute>>>() {
+                        };
                     default:
-                        return new TypeReference<List<JsonNode>>() {};
+                        return new TypeReference<List<JsonNode>>() {
+                        };
                 }
             default:
-                return new TypeReference<JsonNode>() {};
+                return new TypeReference<JsonNode>() {
+                };
         }
     }
 

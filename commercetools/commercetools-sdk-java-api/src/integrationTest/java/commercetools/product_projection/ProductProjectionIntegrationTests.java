@@ -1,6 +1,8 @@
 
 package commercetools.product_projection;
 
+import java.util.List;
+
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionPagedQueryResponse;
 import com.commercetools.api.models.product.ProductProjectionPagedSearchResponse;
@@ -13,8 +15,6 @@ import commercetools.utils.CommercetoolsTestUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.List;
 
 public class ProductProjectionIntegrationTests {
 
@@ -51,10 +51,11 @@ public class ProductProjectionIntegrationTests {
     @Test
     public void search() {
         ProductFixtures.withProduct(product -> {
-            ProductProjectionPagedSearchResponse searchResponse = CommercetoolsTestUtils.getProjectRoot().productProjections().search().get().withFacet("categories.id").withStaged(true).executeBlocking().getBody();
+            ProductProjectionPagedSearchResponse searchResponse = CommercetoolsTestUtils.getProjectRoot().productProjections().search().get().withFacet(
+                "categories.id").withStaged(true).executeBlocking().getBody();
 
             Assertions.assertThat(searchResponse.getFacets().values().get("categories.id")).isInstanceOf(
-                    TermFacetResult.class);
+                TermFacetResult.class);
         });
     }
 
@@ -62,13 +63,21 @@ public class ProductProjectionIntegrationTests {
     public void attribute() {
         ProductFixtures.withProduct(product -> {
             ProductProjection productProjection = CommercetoolsTestUtils.getProjectRoot().productProjections().withKey(
-                    product.getKey()).get().withStaged(true).executeBlocking().getBody();
+                product.getKey()).get().withStaged(true).executeBlocking().getBody();
 
-            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(attribute -> attribute.getName().equals("test-text")).findFirst().get().getValue()).isEqualTo("foo");
-            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(attribute -> attribute.getName().equals("test-number")).findFirst().get().getValue()).isEqualTo(10.0);
-            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(attribute -> attribute.getName().equals("test-set-text")).findFirst().get().getValue()).asList().contains("foo");
-            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(attribute -> attribute.getName().equals("test-set-number")).findFirst().get().getValue()).asList().contains(11.0);
-            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(attribute -> attribute.getName().equals("test-enum")).findFirst().get().getValue()).isInstanceOf(AttributePlainEnumValue.class);
+            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(
+                attribute -> attribute.getName().equals("test-text")).findFirst().get().getValue()).isEqualTo("foo");
+            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(
+                attribute -> attribute.getName().equals("test-number")).findFirst().get().getValue()).isEqualTo(10.0);
+            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(
+                attribute -> attribute.getName().equals(
+                    "test-set-text")).findFirst().get().getValue()).asList().contains("foo");
+            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(
+                attribute -> attribute.getName().equals(
+                    "test-set-number")).findFirst().get().getValue()).asList().contains(11.0);
+            Assertions.assertThat(productProjection.getMasterVariant().getAttributes().stream().filter(
+                attribute -> attribute.getName().equals("test-enum")).findFirst().get().getValue()).isInstanceOf(
+                    AttributePlainEnumValue.class);
         });
     }
 }

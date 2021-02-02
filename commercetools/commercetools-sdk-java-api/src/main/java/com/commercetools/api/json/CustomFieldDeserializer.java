@@ -35,7 +35,7 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
     @Override
     public FieldContainerImpl deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
 
-        JsonNode node = p.getCodec().readTree(p);
+        JsonNode node = p.readValueAsTree();
 
         FieldContainerBuilder builder = FieldContainerBuilder.of();
 
@@ -46,7 +46,7 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
 
     private Object mapValue(JsonParser p, JsonNode nodeValue) {
         try {
-            return p.getCodec().readValue(p.getCodec().treeAsTokens(nodeValue), typeRef(nodeValue));
+            return p.getCodec().treeAsTokens(nodeValue).readValueAs(typeRef(nodeValue));
         }
         catch (IOException e) {
             throw new RuntimeException(e);

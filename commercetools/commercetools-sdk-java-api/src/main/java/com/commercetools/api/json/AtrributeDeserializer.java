@@ -36,13 +36,13 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
     @Override
     public AttributeImpl deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
 
-        JsonNode node = p.getCodec().readTree(p);
+        JsonNode node = p.readValueAsTree();
         JsonNode valueNode = node.get("value");
 
         AttributeBuilder builder = Attribute.builder();
         builder.name(node.get("name").asText());
 
-        return (AttributeImpl) builder.value(p.getCodec().readValue(p.getCodec().treeAsTokens(valueNode), typeRef(valueNode))).build();
+        return (AttributeImpl) builder.value(p.getCodec().treeAsTokens(valueNode).readValueAs(typeRef(valueNode))).build();
     }
 
     private TypeReference<?> typeRef(JsonNode valueNode) {

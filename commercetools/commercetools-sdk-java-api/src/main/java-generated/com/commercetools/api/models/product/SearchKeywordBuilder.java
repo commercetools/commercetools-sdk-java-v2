@@ -1,13 +1,13 @@
 
 package com.commercetools.api.models.product;
 
-import java.lang.Object;
 import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.product.SearchKeyword;
+import com.commercetools.api.models.product.SuggestTokenizer;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -17,14 +17,15 @@ public final class SearchKeywordBuilder {
     private String text;
 
     @Nullable
-    private java.lang.Object suggestTokenizer;
+    private com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer;
 
     public SearchKeywordBuilder text(final String text) {
         this.text = text;
         return this;
     }
 
-    public SearchKeywordBuilder suggestTokenizer(@Nullable final java.lang.Object suggestTokenizer) {
+    public SearchKeywordBuilder suggestTokenizer(
+            @Nullable final com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer) {
         this.suggestTokenizer = suggestTokenizer;
         return this;
     }
@@ -34,7 +35,7 @@ public final class SearchKeywordBuilder {
     }
 
     @Nullable
-    public java.lang.Object getSuggestTokenizer() {
+    public com.commercetools.api.models.product.SuggestTokenizer getSuggestTokenizer() {
         return this.suggestTokenizer;
     }
 

@@ -1,7 +1,6 @@
 
 package com.commercetools.importapi.models.categories;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -9,7 +8,6 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.importapi.models.categories.CategoryImportImpl;
 import com.commercetools.importapi.models.common.Asset;
 import com.commercetools.importapi.models.common.CategoryKeyReference;
 import com.commercetools.importapi.models.common.ImportResource;
@@ -18,7 +16,6 @@ import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**

@@ -1,7 +1,6 @@
 
 package com.commercetools.ml.models.image_search;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -9,12 +8,9 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.ml.models.image_search.ImageSearchResponseImpl;
-import com.commercetools.ml.models.image_search.ResultItem;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**

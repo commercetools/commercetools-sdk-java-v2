@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.error;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.customer_group.CustomerGroupReference;
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.MatchingPriceNotFoundError;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

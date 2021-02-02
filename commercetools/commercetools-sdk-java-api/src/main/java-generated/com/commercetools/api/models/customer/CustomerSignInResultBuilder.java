@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.customer;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.Cart;
-import com.commercetools.api.models.customer.Customer;
-import com.commercetools.api.models.customer.CustomerSignInResult;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

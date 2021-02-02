@@ -1,13 +1,7 @@
 
 package com.commercetools.importapi.models.orders;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.orders.ItemShippingDetailsDraft;
-import com.commercetools.importapi.models.orders.ItemShippingTarget;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

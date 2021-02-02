@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.inventory;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.inventory.InventoryEntry;
-import com.commercetools.api.models.inventory.InventoryPagedQueryResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

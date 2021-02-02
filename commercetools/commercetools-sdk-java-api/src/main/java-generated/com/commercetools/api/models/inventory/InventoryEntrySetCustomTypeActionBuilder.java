@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.inventory;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeAction;
-import com.commercetools.api.models.inventory.InventoryEntryUpdateAction;
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

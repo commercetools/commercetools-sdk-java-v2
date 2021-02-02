@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.error;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.PriceDraft;
-import com.commercetools.api.models.error.VariantValues;
-import com.commercetools.api.models.product.Attribute;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

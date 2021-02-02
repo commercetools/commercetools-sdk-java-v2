@@ -1,44 +1,15 @@
 
 package com.commercetools.api.models.me;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.me.MyCartAddDiscountCodeAction;
-import com.commercetools.api.models.me.MyCartAddItemShippingAddressAction;
-import com.commercetools.api.models.me.MyCartAddLineItemAction;
-import com.commercetools.api.models.me.MyCartAddPaymentAction;
-import com.commercetools.api.models.me.MyCartApplyDeltaToLineItemShippingDetailsTargetsAction;
-import com.commercetools.api.models.me.MyCartChangeLineItemQuantityAction;
-import com.commercetools.api.models.me.MyCartChangeTaxModeAction;
-import com.commercetools.api.models.me.MyCartRecalculateAction;
-import com.commercetools.api.models.me.MyCartRemoveDiscountCodeAction;
-import com.commercetools.api.models.me.MyCartRemoveItemShippingAddressAction;
-import com.commercetools.api.models.me.MyCartRemoveLineItemAction;
-import com.commercetools.api.models.me.MyCartRemovePaymentAction;
-import com.commercetools.api.models.me.MyCartSetBillingAddressAction;
-import com.commercetools.api.models.me.MyCartSetCountryAction;
-import com.commercetools.api.models.me.MyCartSetCustomFieldAction;
-import com.commercetools.api.models.me.MyCartSetCustomShippingMethodAction;
-import com.commercetools.api.models.me.MyCartSetCustomTypeAction;
-import com.commercetools.api.models.me.MyCartSetDeleteDaysAfterLastModificationAction;
-import com.commercetools.api.models.me.MyCartSetLineItemCustomFieldAction;
-import com.commercetools.api.models.me.MyCartSetLineItemCustomTypeAction;
-import com.commercetools.api.models.me.MyCartSetLineItemDistributionChannelAction;
-import com.commercetools.api.models.me.MyCartSetLineItemShippingDetailsAction;
-import com.commercetools.api.models.me.MyCartSetLocaleAction;
-import com.commercetools.api.models.me.MyCartSetShippingAddressAction;
-import com.commercetools.api.models.me.MyCartSetShippingMethodAction;
-import com.commercetools.api.models.me.MyCartUpdateItemShippingAddressAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

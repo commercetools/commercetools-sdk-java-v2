@@ -4,27 +4,8 @@ package com.commercetools.importapi.models.producttypes;
 import java.time.*;
 import java.util.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
-import com.commercetools.importapi.models.producttypes.AttributeBooleanType;
-import com.commercetools.importapi.models.producttypes.AttributeDateTimeType;
-import com.commercetools.importapi.models.producttypes.AttributeDateType;
-import com.commercetools.importapi.models.producttypes.AttributeEnumType;
-import com.commercetools.importapi.models.producttypes.AttributeLocalizableTextType;
-import com.commercetools.importapi.models.producttypes.AttributeLocalizedEnumType;
-import com.commercetools.importapi.models.producttypes.AttributeMoneyType;
-import com.commercetools.importapi.models.producttypes.AttributeNestedType;
-import com.commercetools.importapi.models.producttypes.AttributeNumberType;
-import com.commercetools.importapi.models.producttypes.AttributeReferenceType;
-import com.commercetools.importapi.models.producttypes.AttributeSetType;
-import com.commercetools.importapi.models.producttypes.AttributeTextType;
-import com.commercetools.importapi.models.producttypes.AttributeTimeType;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;

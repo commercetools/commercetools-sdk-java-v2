@@ -1,14 +1,7 @@
 
 package com.commercetools.ml.models.missing_data;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.ml.models.common.TaskStatusEnum;
-import com.commercetools.ml.models.missing_data.MissingImagesPagedQueryResult;
-import com.commercetools.ml.models.missing_data.MissingImagesTaskStatus;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.error;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.ReferenceTypeId;
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.ReferenceExistsError;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

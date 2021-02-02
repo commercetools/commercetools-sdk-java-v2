@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.message;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.DiscountCodeState;
-import com.commercetools.api.models.discount_code.DiscountCodeReference;
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.OrderDiscountCodeStateSetMessagePayload;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

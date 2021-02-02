@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.category;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.category.CategorySetKeyAction;
-import com.commercetools.api.models.category.CategoryUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,29 +1,15 @@
 
 package com.commercetools.api.models.review;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.review.ReviewSetAuthorNameAction;
-import com.commercetools.api.models.review.ReviewSetCustomFieldAction;
-import com.commercetools.api.models.review.ReviewSetCustomTypeAction;
-import com.commercetools.api.models.review.ReviewSetCustomerAction;
-import com.commercetools.api.models.review.ReviewSetKeyAction;
-import com.commercetools.api.models.review.ReviewSetLocaleAction;
-import com.commercetools.api.models.review.ReviewSetRatingAction;
-import com.commercetools.api.models.review.ReviewSetTargetAction;
-import com.commercetools.api.models.review.ReviewSetTextAction;
-import com.commercetools.api.models.review.ReviewSetTitleAction;
-import com.commercetools.api.models.review.ReviewTransitionStateAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

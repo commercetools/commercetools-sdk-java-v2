@@ -1,7 +1,6 @@
 
 package com.commercetools.importapi.models.productvariants;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -13,12 +12,9 @@ import com.commercetools.importapi.models.common.Asset;
 import com.commercetools.importapi.models.common.Image;
 import com.commercetools.importapi.models.common.ImportResource;
 import com.commercetools.importapi.models.common.ProductKeyReference;
-import com.commercetools.importapi.models.productvariants.Attribute;
-import com.commercetools.importapi.models.productvariants.ProductVariantImportImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**

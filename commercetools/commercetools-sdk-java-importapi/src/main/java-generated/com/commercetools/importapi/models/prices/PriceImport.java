@@ -1,7 +1,6 @@
 
 package com.commercetools.importapi.models.prices;
 
-import java.io.IOException;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -19,11 +18,9 @@ import com.commercetools.importapi.models.common.ProductKeyReference;
 import com.commercetools.importapi.models.common.ProductVariantKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
 import com.commercetools.importapi.models.customfields.Custom;
-import com.commercetools.importapi.models.prices.PriceImportImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**

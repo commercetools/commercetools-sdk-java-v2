@@ -1,14 +1,7 @@
 
 package com.commercetools.importapi.models.customfields;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.customfields.CustomField;
-import com.commercetools.importapi.models.customfields.MoneyField;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

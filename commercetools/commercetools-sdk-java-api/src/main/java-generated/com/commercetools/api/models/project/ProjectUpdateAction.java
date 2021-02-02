@@ -1,27 +1,15 @@
 
 package com.commercetools.api.models.project;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.project.ProjectChangeCountriesAction;
-import com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction;
-import com.commercetools.api.models.project.ProjectChangeCurrenciesAction;
-import com.commercetools.api.models.project.ProjectChangeLanguagesAction;
-import com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction;
-import com.commercetools.api.models.project.ProjectChangeMessagesEnabledAction;
-import com.commercetools.api.models.project.ProjectChangeNameAction;
-import com.commercetools.api.models.project.ProjectSetExternalOAuthAction;
-import com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

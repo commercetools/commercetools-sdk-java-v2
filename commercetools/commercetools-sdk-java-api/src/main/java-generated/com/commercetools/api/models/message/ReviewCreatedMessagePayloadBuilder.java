@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.message;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.ReviewCreatedMessagePayload;
-import com.commercetools.api.models.review.Review;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

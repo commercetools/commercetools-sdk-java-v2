@@ -1,18 +1,9 @@
 
 package com.commercetools.api.models.common;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.common.DiscountedPrice;
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.common.PriceDraft;
-import com.commercetools.api.models.common.PriceTierDraft;
-import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
-import com.commercetools.api.models.type.CustomFieldsDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.customer;
 
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.customer.CustomerSetDateOfBirthAction;
-import com.commercetools.api.models.customer.CustomerUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

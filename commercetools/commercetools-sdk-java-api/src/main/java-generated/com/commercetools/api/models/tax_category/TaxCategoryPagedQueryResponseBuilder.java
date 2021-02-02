@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.tax_category;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.tax_category.TaxCategory;
-import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,17 +1,9 @@
 
 package com.commercetools.importapi.models.customers;
 
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.Address;
-import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
-import com.commercetools.importapi.models.common.ImportResource;
-import com.commercetools.importapi.models.customers.CustomerImport;
-import com.commercetools.importapi.models.customfields.Custom;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

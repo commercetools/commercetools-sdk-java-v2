@@ -1,18 +1,9 @@
 
 package com.commercetools.api.models.product;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Asset;
-import com.commercetools.api.models.common.Image;
-import com.commercetools.api.models.common.Price;
-import com.commercetools.api.models.common.ScopedPrice;
-import com.commercetools.api.models.product.Attribute;
-import com.commercetools.api.models.product.ProductVariant;
-import com.commercetools.api.models.product.ProductVariantAvailability;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

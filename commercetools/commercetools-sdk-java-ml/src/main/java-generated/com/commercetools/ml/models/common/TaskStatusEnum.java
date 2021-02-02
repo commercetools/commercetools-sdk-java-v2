@@ -1,7 +1,6 @@
 
 package com.commercetools.ml.models.common;
 
-import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
 

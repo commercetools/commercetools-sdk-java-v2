@@ -1,20 +1,9 @@
 
 package com.commercetools.api.models.product;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.product.Product;
-import com.commercetools.api.models.product.ProductCatalogData;
-import com.commercetools.api.models.product_type.ProductTypeReference;
-import com.commercetools.api.models.review.ReviewRatingStatistics;
-import com.commercetools.api.models.state.StateReference;
-import com.commercetools.api.models.tax_category.TaxCategoryReference;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

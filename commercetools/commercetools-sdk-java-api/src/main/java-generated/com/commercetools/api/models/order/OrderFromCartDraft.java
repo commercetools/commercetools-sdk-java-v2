@@ -1,7 +1,6 @@
 
 package com.commercetools.api.models.order;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -10,15 +9,10 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartResourceIdentifier;
-import com.commercetools.api.models.order.OrderFromCartDraftImpl;
-import com.commercetools.api.models.order.OrderState;
-import com.commercetools.api.models.order.PaymentState;
-import com.commercetools.api.models.order.ShipmentState;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

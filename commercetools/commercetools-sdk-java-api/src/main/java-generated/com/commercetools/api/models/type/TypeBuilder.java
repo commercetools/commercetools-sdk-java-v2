@@ -1,18 +1,9 @@
 
 package com.commercetools.api.models.type;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.type.FieldDefinition;
-import com.commercetools.api.models.type.ResourceTypeId;
-import com.commercetools.api.models.type.Type;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

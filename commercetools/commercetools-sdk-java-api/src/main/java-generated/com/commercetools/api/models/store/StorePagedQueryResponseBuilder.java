@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.store;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.store.Store;
-import com.commercetools.api.models.store.StorePagedQueryResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

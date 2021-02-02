@@ -6,7 +6,6 @@ import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
-import java.util.regex.Pattern;
 
 import javax.annotation.Nullable;
 

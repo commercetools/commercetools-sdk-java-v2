@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.subscription;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.subscription.Subscription;
-import com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

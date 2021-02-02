@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.product_discount;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.product_discount.ProductDiscountSetKeyAction;
-import com.commercetools.api.models.product_discount.ProductDiscountUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

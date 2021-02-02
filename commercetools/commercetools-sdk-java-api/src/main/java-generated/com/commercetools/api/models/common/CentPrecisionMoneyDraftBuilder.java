@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.common;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.CentPrecisionMoneyDraft;
-import com.commercetools.api.models.common.MoneyType;
-import com.commercetools.api.models.common.TypedMoneyDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

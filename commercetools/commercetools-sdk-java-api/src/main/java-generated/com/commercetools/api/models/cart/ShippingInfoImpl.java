@@ -4,23 +4,8 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
-import com.commercetools.api.models.cart.DiscountedLineItemPrice;
-import com.commercetools.api.models.cart.ShippingMethodState;
-import com.commercetools.api.models.cart.TaxedItemPrice;
-import com.commercetools.api.models.common.TypedMoney;
-import com.commercetools.api.models.order.Delivery;
-import com.commercetools.api.models.shipping_method.ShippingMethodReference;
-import com.commercetools.api.models.shipping_method.ShippingRate;
-import com.commercetools.api.models.tax_category.TaxCategoryReference;
-import com.commercetools.api.models.tax_category.TaxRate;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;

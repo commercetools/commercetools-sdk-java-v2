@@ -4,7 +4,6 @@ package io.vrap.rmf.base.client.http;
 import java.util.concurrent.CompletableFuture;
 
 import io.vrap.rmf.base.client.AuthenticationToken;
-import io.vrap.rmf.base.client.oauth2.StaticTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 import org.assertj.core.api.Assertions;

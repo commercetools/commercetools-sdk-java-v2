@@ -1,13 +1,7 @@
 
 package com.commercetools.importapi.models.productvariants;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.productvariants.Attribute;
-import com.commercetools.importapi.models.productvariants.Attributes;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

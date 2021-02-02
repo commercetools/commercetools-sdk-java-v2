@@ -1,14 +1,7 @@
 
 package com.commercetools.ml.models.missing_data;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.ml.models.missing_data.MissingAttributes;
-import com.commercetools.ml.models.missing_data.MissingAttributesMeta;
-import com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResult;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.order_edit;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.order.DeliveryItem;
-import com.commercetools.api.models.order.ParcelDraft;
-import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.order_edit.StagedOrderAddDeliveryAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

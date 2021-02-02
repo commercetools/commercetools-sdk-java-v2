@@ -1,15 +1,7 @@
 
 package com.commercetools.api.models.project;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.project.CartClassificationType;
-import com.commercetools.api.models.project.ShippingRateInputType;
-import com.commercetools.api.models.shipping_method.ShippingRateTierType;
-import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

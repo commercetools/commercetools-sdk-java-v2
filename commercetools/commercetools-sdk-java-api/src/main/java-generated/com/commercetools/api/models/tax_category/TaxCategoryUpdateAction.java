@@ -1,24 +1,15 @@
 
 package com.commercetools.api.models.tax_category;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateAction;
-import com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction;
-import com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateAction;
-import com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction;
-import com.commercetools.api.models.tax_category.TaxCategorySetDescriptionAction;
-import com.commercetools.api.models.tax_category.TaxCategorySetKeyAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

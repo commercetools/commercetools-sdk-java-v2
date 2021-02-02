@@ -1,13 +1,7 @@
 
 package com.commercetools.importapi.models.importsinks;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.ImportResourceType;
-import com.commercetools.importapi.models.importsinks.ImportSink;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

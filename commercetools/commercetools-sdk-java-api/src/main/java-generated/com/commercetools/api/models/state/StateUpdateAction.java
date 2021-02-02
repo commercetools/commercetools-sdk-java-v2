@@ -1,27 +1,15 @@
 
 package com.commercetools.api.models.state;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.state.StateAddRolesAction;
-import com.commercetools.api.models.state.StateChangeInitialAction;
-import com.commercetools.api.models.state.StateChangeKeyAction;
-import com.commercetools.api.models.state.StateChangeTypeAction;
-import com.commercetools.api.models.state.StateRemoveRolesAction;
-import com.commercetools.api.models.state.StateSetDescriptionAction;
-import com.commercetools.api.models.state.StateSetNameAction;
-import com.commercetools.api.models.state.StateSetRolesAction;
-import com.commercetools.api.models.state.StateSetTransitionsAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

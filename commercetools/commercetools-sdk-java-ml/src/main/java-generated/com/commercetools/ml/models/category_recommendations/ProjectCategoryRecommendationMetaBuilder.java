@@ -1,12 +1,9 @@
 
 package com.commercetools.ml.models.category_recommendations;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.ml.models.category_recommendations.ProjectCategoryRecommendationMeta;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

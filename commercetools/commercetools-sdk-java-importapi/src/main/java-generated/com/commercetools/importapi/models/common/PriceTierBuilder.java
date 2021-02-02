@@ -1,13 +1,7 @@
 
 package com.commercetools.importapi.models.common;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.PriceTier;
-import com.commercetools.importapi.models.common.TypedMoney;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

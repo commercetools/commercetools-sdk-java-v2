@@ -4,36 +4,8 @@ package com.commercetools.importapi.models.errors;
 import java.time.*;
 import java.util.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
-import com.commercetools.importapi.models.errors.AccessDeniedError;
-import com.commercetools.importapi.models.errors.ConcurrentModificationError;
-import com.commercetools.importapi.models.errors.ContentionError;
-import com.commercetools.importapi.models.errors.DuplicateAttributeValueError;
-import com.commercetools.importapi.models.errors.DuplicateAttributeValuesError;
-import com.commercetools.importapi.models.errors.DuplicateFieldError;
-import com.commercetools.importapi.models.errors.DuplicateVariantValuesError;
-import com.commercetools.importapi.models.errors.GenericError;
-import com.commercetools.importapi.models.errors.InsufficientScopeError;
-import com.commercetools.importapi.models.errors.InvalidCredentialsError;
-import com.commercetools.importapi.models.errors.InvalidFieldError;
-import com.commercetools.importapi.models.errors.InvalidInput;
-import com.commercetools.importapi.models.errors.InvalidJsonInput;
-import com.commercetools.importapi.models.errors.InvalidOperation;
-import com.commercetools.importapi.models.errors.InvalidScopeError;
-import com.commercetools.importapi.models.errors.InvalidStateTransitionError;
-import com.commercetools.importapi.models.errors.InvalidTokenError;
-import com.commercetools.importapi.models.errors.RequiredFieldError;
-import com.commercetools.importapi.models.errors.ResourceCreationError;
-import com.commercetools.importapi.models.errors.ResourceDeletionError;
-import com.commercetools.importapi.models.errors.ResourceNotFoundError;
-import com.commercetools.importapi.models.errors.ResourceUpdateError;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;

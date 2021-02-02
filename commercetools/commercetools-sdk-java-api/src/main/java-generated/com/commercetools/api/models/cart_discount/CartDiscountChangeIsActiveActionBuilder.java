@@ -1,13 +1,7 @@
 
 package com.commercetools.api.models.cart_discount;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart_discount.CartDiscountChangeIsActiveAction;
-import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

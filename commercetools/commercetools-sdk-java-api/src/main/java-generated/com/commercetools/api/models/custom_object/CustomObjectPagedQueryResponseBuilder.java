@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.custom_object;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.custom_object.CustomObject;
-import com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

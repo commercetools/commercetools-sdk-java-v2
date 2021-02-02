@@ -1,18 +1,9 @@
 
 package com.commercetools.api.models.store;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.store.Store;
-import com.commercetools.api.models.type.CustomFields;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

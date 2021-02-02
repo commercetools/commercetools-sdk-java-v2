@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.cart;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.CartSetCartTotalTaxAction;
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.cart.TaxPortionDraft;
-import com.commercetools.api.models.common.Money;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.shopping_list;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product.ProductVariant;
-import com.commercetools.api.models.product_type.ProductTypeReference;
-import com.commercetools.api.models.shopping_list.ShoppingListLineItem;
-import com.commercetools.api.models.type.CustomFields;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

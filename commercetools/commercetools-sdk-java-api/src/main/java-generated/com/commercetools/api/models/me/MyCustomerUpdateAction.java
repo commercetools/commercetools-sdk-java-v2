@@ -1,39 +1,15 @@
 
 package com.commercetools.api.models.me;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.me.MyCustomerAddAddressAction;
-import com.commercetools.api.models.me.MyCustomerAddBillingAddressIdAction;
-import com.commercetools.api.models.me.MyCustomerAddShippingAddressIdAction;
-import com.commercetools.api.models.me.MyCustomerChangeAddressAction;
-import com.commercetools.api.models.me.MyCustomerChangeEmailAction;
-import com.commercetools.api.models.me.MyCustomerRemoveAddressAction;
-import com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdAction;
-import com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdAction;
-import com.commercetools.api.models.me.MyCustomerSetCompanyNameAction;
-import com.commercetools.api.models.me.MyCustomerSetCustomFieldAction;
-import com.commercetools.api.models.me.MyCustomerSetCustomTypeAction;
-import com.commercetools.api.models.me.MyCustomerSetDateOfBirthAction;
-import com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressAction;
-import com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressAction;
-import com.commercetools.api.models.me.MyCustomerSetFirstNameAction;
-import com.commercetools.api.models.me.MyCustomerSetLastNameAction;
-import com.commercetools.api.models.me.MyCustomerSetLocaleAction;
-import com.commercetools.api.models.me.MyCustomerSetMiddleNameAction;
-import com.commercetools.api.models.me.MyCustomerSetSalutationAction;
-import com.commercetools.api.models.me.MyCustomerSetTitleAction;
-import com.commercetools.api.models.me.MyCustomerSetVatIdAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.order;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.order.LineItemReturnItem;
-import com.commercetools.api.models.order.ReturnItem;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

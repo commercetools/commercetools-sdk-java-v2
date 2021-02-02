@@ -1,7 +1,6 @@
 
 package com.commercetools.api.models.discount_code;
 
-import java.io.IOException;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -16,12 +15,10 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Reference;
-import com.commercetools.api.models.discount_code.DiscountCodeImpl;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

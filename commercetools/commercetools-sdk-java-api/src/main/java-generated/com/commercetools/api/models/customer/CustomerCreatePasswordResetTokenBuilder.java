@@ -1,12 +1,9 @@
 
 package com.commercetools.api.models.customer;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.customer.CustomerCreatePasswordResetToken;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

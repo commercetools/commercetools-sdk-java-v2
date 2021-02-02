@@ -1,29 +1,15 @@
 
 package com.commercetools.api.models.shipping_method;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodChangeNameAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodRemoveShippingRateAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodRemoveZoneAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodSetDescriptionAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

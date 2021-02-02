@@ -1,13 +1,7 @@
 
 package com.commercetools.api.models.extension;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.extension.ExtensionAWSLambdaDestination;
-import com.commercetools.api.models.extension.ExtensionDestination;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

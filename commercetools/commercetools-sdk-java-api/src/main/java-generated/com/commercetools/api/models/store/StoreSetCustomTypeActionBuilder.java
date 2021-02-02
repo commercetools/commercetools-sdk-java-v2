@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.store;
 
-import java.lang.Object;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.store.StoreSetCustomTypeAction;
-import com.commercetools.api.models.store.StoreUpdateAction;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

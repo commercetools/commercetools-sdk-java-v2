@@ -1,15 +1,9 @@
 
 package com.commercetools.importapi.models.orders;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.Money;
-import com.commercetools.importapi.models.orders.CartClassificationTier;
-import com.commercetools.importapi.models.orders.ShippingRatePriceTier;
-import com.commercetools.importapi.models.orders.ShippingRateTierType;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

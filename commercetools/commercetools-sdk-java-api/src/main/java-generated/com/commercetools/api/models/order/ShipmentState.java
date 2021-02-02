@@ -1,7 +1,6 @@
 
 package com.commercetools.api.models.order;
 
-import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
 

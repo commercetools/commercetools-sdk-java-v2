@@ -1,23 +1,16 @@
 
 package com.commercetools.api.models.order;
 
-import java.io.IOException;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.order.CustomLineItemReturnItem;
-import com.commercetools.api.models.order.LineItemReturnItem;
-import com.commercetools.api.models.order.ReturnPaymentState;
-import com.commercetools.api.models.order.ReturnShipmentState;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

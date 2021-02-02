@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.me;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.me.MyCartSetCustomTypeAction;
-import com.commercetools.api.models.me.MyCartUpdateAction;
-import com.commercetools.api.models.type.FieldContainer;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

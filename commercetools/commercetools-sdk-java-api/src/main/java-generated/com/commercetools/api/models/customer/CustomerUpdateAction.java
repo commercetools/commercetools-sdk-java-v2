@@ -1,46 +1,15 @@
 
 package com.commercetools.api.models.customer;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.customer.CustomerAddAddressAction;
-import com.commercetools.api.models.customer.CustomerAddBillingAddressIdAction;
-import com.commercetools.api.models.customer.CustomerAddShippingAddressIdAction;
-import com.commercetools.api.models.customer.CustomerAddStoreAction;
-import com.commercetools.api.models.customer.CustomerChangeAddressAction;
-import com.commercetools.api.models.customer.CustomerChangeEmailAction;
-import com.commercetools.api.models.customer.CustomerRemoveAddressAction;
-import com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdAction;
-import com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdAction;
-import com.commercetools.api.models.customer.CustomerRemoveStoreAction;
-import com.commercetools.api.models.customer.CustomerSetCompanyNameAction;
-import com.commercetools.api.models.customer.CustomerSetCustomFieldAction;
-import com.commercetools.api.models.customer.CustomerSetCustomTypeAction;
-import com.commercetools.api.models.customer.CustomerSetCustomerGroupAction;
-import com.commercetools.api.models.customer.CustomerSetCustomerNumberAction;
-import com.commercetools.api.models.customer.CustomerSetDateOfBirthAction;
-import com.commercetools.api.models.customer.CustomerSetDefaultBillingAddressAction;
-import com.commercetools.api.models.customer.CustomerSetDefaultShippingAddressAction;
-import com.commercetools.api.models.customer.CustomerSetExternalIdAction;
-import com.commercetools.api.models.customer.CustomerSetFirstNameAction;
-import com.commercetools.api.models.customer.CustomerSetKeyAction;
-import com.commercetools.api.models.customer.CustomerSetLastNameAction;
-import com.commercetools.api.models.customer.CustomerSetLocaleAction;
-import com.commercetools.api.models.customer.CustomerSetMiddleNameAction;
-import com.commercetools.api.models.customer.CustomerSetSalutationAction;
-import com.commercetools.api.models.customer.CustomerSetStoresAction;
-import com.commercetools.api.models.customer.CustomerSetTitleAction;
-import com.commercetools.api.models.customer.CustomerSetVatIdAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

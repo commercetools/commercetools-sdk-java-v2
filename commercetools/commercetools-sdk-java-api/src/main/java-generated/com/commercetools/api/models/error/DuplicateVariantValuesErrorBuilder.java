@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.error;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.error.DuplicateVariantValuesError;
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.VariantValues;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

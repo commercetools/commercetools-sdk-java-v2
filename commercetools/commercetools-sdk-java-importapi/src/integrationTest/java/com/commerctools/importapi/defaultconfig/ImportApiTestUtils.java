@@ -9,8 +9,6 @@ import com.commercetools.importapi.defaultconfig.ServiceRegion;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
 
-import io.vrap.rmf.base.client.HttpClientSupplier;
-import io.vrap.rmf.base.client.VrapHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class ImportApiTestUtils {

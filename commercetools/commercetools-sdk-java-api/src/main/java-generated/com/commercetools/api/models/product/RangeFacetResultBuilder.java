@@ -1,15 +1,7 @@
 
 package com.commercetools.api.models.product;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.product.FacetResult;
-import com.commercetools.api.models.product.FacetResultRange;
-import com.commercetools.api.models.product.FacetTypes;
-import com.commercetools.api.models.product.RangeFacetResult;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

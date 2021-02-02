@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.customer;
 
-import java.lang.Object;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.customer.CustomerSetCustomFieldAction;
-import com.commercetools.api.models.customer.CustomerUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

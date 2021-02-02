@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.review;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.review.Review;
-import com.commercetools.api.models.review.ReviewPagedQueryResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

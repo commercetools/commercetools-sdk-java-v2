@@ -1,16 +1,9 @@
 
 package com.commercetools.ml.models.missing_data;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.ml.models.common.ProductReference;
-import com.commercetools.ml.models.common.ProductTypeReference;
-import com.commercetools.ml.models.missing_data.AttributeCount;
-import com.commercetools.ml.models.missing_data.AttributeCoverage;
-import com.commercetools.ml.models.missing_data.MissingAttributes;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

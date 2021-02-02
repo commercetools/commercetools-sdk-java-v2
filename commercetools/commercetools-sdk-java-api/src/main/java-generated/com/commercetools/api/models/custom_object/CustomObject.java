@@ -1,8 +1,6 @@
 
 package com.commercetools.api.models.custom_object;
 
-import java.io.IOException;
-import java.lang.Object;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -14,11 +12,9 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.custom_object.CustomObjectImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

@@ -1,14 +1,7 @@
 
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.ProductTypeKeyReference;
-import com.commercetools.importapi.models.producttypes.AttributeNestedType;
-import com.commercetools.importapi.models.producttypes.AttributeType;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.shipping_method;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.shipping_method.CartScoreTier;
-import com.commercetools.api.models.shipping_method.PriceFunction;
-import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
-import com.commercetools.api.models.shipping_method.ShippingRateTierType;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

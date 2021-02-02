@@ -1,14 +1,9 @@
 
 package com.commercetools.importapi.models.customfields;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.TypeKeyReference;
-import com.commercetools.importapi.models.customfields.Custom;
-import com.commercetools.importapi.models.customfields.FieldContainer;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

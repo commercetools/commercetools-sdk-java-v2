@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.cart;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.cart.CartUpdateItemShippingAddressAction;
-import com.commercetools.api.models.common.Address;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

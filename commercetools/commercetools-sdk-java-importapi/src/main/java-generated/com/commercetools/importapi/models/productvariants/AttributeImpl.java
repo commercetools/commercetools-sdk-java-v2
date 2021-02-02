@@ -4,36 +4,8 @@ package com.commercetools.importapi.models.productvariants;
 import java.time.*;
 import java.util.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
-import com.commercetools.importapi.models.productvariants.BooleanAttribute;
-import com.commercetools.importapi.models.productvariants.BooleanSetAttribute;
-import com.commercetools.importapi.models.productvariants.DateAttribute;
-import com.commercetools.importapi.models.productvariants.DateSetAttribute;
-import com.commercetools.importapi.models.productvariants.DateTimeAttribute;
-import com.commercetools.importapi.models.productvariants.DateTimeSetAttribute;
-import com.commercetools.importapi.models.productvariants.EnumAttribute;
-import com.commercetools.importapi.models.productvariants.EnumSetAttribute;
-import com.commercetools.importapi.models.productvariants.LocalizableEnumAttribute;
-import com.commercetools.importapi.models.productvariants.LocalizableEnumSetAttribute;
-import com.commercetools.importapi.models.productvariants.LocalizableTextAttribute;
-import com.commercetools.importapi.models.productvariants.LocalizableTextSetAttribute;
-import com.commercetools.importapi.models.productvariants.MoneyAttribute;
-import com.commercetools.importapi.models.productvariants.MoneySetAttribute;
-import com.commercetools.importapi.models.productvariants.NumberAttribute;
-import com.commercetools.importapi.models.productvariants.NumberSetAttribute;
-import com.commercetools.importapi.models.productvariants.ReferenceAttribute;
-import com.commercetools.importapi.models.productvariants.ReferenceSetAttribute;
-import com.commercetools.importapi.models.productvariants.TextAttribute;
-import com.commercetools.importapi.models.productvariants.TextSetAttribute;
-import com.commercetools.importapi.models.productvariants.TimeAttribute;
-import com.commercetools.importapi.models.productvariants.TimeSetAttribute;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;

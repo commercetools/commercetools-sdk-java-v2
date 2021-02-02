@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.store;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.store.StoreDraft;
-import com.commercetools.api.models.type.CustomFieldsDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

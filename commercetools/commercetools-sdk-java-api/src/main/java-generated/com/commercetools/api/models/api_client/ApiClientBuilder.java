@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.api_client;
 
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.api_client.ApiClient;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.review;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.review.ReviewTransitionStateAction;
-import com.commercetools.api.models.review.ReviewUpdateAction;
-import com.commercetools.api.models.state.StateResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

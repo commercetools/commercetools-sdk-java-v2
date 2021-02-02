@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.me;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.me.MyCartRemovePaymentAction;
-import com.commercetools.api.models.me.MyCartUpdateAction;
-import com.commercetools.api.models.payment.PaymentResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

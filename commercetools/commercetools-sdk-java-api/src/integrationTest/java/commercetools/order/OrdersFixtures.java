@@ -1,15 +1,6 @@
 
 package commercetools.order;
 
-import java.util.Arrays;
-import java.util.function.Consumer;
-import java.util.function.UnaryOperator;
-
-import com.commercetools.api.models.channel.Channel;
-import com.commercetools.api.models.channel.ChannelDraft;
-import com.commercetools.api.models.channel.ChannelDraftBuilder;
-import com.commercetools.api.models.channel.ChannelRoleEnum;
-import com.commercetools.api.models.common.GeoJsonPointBuilder;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.order_edit.OrderEdit;
 import commercetools.utils.CommercetoolsTestUtils;

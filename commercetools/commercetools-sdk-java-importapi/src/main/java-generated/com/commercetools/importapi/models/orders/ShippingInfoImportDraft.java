@@ -1,7 +1,6 @@
 
 package com.commercetools.importapi.models.orders;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -12,16 +11,10 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.importapi.models.common.ShippingMethodKeyReference;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
 import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.orders.Delivery;
-import com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft;
-import com.commercetools.importapi.models.orders.ShippingInfoImportDraftImpl;
-import com.commercetools.importapi.models.orders.ShippingMethodState;
-import com.commercetools.importapi.models.orders.ShippingRateDraft;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**

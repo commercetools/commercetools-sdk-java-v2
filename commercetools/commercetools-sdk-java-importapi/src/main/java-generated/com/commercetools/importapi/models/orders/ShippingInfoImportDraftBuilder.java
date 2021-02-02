@@ -1,20 +1,9 @@
 
 package com.commercetools.importapi.models.orders;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.ShippingMethodKeyReference;
-import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
-import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.orders.Delivery;
-import com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft;
-import com.commercetools.importapi.models.orders.ShippingInfoImportDraft;
-import com.commercetools.importapi.models.orders.ShippingMethodState;
-import com.commercetools.importapi.models.orders.ShippingRateDraft;
-import com.commercetools.importapi.models.prices.TaxRate;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

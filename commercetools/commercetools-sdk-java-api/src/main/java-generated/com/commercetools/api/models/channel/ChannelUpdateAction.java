@@ -1,28 +1,15 @@
 
 package com.commercetools.api.models.channel;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.channel.ChannelAddRolesAction;
-import com.commercetools.api.models.channel.ChannelChangeDescriptionAction;
-import com.commercetools.api.models.channel.ChannelChangeKeyAction;
-import com.commercetools.api.models.channel.ChannelChangeNameAction;
-import com.commercetools.api.models.channel.ChannelRemoveRolesAction;
-import com.commercetools.api.models.channel.ChannelSetAddressAction;
-import com.commercetools.api.models.channel.ChannelSetCustomFieldAction;
-import com.commercetools.api.models.channel.ChannelSetCustomTypeAction;
-import com.commercetools.api.models.channel.ChannelSetGeoLocationAction;
-import com.commercetools.api.models.channel.ChannelSetRolesAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

@@ -1,7 +1,6 @@
 
 package com.commercetools.api.models.me;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -11,14 +10,12 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer.CustomerReference;
-import com.commercetools.api.models.me.MyPaymentImpl;
 import com.commercetools.api.models.payment.PaymentMethodInfo;
 import com.commercetools.api.models.payment.Transaction;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

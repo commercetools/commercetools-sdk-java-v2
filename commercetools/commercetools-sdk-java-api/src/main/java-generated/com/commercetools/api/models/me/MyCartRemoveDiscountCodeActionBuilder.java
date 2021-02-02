@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.me;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.discount_code.DiscountCodeReference;
-import com.commercetools.api.models.me.MyCartRemoveDiscountCodeAction;
-import com.commercetools.api.models.me.MyCartUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

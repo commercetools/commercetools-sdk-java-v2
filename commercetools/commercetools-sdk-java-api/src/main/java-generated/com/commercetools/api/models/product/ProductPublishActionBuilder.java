@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.product;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.ProductPublishScope;
-import com.commercetools.api.models.product.ProductPublishAction;
-import com.commercetools.api.models.product.ProductUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

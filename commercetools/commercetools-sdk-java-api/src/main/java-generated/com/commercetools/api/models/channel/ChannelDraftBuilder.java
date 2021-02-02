@@ -1,17 +1,9 @@
 
 package com.commercetools.api.models.channel;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.channel.ChannelDraft;
-import com.commercetools.api.models.channel.ChannelRoleEnum;
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.common.GeoJson;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.type.CustomFieldsDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

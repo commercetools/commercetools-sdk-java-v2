@@ -1,13 +1,7 @@
 
 package com.commercetools.api.models.customer_group;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.customer_group.CustomerGroupChangeNameAction;
-import com.commercetools.api.models.customer_group.CustomerGroupUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

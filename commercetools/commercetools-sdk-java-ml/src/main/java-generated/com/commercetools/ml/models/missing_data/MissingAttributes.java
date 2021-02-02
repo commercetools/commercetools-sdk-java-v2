@@ -1,7 +1,6 @@
 
 package com.commercetools.ml.models.missing_data;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -11,13 +10,9 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.ml.models.common.ProductReference;
 import com.commercetools.ml.models.common.ProductTypeReference;
-import com.commercetools.ml.models.missing_data.AttributeCount;
-import com.commercetools.ml.models.missing_data.AttributeCoverage;
-import com.commercetools.ml.models.missing_data.MissingAttributesImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

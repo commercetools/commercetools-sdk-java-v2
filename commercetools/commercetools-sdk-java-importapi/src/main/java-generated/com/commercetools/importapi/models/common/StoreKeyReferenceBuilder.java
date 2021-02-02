@@ -1,14 +1,7 @@
 
 package com.commercetools.importapi.models.common;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.KeyReference;
-import com.commercetools.importapi.models.common.ReferenceType;
-import com.commercetools.importapi.models.common.StoreKeyReference;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

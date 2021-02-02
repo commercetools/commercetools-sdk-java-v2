@@ -1,31 +1,15 @@
 
 package com.commercetools.api.models.discount_code;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction;
-import com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsAction;
-import com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetNameAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction;
-import com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

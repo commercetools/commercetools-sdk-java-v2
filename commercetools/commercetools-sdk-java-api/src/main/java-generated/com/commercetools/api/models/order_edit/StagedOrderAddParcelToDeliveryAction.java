@@ -1,7 +1,6 @@
 
 package com.commercetools.api.models.order_edit;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -13,11 +12,9 @@ import com.commercetools.api.models.order.DeliveryItem;
 import com.commercetools.api.models.order.ParcelMeasurements;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.order.TrackingData;
-import com.commercetools.api.models.order_edit.StagedOrderAddParcelToDeliveryActionImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

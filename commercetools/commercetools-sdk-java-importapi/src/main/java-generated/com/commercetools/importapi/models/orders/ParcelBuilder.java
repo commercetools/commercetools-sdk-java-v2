@@ -1,15 +1,9 @@
 
 package com.commercetools.importapi.models.orders;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.orders.DeliveryItem;
-import com.commercetools.importapi.models.orders.Parcel;
-import com.commercetools.importapi.models.orders.ParcelMeasurements;
-import com.commercetools.importapi.models.orders.TrackingData;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

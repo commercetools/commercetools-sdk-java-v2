@@ -1,14 +1,11 @@
 
 package commercetools.product_projection;
 
-import java.util.List;
-
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.api.models.product.ProductProjectionPagedQueryResponse;
 import com.commercetools.api.models.product.ProductProjectionPagedSearchResponse;
 import com.commercetools.api.models.product.TermFacetResult;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
-import com.fasterxml.jackson.databind.JsonNode;
 import commercetools.product.ProductFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 

@@ -5,7 +5,6 @@ import com.commercetools.api.models.error.ErrorResponse;
 import commercetools.category.CategoryFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import io.vrap.rmf.base.client.ApiHttpException;
 import io.vrap.rmf.base.client.error.BadRequestException;
 import io.vrap.rmf.base.client.error.NotFoundException;
 

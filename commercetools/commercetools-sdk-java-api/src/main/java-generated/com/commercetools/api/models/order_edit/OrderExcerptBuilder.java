@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.order_edit;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.TaxedPrice;
-import com.commercetools.api.models.common.TypedMoney;
-import com.commercetools.api.models.order_edit.OrderExcerpt;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

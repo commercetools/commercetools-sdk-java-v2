@@ -1,14 +1,9 @@
 
 package com.commercetools.importapi.models.errors;
 
-import java.lang.Object;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.errors.ErrorObject;
-import com.commercetools.importapi.models.errors.InvalidFieldError;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

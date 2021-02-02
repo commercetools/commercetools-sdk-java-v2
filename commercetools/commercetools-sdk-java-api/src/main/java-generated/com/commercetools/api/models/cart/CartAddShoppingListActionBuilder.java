@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.cart;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.CartAddShoppingListAction;
-import com.commercetools.api.models.cart.CartUpdateAction;
-import com.commercetools.api.models.channel.ChannelResourceIdentifier;
-import com.commercetools.api.models.shopping_list.ShoppingListResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

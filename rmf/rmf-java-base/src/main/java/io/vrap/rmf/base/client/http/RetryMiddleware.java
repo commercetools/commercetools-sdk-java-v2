@@ -6,8 +6,6 @@ import static java.util.Collections.singletonList;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 
 import net.jodah.failsafe.Failsafe;

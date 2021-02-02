@@ -1,29 +1,9 @@
 
 package com.commercetools.importapi.models.orders;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.Address;
-import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
-import com.commercetools.importapi.models.common.CustomerKeyReference;
-import com.commercetools.importapi.models.common.ImportResource;
-import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.customfields.Custom;
-import com.commercetools.importapi.models.orders.CartOrigin;
-import com.commercetools.importapi.models.orders.CustomLineItemDraft;
-import com.commercetools.importapi.models.orders.InventoryMode;
-import com.commercetools.importapi.models.orders.LineItemImportDraft;
-import com.commercetools.importapi.models.orders.OrderImport;
-import com.commercetools.importapi.models.orders.OrderState;
-import com.commercetools.importapi.models.orders.PaymentState;
-import com.commercetools.importapi.models.orders.RoundingMode;
-import com.commercetools.importapi.models.orders.ShipmentState;
-import com.commercetools.importapi.models.orders.ShippingInfoImportDraft;
-import com.commercetools.importapi.models.orders.TaxCalculationMode;
-import com.commercetools.importapi.models.orders.TaxedPrice;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

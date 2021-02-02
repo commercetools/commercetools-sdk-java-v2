@@ -1,20 +1,9 @@
 
 package com.commercetools.api.models.me;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.DiscountCodeInfo;
-import com.commercetools.api.models.cart.InventoryMode;
-import com.commercetools.api.models.cart.TaxMode;
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.me.MyCartDraft;
-import com.commercetools.api.models.me.MyLineItemDraft;
-import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
-import com.commercetools.api.models.store.StoreKeyReference;
-import com.commercetools.api.models.type.CustomFieldsDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

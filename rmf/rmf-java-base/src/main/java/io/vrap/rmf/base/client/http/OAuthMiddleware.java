@@ -2,8 +2,6 @@
 package io.vrap.rmf.base.client.http;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.function.Function;
 
 import net.jodah.failsafe.Failsafe;

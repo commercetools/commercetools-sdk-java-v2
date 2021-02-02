@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.custom_object;
 
-import java.lang.Object;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.custom_object.CustomObject;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

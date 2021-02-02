@@ -1,25 +1,20 @@
 
 package com.commercetools.api.models.review;
 
-import java.io.IOException;
-import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
-import com.commercetools.api.models.review.ReviewDraftImpl;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.payment;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.payment.PaymentChangeAmountPlannedAction;
-import com.commercetools.api.models.payment.PaymentUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

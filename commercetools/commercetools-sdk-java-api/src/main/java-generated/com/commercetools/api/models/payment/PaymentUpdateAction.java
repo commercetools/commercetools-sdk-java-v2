@@ -1,40 +1,15 @@
 
 package com.commercetools.api.models.payment;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.payment.PaymentAddInterfaceInteractionAction;
-import com.commercetools.api.models.payment.PaymentAddTransactionAction;
-import com.commercetools.api.models.payment.PaymentChangeAmountPlannedAction;
-import com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdAction;
-import com.commercetools.api.models.payment.PaymentChangeTransactionStateAction;
-import com.commercetools.api.models.payment.PaymentChangeTransactionTimestampAction;
-import com.commercetools.api.models.payment.PaymentSetAmountPaidAction;
-import com.commercetools.api.models.payment.PaymentSetAmountRefundedAction;
-import com.commercetools.api.models.payment.PaymentSetAnonymousIdAction;
-import com.commercetools.api.models.payment.PaymentSetAuthorizationAction;
-import com.commercetools.api.models.payment.PaymentSetCustomFieldAction;
-import com.commercetools.api.models.payment.PaymentSetCustomTypeAction;
-import com.commercetools.api.models.payment.PaymentSetCustomerAction;
-import com.commercetools.api.models.payment.PaymentSetExternalIdAction;
-import com.commercetools.api.models.payment.PaymentSetInterfaceIdAction;
-import com.commercetools.api.models.payment.PaymentSetKeyAction;
-import com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAction;
-import com.commercetools.api.models.payment.PaymentSetMethodInfoMethodAction;
-import com.commercetools.api.models.payment.PaymentSetMethodInfoNameAction;
-import com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeAction;
-import com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextAction;
-import com.commercetools.api.models.payment.PaymentTransitionStateAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

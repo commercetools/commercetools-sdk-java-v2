@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.product_type;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product_type.AttributeConstraintEnum;
-import com.commercetools.api.models.product_type.AttributeDefinitionDraft;
-import com.commercetools.api.models.product_type.AttributeType;
-import com.commercetools.api.models.product_type.TextInputHint;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,13 +1,7 @@
 
 package com.commercetools.api.models.zone;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.zone.ZoneChangeNameAction;
-import com.commercetools.api.models.zone.ZoneUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

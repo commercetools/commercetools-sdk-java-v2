@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.message;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.ProductPublishScope;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.ProductPublishedMessage;
-import com.commercetools.api.models.product.ProductProjection;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

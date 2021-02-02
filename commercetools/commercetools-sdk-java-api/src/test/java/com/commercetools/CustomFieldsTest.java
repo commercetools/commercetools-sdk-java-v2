@@ -12,20 +12,13 @@ import java.util.Map;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
-import com.commercetools.api.models.product.Attribute;
-import com.commercetools.api.models.product.ProductPagedQueryResponse;
 import com.commercetools.api.models.product.ProductReference;
-import com.commercetools.api.models.product.ProductVariant;
-import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
-import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.type.CustomFieldEnumValue;
 import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
 import com.commercetools.api.models.type.CustomFields;
-import com.commercetools.api.product.AttributeAccessor;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-import org.apache.commons.lang3.time.StopWatch;
 import org.junit.Test;
 
 public class CustomFieldsTest {

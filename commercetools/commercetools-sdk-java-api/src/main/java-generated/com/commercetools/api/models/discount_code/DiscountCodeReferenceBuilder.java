@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.discount_code;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Reference;
-import com.commercetools.api.models.common.ReferenceTypeId;
-import com.commercetools.api.models.discount_code.DiscountCode;
-import com.commercetools.api.models.discount_code.DiscountCodeReference;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

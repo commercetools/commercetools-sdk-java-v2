@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.error;
 
-import java.lang.Object;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.error.ErrorByExtension;
-import com.commercetools.api.models.error.ErrorObject;
-import com.commercetools.api.models.error.ExtensionUpdateActionsFailedError;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

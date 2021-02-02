@@ -12,7 +12,6 @@ import com.commercetools.api.models.review.Review;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
-import org.assertj.core.api.Assertions;
 import org.junit.Test;
 
 public class ReviewTest {

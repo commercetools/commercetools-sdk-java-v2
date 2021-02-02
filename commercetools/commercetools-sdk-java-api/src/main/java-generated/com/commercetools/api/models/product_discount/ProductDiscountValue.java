@@ -1,21 +1,15 @@
 
 package com.commercetools.api.models.product_discount;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute;
-import com.commercetools.api.models.product_discount.ProductDiscountValueExternal;
-import com.commercetools.api.models.product_discount.ProductDiscountValueRelative;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

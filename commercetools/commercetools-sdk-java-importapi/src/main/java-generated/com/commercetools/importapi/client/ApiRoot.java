@@ -2,9 +2,6 @@
 package com.commercetools.importapi.client;
 
 import java.io.Closeable;
-import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.utils.Generated;

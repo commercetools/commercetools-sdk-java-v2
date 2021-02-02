@@ -7,7 +7,6 @@ import com.commercetools.api.models.custom_object.CustomObject;
 import com.commercetools.api.models.custom_object.CustomObjectDraft;
 import com.commercetools.api.models.custom_object.CustomObjectDraftBuilder;
 import com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse;
-import com.fasterxml.jackson.databind.JsonNode;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;

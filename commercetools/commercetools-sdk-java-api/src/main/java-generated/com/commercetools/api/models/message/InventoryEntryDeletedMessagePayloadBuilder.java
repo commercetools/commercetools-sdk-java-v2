@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.message;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.message.InventoryEntryDeletedMessagePayload;
-import com.commercetools.api.models.message.MessagePayload;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

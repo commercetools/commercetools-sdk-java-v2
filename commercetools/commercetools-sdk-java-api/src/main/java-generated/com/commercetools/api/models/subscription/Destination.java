@@ -1,24 +1,15 @@
 
 package com.commercetools.api.models.subscription;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.subscription.AzureEventGridDestination;
-import com.commercetools.api.models.subscription.AzureServiceBusDestination;
-import com.commercetools.api.models.subscription.GoogleCloudPubSubDestination;
-import com.commercetools.api.models.subscription.IronMqDestination;
-import com.commercetools.api.models.subscription.SnsDestination;
-import com.commercetools.api.models.subscription.SqsDestination;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.discount_code;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction;
-import com.commercetools.api.models.discount_code.DiscountCodeUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

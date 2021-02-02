@@ -1,19 +1,16 @@
 
 package com.commercetools.api.models.common;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.category.CategoryReference;
 import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.common.ReferenceTypeId;
 import com.commercetools.api.models.custom_object.CustomObjectReference;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
@@ -36,7 +33,6 @@ import com.commercetools.api.models.zone.ZoneReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

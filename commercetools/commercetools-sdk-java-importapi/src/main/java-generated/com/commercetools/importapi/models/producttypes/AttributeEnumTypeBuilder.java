@@ -1,14 +1,7 @@
 
 package com.commercetools.importapi.models.producttypes;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.producttypes.AttributeEnumType;
-import com.commercetools.importapi.models.producttypes.AttributePlainEnumValue;
-import com.commercetools.importapi.models.producttypes.AttributeType;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

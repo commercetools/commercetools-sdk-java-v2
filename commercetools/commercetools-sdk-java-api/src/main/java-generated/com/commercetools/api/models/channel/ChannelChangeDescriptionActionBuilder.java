@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.channel;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.channel.ChannelChangeDescriptionAction;
-import com.commercetools.api.models.channel.ChannelUpdateAction;
-import com.commercetools.api.models.common.LocalizedString;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

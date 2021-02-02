@@ -1,13 +1,7 @@
 
 package com.commercetools.importapi.models.importrequests;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.importoperations.ImportOperationStatus;
-import com.commercetools.importapi.models.importrequests.ImportResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

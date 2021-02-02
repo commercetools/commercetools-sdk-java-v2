@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.order_edit;
 
-import java.lang.Object;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.order_edit.OrderEditSetCustomFieldAction;
-import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

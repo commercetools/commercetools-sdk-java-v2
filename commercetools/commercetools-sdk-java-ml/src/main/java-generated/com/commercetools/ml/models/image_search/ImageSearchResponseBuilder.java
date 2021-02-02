@@ -1,13 +1,7 @@
 
 package com.commercetools.ml.models.image_search;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.ml.models.image_search.ImageSearchResponse;
-import com.commercetools.ml.models.image_search.ResultItem;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

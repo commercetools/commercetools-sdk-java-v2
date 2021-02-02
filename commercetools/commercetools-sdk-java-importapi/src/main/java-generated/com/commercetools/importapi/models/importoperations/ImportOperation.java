@@ -1,7 +1,6 @@
 
 package com.commercetools.importapi.models.importoperations;
 
-import java.io.IOException;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -12,11 +11,9 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.importapi.models.common.ProcessingState;
 import com.commercetools.importapi.models.errors.ErrorObject;
-import com.commercetools.importapi.models.importoperations.ImportOperationImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**

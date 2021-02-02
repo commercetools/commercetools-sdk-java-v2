@@ -1,26 +1,15 @@
 
 package com.commercetools.api.models.inventory;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction;
-import com.commercetools.api.models.inventory.InventoryEntryChangeQuantityAction;
-import com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityAction;
-import com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction;
-import com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeAction;
-import com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryAction;
-import com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysAction;
-import com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

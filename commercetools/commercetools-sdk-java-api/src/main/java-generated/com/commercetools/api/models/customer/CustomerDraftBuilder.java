@@ -1,18 +1,9 @@
 
 package com.commercetools.api.models.customer;
 
-import java.time.LocalDate;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.CartResourceIdentifier;
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.customer.CustomerDraft;
-import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
-import com.commercetools.api.models.store.StoreResourceIdentifier;
-import com.commercetools.api.models.type.CustomFieldsDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

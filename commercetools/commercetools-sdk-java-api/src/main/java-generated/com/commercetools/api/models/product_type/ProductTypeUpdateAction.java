@@ -1,39 +1,15 @@
 
 package com.commercetools.api.models.product_type;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionAction;
-import com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueAction;
-import com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeDescriptionAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeInputHintAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeLabelAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction;
-import com.commercetools.api.models.product_type.ProductTypeChangeNameAction;
-import com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelAction;
-import com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderAction;
-import com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionAction;
-import com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesAction;
-import com.commercetools.api.models.product_type.ProductTypeSetInputTipAction;
-import com.commercetools.api.models.product_type.ProductTypeSetKeyAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

@@ -1,27 +1,13 @@
 
 package commercetools.cart;
 
-import java.util.Arrays;
-import java.util.concurrent.ExecutionException;
 import java.util.function.Consumer;
 import java.util.function.UnaryOperator;
 
 import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.cart.CartDraft;
 import com.commercetools.api.models.cart.CartDraftBuilder;
-import com.commercetools.api.models.common.AddressBuilder;
-import com.commercetools.api.models.customer.Customer;
-import com.commercetools.api.models.customer.CustomerDraft;
-import com.commercetools.api.models.customer.CustomerDraftBuilder;
-import com.commercetools.api.models.customer_group.CustomerGroup;
-import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierBuilder;
-import com.commercetools.api.models.order.Order;
-import com.commercetools.api.models.order_edit.OrderEdit;
-import com.commercetools.api.models.store.Store;
-import com.commercetools.api.models.store.StoreResourceIdentifierBuilder;
 import commercetools.customer.CustomerFixtures;
-import commercetools.customer_group.CustomerGroupFixtures;
-import commercetools.store.StoreFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import org.junit.Assert;

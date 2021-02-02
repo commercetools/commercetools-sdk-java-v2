@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.product_discount;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.TypedMoney;
-import com.commercetools.api.models.product_discount.ProductDiscountValue;
-import com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

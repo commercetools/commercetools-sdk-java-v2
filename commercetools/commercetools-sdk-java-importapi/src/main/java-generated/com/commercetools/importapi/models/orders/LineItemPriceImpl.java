@@ -2,23 +2,10 @@
 package com.commercetools.importapi.models.orders;
 
 import java.time.*;
-import java.time.ZonedDateTime;
 import java.util.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
-import com.commercetools.importapi.models.common.ChannelKeyReference;
-import com.commercetools.importapi.models.common.CustomerGroupKeyReference;
-import com.commercetools.importapi.models.common.DiscountedPrice;
-import com.commercetools.importapi.models.common.PriceTier;
-import com.commercetools.importapi.models.common.TypedMoney;
-import com.commercetools.importapi.models.customfields.Custom;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;

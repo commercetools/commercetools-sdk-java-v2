@@ -1,7 +1,6 @@
 
 package com.commercetools.api.models.product_type;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -10,14 +9,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.product_type.AttributeConstraintEnum;
-import com.commercetools.api.models.product_type.AttributeDefinitionImpl;
-import com.commercetools.api.models.product_type.AttributeType;
-import com.commercetools.api.models.product_type.TextInputHint;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")

@@ -1,21 +1,9 @@
 
 package com.commercetools.api.models.cart_discount;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart_discount.CartDiscount;
-import com.commercetools.api.models.cart_discount.CartDiscountTarget;
-import com.commercetools.api.models.cart_discount.CartDiscountValueDraft;
-import com.commercetools.api.models.cart_discount.StackingMode;
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.Reference;
-import com.commercetools.api.models.type.CustomFields;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

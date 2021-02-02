@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.order_edit;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Reference;
-import com.commercetools.api.models.common.ReferenceTypeId;
-import com.commercetools.api.models.order_edit.OrderEdit;
-import com.commercetools.api.models.order_edit.OrderEditReference;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,7 +1,6 @@
 
 package com.commercetools.api.models.shipping_method;
 
-import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
 

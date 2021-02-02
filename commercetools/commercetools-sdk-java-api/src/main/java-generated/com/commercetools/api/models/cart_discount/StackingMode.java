@@ -1,7 +1,6 @@
 
 package com.commercetools.api.models.cart_discount;
 
-import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
 

@@ -1,13 +1,7 @@
 
 package com.commercetools.ml.models.similar_products;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.ml.models.similar_products.SimilarProduct;
-import com.commercetools.ml.models.similar_products.SimilarProductPair;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

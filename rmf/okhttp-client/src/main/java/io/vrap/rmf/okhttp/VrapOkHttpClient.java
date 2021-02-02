@@ -8,7 +8,6 @@ import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
@@ -20,7 +19,6 @@ import okio.GzipSource;
 import okio.Okio;
 
 import io.vrap.rmf.base.client.ApiHttpHeaders;
-import io.vrap.rmf.base.client.ApiHttpHeaders.HeaderEntry;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;

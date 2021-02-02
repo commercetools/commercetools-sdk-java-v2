@@ -1,7 +1,6 @@
 
 package com.commercetools.ml.models.missing_data;
 
-import java.io.IOException;
 import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
@@ -11,12 +10,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.commercetools.ml.models.common.TaskStatusEnum;
-import com.commercetools.ml.models.missing_data.MissingAttributesPagedQueryResult;
-import com.commercetools.ml.models.missing_data.MissingDataTaskStatusImpl;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**

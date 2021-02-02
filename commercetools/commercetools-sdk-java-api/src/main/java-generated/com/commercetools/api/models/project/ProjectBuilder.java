@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.project;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.message.MessageConfiguration;
-import com.commercetools.api.models.project.CartsConfiguration;
-import com.commercetools.api.models.project.ExternalOAuth;
-import com.commercetools.api.models.project.Project;
-import com.commercetools.api.models.project.ShippingRateInputType;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

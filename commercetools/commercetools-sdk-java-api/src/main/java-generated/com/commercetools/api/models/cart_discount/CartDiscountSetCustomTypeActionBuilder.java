@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.cart_discount;
 
-import java.lang.Object;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart_discount.CartDiscountSetCustomTypeAction;
-import com.commercetools.api.models.cart_discount.CartDiscountUpdateAction;
-import com.commercetools.api.models.type.TypeResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

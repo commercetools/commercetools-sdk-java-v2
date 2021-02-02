@@ -1,18 +1,9 @@
 
 package com.commercetools.api.models.order_edit;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.ExternalTaxRateDraft;
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.order.StagedOrderUpdateAction;
-import com.commercetools.api.models.order_edit.StagedOrderAddCustomLineItemAction;
-import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
-import com.commercetools.api.models.type.CustomFieldsDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

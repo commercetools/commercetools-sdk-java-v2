@@ -1,7 +1,6 @@
 
 package com.commercetools.ml.models.image_search_config;
 
-import java.lang.String;
 import java.util.Arrays;
 import java.util.Optional;
 

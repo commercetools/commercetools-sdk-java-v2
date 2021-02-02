@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.message;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.message.MessagePayload;
-import com.commercetools.api.models.message.PaymentTransactionStateChangedMessagePayload;
-import com.commercetools.api.models.payment.TransactionState;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

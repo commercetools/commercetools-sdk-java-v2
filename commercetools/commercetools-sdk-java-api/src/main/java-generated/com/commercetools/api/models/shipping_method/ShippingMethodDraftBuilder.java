@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.shipping_method;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.shipping_method.ShippingMethodDraft;
-import com.commercetools.api.models.shipping_method.ZoneRateDraft;
-import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.customer;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Reference;
-import com.commercetools.api.models.common.ReferenceTypeId;
-import com.commercetools.api.models.customer.Customer;
-import com.commercetools.api.models.customer.CustomerReference;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.message;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
-import com.commercetools.api.models.cart.TaxedItemPrice;
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.OrderLineItemDiscountSetMessage;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

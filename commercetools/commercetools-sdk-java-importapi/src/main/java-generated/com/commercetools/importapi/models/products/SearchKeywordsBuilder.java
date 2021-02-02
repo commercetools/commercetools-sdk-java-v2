@@ -1,13 +1,7 @@
 
 package com.commercetools.importapi.models.products;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.products.SearchKeyword;
-import com.commercetools.importapi.models.products.SearchKeywords;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

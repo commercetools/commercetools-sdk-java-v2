@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.customer_group;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.customer_group.CustomerGroupDraft;
-import com.commercetools.api.models.type.CustomFields;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

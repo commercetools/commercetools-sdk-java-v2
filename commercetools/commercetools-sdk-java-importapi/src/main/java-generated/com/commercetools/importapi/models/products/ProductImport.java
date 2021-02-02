@@ -1,7 +1,6 @@
 
 package com.commercetools.importapi.models.products;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -15,12 +14,9 @@ import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.ProductTypeKeyReference;
 import com.commercetools.importapi.models.common.StateKeyReference;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
-import com.commercetools.importapi.models.products.ProductImportImpl;
-import com.commercetools.importapi.models.products.SearchKeywords;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**

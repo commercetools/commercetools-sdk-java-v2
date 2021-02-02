@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.tax_category;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction;
-import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
-import com.commercetools.api.models.tax_category.TaxRateDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

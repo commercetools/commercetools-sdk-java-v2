@@ -1,13 +1,7 @@
 
 package com.commercetools.ml.models.general_category_recommendations;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendation;
-import com.commercetools.ml.models.general_category_recommendations.GeneralCategoryRecommendationPagedQueryResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

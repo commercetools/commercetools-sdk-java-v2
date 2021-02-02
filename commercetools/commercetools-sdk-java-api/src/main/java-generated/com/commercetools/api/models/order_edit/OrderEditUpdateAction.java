@@ -1,24 +1,15 @@
 
 package com.commercetools.api.models.order_edit;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.order_edit.OrderEditAddStagedActionAction;
-import com.commercetools.api.models.order_edit.OrderEditSetCommentAction;
-import com.commercetools.api.models.order_edit.OrderEditSetCustomFieldAction;
-import com.commercetools.api.models.order_edit.OrderEditSetCustomTypeAction;
-import com.commercetools.api.models.order_edit.OrderEditSetKeyAction;
-import com.commercetools.api.models.order_edit.OrderEditSetStagedActionsAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

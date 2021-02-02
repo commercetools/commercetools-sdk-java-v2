@@ -1,59 +1,15 @@
 
 package com.commercetools.api.models.order;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.order.OrderAddDeliveryAction;
-import com.commercetools.api.models.order.OrderAddItemShippingAddressAction;
-import com.commercetools.api.models.order.OrderAddParcelToDeliveryAction;
-import com.commercetools.api.models.order.OrderAddPaymentAction;
-import com.commercetools.api.models.order.OrderAddReturnInfoAction;
-import com.commercetools.api.models.order.OrderChangeOrderStateAction;
-import com.commercetools.api.models.order.OrderChangePaymentStateAction;
-import com.commercetools.api.models.order.OrderChangeShipmentStateAction;
-import com.commercetools.api.models.order.OrderImportCustomLineItemStateAction;
-import com.commercetools.api.models.order.OrderImportLineItemStateAction;
-import com.commercetools.api.models.order.OrderRemoveDeliveryAction;
-import com.commercetools.api.models.order.OrderRemoveItemShippingAddressAction;
-import com.commercetools.api.models.order.OrderRemoveParcelFromDeliveryAction;
-import com.commercetools.api.models.order.OrderRemovePaymentAction;
-import com.commercetools.api.models.order.OrderSetBillingAddressAction;
-import com.commercetools.api.models.order.OrderSetCustomFieldAction;
-import com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldAction;
-import com.commercetools.api.models.order.OrderSetCustomLineItemCustomTypeAction;
-import com.commercetools.api.models.order.OrderSetCustomLineItemShippingDetailsAction;
-import com.commercetools.api.models.order.OrderSetCustomTypeAction;
-import com.commercetools.api.models.order.OrderSetCustomerEmailAction;
-import com.commercetools.api.models.order.OrderSetCustomerIdAction;
-import com.commercetools.api.models.order.OrderSetDeliveryAddressAction;
-import com.commercetools.api.models.order.OrderSetDeliveryItemsAction;
-import com.commercetools.api.models.order.OrderSetLineItemCustomFieldAction;
-import com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction;
-import com.commercetools.api.models.order.OrderSetLineItemShippingDetailsAction;
-import com.commercetools.api.models.order.OrderSetLocaleAction;
-import com.commercetools.api.models.order.OrderSetOrderNumberAction;
-import com.commercetools.api.models.order.OrderSetParcelItemsAction;
-import com.commercetools.api.models.order.OrderSetParcelMeasurementsAction;
-import com.commercetools.api.models.order.OrderSetParcelTrackingDataAction;
-import com.commercetools.api.models.order.OrderSetReturnPaymentStateAction;
-import com.commercetools.api.models.order.OrderSetReturnShipmentStateAction;
-import com.commercetools.api.models.order.OrderSetShippingAddressAction;
-import com.commercetools.api.models.order.OrderSetStoreAction;
-import com.commercetools.api.models.order.OrderTransitionCustomLineItemStateAction;
-import com.commercetools.api.models.order.OrderTransitionLineItemStateAction;
-import com.commercetools.api.models.order.OrderTransitionStateAction;
-import com.commercetools.api.models.order.OrderUpdateItemShippingAddressAction;
-import com.commercetools.api.models.order.OrderUpdateSyncInfoAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

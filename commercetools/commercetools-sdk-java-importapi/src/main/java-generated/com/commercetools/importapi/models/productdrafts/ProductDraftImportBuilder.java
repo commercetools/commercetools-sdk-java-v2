@@ -1,20 +1,9 @@
 
 package com.commercetools.importapi.models.productdrafts;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.CategoryKeyReference;
-import com.commercetools.importapi.models.common.ImportResource;
-import com.commercetools.importapi.models.common.LocalizedString;
-import com.commercetools.importapi.models.common.ProductTypeKeyReference;
-import com.commercetools.importapi.models.common.StateKeyReference;
-import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
-import com.commercetools.importapi.models.productdrafts.ProductDraftImport;
-import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
-import com.commercetools.importapi.models.products.SearchKeywords;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

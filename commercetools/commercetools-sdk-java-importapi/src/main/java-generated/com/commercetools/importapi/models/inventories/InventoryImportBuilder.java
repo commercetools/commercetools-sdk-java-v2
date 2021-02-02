@@ -1,15 +1,9 @@
 
 package com.commercetools.importapi.models.inventories;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.ChannelKeyReference;
-import com.commercetools.importapi.models.common.ImportResource;
-import com.commercetools.importapi.models.customfields.Custom;
-import com.commercetools.importapi.models.inventories.InventoryImport;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

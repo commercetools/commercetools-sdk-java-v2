@@ -1,22 +1,15 @@
 
 package com.commercetools.api.models.extension;
 
-import java.io.IOException;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.extension.ExtensionChangeDestinationAction;
-import com.commercetools.api.models.extension.ExtensionChangeTriggersAction;
-import com.commercetools.api.models.extension.ExtensionSetKeyAction;
-import com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
-import io.vrap.rmf.base.client.Accessor;
 import io.vrap.rmf.base.client.utils.Generated;
 
 @JsonSubTypes({

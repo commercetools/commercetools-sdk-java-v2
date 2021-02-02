@@ -16,7 +16,6 @@ import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.type.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 

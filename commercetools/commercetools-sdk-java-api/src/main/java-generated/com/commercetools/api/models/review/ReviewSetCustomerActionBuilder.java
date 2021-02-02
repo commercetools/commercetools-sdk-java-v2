@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.review;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.customer.CustomerResourceIdentifier;
-import com.commercetools.api.models.review.ReviewSetCustomerAction;
-import com.commercetools.api.models.review.ReviewUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

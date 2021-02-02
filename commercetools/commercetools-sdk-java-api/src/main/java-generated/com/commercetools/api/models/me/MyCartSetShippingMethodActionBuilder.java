@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.me;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.ExternalTaxRateDraft;
-import com.commercetools.api.models.me.MyCartSetShippingMethodAction;
-import com.commercetools.api.models.me.MyCartUpdateAction;
-import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

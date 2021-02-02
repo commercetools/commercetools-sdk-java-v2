@@ -1,13 +1,7 @@
 
 package com.commercetools.api.models.shopping_list;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.shopping_list.ShoppingListChangeTextLineItemQuantityAction;
-import com.commercetools.api.models.shopping_list.ShoppingListUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

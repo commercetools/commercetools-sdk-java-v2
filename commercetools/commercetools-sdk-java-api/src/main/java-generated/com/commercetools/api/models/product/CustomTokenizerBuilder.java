@@ -1,13 +1,7 @@
 
 package com.commercetools.api.models.product;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.product.CustomTokenizer;
-import com.commercetools.api.models.product.SuggestTokenizer;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

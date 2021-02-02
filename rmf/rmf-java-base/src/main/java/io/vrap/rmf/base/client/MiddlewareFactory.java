@@ -10,7 +10,6 @@ import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 import org.apache.commons.lang3.SystemUtils;
-import org.slf4j.Logger;
 
 public class MiddlewareFactory {
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier,

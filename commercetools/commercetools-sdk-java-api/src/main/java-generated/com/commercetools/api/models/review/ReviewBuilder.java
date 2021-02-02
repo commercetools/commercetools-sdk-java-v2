@@ -1,21 +1,9 @@
 
 package com.commercetools.api.models.review;
 
-import java.lang.Object;
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.channel.ChannelReference;
-import com.commercetools.api.models.common.BaseResource;
-import com.commercetools.api.models.common.CreatedBy;
-import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.customer.CustomerReference;
-import com.commercetools.api.models.product.ProductReference;
-import com.commercetools.api.models.review.Review;
-import com.commercetools.api.models.state.StateReference;
-import com.commercetools.api.models.type.CustomFields;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.me;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Address;
-import com.commercetools.api.models.me.MyCustomerChangeAddressAction;
-import com.commercetools.api.models.me.MyCustomerUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

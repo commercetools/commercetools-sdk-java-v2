@@ -5,13 +5,10 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
-import java.util.Date;
 import java.util.List;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.product.*;

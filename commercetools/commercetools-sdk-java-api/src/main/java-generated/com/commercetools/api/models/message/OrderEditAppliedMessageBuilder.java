@@ -1,15 +1,9 @@
 
 package com.commercetools.api.models.message;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.message.Message;
-import com.commercetools.api.models.message.OrderEditAppliedMessage;
-import com.commercetools.api.models.order_edit.OrderEditApplied;
-import com.commercetools.api.models.order_edit.OrderEditReference;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

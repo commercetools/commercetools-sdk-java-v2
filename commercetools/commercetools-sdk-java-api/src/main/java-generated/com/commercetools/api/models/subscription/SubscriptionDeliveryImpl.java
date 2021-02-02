@@ -4,20 +4,8 @@ package com.commercetools.api.models.subscription;
 import java.time.*;
 import java.util.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
-import com.commercetools.api.models.common.Reference;
-import com.commercetools.api.models.message.UserProvidedIdentifiers;
-import com.commercetools.api.models.subscription.MessageDelivery;
-import com.commercetools.api.models.subscription.ResourceCreatedDelivery;
-import com.commercetools.api.models.subscription.ResourceDeletedDelivery;
-import com.commercetools.api.models.subscription.ResourceUpdatedDelivery;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;

@@ -1,14 +1,7 @@
 
 package com.commercetools.api.models.order;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.order.OrderSetReturnPaymentStateAction;
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.order.ReturnPaymentState;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

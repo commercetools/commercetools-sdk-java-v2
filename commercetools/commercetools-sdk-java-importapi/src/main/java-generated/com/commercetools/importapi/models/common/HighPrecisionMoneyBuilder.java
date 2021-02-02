@@ -1,14 +1,9 @@
 
 package com.commercetools.importapi.models.common;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.importapi.models.common.HighPrecisionMoney;
-import com.commercetools.importapi.models.common.MoneyType;
-import com.commercetools.importapi.models.common.TypedMoney;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.product;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.product.FacetResults;
-import com.commercetools.api.models.product.ProductProjection;
-import com.commercetools.api.models.product.ProductProjectionPagedSearchResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

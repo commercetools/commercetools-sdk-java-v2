@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.state;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.state.StateResourceIdentifier;
-import com.commercetools.api.models.state.StateSetTransitionsAction;
-import com.commercetools.api.models.state.StateUpdateAction;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

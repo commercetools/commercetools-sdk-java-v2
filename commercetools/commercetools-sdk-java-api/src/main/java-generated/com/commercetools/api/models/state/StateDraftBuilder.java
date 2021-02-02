@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.state;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.LocalizedString;
-import com.commercetools.api.models.state.StateDraft;
-import com.commercetools.api.models.state.StateResourceIdentifier;
-import com.commercetools.api.models.state.StateRoleEnum;
-import com.commercetools.api.models.state.StateTypeEnum;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

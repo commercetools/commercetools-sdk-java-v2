@@ -4,22 +4,8 @@ package com.commercetools.importapi.models.productdrafts;
 import java.time.*;
 import java.util.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
-import com.commercetools.importapi.models.common.CategoryKeyReference;
-import com.commercetools.importapi.models.common.ImportResource;
-import com.commercetools.importapi.models.common.LocalizedString;
-import com.commercetools.importapi.models.common.ProductTypeKeyReference;
-import com.commercetools.importapi.models.common.StateKeyReference;
-import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
-import com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport;
-import com.commercetools.importapi.models.products.SearchKeywords;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;

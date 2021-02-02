@@ -1,16 +1,9 @@
 
 package com.commercetools.api.models.me;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.me.MyPaymentDraft;
-import com.commercetools.api.models.me.MyTransactionDraft;
-import com.commercetools.api.models.payment.PaymentMethodInfo;
-import com.commercetools.api.models.type.CustomFieldsDraft;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

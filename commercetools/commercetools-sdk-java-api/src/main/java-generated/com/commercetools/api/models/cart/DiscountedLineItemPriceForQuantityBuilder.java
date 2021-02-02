@@ -1,13 +1,7 @@
 
 package com.commercetools.api.models.cart;
 
-import java.time.ZonedDateTime;
 import java.util.*;
-
-import javax.annotation.Nullable;
-
-import com.commercetools.api.models.cart.DiscountedLineItemPrice;
-import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

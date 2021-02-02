@@ -1,14 +1,9 @@
 
 package com.commercetools.api.models.order;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.order.OrderSetStoreAction;
-import com.commercetools.api.models.order.OrderUpdateAction;
-import com.commercetools.api.models.store.StoreResourceIdentifier;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

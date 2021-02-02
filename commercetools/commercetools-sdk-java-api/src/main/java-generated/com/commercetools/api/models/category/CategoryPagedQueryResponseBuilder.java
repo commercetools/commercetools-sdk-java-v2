@@ -1,13 +1,9 @@
 
 package com.commercetools.api.models.category;
 
-import java.time.ZonedDateTime;
 import java.util.*;
 
 import javax.annotation.Nullable;
-
-import com.commercetools.api.models.category.Category;
-import com.commercetools.api.models.category.CategoryPagedQueryResponse;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

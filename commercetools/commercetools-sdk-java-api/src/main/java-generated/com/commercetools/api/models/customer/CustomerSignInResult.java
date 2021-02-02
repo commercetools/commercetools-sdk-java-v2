@@ -2,7 +2,6 @@
 package com.commercetools.api.models.customer;
 
 import java.io.IOException;
-import java.lang.Object;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
@@ -10,6 +9,7 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.customer.Customer;
 import com.commercetools.api.models.customer.CustomerSignInResultImpl;
 import com.fasterxml.jackson.annotation.*;
@@ -33,11 +33,11 @@ public interface CustomerSignInResult {
     */
     @Valid
     @JsonProperty("cart")
-    public Object getCart();
+    public Cart getCart();
 
     public void setCustomer(final Customer customer);
 
-    public void setCart(final Object cart);
+    public void setCart(final Cart cart);
 
     public static CustomerSignInResult of() {
         return new CustomerSignInResultImpl();

@@ -1,13 +1,13 @@
 
 package com.commercetools.api.models.customer;
 
-import java.lang.Object;
 import java.time.*;
 import java.util.*;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.customer.Customer;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -25,11 +25,11 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
 
     private com.commercetools.api.models.customer.Customer customer;
 
-    private java.lang.Object cart;
+    private com.commercetools.api.models.cart.Cart cart;
 
     @JsonCreator
     CustomerSignInResultImpl(@JsonProperty("customer") final com.commercetools.api.models.customer.Customer customer,
-            @JsonProperty("cart") final java.lang.Object cart) {
+            @JsonProperty("cart") final com.commercetools.api.models.cart.Cart cart) {
         this.customer = customer;
         this.cart = cart;
     }
@@ -45,7 +45,7 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
     *  <p>A cart that is associated to the customer.
     *  Empty if the customer does not have a cart yet.</p>
     */
-    public java.lang.Object getCart() {
+    public com.commercetools.api.models.cart.Cart getCart() {
         return this.cart;
     }
 
@@ -53,7 +53,7 @@ public final class CustomerSignInResultImpl implements CustomerSignInResult {
         this.customer = customer;
     }
 
-    public void setCart(final java.lang.Object cart) {
+    public void setCart(final com.commercetools.api.models.cart.Cart cart) {
         this.cart = cart;
     }
 

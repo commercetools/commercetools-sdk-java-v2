@@ -10,7 +10,11 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.product.FacetResult;
 import com.commercetools.api.models.product.FacetResultsImpl;
+import com.commercetools.api.models.product.FilteredFacetResult;
+import com.commercetools.api.models.product.RangeFacetResult;
+import com.commercetools.api.models.product.TermFacetResult;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 

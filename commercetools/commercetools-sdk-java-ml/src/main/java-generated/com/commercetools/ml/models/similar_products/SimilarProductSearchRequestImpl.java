@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.ml.models.similar_products.ProductSetSelector;
 import com.commercetools.ml.models.similar_products.SimilarityMeasures;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -15,6 +15,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.product_discount.ProductDiscountValue;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

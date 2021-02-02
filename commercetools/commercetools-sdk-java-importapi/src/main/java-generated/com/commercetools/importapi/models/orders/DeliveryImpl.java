@@ -12,6 +12,7 @@ import com.commercetools.importapi.models.common.Address;
 import com.commercetools.importapi.models.orders.DeliveryItem;
 import com.commercetools.importapi.models.orders.Parcel;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

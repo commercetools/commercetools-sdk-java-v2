@@ -23,6 +23,7 @@ import com.commercetools.api.models.type.TypeChangeNameAction;
 import com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction;
 import com.commercetools.api.models.type.TypeSetDescriptionAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

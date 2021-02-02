@@ -12,6 +12,7 @@ import com.commercetools.api.models.customer_group.CustomerGroupSetCustomFieldAc
 import com.commercetools.api.models.customer_group.CustomerGroupSetCustomTypeAction;
 import com.commercetools.api.models.customer_group.CustomerGroupSetKeyAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

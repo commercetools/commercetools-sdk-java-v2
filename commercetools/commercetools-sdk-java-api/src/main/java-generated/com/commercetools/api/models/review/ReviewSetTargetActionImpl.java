@@ -8,8 +8,11 @@ import java.util.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.review.ReviewUpdateAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -48,6 +51,16 @@ public final class ReviewSetTargetActionImpl implements ReviewSetTargetAction {
     */
     public java.lang.Object getTarget() {
         return this.target;
+    }
+
+    @JsonIgnore
+    public void setTarget(final ProductResourceIdentifier target) {
+        this.target = target;
+    }
+
+    @JsonIgnore
+    public void setTarget(final ChannelResourceIdentifier target) {
+        this.target = target;
     }
 
     public void setTarget(final java.lang.Object target) {

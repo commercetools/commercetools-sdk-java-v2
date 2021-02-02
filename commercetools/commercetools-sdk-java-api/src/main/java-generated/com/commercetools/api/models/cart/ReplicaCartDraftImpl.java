@@ -8,7 +8,10 @@ import java.util.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.cart.CartReference;
+import com.commercetools.api.models.order.OrderReference;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -45,6 +48,16 @@ public final class ReplicaCartDraftImpl implements ReplicaCartDraft {
     */
     public String getKey() {
         return this.key;
+    }
+
+    @JsonIgnore
+    public void setReference(final CartReference reference) {
+        this.reference = reference;
+    }
+
+    @JsonIgnore
+    public void setReference(final OrderReference reference) {
+        this.reference = reference;
     }
 
     public void setReference(final java.lang.Object reference) {

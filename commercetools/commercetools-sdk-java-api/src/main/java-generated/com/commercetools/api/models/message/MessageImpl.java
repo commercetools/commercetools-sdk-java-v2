@@ -87,6 +87,7 @@ import com.commercetools.api.models.message.ReviewRatingSetMessage;
 import com.commercetools.api.models.message.ReviewStateTransitionMessage;
 import com.commercetools.api.models.message.UserProvidedIdentifiers;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

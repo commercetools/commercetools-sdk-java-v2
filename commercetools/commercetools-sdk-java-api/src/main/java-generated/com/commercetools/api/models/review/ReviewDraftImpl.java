@@ -8,10 +8,13 @@ import java.util.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -158,6 +161,16 @@ public final class ReviewDraftImpl implements ReviewDraft {
 
     public void setText(final String text) {
         this.text = text;
+    }
+
+    @JsonIgnore
+    public void setTarget(final ProductResourceIdentifier target) {
+        this.target = target;
+    }
+
+    @JsonIgnore
+    public void setTarget(final ChannelResourceIdentifier target) {
+        this.target = target;
     }
 
     public void setTarget(final java.lang.Object target) {

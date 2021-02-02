@@ -70,6 +70,7 @@ import com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartError;
 import com.commercetools.api.models.error.SyntaxErrorError;
 import com.commercetools.api.models.error.WeakPasswordError;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

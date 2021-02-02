@@ -17,6 +17,7 @@ import com.commercetools.importapi.models.orders.ItemShippingDetailsDraft;
 import com.commercetools.importapi.models.orders.ItemState;
 import com.commercetools.importapi.models.prices.TaxRate;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

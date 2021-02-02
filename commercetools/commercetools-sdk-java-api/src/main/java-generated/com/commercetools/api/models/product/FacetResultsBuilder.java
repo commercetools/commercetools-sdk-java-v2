@@ -7,7 +7,11 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.product.FacetResult;
 import com.commercetools.api.models.product.FacetResults;
+import com.commercetools.api.models.product.FilteredFacetResult;
+import com.commercetools.api.models.product.RangeFacetResult;
+import com.commercetools.api.models.product.TermFacetResult;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

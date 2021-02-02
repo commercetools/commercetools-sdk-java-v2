@@ -78,6 +78,7 @@ import com.commercetools.api.models.order_edit.StagedOrderTransitionStateAction;
 import com.commercetools.api.models.order_edit.StagedOrderUpdateItemShippingAddressAction;
 import com.commercetools.api.models.order_edit.StagedOrderUpdateSyncInfoAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

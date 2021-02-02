@@ -12,6 +12,7 @@ import com.commercetools.importapi.models.producttypes.AttributeConstraintEnum;
 import com.commercetools.importapi.models.producttypes.AttributeType;
 import com.commercetools.importapi.models.producttypes.TextInputHint;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

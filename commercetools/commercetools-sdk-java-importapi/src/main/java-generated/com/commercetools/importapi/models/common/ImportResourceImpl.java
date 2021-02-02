@@ -17,6 +17,7 @@ import com.commercetools.importapi.models.products.ProductImport;
 import com.commercetools.importapi.models.producttypes.ProductTypeImport;
 import com.commercetools.importapi.models.productvariants.ProductVariantImport;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

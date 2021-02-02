@@ -21,6 +21,7 @@ import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction
 import com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction;
 import com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

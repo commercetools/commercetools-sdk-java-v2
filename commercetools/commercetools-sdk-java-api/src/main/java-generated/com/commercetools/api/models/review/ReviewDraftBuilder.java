@@ -7,7 +7,9 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.review.ReviewDraft;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;

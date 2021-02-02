@@ -12,6 +12,7 @@ import com.commercetools.api.models.product.FacetResultTerm;
 import com.commercetools.api.models.product.FacetTypes;
 import com.commercetools.api.models.product.TermFacetResultType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

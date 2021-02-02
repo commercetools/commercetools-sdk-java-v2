@@ -30,6 +30,7 @@ import com.commercetools.importapi.models.productvariants.TextSetAttribute;
 import com.commercetools.importapi.models.productvariants.TimeAttribute;
 import com.commercetools.importapi.models.productvariants.TimeSetAttribute;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

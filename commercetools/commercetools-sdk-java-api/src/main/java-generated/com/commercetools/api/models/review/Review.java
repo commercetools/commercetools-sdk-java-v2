@@ -11,10 +11,12 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.review.ReviewImpl;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFields;
@@ -148,6 +150,10 @@ public interface Review extends BaseResource, com.commercetools.api.models.Domai
     public void setTitle(final String title);
 
     public void setText(final String text);
+
+    public void setTarget(final ProductReference target);
+
+    public void setTarget(final ChannelReference target);
 
     public void setTarget(final Object target);
 

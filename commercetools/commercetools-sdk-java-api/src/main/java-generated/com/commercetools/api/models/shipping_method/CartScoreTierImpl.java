@@ -12,6 +12,7 @@ import com.commercetools.api.models.shipping_method.PriceFunction;
 import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
 import com.commercetools.api.models.shipping_method.ShippingRateTierType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

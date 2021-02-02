@@ -19,6 +19,7 @@ import com.commercetools.api.models.shipping_method.ShippingMethodSetKeyAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodSetLocalizedDescriptionAction;
 import com.commercetools.api.models.shipping_method.ShippingMethodSetPredicateAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

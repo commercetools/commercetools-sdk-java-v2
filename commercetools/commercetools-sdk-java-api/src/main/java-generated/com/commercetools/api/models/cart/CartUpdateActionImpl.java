@@ -60,6 +60,7 @@ import com.commercetools.api.models.cart.CartSetShippingMethodTaxRateAction;
 import com.commercetools.api.models.cart.CartSetShippingRateInputAction;
 import com.commercetools.api.models.cart.CartUpdateItemShippingAddressAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -10,7 +10,9 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.review.ReviewDraftImpl;
 import com.commercetools.api.models.state.StateResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
@@ -95,6 +97,10 @@ public interface ReviewDraft {
     public void setTitle(final String title);
 
     public void setText(final String text);
+
+    public void setTarget(final ProductResourceIdentifier target);
+
+    public void setTarget(final ChannelResourceIdentifier target);
 
     public void setTarget(final Object target);
 

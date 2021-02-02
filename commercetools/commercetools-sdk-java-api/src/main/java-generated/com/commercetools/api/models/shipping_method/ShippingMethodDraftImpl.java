@@ -11,6 +11,7 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.shipping_method.ZoneRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -10,7 +10,9 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.cart.ReplicaCartDraftImpl;
+import com.commercetools.api.models.order.OrderReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -31,6 +33,10 @@ public interface ReplicaCartDraft {
 
     @JsonProperty("key")
     public String getKey();
+
+    public void setReference(final CartReference reference);
+
+    public void setReference(final OrderReference reference);
 
     public void setReference(final Object reference);
 

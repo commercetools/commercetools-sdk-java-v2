@@ -20,6 +20,7 @@ import com.commercetools.api.models.type.CustomFieldSetType;
 import com.commercetools.api.models.type.CustomFieldStringType;
 import com.commercetools.api.models.type.CustomFieldTimeType;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

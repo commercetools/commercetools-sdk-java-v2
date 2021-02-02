@@ -54,6 +54,7 @@ import com.commercetools.api.models.product.ProductSetTaxCategoryAction;
 import com.commercetools.api.models.product.ProductTransitionStateAction;
 import com.commercetools.api.models.product.ProductUnpublishAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

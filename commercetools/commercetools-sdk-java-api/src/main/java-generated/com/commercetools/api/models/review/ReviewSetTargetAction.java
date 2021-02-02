@@ -10,6 +10,8 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.review.ReviewSetTargetActionImpl;
 import com.commercetools.api.models.review.ReviewUpdateAction;
 import com.fasterxml.jackson.annotation.*;
@@ -32,6 +34,10 @@ public interface ReviewSetTargetAction extends ReviewUpdateAction {
     @NotNull
     @JsonProperty("target")
     public Object getTarget();
+
+    public void setTarget(final ProductResourceIdentifier target);
+
+    public void setTarget(final ChannelResourceIdentifier target);
 
     public void setTarget(final Object target);
 

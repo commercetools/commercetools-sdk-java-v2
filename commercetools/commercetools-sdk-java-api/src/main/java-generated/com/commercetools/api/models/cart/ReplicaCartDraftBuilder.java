@@ -7,7 +7,9 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.cart.CartReference;
 import com.commercetools.api.models.cart.ReplicaCartDraft;
+import com.commercetools.api.models.order.OrderReference;
 
 import io.vrap.rmf.base.client.utils.Generated;
 

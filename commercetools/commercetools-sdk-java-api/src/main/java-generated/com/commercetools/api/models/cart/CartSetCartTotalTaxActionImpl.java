@@ -11,6 +11,7 @@ import com.commercetools.api.models.cart.CartUpdateAction;
 import com.commercetools.api.models.cart.TaxPortionDraft;
 import com.commercetools.api.models.common.Money;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

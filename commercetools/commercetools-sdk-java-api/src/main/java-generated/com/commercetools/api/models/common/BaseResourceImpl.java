@@ -40,6 +40,7 @@ import com.commercetools.api.models.tax_category.TaxCategory;
 import com.commercetools.api.models.type.Type;
 import com.commercetools.api.models.zone.Zone;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

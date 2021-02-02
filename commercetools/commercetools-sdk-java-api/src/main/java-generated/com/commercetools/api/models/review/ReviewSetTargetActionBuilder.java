@@ -7,6 +7,8 @@ import java.util.*;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.review.ReviewSetTargetAction;
 import com.commercetools.api.models.review.ReviewUpdateAction;
 

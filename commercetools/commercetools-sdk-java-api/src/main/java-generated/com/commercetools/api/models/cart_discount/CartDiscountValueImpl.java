@@ -11,6 +11,7 @@ import com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute;
 import com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem;
 import com.commercetools.api.models.cart_discount.CartDiscountValueRelative;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

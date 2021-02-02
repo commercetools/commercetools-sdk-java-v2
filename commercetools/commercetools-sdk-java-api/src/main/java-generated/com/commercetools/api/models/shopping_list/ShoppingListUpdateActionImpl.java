@@ -31,6 +31,7 @@ import com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCus
 import com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomTypeAction;
 import com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemDescriptionAction;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

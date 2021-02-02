@@ -9,13 +9,16 @@ import java.util.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.customer.CustomerReference;
+import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -251,6 +254,16 @@ public final class ReviewImpl implements Review {
 
     public void setText(final String text) {
         this.text = text;
+    }
+
+    @JsonIgnore
+    public void setTarget(final ProductReference target) {
+        this.target = target;
+    }
+
+    @JsonIgnore
+    public void setTarget(final ChannelReference target) {
+        this.target = target;
     }
 
     public void setTarget(final java.lang.Object target) {

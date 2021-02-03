@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a>, <a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;</dd>
 </dl>
 <hr>
 <br>
@@ -120,6 +120,21 @@ implements <a href="../../../../../com/commercetools/api/models/order_edit/Stage
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;com.commercetools.api.models.order_edit.<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#TRANSITION_CUSTOM_LINE_ITEM_STATE">TRANSITION_CUSTOM_LINE_ITEM_STATE</a></code></li>
+</ul>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -150,46 +165,54 @@ implements <a href="../../../../../com/commercetools/api/models/order_edit/Stage
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#getAction--">getAction</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#getActualTransitionDate--">getActualTransitionDate</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#getCustomLineItemId--">getCustomLineItemId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#getFromState--">getFromState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#getQuantity--">getQuantity</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#getToState--">getToState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setActualTransitionDate-java.time.ZonedDateTime-">setActualTransitionDate</a></span>(java.time.ZonedDateTime&nbsp;actualTransitionDate)</code>&nbsp;</td>
-</tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setCustomLineItemId-java.lang.String-">setCustomLineItemId</a></span>(java.lang.String&nbsp;customLineItemId)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setFromState-com.commercetools.api.models.state.StateResourceIdentifier-">setFromState</a></span>(<a href="../../../../../com/commercetools/api/models/state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;fromState)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setActualTransitionDate-java.time.ZonedDateTime-">setActualTransitionDate</a></span>(java.time.ZonedDateTime&nbsp;actualTransitionDate)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setQuantity-java.lang.Long-">setQuantity</a></span>(java.lang.Long&nbsp;quantity)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setCustomLineItemId-java.lang.String-">setCustomLineItemId</a></span>(java.lang.String&nbsp;customLineItemId)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setFromState-com.commercetools.api.models.state.StateResourceIdentifier-">setFromState</a></span>(<a href="../../../../../com/commercetools/api/models/state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;fromState)</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setQuantity-java.lang.Long-">setQuantity</a></span>(java.lang.Long&nbsp;quantity)</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateActionImpl.html#setToState-com.commercetools.api.models.state.StateResourceIdentifier-">setToState</a></span>(<a href="../../../../../com/commercetools/api/models/state/StateResourceIdentifier.html" title="interface in com.commercetools.api.models.state">StateResourceIdentifier</a>&nbsp;toState)</code>&nbsp;</td>
 </tr>
@@ -199,14 +222,14 @@ implements <a href="../../../../../com/commercetools/api/models/order_edit/Stage
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.order_edit.<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#of-com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction-">of</a>, <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#withStagedOrderTransitionCustomLineItemStateAction-java.util.function.Function-">withStagedOrderTransitionCustomLineItemStateAction</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#builder-com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction-">builder</a>, <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#of-com.commercetools.api.models.order_edit.StagedOrderTransitionCustomLineItemStateAction-">of</a>, <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#withStagedOrderTransitionCustomLineItemStateAction-java.util.function.Function-">withStagedOrderTransitionCustomLineItemStateAction</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.order.StagedOrderUpdateAction">
@@ -214,6 +237,13 @@ implements <a href="../../../../../com/commercetools/api/models/order_edit/Stage
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.order.<a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html#withStagedOrderUpdateAction-java.util.function.Function-">withStagedOrderUpdateAction</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
 </ul>
 </li>
 </ul>
@@ -256,6 +286,8 @@ implements <a href="../../../../../com/commercetools/api/models/order_edit/Stage
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -379,13 +411,39 @@ implements <a href="../../../../../com/commercetools/api/models/order_edit/Stage
 <a name="setActualTransitionDate-java.time.ZonedDateTime-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setActualTransitionDate</h4>
 <pre>public&nbsp;void&nbsp;setActualTransitionDate(java.time.ZonedDateTime&nbsp;actualTransitionDate)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html#setActualTransitionDate-java.time.ZonedDateTime-">setActualTransitionDate</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderTransitionCustomLineItemStateAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderTransitionCustomLineItemStateAction</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

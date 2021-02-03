@@ -1,5 +1,6 @@
 com.commercetools.api.client
 com.commercetools.api.defaultconfig
+com.commercetools.api.json
 com.commercetools.api.models
 com.commercetools.api.models.api_client
 com.commercetools.api.models.cart
@@ -34,6 +35,8 @@ com.commercetools.api.models.tax_category
 com.commercetools.api.models.type
 com.commercetools.api.models.zone
 com.commercetools.api.product
+com.commercetools.http.okhttp3
+com.commercetools.http.okhttp4
 com.commercetools.importapi.client
 com.commercetools.importapi.defaultconfig
 com.commercetools.importapi.models.categories
@@ -70,5 +73,4 @@ io.vrap.rmf.base.client.utils.json
 io.vrap.rmf.base.client.utils.json.modules
 io.vrap.rmf.base.client.utils.json.modules.deserializers
 io.vrap.rmf.base.client.utils.json.modules.serializers
-io.vrap.rmf.impl.okhttp
 io.vrap.rmf.okhttp

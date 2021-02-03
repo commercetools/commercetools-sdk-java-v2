@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":17,"i4":17,"i5":6,"i6":6,"i7":6,"i8":6,"i9":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":17,"i6":17,"i7":6,"i8":6,"i9":6,"i10":6,"i11":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,44 +123,52 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#builder-com.commercetools.api.models.order.ReturnInfo-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/ReturnItem.html" title="interface in com.commercetools.api.models.order">ReturnItem</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#getItems--">getItems</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#getReturnDate--">getReturnDate</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#getReturnTrackingId--">getReturnTrackingId</a></span>()</code>
 <div class="block">Identifies, which return tracking ID is connected to this particular return.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/ReturnInfoImpl.html" title="class in com.commercetools.api.models.order">ReturnInfoImpl</a></code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/ReturnInfoImpl.html" title="class in com.commercetools.api.models.order">ReturnInfoImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#of-com.commercetools.api.models.order.ReturnInfo-">of</a></span>(<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#setItems-java.util.List-">setItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/ReturnItem.html" title="interface in com.commercetools.api.models.order">ReturnItem</a>&gt;&nbsp;items)</code>&nbsp;</td>
-</tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#setItems-com.commercetools.api.models.order.ReturnItem...-">setItems</a></span>(<a href="../../../../../com/commercetools/api/models/order/ReturnItem.html" title="interface in com.commercetools.api.models.order">ReturnItem</a>...&nbsp;items)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#of-com.commercetools.api.models.order.ReturnInfo-">of</a></span>(<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#setReturnDate-java.time.ZonedDateTime-">setReturnDate</a></span>(java.time.ZonedDateTime&nbsp;returnDate)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#setItems-java.util.List-">setItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/order/ReturnItem.html" title="interface in com.commercetools.api.models.order">ReturnItem</a>&gt;&nbsp;items)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#setReturnTrackingId-java.lang.String-">setReturnTrackingId</a></span>(java.lang.String&nbsp;returnTrackingId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#setItems-com.commercetools.api.models.order.ReturnItem...-">setItems</a></span>(<a href="../../../../../com/commercetools/api/models/order/ReturnItem.html" title="interface in com.commercetools.api.models.order">ReturnItem</a>...&nbsp;items)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#setReturnDate-java.time.ZonedDateTime-">setReturnDate</a></span>(java.time.ZonedDateTime&nbsp;returnDate)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#setReturnTrackingId-java.lang.String-">setReturnTrackingId</a></span>(java.lang.String&nbsp;returnTrackingId)</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html#withReturnInfo-java.util.function.Function-">withReturnInfo</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -251,7 +259,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/ReturnInfoImpl.html" title="class in com.commercetools.api.models.order">ReturnInfoImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.order.ReturnInfo-">
@@ -260,7 +268,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/ReturnInfoImpl.html" title="class in com.commercetools.api.models.order">ReturnInfoImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.order.ReturnInfo-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order/ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/order/ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withReturnInfo-java.util.function.Function-">

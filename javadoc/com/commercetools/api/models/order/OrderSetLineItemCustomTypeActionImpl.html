@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.order">OrderSetLineItemCustomTypeAction</a>, <a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.order">OrderSetLineItemCustomTypeAction</a>, <a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a>&gt;</dd>
 </dl>
 <hr>
 <br>
@@ -120,6 +120,21 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetLi
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;com.commercetools.api.models.order.<a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.order">OrderSetLineItemCustomTypeAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#SET_LINE_ITEM_CUSTOM_TYPE">SET_LINE_ITEM_CUSTOM_TYPE</a></code></li>
+</ul>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -150,30 +165,38 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetLi
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#getAction--">getAction</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#getFields--">getFields</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#getLineItemId--">getLineItemId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#getType--">getType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#setFields-com.commercetools.api.models.type.FieldContainer-">setFields</a></span>(<a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#setLineItemId-java.lang.String-">setLineItemId</a></span>(java.lang.String&nbsp;lineItemId)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeActionImpl.html#setType-com.commercetools.api.models.type.TypeResourceIdentifier-">setType</a></span>(<a href="../../../../../com/commercetools/api/models/type/TypeResourceIdentifier.html" title="interface in com.commercetools.api.models.type">TypeResourceIdentifier</a>&nbsp;type)</code>&nbsp;</td>
 </tr>
@@ -183,14 +206,14 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetLi
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.order.<a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.order">OrderSetLineItemCustomTypeAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#of-com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction-">of</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#withOrderSetLineItemCustomTypeAction-java.util.function.Function-">withOrderSetLineItemCustomTypeAction</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#builder-com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction-">builder</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#of-com.commercetools.api.models.order.OrderSetLineItemCustomTypeAction-">of</a>, <a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#withOrderSetLineItemCustomTypeAction-java.util.function.Function-">withOrderSetLineItemCustomTypeAction</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.order.OrderUpdateAction">
@@ -198,6 +221,13 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetLi
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.order.<a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html#withOrderUpdateAction-java.util.function.Function-">withOrderUpdateAction</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
 </ul>
 </li>
 </ul>
@@ -240,6 +270,8 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetLi
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/order/OrderUpdateAction.html" title="interface in com.commercetools.api.models.order">OrderUpdateAction</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -311,13 +343,39 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderSetLi
 <a name="setFields-com.commercetools.api.models.type.FieldContainer-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setFields</h4>
 <pre>public&nbsp;void&nbsp;setFields(<a href="../../../../../com/commercetools/api/models/type/FieldContainer.html" title="interface in com.commercetools.api.models.type">FieldContainer</a>&nbsp;fields)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html#setFields-com.commercetools.api.models.type.FieldContainer-">setFields</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/order/OrderSetLineItemCustomTypeAction.html" title="interface in com.commercetools.api.models.order">OrderSetLineItemCustomTypeAction</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

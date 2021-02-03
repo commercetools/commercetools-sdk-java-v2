@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListChangeTextLineItemsOrderAction</a>, <a href="../../../../../com/commercetools/api/models/me/MyShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListChangeTextLineItemsOrderAction</a>, <a href="../../../../../com/commercetools/api/models/me/MyShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/me/MyShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListUpdateAction</a>&gt;</dd>
 </dl>
 <hr>
 <br>
@@ -120,6 +120,21 @@ implements <a href="../../../../../com/commercetools/api/models/me/MyShoppingLis
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderAction">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;com.commercetools.api.models.me.<a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListChangeTextLineItemsOrderAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#CHANGE_TEXT_LINE_ITEMS_ORDER">CHANGE_TEXT_LINE_ITEMS_ORDER</a></code></li>
+</ul>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -150,18 +165,26 @@ implements <a href="../../../../../com/commercetools/api/models/me/MyShoppingLis
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionImpl.html#getAction--">getAction</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionImpl.html#getTextLineItemOrder--">getTextLineItemOrder</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionImpl.html#setTextLineItemOrder-java.util.List-">setTextLineItemOrder</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;textLineItemOrder)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionImpl.html#setTextLineItemOrder-java.lang.String...-">setTextLineItemOrder</a></span>(java.lang.String...&nbsp;textLineItemOrder)</code>&nbsp;</td>
 </tr>
@@ -171,14 +194,14 @@ implements <a href="../../../../../com/commercetools/api/models/me/MyShoppingLis
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderAction">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.me.<a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListChangeTextLineItemsOrderAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#of-com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderAction-">of</a>, <a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#withMyShoppingListChangeTextLineItemsOrderAction-java.util.function.Function-">withMyShoppingListChangeTextLineItemsOrderAction</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#builder-com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderAction-">builder</a>, <a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#of-com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderAction-">of</a>, <a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#withMyShoppingListChangeTextLineItemsOrderAction-java.util.function.Function-">withMyShoppingListChangeTextLineItemsOrderAction</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.me.MyShoppingListUpdateAction">
@@ -186,6 +209,13 @@ implements <a href="../../../../../com/commercetools/api/models/me/MyShoppingLis
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.me.<a href="../../../../../com/commercetools/api/models/me/MyShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/me/MyShoppingListUpdateAction.html#withMyShoppingListUpdateAction-java.util.function.Function-">withMyShoppingListUpdateAction</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
 </ul>
 </li>
 </ul>
@@ -228,6 +258,8 @@ implements <a href="../../../../../com/commercetools/api/models/me/MyShoppingLis
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/me/MyShoppingListUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/me/MyShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListUpdateAction</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/me/MyShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListUpdateAction</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -260,13 +292,39 @@ implements <a href="../../../../../com/commercetools/api/models/me/MyShoppingLis
 <a name="setTextLineItemOrder-java.util.List-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setTextLineItemOrder</h4>
 <pre>public&nbsp;void&nbsp;setTextLineItemOrder(java.util.List&lt;java.lang.String&gt;&nbsp;textLineItemOrder)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html#setTextLineItemOrder-java.util.List-">setTextLineItemOrder</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListChangeTextLineItemsOrderAction</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":17,"i6":17,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":17,"i8":17,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,64 +123,72 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/type/FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/type/FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#builder-com.commercetools.api.models.type.FieldDefinition-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/type/TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#getInputHint--">getInputHint</a></span>()</code>
 <div class="block">Provides a visual representation type for this field.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#getLabel--">getLabel</a></span>()</code>
 <div class="block">A human-readable label for the field.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#getName--">getName</a></span>()</code>
 <div class="block">The name of the field.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#getRequired--">getRequired</a></span>()</code>
 <div class="block">Whether the field is required to have a value.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/type/FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#getType--">getType</a></span>()</code>
 <div class="block">Describes the type of the field.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/type/FieldDefinitionImpl.html" title="class in com.commercetools.api.models.type">FieldDefinitionImpl</a></code></td>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/type/FieldDefinitionImpl.html" title="class in com.commercetools.api.models.type">FieldDefinitionImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#of-com.commercetools.api.models.type.FieldDefinition-">of</a></span>(<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setInputHint-com.commercetools.api.models.type.TypeTextInputHint-">setInputHint</a></span>(<a href="../../../../../com/commercetools/api/models/type/TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</code>&nbsp;</td>
-</tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setLabel-com.commercetools.api.models.common.LocalizedString-">setLabel</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#of-com.commercetools.api.models.type.FieldDefinition-">of</a></span>(<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setInputHint-com.commercetools.api.models.type.TypeTextInputHint-">setInputHint</a></span>(<a href="../../../../../com/commercetools/api/models/type/TypeTextInputHint.html" title="interface in com.commercetools.api.models.type">TypeTextInputHint</a>&nbsp;inputHint)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setRequired-java.lang.Boolean-">setRequired</a></span>(java.lang.Boolean&nbsp;required)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setLabel-com.commercetools.api.models.common.LocalizedString-">setLabel</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setType-com.commercetools.api.models.type.FieldType-">setType</a></span>(<a href="../../../../../com/commercetools/api/models/type/FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a>&nbsp;type)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setRequired-java.lang.Boolean-">setRequired</a></span>(java.lang.Boolean&nbsp;required)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#setType-com.commercetools.api.models.type.FieldType-">setType</a></span>(<a href="../../../../../com/commercetools/api/models/type/FieldType.html" title="interface in com.commercetools.api.models.type">FieldType</a>&nbsp;type)</code>&nbsp;</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html#withFieldDefinition-java.util.function.Function-">withFieldDefinition</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -310,7 +318,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/type/FieldDefinitionImpl.html" title="class in com.commercetools.api.models.type">FieldDefinitionImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.type.FieldDefinition-">
@@ -319,7 +327,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/type/FieldDefinitionImpl.html" title="class in com.commercetools.api.models.type">FieldDefinitionImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/type/FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.type.FieldDefinition-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/type/FieldDefinitionBuilder.html" title="class in com.commercetools.api.models.type">FieldDefinitionBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/type/FieldDefinition.html" title="interface in com.commercetools.api.models.type">FieldDefinition</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withFieldDefinition-java.util.function.Function-">

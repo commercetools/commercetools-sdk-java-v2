@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":17,"i14":17,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":17,"i18":17,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":6,"i29":6,"i30":6,"i31":6,"i32":6,"i33":6,"i34":6,"i35":6,"i36":6,"i37":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,140 +123,168 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#builder-com.commercetools.api.models.me.MyCartDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getBillingAddress--">getBillingAddress</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getCountry--">getCountry</a></span>()</code>
 <div class="block">A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getCurrency--">getCurrency</a></span>()</code>
 <div class="block">A three-digit currency code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getCustom--">getCustom</a></span>()</code>
 <div class="block">The custom fields.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getCustomerEmail--">getCustomerEmail</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getDeleteDaysAfterLastModification--">getDeleteDaysAfterLastModification</a></span>()</code>
 <div class="block">The cart will be deleted automatically if it hasn't been modified for the specified amount of days and it is in the <code>Active</code> CartState.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getDiscountCodes--">getDiscountCodes</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getInventoryMode--">getInventoryMode</a></span>()</code>
 <div class="block">Default inventory mode is <code>None</code>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getItemShippingAddresses--">getItemShippingAddresses</a></span>()</code>
 <div class="block">Contains addresses for orders with multiple shipping addresses.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/me/MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getLineItems--">getLineItems</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getLocale--">getLocale</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getShippingAddress--">getShippingAddress</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getShippingMethod--">getShippingMethod</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getStore--">getStore</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#getTaxMode--">getTaxMode</a></span>()</code>
 <div class="block">The <code>TaxMode</code> <code>Disabled</code> can not be set on the My Carts endpoint.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartDraftImpl.html" title="class in com.commercetools.api.models.me">MyCartDraftImpl</a></code></td>
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartDraftImpl.html" title="class in com.commercetools.api.models.me">MyCartDraftImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#of-com.commercetools.api.models.me.MyCartDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setBillingAddress-com.commercetools.api.models.common.Address-">setBillingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;billingAddress)</code>&nbsp;</td>
-</tr>
-<tr id="i16" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setCountry-java.lang.String-">setCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
-</tr>
-<tr id="i17" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setCurrency-java.lang.String-">setCurrency</a></span>(java.lang.String&nbsp;currency)</code>&nbsp;</td>
-</tr>
 <tr id="i18" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#of-com.commercetools.api.models.me.MyCartDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setCustomerEmail-java.lang.String-">setCustomerEmail</a></span>(java.lang.String&nbsp;customerEmail)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setBillingAddress-com.commercetools.api.models.common.Address-">setBillingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;billingAddress)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setDeleteDaysAfterLastModification-java.lang.Long-">setDeleteDaysAfterLastModification</a></span>(java.lang.Long&nbsp;deleteDaysAfterLastModification)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setCountry-java.lang.String-">setCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setInventoryMode-com.commercetools.api.models.cart.InventoryMode-">setInventoryMode</a></span>(<a href="../../../../../com/commercetools/api/models/cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a>&nbsp;inventoryMode)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setCurrency-java.lang.String-">setCurrency</a></span>(java.lang.String&nbsp;currency)</code>&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setItemShippingAddresses-com.commercetools.api.models.common.Address...-">setItemShippingAddresses</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;itemShippingAddresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setItemShippingAddresses-java.util.List-">setItemShippingAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;itemShippingAddresses)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setCustomerEmail-java.lang.String-">setCustomerEmail</a></span>(java.lang.String&nbsp;customerEmail)</code>&nbsp;</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setLineItems-java.util.List-">setLineItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/me/MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;&nbsp;lineItems)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setDeleteDaysAfterLastModification-java.lang.Long-">setDeleteDaysAfterLastModification</a></span>(java.lang.Long&nbsp;deleteDaysAfterLastModification)</code>&nbsp;</td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setLineItems-com.commercetools.api.models.me.MyLineItemDraft...-">setLineItems</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>...&nbsp;lineItems)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setDiscountCodes-com.commercetools.api.models.cart.DiscountCodeInfo...-">setDiscountCodes</a></span>(<a href="../../../../../com/commercetools/api/models/cart/DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>...&nbsp;discountCodes)</code>&nbsp;</td>
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setLocale-java.lang.String-">setLocale</a></span>(java.lang.String&nbsp;locale)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setDiscountCodes-java.util.List-">setDiscountCodes</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;&nbsp;discountCodes)</code>&nbsp;</td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setShippingAddress-com.commercetools.api.models.common.Address-">setShippingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setInventoryMode-com.commercetools.api.models.cart.InventoryMode-">setInventoryMode</a></span>(<a href="../../../../../com/commercetools/api/models/cart/InventoryMode.html" title="interface in com.commercetools.api.models.cart">InventoryMode</a>&nbsp;inventoryMode)</code>&nbsp;</td>
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setShippingMethod-com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier-">setShippingMethod</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setItemShippingAddresses-com.commercetools.api.models.common.Address...-">setItemShippingAddresses</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>...&nbsp;itemShippingAddresses)</code>&nbsp;</td>
 </tr>
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setTaxMode-com.commercetools.api.models.cart.TaxMode-">setTaxMode</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a>&nbsp;taxMode)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setItemShippingAddresses-java.util.List-">setItemShippingAddresses</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;itemShippingAddresses)</code>&nbsp;</td>
 </tr>
 <tr id="i30" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setLineItems-java.util.List-">setLineItems</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/me/MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>&gt;&nbsp;lineItems)</code>&nbsp;</td>
+</tr>
+<tr id="i31" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setLineItems-com.commercetools.api.models.me.MyLineItemDraft...-">setLineItems</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyLineItemDraft.html" title="interface in com.commercetools.api.models.me">MyLineItemDraft</a>...&nbsp;lineItems)</code>&nbsp;</td>
+</tr>
+<tr id="i32" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setLocale-java.lang.String-">setLocale</a></span>(java.lang.String&nbsp;locale)</code>&nbsp;</td>
+</tr>
+<tr id="i33" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setShippingAddress-com.commercetools.api.models.common.Address-">setShippingAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</code>&nbsp;</td>
+</tr>
+<tr id="i34" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setShippingMethod-com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier-">setShippingMethod</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</code>&nbsp;</td>
+</tr>
+<tr id="i35" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setStore-com.commercetools.api.models.store.StoreKeyReference-">setStore</a></span>(<a href="../../../../../com/commercetools/api/models/store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;store)</code>&nbsp;</td>
+</tr>
+<tr id="i36" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#setTaxMode-com.commercetools.api.models.cart.TaxMode-">setTaxMode</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a>&nbsp;taxMode)</code>&nbsp;</td>
+</tr>
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html#withMyCartDraft-java.util.function.Function-">withMyCartDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -408,6 +436,26 @@ var activeTableTab = "activeTableTab";
   Each address must contain a key which is unique in this cart.</p></div>
 </li>
 </ul>
+<a name="getStore--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getStore</h4>
+<pre>@Valid
+@Valid <a href="../../../../../com/commercetools/api/models/store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;getStore()</pre>
+</li>
+</ul>
+<a name="getDiscountCodes--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDiscountCodes</h4>
+<pre>@Valid
+@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;&nbsp;getDiscountCodes()</pre>
+</li>
+</ul>
 <a name="setCurrency-java.lang.String-">
 <!--   -->
 </a>
@@ -543,13 +591,40 @@ var activeTableTab = "activeTableTab";
 <pre>void&nbsp;setItemShippingAddresses(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;itemShippingAddresses)</pre>
 </li>
 </ul>
+<a name="setStore-com.commercetools.api.models.store.StoreKeyReference-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setStore</h4>
+<pre>void&nbsp;setStore(<a href="../../../../../com/commercetools/api/models/store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;store)</pre>
+</li>
+</ul>
+<a name="setDiscountCodes-com.commercetools.api.models.cart.DiscountCodeInfo...-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDiscountCodes</h4>
+<pre>void&nbsp;setDiscountCodes(<a href="../../../../../com/commercetools/api/models/cart/DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>...&nbsp;discountCodes)</pre>
+</li>
+</ul>
+<a name="setDiscountCodes-java.util.List-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setDiscountCodes</h4>
+<pre>void&nbsp;setDiscountCodes(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;&nbsp;discountCodes)</pre>
+</li>
+</ul>
 <a name="of--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartDraftImpl.html" title="class in com.commercetools.api.models.me">MyCartDraftImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.me.MyCartDraft-">
@@ -558,7 +633,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartDraftImpl.html" title="class in com.commercetools.api.models.me">MyCartDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.me.MyCartDraft-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/me/MyCartDraft.html" title="interface in com.commercetools.api.models.me">MyCartDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withMyCartDraft-java.util.function.Function-">

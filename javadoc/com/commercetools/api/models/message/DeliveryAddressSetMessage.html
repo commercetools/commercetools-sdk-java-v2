@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":17,"i4":17,"i5":6,"i6":6,"i7":6,"i8":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":17,"i6":17,"i7":6,"i8":6,"i9":6,"i10":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#DELIVERY_ADDRESS_SET">DELIVERY_ADDRESS_SET</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,38 +147,46 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#getAddress--">getAddress</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessageBuilder.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessageBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#builder--">builder</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>@NotNull java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#getDeliveryId--">getDeliveryId</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessageBuilder.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessageBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#builder-com.commercetools.api.models.message.DeliveryAddressSetMessage-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#getOldAddress--">getOldAddress</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#getAddress--">getAddress</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessageImpl.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessageImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#of--">of</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>@NotNull java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#getDeliveryId--">getDeliveryId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessageImpl.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessageImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#of-com.commercetools.api.models.message.DeliveryAddressSetMessage-">of</a></span>(<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>&nbsp;template)</code>&nbsp;</td>
+<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#getOldAddress--">getOldAddress</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#setAddress-com.commercetools.api.models.common.Address-">setAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#setDeliveryId-java.lang.String-">setDeliveryId</a></span>(java.lang.String&nbsp;deliveryId)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#of-com.commercetools.api.models.message.DeliveryAddressSetMessage-">of</a></span>(<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#setOldAddress-com.commercetools.api.models.common.Address-">setOldAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;oldAddress)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#setAddress-com.commercetools.api.models.common.Address-">setAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;address)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#setDeliveryId-java.lang.String-">setDeliveryId</a></span>(java.lang.String&nbsp;deliveryId)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#setOldAddress-com.commercetools.api.models.common.Address-">setOldAddress</a></span>(<a href="../../../../../com/commercetools/api/models/common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;oldAddress)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html#withDeliveryAddressSetMessage-java.util.function.Function-">withDeliveryAddressSetMessage</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -193,6 +220,27 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="DELIVERY_ADDRESS_SET">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>DELIVERY_ADDRESS_SET</h4>
+<pre>static final&nbsp;java.lang.String DELIVERY_ADDRESS_SET</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.DeliveryAddressSetMessage.DELIVERY_ADDRESS_SET">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -262,7 +310,7 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessageImpl.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessageImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.message.DeliveryAddressSetMessage-">
@@ -271,7 +319,25 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessageImpl.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessageImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessageBuilder.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessageBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.message.DeliveryAddressSetMessage-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessageBuilder.html" title="class in com.commercetools.api.models.message">DeliveryAddressSetMessageBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/message/DeliveryAddressSetMessage.html" title="interface in com.commercetools.api.models.message">DeliveryAddressSetMessage</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withDeliveryAddressSetMessage-java.util.function.Function-">
@@ -336,13 +402,13 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

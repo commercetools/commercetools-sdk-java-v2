@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":17,"i6":17,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":17,"i8":17,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/me/MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/me/MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/me/MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a>&gt;</dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/me/MyCartUpdateActi
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#REMOVE_LINE_ITEM">REMOVE_LINE_ITEM</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,54 +147,62 @@ extends <a href="../../../../../com/commercetools/api/models/me/MyCartUpdateActi
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemActionBuilder.html" title="class in com.commercetools.api.models.me">MyCartRemoveLineItemActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemActionBuilder.html" title="class in com.commercetools.api.models.me">MyCartRemoveLineItemActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#builder-com.commercetools.api.models.me.MyCartRemoveLineItemAction-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#getExternalPrice--">getExternalPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#getExternalTotalPrice--">getExternalTotalPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#getLineItemId--">getLineItemId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#getQuantity--">getQuantity</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#getShippingDetailsToRemove--">getShippingDetailsToRemove</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemActionImpl.html" title="class in com.commercetools.api.models.me">MyCartRemoveLineItemActionImpl</a></code></td>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemActionImpl.html" title="class in com.commercetools.api.models.me">MyCartRemoveLineItemActionImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#of-com.commercetools.api.models.me.MyCartRemoveLineItemAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setExternalPrice-com.commercetools.api.models.common.Money-">setExternalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalPrice)</code>&nbsp;</td>
-</tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setExternalTotalPrice-com.commercetools.api.models.cart.ExternalLineItemTotalPrice-">setExternalTotalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a>&nbsp;externalTotalPrice)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#of-com.commercetools.api.models.me.MyCartRemoveLineItemAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setLineItemId-java.lang.String-">setLineItemId</a></span>(java.lang.String&nbsp;lineItemId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setExternalPrice-com.commercetools.api.models.common.Money-">setExternalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalPrice)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setQuantity-java.lang.Double-">setQuantity</a></span>(java.lang.Double&nbsp;quantity)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setExternalTotalPrice-com.commercetools.api.models.cart.ExternalLineItemTotalPrice-">setExternalTotalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a>&nbsp;externalTotalPrice)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setShippingDetailsToRemove-com.commercetools.api.models.cart.ItemShippingDetailsDraft-">setShippingDetailsToRemove</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetailsToRemove)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setLineItemId-java.lang.String-">setLineItemId</a></span>(java.lang.String&nbsp;lineItemId)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setQuantity-java.lang.Double-">setQuantity</a></span>(java.lang.Double&nbsp;quantity)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#setShippingDetailsToRemove-com.commercetools.api.models.cart.ItemShippingDetailsDraft-">setShippingDetailsToRemove</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetailsToRemove)</code>&nbsp;</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html#withMyCartRemoveLineItemAction-java.util.function.Function-">withMyCartRemoveLineItemAction</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -187,6 +214,13 @@ extends <a href="../../../../../com/commercetools/api/models/me/MyCartUpdateActi
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.me.<a href="../../../../../com/commercetools/api/models/me/MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/me/MyCartUpdateAction.html#getAction--">getAction</a>, <a href="../../../../../com/commercetools/api/models/me/MyCartUpdateAction.html#withMyCartUpdateAction-java.util.function.Function-">withMyCartUpdateAction</a></code></li>
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -195,6 +229,27 @@ extends <a href="../../../../../com/commercetools/api/models/me/MyCartUpdateActi
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="REMOVE_LINE_ITEM">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>REMOVE_LINE_ITEM</h4>
+<pre>static final&nbsp;java.lang.String REMOVE_LINE_ITEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.me.MyCartRemoveLineItemAction.REMOVE_LINE_ITEM">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -301,7 +356,7 @@ extends <a href="../../../../../com/commercetools/api/models/me/MyCartUpdateActi
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemActionImpl.html" title="class in com.commercetools.api.models.me">MyCartRemoveLineItemActionImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.me.MyCartRemoveLineItemAction-">
@@ -310,7 +365,25 @@ extends <a href="../../../../../com/commercetools/api/models/me/MyCartUpdateActi
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemActionImpl.html" title="class in com.commercetools.api.models.me">MyCartRemoveLineItemActionImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemActionBuilder.html" title="class in com.commercetools.api.models.me">MyCartRemoveLineItemActionBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.me.MyCartRemoveLineItemAction-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemActionBuilder.html" title="class in com.commercetools.api.models.me">MyCartRemoveLineItemActionBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/me/MyCartRemoveLineItemAction.html" title="interface in com.commercetools.api.models.me">MyCartRemoveLineItemAction</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withMyCartRemoveLineItemAction-java.util.function.Function-">
@@ -375,13 +448,13 @@ extends <a href="../../../../../com/commercetools/api/models/me/MyCartUpdateActi
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

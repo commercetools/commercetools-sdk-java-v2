@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":17,"i2":17,"i3":6,"i4":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":6,"i10":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,22 +123,48 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>@NotNull com.fasterxml.jackson.databind.JsonNode</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#getReference--">getReference</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraftBuilder.html" title="class in com.commercetools.api.models.cart">ReplicaCartDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraftImpl.html" title="class in com.commercetools.api.models.cart">ReplicaCartDraftImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#of--">of</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraftBuilder.html" title="class in com.commercetools.api.models.cart">ReplicaCartDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#builder-com.commercetools.api.models.cart.ReplicaCartDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraftImpl.html" title="class in com.commercetools.api.models.cart">ReplicaCartDraftImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#of-com.commercetools.api.models.cart.ReplicaCartDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>&nbsp;template)</code>&nbsp;</td>
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#getKey--">getKey</a></span>()</code>
+<div class="block">User-specific unique identifier of the cart.</div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#setReference-com.fasterxml.jackson.databind.JsonNode-">setReference</a></span>(com.fasterxml.jackson.databind.JsonNode&nbsp;reference)</code>&nbsp;</td>
+<td class="colFirst"><code>@NotNull java.lang.Object</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#getReference--">getReference</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#of--">of</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#of-com.commercetools.api.models.cart.ReplicaCartDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#setReference-com.commercetools.api.models.cart.CartReference-">setReference</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;reference)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#setReference-java.lang.Object-">setReference</a></span>(java.lang.Object&nbsp;reference)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#setReference-com.commercetools.api.models.order.OrderReference-">setReference</a></span>(<a href="../../../../../com/commercetools/api/models/order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;reference)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html#withReplicaCartDraft-java.util.function.Function-">withReplicaCartDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -164,16 +190,53 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getReference</h4>
 <pre>@NotNull
-@NotNull com.fasterxml.jackson.databind.JsonNode&nbsp;getReference()</pre>
+@NotNull java.lang.Object&nbsp;getReference()</pre>
 </li>
 </ul>
-<a name="setReference-com.fasterxml.jackson.databind.JsonNode-">
+<a name="getKey--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKey</h4>
+<pre>java.lang.String&nbsp;getKey()</pre>
+<div class="block"><p>User-specific unique identifier of the cart.</p></div>
+</li>
+</ul>
+<a name="setReference-com.commercetools.api.models.cart.CartReference-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setReference</h4>
-<pre>void&nbsp;setReference(com.fasterxml.jackson.databind.JsonNode&nbsp;reference)</pre>
+<pre>void&nbsp;setReference(<a href="../../../../../com/commercetools/api/models/cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&nbsp;reference)</pre>
+</li>
+</ul>
+<a name="setReference-com.commercetools.api.models.order.OrderReference-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReference</h4>
+<pre>void&nbsp;setReference(<a href="../../../../../com/commercetools/api/models/order/OrderReference.html" title="interface in com.commercetools.api.models.order">OrderReference</a>&nbsp;reference)</pre>
+</li>
+</ul>
+<a name="setReference-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReference</h4>
+<pre>void&nbsp;setReference(java.lang.Object&nbsp;reference)</pre>
+</li>
+</ul>
+<a name="setKey-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKey</h4>
+<pre>void&nbsp;setKey(java.lang.String&nbsp;key)</pre>
 </li>
 </ul>
 <a name="of--">
@@ -182,7 +245,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraftImpl.html" title="class in com.commercetools.api.models.cart">ReplicaCartDraftImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.cart.ReplicaCartDraft-">
@@ -191,7 +254,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraftImpl.html" title="class in com.commercetools.api.models.cart">ReplicaCartDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraftBuilder.html" title="class in com.commercetools.api.models.cart">ReplicaCartDraftBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.cart.ReplicaCartDraft-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraftBuilder.html" title="class in com.commercetools.api.models.cart">ReplicaCartDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/cart/ReplicaCartDraft.html" title="interface in com.commercetools.api.models.cart">ReplicaCartDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withReplicaCartDraft-java.util.function.Function-">

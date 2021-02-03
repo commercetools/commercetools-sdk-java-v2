@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":17,"i2":17,"i3":6,"i4":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":17,"i4":17,"i5":6,"i6":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListUpdateAction</a>&gt;, <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListUpdateAction</a></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/shopping_list/Shopp
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html#SET_ANONYMOUS_ID">SET_ANONYMOUS_ID</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,24 +147,32 @@ extends <a href="../../../../../com/commercetools/api/models/shopping_list/Shopp
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html#builder-com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html#getAnonymousId--">getAnonymousId</a></span>()</code>
 <div class="block">Anonymous ID of the anonymous customer that this shopping list belongs to.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdActionImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdActionImpl</a></code></td>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdActionImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdActionImpl</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html#of-com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html#setAnonymousId-java.lang.String-">setAnonymousId</a></span>(java.lang.String&nbsp;anonymousId)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html#withShoppingListSetAnonymousIdAction-java.util.function.Function-">withShoppingListSetAnonymousIdAction</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -157,6 +184,13 @@ extends <a href="../../../../../com/commercetools/api/models/shopping_list/Shopp
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.shopping_list.<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListUpdateAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListUpdateAction.html#getAction--">getAction</a>, <a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListUpdateAction.html#withShoppingListUpdateAction-java.util.function.Function-">withShoppingListUpdateAction</a></code></li>
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -165,6 +199,27 @@ extends <a href="../../../../../com/commercetools/api/models/shopping_list/Shopp
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="SET_ANONYMOUS_ID">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SET_ANONYMOUS_ID</h4>
+<pre>static final&nbsp;java.lang.String SET_ANONYMOUS_ID</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction.SET_ANONYMOUS_ID">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -197,7 +252,7 @@ extends <a href="../../../../../com/commercetools/api/models/shopping_list/Shopp
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdActionImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdActionImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction-">
@@ -206,7 +261,25 @@ extends <a href="../../../../../com/commercetools/api/models/shopping_list/Shopp
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdActionImpl.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdActionImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdActionBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdActionBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/shopping_list/ShoppingListSetAnonymousIdAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetAnonymousIdAction</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withShoppingListSetAnonymousIdAction-java.util.function.Function-">
@@ -271,13 +344,13 @@ extends <a href="../../../../../com/commercetools/api/models/shopping_list/Shopp
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

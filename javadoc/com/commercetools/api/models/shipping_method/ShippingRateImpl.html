@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,44 +150,52 @@ implements <a href="../../../../../com/commercetools/api/models/shipping_method/
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#getFreeAbove--">getFreeAbove</a></span>()</code>
 <div class="block">The shipping is free if the order total (the sum of line item prices) exceeds the <code>freeAbove</code> value.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#getIsMatching--">getIsMatching</a></span>()</code>
 <div class="block">Only appears in response to requests for shipping methods by cart or location to mark this shipping rate as one that matches the cart or location.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#getPrice--">getPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#getTiers--">getTiers</a></span>()</code>
 <div class="block">A list of shipping rate price tiers.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setFreeAbove-com.commercetools.api.models.common.TypedMoney-">setFreeAbove</a></span>(<a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;freeAbove)</code>&nbsp;</td>
-</tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setIsMatching-java.lang.Boolean-">setIsMatching</a></span>(java.lang.Boolean&nbsp;isMatching)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setPrice-com.commercetools.api.models.common.TypedMoney-">setPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setFreeAbove-com.commercetools.api.models.common.TypedMoney-">setFreeAbove</a></span>(<a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;freeAbove)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setTiers-java.util.List-">setTiers</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setIsMatching-java.lang.Boolean-">setIsMatching</a></span>(java.lang.Boolean&nbsp;isMatching)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setPrice-com.commercetools.api.models.common.TypedMoney-">setPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;price)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setTiers-java.util.List-">setTiers</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRateImpl.html#setTiers-com.commercetools.api.models.shipping_method.ShippingRatePriceTier...-">setTiers</a></span>(<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>...&nbsp;tiers)</code>&nbsp;</td>
 </tr>
@@ -197,14 +205,14 @@ implements <a href="../../../../../com/commercetools/api/models/shipping_method/
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.shipping_method.ShippingRate">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.shipping_method.<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#of-com.commercetools.api.models.shipping_method.ShippingRate-">of</a>, <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#withShippingRate-java.util.function.Function-">withShippingRate</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#builder-com.commercetools.api.models.shipping_method.ShippingRate-">builder</a>, <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#of-com.commercetools.api.models.shipping_method.ShippingRate-">of</a>, <a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#withShippingRate-java.util.function.Function-">withShippingRate</a></code></li>
 </ul>
 </li>
 </ul>
@@ -349,13 +357,39 @@ implements <a href="../../../../../com/commercetools/api/models/shipping_method/
 <a name="setTiers-java.util.List-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setTiers</h4>
 <pre>public&nbsp;void&nbsp;setTiers(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRatePriceTier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRatePriceTier</a>&gt;&nbsp;tiers)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html#setTiers-java.util.List-">setTiers</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/shipping_method/ShippingRate.html" title="interface in com.commercetools.api.models.shipping_method">ShippingRate</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

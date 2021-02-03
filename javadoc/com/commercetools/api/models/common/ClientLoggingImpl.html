@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,34 +150,42 @@ implements <a href="../../../../../com/commercetools/api/models/common/ClientLog
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#getAnonymousId--">getAnonymousId</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#getClientId--">getClientId</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#getAnonymousId--">getAnonymousId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#getClientId--">getClientId</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#getCustomer--">getCustomer</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#getExternalUserId--">getExternalUserId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#setAnonymousId-java.lang.String-">setAnonymousId</a></span>(java.lang.String&nbsp;anonymousId)</code>&nbsp;</td>
-</tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#setClientId-java.lang.String-">setClientId</a></span>(java.lang.String&nbsp;clientId)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#setCustomer-com.commercetools.api.models.customer.CustomerReference-">setCustomer</a></span>(<a href="../../../../../com/commercetools/api/models/customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#setAnonymousId-java.lang.String-">setAnonymousId</a></span>(java.lang.String&nbsp;anonymousId)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#setClientId-java.lang.String-">setClientId</a></span>(java.lang.String&nbsp;clientId)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#setCustomer-com.commercetools.api.models.customer.CustomerReference-">setCustomer</a></span>(<a href="../../../../../com/commercetools/api/models/customer/CustomerReference.html" title="interface in com.commercetools.api.models.customer">CustomerReference</a>&nbsp;customer)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/common/ClientLoggingImpl.html#setExternalUserId-java.lang.String-">setExternalUserId</a></span>(java.lang.String&nbsp;externalUserId)</code>&nbsp;</td>
 </tr>
@@ -187,14 +195,14 @@ implements <a href="../../../../../com/commercetools/api/models/common/ClientLog
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.common.ClientLogging">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#of-com.commercetools.api.models.common.ClientLogging-">of</a>, <a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#withClientLogging-java.util.function.Function-">withClientLogging</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#builder-com.commercetools.api.models.common.ClientLogging-">builder</a>, <a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#of-com.commercetools.api.models.common.ClientLogging-">of</a>, <a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#withClientLogging-java.util.function.Function-">withClientLogging</a></code></li>
 </ul>
 </li>
 </ul>
@@ -321,13 +329,39 @@ implements <a href="../../../../../com/commercetools/api/models/common/ClientLog
 <a name="setAnonymousId-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setAnonymousId</h4>
 <pre>public&nbsp;void&nbsp;setAnonymousId(java.lang.String&nbsp;anonymousId)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/common/ClientLogging.html#setAnonymousId-java.lang.String-">setAnonymousId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/common/ClientLogging.html" title="interface in com.commercetools.api.models.common">ClientLogging</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

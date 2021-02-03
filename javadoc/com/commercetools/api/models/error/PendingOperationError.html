@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":18};
+var methods = {"i0":17,"i1":17,"i2":17,"i3":17,"i4":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/error/ErrorObject.h
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html#PENDING_OPERATION">PENDING_OPERATION</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,14 +147,22 @@ extends <a href="../../../../../com/commercetools/api/models/error/ErrorObject.h
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/error/PendingOperationErrorImpl.html" title="class in com.commercetools.api.models.error">PendingOperationErrorImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html#of--">of</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/error/PendingOperationErrorBuilder.html" title="class in com.commercetools.api.models.error">PendingOperationErrorBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html#builder--">builder</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/error/PendingOperationErrorImpl.html" title="class in com.commercetools.api.models.error">PendingOperationErrorImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html#of-com.commercetools.api.models.error.PendingOperationError-">of</a></span>(<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>&nbsp;template)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/error/PendingOperationErrorBuilder.html" title="class in com.commercetools.api.models.error">PendingOperationErrorBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html#builder-com.commercetools.api.models.error.PendingOperationError-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html#of--">of</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html#of-com.commercetools.api.models.error.PendingOperationError-">of</a></span>(<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html#withPendingOperationError-java.util.function.Function-">withPendingOperationError</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -155,6 +182,27 @@ extends <a href="../../../../../com/commercetools/api/models/error/ErrorObject.h
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="PENDING_OPERATION">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PENDING_OPERATION</h4>
+<pre>static final&nbsp;java.lang.String PENDING_OPERATION</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.error.PendingOperationError.PENDING_OPERATION">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -167,7 +215,7 @@ extends <a href="../../../../../com/commercetools/api/models/error/ErrorObject.h
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/error/PendingOperationErrorImpl.html" title="class in com.commercetools.api.models.error">PendingOperationErrorImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.error.PendingOperationError-">
@@ -176,7 +224,25 @@ extends <a href="../../../../../com/commercetools/api/models/error/ErrorObject.h
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/error/PendingOperationErrorImpl.html" title="class in com.commercetools.api.models.error">PendingOperationErrorImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/error/PendingOperationErrorBuilder.html" title="class in com.commercetools.api.models.error">PendingOperationErrorBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.error.PendingOperationError-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/error/PendingOperationErrorBuilder.html" title="class in com.commercetools.api.models.error">PendingOperationErrorBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/error/PendingOperationError.html" title="interface in com.commercetools.api.models.error">PendingOperationError</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withPendingOperationError-java.util.function.Function-">
@@ -241,13 +307,13 @@ extends <a href="../../../../../com/commercetools/api/models/error/ErrorObject.h
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

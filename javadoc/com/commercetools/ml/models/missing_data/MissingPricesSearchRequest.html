@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":17,"i12":17,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":17,"i14":17,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,128 +123,136 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequestBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesSearchRequestBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequestBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesSearchRequestBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#builder-com.commercetools.ml.models.missing_data.MissingPricesSearchRequest-">builder</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getCheckDate--">getCheckDate</a></span>()</code>
 <div class="block">If true, checks if there are prices for the specified date range and time.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getCurrencyCode--">getCurrencyCode</a></span>()</code>
 <div class="block">If used, only checks if a product variant has a price in the provided currency code.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getIncludeVariants--">getIncludeVariants</a></span>()</code>
 <div class="block">If true, searches all product variants.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getLimit--">getLimit</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getOffset--">getOffset</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getProductIds--">getProductIds</a></span>()</code>
 <div class="block">Filters results by the provided Product IDs.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getProductSetLimit--">getProductSetLimit</a></span>()</code>
 <div class="block">Maximum number of products to scan.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getProductTypeIds--">getProductTypeIds</a></span>()</code>
 <div class="block">Filters results by the provided product type IDs.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getStaged--">getStaged</a></span>()</code>
 <div class="block">If true, searches data from staged products in addition to published products.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getValidFrom--">getValidFrom</a></span>()</code>
 <div class="block">Starting date of the range to check.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#getValidUntil--">getValidUntil</a></span>()</code>
 <div class="block">Ending date of the range to check.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequestImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesSearchRequestImpl</a></code></td>
+<tr id="i13" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequestImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesSearchRequestImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#of-com.commercetools.ml.models.missing_data.MissingPricesSearchRequest-">of</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setCheckDate-java.lang.Boolean-">setCheckDate</a></span>(java.lang.Boolean&nbsp;checkDate)</code>&nbsp;</td>
-</tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setCurrencyCode-java.lang.String-">setCurrencyCode</a></span>(java.lang.String&nbsp;currencyCode)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#of-com.commercetools.ml.models.missing_data.MissingPricesSearchRequest-">of</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setIncludeVariants-java.lang.Boolean-">setIncludeVariants</a></span>(java.lang.Boolean&nbsp;includeVariants)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setCheckDate-java.lang.Boolean-">setCheckDate</a></span>(java.lang.Boolean&nbsp;checkDate)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setLimit-java.lang.Long-">setLimit</a></span>(java.lang.Long&nbsp;limit)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setCurrencyCode-java.lang.String-">setCurrencyCode</a></span>(java.lang.String&nbsp;currencyCode)</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setOffset-java.lang.Long-">setOffset</a></span>(java.lang.Long&nbsp;offset)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setIncludeVariants-java.lang.Boolean-">setIncludeVariants</a></span>(java.lang.Boolean&nbsp;includeVariants)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductIds-java.util.List-">setProductIds</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;productIds)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setLimit-java.lang.Long-">setLimit</a></span>(java.lang.Long&nbsp;limit)</code>&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductIds-java.lang.String...-">setProductIds</a></span>(java.lang.String...&nbsp;productIds)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setOffset-java.lang.Long-">setOffset</a></span>(java.lang.Long&nbsp;offset)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductSetLimit-java.lang.Long-">setProductSetLimit</a></span>(java.lang.Long&nbsp;productSetLimit)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductIds-java.util.List-">setProductIds</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;productIds)</code>&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductTypeIds-java.util.List-">setProductTypeIds</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;productTypeIds)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductIds-java.lang.String...-">setProductIds</a></span>(java.lang.String...&nbsp;productIds)</code>&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductTypeIds-java.lang.String...-">setProductTypeIds</a></span>(java.lang.String...&nbsp;productTypeIds)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductSetLimit-java.lang.Long-">setProductSetLimit</a></span>(java.lang.Long&nbsp;productSetLimit)</code>&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setStaged-java.lang.Boolean-">setStaged</a></span>(java.lang.Boolean&nbsp;staged)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductTypeIds-java.util.List-">setProductTypeIds</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;productTypeIds)</code>&nbsp;</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setProductTypeIds-java.lang.String...-">setProductTypeIds</a></span>(java.lang.String...&nbsp;productTypeIds)</code>&nbsp;</td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setValidUntil-java.time.ZonedDateTime-">setValidUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setStaged-java.lang.Boolean-">setStaged</a></span>(java.lang.Boolean&nbsp;staged)</code>&nbsp;</td>
 </tr>
 <tr id="i26" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
+</tr>
+<tr id="i27" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#setValidUntil-java.time.ZonedDateTime-">setValidUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
+</tr>
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html#withMissingPricesSearchRequest-java.util.function.Function-">withMissingPricesSearchRequest</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -494,7 +502,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequestImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesSearchRequestImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.ml.models.missing_data.MissingPricesSearchRequest-">
@@ -503,7 +511,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequestImpl.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesSearchRequestImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>&nbsp;of(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequestBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesSearchRequestBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.ml.models.missing_data.MissingPricesSearchRequest-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequestBuilder.html" title="class in com.commercetools.ml.models.missing_data">MissingPricesSearchRequestBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/ml/models/missing_data/MissingPricesSearchRequest.html" title="interface in com.commercetools.ml.models.missing_data">MissingPricesSearchRequest</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withMissingPricesSearchRequest-java.util.function.Function-">

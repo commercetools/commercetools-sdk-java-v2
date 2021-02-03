@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":17,"i9":17,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":17,"i11":17,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,94 +123,102 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#builder-com.commercetools.api.models.product_type.AttributeDefinitionDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product_type/AttributeConstraintEnum.html" title="interface in com.commercetools.api.models.product_type">AttributeConstraintEnum</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#getAttributeConstraint--">getAttributeConstraint</a></span>()</code>
 <div class="block">Describes how an attribute or a set of attributes should be validated across all variants of a product.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/product_type/TextInputHint.html" title="interface in com.commercetools.api.models.product_type">TextInputHint</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#getInputHint--">getInputHint</a></span>()</code>
 <div class="block">Provides a visual representation type for this attribute.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#getInputTip--">getInputTip</a></span>()</code>
 <div class="block">Additional information about the attribute that aids content managers when setting product details.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#getIsRequired--">getIsRequired</a></span>()</code>
 <div class="block">Whether the attribute is required to have a value.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.Boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#getIsSearchable--">getIsSearchable</a></span>()</code>
 <div class="block">Whether the attribute's values should generally be enabled in product search.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#getLabel--">getLabel</a></span>()</code>
 <div class="block">A human-readable label for the attribute.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#getName--">getName</a></span>()</code>
 <div class="block">The unique name of the attribute used in the API.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/product_type/AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#getType--">getType</a></span>()</code>
 <div class="block">Describes the type of the attribute.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraftImpl.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftImpl</a></code></td>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraftImpl.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#of-com.commercetools.api.models.product_type.AttributeDefinitionDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setAttributeConstraint-com.commercetools.api.models.product_type.AttributeConstraintEnum-">setAttributeConstraint</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/AttributeConstraintEnum.html" title="interface in com.commercetools.api.models.product_type">AttributeConstraintEnum</a>&nbsp;attributeConstraint)</code>&nbsp;</td>
-</tr>
 <tr id="i11" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setInputHint-com.commercetools.api.models.product_type.TextInputHint-">setInputHint</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/TextInputHint.html" title="interface in com.commercetools.api.models.product_type">TextInputHint</a>&nbsp;inputHint)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#of-com.commercetools.api.models.product_type.AttributeDefinitionDraft-">of</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setInputTip-com.commercetools.api.models.common.LocalizedString-">setInputTip</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;inputTip)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setAttributeConstraint-com.commercetools.api.models.product_type.AttributeConstraintEnum-">setAttributeConstraint</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/AttributeConstraintEnum.html" title="interface in com.commercetools.api.models.product_type">AttributeConstraintEnum</a>&nbsp;attributeConstraint)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setIsRequired-java.lang.Boolean-">setIsRequired</a></span>(java.lang.Boolean&nbsp;isRequired)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setInputHint-com.commercetools.api.models.product_type.TextInputHint-">setInputHint</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/TextInputHint.html" title="interface in com.commercetools.api.models.product_type">TextInputHint</a>&nbsp;inputHint)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setIsSearchable-java.lang.Boolean-">setIsSearchable</a></span>(java.lang.Boolean&nbsp;isSearchable)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setInputTip-com.commercetools.api.models.common.LocalizedString-">setInputTip</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;inputTip)</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setLabel-com.commercetools.api.models.common.LocalizedString-">setLabel</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setIsRequired-java.lang.Boolean-">setIsRequired</a></span>(java.lang.Boolean&nbsp;isRequired)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setIsSearchable-java.lang.Boolean-">setIsSearchable</a></span>(java.lang.Boolean&nbsp;isSearchable)</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setType-com.commercetools.api.models.product_type.AttributeType-">setType</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&nbsp;type)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setLabel-com.commercetools.api.models.common.LocalizedString-">setLabel</a></span>(<a href="../../../../../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setName-java.lang.String-">setName</a></span>(java.lang.String&nbsp;name)</code>&nbsp;</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#setType-com.commercetools.api.models.product_type.AttributeType-">setType</a></span>(<a href="../../../../../com/commercetools/api/models/product_type/AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&nbsp;type)</code>&nbsp;</td>
+</tr>
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html#withAttributeDefinitionDraft-java.util.function.Function-">withAttributeDefinitionDraft</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -399,7 +407,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraftImpl.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.product_type.AttributeDefinitionDraft-">
@@ -408,7 +416,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraftImpl.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.product_type.AttributeDefinitionDraft-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/product_type/AttributeDefinitionDraft.html" title="interface in com.commercetools.api.models.product_type">AttributeDefinitionDraft</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withAttributeDefinitionDraft-java.util.function.Function-">

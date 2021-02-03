@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":17,"i2":17,"i3":6,"i4":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":17,"i4":17,"i5":6,"i6":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a>&gt;</dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html#SET_COUNTRY">SET_COUNTRY</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,24 +147,32 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCountryActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCountryActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCountryActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCountryActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html#builder-com.commercetools.api.models.cart.CartSetCountryAction-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html#getCountry--">getCountry</a></span>()</code>
 <div class="block">A two-digit country code as per <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO 3166-1 alpha-2</a>.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCountryActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCountryActionImpl</a></code></td>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCountryActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCountryActionImpl</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html#of-com.commercetools.api.models.cart.CartSetCountryAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html#setCountry-java.lang.String-">setCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html#withCartSetCountryAction-java.util.function.Function-">withCartSetCountryAction</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -157,6 +184,13 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.cart.<a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html#getAction--">getAction</a>, <a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html#withCartUpdateAction-java.util.function.Function-">withCartUpdateAction</a></code></li>
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -165,6 +199,27 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="SET_COUNTRY">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SET_COUNTRY</h4>
+<pre>static final&nbsp;java.lang.String SET_COUNTRY</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart.CartSetCountryAction.SET_COUNTRY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -196,7 +251,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCountryActionImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.cart.CartSetCountryAction-">
@@ -205,7 +260,25 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCountryActionImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCountryActionBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.cart.CartSetCountryAction-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCountryActionBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/cart/CartSetCountryAction.html" title="interface in com.commercetools.api.models.cart">CartSetCountryAction</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withCartSetCountryAction-java.util.function.Function-">
@@ -270,13 +343,13 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

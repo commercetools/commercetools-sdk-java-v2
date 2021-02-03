@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -120,6 +120,21 @@ implements <a href="../../../../../com/commercetools/api/models/error/DuplicateF
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.com.commercetools.api.models.error.DuplicateFieldError">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;com.commercetools.api.models.error.<a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldError</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#DUPLICATE_FIELD">DUPLICATE_FIELD</a></code></li>
+</ul>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -150,38 +165,46 @@ implements <a href="../../../../../com/commercetools/api/models/error/DuplicateF
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#getCode--">getCode</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#getConflictingResource--">getConflictingResource</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>com.fasterxml.jackson.databind.JsonNode</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#getDuplicateValue--">getDuplicateValue</a></span>()</code>&nbsp;</td>
-</tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#getField--">getField</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>java.lang.Object</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#getDuplicateValue--">getDuplicateValue</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#getMessage--">getMessage</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#getField--">getField</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#setConflictingResource-com.commercetools.api.models.common.Reference-">setConflictingResource</a></span>(<a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;conflictingResource)</code>&nbsp;</td>
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#getMessage--">getMessage</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#setDuplicateValue-com.fasterxml.jackson.databind.JsonNode-">setDuplicateValue</a></span>(com.fasterxml.jackson.databind.JsonNode&nbsp;duplicateValue)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#setField-java.lang.String-">setField</a></span>(java.lang.String&nbsp;field)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#setConflictingResource-com.commercetools.api.models.common.Reference-">setConflictingResource</a></span>(<a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;conflictingResource)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#setDuplicateValue-java.lang.Object-">setDuplicateValue</a></span>(java.lang.Object&nbsp;duplicateValue)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#setField-java.lang.String-">setField</a></span>(java.lang.String&nbsp;field)</code>&nbsp;</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldErrorImpl.html#setMessage-java.lang.String-">setMessage</a></span>(java.lang.String&nbsp;message)</code>&nbsp;</td>
 </tr>
@@ -191,14 +214,14 @@ implements <a href="../../../../../com/commercetools/api/models/error/DuplicateF
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.error.DuplicateFieldError">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.error.<a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldError</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#of-com.commercetools.api.models.error.DuplicateFieldError-">of</a>, <a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#withDuplicateFieldError-java.util.function.Function-">withDuplicateFieldError</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#builder-com.commercetools.api.models.error.DuplicateFieldError-">builder</a>, <a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#of-com.commercetools.api.models.error.DuplicateFieldError-">of</a>, <a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#withDuplicateFieldError-java.util.function.Function-">withDuplicateFieldError</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.error.ErrorObject">
@@ -283,7 +306,7 @@ implements <a href="../../../../../com/commercetools/api/models/error/DuplicateF
 <ul class="blockList">
 <li class="blockList">
 <h4>getDuplicateValue</h4>
-<pre>public&nbsp;com.fasterxml.jackson.databind.JsonNode&nbsp;getDuplicateValue()</pre>
+<pre>public&nbsp;java.lang.Object&nbsp;getDuplicateValue()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#getDuplicateValue--">getDuplicateValue</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldError</a></code></dd>
@@ -329,29 +352,55 @@ implements <a href="../../../../../com/commercetools/api/models/error/DuplicateF
 </dl>
 </li>
 </ul>
-<a name="setDuplicateValue-com.fasterxml.jackson.databind.JsonNode-">
+<a name="setDuplicateValue-java.lang.Object-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>setDuplicateValue</h4>
-<pre>public&nbsp;void&nbsp;setDuplicateValue(com.fasterxml.jackson.databind.JsonNode&nbsp;duplicateValue)</pre>
+<pre>public&nbsp;void&nbsp;setDuplicateValue(java.lang.Object&nbsp;duplicateValue)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#setDuplicateValue-com.fasterxml.jackson.databind.JsonNode-">setDuplicateValue</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldError</a></code></dd>
+<dd><code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#setDuplicateValue-java.lang.Object-">setDuplicateValue</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldError</a></code></dd>
 </dl>
 </li>
 </ul>
 <a name="setConflictingResource-com.commercetools.api.models.common.Reference-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setConflictingResource</h4>
 <pre>public&nbsp;void&nbsp;setConflictingResource(<a href="../../../../../com/commercetools/api/models/common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;conflictingResource)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html#setConflictingResource-com.commercetools.api.models.common.Reference-">setConflictingResource</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/error/DuplicateFieldError.html" title="interface in com.commercetools.api.models.error">DuplicateFieldError</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

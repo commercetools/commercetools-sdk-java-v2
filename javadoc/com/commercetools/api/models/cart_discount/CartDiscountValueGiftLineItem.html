@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":6,"i10":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":17,"i7":17,"i8":6,"i9":6,"i10":6,"i11":6,"i12":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#GIFT_LINE_ITEM">GIFT_LINE_ITEM</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,46 +147,58 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#getDistributionChannel--">getDistributionChannel</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#builder--">builder</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#getProduct--">getProduct</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#builder-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#getSupplyChannel--">getSupplyChannel</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#getDistributionChannel--">getDistributionChannel</a></span>()</code>
+<div class="block">The channel must have the role <code>ProductDistribution</code></div>
+</td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#getProduct--">getProduct</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#getSupplyChannel--">getSupplyChannel</a></span>()</code>
+<div class="block">The channel must have the role <code>InventorySupply</code></div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#getVariantId--">getVariantId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemImpl</a></code></td>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#of-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem-">of</a></span>(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#setDistributionChannel-com.commercetools.api.models.channel.ChannelReference-">setDistributionChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;distributionChannel)</code>&nbsp;</td>
-</tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#setProduct-com.commercetools.api.models.product.ProductReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#of-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem-">of</a></span>(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#setSupplyChannel-com.commercetools.api.models.channel.ChannelReference-">setSupplyChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#setDistributionChannel-com.commercetools.api.models.channel.ChannelReference-">setDistributionChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;distributionChannel)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#setVariantId-java.lang.Long-">setVariantId</a></span>(java.lang.Long&nbsp;variantId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#setProduct-com.commercetools.api.models.product.ProductReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product">ProductReference</a>&nbsp;product)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#setSupplyChannel-com.commercetools.api.models.channel.ChannelReference-">setSupplyChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</code>&nbsp;</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#setVariantId-java.lang.Long-">setVariantId</a></span>(java.lang.Long&nbsp;variantId)</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html#withCartDiscountValueGiftLineItem-java.util.function.Function-">withCartDiscountValueGiftLineItem</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -187,6 +218,27 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="GIFT_LINE_ITEM">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>GIFT_LINE_ITEM</h4>
+<pre>static final&nbsp;java.lang.String GIFT_LINE_ITEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem.GIFT_LINE_ITEM">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -222,6 +274,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <h4>getSupplyChannel</h4>
 <pre>@Valid
 @Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;getSupplyChannel()</pre>
+<div class="block"><p>The channel must have the role <code>InventorySupply</code></p></div>
 </li>
 </ul>
 <a name="getDistributionChannel--">
@@ -232,6 +285,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <h4>getDistributionChannel</h4>
 <pre>@Valid
 @Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;getDistributionChannel()</pre>
+<div class="block"><p>The channel must have the role <code>ProductDistribution</code></p></div>
 </li>
 </ul>
 <a name="setProduct-com.commercetools.api.models.product.ProductReference-">
@@ -276,7 +330,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem-">
@@ -285,7 +339,25 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemImpl.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItemBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItemBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/cart_discount/CartDiscountValueGiftLineItem.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueGiftLineItem</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withCartDiscountValueGiftLineItem-java.util.function.Function-">
@@ -350,13 +422,13 @@ extends <a href="../../../../../com/commercetools/api/models/cart_discount/CartD
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

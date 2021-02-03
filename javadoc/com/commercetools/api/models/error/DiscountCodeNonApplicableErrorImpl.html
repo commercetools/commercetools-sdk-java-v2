@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -120,6 +120,21 @@ implements <a href="../../../../../com/commercetools/api/models/error/DiscountCo
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.com.commercetools.api.models.error.DiscountCodeNonApplicableError">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;com.commercetools.api.models.error.<a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html" title="interface in com.commercetools.api.models.error">DiscountCodeNonApplicableError</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#DISCOUNT_CODE_NON_APPLICABLE">DISCOUNT_CODE_NON_APPLICABLE</a></code></li>
+</ul>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -150,62 +165,70 @@ implements <a href="../../../../../com/commercetools/api/models/error/DiscountCo
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getCode--">getCode</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getDicountCodeId--">getDicountCodeId</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getCode--">getCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getDiscountCode--">getDiscountCode</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getDicountCodeId--">getDicountCodeId</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getMessage--">getMessage</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getDiscountCode--">getDiscountCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getReason--">getReason</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getMessage--">getMessage</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>java.time.ZonedDateTime</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getValidFrom--">getValidFrom</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getReason--">getReason</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getValidityCheckTime--">getValidityCheckTime</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getValidFrom--">getValidFrom</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getValidUntil--">getValidUntil</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getValidityCheckTime--">getValidityCheckTime</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setDicountCodeId-java.lang.String-">setDicountCodeId</a></span>(java.lang.String&nbsp;dicountCodeId)</code>&nbsp;</td>
+<td class="colFirst"><code>java.time.ZonedDateTime</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#getValidUntil--">getValidUntil</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setDiscountCode-java.lang.String-">setDiscountCode</a></span>(java.lang.String&nbsp;discountCode)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setMessage-java.lang.String-">setMessage</a></span>(java.lang.String&nbsp;message)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setDicountCodeId-java.lang.String-">setDicountCodeId</a></span>(java.lang.String&nbsp;dicountCodeId)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setReason-java.lang.String-">setReason</a></span>(java.lang.String&nbsp;reason)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setDiscountCode-java.lang.String-">setDiscountCode</a></span>(java.lang.String&nbsp;discountCode)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setMessage-java.lang.String-">setMessage</a></span>(java.lang.String&nbsp;message)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setValidityCheckTime-java.time.ZonedDateTime-">setValidityCheckTime</a></span>(java.time.ZonedDateTime&nbsp;validityCheckTime)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setReason-java.lang.String-">setReason</a></span>(java.lang.String&nbsp;reason)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
+</tr>
+<tr id="i15" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setValidityCheckTime-java.time.ZonedDateTime-">setValidityCheckTime</a></span>(java.time.ZonedDateTime&nbsp;validityCheckTime)</code>&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableErrorImpl.html#setValidUntil-java.time.ZonedDateTime-">setValidUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
 </tr>
@@ -215,14 +238,14 @@ implements <a href="../../../../../com/commercetools/api/models/error/DiscountCo
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.error.DiscountCodeNonApplicableError">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.error.<a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html" title="interface in com.commercetools.api.models.error">DiscountCodeNonApplicableError</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#of-com.commercetools.api.models.error.DiscountCodeNonApplicableError-">of</a>, <a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#withDiscountCodeNonApplicableError-java.util.function.Function-">withDiscountCodeNonApplicableError</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#builder-com.commercetools.api.models.error.DiscountCodeNonApplicableError-">builder</a>, <a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#of-com.commercetools.api.models.error.DiscountCodeNonApplicableError-">of</a>, <a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#withDiscountCodeNonApplicableError-java.util.function.Function-">withDiscountCodeNonApplicableError</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.error.ErrorObject">
@@ -447,13 +470,39 @@ implements <a href="../../../../../com/commercetools/api/models/error/DiscountCo
 <a name="setValidityCheckTime-java.time.ZonedDateTime-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setValidityCheckTime</h4>
 <pre>public&nbsp;void&nbsp;setValidityCheckTime(java.time.ZonedDateTime&nbsp;validityCheckTime)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html#setValidityCheckTime-java.time.ZonedDateTime-">setValidityCheckTime</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/error/DiscountCodeNonApplicableError.html" title="interface in com.commercetools.api.models.error">DiscountCodeNonApplicableError</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

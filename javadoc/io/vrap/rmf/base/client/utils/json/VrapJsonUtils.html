@@ -17,12 +17,6 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
-var altColor = "altColor";
-var rowColor = "rowColor";
-var tableTab = "tableTab";
-var activeTableTab = "activeTableTab";
 </script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -47,7 +41,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonException.html" title="class in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li>Next&nbsp;Class</li>
 </ul>
 <ul class="navList">
@@ -75,13 +69,13 @@ var activeTableTab = "activeTableTab";
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method.summary">Method</a></li>
+<li><a href="#methods.inherited.from.class.io.vrap.rmf.base.client.utils.json.JsonUtils">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method.detail">Method</a></li>
+<li>Method</li>
 </ul>
 </div>
 <a name="skip.navbar.top">
@@ -98,7 +92,12 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
+<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json">io.vrap.rmf.base.client.utils.json.JsonUtils</a></li>
+<li>
+<ul class="inheritance">
 <li>io.vrap.rmf.base.client.utils.json.VrapJsonUtils</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -106,9 +105,13 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <hr>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;
+<div class="block"><span class="deprecationComment">use <a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json"><code>JsonUtils</code></a> instead</span></div>
+</div>
 <br>
-<pre>public final class <span class="typeNameLabel">VrapJsonUtils</span>
-extends java.lang.Object</pre>
+<pre>@Deprecated
+public final class <span class="typeNameLabel">VrapJsonUtils</span>
+extends <a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json">JsonUtils</a></pre>
 </li>
 </ul>
 </div>
@@ -127,7 +130,9 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#VrapJsonUtils--">VrapJsonUtils</a></span>()</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#VrapJsonUtils--">VrapJsonUtils</a></span>()</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -138,46 +143,13 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tr id="i0" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#fromInputStream-java.io.InputStream-java.lang.Class-">fromInputStream</a></span>(java.io.InputStream&nbsp;content,
-               java.lang.Class&lt;T&gt;&nbsp;clazz)</code>&nbsp;</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#fromJsonByteArray-byte:A-java.lang.Class-">fromJsonByteArray</a></span>(byte[]&nbsp;content,
-                 java.lang.Class&lt;T&gt;&nbsp;clazz)</code>&nbsp;</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#fromJsonString-java.lang.String-java.lang.Class-">fromJsonString</a></span>(java.lang.String&nbsp;content,
-              java.lang.Class&lt;T&gt;&nbsp;clazz)</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static com.fasterxml.jackson.databind.ObjectMapper</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#getConfiguredObjectMapper--">getConfiguredObjectMapper</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#prettyPrint-java.lang.String-">prettyPrint</a></span>(java.lang.String&nbsp;json)</code>
-<div class="block">Pretty prints a given JSON string.</div>
-</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>static byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#toJsonByteArray-java.lang.Object-">toJsonByteArray</a></span>(java.lang.Object&nbsp;value)</code>&nbsp;</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>static java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html#toJsonString-java.lang.Object-">toJsonString</a></span>(java.lang.Object&nbsp;value)</code>&nbsp;</td>
-</tr>
-</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.io.vrap.rmf.base.client.utils.json.JsonUtils">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;io.vrap.rmf.base.client.utils.json.<a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json">JsonUtils</a></h3>
+<code><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#fromInputStream-java.io.InputStream-java.lang.Class-">fromInputStream</a>, <a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#fromJsonByteArray-byte:A-java.lang.Class-">fromJsonByteArray</a>, <a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#fromJsonString-java.lang.String-java.lang.Class-">fromJsonString</a>, <a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#getConfiguredObjectMapper--">getConfiguredObjectMapper</a>, <a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#prettyPrint-java.lang.String-">prettyPrint</a>, <a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#toJsonByteArray-java.lang.Object-">toJsonByteArray</a>, <a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#toJsonString-java.lang.Object-">toJsonString</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -206,112 +178,7 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>VrapJsonUtils</h4>
 <pre>public&nbsp;VrapJsonUtils()</pre>
-</li>
-</ul>
-</li>
-</ul>
-<!-- ============ METHOD DETAIL ========== -->
-<ul class="blockList">
-<li class="blockList"><a name="method.detail">
-<!--   -->
-</a>
-<h3>Method Detail</h3>
-<a name="toJsonByteArray-java.lang.Object-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>toJsonByteArray</h4>
-<pre>public static&nbsp;byte[]&nbsp;toJsonByteArray(java.lang.Object&nbsp;value)
-                              throws com.fasterxml.jackson.core.JsonProcessingException</pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>com.fasterxml.jackson.core.JsonProcessingException</code></dd>
-</dl>
-</li>
-</ul>
-<a name="toJsonString-java.lang.Object-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>toJsonString</h4>
-<pre>public static&nbsp;java.lang.String&nbsp;toJsonString(java.lang.Object&nbsp;value)
-                                     throws com.fasterxml.jackson.core.JsonProcessingException</pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>com.fasterxml.jackson.core.JsonProcessingException</code></dd>
-</dl>
-</li>
-</ul>
-<a name="fromJsonString-java.lang.String-java.lang.Class-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>fromJsonString</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;fromJsonString(java.lang.String&nbsp;content,
-                                   java.lang.Class&lt;T&gt;&nbsp;clazz)
-                            throws java.io.IOException</pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.io.IOException</code></dd>
-</dl>
-</li>
-</ul>
-<a name="fromJsonByteArray-byte:A-java.lang.Class-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>fromJsonByteArray</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;fromJsonByteArray(byte[]&nbsp;content,
-                                      java.lang.Class&lt;T&gt;&nbsp;clazz)
-                               throws java.io.IOException</pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.io.IOException</code></dd>
-</dl>
-</li>
-</ul>
-<a name="fromInputStream-java.io.InputStream-java.lang.Class-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>fromInputStream</h4>
-<pre>public static&nbsp;&lt;T&gt;&nbsp;T&nbsp;fromInputStream(java.io.InputStream&nbsp;content,
-                                    java.lang.Class&lt;T&gt;&nbsp;clazz)
-                             throws java.io.IOException</pre>
-<dl>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>java.io.IOException</code></dd>
-</dl>
-</li>
-</ul>
-<a name="getConfiguredObjectMapper--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getConfiguredObjectMapper</h4>
-<pre>public static&nbsp;com.fasterxml.jackson.databind.ObjectMapper&nbsp;getConfiguredObjectMapper()</pre>
-</li>
-</ul>
-<a name="prettyPrint-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>prettyPrint</h4>
-<pre>public static&nbsp;java.lang.String&nbsp;prettyPrint(java.lang.String&nbsp;json)</pre>
-<div class="block">Pretty prints a given JSON string.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>json</code> - JSON code as String which should be formatted</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>json</code> formatted</dd>
-</dl>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 </li>
@@ -341,7 +208,7 @@ extends java.lang.Object</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonException.html" title="class in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li>Next&nbsp;Class</li>
 </ul>
 <ul class="navList">
@@ -369,13 +236,13 @@ extends java.lang.Object</pre>
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method.summary">Method</a></li>
+<li><a href="#methods.inherited.from.class.io.vrap.rmf.base.client.utils.json.JsonUtils">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
-<li><a href="#method.detail">Method</a></li>
+<li>Method</li>
 </ul>
 </div>
 <a name="skip.navbar.bottom">

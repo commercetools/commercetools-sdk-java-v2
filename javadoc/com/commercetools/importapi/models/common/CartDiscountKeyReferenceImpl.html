@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -121,6 +121,21 @@ implements <a href="../../../../../com/commercetools/importapi/models/common/Car
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.com.commercetools.importapi.models.common.CartDiscountKeyReference">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;com.commercetools.importapi.models.common.<a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a></h3>
+<code><a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#CART_DISCOUNT">CART_DISCOUNT</a></code></li>
+</ul>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -151,16 +166,24 @@ implements <a href="../../../../../com/commercetools/importapi/models/common/Car
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReferenceImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReferenceImpl.html#getKey--">getKey</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReferenceImpl.html#getTypeId--">getTypeId</a></span>()</code>
 <div class="block">The type of the referenced resource.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReferenceImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReferenceImpl.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
@@ -170,14 +193,14 @@ implements <a href="../../../../../com/commercetools/importapi/models/common/Car
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.importapi.models.common.CartDiscountKeyReference">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.importapi.models.common.<a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a></h3>
-<code><a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#of--">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#of-com.commercetools.importapi.models.common.CartDiscountKeyReference-">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#withCartDiscountKeyReference-java.util.function.Function-">withCartDiscountKeyReference</a></code></li>
+<code><a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#builder--">builder</a>, <a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#builder-com.commercetools.importapi.models.common.CartDiscountKeyReference-">builder</a>, <a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#of--">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#of-com.commercetools.importapi.models.common.CartDiscountKeyReference-">of</a>, <a href="../../../../../com/commercetools/importapi/models/common/CartDiscountKeyReference.html#withCartDiscountKeyReference-java.util.function.Function-">withCartDiscountKeyReference</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.importapi.models.common.KeyReference">
@@ -247,13 +270,39 @@ implements <a href="../../../../../com/commercetools/importapi/models/common/Car
 <a name="setKey-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setKey</h4>
 <pre>public&nbsp;void&nbsp;setKey(java.lang.String&nbsp;key)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/common/KeyReference.html#setKey-java.lang.String-">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/common/KeyReference.html" title="interface in com.commercetools.importapi.models.common">KeyReference</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,96 +150,104 @@ implements <a href="../../../../../com/commercetools/importapi/models/orders/Lin
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getChannel--">getChannel</a></span>()</code>
 <div class="block">References a channel by its key.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getCountry--">getCountry</a></span>()</code>
 <div class="block">Maps to <code>Price.county</code>.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getCustom--">getCustom</a></span>()</code>
 <div class="block">Maps to <code>Price.custom</code>.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getCustomerGroup--">getCustomerGroup</a></span>()</code>
 <div class="block">References a customer group by its key.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getDiscounted--">getDiscounted</a></span>()</code>
 <div class="block">Sets a discounted price from an external service.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getTiers--">getTiers</a></span>()</code>
 <div class="block">The tiered prices for this price.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getValidFrom--">getValidFrom</a></span>()</code>
 <div class="block">Maps to <code>Price.validFrom</code>.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getValidUntil--">getValidUntil</a></span>()</code>
 <div class="block">Maps to <code>Price.validUntil</code>.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/importapi/models/common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#getValue--">getValue</a></span>()</code>
 <div class="block">Maps to <code>Price.value</code>.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setChannel-com.commercetools.importapi.models.common.ChannelKeyReference-">setChannel</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;channel)</code>&nbsp;</td>
-</tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setCountry-java.lang.String-">setCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setCustom-com.commercetools.importapi.models.customfields.Custom-">setCustom</a></span>(<a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setChannel-com.commercetools.importapi.models.common.ChannelKeyReference-">setChannel</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;channel)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setCustomerGroup-com.commercetools.importapi.models.common.CustomerGroupKeyReference-">setCustomerGroup</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setCountry-java.lang.String-">setCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setDiscounted-com.commercetools.importapi.models.common.DiscountedPrice-">setDiscounted</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a>&nbsp;discounted)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setCustom-com.commercetools.importapi.models.customfields.Custom-">setCustom</a></span>(<a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setTiers-java.util.List-">setTiers</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;&nbsp;tiers)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setCustomerGroup-com.commercetools.importapi.models.common.CustomerGroupKeyReference-">setCustomerGroup</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setTiers-com.commercetools.importapi.models.common.PriceTier...-">setTiers</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>...&nbsp;tiers)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setDiscounted-com.commercetools.importapi.models.common.DiscountedPrice-">setDiscounted</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a>&nbsp;discounted)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setTiers-java.util.List-">setTiers</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;&nbsp;tiers)</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setValidUntil-java.time.ZonedDateTime-">setValidUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setTiers-com.commercetools.importapi.models.common.PriceTier...-">setTiers</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>...&nbsp;tiers)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setValidFrom-java.time.ZonedDateTime-">setValidFrom</a></span>(java.time.ZonedDateTime&nbsp;validFrom)</code>&nbsp;</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setValidUntil-java.time.ZonedDateTime-">setValidUntil</a></span>(java.time.ZonedDateTime&nbsp;validUntil)</code>&nbsp;</td>
+</tr>
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPriceImpl.html#setValue-com.commercetools.importapi.models.common.TypedMoney-">setValue</a></span>(<a href="../../../../../com/commercetools/importapi/models/common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
@@ -249,14 +257,14 @@ implements <a href="../../../../../com/commercetools/importapi/models/orders/Lin
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.importapi.models.orders.LineItemPrice">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.importapi.models.orders.<a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></h3>
-<code><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#of--">of</a>, <a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#of-com.commercetools.importapi.models.orders.LineItemPrice-">of</a>, <a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#withLineItemPrice-java.util.function.Function-">withLineItemPrice</a></code></li>
+<code><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#builder--">builder</a>, <a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#builder-com.commercetools.importapi.models.orders.LineItemPrice-">builder</a>, <a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#of--">of</a>, <a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#of-com.commercetools.importapi.models.orders.LineItemPrice-">of</a>, <a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#withLineItemPrice-java.util.function.Function-">withLineItemPrice</a></code></li>
 </ul>
 </li>
 </ul>
@@ -535,13 +543,39 @@ implements <a href="../../../../../com/commercetools/importapi/models/orders/Lin
 <a name="setCustom-com.commercetools.importapi.models.customfields.Custom-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setCustom</h4>
 <pre>public&nbsp;void&nbsp;setCustom(<a href="../../../../../com/commercetools/importapi/models/customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html#setCustom-com.commercetools.importapi.models.customfields.Custom-">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/importapi/models/orders/LineItemPrice.html" title="interface in com.commercetools.importapi.models.orders">LineItemPrice</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

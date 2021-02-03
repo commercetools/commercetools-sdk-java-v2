@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsPost.html" title="class in com.commercetools.api.client"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder.html" title="class in com.commercetools.api.client"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete.html" title="class in com.commercetools.api.client"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -127,7 +127,7 @@ extends java.lang.Object</pre>
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder.html#ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-java.lang.String-">ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder.html#ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-java.lang.String-">ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                                    java.lang.String&nbsp;projectKey,
                                                    java.lang.String&nbsp;storeKey)</code>&nbsp;</td>
 </tr>
@@ -155,12 +155,20 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder.html#post-com.commercetools.api.models.cart.CartDraft-">post</a></span>(<a href="../../../../com/commercetools/api/models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a>&nbsp;cartDraft)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder.html#replicate--">replicate</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder.html#withCustomerId-java.lang.String-">withCustomerId</a></span>(java.lang.String&nbsp;customerId)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsByIDRequestBuilder</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder.html#withId-java.lang.String-">withId</a></span>(java.lang.String&nbsp;ID)</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder.html#withKey-java.lang.String-">withKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -190,7 +198,7 @@ extends java.lang.Object</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder</h4>
-<pre>public&nbsp;ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<pre>public&nbsp;ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                                            java.lang.String&nbsp;projectKey,
                                                            java.lang.String&nbsp;storeKey)</pre>
 </li>
@@ -230,6 +238,24 @@ extends java.lang.Object</pre>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdRequestBuilder</a>&nbsp;withCustomerId(java.lang.String&nbsp;customerId)</pre>
 </li>
 </ul>
+<a name="withKey-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withKey</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder</a>&nbsp;withKey(java.lang.String&nbsp;key)</pre>
+</li>
+</ul>
+<a name="replicate--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>replicate</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder</a>&nbsp;replicate()</pre>
+</li>
+</ul>
 <a name="withId-java.lang.String-">
 <!--   -->
 </a>
@@ -266,7 +292,7 @@ extends java.lang.Object</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsPost.html" title="class in com.commercetools.api.client"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCartsReplicateRequestBuilder.html" title="class in com.commercetools.api.client"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyCustomersByIDDelete.html" title="class in com.commercetools.api.client"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

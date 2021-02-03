@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":17,"i13":17,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":17,"i15":17,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6,"i25":6,"i26":6,"i27":6,"i28":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a>&gt;, <a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#ADD_LINE_ITEM">ADD_LINE_ITEM</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,110 +147,118 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#builder-com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>java.time.ZonedDateTime</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getAddedAt--">getAddedAt</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getCustom--">getCustom</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getDistributionChannel--">getDistributionChannel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getExternalPrice--">getExternalPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getExternalTaxRate--">getExternalTaxRate</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getExternalTotalPrice--">getExternalTotalPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getProductId--">getProductId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.lang.Double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getQuantity--">getQuantity</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getShippingDetails--">getShippingDetails</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getSku--">getSku</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getSupplyChannel--">getSupplyChannel</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>java.lang.Long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#getVariantId--">getVariantId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionImpl</a></code></td>
+<tr id="i14" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#of-com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i14" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setAddedAt-java.time.ZonedDateTime-">setAddedAt</a></span>(java.time.ZonedDateTime&nbsp;addedAt)</code>&nbsp;</td>
-</tr>
 <tr id="i15" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#of-com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setDistributionChannel-com.commercetools.api.models.channel.ChannelResourceIdentifier-">setDistributionChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;distributionChannel)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setAddedAt-java.time.ZonedDateTime-">setAddedAt</a></span>(java.time.ZonedDateTime&nbsp;addedAt)</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setExternalPrice-com.commercetools.api.models.common.Money-">setExternalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalPrice)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setExternalTaxRate-com.commercetools.api.models.cart.ExternalTaxRateDraft-">setExternalTaxRate</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setDistributionChannel-com.commercetools.api.models.channel.ChannelResourceIdentifier-">setDistributionChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;distributionChannel)</code>&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setExternalTotalPrice-com.commercetools.api.models.cart.ExternalLineItemTotalPrice-">setExternalTotalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a>&nbsp;externalTotalPrice)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setExternalPrice-com.commercetools.api.models.common.Money-">setExternalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalPrice)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setProductId-java.lang.String-">setProductId</a></span>(java.lang.String&nbsp;productId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setExternalTaxRate-com.commercetools.api.models.cart.ExternalTaxRateDraft-">setExternalTaxRate</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&nbsp;externalTaxRate)</code>&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setQuantity-java.lang.Double-">setQuantity</a></span>(java.lang.Double&nbsp;quantity)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setExternalTotalPrice-com.commercetools.api.models.cart.ExternalLineItemTotalPrice-">setExternalTotalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ExternalLineItemTotalPrice.html" title="interface in com.commercetools.api.models.cart">ExternalLineItemTotalPrice</a>&nbsp;externalTotalPrice)</code>&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setShippingDetails-com.commercetools.api.models.cart.ItemShippingDetailsDraft-">setShippingDetails</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setProductId-java.lang.String-">setProductId</a></span>(java.lang.String&nbsp;productId)</code>&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setSku-java.lang.String-">setSku</a></span>(java.lang.String&nbsp;sku)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setQuantity-java.lang.Double-">setQuantity</a></span>(java.lang.Double&nbsp;quantity)</code>&nbsp;</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setSupplyChannel-com.commercetools.api.models.channel.ChannelResourceIdentifier-">setSupplyChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setShippingDetails-com.commercetools.api.models.cart.ItemShippingDetailsDraft-">setShippingDetails</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ItemShippingDetailsDraft.html" title="interface in com.commercetools.api.models.cart">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</code>&nbsp;</td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setVariantId-java.lang.Long-">setVariantId</a></span>(java.lang.Long&nbsp;variantId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setSku-java.lang.String-">setSku</a></span>(java.lang.String&nbsp;sku)</code>&nbsp;</td>
 </tr>
 <tr id="i26" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setSupplyChannel-com.commercetools.api.models.channel.ChannelResourceIdentifier-">setSupplyChannel</a></span>(<a href="../../../../../com/commercetools/api/models/channel/ChannelResourceIdentifier.html" title="interface in com.commercetools.api.models.channel">ChannelResourceIdentifier</a>&nbsp;supplyChannel)</code>&nbsp;</td>
+</tr>
+<tr id="i27" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#setVariantId-java.lang.Long-">setVariantId</a></span>(java.lang.Long&nbsp;variantId)</code>&nbsp;</td>
+</tr>
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html#withStagedOrderAddLineItemAction-java.util.function.Function-">withStagedOrderAddLineItemAction</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -243,6 +270,13 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.order.<a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html" title="interface in com.commercetools.api.models.order">StagedOrderUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html#getAction--">getAction</a>, <a href="../../../../../com/commercetools/api/models/order/StagedOrderUpdateAction.html#withStagedOrderUpdateAction-java.util.function.Function-">withStagedOrderUpdateAction</a></code></li>
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -251,6 +285,27 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ADD_LINE_ITEM">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ADD_LINE_ITEM</h4>
+<pre>static final&nbsp;java.lang.String ADD_LINE_ITEM</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction.ADD_LINE_ITEM">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -486,7 +541,7 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction-">
@@ -495,7 +550,25 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionImpl.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.order_edit.StagedOrderAddLineItemAction-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemActionBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderAddLineItemActionBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/order_edit/StagedOrderAddLineItemAction.html" title="interface in com.commercetools.api.models.order_edit">StagedOrderAddLineItemAction</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withStagedOrderAddLineItemAction-java.util.function.Function-">
@@ -560,13 +633,13 @@ extends <a href="../../../../../com/commercetools/api/models/order/StagedOrderUp
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

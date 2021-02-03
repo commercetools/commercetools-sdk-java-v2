@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -149,11 +149,15 @@ extends java.lang.Object</pre>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/vrap/rmf/base/client/utils/Utils.html#bytesToString-byte:A-">bytesToString</a></span>(byte[]&nbsp;input)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/vrap/rmf/base/client/utils/Utils.html#bytesToUTF8String-byte:A-">bytesToUTF8String</a></span>(byte[]&nbsp;input)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static &lt;I,O&gt;&nbsp;<a href="../../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;O&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/vrap/rmf/base/client/utils/Utils.html#convertResponse-io.vrap.rmf.base.client.ApiHttpResponse-java.lang.Class-">convertResponse</a></span>(<a href="../../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response,
                java.lang.Class&lt;O&gt;&nbsp;outputType)</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static &lt;U,V&gt;&nbsp;java.util.function.Function&lt;U,V&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/vrap/rmf/base/client/utils/Utils.html#wrapToCompletionException-io.vrap.rmf.base.client.utils.ExceptionalFunction-">wrapToCompletionException</a></span>(<a href="../../../../../../io/vrap/rmf/base/client/utils/ExceptionalFunction.html" title="interface in io.vrap.rmf.base.client.utils">ExceptionalFunction</a>&lt;U,V&gt;&nbsp;exceptionalFunction)</code>&nbsp;</td>
 </tr>
@@ -212,6 +216,15 @@ extends java.lang.Object</pre>
 <li class="blockList">
 <h4>bytesToString</h4>
 <pre>public static&nbsp;java.lang.String&nbsp;bytesToString(byte[]&nbsp;input)</pre>
+</li>
+</ul>
+<a name="bytesToUTF8String-byte:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>bytesToUTF8String</h4>
+<pre>public static&nbsp;java.lang.String&nbsp;bytesToUTF8String(byte[]&nbsp;input)</pre>
 </li>
 </ul>
 <a name="convertResponse-io.vrap.rmf.base.client.ApiHttpResponse-java.lang.Class-">

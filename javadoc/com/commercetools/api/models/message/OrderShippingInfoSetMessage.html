@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":17,"i3":17,"i4":6,"i5":6,"i6":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#ORDER_SHIPPING_INFO_SET">ORDER_SHIPPING_INFO_SET</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,30 +147,38 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#builder-com.commercetools.api.models.message.OrderShippingInfoSetMessage-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#getOldShippingInfo--">getOldShippingInfo</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#getShippingInfo--">getShippingInfo</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageImpl</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageImpl</a></code></td>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#of-com.commercetools.api.models.message.OrderShippingInfoSetMessage-">of</a></span>(<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#setOldShippingInfo-com.commercetools.api.models.cart.ShippingInfo-">setOldShippingInfo</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;oldShippingInfo)</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#setShippingInfo-com.commercetools.api.models.cart.ShippingInfo-">setShippingInfo</a></span>(<a href="../../../../../com/commercetools/api/models/cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;shippingInfo)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html#withOrderShippingInfoSetMessage-java.util.function.Function-">withOrderShippingInfoSetMessage</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -185,6 +212,27 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ORDER_SHIPPING_INFO_SET">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ORDER_SHIPPING_INFO_SET</h4>
+<pre>static final&nbsp;java.lang.String ORDER_SHIPPING_INFO_SET</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderShippingInfoSetMessage.ORDER_SHIPPING_INFO_SET">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -235,7 +283,7 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.message.OrderShippingInfoSetMessage-">
@@ -244,7 +292,25 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.message.OrderShippingInfoSetMessage-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderShippingInfoSetMessageBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/message/OrderShippingInfoSetMessage.html" title="interface in com.commercetools.api.models.message">OrderShippingInfoSetMessage</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withOrderShippingInfoSetMessage-java.util.function.Function-">
@@ -309,13 +375,13 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

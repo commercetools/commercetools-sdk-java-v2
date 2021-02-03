@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":18};
+var methods = {"i0":17,"i1":17,"i2":17,"i3":17,"i4":6,"i5":6,"i6":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -123,23 +123,31 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/products/SearchKeywordsImpl.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#of--">of</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#builder--">builder</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/products/SearchKeywordsImpl.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#of-com.commercetools.importapi.models.products.SearchKeywords-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;template)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#builder-com.commercetools.importapi.models.products.SearchKeywords-">builder</a></span>(<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#of--">of</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#of-com.commercetools.importapi.models.products.SearchKeywords-">of</a></span>(<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#setValue-java.lang.String-java.util.List-">setValue</a></span>(java.lang.String&nbsp;key,
         java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>&gt;&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid java.util.Map&lt;java.lang.String,java.util.List&lt;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeyword.html" title="interface in com.commercetools.importapi.models.products">SearchKeyword</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#values--">values</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html#withSearchKeywords-java.util.function.Function-">withSearchKeywords</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -185,7 +193,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywordsImpl.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.importapi.models.products.SearchKeywords-">
@@ -194,7 +202,25 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywordsImpl.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;of(<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.importapi.models.products.SearchKeywords-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/importapi/models/products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withSearchKeywords-java.util.function.Function-">

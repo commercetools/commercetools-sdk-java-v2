@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":17,"i3":17,"i4":6,"i5":6,"i6":6,"i7":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Superinterfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a>, <a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a>&gt;</dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#SET_CART_TOTAL_TAX">SET_CART_TOTAL_TAX</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,36 +147,44 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#builder-com.commercetools.api.models.cart.CartSetCartTotalTaxAction-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#getExternalTaxPortions--">getExternalTaxPortions</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#getExternalTotalGross--">getExternalTotalGross</a></span>()</code>
 <div class="block">The total gross amount of the cart (totalNet + taxes).</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionImpl</a></code></td>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#of-com.commercetools.api.models.cart.CartSetCartTotalTaxAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#setExternalTaxPortions-java.util.List-">setExternalTaxPortions</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;&nbsp;externalTaxPortions)</code>&nbsp;</td>
-</tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#setExternalTaxPortions-com.commercetools.api.models.cart.TaxPortionDraft...-">setExternalTaxPortions</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>...&nbsp;externalTaxPortions)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#of-com.commercetools.api.models.cart.CartSetCartTotalTaxAction-">of</a></span>(<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#setExternalTotalGross-com.commercetools.api.models.common.Money-">setExternalTotalGross</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalTotalGross)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#setExternalTaxPortions-java.util.List-">setExternalTaxPortions</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;&nbsp;externalTaxPortions)</code>&nbsp;</td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#setExternalTaxPortions-com.commercetools.api.models.cart.TaxPortionDraft...-">setExternalTaxPortions</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>...&nbsp;externalTaxPortions)</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#setExternalTotalGross-com.commercetools.api.models.common.Money-">setExternalTotalGross</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalTotalGross)</code>&nbsp;</td>
+</tr>
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html#withCartSetCartTotalTaxAction-java.util.function.Function-">withCartSetCartTotalTaxAction</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -169,6 +196,13 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.cart.<a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html#getAction--">getAction</a>, <a href="../../../../../com/commercetools/api/models/cart/CartUpdateAction.html#withCartUpdateAction-java.util.function.Function-">withCartUpdateAction</a></code></li>
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -177,6 +211,27 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="SET_CART_TOTAL_TAX">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>SET_CART_TOTAL_TAX</h4>
+<pre>static final&nbsp;java.lang.String SET_CART_TOTAL_TAX</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.cart.CartSetCartTotalTaxAction.SET_CART_TOTAL_TAX">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -238,7 +293,7 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.cart.CartSetCartTotalTaxAction-">
@@ -247,7 +302,25 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxActionImpl.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.cart.CartSetCartTotalTaxAction-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/cart/CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withCartSetCartTotalTaxAction-java.util.function.Function-">
@@ -312,13 +385,13 @@ extends <a href="../../../../../com/commercetools/api/models/cart/CartUpdateActi
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

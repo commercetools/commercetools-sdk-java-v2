@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelAction</a>, <a href="../../../../../com/commercetools/api/models/type/TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a></dd>
+<dd><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/type/TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;, <a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelAction</a>, <a href="../../../../../com/commercetools/api/models/type/TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a></dd>
 </dl>
 <hr>
 <br>
@@ -120,6 +120,21 @@ implements <a href="../../../../../com/commercetools/api/models/type/TypeChangeL
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction">
+<!--   -->
+</a>
+<h3>Fields inherited from interface&nbsp;com.commercetools.api.models.type.<a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#CHANGE_LOCALIZED_ENUM_VALUE_LABEL">CHANGE_LOCALIZED_ENUM_VALUE_LABEL</a></code></li>
+</ul>
+</li>
+</ul>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.summary">
@@ -150,22 +165,30 @@ implements <a href="../../../../../com/commercetools/api/models/type/TypeChangeL
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#getAction--">getAction</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#getFieldName--">getFieldName</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#getAction--">getAction</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#getFieldName--">getFieldName</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#getValue--">getValue</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#setFieldName-java.lang.String-">setFieldName</a></span>(java.lang.String&nbsp;fieldName)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelActionImpl.html#setValue-com.commercetools.api.models.type.CustomFieldLocalizedEnumValue-">setValue</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>&nbsp;value)</code>&nbsp;</td>
 </tr>
@@ -175,14 +198,14 @@ implements <a href="../../../../../com/commercetools/api/models/type/TypeChangeL
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.type.<a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelAction</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#of-com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction-">of</a>, <a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#withTypeChangeLocalizedEnumValueLabelAction-java.util.function.Function-">withTypeChangeLocalizedEnumValueLabelAction</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#builder-com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction-">builder</a>, <a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#of-com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction-">of</a>, <a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#withTypeChangeLocalizedEnumValueLabelAction-java.util.function.Function-">withTypeChangeLocalizedEnumValueLabelAction</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.type.TypeUpdateAction">
@@ -190,6 +213,13 @@ implements <a href="../../../../../com/commercetools/api/models/type/TypeChangeL
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.type.<a href="../../../../../com/commercetools/api/models/type/TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a></h3>
 <code><a href="../../../../../com/commercetools/api/models/type/TypeUpdateAction.html#withTypeUpdateAction-java.util.function.Function-">withTypeUpdateAction</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.ResourceUpdateAction">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a></h3>
+<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#get--">get</a></code></li>
 </ul>
 </li>
 </ul>
@@ -230,6 +260,8 @@ implements <a href="../../../../../com/commercetools/api/models/type/TypeChangeL
 <h4>getAction</h4>
 <pre>public&nbsp;java.lang.String&nbsp;getAction()</pre>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/ResourceUpdateAction.html" title="interface in com.commercetools.api.models">ResourceUpdateAction</a>&lt;<a href="../../../../../com/commercetools/api/models/type/TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a>&gt;</code></dd>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/type/TypeUpdateAction.html#getAction--">getAction</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/type/TypeUpdateAction.html" title="interface in com.commercetools.api.models.type">TypeUpdateAction</a></code></dd>
 </dl>
@@ -277,13 +309,39 @@ implements <a href="../../../../../com/commercetools/api/models/type/TypeChangeL
 <a name="setValue-com.commercetools.api.models.type.CustomFieldLocalizedEnumValue-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setValue</h4>
 <pre>public&nbsp;void&nbsp;setValue(<a href="../../../../../com/commercetools/api/models/type/CustomFieldLocalizedEnumValue.html" title="interface in com.commercetools.api.models.type">CustomFieldLocalizedEnumValue</a>&nbsp;value)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html#setValue-com.commercetools.api.models.type.CustomFieldLocalizedEnumValue-">setValue</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/type/TypeChangeLocalizedEnumValueLabelAction.html" title="interface in com.commercetools.api.models.type">TypeChangeLocalizedEnumValueLabelAction</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

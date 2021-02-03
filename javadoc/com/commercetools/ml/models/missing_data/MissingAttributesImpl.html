@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,72 +150,80 @@ implements <a href="../../../../../com/commercetools/ml/models/missing_data/Miss
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCount.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCount</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#getAttributeCount--">getAttributeCount</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#getAttributeCoverage--">getAttributeCoverage</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#getMissingAttributeNames--">getMissingAttributeNames</a></span>()</code>
 <div class="block">The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#getMissingAttributeValues--">getMissingAttributeValues</a></span>()</code>
 <div class="block">The names of the attributes of the product type that the variant is missing, sorted by attribute importance in descending order.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/ml/models/common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#getProduct--">getProduct</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#getProductType--">getProductType</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>java.lang.Integer</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#getVariantId--">getVariantId</a></span>()</code>
 <div class="block">ID of a ProductVariant.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setAttributeCount-com.commercetools.ml.models.missing_data.AttributeCount-">setAttributeCount</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCount.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCount</a>&nbsp;attributeCount)</code>&nbsp;</td>
-</tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setAttributeCoverage-com.commercetools.ml.models.missing_data.AttributeCoverage-">setAttributeCoverage</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a>&nbsp;attributeCoverage)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setMissingAttributeNames-java.util.List-">setMissingAttributeNames</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;missingAttributeNames)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setAttributeCount-com.commercetools.ml.models.missing_data.AttributeCount-">setAttributeCount</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCount.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCount</a>&nbsp;attributeCount)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setMissingAttributeNames-java.lang.String...-">setMissingAttributeNames</a></span>(java.lang.String...&nbsp;missingAttributeNames)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setAttributeCoverage-com.commercetools.ml.models.missing_data.AttributeCoverage-">setAttributeCoverage</a></span>(<a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a>&nbsp;attributeCoverage)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setMissingAttributeValues-java.util.List-">setMissingAttributeValues</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;missingAttributeValues)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setMissingAttributeNames-java.util.List-">setMissingAttributeNames</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;missingAttributeNames)</code>&nbsp;</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setMissingAttributeValues-java.lang.String...-">setMissingAttributeValues</a></span>(java.lang.String...&nbsp;missingAttributeValues)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setMissingAttributeNames-java.lang.String...-">setMissingAttributeNames</a></span>(java.lang.String...&nbsp;missingAttributeNames)</code>&nbsp;</td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setProduct-com.commercetools.ml.models.common.ProductReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a>&nbsp;product)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setMissingAttributeValues-java.util.List-">setMissingAttributeValues</a></span>(java.util.List&lt;java.lang.String&gt;&nbsp;missingAttributeValues)</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setProductType-com.commercetools.ml.models.common.ProductTypeReference-">setProductType</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;productType)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setMissingAttributeValues-java.lang.String...-">setMissingAttributeValues</a></span>(java.lang.String...&nbsp;missingAttributeValues)</code>&nbsp;</td>
 </tr>
 <tr id="i15" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setProduct-com.commercetools.ml.models.common.ProductReference-">setProduct</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductReference.html" title="interface in com.commercetools.ml.models.common">ProductReference</a>&nbsp;product)</code>&nbsp;</td>
+</tr>
+<tr id="i16" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setProductType-com.commercetools.ml.models.common.ProductTypeReference-">setProductType</a></span>(<a href="../../../../../com/commercetools/ml/models/common/ProductTypeReference.html" title="interface in com.commercetools.ml.models.common">ProductTypeReference</a>&nbsp;productType)</code>&nbsp;</td>
+</tr>
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributesImpl.html#setVariantId-java.lang.Integer-">setVariantId</a></span>(java.lang.Integer&nbsp;variantId)</code>&nbsp;</td>
 </tr>
@@ -225,14 +233,14 @@ implements <a href="../../../../../com/commercetools/ml/models/missing_data/Miss
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.ml.models.missing_data.MissingAttributes">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.ml.models.missing_data.<a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a></h3>
-<code><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#of--">of</a>, <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#of-com.commercetools.ml.models.missing_data.MissingAttributes-">of</a>, <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#withMissingAttributes-java.util.function.Function-">withMissingAttributes</a></code></li>
+<code><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#builder--">builder</a>, <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#builder-com.commercetools.ml.models.missing_data.MissingAttributes-">builder</a>, <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#of--">of</a>, <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#of-com.commercetools.ml.models.missing_data.MissingAttributes-">of</a>, <a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#withMissingAttributes-java.util.function.Function-">withMissingAttributes</a></code></li>
 </ul>
 </li>
 </ul>
@@ -466,13 +474,39 @@ implements <a href="../../../../../com/commercetools/ml/models/missing_data/Miss
 <a name="setAttributeCoverage-com.commercetools.ml.models.missing_data.AttributeCoverage-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setAttributeCoverage</h4>
 <pre>public&nbsp;void&nbsp;setAttributeCoverage(<a href="../../../../../com/commercetools/ml/models/missing_data/AttributeCoverage.html" title="interface in com.commercetools.ml.models.missing_data">AttributeCoverage</a>&nbsp;attributeCoverage)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html#setAttributeCoverage-com.commercetools.ml.models.missing_data.AttributeCoverage-">setAttributeCoverage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/ml/models/missing_data/MissingAttributes.html" title="interface in com.commercetools.ml.models.missing_data">MissingAttributes</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

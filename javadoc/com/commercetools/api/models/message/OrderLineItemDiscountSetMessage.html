@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":17,"i5":17,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":18};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":17,"i7":17,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":18};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -73,13 +73,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -115,6 +115,25 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
+<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Field and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static java.lang.String</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#ORDER_LINE_ITEM_DISCOUNT_SET">ORDER_LINE_ITEM_DISCOUNT_SET</a></span></code>&nbsp;</td>
+</tr>
+</table>
+</li>
+</ul>
 <!-- ========== METHOD SUMMARY =========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.summary">
@@ -128,50 +147,58 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#builder--">builder</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#builder-com.commercetools.api.models.message.OrderLineItemDiscountSetMessage-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>@NotNull @Valid java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#getDiscountedPricePerQuantity--">getDiscountedPricePerQuantity</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>@NotNull java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#getLineItemId--">getLineItemId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#getTaxedPrice--">getTaxedPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#getTotalPrice--">getTotalPrice</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageImpl</a></code></td>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#of--">of</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageImpl</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#of-com.commercetools.api.models.message.OrderLineItemDiscountSetMessage-">of</a></span>(<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</code>&nbsp;</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setDiscountedPricePerQuantity-com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity...-">setDiscountedPricePerQuantity</a></span>(<a href="../../../../../com/commercetools/api/models/cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>...&nbsp;discountedPricePerQuantity)</code>&nbsp;</td>
-</tr>
 <tr id="i7" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setDiscountedPricePerQuantity-java.util.List-">setDiscountedPricePerQuantity</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>&gt;&nbsp;discountedPricePerQuantity)</code>&nbsp;</td>
+<td class="colFirst"><code>static <a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#of-com.commercetools.api.models.message.OrderLineItemDiscountSetMessage-">of</a></span>(<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setLineItemId-java.lang.String-">setLineItemId</a></span>(java.lang.String&nbsp;lineItemId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setDiscountedPricePerQuantity-com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity...-">setDiscountedPricePerQuantity</a></span>(<a href="../../../../../com/commercetools/api/models/cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>...&nbsp;discountedPricePerQuantity)</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setTaxedPrice-com.commercetools.api.models.cart.TaxedItemPrice-">setTaxedPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setDiscountedPricePerQuantity-java.util.List-">setDiscountedPricePerQuantity</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/cart/DiscountedLineItemPriceForQuantity.html" title="interface in com.commercetools.api.models.cart">DiscountedLineItemPriceForQuantity</a>&gt;&nbsp;discountedPricePerQuantity)</code>&nbsp;</td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setTotalPrice-com.commercetools.api.models.common.Money-">setTotalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalPrice)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setLineItemId-java.lang.String-">setLineItemId</a></span>(java.lang.String&nbsp;lineItemId)</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setTaxedPrice-com.commercetools.api.models.cart.TaxedItemPrice-">setTaxedPrice</a></span>(<a href="../../../../../com/commercetools/api/models/cart/TaxedItemPrice.html" title="interface in com.commercetools.api.models.cart">TaxedItemPrice</a>&nbsp;taxedPrice)</code>&nbsp;</td>
+</tr>
+<tr id="i12" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#setTotalPrice-com.commercetools.api.models.common.Money-">setTotalPrice</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;totalPrice)</code>&nbsp;</td>
+</tr>
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>default &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html#withOrderLineItemDiscountSetMessage-java.util.function.Function-">withOrderLineItemDiscountSetMessage</a></span>(java.util.function.Function&lt;<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>,T&gt;&nbsp;helper)</code>&nbsp;</td>
 </tr>
@@ -205,6 +232,27 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
+<!-- ============ FIELD DETAIL =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.detail">
+<!--   -->
+</a>
+<h3>Field Detail</h3>
+<a name="ORDER_LINE_ITEM_DISCOUNT_SET">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ORDER_LINE_ITEM_DISCOUNT_SET</h4>
+<pre>static final&nbsp;java.lang.String ORDER_LINE_ITEM_DISCOUNT_SET</pre>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../constant-values.html#com.commercetools.api.models.message.OrderLineItemDiscountSetMessage.ORDER_LINE_ITEM_DISCOUNT_SET">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
 <!-- ============ METHOD DETAIL ========== -->
 <ul class="blockList">
 <li class="blockList"><a name="method.detail">
@@ -304,7 +352,7 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageImpl</a>&nbsp;of()</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;of()</pre>
 </li>
 </ul>
 <a name="of-com.commercetools.api.models.message.OrderLineItemDiscountSetMessage-">
@@ -313,7 +361,25 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="blockList">
 <li class="blockList">
 <h4>of</h4>
-<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageImpl.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageImpl</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</pre>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;of(<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</pre>
+</li>
+</ul>
+<a name="builder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a>&nbsp;builder()</pre>
+</li>
+</ul>
+<a name="builder-com.commercetools.api.models.message.OrderLineItemDiscountSetMessage-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>builder</h4>
+<pre>static&nbsp;<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessageBuilder.html" title="class in com.commercetools.api.models.message">OrderLineItemDiscountSetMessageBuilder</a>&nbsp;builder(<a href="../../../../../com/commercetools/api/models/message/OrderLineItemDiscountSetMessage.html" title="interface in com.commercetools.api.models.message">OrderLineItemDiscountSetMessage</a>&nbsp;template)</pre>
 </li>
 </ul>
 <a name="withOrderLineItemDiscountSetMessage-java.util.function.Function-">
@@ -378,13 +444,13 @@ extends <a href="../../../../../com/commercetools/api/models/message/Message.htm
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

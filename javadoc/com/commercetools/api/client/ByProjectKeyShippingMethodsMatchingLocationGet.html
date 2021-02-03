@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -98,7 +98,7 @@ var activeTableTab = "activeTableTab";
 <li>java.lang.Object</li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;</li>
+<li><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">io.vrap.rmf.base.client.ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>,<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>com.commercetools.api.client.ByProjectKeyShippingMethodsMatchingLocationGet</li>
@@ -110,10 +110,15 @@ var activeTableTab = "activeTableTab";
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../com/commercetools/api/client/DeprecatableTrait.html" title="interface in com.commercetools.api.client">DeprecatableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;, <a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</dd>
+</dl>
 <hr>
 <br>
 <pre>public class <span class="typeNameLabel">ByProjectKeyShippingMethodsMatchingLocationGet</span>
-extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;</pre>
+extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>,<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;
+implements <a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;, <a href="../../../../com/commercetools/api/client/ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;, <a href="../../../../com/commercetools/api/client/DeprecatableTrait.html" title="interface in com.commercetools.api.client">DeprecatableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;</pre>
 </li>
 </ul>
 </div>
@@ -147,7 +152,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#ByProjectKeyShippingMethodsMatchingLocationGet-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-">ByProjectKeyShippingMethodsMatchingLocationGet</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#ByProjectKeyShippingMethodsMatchingLocationGet-io.vrap.rmf.base.client.ApiHttpClient-java.lang.String-">ByProjectKeyShippingMethodsMatchingLocationGet</a></span>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                               java.lang.String&nbsp;projectKey)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -169,58 +174,74 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#addCountry-java.lang.String-">addCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#addCurrency-java.lang.String-">addCurrency</a></span>(java.lang.String&nbsp;currency)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#addExpand-java.lang.String-">addExpand</a></span>(java.lang.String&nbsp;expand)</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#addState-java.lang.String-">addState</a></span>(java.lang.String&nbsp;state)</code>&nbsp;</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>protected <a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#copy--">copy</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#createHttpRequest--">createHttpRequest</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.util.concurrent.CompletableFuture&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#execute--">execute</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#executeBlocking--">executeBlocking</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#executeBlocking-java.time.Duration-">executeBlocking</a></span>(java.time.Duration&nbsp;timeout)</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#getCountry--">getCountry</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#getCurrency--">getCurrency</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#getExpand--">getExpand</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#getProjectKey--">getProjectKey</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.util.List&lt;java.lang.String&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#getState--">getState</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#setProjectKey-java.lang.String-">setProjectKey</a></span>(java.lang.String&nbsp;projectKey)</code>&nbsp;</td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#withCountry-java.lang.String-">withCountry</a></span>(java.lang.String&nbsp;country)</code>&nbsp;</td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#withCurrency-java.lang.String-">withCurrency</a></span>(java.lang.String&nbsp;currency)</code>&nbsp;</td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#withExpand-java.lang.String-">withExpand</a></span>(java.lang.String&nbsp;expand)</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html#withState-java.lang.String-">withState</a></span>(java.lang.String&nbsp;state)</code>&nbsp;</td>
 </tr>
@@ -230,7 +251,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.vrap.rmf.base.client.<a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a></h3>
-<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam-java.lang.String-V-">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></code></li>
+<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addHeader-java.lang.String-java.lang.String-">addHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#addQueryParam-java.lang.String-V-">addQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#apiHttpClient--">apiHttpClient</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking--">executeBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getFirstQueryParam-java.lang.String-">getFirstQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getHeaders--">getHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParam-java.lang.String-">getQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParams--">getQueryParams</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#getQueryParamUriStrings--">getQueryParamUriStrings</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#send--">send</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#sendBlocking--">sendBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#sendBlocking-java.time.Duration-">sendBlocking</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeader-java.lang.String-java.lang.String-">withHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withHeaders-io.vrap.rmf.base.client.ApiHttpHeaders-">withHeaders</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutHeader-java.lang.String-">withoutHeader</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withoutQueryParam-java.lang.String-">withoutQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParam-java.lang.String-V-">withQueryParam</a>, <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#withQueryParams-java.util.List-">withQueryParams</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -259,7 +280,7 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <ul class="blockList">
 <li class="blockList">
 <h4>ByProjectKeyShippingMethodsMatchingLocationGet</h4>
-<pre>public&nbsp;ByProjectKeyShippingMethodsMatchingLocationGet(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="class in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
+<pre>public&nbsp;ByProjectKeyShippingMethodsMatchingLocationGet(<a href="../../../../io/vrap/rmf/base/client/ApiHttpClient.html" title="interface in io.vrap.rmf.base.client">ApiHttpClient</a>&nbsp;apiHttpClient,
                                                       java.lang.String&nbsp;projectKey)</pre>
 </li>
 </ul>
@@ -287,15 +308,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>createHttpRequest</h4>
 <pre>public&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;createHttpRequest()</pre>
-</li>
-</ul>
-<a name="executeBlocking--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>executeBlocking</h4>
-<pre>public&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;&nbsp;executeBlocking()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#createHttpRequest--">createHttpRequest</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>,<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="executeBlocking-java.time.Duration-">
@@ -305,6 +321,12 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>executeBlocking</h4>
 <pre>public&nbsp;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;&nbsp;executeBlocking(java.time.Duration&nbsp;timeout)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html#executeBlocking-java.time.Duration-">executeBlocking</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#executeBlocking-java.time.Duration-">executeBlocking</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>,<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="execute--">
@@ -314,6 +336,12 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>execute</h4>
 <pre>public&nbsp;java.util.concurrent.CompletableFuture&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;&gt;&nbsp;execute()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html#execute--">execute</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/RequestCommand.html" title="interface in io.vrap.rmf.base.client">RequestCommand</a>&lt;<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#execute--">execute</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>,<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="getProjectKey--">
@@ -359,6 +387,10 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>getExpand</h4>
 <pre>public&nbsp;java.util.List&lt;java.lang.String&gt;&nbsp;getExpand()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html#getExpand--">getExpand</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 <a name="setProjectKey-java.lang.String-">
@@ -379,6 +411,15 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;withCountry(java.lang.String&nbsp;country)</pre>
 </li>
 </ul>
+<a name="addCountry-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addCountry</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;addCountry(java.lang.String&nbsp;country)</pre>
+</li>
+</ul>
 <a name="withState-java.lang.String-">
 <!--   -->
 </a>
@@ -386,6 +427,15 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <li class="blockList">
 <h4>withState</h4>
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;withState(java.lang.String&nbsp;state)</pre>
+</li>
+</ul>
+<a name="addState-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addState</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;addState(java.lang.String&nbsp;state)</pre>
 </li>
 </ul>
 <a name="withCurrency-java.lang.String-">
@@ -397,13 +447,48 @@ extends <a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="clas
 <pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;withCurrency(java.lang.String&nbsp;currency)</pre>
 </li>
 </ul>
+<a name="addCurrency-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addCurrency</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;addCurrency(java.lang.String&nbsp;currency)</pre>
+</li>
+</ul>
 <a name="withExpand-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>withExpand</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;withExpand(java.lang.String&nbsp;expand)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html#withExpand-java.lang.String-">withExpand</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../com/commercetools/api/client/ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&gt;</code></dd>
+</dl>
+</li>
+</ul>
+<a name="addExpand-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addExpand</h4>
+<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;addExpand(java.lang.String&nbsp;expand)</pre>
+</li>
+</ul>
+<a name="copy--">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
-<h4>withExpand</h4>
-<pre>public&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;withExpand(java.lang.String&nbsp;expand)</pre>
+<h4>copy</h4>
+<pre>protected&nbsp;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>&nbsp;copy()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html#copy--">copy</a></code>&nbsp;in class&nbsp;<code><a href="../../../../io/vrap/rmf/base/client/ApiMethod.html" title="class in io.vrap.rmf.base.client">ApiMethod</a>&lt;<a href="../../../../com/commercetools/api/client/ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a>,<a href="../../../../com/commercetools/api/models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;</code></dd>
+</dl>
 </li>
 </ul>
 </li>

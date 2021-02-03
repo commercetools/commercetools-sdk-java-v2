@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -150,144 +150,152 @@ implements <a href="../../../../../com/commercetools/api/models/payment/PaymentD
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getAmountAuthorized--">getAmountAuthorized</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#equals-java.lang.Object-">equals</a></span>(java.lang.Object&nbsp;o)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getAmountPaid--">getAmountPaid</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getAmountAuthorized--">getAmountAuthorized</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getAmountPaid--">getAmountPaid</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getAmountPlanned--">getAmountPlanned</a></span>()</code>
 <div class="block">How much money this payment intends to receive from the customer.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getAmountRefunded--">getAmountRefunded</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getAnonymousId--">getAnonymousId</a></span>()</code>
 <div class="block">Identifies payments belonging to an anonymous session (the customer has not signed up/in yet).</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getAuthorizedUntil--">getAuthorizedUntil</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getCustom--">getCustom</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getCustomer--">getCustomer</a></span>()</code>
 <div class="block">A reference to the customer this payment belongs to.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getExternalId--">getExternalId</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getInterfaceId--">getInterfaceId</a></span>()</code>
 <div class="block">The identifier that is used by the interface that manages the payment (usually the PSP).</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getInterfaceInteractions--">getInterfaceInteractions</a></span>()</code>
 <div class="block">Interface interactions can be requests send to the PSP, responses received from the PSP or notifications received from the PSP.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getKey--">getKey</a></span>()</code>
 <div class="block">User-specific unique identifier for the payment (max.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getPaymentMethodInfo--">getPaymentMethodInfo</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../com/commercetools/api/models/payment/PaymentStatusDraft.html" title="interface in com.commercetools.api.models.payment">PaymentStatusDraft</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getPaymentStatus--">getPaymentStatus</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>java.util.List&lt;<a href="../../../../../com/commercetools/api/models/payment/TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#getTransactions--">getTransactions</a></span>()</code>
 <div class="block">A list of financial transactions of different TransactionTypes with different TransactionStates.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAmountAuthorized-com.commercetools.api.models.common.Money-">setAmountAuthorized</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountAuthorized)</code>&nbsp;</td>
-</tr>
 <tr id="i16" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAmountPaid-com.commercetools.api.models.common.Money-">setAmountPaid</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPaid)</code>&nbsp;</td>
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#hashCode--">hashCode</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAmountPlanned-com.commercetools.api.models.common.Money-">setAmountPlanned</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPlanned)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAmountAuthorized-com.commercetools.api.models.common.Money-">setAmountAuthorized</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountAuthorized)</code>&nbsp;</td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAmountRefunded-com.commercetools.api.models.common.Money-">setAmountRefunded</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountRefunded)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAmountPaid-com.commercetools.api.models.common.Money-">setAmountPaid</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPaid)</code>&nbsp;</td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAnonymousId-java.lang.String-">setAnonymousId</a></span>(java.lang.String&nbsp;anonymousId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAmountPlanned-com.commercetools.api.models.common.Money-">setAmountPlanned</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountPlanned)</code>&nbsp;</td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAuthorizedUntil-java.lang.String-">setAuthorizedUntil</a></span>(java.lang.String&nbsp;authorizedUntil)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAmountRefunded-com.commercetools.api.models.common.Money-">setAmountRefunded</a></span>(<a href="../../../../../com/commercetools/api/models/common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;amountRefunded)</code>&nbsp;</td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAnonymousId-java.lang.String-">setAnonymousId</a></span>(java.lang.String&nbsp;anonymousId)</code>&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setCustomer-com.commercetools.api.models.customer.CustomerResourceIdentifier-">setCustomer</a></span>(<a href="../../../../../com/commercetools/api/models/customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a>&nbsp;customer)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setAuthorizedUntil-java.lang.String-">setAuthorizedUntil</a></span>(java.lang.String&nbsp;authorizedUntil)</code>&nbsp;</td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setExternalId-java.lang.String-">setExternalId</a></span>(java.lang.String&nbsp;externalId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setCustom-com.commercetools.api.models.type.CustomFieldsDraft-">setCustom</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&nbsp;custom)</code>&nbsp;</td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setInterfaceId-java.lang.String-">setInterfaceId</a></span>(java.lang.String&nbsp;interfaceId)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setCustomer-com.commercetools.api.models.customer.CustomerResourceIdentifier-">setCustomer</a></span>(<a href="../../../../../com/commercetools/api/models/customer/CustomerResourceIdentifier.html" title="interface in com.commercetools.api.models.customer">CustomerResourceIdentifier</a>&nbsp;customer)</code>&nbsp;</td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setInterfaceInteractions-com.commercetools.api.models.type.CustomFieldsDraft...-">setInterfaceInteractions</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>...&nbsp;interfaceInteractions)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setExternalId-java.lang.String-">setExternalId</a></span>(java.lang.String&nbsp;externalId)</code>&nbsp;</td>
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setInterfaceInteractions-java.util.List-">setInterfaceInteractions</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;&nbsp;interfaceInteractions)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setInterfaceId-java.lang.String-">setInterfaceId</a></span>(java.lang.String&nbsp;interfaceId)</code>&nbsp;</td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setInterfaceInteractions-com.commercetools.api.models.type.CustomFieldsDraft...-">setInterfaceInteractions</a></span>(<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>...&nbsp;interfaceInteractions)</code>&nbsp;</td>
 </tr>
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setPaymentMethodInfo-com.commercetools.api.models.payment.PaymentMethodInfo-">setPaymentMethodInfo</a></span>(<a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;paymentMethodInfo)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setInterfaceInteractions-java.util.List-">setInterfaceInteractions</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/type/CustomFieldsDraft.html" title="interface in com.commercetools.api.models.type">CustomFieldsDraft</a>&gt;&nbsp;interfaceInteractions)</code>&nbsp;</td>
 </tr>
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setPaymentStatus-com.commercetools.api.models.payment.PaymentStatusDraft-">setPaymentStatus</a></span>(<a href="../../../../../com/commercetools/api/models/payment/PaymentStatusDraft.html" title="interface in com.commercetools.api.models.payment">PaymentStatusDraft</a>&nbsp;paymentStatus)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setKey-java.lang.String-">setKey</a></span>(java.lang.String&nbsp;key)</code>&nbsp;</td>
 </tr>
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setTransactions-java.util.List-">setTransactions</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/payment/TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>&gt;&nbsp;transactions)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setPaymentMethodInfo-com.commercetools.api.models.payment.PaymentMethodInfo-">setPaymentMethodInfo</a></span>(<a href="../../../../../com/commercetools/api/models/payment/PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;paymentMethodInfo)</code>&nbsp;</td>
 </tr>
 <tr id="i31" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setPaymentStatus-com.commercetools.api.models.payment.PaymentStatusDraft-">setPaymentStatus</a></span>(<a href="../../../../../com/commercetools/api/models/payment/PaymentStatusDraft.html" title="interface in com.commercetools.api.models.payment">PaymentStatusDraft</a>&nbsp;paymentStatus)</code>&nbsp;</td>
+</tr>
+<tr id="i32" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setTransactions-java.util.List-">setTransactions</a></span>(java.util.List&lt;<a href="../../../../../com/commercetools/api/models/payment/TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>&gt;&nbsp;transactions)</code>&nbsp;</td>
+</tr>
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/payment/PaymentDraftImpl.html#setTransactions-com.commercetools.api.models.payment.TransactionDraft...-">setTransactions</a></span>(<a href="../../../../../com/commercetools/api/models/payment/TransactionDraft.html" title="interface in com.commercetools.api.models.payment">TransactionDraft</a>...&nbsp;transactions)</code>&nbsp;</td>
 </tr>
@@ -297,14 +305,14 @@ implements <a href="../../../../../com/commercetools/api/models/payment/PaymentD
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.Object</h3>
-<code>clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait, wait, wait</code></li>
+<code>clone, finalize, getClass, notify, notifyAll, toString, wait, wait, wait</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.com.commercetools.api.models.payment.PaymentDraft">
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.commercetools.api.models.payment.<a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a></h3>
-<code><a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#of-com.commercetools.api.models.payment.PaymentDraft-">of</a>, <a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#withPaymentDraft-java.util.function.Function-">withPaymentDraft</a></code></li>
+<code><a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#builder--">builder</a>, <a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#builder-com.commercetools.api.models.payment.PaymentDraft-">builder</a>, <a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#of--">of</a>, <a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#of-com.commercetools.api.models.payment.PaymentDraft-">of</a>, <a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#withPaymentDraft-java.util.function.Function-">withPaymentDraft</a></code></li>
 </ul>
 </li>
 </ul>
@@ -757,13 +765,39 @@ implements <a href="../../../../../com/commercetools/api/models/payment/PaymentD
 <a name="setKey-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setKey</h4>
 <pre>public&nbsp;void&nbsp;setKey(java.lang.String&nbsp;key)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html#setKey-java.lang.String-">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/payment/PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="equals-java.lang.Object-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>equals</h4>
+<pre>public&nbsp;boolean&nbsp;equals(java.lang.Object&nbsp;o)</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>equals</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
+</dl>
+</li>
+</ul>
+<a name="hashCode--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>hashCode</h4>
+<pre>public&nbsp;int&nbsp;hashCode()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code>hashCode</code>&nbsp;in class&nbsp;<code>java.lang.Object</code></dd>
 </dl>
 </li>
 </ul>

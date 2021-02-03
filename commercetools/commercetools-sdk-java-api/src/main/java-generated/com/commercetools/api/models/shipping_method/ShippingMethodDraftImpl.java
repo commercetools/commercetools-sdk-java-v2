@@ -32,13 +32,16 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
 
     private String predicate;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     @JsonCreator
     ShippingMethodDraftImpl(@JsonProperty("key") final String key, @JsonProperty("name") final String name,
             @JsonProperty("description") final String description,
             @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
             @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> zoneRates,
-            @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("predicate") final String predicate) {
+            @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("predicate") final String predicate,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.name = name;
         this.description = description;
@@ -47,6 +50,7 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
         this.zoneRates = zoneRates;
         this.isDefault = isDefault;
         this.predicate = predicate;
+        this.custom = custom;
     }
 
     public ShippingMethodDraftImpl() {
@@ -90,6 +94,10 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
         return this.predicate;
     }
 
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -129,6 +137,10 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
         this.predicate = predicate;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -142,14 +154,14 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
         return new EqualsBuilder().append(key, that.key).append(name, that.name).append(description,
             that.description).append(localizedDescription, that.localizedDescription).append(taxCategory,
                 that.taxCategory).append(zoneRates, that.zoneRates).append(isDefault, that.isDefault).append(predicate,
-                    that.predicate).isEquals();
+                    that.predicate).append(custom, that.custom).isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(key).append(name).append(description).append(
-            localizedDescription).append(taxCategory).append(zoneRates).append(isDefault).append(
-                predicate).toHashCode();
+            localizedDescription).append(taxCategory).append(zoneRates).append(isDefault).append(predicate).append(
+                custom).toHashCode();
     }
 
 }

@@ -10,6 +10,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -57,6 +58,10 @@ public interface ShippingMethodDraft {
     @JsonProperty("predicate")
     public String getPredicate();
 
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
     public void setKey(final String key);
 
     public void setName(final String name);
@@ -76,6 +81,8 @@ public interface ShippingMethodDraft {
 
     public void setPredicate(final String predicate);
 
+    public void setCustom(final CustomFieldsDraft custom);
+
     public static ShippingMethodDraft of() {
         return new ShippingMethodDraftImpl();
     }
@@ -90,6 +97,7 @@ public interface ShippingMethodDraft {
         instance.setZoneRates(template.getZoneRates());
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 

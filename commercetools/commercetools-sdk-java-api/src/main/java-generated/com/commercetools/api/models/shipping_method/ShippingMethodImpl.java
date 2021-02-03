@@ -44,6 +44,8 @@ public final class ShippingMethodImpl implements ShippingMethod {
 
     private String predicate;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     @JsonCreator
     ShippingMethodImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
@@ -55,7 +57,8 @@ public final class ShippingMethodImpl implements ShippingMethod {
             @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates,
-            @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("predicate") final String predicate) {
+            @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("predicate") final String predicate,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -70,6 +73,7 @@ public final class ShippingMethodImpl implements ShippingMethod {
         this.zoneRates = zoneRates;
         this.isDefault = isDefault;
         this.predicate = predicate;
+        this.custom = custom;
     }
 
     public ShippingMethodImpl() {
@@ -146,6 +150,10 @@ public final class ShippingMethodImpl implements ShippingMethod {
         return this.predicate;
     }
 
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -207,6 +215,10 @@ public final class ShippingMethodImpl implements ShippingMethod {
         this.predicate = predicate;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -222,16 +234,16 @@ public final class ShippingMethodImpl implements ShippingMethod {
                 that.lastModifiedBy).append(createdBy, that.createdBy).append(key, that.key).append(name,
                     that.name).append(description, that.description).append(localizedDescription,
                         that.localizedDescription).append(taxCategory, that.taxCategory).append(zoneRates,
-                            that.zoneRates).append(isDefault, that.isDefault).append(predicate,
-                                that.predicate).isEquals();
+                            that.zoneRates).append(isDefault, that.isDefault).append(predicate, that.predicate).append(
+                                custom, that.custom).isEquals();
     }
 
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
             lastModifiedBy).append(createdBy).append(key).append(name).append(description).append(
-                localizedDescription).append(taxCategory).append(zoneRates).append(isDefault).append(
-                    predicate).toHashCode();
+                localizedDescription).append(taxCategory).append(zoneRates).append(isDefault).append(predicate).append(
+                    custom).toHashCode();
     }
 
 }

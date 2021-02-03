@@ -44,6 +44,9 @@ public final class ShippingMethodBuilder {
     @Nullable
     private String predicate;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     public ShippingMethodBuilder id(final String id) {
         this.id = id;
         return this;
@@ -123,6 +126,11 @@ public final class ShippingMethodBuilder {
         return this;
     }
 
+    public ShippingMethodBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
     public String getId() {
         return this.id;
     }
@@ -185,9 +193,14 @@ public final class ShippingMethodBuilder {
         return this.predicate;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public ShippingMethod build() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            description, localizedDescription, taxCategory, zoneRates, isDefault, predicate);
+            description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
     }
 
     public static ShippingMethodBuilder of() {
@@ -210,6 +223,7 @@ public final class ShippingMethodBuilder {
         builder.zoneRates = template.getZoneRates();
         builder.isDefault = template.getIsDefault();
         builder.predicate = template.getPredicate();
+        builder.custom = template.getCustom();
         return builder;
     }
 

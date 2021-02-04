@@ -20,6 +20,7 @@ public final class CustomerSigninImpl implements CustomerSignin {
 
     private String password;
 
+    @Deprecated
     private String anonymousCartId;
 
     private com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart;
@@ -57,6 +58,7 @@ public final class CustomerSigninImpl implements CustomerSignin {
         return this.password;
     }
 
+    @Deprecated
     public String getAnonymousCartId() {
         return this.anonymousCartId;
     }
@@ -85,6 +87,7 @@ public final class CustomerSigninImpl implements CustomerSignin {
         this.password = password;
     }
 
+    @Deprecated
     public void setAnonymousCartId(final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
     }

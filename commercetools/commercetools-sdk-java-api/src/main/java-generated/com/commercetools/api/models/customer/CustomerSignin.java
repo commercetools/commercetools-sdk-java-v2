@@ -26,6 +26,7 @@ public interface CustomerSignin {
     @JsonProperty("password")
     public String getPassword();
 
+    @Deprecated
     @JsonProperty("anonymousCartId")
     public String getAnonymousCartId();
 
@@ -46,6 +47,7 @@ public interface CustomerSignin {
 
     public void setPassword(final String password);
 
+    @Deprecated
     public void setAnonymousCartId(final String anonymousCartId);
 
     public void setAnonymousCart(final CartResourceIdentifier anonymousCart);

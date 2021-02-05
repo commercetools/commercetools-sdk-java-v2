@@ -10,14 +10,14 @@ public final class DeliveryItemBuilder {
 
     private String id;
 
-    private Double quantity;
+    private Long quantity;
 
     public DeliveryItemBuilder id(final String id) {
         this.id = id;
         return this;
     }
 
-    public DeliveryItemBuilder quantity(final Double quantity) {
+    public DeliveryItemBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -26,7 +26,7 @@ public final class DeliveryItemBuilder {
         return this.id;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

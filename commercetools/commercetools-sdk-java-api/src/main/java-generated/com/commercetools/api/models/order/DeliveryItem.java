@@ -22,11 +22,11 @@ public interface DeliveryItem {
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     public void setId(final String id);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public static DeliveryItem of() {
         return new DeliveryItemImpl();

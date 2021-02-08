@@ -23,6 +23,7 @@ public interface OrderFromCartDraft {
     *  <p>The unique id of the cart from which an order is created.</p>
     */
     @NotNull
+    @Deprecated
     @JsonProperty("id")
     public String getId();
 
@@ -66,6 +67,7 @@ public interface OrderFromCartDraft {
     @JsonProperty("state")
     public StateResourceIdentifier getState();
 
+    @Deprecated
     public void setId(final String id);
 
     public void setCart(final CartResourceIdentifier cart);

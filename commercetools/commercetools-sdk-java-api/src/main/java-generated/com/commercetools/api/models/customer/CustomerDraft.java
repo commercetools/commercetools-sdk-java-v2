@@ -61,7 +61,7 @@ public interface CustomerDraft {
     /**
     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
     */
-
+    @Deprecated
     @JsonProperty("anonymousCartId")
     public String getAnonymousCartId();
 
@@ -186,6 +186,7 @@ public interface CustomerDraft {
 
     public void setTitle(final String title);
 
+    @Deprecated
     public void setAnonymousCartId(final String anonymousCartId);
 
     public void setAnonymousCart(final CartResourceIdentifier anonymousCart);

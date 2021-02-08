@@ -30,6 +30,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
 
     private String title;
 
+    @Deprecated
     private String anonymousCartId;
 
     private com.commercetools.api.models.cart.CartResourceIdentifier anonymousCart;
@@ -163,6 +164,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
     /**
     *  <p>Identifies a single cart that will be assigned to the new customer account.</p>
     */
+    @Deprecated
     public String getAnonymousCartId() {
         return this.anonymousCartId;
     }
@@ -308,6 +310,7 @@ public final class CustomerDraftImpl implements CustomerDraft {
         this.title = title;
     }
 
+    @Deprecated
     public void setAnonymousCartId(final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
     }

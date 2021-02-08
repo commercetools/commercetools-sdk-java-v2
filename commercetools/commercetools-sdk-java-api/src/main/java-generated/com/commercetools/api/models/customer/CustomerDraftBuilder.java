@@ -29,6 +29,7 @@ public final class CustomerDraftBuilder {
     @Nullable
     private String title;
 
+    @Deprecated
     @Nullable
     private String anonymousCartId;
 
@@ -121,6 +122,7 @@ public final class CustomerDraftBuilder {
         return this;
     }
 
+    @Deprecated
     public CustomerDraftBuilder anonymousCartId(@Nullable final String anonymousCartId) {
         this.anonymousCartId = anonymousCartId;
         return this;
@@ -274,6 +276,7 @@ public final class CustomerDraftBuilder {
         return this.title;
     }
 
+    @Deprecated
     @Nullable
     public String getAnonymousCartId() {
         return this.anonymousCartId;

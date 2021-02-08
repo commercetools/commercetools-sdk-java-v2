@@ -16,6 +16,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
 
+    @Deprecated
     private String id;
 
     private com.commercetools.api.models.cart.CartResourceIdentifier cart;
@@ -56,6 +57,7 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
     /**
     *  <p>The unique id of the cart from which an order is created.</p>
     */
+    @Deprecated
     public String getId() {
         return this.id;
     }
@@ -101,6 +103,7 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
         return this.state;
     }
 
+    @Deprecated
     public void setId(final String id) {
         this.id = id;
     }

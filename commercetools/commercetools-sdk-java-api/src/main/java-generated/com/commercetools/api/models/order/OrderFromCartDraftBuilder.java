@@ -10,6 +10,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class OrderFromCartDraftBuilder {
 
+    @Deprecated
+
     private String id;
 
     private com.commercetools.api.models.cart.CartResourceIdentifier cart;
@@ -31,6 +33,7 @@ public final class OrderFromCartDraftBuilder {
     @Nullable
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
+    @Deprecated
     public OrderFromCartDraftBuilder id(final String id) {
         this.id = id;
         return this;
@@ -74,6 +77,8 @@ public final class OrderFromCartDraftBuilder {
         this.state = state;
         return this;
     }
+
+    @Deprecated
 
     public String getId() {
         return this.id;

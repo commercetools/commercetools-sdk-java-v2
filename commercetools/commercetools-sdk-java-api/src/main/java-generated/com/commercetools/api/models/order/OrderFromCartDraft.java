@@ -22,7 +22,6 @@ public interface OrderFromCartDraft {
     /**
     *  <p>The unique id of the cart from which an order is created.</p>
     */
-    @NotNull
     @Deprecated
     @JsonProperty("id")
     public String getId();
@@ -30,7 +29,6 @@ public interface OrderFromCartDraft {
     /**
     *  <p>ResourceIdentifier to the Cart from which this order is created.</p>
     */
-    @NotNull
     @Valid
     @JsonProperty("cart")
     public CartResourceIdentifier getCart();

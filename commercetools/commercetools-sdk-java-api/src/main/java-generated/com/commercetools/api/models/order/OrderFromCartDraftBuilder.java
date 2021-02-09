@@ -11,9 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class OrderFromCartDraftBuilder {
 
     @Deprecated
-
+    @Nullable
     private String id;
 
+    @Nullable
     private com.commercetools.api.models.cart.CartResourceIdentifier cart;
 
     private Long version;
@@ -34,12 +35,13 @@ public final class OrderFromCartDraftBuilder {
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
     @Deprecated
-    public OrderFromCartDraftBuilder id(final String id) {
+    public OrderFromCartDraftBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
 
-    public OrderFromCartDraftBuilder cart(final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
+    public OrderFromCartDraftBuilder cart(
+            @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
         this.cart = cart;
         return this;
     }
@@ -79,11 +81,12 @@ public final class OrderFromCartDraftBuilder {
     }
 
     @Deprecated
-
+    @Nullable
     public String getId() {
         return this.id;
     }
 
+    @Nullable
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
         return this.cart;
     }

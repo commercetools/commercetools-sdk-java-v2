@@ -24,12 +24,6 @@ public class ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyRequestBuild
             productVariantImportRequest);
     }
 
-    public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder resourceKeyWithResourceKeyValue(
-            String resourceKey) {
-        return new ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyResourceKeyByResourceKeyRequestBuilder(
-            apiHttpClient, projectKey, importSinkKey, resourceKey);
-    }
-
     public ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder importOperations() {
         return new ByProjectKeyProductVariantsImportSinkKeyByImportSinkKeyImportOperationsRequestBuilder(apiHttpClient,
             projectKey, importSinkKey);

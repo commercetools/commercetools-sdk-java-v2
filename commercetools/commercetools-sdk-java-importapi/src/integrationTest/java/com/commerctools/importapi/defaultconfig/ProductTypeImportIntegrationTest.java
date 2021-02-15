@@ -2,8 +2,10 @@
 package com.commerctools.importapi.defaultconfig;
 
 import static com.commerctools.importapi.defaultconfig.ImportApiTestUtils.assertEventually;
+import static com.commerctools.importapi.defaultconfig.ImportApiTestUtils.randomKey;
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
 
@@ -34,13 +36,15 @@ public class ProductTypeImportIntegrationTest {
 
         assertThat(importSink).isNotNull();
 
+        String name = randomKey();
+
         ProductTypeImportRequest importRequest = ProductTypeImportRequestBuilder.of().resources(
             Collections.singletonList(
-                ProductTypeImportBuilder.of().key("default").name("default").description("some type").build())).build();
+                ProductTypeImportBuilder.of().key(name).name(name).description(name).build())).build();
         ImportApiTestUtils.getProjectRoot().productTypes().importSinkKeyWithImportSinkKeyValue(importSinkKey).post(
             importRequest).executeBlocking().getBody();
 
-        assertEventually(() -> {
+        assertEventually(Duration.ofSeconds(240), Duration.ofMillis(1000), () -> {
             ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot().productTypes().importSinkKeyWithImportSinkKeyValue(
                 importSinkKey).importOperations().get().executeBlocking().getBody();
 

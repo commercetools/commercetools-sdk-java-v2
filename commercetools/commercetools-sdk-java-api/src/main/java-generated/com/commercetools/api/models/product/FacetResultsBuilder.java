@@ -8,14 +8,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FacetResultsBuilder {
 
-    private Map<String, java.lang.Object> values;
+    private Map<String, com.commercetools.api.models.product.FacetResult> values;
 
-    public FacetResultsBuilder values(final Map<String, java.lang.Object> values) {
+    public FacetResultsBuilder values(final Map<String, com.commercetools.api.models.product.FacetResult> values) {
         this.values = values;
         return this;
     }
 
-    public FacetResultsBuilder addValue(final String key, final java.lang.Object value) {
+    public FacetResultsBuilder addValue(final String key,
+            final com.commercetools.api.models.product.FacetResult value) {
         if (this.values == null) {
             values = new HashMap<>();
         }
@@ -23,7 +24,7 @@ public final class FacetResultsBuilder {
         return this;
     }
 
-    public Map<String, java.lang.Object> getValues() {
+    public Map<String, com.commercetools.api.models.product.FacetResult> getValues() {
         return this.values;
     }
 

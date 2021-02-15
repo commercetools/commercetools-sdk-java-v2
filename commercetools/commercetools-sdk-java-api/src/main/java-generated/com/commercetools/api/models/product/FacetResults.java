@@ -5,6 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
@@ -17,11 +18,12 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface FacetResults {
 
     @NotNull
+    @Valid
     @JsonAnyGetter
-    public Map<String, Object> values();
+    public Map<String, FacetResult> values();
 
     @JsonAnySetter
-    public void setValue(String key, Object value);
+    public void setValue(String key, FacetResult value);
 
     public static FacetResults of() {
         return new FacetResultsImpl();

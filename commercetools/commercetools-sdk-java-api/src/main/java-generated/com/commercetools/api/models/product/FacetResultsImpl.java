@@ -16,21 +16,22 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class FacetResultsImpl implements FacetResults {
 
-    private Map<String, java.lang.Object> values;
+    private Map<String, com.commercetools.api.models.product.FacetResult> values;
 
     @JsonCreator
-    FacetResultsImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    FacetResultsImpl(
+            @JsonProperty("values") final Map<String, com.commercetools.api.models.product.FacetResult> values) {
         this.values = values;
     }
 
     public FacetResultsImpl() {
     }
 
-    public Map<String, java.lang.Object> values() {
+    public Map<String, com.commercetools.api.models.product.FacetResult> values() {
         return values;
     }
 
-    public void setValue(String key, java.lang.Object value) {
+    public void setValue(String key, com.commercetools.api.models.product.FacetResult value) {
         if (values == null) {
             values = new HashMap<>();
         }

@@ -12,7 +12,7 @@ public final class MyCartChangeLineItemQuantityActionBuilder {
 
     private String lineItemId;
 
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private com.commercetools.api.models.common.Money externalPrice;
@@ -25,7 +25,7 @@ public final class MyCartChangeLineItemQuantityActionBuilder {
         return this;
     }
 
-    public MyCartChangeLineItemQuantityActionBuilder quantity(final Double quantity) {
+    public MyCartChangeLineItemQuantityActionBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -46,7 +46,7 @@ public final class MyCartChangeLineItemQuantityActionBuilder {
         return this.lineItemId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

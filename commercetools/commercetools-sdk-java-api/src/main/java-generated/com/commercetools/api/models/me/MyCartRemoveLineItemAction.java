@@ -27,7 +27,7 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
     public String getLineItemId();
 
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @Valid
     @JsonProperty("externalPrice")
@@ -43,7 +43,7 @@ public interface MyCartRemoveLineItemAction extends MyCartUpdateAction {
 
     public void setLineItemId(final String lineItemId);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setExternalPrice(final Money externalPrice);
 

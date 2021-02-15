@@ -47,7 +47,7 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
     public String getSku();
 
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @Valid
     @JsonProperty("supplyChannel")
@@ -80,7 +80,7 @@ public interface MyCartAddLineItemAction extends MyCartUpdateAction {
 
     public void setSku(final String sku);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setSupplyChannel(final ChannelResourceIdentifier supplyChannel);
 

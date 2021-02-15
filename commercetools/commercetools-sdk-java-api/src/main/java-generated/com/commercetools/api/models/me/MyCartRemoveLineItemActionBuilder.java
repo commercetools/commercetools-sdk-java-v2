@@ -13,7 +13,7 @@ public final class MyCartRemoveLineItemActionBuilder {
     private String lineItemId;
 
     @Nullable
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private com.commercetools.api.models.common.Money externalPrice;
@@ -29,7 +29,7 @@ public final class MyCartRemoveLineItemActionBuilder {
         return this;
     }
 
-    public MyCartRemoveLineItemActionBuilder quantity(@Nullable final Double quantity) {
+    public MyCartRemoveLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -57,7 +57,7 @@ public final class MyCartRemoveLineItemActionBuilder {
     }
 
     @Nullable
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

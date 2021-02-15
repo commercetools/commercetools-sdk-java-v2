@@ -30,7 +30,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
 
     private String sku;
 
-    private Double quantity;
+    private Long quantity;
 
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
 
@@ -48,7 +48,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Long variantId,
-            @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("sku") final String sku, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("externalPrice") final com.commercetools.api.models.common.Money externalPrice,
             @JsonProperty("externalTotalPrice") final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice,
@@ -101,7 +101,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
         return this.sku;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -150,7 +150,7 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
         this.sku = sku;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

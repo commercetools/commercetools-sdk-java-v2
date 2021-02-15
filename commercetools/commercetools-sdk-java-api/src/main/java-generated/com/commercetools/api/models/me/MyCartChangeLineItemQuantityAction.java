@@ -27,7 +27,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     @Valid
     @JsonProperty("externalPrice")
@@ -39,7 +39,7 @@ public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
 
     public void setLineItemId(final String lineItemId);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setExternalPrice(final Money externalPrice);
 

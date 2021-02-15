@@ -4,7 +4,6 @@ package com.commerctools.importapi.defaultconfig;
 import static com.commerctools.importapi.defaultconfig.ImportApiTestUtils.assertEventually;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import java.time.Duration;
 import java.util.Collections;
 import java.util.List;
 
@@ -43,14 +42,13 @@ public class ProductTypeImportIntegrationTest {
 
         assertEventually(() -> {
             ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot().productTypes().importSinkKeyWithImportSinkKeyValue(
-                    importSinkKey).importOperations().get().executeBlocking().getBody();
+                importSinkKey).importOperations().get().executeBlocking().getBody();
 
             assertThat(operationPagedResponse).isNotNull();
             List<ImportOperation> results = operationPagedResponse.getResults();
             assertThat(results).hasSize(1);
             assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
         });
-
 
         ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot().importSinks().withImportSinkKeyValue(
             importSink.getKey()).delete().executeBlocking().getBody();

@@ -11,9 +11,8 @@ import com.commercetools.importapi.defaultconfig.ServiceRegion;
 import com.commercetools.importapi.models.common.LocalizedString;
 import com.commercetools.importapi.models.common.LocalizedStringImpl;
 
-import io.vrap.rmf.base.client.ApiHttpException;
-import io.vrap.rmf.base.client.error.ApiClientException;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+
 import org.apache.commons.lang3.StringUtils;
 import org.assertj.core.api.SoftAssertions;
 
@@ -75,7 +74,8 @@ public class ImportApiTestUtils {
         return projectRoot;
     }
 
-    public static void assertEventually(final Duration maxWaitTime, final Duration waitBeforeRetry, final Runnable block) {
+    public static void assertEventually(final Duration maxWaitTime, final Duration waitBeforeRetry,
+            final Runnable block) {
         final long timeOutAt = System.currentTimeMillis() + maxWaitTime.toMillis();
         while (true) {
             try {
@@ -83,7 +83,8 @@ public class ImportApiTestUtils {
 
                 // the block executed without throwing an exception, return
                 return;
-            } catch (AssertionError e) {
+            }
+            catch (AssertionError e) {
                 if (System.currentTimeMillis() > timeOutAt) {
                     throw e;
                 }
@@ -91,7 +92,8 @@ public class ImportApiTestUtils {
 
             try {
                 Thread.sleep(waitBeforeRetry.toMillis());
-            } catch (InterruptedException e) {
+            }
+            catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         }

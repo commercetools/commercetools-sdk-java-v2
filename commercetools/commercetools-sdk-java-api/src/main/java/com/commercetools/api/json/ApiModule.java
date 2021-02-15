@@ -2,7 +2,6 @@
 package com.commercetools.api.json;
 
 import com.commercetools.api.models.product.AttributeImpl;
-import com.commercetools.api.models.product.FacetResultsImpl;
 import com.commercetools.api.models.review.Review;
 import com.commercetools.api.models.type.FieldContainerImpl;
 import com.fasterxml.jackson.databind.module.SimpleModule;

@@ -1,6 +1,7 @@
 
 package com.commerctools.importapi.defaultconfig;
 
+import static com.commerctools.importapi.defaultconfig.ImportApiTestUtils.assertEventually;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.time.Duration;
@@ -40,15 +41,16 @@ public class ProductTypeImportIntegrationTest {
         ImportApiTestUtils.getProjectRoot().productTypes().importSinkKeyWithImportSinkKeyValue(importSinkKey).post(
             importRequest).executeBlocking().getBody();
 
-        Thread.sleep(Duration.ofSeconds(30).toMillis());
+        assertEventually(() -> {
+            ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot().productTypes().importSinkKeyWithImportSinkKeyValue(
+                    importSinkKey).importOperations().get().executeBlocking().getBody();
 
-        ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot().productTypes().importSinkKeyWithImportSinkKeyValue(
-            importSinkKey).importOperations().get().executeBlocking().getBody();
+            assertThat(operationPagedResponse).isNotNull();
+            List<ImportOperation> results = operationPagedResponse.getResults();
+            assertThat(results).hasSize(1);
+            assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
+        });
 
-        assertThat(operationPagedResponse).isNotNull();
-        List<ImportOperation> results = operationPagedResponse.getResults();
-        assertThat(results).hasSize(1);
-        assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
 
         ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot().importSinks().withImportSinkKeyValue(
             importSink.getKey()).delete().executeBlocking().getBody();

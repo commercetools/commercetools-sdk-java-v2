@@ -11,7 +11,6 @@ public class ApiModule extends SimpleModule {
     private static final long serialVersionUID = 0L;
 
     public ApiModule() {
-        addDeserializer(FacetResultsImpl.class, new FacetResultsDeserializer());
         addDeserializer(AttributeImpl.class, new AtrributeDeserializer());
         addDeserializer(FieldContainerImpl.class, new CustomFieldDeserializer());
         setMixInAnnotation(Review.class, ReviewMixin.class);

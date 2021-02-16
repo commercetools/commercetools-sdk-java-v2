@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>An Image uploaded to the commercetools platform is stored in a Content Delivery Network and it's available in several pre-defined sizes. If you already have an image stored on an external service, you can save the URL when creating a new product or adding a variant, or you can add it later.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class ImageImpl implements Image {
 
@@ -34,14 +37,23 @@ public final class ImageImpl implements Image {
     public ImageImpl() {
     }
 
+    /**
+    *  <p>URL of the image in its original size. The URL must be unique within a single variant. It can be used to obtain the image in different sizes.</p>
+    */
     public String getUrl() {
         return this.url;
     }
 
+    /**
+    *  <p>Dimensions of the original image. This can be used by your application, for example, to determine whether the image is large enough to display a zoom view.</p>
+    */
     public com.commercetools.importapi.models.common.AssetDimensions getDimensions() {
         return this.dimensions;
     }
 
+    /**
+    *  <p>Custom label that can be used, for example, as an image description.</p>
+    */
     public String getLabel() {
         return this.label;
     }

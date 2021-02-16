@@ -13,6 +13,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
+/**
+*  <p>The width and height of the Asset Source.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class AssetDimensionsImpl implements AssetDimensions {
 
@@ -29,10 +32,16 @@ public final class AssetDimensionsImpl implements AssetDimensions {
     public AssetDimensionsImpl() {
     }
 
+    /**
+    *  <p>The width of the asset source.</p>
+    */
     public Double getW() {
         return this.w;
     }
 
+    /**
+    *  <p>The height of the asset source.</p>
+    */
     public Double getH() {
         return this.h;
     }

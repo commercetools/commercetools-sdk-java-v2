@@ -50,7 +50,10 @@ public interface ReferenceType {
 
     */
     ReferenceType PRODUCT = ReferenceTypeEnum.PRODUCT;
+    /**
+    	<p>References a product discount.</p>
 
+    */
     ReferenceType PRODUCT_DISCOUNT = ReferenceTypeEnum.PRODUCT_DISCOUNT;
     /**
     	<p>References a product type.</p>

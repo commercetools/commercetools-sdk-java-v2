@@ -125,14 +125,38 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
         return this.categories;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
+    *  <pre><code class="language-json">{
+    *    &quot;de&quot;: &quot;Hundefutter&quot;,
+    *    &quot;en&quot;: &quot;dog food&quot;
+    *  }
+    *  </code></pre>
+    */
     public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {
         return this.metaTitle;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
+    *  <pre><code class="language-json">{
+    *    &quot;de&quot;: &quot;Hundefutter&quot;,
+    *    &quot;en&quot;: &quot;dog food&quot;
+    *  }
+    *  </code></pre>
+    */
     public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {
         return this.metaDescription;
     }
 
+    /**
+    *  <p>A localized string is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>, and the values the corresponding strings used for that language.</p>
+    *  <pre><code class="language-json">{
+    *    &quot;de&quot;: &quot;Hundefutter&quot;,
+    *    &quot;en&quot;: &quot;dog food&quot;
+    *  }
+    *  </code></pre>
+    */
     public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {
         return this.metaKeywords;
     }
@@ -162,6 +186,25 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
         return this.taxCategory;
     }
 
+    /**
+    *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of <a href="https://en.wikipedia.org/wiki/IETF_language_tag">IETF language tag</a>. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
+    *  <pre><code class="language-json">{
+    *    &quot;en&quot;: [
+    *      { &quot;text&quot;: &quot;Multi tool&quot; },
+    *      { &quot;text&quot;: &quot;Swiss Army Knife&quot;, &quot;suggestTokenizer&quot;: { &quot;type&quot;: &quot;whitespace&quot; } }
+    *    ],
+    *    &quot;de&quot;: [
+    *      {
+    *        &quot;text&quot;: &quot;Schweizer Messer&quot;,
+    *        &quot;suggestTokenizer&quot;: {
+    *          &quot;type&quot;: &quot;custom&quot;,
+    *          &quot;inputs&quot;: [&quot;schweizer messer&quot;, &quot;offiziersmesser&quot;, &quot;sackmesser&quot;]
+    *        }
+    *      }
+    *    ]
+    *  }
+    *  </code></pre>
+    */
     public com.commercetools.importapi.models.products.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
     }

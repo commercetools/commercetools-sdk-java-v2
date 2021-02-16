@@ -47,7 +47,7 @@ public interface ErrorObject {
     public String getCode();
 
     /**
-    *  <p>The error's description.</p>
+    *  <p>This is a placeholder for an actual platform error message.</p>
     */
     @NotNull
     @JsonProperty("message")

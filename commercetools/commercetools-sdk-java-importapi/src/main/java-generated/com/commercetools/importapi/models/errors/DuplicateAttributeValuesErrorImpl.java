@@ -42,7 +42,7 @@ public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttribu
     }
 
     /**
-    *  <p>The error's description.</p>
+    *  <p>This is a placeholder for an actual platform error message.</p>
     */
     public String getMessage() {
         return this.message;

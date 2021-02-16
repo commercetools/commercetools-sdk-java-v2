@@ -34,6 +34,9 @@ public final class SearchKeywordImpl implements SearchKeyword {
         return this.text;
     }
 
+    /**
+    *  <p>The tokenizer defines the tokens that are used to match against the <a href="/../products-suggestions#suggest-query">Suggest Query</a> input.</p>
+    */
     public com.commercetools.importapi.models.products.SuggestTokenizer getSuggestTokenizer() {
         return this.suggestTokenizer;
     }

@@ -13,6 +13,9 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+/**
+*  <p>An AssetSource is a representation of an Asset in a specific format, for example, a video in a certain encoding or an image in a certain resolution.</p>
+*/
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = AssetSourceImpl.class)
 public interface AssetSource {
@@ -24,6 +27,9 @@ public interface AssetSource {
     @JsonProperty("key")
     public String getKey();
 
+    /**
+    *  <p>The width and height of the Asset Source.</p>
+    */
     @Valid
     @JsonProperty("dimensions")
     public AssetDimensions getDimensions();

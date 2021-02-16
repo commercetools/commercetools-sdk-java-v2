@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":10,"i1":10,"i2":42,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":42,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -144,7 +144,7 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderFromC
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -162,7 +162,7 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderFromC
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraftImpl.html#getId--">getId</a></span>()</code>
-<div class="block">The unique id of the cart from which an order is created.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -203,7 +203,9 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderFromC
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraftImpl.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraftImpl.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -281,7 +283,9 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderFromC
 <ul class="blockList">
 <li class="blockList">
 <h4>getId</h4>
-<pre>public&nbsp;java.lang.String&nbsp;getId()</pre>
+<pre>@Deprecated
+public&nbsp;java.lang.String&nbsp;getId()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block"><p>The unique id of the cart from which an order is created.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -393,7 +397,9 @@ implements <a href="../../../../../com/commercetools/api/models/order/OrderFromC
 <ul class="blockList">
 <li class="blockList">
 <h4>setId</h4>
-<pre>public&nbsp;void&nbsp;setId(java.lang.String&nbsp;id)</pre>
+<pre>@Deprecated
+public&nbsp;void&nbsp;setId(java.lang.String&nbsp;id)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraft.html#setId-java.lang.String-">setId</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a></code></dd>

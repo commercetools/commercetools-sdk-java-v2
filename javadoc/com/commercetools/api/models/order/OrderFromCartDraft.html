@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":17,"i1":17,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":17,"i11":17,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":18};
-var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
+var methods = {"i0":17,"i1":17,"i2":6,"i3":38,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":17,"i11":17,"i12":6,"i13":38,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":18};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -117,7 +117,7 @@ var activeTableTab = "activeTableTab";
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t5" class="tableTab"><span><a href="javascript:show(16);">Default Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -131,15 +131,15 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraft.html#builder-com.commercetools.api.models.order.OrderFromCartDraft-">builder</a></span>(<a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraft.html" title="interface in com.commercetools.api.models.order">OrderFromCartDraft</a>&nbsp;template)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>@NotNull @Valid <a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></code></td>
+<td class="colFirst"><code>@Valid <a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraft.html#getCart--">getCart</a></span>()</code>
 <div class="block">ResourceIdentifier to the Cart from which this order is created.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code>@NotNull java.lang.String</code></td>
+<td class="colFirst"><code>java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraft.html#getId--">getId</a></span>()</code>
-<div class="block">The unique id of the cart from which an order is created.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -184,7 +184,9 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraft.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../com/commercetools/api/models/order/OrderFromCartDraft.html#setId-java.lang.String-">setId</a></span>(java.lang.String&nbsp;id)</code>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
+</td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
@@ -235,8 +237,9 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>getId</h4>
-<pre>@NotNull
-@NotNull java.lang.String&nbsp;getId()</pre>
+<pre>@Deprecated
+java.lang.String&nbsp;getId()</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 <div class="block"><p>The unique id of the cart from which an order is created.</p></div>
 </li>
 </ul>
@@ -246,9 +249,8 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>getCart</h4>
-<pre>@NotNull
- @Valid
-@NotNull @Valid <a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;getCart()</pre>
+<pre>@Valid
+@Valid <a href="../../../../../com/commercetools/api/models/cart/CartResourceIdentifier.html" title="interface in com.commercetools.api.models.cart">CartResourceIdentifier</a>&nbsp;getCart()</pre>
 <div class="block"><p>ResourceIdentifier to the Cart from which this order is created.</p></div>
 </li>
 </ul>
@@ -320,7 +322,9 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>setId</h4>
-<pre>void&nbsp;setId(java.lang.String&nbsp;id)</pre>
+<pre>@Deprecated
+void&nbsp;setId(java.lang.String&nbsp;id)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 <a name="setCart-com.commercetools.api.models.cart.CartResourceIdentifier-">

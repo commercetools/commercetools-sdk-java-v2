@@ -24,6 +24,8 @@ public final class MyCartImpl implements MyCart {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    private String key;
+
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
@@ -86,6 +88,7 @@ public final class MyCartImpl implements MyCart {
     MyCartImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
+            @JsonProperty("key") final String key,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
             @JsonProperty("customerId") final String customerId,
@@ -119,6 +122,7 @@ public final class MyCartImpl implements MyCart {
         this.version = version;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
+        this.key = key;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
         this.customerId = customerId;
@@ -167,6 +171,13 @@ public final class MyCartImpl implements MyCart {
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
+    }
+
+    /**
+    *  <p>User-specific unique identifier of the cart.</p>
+    */
+    public String getKey() {
+        return this.key;
     }
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -302,6 +313,10 @@ public final class MyCartImpl implements MyCart {
 
     public void setLastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
+    }
+
+    public void setKey(final String key) {
+        this.key = key;
     }
 
     public void setLastModifiedBy(final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
@@ -457,7 +472,7 @@ public final class MyCartImpl implements MyCart {
         MyCartImpl that = (MyCartImpl) o;
 
         return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
+            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(key, that.key).append(lastModifiedBy,
                 that.lastModifiedBy).append(createdBy, that.createdBy).append(customerId, that.customerId).append(
                     customerEmail, that.customerEmail).append(anonymousId, that.anonymousId).append(store,
                         that.store).append(lineItems, that.lineItems).append(customLineItems,
@@ -484,14 +499,14 @@ public final class MyCartImpl implements MyCart {
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(customerId).append(customerEmail).append(anonymousId).append(
-                store).append(lineItems).append(customLineItems).append(totalPrice).append(taxedPrice).append(
-                    cartState).append(shippingAddress).append(billingAddress).append(inventoryMode).append(
-                        taxMode).append(taxRoundingMode).append(taxCalculationMode).append(customerGroup).append(
-                            country).append(shippingInfo).append(discountCodes).append(custom).append(
-                                paymentInfo).append(locale).append(deleteDaysAfterLastModification).append(
-                                    refusedGifts).append(origin).append(shippingRateInput).append(
-                                        itemShippingAddresses).toHashCode();
+            key).append(lastModifiedBy).append(createdBy).append(customerId).append(customerEmail).append(
+                anonymousId).append(store).append(lineItems).append(customLineItems).append(totalPrice).append(
+                    taxedPrice).append(cartState).append(shippingAddress).append(billingAddress).append(
+                        inventoryMode).append(taxMode).append(taxRoundingMode).append(taxCalculationMode).append(
+                            customerGroup).append(country).append(shippingInfo).append(discountCodes).append(
+                                custom).append(paymentInfo).append(locale).append(
+                                    deleteDaysAfterLastModification).append(refusedGifts).append(origin).append(
+                                        shippingRateInput).append(itemShippingAddresses).toHashCode();
     }
 
 }

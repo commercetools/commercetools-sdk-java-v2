@@ -18,6 +18,7 @@ public final class CartBuilder {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    @Nullable
     private String key;
 
     @Nullable
@@ -118,7 +119,7 @@ public final class CartBuilder {
         return this;
     }
 
-    public CartBuilder key(final String key) {
+    public CartBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
@@ -320,6 +321,7 @@ public final class CartBuilder {
         return this.lastModifiedAt;
     }
 
+    @Nullable
     public String getKey() {
         return this.key;
     }

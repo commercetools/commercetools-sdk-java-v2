@@ -30,6 +30,13 @@ public interface CartDraft {
     public String getCurrency();
 
     /**
+    *  <p>User-specific unique identifier of the cart.</p>
+    */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
     *  <p>Id of an existing Customer.</p>
     */
 
@@ -187,6 +194,8 @@ public interface CartDraft {
 
     public void setCurrency(final String currency);
 
+    public void setKey(final String key);
+
     public void setCustomerId(final String customerId);
 
     public void setCustomerEmail(final String customerEmail);
@@ -252,6 +261,7 @@ public interface CartDraft {
     public static CartDraft of(final CartDraft template) {
         CartDraftImpl instance = new CartDraftImpl();
         instance.setCurrency(template.getCurrency());
+        instance.setKey(template.getKey());
         instance.setCustomerId(template.getCustomerId());
         instance.setCustomerEmail(template.getCustomerEmail());
         instance.setCustomerGroup(template.getCustomerGroup());

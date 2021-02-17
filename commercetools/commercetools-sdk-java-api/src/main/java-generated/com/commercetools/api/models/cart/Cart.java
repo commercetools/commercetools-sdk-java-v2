@@ -38,7 +38,7 @@ public interface Cart extends BaseResource, com.commercetools.api.models.DomainR
     /**
     *  <p>User-specific unique identifier of the cart.</p>
     */
-    @NotNull
+
     @JsonProperty("key")
     public String getKey();
 

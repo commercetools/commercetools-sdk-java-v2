@@ -13,6 +13,9 @@ public final class CartDraftBuilder {
     private String currency;
 
     @Nullable
+    private String key;
+
+    @Nullable
     private String customerId;
 
     @Nullable
@@ -83,6 +86,11 @@ public final class CartDraftBuilder {
 
     public CartDraftBuilder currency(final String currency) {
         this.currency = currency;
+        return this;
+    }
+
+    public CartDraftBuilder key(@Nullable final String key) {
+        this.key = key;
         return this;
     }
 
@@ -239,6 +247,11 @@ public final class CartDraftBuilder {
     }
 
     @Nullable
+    public String getKey() {
+        return this.key;
+    }
+
+    @Nullable
     public String getCustomerId() {
         return this.customerId;
     }
@@ -354,7 +367,7 @@ public final class CartDraftBuilder {
     }
 
     public CartDraft build() {
-        return new CartDraftImpl(currency, customerId, customerEmail, customerGroup, anonymousId, store, country,
+        return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, store, country,
             inventoryMode, taxMode, taxRoundingMode, taxCalculationMode, lineItems, customLineItems, shippingAddress,
             billingAddress, shippingMethod, externalTaxRateForShippingMethod, custom, locale,
             deleteDaysAfterLastModification, origin, shippingRateInput, itemShippingAddresses, discountCodes);
@@ -367,6 +380,7 @@ public final class CartDraftBuilder {
     public static CartDraftBuilder of(final CartDraft template) {
         CartDraftBuilder builder = new CartDraftBuilder();
         builder.currency = template.getCurrency();
+        builder.key = template.getKey();
         builder.customerId = template.getCustomerId();
         builder.customerEmail = template.getCustomerEmail();
         builder.customerGroup = template.getCustomerGroup();

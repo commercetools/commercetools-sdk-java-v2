@@ -18,6 +18,8 @@ public final class CartDraftImpl implements CartDraft {
 
     private String currency;
 
+    private String key;
+
     private String customerId;
 
     private String customerEmail;
@@ -65,7 +67,8 @@ public final class CartDraftImpl implements CartDraft {
     private java.util.List<String> discountCodes;
 
     @JsonCreator
-    CartDraftImpl(@JsonProperty("currency") final String currency, @JsonProperty("customerId") final String customerId,
+    CartDraftImpl(@JsonProperty("currency") final String currency, @JsonProperty("key") final String key,
+            @JsonProperty("customerId") final String customerId,
             @JsonProperty("customerEmail") final String customerEmail,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,
             @JsonProperty("anonymousId") final String anonymousId,
@@ -89,6 +92,7 @@ public final class CartDraftImpl implements CartDraft {
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.Address> itemShippingAddresses,
             @JsonProperty("discountCodes") final java.util.List<String> discountCodes) {
         this.currency = currency;
+        this.key = key;
         this.customerId = customerId;
         this.customerEmail = customerEmail;
         this.customerGroup = customerGroup;
@@ -122,6 +126,13 @@ public final class CartDraftImpl implements CartDraft {
     */
     public String getCurrency() {
         return this.currency;
+    }
+
+    /**
+    *  <p>User-specific unique identifier of the cart.</p>
+    */
+    public String getKey() {
+        return this.key;
     }
 
     /**
@@ -285,6 +296,10 @@ public final class CartDraftImpl implements CartDraft {
         this.currency = currency;
     }
 
+    public void setKey(final String key) {
+        this.key = key;
+    }
+
     public void setCustomerId(final String customerId) {
         this.customerId = customerId;
     }
@@ -408,10 +423,10 @@ public final class CartDraftImpl implements CartDraft {
 
         CartDraftImpl that = (CartDraftImpl) o;
 
-        return new EqualsBuilder().append(currency, that.currency).append(customerId, that.customerId).append(
-            customerEmail, that.customerEmail).append(customerGroup, that.customerGroup).append(anonymousId,
-                that.anonymousId).append(store, that.store).append(country, that.country).append(inventoryMode,
-                    that.inventoryMode).append(taxMode, that.taxMode).append(taxRoundingMode,
+        return new EqualsBuilder().append(currency, that.currency).append(key, that.key).append(customerId,
+            that.customerId).append(customerEmail, that.customerEmail).append(customerGroup, that.customerGroup).append(
+                anonymousId, that.anonymousId).append(store, that.store).append(country, that.country).append(
+                    inventoryMode, that.inventoryMode).append(taxMode, that.taxMode).append(taxRoundingMode,
                         that.taxRoundingMode).append(taxCalculationMode, that.taxCalculationMode).append(lineItems,
                             that.lineItems).append(customLineItems, that.customLineItems).append(shippingAddress,
                                 that.shippingAddress).append(billingAddress, that.billingAddress).append(shippingMethod,
@@ -427,7 +442,7 @@ public final class CartDraftImpl implements CartDraft {
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(currency).append(customerId).append(customerEmail).append(
+        return new HashCodeBuilder(17, 37).append(currency).append(key).append(customerId).append(customerEmail).append(
             customerGroup).append(anonymousId).append(store).append(country).append(inventoryMode).append(
                 taxMode).append(taxRoundingMode).append(taxCalculationMode).append(lineItems).append(
                     customLineItems).append(shippingAddress).append(billingAddress).append(shippingMethod).append(

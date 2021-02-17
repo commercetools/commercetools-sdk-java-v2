@@ -84,6 +84,9 @@ public final class AddressBuilder {
     @Nullable
     private String externalId;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     public AddressBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
@@ -206,6 +209,11 @@ public final class AddressBuilder {
 
     public AddressBuilder externalId(@Nullable final String externalId) {
         this.externalId = externalId;
+        return this;
+    }
+
+    public AddressBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
         return this;
     }
 
@@ -333,10 +341,15 @@ public final class AddressBuilder {
         return this.externalId;
     }
 
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public Address build() {
         return new AddressImpl(id, key, title, salutation, firstName, lastName, streetName, streetNumber,
             additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId);
+            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     public static AddressBuilder of() {
@@ -370,6 +383,7 @@ public final class AddressBuilder {
         builder.fax = template.getFax();
         builder.additionalAddressInfo = template.getAdditionalAddressInfo();
         builder.externalId = template.getExternalId();
+        builder.custom = template.getCustom();
         return builder;
     }
 

@@ -12,6 +12,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public interface ResourceTypeId {
 
+    ResourceTypeId ADDRESS = ResourceTypeIdEnum.ADDRESS;
+
     ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
 
     ResourceTypeId CATEGORY = ResourceTypeIdEnum.CATEGORY;
@@ -51,6 +53,8 @@ public interface ResourceTypeId {
     ResourceTypeId CUSTOMER_GROUP = ResourceTypeIdEnum.CUSTOMER_GROUP;
 
     enum ResourceTypeIdEnum implements ResourceTypeId {
+        ADDRESS("address"),
+
         ASSET("asset"),
 
         CATEGORY("category"),

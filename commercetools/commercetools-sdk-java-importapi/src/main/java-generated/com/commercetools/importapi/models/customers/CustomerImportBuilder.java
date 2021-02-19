@@ -20,6 +20,9 @@ public final class CustomerImportBuilder {
     private String password;
 
     @Nullable
+    private java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> stores;
+
+    @Nullable
     private String firstName;
 
     @Nullable
@@ -56,16 +59,16 @@ public final class CustomerImportBuilder {
     private java.util.List<com.commercetools.importapi.models.common.Address> addresses;
 
     @Nullable
-    private com.commercetools.importapi.models.common.Address defaultBillingAddress;
+    private Integer defaultBillingAddress;
 
     @Nullable
-    private com.commercetools.importapi.models.common.Address billingAddresses;
+    private java.util.List<Integer> billingAddresses;
 
     @Nullable
-    private com.commercetools.importapi.models.common.Address defaultShippingAddress;
+    private Integer defaultShippingAddress;
 
     @Nullable
-    private com.commercetools.importapi.models.common.Address shippingAddresses;
+    private java.util.List<Integer> shippingAddresses;
 
     @Nullable
     private String locale;
@@ -90,6 +93,18 @@ public final class CustomerImportBuilder {
 
     public CustomerImportBuilder password(final String password) {
         this.password = password;
+        return this;
+    }
+
+    public CustomerImportBuilder stores(
+            @Nullable final com.commercetools.importapi.models.common.StoreKeyReference... stores) {
+        this.stores = new ArrayList<>(Arrays.asList(stores));
+        return this;
+    }
+
+    public CustomerImportBuilder stores(
+            @Nullable final java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> stores) {
+        this.stores = stores;
         return this;
     }
 
@@ -161,26 +176,32 @@ public final class CustomerImportBuilder {
         return this;
     }
 
-    public CustomerImportBuilder defaultBillingAddress(
-            @Nullable final com.commercetools.importapi.models.common.Address defaultBillingAddress) {
+    public CustomerImportBuilder defaultBillingAddress(@Nullable final Integer defaultBillingAddress) {
         this.defaultBillingAddress = defaultBillingAddress;
         return this;
     }
 
-    public CustomerImportBuilder billingAddresses(
-            @Nullable final com.commercetools.importapi.models.common.Address billingAddresses) {
+    public CustomerImportBuilder billingAddresses(@Nullable final Integer... billingAddresses) {
+        this.billingAddresses = new ArrayList<>(Arrays.asList(billingAddresses));
+        return this;
+    }
+
+    public CustomerImportBuilder billingAddresses(@Nullable final java.util.List<Integer> billingAddresses) {
         this.billingAddresses = billingAddresses;
         return this;
     }
 
-    public CustomerImportBuilder defaultShippingAddress(
-            @Nullable final com.commercetools.importapi.models.common.Address defaultShippingAddress) {
+    public CustomerImportBuilder defaultShippingAddress(@Nullable final Integer defaultShippingAddress) {
         this.defaultShippingAddress = defaultShippingAddress;
         return this;
     }
 
-    public CustomerImportBuilder shippingAddresses(
-            @Nullable final com.commercetools.importapi.models.common.Address shippingAddresses) {
+    public CustomerImportBuilder shippingAddresses(@Nullable final Integer... shippingAddresses) {
+        this.shippingAddresses = new ArrayList<>(Arrays.asList(shippingAddresses));
+        return this;
+    }
+
+    public CustomerImportBuilder shippingAddresses(@Nullable final java.util.List<Integer> shippingAddresses) {
         this.shippingAddresses = shippingAddresses;
         return this;
     }
@@ -210,6 +231,11 @@ public final class CustomerImportBuilder {
 
     public String getPassword() {
         return this.password;
+    }
+
+    @Nullable
+    public java.util.List<com.commercetools.importapi.models.common.StoreKeyReference> getStores() {
+        return this.stores;
     }
 
     @Nullable
@@ -273,22 +299,22 @@ public final class CustomerImportBuilder {
     }
 
     @Nullable
-    public com.commercetools.importapi.models.common.Address getDefaultBillingAddress() {
+    public Integer getDefaultBillingAddress() {
         return this.defaultBillingAddress;
     }
 
     @Nullable
-    public com.commercetools.importapi.models.common.Address getBillingAddresses() {
+    public java.util.List<Integer> getBillingAddresses() {
         return this.billingAddresses;
     }
 
     @Nullable
-    public com.commercetools.importapi.models.common.Address getDefaultShippingAddress() {
+    public Integer getDefaultShippingAddress() {
         return this.defaultShippingAddress;
     }
 
     @Nullable
-    public com.commercetools.importapi.models.common.Address getShippingAddresses() {
+    public java.util.List<Integer> getShippingAddresses() {
         return this.shippingAddresses;
     }
 
@@ -303,8 +329,8 @@ public final class CustomerImportBuilder {
     }
 
     public CustomerImport build() {
-        return new CustomerImportImpl(key, customerNumber, email, password, firstName, lastName, middleName, title,
-            salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
+        return new CustomerImportImpl(key, customerNumber, email, password, stores, firstName, lastName, middleName,
+            title, salutation, externalId, dateOfBirth, companyName, vatId, isEmailVerified, customerGroup, addresses,
             defaultBillingAddress, billingAddresses, defaultShippingAddress, shippingAddresses, locale, custom);
     }
 
@@ -318,6 +344,7 @@ public final class CustomerImportBuilder {
         builder.customerNumber = template.getCustomerNumber();
         builder.email = template.getEmail();
         builder.password = template.getPassword();
+        builder.stores = template.getStores();
         builder.firstName = template.getFirstName();
         builder.lastName = template.getLastName();
         builder.middleName = template.getMiddleName();

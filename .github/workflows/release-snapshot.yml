@@ -28,7 +28,9 @@ jobs:
         run: ./gradlew --build-cache clean test
 
       - name: Release
-        run: ./gradlew --build-cache publishAllPublicationsToMavenCentralRepository --info --stacktrace
+        run: ./gradlew --build-cache publishAllPublicationsToMavenCentralRepository
         env:
           CTP_OSS_USER: ${{ secrets.OSS_USER }}
           CTP_OSS_SECRET: ${{ secrets.OSS_SECRET }}
+
+      - run: rm -rf ~/.gradle/gradle.properties

@@ -38,9 +38,9 @@ gpg -K
 
 KEYNAME=`gpg --with-colons --keyid-format long --list-keys automation@commercetools.de | grep fpr | cut -d ':' -f 10`
 
-echo "signing.gnupg.executable=gpg" >> gradle.properties
-echo "signing.gnupg.keyName=$KEYNAME" >> gradle.properties
-echo "signing.gnupg.passphrase=$(<signing_passphrase.txt)" >> gradle.properties
+echo "signing.gnupg.executable=gpg" >> ~/.gradle/gradle.properties
+echo "signing.gnupg.keyName=$KEYNAME" >> ~/.gradle/gradle.properties
+echo "signing.gnupg.passphrase=$(<signing_passphrase.txt)" >> ~/.gradle/gradle.properties
 
 rm -rf signing_passphrase.txt signing_passphrase.enc signing_key.enc decrypter.json signing_key.asc
 

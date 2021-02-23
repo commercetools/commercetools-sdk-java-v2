@@ -37,7 +37,7 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           PASSPHRASE: ${{ secrets.PASSPHRASE }}
 
-      - run: ./gradlew -Pversion=$SOURCE_TAG clean test javadoc publishAllPublicationsToMavenCentralRepository writeVersionToReadme --info --stacktrace
+      - run: ./gradlew -Pversion=$SOURCE_TAG clean test javadoc publishAllPublicationsToMavenCentralRepository writeVersionToReadme
         working-directory: sdk
         env:
           CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
@@ -47,6 +47,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
           SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
+
+      - run: rm -rf ~/.gradle/gradle.properties
 
       - name: Create GH Release
         id: create_release

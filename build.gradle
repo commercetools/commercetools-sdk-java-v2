@@ -136,6 +136,8 @@ allprojects {
     }
 }
 
+group='com.commercetools.sdk'
+
 nexusPublishing {
     repositories {
         sonatype {

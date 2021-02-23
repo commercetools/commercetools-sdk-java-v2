@@ -41,4 +41,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder shippingMethods() {
         return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
+
+    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder shoppingLists() {
+        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
 }

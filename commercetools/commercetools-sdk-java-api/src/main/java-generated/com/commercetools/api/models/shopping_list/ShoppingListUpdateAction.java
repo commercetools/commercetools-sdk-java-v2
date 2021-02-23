@@ -33,6 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomFieldActionImpl.class, name = ShoppingListSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetLineItemCustomTypeActionImpl.class, name = ShoppingListSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetSlugActionImpl.class, name = ShoppingListSetSlugAction.SET_SLUG),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetStoreActionImpl.class, name = ShoppingListSetStoreAction.SET_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomFieldActionImpl.class, name = ShoppingListSetTextLineItemCustomFieldAction.SET_TEXT_LINE_ITEM_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemCustomTypeActionImpl.class, name = ShoppingListSetTextLineItemCustomTypeAction.SET_TEXT_LINE_ITEM_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetTextLineItemDescriptionActionImpl.class, name = ShoppingListSetTextLineItemDescriptionAction.SET_TEXT_LINE_ITEM_DESCRIPTION) })

@@ -23,7 +23,7 @@ public final class FacetResultRangeBuilder {
     @Nullable
     private Long productCount;
 
-    private Long total;
+    private Double total;
 
     private Double min;
 
@@ -61,7 +61,7 @@ public final class FacetResultRangeBuilder {
         return this;
     }
 
-    public FacetResultRangeBuilder total(final Long total) {
+    public FacetResultRangeBuilder total(final Double total) {
         this.total = total;
         return this;
     }
@@ -106,7 +106,7 @@ public final class FacetResultRangeBuilder {
         return this.productCount;
     }
 
-    public Long getTotal() {
+    public Double getTotal() {
         return this.total;
     }
 

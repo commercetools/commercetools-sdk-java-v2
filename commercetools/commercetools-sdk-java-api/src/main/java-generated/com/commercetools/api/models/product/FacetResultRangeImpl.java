@@ -28,7 +28,7 @@ public final class FacetResultRangeImpl implements FacetResultRange {
 
     private Long productCount;
 
-    private Long total;
+    private Double total;
 
     private Double min;
 
@@ -40,7 +40,7 @@ public final class FacetResultRangeImpl implements FacetResultRange {
     FacetResultRangeImpl(@JsonProperty("from") final Double from, @JsonProperty("fromStr") final String fromStr,
             @JsonProperty("to") final Double to, @JsonProperty("toStr") final String toStr,
             @JsonProperty("count") final Long count, @JsonProperty("productCount") final Long productCount,
-            @JsonProperty("total") final Long total, @JsonProperty("min") final Double min,
+            @JsonProperty("total") final Double total, @JsonProperty("min") final Double min,
             @JsonProperty("max") final Double max, @JsonProperty("mean") final Double mean) {
         this.from = from;
         this.fromStr = fromStr;
@@ -81,7 +81,7 @@ public final class FacetResultRangeImpl implements FacetResultRange {
         return this.productCount;
     }
 
-    public Long getTotal() {
+    public Double getTotal() {
         return this.total;
     }
 
@@ -121,7 +121,7 @@ public final class FacetResultRangeImpl implements FacetResultRange {
         this.productCount = productCount;
     }
 
-    public void setTotal(final Long total) {
+    public void setTotal(final Double total) {
         this.total = total;
     }
 

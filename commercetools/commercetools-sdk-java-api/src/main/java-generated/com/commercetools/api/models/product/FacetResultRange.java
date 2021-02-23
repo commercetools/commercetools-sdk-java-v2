@@ -41,7 +41,7 @@ public interface FacetResultRange {
 
     @NotNull
     @JsonProperty("total")
-    public Long getTotal();
+    public Double getTotal();
 
     @NotNull
     @JsonProperty("min")
@@ -67,7 +67,7 @@ public interface FacetResultRange {
 
     public void setProductCount(final Long productCount);
 
-    public void setTotal(final Long total);
+    public void setTotal(final Double total);
 
     public void setMin(final Double min);
 

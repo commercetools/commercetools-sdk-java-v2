@@ -212,18 +212,6 @@ subprojects { project ->
                         password = System.getenv("GITHUB_TOKEN")
                     }
                 }
-                maven {
-                    name = "MavenCentral"
-                    if (version.status == 'release') {
-                        url("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
-                    } else {
-                        url("https://oss.sonatype.org/content/repositories/snapshots/")
-                    }
-                    credentials {
-                        username System.getenv('CTP_OSS_USER') ?: ''
-                        password System.getenv('CTP_OSS_SECRET') ?: ''
-                    }
-                }
             }
             publications {
                 Maven(MavenPublication) {

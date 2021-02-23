@@ -2,7 +2,6 @@ on:
   push:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+*'
-  workflow_dispatch:
 
 name: AutoRelease
 
@@ -35,7 +34,7 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           PASSPHRASE: ${{ secrets.PASSPHRASE }}
 
-      - run: ./gradlew -Pversion=$SOURCE_TAG clean test javadoc publishToSonatype closeSonatypeStagingRepository
+      - run: ./gradlew -Pversion=$SOURCE_TAG clean test javadoc publishToSonatype closeAndReleaseSonatypeStagingRepository
         env:
           CTP_OSS_USER: ${{ secrets.OSS_USER }}
           CTP_OSS_SECRET: ${{ secrets.OSS_SECRET }}
@@ -44,17 +43,6 @@ jobs:
           SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
 
       - run: rm -rf ~/.gradle/gradle.properties
-
-      - name: Create GH Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref }}
-          release_name: ${{ github.ref }}
-          draft: true
-          prerelease: false
 
   update_readme:
     runs-on: ubuntu-latest
@@ -68,6 +56,13 @@ jobs:
         with:
             ref: master
 
+      - name: Retrieve branch name
+        id: branch_name
+        run: |
+            echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
+            echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
+            echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+
       - run: ./gradlew -Pversion=$SOURCE_TAG writeVersionToReadme
         env:
           SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
@@ -78,6 +73,17 @@ jobs:
           commit_user_name: Auto Mation
           commit_user_email: automation@commercetools.com
           commit_author: Auto Mation <automation@commercetools.com>
+
+      - name: Create GH Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            tag_name: ${{ github.ref }}
+            release_name: ${{ github.ref }}
+            draft: false
+            prerelease: false
 
   docs:
     name: Build and release docs

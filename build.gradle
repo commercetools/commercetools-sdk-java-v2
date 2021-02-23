@@ -20,6 +20,7 @@ plugins {
 
     id 'com.softeq.gradle.itest' version '1.0.4'
 
+    id 'io.github.gradle-nexus.publish-plugin' version '1.0.0'
 }
 
 import java.text.SimpleDateFormat
@@ -135,6 +136,17 @@ allprojects {
     }
 }
 
+group='com.commercetools.sdk'
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            username = System.getenv('CTP_OSS_USER')
+            password = System.getenv('CTP_OSS_SECRET')
+        }
+    }
+}
+
 subprojects { project ->
     repositories {
         mavenCentral()
@@ -209,7 +221,7 @@ subprojects { project ->
                     }
                     credentials {
                         username System.getenv('CTP_OSS_USER') ?: ''
-                        password System.getenv("CTP_OSS_SECRET") ?: ''
+                        password System.getenv('CTP_OSS_SECRET') ?: ''
                     }
                 }
             }

@@ -15,7 +15,7 @@ This repository contains the commercetools platform and import-api java sdks gen
 
 ### Java SDK with Gradle
 
-The latest stable SDK release can be retrieved from [jcenter](https://bintray.com/bintray/jcenter?filterByPkgName=commercetools-sdk-java) with:
+The latest stable SDK release can be retrieved from [Maven Central](https://search.maven.org/search?q=g:com.commercetools.sdk) with:
 
 
 ```gradle
@@ -28,7 +28,7 @@ ext {
 sourceCompatibility = 1.8
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -67,31 +67,6 @@ dependencies {
       <version>${commercetools.version}</version>
     </dependency>
 </dependencies>
-<profiles>
-    <profile>
-        <repositories>
-            <repository>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-                <id>central</id>
-                <name>bintray</name>
-                <url>https://jcenter.bintray.com</url>
-            </repository>
-        </repositories>
-        <pluginRepositories>
-            <pluginRepository>
-                <snapshots>
-                    <enabled>false</enabled>
-                </snapshots>
-                <id>central</id>
-                <name>bintray-plugins</name>
-                <url>https://jcenter.bintray.com</url>
-            </pluginRepository>
-        </pluginRepositories>
-        <id>bintray</id>
-    </profile>
-</profiles>
 ```
 
 ### Modules

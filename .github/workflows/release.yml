@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          path: sdk
 
       - name: Setup Java
         uses: actions/setup-java@v1
@@ -38,7 +36,6 @@ jobs:
           PASSPHRASE: ${{ secrets.PASSPHRASE }}
 
       - run: ./gradlew -Pversion=$SOURCE_TAG clean test javadoc publishAllPublicationsToMavenCentralRepository writeVersionToReadme
-        working-directory: sdk
         env:
           CTP_BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
           CTP_BINTRAY_KEY: ${{ secrets.BINTRAY_KEY }}

@@ -15,6 +15,7 @@ plugins {
 
     id 'maven'
     id 'maven-publish'
+    id 'signing'
 
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
@@ -39,9 +40,9 @@ class Version {
     Version(String versionValue) {
         buildTime = new Date()
         originalVersion = versionValue
+        thisVersion = versionValue
         if (originalVersion.endsWith('-SNAPSHOT')) {
             status = 'integration'
-            thisVersion = originalVersion.substring(0, originalVersion.length() - 'SNAPSHOT'.length()) + getTimestamp()
         } else {
             status = 'release'
             thisVersion = versionValue
@@ -149,6 +150,7 @@ subprojects { project ->
 
     apply plugin: 'maven'
     apply plugin: 'maven-publish'
+    apply plugin: 'signing'
 
     apply plugin: 'java'
     apply plugin: 'java-library' // needed to make sure that transitive deps have 'compile' scope
@@ -229,6 +231,18 @@ subprojects { project ->
                         password = System.getenv("GITHUB_TOKEN")
                     }
                 }
+                maven {
+                    name = "MavenCentral"
+                    if (version.status == 'release') {
+                        url("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
+                    } else {
+                        url("https://oss.sonatype.org/content/repositories/snapshots/")
+                    }
+                    credentials {
+                        username System.getenv('CTP_OSS_USER') ?: ''
+                        password System.getenv("CTP_OSS_SECRET") ?: ''
+                    }
+                }
             }
             publications {
                 Maven(MavenPublication) {
@@ -257,6 +271,11 @@ subprojects { project ->
                     }
                 }
             }
+        }
+
+        signing {
+            useGpgCmd()
+            sign publishing.publications.Maven
         }
 
         task bintrayMavenSync(type: MavenCentralSync) {

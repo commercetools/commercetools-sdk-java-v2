@@ -87,6 +87,10 @@ public interface Project {
     @JsonProperty("carts")
     public CartsConfiguration getCarts();
 
+    @Valid
+    @JsonProperty("searchIndexing")
+    public SearchIndexingConfiguration getSearchIndexing();
+
     public void setVersion(final Long version);
 
     public void setKey(final String key);
@@ -120,6 +124,8 @@ public interface Project {
 
     public void setCarts(final CartsConfiguration carts);
 
+    public void setSearchIndexing(final SearchIndexingConfiguration searchIndexing);
+
     public static Project of() {
         return new ProjectImpl();
     }
@@ -138,6 +144,7 @@ public interface Project {
         instance.setShippingRateInputType(template.getShippingRateInputType());
         instance.setExternalOAuth(template.getExternalOAuth());
         instance.setCarts(template.getCarts());
+        instance.setSearchIndexing(template.getSearchIndexing());
         return instance;
     }
 

@@ -6,12 +6,12 @@ dependencies {
     testImplementation "ch.qos.logback:logback-classic:${versions.logback}"
 
     implementation "com.google.code.findbugs:jsr305:${versions.findbugs}"
-    implementation "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
-    implementation "com.fasterxml.jackson.core:jackson-core:${versions.jackson}"
-    implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${versions.jackson}"
-    implementation commons.lang3
-    implementation "org.slf4j:slf4j-api:${versions.slf4j}"
-    implementation "net.jodah:failsafe:${versions.failsafe}"
+    api "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
+    api "com.fasterxml.jackson.core:jackson-core:${versions.jackson}"
+    api "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${versions.jackson}"
+    api commons.lang3
+    api "org.slf4j:slf4j-api:${versions.slf4j}"
+    api "net.jodah:failsafe:${versions.failsafe}"
 }
 
 

@@ -27,15 +27,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost extends
     private String storeKey;
     private String ID;
 
-    private com.commercetools.api.models.common.Update update;
+    private com.commercetools.api.models.shopping_list.ShoppingListUpdate shoppingListUpdate;
 
     public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost(final ApiHttpClient apiHttpClient, String projectKey,
-            String storeKey, String ID, com.commercetools.api.models.common.Update update) {
+            String storeKey, String ID,
+            com.commercetools.api.models.shopping_list.ShoppingListUpdate shoppingListUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.ID = ID;
-        this.update = update;
+        this.shoppingListUpdate = shoppingListUpdate;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost(
@@ -44,7 +45,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost extends
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
         this.ID = t.ID;
-        this.update = t.update;
+        this.shoppingListUpdate = t.shoppingListUpdate;
     }
 
     @Override
@@ -56,7 +57,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost extends
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(update);
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(shoppingListUpdate);
             return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {

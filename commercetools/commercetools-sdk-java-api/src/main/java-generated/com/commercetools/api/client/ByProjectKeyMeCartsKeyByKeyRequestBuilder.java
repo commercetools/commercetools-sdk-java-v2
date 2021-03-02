@@ -18,8 +18,16 @@ public class ByProjectKeyMeCartsKeyByKeyRequestBuilder {
         this.key = key;
     }
 
+    public ByProjectKeyMeCartsKeyByKeyGet get() {
+        return new ByProjectKeyMeCartsKeyByKeyGet(apiHttpClient, projectKey, key);
+    }
+
     public ByProjectKeyMeCartsKeyByKeyPost post(com.commercetools.api.models.me.MyCartUpdate myCartUpdate) {
         return new ByProjectKeyMeCartsKeyByKeyPost(apiHttpClient, projectKey, key, myCartUpdate);
+    }
+
+    public ByProjectKeyMeCartsKeyByKeyDelete delete() {
+        return new ByProjectKeyMeCartsKeyByKeyDelete(apiHttpClient, projectKey, key);
     }
 
 }

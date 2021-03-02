@@ -23,11 +23,11 @@ public class ByProjectKeyMeCartsRequestBuilder {
         return new ByProjectKeyMeCartsPost(apiHttpClient, projectKey, myCartDraft);
     }
 
-    public ByProjectKeyMeCartsByIDRequestBuilder withId(String ID) {
-        return new ByProjectKeyMeCartsByIDRequestBuilder(apiHttpClient, projectKey, ID);
+    public ByProjectKeyMeCartsKeyByKeyRequestBuilder withKey(String key) {
+        return new ByProjectKeyMeCartsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
 
-    public ByProjectKeyMeCartsKeyByKeyRequestBuilder keyWithKeyValue(String key) {
-        return new ByProjectKeyMeCartsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
+    public ByProjectKeyMeCartsByIDRequestBuilder withId(String ID) {
+        return new ByProjectKeyMeCartsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
 }

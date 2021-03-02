@@ -27,15 +27,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
     private String storeKey;
     private String ID;
 
-    private com.commercetools.api.models.common.Update update;
+    private com.commercetools.api.models.cart.CartUpdate cartUpdate;
 
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(final ApiHttpClient apiHttpClient, String projectKey,
-            String storeKey, String ID, com.commercetools.api.models.common.Update update) {
+            String storeKey, String ID, com.commercetools.api.models.cart.CartUpdate cartUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.ID = ID;
-        this.update = update;
+        this.cartUpdate = cartUpdate;
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost t) {
@@ -43,7 +43,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
         this.ID = t.ID;
-        this.update = t.update;
+        this.cartUpdate = t.cartUpdate;
     }
 
     @Override
@@ -55,7 +55,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(update);
+            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(cartUpdate);
             return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {

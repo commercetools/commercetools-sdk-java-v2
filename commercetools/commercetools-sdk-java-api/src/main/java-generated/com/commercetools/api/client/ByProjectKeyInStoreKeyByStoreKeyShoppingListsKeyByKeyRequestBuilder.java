@@ -25,9 +25,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPost post(
-            com.commercetools.api.models.common.Update update) {
+            com.commercetools.api.models.shopping_list.ShoppingListUpdate shoppingListUpdate) {
         return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPost(apiHttpClient, projectKey, storeKey, key,
-            update);
+            shoppingListUpdate);
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyDelete delete() {

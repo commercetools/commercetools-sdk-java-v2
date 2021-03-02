@@ -13,34 +13,30 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Update MyCart by key</p>
+*  <p>Delete MyCart by key</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeCartsKeyByKeyPost
-        extends ApiMethod<ByProjectKeyMeCartsKeyByKeyPost, com.commercetools.api.models.me.MyCart>
-        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeCartsKeyByKeyPost>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeCartsKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsKeyByKeyPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeCartsKeyByKeyPost> {
+public class ByProjectKeyMeCartsKeyByKeyDelete
+        extends ApiMethod<ByProjectKeyMeCartsKeyByKeyDelete, com.commercetools.api.models.me.MyCart>
+        implements com.commercetools.api.client.VersionedTrait<ByProjectKeyMeCartsKeyByKeyDelete>,
+        com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeCartsKeyByKeyDelete>,
+        com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeCartsKeyByKeyDelete>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsKeyByKeyDelete>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeCartsKeyByKeyDelete> {
 
     private String projectKey;
     private String key;
 
-    private com.commercetools.api.models.me.MyCartUpdate myCartUpdate;
-
-    public ByProjectKeyMeCartsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key,
-            com.commercetools.api.models.me.MyCartUpdate myCartUpdate) {
+    public ByProjectKeyMeCartsKeyByKeyDelete(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
-        this.myCartUpdate = myCartUpdate;
     }
 
-    public ByProjectKeyMeCartsKeyByKeyPost(ByProjectKeyMeCartsKeyByKeyPost t) {
+    public ByProjectKeyMeCartsKeyByKeyDelete(ByProjectKeyMeCartsKeyByKeyDelete t) {
         super(t);
         this.projectKey = t.projectKey;
         this.key = t.key;
-        this.myCartUpdate = t.myCartUpdate;
     }
 
     @Override
@@ -50,15 +46,8 @@ public class ByProjectKeyMeCartsKeyByKeyPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(myCartUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
+        return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -79,6 +68,10 @@ public class ByProjectKeyMeCartsKeyByKeyPost
         return this.key;
     }
 
+    public List<String> getVersion() {
+        return this.getQueryParam("version");
+    }
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -91,16 +84,24 @@ public class ByProjectKeyMeCartsKeyByKeyPost
         this.key = key;
     }
 
-    public ByProjectKeyMeCartsKeyByKeyPost withExpand(final String expand) {
+    public ByProjectKeyMeCartsKeyByKeyDelete withVersion(final Long version) {
+        return copy().withQueryParam("version", version);
+    }
+
+    public ByProjectKeyMeCartsKeyByKeyDelete addVersion(final Long version) {
+        return copy().addQueryParam("version", version);
+    }
+
+    public ByProjectKeyMeCartsKeyByKeyDelete withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
-    public ByProjectKeyMeCartsKeyByKeyPost addExpand(final String expand) {
+    public ByProjectKeyMeCartsKeyByKeyDelete addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }
 
     @Override
-    protected ByProjectKeyMeCartsKeyByKeyPost copy() {
-        return new ByProjectKeyMeCartsKeyByKeyPost(this);
+    protected ByProjectKeyMeCartsKeyByKeyDelete copy() {
+        return new ByProjectKeyMeCartsKeyByKeyDelete(this);
     }
 }

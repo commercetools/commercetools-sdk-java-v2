@@ -24,8 +24,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet(apiHttpClient, projectKey, storeKey, ID);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost post(com.commercetools.api.models.common.Update update) {
-        return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(apiHttpClient, projectKey, storeKey, ID, update);
+    public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost post(
+            com.commercetools.api.models.cart.CartUpdate cartUpdate) {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost(apiHttpClient, projectKey, storeKey, ID, cartUpdate);
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDDelete delete() {

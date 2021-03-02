@@ -13,34 +13,28 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Update MyCart by key</p>
+*  <p>Get MyCart by key</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeCartsKeyByKeyPost
-        extends ApiMethod<ByProjectKeyMeCartsKeyByKeyPost, com.commercetools.api.models.me.MyCart>
-        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeCartsKeyByKeyPost>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeCartsKeyByKeyPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsKeyByKeyPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeCartsKeyByKeyPost> {
+public class ByProjectKeyMeCartsKeyByKeyGet
+        extends ApiMethod<ByProjectKeyMeCartsKeyByKeyGet, com.commercetools.api.models.me.MyCart>
+        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyMeCartsKeyByKeyGet>,
+        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeCartsKeyByKeyGet>,
+        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeCartsKeyByKeyGet> {
 
     private String projectKey;
     private String key;
 
-    private com.commercetools.api.models.me.MyCartUpdate myCartUpdate;
-
-    public ByProjectKeyMeCartsKeyByKeyPost(final ApiHttpClient apiHttpClient, String projectKey, String key,
-            com.commercetools.api.models.me.MyCartUpdate myCartUpdate) {
+    public ByProjectKeyMeCartsKeyByKeyGet(final ApiHttpClient apiHttpClient, String projectKey, String key) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.key = key;
-        this.myCartUpdate = myCartUpdate;
     }
 
-    public ByProjectKeyMeCartsKeyByKeyPost(ByProjectKeyMeCartsKeyByKeyPost t) {
+    public ByProjectKeyMeCartsKeyByKeyGet(ByProjectKeyMeCartsKeyByKeyGet t) {
         super(t);
         this.projectKey = t.projectKey;
         this.key = t.key;
-        this.myCartUpdate = t.myCartUpdate;
     }
 
     @Override
@@ -50,15 +44,8 @@ public class ByProjectKeyMeCartsKeyByKeyPost
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }
-        try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(myCartUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
 
-        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
+        return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
@@ -91,16 +78,16 @@ public class ByProjectKeyMeCartsKeyByKeyPost
         this.key = key;
     }
 
-    public ByProjectKeyMeCartsKeyByKeyPost withExpand(final String expand) {
+    public ByProjectKeyMeCartsKeyByKeyGet withExpand(final String expand) {
         return copy().withQueryParam("expand", expand);
     }
 
-    public ByProjectKeyMeCartsKeyByKeyPost addExpand(final String expand) {
+    public ByProjectKeyMeCartsKeyByKeyGet addExpand(final String expand) {
         return copy().addQueryParam("expand", expand);
     }
 
     @Override
-    protected ByProjectKeyMeCartsKeyByKeyPost copy() {
-        return new ByProjectKeyMeCartsKeyByKeyPost(this);
+    protected ByProjectKeyMeCartsKeyByKeyGet copy() {
+        return new ByProjectKeyMeCartsKeyByKeyGet(this);
     }
 }

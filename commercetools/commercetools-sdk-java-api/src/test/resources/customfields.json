@@ -79,6 +79,7 @@
         ],
         "set-boolean": [
             true
-        ]
+        ],
+        "set-empty": []
     }
 }

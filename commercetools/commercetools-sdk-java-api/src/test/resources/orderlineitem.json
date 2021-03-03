@@ -1,0 +1,15 @@
+{
+    "lineItems": [
+        {
+            "custom": {
+                "type": {
+                    "typeId" : "type",
+                    "id": "12345"
+                },
+                "fields": {
+                    "empty": []
+                }
+            }
+        }
+    ]
+}

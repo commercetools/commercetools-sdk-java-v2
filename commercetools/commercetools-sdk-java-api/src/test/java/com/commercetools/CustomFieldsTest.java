@@ -8,10 +8,12 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.Map;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.type.CustomFieldEnumValue;
 import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
@@ -70,5 +72,13 @@ public class CustomFieldsTest {
             number -> assertThat(number).isEqualTo(11.0));
         assertThat(fields.get("set-reference")).asList().first().isInstanceOf(ProductReference.class);
         assertThat(fields.get("set-money")).asList().first().isInstanceOf(TypedMoney.class);
+        assertThat(fields.get("set-empty")).asList().isEmpty();
+    }
+
+    @Test
+    public void emptyField() throws IOException {
+        Order order = JsonUtils.fromJsonString(stringFromResource("orderlineitem.json"), Order.class);
+
+        assertThat(order.getLineItems().get(0).getCustom().getFields().values().get("empty")).isInstanceOf(List.class);
     }
 }

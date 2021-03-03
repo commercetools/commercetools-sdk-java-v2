@@ -143,6 +143,9 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
     }
 
     private ElemType elemType(JsonNode valueNode) {
+        if (valueNode == null) {
+            return ElemType.JSON_NODE;
+        }
         JsonNodeType valueNodeType = valueNode.getNodeType();
         switch (valueNodeType) {
             case OBJECT:

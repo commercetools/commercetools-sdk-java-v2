@@ -77,8 +77,7 @@ public class CustomFieldsTest {
 
     @Test
     public void emptyField() throws IOException {
-        Order order = JsonUtils.fromJsonString(stringFromResource("orderlineitem.json"),
-                Order.class);
+        Order order = JsonUtils.fromJsonString(stringFromResource("orderlineitem.json"), Order.class);
 
         assertThat(order.getLineItems().get(0).getCustom().getFields().values().get("empty")).isInstanceOf(List.class);
     }

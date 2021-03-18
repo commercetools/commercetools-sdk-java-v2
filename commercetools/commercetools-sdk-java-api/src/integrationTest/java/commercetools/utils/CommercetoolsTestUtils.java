@@ -19,14 +19,12 @@ public class CommercetoolsTestUtils {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if ("OFF".equals(logLevel)) {
             projectRoot = ApiFactory.createForProject(getProjectKey(),
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).withScopes(
-                    getScopes()).build(),
+                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                 ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
         }
         else {
             projectRoot = ApiFactory.createForProject(getProjectKey(),
-                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).withScopes(
-                    getScopes()).build(),
+                ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                 ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
         }
     }
@@ -59,10 +57,6 @@ public class CommercetoolsTestUtils {
 
     public static String getClientSecret() {
         return System.getenv("CTP_CLIENT_SECRET");
-    }
-
-    public static String getScopes() {
-        return "manage_project:" + getProjectKey() + " manage_api_clients:" + getProjectKey();
     }
 
     public static ByProjectKeyRequestBuilder getProjectRoot() {

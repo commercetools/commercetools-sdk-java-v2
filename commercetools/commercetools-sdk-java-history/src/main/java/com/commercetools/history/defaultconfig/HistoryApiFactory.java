@@ -9,8 +9,8 @@ import javax.annotation.Nullable;
 
 import com.commercetools.history.client.ApiRoot;
 import com.commercetools.history.client.ByProjectKeyRequestBuilder;
-
 import com.commercetools.history.client.HistoryCorrelationIdProvider;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.ClientFactory;
 import io.vrap.rmf.base.client.HttpClientSupplier;

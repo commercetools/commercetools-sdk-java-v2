@@ -4,6 +4,7 @@ package com.commercetools.history.defaultconfig;
 import com.commercetools.history.models.ChangeHistoryPagedQueryResponse;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
+
 import org.junit.Assert;
 import org.junit.Test;
 

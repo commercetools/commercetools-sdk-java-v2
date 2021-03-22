@@ -5,5 +5,4 @@ dependencies {
 
     implementation "javax.validation:validation-api:${versions.validation}"
 
-    testImplementation "junit:junit:${versions.junit}"
 }

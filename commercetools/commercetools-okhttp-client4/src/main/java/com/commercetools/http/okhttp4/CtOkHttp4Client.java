@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 import javax.validation.constraints.NotNull;
 
 import okhttp3.*;
-import okhttp3.internal.http.RealResponseBody;
 import okio.GzipSource;
 import okio.Okio;
 
@@ -39,7 +38,7 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
     public CtOkHttp4Client(final BuilderOptions options) {
         okHttpClient = options.plus(
-                clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS))).build();
+            clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS))).build();
     }
 
     public CtOkHttp4Client(final Supplier<OkHttpClient.Builder> builderSupplier) {
@@ -52,7 +51,7 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
     public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
         okHttpClient = clientBuilder.get().dispatcher(
-                createDispatcher(executor, maxRequests, maxRequestsPerHost)).build();
+            createDispatcher(executor, maxRequests, maxRequestsPerHost)).build();
     }
 
     private Dispatcher createDispatcher(final int maxRequests, final int maxRequestsPerHost) {

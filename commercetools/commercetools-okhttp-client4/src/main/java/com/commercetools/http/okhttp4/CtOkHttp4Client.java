@@ -33,6 +33,28 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
     private final OkHttpClient okHttpClient;
 
+    public CtOkHttp4Client() {
+        okHttpClient = clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)).build();
+    }
+
+    public CtOkHttp4Client(final BuilderOptions options) {
+        okHttpClient = options.plus(
+                clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS))).build();
+    }
+
+    public CtOkHttp4Client(final Supplier<OkHttpClient.Builder> builderSupplier) {
+        okHttpClient = builderSupplier.get().build();
+    }
+
+    public CtOkHttp4Client(final int maxRequests, final int maxRequestsPerHost) {
+        okHttpClient = clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)).build();
+    }
+
+    public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
+        okHttpClient = clientBuilder.get().dispatcher(
+                createDispatcher(executor, maxRequests, maxRequestsPerHost)).build();
+    }
+
     private Dispatcher createDispatcher(final int maxRequests, final int maxRequestsPerHost) {
         final Dispatcher dispatcher = new Dispatcher();
         dispatcher.setMaxRequests(maxRequests);
@@ -46,28 +68,6 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
         dispatcher.setMaxRequests(maxRequests);
         dispatcher.setMaxRequestsPerHost(maxRequestsPerHost);
         return dispatcher;
-    }
-
-    public CtOkHttp4Client() {
-        okHttpClient = clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)).build();
-    }
-
-    public CtOkHttp4Client(final BuilderOptions options) {
-        okHttpClient = options.plus(
-            clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS))).build();
-    }
-
-    public CtOkHttp4Client(final Supplier<OkHttpClient.Builder> builderSupplier) {
-        okHttpClient = builderSupplier.get().build();
-    }
-
-    public CtOkHttp4Client(final int maxRequests, final int maxRequestsPerHost) {
-        okHttpClient = clientBuilder.get().dispatcher(createDispatcher(maxRequests, maxRequestsPerHost)).build();
-    }
-
-    public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
-        okHttpClient = clientBuilder.get().dispatcher(
-            createDispatcher(executor, maxRequests, maxRequestsPerHost)).build();
     }
 
     private static final String CONTENT_TYPE = "Content-Type";
@@ -177,7 +177,7 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
                 "Content-Length").build();
             String contentType = response.header("Content-Type");
             return response.newBuilder().headers(strippedHeaders).body(
-                new RealResponseBody(contentType, -1L, Okio.buffer(gzipSource))).build();
+                ResponseBody.create(Okio.buffer(gzipSource), MediaType.get(contentType), -1L)).build();
         }
     }
 }

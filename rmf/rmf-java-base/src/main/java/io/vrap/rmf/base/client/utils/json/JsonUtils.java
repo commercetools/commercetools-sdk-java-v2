@@ -15,6 +15,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import io.vrap.rmf.base.client.utils.json.modules.NumberSerializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
 

@@ -1,13 +1,10 @@
 
 package io.vrap.rmf.base.client;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
-import io.vrap.rmf.base.client.utils.Utils;
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
-
 import java.io.IOException;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 class ResponseSerializerImpl implements ResponseSerializer {
 

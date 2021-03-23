@@ -1,3 +1,4 @@
+
 package commercetools.utils;
 
 public interface ValueObject {

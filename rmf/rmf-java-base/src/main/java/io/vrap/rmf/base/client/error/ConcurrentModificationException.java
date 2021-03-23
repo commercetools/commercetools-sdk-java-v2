@@ -23,7 +23,8 @@ public class ConcurrentModificationException extends ApiClientException {
     }
 
     public ConcurrentModificationException(final int statusCode, final String body, final ApiHttpHeaders headers,
-            final String message, final ApiHttpResponse<byte[]> response, final ApiHttpRequest request, final ResponseSerializer serializer) {
+            final String message, final ApiHttpResponse<byte[]> response, final ApiHttpRequest request,
+            final ResponseSerializer serializer) {
         super(statusCode, body, headers, message, response, request, serializer);
     }
 }

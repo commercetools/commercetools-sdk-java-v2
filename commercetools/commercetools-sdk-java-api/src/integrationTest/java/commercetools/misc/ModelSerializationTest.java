@@ -71,10 +71,11 @@ public class ModelSerializationTest {
                 .slug(localizedString)
                 .build();
 
-            final URL url = Thread.currentThread()
-                    .getContextClassLoader()
-                    .getResource("json_examples/category-draft-example.json");
-            JSONAssert.assertEquals(new String(Files.readAllBytes(Paths.get(url.getPath()))), JsonUtils.toJsonString(categoryDraft), true);
+        final URL url = Thread.currentThread()
+                .getContextClassLoader()
+                .getResource("json_examples/category-draft-example.json");
+        JSONAssert.assertEquals(new String(Files.readAllBytes(Paths.get(url.getPath()))),
+            JsonUtils.toJsonString(categoryDraft), true);
     }
 
     @Test

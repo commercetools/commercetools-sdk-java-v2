@@ -8,7 +8,6 @@ import com.commercetools.api.models.custom_object.CustomObject;
 import com.commercetools.api.models.custom_object.CustomObjectDraft;
 import com.commercetools.api.models.custom_object.CustomObjectDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
-
 import commercetools.utils.ValueObject;
 
 import org.junit.Assert;

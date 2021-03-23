@@ -23,7 +23,8 @@ public class MiddlewareFactory {
     }
 
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier,
-            final InternalLoggerFactory internalLoggerFactory, final Supplier<String> userAgent, final ResponseSerializer serializer) {
+            final InternalLoggerFactory internalLoggerFactory, final Supplier<String> userAgent,
+            final ResponseSerializer serializer) {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
         return asList(
             (request,

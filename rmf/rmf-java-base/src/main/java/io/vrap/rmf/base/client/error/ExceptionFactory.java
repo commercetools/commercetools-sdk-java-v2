@@ -15,8 +15,8 @@ public class ExceptionFactory {
         return createClientException(request, response);
     }
 
-    public static ApiHttpException create(final ApiHttpRequest request, final ApiHttpResponse<byte[]> response, final
-            ResponseSerializer serializer) {
+    public static ApiHttpException create(final ApiHttpRequest request, final ApiHttpResponse<byte[]> response,
+            final ResponseSerializer serializer) {
         if (response.getStatusCode() >= 500) {
             return createServerException(request, response, serializer);
         }
@@ -24,12 +24,13 @@ public class ExceptionFactory {
     }
 
     @Deprecated
-    public static ApiHttpException createServerException(final ApiHttpRequest request, final ApiHttpResponse<byte[]> response) {
+    public static ApiHttpException createServerException(final ApiHttpRequest request,
+            final ApiHttpResponse<byte[]> response) {
         return createServerException(request, response, ResponseSerializer.of());
     }
 
-    public static ApiHttpException createServerException(final ApiHttpRequest request, final ApiHttpResponse<byte[]> response, final
-    ResponseSerializer serializer) {
+    public static ApiHttpException createServerException(final ApiHttpRequest request,
+            final ApiHttpResponse<byte[]> response, final ResponseSerializer serializer) {
         String message = "Server error response [url] " + request.getUri().toString() + " [status code] "
                 + response.getStatusCode() + " [reason phrase] " + response.getMessage();
 
@@ -52,12 +53,13 @@ public class ExceptionFactory {
     }
 
     @Deprecated
-    public static ApiHttpException createClientException(final ApiHttpRequest request, final ApiHttpResponse<byte[]> response) {
+    public static ApiHttpException createClientException(final ApiHttpRequest request,
+            final ApiHttpResponse<byte[]> response) {
         return createClientException(request, response, ResponseSerializer.of());
     }
 
-    public static ApiHttpException createClientException(ApiHttpRequest request, ApiHttpResponse<byte[]> response, final
-    ResponseSerializer serializer) {
+    public static ApiHttpException createClientException(ApiHttpRequest request, ApiHttpResponse<byte[]> response,
+            final ResponseSerializer serializer) {
         String message = "Client error response [url] " + request.getUri().toString() + " [status code] "
                 + response.getStatusCode() + " [reason phrase] " + response.getMessage();
 

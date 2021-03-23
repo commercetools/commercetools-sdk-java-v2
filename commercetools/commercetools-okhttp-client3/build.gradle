@@ -4,6 +4,4 @@ dependencies {
     api "com.squareup.okhttp3:okhttp:3.14.9"
 
     implementation "javax.validation:validation-api:${versions.validation}"
-
-    testImplementation "junit:junit:${versions.junit}"
 }

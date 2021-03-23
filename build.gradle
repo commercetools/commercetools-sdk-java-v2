@@ -168,6 +168,24 @@ subprojects { project ->
 
     version = globalVersion
 
+    dependencies {
+        testImplementation "junit:junit:${versions.junit}"
+        testImplementation "org.assertj:assertj-core:${versions.assertJ}"
+        testImplementation "org.awaitility:awaitility:${versions.awaitility}"
+        testImplementation "ch.qos.logback:logback-classic:${versions.logback}"
+        testImplementation 'org.skyscreamer:jsonassert:1.5.0'
+        testImplementation "com.google.code.gson:gson:${versions.gson}"
+        testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.6"
+
+        itestImplementation "junit:junit:${versions.junit}"
+        itestImplementation "org.assertj:assertj-core:${versions.assertJ}"
+        itestImplementation "org.awaitility:awaitility:${versions.awaitility}"
+        itestImplementation "ch.qos.logback:logback-classic:${versions.logback}"
+        itestImplementation 'org.skyscreamer:jsonassert:1.5.0'
+        itestImplementation "com.google.code.gson:gson:${versions.gson}"
+        itestImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.6"
+    }
+
     itestSourceSet {
         name = "integrationTest"
     }

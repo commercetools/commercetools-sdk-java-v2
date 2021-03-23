@@ -104,14 +104,24 @@ public final class TermFacetResultImpl implements TermFacetResult {
 
         TermFacetResultImpl that = (TermFacetResultImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(dataType, that.dataType).append(missing,
-            that.missing).append(total, that.total).append(other, that.other).append(terms, that.terms).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(dataType, that.dataType)
+                .append(missing, that.missing)
+                .append(total, that.total)
+                .append(other, that.other)
+                .append(terms, that.terms)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(dataType).append(missing).append(total).append(
-            other).append(terms).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(dataType)
+                .append(missing)
+                .append(total)
+                .append(other)
+                .append(terms)
+                .toHashCode();
     }
 
 }

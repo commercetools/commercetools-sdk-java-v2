@@ -102,15 +102,24 @@ public final class UserProvidedIdentifiersImpl implements UserProvidedIdentifier
 
         UserProvidedIdentifiersImpl that = (UserProvidedIdentifiersImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(externalId, that.externalId).append(orderNumber,
-            that.orderNumber).append(customerNumber, that.customerNumber).append(sku, that.sku).append(slug,
-                that.slug).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(externalId, that.externalId)
+                .append(orderNumber, that.orderNumber)
+                .append(customerNumber, that.customerNumber)
+                .append(sku, that.sku)
+                .append(slug, that.slug)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(externalId).append(orderNumber).append(
-            customerNumber).append(sku).append(slug).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(externalId)
+                .append(orderNumber)
+                .append(customerNumber)
+                .append(sku)
+                .append(slug)
+                .toHashCode();
     }
 
 }

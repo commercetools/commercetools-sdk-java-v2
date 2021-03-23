@@ -65,8 +65,10 @@ public final class OrderPaymentStateChangedMessagePayloadImpl implements OrderPa
 
         OrderPaymentStateChangedMessagePayloadImpl that = (OrderPaymentStateChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(paymentState, that.paymentState).append(
-            oldPaymentState, that.oldPaymentState).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(paymentState, that.paymentState)
+                .append(oldPaymentState, that.oldPaymentState)
+                .isEquals();
     }
 
     @Override

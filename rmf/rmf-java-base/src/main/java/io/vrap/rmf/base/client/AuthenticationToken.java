@@ -51,8 +51,9 @@ public class AuthenticationToken {
     }
 
     public void setExpiresIn(Long expiresIn) {
-        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn).map(
-            seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5)).orElse(null);
+        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn)
+                .map(seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5))
+                .orElse(null);
         this.expiresIn = expiresIn;
     }
 

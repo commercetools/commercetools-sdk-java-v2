@@ -263,21 +263,44 @@ public final class ProductDraftImpl implements ProductDraft {
 
         ProductDraftImpl that = (ProductDraftImpl) o;
 
-        return new EqualsBuilder().append(productType, that.productType).append(name, that.name).append(slug,
-            that.slug).append(key, that.key).append(description, that.description).append(categories,
-                that.categories).append(categoryOrderHints, that.categoryOrderHints).append(metaTitle,
-                    that.metaTitle).append(metaDescription, that.metaDescription).append(metaKeywords,
-                        that.metaKeywords).append(masterVariant, that.masterVariant).append(variants,
-                            that.variants).append(taxCategory, that.taxCategory).append(searchKeywords,
-                                that.searchKeywords).append(state, that.state).append(publish, that.publish).isEquals();
+        return new EqualsBuilder().append(productType, that.productType)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productType).append(name).append(slug).append(key).append(
-            description).append(categories).append(categoryOrderHints).append(metaTitle).append(metaDescription).append(
-                metaKeywords).append(masterVariant).append(variants).append(taxCategory).append(searchKeywords).append(
-                    state).append(publish).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productType)
+                .append(name)
+                .append(slug)
+                .append(key)
+                .append(description)
+                .append(categories)
+                .append(categoryOrderHints)
+                .append(metaTitle)
+                .append(metaDescription)
+                .append(metaKeywords)
+                .append(masterVariant)
+                .append(variants)
+                .append(taxCategory)
+                .append(searchKeywords)
+                .append(state)
+                .append(publish)
+                .toHashCode();
     }
 
 }

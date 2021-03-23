@@ -65,8 +65,10 @@ public final class ProductVariantAddedMessagePayloadImpl implements ProductVaria
 
         ProductVariantAddedMessagePayloadImpl that = (ProductVariantAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(variant, that.variant).append(staged,
-            that.staged).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(variant, that.variant)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

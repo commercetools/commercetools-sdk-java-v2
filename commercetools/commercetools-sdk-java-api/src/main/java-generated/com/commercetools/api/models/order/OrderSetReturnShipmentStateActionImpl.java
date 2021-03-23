@@ -64,8 +64,10 @@ public final class OrderSetReturnShipmentStateActionImpl implements OrderSetRetu
 
         OrderSetReturnShipmentStateActionImpl that = (OrderSetReturnShipmentStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(returnItemId, that.returnItemId).append(
-            shipmentState, that.shipmentState).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(returnItemId, that.returnItemId)
+                .append(shipmentState, that.shipmentState)
+                .isEquals();
     }
 
     @Override

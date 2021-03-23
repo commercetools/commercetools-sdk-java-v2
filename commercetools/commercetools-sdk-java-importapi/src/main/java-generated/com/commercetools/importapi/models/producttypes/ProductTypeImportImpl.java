@@ -96,8 +96,11 @@ public final class ProductTypeImportImpl implements ProductTypeImport {
 
         ProductTypeImportImpl that = (ProductTypeImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(description,
-            that.description).append(attributes, that.attributes).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(attributes, that.attributes)
+                .isEquals();
     }
 
     @Override

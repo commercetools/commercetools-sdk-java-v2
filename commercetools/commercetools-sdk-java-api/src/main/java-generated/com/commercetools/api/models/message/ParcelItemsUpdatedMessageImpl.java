@@ -215,21 +215,42 @@ public final class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMe
 
         ParcelItemsUpdatedMessageImpl that = (ParcelItemsUpdatedMessageImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(sequenceNumber,
-                    that.sequenceNumber).append(resource, that.resource).append(resourceVersion,
-                        that.resourceVersion).append(type, that.type).append(resourceUserProvidedIdentifiers,
-                            that.resourceUserProvidedIdentifiers).append(parcelId, that.parcelId).append(deliveryId,
-                                that.deliveryId).append(items, that.items).append(oldItems, that.oldItems).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(parcelId, that.parcelId)
+                .append(deliveryId, that.deliveryId)
+                .append(items, that.items)
+                .append(oldItems, that.oldItems)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(sequenceNumber).append(resource).append(resourceVersion).append(
-                type).append(resourceUserProvidedIdentifiers).append(parcelId).append(deliveryId).append(items).append(
-                    oldItems).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(sequenceNumber)
+                .append(resource)
+                .append(resourceVersion)
+                .append(type)
+                .append(resourceUserProvidedIdentifiers)
+                .append(parcelId)
+                .append(deliveryId)
+                .append(items)
+                .append(oldItems)
+                .toHashCode();
     }
 
 }

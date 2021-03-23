@@ -159,15 +159,28 @@ public final class AttributeDefinitionDraftImpl implements AttributeDefinitionDr
 
         AttributeDefinitionDraftImpl that = (AttributeDefinitionDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(name, that.name).append(label, that.label).append(
-            isRequired, that.isRequired).append(attributeConstraint, that.attributeConstraint).append(inputTip,
-                that.inputTip).append(inputHint, that.inputHint).append(isSearchable, that.isSearchable).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(name, that.name)
+                .append(label, that.label)
+                .append(isRequired, that.isRequired)
+                .append(attributeConstraint, that.attributeConstraint)
+                .append(inputTip, that.inputTip)
+                .append(inputHint, that.inputHint)
+                .append(isSearchable, that.isSearchable)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(name).append(label).append(isRequired).append(
-            attributeConstraint).append(inputTip).append(inputHint).append(isSearchable).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(name)
+                .append(label)
+                .append(isRequired)
+                .append(attributeConstraint)
+                .append(inputTip)
+                .append(inputHint)
+                .append(isSearchable)
+                .toHashCode();
     }
 
 }

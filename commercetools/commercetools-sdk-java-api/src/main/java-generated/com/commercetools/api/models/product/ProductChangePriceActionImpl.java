@@ -79,8 +79,11 @@ public final class ProductChangePriceActionImpl implements ProductChangePriceAct
 
         ProductChangePriceActionImpl that = (ProductChangePriceActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(priceId, that.priceId).append(price,
-            that.price).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(price, that.price)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

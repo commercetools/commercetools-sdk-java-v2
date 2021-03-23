@@ -84,8 +84,11 @@ public final class CustomObjectDraftImpl implements CustomObjectDraft {
 
         CustomObjectDraftImpl that = (CustomObjectDraftImpl) o;
 
-        return new EqualsBuilder().append(container, that.container).append(key, that.key).append(value,
-            that.value).append(version, that.version).isEquals();
+        return new EqualsBuilder().append(container, that.container)
+                .append(key, that.key)
+                .append(value, that.value)
+                .append(version, that.version)
+                .isEquals();
     }
 
     @Override

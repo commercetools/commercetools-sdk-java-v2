@@ -102,15 +102,24 @@ public final class RemovePriceChangeImpl implements RemovePriceChange {
 
         RemovePriceChangeImpl that = (RemovePriceChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(catalogData,
-            that.catalogData).append(priceId, that.priceId).append(previousValue, that.previousValue).append(nextValue,
-                that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(catalogData, that.catalogData)
+                .append(priceId, that.priceId)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(catalogData).append(priceId).append(
-            previousValue).append(nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(catalogData)
+                .append(priceId)
+                .append(previousValue)
+                .append(nextValue)
+                .toHashCode();
     }
 
 }

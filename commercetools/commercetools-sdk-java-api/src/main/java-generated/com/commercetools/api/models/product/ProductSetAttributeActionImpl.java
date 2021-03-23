@@ -103,14 +103,24 @@ public final class ProductSetAttributeActionImpl implements ProductSetAttributeA
 
         ProductSetAttributeActionImpl that = (ProductSetAttributeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(name, that.name).append(value, that.value).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(name).append(
-            value).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(name)
+                .append(value)
+                .append(staged)
+                .toHashCode();
     }
 
 }

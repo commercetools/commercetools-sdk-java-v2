@@ -101,15 +101,24 @@ public final class ProductMoveImageToPositionActionImpl implements ProductMoveIm
 
         ProductMoveImageToPositionActionImpl that = (ProductMoveImageToPositionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(imageUrl, that.imageUrl).append(position, that.position).append(staged,
-                that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(imageUrl, that.imageUrl)
+                .append(position, that.position)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(imageUrl).append(
-            position).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(imageUrl)
+                .append(position)
+                .append(staged)
+                .toHashCode();
     }
 
 }

@@ -98,8 +98,11 @@ public final class ImageSearchResponseImpl implements ImageSearchResponse {
 
         ImageSearchResponseImpl that = (ImageSearchResponseImpl) o;
 
-        return new EqualsBuilder().append(count, that.count).append(offset, that.offset).append(total,
-            that.total).append(results, that.results).isEquals();
+        return new EqualsBuilder().append(count, that.count)
+                .append(offset, that.offset)
+                .append(total, that.total)
+                .append(results, that.results)
+                .isEquals();
     }
 
     @Override

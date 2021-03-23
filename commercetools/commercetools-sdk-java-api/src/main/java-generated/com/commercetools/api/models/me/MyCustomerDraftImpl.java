@@ -230,20 +230,42 @@ public final class MyCustomerDraftImpl implements MyCustomerDraft {
 
         MyCustomerDraftImpl that = (MyCustomerDraftImpl) o;
 
-        return new EqualsBuilder().append(email, that.email).append(password, that.password).append(firstName,
-            that.firstName).append(lastName, that.lastName).append(middleName, that.middleName).append(title,
-                that.title).append(dateOfBirth, that.dateOfBirth).append(companyName, that.companyName).append(vatId,
-                    that.vatId).append(addresses, that.addresses).append(defaultShippingAddress,
-                        that.defaultShippingAddress).append(defaultBillingAddress, that.defaultBillingAddress).append(
-                            custom, that.custom).append(locale, that.locale).append(stores, that.stores).isEquals();
+        return new EqualsBuilder().append(email, that.email)
+                .append(password, that.password)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(middleName, that.middleName)
+                .append(title, that.title)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(companyName, that.companyName)
+                .append(vatId, that.vatId)
+                .append(addresses, that.addresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(custom, that.custom)
+                .append(locale, that.locale)
+                .append(stores, that.stores)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(email).append(password).append(firstName).append(lastName).append(
-            middleName).append(title).append(dateOfBirth).append(companyName).append(vatId).append(addresses).append(
-                defaultShippingAddress).append(defaultBillingAddress).append(custom).append(locale).append(
-                    stores).toHashCode();
+        return new HashCodeBuilder(17, 37).append(email)
+                .append(password)
+                .append(firstName)
+                .append(lastName)
+                .append(middleName)
+                .append(title)
+                .append(dateOfBirth)
+                .append(companyName)
+                .append(vatId)
+                .append(addresses)
+                .append(defaultShippingAddress)
+                .append(defaultBillingAddress)
+                .append(custom)
+                .append(locale)
+                .append(stores)
+                .toHashCode();
     }
 
 }

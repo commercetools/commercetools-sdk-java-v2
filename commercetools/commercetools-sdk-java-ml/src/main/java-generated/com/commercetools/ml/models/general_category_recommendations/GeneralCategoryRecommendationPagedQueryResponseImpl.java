@@ -86,8 +86,11 @@ public final class GeneralCategoryRecommendationPagedQueryResponseImpl
 
         GeneralCategoryRecommendationPagedQueryResponseImpl that = (GeneralCategoryRecommendationPagedQueryResponseImpl) o;
 
-        return new EqualsBuilder().append(count, that.count).append(total, that.total).append(offset,
-            that.offset).append(results, that.results).isEquals();
+        return new EqualsBuilder().append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .isEquals();
     }
 
     @Override

@@ -54,8 +54,9 @@ public final class ProjectChangeMessagesConfigurationActionImpl implements Proje
 
         ProjectChangeMessagesConfigurationActionImpl that = (ProjectChangeMessagesConfigurationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(messagesConfiguration,
-            that.messagesConfiguration).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(messagesConfiguration, that.messagesConfiguration)
+                .isEquals();
     }
 
     @Override

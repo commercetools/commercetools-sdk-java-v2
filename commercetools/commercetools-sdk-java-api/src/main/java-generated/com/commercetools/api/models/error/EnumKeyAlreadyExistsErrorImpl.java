@@ -76,14 +76,20 @@ public final class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExists
 
         EnumKeyAlreadyExistsErrorImpl that = (EnumKeyAlreadyExistsErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(conflictingEnumKey,
-            that.conflictingEnumKey).append(conflictingAttributeName, that.conflictingAttributeName).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(conflictingEnumKey, that.conflictingEnumKey)
+                .append(conflictingAttributeName, that.conflictingAttributeName)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(conflictingEnumKey).append(
-            conflictingAttributeName).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(conflictingEnumKey)
+                .append(conflictingAttributeName)
+                .toHashCode();
     }
 
 }

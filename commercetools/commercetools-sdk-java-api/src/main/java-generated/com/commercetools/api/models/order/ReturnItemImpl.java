@@ -122,16 +122,28 @@ public final class ReturnItemImpl implements ReturnItem {
 
         ReturnItemImpl that = (ReturnItemImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(quantity, that.quantity).append(type, that.type).append(
-            comment, that.comment).append(shipmentState, that.shipmentState).append(paymentState,
-                that.paymentState).append(lastModifiedAt, that.lastModifiedAt).append(createdAt,
-                    that.createdAt).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(quantity, that.quantity)
+                .append(type, that.type)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(createdAt, that.createdAt)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(quantity).append(type).append(comment).append(
-            shipmentState).append(paymentState).append(lastModifiedAt).append(createdAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(quantity)
+                .append(type)
+                .append(comment)
+                .append(shipmentState)
+                .append(paymentState)
+                .append(lastModifiedAt)
+                .append(createdAt)
+                .toHashCode();
     }
 
 }

@@ -54,8 +54,9 @@ public final class ShippingMethodSetLocalizedDescriptionActionImpl
 
         ShippingMethodSetLocalizedDescriptionActionImpl that = (ShippingMethodSetLocalizedDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(localizedDescription,
-            that.localizedDescription).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(localizedDescription, that.localizedDescription)
+                .isEquals();
     }
 
     @Override

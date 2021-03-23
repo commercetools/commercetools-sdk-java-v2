@@ -91,14 +91,22 @@ public final class ChangeTransactionTimestampChangeImpl implements ChangeTransac
 
         ChangeTransactionTimestampChangeImpl that = (ChangeTransactionTimestampChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(transaction,
-            that.transaction).append(nextValue, that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(transaction, that.transaction)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(transaction).append(nextValue).append(
-            previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(transaction)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

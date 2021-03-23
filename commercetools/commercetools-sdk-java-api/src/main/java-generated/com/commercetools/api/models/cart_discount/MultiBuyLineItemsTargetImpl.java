@@ -112,15 +112,24 @@ public final class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarge
 
         MultiBuyLineItemsTargetImpl that = (MultiBuyLineItemsTargetImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(predicate, that.predicate).append(triggerQuantity,
-            that.triggerQuantity).append(discountedQuantity, that.discountedQuantity).append(maxOccurrence,
-                that.maxOccurrence).append(selectionMode, that.selectionMode).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(predicate, that.predicate)
+                .append(triggerQuantity, that.triggerQuantity)
+                .append(discountedQuantity, that.discountedQuantity)
+                .append(maxOccurrence, that.maxOccurrence)
+                .append(selectionMode, that.selectionMode)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(predicate).append(triggerQuantity).append(
-            discountedQuantity).append(maxOccurrence).append(selectionMode).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(predicate)
+                .append(triggerQuantity)
+                .append(discountedQuantity)
+                .append(maxOccurrence)
+                .append(selectionMode)
+                .toHashCode();
     }
 
 }

@@ -79,14 +79,20 @@ public final class CartAddShoppingListActionImpl implements CartAddShoppingListA
 
         CartAddShoppingListActionImpl that = (CartAddShoppingListActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shoppingList, that.shoppingList).append(
-            supplyChannel, that.supplyChannel).append(distributionChannel, that.distributionChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shoppingList, that.shoppingList)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(shoppingList).append(supplyChannel).append(
-            distributionChannel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(shoppingList)
+                .append(supplyChannel)
+                .append(distributionChannel)
+                .toHashCode();
     }
 
 }

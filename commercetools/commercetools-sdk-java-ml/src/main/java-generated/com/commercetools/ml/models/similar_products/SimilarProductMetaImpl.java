@@ -92,14 +92,20 @@ public final class SimilarProductMetaImpl implements SimilarProductMeta {
 
         SimilarProductMetaImpl that = (SimilarProductMetaImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(description, that.description).append(price,
-            that.price).append(variantCount, that.variantCount).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(description, that.description)
+                .append(price, that.price)
+                .append(variantCount, that.variantCount)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(description).append(price).append(
-            variantCount).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(description)
+                .append(price)
+                .append(variantCount)
+                .toHashCode();
     }
 
 }

@@ -102,15 +102,24 @@ public final class ShoppingListLineItemDraftImpl implements ShoppingListLineItem
 
         ShoppingListLineItemDraftImpl that = (ShoppingListLineItemDraftImpl) o;
 
-        return new EqualsBuilder().append(addedAt, that.addedAt).append(custom, that.custom).append(sku,
-            that.sku).append(productId, that.productId).append(quantity, that.quantity).append(variantId,
-                that.variantId).isEquals();
+        return new EqualsBuilder().append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(sku, that.sku)
+                .append(productId, that.productId)
+                .append(quantity, that.quantity)
+                .append(variantId, that.variantId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt).append(custom).append(sku).append(productId).append(
-            quantity).append(variantId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(addedAt)
+                .append(custom)
+                .append(sku)
+                .append(productId)
+                .append(quantity)
+                .append(variantId)
+                .toHashCode();
     }
 
 }

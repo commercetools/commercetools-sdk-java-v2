@@ -76,8 +76,11 @@ public final class ProductImageAddedMessagePayloadImpl implements ProductImageAd
 
         ProductImageAddedMessagePayloadImpl that = (ProductImageAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(variantId, that.variantId).append(image,
-            that.image).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(variantId, that.variantId)
+                .append(image, that.image)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

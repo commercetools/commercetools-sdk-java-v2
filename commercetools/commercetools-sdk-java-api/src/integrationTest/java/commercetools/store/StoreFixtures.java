@@ -37,8 +37,13 @@ public class StoreFixtures {
     }
 
     public static Store deleteStore(final String id, final Long version) {
-        Store store = CommercetoolsTestUtils.getProjectRoot().stores().withId(id).delete().withVersion(
-            version).executeBlocking().getBody();
+        Store store = CommercetoolsTestUtils.getProjectRoot()
+                .stores()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(store);
         Assert.assertEquals(store.getId(), id);

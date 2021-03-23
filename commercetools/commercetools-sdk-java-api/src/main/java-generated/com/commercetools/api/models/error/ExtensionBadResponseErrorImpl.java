@@ -88,15 +88,22 @@ public final class ExtensionBadResponseErrorImpl implements ExtensionBadResponse
 
         ExtensionBadResponseErrorImpl that = (ExtensionBadResponseErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(localizedMessage,
-            that.localizedMessage).append(extensionExtraInfo, that.extensionExtraInfo).append(errorByExtension,
-                that.errorByExtension).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(localizedMessage, that.localizedMessage)
+                .append(extensionExtraInfo, that.extensionExtraInfo)
+                .append(errorByExtension, that.errorByExtension)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(localizedMessage).append(
-            extensionExtraInfo).append(errorByExtension).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(localizedMessage)
+                .append(extensionExtraInfo)
+                .append(errorByExtension)
+                .toHashCode();
     }
 
 }

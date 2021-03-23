@@ -76,14 +76,20 @@ public final class MyCustomerChangeAddressActionImpl implements MyCustomerChange
 
         MyCustomerChangeAddressActionImpl that = (MyCustomerChangeAddressActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(addressId, that.addressId).append(addressKey,
-            that.addressKey).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(addressKey, that.addressKey)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(addressId).append(addressKey).append(
-            address).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(addressId)
+                .append(addressKey)
+                .append(address)
+                .toHashCode();
     }
 
 }

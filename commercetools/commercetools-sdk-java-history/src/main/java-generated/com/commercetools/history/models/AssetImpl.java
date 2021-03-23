@@ -92,14 +92,22 @@ public final class AssetImpl implements Asset {
 
         AssetImpl that = (AssetImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).append(description,
-            that.description).append(custom, that.custom).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(name).append(description).append(custom).append(
-            key).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(name)
+                .append(description)
+                .append(custom)
+                .append(key)
+                .toHashCode();
     }
 
 }

@@ -67,8 +67,10 @@ public final class AddAttributeDefinitionChangeImpl implements AddAttributeDefin
 
         AddAttributeDefinitionChangeImpl that = (AddAttributeDefinitionChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(nextValue,
-            that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override

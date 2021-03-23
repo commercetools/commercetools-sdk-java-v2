@@ -64,8 +64,10 @@ public final class AddTextLineItemChangeImpl implements AddTextLineItemChange {
 
         AddTextLineItemChangeImpl that = (AddTextLineItemChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(nextValue,
-            that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override

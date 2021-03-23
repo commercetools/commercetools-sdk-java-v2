@@ -72,8 +72,10 @@ public final class MissingImagesMetaImpl implements MissingImagesMeta {
 
         MissingImagesMetaImpl that = (MissingImagesMetaImpl) o;
 
-        return new EqualsBuilder().append(productLevel, that.productLevel).append(variantLevel,
-            that.variantLevel).append(threshold, that.threshold).isEquals();
+        return new EqualsBuilder().append(productLevel, that.productLevel)
+                .append(variantLevel, that.variantLevel)
+                .append(threshold, that.threshold)
+                .isEquals();
     }
 
     @Override

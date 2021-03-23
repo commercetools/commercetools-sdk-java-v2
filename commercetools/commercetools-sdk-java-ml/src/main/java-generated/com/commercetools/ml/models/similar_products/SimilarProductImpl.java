@@ -80,8 +80,10 @@ public final class SimilarProductImpl implements SimilarProduct {
 
         SimilarProductImpl that = (SimilarProductImpl) o;
 
-        return new EqualsBuilder().append(product, that.product).append(variantId, that.variantId).append(meta,
-            that.meta).isEquals();
+        return new EqualsBuilder().append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(meta, that.meta)
+                .isEquals();
     }
 
     @Override

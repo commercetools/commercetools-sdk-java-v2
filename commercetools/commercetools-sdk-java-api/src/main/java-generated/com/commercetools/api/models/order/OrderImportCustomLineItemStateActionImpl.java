@@ -68,8 +68,10 @@ public final class OrderImportCustomLineItemStateActionImpl implements OrderImpo
 
         OrderImportCustomLineItemStateActionImpl that = (OrderImportCustomLineItemStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            state, that.state).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

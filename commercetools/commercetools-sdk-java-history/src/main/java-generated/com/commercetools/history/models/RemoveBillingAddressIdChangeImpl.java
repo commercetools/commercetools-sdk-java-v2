@@ -99,14 +99,22 @@ public final class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddr
 
         RemoveBillingAddressIdChangeImpl that = (RemoveBillingAddressIdChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(nextValue,
-            that.nextValue).append(previousValue, that.previousValue).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(nextValue).append(previousValue).append(
-            address).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(nextValue)
+                .append(previousValue)
+                .append(address)
+                .toHashCode();
     }
 
 }

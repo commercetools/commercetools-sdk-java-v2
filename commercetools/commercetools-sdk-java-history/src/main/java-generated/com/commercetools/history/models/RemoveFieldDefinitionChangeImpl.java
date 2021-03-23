@@ -67,8 +67,10 @@ public final class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinit
 
         RemoveFieldDefinitionChangeImpl that = (RemoveFieldDefinitionChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(previousValue,
-            that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override

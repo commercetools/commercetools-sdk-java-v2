@@ -65,8 +65,10 @@ public final class CartSetCustomTypeActionImpl implements CartSetCustomTypeActio
 
         CartSetCustomTypeActionImpl that = (CartSetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

@@ -92,15 +92,22 @@ public final class ReturnItemDraftImpl implements ReturnItemDraft {
 
         ReturnItemDraftImpl that = (ReturnItemDraftImpl) o;
 
-        return new EqualsBuilder().append(quantity, that.quantity).append(lineItemId, that.lineItemId).append(
-            customLineItemId, that.customLineItemId).append(comment, that.comment).append(shipmentState,
-                that.shipmentState).isEquals();
+        return new EqualsBuilder().append(quantity, that.quantity)
+                .append(lineItemId, that.lineItemId)
+                .append(customLineItemId, that.customLineItemId)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(quantity).append(lineItemId).append(customLineItemId).append(
-            comment).append(shipmentState).toHashCode();
+        return new HashCodeBuilder(17, 37).append(quantity)
+                .append(lineItemId)
+                .append(customLineItemId)
+                .append(comment)
+                .append(shipmentState)
+                .toHashCode();
     }
 
 }

@@ -72,8 +72,10 @@ public final class ShoppingListSetCustomTypeActionImpl implements ShoppingListSe
 
         ShoppingListSetCustomTypeActionImpl that = (ShoppingListSetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

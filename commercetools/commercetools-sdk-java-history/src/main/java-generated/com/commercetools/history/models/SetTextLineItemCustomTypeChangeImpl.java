@@ -91,14 +91,22 @@ public final class SetTextLineItemCustomTypeChangeImpl implements SetTextLineIte
 
         SetTextLineItemCustomTypeChangeImpl that = (SetTextLineItemCustomTypeChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(textLineItem,
-            that.textLineItem).append(nextValue, that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(textLineItem, that.textLineItem)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(textLineItem).append(nextValue).append(
-            previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(textLineItem)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

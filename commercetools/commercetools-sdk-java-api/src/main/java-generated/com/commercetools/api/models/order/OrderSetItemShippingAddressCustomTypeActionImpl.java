@@ -77,8 +77,11 @@ public final class OrderSetItemShippingAddressCustomTypeActionImpl
 
         OrderSetItemShippingAddressCustomTypeActionImpl that = (OrderSetItemShippingAddressCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(addressKey, that.addressKey).append(type,
-            that.type).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(addressKey, that.addressKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

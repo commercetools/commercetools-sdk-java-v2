@@ -79,8 +79,11 @@ public final class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange {
 
         UpdateSyncInfoChangeImpl that = (UpdateSyncInfoChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(channelId,
-            that.channelId).append(nextValue, that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(channelId, that.channelId)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override

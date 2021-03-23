@@ -79,14 +79,20 @@ public final class TypedMoneyDraftImpl implements TypedMoneyDraft {
 
         TypedMoneyDraftImpl that = (TypedMoneyDraftImpl) o;
 
-        return new EqualsBuilder().append(centAmount, that.centAmount).append(currencyCode, that.currencyCode).append(
-            type, that.type).append(fractionDigits, that.fractionDigits).isEquals();
+        return new EqualsBuilder().append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(centAmount).append(currencyCode).append(type).append(
-            fractionDigits).toHashCode();
+        return new HashCodeBuilder(17, 37).append(centAmount)
+                .append(currencyCode)
+                .append(type)
+                .append(fractionDigits)
+                .toHashCode();
     }
 
 }

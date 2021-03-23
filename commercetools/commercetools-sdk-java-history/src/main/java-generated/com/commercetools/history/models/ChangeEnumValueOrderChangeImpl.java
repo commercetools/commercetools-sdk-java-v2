@@ -102,14 +102,22 @@ public final class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrde
 
         ChangeEnumValueOrderChangeImpl that = (ChangeEnumValueOrderChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(fieldName,
-            that.fieldName).append(nextValue, that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(fieldName, that.fieldName)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(fieldName).append(nextValue).append(
-            previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(fieldName)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

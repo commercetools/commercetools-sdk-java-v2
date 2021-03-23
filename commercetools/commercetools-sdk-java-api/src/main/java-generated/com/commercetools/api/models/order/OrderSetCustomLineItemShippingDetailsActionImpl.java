@@ -65,8 +65,10 @@ public final class OrderSetCustomLineItemShippingDetailsActionImpl
 
         OrderSetCustomLineItemShippingDetailsActionImpl that = (OrderSetCustomLineItemShippingDetailsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            shippingDetails, that.shippingDetails).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
     }
 
     @Override

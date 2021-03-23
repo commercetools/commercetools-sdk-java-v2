@@ -70,8 +70,10 @@ public final class AddInterfaceInteractionChangeImpl implements AddInterfaceInte
 
         AddInterfaceInteractionChangeImpl that = (AddInterfaceInteractionChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(nextValue,
-            that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override

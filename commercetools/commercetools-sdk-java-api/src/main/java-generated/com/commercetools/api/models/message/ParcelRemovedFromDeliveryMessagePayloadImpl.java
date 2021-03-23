@@ -64,8 +64,10 @@ public final class ParcelRemovedFromDeliveryMessagePayloadImpl implements Parcel
 
         ParcelRemovedFromDeliveryMessagePayloadImpl that = (ParcelRemovedFromDeliveryMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(deliveryId, that.deliveryId).append(parcel,
-            that.parcel).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(deliveryId, that.deliveryId)
+                .append(parcel, that.parcel)
+                .isEquals();
     }
 
     @Override

@@ -110,15 +110,26 @@ public final class ProductChangeAssetNameActionImpl implements ProductChangeAsse
 
         ProductChangeAssetNameActionImpl that = (ProductChangeAssetNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(staged, that.staged).append(assetId, that.assetId).append(assetKey, that.assetKey).append(
-                name, that.name).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(staged).append(
-            assetId).append(assetKey).append(name).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(staged)
+                .append(assetId)
+                .append(assetKey)
+                .append(name)
+                .toHashCode();
     }
 
 }

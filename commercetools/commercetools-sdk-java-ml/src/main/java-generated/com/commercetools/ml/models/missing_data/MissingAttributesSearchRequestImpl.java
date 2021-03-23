@@ -216,19 +216,36 @@ public final class MissingAttributesSearchRequestImpl implements MissingAttribut
 
         MissingAttributesSearchRequestImpl that = (MissingAttributesSearchRequestImpl) o;
 
-        return new EqualsBuilder().append(limit, that.limit).append(offset, that.offset).append(staged,
-            that.staged).append(productSetLimit, that.productSetLimit).append(includeVariants,
-                that.includeVariants).append(coverageMin, that.coverageMin).append(coverageMax,
-                    that.coverageMax).append(sortBy, that.sortBy).append(showMissingAttributeNames,
-                        that.showMissingAttributeNames).append(productIds, that.productIds).append(productTypeIds,
-                            that.productTypeIds).append(attributeName, that.attributeName).isEquals();
+        return new EqualsBuilder().append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(staged, that.staged)
+                .append(productSetLimit, that.productSetLimit)
+                .append(includeVariants, that.includeVariants)
+                .append(coverageMin, that.coverageMin)
+                .append(coverageMax, that.coverageMax)
+                .append(sortBy, that.sortBy)
+                .append(showMissingAttributeNames, that.showMissingAttributeNames)
+                .append(productIds, that.productIds)
+                .append(productTypeIds, that.productTypeIds)
+                .append(attributeName, that.attributeName)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(limit).append(offset).append(staged).append(productSetLimit).append(
-            includeVariants).append(coverageMin).append(coverageMax).append(sortBy).append(
-                showMissingAttributeNames).append(productIds).append(productTypeIds).append(attributeName).toHashCode();
+        return new HashCodeBuilder(17, 37).append(limit)
+                .append(offset)
+                .append(staged)
+                .append(productSetLimit)
+                .append(includeVariants)
+                .append(coverageMin)
+                .append(coverageMax)
+                .append(sortBy)
+                .append(showMissingAttributeNames)
+                .append(productIds)
+                .append(productTypeIds)
+                .append(attributeName)
+                .toHashCode();
     }
 
 }

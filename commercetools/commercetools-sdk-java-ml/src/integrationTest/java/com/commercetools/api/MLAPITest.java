@@ -22,21 +22,28 @@ public class MLAPITest extends TestBase {
     @Test
     public void generalRecommendationsTest() {
 
-        ApiHttpResponse<GeneralCategoryRecommendationPagedQueryResponse> response = mlApiBuilder.recommendations().generalCategories().get().withProductName(
-            "vase").executeBlocking();
+        ApiHttpResponse<GeneralCategoryRecommendationPagedQueryResponse> response = mlApiBuilder.recommendations()
+                .generalCategories()
+                .get()
+                .withProductName("vase")
+                .executeBlocking();
         assertThat(response.getStatusCode()).isEqualTo(200);
     }
 
     @Ignore
     @Test
     public void similaritiesTest() {
-        ApiHttpResponse<TaskToken> tokenApiHttpResponse = mlApiBuilder.similarities().products().post(
-            new SimilarProductSearchRequestBuilder().build()).executeBlocking();
+        ApiHttpResponse<TaskToken> tokenApiHttpResponse = mlApiBuilder.similarities()
+                .products()
+                .post(new SimilarProductSearchRequestBuilder().build())
+                .executeBlocking();
 
         assertThat(tokenApiHttpResponse.getStatusCode()).isEqualTo(202);
-        await().atMost(30, TimeUnit.SECONDS).pollInterval(2, TimeUnit.SECONDS).untilAsserted(() -> assertThat(
-            getSimilarProducts(tokenApiHttpResponse.getBody().getTaskId()).getBody().getState()).isEqualTo(
-                TaskStatusEnum.SUCCESS));
+        await().atMost(30, TimeUnit.SECONDS)
+                .pollInterval(2, TimeUnit.SECONDS)
+                .untilAsserted(() -> assertThat(
+                    getSimilarProducts(tokenApiHttpResponse.getBody().getTaskId()).getBody().getState())
+                            .isEqualTo(TaskStatusEnum.SUCCESS));
     }
 
     public ApiHttpResponse<SimilarProductsTaskStatus> getSimilarProducts(final String taskId) {

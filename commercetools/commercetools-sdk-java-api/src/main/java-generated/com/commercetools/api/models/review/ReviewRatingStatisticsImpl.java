@@ -109,15 +109,22 @@ public final class ReviewRatingStatisticsImpl implements ReviewRatingStatistics 
 
         ReviewRatingStatisticsImpl that = (ReviewRatingStatisticsImpl) o;
 
-        return new EqualsBuilder().append(averageRating, that.averageRating).append(highestRating,
-            that.highestRating).append(lowestRating, that.lowestRating).append(count, that.count).append(
-                ratingsDistribution, that.ratingsDistribution).isEquals();
+        return new EqualsBuilder().append(averageRating, that.averageRating)
+                .append(highestRating, that.highestRating)
+                .append(lowestRating, that.lowestRating)
+                .append(count, that.count)
+                .append(ratingsDistribution, that.ratingsDistribution)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(averageRating).append(highestRating).append(lowestRating).append(
-            count).append(ratingsDistribution).toHashCode();
+        return new HashCodeBuilder(17, 37).append(averageRating)
+                .append(highestRating)
+                .append(lowestRating)
+                .append(count)
+                .append(ratingsDistribution)
+                .toHashCode();
     }
 
 }

@@ -14,8 +14,13 @@ import org.junit.Assert;
 
 public class CartsFixtures {
     public static Cart deleteCart(final String id, final Long version) {
-        Cart cart = CommercetoolsTestUtils.getProjectRoot().carts().withId(id).delete().withVersion(
-            version).executeBlocking().getBody();
+        Cart cart = CommercetoolsTestUtils.getProjectRoot()
+                .carts()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(cart);
         Assert.assertEquals(cart.getId(), id);
@@ -33,8 +38,11 @@ public class CartsFixtures {
 
     public static void withCartWithCustomer(final Consumer<Cart> consumer) {
         CustomerFixtures.withCustomer(customer -> {
-            CartDraft cartDraft = CartDraftBuilder.of().currency("EUR").country("DE").anonymousId(
-                customer.getId()).build();
+            CartDraft cartDraft = CartDraftBuilder.of()
+                    .currency("EUR")
+                    .country("DE")
+                    .anonymousId(customer.getId())
+                    .build();
 
             Cart cart = createCart(cartDraft);
             consumer.accept(cart);

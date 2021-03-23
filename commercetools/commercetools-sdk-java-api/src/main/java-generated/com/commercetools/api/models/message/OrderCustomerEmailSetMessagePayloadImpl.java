@@ -64,8 +64,10 @@ public final class OrderCustomerEmailSetMessagePayloadImpl implements OrderCusto
 
         OrderCustomerEmailSetMessagePayloadImpl that = (OrderCustomerEmailSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(email, that.email).append(oldEmail,
-            that.oldEmail).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(email, that.email)
+                .append(oldEmail, that.oldEmail)
+                .isEquals();
     }
 
     @Override

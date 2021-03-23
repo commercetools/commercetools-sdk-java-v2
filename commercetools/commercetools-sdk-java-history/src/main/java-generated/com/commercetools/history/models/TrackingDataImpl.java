@@ -100,15 +100,22 @@ public final class TrackingDataImpl implements TrackingData {
 
         TrackingDataImpl that = (TrackingDataImpl) o;
 
-        return new EqualsBuilder().append(trackingId, that.trackingId).append(carrier, that.carrier).append(provider,
-            that.provider).append(providerTransaction, that.providerTransaction).append(isReturn,
-                that.isReturn).isEquals();
+        return new EqualsBuilder().append(trackingId, that.trackingId)
+                .append(carrier, that.carrier)
+                .append(provider, that.provider)
+                .append(providerTransaction, that.providerTransaction)
+                .append(isReturn, that.isReturn)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(trackingId).append(carrier).append(provider).append(
-            providerTransaction).append(isReturn).toHashCode();
+        return new HashCodeBuilder(17, 37).append(trackingId)
+                .append(carrier)
+                .append(provider)
+                .append(providerTransaction)
+                .append(isReturn)
+                .toHashCode();
     }
 
 }

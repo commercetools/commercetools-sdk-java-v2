@@ -64,8 +64,10 @@ public final class TypeChangeInputHintActionImpl implements TypeChangeInputHintA
 
         TypeChangeInputHintActionImpl that = (TypeChangeInputHintActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(fieldName, that.fieldName).append(inputHint,
-            that.inputHint).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(inputHint, that.inputHint)
+                .isEquals();
     }
 
     @Override

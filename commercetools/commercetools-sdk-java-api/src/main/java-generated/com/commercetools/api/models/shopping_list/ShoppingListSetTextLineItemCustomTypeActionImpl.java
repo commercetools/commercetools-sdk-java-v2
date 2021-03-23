@@ -77,14 +77,20 @@ public final class ShoppingListSetTextLineItemCustomTypeActionImpl
 
         ShoppingListSetTextLineItemCustomTypeActionImpl that = (ShoppingListSetTextLineItemCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(textLineItemId, that.textLineItemId).append(type,
-            that.type).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(textLineItemId).append(type).append(
-            fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(textLineItemId)
+                .append(type)
+                .append(fields)
+                .toHashCode();
     }
 
 }

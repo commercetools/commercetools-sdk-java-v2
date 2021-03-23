@@ -91,14 +91,22 @@ public final class InvalidFieldErrorImpl implements InvalidFieldError {
 
         InvalidFieldErrorImpl that = (InvalidFieldErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(field,
-            that.field).append(invalidValue, that.invalidValue).append(allowedValues, that.allowedValues).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(field, that.field)
+                .append(invalidValue, that.invalidValue)
+                .append(allowedValues, that.allowedValues)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(field).append(invalidValue).append(
-            allowedValues).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(field)
+                .append(invalidValue)
+                .append(allowedValues)
+                .toHashCode();
     }
 
 }

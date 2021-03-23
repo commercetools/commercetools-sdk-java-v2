@@ -153,16 +153,30 @@ public final class CustomerGroupImpl implements CustomerGroup {
 
         CustomerGroupImpl that = (CustomerGroupImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(key, that.key).append(name,
-                    that.name).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(key).append(name).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(key)
+                .append(name)
+                .append(custom)
+                .toHashCode();
     }
 
 }

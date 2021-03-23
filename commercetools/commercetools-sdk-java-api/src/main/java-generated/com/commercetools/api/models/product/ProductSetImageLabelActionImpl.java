@@ -105,15 +105,24 @@ public final class ProductSetImageLabelActionImpl implements ProductSetImageLabe
 
         ProductSetImageLabelActionImpl that = (ProductSetImageLabelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(sku, that.sku).append(variantId,
-            that.variantId).append(imageUrl, that.imageUrl).append(label, that.label).append(staged,
-                that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(sku, that.sku)
+                .append(variantId, that.variantId)
+                .append(imageUrl, that.imageUrl)
+                .append(label, that.label)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(sku).append(variantId).append(imageUrl).append(
-            label).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(sku)
+                .append(variantId)
+                .append(imageUrl)
+                .append(label)
+                .append(staged)
+                .toHashCode();
     }
 
 }

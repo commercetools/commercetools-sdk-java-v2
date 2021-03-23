@@ -68,8 +68,10 @@ public final class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectN
 
         ProjectNotConfiguredForLanguagesErrorImpl that = (ProjectNotConfiguredForLanguagesErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(languages,
-            that.languages).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(languages, that.languages)
+                .isEquals();
     }
 
     @Override

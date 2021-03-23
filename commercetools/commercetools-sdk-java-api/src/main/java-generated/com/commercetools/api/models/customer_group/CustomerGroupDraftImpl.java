@@ -70,8 +70,10 @@ public final class CustomerGroupDraftImpl implements CustomerGroupDraft {
 
         CustomerGroupDraftImpl that = (CustomerGroupDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(groupName, that.groupName).append(custom,
-            that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(groupName, that.groupName)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override

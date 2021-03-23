@@ -62,8 +62,10 @@ public class AttributesTest {
             reference -> assertThat(reference.getId()).isEqualTo("12345"));
         assertThat(attributes.get("money")).isInstanceOfSatisfying(TypedMoney.class,
             money -> assertThat(money.getCentAmount()).isEqualTo(100));
-        assertThat(attributes.get("nested")).asList().first().isInstanceOfSatisfying(Attribute.class,
-            attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+        assertThat(attributes.get("nested")).asList()
+                .first()
+                .isInstanceOfSatisfying(Attribute.class,
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
         assertThat(attributes.get("set-text")).asList().first().isInstanceOf(String.class);
         assertThat(attributes.get("set-ltext")).asList().first().isInstanceOf(LocalizedString.class);
         assertThat(attributes.get("set-enum")).asList().first().isInstanceOf(AttributePlainEnumValue.class);
@@ -72,14 +74,20 @@ public class AttributesTest {
         assertThat(attributes.get("set-time")).asList().first().isInstanceOf(LocalTime.class);
         assertThat(attributes.get("set-datetime")).asList().first().isInstanceOf(ZonedDateTime.class);
         assertThat(attributes.get("set-boolean")).asList().first().isInstanceOf(Boolean.class);
-        assertThat(attributes.get("set-integer")).asList().first().isInstanceOfSatisfying(Double.class,
-            number -> assertThat(number).isEqualTo(10.0));
-        assertThat(attributes.get("set-double")).asList().first().isInstanceOfSatisfying(Double.class,
-            number -> assertThat(number).isEqualTo(11.0));
+        assertThat(attributes.get("set-integer")).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(10.0));
+        assertThat(attributes.get("set-double")).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
         assertThat(attributes.get("set-reference")).asList().first().isInstanceOf(ProductReference.class);
         assertThat(attributes.get("set-money")).asList().first().isInstanceOf(TypedMoney.class);
-        assertThat(attributes.get("set-nested")).asList().first().asList().first().isInstanceOfSatisfying(
-            Attribute.class, attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+        assertThat(attributes.get("set-nested")).asList()
+                .first()
+                .asList()
+                .first()
+                .isInstanceOfSatisfying(Attribute.class,
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
     }
 
     @Test
@@ -91,30 +99,36 @@ public class AttributesTest {
         Assertions.assertThat(JsonUtils.toJsonString(doubleAttribute)).isEqualTo("{\"name\":\"double\",\"value\":13}");
 
         Attribute double2Attribute = AttributeBuilder.of().name("double").value(13.1).build();
-        Assertions.assertThat(JsonUtils.toJsonString(double2Attribute)).isEqualTo(
-            "{\"name\":\"double\",\"value\":13.1}");
+        Assertions.assertThat(JsonUtils.toJsonString(double2Attribute))
+                .isEqualTo("{\"name\":\"double\",\"value\":13.1}");
 
         Attribute boolAttribute = AttributeBuilder.of().name("bool").value(true).build();
         Assertions.assertThat(JsonUtils.toJsonString(boolAttribute)).isEqualTo("{\"name\":\"bool\",\"value\":true}");
 
         Attribute stringAttribute = AttributeBuilder.of().name("string").value("foo").build();
-        Assertions.assertThat(JsonUtils.toJsonString(stringAttribute)).isEqualTo(
-            "{\"name\":\"string\",\"value\":\"foo\"}");
+        Assertions.assertThat(JsonUtils.toJsonString(stringAttribute))
+                .isEqualTo("{\"name\":\"string\",\"value\":\"foo\"}");
 
-        Attribute enumAttribute = AttributeBuilder.of().name("enum").value(
-            AttributePlainEnumValueBuilder.of().key("foo").label("foo").build()).build();
-        Assertions.assertThat(JsonUtils.toJsonString(enumAttribute)).isEqualTo(
-            "{\"name\":\"enum\",\"value\":{\"key\":\"foo\",\"label\":\"foo\"}}");
+        Attribute enumAttribute = AttributeBuilder.of()
+                .name("enum")
+                .value(AttributePlainEnumValueBuilder.of().key("foo").label("foo").build())
+                .build();
+        Assertions.assertThat(JsonUtils.toJsonString(enumAttribute))
+                .isEqualTo("{\"name\":\"enum\",\"value\":{\"key\":\"foo\",\"label\":\"foo\"}}");
 
-        Attribute setNumberAttribute = AttributeBuilder.of().name("setNumber").value(
-            Lists.newArrayList(13, 13.0, 13.1)).build();
-        Assertions.assertThat(JsonUtils.toJsonString(setNumberAttribute)).isEqualTo(
-            "{\"name\":\"setNumber\",\"value\":[13,13,13.1]}");
+        Attribute setNumberAttribute = AttributeBuilder.of()
+                .name("setNumber")
+                .value(Lists.newArrayList(13, 13.0, 13.1))
+                .build();
+        Assertions.assertThat(JsonUtils.toJsonString(setNumberAttribute))
+                .isEqualTo("{\"name\":\"setNumber\",\"value\":[13,13,13.1]}");
 
-        Attribute setStringAttribute = AttributeBuilder.of().name("setString").value(
-            Lists.newArrayList("foo", "bar")).build();
-        Assertions.assertThat(JsonUtils.toJsonString(setStringAttribute)).isEqualTo(
-            "{\"name\":\"setString\",\"value\":[\"foo\",\"bar\"]}");
+        Attribute setStringAttribute = AttributeBuilder.of()
+                .name("setString")
+                .value(Lists.newArrayList("foo", "bar"))
+                .build();
+        Assertions.assertThat(JsonUtils.toJsonString(setStringAttribute))
+                .isEqualTo("{\"name\":\"setString\",\"value\":[\"foo\",\"bar\"]}");
 
     }
 }

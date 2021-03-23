@@ -65,8 +65,10 @@ public final class PaymentChangeTransactionInteractionIdActionImpl
 
         PaymentChangeTransactionInteractionIdActionImpl that = (PaymentChangeTransactionInteractionIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(transactionId, that.transactionId).append(
-            interactionId, that.interactionId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(transactionId, that.transactionId)
+                .append(interactionId, that.interactionId)
+                .isEquals();
     }
 
     @Override

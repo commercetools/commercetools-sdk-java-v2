@@ -236,19 +236,40 @@ public final class ChannelImpl implements Channel {
 
         ChannelImpl that = (ChannelImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(key, that.key).append(roles,
-                    that.roles).append(name, that.name).append(description, that.description).append(address,
-                        that.address).append(reviewRatingStatistics, that.reviewRatingStatistics).append(custom,
-                            that.custom).append(geoLocation, that.geoLocation).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(roles, that.roles)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(address, that.address)
+                .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .append(custom, that.custom)
+                .append(geoLocation, that.geoLocation)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(key).append(roles).append(name).append(description).append(
-                address).append(reviewRatingStatistics).append(custom).append(geoLocation).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(key)
+                .append(roles)
+                .append(name)
+                .append(description)
+                .append(address)
+                .append(reviewRatingStatistics)
+                .append(custom)
+                .append(geoLocation)
+                .toHashCode();
     }
 
 }

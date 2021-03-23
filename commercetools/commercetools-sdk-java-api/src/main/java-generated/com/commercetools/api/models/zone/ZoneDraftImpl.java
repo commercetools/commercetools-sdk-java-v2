@@ -88,8 +88,11 @@ public final class ZoneDraftImpl implements ZoneDraft {
 
         ZoneDraftImpl that = (ZoneDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(description,
-            that.description).append(locations, that.locations).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(locations, that.locations)
+                .isEquals();
     }
 
     @Override

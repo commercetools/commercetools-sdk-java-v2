@@ -76,8 +76,10 @@ public final class ParcelDraftImpl implements ParcelDraft {
 
         ParcelDraftImpl that = (ParcelDraftImpl) o;
 
-        return new EqualsBuilder().append(measurements, that.measurements).append(trackingData,
-            that.trackingData).append(items, that.items).isEquals();
+        return new EqualsBuilder().append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override

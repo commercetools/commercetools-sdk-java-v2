@@ -62,8 +62,9 @@ public final class DiscountedLineItemPriceDraftImpl implements DiscountedLineIte
 
         DiscountedLineItemPriceDraftImpl that = (DiscountedLineItemPriceDraftImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(includedDiscounts,
-            that.includedDiscounts).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(includedDiscounts, that.includedDiscounts)
+                .isEquals();
     }
 
     @Override

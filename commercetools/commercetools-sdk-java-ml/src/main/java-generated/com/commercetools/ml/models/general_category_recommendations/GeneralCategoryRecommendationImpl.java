@@ -62,8 +62,9 @@ public final class GeneralCategoryRecommendationImpl implements GeneralCategoryR
 
         GeneralCategoryRecommendationImpl that = (GeneralCategoryRecommendationImpl) o;
 
-        return new EqualsBuilder().append(categoryName, that.categoryName).append(confidence,
-            that.confidence).isEquals();
+        return new EqualsBuilder().append(categoryName, that.categoryName)
+                .append(confidence, that.confidence)
+                .isEquals();
     }
 
     @Override

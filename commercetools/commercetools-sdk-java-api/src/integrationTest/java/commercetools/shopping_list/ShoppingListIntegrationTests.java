@@ -21,8 +21,12 @@ public class ShoppingListIntegrationTests {
     @Test
     public void getById() {
         ShoppingListFixtures.withShoppingList(shoppingList -> {
-            ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectRoot().shoppingLists().withId(
-                shoppingList.getId()).get().executeBlocking().getBody();
+            ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectRoot()
+                    .shoppingLists()
+                    .withId(shoppingList.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(queriedShoppingList);
             Assert.assertEquals(shoppingList.getId(), queriedShoppingList.getId());
@@ -32,8 +36,12 @@ public class ShoppingListIntegrationTests {
     @Test
     public void getByKey() {
         ShoppingListFixtures.withShoppingList(shoppingList -> {
-            ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectRoot().shoppingLists().withKey(
-                shoppingList.getKey()).get().executeBlocking().getBody();
+            ShoppingList queriedShoppingList = CommercetoolsTestUtils.getProjectRoot()
+                    .shoppingLists()
+                    .withKey(shoppingList.getKey())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(queriedShoppingList);
             Assert.assertEquals(shoppingList.getKey(), queriedShoppingList.getKey());
@@ -43,8 +51,12 @@ public class ShoppingListIntegrationTests {
     @Test
     public void query() {
         ShoppingListFixtures.withShoppingList(shoppingList -> {
-            ShoppingListPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().shoppingLists().get().withWhere(
-                "id=" + "\"" + shoppingList.getId() + "\"").executeBlocking().getBody();
+            ShoppingListPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+                    .shoppingLists()
+                    .get()
+                    .withWhere("id=" + "\"" + shoppingList.getId() + "\"")
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(response);
             Assert.assertEquals(response.getResults().get(0).getId(), shoppingList.getId());
@@ -59,10 +71,15 @@ public class ShoppingListIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ShoppingListSetKeyActionBuilder.of().key(newKey).build());
 
-            ShoppingList updatedShoppingList = CommercetoolsTestUtils.getProjectRoot().shoppingLists().withKey(
-                shoppingList.getKey()).post(
-                    ShoppingListUpdateBuilder.of().version(shoppingList.getVersion()).actions(
-                        updateActions).build()).executeBlocking().getBody();
+            ShoppingList updatedShoppingList = CommercetoolsTestUtils.getProjectRoot()
+                    .shoppingLists()
+                    .withKey(shoppingList.getKey())
+                    .post(ShoppingListUpdateBuilder.of()
+                            .version(shoppingList.getVersion())
+                            .actions(updateActions)
+                            .build())
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(updatedShoppingList);
             Assert.assertEquals(updatedShoppingList.getKey(), newKey);
@@ -79,10 +96,15 @@ public class ShoppingListIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ShoppingListSetKeyActionBuilder.of().key(newKey).build());
 
-            ShoppingList updatedShoppingList = CommercetoolsTestUtils.getProjectRoot().shoppingLists().withId(
-                shoppingList.getId()).post(
-                    ShoppingListUpdateBuilder.of().version(shoppingList.getVersion()).actions(
-                        updateActions).build()).executeBlocking().getBody();
+            ShoppingList updatedShoppingList = CommercetoolsTestUtils.getProjectRoot()
+                    .shoppingLists()
+                    .withId(shoppingList.getId())
+                    .post(ShoppingListUpdateBuilder.of()
+                            .version(shoppingList.getVersion())
+                            .actions(updateActions)
+                            .build())
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(updatedShoppingList);
             Assert.assertEquals(updatedShoppingList.getKey(), newKey);

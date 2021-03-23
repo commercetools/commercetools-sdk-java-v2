@@ -64,8 +64,10 @@ public final class OrderSetReturnPaymentStateActionImpl implements OrderSetRetur
 
         OrderSetReturnPaymentStateActionImpl that = (OrderSetReturnPaymentStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(returnItemId, that.returnItemId).append(
-            paymentState, that.paymentState).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(returnItemId, that.returnItemId)
+                .append(paymentState, that.paymentState)
+                .isEquals();
     }
 
     @Override

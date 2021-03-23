@@ -124,15 +124,26 @@ public final class CustomLineItemImpl implements CustomLineItem {
 
         CustomLineItemImpl that = (CustomLineItemImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).append(money, that.money).append(
-            taxedPrice, that.taxedPrice).append(totalPrice, that.totalPrice).append(slug, that.slug).append(quantity,
-                that.quantity).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(name).append(money).append(taxedPrice).append(
-            totalPrice).append(slug).append(quantity).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(name)
+                .append(money)
+                .append(taxedPrice)
+                .append(totalPrice)
+                .append(slug)
+                .append(quantity)
+                .toHashCode();
     }
 
 }

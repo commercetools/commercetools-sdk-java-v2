@@ -67,8 +67,10 @@ public final class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsC
 
         RemoveDeliveryItemsChangeImpl that = (RemoveDeliveryItemsChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(previousValue,
-            that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override

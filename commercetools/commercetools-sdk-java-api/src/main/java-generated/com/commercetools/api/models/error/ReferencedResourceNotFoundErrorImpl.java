@@ -87,14 +87,22 @@ public final class ReferencedResourceNotFoundErrorImpl implements ReferencedReso
 
         ReferencedResourceNotFoundErrorImpl that = (ReferencedResourceNotFoundErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(typeId,
-            that.typeId).append(id, that.id).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(typeId, that.typeId)
+                .append(id, that.id)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(typeId).append(id).append(
-            key).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(typeId)
+                .append(id)
+                .append(key)
+                .toHashCode();
     }
 
 }

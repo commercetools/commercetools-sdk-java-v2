@@ -59,8 +59,9 @@ public final class CartSetShippingRateInputActionImpl implements CartSetShipping
 
         CartSetShippingRateInputActionImpl that = (CartSetShippingRateInputActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shippingRateInput,
-            that.shippingRateInput).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shippingRateInput, that.shippingRateInput)
+                .isEquals();
     }
 
     @Override

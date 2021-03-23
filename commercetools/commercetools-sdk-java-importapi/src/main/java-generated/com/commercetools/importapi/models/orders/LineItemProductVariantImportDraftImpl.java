@@ -121,14 +121,22 @@ public final class LineItemProductVariantImportDraftImpl implements LineItemProd
 
         LineItemProductVariantImportDraftImpl that = (LineItemProductVariantImportDraftImpl) o;
 
-        return new EqualsBuilder().append(product, that.product).append(sku, that.sku).append(prices,
-            that.prices).append(attributes, that.attributes).append(images, that.images).isEquals();
+        return new EqualsBuilder().append(product, that.product)
+                .append(sku, that.sku)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(product).append(sku).append(prices).append(attributes).append(
-            images).toHashCode();
+        return new HashCodeBuilder(17, 37).append(product)
+                .append(sku)
+                .append(prices)
+                .append(attributes)
+                .append(images)
+                .toHashCode();
     }
 
 }

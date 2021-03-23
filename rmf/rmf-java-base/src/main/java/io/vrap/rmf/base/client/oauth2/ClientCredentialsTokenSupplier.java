@@ -43,17 +43,18 @@ public class ClientCredentialsTokenSupplier extends AutoCloseableService impleme
                         apiHttpRequest.getHeaders(), apiHttpResponse.getMessage(), apiHttpResponse));
             }
             return apiHttpResponse;
-        }).thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils.fromJsonByteArray(
-            response.getBody(), AuthenticationToken.class)));
+        })
+                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils
+                        .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));
     }
 
     private static ApiHttpRequest constructApiHttpRequest(final String clientId, final String clientSecret,
             final String scope, final String tokenEndpoint) {
-        String auth = Base64.getEncoder().encodeToString(
-            (clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
+        String auth = Base64.getEncoder()
+                .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
 
-        final ApiHttpHeaders headers = new ApiHttpHeaders().withHeader(ApiHttpHeaders.AUTHORIZATION,
-            "Basic " + auth).withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
+        final ApiHttpHeaders headers = new ApiHttpHeaders().withHeader(ApiHttpHeaders.AUTHORIZATION, "Basic " + auth)
+                .withHeader(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded");
 
         String body = "";
         if (scope == null || scope.isEmpty()) {

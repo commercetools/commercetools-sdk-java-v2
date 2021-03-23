@@ -64,8 +64,10 @@ public final class StagedOrderSetCustomLineItemTaxRateActionImpl implements Stag
 
         StagedOrderSetCustomLineItemTaxRateActionImpl that = (StagedOrderSetCustomLineItemTaxRateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            externalTaxRate, that.externalTaxRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(externalTaxRate, that.externalTaxRate)
+                .isEquals();
     }
 
     @Override

@@ -251,22 +251,42 @@ public final class PaymentDraftImpl implements PaymentDraft {
 
         PaymentDraftImpl that = (PaymentDraftImpl) o;
 
-        return new EqualsBuilder().append(customer, that.customer).append(anonymousId, that.anonymousId).append(
-            externalId, that.externalId).append(interfaceId, that.interfaceId).append(amountPlanned,
-                that.amountPlanned).append(amountAuthorized, that.amountAuthorized).append(authorizedUntil,
-                    that.authorizedUntil).append(amountPaid, that.amountPaid).append(amountRefunded,
-                        that.amountRefunded).append(paymentMethodInfo, that.paymentMethodInfo).append(paymentStatus,
-                            that.paymentStatus).append(transactions, that.transactions).append(interfaceInteractions,
-                                that.interfaceInteractions).append(custom, that.custom).append(key,
-                                    that.key).isEquals();
+        return new EqualsBuilder().append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(externalId, that.externalId)
+                .append(interfaceId, that.interfaceId)
+                .append(amountPlanned, that.amountPlanned)
+                .append(amountAuthorized, that.amountAuthorized)
+                .append(authorizedUntil, that.authorizedUntil)
+                .append(amountPaid, that.amountPaid)
+                .append(amountRefunded, that.amountRefunded)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(paymentStatus, that.paymentStatus)
+                .append(transactions, that.transactions)
+                .append(interfaceInteractions, that.interfaceInteractions)
+                .append(custom, that.custom)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(customer).append(anonymousId).append(externalId).append(
-            interfaceId).append(amountPlanned).append(amountAuthorized).append(authorizedUntil).append(
-                amountPaid).append(amountRefunded).append(paymentMethodInfo).append(paymentStatus).append(
-                    transactions).append(interfaceInteractions).append(custom).append(key).toHashCode();
+        return new HashCodeBuilder(17, 37).append(customer)
+                .append(anonymousId)
+                .append(externalId)
+                .append(interfaceId)
+                .append(amountPlanned)
+                .append(amountAuthorized)
+                .append(authorizedUntil)
+                .append(amountPaid)
+                .append(amountRefunded)
+                .append(paymentMethodInfo)
+                .append(paymentStatus)
+                .append(transactions)
+                .append(interfaceInteractions)
+                .append(custom)
+                .append(key)
+                .toHashCode();
     }
 
 }

@@ -88,14 +88,22 @@ public final class CartScoreTierImpl implements CartScoreTier {
 
         CartScoreTierImpl that = (CartScoreTierImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(score, that.score).append(price, that.price).append(
-            priceFunction, that.priceFunction).append(isMatching, that.isMatching).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(score, that.score)
+                .append(price, that.price)
+                .append(priceFunction, that.priceFunction)
+                .append(isMatching, that.isMatching)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(score).append(price).append(priceFunction).append(
-            isMatching).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(score)
+                .append(price)
+                .append(priceFunction)
+                .append(isMatching)
+                .toHashCode();
     }
 
 }

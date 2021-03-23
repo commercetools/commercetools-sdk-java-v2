@@ -352,24 +352,54 @@ public final class LineItemImpl implements LineItem {
 
         LineItemImpl that = (LineItemImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(productId, that.productId).append(name, that.name).append(
-            productSlug, that.productSlug).append(productType, that.productType).append(variant, that.variant).append(
-                price, that.price).append(taxedPrice, that.taxedPrice).append(totalPrice, that.totalPrice).append(
-                    quantity, that.quantity).append(addedAt, that.addedAt).append(state, that.state).append(taxRate,
-                        that.taxRate).append(supplyChannel, that.supplyChannel).append(distributionChannel,
-                            that.distributionChannel).append(discountedPricePerQuantity,
-                                that.discountedPricePerQuantity).append(priceMode, that.priceMode).append(lineItemMode,
-                                    that.lineItemMode).append(custom, that.custom).append(shippingDetails,
-                                        that.shippingDetails).append(lastModifiedAt, that.lastModifiedAt).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(productId, that.productId)
+                .append(name, that.name)
+                .append(productSlug, that.productSlug)
+                .append(productType, that.productType)
+                .append(variant, that.variant)
+                .append(price, that.price)
+                .append(taxedPrice, that.taxedPrice)
+                .append(totalPrice, that.totalPrice)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(state, that.state)
+                .append(taxRate, that.taxRate)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(priceMode, that.priceMode)
+                .append(lineItemMode, that.lineItemMode)
+                .append(custom, that.custom)
+                .append(shippingDetails, that.shippingDetails)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(productId).append(name).append(productSlug).append(
-            productType).append(variant).append(price).append(taxedPrice).append(totalPrice).append(quantity).append(
-                addedAt).append(state).append(taxRate).append(supplyChannel).append(distributionChannel).append(
-                    discountedPricePerQuantity).append(priceMode).append(lineItemMode).append(custom).append(
-                        shippingDetails).append(lastModifiedAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(productId)
+                .append(name)
+                .append(productSlug)
+                .append(productType)
+                .append(variant)
+                .append(price)
+                .append(taxedPrice)
+                .append(totalPrice)
+                .append(quantity)
+                .append(addedAt)
+                .append(state)
+                .append(taxRate)
+                .append(supplyChannel)
+                .append(distributionChannel)
+                .append(discountedPricePerQuantity)
+                .append(priceMode)
+                .append(lineItemMode)
+                .append(custom)
+                .append(shippingDetails)
+                .append(lastModifiedAt)
+                .toHashCode();
     }
 
 }

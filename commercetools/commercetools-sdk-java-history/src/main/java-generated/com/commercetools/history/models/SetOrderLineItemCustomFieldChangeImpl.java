@@ -126,15 +126,28 @@ public final class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLine
 
         SetOrderLineItemCustomFieldChangeImpl that = (SetOrderLineItemCustomFieldChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(customTypeId,
-            that.customTypeId).append(name, that.name).append(variant, that.variant).append(lineItem,
-                that.lineItem).append(nextValue, that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(customTypeId, that.customTypeId)
+                .append(name, that.name)
+                .append(variant, that.variant)
+                .append(lineItem, that.lineItem)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(customTypeId).append(name).append(
-            variant).append(lineItem).append(nextValue).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(customTypeId)
+                .append(name)
+                .append(variant)
+                .append(lineItem)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

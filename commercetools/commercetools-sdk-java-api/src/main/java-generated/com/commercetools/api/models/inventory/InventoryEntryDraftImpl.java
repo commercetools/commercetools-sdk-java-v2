@@ -107,15 +107,24 @@ public final class InventoryEntryDraftImpl implements InventoryEntryDraft {
 
         InventoryEntryDraftImpl that = (InventoryEntryDraftImpl) o;
 
-        return new EqualsBuilder().append(sku, that.sku).append(supplyChannel, that.supplyChannel).append(
-            quantityOnStock, that.quantityOnStock).append(restockableInDays, that.restockableInDays).append(
-                expectedDelivery, that.expectedDelivery).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(sku, that.sku)
+                .append(supplyChannel, that.supplyChannel)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(sku).append(supplyChannel).append(quantityOnStock).append(
-            restockableInDays).append(expectedDelivery).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(sku)
+                .append(supplyChannel)
+                .append(quantityOnStock)
+                .append(restockableInDays)
+                .append(expectedDelivery)
+                .append(custom)
+                .toHashCode();
     }
 
 }

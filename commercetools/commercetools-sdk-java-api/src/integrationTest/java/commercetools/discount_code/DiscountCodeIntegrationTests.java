@@ -21,8 +21,12 @@ public class DiscountCodeIntegrationTests {
     @Test
     public void getById() {
         DiscountCodeFixtures.withDiscountCode(discountCode -> {
-            DiscountCode queriedDiscountCode = CommercetoolsTestUtils.getProjectRoot().discountCodes().withId(
-                discountCode.getId()).get().executeBlocking().getBody();
+            DiscountCode queriedDiscountCode = CommercetoolsTestUtils.getProjectRoot()
+                    .discountCodes()
+                    .withId(discountCode.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(queriedDiscountCode);
             Assert.assertEquals(queriedDiscountCode.getId(), discountCode.getId());
@@ -32,8 +36,12 @@ public class DiscountCodeIntegrationTests {
     @Test
     public void query() {
         DiscountCodeFixtures.withDiscountCode(discountCode -> {
-            DiscountCodePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().discountCodes().get().withWhere(
-                "id=" + "\"" + discountCode.getId() + "\"").executeBlocking().getBody();
+            DiscountCodePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+                    .discountCodes()
+                    .get()
+                    .withWhere("id=" + "\"" + discountCode.getId() + "\"")
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(response);
             Assert.assertEquals(response.getResults().get(0).getId(), discountCode.getId());
@@ -45,10 +53,15 @@ public class DiscountCodeIntegrationTests {
         DiscountCodeFixtures.withUpdateableDiscountCode(discountCode -> {
             List<DiscountCodeUpdateAction> updateActions = new ArrayList<>();
             updateActions.add(DiscountCodeSetMaxApplicationsActionBuilder.of().maxApplications(10L).build());
-            DiscountCode updatedDiscountCode = CommercetoolsTestUtils.getProjectRoot().discountCodes().withId(
-                discountCode.getId()).post(
-                    DiscountCodeUpdateBuilder.of().actions(updateActions).version(
-                        discountCode.getVersion()).build()).executeBlocking().getBody();
+            DiscountCode updatedDiscountCode = CommercetoolsTestUtils.getProjectRoot()
+                    .discountCodes()
+                    .withId(discountCode.getId())
+                    .post(DiscountCodeUpdateBuilder.of()
+                            .actions(updateActions)
+                            .version(discountCode.getVersion())
+                            .build())
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(updatedDiscountCode);
             Assert.assertEquals(updatedDiscountCode.getMaxApplications(), Long.valueOf(10));

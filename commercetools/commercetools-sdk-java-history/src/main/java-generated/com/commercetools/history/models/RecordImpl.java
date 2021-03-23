@@ -190,17 +190,32 @@ public final class RecordImpl implements Record {
 
         RecordImpl that = (RecordImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(previousVersion, that.previousVersion).append(
-            type, that.type).append(modifiedBy, that.modifiedBy).append(modifiedAt, that.modifiedAt).append(label,
-                that.label).append(previousLabel, that.previousLabel).append(changes, that.changes).append(resource,
-                    that.resource).append(withoutChanges, that.withoutChanges).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(previousVersion, that.previousVersion)
+                .append(type, that.type)
+                .append(modifiedBy, that.modifiedBy)
+                .append(modifiedAt, that.modifiedAt)
+                .append(label, that.label)
+                .append(previousLabel, that.previousLabel)
+                .append(changes, that.changes)
+                .append(resource, that.resource)
+                .append(withoutChanges, that.withoutChanges)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(version).append(previousVersion).append(type).append(
-            modifiedBy).append(modifiedAt).append(label).append(previousLabel).append(changes).append(resource).append(
-                withoutChanges).toHashCode();
+        return new HashCodeBuilder(17, 37).append(version)
+                .append(previousVersion)
+                .append(type)
+                .append(modifiedBy)
+                .append(modifiedAt)
+                .append(label)
+                .append(previousLabel)
+                .append(changes)
+                .append(resource)
+                .append(withoutChanges)
+                .toHashCode();
     }
 
 }

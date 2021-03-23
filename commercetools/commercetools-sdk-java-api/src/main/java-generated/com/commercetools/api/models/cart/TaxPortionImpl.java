@@ -70,8 +70,10 @@ public final class TaxPortionImpl implements TaxPortion {
 
         TaxPortionImpl that = (TaxPortionImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(rate, that.rate).append(amount,
-            that.amount).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(rate, that.rate)
+                .append(amount, that.amount)
+                .isEquals();
     }
 
     @Override

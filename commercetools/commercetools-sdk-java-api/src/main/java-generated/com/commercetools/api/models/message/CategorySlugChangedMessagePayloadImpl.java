@@ -65,8 +65,10 @@ public final class CategorySlugChangedMessagePayloadImpl implements CategorySlug
 
         CategorySlugChangedMessagePayloadImpl that = (CategorySlugChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(slug, that.slug).append(oldSlug,
-            that.oldSlug).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(slug, that.slug)
+                .append(oldSlug, that.oldSlug)
+                .isEquals();
     }
 
     @Override

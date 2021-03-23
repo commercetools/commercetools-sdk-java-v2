@@ -65,8 +65,10 @@ public final class OrderLineItemAddedMessagePayloadImpl implements OrderLineItem
 
         OrderLineItemAddedMessagePayloadImpl that = (OrderLineItemAddedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(lineItem, that.lineItem).append(addedQuantity,
-            that.addedQuantity).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(lineItem, that.lineItem)
+                .append(addedQuantity, that.addedQuantity)
+                .isEquals();
     }
 
     @Override

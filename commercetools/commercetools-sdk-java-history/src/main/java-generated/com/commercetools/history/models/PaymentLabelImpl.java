@@ -64,8 +64,10 @@ public final class PaymentLabelImpl implements PaymentLabel {
 
         PaymentLabelImpl that = (PaymentLabelImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(key, that.key).append(amountPlanned,
-            that.amountPlanned).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(key, that.key)
+                .append(amountPlanned, that.amountPlanned)
+                .isEquals();
     }
 
     @Override

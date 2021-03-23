@@ -79,14 +79,20 @@ public final class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFro
 
         RemoveParcelFromDeliveryChangeImpl that = (RemoveParcelFromDeliveryChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(deliveryId,
-            that.deliveryId).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(deliveryId, that.deliveryId)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(deliveryId).append(
-            previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(deliveryId)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

@@ -67,10 +67,12 @@ public class CustomFieldsTest {
         assertThat(fields.get("set-time")).asList().first().isInstanceOf(LocalTime.class);
         assertThat(fields.get("set-datetime")).asList().first().isInstanceOf(ZonedDateTime.class);
         assertThat(fields.get("set-boolean")).asList().first().isInstanceOf(Boolean.class);
-        assertThat(fields.get("set-integer")).asList().first().isInstanceOfSatisfying(Double.class,
-            number -> assertThat(number).isEqualTo(10.0));
-        assertThat(fields.get("set-double")).asList().first().isInstanceOfSatisfying(Double.class,
-            number -> assertThat(number).isEqualTo(11.0));
+        assertThat(fields.get("set-integer")).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(10.0));
+        assertThat(fields.get("set-double")).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
         assertThat(fields.get("set-reference")).asList().first().isInstanceOf(ProductReference.class);
         assertThat(fields.get("set-money")).asList().first().isInstanceOf(TypedMoney.class);
         assertThat(fields.get("set-empty")).asList().isEmpty();
@@ -85,11 +87,18 @@ public class CustomFieldsTest {
 
     @Test
     public void serializeCustomFields() throws JsonProcessingException {
-        FieldContainer container = FieldContainerBuilder.of().addValue("int", 13).addValue("double", 13.0).addValue(
-            "double2", 13.1).addValue("bool", true).addValue("string", "foo").addValue("enum",
-                CustomFieldEnumValueBuilder.of().key("foo").label("foo").build()).addValue("setNumber",
-                    Lists.newArrayList(13, 13.0, 13.1)).addValue("setText", Lists.newArrayList("foo", "bar")).build();
-        Assertions.assertThat(JsonUtils.toJsonString(container)).isEqualTo(
-            "{\"bool\":true,\"string\":\"foo\",\"double\":13,\"double2\":13.1,\"int\":13,\"enum\":{\"key\":\"foo\",\"label\":\"foo\"},\"setNumber\":[13,13,13.1],\"setText\":[\"foo\",\"bar\"]}");
+        FieldContainer container = FieldContainerBuilder.of()
+                .addValue("int", 13)
+                .addValue("double", 13.0)
+                .addValue("double2", 13.1)
+                .addValue("bool", true)
+                .addValue("string", "foo")
+                .addValue("enum", CustomFieldEnumValueBuilder.of().key("foo").label("foo").build())
+                .addValue("setNumber", Lists.newArrayList(13, 13.0, 13.1))
+                .addValue("setText", Lists.newArrayList("foo", "bar"))
+                .build();
+        Assertions.assertThat(JsonUtils.toJsonString(container))
+                .isEqualTo(
+                    "{\"bool\":true,\"string\":\"foo\",\"double\":13,\"double2\":13.1,\"int\":13,\"enum\":{\"key\":\"foo\",\"label\":\"foo\"},\"setNumber\":[13,13,13.1],\"setText\":[\"foo\",\"bar\"]}");
     }
 }

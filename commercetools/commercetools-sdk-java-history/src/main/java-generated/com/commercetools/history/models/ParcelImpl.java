@@ -95,14 +95,22 @@ public final class ParcelImpl implements Parcel {
 
         ParcelImpl that = (ParcelImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(createdAt, that.createdAt).append(measurements,
-            that.measurements).append(trackingData, that.trackingData).append(items, that.items).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(createdAt, that.createdAt)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(createdAt).append(measurements).append(
-            trackingData).append(items).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(createdAt)
+                .append(measurements)
+                .append(trackingData)
+                .append(items)
+                .toHashCode();
     }
 
 }

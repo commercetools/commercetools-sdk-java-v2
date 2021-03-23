@@ -156,8 +156,9 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public T withoutQueryParam(final String key) {
         T c = copy();
-        ((ApiMethod<T, TResult>) c).queryParams = ((ApiMethod<T, TResult>) c).queryParams.stream().filter(
-            e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
+        ((ApiMethod<T, TResult>) c).queryParams = ((ApiMethod<T, TResult>) c).queryParams.stream()
+                .filter(e -> !e.getKey().equalsIgnoreCase(key))
+                .collect(Collectors.toList());
         return c;
     }
 
@@ -186,8 +187,11 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
 
     @Nullable
     public String getFirstQueryParam(final String key) {
-        return this.queryParams.stream().filter(e -> e.getKey().equals(key)).map(
-            Map.Entry::getValue).findFirst().orElse(null);
+        return this.queryParams.stream()
+                .filter(e -> e.getKey().equals(key))
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .orElse(null);
     }
 
     protected abstract T copy();

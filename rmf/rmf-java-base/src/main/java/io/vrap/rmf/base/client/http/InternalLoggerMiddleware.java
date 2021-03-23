@@ -32,9 +32,12 @@ public class InternalLoggerMiddleware implements Middleware {
             final String httpMethodAndUrl = request.getMethod().name() + " " + request.getUrl().toString();
             if (request.getBody() != null) {
                 final String unformattedBody = request.getSecuredBody();
-                final boolean isJsonRequest = request.getHeaders().getHeaders(
-                    ApiHttpHeaders.CONTENT_TYPE).stream().findFirst().map(
-                        ct -> ct.getValue().toLowerCase().contains("json")).orElse(true);
+                final boolean isJsonRequest = request.getHeaders()
+                        .getHeaders(ApiHttpHeaders.CONTENT_TYPE)
+                        .stream()
+                        .findFirst()
+                        .map(ct -> ct.getValue().toLowerCase().contains("json"))
+                        .orElse(true);
                 if (isJsonRequest) {
                     String prettyPrint;
                     try {
@@ -60,19 +63,20 @@ public class InternalLoggerMiddleware implements Middleware {
             InternalLogger responseLogger = factory.createFor(request, InternalLogger.TOPIC_RESPONSE);
             if (throwable != null) {
                 if (throwable.getCause() instanceof ApiHttpException) {
-                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause()).getResponse();
+                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
+                            .getResponse();
                     responseLogger.error(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(),
                         errorResponse.getStatusCode()));
-                    final List<Map.Entry<String, String>> notices = errorResponse.getHeaders().getHeaders(
-                        ApiHttpHeaders.X_DEPRECATION_NOTICE);
+                    final List<Map.Entry<String, String>> notices = errorResponse.getHeaders()
+                            .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                     if (notices != null) {
                         notices.forEach(message -> logger.info(() -> "Deprecation notice: " + message));
                     }
                     responseLogger.debug(() -> errorResponse, throwable);
                     responseLogger.trace(() -> errorResponse.getStatusCode() + "\n"
-                            + Optional.ofNullable(errorResponse.getBody()).map(
-                                body -> JsonUtils.prettyPrint(errorResponse.getBodyAsString().orElse(""))).orElse(
-                                    "<no body>"));
+                            + Optional.ofNullable(errorResponse.getBody())
+                                    .map(body -> JsonUtils.prettyPrint(errorResponse.getBodyAsString().orElse("")))
+                                    .orElse("<no body>"));
                 }
                 else {
                     responseLogger.error(throwable::getCause, throwable);
@@ -81,18 +85,17 @@ public class InternalLoggerMiddleware implements Middleware {
             else {
                 responseLogger.info(() -> String.format("%s %s %s", request.getMethod().name(), request.getUrl(),
                     response.getStatusCode()));
-                final List<Map.Entry<String, String>> notices = response.getHeaders().getHeaders(
-                    ApiHttpHeaders.X_DEPRECATION_NOTICE);
+                final List<Map.Entry<String, String>> notices = response.getHeaders()
+                        .getHeaders(ApiHttpHeaders.X_DEPRECATION_NOTICE);
                 if (notices != null) {
                     notices.forEach(message -> logger.info(() -> "Deprecation notice: " + message));
                 }
 
                 responseLogger.debug(() -> response);
-                responseLogger.trace(
-                    () -> response.getStatusCode() + "\n"
-                            + Optional.ofNullable(response.getBody()).map(
-                                body -> JsonUtils.prettyPrint(response.getBodyAsString().orElse(""))).orElse(
-                                    "<no body>"));
+                responseLogger.trace(() -> response.getStatusCode() + "\n"
+                        + Optional.ofNullable(response.getBody())
+                                .map(body -> JsonUtils.prettyPrint(response.getBodyAsString().orElse("")))
+                                .orElse("<no body>"));
             }
         });
     }

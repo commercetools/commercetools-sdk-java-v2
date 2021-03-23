@@ -76,14 +76,20 @@ public final class ExtensionNoResponseErrorImpl implements ExtensionNoResponseEr
 
         ExtensionNoResponseErrorImpl that = (ExtensionNoResponseErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(extensionId,
-            that.extensionId).append(extensionKey, that.extensionKey).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(extensionId, that.extensionId)
+                .append(extensionKey, that.extensionKey)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(extensionId).append(
-            extensionKey).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(extensionId)
+                .append(extensionKey)
+                .toHashCode();
     }
 
 }

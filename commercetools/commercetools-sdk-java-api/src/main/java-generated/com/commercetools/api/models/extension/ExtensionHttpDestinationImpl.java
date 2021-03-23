@@ -65,8 +65,10 @@ public final class ExtensionHttpDestinationImpl implements ExtensionHttpDestinat
 
         ExtensionHttpDestinationImpl that = (ExtensionHttpDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(url, that.url).append(authentication,
-            that.authentication).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(url, that.url)
+                .append(authentication, that.authentication)
+                .isEquals();
     }
 
     @Override

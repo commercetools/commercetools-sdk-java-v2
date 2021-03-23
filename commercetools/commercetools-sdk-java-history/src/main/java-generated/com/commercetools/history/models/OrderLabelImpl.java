@@ -64,8 +64,10 @@ public final class OrderLabelImpl implements OrderLabel {
 
         OrderLabelImpl that = (OrderLabelImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(customerEmail, that.customerEmail).append(orderNumber,
-            that.orderNumber).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(customerEmail, that.customerEmail)
+                .append(orderNumber, that.orderNumber)
+                .isEquals();
     }
 
     @Override

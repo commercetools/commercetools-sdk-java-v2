@@ -265,21 +265,44 @@ public final class ProductDiscountImpl implements ProductDiscount {
 
         ProductDiscountImpl that = (ProductDiscountImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(name, that.name).append(key,
-                    that.key).append(description, that.description).append(value, that.value).append(predicate,
-                        that.predicate).append(sortOrder, that.sortOrder).append(isActive, that.isActive).append(
-                            references, that.references).append(validFrom, that.validFrom).append(validUntil,
-                                that.validUntil).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(predicate, that.predicate)
+                .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
+                .append(references, that.references)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(name).append(key).append(description).append(value).append(
-                predicate).append(sortOrder).append(isActive).append(references).append(validFrom).append(
-                    validUntil).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(name)
+                .append(key)
+                .append(description)
+                .append(value)
+                .append(predicate)
+                .append(sortOrder)
+                .append(isActive)
+                .append(references)
+                .append(validFrom)
+                .append(validUntil)
+                .toHashCode();
     }
 
 }

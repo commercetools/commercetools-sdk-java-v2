@@ -13,16 +13,25 @@ public class ImportSinkIntegrationTests {
 
     @Test
     public void createAndDelete() {
-        ImportSinkDraft importSinkDraft = ImportSinkDraftBuilder.of().key(ImportApiTestUtils.randomKey()).resourceType(
-            ImportResourceType.PRODUCT_TYPE).build();
+        ImportSinkDraft importSinkDraft = ImportSinkDraftBuilder.of()
+                .key(ImportApiTestUtils.randomKey())
+                .resourceType(ImportResourceType.PRODUCT_TYPE)
+                .build();
 
-        ImportSink importSink = ImportApiTestUtils.getProjectRoot().importSinks().post(
-            importSinkDraft).executeBlocking().getBody();
+        ImportSink importSink = ImportApiTestUtils.getProjectRoot()
+                .importSinks()
+                .post(importSinkDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(importSink);
 
-        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot().importSinks().withImportSinkKeyValue(
-            importSink.getKey()).delete().executeBlocking().getBody();
+        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()
+                .importSinks()
+                .withImportSinkKeyValue(importSink.getKey())
+                .delete()
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(deletedImportSink);
         Assert.assertEquals(importSink.getKey(), deletedImportSink.getKey());

@@ -54,8 +54,9 @@ public final class StoreAddDistributionChannelActionImpl implements StoreAddDist
 
         StoreAddDistributionChannelActionImpl that = (StoreAddDistributionChannelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(distributionChannel,
-            that.distributionChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(distributionChannel, that.distributionChannel)
+                .isEquals();
     }
 
     @Override

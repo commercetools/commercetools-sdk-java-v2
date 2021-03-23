@@ -63,8 +63,10 @@ public final class RequiredFieldErrorImpl implements RequiredFieldError {
 
         RequiredFieldErrorImpl that = (RequiredFieldErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(field,
-            that.field).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(field, that.field)
+                .isEquals();
     }
 
     @Override

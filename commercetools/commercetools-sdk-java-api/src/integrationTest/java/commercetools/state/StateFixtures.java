@@ -25,8 +25,11 @@ public class StateFixtures {
     }
 
     public static State createState() {
-        StateDraft stateDraft = StateDraftBuilder.of().type(StateTypeEnum.LINE_ITEM_STATE).key(
-            CommercetoolsTestUtils.randomKey()).roles(Arrays.asList(StateRoleEnum.RETURN)).build();
+        StateDraft stateDraft = StateDraftBuilder.of()
+                .type(StateTypeEnum.LINE_ITEM_STATE)
+                .key(CommercetoolsTestUtils.randomKey())
+                .roles(Arrays.asList(StateRoleEnum.RETURN))
+                .build();
 
         State state = CommercetoolsTestUtils.getProjectRoot().states().post(stateDraft).executeBlocking().getBody();
 
@@ -37,8 +40,13 @@ public class StateFixtures {
     }
 
     public static State deleteState(final String id, final Long version) {
-        State state = CommercetoolsTestUtils.getProjectRoot().states().withId(id).delete().withVersion(
-            version).executeBlocking().getBody();
+        State state = CommercetoolsTestUtils.getProjectRoot()
+                .states()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(state);
         Assert.assertEquals(state.getId(), id);

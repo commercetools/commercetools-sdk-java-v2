@@ -77,8 +77,11 @@ public final class CustomerSetAddressCustomTypeActionImpl implements CustomerSet
 
         CustomerSetAddressCustomTypeActionImpl that = (CustomerSetAddressCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).append(addressId, that.addressId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .append(addressId, that.addressId)
+                .isEquals();
     }
 
     @Override

@@ -42,8 +42,8 @@ public class ErrorMiddlewareTest {
         Assertions.assertThatExceptionOfType(exceptionClass).isThrownBy(() -> {
             blockingWait(
                 middleware.invoke(request,
-                    request1 -> CompletableFuture.completedFuture(
-                        new ApiHttpResponse<>(statusCode, new ApiHttpHeaders(), "".getBytes()))),
+                    request1 -> CompletableFuture
+                            .completedFuture(new ApiHttpResponse<>(statusCode, new ApiHttpHeaders(), "".getBytes()))),
                 Duration.ofSeconds(1));
         }).matches(e -> e.getStatusCode() == statusCode);
     }

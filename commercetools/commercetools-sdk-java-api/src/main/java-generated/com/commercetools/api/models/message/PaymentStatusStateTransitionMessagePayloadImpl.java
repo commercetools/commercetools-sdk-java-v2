@@ -66,8 +66,10 @@ public final class PaymentStatusStateTransitionMessagePayloadImpl
 
         PaymentStatusStateTransitionMessagePayloadImpl that = (PaymentStatusStateTransitionMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(state, that.state).append(force,
-            that.force).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(state, that.state)
+                .append(force, that.force)
+                .isEquals();
     }
 
     @Override

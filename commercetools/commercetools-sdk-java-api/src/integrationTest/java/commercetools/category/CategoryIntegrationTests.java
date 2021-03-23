@@ -21,8 +21,12 @@ public class CategoryIntegrationTests {
     @Test
     public void getById() {
         CategoryFixtures.withCategory(category -> {
-            Category queriedCategory = CommercetoolsTestUtils.getProjectRoot().categories().withId(
-                category.getId()).get().executeBlocking().getBody();
+            Category queriedCategory = CommercetoolsTestUtils.getProjectRoot()
+                    .categories()
+                    .withId(category.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
             Assert.assertEquals(category.getId(), queriedCategory.getId());
         });
     }
@@ -30,8 +34,12 @@ public class CategoryIntegrationTests {
     @Test
     public void getByKey() {
         CategoryFixtures.withCategory(category -> {
-            Category queriedCategory = CommercetoolsTestUtils.getProjectRoot().categories().withKey(
-                category.getKey()).get().executeBlocking().getBody();
+            Category queriedCategory = CommercetoolsTestUtils.getProjectRoot()
+                    .categories()
+                    .withKey(category.getKey())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
             Assert.assertEquals(category.getId(), queriedCategory.getId());
             Assert.assertEquals(category.getKey(), queriedCategory.getKey());
         });
@@ -40,24 +48,38 @@ public class CategoryIntegrationTests {
     @Test
     public void deleteById() {
         Category category = CategoryFixtures.createCategory();
-        Category deletedCategory = CommercetoolsTestUtils.getProjectRoot().categories().withId(
-            category.getId()).delete().withVersion(category.getVersion()).executeBlocking().getBody();
+        Category deletedCategory = CommercetoolsTestUtils.getProjectRoot()
+                .categories()
+                .withId(category.getId())
+                .delete()
+                .withVersion(category.getVersion())
+                .executeBlocking()
+                .getBody();
         Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
 
     @Test
     public void deleteByKey() {
         Category category = CategoryFixtures.createCategory();
-        Category deletedCategory = CommercetoolsTestUtils.getProjectRoot().categories().withKey(
-            category.getKey()).delete().withVersion(category.getVersion()).executeBlocking().getBody();
+        Category deletedCategory = CommercetoolsTestUtils.getProjectRoot()
+                .categories()
+                .withKey(category.getKey())
+                .delete()
+                .withVersion(category.getVersion())
+                .executeBlocking()
+                .getBody();
         Assert.assertEquals(category.getId(), deletedCategory.getId());
     }
 
     @Test
     public void queryCategories() {
         Category category = CategoryFixtures.createCategory();
-        CategoryPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().categories().get().withWhere(
-            "id=" + "\"" + category.getId() + "\"").executeBlocking().getBody();
+        CategoryPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+                .categories()
+                .get()
+                .withWhere("id=" + "\"" + category.getId() + "\"")
+                .executeBlocking()
+                .getBody();
         Assert.assertEquals(response.getResults().size(), 1);
         Assert.assertEquals(response.getResults().get(0).getId(), category.getId());
         CategoryFixtures.deleteCategory(category.getId(), category.getVersion());
@@ -69,10 +91,16 @@ public class CategoryIntegrationTests {
             LocalizedString newName = LocalizedString.of();
             newName.setValue("key-Temp", "value-Temp");
 
-            CategoryUpdate categoryUpdate = CategoryUpdateBuilder.of().version(category.getVersion()).actions(
-                CategoryChangeNameActionBuilder.of().name(newName).build()).build();
-            Category updatedCategory = CommercetoolsTestUtils.getProjectRoot().categories().withId(
-                category.getId()).post(categoryUpdate).executeBlocking().getBody();
+            CategoryUpdate categoryUpdate = CategoryUpdateBuilder.of()
+                    .version(category.getVersion())
+                    .actions(CategoryChangeNameActionBuilder.of().name(newName).build())
+                    .build();
+            Category updatedCategory = CommercetoolsTestUtils.getProjectRoot()
+                    .categories()
+                    .withId(category.getId())
+                    .post(categoryUpdate)
+                    .executeBlocking()
+                    .getBody();
             Assert.assertEquals(category.getId(), updatedCategory.getId());
             Assert.assertEquals(newName.values(), updatedCategory.getName().values());
 

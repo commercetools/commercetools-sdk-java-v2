@@ -80,14 +80,20 @@ public final class ReservationImpl implements Reservation {
 
         ReservationImpl that = (ReservationImpl) o;
 
-        return new EqualsBuilder().append(quantity, that.quantity).append(owner, that.owner).append(createdAt,
-            that.createdAt).append(checkoutStartedAt, that.checkoutStartedAt).isEquals();
+        return new EqualsBuilder().append(quantity, that.quantity)
+                .append(owner, that.owner)
+                .append(createdAt, that.createdAt)
+                .append(checkoutStartedAt, that.checkoutStartedAt)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(quantity).append(owner).append(createdAt).append(
-            checkoutStartedAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(quantity)
+                .append(owner)
+                .append(createdAt)
+                .append(checkoutStartedAt)
+                .toHashCode();
     }
 
 }

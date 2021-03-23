@@ -103,15 +103,24 @@ public final class SetLineItemProductSlugChangeImpl implements SetLineItemProduc
 
         SetLineItemProductSlugChangeImpl that = (SetLineItemProductSlugChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(lineItem,
-            that.lineItem).append(variant, that.variant).append(nextValue, that.nextValue).append(previousValue,
-                that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(lineItem, that.lineItem)
+                .append(variant, that.variant)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(lineItem).append(variant).append(
-            nextValue).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(lineItem)
+                .append(variant)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

@@ -99,14 +99,20 @@ public final class ExtensionDraftImpl implements ExtensionDraft {
 
         ExtensionDraftImpl that = (ExtensionDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(destination, that.destination).append(triggers,
-            that.triggers).append(timeoutInMs, that.timeoutInMs).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(destination, that.destination)
+                .append(triggers, that.triggers)
+                .append(timeoutInMs, that.timeoutInMs)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(destination).append(triggers).append(
-            timeoutInMs).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(destination)
+                .append(triggers)
+                .append(timeoutInMs)
+                .toHashCode();
     }
 
 }

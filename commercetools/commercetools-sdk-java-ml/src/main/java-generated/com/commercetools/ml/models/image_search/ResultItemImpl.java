@@ -70,8 +70,9 @@ public final class ResultItemImpl implements ResultItem {
 
         ResultItemImpl that = (ResultItemImpl) o;
 
-        return new EqualsBuilder().append(imageUrl, that.imageUrl).append(productVariants,
-            that.productVariants).isEquals();
+        return new EqualsBuilder().append(imageUrl, that.imageUrl)
+                .append(productVariants, that.productVariants)
+                .isEquals();
     }
 
     @Override

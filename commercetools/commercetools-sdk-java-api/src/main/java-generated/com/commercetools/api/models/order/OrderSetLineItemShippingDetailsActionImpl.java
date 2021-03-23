@@ -64,8 +64,10 @@ public final class OrderSetLineItemShippingDetailsActionImpl implements OrderSet
 
         OrderSetLineItemShippingDetailsActionImpl that = (OrderSetLineItemShippingDetailsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(
-            shippingDetails, that.shippingDetails).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
     }
 
     @Override

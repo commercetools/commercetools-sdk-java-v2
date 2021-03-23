@@ -111,14 +111,22 @@ public final class FieldDefinitionImpl implements FieldDefinition {
 
         FieldDefinitionImpl that = (FieldDefinitionImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(name, that.name).append(label, that.label).append(
-            required, that.required).append(inputHint, that.inputHint).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(name, that.name)
+                .append(label, that.label)
+                .append(required, that.required)
+                .append(inputHint, that.inputHint)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(name).append(label).append(required).append(
-            inputHint).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(name)
+                .append(label)
+                .append(required)
+                .append(inputHint)
+                .toHashCode();
     }
 
 }

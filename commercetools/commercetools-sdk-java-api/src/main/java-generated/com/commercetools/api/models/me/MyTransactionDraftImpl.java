@@ -94,14 +94,20 @@ public final class MyTransactionDraftImpl implements MyTransactionDraft {
 
         MyTransactionDraftImpl that = (MyTransactionDraftImpl) o;
 
-        return new EqualsBuilder().append(timestamp, that.timestamp).append(type, that.type).append(amount,
-            that.amount).append(interactionId, that.interactionId).isEquals();
+        return new EqualsBuilder().append(timestamp, that.timestamp)
+                .append(type, that.type)
+                .append(amount, that.amount)
+                .append(interactionId, that.interactionId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(timestamp).append(type).append(amount).append(
-            interactionId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(timestamp)
+                .append(type)
+                .append(amount)
+                .append(interactionId)
+                .toHashCode();
     }
 
 }

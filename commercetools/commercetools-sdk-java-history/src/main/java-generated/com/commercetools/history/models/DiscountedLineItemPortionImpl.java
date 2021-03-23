@@ -56,8 +56,9 @@ public final class DiscountedLineItemPortionImpl implements DiscountedLineItemPo
 
         DiscountedLineItemPortionImpl that = (DiscountedLineItemPortionImpl) o;
 
-        return new EqualsBuilder().append(discount, that.discount).append(discountedAmount,
-            that.discountedAmount).isEquals();
+        return new EqualsBuilder().append(discount, that.discount)
+                .append(discountedAmount, that.discountedAmount)
+                .isEquals();
     }
 
     @Override

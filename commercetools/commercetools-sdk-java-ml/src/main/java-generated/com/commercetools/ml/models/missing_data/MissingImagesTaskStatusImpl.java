@@ -77,8 +77,10 @@ public final class MissingImagesTaskStatusImpl implements MissingImagesTaskStatu
 
         MissingImagesTaskStatusImpl that = (MissingImagesTaskStatusImpl) o;
 
-        return new EqualsBuilder().append(state, that.state).append(expires, that.expires).append(result,
-            that.result).isEquals();
+        return new EqualsBuilder().append(state, that.state)
+                .append(expires, that.expires)
+                .append(result, that.result)
+                .isEquals();
     }
 
     @Override

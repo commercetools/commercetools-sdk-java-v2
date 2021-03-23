@@ -64,8 +64,10 @@ public final class ChannelSetAddressCustomFieldActionImpl implements ChannelSetA
 
         ChannelSetAddressCustomFieldActionImpl that = (ChannelSetAddressCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).append(value,
-            that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

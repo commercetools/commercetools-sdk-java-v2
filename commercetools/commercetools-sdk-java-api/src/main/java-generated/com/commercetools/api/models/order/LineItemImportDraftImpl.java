@@ -190,17 +190,34 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
 
         LineItemImportDraftImpl that = (LineItemImportDraftImpl) o;
 
-        return new EqualsBuilder().append(productId, that.productId).append(name, that.name).append(variant,
-            that.variant).append(price, that.price).append(quantity, that.quantity).append(state, that.state).append(
-                supplyChannel, that.supplyChannel).append(distributionChannel, that.distributionChannel).append(taxRate,
-                    that.taxRate).append(custom, that.custom).append(shippingDetails, that.shippingDetails).isEquals();
+        return new EqualsBuilder().append(productId, that.productId)
+                .append(name, that.name)
+                .append(variant, that.variant)
+                .append(price, that.price)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .append(taxRate, that.taxRate)
+                .append(custom, that.custom)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productId).append(name).append(variant).append(price).append(
-            quantity).append(state).append(supplyChannel).append(distributionChannel).append(taxRate).append(
-                custom).append(shippingDetails).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productId)
+                .append(name)
+                .append(variant)
+                .append(price)
+                .append(quantity)
+                .append(state)
+                .append(supplyChannel)
+                .append(distributionChannel)
+                .append(taxRate)
+                .append(custom)
+                .append(shippingDetails)
+                .toHashCode();
     }
 
 }

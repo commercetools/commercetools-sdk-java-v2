@@ -64,8 +64,10 @@ public final class AttributeNameDoesNotExistErrorImpl implements AttributeNameDo
 
         AttributeNameDoesNotExistErrorImpl that = (AttributeNameDoesNotExistErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(invalidAttributeName,
-            that.invalidAttributeName).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(invalidAttributeName, that.invalidAttributeName)
+                .isEquals();
     }
 
     @Override

@@ -141,16 +141,30 @@ public final class CustomObjectImpl implements CustomObject {
 
         CustomObjectImpl that = (CustomObjectImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(container, that.container).append(key,
-                    that.key).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(container, that.container)
+                .append(key, that.key)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(container).append(key).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(container)
+                .append(key)
+                .append(value)
+                .toHashCode();
     }
 
 }

@@ -74,8 +74,10 @@ public final class SyncInfoImpl implements SyncInfo {
 
         SyncInfoImpl that = (SyncInfoImpl) o;
 
-        return new EqualsBuilder().append(channel, that.channel).append(externalId, that.externalId).append(syncedAt,
-            that.syncedAt).isEquals();
+        return new EqualsBuilder().append(channel, that.channel)
+                .append(externalId, that.externalId)
+                .append(syncedAt, that.syncedAt)
+                .isEquals();
     }
 
     @Override

@@ -75,8 +75,10 @@ public final class ReturnInfoImpl implements ReturnInfo {
 
         ReturnInfoImpl that = (ReturnInfoImpl) o;
 
-        return new EqualsBuilder().append(items, that.items).append(returnTrackingId, that.returnTrackingId).append(
-            returnDate, that.returnDate).isEquals();
+        return new EqualsBuilder().append(items, that.items)
+                .append(returnTrackingId, that.returnTrackingId)
+                .append(returnDate, that.returnDate)
+                .isEquals();
     }
 
     @Override

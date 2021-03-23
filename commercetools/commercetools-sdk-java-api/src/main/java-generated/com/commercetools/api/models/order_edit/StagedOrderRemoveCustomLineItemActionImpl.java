@@ -52,8 +52,9 @@ public final class StagedOrderRemoveCustomLineItemActionImpl implements StagedOr
 
         StagedOrderRemoveCustomLineItemActionImpl that = (StagedOrderRemoveCustomLineItemActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId,
-            that.customLineItemId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .isEquals();
     }
 
     @Override

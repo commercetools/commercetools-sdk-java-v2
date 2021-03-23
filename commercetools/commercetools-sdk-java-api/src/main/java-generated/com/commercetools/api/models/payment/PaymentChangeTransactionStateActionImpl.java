@@ -64,8 +64,10 @@ public final class PaymentChangeTransactionStateActionImpl implements PaymentCha
 
         PaymentChangeTransactionStateActionImpl that = (PaymentChangeTransactionStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(transactionId, that.transactionId).append(state,
-            that.state).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(transactionId, that.transactionId)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

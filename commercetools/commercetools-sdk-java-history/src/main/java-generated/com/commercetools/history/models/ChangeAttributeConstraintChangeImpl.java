@@ -91,14 +91,22 @@ public final class ChangeAttributeConstraintChangeImpl implements ChangeAttribut
 
         ChangeAttributeConstraintChangeImpl that = (ChangeAttributeConstraintChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(attributeName,
-            that.attributeName).append(previousValue, that.previousValue).append(nextValue, that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(attributeName, that.attributeName)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(attributeName).append(
-            previousValue).append(nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(attributeName)
+                .append(previousValue)
+                .append(nextValue)
+                .toHashCode();
     }
 
 }

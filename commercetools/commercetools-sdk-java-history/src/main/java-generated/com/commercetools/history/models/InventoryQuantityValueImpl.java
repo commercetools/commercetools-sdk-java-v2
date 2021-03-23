@@ -56,8 +56,9 @@ public final class InventoryQuantityValueImpl implements InventoryQuantityValue 
 
         InventoryQuantityValueImpl that = (InventoryQuantityValueImpl) o;
 
-        return new EqualsBuilder().append(quantityOnStock, that.quantityOnStock).append(availableQuantity,
-            that.availableQuantity).isEquals();
+        return new EqualsBuilder().append(quantityOnStock, that.quantityOnStock)
+                .append(availableQuantity, that.availableQuantity)
+                .isEquals();
     }
 
     @Override

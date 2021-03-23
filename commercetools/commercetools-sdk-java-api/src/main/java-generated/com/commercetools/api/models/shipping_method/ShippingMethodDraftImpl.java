@@ -151,17 +151,30 @@ public final class ShippingMethodDraftImpl implements ShippingMethodDraft {
 
         ShippingMethodDraftImpl that = (ShippingMethodDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(description,
-            that.description).append(localizedDescription, that.localizedDescription).append(taxCategory,
-                that.taxCategory).append(zoneRates, that.zoneRates).append(isDefault, that.isDefault).append(predicate,
-                    that.predicate).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(localizedDescription, that.localizedDescription)
+                .append(taxCategory, that.taxCategory)
+                .append(zoneRates, that.zoneRates)
+                .append(isDefault, that.isDefault)
+                .append(predicate, that.predicate)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(description).append(
-            localizedDescription).append(taxCategory).append(zoneRates).append(isDefault).append(predicate).append(
-                custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(name)
+                .append(description)
+                .append(localizedDescription)
+                .append(taxCategory)
+                .append(zoneRates)
+                .append(isDefault)
+                .append(predicate)
+                .append(custom)
+                .toHashCode();
     }
 
 }

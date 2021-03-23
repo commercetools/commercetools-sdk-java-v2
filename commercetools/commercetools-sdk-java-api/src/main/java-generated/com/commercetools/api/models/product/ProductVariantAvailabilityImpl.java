@@ -80,15 +80,20 @@ public final class ProductVariantAvailabilityImpl implements ProductVariantAvail
 
         ProductVariantAvailabilityImpl that = (ProductVariantAvailabilityImpl) o;
 
-        return new EqualsBuilder().append(isOnStock, that.isOnStock).append(restockableInDays,
-            that.restockableInDays).append(availableQuantity, that.availableQuantity).append(channels,
-                that.channels).isEquals();
+        return new EqualsBuilder().append(isOnStock, that.isOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(availableQuantity, that.availableQuantity)
+                .append(channels, that.channels)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(isOnStock).append(restockableInDays).append(availableQuantity).append(
-            channels).toHashCode();
+        return new HashCodeBuilder(17, 37).append(isOnStock)
+                .append(restockableInDays)
+                .append(availableQuantity)
+                .append(channels)
+                .toHashCode();
     }
 
 }

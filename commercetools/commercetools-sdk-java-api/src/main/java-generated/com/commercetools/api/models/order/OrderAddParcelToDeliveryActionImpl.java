@@ -92,14 +92,22 @@ public final class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelT
 
         OrderAddParcelToDeliveryActionImpl that = (OrderAddParcelToDeliveryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(deliveryId, that.deliveryId).append(measurements,
-            that.measurements).append(trackingData, that.trackingData).append(items, that.items).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(measurements, that.measurements)
+                .append(trackingData, that.trackingData)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(deliveryId).append(measurements).append(
-            trackingData).append(items).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(deliveryId)
+                .append(measurements)
+                .append(trackingData)
+                .append(items)
+                .toHashCode();
     }
 
 }

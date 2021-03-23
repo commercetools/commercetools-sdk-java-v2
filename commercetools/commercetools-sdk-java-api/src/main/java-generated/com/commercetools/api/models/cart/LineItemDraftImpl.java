@@ -210,19 +210,36 @@ public final class LineItemDraftImpl implements LineItemDraft {
 
         LineItemDraftImpl that = (LineItemDraftImpl) o;
 
-        return new EqualsBuilder().append(productId, that.productId).append(variantId, that.variantId).append(sku,
-            that.sku).append(quantity, that.quantity).append(addedAt, that.addedAt).append(supplyChannel,
-                that.supplyChannel).append(distributionChannel, that.distributionChannel).append(externalTaxRate,
-                    that.externalTaxRate).append(custom, that.custom).append(externalPrice, that.externalPrice).append(
-                        externalTotalPrice, that.externalTotalPrice).append(shippingDetails,
-                            that.shippingDetails).isEquals();
+        return new EqualsBuilder().append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(custom, that.custom)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productId).append(variantId).append(sku).append(quantity).append(
-            addedAt).append(supplyChannel).append(distributionChannel).append(externalTaxRate).append(custom).append(
-                externalPrice).append(externalTotalPrice).append(shippingDetails).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productId)
+                .append(variantId)
+                .append(sku)
+                .append(quantity)
+                .append(addedAt)
+                .append(supplyChannel)
+                .append(distributionChannel)
+                .append(externalTaxRate)
+                .append(custom)
+                .append(externalPrice)
+                .append(externalTotalPrice)
+                .append(shippingDetails)
+                .toHashCode();
     }
 
 }

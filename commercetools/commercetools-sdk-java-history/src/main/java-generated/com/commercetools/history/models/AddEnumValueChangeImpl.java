@@ -82,8 +82,11 @@ public final class AddEnumValueChangeImpl implements AddEnumValueChange {
 
         AddEnumValueChangeImpl that = (AddEnumValueChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(fieldName,
-            that.fieldName).append(nextValue, that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(fieldName, that.fieldName)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override

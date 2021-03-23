@@ -26,9 +26,11 @@ import io.vrap.rmf.base.client.utils.Utils;
 public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
     public static final int MAX_REQUESTS = 64;
-    private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder().connectTimeout(120,
-        TimeUnit.SECONDS).writeTimeout(120, TimeUnit.SECONDS).readTimeout(120, TimeUnit.SECONDS).addInterceptor(
-            new UnzippingInterceptor());
+    private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
+            .connectTimeout(120, TimeUnit.SECONDS)
+            .writeTimeout(120, TimeUnit.SECONDS)
+            .readTimeout(120, TimeUnit.SECONDS)
+            .addInterceptor(new UnzippingInterceptor());
 
     private final OkHttpClient okHttpClient;
 
@@ -37,8 +39,8 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
     }
 
     public CtOkHttp4Client(final BuilderOptions options) {
-        okHttpClient = options.plus(
-            clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS))).build();
+        okHttpClient = options.plus(clientBuilder.get().dispatcher(createDispatcher(MAX_REQUESTS, MAX_REQUESTS)))
+                .build();
     }
 
     public CtOkHttp4Client(final Supplier<OkHttpClient.Builder> builderSupplier) {
@@ -50,8 +52,9 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
     }
 
     public CtOkHttp4Client(final ExecutorService executor, final int maxRequests, final int maxRequestsPerHost) {
-        okHttpClient = clientBuilder.get().dispatcher(
-            createDispatcher(executor, maxRequests, maxRequestsPerHost)).build();
+        okHttpClient = clientBuilder.get()
+                .dispatcher(createDispatcher(executor, maxRequests, maxRequestsPerHost))
+                .build();
     }
 
     private Dispatcher createDispatcher(final int maxRequests, final int maxRequestsPerHost) {
@@ -80,10 +83,12 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final Response response) {
-        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(
-            response.headers().toMultimap().entrySet().stream().flatMap(
-                e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value))).collect(
-                    Collectors.toList()));
+        final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(response.headers()
+                .toMultimap()
+                .entrySet()
+                .stream()
+                .flatMap(e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value)))
+                .collect(Collectors.toList()));
 
         final ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(response.code(), apiHttpHeaders,
             Optional.ofNullable(response.body()).map(Utils.wrapToCompletionException(ResponseBody::bytes)).orElse(null),
@@ -109,10 +114,12 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
 
         //default media type is JSON, if other media type is set as a header, use it
         MediaType mediaType = JSON;
-        if (apiHttpRequest.getHeaders().getHeaders().stream().anyMatch(
-            s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))) {
-            mediaType = MediaType.get(
-                Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+        if (apiHttpRequest.getHeaders()
+                .getHeaders()
+                .stream()
+                .anyMatch(s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))) {
+            mediaType = MediaType
+                    .get(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
         }
 
         final RequestBody body = apiHttpRequest.getBody() == null ? null
@@ -172,11 +179,16 @@ public class CtOkHttp4Client implements VrapHttpClient, AutoCloseable {
             }
 
             GzipSource gzipSource = new GzipSource(responseBody.source());
-            Headers strippedHeaders = response.headers().newBuilder().removeAll("Content-Encoding").removeAll(
-                "Content-Length").build();
+            Headers strippedHeaders = response.headers()
+                    .newBuilder()
+                    .removeAll("Content-Encoding")
+                    .removeAll("Content-Length")
+                    .build();
             String contentType = response.header("Content-Type");
-            return response.newBuilder().headers(strippedHeaders).body(
-                ResponseBody.create(Okio.buffer(gzipSource), MediaType.get(contentType), -1L)).build();
+            return response.newBuilder()
+                    .headers(strippedHeaders)
+                    .body(ResponseBody.create(Okio.buffer(gzipSource), MediaType.get(contentType), -1L))
+                    .build();
         }
     }
 }

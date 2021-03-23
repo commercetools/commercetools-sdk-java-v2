@@ -77,14 +77,20 @@ public final class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderD
 
         OrderDiscountCodeStateSetMessagePayloadImpl that = (OrderDiscountCodeStateSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(discountCode, that.discountCode).append(state,
-            that.state).append(oldState, that.oldState).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(discountCode, that.discountCode)
+                .append(state, that.state)
+                .append(oldState, that.oldState)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(discountCode).append(state).append(
-            oldState).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(discountCode)
+                .append(state)
+                .append(oldState)
+                .toHashCode();
     }
 
 }

@@ -213,19 +213,38 @@ public final class InventoryEntryImpl implements InventoryEntry {
 
         InventoryEntryImpl that = (InventoryEntryImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(sku, that.sku).append(supplyChannel,
-                    that.supplyChannel).append(quantityOnStock, that.quantityOnStock).append(availableQuantity,
-                        that.availableQuantity).append(restockableInDays, that.restockableInDays).append(
-                            expectedDelivery, that.expectedDelivery).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sku, that.sku)
+                .append(supplyChannel, that.supplyChannel)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(availableQuantity, that.availableQuantity)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(sku).append(supplyChannel).append(quantityOnStock).append(
-                availableQuantity).append(restockableInDays).append(expectedDelivery).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(sku)
+                .append(supplyChannel)
+                .append(quantityOnStock)
+                .append(availableQuantity)
+                .append(restockableInDays)
+                .append(expectedDelivery)
+                .append(custom)
+                .toHashCode();
     }
 
 }

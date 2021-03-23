@@ -64,8 +64,10 @@ public final class StagedOrderSetReturnPaymentStateActionImpl implements StagedO
 
         StagedOrderSetReturnPaymentStateActionImpl that = (StagedOrderSetReturnPaymentStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(returnItemId, that.returnItemId).append(
-            paymentState, that.paymentState).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(returnItemId, that.returnItemId)
+                .append(paymentState, that.paymentState)
+                .isEquals();
     }
 
     @Override

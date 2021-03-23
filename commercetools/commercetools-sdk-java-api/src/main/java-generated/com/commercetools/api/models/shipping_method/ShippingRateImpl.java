@@ -96,14 +96,20 @@ public final class ShippingRateImpl implements ShippingRate {
 
         ShippingRateImpl that = (ShippingRateImpl) o;
 
-        return new EqualsBuilder().append(price, that.price).append(freeAbove, that.freeAbove).append(isMatching,
-            that.isMatching).append(tiers, that.tiers).isEquals();
+        return new EqualsBuilder().append(price, that.price)
+                .append(freeAbove, that.freeAbove)
+                .append(isMatching, that.isMatching)
+                .append(tiers, that.tiers)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(price).append(freeAbove).append(isMatching).append(
-            tiers).toHashCode();
+        return new HashCodeBuilder(17, 37).append(price)
+                .append(freeAbove)
+                .append(isMatching)
+                .append(tiers)
+                .toHashCode();
     }
 
 }

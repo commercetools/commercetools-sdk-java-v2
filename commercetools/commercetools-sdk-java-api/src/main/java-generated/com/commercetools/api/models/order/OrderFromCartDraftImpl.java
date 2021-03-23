@@ -146,15 +146,28 @@ public final class OrderFromCartDraftImpl implements OrderFromCartDraft {
 
         OrderFromCartDraftImpl that = (OrderFromCartDraftImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(cart, that.cart).append(version, that.version).append(
-            orderNumber, that.orderNumber).append(paymentState, that.paymentState).append(shipmentState,
-                that.shipmentState).append(orderState, that.orderState).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(cart, that.cart)
+                .append(version, that.version)
+                .append(orderNumber, that.orderNumber)
+                .append(paymentState, that.paymentState)
+                .append(shipmentState, that.shipmentState)
+                .append(orderState, that.orderState)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(cart).append(version).append(orderNumber).append(
-            paymentState).append(shipmentState).append(orderState).append(state).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(cart)
+                .append(version)
+                .append(orderNumber)
+                .append(paymentState)
+                .append(shipmentState)
+                .append(orderState)
+                .append(state)
+                .toHashCode();
     }
 
 }

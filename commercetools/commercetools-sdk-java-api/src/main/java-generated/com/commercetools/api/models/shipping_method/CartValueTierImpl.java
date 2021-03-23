@@ -76,14 +76,20 @@ public final class CartValueTierImpl implements CartValueTier {
 
         CartValueTierImpl that = (CartValueTierImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(minimumCentAmount, that.minimumCentAmount).append(
-            price, that.price).append(isMatching, that.isMatching).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(minimumCentAmount, that.minimumCentAmount)
+                .append(price, that.price)
+                .append(isMatching, that.isMatching)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(minimumCentAmount).append(price).append(
-            isMatching).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(minimumCentAmount)
+                .append(price)
+                .append(isMatching)
+                .toHashCode();
     }
 
 }

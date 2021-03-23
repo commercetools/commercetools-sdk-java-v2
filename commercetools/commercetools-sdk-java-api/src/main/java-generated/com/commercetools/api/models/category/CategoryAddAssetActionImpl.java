@@ -67,8 +67,10 @@ public final class CategoryAddAssetActionImpl implements CategoryAddAssetAction 
 
         CategoryAddAssetActionImpl that = (CategoryAddAssetActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(asset, that.asset).append(position,
-            that.position).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(asset, that.asset)
+                .append(position, that.position)
+                .isEquals();
     }
 
     @Override

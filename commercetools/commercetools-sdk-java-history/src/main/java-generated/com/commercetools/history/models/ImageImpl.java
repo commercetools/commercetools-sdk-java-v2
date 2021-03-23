@@ -68,8 +68,10 @@ public final class ImageImpl implements Image {
 
         ImageImpl that = (ImageImpl) o;
 
-        return new EqualsBuilder().append(url, that.url).append(dimensions, that.dimensions).append(label,
-            that.label).isEquals();
+        return new EqualsBuilder().append(url, that.url)
+                .append(dimensions, that.dimensions)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

@@ -91,15 +91,22 @@ public final class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSe
 
         OrderCustomerSetMessagePayloadImpl that = (OrderCustomerSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(customer, that.customer).append(customerGroup,
-            that.customerGroup).append(oldCustomer, that.oldCustomer).append(oldCustomerGroup,
-                that.oldCustomerGroup).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(customer, that.customer)
+                .append(customerGroup, that.customerGroup)
+                .append(oldCustomer, that.oldCustomer)
+                .append(oldCustomerGroup, that.oldCustomerGroup)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customer).append(customerGroup).append(
-            oldCustomer).append(oldCustomerGroup).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customer)
+                .append(customerGroup)
+                .append(oldCustomer)
+                .append(oldCustomerGroup)
+                .toHashCode();
     }
 
 }

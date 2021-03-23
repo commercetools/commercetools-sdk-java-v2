@@ -218,18 +218,38 @@ public final class ProjectImpl implements Project {
 
         ProjectImpl that = (ProjectImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(key, that.key).append(name, that.name).append(
-            countries, that.countries).append(currencies, that.currencies).append(languages, that.languages).append(
-                createdAt, that.createdAt).append(trialUntil, that.trialUntil).append(messages, that.messages).append(
-                    shippingRateInputType, that.shippingRateInputType).append(externalOAuth, that.externalOAuth).append(
-                        carts, that.carts).append(searchIndexing, that.searchIndexing).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(countries, that.countries)
+                .append(currencies, that.currencies)
+                .append(languages, that.languages)
+                .append(createdAt, that.createdAt)
+                .append(trialUntil, that.trialUntil)
+                .append(messages, that.messages)
+                .append(shippingRateInputType, that.shippingRateInputType)
+                .append(externalOAuth, that.externalOAuth)
+                .append(carts, that.carts)
+                .append(searchIndexing, that.searchIndexing)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(version).append(key).append(name).append(countries).append(
-            currencies).append(languages).append(createdAt).append(trialUntil).append(messages).append(
-                shippingRateInputType).append(externalOAuth).append(carts).append(searchIndexing).toHashCode();
+        return new HashCodeBuilder(17, 37).append(version)
+                .append(key)
+                .append(name)
+                .append(countries)
+                .append(currencies)
+                .append(languages)
+                .append(createdAt)
+                .append(trialUntil)
+                .append(messages)
+                .append(shippingRateInputType)
+                .append(externalOAuth)
+                .append(carts)
+                .append(searchIndexing)
+                .toHashCode();
     }
 
 }

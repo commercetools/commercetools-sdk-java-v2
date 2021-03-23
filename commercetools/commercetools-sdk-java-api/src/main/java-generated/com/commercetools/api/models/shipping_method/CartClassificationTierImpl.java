@@ -76,8 +76,11 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
 
         CartClassificationTierImpl that = (CartClassificationTierImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(value, that.value).append(price, that.price).append(
-            isMatching, that.isMatching).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(value, that.value)
+                .append(price, that.price)
+                .append(isMatching, that.isMatching)
+                .isEquals();
     }
 
     @Override

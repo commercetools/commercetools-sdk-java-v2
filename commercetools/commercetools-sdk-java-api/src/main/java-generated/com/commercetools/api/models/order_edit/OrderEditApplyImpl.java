@@ -56,8 +56,9 @@ public final class OrderEditApplyImpl implements OrderEditApply {
 
         OrderEditApplyImpl that = (OrderEditApplyImpl) o;
 
-        return new EqualsBuilder().append(editVersion, that.editVersion).append(resourceVersion,
-            that.resourceVersion).isEquals();
+        return new EqualsBuilder().append(editVersion, that.editVersion)
+                .append(resourceVersion, that.resourceVersion)
+                .isEquals();
     }
 
     @Override

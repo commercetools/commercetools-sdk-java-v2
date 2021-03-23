@@ -72,8 +72,10 @@ public final class TaxedPriceDraftImpl implements TaxedPriceDraft {
 
         TaxedPriceDraftImpl that = (TaxedPriceDraftImpl) o;
 
-        return new EqualsBuilder().append(totalNet, that.totalNet).append(totalGross, that.totalGross).append(
-            taxPortions, that.taxPortions).isEquals();
+        return new EqualsBuilder().append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
+                .isEquals();
     }
 
     @Override

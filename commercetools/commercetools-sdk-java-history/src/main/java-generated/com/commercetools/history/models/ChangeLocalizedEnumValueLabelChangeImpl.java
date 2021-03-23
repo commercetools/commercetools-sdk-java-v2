@@ -123,15 +123,26 @@ public final class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLoca
 
         ChangeLocalizedEnumValueLabelChangeImpl that = (ChangeLocalizedEnumValueLabelChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(fieldName,
-            that.fieldName).append(attributeName, that.attributeName).append(valueKey, that.valueKey).append(
-                previousValue, that.previousValue).append(nextValue, that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
+                .append(valueKey, that.valueKey)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(fieldName).append(attributeName).append(
-            valueKey).append(previousValue).append(nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(fieldName)
+                .append(attributeName)
+                .append(valueKey)
+                .append(previousValue)
+                .append(nextValue)
+                .toHashCode();
     }
 
 }

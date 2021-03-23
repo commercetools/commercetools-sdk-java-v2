@@ -67,8 +67,10 @@ public final class ResourceUpdateErrorImpl implements ResourceUpdateError {
 
         ResourceUpdateErrorImpl that = (ResourceUpdateErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(resource,
-            that.resource).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(resource, that.resource)
+                .isEquals();
     }
 
     @Override

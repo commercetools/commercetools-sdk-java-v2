@@ -85,8 +85,11 @@ public final class FieldDefinitionImpl implements FieldDefinition {
 
         FieldDefinitionImpl that = (FieldDefinitionImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(name, that.name).append(label, that.label).append(
-            inputHint, that.inputHint).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(name, that.name)
+                .append(label, that.label)
+                .append(inputHint, that.inputHint)
+                .isEquals();
     }
 
     @Override

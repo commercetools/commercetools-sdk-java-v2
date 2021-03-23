@@ -12,7 +12,9 @@ public class HistoryIntegrationTests {
 
     @Test
     public void createAndDelete() {
-        final ApiHttpResponse<ChangeHistoryPagedQueryResponse> response = HistoryApiTestUtils.getProjectRoot().get().executeBlocking();
+        final ApiHttpResponse<ChangeHistoryPagedQueryResponse> response = HistoryApiTestUtils.getProjectRoot()
+                .get()
+                .executeBlocking();
 
         Assert.assertNotNull(response.getBody());
     }

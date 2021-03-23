@@ -123,15 +123,28 @@ public final class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFou
 
         MatchingPriceNotFoundErrorImpl that = (MatchingPriceNotFoundErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(productId,
-            that.productId).append(variantId, that.variantId).append(currency, that.currency).append(country,
-                that.country).append(customerGroup, that.customerGroup).append(channel, that.channel).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(currency, that.currency)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(productId).append(variantId).append(
-            currency).append(country).append(customerGroup).append(channel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(productId)
+                .append(variantId)
+                .append(currency)
+                .append(country)
+                .append(customerGroup)
+                .append(channel)
+                .toHashCode();
     }
 
 }

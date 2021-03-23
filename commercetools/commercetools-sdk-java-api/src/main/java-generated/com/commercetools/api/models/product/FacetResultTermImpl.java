@@ -67,8 +67,10 @@ public final class FacetResultTermImpl implements FacetResultTerm {
 
         FacetResultTermImpl that = (FacetResultTermImpl) o;
 
-        return new EqualsBuilder().append(term, that.term).append(count, that.count).append(productCount,
-            that.productCount).isEquals();
+        return new EqualsBuilder().append(term, that.term)
+                .append(count, that.count)
+                .append(productCount, that.productCount)
+                .isEquals();
     }
 
     @Override

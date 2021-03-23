@@ -79,8 +79,11 @@ public final class ProductSetSkuActionImpl implements ProductSetSkuAction {
 
         ProductSetSkuActionImpl that = (ProductSetSkuActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

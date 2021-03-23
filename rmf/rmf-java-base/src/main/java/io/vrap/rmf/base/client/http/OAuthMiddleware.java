@@ -25,16 +25,18 @@ public class OAuthMiddleware implements Middleware, AutoCloseable {
     }
 
     public OAuthMiddleware(final OAuthHandler oauthHandler, final Integer maxRetries) {
-        RetryPolicy<ApiHttpResponse<byte[]>> retry = new RetryPolicy<ApiHttpResponse<byte[]>>().handleIf(
-            (response, throwable) -> {
-                if (throwable != null) {
-                    return throwable instanceof UnauthorizedException;
-                }
-                return response.getStatusCode() == 401;
-            }).onRetry(event -> {
-                logger.debug("Refresh Bearer token #" + event.getAttemptCount());
-                oauthHandler.refreshToken();
-            }).withMaxRetries(maxRetries);
+        RetryPolicy<ApiHttpResponse<byte[]>> retry = new RetryPolicy<ApiHttpResponse<byte[]>>()
+                .handleIf((response, throwable) -> {
+                    if (throwable != null) {
+                        return throwable instanceof UnauthorizedException;
+                    }
+                    return response.getStatusCode() == 401;
+                })
+                .onRetry(event -> {
+                    logger.debug("Refresh Bearer token #" + event.getAttemptCount());
+                    oauthHandler.refreshToken();
+                })
+                .withMaxRetries(maxRetries);
         this.authHandler = oauthHandler;
         this.failsafeExecutor = Failsafe.with(retry);
     }

@@ -91,14 +91,22 @@ public final class ProductChangeAssetOrderActionImpl implements ProductChangeAss
 
         ProductChangeAssetOrderActionImpl that = (ProductChangeAssetOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(staged, that.staged).append(assetOrder, that.assetOrder).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetOrder, that.assetOrder)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(staged).append(
-            assetOrder).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(staged)
+                .append(assetOrder)
+                .toHashCode();
     }
 
 }

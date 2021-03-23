@@ -76,14 +76,20 @@ public final class CustomerLabelImpl implements CustomerLabel {
 
         CustomerLabelImpl that = (CustomerLabelImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(firstName, that.firstName).append(lastName,
-            that.lastName).append(customerNumber, that.customerNumber).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(customerNumber, that.customerNumber)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(firstName).append(lastName).append(
-            customerNumber).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(firstName)
+                .append(lastName)
+                .append(customerNumber)
+                .toHashCode();
     }
 
 }

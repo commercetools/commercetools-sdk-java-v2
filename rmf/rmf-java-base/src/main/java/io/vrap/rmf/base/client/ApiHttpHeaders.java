@@ -123,13 +123,18 @@ public class ApiHttpHeaders extends Base {
 
     @Nullable
     public String getFirst(final String key) {
-        return this.headers.stream().filter(e -> e.getKey().equalsIgnoreCase(key)).map(
-            Map.Entry::getValue).findFirst().orElse(null);
+        return this.headers.stream()
+                .filter(e -> e.getKey().equalsIgnoreCase(key))
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .orElse(null);
     }
 
     public List<String> getHeaderValue(final String key) {
-        return headers.stream().filter(e -> e.getKey().equalsIgnoreCase(key)).map(Map.Entry::getValue).collect(
-            Collectors.toList());
+        return headers.stream()
+                .filter(e -> e.getKey().equalsIgnoreCase(key))
+                .map(Map.Entry::getValue)
+                .collect(Collectors.toList());
     }
 
     public List<Map.Entry<String, String>> getHeaders(final String key) {

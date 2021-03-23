@@ -9,7 +9,7 @@ import com.commercetools.api.models.custom_object.CustomObjectDraftBuilder;
 import com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
+import commercetools.utils.ValueObject;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -46,7 +46,7 @@ public class CustomObjectIntegrationTests {
             CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
                     .key(customObject.getKey())
                     .container(customObject.getContainer())
-                    .value(JsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "val"))
+                    .value((ValueObject) () -> "foo")
                     .build();
 
             CustomObject updatedCustomObject = CommercetoolsTestUtils.getProjectRoot()
@@ -56,7 +56,7 @@ public class CustomObjectIntegrationTests {
                     .getBody();
 
             Assert.assertNotNull(updatedCustomObject);
-            Assert.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "val");
+            Assert.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "foo");
 
             return updatedCustomObject;
         });

@@ -24,37 +24,51 @@ public class ApiHttpException extends BaseException {
     @Nullable
     private final ApiHttpRequest request;
 
+    private final ResponseSerializer serializer;
+
     private final String dateAsString = DateTimeFormatter.ISO_INSTANT
             .format(ZonedDateTime.now().withZoneSameInstant(ZoneOffset.UTC));
 
     public ApiHttpException(final int statusCode, final String body, final ApiHttpHeaders headers) {
-        this(statusCode, body, headers, null, null, null);
+        this(statusCode, body, headers, null, null, null, ResponseSerializer.of());
     }
 
     public ApiHttpException(final int statusCode, final String body, final ApiHttpHeaders headers,
             final ApiHttpResponse<byte[]> response) {
-        this(statusCode, body, headers, null, response, null);
+        this(statusCode, body, headers, null, response, null, ResponseSerializer.of());
     }
 
     public ApiHttpException(final int statusCode, final String body, final ApiHttpHeaders headers, final String message,
             final ApiHttpResponse<byte[]> response) {
-        this(statusCode, body, headers, message, response, null);
+        this(statusCode, body, headers, message, response, null, ResponseSerializer.of());
+    }
+
+    public ApiHttpException(final int statusCode, final String body, final ApiHttpHeaders headers, final String message,
+            final ApiHttpResponse<byte[]> response, final ResponseSerializer serializer) {
+        this(statusCode, body, headers, message, response, null, serializer);
     }
 
     public ApiHttpException(final int statusCode, @Nullable final String body, @Nullable final ApiHttpHeaders headers,
             @Nullable final String message, @Nullable final ApiHttpResponse<byte[]> response,
             @Nullable final ApiHttpRequest request) {
+        this(statusCode, body, headers, message, response, request, ResponseSerializer.of());
+    }
+
+    public ApiHttpException(final int statusCode, @Nullable final String body, @Nullable final ApiHttpHeaders headers,
+            @Nullable final String message, @Nullable final ApiHttpResponse<byte[]> response,
+            @Nullable final ApiHttpRequest request, final ResponseSerializer serializer) {
         super(message);
         this.statusCode = statusCode;
         this.body = body;
         this.headers = headers;
         this.response = response;
         this.request = request;
+        this.serializer = serializer;
     }
 
     public <T> T getBodyAs(Class<T> clazz) throws SerializationException {
         try {
-            return JsonUtils.getConfiguredObjectMapper().readValue(body, clazz);
+            return serializer.convertResponse(response, clazz).getBody();
         }
         catch (Exception e) {
             throw new SerializationException(e.getMessage());

@@ -13,7 +13,7 @@ public class ApiHttpClientImpl extends AutoCloseableService implements ApiHttpCl
     private final ResponseSerializer serializer;
 
     public ApiHttpClientImpl(final String baseUri, final HandlerStack stack) {
-        this(URI.create(baseUri), stack);
+        this(URI.create(baseUri), stack, ResponseSerializer.of());
     }
 
     public ApiHttpClientImpl(final URI baseUri, final HandlerStack stack) {

@@ -1,6 +1,7 @@
 
 package io.vrap.rmf.base.client;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
@@ -81,7 +82,8 @@ public class ClientFactory {
             final TokenSupplier tokenSupplier, final InternalLoggerFactory internalLoggerFactory,
             final Supplier<String> userAgentSupplier, List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider) {
-        List<Middleware> middlewareStack = new ArrayList<>(
+        final ResponseSerializer serializer = ResponseSerializer.of();
+        final List<Middleware> middlewareStack = new ArrayList<>(
             MiddlewareFactory.createDefault(tokenSupplier, internalLoggerFactory, userAgentSupplier));
         if (correlationIdProvider != null) {
             middlewareStack.add((request, next) -> next.apply(
@@ -90,6 +92,6 @@ public class ClientFactory {
         middlewareStack.addAll(middlewares);
         final HandlerStack stack = HandlerStack.create(HttpHandler.create(httpClient), middlewareStack);
 
-        return ApiHttpClient.of(apiBaseUrl, stack);
+        return ApiHttpClient.of(apiBaseUrl, stack, serializer);
     }
 }

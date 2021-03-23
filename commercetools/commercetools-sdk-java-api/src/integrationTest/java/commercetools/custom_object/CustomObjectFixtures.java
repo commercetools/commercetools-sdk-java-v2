@@ -9,7 +9,7 @@ import com.commercetools.api.models.custom_object.CustomObjectDraft;
 import com.commercetools.api.models.custom_object.CustomObjectDraftBuilder;
 import commercetools.utils.CommercetoolsTestUtils;
 
-import io.vrap.rmf.base.client.utils.json.JsonUtils;
+import commercetools.utils.ValueObject;
 
 import org.junit.Assert;
 
@@ -31,7 +31,7 @@ public class CustomObjectFixtures {
         CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
                 .container("a")
                 .key(CommercetoolsTestUtils.randomKey())
-                .value(JsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "val"))
+                .value((ValueObject) () -> "val")
                 .build();
 
         CustomObject customObject = CommercetoolsTestUtils.getProjectRoot()

@@ -21,6 +21,10 @@ public interface ApiHttpClient extends AutoCloseable, VrapHttpClient {
         return of(baseUri, stack, ResponseSerializer.of());
     }
 
+    public static ApiHttpClient of(final String baseUri, final HandlerStack stack, ResponseSerializer serializer) {
+        return of(URI.create(baseUri), stack, serializer);
+    }
+
     public static ApiHttpClient of(final URI baseUri, final HandlerStack stack, ResponseSerializer serializer) {
         return new ApiHttpClientImpl(baseUri, stack, serializer);
     }

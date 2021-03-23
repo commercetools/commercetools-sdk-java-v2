@@ -19,12 +19,17 @@ public class MiddlewareFactory {
 
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier,
             final InternalLoggerFactory internalLoggerFactory, final Supplier<String> userAgent) {
+        return createDefault(tokenSupplier, internalLoggerFactory, userAgent, ResponseSerializer.of());
+    }
+
+    public static List<Middleware> createDefault(final TokenSupplier tokenSupplier,
+            final InternalLoggerFactory internalLoggerFactory, final Supplier<String> userAgent, final ResponseSerializer serializer) {
         final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
         return asList(
             (request,
                     next) -> next.apply(request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent.get())
                             .withHeader(ApiHttpHeaders.ACCEPT_ENCODING, "gzip")),
-            new ErrorMiddleware(), new InternalLoggerMiddleware(internalLoggerFactory),
+            new ErrorMiddleware(serializer), new InternalLoggerMiddleware(internalLoggerFactory),
             new OAuthMiddleware(oAuthHandler));
     }
 

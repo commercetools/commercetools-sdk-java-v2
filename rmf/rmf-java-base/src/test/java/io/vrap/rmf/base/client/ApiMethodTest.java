@@ -47,7 +47,7 @@ public class ApiMethodTest {
     }
 
     private ApiHttpClient createClient() {
-        return ApiHttpClient.of("", null);
+        return ApiHttpClient.of("", null, ResponseSerializer.of());
     }
 
     @Test

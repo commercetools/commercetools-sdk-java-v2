@@ -20,8 +20,8 @@ import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
 import com.commercetools.api.product.AttributeAccessor;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
+
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
@@ -91,22 +91,30 @@ public class AttributesTest {
         Assertions.assertThat(JsonUtils.toJsonString(doubleAttribute)).isEqualTo("{\"name\":\"double\",\"value\":13}");
 
         Attribute double2Attribute = AttributeBuilder.of().name("double").value(13.1).build();
-        Assertions.assertThat(JsonUtils.toJsonString(double2Attribute)).isEqualTo("{\"name\":\"double\",\"value\":13.1}");
+        Assertions.assertThat(JsonUtils.toJsonString(double2Attribute)).isEqualTo(
+            "{\"name\":\"double\",\"value\":13.1}");
 
         Attribute boolAttribute = AttributeBuilder.of().name("bool").value(true).build();
         Assertions.assertThat(JsonUtils.toJsonString(boolAttribute)).isEqualTo("{\"name\":\"bool\",\"value\":true}");
 
         Attribute stringAttribute = AttributeBuilder.of().name("string").value("foo").build();
-        Assertions.assertThat(JsonUtils.toJsonString(stringAttribute)).isEqualTo("{\"name\":\"string\",\"value\":\"foo\"}");
+        Assertions.assertThat(JsonUtils.toJsonString(stringAttribute)).isEqualTo(
+            "{\"name\":\"string\",\"value\":\"foo\"}");
 
-        Attribute enumAttribute = AttributeBuilder.of().name("enum").value(AttributePlainEnumValueBuilder.of().key("foo").label("foo").build()).build();
-        Assertions.assertThat(JsonUtils.toJsonString(enumAttribute)).isEqualTo("{\"name\":\"enum\",\"value\":{\"key\":\"foo\",\"label\":\"foo\"}}");
+        Attribute enumAttribute = AttributeBuilder.of().name("enum").value(
+            AttributePlainEnumValueBuilder.of().key("foo").label("foo").build()).build();
+        Assertions.assertThat(JsonUtils.toJsonString(enumAttribute)).isEqualTo(
+            "{\"name\":\"enum\",\"value\":{\"key\":\"foo\",\"label\":\"foo\"}}");
 
-        Attribute setNumberAttribute = AttributeBuilder.of().name("setNumber").value(Lists.newArrayList(13, 13.0, 13.1)).build();
-        Assertions.assertThat(JsonUtils.toJsonString(setNumberAttribute)).isEqualTo("{\"name\":\"setNumber\",\"value\":[13,13,13.1]}");
+        Attribute setNumberAttribute = AttributeBuilder.of().name("setNumber").value(
+            Lists.newArrayList(13, 13.0, 13.1)).build();
+        Assertions.assertThat(JsonUtils.toJsonString(setNumberAttribute)).isEqualTo(
+            "{\"name\":\"setNumber\",\"value\":[13,13,13.1]}");
 
-        Attribute setStringAttribute = AttributeBuilder.of().name("setString").value(Lists.newArrayList("foo", "bar")).build();
-        Assertions.assertThat(JsonUtils.toJsonString(setStringAttribute)).isEqualTo("{\"name\":\"setString\",\"value\":[\"foo\",\"bar\"]}");
+        Attribute setStringAttribute = AttributeBuilder.of().name("setString").value(
+            Lists.newArrayList("foo", "bar")).build();
+        Assertions.assertThat(JsonUtils.toJsonString(setStringAttribute)).isEqualTo(
+            "{\"name\":\"setString\",\"value\":[\"foo\",\"bar\"]}");
 
     }
 }

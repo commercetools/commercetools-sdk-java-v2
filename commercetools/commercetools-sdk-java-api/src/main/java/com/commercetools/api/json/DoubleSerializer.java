@@ -1,10 +1,11 @@
+
 package com.commercetools.api.json;
+
+import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdScalarSerializer;
-
-import java.io.IOException;
 
 public class DoubleSerializer extends StdScalarSerializer<Double> {
 

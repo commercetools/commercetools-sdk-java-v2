@@ -102,11 +102,11 @@ public class CustomFieldsTest {
                 .addValue("bool", true)
                 .addValue("string", "foo")
                 .addValue("enum", CustomFieldEnumValueBuilder.of().key("foo").label("foo").build())
-                .addValue("setNumber", Lists.newArrayList(13, 13.0, 13.1))
+                .addValue("setNumber", Lists.newArrayList(13.0, 13, 13.1))
                 .addValue("setText", Lists.newArrayList("foo", "bar"))
                 .build();
         Assertions.assertThat(JsonUtils.toJsonString(container))
                 .isEqualTo(
-                    "{\"bool\":true,\"string\":\"foo\",\"double\":13,\"double2\":13.1,\"int\":13,\"enum\":{\"key\":\"foo\",\"label\":\"foo\"},\"setNumber\":[13,13,13.1],\"setText\":[\"foo\",\"bar\"]}");
+                    "{\"bool\":true,\"string\":\"foo\",\"double\":13.0,\"double2\":13.1,\"int\":13,\"enum\":{\"key\":\"foo\",\"label\":\"foo\"},\"setNumber\":[13.0,13,13.1],\"setText\":[\"foo\",\"bar\"]}");
     }
 }

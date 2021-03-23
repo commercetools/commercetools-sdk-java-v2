@@ -20,19 +20,25 @@ import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModu
 
 public class JsonUtils {
 
-    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
+    private static final ObjectMapper OBJECT_MAPPER;
 
     static {
+        OBJECT_MAPPER = createObjectMapper();
+    }
+
+    public static ObjectMapper createObjectMapper() {
         ServiceLoader<SimpleModule> loader = ServiceLoader.load(SimpleModule.class,
             SimpleModule.class.getClassLoader());
 
-        OBJECT_MAPPER.registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
+        final ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.registerModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .registerModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .registerModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
                 .registerModules(loader)
                 .setSerializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+        return objectMapper;
     }
 
     public static byte[] toJsonByteArray(Object value) throws JsonProcessingException {

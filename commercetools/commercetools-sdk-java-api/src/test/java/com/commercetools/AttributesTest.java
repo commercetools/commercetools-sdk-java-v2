@@ -10,6 +10,7 @@ import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.util.Map;
 
+import com.commercetools.api.json.ApiModule;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.product.Attribute;
@@ -21,6 +22,7 @@ import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
 import com.commercetools.api.product.AttributeAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -130,5 +132,90 @@ public class AttributesTest {
         Assertions.assertThat(JsonUtils.toJsonString(setStringAttribute))
                 .isEqualTo("{\"name\":\"setString\",\"value\":[\"foo\",\"bar\"]}");
 
+    }
+
+    @Test
+    public void attributesAsDateFalse() throws IOException {
+        System.setProperty(ApiModule.DESERIALIZE_ATTRIBUTE_AS_DATE, "false");
+        ObjectMapper mapper = JsonUtils.createObjectMapper();
+        System.setProperty(ApiModule.DESERIALIZE_ATTRIBUTE_AS_DATE, "true");
+        ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
+
+        assertThat(variant.getAttributes()).isNotEmpty();
+
+        Map<String, Attribute> attributes = variant.withProductVariant(AttributeAccessor::asMap);
+        assertThat(attributes.get("text").getValue()).isInstanceOfSatisfying(String.class,
+            s -> assertThat(s).isEqualTo("foo"));
+        assertThat(attributes.get("ltext").getValue()).isInstanceOfSatisfying(LocalizedString.class,
+            localizedString -> assertThat(localizedString.values().get("en")).isEqualTo("foo"));
+        assertThat(attributes.get("enum").getValue()).isInstanceOfSatisfying(AttributePlainEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel()).isEqualTo("foo"));
+        assertThat(attributes.get("lenum").getValue()).isInstanceOfSatisfying(AttributeLocalizedEnumValue.class,
+            enumValue -> assertThat(enumValue.getLabel().values().get("en")).isEqualTo("foo"));
+
+        assertThat(attributes.get("date").getValue()).isInstanceOfSatisfying(String.class,
+            localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(attributes.get("time").getValue()).isInstanceOfSatisfying(String.class,
+            localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
+        assertThat(attributes.get("datetime").getValue()).isInstanceOfSatisfying(String.class,
+            dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+        assertThat(attributes.get("date").withAttribute(AttributeAccessor::asDate))
+                .isInstanceOfSatisfying(LocalDate.class, localDate -> assertThat(localDate).isEqualTo("2020-01-01"));
+        assertThat(attributes.get("time").withAttribute(AttributeAccessor::asTime))
+                .isInstanceOfSatisfying(LocalTime.class, localTime -> assertThat(localTime).isEqualTo("13:15:00.123"));
+        assertThat(attributes.get("datetime").withAttribute(AttributeAccessor::asDateTime)).isInstanceOfSatisfying(
+            ZonedDateTime.class, dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
+
+        assertThat(attributes.get("boolean").getValue()).isInstanceOfSatisfying(Boolean.class,
+            aBoolean -> assertThat(aBoolean).isTrue());
+        assertThat(attributes.get("integer").getValue()).isInstanceOfSatisfying(Double.class,
+            number -> assertThat(number).isEqualTo(10.0));
+        assertThat(attributes.get("double").getValue()).isInstanceOfSatisfying(Double.class,
+            number -> assertThat(number).isEqualTo(11.0));
+        assertThat(attributes.get("boolean").getValue()).isInstanceOfSatisfying(Boolean.class,
+            aBoolean -> assertThat(aBoolean).isTrue());
+        assertThat(attributes.get("reference").getValue()).isInstanceOfSatisfying(ProductReference.class,
+            reference -> assertThat(reference.getId()).isEqualTo("12345"));
+        assertThat(attributes.get("money").getValue()).isInstanceOfSatisfying(TypedMoney.class,
+            money -> assertThat(money.getCentAmount()).isEqualTo(100));
+        assertThat(attributes.get("nested").getValue()).asList()
+                .first()
+                .isInstanceOfSatisfying(Attribute.class,
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+        assertThat(attributes.get("set-text").getValue()).asList().first().isInstanceOf(String.class);
+        assertThat(attributes.get("set-ltext").getValue()).asList().first().isInstanceOf(LocalizedString.class);
+        assertThat(attributes.get("set-enum").getValue()).asList().first().isInstanceOf(AttributePlainEnumValue.class);
+        assertThat(attributes.get("set-lenum").getValue()).asList()
+                .first()
+                .isInstanceOf(AttributeLocalizedEnumValue.class);
+
+        assertThat(attributes.get("set-date").getValue()).asList().first().isInstanceOf(String.class);
+        assertThat(attributes.get("set-time").getValue()).asList().first().isInstanceOf(String.class);
+        assertThat(attributes.get("set-datetime").getValue()).asList().first().isInstanceOf(String.class);
+        assertThat(attributes.get("set-date").withAttribute(AttributeAccessor::asSetDate)).asList()
+                .first()
+                .isInstanceOf(LocalDate.class);
+        assertThat(attributes.get("set-time").withAttribute(AttributeAccessor::asSetTime)).asList()
+                .first()
+                .isInstanceOf(LocalTime.class);
+        assertThat(attributes.get("set-datetime").withAttribute(AttributeAccessor::asSetDateTime)).asList()
+                .first()
+                .isInstanceOf(ZonedDateTime.class);
+
+        assertThat(attributes.get("set-boolean").getValue()).asList().first().isInstanceOf(Boolean.class);
+        assertThat(attributes.get("set-integer").getValue()).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(10.0));
+        assertThat(attributes.get("set-double").getValue()).asList()
+                .first()
+                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
+        assertThat(attributes.get("set-reference").getValue()).asList().first().isInstanceOf(ProductReference.class);
+        assertThat(attributes.get("set-money").getValue()).asList().first().isInstanceOf(TypedMoney.class);
+        assertThat(attributes.get("set-nested").getValue()).asList()
+                .first()
+                .asList()
+                .first()
+                .isInstanceOfSatisfying(Attribute.class,
+                    attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
     }
 }

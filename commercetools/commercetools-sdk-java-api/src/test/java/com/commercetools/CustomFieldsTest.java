@@ -49,8 +49,8 @@ public class CustomFieldsTest {
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
         assertThat(fields.get("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());
-        assertThat(fields.get("integer")).isInstanceOfSatisfying(Double.class,
-            number -> assertThat(number).isEqualTo(10.0));
+        assertThat(fields.get("integer")).isInstanceOfSatisfying(Long.class,
+            number -> assertThat(number).isEqualTo(10L));
         assertThat(fields.get("double")).isInstanceOfSatisfying(Double.class,
             number -> assertThat(number).isEqualTo(11.0));
         assertThat(fields.get("boolean")).isInstanceOfSatisfying(Boolean.class,
@@ -69,7 +69,7 @@ public class CustomFieldsTest {
         assertThat(fields.get("set-boolean")).asList().first().isInstanceOf(Boolean.class);
         assertThat(fields.get("set-integer")).asList()
                 .first()
-                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(10.0));
+                .isInstanceOfSatisfying(Long.class, number -> assertThat(number).isEqualTo(10L));
         assertThat(fields.get("set-double")).asList()
                 .first()
                 .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
@@ -83,6 +83,14 @@ public class CustomFieldsTest {
         Order order = JsonUtils.fromJsonString(stringFromResource("orderlineitem.json"), Order.class);
 
         assertThat(order.getLineItems().get(0).getCustom().getFields().values().get("empty")).isInstanceOf(List.class);
+    }
+
+    @Test
+    public void httpDeSerialize() throws IOException {
+        String numberAttributes = stringFromResource("fieldnumbers.json");
+        FieldContainer fieldContainer = JsonUtils.fromJsonString(numberAttributes, FieldContainer.class);
+        String serializedNumberAttributes = JsonUtils.toJsonString(fieldContainer);
+        Assertions.assertThat(serializedNumberAttributes).isEqualTo("{\"double\":13.0,\"decimal\":13.1,\"int\":13}");
     }
 
     @Test

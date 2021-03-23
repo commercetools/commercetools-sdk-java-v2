@@ -10,6 +10,7 @@ dependencies {
 
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation commons.io
+    testImplementation "com.google.code.gson:gson:${versions.gson}"
 
     itestImplementation project(':commercetools:commercetools-http-client')
 }

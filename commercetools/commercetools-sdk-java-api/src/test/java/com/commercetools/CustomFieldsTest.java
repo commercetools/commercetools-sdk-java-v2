@@ -15,12 +15,13 @@ import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.product.ProductReference;
-import com.commercetools.api.models.type.CustomFieldEnumValue;
-import com.commercetools.api.models.type.CustomFieldLocalizedEnumValue;
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.*;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
+import org.assertj.core.api.Assertions;
+import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 public class CustomFieldsTest {
@@ -80,5 +81,15 @@ public class CustomFieldsTest {
         Order order = JsonUtils.fromJsonString(stringFromResource("orderlineitem.json"), Order.class);
 
         assertThat(order.getLineItems().get(0).getCustom().getFields().values().get("empty")).isInstanceOf(List.class);
+    }
+
+    @Test
+    public void serializeCustomFields() throws JsonProcessingException {
+        FieldContainer container = FieldContainerBuilder.of().addValue("int", 13).addValue("double", 13.0).addValue(
+            "double2", 13.1).addValue("bool", true).addValue("string", "foo").addValue("enum",
+                CustomFieldEnumValueBuilder.of().key("foo").label("foo").build()).addValue("setNumber",
+                    Lists.newArrayList(13, 13.0, 13.1)).addValue("setText", Lists.newArrayList("foo", "bar")).build();
+        Assertions.assertThat(JsonUtils.toJsonString(container)).isEqualTo(
+            "{\"bool\":true,\"string\":\"foo\",\"double\":13,\"double2\":13.1,\"int\":13,\"enum\":{\"key\":\"foo\",\"label\":\"foo\"},\"setNumber\":[13,13,13.1],\"setText\":[\"foo\",\"bar\"]}");
     }
 }

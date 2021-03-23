@@ -13,14 +13,19 @@ import java.util.Map;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.product.AttributeBuilder;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
 import com.commercetools.api.product.AttributeAccessor;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
+import org.assertj.core.api.Assertions;
+import org.assertj.core.util.Lists;
 import org.junit.Test;
 
 public class AttributesTest {
@@ -75,5 +80,41 @@ public class AttributesTest {
         assertThat(attributes.get("set-money")).asList().first().isInstanceOf(TypedMoney.class);
         assertThat(attributes.get("set-nested")).asList().first().asList().first().isInstanceOfSatisfying(
             Attribute.class, attribute -> assertThat(attribute.getValue()).isInstanceOf(AttributePlainEnumValue.class));
+    }
+
+    @Test
+    public void serializeAttributes() throws JsonProcessingException {
+        Attribute intAttribute = AttributeBuilder.of().name("int").value(13).build();
+        Assertions.assertThat(JsonUtils.toJsonString(intAttribute)).isEqualTo("{\"name\":\"int\",\"value\":13}");
+
+        Attribute doubleAttribute = AttributeBuilder.of().name("double").value(13.0).build();
+        Assertions.assertThat(JsonUtils.toJsonString(doubleAttribute)).isEqualTo("{\"name\":\"double\",\"value\":13}");
+
+        Attribute double2Attribute = AttributeBuilder.of().name("double").value(13.1).build();
+        Assertions.assertThat(JsonUtils.toJsonString(double2Attribute)).isEqualTo(
+            "{\"name\":\"double\",\"value\":13.1}");
+
+        Attribute boolAttribute = AttributeBuilder.of().name("bool").value(true).build();
+        Assertions.assertThat(JsonUtils.toJsonString(boolAttribute)).isEqualTo("{\"name\":\"bool\",\"value\":true}");
+
+        Attribute stringAttribute = AttributeBuilder.of().name("string").value("foo").build();
+        Assertions.assertThat(JsonUtils.toJsonString(stringAttribute)).isEqualTo(
+            "{\"name\":\"string\",\"value\":\"foo\"}");
+
+        Attribute enumAttribute = AttributeBuilder.of().name("enum").value(
+            AttributePlainEnumValueBuilder.of().key("foo").label("foo").build()).build();
+        Assertions.assertThat(JsonUtils.toJsonString(enumAttribute)).isEqualTo(
+            "{\"name\":\"enum\",\"value\":{\"key\":\"foo\",\"label\":\"foo\"}}");
+
+        Attribute setNumberAttribute = AttributeBuilder.of().name("setNumber").value(
+            Lists.newArrayList(13, 13.0, 13.1)).build();
+        Assertions.assertThat(JsonUtils.toJsonString(setNumberAttribute)).isEqualTo(
+            "{\"name\":\"setNumber\",\"value\":[13,13,13.1]}");
+
+        Attribute setStringAttribute = AttributeBuilder.of().name("setString").value(
+            Lists.newArrayList("foo", "bar")).build();
+        Assertions.assertThat(JsonUtils.toJsonString(setStringAttribute)).isEqualTo(
+            "{\"name\":\"setString\",\"value\":[\"foo\",\"bar\"]}");
+
     }
 }

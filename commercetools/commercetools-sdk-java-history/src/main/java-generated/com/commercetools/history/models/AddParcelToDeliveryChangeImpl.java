@@ -79,14 +79,20 @@ public final class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryC
 
         AddParcelToDeliveryChangeImpl that = (AddParcelToDeliveryChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(deliveryId,
-            that.deliveryId).append(nextValue, that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(deliveryId, that.deliveryId)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(deliveryId).append(
-            nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(deliveryId)
+                .append(nextValue)
+                .toHashCode();
     }
 
 }

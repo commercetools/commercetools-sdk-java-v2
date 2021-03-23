@@ -99,14 +99,22 @@ public final class SetParcelItemsChangeImpl implements SetParcelItemsChange {
 
         SetParcelItemsChangeImpl that = (SetParcelItemsChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(parcel,
-            that.parcel).append(nextValue, that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(parcel, that.parcel)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(parcel).append(nextValue).append(
-            previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(parcel)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

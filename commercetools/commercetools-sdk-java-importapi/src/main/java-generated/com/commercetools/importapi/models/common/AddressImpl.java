@@ -325,25 +325,62 @@ public final class AddressImpl implements Address {
 
         AddressImpl that = (AddressImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(key, that.key).append(title, that.title).append(
-            salutation, that.salutation).append(firstName, that.firstName).append(lastName, that.lastName).append(
-                streetName, that.streetName).append(streetNumber, that.streetNumber).append(additionalStreetInfo,
-                    that.additionalStreetInfo).append(postalCode, that.postalCode).append(city, that.city).append(
-                        region, that.region).append(state, that.state).append(country, that.country).append(company,
-                            that.company).append(department, that.department).append(building, that.building).append(
-                                apartment, that.apartment).append(pOBox, that.pOBox).append(phone, that.phone).append(
-                                    mobile, that.mobile).append(email, that.email).append(fax, that.fax).append(
-                                        additionalAddressInfo, that.additionalAddressInfo).append(externalId,
-                                            that.externalId).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(key, that.key)
+                .append(title, that.title)
+                .append(salutation, that.salutation)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(streetName, that.streetName)
+                .append(streetNumber, that.streetNumber)
+                .append(additionalStreetInfo, that.additionalStreetInfo)
+                .append(postalCode, that.postalCode)
+                .append(city, that.city)
+                .append(region, that.region)
+                .append(state, that.state)
+                .append(country, that.country)
+                .append(company, that.company)
+                .append(department, that.department)
+                .append(building, that.building)
+                .append(apartment, that.apartment)
+                .append(pOBox, that.pOBox)
+                .append(phone, that.phone)
+                .append(mobile, that.mobile)
+                .append(email, that.email)
+                .append(fax, that.fax)
+                .append(additionalAddressInfo, that.additionalAddressInfo)
+                .append(externalId, that.externalId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(key).append(title).append(salutation).append(
-            firstName).append(lastName).append(streetName).append(streetNumber).append(additionalStreetInfo).append(
-                postalCode).append(city).append(region).append(state).append(country).append(company).append(
-                    department).append(building).append(apartment).append(pOBox).append(phone).append(mobile).append(
-                        email).append(fax).append(additionalAddressInfo).append(externalId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(key)
+                .append(title)
+                .append(salutation)
+                .append(firstName)
+                .append(lastName)
+                .append(streetName)
+                .append(streetNumber)
+                .append(additionalStreetInfo)
+                .append(postalCode)
+                .append(city)
+                .append(region)
+                .append(state)
+                .append(country)
+                .append(company)
+                .append(department)
+                .append(building)
+                .append(apartment)
+                .append(pOBox)
+                .append(phone)
+                .append(mobile)
+                .append(email)
+                .append(fax)
+                .append(additionalAddressInfo)
+                .append(externalId)
+                .toHashCode();
     }
 
 }

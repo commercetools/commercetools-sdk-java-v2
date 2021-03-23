@@ -67,8 +67,10 @@ public final class AddTransactionChangeImpl implements AddTransactionChange {
 
         AddTransactionChangeImpl that = (AddTransactionChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(nextValue,
-            that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override

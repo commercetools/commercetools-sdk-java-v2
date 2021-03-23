@@ -75,8 +75,11 @@ public final class CartSetDeliveryAddressCustomTypeActionImpl implements CartSet
 
         CartSetDeliveryAddressCustomTypeActionImpl that = (CartSetDeliveryAddressCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(deliveryId, that.deliveryId).append(name,
-            that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

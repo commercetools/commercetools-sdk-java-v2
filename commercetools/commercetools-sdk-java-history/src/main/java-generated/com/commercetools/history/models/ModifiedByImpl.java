@@ -132,15 +132,24 @@ public final class ModifiedByImpl implements ModifiedBy {
 
         ModifiedByImpl that = (ModifiedByImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(type, that.type).append(customer, that.customer).append(
-            anonymousId, that.anonymousId).append(clientId, that.clientId).append(isPlatformClient,
-                that.isPlatformClient).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(type, that.type)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(clientId, that.clientId)
+                .append(isPlatformClient, that.isPlatformClient)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(type).append(customer).append(anonymousId).append(
-            clientId).append(isPlatformClient).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(type)
+                .append(customer)
+                .append(anonymousId)
+                .append(clientId)
+                .append(isPlatformClient)
+                .toHashCode();
     }
 
 }

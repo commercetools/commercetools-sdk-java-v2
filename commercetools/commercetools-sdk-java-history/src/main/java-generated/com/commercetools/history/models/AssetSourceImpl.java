@@ -79,8 +79,11 @@ public final class AssetSourceImpl implements AssetSource {
 
         AssetSourceImpl that = (AssetSourceImpl) o;
 
-        return new EqualsBuilder().append(uri, that.uri).append(key, that.key).append(dimensions,
-            that.dimensions).append(contentType, that.contentType).isEquals();
+        return new EqualsBuilder().append(uri, that.uri)
+                .append(key, that.key)
+                .append(dimensions, that.dimensions)
+                .append(contentType, that.contentType)
+                .isEquals();
     }
 
     @Override

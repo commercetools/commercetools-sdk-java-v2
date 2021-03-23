@@ -68,8 +68,10 @@ public final class ShoppingListLineItemValueImpl implements ShoppingListLineItem
 
         ShoppingListLineItemValueImpl that = (ShoppingListLineItemValueImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).append(variantId,
-            that.variantId).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(name, that.name)
+                .append(variantId, that.variantId)
+                .isEquals();
     }
 
     @Override

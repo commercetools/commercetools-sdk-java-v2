@@ -83,14 +83,20 @@ public final class OrderCustomLineItemDiscountSetMessagePayloadImpl
 
         OrderCustomLineItemDiscountSetMessagePayloadImpl that = (OrderCustomLineItemDiscountSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(customLineItemId, that.customLineItemId).append(
-            discountedPricePerQuantity, that.discountedPricePerQuantity).append(taxedPrice, that.taxedPrice).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(customLineItemId, that.customLineItemId)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(taxedPrice, that.taxedPrice)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customLineItemId).append(
-            discountedPricePerQuantity).append(taxedPrice).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customLineItemId)
+                .append(discountedPricePerQuantity)
+                .append(taxedPrice)
+                .toHashCode();
     }
 
 }

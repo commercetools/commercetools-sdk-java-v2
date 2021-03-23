@@ -82,8 +82,8 @@ public class ApiMethodTest {
     public void testImmutableWithQueryParams() {
         TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
 
-        TestApiMethod newMethod = method.withQueryParams(
-            Lists.newArrayList(new ApiMethod.ParamEntry<>("fooz", "barz")));
+        TestApiMethod newMethod = method
+                .withQueryParams(Lists.newArrayList(new ApiMethod.ParamEntry<>("fooz", "barz")));
 
         Assert.assertEquals(1, method.getQueryParams().size());
         Assert.assertEquals(1, newMethod.getQueryParams().size());

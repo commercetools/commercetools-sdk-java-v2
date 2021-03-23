@@ -64,8 +64,10 @@ public final class MyCartSetCustomFieldActionImpl implements MyCartSetCustomFiel
 
         MyCartSetCustomFieldActionImpl that = (MyCartSetCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).append(value,
-            that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

@@ -65,8 +65,10 @@ public final class PaymentTransactionStateChangedMessagePayloadImpl
 
         PaymentTransactionStateChangedMessagePayloadImpl that = (PaymentTransactionStateChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(transactionId, that.transactionId).append(state,
-            that.state).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(transactionId, that.transactionId)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

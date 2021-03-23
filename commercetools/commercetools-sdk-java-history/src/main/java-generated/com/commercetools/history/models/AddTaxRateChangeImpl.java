@@ -70,8 +70,10 @@ public final class AddTaxRateChangeImpl implements AddTaxRateChange {
 
         AddTaxRateChangeImpl that = (AddTaxRateChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(nextValue,
-            that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override

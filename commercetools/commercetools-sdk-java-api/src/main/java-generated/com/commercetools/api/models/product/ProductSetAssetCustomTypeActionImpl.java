@@ -129,15 +129,28 @@ public final class ProductSetAssetCustomTypeActionImpl implements ProductSetAsse
 
         ProductSetAssetCustomTypeActionImpl that = (ProductSetAssetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(staged, that.staged).append(assetId, that.assetId).append(assetKey, that.assetKey).append(
-                type, that.type).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(staged).append(
-            assetId).append(assetKey).append(type).append(fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(staged)
+                .append(assetId)
+                .append(assetKey)
+                .append(type)
+                .append(fields)
+                .toHashCode();
     }
 
 }

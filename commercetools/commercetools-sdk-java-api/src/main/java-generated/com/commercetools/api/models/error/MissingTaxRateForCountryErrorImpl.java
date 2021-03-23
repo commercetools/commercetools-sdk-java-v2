@@ -87,14 +87,22 @@ public final class MissingTaxRateForCountryErrorImpl implements MissingTaxRateFo
 
         MissingTaxRateForCountryErrorImpl that = (MissingTaxRateForCountryErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(taxCategoryId,
-            that.taxCategoryId).append(country, that.country).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(taxCategoryId, that.taxCategoryId)
+                .append(country, that.country)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(taxCategoryId).append(country).append(
-            state).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(taxCategoryId)
+                .append(country)
+                .append(state)
+                .toHashCode();
     }
 
 }

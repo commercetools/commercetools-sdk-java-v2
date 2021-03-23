@@ -68,8 +68,10 @@ public final class TransactionChangeValueImpl implements TransactionChangeValue 
 
         TransactionChangeValueImpl that = (TransactionChangeValueImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(interactionId, that.interactionId).append(timestamp,
-            that.timestamp).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(interactionId, that.interactionId)
+                .append(timestamp, that.timestamp)
+                .isEquals();
     }
 
     @Override

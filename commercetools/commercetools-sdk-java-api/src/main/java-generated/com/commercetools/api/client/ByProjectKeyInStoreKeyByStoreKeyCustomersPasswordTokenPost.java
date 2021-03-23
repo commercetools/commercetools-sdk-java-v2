@@ -54,8 +54,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost extends
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(
-                customerCreatePasswordResetToken);
+            final byte[] body = apiHttpClient().getSerializerService()
+                    .toJsonByteArray(customerCreatePasswordResetToken);
             return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {

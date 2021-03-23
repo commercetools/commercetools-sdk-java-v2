@@ -68,8 +68,10 @@ public final class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeR
 
         ProductTypeRemoveEnumValuesActionImpl that = (ProductTypeRemoveEnumValuesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(keys,
-            that.keys).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(keys, that.keys)
+                .isEquals();
     }
 
     @Override

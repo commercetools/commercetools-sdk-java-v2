@@ -77,14 +77,20 @@ public final class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpd
 
         StagedOrderUpdateSyncInfoActionImpl that = (StagedOrderUpdateSyncInfoActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(channel, that.channel).append(externalId,
-            that.externalId).append(syncedAt, that.syncedAt).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(channel, that.channel)
+                .append(externalId, that.externalId)
+                .append(syncedAt, that.syncedAt)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(channel).append(externalId).append(
-            syncedAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(channel)
+                .append(externalId)
+                .append(syncedAt)
+                .toHashCode();
     }
 
 }

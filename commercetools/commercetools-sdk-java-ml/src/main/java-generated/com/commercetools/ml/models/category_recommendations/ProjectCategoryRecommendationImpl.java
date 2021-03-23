@@ -77,8 +77,10 @@ public final class ProjectCategoryRecommendationImpl implements ProjectCategoryR
 
         ProjectCategoryRecommendationImpl that = (ProjectCategoryRecommendationImpl) o;
 
-        return new EqualsBuilder().append(category, that.category).append(confidence, that.confidence).append(path,
-            that.path).isEquals();
+        return new EqualsBuilder().append(category, that.category)
+                .append(confidence, that.confidence)
+                .append(path, that.path)
+                .isEquals();
     }
 
     @Override

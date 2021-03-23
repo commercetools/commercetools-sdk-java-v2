@@ -89,15 +89,22 @@ public final class CartSetCustomShippingMethodActionImpl implements CartSetCusto
 
         CartSetCustomShippingMethodActionImpl that = (CartSetCustomShippingMethodActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shippingMethodName,
-            that.shippingMethodName).append(shippingRate, that.shippingRate).append(taxCategory,
-                that.taxCategory).append(externalTaxRate, that.externalTaxRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shippingMethodName, that.shippingMethodName)
+                .append(shippingRate, that.shippingRate)
+                .append(taxCategory, that.taxCategory)
+                .append(externalTaxRate, that.externalTaxRate)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(shippingMethodName).append(shippingRate).append(
-            taxCategory).append(externalTaxRate).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(shippingMethodName)
+                .append(shippingRate)
+                .append(taxCategory)
+                .append(externalTaxRate)
+                .toHashCode();
     }
 
 }

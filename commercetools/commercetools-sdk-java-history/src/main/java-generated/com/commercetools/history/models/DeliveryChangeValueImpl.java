@@ -77,8 +77,10 @@ public final class DeliveryChangeValueImpl implements DeliveryChangeValue {
 
         DeliveryChangeValueImpl that = (DeliveryChangeValueImpl) o;
 
-        return new EqualsBuilder().append(items, that.items).append(address, that.address).append(parcels,
-            that.parcels).isEquals();
+        return new EqualsBuilder().append(items, that.items)
+                .append(address, that.address)
+                .append(parcels, that.parcels)
+                .isEquals();
     }
 
     @Override

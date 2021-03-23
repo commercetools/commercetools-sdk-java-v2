@@ -111,15 +111,26 @@ public final class ShoppingListAddLineItemActionImpl implements ShoppingListAddL
 
         ShoppingListAddLineItemActionImpl that = (ShoppingListAddLineItemActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(sku, that.sku).append(productId,
-            that.productId).append(variantId, that.variantId).append(quantity, that.quantity).append(addedAt,
-                that.addedAt).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(sku, that.sku)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(sku).append(productId).append(variantId).append(
-            quantity).append(addedAt).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(sku)
+                .append(productId)
+                .append(variantId)
+                .append(quantity)
+                .append(addedAt)
+                .append(custom)
+                .toHashCode();
     }
 
 }

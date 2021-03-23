@@ -172,16 +172,30 @@ public final class LineItemPriceImpl implements LineItemPrice {
 
         LineItemPriceImpl that = (LineItemPriceImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(country, that.country).append(validFrom,
-            that.validFrom).append(validUntil, that.validUntil).append(customerGroup, that.customerGroup).append(
-                channel, that.channel).append(discounted, that.discounted).append(tiers, that.tiers).append(custom,
-                    that.custom).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(country, that.country)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(discounted, that.discounted)
+                .append(tiers, that.tiers)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(value).append(country).append(validFrom).append(validUntil).append(
-            customerGroup).append(channel).append(discounted).append(tiers).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(value)
+                .append(country)
+                .append(validFrom)
+                .append(validUntil)
+                .append(customerGroup)
+                .append(channel)
+                .append(discounted)
+                .append(tiers)
+                .append(custom)
+                .toHashCode();
     }
 
 }

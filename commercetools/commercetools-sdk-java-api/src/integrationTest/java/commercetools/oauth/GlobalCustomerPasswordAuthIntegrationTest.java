@@ -26,12 +26,18 @@ public class GlobalCustomerPasswordAuthIntegrationTest {
     public void execute() {
         String password = "pw-" + CommercetoolsTestUtils.randomString();
 
-        CustomerDraft customerDraft = CustomerDraftBuilder.of().email(
-            "test-email-" + CommercetoolsTestUtils.randomString() + "@test.com").key(
-                CommercetoolsTestUtils.randomKey()).password(password).build();
+        CustomerDraft customerDraft = CustomerDraftBuilder.of()
+                .email("test-email-" + CommercetoolsTestUtils.randomString() + "@test.com")
+                .key(CommercetoolsTestUtils.randomKey())
+                .password(password)
+                .build();
 
-        Customer customer = CommercetoolsTestUtils.getProjectRoot().customers().post(
-            customerDraft).executeBlocking().getBody().getCustomer();
+        Customer customer = CommercetoolsTestUtils.getProjectRoot()
+                .customers()
+                .post(customerDraft)
+                .executeBlocking()
+                .getBody()
+                .getCustomer();
 
         String email = customer.getEmail();
 

@@ -91,14 +91,22 @@ public final class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLin
 
         SetCustomLineItemCustomTypeChangeImpl that = (SetCustomLineItemCustomTypeChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(customLineItem,
-            that.customLineItem).append(nextValue, that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(customLineItem, that.customLineItem)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(customLineItem).append(nextValue).append(
-            previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(customLineItem)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

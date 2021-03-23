@@ -91,14 +91,22 @@ public final class ProductSetPricesActionImpl implements ProductSetPricesAction 
 
         ProductSetPricesActionImpl that = (ProductSetPricesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(prices, that.prices).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(prices, that.prices)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(prices).append(
-            staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(prices)
+                .append(staged)
+                .toHashCode();
     }
 
 }

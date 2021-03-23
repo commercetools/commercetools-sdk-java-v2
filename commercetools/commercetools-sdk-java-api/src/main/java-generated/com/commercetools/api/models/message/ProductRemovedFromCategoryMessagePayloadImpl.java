@@ -65,8 +65,10 @@ public final class ProductRemovedFromCategoryMessagePayloadImpl implements Produ
 
         ProductRemovedFromCategoryMessagePayloadImpl that = (ProductRemovedFromCategoryMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(category, that.category).append(staged,
-            that.staged).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(category, that.category)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

@@ -64,8 +64,10 @@ public final class ShoppingListChangeLineItemQuantityActionImpl implements Shopp
 
         ShoppingListChangeLineItemQuantityActionImpl that = (ShoppingListChangeLineItemQuantityActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(quantity,
-            that.quantity).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

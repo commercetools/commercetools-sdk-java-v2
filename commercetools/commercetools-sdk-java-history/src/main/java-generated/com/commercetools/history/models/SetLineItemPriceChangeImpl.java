@@ -91,14 +91,22 @@ public final class SetLineItemPriceChangeImpl implements SetLineItemPriceChange 
 
         SetLineItemPriceChangeImpl that = (SetLineItemPriceChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(lineItem,
-            that.lineItem).append(nextValue, that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(lineItem, that.lineItem)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(lineItem).append(nextValue).append(
-            previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(lineItem)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

@@ -197,17 +197,32 @@ public final class LineItemImportDraftImpl implements LineItemImportDraft {
 
         LineItemImportDraftImpl that = (LineItemImportDraftImpl) o;
 
-        return new EqualsBuilder().append(product, that.product).append(name, that.name).append(variant,
-            that.variant).append(price, that.price).append(quantity, that.quantity).append(state, that.state).append(
-                supplyChannel, that.supplyChannel).append(distributionChannel, that.distributionChannel).append(taxRate,
-                    that.taxRate).append(shippingDetails, that.shippingDetails).isEquals();
+        return new EqualsBuilder().append(product, that.product)
+                .append(name, that.name)
+                .append(variant, that.variant)
+                .append(price, that.price)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .append(taxRate, that.taxRate)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(product).append(name).append(variant).append(price).append(
-            quantity).append(state).append(supplyChannel).append(distributionChannel).append(taxRate).append(
-                shippingDetails).toHashCode();
+        return new HashCodeBuilder(17, 37).append(product)
+                .append(name)
+                .append(variant)
+                .append(price)
+                .append(quantity)
+                .append(state)
+                .append(supplyChannel)
+                .append(distributionChannel)
+                .append(taxRate)
+                .append(shippingDetails)
+                .toHashCode();
     }
 
 }

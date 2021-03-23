@@ -123,16 +123,28 @@ public final class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNon
 
         DiscountCodeNonApplicableErrorImpl that = (DiscountCodeNonApplicableErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(discountCode,
-            that.discountCode).append(reason, that.reason).append(dicountCodeId, that.dicountCodeId).append(validFrom,
-                that.validFrom).append(validUntil, that.validUntil).append(validityCheckTime,
-                    that.validityCheckTime).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(discountCode, that.discountCode)
+                .append(reason, that.reason)
+                .append(dicountCodeId, that.dicountCodeId)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(validityCheckTime, that.validityCheckTime)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(discountCode).append(reason).append(
-            dicountCodeId).append(validFrom).append(validUntil).append(validityCheckTime).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(discountCode)
+                .append(reason)
+                .append(dicountCodeId)
+                .append(validFrom)
+                .append(validUntil)
+                .append(validityCheckTime)
+                .toHashCode();
     }
 
 }

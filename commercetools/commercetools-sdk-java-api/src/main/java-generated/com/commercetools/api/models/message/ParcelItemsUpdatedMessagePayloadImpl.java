@@ -96,14 +96,22 @@ public final class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUp
 
         ParcelItemsUpdatedMessagePayloadImpl that = (ParcelItemsUpdatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(parcelId, that.parcelId).append(deliveryId,
-            that.deliveryId).append(items, that.items).append(oldItems, that.oldItems).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(parcelId, that.parcelId)
+                .append(deliveryId, that.deliveryId)
+                .append(items, that.items)
+                .append(oldItems, that.oldItems)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(parcelId).append(deliveryId).append(items).append(
-            oldItems).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(parcelId)
+                .append(deliveryId)
+                .append(items)
+                .append(oldItems)
+                .toHashCode();
     }
 
 }

@@ -56,8 +56,9 @@ public final class ExternalOAuthImpl implements ExternalOAuth {
 
         ExternalOAuthImpl that = (ExternalOAuthImpl) o;
 
-        return new EqualsBuilder().append(url, that.url).append(authorizationHeader,
-            that.authorizationHeader).isEquals();
+        return new EqualsBuilder().append(url, that.url)
+                .append(authorizationHeader, that.authorizationHeader)
+                .isEquals();
     }
 
     @Override

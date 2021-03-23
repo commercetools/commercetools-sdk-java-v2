@@ -72,8 +72,10 @@ public final class SearchIndexingConfigurationValuesImpl implements SearchIndexi
 
         SearchIndexingConfigurationValuesImpl that = (SearchIndexingConfigurationValuesImpl) o;
 
-        return new EqualsBuilder().append(status, that.status).append(lastModifiedAt, that.lastModifiedAt).append(
-            lastModifiedBy, that.lastModifiedBy).isEquals();
+        return new EqualsBuilder().append(status, that.status)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .isEquals();
     }
 
     @Override

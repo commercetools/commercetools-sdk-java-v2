@@ -19,11 +19,16 @@ public class ApiClientFixtures {
     }
 
     public static ApiClient createApiClient() {
-        ApiClientDraft apiClientDraft = ApiClientDraftBuilder.of().name(CommercetoolsTestUtils.randomString()).scope(
-            "manage_project:" + CommercetoolsTestUtils.getProjectKey()).build();
+        ApiClientDraft apiClientDraft = ApiClientDraftBuilder.of()
+                .name(CommercetoolsTestUtils.randomString())
+                .scope("manage_project:" + CommercetoolsTestUtils.getProjectKey())
+                .build();
 
-        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot().apiClients().post(
-            apiClientDraft).executeBlocking().getBody();
+        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot()
+                .apiClients()
+                .post(apiClientDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(apiClient);
 
@@ -31,8 +36,12 @@ public class ApiClientFixtures {
     }
 
     public static ApiClient deleteApiClient(final String id) {
-        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot().apiClients().withId(
-            id).delete().executeBlocking().getBody();
+        ApiClient apiClient = CommercetoolsTestUtils.getProjectRoot()
+                .apiClients()
+                .withId(id)
+                .delete()
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(apiClient);
         Assert.assertNotNull(apiClient.getId(), id);

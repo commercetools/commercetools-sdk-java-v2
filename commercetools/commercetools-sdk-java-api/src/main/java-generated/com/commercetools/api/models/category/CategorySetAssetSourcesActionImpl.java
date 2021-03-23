@@ -80,8 +80,11 @@ public final class CategorySetAssetSourcesActionImpl implements CategorySetAsset
 
         CategorySetAssetSourcesActionImpl that = (CategorySetAssetSourcesActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(assetId, that.assetId).append(assetKey,
-            that.assetKey).append(sources, that.sources).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(sources, that.sources)
+                .isEquals();
     }
 
     @Override

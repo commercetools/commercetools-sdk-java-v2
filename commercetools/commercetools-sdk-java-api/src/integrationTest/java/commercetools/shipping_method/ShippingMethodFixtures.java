@@ -35,20 +35,29 @@ public class ShippingMethodFixtures {
     public static ShippingMethod createShippingMethod() {
         TaxCategory taxCategory = TaxCategoryFixtures.createTaxCategory();
         Zone zone = ZoneFixtures.createZone();
-        HighPrecisionMoneyDraft highPrecisionMoney = HighPrecisionMoneyDraftBuilder.of().centAmount(100L).currencyCode(
-            "EUR").preciseAmount(20L).build();
+        HighPrecisionMoneyDraft highPrecisionMoney = HighPrecisionMoneyDraftBuilder.of()
+                .centAmount(100L)
+                .currencyCode("EUR")
+                .preciseAmount(20L)
+                .build();
 
-        ShippingMethodDraft shippingMethodDraft = ShippingMethodDraftBuilder.of().name(
-            CommercetoolsTestUtils.randomString()).key(CommercetoolsTestUtils.randomKey()).description(
-                CommercetoolsTestUtils.randomString()).taxCategory(
-                    TaxCategoryResourceIdentifierBuilder.of().id(taxCategory.getId()).build()).zoneRates(
-                        Arrays.asList(ZoneRateDraftBuilder.of().zone(
-                            ZoneResourceIdentifierBuilder.of().id(zone.getId()).build()).shippingRates(
-                                Arrays.asList(ShippingRateDraftBuilder.of().price(
-                                    highPrecisionMoney).build())).build())).isDefault(false).build();
+        ShippingMethodDraft shippingMethodDraft = ShippingMethodDraftBuilder.of()
+                .name(CommercetoolsTestUtils.randomString())
+                .key(CommercetoolsTestUtils.randomKey())
+                .description(CommercetoolsTestUtils.randomString())
+                .taxCategory(TaxCategoryResourceIdentifierBuilder.of().id(taxCategory.getId()).build())
+                .zoneRates(Arrays.asList(ZoneRateDraftBuilder.of()
+                        .zone(ZoneResourceIdentifierBuilder.of().id(zone.getId()).build())
+                        .shippingRates(Arrays.asList(ShippingRateDraftBuilder.of().price(highPrecisionMoney).build()))
+                        .build()))
+                .isDefault(false)
+                .build();
 
-        ShippingMethod shippingMethod = CommercetoolsTestUtils.getProjectRoot().shippingMethods().post(
-            shippingMethodDraft).executeBlocking().getBody();
+        ShippingMethod shippingMethod = CommercetoolsTestUtils.getProjectRoot()
+                .shippingMethods()
+                .post(shippingMethodDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(shippingMethod);
         Assert.assertEquals(shippingMethodDraft.getKey(), shippingMethod.getKey());
@@ -57,8 +66,13 @@ public class ShippingMethodFixtures {
     }
 
     public static ShippingMethod deleteShippingMethod(final String id, final Long version) {
-        ShippingMethod shippingMethod = CommercetoolsTestUtils.getProjectRoot().shippingMethods().withId(
-            id).delete().withVersion(version).executeBlocking().getBody();
+        ShippingMethod shippingMethod = CommercetoolsTestUtils.getProjectRoot()
+                .shippingMethods()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(shippingMethod);
         Assert.assertEquals(shippingMethod.getId(), id);

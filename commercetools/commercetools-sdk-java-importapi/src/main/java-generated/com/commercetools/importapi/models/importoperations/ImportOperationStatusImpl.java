@@ -84,8 +84,10 @@ public final class ImportOperationStatusImpl implements ImportOperationStatus {
 
         ImportOperationStatusImpl that = (ImportOperationStatusImpl) o;
 
-        return new EqualsBuilder().append(operationId, that.operationId).append(state, that.state).append(errors,
-            that.errors).isEquals();
+        return new EqualsBuilder().append(operationId, that.operationId)
+                .append(state, that.state)
+                .append(errors, that.errors)
+                .isEquals();
     }
 
     @Override

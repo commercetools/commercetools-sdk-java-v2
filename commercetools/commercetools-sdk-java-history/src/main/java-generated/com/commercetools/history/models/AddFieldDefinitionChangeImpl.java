@@ -67,8 +67,10 @@ public final class AddFieldDefinitionChangeImpl implements AddFieldDefinitionCha
 
         AddFieldDefinitionChangeImpl that = (AddFieldDefinitionChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(nextValue,
-            that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override

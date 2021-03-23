@@ -139,15 +139,28 @@ public final class ProductAddVariantActionImpl implements ProductAddVariantActio
 
         ProductAddVariantActionImpl that = (ProductAddVariantActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(sku, that.sku).append(key, that.key).append(
-            prices, that.prices).append(images, that.images).append(attributes, that.attributes).append(staged,
-                that.staged).append(assets, that.assets).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(images, that.images)
+                .append(attributes, that.attributes)
+                .append(staged, that.staged)
+                .append(assets, that.assets)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(sku).append(key).append(prices).append(images).append(
-            attributes).append(staged).append(assets).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(sku)
+                .append(key)
+                .append(prices)
+                .append(images)
+                .append(attributes)
+                .append(staged)
+                .append(assets)
+                .toHashCode();
     }
 
 }

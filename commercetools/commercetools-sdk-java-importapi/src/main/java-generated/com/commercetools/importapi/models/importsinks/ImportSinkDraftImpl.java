@@ -79,8 +79,10 @@ public final class ImportSinkDraftImpl implements ImportSinkDraft {
 
         ImportSinkDraftImpl that = (ImportSinkDraftImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(key, that.key).append(resourceType,
-            that.resourceType).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(key, that.key)
+                .append(resourceType, that.resourceType)
+                .isEquals();
     }
 
     @Override

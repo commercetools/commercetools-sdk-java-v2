@@ -278,18 +278,38 @@ public final class ProductImportImpl implements ProductImport {
 
         ProductImportImpl that = (ProductImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(productType,
-            that.productType).append(slug, that.slug).append(description, that.description).append(categories,
-                that.categories).append(metaTitle, that.metaTitle).append(metaDescription, that.metaDescription).append(
-                    metaKeywords, that.metaKeywords).append(taxCategory, that.taxCategory).append(searchKeywords,
-                        that.searchKeywords).append(state, that.state).append(publish, that.publish).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
+                .append(productType, that.productType)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(productType).append(slug).append(
-            description).append(categories).append(metaTitle).append(metaDescription).append(metaKeywords).append(
-                taxCategory).append(searchKeywords).append(state).append(publish).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(name)
+                .append(productType)
+                .append(slug)
+                .append(description)
+                .append(categories)
+                .append(metaTitle)
+                .append(metaDescription)
+                .append(metaKeywords)
+                .append(taxCategory)
+                .append(searchKeywords)
+                .append(state)
+                .append(publish)
+                .toHashCode();
     }
 
 }

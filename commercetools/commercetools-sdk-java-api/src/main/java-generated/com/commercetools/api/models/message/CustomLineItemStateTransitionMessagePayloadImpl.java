@@ -101,15 +101,24 @@ public final class CustomLineItemStateTransitionMessagePayloadImpl
 
         CustomLineItemStateTransitionMessagePayloadImpl that = (CustomLineItemStateTransitionMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(customLineItemId, that.customLineItemId).append(
-            transitionDate, that.transitionDate).append(quantity, that.quantity).append(fromState,
-                that.fromState).append(toState, that.toState).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(customLineItemId, that.customLineItemId)
+                .append(transitionDate, that.transitionDate)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customLineItemId).append(transitionDate).append(
-            quantity).append(fromState).append(toState).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customLineItemId)
+                .append(transitionDate)
+                .append(quantity)
+                .append(fromState)
+                .append(toState)
+                .toHashCode();
     }
 
 }

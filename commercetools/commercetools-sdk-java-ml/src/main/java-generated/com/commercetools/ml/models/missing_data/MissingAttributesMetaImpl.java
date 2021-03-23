@@ -76,14 +76,18 @@ public final class MissingAttributesMetaImpl implements MissingAttributesMeta {
 
         MissingAttributesMetaImpl that = (MissingAttributesMetaImpl) o;
 
-        return new EqualsBuilder().append(productLevel, that.productLevel).append(variantLevel,
-            that.variantLevel).append(productTypeIds, that.productTypeIds).isEquals();
+        return new EqualsBuilder().append(productLevel, that.productLevel)
+                .append(variantLevel, that.variantLevel)
+                .append(productTypeIds, that.productTypeIds)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productLevel).append(variantLevel).append(
-            productTypeIds).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productLevel)
+                .append(variantLevel)
+                .append(productTypeIds)
+                .toHashCode();
     }
 
 }

@@ -69,8 +69,10 @@ public final class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeEr
 
         DuplicatePriceScopeErrorImpl that = (DuplicatePriceScopeErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(conflictingPrices,
-            that.conflictingPrices).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(conflictingPrices, that.conflictingPrices)
+                .isEquals();
     }
 
     @Override

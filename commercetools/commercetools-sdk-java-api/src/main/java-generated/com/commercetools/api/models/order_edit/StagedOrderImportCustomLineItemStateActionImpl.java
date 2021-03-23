@@ -69,8 +69,10 @@ public final class StagedOrderImportCustomLineItemStateActionImpl
 
         StagedOrderImportCustomLineItemStateActionImpl that = (StagedOrderImportCustomLineItemStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            state, that.state).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

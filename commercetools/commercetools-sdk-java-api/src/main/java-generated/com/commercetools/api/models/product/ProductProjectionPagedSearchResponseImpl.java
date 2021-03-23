@@ -107,14 +107,24 @@ public final class ProductProjectionPagedSearchResponseImpl implements ProductPr
 
         ProductProjectionPagedSearchResponseImpl that = (ProductProjectionPagedSearchResponseImpl) o;
 
-        return new EqualsBuilder().append(limit, that.limit).append(count, that.count).append(total, that.total).append(
-            offset, that.offset).append(results, that.results).append(facets, that.facets).isEquals();
+        return new EqualsBuilder().append(limit, that.limit)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .append(facets, that.facets)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(limit).append(count).append(total).append(offset).append(
-            results).append(facets).toHashCode();
+        return new HashCodeBuilder(17, 37).append(limit)
+                .append(count)
+                .append(total)
+                .append(offset)
+                .append(results)
+                .append(facets)
+                .toHashCode();
     }
 
 }

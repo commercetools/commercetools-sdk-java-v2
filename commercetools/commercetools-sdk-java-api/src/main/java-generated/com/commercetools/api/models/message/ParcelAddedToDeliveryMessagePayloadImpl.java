@@ -65,8 +65,10 @@ public final class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAdde
 
         ParcelAddedToDeliveryMessagePayloadImpl that = (ParcelAddedToDeliveryMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(delivery, that.delivery).append(parcel,
-            that.parcel).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(delivery, that.delivery)
+                .append(parcel, that.parcel)
+                .isEquals();
     }
 
     @Override

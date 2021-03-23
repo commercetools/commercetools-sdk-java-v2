@@ -68,8 +68,10 @@ public final class OrderExcerptImpl implements OrderExcerpt {
 
         OrderExcerptImpl that = (OrderExcerptImpl) o;
 
-        return new EqualsBuilder().append(totalPrice, that.totalPrice).append(taxedPrice, that.taxedPrice).append(
-            version, that.version).isEquals();
+        return new EqualsBuilder().append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(version, that.version)
+                .isEquals();
     }
 
     @Override

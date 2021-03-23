@@ -79,14 +79,20 @@ public final class ProductDiscountMatchQueryImpl implements ProductDiscountMatch
 
         ProductDiscountMatchQueryImpl that = (ProductDiscountMatchQueryImpl) o;
 
-        return new EqualsBuilder().append(productId, that.productId).append(variantId, that.variantId).append(staged,
-            that.staged).append(price, that.price).isEquals();
+        return new EqualsBuilder().append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(staged, that.staged)
+                .append(price, that.price)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productId).append(variantId).append(staged).append(
-            price).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productId)
+                .append(variantId)
+                .append(staged)
+                .append(price)
+                .toHashCode();
     }
 
 }

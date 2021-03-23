@@ -135,17 +135,30 @@ public final class CustomLineItemReturnItemImpl implements CustomLineItemReturnI
 
         CustomLineItemReturnItemImpl that = (CustomLineItemReturnItemImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(quantity, that.quantity).append(type, that.type).append(
-            comment, that.comment).append(shipmentState, that.shipmentState).append(paymentState,
-                that.paymentState).append(lastModifiedAt, that.lastModifiedAt).append(createdAt, that.createdAt).append(
-                    customLineItemId, that.customLineItemId).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(quantity, that.quantity)
+                .append(type, that.type)
+                .append(comment, that.comment)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(createdAt, that.createdAt)
+                .append(customLineItemId, that.customLineItemId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(quantity).append(type).append(comment).append(
-            shipmentState).append(paymentState).append(lastModifiedAt).append(createdAt).append(
-                customLineItemId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(quantity)
+                .append(type)
+                .append(comment)
+                .append(shipmentState)
+                .append(paymentState)
+                .append(lastModifiedAt)
+                .append(createdAt)
+                .append(customLineItemId)
+                .toHashCode();
     }
 
 }

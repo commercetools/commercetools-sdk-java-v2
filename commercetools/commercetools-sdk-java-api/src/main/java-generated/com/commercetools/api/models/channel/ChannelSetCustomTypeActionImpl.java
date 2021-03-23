@@ -65,8 +65,10 @@ public final class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTyp
 
         ChannelSetCustomTypeActionImpl that = (ChannelSetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

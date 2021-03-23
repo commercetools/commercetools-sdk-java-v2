@@ -80,14 +80,20 @@ public final class CreatedByImpl implements CreatedBy {
 
         CreatedByImpl that = (CreatedByImpl) o;
 
-        return new EqualsBuilder().append(clientId, that.clientId).append(externalUserId, that.externalUserId).append(
-            customer, that.customer).append(anonymousId, that.anonymousId).isEquals();
+        return new EqualsBuilder().append(clientId, that.clientId)
+                .append(externalUserId, that.externalUserId)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(clientId).append(externalUserId).append(customer).append(
-            anonymousId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(clientId)
+                .append(externalUserId)
+                .append(customer)
+                .append(anonymousId)
+                .toHashCode();
     }
 
 }

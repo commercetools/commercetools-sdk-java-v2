@@ -52,8 +52,9 @@ public final class MyCartRecalculateActionImpl implements MyCartRecalculateActio
 
         MyCartRecalculateActionImpl that = (MyCartRecalculateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(updateProductData,
-            that.updateProductData).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(updateProductData, that.updateProductData)
+                .isEquals();
     }
 
     @Override

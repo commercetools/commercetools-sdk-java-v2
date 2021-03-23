@@ -95,14 +95,22 @@ public final class ProductProjectionPagedQueryResponseImpl implements ProductPro
 
         ProductProjectionPagedQueryResponseImpl that = (ProductProjectionPagedQueryResponseImpl) o;
 
-        return new EqualsBuilder().append(limit, that.limit).append(count, that.count).append(total, that.total).append(
-            offset, that.offset).append(results, that.results).isEquals();
+        return new EqualsBuilder().append(limit, that.limit)
+                .append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(limit).append(count).append(total).append(offset).append(
-            results).toHashCode();
+        return new HashCodeBuilder(17, 37).append(limit)
+                .append(count)
+                .append(total)
+                .append(offset)
+                .append(results)
+                .toHashCode();
     }
 
 }

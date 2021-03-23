@@ -399,28 +399,58 @@ public final class OrderImportImpl implements OrderImport {
 
         OrderImportImpl that = (OrderImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(orderNumber, that.orderNumber).append(customer,
-            that.customer).append(customerEmail, that.customerEmail).append(lineItems, that.lineItems).append(
-                customLineItems, that.customLineItems).append(totalPrice, that.totalPrice).append(taxedPrice,
-                    that.taxedPrice).append(shippingAddress, that.shippingAddress).append(billingAddress,
-                        that.billingAddress).append(customerGroup, that.customerGroup).append(country,
-                            that.country).append(orderState, that.orderState).append(shipmentState,
-                                that.shipmentState).append(paymentState, that.paymentState).append(shippingInfo,
-                                    that.shippingInfo).append(completedAt, that.completedAt).append(custom,
-                                        that.custom).append(inventoryMode, that.inventoryMode).append(taxRoundingMode,
-                                            that.taxRoundingMode).append(taxCalculationMode,
-                                                that.taxCalculationMode).append(origin, that.origin).append(
-                                                    itemShippingAddresses, that.itemShippingAddresses).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(orderNumber, that.orderNumber)
+                .append(customer, that.customer)
+                .append(customerEmail, that.customerEmail)
+                .append(lineItems, that.lineItems)
+                .append(customLineItems, that.customLineItems)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(customerGroup, that.customerGroup)
+                .append(country, that.country)
+                .append(orderState, that.orderState)
+                .append(shipmentState, that.shipmentState)
+                .append(paymentState, that.paymentState)
+                .append(shippingInfo, that.shippingInfo)
+                .append(completedAt, that.completedAt)
+                .append(custom, that.custom)
+                .append(inventoryMode, that.inventoryMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .append(origin, that.origin)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(orderNumber).append(customer).append(
-            customerEmail).append(lineItems).append(customLineItems).append(totalPrice).append(taxedPrice).append(
-                shippingAddress).append(billingAddress).append(customerGroup).append(country).append(orderState).append(
-                    shipmentState).append(paymentState).append(shippingInfo).append(completedAt).append(custom).append(
-                        inventoryMode).append(taxRoundingMode).append(taxCalculationMode).append(origin).append(
-                            itemShippingAddresses).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(orderNumber)
+                .append(customer)
+                .append(customerEmail)
+                .append(lineItems)
+                .append(customLineItems)
+                .append(totalPrice)
+                .append(taxedPrice)
+                .append(shippingAddress)
+                .append(billingAddress)
+                .append(customerGroup)
+                .append(country)
+                .append(orderState)
+                .append(shipmentState)
+                .append(paymentState)
+                .append(shippingInfo)
+                .append(completedAt)
+                .append(custom)
+                .append(inventoryMode)
+                .append(taxRoundingMode)
+                .append(taxCalculationMode)
+                .append(origin)
+                .append(itemShippingAddresses)
+                .toHashCode();
     }
 
 }

@@ -75,14 +75,20 @@ public final class SnsDestinationImpl implements SnsDestination {
 
         SnsDestinationImpl that = (SnsDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(accessKey, that.accessKey).append(accessSecret,
-            that.accessSecret).append(topicArn, that.topicArn).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(accessKey, that.accessKey)
+                .append(accessSecret, that.accessSecret)
+                .append(topicArn, that.topicArn)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(accessKey).append(accessSecret).append(
-            topicArn).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(accessKey)
+                .append(accessSecret)
+                .append(topicArn)
+                .toHashCode();
     }
 
 }

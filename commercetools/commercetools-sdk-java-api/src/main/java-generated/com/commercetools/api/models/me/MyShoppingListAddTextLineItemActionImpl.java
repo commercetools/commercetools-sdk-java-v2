@@ -101,15 +101,24 @@ public final class MyShoppingListAddTextLineItemActionImpl implements MyShopping
 
         MyShoppingListAddTextLineItemActionImpl that = (MyShoppingListAddTextLineItemActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).append(description,
-            that.description).append(quantity, that.quantity).append(addedAt, that.addedAt).append(custom,
-                that.custom).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(quantity, that.quantity)
+                .append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(name).append(description).append(quantity).append(
-            addedAt).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(name)
+                .append(description)
+                .append(quantity)
+                .append(addedAt)
+                .append(custom)
+                .toHashCode();
     }
 
 }

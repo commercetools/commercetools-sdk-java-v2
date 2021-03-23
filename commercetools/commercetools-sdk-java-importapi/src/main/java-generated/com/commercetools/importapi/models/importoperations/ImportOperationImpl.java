@@ -204,18 +204,34 @@ public final class ImportOperationImpl implements ImportOperation {
 
         ImportOperationImpl that = (ImportOperationImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(importSinkKey, that.importSinkKey).append(
-            resourceKey, that.resourceKey).append(id, that.id).append(state, that.state).append(resourceVersion,
-                that.resourceVersion).append(retryCount, that.retryCount).append(errors, that.errors).append(createdAt,
-                    that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(expiresAt,
-                        that.expiresAt).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(importSinkKey, that.importSinkKey)
+                .append(resourceKey, that.resourceKey)
+                .append(id, that.id)
+                .append(state, that.state)
+                .append(resourceVersion, that.resourceVersion)
+                .append(retryCount, that.retryCount)
+                .append(errors, that.errors)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(expiresAt, that.expiresAt)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(version).append(importSinkKey).append(resourceKey).append(id).append(
-            state).append(resourceVersion).append(retryCount).append(errors).append(createdAt).append(
-                lastModifiedAt).append(expiresAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(version)
+                .append(importSinkKey)
+                .append(resourceKey)
+                .append(id)
+                .append(state)
+                .append(resourceVersion)
+                .append(retryCount)
+                .append(errors)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(expiresAt)
+                .toHashCode();
     }
 
 }

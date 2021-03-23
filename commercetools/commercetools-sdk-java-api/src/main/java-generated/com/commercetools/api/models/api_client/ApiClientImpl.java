@@ -133,15 +133,26 @@ public final class ApiClientImpl implements ApiClient {
 
         ApiClientImpl that = (ApiClientImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).append(scope, that.scope).append(
-            createdAt, that.createdAt).append(lastUsedAt, that.lastUsedAt).append(deleteAt, that.deleteAt).append(
-                secret, that.secret).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(name, that.name)
+                .append(scope, that.scope)
+                .append(createdAt, that.createdAt)
+                .append(lastUsedAt, that.lastUsedAt)
+                .append(deleteAt, that.deleteAt)
+                .append(secret, that.secret)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(name).append(scope).append(createdAt).append(
-            lastUsedAt).append(deleteAt).append(secret).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(name)
+                .append(scope)
+                .append(createdAt)
+                .append(lastUsedAt)
+                .append(deleteAt)
+                .append(secret)
+                .toHashCode();
     }
 
 }

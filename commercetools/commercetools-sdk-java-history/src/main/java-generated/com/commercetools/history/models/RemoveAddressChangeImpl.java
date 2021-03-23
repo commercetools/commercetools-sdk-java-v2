@@ -67,8 +67,10 @@ public final class RemoveAddressChangeImpl implements RemoveAddressChange {
 
         RemoveAddressChangeImpl that = (RemoveAddressChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(previousValue,
-            that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override

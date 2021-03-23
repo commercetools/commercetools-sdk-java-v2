@@ -68,8 +68,10 @@ public final class ProductDeletedMessagePayloadImpl implements ProductDeletedMes
 
         ProductDeletedMessagePayloadImpl that = (ProductDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(removedImageUrls, that.removedImageUrls).append(
-            currentProjection, that.currentProjection).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(removedImageUrls, that.removedImageUrls)
+                .append(currentProjection, that.currentProjection)
+                .isEquals();
     }
 
     @Override

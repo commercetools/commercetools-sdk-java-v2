@@ -64,8 +64,10 @@ public final class CustomerRemoveShippingAddressIdActionImpl implements Customer
 
         CustomerRemoveShippingAddressIdActionImpl that = (CustomerRemoveShippingAddressIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(addressId, that.addressId).append(addressKey,
-            that.addressKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(addressKey, that.addressKey)
+                .isEquals();
     }
 
     @Override

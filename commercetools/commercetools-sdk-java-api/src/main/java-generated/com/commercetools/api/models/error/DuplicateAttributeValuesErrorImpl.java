@@ -68,8 +68,10 @@ public final class DuplicateAttributeValuesErrorImpl implements DuplicateAttribu
 
         DuplicateAttributeValuesErrorImpl that = (DuplicateAttributeValuesErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(attributes,
-            that.attributes).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(attributes, that.attributes)
+                .isEquals();
     }
 
     @Override

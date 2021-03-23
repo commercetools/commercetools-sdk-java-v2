@@ -33,8 +33,10 @@ public class MiddlewareTest {
 
         AtomicInteger count = new AtomicInteger();
         ByProjectKeyRequestBuilder b = ApiFactory.createForProject(projectKey,
-            ClientCredentials.of().withClientId(CommercetoolsTestUtils.getClientId()).withClientSecret(
-                CommercetoolsTestUtils.getClientSecret()).build(),
+            ClientCredentials.of()
+                    .withClientId(CommercetoolsTestUtils.getClientId())
+                    .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                    .build(),
             ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(),
             Lists.newArrayList((request, next) -> {
                 count.getAndIncrement();
@@ -42,16 +44,21 @@ public class MiddlewareTest {
             }, new RetryMiddleware(3, singletonList(404))));
 
         Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(() -> {
-            Category category = b.categories().withId(
-                "fdbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3").get().executeBlocking().getBody();
+            Category category = b.categories()
+                    .withId("fdbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")
+                    .get()
+                    .executeBlocking()
+                    .getBody();
         });
         Assertions.assertThat(count.get()).isEqualTo(4);
     }
 
     @Test
     public void testUnauthorizedToken() throws ExecutionException, InterruptedException {
-        ClientCredentials credentials = ClientCredentials.of().withClientId(
-            CommercetoolsTestUtils.getClientId()).withClientSecret(CommercetoolsTestUtils.getClientSecret()).build();
+        ClientCredentials credentials = ClientCredentials.of()
+                .withClientId(CommercetoolsTestUtils.getClientId())
+                .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                .build();
 
         VrapHttpClient httpClient = HttpClientSupplier.of().get();
         ApiHttpClient client = ClientFactory.create(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(), new VrapHttpClient() {
@@ -61,8 +68,8 @@ public class MiddlewareTest {
             public CompletableFuture<ApiHttpResponse<byte[]>> execute(ApiHttpRequest request) {
                 if (firstCall) {
                     firstCall = false;
-                    return CompletableFuture.completedFuture(
-                        new ApiHttpResponse<>(401, new ApiHttpHeaders(), "".getBytes()));
+                    return CompletableFuture
+                            .completedFuture(new ApiHttpResponse<>(401, new ApiHttpHeaders(), "".getBytes()));
                 }
                 return httpClient.execute(request);
             }

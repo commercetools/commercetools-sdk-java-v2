@@ -145,16 +145,28 @@ public final class SimilarProductSearchRequestImpl implements SimilarProductSear
 
         SimilarProductSearchRequestImpl that = (SimilarProductSearchRequestImpl) o;
 
-        return new EqualsBuilder().append(limit, that.limit).append(offset, that.offset).append(language,
-            that.language).append(currencyCode, that.currencyCode).append(similarityMeasures,
-                that.similarityMeasures).append(productSetSelectors, that.productSetSelectors).append(confidenceMin,
-                    that.confidenceMin).append(confidenceMax, that.confidenceMax).isEquals();
+        return new EqualsBuilder().append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(language, that.language)
+                .append(currencyCode, that.currencyCode)
+                .append(similarityMeasures, that.similarityMeasures)
+                .append(productSetSelectors, that.productSetSelectors)
+                .append(confidenceMin, that.confidenceMin)
+                .append(confidenceMax, that.confidenceMax)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(limit).append(offset).append(language).append(currencyCode).append(
-            similarityMeasures).append(productSetSelectors).append(confidenceMin).append(confidenceMax).toHashCode();
+        return new HashCodeBuilder(17, 37).append(limit)
+                .append(offset)
+                .append(language)
+                .append(currencyCode)
+                .append(similarityMeasures)
+                .append(productSetSelectors)
+                .append(confidenceMin)
+                .append(confidenceMax)
+                .toHashCode();
     }
 
 }

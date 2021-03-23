@@ -88,14 +88,22 @@ public final class ProductSetProductPriceCustomTypeActionImpl implements Product
 
         ProductSetProductPriceCustomTypeActionImpl that = (ProductSetProductPriceCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(priceId, that.priceId).append(staged,
-            that.staged).append(type, that.type).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(priceId).append(staged).append(type).append(
-            fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(priceId)
+                .append(staged)
+                .append(type)
+                .append(fields)
+                .toHashCode();
     }
 
 }

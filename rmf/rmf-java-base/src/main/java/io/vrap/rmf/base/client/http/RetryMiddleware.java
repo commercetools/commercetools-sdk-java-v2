@@ -44,14 +44,17 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
     }
 
     public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, List<Integer> statusCodes) {
-        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = new RetryPolicy<ApiHttpResponse<byte[]>>().handleIf(
-            (response, throwable) -> {
-                if (throwable instanceof ApiHttpException) {
-                    return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
-                }
-                return statusCodes.contains(response.getStatusCode());
-            }).withBackoff(delay, maxDelay, ChronoUnit.MILLIS).withJitter(0.25).onRetry(
-                event -> logger.info("Retry #" + event.getAttemptCount())).withMaxRetries(maxRetries);
+        RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = new RetryPolicy<ApiHttpResponse<byte[]>>()
+                .handleIf((response, throwable) -> {
+                    if (throwable instanceof ApiHttpException) {
+                        return statusCodes.contains(((ApiHttpException) throwable).getStatusCode());
+                    }
+                    return statusCodes.contains(response.getStatusCode());
+                })
+                .withBackoff(delay, maxDelay, ChronoUnit.MILLIS)
+                .withJitter(0.25)
+                .onRetry(event -> logger.info("Retry #" + event.getAttemptCount()))
+                .withMaxRetries(maxRetries);
         this.failsafeExecutor = Failsafe.with(retryPolicy);
     }
 

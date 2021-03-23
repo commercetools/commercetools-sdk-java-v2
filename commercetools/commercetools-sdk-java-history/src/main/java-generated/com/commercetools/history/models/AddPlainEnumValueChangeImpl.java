@@ -82,14 +82,20 @@ public final class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChang
 
         AddPlainEnumValueChangeImpl that = (AddPlainEnumValueChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(attributeName,
-            that.attributeName).append(nextValue, that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(attributeName, that.attributeName)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(attributeName).append(
-            nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(attributeName)
+                .append(nextValue)
+                .toHashCode();
     }
 
 }

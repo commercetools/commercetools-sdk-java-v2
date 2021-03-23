@@ -77,8 +77,11 @@ public final class OrderEditSetDeliveryAddressCustomFieldActionImpl
 
         OrderEditSetDeliveryAddressCustomFieldActionImpl that = (OrderEditSetDeliveryAddressCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(deliveryId, that.deliveryId).append(type,
-            that.type).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

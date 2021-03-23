@@ -21,8 +21,8 @@ public class TestBase {
         ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build(), tokenUrl, ml_host);
 
     public static String requireEnvVar(String varName) {
-        return Optional.ofNullable(System.getenv(varName)).orElseThrow(
-            () -> new RuntimeException("Cannot find environment variable '" + varName + "'"));
+        return Optional.ofNullable(System.getenv(varName))
+                .orElseThrow(() -> new RuntimeException("Cannot find environment variable '" + varName + "'"));
     }
 
 }

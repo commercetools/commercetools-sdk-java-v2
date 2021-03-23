@@ -64,8 +64,10 @@ public final class EditPreviewFailedErrorImpl implements EditPreviewFailedError 
 
         EditPreviewFailedErrorImpl that = (EditPreviewFailedErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(result,
-            that.result).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(result, that.result)
+                .isEquals();
     }
 
     @Override

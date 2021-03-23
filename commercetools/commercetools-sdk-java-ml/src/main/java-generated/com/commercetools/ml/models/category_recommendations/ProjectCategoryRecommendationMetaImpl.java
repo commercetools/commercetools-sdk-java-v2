@@ -81,14 +81,18 @@ public final class ProjectCategoryRecommendationMetaImpl implements ProjectCateg
 
         ProjectCategoryRecommendationMetaImpl that = (ProjectCategoryRecommendationMetaImpl) o;
 
-        return new EqualsBuilder().append(productName, that.productName).append(productImageUrl,
-            that.productImageUrl).append(generalCategoryNames, that.generalCategoryNames).isEquals();
+        return new EqualsBuilder().append(productName, that.productName)
+                .append(productImageUrl, that.productImageUrl)
+                .append(generalCategoryNames, that.generalCategoryNames)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productName).append(productImageUrl).append(
-            generalCategoryNames).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productName)
+                .append(productImageUrl)
+                .append(generalCategoryNames)
+                .toHashCode();
     }
 
 }

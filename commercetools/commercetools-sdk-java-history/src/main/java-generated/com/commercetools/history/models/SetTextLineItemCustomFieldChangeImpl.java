@@ -114,15 +114,26 @@ public final class SetTextLineItemCustomFieldChangeImpl implements SetTextLineIt
 
         SetTextLineItemCustomFieldChangeImpl that = (SetTextLineItemCustomFieldChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(name, that.name).append(
-            customTypeId, that.customTypeId).append(textLineItem, that.textLineItem).append(nextValue,
-                that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(name, that.name)
+                .append(customTypeId, that.customTypeId)
+                .append(textLineItem, that.textLineItem)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(name).append(customTypeId).append(
-            textLineItem).append(nextValue).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(name)
+                .append(customTypeId)
+                .append(textLineItem)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

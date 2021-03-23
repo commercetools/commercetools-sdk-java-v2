@@ -83,8 +83,11 @@ public final class TaxCategoryDraftImpl implements TaxCategoryDraft {
 
         TaxCategoryDraftImpl that = (TaxCategoryDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(description, that.description).append(rates,
-            that.rates).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(description, that.description)
+                .append(rates, that.rates)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override

@@ -78,8 +78,11 @@ public final class ProductSetAttributeInAllVariantsActionImpl implements Product
 
         ProductSetAttributeInAllVariantsActionImpl that = (ProductSetAttributeInAllVariantsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).append(value, that.value).append(
-            staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

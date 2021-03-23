@@ -75,8 +75,11 @@ public final class StagedOrderSetLineItemCustomFieldActionImpl implements Staged
 
         StagedOrderSetLineItemCustomFieldActionImpl that = (StagedOrderSetLineItemCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(name,
-            that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

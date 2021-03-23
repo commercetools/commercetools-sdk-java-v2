@@ -120,8 +120,8 @@ public class ApiHttpRequestTest {
     }
 
     public void testImmutableGetHeaders() {
-        ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, URI.create("/test"), null, null).withHeader(
-            "foo", "foo");
+        ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.POST, URI.create("/test"), null, null)
+                .withHeader("foo", "foo");
 
         request.getHeaders().addHeader("foo", "bar");
 

@@ -215,19 +215,38 @@ public final class CartDiscountDraftImpl implements CartDiscountDraft {
 
         CartDiscountDraftImpl that = (CartDiscountDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(key, that.key).append(description,
-            that.description).append(value, that.value).append(cartPredicate, that.cartPredicate).append(target,
-                that.target).append(sortOrder, that.sortOrder).append(isActive, that.isActive).append(validFrom,
-                    that.validFrom).append(validUntil, that.validUntil).append(requiresDiscountCode,
-                        that.requiresDiscountCode).append(stackingMode, that.stackingMode).append(custom,
-                            that.custom).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(cartPredicate, that.cartPredicate)
+                .append(target, that.target)
+                .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(requiresDiscountCode, that.requiresDiscountCode)
+                .append(stackingMode, that.stackingMode)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(key).append(description).append(value).append(
-            cartPredicate).append(target).append(sortOrder).append(isActive).append(validFrom).append(
-                validUntil).append(requiresDiscountCode).append(stackingMode).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(key)
+                .append(description)
+                .append(value)
+                .append(cartPredicate)
+                .append(target)
+                .append(sortOrder)
+                .append(isActive)
+                .append(validFrom)
+                .append(validUntil)
+                .append(requiresDiscountCode)
+                .append(stackingMode)
+                .append(custom)
+                .toHashCode();
     }
 
 }

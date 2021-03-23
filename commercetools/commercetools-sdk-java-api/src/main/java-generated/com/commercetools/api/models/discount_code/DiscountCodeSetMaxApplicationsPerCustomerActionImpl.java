@@ -57,8 +57,9 @@ public final class DiscountCodeSetMaxApplicationsPerCustomerActionImpl
 
         DiscountCodeSetMaxApplicationsPerCustomerActionImpl that = (DiscountCodeSetMaxApplicationsPerCustomerActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(maxApplicationsPerCustomer,
-            that.maxApplicationsPerCustomer).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(maxApplicationsPerCustomer, that.maxApplicationsPerCustomer)
+                .isEquals();
     }
 
     @Override

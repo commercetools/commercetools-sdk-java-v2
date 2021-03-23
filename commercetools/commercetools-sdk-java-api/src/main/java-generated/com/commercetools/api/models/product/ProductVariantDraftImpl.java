@@ -119,14 +119,24 @@ public final class ProductVariantDraftImpl implements ProductVariantDraft {
 
         ProductVariantDraftImpl that = (ProductVariantDraftImpl) o;
 
-        return new EqualsBuilder().append(sku, that.sku).append(key, that.key).append(prices, that.prices).append(
-            attributes, that.attributes).append(images, that.images).append(assets, that.assets).isEquals();
+        return new EqualsBuilder().append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
+                .append(assets, that.assets)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(sku).append(key).append(prices).append(attributes).append(
-            images).append(assets).toHashCode();
+        return new HashCodeBuilder(17, 37).append(sku)
+                .append(key)
+                .append(prices)
+                .append(attributes)
+                .append(images)
+                .append(assets)
+                .toHashCode();
     }
 
 }

@@ -82,8 +82,10 @@ public final class PaymentMethodInfoImpl implements PaymentMethodInfo {
 
         PaymentMethodInfoImpl that = (PaymentMethodInfoImpl) o;
 
-        return new EqualsBuilder().append(paymentInterface, that.paymentInterface).append(method, that.method).append(
-            name, that.name).isEquals();
+        return new EqualsBuilder().append(paymentInterface, that.paymentInterface)
+                .append(method, that.method)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

@@ -79,14 +79,20 @@ public final class MoneyImpl implements Money {
 
         MoneyImpl that = (MoneyImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(fractionDigits, that.fractionDigits).append(
-            centAmount, that.centAmount).append(currencyCode, that.currencyCode).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(fractionDigits).append(centAmount).append(
-            currencyCode).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(fractionDigits)
+                .append(centAmount)
+                .append(currencyCode)
+                .toHashCode();
     }
 
 }

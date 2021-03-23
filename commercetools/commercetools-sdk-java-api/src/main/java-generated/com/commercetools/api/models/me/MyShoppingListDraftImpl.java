@@ -120,15 +120,24 @@ public final class MyShoppingListDraftImpl implements MyShoppingListDraft {
 
         MyShoppingListDraftImpl that = (MyShoppingListDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(description, that.description).append(lineItems,
-            that.lineItems).append(textLineItems, that.textLineItems).append(custom, that.custom).append(
-                deleteDaysAfterLastModification, that.deleteDaysAfterLastModification).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(description, that.description)
+                .append(lineItems, that.lineItems)
+                .append(textLineItems, that.textLineItems)
+                .append(custom, that.custom)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(description).append(lineItems).append(
-            textLineItems).append(custom).append(deleteDaysAfterLastModification).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(description)
+                .append(lineItems)
+                .append(textLineItems)
+                .append(custom)
+                .append(deleteDaysAfterLastModification)
+                .toHashCode();
     }
 
 }

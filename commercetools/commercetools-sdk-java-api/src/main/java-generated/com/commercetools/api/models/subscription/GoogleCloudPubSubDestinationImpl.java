@@ -64,8 +64,10 @@ public final class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSub
 
         GoogleCloudPubSubDestinationImpl that = (GoogleCloudPubSubDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(projectId, that.projectId).append(topic,
-            that.topic).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(projectId, that.projectId)
+                .append(topic, that.topic)
+                .isEquals();
     }
 
     @Override

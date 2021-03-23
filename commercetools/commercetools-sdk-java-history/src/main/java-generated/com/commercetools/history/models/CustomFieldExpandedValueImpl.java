@@ -74,8 +74,10 @@ public final class CustomFieldExpandedValueImpl implements CustomFieldExpandedVa
 
         CustomFieldExpandedValueImpl that = (CustomFieldExpandedValueImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(value, that.value).append(label,
-            that.label).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(value, that.value)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

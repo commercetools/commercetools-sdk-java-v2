@@ -68,8 +68,10 @@ public final class OrderImportLineItemStateActionImpl implements OrderImportLine
 
         OrderImportLineItemStateActionImpl that = (OrderImportLineItemStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(state,
-            that.state).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

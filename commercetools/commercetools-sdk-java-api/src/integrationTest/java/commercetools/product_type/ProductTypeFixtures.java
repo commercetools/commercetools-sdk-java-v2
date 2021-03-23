@@ -26,18 +26,29 @@ public class ProductTypeFixtures {
 
     public static ProductType createProductType() {
 
-        AttributeDefinitionDraft attributeDefinitionDraft = AttributeDefinitionDraftBuilder.of().type(
-            AttributeTextTypeBuilder.of().build()).name(CommercetoolsTestUtils.randomString()).label(
-                CommercetoolsTestUtils.randomLocalizedString()).isRequired(true).attributeConstraint(
-                    AttributeConstraintEnum.NONE).inputTip(CommercetoolsTestUtils.randomLocalizedString()).inputHint(
-                        TextInputHint.SINGLE_LINE).isSearchable(true).build();
+        AttributeDefinitionDraft attributeDefinitionDraft = AttributeDefinitionDraftBuilder.of()
+                .type(AttributeTextTypeBuilder.of().build())
+                .name(CommercetoolsTestUtils.randomString())
+                .label(CommercetoolsTestUtils.randomLocalizedString())
+                .isRequired(true)
+                .attributeConstraint(AttributeConstraintEnum.NONE)
+                .inputTip(CommercetoolsTestUtils.randomLocalizedString())
+                .inputHint(TextInputHint.SINGLE_LINE)
+                .isSearchable(true)
+                .build();
 
-        ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).name(
-            CommercetoolsTestUtils.randomString()).description(CommercetoolsTestUtils.randomString()).attributes(
-                Arrays.asList(attributeDefinitionDraft)).build();
+        ProductTypeDraft productTypeDraft = ProductTypeDraftBuilder.of()
+                .key(CommercetoolsTestUtils.randomKey())
+                .name(CommercetoolsTestUtils.randomString())
+                .description(CommercetoolsTestUtils.randomString())
+                .attributes(Arrays.asList(attributeDefinitionDraft))
+                .build();
 
-        ProductType productType = CommercetoolsTestUtils.getProjectRoot().productTypes().post(
-            productTypeDraft).executeBlocking().getBody();
+        ProductType productType = CommercetoolsTestUtils.getProjectRoot()
+                .productTypes()
+                .post(productTypeDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(productType);
         Assert.assertEquals(productType.getName(), productTypeDraft.getName());
@@ -47,8 +58,13 @@ public class ProductTypeFixtures {
     }
 
     public static ProductType deleteProductType(final String id, final Long version) {
-        ProductType deletedProductType = CommercetoolsTestUtils.getProjectRoot().productTypes().withId(
-            id).delete().withVersion(version).executeBlocking().getBody();
+        ProductType deletedProductType = CommercetoolsTestUtils.getProjectRoot()
+                .productTypes()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(deletedProductType);
         Assert.assertEquals(deletedProductType.getId(), id);

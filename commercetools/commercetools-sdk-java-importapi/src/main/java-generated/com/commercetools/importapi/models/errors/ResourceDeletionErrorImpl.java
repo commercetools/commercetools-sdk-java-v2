@@ -67,8 +67,10 @@ public final class ResourceDeletionErrorImpl implements ResourceDeletionError {
 
         ResourceDeletionErrorImpl that = (ResourceDeletionErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(resource,
-            that.resource).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(resource, that.resource)
+                .isEquals();
     }
 
     @Override

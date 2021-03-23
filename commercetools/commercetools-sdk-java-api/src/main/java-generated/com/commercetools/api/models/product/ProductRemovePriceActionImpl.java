@@ -67,8 +67,10 @@ public final class ProductRemovePriceActionImpl implements ProductRemovePriceAct
 
         ProductRemovePriceActionImpl that = (ProductRemovePriceActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(priceId, that.priceId).append(staged,
-            that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

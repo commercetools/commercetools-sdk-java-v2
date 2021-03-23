@@ -64,8 +64,10 @@ public final class ProductTypeAddPlainEnumValueActionImpl implements ProductType
 
         ProductTypeAddPlainEnumValueActionImpl that = (ProductTypeAddPlainEnumValueActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(value,
-            that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

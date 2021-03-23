@@ -54,8 +54,9 @@ public final class StoreRemoveDistributionChannelActionImpl implements StoreRemo
 
         StoreRemoveDistributionChannelActionImpl that = (StoreRemoveDistributionChannelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(distributionChannel,
-            that.distributionChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(distributionChannel, that.distributionChannel)
+                .isEquals();
     }
 
     @Override

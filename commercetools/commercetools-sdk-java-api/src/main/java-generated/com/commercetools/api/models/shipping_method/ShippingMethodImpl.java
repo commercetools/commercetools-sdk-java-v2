@@ -229,21 +229,42 @@ public final class ShippingMethodImpl implements ShippingMethod {
 
         ShippingMethodImpl that = (ShippingMethodImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(key, that.key).append(name,
-                    that.name).append(description, that.description).append(localizedDescription,
-                        that.localizedDescription).append(taxCategory, that.taxCategory).append(zoneRates,
-                            that.zoneRates).append(isDefault, that.isDefault).append(predicate, that.predicate).append(
-                                custom, that.custom).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(localizedDescription, that.localizedDescription)
+                .append(taxCategory, that.taxCategory)
+                .append(zoneRates, that.zoneRates)
+                .append(isDefault, that.isDefault)
+                .append(predicate, that.predicate)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(key).append(name).append(description).append(
-                localizedDescription).append(taxCategory).append(zoneRates).append(isDefault).append(predicate).append(
-                    custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(key)
+                .append(name)
+                .append(description)
+                .append(localizedDescription)
+                .append(taxCategory)
+                .append(zoneRates)
+                .append(isDefault)
+                .append(predicate)
+                .append(custom)
+                .toHashCode();
     }
 
 }

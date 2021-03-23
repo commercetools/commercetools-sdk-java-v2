@@ -52,8 +52,9 @@ public final class InventoryEntrySetRestockableInDaysActionImpl implements Inven
 
         InventoryEntrySetRestockableInDaysActionImpl that = (InventoryEntrySetRestockableInDaysActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(restockableInDays,
-            that.restockableInDays).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(restockableInDays, that.restockableInDays)
+                .isEquals();
     }
 
     @Override

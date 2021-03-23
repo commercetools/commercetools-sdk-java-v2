@@ -76,14 +76,20 @@ public final class ProductSetDiscountedPriceActionImpl implements ProductSetDisc
 
         ProductSetDiscountedPriceActionImpl that = (ProductSetDiscountedPriceActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(priceId, that.priceId).append(staged,
-            that.staged).append(discounted, that.discounted).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .append(discounted, that.discounted)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(priceId).append(staged).append(
-            discounted).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(priceId)
+                .append(staged)
+                .append(discounted)
+                .toHashCode();
     }
 
 }

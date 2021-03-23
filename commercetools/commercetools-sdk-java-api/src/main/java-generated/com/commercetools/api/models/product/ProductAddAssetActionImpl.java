@@ -102,14 +102,24 @@ public final class ProductAddAssetActionImpl implements ProductAddAssetAction {
 
         ProductAddAssetActionImpl that = (ProductAddAssetActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(staged, that.staged).append(asset, that.asset).append(position, that.position).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(asset, that.asset)
+                .append(position, that.position)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(staged).append(
-            asset).append(position).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(staged)
+                .append(asset)
+                .append(position)
+                .toHashCode();
     }
 
 }

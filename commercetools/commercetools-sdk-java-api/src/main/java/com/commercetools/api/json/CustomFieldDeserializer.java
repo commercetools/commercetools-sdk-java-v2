@@ -22,8 +22,8 @@ import com.fasterxml.jackson.databind.node.JsonNodeType;
 public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl> {
 
     private static Pattern p = Pattern.compile("^[0-9]");
-    private static Pattern dateTime = Pattern.compile(
-        "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
+    private static Pattern dateTime = Pattern
+            .compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
     private static Pattern date = Pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}");
     private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
 
@@ -34,8 +34,8 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
 
         FieldContainerBuilder builder = FieldContainerBuilder.of();
 
-        node.fields().forEachRemaining(
-            nodeEntry -> builder.addValue(nodeEntry.getKey(), mapValue(p, nodeEntry.getValue())));
+        node.fields()
+                .forEachRemaining(nodeEntry -> builder.addValue(nodeEntry.getKey(), mapValue(p, nodeEntry.getValue())));
 
         return (FieldContainerImpl) builder.build();
     }

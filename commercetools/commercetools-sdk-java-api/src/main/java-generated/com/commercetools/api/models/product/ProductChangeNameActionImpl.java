@@ -64,8 +64,10 @@ public final class ProductChangeNameActionImpl implements ProductChangeNameActio
 
         ProductChangeNameActionImpl that = (ProductChangeNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).append(staged,
-            that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

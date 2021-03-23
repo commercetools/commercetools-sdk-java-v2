@@ -68,8 +68,10 @@ public final class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryIt
 
         OrderSetDeliveryItemsActionImpl that = (OrderSetDeliveryItemsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(deliveryId, that.deliveryId).append(items,
-            that.items).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(deliveryId, that.deliveryId)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override

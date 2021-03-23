@@ -88,14 +88,20 @@ public final class MyPaymentDraftImpl implements MyPaymentDraft {
 
         MyPaymentDraftImpl that = (MyPaymentDraftImpl) o;
 
-        return new EqualsBuilder().append(amountPlanned, that.amountPlanned).append(paymentMethodInfo,
-            that.paymentMethodInfo).append(custom, that.custom).append(transaction, that.transaction).isEquals();
+        return new EqualsBuilder().append(amountPlanned, that.amountPlanned)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(custom, that.custom)
+                .append(transaction, that.transaction)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(amountPlanned).append(paymentMethodInfo).append(custom).append(
-            transaction).toHashCode();
+        return new HashCodeBuilder(17, 37).append(amountPlanned)
+                .append(paymentMethodInfo)
+                .append(custom)
+                .append(transaction)
+                .toHashCode();
     }
 
 }

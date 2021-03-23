@@ -64,8 +64,10 @@ public final class PaymentSetAuthorizationActionImpl implements PaymentSetAuthor
 
         PaymentSetAuthorizationActionImpl that = (PaymentSetAuthorizationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(amount, that.amount).append(until,
-            that.until).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(amount, that.amount)
+                .append(until, that.until)
+                .isEquals();
     }
 
     @Override

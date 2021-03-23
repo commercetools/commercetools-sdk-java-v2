@@ -65,8 +65,10 @@ public final class ProductRemoveFromCategoryActionImpl implements ProductRemoveF
 
         ProductRemoveFromCategoryActionImpl that = (ProductRemoveFromCategoryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(category, that.category).append(staged,
-            that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(category, that.category)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

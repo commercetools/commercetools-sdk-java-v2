@@ -179,18 +179,32 @@ public final class ShoppingListDraftImpl implements ShoppingListDraft {
 
         ShoppingListDraftImpl that = (ShoppingListDraftImpl) o;
 
-        return new EqualsBuilder().append(custom, that.custom).append(customer, that.customer).append(
-            deleteDaysAfterLastModification, that.deleteDaysAfterLastModification).append(description,
-                that.description).append(key, that.key).append(lineItems, that.lineItems).append(name,
-                    that.name).append(slug, that.slug).append(textLineItems, that.textLineItems).append(anonymousId,
-                        that.anonymousId).isEquals();
+        return new EqualsBuilder().append(custom, that.custom)
+                .append(customer, that.customer)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(description, that.description)
+                .append(key, that.key)
+                .append(lineItems, that.lineItems)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(textLineItems, that.textLineItems)
+                .append(anonymousId, that.anonymousId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(custom).append(customer).append(
-            deleteDaysAfterLastModification).append(description).append(key).append(lineItems).append(name).append(
-                slug).append(textLineItems).append(anonymousId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(custom)
+                .append(customer)
+                .append(deleteDaysAfterLastModification)
+                .append(description)
+                .append(key)
+                .append(lineItems)
+                .append(name)
+                .append(slug)
+                .append(textLineItems)
+                .append(anonymousId)
+                .toHashCode();
     }
 
 }

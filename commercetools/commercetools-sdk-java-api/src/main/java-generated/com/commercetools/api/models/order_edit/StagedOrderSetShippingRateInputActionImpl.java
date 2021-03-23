@@ -53,8 +53,9 @@ public final class StagedOrderSetShippingRateInputActionImpl implements StagedOr
 
         StagedOrderSetShippingRateInputActionImpl that = (StagedOrderSetShippingRateInputActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shippingRateInput,
-            that.shippingRateInput).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shippingRateInput, that.shippingRateInput)
+                .isEquals();
     }
 
     @Override

@@ -19,9 +19,10 @@ public class UploadImageTest extends TestBase {
     @Test
     public void uploadImageTest() throws JsonProcessingException {
 
-        ApiHttpResponse<ImageSearchResponse> response = mlApiBuilder.imageSearch().post(
-            new File("src/test/resources/example_flower.jpg")).addHeader("Content-Type",
-                "image/jpeg").executeBlocking();
+        ApiHttpResponse<ImageSearchResponse> response = mlApiBuilder.imageSearch()
+                .post(new File("src/test/resources/example_flower.jpg"))
+                .addHeader("Content-Type", "image/jpeg")
+                .executeBlocking();
         assertThat(response.getStatusCode()).isEqualTo(200);
     }
 

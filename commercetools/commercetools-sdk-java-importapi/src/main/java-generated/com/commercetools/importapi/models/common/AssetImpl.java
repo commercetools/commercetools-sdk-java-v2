@@ -135,14 +135,24 @@ public final class AssetImpl implements Asset {
 
         AssetImpl that = (AssetImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(sources, that.sources).append(name, that.name).append(
-            description, that.description).append(tags, that.tags).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(sources, that.sources)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(tags, that.tags)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(sources).append(name).append(description).append(
-            tags).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(sources)
+                .append(name)
+                .append(description)
+                .append(tags)
+                .append(custom)
+                .toHashCode();
     }
 
 }

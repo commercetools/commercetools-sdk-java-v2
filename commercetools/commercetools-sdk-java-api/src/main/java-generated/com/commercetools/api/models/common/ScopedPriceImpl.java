@@ -156,17 +156,32 @@ public final class ScopedPriceImpl implements ScopedPrice {
 
         ScopedPriceImpl that = (ScopedPriceImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(value, that.value).append(currentValue,
-            that.currentValue).append(country, that.country).append(customerGroup, that.customerGroup).append(channel,
-                that.channel).append(validFrom, that.validFrom).append(validUntil, that.validUntil).append(discounted,
-                    that.discounted).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(value, that.value)
+                .append(currentValue, that.currentValue)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(value).append(currentValue).append(country).append(
-            customerGroup).append(channel).append(validFrom).append(validUntil).append(discounted).append(
-                custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(value)
+                .append(currentValue)
+                .append(country)
+                .append(customerGroup)
+                .append(channel)
+                .append(validFrom)
+                .append(validUntil)
+                .append(discounted)
+                .append(custom)
+                .toHashCode();
     }
 
 }

@@ -22,8 +22,9 @@ public class FacetResultsDeserializer extends JsonDeserializer<FacetResultsImpl>
         JsonNode node = p.getCodec().readTree(p);
 
         FacetResultsBuilder r = FacetResults.builder();
-        node.fields().forEachRemaining(entry -> r.addValue(entry.getKey(),
-            JsonUtils.getConfiguredObjectMapper().convertValue(entry.getValue(), FacetResult.class)));
+        node.fields()
+                .forEachRemaining(entry -> r.addValue(entry.getKey(),
+                    JsonUtils.getConfiguredObjectMapper().convertValue(entry.getValue(), FacetResult.class)));
 
         return (FacetResultsImpl) r.build();
     }

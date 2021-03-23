@@ -35,23 +35,36 @@ public class MyCartsIntegrationTests {
         final StaticTokenSupplier staticTokenSupplier = new StaticTokenSupplier(
             anonymousSessionTokenSupplier.getToken().get());
 
-        final ApiHttpClient apiAnonymousHttpClient = ClientFactory.create(
-            "https://api.europe-west1.gcp.commercetools.com/", vrapHttpClient, staticTokenSupplier);
+        final ApiHttpClient apiAnonymousHttpClient = ClientFactory
+                .create("https://api.europe-west1.gcp.commercetools.com/", vrapHttpClient, staticTokenSupplier);
         ApiRoot apiAnonymousRoot = ApiFactory.create(() -> apiAnonymousHttpClient);
 
         MyCartDraft anonymousMyCartDraft = MyCartDraftBuilder.of().currency("EUR").country("DE").build();
 
-        MyCart myCart = apiAnonymousRoot.withProjectKey(getProjectKey()).me().carts().post(
-            anonymousMyCartDraft).executeBlocking().getBody();
+        MyCart myCart = apiAnonymousRoot.withProjectKey(getProjectKey())
+                .me()
+                .carts()
+                .post(anonymousMyCartDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(myCart);
 
-        MyCart myCartGet = apiAnonymousRoot.withProjectKey(
-            getProjectKey()).me().activeCart().get().executeBlocking().getBody();
+        MyCart myCartGet = apiAnonymousRoot.withProjectKey(getProjectKey())
+                .me()
+                .activeCart()
+                .get()
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(myCartGet);
 
-        apiAnonymousRoot.withProjectKey(getProjectKey()).me().carts().withId(myCart.getId()).delete().withVersion(
-            myCart.getVersion()).executeBlocking();
+        apiAnonymousRoot.withProjectKey(getProjectKey())
+                .me()
+                .carts()
+                .withId(myCart.getId())
+                .delete()
+                .withVersion(myCart.getVersion())
+                .executeBlocking();
     }
 }

@@ -110,15 +110,26 @@ public final class ProductSetAssetDescriptionActionImpl implements ProductSetAss
 
         ProductSetAssetDescriptionActionImpl that = (ProductSetAssetDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(staged, that.staged).append(assetId, that.assetId).append(assetKey, that.assetKey).append(
-                description, that.description).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(description, that.description)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(staged).append(
-            assetId).append(assetKey).append(description).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(staged)
+                .append(assetId)
+                .append(assetKey)
+                .append(description)
+                .toHashCode();
     }
 
 }

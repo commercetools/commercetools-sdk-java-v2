@@ -54,8 +54,9 @@ public final class StagedOrderSetShippingMethodTaxAmountActionImpl
 
         StagedOrderSetShippingMethodTaxAmountActionImpl that = (StagedOrderSetShippingMethodTaxAmountActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(externalTaxAmount,
-            that.externalTaxAmount).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .isEquals();
     }
 
     @Override

@@ -33,13 +33,18 @@ public class InventoryEntryFixtures {
     public static InventoryEntry create() {
         Channel channel = ChannelFixtures.createChannel();
 
-        InventoryEntryDraft inventoryEntryDraft = InventoryEntryDraftBuilder.of().sku(
-            CommercetoolsTestUtils.randomString()).quantityOnStock(10L).expectedDelivery(
-                ZonedDateTime.now().plus(1, ChronoUnit.DAYS)).supplyChannel(
-                    ChannelResourceIdentifierBuilder.of().id(channel.getId()).build()).build();
+        InventoryEntryDraft inventoryEntryDraft = InventoryEntryDraftBuilder.of()
+                .sku(CommercetoolsTestUtils.randomString())
+                .quantityOnStock(10L)
+                .expectedDelivery(ZonedDateTime.now().plus(1, ChronoUnit.DAYS))
+                .supplyChannel(ChannelResourceIdentifierBuilder.of().id(channel.getId()).build())
+                .build();
 
-        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectRoot().inventory().post(
-            inventoryEntryDraft).executeBlocking().getBody();
+        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectRoot()
+                .inventory()
+                .post(inventoryEntryDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(inventoryEntry);
         Assert.assertEquals(inventoryEntry.getSku(), inventoryEntryDraft.getSku());
@@ -49,8 +54,12 @@ public class InventoryEntryFixtures {
     }
 
     public static InventoryEntry delete(final String id) {
-        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectRoot().inventory().withId(
-            id).delete().executeBlocking().getBody();
+        InventoryEntry inventoryEntry = CommercetoolsTestUtils.getProjectRoot()
+                .inventory()
+                .withId(id)
+                .delete()
+                .executeBlocking()
+                .getBody();
         Assert.assertNotNull(inventoryEntry);
         return inventoryEntry;
     }

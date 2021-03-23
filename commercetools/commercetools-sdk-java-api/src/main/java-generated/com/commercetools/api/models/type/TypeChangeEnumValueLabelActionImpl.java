@@ -64,8 +64,10 @@ public final class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumV
 
         TypeChangeEnumValueLabelActionImpl that = (TypeChangeEnumValueLabelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(fieldName, that.fieldName).append(value,
-            that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

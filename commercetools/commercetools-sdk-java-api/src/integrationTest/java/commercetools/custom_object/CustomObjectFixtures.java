@@ -28,12 +28,17 @@ public class CustomObjectFixtures {
     }
 
     public static CustomObject createCustomObject() {
-        CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of().container("a").key(
-            CommercetoolsTestUtils.randomKey()).value(
-                JsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "val")).build();
+        CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
+                .container("a")
+                .key(CommercetoolsTestUtils.randomKey())
+                .value(JsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "val"))
+                .build();
 
-        CustomObject customObject = CommercetoolsTestUtils.getProjectRoot().customObjects().post(
-            customObjectDraft).executeBlocking().getBody();
+        CustomObject customObject = CommercetoolsTestUtils.getProjectRoot()
+                .customObjects()
+                .post(customObjectDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(customObject);
 
@@ -41,8 +46,13 @@ public class CustomObjectFixtures {
     }
 
     public static CustomObject deleteCustomObject(final String container, final String key, final Long version) {
-        CustomObject customObject = CommercetoolsTestUtils.getProjectRoot().customObjects().withContainerAndKey(
-            container, key).delete().withVersion(version).executeBlocking().getBody();
+        CustomObject customObject = CommercetoolsTestUtils.getProjectRoot()
+                .customObjects()
+                .withContainerAndKey(container, key)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(customObject);
         return customObject;

@@ -75,8 +75,11 @@ public final class InvalidItemShippingDetailsErrorImpl implements InvalidItemShi
 
         InvalidItemShippingDetailsErrorImpl that = (InvalidItemShippingDetailsErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(subject,
-            that.subject).append(itemId, that.itemId).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(subject, that.subject)
+                .append(itemId, that.itemId)
+                .isEquals();
     }
 
     @Override

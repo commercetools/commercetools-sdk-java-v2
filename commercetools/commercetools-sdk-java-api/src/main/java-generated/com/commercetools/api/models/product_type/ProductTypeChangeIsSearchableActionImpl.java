@@ -64,8 +64,10 @@ public final class ProductTypeChangeIsSearchableActionImpl implements ProductTyp
 
         ProductTypeChangeIsSearchableActionImpl that = (ProductTypeChangeIsSearchableActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(
-            isSearchable, that.isSearchable).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(isSearchable, that.isSearchable)
+                .isEquals();
     }
 
     @Override

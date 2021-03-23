@@ -114,15 +114,26 @@ public final class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldC
 
         SetAssetCustomFieldChangeImpl that = (SetAssetCustomFieldChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(name, that.name).append(
-            customTypeId, that.customTypeId).append(asset, that.asset).append(nextValue, that.nextValue).append(
-                previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(name, that.name)
+                .append(customTypeId, that.customTypeId)
+                .append(asset, that.asset)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(name).append(customTypeId).append(
-            asset).append(nextValue).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(name)
+                .append(customTypeId)
+                .append(asset)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

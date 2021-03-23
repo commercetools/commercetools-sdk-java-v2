@@ -164,17 +164,34 @@ public final class ShoppingListLineItemImpl implements ShoppingListLineItem {
 
         ShoppingListLineItemImpl that = (ShoppingListLineItemImpl) o;
 
-        return new EqualsBuilder().append(addedAt, that.addedAt).append(custom, that.custom).append(deactivatedAt,
-            that.deactivatedAt).append(id, that.id).append(name, that.name).append(productId, that.productId).append(
-                productSlug, that.productSlug).append(productType, that.productType).append(quantity,
-                    that.quantity).append(variant, that.variant).append(variantId, that.variantId).isEquals();
+        return new EqualsBuilder().append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(deactivatedAt, that.deactivatedAt)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(productId, that.productId)
+                .append(productSlug, that.productSlug)
+                .append(productType, that.productType)
+                .append(quantity, that.quantity)
+                .append(variant, that.variant)
+                .append(variantId, that.variantId)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt).append(custom).append(deactivatedAt).append(id).append(
-            name).append(productId).append(productSlug).append(productType).append(quantity).append(variant).append(
-                variantId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(addedAt)
+                .append(custom)
+                .append(deactivatedAt)
+                .append(id)
+                .append(name)
+                .append(productId)
+                .append(productSlug)
+                .append(productType)
+                .append(quantity)
+                .append(variant)
+                .append(variantId)
+                .toHashCode();
     }
 
 }

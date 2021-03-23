@@ -92,14 +92,22 @@ public final class CartClassificationTierImpl implements CartClassificationTier 
 
         CartClassificationTierImpl that = (CartClassificationTierImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(value, that.value).append(price, that.price).append(
-            tiers, that.tiers).append(isMatching, that.isMatching).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(value, that.value)
+                .append(price, that.price)
+                .append(tiers, that.tiers)
+                .append(isMatching, that.isMatching)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(value).append(price).append(tiers).append(
-            isMatching).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(value)
+                .append(price)
+                .append(tiers)
+                .append(isMatching)
+                .toHashCode();
     }
 
 }

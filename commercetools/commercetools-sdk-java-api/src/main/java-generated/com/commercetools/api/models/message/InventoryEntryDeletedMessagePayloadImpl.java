@@ -64,8 +64,10 @@ public final class InventoryEntryDeletedMessagePayloadImpl implements InventoryE
 
         InventoryEntryDeletedMessagePayloadImpl that = (InventoryEntryDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(sku, that.sku).append(supplyChannel,
-            that.supplyChannel).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(sku, that.sku)
+                .append(supplyChannel, that.supplyChannel)
+                .isEquals();
     }
 
     @Override

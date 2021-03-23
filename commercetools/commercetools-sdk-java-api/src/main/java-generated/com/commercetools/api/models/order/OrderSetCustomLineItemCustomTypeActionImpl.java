@@ -76,14 +76,20 @@ public final class OrderSetCustomLineItemCustomTypeActionImpl implements OrderSe
 
         OrderSetCustomLineItemCustomTypeActionImpl that = (OrderSetCustomLineItemCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            type, that.type).append(fields, that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(type).append(
-            fields).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(type)
+                .append(fields)
+                .toHashCode();
     }
 
 }

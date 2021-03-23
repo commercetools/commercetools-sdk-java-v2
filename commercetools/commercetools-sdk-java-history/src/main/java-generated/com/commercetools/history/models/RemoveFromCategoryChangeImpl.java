@@ -99,14 +99,22 @@ public final class RemoveFromCategoryChangeImpl implements RemoveFromCategoryCha
 
         RemoveFromCategoryChangeImpl that = (RemoveFromCategoryChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(category,
-            that.category).append(previousValue, that.previousValue).append(nextValue, that.nextValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(category, that.category)
+                .append(previousValue, that.previousValue)
+                .append(nextValue, that.nextValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(category).append(previousValue).append(
-            nextValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(category)
+                .append(previousValue)
+                .append(nextValue)
+                .toHashCode();
     }
 
 }

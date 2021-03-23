@@ -76,8 +76,10 @@ public final class VariantValuesImpl implements VariantValues {
 
         VariantValuesImpl that = (VariantValuesImpl) o;
 
-        return new EqualsBuilder().append(sku, that.sku).append(prices, that.prices).append(attributes,
-            that.attributes).isEquals();
+        return new EqualsBuilder().append(sku, that.sku)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .isEquals();
     }
 
     @Override

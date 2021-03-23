@@ -99,14 +99,22 @@ public final class SetAssetTagsChangeImpl implements SetAssetTagsChange {
 
         SetAssetTagsChangeImpl that = (SetAssetTagsChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(asset, that.asset).append(
-            nextValue, that.nextValue).append(previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(asset, that.asset)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(asset).append(nextValue).append(
-            previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(asset)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

@@ -109,15 +109,24 @@ public final class ChangeInputHintChangeImpl implements ChangeInputHintChange {
 
         ChangeInputHintChangeImpl that = (ChangeInputHintChangeImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(change, that.change).append(fieldName,
-            that.fieldName).append(attributeName, that.attributeName).append(nextValue, that.nextValue).append(
-                previousValue, that.previousValue).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(change, that.change)
+                .append(fieldName, that.fieldName)
+                .append(attributeName, that.attributeName)
+                .append(nextValue, that.nextValue)
+                .append(previousValue, that.previousValue)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(change).append(fieldName).append(attributeName).append(
-            nextValue).append(previousValue).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(change)
+                .append(fieldName)
+                .append(attributeName)
+                .append(nextValue)
+                .append(previousValue)
+                .toHashCode();
     }
 
 }

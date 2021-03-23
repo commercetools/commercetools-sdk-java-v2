@@ -64,8 +64,10 @@ public final class ShoppingListChangeTextLineItemNameActionImpl implements Shopp
 
         ShoppingListChangeTextLineItemNameActionImpl that = (ShoppingListChangeTextLineItemNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(textLineItemId, that.textLineItemId).append(name,
-            that.name).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

@@ -65,8 +65,10 @@ public final class OrderStateTransitionMessagePayloadImpl implements OrderStateT
 
         OrderStateTransitionMessagePayloadImpl that = (OrderStateTransitionMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(state, that.state).append(force,
-            that.force).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(state, that.state)
+                .append(force, that.force)
+                .isEquals();
     }
 
     @Override

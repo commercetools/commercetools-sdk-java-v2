@@ -88,15 +88,22 @@ public final class InventoryEntryQuantitySetMessagePayloadImpl implements Invent
 
         InventoryEntryQuantitySetMessagePayloadImpl that = (InventoryEntryQuantitySetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(oldQuantityOnStock, that.oldQuantityOnStock).append(
-            newQuantityOnStock, that.newQuantityOnStock).append(oldAvailableQuantity, that.oldAvailableQuantity).append(
-                newAvailableQuantity, that.newAvailableQuantity).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(oldQuantityOnStock, that.oldQuantityOnStock)
+                .append(newQuantityOnStock, that.newQuantityOnStock)
+                .append(oldAvailableQuantity, that.oldAvailableQuantity)
+                .append(newAvailableQuantity, that.newAvailableQuantity)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(oldQuantityOnStock).append(newQuantityOnStock).append(
-            oldAvailableQuantity).append(newAvailableQuantity).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(oldQuantityOnStock)
+                .append(newQuantityOnStock)
+                .append(oldAvailableQuantity)
+                .append(newAvailableQuantity)
+                .toHashCode();
     }
 
 }

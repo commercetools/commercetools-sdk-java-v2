@@ -126,15 +126,26 @@ public final class ChannelDraftImpl implements ChannelDraft {
 
         ChannelDraftImpl that = (ChannelDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(roles, that.roles).append(name, that.name).append(
-            description, that.description).append(address, that.address).append(custom, that.custom).append(geoLocation,
-                that.geoLocation).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(roles, that.roles)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(address, that.address)
+                .append(custom, that.custom)
+                .append(geoLocation, that.geoLocation)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(roles).append(name).append(description).append(
-            address).append(custom).append(geoLocation).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(roles)
+                .append(name)
+                .append(description)
+                .append(address)
+                .append(custom)
+                .append(geoLocation)
+                .toHashCode();
     }
 
 }

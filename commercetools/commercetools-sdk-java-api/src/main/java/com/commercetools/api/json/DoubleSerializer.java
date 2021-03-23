@@ -1,4 +1,4 @@
-package io.vrap.rmf.base.client.utils.json.modules.serializers;
+package com.commercetools.api.json;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;

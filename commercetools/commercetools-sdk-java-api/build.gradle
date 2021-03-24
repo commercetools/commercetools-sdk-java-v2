@@ -9,6 +9,10 @@ dependencies {
     api commons.lang3
 
     testImplementation "junit:junit:${versions.junit}"
+    testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.6"
+    testImplementation 'org.mockito:mockito-inline:3.7.7'
+    testImplementation 'org.mockito:mockito-junit-jupiter:3.7.7'
+    testCompile 'pl.pragmatists:JUnitParams:1.1.1'
     testImplementation "org.assertj:assertj-core:${versions.assertJ}"
     testImplementation 'org.skyscreamer:jsonassert:1.5.0'
     testImplementation project(':commercetools:commercetools-http-client')

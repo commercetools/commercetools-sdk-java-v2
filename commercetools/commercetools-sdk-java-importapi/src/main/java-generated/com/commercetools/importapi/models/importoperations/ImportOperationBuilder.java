@@ -23,8 +23,6 @@ public final class ImportOperationBuilder {
     @Nullable
     private Long resourceVersion;
 
-    private Integer retryCount;
-
     @Nullable
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
@@ -61,11 +59,6 @@ public final class ImportOperationBuilder {
 
     public ImportOperationBuilder resourceVersion(@Nullable final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
-        return this;
-    }
-
-    public ImportOperationBuilder retryCount(final Integer retryCount) {
-        this.retryCount = retryCount;
         return this;
     }
 
@@ -121,10 +114,6 @@ public final class ImportOperationBuilder {
         return this.resourceVersion;
     }
 
-    public Integer getRetryCount() {
-        return this.retryCount;
-    }
-
     @Nullable
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
         return this.errors;
@@ -143,8 +132,8 @@ public final class ImportOperationBuilder {
     }
 
     public ImportOperation build() {
-        return new ImportOperationImpl(version, importSinkKey, resourceKey, id, state, resourceVersion, retryCount,
-            errors, createdAt, lastModifiedAt, expiresAt);
+        return new ImportOperationImpl(version, importSinkKey, resourceKey, id, state, resourceVersion, errors,
+            createdAt, lastModifiedAt, expiresAt);
     }
 
     public static ImportOperationBuilder of() {
@@ -159,7 +148,6 @@ public final class ImportOperationBuilder {
         builder.id = template.getId();
         builder.state = template.getState();
         builder.resourceVersion = template.getResourceVersion();
-        builder.retryCount = template.getRetryCount();
         builder.errors = template.getErrors();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();

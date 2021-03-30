@@ -111,6 +111,15 @@ public class ProductProjectionIntegrationTests {
                     .assertThat(productProjection.getMasterVariant()
                             .getAttributes()
                             .stream()
+                            .filter(attribute -> attribute.getName().equals("test-integer"))
+                            .findFirst()
+                            .get()
+                            .getValue())
+                    .isEqualTo(10L);
+            Assertions
+                    .assertThat(productProjection.getMasterVariant()
+                            .getAttributes()
+                            .stream()
                             .filter(attribute -> attribute.getName().equals("test-set-text"))
                             .findFirst()
                             .get()
@@ -127,6 +136,16 @@ public class ProductProjectionIntegrationTests {
                             .getValue())
                     .asList()
                     .contains(11.0);
+            Assertions
+                    .assertThat(productProjection.getMasterVariant()
+                            .getAttributes()
+                            .stream()
+                            .filter(attribute -> attribute.getName().equals("test-set-integer"))
+                            .findFirst()
+                            .get()
+                            .getValue())
+                    .asList()
+                    .contains(11L);
             Assertions
                     .assertThat(productProjection.getMasterVariant()
                             .getAttributes()

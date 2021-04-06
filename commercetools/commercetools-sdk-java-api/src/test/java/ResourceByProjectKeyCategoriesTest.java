@@ -35,20 +35,6 @@ public class ResourceByProjectKeyCategoriesTest {
                 ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
     }
 
-    @Test
-    @Parameters(method = "requestParameters")
-    public void createHttpRequest(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    private Object[] requestParameters() {
-        return new Object[] {
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/test_projectKey/categories?expand=expand"), new ApiHttpHeaders(), null), "GET", "/test_projectKey/categories?expand=expand" },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/test_projectKey/categories?sort=sort"), new ApiHttpHeaders(), null), "GET", "/test_projectKey/categories?sort=sort" },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/test_projectKey/categories?limit=10"), new ApiHttpHeaders(), null), "GET", "/test_projectKey/categories?limit=10" }
-        };
-    }
 
     @Test
     @Parameters(method = "requestWithMethodParameters")

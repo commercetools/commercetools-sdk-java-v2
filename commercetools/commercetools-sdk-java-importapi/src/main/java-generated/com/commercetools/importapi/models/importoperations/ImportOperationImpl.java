@@ -31,8 +31,6 @@ public final class ImportOperationImpl implements ImportOperation {
 
     private Long resourceVersion;
 
-    private Integer retryCount;
-
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
     private java.time.ZonedDateTime createdAt;
@@ -47,7 +45,6 @@ public final class ImportOperationImpl implements ImportOperation {
             @JsonProperty("resourceKey") final String resourceKey, @JsonProperty("id") final String id,
             @JsonProperty("state") final com.commercetools.importapi.models.common.ProcessingState state,
             @JsonProperty("resourceVersion") final Long resourceVersion,
-            @JsonProperty("retryCount") final Integer retryCount,
             @JsonProperty("errors") final java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
@@ -58,7 +55,6 @@ public final class ImportOperationImpl implements ImportOperation {
         this.id = id;
         this.state = state;
         this.resourceVersion = resourceVersion;
-        this.retryCount = retryCount;
         this.errors = errors;
         this.createdAt = createdAt;
         this.lastModifiedAt = lastModifiedAt;
@@ -108,13 +104,6 @@ public final class ImportOperationImpl implements ImportOperation {
     */
     public Long getResourceVersion() {
         return this.resourceVersion;
-    }
-
-    /**
-    *  <p>The number of request retries for processing the import resource.</p>
-    */
-    public Integer getRetryCount() {
-        return this.retryCount;
     }
 
     /**
@@ -170,10 +159,6 @@ public final class ImportOperationImpl implements ImportOperation {
         this.resourceVersion = resourceVersion;
     }
 
-    public void setRetryCount(final Integer retryCount) {
-        this.retryCount = retryCount;
-    }
-
     public void setErrors(final com.commercetools.importapi.models.errors.ErrorObject... errors) {
         this.errors = new ArrayList<>(Arrays.asList(errors));
     }
@@ -210,7 +195,6 @@ public final class ImportOperationImpl implements ImportOperation {
                 .append(id, that.id)
                 .append(state, that.state)
                 .append(resourceVersion, that.resourceVersion)
-                .append(retryCount, that.retryCount)
                 .append(errors, that.errors)
                 .append(createdAt, that.createdAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
@@ -226,7 +210,6 @@ public final class ImportOperationImpl implements ImportOperation {
                 .append(id)
                 .append(state)
                 .append(resourceVersion)
-                .append(retryCount)
                 .append(errors)
                 .append(createdAt)
                 .append(lastModifiedAt)

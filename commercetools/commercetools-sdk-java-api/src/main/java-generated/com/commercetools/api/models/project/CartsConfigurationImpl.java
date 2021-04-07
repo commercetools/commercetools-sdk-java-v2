@@ -18,9 +18,13 @@ public final class CartsConfigurationImpl implements CartsConfiguration {
 
     private Boolean countryTaxRateFallbackEnabled;
 
+    private Long deleteDaysAfterLastModification;
+
     @JsonCreator
-    CartsConfigurationImpl(@JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
+    CartsConfigurationImpl(@JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled,
+            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification) {
         this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 
     public CartsConfigurationImpl() {
@@ -33,8 +37,19 @@ public final class CartsConfigurationImpl implements CartsConfiguration {
         return this.countryTaxRateFallbackEnabled;
     }
 
+    /**
+    *  <p>The default value for the deleteDaysAfterLastModification parameter of the CartDraft. Initially set to 90 for projects created after December 2019.</p>
+    */
+    public Long getDeleteDaysAfterLastModification() {
+        return this.deleteDaysAfterLastModification;
+    }
+
     public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled) {
         this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+    }
+
+    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+        this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 
     @Override
@@ -47,12 +62,16 @@ public final class CartsConfigurationImpl implements CartsConfiguration {
 
         CartsConfigurationImpl that = (CartsConfigurationImpl) o;
 
-        return new EqualsBuilder().append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled).isEquals();
+        return new EqualsBuilder().append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(countryTaxRateFallbackEnabled).toHashCode();
+        return new HashCodeBuilder(17, 37).append(countryTaxRateFallbackEnabled)
+                .append(deleteDaysAfterLastModification)
+                .toHashCode();
     }
 
 }

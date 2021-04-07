@@ -27,6 +27,16 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
     private static Pattern date = Pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}");
     private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
 
+    private final boolean deserializeAsDate;
+
+    public CustomFieldDeserializer(boolean deserializeAsDateString) {
+        this.deserializeAsDate = !deserializeAsDateString;
+    }
+
+    public CustomFieldDeserializer() {
+        this.deserializeAsDate = true;
+    }
+
     @Override
     public FieldContainerImpl deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
 
@@ -63,19 +73,21 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
                 return new TypeReference<Double>() {
                 };
             case STRING:
-                String val = valueNode.asText();
-                if (p.matcher(val).find()) {
-                    if (dateTime.matcher(val).find()) {
-                        return new TypeReference<ZonedDateTime>() {
-                        };
-                    }
-                    if (date.matcher(val).matches()) {
-                        return new TypeReference<LocalDate>() {
-                        };
-                    }
-                    if (time.matcher(val).matches()) {
-                        return new TypeReference<LocalTime>() {
-                        };
+                if (deserializeAsDate) {
+                    String val = valueNode.asText();
+                    if (p.matcher(val).find()) {
+                        if (dateTime.matcher(val).find()) {
+                            return new TypeReference<ZonedDateTime>() {
+                            };
+                        }
+                        if (date.matcher(val).matches()) {
+                            return new TypeReference<LocalDate>() {
+                            };
+                        }
+                        if (time.matcher(val).matches()) {
+                            return new TypeReference<LocalTime>() {
+                            };
+                        }
                     }
                 }
                 return new TypeReference<String>() {
@@ -176,16 +188,18 @@ public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl
                 }
                 return ElemType.NUMBER;
             case STRING:
-                String val = valueNode.asText();
-                if (p.matcher(val).find()) {
-                    if (dateTime.matcher(val).find()) {
-                        return ElemType.DATETIME;
-                    }
-                    if (date.matcher(val).matches()) {
-                        return ElemType.DATE;
-                    }
-                    if (time.matcher(val).matches()) {
-                        return ElemType.TIME;
+                if (deserializeAsDate) {
+                    String val = valueNode.asText();
+                    if (p.matcher(val).find()) {
+                        if (dateTime.matcher(val).find()) {
+                            return ElemType.DATETIME;
+                        }
+                        if (date.matcher(val).matches()) {
+                            return ElemType.DATE;
+                        }
+                        if (time.matcher(val).matches()) {
+                            return ElemType.TIME;
+                        }
                     }
                 }
                 return ElemType.STRING;

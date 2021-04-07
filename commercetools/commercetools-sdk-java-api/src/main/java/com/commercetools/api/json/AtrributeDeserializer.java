@@ -31,8 +31,8 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
 
     private final boolean deserializeAsDate;
 
-    public AtrributeDeserializer(boolean deserializeAsDate) {
-        this.deserializeAsDate = deserializeAsDate;
+    public AtrributeDeserializer(boolean deserializeAsDateString) {
+        this.deserializeAsDate = !deserializeAsDateString;
     }
 
     public AtrributeDeserializer() {

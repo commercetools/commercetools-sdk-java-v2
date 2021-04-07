@@ -11,6 +11,7 @@ import java.time.ZonedDateTime;
 import java.util.Map;
 
 import com.commercetools.api.json.ApiModule;
+import com.commercetools.api.json.ApiModuleOptions;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.product.Attribute;
@@ -147,9 +148,9 @@ public class AttributesTest {
 
     @Test
     public void attributesAsDateFalse() throws IOException {
-        System.setProperty(ApiModule.DESERIALIZE_ATTRIBUTE_AS_DATE, "false");
-        ObjectMapper mapper = JsonUtils.createObjectMapper();
-        System.setProperty(ApiModule.DESERIALIZE_ATTRIBUTE_AS_DATE, "true");
+        ApiModuleOptions options = ApiModuleOptions.of().withDateAttributeAsString(true).withDateCustomFieldAsString(true);
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
         ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
 
         assertThat(variant.getAttributes()).isNotEmpty();

@@ -69,6 +69,13 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
         this.apiHttpClient = apiHttpClient;
     }
 
+    public ApiMethod(final ApiHttpClient apiHttpClient, ApiHttpHeaders headers,
+            List<ParamEntry<String, String>> queryParams) {
+        this.apiHttpClient = apiHttpClient;
+        this.headers = headers;
+        this.queryParams = new ArrayList<>(queryParams);
+    }
+
     public ApiMethod(final ApiMethod<T, TResult> apiMethod) {
         this.apiHttpClient = apiMethod.apiHttpClient;
         this.headers = new ApiHttpHeaders(apiMethod.headers);
@@ -183,6 +190,10 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
 
     public List<String> getQueryParamUriStrings() {
         return this.queryParams.stream().map(ParamEntry::toUriString).collect(Collectors.toList());
+    }
+
+    public String getQueryParamUriString() {
+        return this.queryParams.stream().map(ParamEntry::toUriString).collect(Collectors.joining("&"));
     }
 
     @Nullable

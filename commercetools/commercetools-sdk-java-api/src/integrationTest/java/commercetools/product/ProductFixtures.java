@@ -67,6 +67,12 @@ public class ProductFixtures {
                             .type(AttributeNumberTypeBuilder.of().build())
                             .build(),
                     AttributeDefinitionDraftBuilder.of()
+                            .name("test-integer")
+                            .label(LocalizedStringBuilder.of().addValue("en", "test-integer").build())
+                            .isRequired(false)
+                            .type(AttributeNumberTypeBuilder.of().build())
+                            .build(),
+                    AttributeDefinitionDraftBuilder.of()
                             .name("test-enum")
                             .label(LocalizedStringBuilder.of().addValue("en", "test-enum").build())
                             .isRequired(false)
@@ -84,6 +90,14 @@ public class ProductFixtures {
                     AttributeDefinitionDraftBuilder.of()
                             .name("test-set-number")
                             .label(LocalizedStringBuilder.of().addValue("en", "test-set-number").build())
+                            .isRequired(false)
+                            .type(AttributeSetTypeBuilder.of()
+                                    .elementType(AttributeNumberTypeBuilder.of().build())
+                                    .build())
+                            .build(),
+                    AttributeDefinitionDraftBuilder.of()
+                            .name("test-set-integer")
+                            .label(LocalizedStringBuilder.of().addValue("en", "test-set-integer").build())
                             .isRequired(false)
                             .type(AttributeSetTypeBuilder.of()
                                     .elementType(AttributeNumberTypeBuilder.of().build())
@@ -175,10 +189,12 @@ public class ProductFixtures {
                         .name(CommercetoolsTestUtils.randomLocalizedString())
                         .build()))
                 .attributes(AttributeBuilder.of().name("test-text").value("foo").build(),
-                    AttributeBuilder.of().name("test-number").value(10).build(),
+                    AttributeBuilder.of().name("test-number").value(10.0).build(),
+                    AttributeBuilder.of().name("test-integer").value(10).build(),
                     AttributeBuilder.of().name("test-enum").value("test").build(),
                     AttributeBuilder.of().name("test-set-text").value(Collections.singletonList("foo")).build(),
-                    AttributeBuilder.of().name("test-set-number").value(Collections.singletonList(11)).build())
+                    AttributeBuilder.of().name("test-set-integer").value(Collections.singletonList(11)).build(),
+                    AttributeBuilder.of().name("test-set-number").value(Collections.singletonList(11.0)).build())
                 .build();
 
         TaxCategory taxCategory = TaxCategoryFixtures.createTaxCategory();

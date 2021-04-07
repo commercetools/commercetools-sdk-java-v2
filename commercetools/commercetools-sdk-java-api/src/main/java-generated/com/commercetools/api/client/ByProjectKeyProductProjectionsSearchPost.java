@@ -4,10 +4,15 @@ package com.commercetools.api.client;
 import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+import java.util.stream.Collectors;
+
+import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
@@ -23,14 +28,22 @@ public class ByProjectKeyProductProjectionsSearchPost
 
     private String projectKey;
 
-    public ByProjectKeyProductProjectionsSearchPost(final ApiHttpClient apiHttpClient, String projectKey) {
-        super(apiHttpClient);
+    private List<ParamEntry<String, String>> formParams;
+
+    public ByProjectKeyProductProjectionsSearchPost(final ApiHttpClient apiHttpClient, String projectKey,
+            List<ParamEntry<String, String>> formParams) {
+        super(apiHttpClient,
+            new ApiHttpHeaders(
+                new ApiHttpHeaders.StringHeaderEntry(ApiHttpHeaders.CONTENT_TYPE, "application/x-www-form-urlencoded")),
+            new ArrayList<>());
         this.projectKey = projectKey;
+        this.formParams = formParams;
     }
 
     public ByProjectKeyProductProjectionsSearchPost(ByProjectKeyProductProjectionsSearchPost t) {
         super(t);
         this.projectKey = t.projectKey;
+        this.formParams = new ArrayList<>(t.formParams);
     }
 
     @Override
@@ -41,6 +54,13 @@ public class ByProjectKeyProductProjectionsSearchPost
             httpRequestPath += "?" + String.join("&", params);
         }
 
+        try {
+            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(),
+                getFormParamUriString().getBytes(StandardCharsets.UTF_8));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
@@ -60,6 +80,82 @@ public class ByProjectKeyProductProjectionsSearchPost
 
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    /**
+     * add an additional form parameter
+     * @param key form parameter name
+     * @param value form parameter value
+     * @param <V> value type
+     * @return T
+     */
+    public <V> ByProjectKeyProductProjectionsSearchPost addFormParam(final String key, final V value) {
+        ByProjectKeyProductProjectionsSearchPost c = copy();
+        c.formParams.add(new ParamEntry<>(key, value.toString()));
+        return c;
+    }
+
+    /**
+     * set the form parameter with the specified value
+     * @param key form parameter name
+     * @param value form parameter value
+     * @param <V> value type
+     * @return T
+     */
+    public <V> ByProjectKeyProductProjectionsSearchPost withFormParam(final String key, final V value) {
+        return withoutFormParam(key).addFormParam(key, value);
+    }
+
+    /**
+     * removes the specified form parameter
+     * @param key form parameter name
+     * @return T
+     */
+    public ByProjectKeyProductProjectionsSearchPost withoutFormParam(final String key) {
+        ByProjectKeyProductProjectionsSearchPost c = copy();
+        c.formParams = c.formParams.stream()
+                .filter(e -> !e.getKey().equalsIgnoreCase(key))
+                .collect(Collectors.toList());
+        return c;
+    }
+
+    /**
+     * set the form parameters
+     * @param formParams list of form parameters
+     * @return T
+     */
+    public ByProjectKeyProductProjectionsSearchPost withFormParams(final List<ParamEntry<String, String>> formParams) {
+        ByProjectKeyProductProjectionsSearchPost c = copy();
+        c.formParams = formParams;
+        return c;
+    }
+
+    public List<ParamEntry<String, String>> getFormParams() {
+        return new ArrayList<>(this.formParams);
+    }
+
+    public List<String> getFormParam(final String key) {
+        return this.formParams.stream()
+                .filter(e -> e.getKey().equals(key))
+                .map(ParamEntry::getValue)
+                .collect(Collectors.toList());
+    }
+
+    public List<String> getFormParamUriStrings() {
+        return this.formParams.stream().map(ParamEntry::toUriString).collect(Collectors.toList());
+    }
+
+    public String getFormParamUriString() {
+        return this.formParams.stream().map(ParamEntry::toUriString).collect(Collectors.joining("&"));
+    }
+
+    @Nullable
+    public String getFirstFormParam(final String key) {
+        return this.formParams.stream()
+                .filter(e -> e.getKey().equals(key))
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .orElse(null);
     }
 
     @Override

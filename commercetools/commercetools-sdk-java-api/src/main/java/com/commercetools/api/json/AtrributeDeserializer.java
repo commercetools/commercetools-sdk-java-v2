@@ -59,6 +59,10 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 return new TypeReference<Boolean>() {
                 };
             case NUMBER:
+                if (valueNode.isInt() || valueNode.isLong()) {
+                    return new TypeReference<Long>() {
+                    };
+                }
                 return new TypeReference<Double>() {
                 };
             case STRING:
@@ -123,6 +127,9 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                     case NUMBER:
                         return new TypeReference<List<Double>>() {
                         };
+                    case LONG:
+                        return new TypeReference<List<Long>>() {
+                        };
                     case BOOLEAN:
                         return new TypeReference<List<Boolean>>() {
                         };
@@ -182,6 +189,9 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 }
                 return ElemType.LOCALIZED_STRING;
             case NUMBER:
+                if (valueNode.isInt() || valueNode.isLong()) {
+                    return ElemType.LONG;
+                }
                 return ElemType.NUMBER;
             case STRING:
                 if (deserializeAsDate) {
@@ -214,6 +224,7 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
         DATETIME,
         TIME,
         NUMBER,
+        LONG,
         BOOLEAN,
         ENUM,
         LOCALIZED_ENUM,

@@ -1,0 +1,16 @@
+{
+    "attributes": [
+        {
+            "name": "double",
+            "value": 13.0
+        },
+        {
+            "name": "int",
+            "value": 13
+        },
+        {
+            "name": "decimal",
+            "value": 13.1
+        }
+    ]
+}

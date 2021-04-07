@@ -54,8 +54,8 @@ public class AttributesTest {
             dateTime -> assertThat(dateTime).isEqualTo("2020-01-01T13:15:00.123Z"));
         assertThat(attributes.get("boolean")).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());
-        assertThat(attributes.get("integer")).isInstanceOfSatisfying(Double.class,
-            number -> assertThat(number).isEqualTo(10.0));
+        assertThat(attributes.get("integer")).isInstanceOfSatisfying(Long.class,
+            number -> assertThat(number).isEqualTo(10L));
         assertThat(attributes.get("double")).isInstanceOfSatisfying(Double.class,
             number -> assertThat(number).isEqualTo(11.0));
         assertThat(attributes.get("boolean")).isInstanceOfSatisfying(Boolean.class,
@@ -78,7 +78,7 @@ public class AttributesTest {
         assertThat(attributes.get("set-boolean")).asList().first().isInstanceOf(Boolean.class);
         assertThat(attributes.get("set-integer")).asList()
                 .first()
-                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(10.0));
+                .isInstanceOfSatisfying(Long.class, number -> assertThat(number).isEqualTo(10L));
         assertThat(attributes.get("set-double")).asList()
                 .first()
                 .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));
@@ -93,12 +93,23 @@ public class AttributesTest {
     }
 
     @Test
+    public void httpDeSerialize() throws IOException {
+        String numberAttributes = stringFromResource("numbers.json");
+        ProductVariant variant = JsonUtils.fromJsonString(numberAttributes, ProductVariant.class);
+        String serializedNumberAttributes = JsonUtils.toJsonString(variant);
+        Assertions.assertThat(serializedNumberAttributes)
+                .isEqualTo(
+                    "{\"attributes\":[{\"name\":\"double\",\"value\":13.0},{\"name\":\"int\",\"value\":13},{\"name\":\"decimal\",\"value\":13.1}]}");
+    }
+
+    @Test
     public void serializeAttributes() throws JsonProcessingException {
         Attribute intAttribute = AttributeBuilder.of().name("int").value(13).build();
         Assertions.assertThat(JsonUtils.toJsonString(intAttribute)).isEqualTo("{\"name\":\"int\",\"value\":13}");
 
         Attribute doubleAttribute = AttributeBuilder.of().name("double").value(13.0).build();
-        Assertions.assertThat(JsonUtils.toJsonString(doubleAttribute)).isEqualTo("{\"name\":\"double\",\"value\":13}");
+        Assertions.assertThat(JsonUtils.toJsonString(doubleAttribute))
+                .isEqualTo("{\"name\":\"double\",\"value\":13.0}");
 
         Attribute double2Attribute = AttributeBuilder.of().name("double").value(13.1).build();
         Assertions.assertThat(JsonUtils.toJsonString(double2Attribute))
@@ -123,7 +134,7 @@ public class AttributesTest {
                 .value(Lists.newArrayList(13, 13.0, 13.1))
                 .build();
         Assertions.assertThat(JsonUtils.toJsonString(setNumberAttribute))
-                .isEqualTo("{\"name\":\"setNumber\",\"value\":[13,13,13.1]}");
+                .isEqualTo("{\"name\":\"setNumber\",\"value\":[13,13.0,13.1]}");
 
         Attribute setStringAttribute = AttributeBuilder.of()
                 .name("setString")

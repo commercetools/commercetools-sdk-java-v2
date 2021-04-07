@@ -24,24 +24,17 @@ public final class OperationStatesImpl implements OperationStates {
 
     private Long imported;
 
-    private Long delete;
-
-    private Long deleted;
-
     private Long rejected;
 
     @JsonCreator
     OperationStatesImpl(@JsonProperty("ValidationFailed") final Long validationFailed,
             @JsonProperty("Unresolved") final Long unresolved,
             @JsonProperty("WaitForMasterVariant") final Long waitForMasterVariant,
-            @JsonProperty("Imported") final Long imported, @JsonProperty("Delete") final Long delete,
-            @JsonProperty("Deleted") final Long deleted, @JsonProperty("Rejected") final Long rejected) {
+            @JsonProperty("Imported") final Long imported, @JsonProperty("Rejected") final Long rejected) {
         this.validationFailed = validationFailed;
         this.unresolved = unresolved;
         this.waitForMasterVariant = waitForMasterVariant;
         this.imported = imported;
-        this.delete = delete;
-        this.deleted = deleted;
         this.rejected = rejected;
     }
 
@@ -77,20 +70,6 @@ public final class OperationStatesImpl implements OperationStates {
     }
 
     /**
-    *  <p>The number of import operations that are in the state <code>Delete</code>.</p>
-    */
-    public Long getDelete() {
-        return this.delete;
-    }
-
-    /**
-    *  <p>The number of import operations that are in the state <code>Deleted</code>.</p>
-    */
-    public Long getDeleted() {
-        return this.deleted;
-    }
-
-    /**
     *  <p>The number of import operations that are in the state <code>Rejected</code>.</p>
     */
     public Long getRejected() {
@@ -113,14 +92,6 @@ public final class OperationStatesImpl implements OperationStates {
         this.imported = imported;
     }
 
-    public void setDelete(final Long delete) {
-        this.delete = delete;
-    }
-
-    public void setDeleted(final Long deleted) {
-        this.deleted = deleted;
-    }
-
     public void setRejected(final Long rejected) {
         this.rejected = rejected;
     }
@@ -139,8 +110,6 @@ public final class OperationStatesImpl implements OperationStates {
                 .append(unresolved, that.unresolved)
                 .append(waitForMasterVariant, that.waitForMasterVariant)
                 .append(imported, that.imported)
-                .append(delete, that.delete)
-                .append(deleted, that.deleted)
                 .append(rejected, that.rejected)
                 .isEquals();
     }
@@ -151,8 +120,6 @@ public final class OperationStatesImpl implements OperationStates {
                 .append(unresolved)
                 .append(waitForMasterVariant)
                 .append(imported)
-                .append(delete)
-                .append(deleted)
                 .append(rejected)
                 .toHashCode();
     }

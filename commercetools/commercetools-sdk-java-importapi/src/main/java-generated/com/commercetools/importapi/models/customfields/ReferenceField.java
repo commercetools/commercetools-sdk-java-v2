@@ -24,7 +24,7 @@ public interface ReferenceField extends CustomField {
     String REFERENCE = "Reference";
 
     /**
-    *  <p>References a resource by its key.</p>
+    *  <p>References a resource by its key</p>
     */
     @NotNull
     @Valid

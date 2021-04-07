@@ -66,13 +66,6 @@ public interface ImportOperation {
     public Long getResourceVersion();
 
     /**
-    *  <p>The number of request retries for processing the import resource.</p>
-    */
-    @NotNull
-    @JsonProperty("retryCount")
-    public Integer getRetryCount();
-
-    /**
     *  <p>If an import resource does not import correctly, the state is set to <code>Rejected</code> or <code>ValidationFailed</code>
     *  and this property contains the errors.</p>
     */
@@ -113,8 +106,6 @@ public interface ImportOperation {
 
     public void setResourceVersion(final Long resourceVersion);
 
-    public void setRetryCount(final Integer retryCount);
-
     @JsonIgnore
     public void setErrors(final ErrorObject... errors);
 
@@ -138,7 +129,6 @@ public interface ImportOperation {
         instance.setId(template.getId());
         instance.setState(template.getState());
         instance.setResourceVersion(template.getResourceVersion());
-        instance.setRetryCount(template.getRetryCount());
         instance.setErrors(template.getErrors());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());

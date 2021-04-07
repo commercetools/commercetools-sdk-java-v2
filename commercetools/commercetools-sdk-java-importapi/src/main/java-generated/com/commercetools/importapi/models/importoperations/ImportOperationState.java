@@ -25,18 +25,11 @@ public interface ImportOperationState {
 
     */
     ImportOperationState VALIDATION_FAILED = ImportOperationStateEnum.VALIDATION_FAILED;
-    /**
-    	<p>The import resource is being deleted.</p>
-
-    */
-    ImportOperationState DELETE = ImportOperationStateEnum.DELETE;
 
     enum ImportOperationStateEnum implements ImportOperationState {
         UNRESOLVED("Unresolved"),
 
-        VALIDATION_FAILED("ValidationFailed"),
-
-        DELETE("Delete");
+        VALIDATION_FAILED("ValidationFailed");
         private final String jsonName;
 
         private ImportOperationStateEnum(final String jsonName) {

@@ -11,6 +11,7 @@ import commercetools.utils.CommercetoolsTestUtils;
 import commercetools.utils.ValueObject;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -83,7 +84,6 @@ public class CustomObjectIntegrationTests {
             return updatedCustomObject;
         });
     }
-
 
     @Test
     public void query() {

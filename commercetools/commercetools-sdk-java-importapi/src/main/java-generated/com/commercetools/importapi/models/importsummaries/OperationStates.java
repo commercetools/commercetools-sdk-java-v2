@@ -45,20 +45,6 @@ public interface OperationStates {
     public Long getImported();
 
     /**
-    *  <p>The number of import operations that are in the state <code>Delete</code>.</p>
-    */
-    @NotNull
-    @JsonProperty("Delete")
-    public Long getDelete();
-
-    /**
-    *  <p>The number of import operations that are in the state <code>Deleted</code>.</p>
-    */
-    @NotNull
-    @JsonProperty("Deleted")
-    public Long getDeleted();
-
-    /**
     *  <p>The number of import operations that are in the state <code>Rejected</code>.</p>
     */
     @NotNull
@@ -73,10 +59,6 @@ public interface OperationStates {
 
     public void setImported(final Long imported);
 
-    public void setDelete(final Long delete);
-
-    public void setDeleted(final Long deleted);
-
     public void setRejected(final Long rejected);
 
     public static OperationStates of() {
@@ -89,8 +71,6 @@ public interface OperationStates {
         instance.setUnresolved(template.getUnresolved());
         instance.setWaitForMasterVariant(template.getWaitForMasterVariant());
         instance.setImported(template.getImported());
-        instance.setDelete(template.getDelete());
-        instance.setDeleted(template.getDeleted());
         instance.setRejected(template.getRejected());
         return instance;
     }

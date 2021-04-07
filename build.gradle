@@ -18,8 +18,6 @@ plugins {
 
     id "com.diffplug.spotless" version "5.9.0"
 
-    id 'com.softeq.gradle.itest' version '1.0.4'
-
     id 'io.github.gradle-nexus.publish-plugin' version '1.0.0'
 }
 
@@ -162,11 +160,24 @@ subprojects { project ->
     apply plugin: 'java'
     apply plugin: 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    apply plugin: 'com.softeq.gradle.itest'
-
     group='com.commercetools.sdk'
 
     version = globalVersion
+
+    configurations {
+        integrationTestImplementation.extendsFrom(testImplementation)
+        integrationTestApi.extendsFrom(testApi)
+        integrationTestRuntimeOnly.extendsFrom(testRuntimeOnly)
+    }
+
+    sourceSets {
+        integrationTest {
+            compileClasspath += sourceSets.main.output
+            runtimeClasspath += sourceSets.main.output
+            java {
+            }
+        }
+    }
 
     dependencies {
         testImplementation "junit:junit:${versions.junit}"
@@ -176,19 +187,17 @@ subprojects { project ->
         testImplementation 'org.skyscreamer:jsonassert:1.5.0'
         testImplementation "com.google.code.gson:gson:${versions.gson}"
         testImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.6"
-
-        itestImplementation "junit:junit:${versions.junit}"
-        itestImplementation "org.assertj:assertj-core:${versions.assertJ}"
-        itestImplementation "org.awaitility:awaitility:${versions.awaitility}"
-        itestImplementation "ch.qos.logback:logback-classic:${versions.logback}"
-        itestImplementation 'org.skyscreamer:jsonassert:1.5.0'
-        itestImplementation "com.google.code.gson:gson:${versions.gson}"
-        itestImplementation "com.tngtech.junit.dataprovider:junit4-dataprovider:2.6"
     }
 
-    itestSourceSet {
-        name = "integrationTest"
+    task integrationTest(type: Test) {
+        description = "Runs integration tests."
+        group = "verification"
+
+        testClassesDirs = sourceSets.integrationTest.output.classesDirs
+        classpath = sourceSets.integrationTest.runtimeClasspath
+        shouldRunAfter(test)
     }
+    check.dependsOn(integrationTest)
 
     task sourcesJar(type: Jar) {
         archiveClassifier = 'sources'

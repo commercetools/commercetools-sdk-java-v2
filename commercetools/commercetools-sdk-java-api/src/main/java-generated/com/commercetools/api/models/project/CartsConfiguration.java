@@ -21,7 +21,16 @@ public interface CartsConfiguration {
     @JsonProperty("countryTaxRateFallbackEnabled")
     public Boolean getCountryTaxRateFallbackEnabled();
 
+    /**
+    *  <p>The default value for the deleteDaysAfterLastModification parameter of the CartDraft. Initially set to 90 for projects created after December 2019.</p>
+    */
+
+    @JsonProperty("deleteDaysAfterLastModification")
+    public Long getDeleteDaysAfterLastModification();
+
     public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
+
+    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
 
     public static CartsConfiguration of() {
         return new CartsConfigurationImpl();
@@ -30,6 +39,7 @@ public interface CartsConfiguration {
     public static CartsConfiguration of(final CartsConfiguration template) {
         CartsConfigurationImpl instance = new CartsConfigurationImpl();
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
+        instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;
     }
 

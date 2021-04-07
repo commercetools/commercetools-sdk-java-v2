@@ -36,17 +36,7 @@ public interface ProcessingState {
     */
     ProcessingState IMPORTED = ProcessingStateEnum.IMPORTED;
     /**
-    	<p>The import resource is being deleted.</p>
-
-    */
-    ProcessingState DELETE = ProcessingStateEnum.DELETE;
-    /**
-    	<p>The import resource was deleted successfully.</p>
-
-    */
-    ProcessingState DELETED = ProcessingStateEnum.DELETED;
-    /**
-    	<p>The import resource couldn't be imported or deleted after several retries.</p>
+    	<p>The import resource couldn't be imported after several retries.</p>
 
     */
     ProcessingState REJECTED = ProcessingStateEnum.REJECTED;
@@ -59,10 +49,6 @@ public interface ProcessingState {
         WAIT_FOR_MASTER_VARIANT("WaitForMasterVariant"),
 
         IMPORTED("Imported"),
-
-        DELETE("Delete"),
-
-        DELETED("Deleted"),
 
         REJECTED("Rejected");
         private final String jsonName;

@@ -179,8 +179,8 @@ public class AttributesTest {
 
         assertThat(attributes.get("boolean").getValue()).isInstanceOfSatisfying(Boolean.class,
             aBoolean -> assertThat(aBoolean).isTrue());
-        assertThat(attributes.get("integer").getValue()).isInstanceOfSatisfying(Double.class,
-            number -> assertThat(number).isEqualTo(10.0));
+        assertThat(attributes.get("integer").getValue()).isInstanceOfSatisfying(Long.class,
+            number -> assertThat(number).isEqualTo(10L));
         assertThat(attributes.get("double").getValue()).isInstanceOfSatisfying(Double.class,
             number -> assertThat(number).isEqualTo(11.0));
         assertThat(attributes.get("boolean").getValue()).isInstanceOfSatisfying(Boolean.class,
@@ -216,7 +216,7 @@ public class AttributesTest {
         assertThat(attributes.get("set-boolean").getValue()).asList().first().isInstanceOf(Boolean.class);
         assertThat(attributes.get("set-integer").getValue()).asList()
                 .first()
-                .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(10.0));
+                .isInstanceOfSatisfying(Long.class, number -> assertThat(number).isEqualTo(10L));
         assertThat(attributes.get("set-double").getValue()).asList()
                 .first()
                 .isInstanceOfSatisfying(Double.class, number -> assertThat(number).isEqualTo(11.0));

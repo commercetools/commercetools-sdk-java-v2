@@ -34,7 +34,7 @@ public class JsonUtils {
             SimpleModule.class.getClassLoader());
 
         ServiceLoader<ModuleSupplier> suppliers = ServiceLoader.load(ModuleSupplier.class,
-                ModuleSupplier.class.getClassLoader());
+            ModuleSupplier.class.getClassLoader());
         final List<SimpleModule> moduleList = new ArrayList<>();
         suppliers.iterator().forEachRemaining(moduleSupplier -> moduleList.add(moduleSupplier.getModule(options)));
 

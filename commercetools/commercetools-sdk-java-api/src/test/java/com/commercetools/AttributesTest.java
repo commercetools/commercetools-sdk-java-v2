@@ -10,7 +10,6 @@ import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.util.Map;
 
-import com.commercetools.api.json.ApiModule;
 import com.commercetools.api.json.ApiModuleOptions;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
@@ -148,7 +147,9 @@ public class AttributesTest {
 
     @Test
     public void attributesAsDateFalse() throws IOException {
-        ApiModuleOptions options = ApiModuleOptions.of().withDateAttributeAsString(true).withDateCustomFieldAsString(true);
+        ApiModuleOptions options = ApiModuleOptions.of()
+                .withDateAttributeAsString(true)
+                .withDateCustomFieldAsString(true);
         ObjectMapper mapper = JsonUtils.createObjectMapper(options);
 
         ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);

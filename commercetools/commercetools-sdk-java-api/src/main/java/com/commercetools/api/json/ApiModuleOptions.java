@@ -1,3 +1,4 @@
+
 package com.commercetools.api.json;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
@@ -39,7 +40,8 @@ public class ApiModuleOptions implements ModuleOptions {
         return new ApiModuleOptions(dateAttributeAsString, dateCustomFieldAsString);
     }
 
-    @Override public String getOption(String name) {
+    @Override
+    public String getOption(String name) {
         if (name.equals(DESERIALIZE_DATE_ATTRIBUTE_AS_STRING)) {
             return dateAttributeAsString.toString();
         }

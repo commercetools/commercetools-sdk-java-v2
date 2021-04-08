@@ -73,24 +73,24 @@ public class ClientFactory {
     public static ApiHttpClient create(final String apiBaseUrl, final VrapHttpClient httpClient,
             final TokenSupplier tokenSupplier, final InternalLoggerFactory internalLoggerFactory,
             List<Middleware> middlewares, @Nullable final CorrelationIdProvider correlationIdProvider) {
-        return create(apiBaseUrl, httpClient, tokenSupplier, internalLoggerFactory, MiddlewareFactory::buildUserAgent,
-            middlewares, correlationIdProvider);
+        return create(apiBaseUrl, httpClient, tokenSupplier, internalLoggerFactory,
+            ClientBuilder::buildDefaultUserAgent, middlewares, correlationIdProvider);
     }
 
     public static ApiHttpClient create(final String apiBaseUrl, final VrapHttpClient httpClient,
             final TokenSupplier tokenSupplier, final InternalLoggerFactory internalLoggerFactory,
             final Supplier<String> userAgentSupplier, List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider) {
-        final ResponseSerializer serializer = ResponseSerializer.of();
-        final List<Middleware> middlewareStack = new ArrayList<>(
-            MiddlewareFactory.createDefault(tokenSupplier, internalLoggerFactory, userAgentSupplier));
-        if (correlationIdProvider != null) {
-            middlewareStack.add((request, next) -> next.apply(
-                request.withHeader(ApiHttpHeaders.X_CORRELATION_ID, correlationIdProvider.getCorrelationId())));
-        }
-        middlewareStack.addAll(middlewares);
-        final HandlerStack stack = HandlerStack.create(HttpHandler.create(httpClient), middlewareStack);
-
-        return ApiHttpClient.of(apiBaseUrl, stack, serializer);
+        return ClientBuilder.of(httpClient)
+                .withApiBaseUrl(apiBaseUrl)
+                .withSerializer(ResponseSerializer.of())
+                .addErrorMiddleware()
+                .addInternalLoggerFactory(internalLoggerFactory)
+                .addAcceptGZipMiddleware()
+                .addUserAgentSupplier(userAgentSupplier)
+                .addTokenSupplier(tokenSupplier)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .addMiddlewares(middlewares)
+                .build();
     }
 }

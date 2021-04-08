@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 import org.apache.commons.lang3.SystemUtils;
 
+/**
+ * @deprecated functionality now available using the {@link ClientBuilder}
+ */
+@Deprecated
 public class MiddlewareFactory {
     public static List<Middleware> createDefault(final TokenSupplier tokenSupplier,
             final InternalLoggerFactory internalLoggerFactory) {
@@ -30,10 +34,15 @@ public class MiddlewareFactory {
             (request,
                     next) -> next.apply(request.withHeader(ApiHttpHeaders.USER_AGENT, userAgent.get())
                             .withHeader(ApiHttpHeaders.ACCEPT_ENCODING, "gzip")),
-            new ErrorMiddleware(serializer), new InternalLoggerMiddleware(internalLoggerFactory),
-            new OAuthMiddleware(oAuthHandler));
+            ErrorMiddleware.of(serializer), InternalLoggerMiddleware.of(internalLoggerFactory),
+            OAuthMiddleware.of(oAuthHandler));
     }
 
+    /**
+     * @deprecated use {@link ClientBuilder#buildDefaultUserAgent()} instead
+     * @return user agent string
+     */
+    @Deprecated
     public static String buildUserAgent() {
         String runtimeVersion = SystemUtils.JAVA_RUNTIME_VERSION;
         String osName = SystemUtils.OS_NAME;

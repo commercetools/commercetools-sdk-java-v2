@@ -6,29 +6,35 @@ import static java.util.Objects.requireNonNull;
 import java.net.URI;
 import java.util.*;
 import java.util.function.Supplier;
-import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
 import io.vrap.rmf.base.client.http.*;
+import io.vrap.rmf.base.client.oauth2.ClientCredentials;
+import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 import org.apache.commons.lang3.SystemUtils;
 
 public class ClientBuilder {
+    public static final String COMMERCETOOLS = "commercetools";
+
     private URI apiBaseUrl;
-    private ErrorMiddleware errorMiddleware;
+    private Supplier<ErrorMiddleware> errorMiddleware;
+    private Supplier<OAuthMiddleware> oAuthMiddleware;
     private InternalLoggerMiddleware internalLoggerMiddleware;
-    private List<Middleware> middlewares;
-    private final HandlerStack stack;
+    private UserAgentMiddleware userAgentMiddleware;
+    private List<Middleware> middlewares = new ArrayList<>();
+    private Supplier<HandlerStack> stack;
+    private VrapHttpClient httpClient;
     private ResponseSerializer serializer;
 
     public static ClientBuilder of() {
-        return of(HttpClientSupplier.of().get());
+        return new ClientBuilder();
     }
 
     public static ClientBuilder of(VrapHttpClient httpClient) {
-        return of(HandlerStack.create(HttpHandler.create(httpClient)));
+        return new ClientBuilder(httpClient);
     }
 
     public static ClientBuilder of(HandlerStack stack) {
@@ -36,8 +42,42 @@ public class ClientBuilder {
     }
 
     private ClientBuilder(HandlerStack stack) {
-        this.stack = stack;
-        this.middlewares = new ArrayList<>();
+        this.stack = () -> stack;
+        this.serializer = ResponseSerializer.of();
+    }
+
+    private ClientBuilder() {
+        this.httpClient = HttpClientSupplier.of().get();
+        this.stack = stackSupplier();
+        this.serializer = ResponseSerializer.of();
+    }
+
+    private Supplier<HandlerStack> stackSupplier() {
+        return () -> {
+            final List<Middleware> middlewareStack = new ArrayList<>();
+            Optional.ofNullable(errorMiddleware).map(m -> middlewareStack.add(m.get()));
+            Optional.ofNullable(internalLoggerMiddleware).map(middlewareStack::add);
+            Optional.ofNullable(userAgentMiddleware).map(middlewareStack::add);
+            Optional.ofNullable(oAuthMiddleware).map(m -> middlewareStack.add(m.get()));
+            middlewareStack.addAll(middlewares);
+            return HandlerStack.create(HttpHandler.create(requireNonNull(httpClient)), middlewareStack);
+        };
+    }
+
+    private ClientBuilder(VrapHttpClient httpClient) {
+        this.httpClient = httpClient;
+        this.stack = stackSupplier();
+        this.serializer = ResponseSerializer.of();
+    }
+
+    public ClientBuilder withHandlerStack(HandlerStack stack) {
+        this.stack = () -> stack;
+        return this;
+    }
+
+    public ClientBuilder withHttpClient(VrapHttpClient httpClient) {
+        this.httpClient = httpClient;
+        return this;
     }
 
     public ClientBuilder withSerializer(ResponseSerializer serializer) {
@@ -45,50 +85,78 @@ public class ClientBuilder {
         return this;
     }
 
+    public ClientBuilder defaultClient(String apiBaseUrl) {
+        return withApiBaseUrl(apiBaseUrl).withErrorMiddleware()
+                .withSerializer(ResponseSerializer.of())
+                .withInternalLoggerFactory((request, topic) -> InternalLogger.getLogger(COMMERCETOOLS + "." + topic))
+                .withUserAgentSupplier(ClientBuilder::buildDefaultUserAgent)
+                .addAcceptGZipMiddleware();
+    }
+
+    public ClientBuilder defaultClient(String apiBaseUrl, ClientCredentials credentials, String tokenEndpoint) {
+        return defaultClient(apiBaseUrl).withClientCredentials(credentials, tokenEndpoint);
+    }
+
+    public ClientBuilder withClientCredentials(ClientCredentials credentials, String tokenEndpoint) {
+        this.oAuthMiddleware = () -> {
+            final TokenSupplier tokenSupplier = createClientCredentialsTokenSupplier(credentials, tokenEndpoint,
+                requireNonNull(httpClient));
+            final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
+            return OAuthMiddleware.of(oAuthHandler);
+        };
+
+        return this;
+    }
+
+    public ClientBuilder withClientCredentials(ClientCredentials credentials, String tokenEndpoint,
+            VrapHttpClient httpClient) {
+        return withTokenSupplier(createClientCredentialsTokenSupplier(credentials, tokenEndpoint, httpClient));
+    }
+
+    private TokenSupplier createClientCredentialsTokenSupplier(ClientCredentials credentials, String tokenEndpoint,
+            VrapHttpClient httpClient) {
+        return new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
+            credentials.getScopes(), tokenEndpoint, httpClient);
+    }
+
     public ClientBuilder addAcceptGZipMiddleware() {
         return addMiddleware(AcceptGZipMiddleware.of());
     }
 
-    public ClientBuilder addErrorMiddleware() {
-        requireNonNull(serializer);
-        return addErrorMiddleware(ErrorMiddleware.of(serializer));
-    }
-
-    public ClientBuilder addErrorMiddleware(ErrorMiddleware errorMiddleware) {
-        return withMiddlewares(setDefaultMiddlewares(errorMiddleware, internalLoggerMiddleware, middlewares));
-    }
-
-    public ClientBuilder addOAuthMiddleware(OAuthMiddleware oAuthMiddleware) {
-        return addMiddleware(oAuthMiddleware);
-    }
-
-    public ClientBuilder addTokenSupplier(TokenSupplier tokenSupplier) {
-        final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
-        return addOAuthMiddleware(OAuthMiddleware.of(oAuthHandler));
-    }
-
-    public ClientBuilder addInternalLoggerMiddleware(InternalLoggerMiddleware internalLoggerMiddleware) {
-        return withMiddlewares(setDefaultMiddlewares(errorMiddleware, internalLoggerMiddleware, middlewares));
-    }
-
-    private List<Middleware> setDefaultMiddlewares(ErrorMiddleware errorMiddleware,
-            InternalLoggerMiddleware internalLoggerMiddleware, List<Middleware> middlewares) {
+    public ClientBuilder withErrorMiddleware(Supplier<ErrorMiddleware> errorMiddleware) {
         this.errorMiddleware = errorMiddleware;
-        this.internalLoggerMiddleware = internalLoggerMiddleware;
-        List<Middleware> m = new ArrayList<>();
-        if (errorMiddleware != null)
-            m.add(errorMiddleware);
-        if (internalLoggerMiddleware != null)
-            m.add(internalLoggerMiddleware);
-        m.addAll(middlewares.stream()
-                .filter(middleware -> !(middleware instanceof ErrorMiddleware
-                        || middleware instanceof InternalLoggerMiddleware))
-                .collect(Collectors.toList()));
-        return m;
+        return this;
     }
 
-    public ClientBuilder addInternalLoggerFactory(InternalLoggerFactory internalLoggerFactory) {
-        return addInternalLoggerMiddleware(InternalLoggerMiddleware.of(internalLoggerFactory));
+    public ClientBuilder withErrorMiddleware() {
+        return withErrorMiddleware(() -> ErrorMiddleware.of(serializer));
+    }
+
+    public ClientBuilder withErrorMiddleware(ErrorMiddleware errorMiddleware) {
+        return withErrorMiddleware(() -> errorMiddleware);
+    }
+
+    public ClientBuilder withOAuthMiddleware(Supplier<OAuthMiddleware> oAuthMiddleware) {
+        this.oAuthMiddleware = oAuthMiddleware;
+        return this;
+    }
+
+    public ClientBuilder withOAuthMiddleware(OAuthMiddleware oAuthMiddleware) {
+        return withOAuthMiddleware(() -> oAuthMiddleware);
+    }
+
+    public ClientBuilder withTokenSupplier(TokenSupplier tokenSupplier) {
+        final OAuthHandler oAuthHandler = new OAuthHandler(tokenSupplier);
+        return withOAuthMiddleware(OAuthMiddleware.of(oAuthHandler));
+    }
+
+    public ClientBuilder withInternalLoggerMiddleware(InternalLoggerMiddleware internalLoggerMiddleware) {
+        this.internalLoggerMiddleware = internalLoggerMiddleware;
+        return this;
+    }
+
+    public ClientBuilder withInternalLoggerFactory(InternalLoggerFactory internalLoggerFactory) {
+        return withInternalLoggerMiddleware(InternalLoggerMiddleware.of(internalLoggerFactory));
     }
 
     public ClientBuilder withApiBaseUrl(String apiBaseUrl) {
@@ -100,9 +168,13 @@ public class ClientBuilder {
         return this;
     }
 
-    public ClientBuilder addUserAgentSupplier(Supplier<String> userAgentSupplier) {
-        return addMiddleware(
-            (request, next) -> next.apply(request.withHeader(ApiHttpHeaders.USER_AGENT, userAgentSupplier.get())));
+    public ClientBuilder withUserAgentSupplier(Supplier<String> userAgentSupplier) {
+        return withUserAgentMiddleware(new UserAgentMiddleware(userAgentSupplier.get()));
+    }
+
+    private ClientBuilder withUserAgentMiddleware(UserAgentMiddleware userAgentMiddleware) {
+        this.userAgentMiddleware = userAgentMiddleware;
+        return this;
     }
 
     public ClientBuilder addCorrelationIdProvider(@Nullable CorrelationIdProvider correlationIdProvider) {
@@ -140,12 +212,7 @@ public class ClientBuilder {
     }
 
     public ApiHttpClient build() {
-        requireNonNull(apiBaseUrl);
-        requireNonNull(stack);
-        requireNonNull(serializer);
-        stack.addMiddlewares(middlewares);
-
-        return ApiHttpClient.of(apiBaseUrl, stack, serializer);
+        return ApiHttpClient.of(requireNonNull(apiBaseUrl), requireNonNull(stack.get()), requireNonNull(serializer));
     }
 
     public static String buildDefaultUserAgent() {

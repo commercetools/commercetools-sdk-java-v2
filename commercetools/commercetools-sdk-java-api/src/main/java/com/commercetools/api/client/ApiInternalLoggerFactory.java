@@ -3,13 +3,13 @@ package com.commercetools.api.client;
 
 import io.vrap.rmf.base.client.ApiHttpMethod;
 import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ClientFactory;
+import io.vrap.rmf.base.client.ClientBuilder;
 import io.vrap.rmf.base.client.http.InternalLogger;
 
 public class ApiInternalLoggerFactory {
 
     public static InternalLogger get(final ApiHttpRequest httpRequest, final String topic) {
-        return InternalLogger.getLogger(ClientFactory.COMMERCETOOLS + "." + getPathElement(httpRequest) + "." + topic
+        return InternalLogger.getLogger(ClientBuilder.COMMERCETOOLS + "." + getPathElement(httpRequest) + "." + topic
                 + (topic.equals("request") ? "." + requestOrCommandScopeSegment(httpRequest) : ""));
     }
 

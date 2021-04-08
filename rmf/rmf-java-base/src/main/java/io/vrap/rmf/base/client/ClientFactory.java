@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 import io.vrap.rmf.base.client.http.*;
 import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
+@Deprecated
 public class ClientFactory {
 
     public static final String COMMERCETOOLS = "commercetools";
@@ -82,13 +83,10 @@ public class ClientFactory {
             final Supplier<String> userAgentSupplier, List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider) {
         return ClientBuilder.of(httpClient)
-                .withApiBaseUrl(apiBaseUrl)
-                .withSerializer(ResponseSerializer.of())
-                .addErrorMiddleware()
-                .addInternalLoggerFactory(internalLoggerFactory)
-                .addAcceptGZipMiddleware()
-                .addUserAgentSupplier(userAgentSupplier)
-                .addTokenSupplier(tokenSupplier)
+                .defaultClient(apiBaseUrl)
+                .withInternalLoggerFactory(internalLoggerFactory)
+                .withUserAgentSupplier(userAgentSupplier)
+                .withTokenSupplier(tokenSupplier)
                 .addCorrelationIdProvider(correlationIdProvider)
                 .addMiddlewares(middlewares)
                 .build();

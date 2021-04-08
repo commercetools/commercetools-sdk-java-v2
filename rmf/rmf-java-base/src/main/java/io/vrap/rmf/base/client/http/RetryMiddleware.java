@@ -12,10 +12,7 @@ import net.jodah.failsafe.Failsafe;
 import net.jodah.failsafe.FailsafeExecutor;
 import net.jodah.failsafe.RetryPolicy;
 
-import io.vrap.rmf.base.client.ApiHttpException;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.ApiHttpResponse;
-import io.vrap.rmf.base.client.ClientFactory;
+import io.vrap.rmf.base.client.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,7 +24,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
     public static final int DEFAULT_MAX_DELAY = 60000;
     public static final int DEFAULT_INITIAL_DELAY = 200;
     public static final List<Integer> DEFAULT_RETRY_STATUS_CODES = singletonList(503);
-    private static final Logger logger = LoggerFactory.getLogger(ClientFactory.COMMERCETOOLS);
+    private static final Logger logger = LoggerFactory.getLogger(ClientBuilder.COMMERCETOOLS);
 
     private final FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor;
 

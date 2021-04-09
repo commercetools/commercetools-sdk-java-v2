@@ -21,7 +21,8 @@ public final class ZonedDateTimeSerializer extends StdScalarSerializer<ZonedDate
     }
 
     @Override
-    public void serialize(ZonedDateTime value, JsonGenerator gen, SerializerProvider arg2) throws IOException {
+    public void serialize(final ZonedDateTime value, final JsonGenerator gen, final SerializerProvider arg2)
+            throws IOException {
         gen.writeString(FORMATTER.format(value.withZoneSameInstant(ZoneOffset.UTC)));
     }
 }

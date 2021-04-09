@@ -15,19 +15,19 @@ import java.util.Map;
 import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.type.*;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
+import org.json.JSONException;
 import org.junit.Assert;
 import org.junit.Test;
+import org.skyscreamer.jsonassert.JSONAssert;
 
 public class ModelSerializationTest {
 
     @Test
-    public void serializeCategoryDraftToJson() {
+    public void serializeCategoryDraftToJson() throws IOException, JSONException {
         LocalizedString localizedString = new LocalizedStringImpl();
         localizedString.setValue("test-key", "test-value");
         String key = "test-key";
@@ -35,7 +35,7 @@ public class ModelSerializationTest {
         String testString = "test-string";
 
         Map<String, Object> fieldContainerValues = new HashMap<>();
-        fieldContainerValues.put(key, JsonUtils.getConfiguredObjectMapper().createObjectNode().put("val", testString));
+        fieldContainerValues.put(key, testString);
         FieldContainer fieldContainer = FieldContainerBuilder.of().values(fieldContainerValues).build();
 
         AssetDraft assetDraft = AssetDraftBuilder.of()
@@ -71,26 +71,11 @@ public class ModelSerializationTest {
                 .slug(localizedString)
                 .build();
 
-        JsonElement categoryDraftJson = null;
-        try {
-            categoryDraftJson = JsonParser.parseString(JsonUtils.toJsonString(categoryDraft));
-        }
-        catch (JsonProcessingException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            final URL url = Thread.currentThread()
-                    .getContextClassLoader()
-                    .getResource("json_examples/category-draft-example.json");
-            JsonElement categoryDraftExample = JsonParser
-                    .parseString(new String(Files.readAllBytes(Paths.get(url.getPath()))));
-            Assert.assertEquals(categoryDraftExample, categoryDraftJson);
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-            Assert.fail(e.getMessage());
-        }
+        final URL url = Thread.currentThread()
+                .getContextClassLoader()
+                .getResource("json_examples/category-draft-example.json");
+        JSONAssert.assertEquals(new String(Files.readAllBytes(Paths.get(url.getPath()))),
+            JsonUtils.toJsonString(categoryDraft), true);
     }
 
     @Test

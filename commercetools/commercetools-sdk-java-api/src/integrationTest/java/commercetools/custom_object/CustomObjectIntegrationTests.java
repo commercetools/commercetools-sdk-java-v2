@@ -8,6 +8,7 @@ import com.commercetools.api.models.custom_object.CustomObjectDraft;
 import com.commercetools.api.models.custom_object.CustomObjectDraftBuilder;
 import com.commercetools.api.models.custom_object.CustomObjectPagedQueryResponse;
 import commercetools.utils.CommercetoolsTestUtils;
+import commercetools.utils.ValueObject;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -46,7 +47,7 @@ public class CustomObjectIntegrationTests {
             CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
                     .key(customObject.getKey())
                     .container(customObject.getContainer())
-                    .value(JsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "val"))
+                    .value((ValueObject) () -> "foo")
                     .build();
 
             CustomObject updatedCustomObject = CommercetoolsTestUtils.getProjectRoot()
@@ -56,7 +57,29 @@ public class CustomObjectIntegrationTests {
                     .getBody();
 
             Assert.assertNotNull(updatedCustomObject);
-            Assert.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "val");
+            Assert.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "foo");
+
+            return updatedCustomObject;
+        });
+    }
+
+    @Test
+    public void updateWithJsonNode() {
+        CustomObjectFixtures.withUpdateableCustomObject(customObject -> {
+            CustomObjectDraft customObjectDraft = CustomObjectDraftBuilder.of()
+                    .key(customObject.getKey())
+                    .container(customObject.getContainer())
+                    .value(JsonUtils.getConfiguredObjectMapper().createObjectNode().put("value", "foo"))
+                    .build();
+
+            CustomObject updatedCustomObject = CommercetoolsTestUtils.getProjectRoot()
+                    .customObjects()
+                    .post(customObjectDraft)
+                    .executeBlocking()
+                    .getBody();
+
+            Assert.assertNotNull(updatedCustomObject);
+            Assert.assertEquals(((Map<String, Object>) updatedCustomObject.getValue()).get("value"), "foo");
 
             return updatedCustomObject;
         });

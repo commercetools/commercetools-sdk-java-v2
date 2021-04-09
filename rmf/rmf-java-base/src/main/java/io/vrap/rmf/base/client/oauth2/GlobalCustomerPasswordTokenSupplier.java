@@ -18,8 +18,9 @@ public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService im
     private final VrapHttpClient vrapHttpClient;
     private final ApiHttpRequest apiHttpRequest;
 
-    public GlobalCustomerPasswordTokenSupplier(String clientId, String clientSecret, String email, String password,
-            String scope, String tokenEndpoint, VrapHttpClient vrapHttpClient) {
+    public GlobalCustomerPasswordTokenSupplier(final String clientId, final String clientSecret, final String email,
+            final String password, final String scope, final String tokenEndpoint,
+            final VrapHttpClient vrapHttpClient) {
         this.vrapHttpClient = vrapHttpClient;
         this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, email, password, scope, tokenEndpoint);
     }

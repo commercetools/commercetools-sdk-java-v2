@@ -19,7 +19,6 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.NotFoundException;
 import io.vrap.rmf.base.client.http.RetryMiddleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
@@ -61,7 +60,7 @@ public class MiddlewareTest {
                 .build();
 
         VrapHttpClient httpClient = HttpClientSupplier.of().get();
-        ApiHttpClient client = ClientFactory.create(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl(), new VrapHttpClient() {
+        ApiHttpClient client = ClientBuilder.of(new VrapHttpClient() {
             private boolean firstCall = true;
 
             @Override
@@ -73,8 +72,10 @@ public class MiddlewareTest {
                 }
                 return httpClient.execute(request);
             }
-        }, new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
-            credentials.getScopes(), ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), HttpClientSupplier.of().get()));
+        })
+                .defaultClient(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withClientCredentials(credentials, ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), httpClient)
+                .build();
 
         final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET,
             URI.create("/" + CommercetoolsTestUtils.getProjectKey() + "/"), new ApiHttpHeaders(), null);

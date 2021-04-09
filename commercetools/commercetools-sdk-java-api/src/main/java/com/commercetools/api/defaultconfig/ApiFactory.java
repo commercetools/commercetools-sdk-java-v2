@@ -9,14 +9,10 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.client.*;
 
-import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.ClientFactory;
-import io.vrap.rmf.base.client.HttpClientSupplier;
-import io.vrap.rmf.base.client.VrapHttpClient;
+import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.http.CorrelationIdProvider;
 import io.vrap.rmf.base.client.http.Middleware;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.oauth2.ClientCredentialsTokenSupplier;
 
 public class ApiFactory {
 
@@ -155,19 +151,25 @@ public class ApiFactory {
     public static ApiHttpClient defaultClient(final Supplier<VrapHttpClient> httpClientSupplier,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint,
             final List<Middleware> middlewares, @Nullable final CorrelationIdProvider correlationIdProvider) {
-        return ClientFactory.create(apiEndpoint, httpClientSupplier.get(),
-            new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
-                credentials.getScopes(), tokenEndpoint, httpClientSupplier.get()),
-            ApiInternalLoggerFactory::get, middlewares, correlationIdProvider);
+        return ClientBuilder.of(httpClientSupplier.get())
+                .defaultClient(apiEndpoint)
+                .withClientCredentials(credentials, tokenEndpoint)
+                .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .addMiddlewares(middlewares)
+                .build();
     }
 
     public static ApiHttpClient defaultClient(final Supplier<VrapHttpClient> httpClientSupplier,
             final ClientCredentials credentials, final String tokenEndpoint, final String apiEndpoint,
             final Supplier<String> userAgentSupplier, final List<Middleware> middlewares,
             @Nullable final CorrelationIdProvider correlationIdProvider) {
-        return ClientFactory.create(apiEndpoint, httpClientSupplier.get(),
-            new ClientCredentialsTokenSupplier(credentials.getClientId(), credentials.getClientSecret(),
-                credentials.getScopes(), tokenEndpoint, httpClientSupplier.get()),
-            ApiInternalLoggerFactory::get, userAgentSupplier, middlewares, correlationIdProvider);
+        return ClientBuilder.of(httpClientSupplier.get())
+                .defaultClient(apiEndpoint, credentials, tokenEndpoint)
+                .withInternalLoggerFactory(ApiInternalLoggerFactory::get)
+                .withUserAgentSupplier(userAgentSupplier)
+                .addCorrelationIdProvider(correlationIdProvider)
+                .addMiddlewares(middlewares)
+                .build();
     }
 }

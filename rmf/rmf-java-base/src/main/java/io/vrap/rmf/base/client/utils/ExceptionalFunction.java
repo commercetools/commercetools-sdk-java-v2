@@ -8,5 +8,5 @@ package io.vrap.rmf.base.client.utils;
  */
 @FunctionalInterface
 public interface ExceptionalFunction<T, R> {
-    R apply(T t) throws Exception;
+    R apply(final T t) throws Exception;
 }

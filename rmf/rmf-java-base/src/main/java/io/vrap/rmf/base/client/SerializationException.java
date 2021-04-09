@@ -2,7 +2,7 @@
 package io.vrap.rmf.base.client;
 
 public class SerializationException extends RuntimeException {
-    public SerializationException(String message) {
+    public SerializationException(final String message) {
         super(message);
     }
 }

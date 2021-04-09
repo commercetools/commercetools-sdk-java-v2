@@ -34,7 +34,7 @@ public class ErrorMiddlewareTest {
     @Test
     @UseDataProvider("exceptions")
     public void testError(int statusCode, Class<ApiHttpException> exceptionClass) {
-        ErrorMiddleware middleware = new ErrorMiddleware();
+        ErrorMiddleware middleware = ErrorMiddleware.of(ResponseSerializer.of());
 
         final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
             "".getBytes());

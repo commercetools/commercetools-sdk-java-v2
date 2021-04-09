@@ -9,7 +9,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 abstract class Base {
 
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(final Object o) {
         return EqualsBuilder.reflectionEquals(this, o);
     }
 

@@ -24,7 +24,7 @@ public class HandlerStack extends AutoCloseableService {
         this.cached = null;
     }
 
-    public static HandlerStack create(final HttpHandler handler, List<Middleware> middlewares) {
+    public static HandlerStack create(final HttpHandler handler, final List<Middleware> middlewares) {
         return new HandlerStack(handler, middlewares);
     }
 
@@ -32,17 +32,17 @@ public class HandlerStack extends AutoCloseableService {
         return create(handler, new ArrayList<>());
     }
 
-    public void addMiddleware(Middleware middleware) {
+    public void addMiddleware(final Middleware middleware) {
         this.middlewares.add(middleware);
         this.cached = null;
     }
 
-    public void addMiddlewares(List<Middleware> middlewares) {
+    public void addMiddlewares(final List<Middleware> middlewares) {
         this.middlewares.addAll(middlewares);
         this.cached = null;
     }
 
-    public void addMiddlewares(Middleware... middlewares) {
+    public void addMiddlewares(final Middleware... middlewares) {
         this.middlewares.addAll(Arrays.asList(middlewares));
         this.cached = null;
     }
@@ -65,7 +65,7 @@ public class HandlerStack extends AutoCloseableService {
     }
 
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request) {
-        Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> handler = resolve();
+        final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> handler = resolve();
 
         return handler.apply(request);
     }

@@ -32,7 +32,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
         this(maxRetries, DEFAULT_RETRY_STATUS_CODES);
     }
 
-    public RetryMiddleware(final int maxRetries, List<Integer> statusCodes) {
+    public RetryMiddleware(final int maxRetries, final List<Integer> statusCodes) {
         this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
     }
 
@@ -40,7 +40,8 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
         this(maxRetries, delay, maxDelay, DEFAULT_RETRY_STATUS_CODES);
     }
 
-    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay, List<Integer> statusCodes) {
+    public RetryMiddleware(final int maxRetries, final long delay, final long maxDelay,
+            final List<Integer> statusCodes) {
         RetryPolicy<ApiHttpResponse<byte[]>> retryPolicy = new RetryPolicy<ApiHttpResponse<byte[]>>()
                 .handleIf((response, throwable) -> {
                     if (throwable instanceof ApiHttpException) {
@@ -67,7 +68,7 @@ public class RetryMiddleware implements Middleware, AutoCloseable {
      * @deprecated max parallel requests are limited by underlying HTTP client
      */
     @Deprecated
-    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, List<Integer> statusCodes) {
+    public RetryMiddleware(final int maxParallelRequests, final int maxRetries, final List<Integer> statusCodes) {
         this(maxRetries, DEFAULT_INITIAL_DELAY, DEFAULT_MAX_DELAY, statusCodes);
     }
 

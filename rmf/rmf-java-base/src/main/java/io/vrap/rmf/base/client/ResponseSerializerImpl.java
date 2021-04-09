@@ -10,11 +10,11 @@ class ResponseSerializerImpl implements ResponseSerializer {
 
     private final ObjectMapper mapper;
 
-    public ResponseSerializerImpl(ObjectMapper mapper) {
+    public ResponseSerializerImpl(final ObjectMapper mapper) {
         this.mapper = mapper;
     }
 
-    public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, Class<O> outputType) {
+    public <O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response, final Class<O> outputType) {
         try {
             if (response.getBody() == null) {
                 return (ApiHttpResponse<O>) response;
@@ -27,7 +27,7 @@ class ResponseSerializerImpl implements ResponseSerializer {
         }
     }
 
-    public byte[] toJsonByteArray(Object value) throws JsonProcessingException {
+    public byte[] toJsonByteArray(final Object value) throws JsonProcessingException {
         return mapper.writeValueAsBytes(value);
     }
 }

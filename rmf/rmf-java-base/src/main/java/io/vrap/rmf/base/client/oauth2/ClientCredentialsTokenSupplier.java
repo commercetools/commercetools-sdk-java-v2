@@ -20,8 +20,8 @@ public class ClientCredentialsTokenSupplier extends AutoCloseableService impleme
     private final VrapHttpClient vrapHttpClient;
     private final ApiHttpRequest apiHttpRequest;
 
-    public ClientCredentialsTokenSupplier(String clientId, String clientSecret, String scope, String tokenEndpoint,
-            VrapHttpClient vrapHttpClient) {
+    public ClientCredentialsTokenSupplier(final String clientId, final String clientSecret, final String scope,
+            final String tokenEndpoint, final VrapHttpClient vrapHttpClient) {
         this.vrapHttpClient = vrapHttpClient;
         this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, scope, tokenEndpoint);
 

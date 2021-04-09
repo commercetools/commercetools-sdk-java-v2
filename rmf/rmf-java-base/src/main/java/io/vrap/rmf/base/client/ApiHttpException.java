@@ -66,7 +66,7 @@ public class ApiHttpException extends BaseException {
         this.serializer = serializer;
     }
 
-    public <T> T getBodyAs(Class<T> clazz) throws SerializationException {
+    public <T> T getBodyAs(final Class<T> clazz) throws SerializationException {
         try {
             return serializer.convertResponse(response, clazz).getBody();
         }

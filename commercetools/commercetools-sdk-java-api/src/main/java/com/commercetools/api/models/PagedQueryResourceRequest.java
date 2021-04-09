@@ -1,10 +1,11 @@
 
 package com.commercetools.api.models;
 
+import io.vrap.rmf.base.client.ClientRequestCommand;
 import io.vrap.rmf.base.client.RequestCommand;
 
 public interface PagedQueryResourceRequest<T extends PagedQueryResourceRequest<T, TResult>, TResult>
-        extends RequestCommand<TResult> {
+        extends RequestCommand<TResult>, ClientRequestCommand<TResult> {
     T withLimit(final Integer limit);
 
     T withOffset(final Integer offset);

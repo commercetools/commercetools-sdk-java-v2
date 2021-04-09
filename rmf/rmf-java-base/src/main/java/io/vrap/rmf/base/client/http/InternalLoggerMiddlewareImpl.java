@@ -18,13 +18,13 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
     private static final Logger classLogger = LoggerFactory.getLogger(InternalLoggerMiddlewareImpl.class);
     private final InternalLoggerFactory factory;
 
-    public InternalLoggerMiddlewareImpl(InternalLoggerFactory factory) {
+    public InternalLoggerMiddlewareImpl(final InternalLoggerFactory factory) {
         this.factory = factory;
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
-            Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
+    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
+            final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         InternalLogger logger = factory.createFor(request, InternalLogger.TOPIC_REQUEST);
         logger.debug(() -> request);
         logger.trace(() -> {

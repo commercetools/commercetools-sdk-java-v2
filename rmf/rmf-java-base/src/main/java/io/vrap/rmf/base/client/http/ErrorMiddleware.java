@@ -9,7 +9,7 @@ public interface ErrorMiddleware extends Middleware {
         return of(ResponseSerializer.of());
     }
 
-    static ErrorMiddleware of(ResponseSerializer serializer) {
+    static ErrorMiddleware of(final ResponseSerializer serializer) {
         return new ErrorMiddlewareImpl(serializer);
     }
 }

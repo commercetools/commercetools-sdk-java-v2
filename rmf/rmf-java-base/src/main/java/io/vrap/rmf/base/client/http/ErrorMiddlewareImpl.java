@@ -10,7 +10,7 @@ import io.vrap.rmf.base.client.error.ExceptionFactory;
 class ErrorMiddlewareImpl implements ErrorMiddleware {
     private final ResponseSerializer serializer;
 
-    public ErrorMiddlewareImpl(ResponseSerializer serializer) {
+    public ErrorMiddlewareImpl(final ResponseSerializer serializer) {
         this.serializer = serializer;
     }
 

@@ -15,7 +15,8 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implements RequestCommand<TResult> {
+public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult>
+        implements RequestCommand<TResult>, ClientRequestCommand<TResult> {
     public static class ParamEntry<K, V> implements Map.Entry<K, V> {
         protected final K key;
         protected V value;
@@ -209,13 +210,25 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
 
     public abstract ApiHttpRequest createHttpRequest();
 
-    public abstract CompletableFuture<ApiHttpResponse<TResult>> execute();
+    public CompletableFuture<ApiHttpResponse<TResult>> execute() {
+        return execute(apiHttpClient());
+    }
+
+    public abstract CompletableFuture<ApiHttpResponse<TResult>> execute(ApiHttpClient client);
 
     public ApiHttpResponse<TResult> executeBlocking() {
-        return executeBlocking(Duration.ofSeconds(120));
+        return executeBlocking(apiHttpClient(), Duration.ofSeconds(120));
     };
 
-    public abstract ApiHttpResponse<TResult> executeBlocking(Duration timeout);
+    public ApiHttpResponse<TResult> executeBlocking(ApiHttpClient client) {
+        return executeBlocking(client, Duration.ofSeconds(120));
+    };
+
+    public ApiHttpResponse<TResult> executeBlocking(Duration timeout) {
+        return executeBlocking(apiHttpClient(), timeout);
+    }
+
+    public abstract ApiHttpResponse<TResult> executeBlocking(ApiHttpClient client, Duration timeout);
 
     public CompletableFuture<ApiHttpResponse<byte[]>> send() {
         return apiHttpClient.execute(createHttpRequest());

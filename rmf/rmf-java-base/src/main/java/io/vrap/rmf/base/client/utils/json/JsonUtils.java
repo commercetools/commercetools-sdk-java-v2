@@ -29,7 +29,7 @@ public class JsonUtils {
         return createObjectMapper(name -> null);
     }
 
-    public static ObjectMapper createObjectMapper(ModuleOptions options) {
+    public static ObjectMapper createObjectMapper(final ModuleOptions options) {
         ServiceLoader<SimpleModule> loader = ServiceLoader.load(SimpleModule.class,
             SimpleModule.class.getClassLoader());
 
@@ -50,23 +50,23 @@ public class JsonUtils {
         return objectMapper;
     }
 
-    public static byte[] toJsonByteArray(Object value) throws JsonProcessingException {
+    public static byte[] toJsonByteArray(final Object value) throws JsonProcessingException {
         return OBJECT_MAPPER.writeValueAsBytes(value);
     }
 
-    public static String toJsonString(Object value) throws JsonProcessingException {
+    public static String toJsonString(final Object value) throws JsonProcessingException {
         return OBJECT_MAPPER.writeValueAsString(value);
     }
 
-    public static <T> T fromJsonString(String content, Class<T> clazz) throws IOException {
+    public static <T> T fromJsonString(final String content, final Class<T> clazz) throws IOException {
         return OBJECT_MAPPER.readValue(content, clazz);
     }
 
-    public static <T> T fromJsonByteArray(byte[] content, Class<T> clazz) throws IOException {
+    public static <T> T fromJsonByteArray(final byte[] content, final Class<T> clazz) throws IOException {
         return OBJECT_MAPPER.readValue(content, clazz);
     }
 
-    public static <T> T fromInputStream(InputStream content, Class<T> clazz) throws IOException {
+    public static <T> T fromInputStream(final InputStream content, final Class<T> clazz) throws IOException {
         return OBJECT_MAPPER.readValue(content, clazz);
     }
 
@@ -78,7 +78,7 @@ public class JsonUtils {
      * Very simple way to "erase" passwords -
      * replaces all field values whose names contains {@code 'pass'} by {@code '**removed from output**'}.
      */
-    private static JsonNode secure(JsonNode node) {
+    private static JsonNode secure(final JsonNode node) {
         if (node.isObject()) {
             ObjectNode objectNode = (ObjectNode) node;
             Iterator<Map.Entry<String, JsonNode>> fields = node.fields();

@@ -8,13 +8,14 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.history.models.common.Reference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Information about the user who performed the change. This is a variant of
+*  <p>Information about the user or the API client who performed the change. This is a variant of
 *  <a href="/types#lastmodifiedby">LastModifiedBy</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
@@ -30,7 +31,7 @@ public interface ModifiedBy {
     public String getId();
 
     /**
-    *  <p>Indicates whether the change was made by a user with or without an
+    *  <p>Indicates whether the change was made by a user or the API client with or without an
     *  <a href="/client-logging#external-user-ids">External user ID</a>.</p>
     */
     @NotNull

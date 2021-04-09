@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
 *  <p>A Record captures the differences in a resource between one version and the next.
-*  (Reall that the version number is not always incremented by one; see <a href="/general-concepts#optimistic-concurrency-control">Optimistic Concurrency Control</a>.)</p>
+*  (Recall that the version number is not always incremented by one; see <a href="/general-concepts#optimistic-concurrency-control">Optimistic Concurrency Control</a>.)</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public final class RecordImpl implements Record {
@@ -30,13 +30,13 @@ public final class RecordImpl implements Record {
 
     private String modifiedAt;
 
-    private com.commercetools.history.models.Label label;
+    private com.commercetools.history.models.label.Label label;
 
-    private com.commercetools.history.models.Label previousLabel;
+    private com.commercetools.history.models.label.Label previousLabel;
 
-    private java.util.List<com.commercetools.history.models.Change> changes;
+    private java.util.List<com.commercetools.history.models.change.Change> changes;
 
-    private com.commercetools.history.models.Reference resource;
+    private com.commercetools.history.models.common.Reference resource;
 
     private Boolean withoutChanges;
 
@@ -45,10 +45,10 @@ public final class RecordImpl implements Record {
             @JsonProperty("previousVersion") final Integer previousVersion, @JsonProperty("type") final String type,
             @JsonProperty("modifiedBy") final com.commercetools.history.models.ModifiedBy modifiedBy,
             @JsonProperty("modifiedAt") final String modifiedAt,
-            @JsonProperty("label") final com.commercetools.history.models.Label label,
-            @JsonProperty("previousLabel") final com.commercetools.history.models.Label previousLabel,
-            @JsonProperty("changes") final java.util.List<com.commercetools.history.models.Change> changes,
-            @JsonProperty("resource") final com.commercetools.history.models.Reference resource,
+            @JsonProperty("label") final com.commercetools.history.models.label.Label label,
+            @JsonProperty("previousLabel") final com.commercetools.history.models.label.Label previousLabel,
+            @JsonProperty("changes") final java.util.List<com.commercetools.history.models.change.Change> changes,
+            @JsonProperty("resource") final com.commercetools.history.models.common.Reference resource,
             @JsonProperty("withoutChanges") final Boolean withoutChanges) {
         this.version = version;
         this.previousVersion = previousVersion;
@@ -87,7 +87,7 @@ public final class RecordImpl implements Record {
     }
 
     /**
-    *  <p>Information about the user or the client who performed the change.</p>
+    *  <p>Information about the user or the API client who performed the change.</p>
     */
     public com.commercetools.history.models.ModifiedBy getModifiedBy() {
         return this.modifiedBy;
@@ -103,34 +103,35 @@ public final class RecordImpl implements Record {
     /**
     *  <p>Information that describes the resource after the change.</p>
     */
-    public com.commercetools.history.models.Label getLabel() {
+    public com.commercetools.history.models.label.Label getLabel() {
         return this.label;
     }
 
     /**
     *  <p>Information that describes the resource before the change.</p>
     */
-    public com.commercetools.history.models.Label getPreviousLabel() {
+    public com.commercetools.history.models.label.Label getPreviousLabel() {
         return this.previousLabel;
     }
 
     /**
     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.
-    *  The value is not designed to represent the actual array of update actions that was sent to the platform nor is limited to update actions (see, for example, <a href="/general-concepts#optimistic-concurrency-control">Optimistic  Concurrency Control</a>).</p>
+    *  The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, <a href="/general-concepts#optimistic-concurrency-control">Optimistic  Concurrency Control</a>).</p>
     */
-    public java.util.List<com.commercetools.history.models.Change> getChanges() {
+    public java.util.List<com.commercetools.history.models.change.Change> getChanges() {
         return this.changes;
     }
 
     /**
     *  <p><a href="/types#reference">Reference</a> to the changed resource.</p>
     */
-    public com.commercetools.history.models.Reference getResource() {
+    public com.commercetools.history.models.common.Reference getResource() {
         return this.resource;
     }
 
     /**
-    *  <p><code>true</code> if no change was detected.</p>
+    *  <p><code>true</code> if no change was detected.
+    *  The version number of the resource can be increased even without any change in the resource.</p>
     */
     public Boolean getWithoutChanges() {
         return this.withoutChanges;
@@ -156,23 +157,23 @@ public final class RecordImpl implements Record {
         this.modifiedAt = modifiedAt;
     }
 
-    public void setLabel(final com.commercetools.history.models.Label label) {
+    public void setLabel(final com.commercetools.history.models.label.Label label) {
         this.label = label;
     }
 
-    public void setPreviousLabel(final com.commercetools.history.models.Label previousLabel) {
+    public void setPreviousLabel(final com.commercetools.history.models.label.Label previousLabel) {
         this.previousLabel = previousLabel;
     }
 
-    public void setChanges(final com.commercetools.history.models.Change... changes) {
+    public void setChanges(final com.commercetools.history.models.change.Change... changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
     }
 
-    public void setChanges(final java.util.List<com.commercetools.history.models.Change> changes) {
+    public void setChanges(final java.util.List<com.commercetools.history.models.change.Change> changes) {
         this.changes = changes;
     }
 
-    public void setResource(final com.commercetools.history.models.Reference resource) {
+    public void setResource(final com.commercetools.history.models.common.Reference resource) {
         this.resource = resource;
     }
 

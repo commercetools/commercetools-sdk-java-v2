@@ -36,12 +36,22 @@ public class ApiMethodTest {
         }
 
         @Override
+        public CompletableFuture<ApiHttpResponse<Object>> execute(ApiHttpClient client) {
+            return null;
+        }
+
+        @Override
         public ApiHttpResponse<Object> executeBlocking() {
             return null;
         }
 
         @Override
         public ApiHttpResponse<Object> executeBlocking(Duration timeout) {
+            return null;
+        }
+
+        @Override
+        public ApiHttpResponse<Object> executeBlocking(ApiHttpClient client, Duration timeout) {
             return null;
         }
     }

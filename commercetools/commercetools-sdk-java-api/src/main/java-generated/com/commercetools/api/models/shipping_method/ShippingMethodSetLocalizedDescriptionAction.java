@@ -5,6 +5,9 @@ import java.time.*;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
+
+import com.commercetools.api.models.common.LocalizedString;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -16,10 +19,11 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
 
     String SET_LOCALIZED_DESCRIPTION = "setLocalizedDescription";
 
+    @Valid
     @JsonProperty("localizedDescription")
-    public String getLocalizedDescription();
+    public LocalizedString getLocalizedDescription();
 
-    public void setLocalizedDescription(final String localizedDescription);
+    public void setLocalizedDescription(final LocalizedString localizedDescription);
 
     public static ShippingMethodSetLocalizedDescriptionAction of() {
         return new ShippingMethodSetLocalizedDescriptionActionImpl();

@@ -58,13 +58,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersKeyByKeyGet extends
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.customer.Customer> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.Customer>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.customer.Customer.class);
     }
 
     public String getProjectKey() {

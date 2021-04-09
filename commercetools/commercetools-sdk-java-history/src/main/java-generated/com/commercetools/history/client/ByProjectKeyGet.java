@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyGet
-        extends ApiMethod<ByProjectKeyGet, com.commercetools.history.models.ChangeHistoryPagedQueryResponse> {
+        extends ApiMethod<ByProjectKeyGet, com.commercetools.history.models.RecordPagedQueryResponse> {
 
     private String projectKey;
 
@@ -42,15 +42,16 @@ public class ByProjectKeyGet
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.history.models.ChangeHistoryPagedQueryResponse> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse> executeBlocking(
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.history.models.ChangeHistoryPagedQueryResponse>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
-            com.commercetools.history.models.ChangeHistoryPagedQueryResponse.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
+            com.commercetools.history.models.RecordPagedQueryResponse.class);
     }
 
     public String getProjectKey() {
@@ -79,6 +80,10 @@ public class ByProjectKeyGet
 
     public List<String> getUserId() {
         return this.getQueryParam("userId");
+    }
+
+    public List<String> getType() {
+        return this.getQueryParam("type");
     }
 
     public List<String> getClientId() {
@@ -155,6 +160,14 @@ public class ByProjectKeyGet
 
     public ByProjectKeyGet addUserId(final String userId) {
         return copy().addQueryParam("userId", userId);
+    }
+
+    public ByProjectKeyGet withType(final String type) {
+        return copy().withQueryParam("type", type);
+    }
+
+    public ByProjectKeyGet addType(final String type) {
+        return copy().addQueryParam("type", type);
     }
 
     public ByProjectKeyGet withClientId(final String clientId) {

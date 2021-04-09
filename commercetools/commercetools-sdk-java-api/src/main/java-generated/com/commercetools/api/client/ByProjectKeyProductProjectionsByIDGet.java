@@ -52,14 +52,15 @@ public class ByProjectKeyProductProjectionsByIDGet
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product.ProductProjection> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.product.ProductProjection> executeBlocking(
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjection>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
-            com.commercetools.api.models.product.ProductProjection.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.ProductProjection>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.product.ProductProjection.class);
     }
 
     public String getProjectKey() {

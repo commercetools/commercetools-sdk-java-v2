@@ -14,7 +14,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
-*  <p>Information about the user who performed the change. This is a variant of
+*  <p>Information about the user or the API client who performed the change. This is a variant of
 *  <a href="/types#lastmodifiedby">LastModifiedBy</a>.</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
@@ -24,7 +24,7 @@ public final class ModifiedByImpl implements ModifiedBy {
 
     private String type;
 
-    private com.commercetools.history.models.Reference customer;
+    private com.commercetools.history.models.common.Reference customer;
 
     private String anonymousId;
 
@@ -34,7 +34,7 @@ public final class ModifiedByImpl implements ModifiedBy {
 
     @JsonCreator
     ModifiedByImpl(@JsonProperty("id") final String id, @JsonProperty("type") final String type,
-            @JsonProperty("customer") final com.commercetools.history.models.Reference customer,
+            @JsonProperty("customer") final com.commercetools.history.models.common.Reference customer,
             @JsonProperty("anonymousId") final String anonymousId, @JsonProperty("clientId") final String clientId,
             @JsonProperty("isPlatformClient") final Boolean isPlatformClient) {
         this.id = id;
@@ -57,7 +57,7 @@ public final class ModifiedByImpl implements ModifiedBy {
     }
 
     /**
-    *  <p>Indicates whether the change was made by a user with or without an
+    *  <p>Indicates whether the change was made by a user or the API client with or without an
     *  <a href="/client-logging#external-user-ids">External user ID</a>.</p>
     */
     public String getType() {
@@ -70,7 +70,7 @@ public final class ModifiedByImpl implements ModifiedBy {
     *  the change was made using a token from the <a href="/authorization#password-flow">Password
     *  Flow</a>.</p>
     */
-    public com.commercetools.history.models.Reference getCustomer() {
+    public com.commercetools.history.models.common.Reference getCustomer() {
         return this.customer;
     }
 
@@ -106,7 +106,7 @@ public final class ModifiedByImpl implements ModifiedBy {
         this.type = type;
     }
 
-    public void setCustomer(final com.commercetools.history.models.Reference customer) {
+    public void setCustomer(final com.commercetools.history.models.common.Reference customer) {
         this.customer = customer;
     }
 

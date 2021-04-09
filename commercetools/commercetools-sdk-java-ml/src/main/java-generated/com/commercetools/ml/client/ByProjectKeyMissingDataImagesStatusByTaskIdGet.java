@@ -45,13 +45,14 @@ public class ByProjectKeyMissingDataImagesStatusByTaskIdGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingImagesTaskStatus> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingImagesTaskStatus>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
+    public CompletableFuture<ApiHttpResponse<com.commercetools.ml.models.missing_data.MissingImagesTaskStatus>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
             com.commercetools.ml.models.missing_data.MissingImagesTaskStatus.class);
     }
 

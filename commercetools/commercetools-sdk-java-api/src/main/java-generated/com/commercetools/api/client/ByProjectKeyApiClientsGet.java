@@ -50,13 +50,14 @@ public class ByProjectKeyApiClientsGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.api.models.api_client.ApiClientPagedQueryResponse> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.api_client.ApiClientPagedQueryResponse>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.api_client.ApiClientPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
             com.commercetools.api.models.api_client.ApiClientPagedQueryResponse.class);
     }
 

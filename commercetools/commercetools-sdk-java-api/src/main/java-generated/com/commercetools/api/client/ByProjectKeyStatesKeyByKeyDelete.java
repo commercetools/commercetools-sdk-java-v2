@@ -51,13 +51,15 @@ public class ByProjectKeyStatesKeyByKeyDelete
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.State>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.state.State.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.State>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.state.State.class);
     }
 
     public String getProjectKey() {

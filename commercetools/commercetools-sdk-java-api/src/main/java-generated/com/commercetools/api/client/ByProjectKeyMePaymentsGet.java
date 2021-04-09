@@ -50,13 +50,14 @@ public class ByProjectKeyMePaymentsGet
 
     @Override
     public ApiHttpResponse<com.commercetools.api.models.me.MyPaymentPagedQueryResponse> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyPaymentPagedQueryResponse>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyPaymentPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
             com.commercetools.api.models.me.MyPaymentPagedQueryResponse.class);
     }
 

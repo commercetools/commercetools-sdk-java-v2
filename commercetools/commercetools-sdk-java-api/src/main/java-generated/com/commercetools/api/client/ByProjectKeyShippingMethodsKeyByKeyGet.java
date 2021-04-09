@@ -50,13 +50,14 @@ public class ByProjectKeyShippingMethodsKeyByKeyGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.shipping_method.ShippingMethod>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
             com.commercetools.api.models.shipping_method.ShippingMethod.class);
     }
 

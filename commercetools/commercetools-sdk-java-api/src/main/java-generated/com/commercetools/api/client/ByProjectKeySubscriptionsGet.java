@@ -52,13 +52,14 @@ public class ByProjectKeySubscriptionsGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
             com.commercetools.api.models.subscription.SubscriptionPagedQueryResponse.class);
     }
 

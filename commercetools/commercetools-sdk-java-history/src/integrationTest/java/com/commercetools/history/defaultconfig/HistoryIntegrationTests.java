@@ -2,6 +2,7 @@
 package com.commercetools.history.defaultconfig;
 
 import com.commercetools.history.models.RecordPagedQueryResponse;
+
 import io.vrap.rmf.base.client.ApiHttpResponse;
 
 import org.junit.Assert;

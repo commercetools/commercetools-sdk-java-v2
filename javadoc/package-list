@@ -35,6 +35,13 @@ com.commercetools.api.models.tax_category
 com.commercetools.api.models.type
 com.commercetools.api.models.zone
 com.commercetools.api.product
+com.commercetools.history.client
+com.commercetools.history.defaultconfig
+com.commercetools.history.models
+com.commercetools.history.models.change
+com.commercetools.history.models.change_value
+com.commercetools.history.models.common
+com.commercetools.history.models.label
 com.commercetools.http.okhttp3
 com.commercetools.http.okhttp4
 com.commercetools.importapi.client

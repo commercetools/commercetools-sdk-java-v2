@@ -184,6 +184,23 @@ extends <a href="../../../../../io/vrap/rmf/base/client/error/BaseException.html
                 <a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response,
                 <a href="../../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</code>&nbsp;</td>
 </tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpException.html#ApiHttpException-int-java.lang.String-io.vrap.rmf.base.client.ApiHttpHeaders-java.lang.String-io.vrap.rmf.base.client.ApiHttpResponse-io.vrap.rmf.base.client.ApiHttpRequest-io.vrap.rmf.base.client.ResponseSerializer-">ApiHttpException</a></span>(int&nbsp;statusCode,
+                java.lang.String&nbsp;body,
+                <a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers,
+                java.lang.String&nbsp;message,
+                <a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response,
+                <a href="../../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+                <a href="../../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/vrap/rmf/base/client/ApiHttpException.html#ApiHttpException-int-java.lang.String-io.vrap.rmf.base.client.ApiHttpHeaders-java.lang.String-io.vrap.rmf.base.client.ApiHttpResponse-io.vrap.rmf.base.client.ResponseSerializer-">ApiHttpException</a></span>(int&nbsp;statusCode,
+                java.lang.String&nbsp;body,
+                <a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers,
+                java.lang.String&nbsp;message,
+                <a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response,
+                <a href="../../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -288,7 +305,40 @@ extends <a href="../../../../../io/vrap/rmf/base/client/error/BaseException.html
                         <a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response)</pre>
 </li>
 </ul>
+<a name="ApiHttpException-int-java.lang.String-io.vrap.rmf.base.client.ApiHttpHeaders-java.lang.String-io.vrap.rmf.base.client.ApiHttpResponse-io.vrap.rmf.base.client.ResponseSerializer-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ApiHttpException</h4>
+<pre>public&nbsp;ApiHttpException(int&nbsp;statusCode,
+                        java.lang.String&nbsp;body,
+                        <a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers,
+                        java.lang.String&nbsp;message,
+                        <a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response,
+                        <a href="../../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</pre>
+</li>
+</ul>
 <a name="ApiHttpException-int-java.lang.String-io.vrap.rmf.base.client.ApiHttpHeaders-java.lang.String-io.vrap.rmf.base.client.ApiHttpResponse-io.vrap.rmf.base.client.ApiHttpRequest-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ApiHttpException</h4>
+<pre>public&nbsp;ApiHttpException(int&nbsp;statusCode,
+                        @Nullable
+                        java.lang.String&nbsp;body,
+                        @Nullable
+                        <a href="../../../../../io/vrap/rmf/base/client/ApiHttpHeaders.html" title="class in io.vrap.rmf.base.client">ApiHttpHeaders</a>&nbsp;headers,
+                        @Nullable
+                        java.lang.String&nbsp;message,
+                        @Nullable
+                        <a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response,
+                        @Nullable
+                        <a href="../../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</pre>
+</li>
+</ul>
+<a name="ApiHttpException-int-java.lang.String-io.vrap.rmf.base.client.ApiHttpHeaders-java.lang.String-io.vrap.rmf.base.client.ApiHttpResponse-io.vrap.rmf.base.client.ApiHttpRequest-io.vrap.rmf.base.client.ResponseSerializer-">
 <!--   -->
 </a>
 <ul class="blockListLast">
@@ -304,7 +354,8 @@ extends <a href="../../../../../io/vrap/rmf/base/client/error/BaseException.html
                         @Nullable
                         <a href="../../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&nbsp;response,
                         @Nullable
-                        <a href="../../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</pre>
+                        <a href="../../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request,
+                        <a href="../../../../../io/vrap/rmf/base/client/ResponseSerializer.html" title="interface in io.vrap.rmf.base.client">ResponseSerializer</a>&nbsp;serializer)</pre>
 </li>
 </ul>
 </li>

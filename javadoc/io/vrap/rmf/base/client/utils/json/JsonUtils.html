@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9};
+var methods = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -48,7 +48,7 @@ var activeTableTab = "activeTableTab";
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonException.html" title="class in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/ModuleSupplier.html" title="interface in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../../index.html?io/vrap/rmf/base/client/utils/json/JsonUtils.html" target="_top">Frames</a></li>
@@ -149,35 +149,43 @@ extends java.lang.Object</pre>
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static com.fasterxml.jackson.databind.ObjectMapper</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#createObjectMapper--">createObjectMapper</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static com.fasterxml.jackson.databind.ObjectMapper</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#createObjectMapper-io.vrap.rmf.base.client.utils.json.modules.ModuleOptions-">createObjectMapper</a></span>(<a href="../../../../../../../io/vrap/rmf/base/client/utils/json/modules/ModuleOptions.html" title="interface in io.vrap.rmf.base.client.utils.json.modules">ModuleOptions</a>&nbsp;options)</code>&nbsp;</td>
+</tr>
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#fromInputStream-java.io.InputStream-java.lang.Class-">fromInputStream</a></span>(java.io.InputStream&nbsp;content,
                java.lang.Class&lt;T&gt;&nbsp;clazz)</code>&nbsp;</td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#fromJsonByteArray-byte:A-java.lang.Class-">fromJsonByteArray</a></span>(byte[]&nbsp;content,
                  java.lang.Class&lt;T&gt;&nbsp;clazz)</code>&nbsp;</td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>static &lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#fromJsonString-java.lang.String-java.lang.Class-">fromJsonString</a></span>(java.lang.String&nbsp;content,
               java.lang.Class&lt;T&gt;&nbsp;clazz)</code>&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>static com.fasterxml.jackson.databind.ObjectMapper</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#getConfiguredObjectMapper--">getConfiguredObjectMapper</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#prettyPrint-java.lang.String-">prettyPrint</a></span>(java.lang.String&nbsp;json)</code>
 <div class="block">Pretty prints a given JSON string.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#toJsonByteArray-java.lang.Object-">toJsonByteArray</a></span>(java.lang.Object&nbsp;value)</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static java.lang.String</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonUtils.html#toJsonString-java.lang.Object-">toJsonString</a></span>(java.lang.Object&nbsp;value)</code>&nbsp;</td>
 </tr>
@@ -220,6 +228,24 @@ extends java.lang.Object</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="createObjectMapper--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createObjectMapper</h4>
+<pre>public static&nbsp;com.fasterxml.jackson.databind.ObjectMapper&nbsp;createObjectMapper()</pre>
+</li>
+</ul>
+<a name="createObjectMapper-io.vrap.rmf.base.client.utils.json.modules.ModuleOptions-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createObjectMapper</h4>
+<pre>public static&nbsp;com.fasterxml.jackson.databind.ObjectMapper&nbsp;createObjectMapper(<a href="../../../../../../../io/vrap/rmf/base/client/utils/json/modules/ModuleOptions.html" title="interface in io.vrap.rmf.base.client.utils.json.modules">ModuleOptions</a>&nbsp;options)</pre>
+</li>
+</ul>
 <a name="toJsonByteArray-java.lang.Object-">
 <!--   -->
 </a>
@@ -346,7 +372,7 @@ extends java.lang.Object</pre>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/JsonException.html" title="class in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/VrapJsonUtils.html" title="class in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../../../io/vrap/rmf/base/client/utils/json/ModuleSupplier.html" title="interface in io.vrap.rmf.base.client.utils.json"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../../index.html?io/vrap/rmf/base/client/utils/json/JsonUtils.html" target="_top">Frames</a></li>

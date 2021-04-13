@@ -22,8 +22,12 @@ public class StateIntegrationTests {
     @Test
     public void getById() {
         StateFixtures.withState(state -> {
-            State queriedState = CommercetoolsTestUtils.getProjectRoot().states().withId(
-                state.getId()).get().executeBlocking().getBody();
+            State queriedState = CommercetoolsTestUtils.getProjectRoot()
+                    .states()
+                    .withId(state.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(queriedState);
             Assert.assertEquals(state.getId(), queriedState.getId());
@@ -33,8 +37,12 @@ public class StateIntegrationTests {
     @Test
     public void query() {
         StateFixtures.withState(state -> {
-            StatePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().states().get().withWhere(
-                "id=" + "\"" + state.getId() + "\"").executeBlocking().getBody();
+            StatePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+                    .states()
+                    .get()
+                    .withWhere("id=" + "\"" + state.getId() + "\"")
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(response);
             Assert.assertEquals(response.getResults().get(0).getId(), state.getId());
@@ -47,9 +55,12 @@ public class StateIntegrationTests {
             List<StateUpdateAction> updateActions = new ArrayList<>();
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(StateChangeKeyActionBuilder.of().key(newKey).build());
-            State updatedState = CommercetoolsTestUtils.getProjectRoot().states().withId(state.getId()).post(
-                StateUpdateBuilder.of().actions(updateActions).version(
-                    state.getVersion()).build()).executeBlocking().getBody();
+            State updatedState = CommercetoolsTestUtils.getProjectRoot()
+                    .states()
+                    .withId(state.getId())
+                    .post(StateUpdateBuilder.of().actions(updateActions).version(state.getVersion()).build())
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(updatedState);
             Assert.assertEquals(updatedState.getKey(), newKey);

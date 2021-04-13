@@ -18,8 +18,9 @@ public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService im
     private final VrapHttpClient vrapHttpClient;
     private final ApiHttpRequest apiHttpRequest;
 
-    public GlobalCustomerPasswordTokenSupplier(String clientId, String clientSecret, String email, String password,
-            String scope, String tokenEndpoint, VrapHttpClient vrapHttpClient) {
+    public GlobalCustomerPasswordTokenSupplier(final String clientId, final String clientSecret, final String email,
+            final String password, final String scope, final String tokenEndpoint,
+            final VrapHttpClient vrapHttpClient) {
         this.vrapHttpClient = vrapHttpClient;
         this.apiHttpRequest = constructApiHttpRequest(clientId, clientSecret, email, password, scope, tokenEndpoint);
     }
@@ -38,14 +39,15 @@ public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService im
                 throw new CompletionException(new Throwable(new String(apiHttpResponse.getBody())));
             }
             return apiHttpResponse;
-        }).thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils.fromJsonByteArray(
-            response.getBody(), AuthenticationToken.class)));
+        })
+                .thenApply(Utils.wrapToCompletionException((ApiHttpResponse<byte[]> response) -> JsonUtils
+                        .fromJsonByteArray(response.getBody(), AuthenticationToken.class)));
     }
 
     private static ApiHttpRequest constructApiHttpRequest(final String clientId, final String clientSecret,
             final String email, final String password, final String scope, final String tokenEndpoint) {
-        String auth = Base64.getEncoder().encodeToString(
-            (clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
+        String auth = Base64.getEncoder()
+                .encodeToString((clientId + ":" + clientSecret).getBytes(StandardCharsets.UTF_8));
 
         final String body;
         if (scope == null || scope.isEmpty()) {
@@ -54,8 +56,8 @@ public class GlobalCustomerPasswordTokenSupplier extends AutoCloseableService im
         else {
             body = "grant_type=password&username=" + email + "&password=" + password + "&scope=" + scope;
         }
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders().withHeader("Authorization", "Basic " + auth).withHeader(
-            "Content-Type", "application/x-www-form-urlencoded");
+        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders().withHeader("Authorization", "Basic " + auth)
+                .withHeader("Content-Type", "application/x-www-form-urlencoded");
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(tokenEndpoint), apiHttpHeaders,
             body.getBytes(StandardCharsets.UTF_8));
     }

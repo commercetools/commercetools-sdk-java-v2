@@ -37,18 +37,26 @@ public class ReviewFixtures {
         Channel channel = ChannelFixtures.createChannel();
         Customer customer = CustomerFixtures.createCustomer();
 
-        StateDraft stateDraft = StateDraftBuilder.of().type(StateTypeEnum.REVIEW_STATE).key(
-            CommercetoolsTestUtils.randomKey()).build();
+        StateDraft stateDraft = StateDraftBuilder.of()
+                .type(StateTypeEnum.REVIEW_STATE)
+                .key(CommercetoolsTestUtils.randomKey())
+                .build();
 
         State state = CommercetoolsTestUtils.getProjectRoot().states().post(stateDraft).executeBlocking().getBody();
 
-        ReviewDraft reviewDraft = ReviewDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).uniquenessValue(
-            UUID.randomUUID().toString()).locale("de").authorName(CommercetoolsTestUtils.randomString()).title(
-                "review-title-1").text(CommercetoolsTestUtils.randomString())
+        ReviewDraft reviewDraft = ReviewDraftBuilder.of()
+                .key(CommercetoolsTestUtils.randomKey())
+                .uniquenessValue(UUID.randomUUID().toString())
+                .locale("de")
+                .authorName(CommercetoolsTestUtils.randomString())
+                .title("review-title-1")
+                .text(CommercetoolsTestUtils.randomString())
                 //TODO see why this doesn't work
                 //.target(ChannelResourceIdentifierBuilder.of().id(channel.getId()).build())
-                .state(StateResourceIdentifierBuilder.of().id(state.getId()).build()).rating(50).customer(
-                    CustomerResourceIdentifierBuilder.of().id(customer.getId()).build()).build();
+                .state(StateResourceIdentifierBuilder.of().id(state.getId()).build())
+                .rating(50)
+                .customer(CustomerResourceIdentifierBuilder.of().id(customer.getId()).build())
+                .build();
 
         Review review = CommercetoolsTestUtils.getProjectRoot().reviews().post(reviewDraft).executeBlocking().getBody();
 
@@ -59,8 +67,13 @@ public class ReviewFixtures {
     }
 
     public static Review delete(final String id, final Long version) {
-        Review deletedReview = CommercetoolsTestUtils.getProjectRoot().reviews().withId(id).delete().withVersion(
-            version).executeBlocking().getBody();
+        Review deletedReview = CommercetoolsTestUtils.getProjectRoot()
+                .reviews()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(deletedReview);
         Assert.assertEquals(deletedReview.getId(), id);

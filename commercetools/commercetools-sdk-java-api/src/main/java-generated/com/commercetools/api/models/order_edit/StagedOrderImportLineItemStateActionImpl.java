@@ -68,8 +68,10 @@ public final class StagedOrderImportLineItemStateActionImpl implements StagedOrd
 
         StagedOrderImportLineItemStateActionImpl that = (StagedOrderImportLineItemStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(state,
-            that.state).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

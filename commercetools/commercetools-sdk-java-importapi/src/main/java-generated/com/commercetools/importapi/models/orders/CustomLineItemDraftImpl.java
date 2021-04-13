@@ -198,18 +198,36 @@ public final class CustomLineItemDraftImpl implements CustomLineItemDraft {
 
         CustomLineItemDraftImpl that = (CustomLineItemDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(money, that.money).append(taxedPrice,
-            that.taxedPrice).append(totalPrice, that.totalPrice).append(slug, that.slug).append(quantity,
-                that.quantity).append(state, that.state).append(taxCategory, that.taxCategory).append(taxRate,
-                    that.taxRate).append(externalTaxRate, that.externalTaxRate).append(discountedPricePerQuantity,
-                        that.discountedPricePerQuantity).append(shippingDetails, that.shippingDetails).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(money, that.money)
+                .append(taxedPrice, that.taxedPrice)
+                .append(totalPrice, that.totalPrice)
+                .append(slug, that.slug)
+                .append(quantity, that.quantity)
+                .append(state, that.state)
+                .append(taxCategory, that.taxCategory)
+                .append(taxRate, that.taxRate)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(money).append(taxedPrice).append(totalPrice).append(
-            slug).append(quantity).append(state).append(taxCategory).append(taxRate).append(externalTaxRate).append(
-                discountedPricePerQuantity).append(shippingDetails).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(money)
+                .append(taxedPrice)
+                .append(totalPrice)
+                .append(slug)
+                .append(quantity)
+                .append(state)
+                .append(taxCategory)
+                .append(taxRate)
+                .append(externalTaxRate)
+                .append(discountedPricePerQuantity)
+                .append(shippingDetails)
+                .toHashCode();
     }
 
 }

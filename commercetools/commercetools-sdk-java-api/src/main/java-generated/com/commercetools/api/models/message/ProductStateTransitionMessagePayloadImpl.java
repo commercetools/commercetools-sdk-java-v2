@@ -65,8 +65,10 @@ public final class ProductStateTransitionMessagePayloadImpl implements ProductSt
 
         ProductStateTransitionMessagePayloadImpl that = (ProductStateTransitionMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(state, that.state).append(force,
-            that.force).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(state, that.state)
+                .append(force, that.force)
+                .isEquals();
     }
 
     @Override

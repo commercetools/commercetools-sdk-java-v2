@@ -64,8 +64,10 @@ public final class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryRep
 
         TaxCategoryReplaceTaxRateActionImpl that = (TaxCategoryReplaceTaxRateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxRateId, that.taxRateId).append(taxRate,
-            that.taxRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxRateId, that.taxRateId)
+                .append(taxRate, that.taxRate)
+                .isEquals();
     }
 
     @Override

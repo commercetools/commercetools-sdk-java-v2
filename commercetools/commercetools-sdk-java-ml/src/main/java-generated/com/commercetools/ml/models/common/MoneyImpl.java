@@ -59,8 +59,9 @@ public final class MoneyImpl implements Money {
 
         MoneyImpl that = (MoneyImpl) o;
 
-        return new EqualsBuilder().append(centAmount, that.centAmount).append(currencyCode,
-            that.currencyCode).isEquals();
+        return new EqualsBuilder().append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .isEquals();
     }
 
     @Override

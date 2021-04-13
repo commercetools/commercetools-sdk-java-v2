@@ -75,8 +75,11 @@ public final class OrderSetLineItemCustomFieldActionImpl implements OrderSetLine
 
         OrderSetLineItemCustomFieldActionImpl that = (OrderSetLineItemCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(name,
-            that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

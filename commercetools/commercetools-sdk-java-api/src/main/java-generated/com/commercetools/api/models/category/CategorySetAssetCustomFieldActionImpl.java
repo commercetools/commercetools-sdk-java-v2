@@ -87,14 +87,22 @@ public final class CategorySetAssetCustomFieldActionImpl implements CategorySetA
 
         CategorySetAssetCustomFieldActionImpl that = (CategorySetAssetCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(assetId, that.assetId).append(assetKey,
-            that.assetKey).append(name, that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(assetId).append(assetKey).append(name).append(
-            value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(assetId)
+                .append(assetKey)
+                .append(name)
+                .append(value)
+                .toHashCode();
     }
 
 }

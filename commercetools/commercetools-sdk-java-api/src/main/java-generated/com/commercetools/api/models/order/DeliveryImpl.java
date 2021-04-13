@@ -104,14 +104,22 @@ public final class DeliveryImpl implements Delivery {
 
         DeliveryImpl that = (DeliveryImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(createdAt, that.createdAt).append(items,
-            that.items).append(parcels, that.parcels).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(createdAt, that.createdAt)
+                .append(items, that.items)
+                .append(parcels, that.parcels)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(createdAt).append(items).append(parcels).append(
-            address).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(createdAt)
+                .append(items)
+                .append(parcels)
+                .append(address)
+                .toHashCode();
     }
 
 }

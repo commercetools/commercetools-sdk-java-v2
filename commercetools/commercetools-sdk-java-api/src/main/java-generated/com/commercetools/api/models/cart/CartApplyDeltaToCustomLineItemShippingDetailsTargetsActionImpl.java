@@ -71,8 +71,10 @@ public final class CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImp
 
         CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl that = (CartApplyDeltaToCustomLineItemShippingDetailsTargetsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            targetsDelta, that.targetsDelta).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(targetsDelta, that.targetsDelta)
+                .isEquals();
     }
 
     @Override

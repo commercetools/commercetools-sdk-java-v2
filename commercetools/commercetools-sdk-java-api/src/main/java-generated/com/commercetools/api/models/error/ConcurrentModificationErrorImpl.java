@@ -64,8 +64,10 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
 
         ConcurrentModificationErrorImpl that = (ConcurrentModificationErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(currentVersion,
-            that.currentVersion).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(currentVersion, that.currentVersion)
+                .isEquals();
     }
 
     @Override

@@ -110,14 +110,24 @@ public final class TextLineItemImpl implements TextLineItem {
 
         TextLineItemImpl that = (TextLineItemImpl) o;
 
-        return new EqualsBuilder().append(addedAt, that.addedAt).append(custom, that.custom).append(description,
-            that.description).append(id, that.id).append(name, that.name).append(quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(addedAt, that.addedAt)
+                .append(custom, that.custom)
+                .append(description, that.description)
+                .append(id, that.id)
+                .append(name, that.name)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(addedAt).append(custom).append(description).append(id).append(
-            name).append(quantity).toHashCode();
+        return new HashCodeBuilder(17, 37).append(addedAt)
+                .append(custom)
+                .append(description)
+                .append(id)
+                .append(name)
+                .append(quantity)
+                .toHashCode();
     }
 
 }

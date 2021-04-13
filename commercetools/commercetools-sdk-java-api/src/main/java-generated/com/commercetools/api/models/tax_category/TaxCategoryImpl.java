@@ -172,16 +172,32 @@ public final class TaxCategoryImpl implements TaxCategory {
 
         TaxCategoryImpl that = (TaxCategoryImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(name, that.name).append(description,
-                    that.description).append(rates, that.rates).append(key, that.key).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(rates, that.rates)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(name).append(description).append(rates).append(key).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(name)
+                .append(description)
+                .append(rates)
+                .append(key)
+                .toHashCode();
     }
 
 }

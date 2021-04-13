@@ -57,8 +57,9 @@ public final class MissingPricesMetaImpl implements MissingPricesMeta {
 
         MissingPricesMetaImpl that = (MissingPricesMetaImpl) o;
 
-        return new EqualsBuilder().append(productLevel, that.productLevel).append(variantLevel,
-            that.variantLevel).isEquals();
+        return new EqualsBuilder().append(productLevel, that.productLevel)
+                .append(variantLevel, that.variantLevel)
+                .isEquals();
     }
 
     @Override

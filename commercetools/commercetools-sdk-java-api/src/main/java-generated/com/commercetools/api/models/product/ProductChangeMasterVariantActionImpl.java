@@ -75,8 +75,11 @@ public final class ProductChangeMasterVariantActionImpl implements ProductChange
 
         ProductChangeMasterVariantActionImpl that = (ProductChangeMasterVariantActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

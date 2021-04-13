@@ -65,8 +65,10 @@ public final class OrderShipmentStateChangedMessagePayloadImpl implements OrderS
 
         OrderShipmentStateChangedMessagePayloadImpl that = (OrderShipmentStateChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(shipmentState, that.shipmentState).append(
-            oldShipmentState, that.oldShipmentState).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(shipmentState, that.shipmentState)
+                .append(oldShipmentState, that.oldShipmentState)
+                .isEquals();
     }
 
     @Override

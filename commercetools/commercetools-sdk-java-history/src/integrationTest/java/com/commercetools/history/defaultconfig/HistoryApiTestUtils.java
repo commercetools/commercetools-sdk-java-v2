@@ -6,7 +6,7 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 import com.commercetools.history.client.ByProjectKeyRequestBuilder;
-import com.commercetools.history.models.LocalizedString;
+import com.commercetools.history.models.common.LocalizedString;
 
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 

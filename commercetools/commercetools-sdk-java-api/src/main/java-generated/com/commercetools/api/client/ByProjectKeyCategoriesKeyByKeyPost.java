@@ -62,13 +62,15 @@ public class ByProjectKeyCategoriesKeyByKeyPost
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.category.Category> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.category.Category>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.category.Category.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.category.Category>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.category.Category.class);
     }
 
     public String getProjectKey() {

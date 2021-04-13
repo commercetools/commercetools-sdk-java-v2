@@ -395,26 +395,58 @@ public final class CustomerImportImpl implements CustomerImport {
 
         CustomerImportImpl that = (CustomerImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(customerNumber, that.customerNumber).append(email,
-            that.email).append(password, that.password).append(stores, that.stores).append(firstName,
-                that.firstName).append(lastName, that.lastName).append(middleName, that.middleName).append(title,
-                    that.title).append(salutation, that.salutation).append(externalId, that.externalId).append(
-                        dateOfBirth, that.dateOfBirth).append(companyName, that.companyName).append(vatId,
-                            that.vatId).append(isEmailVerified, that.isEmailVerified).append(customerGroup,
-                                that.customerGroup).append(addresses, that.addresses).append(defaultBillingAddress,
-                                    that.defaultBillingAddress).append(billingAddresses, that.billingAddresses).append(
-                                        defaultShippingAddress, that.defaultShippingAddress).append(shippingAddresses,
-                                            that.shippingAddresses).append(locale, that.locale).append(custom,
-                                                that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(customerNumber, that.customerNumber)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(stores, that.stores)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(middleName, that.middleName)
+                .append(title, that.title)
+                .append(salutation, that.salutation)
+                .append(externalId, that.externalId)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(companyName, that.companyName)
+                .append(vatId, that.vatId)
+                .append(isEmailVerified, that.isEmailVerified)
+                .append(customerGroup, that.customerGroup)
+                .append(addresses, that.addresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(locale, that.locale)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(customerNumber).append(email).append(password).append(
-            stores).append(firstName).append(lastName).append(middleName).append(title).append(salutation).append(
-                externalId).append(dateOfBirth).append(companyName).append(vatId).append(isEmailVerified).append(
-                    customerGroup).append(addresses).append(defaultBillingAddress).append(billingAddresses).append(
-                        defaultShippingAddress).append(shippingAddresses).append(locale).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(customerNumber)
+                .append(email)
+                .append(password)
+                .append(stores)
+                .append(firstName)
+                .append(lastName)
+                .append(middleName)
+                .append(title)
+                .append(salutation)
+                .append(externalId)
+                .append(dateOfBirth)
+                .append(companyName)
+                .append(vatId)
+                .append(isEmailVerified)
+                .append(customerGroup)
+                .append(addresses)
+                .append(defaultBillingAddress)
+                .append(billingAddresses)
+                .append(defaultShippingAddress)
+                .append(shippingAddresses)
+                .append(locale)
+                .append(custom)
+                .toHashCode();
     }
 
 }

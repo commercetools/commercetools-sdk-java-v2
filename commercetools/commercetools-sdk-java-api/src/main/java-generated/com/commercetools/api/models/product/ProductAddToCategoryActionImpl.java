@@ -76,14 +76,20 @@ public final class ProductAddToCategoryActionImpl implements ProductAddToCategor
 
         ProductAddToCategoryActionImpl that = (ProductAddToCategoryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(category, that.category).append(orderHint,
-            that.orderHint).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(category, that.category)
+                .append(orderHint, that.orderHint)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(category).append(orderHint).append(
-            staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(category)
+                .append(orderHint)
+                .append(staged)
+                .toHashCode();
     }
 
 }

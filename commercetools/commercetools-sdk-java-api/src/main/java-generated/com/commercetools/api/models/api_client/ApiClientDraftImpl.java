@@ -70,8 +70,10 @@ public final class ApiClientDraftImpl implements ApiClientDraft {
 
         ApiClientDraftImpl that = (ApiClientDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(scope, that.scope).append(deleteDaysAfterCreation,
-            that.deleteDaysAfterCreation).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(scope, that.scope)
+                .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
+                .isEquals();
     }
 
     @Override

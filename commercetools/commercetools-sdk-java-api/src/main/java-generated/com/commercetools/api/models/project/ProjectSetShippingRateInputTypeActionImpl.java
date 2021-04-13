@@ -57,8 +57,9 @@ public final class ProjectSetShippingRateInputTypeActionImpl implements ProjectS
 
         ProjectSetShippingRateInputTypeActionImpl that = (ProjectSetShippingRateInputTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shippingRateInputType,
-            that.shippingRateInputType).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shippingRateInputType, that.shippingRateInputType)
+                .isEquals();
     }
 
     @Override

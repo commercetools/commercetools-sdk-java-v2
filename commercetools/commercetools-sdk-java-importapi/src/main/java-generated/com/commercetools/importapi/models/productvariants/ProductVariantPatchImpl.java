@@ -74,8 +74,9 @@ public final class ProductVariantPatchImpl implements ProductVariantPatch {
 
         ProductVariantPatchImpl that = (ProductVariantPatchImpl) o;
 
-        return new EqualsBuilder().append(productVariant, that.productVariant).append(attributes,
-            that.attributes).isEquals();
+        return new EqualsBuilder().append(productVariant, that.productVariant)
+                .append(attributes, that.attributes)
+                .isEquals();
     }
 
     @Override

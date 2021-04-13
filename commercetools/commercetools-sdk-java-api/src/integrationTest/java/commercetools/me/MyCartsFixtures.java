@@ -31,8 +31,12 @@ public class MyCartsFixtures {
     }
 
     public static MyCart createMeCart(final MyCartDraft myCartDraft) {
-        MyCart myCart = CommercetoolsTestUtils.getProjectRoot().me().carts().post(
-            myCartDraft).executeBlocking().getBody();
+        MyCart myCart = CommercetoolsTestUtils.getProjectRoot()
+                .me()
+                .carts()
+                .post(myCartDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(myCart);
         Assert.assertEquals(myCart.getCountry(), myCartDraft.getCountry());

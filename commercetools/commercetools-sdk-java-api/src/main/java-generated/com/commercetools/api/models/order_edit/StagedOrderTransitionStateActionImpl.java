@@ -65,8 +65,10 @@ public final class StagedOrderTransitionStateActionImpl implements StagedOrderTr
 
         StagedOrderTransitionStateActionImpl that = (StagedOrderTransitionStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(state, that.state).append(force,
-            that.force).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(state, that.state)
+                .append(force, that.force)
+                .isEquals();
     }
 
     @Override

@@ -51,13 +51,15 @@ public class ByProjectKeyStoresByIDDelete
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.store.Store> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.store.Store> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.Store>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.store.Store.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.Store>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.store.Store.class);
     }
 
     public String getProjectKey() {

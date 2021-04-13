@@ -56,8 +56,9 @@ public final class DiscountedLineItemPriceForQuantityImpl implements DiscountedL
 
         DiscountedLineItemPriceForQuantityImpl that = (DiscountedLineItemPriceForQuantityImpl) o;
 
-        return new EqualsBuilder().append(quantity, that.quantity).append(discountedPrice,
-            that.discountedPrice).isEquals();
+        return new EqualsBuilder().append(quantity, that.quantity)
+                .append(discountedPrice, that.discountedPrice)
+                .isEquals();
     }
 
     @Override

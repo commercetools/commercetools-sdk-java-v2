@@ -81,8 +81,10 @@ public final class ShippingRateDraftImpl implements ShippingRateDraft {
 
         ShippingRateDraftImpl that = (ShippingRateDraftImpl) o;
 
-        return new EqualsBuilder().append(price, that.price).append(freeAbove, that.freeAbove).append(tiers,
-            that.tiers).isEquals();
+        return new EqualsBuilder().append(price, that.price)
+                .append(freeAbove, that.freeAbove)
+                .append(tiers, that.tiers)
+                .isEquals();
     }
 
     @Override

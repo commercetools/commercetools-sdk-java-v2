@@ -75,8 +75,11 @@ public final class CustomerSetAddressCustomFieldActionImpl implements CustomerSe
 
         CustomerSetAddressCustomFieldActionImpl that = (CustomerSetAddressCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(addressId, that.addressId).append(name,
-            that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

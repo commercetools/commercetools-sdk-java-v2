@@ -68,8 +68,10 @@ public final class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyA
 
         CategorySetAssetKeyActionImpl that = (CategorySetAssetKeyActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(assetId, that.assetId).append(assetKey,
-            that.assetKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .isEquals();
     }
 
     @Override

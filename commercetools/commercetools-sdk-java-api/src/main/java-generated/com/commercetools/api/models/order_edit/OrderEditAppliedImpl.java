@@ -76,14 +76,20 @@ public final class OrderEditAppliedImpl implements OrderEditApplied {
 
         OrderEditAppliedImpl that = (OrderEditAppliedImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(appliedAt, that.appliedAt).append(excerptBeforeEdit,
-            that.excerptBeforeEdit).append(excerptAfterEdit, that.excerptAfterEdit).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(appliedAt, that.appliedAt)
+                .append(excerptBeforeEdit, that.excerptBeforeEdit)
+                .append(excerptAfterEdit, that.excerptAfterEdit)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(appliedAt).append(excerptBeforeEdit).append(
-            excerptAfterEdit).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(appliedAt)
+                .append(excerptBeforeEdit)
+                .append(excerptAfterEdit)
+                .toHashCode();
     }
 
 }

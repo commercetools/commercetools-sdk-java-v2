@@ -64,8 +64,10 @@ public final class MyShoppingListRemoveTextLineItemActionImpl implements MyShopp
 
         MyShoppingListRemoveTextLineItemActionImpl that = (MyShoppingListRemoveTextLineItemActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(textLineItemId, that.textLineItemId).append(
-            quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

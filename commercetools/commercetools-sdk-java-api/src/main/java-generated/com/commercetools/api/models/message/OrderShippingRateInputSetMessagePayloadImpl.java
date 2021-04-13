@@ -66,14 +66,18 @@ public final class OrderShippingRateInputSetMessagePayloadImpl implements OrderS
 
         OrderShippingRateInputSetMessagePayloadImpl that = (OrderShippingRateInputSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(shippingRateInput, that.shippingRateInput).append(
-            oldShippingRateInput, that.oldShippingRateInput).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(shippingRateInput, that.shippingRateInput)
+                .append(oldShippingRateInput, that.oldShippingRateInput)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(shippingRateInput).append(
-            oldShippingRateInput).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(shippingRateInput)
+                .append(oldShippingRateInput)
+                .toHashCode();
     }
 
 }

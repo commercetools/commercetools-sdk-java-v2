@@ -321,26 +321,56 @@ public final class ProductProjectionImpl implements ProductProjection {
 
         ProductProjectionImpl that = (ProductProjectionImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(key, that.key).append(productType,
-                that.productType).append(name, that.name).append(description, that.description).append(slug,
-                    that.slug).append(categories, that.categories).append(categoryOrderHints,
-                        that.categoryOrderHints).append(metaTitle, that.metaTitle).append(metaDescription,
-                            that.metaDescription).append(metaKeywords, that.metaKeywords).append(searchKeywords,
-                                that.searchKeywords).append(hasStagedChanges, that.hasStagedChanges).append(published,
-                                    that.published).append(masterVariant, that.masterVariant).append(variants,
-                                        that.variants).append(taxCategory, that.taxCategory).append(state,
-                                            that.state).append(reviewRatingStatistics,
-                                                that.reviewRatingStatistics).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(key, that.key)
+                .append(productType, that.productType)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(slug, that.slug)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(searchKeywords, that.searchKeywords)
+                .append(hasStagedChanges, that.hasStagedChanges)
+                .append(published, that.published)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(state, that.state)
+                .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            key).append(productType).append(name).append(description).append(slug).append(categories).append(
-                categoryOrderHints).append(metaTitle).append(metaDescription).append(metaKeywords).append(
-                    searchKeywords).append(hasStagedChanges).append(published).append(masterVariant).append(
-                        variants).append(taxCategory).append(state).append(reviewRatingStatistics).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(key)
+                .append(productType)
+                .append(name)
+                .append(description)
+                .append(slug)
+                .append(categories)
+                .append(categoryOrderHints)
+                .append(metaTitle)
+                .append(metaDescription)
+                .append(metaKeywords)
+                .append(searchKeywords)
+                .append(hasStagedChanges)
+                .append(published)
+                .append(masterVariant)
+                .append(variants)
+                .append(taxCategory)
+                .append(state)
+                .append(reviewRatingStatistics)
+                .toHashCode();
     }
 
 }

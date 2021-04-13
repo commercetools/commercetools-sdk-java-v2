@@ -79,14 +79,20 @@ public final class StagedOrderSetShippingAddressAndShippingMethodActionImpl
 
         StagedOrderSetShippingAddressAndShippingMethodActionImpl that = (StagedOrderSetShippingAddressAndShippingMethodActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(address, that.address).append(shippingMethod,
-            that.shippingMethod).append(externalTaxRate, that.externalTaxRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(address, that.address)
+                .append(shippingMethod, that.shippingMethod)
+                .append(externalTaxRate, that.externalTaxRate)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(address).append(shippingMethod).append(
-            externalTaxRate).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(address)
+                .append(shippingMethod)
+                .append(externalTaxRate)
+                .toHashCode();
     }
 
 }

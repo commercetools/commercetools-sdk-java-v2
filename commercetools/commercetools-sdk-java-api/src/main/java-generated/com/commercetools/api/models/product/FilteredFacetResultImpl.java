@@ -64,8 +64,10 @@ public final class FilteredFacetResultImpl implements FilteredFacetResult {
 
         FilteredFacetResultImpl that = (FilteredFacetResultImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(count, that.count).append(productCount,
-            that.productCount).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(count, that.count)
+                .append(productCount, that.productCount)
+                .isEquals();
     }
 
     @Override

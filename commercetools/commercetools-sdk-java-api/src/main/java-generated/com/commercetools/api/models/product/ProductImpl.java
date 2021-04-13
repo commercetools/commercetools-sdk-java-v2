@@ -198,18 +198,36 @@ public final class ProductImpl implements Product {
 
         ProductImpl that = (ProductImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(key, that.key).append(productType,
-                    that.productType).append(masterData, that.masterData).append(taxCategory, that.taxCategory).append(
-                        state, that.state).append(reviewRatingStatistics, that.reviewRatingStatistics).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(productType, that.productType)
+                .append(masterData, that.masterData)
+                .append(taxCategory, that.taxCategory)
+                .append(state, that.state)
+                .append(reviewRatingStatistics, that.reviewRatingStatistics)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(key).append(productType).append(masterData).append(
-                taxCategory).append(state).append(reviewRatingStatistics).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(key)
+                .append(productType)
+                .append(masterData)
+                .append(taxCategory)
+                .append(state)
+                .append(reviewRatingStatistics)
+                .toHashCode();
     }
 
 }

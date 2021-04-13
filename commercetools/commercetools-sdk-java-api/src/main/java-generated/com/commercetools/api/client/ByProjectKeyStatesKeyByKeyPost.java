@@ -13,7 +13,7 @@ import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
-*  <p>Update State by Key</p>
+*  <p>Update State by key</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyStatesKeyByKeyPost
@@ -62,13 +62,15 @@ public class ByProjectKeyStatesKeyByKeyPost
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.state.State> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.State>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.state.State.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.state.State>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.state.State.class);
     }
 
     public String getProjectKey() {

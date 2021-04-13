@@ -46,13 +46,15 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete, com.co
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
     }
 
     public String getProjectKey() {

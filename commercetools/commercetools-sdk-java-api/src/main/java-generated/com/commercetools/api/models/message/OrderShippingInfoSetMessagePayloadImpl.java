@@ -65,8 +65,10 @@ public final class OrderShippingInfoSetMessagePayloadImpl implements OrderShippi
 
         OrderShippingInfoSetMessagePayloadImpl that = (OrderShippingInfoSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(shippingInfo, that.shippingInfo).append(
-            oldShippingInfo, that.oldShippingInfo).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(shippingInfo, that.shippingInfo)
+                .append(oldShippingInfo, that.oldShippingInfo)
+                .isEquals();
     }
 
     @Override

@@ -91,15 +91,22 @@ public final class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraf
 
         HighPrecisionMoneyDraftImpl that = (HighPrecisionMoneyDraftImpl) o;
 
-        return new EqualsBuilder().append(centAmount, that.centAmount).append(currencyCode, that.currencyCode).append(
-            type, that.type).append(fractionDigits, that.fractionDigits).append(preciseAmount,
-                that.preciseAmount).isEquals();
+        return new EqualsBuilder().append(centAmount, that.centAmount)
+                .append(currencyCode, that.currencyCode)
+                .append(type, that.type)
+                .append(fractionDigits, that.fractionDigits)
+                .append(preciseAmount, that.preciseAmount)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(centAmount).append(currencyCode).append(type).append(
-            fractionDigits).append(preciseAmount).toHashCode();
+        return new HashCodeBuilder(17, 37).append(centAmount)
+                .append(currencyCode)
+                .append(type)
+                .append(fractionDigits)
+                .append(preciseAmount)
+                .toHashCode();
     }
 
 }

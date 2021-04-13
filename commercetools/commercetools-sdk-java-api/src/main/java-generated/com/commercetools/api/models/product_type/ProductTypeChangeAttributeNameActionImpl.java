@@ -64,8 +64,10 @@ public final class ProductTypeChangeAttributeNameActionImpl implements ProductTy
 
         ProductTypeChangeAttributeNameActionImpl that = (ProductTypeChangeAttributeNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(
-            newAttributeName, that.newAttributeName).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(newAttributeName, that.newAttributeName)
+                .isEquals();
     }
 
     @Override

@@ -66,8 +66,10 @@ public final class MyCartSetLineItemDistributionChannelActionImpl
 
         MyCartSetLineItemDistributionChannelActionImpl that = (MyCartSetLineItemDistributionChannelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(
-            distributionChannel, that.distributionChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(distributionChannel, that.distributionChannel)
+                .isEquals();
     }
 
     @Override

@@ -68,8 +68,10 @@ public final class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesEr
 
         DuplicateEnumValuesErrorImpl that = (DuplicateEnumValuesErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(duplicates,
-            that.duplicates).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(duplicates, that.duplicates)
+                .isEquals();
     }
 
     @Override

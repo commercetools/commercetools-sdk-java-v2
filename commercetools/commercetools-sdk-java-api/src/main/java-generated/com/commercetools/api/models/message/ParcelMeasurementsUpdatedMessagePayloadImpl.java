@@ -76,14 +76,20 @@ public final class ParcelMeasurementsUpdatedMessagePayloadImpl implements Parcel
 
         ParcelMeasurementsUpdatedMessagePayloadImpl that = (ParcelMeasurementsUpdatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(deliveryId, that.deliveryId).append(parcelId,
-            that.parcelId).append(measurements, that.measurements).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(deliveryId, that.deliveryId)
+                .append(parcelId, that.parcelId)
+                .append(measurements, that.measurements)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(deliveryId).append(parcelId).append(
-            measurements).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(deliveryId)
+                .append(parcelId)
+                .append(measurements)
+                .toHashCode();
     }
 
 }

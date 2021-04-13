@@ -68,8 +68,10 @@ public final class GraphQLRequestImpl implements GraphQLRequest {
 
         GraphQLRequestImpl that = (GraphQLRequestImpl) o;
 
-        return new EqualsBuilder().append(query, that.query).append(operationName, that.operationName).append(variables,
-            that.variables).isEquals();
+        return new EqualsBuilder().append(query, that.query)
+                .append(operationName, that.operationName)
+                .append(variables, that.variables)
+                .isEquals();
     }
 
     @Override

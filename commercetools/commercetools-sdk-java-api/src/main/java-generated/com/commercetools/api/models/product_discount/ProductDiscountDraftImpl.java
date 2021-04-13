@@ -162,16 +162,30 @@ public final class ProductDiscountDraftImpl implements ProductDiscountDraft {
 
         ProductDiscountDraftImpl that = (ProductDiscountDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(key, that.key).append(description,
-            that.description).append(value, that.value).append(predicate, that.predicate).append(sortOrder,
-                that.sortOrder).append(isActive, that.isActive).append(validFrom, that.validFrom).append(validUntil,
-                    that.validUntil).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(key, that.key)
+                .append(description, that.description)
+                .append(value, that.value)
+                .append(predicate, that.predicate)
+                .append(sortOrder, that.sortOrder)
+                .append(isActive, that.isActive)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(key).append(description).append(value).append(
-            predicate).append(sortOrder).append(isActive).append(validFrom).append(validUntil).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(key)
+                .append(description)
+                .append(value)
+                .append(predicate)
+                .append(sortOrder)
+                .append(isActive)
+                .append(validFrom)
+                .append(validUntil)
+                .toHashCode();
     }
 
 }

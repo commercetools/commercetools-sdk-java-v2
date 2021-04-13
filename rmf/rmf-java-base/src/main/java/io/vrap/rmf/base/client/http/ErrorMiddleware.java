@@ -1,23 +1,15 @@
 
 package io.vrap.rmf.base.client.http;
 
-import java.util.concurrent.CompletableFuture;
-import java.util.function.Function;
+import io.vrap.rmf.base.client.ResponseSerializer;
 
-import io.vrap.rmf.base.client.*;
-import io.vrap.rmf.base.client.error.ExceptionFactory;
+public interface ErrorMiddleware extends Middleware {
 
-public class ErrorMiddleware implements Middleware {
-
-    @Override
-    public CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
-            final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
-        return next.apply(request).thenApply(response -> {
-            if (response.getStatusCode() >= 400) {
-                throw ExceptionFactory.create(request, response);
-            }
-            return response;
-        });
+    static ErrorMiddleware of() {
+        return of(ResponseSerializer.of());
     }
 
+    static ErrorMiddleware of(final ResponseSerializer serializer) {
+        return new ErrorMiddlewareImpl(serializer);
+    }
 }

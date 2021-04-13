@@ -79,8 +79,11 @@ public final class CategorySetAssetTagsActionImpl implements CategorySetAssetTag
 
         CategorySetAssetTagsActionImpl that = (CategorySetAssetTagsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(assetId, that.assetId).append(assetKey,
-            that.assetKey).append(tags, that.tags).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(tags, that.tags)
+                .isEquals();
     }
 
     @Override

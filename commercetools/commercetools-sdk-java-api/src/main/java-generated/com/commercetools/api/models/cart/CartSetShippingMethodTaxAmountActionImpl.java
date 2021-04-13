@@ -53,8 +53,9 @@ public final class CartSetShippingMethodTaxAmountActionImpl implements CartSetSh
 
         CartSetShippingMethodTaxAmountActionImpl that = (CartSetShippingMethodTaxAmountActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(externalTaxAmount,
-            that.externalTaxAmount).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .isEquals();
     }
 
     @Override

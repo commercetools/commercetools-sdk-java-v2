@@ -72,8 +72,10 @@ public final class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTyp
 
         PaymentSetCustomTypeActionImpl that = (PaymentSetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

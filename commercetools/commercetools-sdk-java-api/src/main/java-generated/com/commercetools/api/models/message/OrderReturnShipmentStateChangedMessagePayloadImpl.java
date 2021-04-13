@@ -66,8 +66,10 @@ public final class OrderReturnShipmentStateChangedMessagePayloadImpl
 
         OrderReturnShipmentStateChangedMessagePayloadImpl that = (OrderReturnShipmentStateChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(returnItemId, that.returnItemId).append(
-            returnShipmentState, that.returnShipmentState).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(returnItemId, that.returnItemId)
+                .append(returnShipmentState, that.returnShipmentState)
+                .isEquals();
     }
 
     @Override

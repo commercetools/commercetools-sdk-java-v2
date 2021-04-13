@@ -64,8 +64,10 @@ public final class CartSetLineItemPriceActionImpl implements CartSetLineItemPric
 
         CartSetLineItemPriceActionImpl that = (CartSetLineItemPriceActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(externalPrice,
-            that.externalPrice).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(externalPrice, that.externalPrice)
+                .isEquals();
     }
 
     @Override

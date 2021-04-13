@@ -43,7 +43,7 @@ public class RetryMiddlewareTest {
             blockingWait(middleware.invoke(request, request1 -> {
                 count.getAndIncrement();
                 return CompletableFuture.supplyAsync(() -> {
-                    throw new CompletionException(new ApiHttpException(503, null, null));
+                    throw new CompletionException(new ApiHttpException(503, null, null, null, null));
                 });
             }), Duration.ofSeconds(1));
         }).matches(e -> e.getStatusCode() == 503);
@@ -61,7 +61,7 @@ public class RetryMiddlewareTest {
             blockingWait(middleware.invoke(request, request1 -> {
                 count.getAndIncrement();
                 return CompletableFuture.supplyAsync(() -> {
-                    throw new CompletionException(new ApiHttpException(504, null, null));
+                    throw new CompletionException(new ApiHttpException(504, null, null, null, null));
                 });
             }), Duration.ofSeconds(1));
         }).matches(e -> e.getStatusCode() == 504);

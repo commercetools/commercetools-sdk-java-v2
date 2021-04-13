@@ -77,8 +77,10 @@ public final class GraphQLErrorImpl implements GraphQLError {
 
         GraphQLErrorImpl that = (GraphQLErrorImpl) o;
 
-        return new EqualsBuilder().append(message, that.message).append(locations, that.locations).append(path,
-            that.path).isEquals();
+        return new EqualsBuilder().append(message, that.message)
+                .append(locations, that.locations)
+                .append(path, that.path)
+                .isEquals();
     }
 
     @Override

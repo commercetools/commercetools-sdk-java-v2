@@ -11,16 +11,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class ShippingMethodSetLocalizedDescriptionActionBuilder {
 
     @Nullable
-    private String localizedDescription;
+    private com.commercetools.api.models.common.LocalizedString localizedDescription;
 
     public ShippingMethodSetLocalizedDescriptionActionBuilder localizedDescription(
-            @Nullable final String localizedDescription) {
+            @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
     }
 
     @Nullable
-    public String getLocalizedDescription() {
+    public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
         return this.localizedDescription;
     }
 

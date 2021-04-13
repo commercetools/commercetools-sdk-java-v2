@@ -216,18 +216,36 @@ public final class CategoryImportImpl implements CategoryImport {
 
         CategoryImportImpl that = (CategoryImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(slug, that.slug).append(
-            description, that.description).append(parent, that.parent).append(orderHint, that.orderHint).append(
-                externalId, that.externalId).append(metaTitle, that.metaTitle).append(metaDescription,
-                    that.metaDescription).append(metaKeywords, that.metaKeywords).append(assets, that.assets).append(
-                        custom, that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(parent, that.parent)
+                .append(orderHint, that.orderHint)
+                .append(externalId, that.externalId)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(assets, that.assets)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(slug).append(description).append(
-            parent).append(orderHint).append(externalId).append(metaTitle).append(metaDescription).append(
-                metaKeywords).append(assets).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(name)
+                .append(slug)
+                .append(description)
+                .append(parent)
+                .append(orderHint)
+                .append(externalId)
+                .append(metaTitle)
+                .append(metaDescription)
+                .append(metaKeywords)
+                .append(assets)
+                .append(custom)
+                .toHashCode();
     }
 
 }

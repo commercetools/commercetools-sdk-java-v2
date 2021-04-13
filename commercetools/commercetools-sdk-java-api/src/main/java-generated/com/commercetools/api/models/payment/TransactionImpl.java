@@ -120,14 +120,24 @@ public final class TransactionImpl implements Transaction {
 
         TransactionImpl that = (TransactionImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(timestamp, that.timestamp).append(type, that.type).append(
-            amount, that.amount).append(interactionId, that.interactionId).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(timestamp, that.timestamp)
+                .append(type, that.type)
+                .append(amount, that.amount)
+                .append(interactionId, that.interactionId)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(timestamp).append(type).append(amount).append(
-            interactionId).append(state).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(timestamp)
+                .append(type)
+                .append(amount)
+                .append(interactionId)
+                .append(state)
+                .toHashCode();
     }
 
 }

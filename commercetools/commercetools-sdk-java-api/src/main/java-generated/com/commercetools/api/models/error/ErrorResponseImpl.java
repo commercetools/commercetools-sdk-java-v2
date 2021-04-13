@@ -95,14 +95,22 @@ public final class ErrorResponseImpl implements ErrorResponse {
 
         ErrorResponseImpl that = (ErrorResponseImpl) o;
 
-        return new EqualsBuilder().append(statusCode, that.statusCode).append(message, that.message).append(error,
-            that.error).append(errorDescription, that.errorDescription).append(errors, that.errors).isEquals();
+        return new EqualsBuilder().append(statusCode, that.statusCode)
+                .append(message, that.message)
+                .append(error, that.error)
+                .append(errorDescription, that.errorDescription)
+                .append(errors, that.errors)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(statusCode).append(message).append(error).append(
-            errorDescription).append(errors).toHashCode();
+        return new HashCodeBuilder(17, 37).append(statusCode)
+                .append(message)
+                .append(error)
+                .append(errorDescription)
+                .append(errors)
+                .toHashCode();
     }
 
 }

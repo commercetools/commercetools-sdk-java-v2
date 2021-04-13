@@ -70,8 +70,10 @@ public final class CartDiscountSetCustomFieldActionImpl implements CartDiscountS
 
         CartDiscountSetCustomFieldActionImpl that = (CartDiscountSetCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).append(value,
-            that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

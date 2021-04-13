@@ -57,8 +57,9 @@ public final class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
 
         ProjectChangeCountryTaxRateFallbackEnabledActionImpl that = (ProjectChangeCountryTaxRateFallbackEnabledActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(countryTaxRateFallbackEnabled,
-            that.countryTaxRateFallbackEnabled).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
+                .isEquals();
     }
 
     @Override

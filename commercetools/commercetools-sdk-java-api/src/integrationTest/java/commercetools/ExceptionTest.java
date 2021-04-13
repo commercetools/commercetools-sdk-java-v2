@@ -12,8 +12,11 @@ public class ExceptionTest {
 
     @Test
     public void testException() {
-        Assertions.assertThatExceptionOfType(NotFoundException.class).isThrownBy(
-            () -> CommercetoolsTestUtils.getProjectRoot().categories().withKey(
-                "unknown-category").get().executeBlocking());
+        Assertions.assertThatExceptionOfType(NotFoundException.class)
+                .isThrownBy(() -> CommercetoolsTestUtils.getProjectRoot()
+                        .categories()
+                        .withKey("unknown-category")
+                        .get()
+                        .executeBlocking());
     }
 }

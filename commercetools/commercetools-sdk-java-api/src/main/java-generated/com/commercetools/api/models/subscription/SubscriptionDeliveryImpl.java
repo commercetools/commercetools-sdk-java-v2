@@ -77,15 +77,20 @@ public final class SubscriptionDeliveryImpl implements SubscriptionDelivery {
 
         SubscriptionDeliveryImpl that = (SubscriptionDeliveryImpl) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey).append(notificationType,
-            that.notificationType).append(resource, that.resource).append(resourceUserProvidedIdentifiers,
-                that.resourceUserProvidedIdentifiers).isEquals();
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(notificationType).append(resource).append(
-            resourceUserProvidedIdentifiers).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(notificationType)
+                .append(resource)
+                .append(resourceUserProvidedIdentifiers)
+                .toHashCode();
     }
 
 }

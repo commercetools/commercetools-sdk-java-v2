@@ -69,8 +69,10 @@ public final class ProductVariantDeletedMessagePayloadImpl implements ProductVar
 
         ProductVariantDeletedMessagePayloadImpl that = (ProductVariantDeletedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(variant, that.variant).append(removedImageUrls,
-            that.removedImageUrls).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(variant, that.variant)
+                .append(removedImageUrls, that.removedImageUrls)
+                .isEquals();
     }
 
     @Override

@@ -67,8 +67,10 @@ public final class TaxPortionDraftImpl implements TaxPortionDraft {
 
         TaxPortionDraftImpl that = (TaxPortionDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(rate, that.rate).append(amount,
-            that.amount).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(rate, that.rate)
+                .append(amount, that.amount)
+                .isEquals();
     }
 
     @Override

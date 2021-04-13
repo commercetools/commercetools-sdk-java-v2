@@ -75,14 +75,20 @@ public final class ProductSetCategoryOrderHintActionImpl implements ProductSetCa
 
         ProductSetCategoryOrderHintActionImpl that = (ProductSetCategoryOrderHintActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(categoryId, that.categoryId).append(orderHint,
-            that.orderHint).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(categoryId, that.categoryId)
+                .append(orderHint, that.orderHint)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(categoryId).append(orderHint).append(
-            staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(categoryId)
+                .append(orderHint)
+                .append(staged)
+                .toHashCode();
     }
 
 }

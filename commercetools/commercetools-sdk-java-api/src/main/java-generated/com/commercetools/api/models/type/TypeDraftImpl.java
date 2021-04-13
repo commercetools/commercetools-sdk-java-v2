@@ -105,15 +105,22 @@ public final class TypeDraftImpl implements TypeDraft {
 
         TypeDraftImpl that = (TypeDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(description,
-            that.description).append(resourceTypeIds, that.resourceTypeIds).append(fieldDefinitions,
-                that.fieldDefinitions).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(resourceTypeIds, that.resourceTypeIds)
+                .append(fieldDefinitions, that.fieldDefinitions)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(description).append(resourceTypeIds).append(
-            fieldDefinitions).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(name)
+                .append(description)
+                .append(resourceTypeIds)
+                .append(fieldDefinitions)
+                .toHashCode();
     }
 
 }

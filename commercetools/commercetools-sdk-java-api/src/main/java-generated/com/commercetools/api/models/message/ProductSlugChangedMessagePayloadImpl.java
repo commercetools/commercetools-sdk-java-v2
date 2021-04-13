@@ -65,8 +65,10 @@ public final class ProductSlugChangedMessagePayloadImpl implements ProductSlugCh
 
         ProductSlugChangedMessagePayloadImpl that = (ProductSlugChangedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(slug, that.slug).append(oldSlug,
-            that.oldSlug).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(slug, that.slug)
+                .append(oldSlug, that.oldSlug)
+                .isEquals();
     }
 
     @Override

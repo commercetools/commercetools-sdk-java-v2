@@ -65,8 +65,10 @@ public final class MyShoppingListSetTextLineItemDescriptionActionImpl
 
         MyShoppingListSetTextLineItemDescriptionActionImpl that = (MyShoppingListSetTextLineItemDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(textLineItemId, that.textLineItemId).append(
-            description, that.description).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(description, that.description)
+                .isEquals();
     }
 
     @Override

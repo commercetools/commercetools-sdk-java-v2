@@ -64,8 +64,10 @@ public final class TypeChangeFieldDefinitionLabelActionImpl implements TypeChang
 
         TypeChangeFieldDefinitionLabelActionImpl that = (TypeChangeFieldDefinitionLabelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(fieldName, that.fieldName).append(label,
-            that.label).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

@@ -6,14 +6,7 @@ dependencies {
     implementation "javax.validation:validation-api:${versions.validation}"
     api commons.lang3
 
-    testImplementation "junit:junit:${versions.junit}"
-    testImplementation "org.assertj:assertj-core:${versions.assertJ}"
-    testImplementation "org.awaitility:awaitility:${versions.awaitility}"
-
-    itestImplementation project(':commercetools:commercetools-http-client')
-    itestImplementation "junit:junit:${versions.junit}"
-    itestImplementation "org.assertj:assertj-core:${versions.assertJ}"
-    itestImplementation "org.awaitility:awaitility:${versions.awaitility}"
+    integrationTestImplementation project(':commercetools:commercetools-http-client')
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"

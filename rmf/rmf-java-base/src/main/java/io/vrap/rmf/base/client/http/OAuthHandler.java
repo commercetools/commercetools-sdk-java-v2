@@ -9,11 +9,11 @@ public class OAuthHandler extends AutoCloseableService {
     private final TokenSupplier supplier;
     private AuthenticationToken token;
 
-    public OAuthHandler(TokenSupplier supplier) {
+    public OAuthHandler(final TokenSupplier supplier) {
         this.supplier = supplier;
     }
 
-    static String authHeader(AuthenticationToken token) {
+    static String authHeader(final AuthenticationToken token) {
         return "Bearer " + token.getAccessToken();
     }
 

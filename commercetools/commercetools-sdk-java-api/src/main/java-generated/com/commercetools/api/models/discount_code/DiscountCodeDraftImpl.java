@@ -208,19 +208,36 @@ public final class DiscountCodeDraftImpl implements DiscountCodeDraft {
 
         DiscountCodeDraftImpl that = (DiscountCodeDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(description, that.description).append(code,
-            that.code).append(cartDiscounts, that.cartDiscounts).append(cartPredicate, that.cartPredicate).append(
-                isActive, that.isActive).append(maxApplications, that.maxApplications).append(
-                    maxApplicationsPerCustomer, that.maxApplicationsPerCustomer).append(custom, that.custom).append(
-                        groups, that.groups).append(validFrom, that.validFrom).append(validUntil,
-                            that.validUntil).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(description, that.description)
+                .append(code, that.code)
+                .append(cartDiscounts, that.cartDiscounts)
+                .append(cartPredicate, that.cartPredicate)
+                .append(isActive, that.isActive)
+                .append(maxApplications, that.maxApplications)
+                .append(maxApplicationsPerCustomer, that.maxApplicationsPerCustomer)
+                .append(custom, that.custom)
+                .append(groups, that.groups)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(description).append(code).append(cartDiscounts).append(
-            cartPredicate).append(isActive).append(maxApplications).append(maxApplicationsPerCustomer).append(
-                custom).append(groups).append(validFrom).append(validUntil).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(description)
+                .append(code)
+                .append(cartDiscounts)
+                .append(cartPredicate)
+                .append(isActive)
+                .append(maxApplications)
+                .append(maxApplicationsPerCustomer)
+                .append(custom)
+                .append(groups)
+                .append(validFrom)
+                .append(validUntil)
+                .toHashCode();
     }
 
 }

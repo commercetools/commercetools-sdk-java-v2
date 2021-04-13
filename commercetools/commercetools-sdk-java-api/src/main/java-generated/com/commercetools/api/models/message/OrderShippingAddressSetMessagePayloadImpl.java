@@ -65,8 +65,10 @@ public final class OrderShippingAddressSetMessagePayloadImpl implements OrderShi
 
         OrderShippingAddressSetMessagePayloadImpl that = (OrderShippingAddressSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(address, that.address).append(oldAddress,
-            that.oldAddress).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(address, that.address)
+                .append(oldAddress, that.oldAddress)
+                .isEquals();
     }
 
     @Override

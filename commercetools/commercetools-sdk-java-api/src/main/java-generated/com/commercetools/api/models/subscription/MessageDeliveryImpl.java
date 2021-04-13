@@ -161,19 +161,34 @@ public final class MessageDeliveryImpl implements MessageDelivery {
 
         MessageDeliveryImpl that = (MessageDeliveryImpl) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey).append(notificationType,
-            that.notificationType).append(resource, that.resource).append(resourceUserProvidedIdentifiers,
-                that.resourceUserProvidedIdentifiers).append(id, that.id).append(version, that.version).append(
-                    createdAt, that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(sequenceNumber,
-                        that.sequenceNumber).append(resourceVersion, that.resourceVersion).append(payloadNotIncluded,
-                            that.payloadNotIncluded).isEquals();
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resourceVersion, that.resourceVersion)
+                .append(payloadNotIncluded, that.payloadNotIncluded)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(notificationType).append(resource).append(
-            resourceUserProvidedIdentifiers).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-                sequenceNumber).append(resourceVersion).append(payloadNotIncluded).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(notificationType)
+                .append(resource)
+                .append(resourceUserProvidedIdentifiers)
+                .append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(sequenceNumber)
+                .append(resourceVersion)
+                .append(payloadNotIncluded)
+                .toHashCode();
     }
 
 }

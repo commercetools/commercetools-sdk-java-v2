@@ -36,19 +36,26 @@ public class ShoppingListFixtures {
 
         Customer customer = CustomerFixtures.createCustomer();
 
-        ShoppingListDraft shoppingListDraft = ShoppingListDraftBuilder.of().key(
-            CommercetoolsTestUtils.randomKey()).slug(CommercetoolsTestUtils.randomLocalizedString()).name(
-                CommercetoolsTestUtils.randomLocalizedString()).description(
-                    CommercetoolsTestUtils.randomLocalizedString()).customer(
-                        CustomerResourceIdentifierBuilder.of().id(customer.getId()).build()).textLineItems(
-                            Arrays.asList(TextLineItemDraftBuilder.of().addedAt(
-                                ZonedDateTime.now().plus(1, ChronoUnit.HOURS)).description(
-                                    CommercetoolsTestUtils.randomLocalizedString()).name(
-                                        CommercetoolsTestUtils.randomLocalizedString()).quantity(
-                                            10).build())).deleteDaysAfterLastModification(2L).build();
+        ShoppingListDraft shoppingListDraft = ShoppingListDraftBuilder.of()
+                .key(CommercetoolsTestUtils.randomKey())
+                .slug(CommercetoolsTestUtils.randomLocalizedString())
+                .name(CommercetoolsTestUtils.randomLocalizedString())
+                .description(CommercetoolsTestUtils.randomLocalizedString())
+                .customer(CustomerResourceIdentifierBuilder.of().id(customer.getId()).build())
+                .textLineItems(Arrays.asList(TextLineItemDraftBuilder.of()
+                        .addedAt(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
+                        .description(CommercetoolsTestUtils.randomLocalizedString())
+                        .name(CommercetoolsTestUtils.randomLocalizedString())
+                        .quantity(10)
+                        .build()))
+                .deleteDaysAfterLastModification(2L)
+                .build();
 
-        ShoppingList shoppingList = CommercetoolsTestUtils.getProjectRoot().shoppingLists().post(
-            shoppingListDraft).executeBlocking().getBody();
+        ShoppingList shoppingList = CommercetoolsTestUtils.getProjectRoot()
+                .shoppingLists()
+                .post(shoppingListDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(shoppingList);
         Assert.assertEquals(shoppingListDraft.getKey(), shoppingList.getKey());
@@ -57,8 +64,13 @@ public class ShoppingListFixtures {
     }
 
     public static ShoppingList deleteShoppingList(final String id, final Long version) {
-        ShoppingList shoppingList = CommercetoolsTestUtils.getProjectRoot().shoppingLists().withId(
-            id).delete().withVersion(version).executeBlocking().getBody();
+        ShoppingList shoppingList = CommercetoolsTestUtils.getProjectRoot()
+                .shoppingLists()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(shoppingList);
         Assert.assertEquals(shoppingList.getId(), id);

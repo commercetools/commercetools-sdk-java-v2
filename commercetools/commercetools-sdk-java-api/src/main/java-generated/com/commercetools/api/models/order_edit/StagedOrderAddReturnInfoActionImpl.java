@@ -80,14 +80,20 @@ public final class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddR
 
         StagedOrderAddReturnInfoActionImpl that = (StagedOrderAddReturnInfoActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(returnTrackingId, that.returnTrackingId).append(
-            items, that.items).append(returnDate, that.returnDate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(returnTrackingId, that.returnTrackingId)
+                .append(items, that.items)
+                .append(returnDate, that.returnDate)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(returnTrackingId).append(items).append(
-            returnDate).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(returnTrackingId)
+                .append(items)
+                .append(returnDate)
+                .toHashCode();
     }
 
 }

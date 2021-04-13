@@ -52,8 +52,9 @@ public final class CartRemoveCustomLineItemActionImpl implements CartRemoveCusto
 
         CartRemoveCustomLineItemActionImpl that = (CartRemoveCustomLineItemActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId,
-            that.customLineItemId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .isEquals();
     }
 
     @Override

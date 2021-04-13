@@ -57,13 +57,15 @@ public class ByProjectKeyOrdersEditsByIDApplyPost
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
+    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
 
     public String getProjectKey() {

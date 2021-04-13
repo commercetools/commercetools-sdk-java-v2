@@ -96,14 +96,22 @@ public final class SimilarProductsPagedQueryResultImpl implements SimilarProduct
 
         SimilarProductsPagedQueryResultImpl that = (SimilarProductsPagedQueryResultImpl) o;
 
-        return new EqualsBuilder().append(count, that.count).append(total, that.total).append(offset,
-            that.offset).append(results, that.results).append(meta, that.meta).isEquals();
+        return new EqualsBuilder().append(count, that.count)
+                .append(total, that.total)
+                .append(offset, that.offset)
+                .append(results, that.results)
+                .append(meta, that.meta)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(count).append(total).append(offset).append(results).append(
-            meta).toHashCode();
+        return new HashCodeBuilder(17, 37).append(count)
+                .append(total)
+                .append(offset)
+                .append(results)
+                .append(meta)
+                .toHashCode();
     }
 
 }

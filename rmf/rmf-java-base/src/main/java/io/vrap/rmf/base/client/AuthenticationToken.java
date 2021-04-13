@@ -34,7 +34,7 @@ public class AuthenticationToken {
         return accessToken;
     }
 
-    public void setAccessToken(String accessToken) {
+    public void setAccessToken(final String accessToken) {
         this.accessToken = accessToken;
     }
 
@@ -42,7 +42,7 @@ public class AuthenticationToken {
         return tokenType;
     }
 
-    public void setTokenType(String tokenType) {
+    public void setTokenType(final String tokenType) {
         this.tokenType = tokenType;
     }
 
@@ -50,9 +50,10 @@ public class AuthenticationToken {
         return expiresIn;
     }
 
-    public void setExpiresIn(Long expiresIn) {
-        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn).map(
-            seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5)).orElse(null);
+    public void setExpiresIn(final Long expiresIn) {
+        this.expiresInZonedDateTime = Optional.ofNullable(expiresIn)
+                .map(seconds -> ZonedDateTime.now().plusSeconds(seconds).minusMinutes(5))
+                .orElse(null);
         this.expiresIn = expiresIn;
     }
 
@@ -60,7 +61,7 @@ public class AuthenticationToken {
         return scope;
     }
 
-    public void setScope(String scope) {
+    public void setScope(final String scope) {
         this.scope = scope;
     }
 
@@ -68,7 +69,7 @@ public class AuthenticationToken {
         return refresherToken;
     }
 
-    public void setRefresherToken(String refresherToken) {
+    public void setRefresherToken(final String refresherToken) {
         this.refresherToken = refresherToken;
     }
 

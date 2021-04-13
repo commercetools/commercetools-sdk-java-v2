@@ -21,8 +21,12 @@ public class ApiClientIntegrationTests {
     @Test
     public void getById() {
         ApiClientFixtures.withApiClient(apiClient -> {
-            ApiClient queriedApiClient = CommercetoolsTestUtils.getProjectRoot().apiClients().withId(
-                apiClient.getId()).get().executeBlocking().getBody();
+            ApiClient queriedApiClient = CommercetoolsTestUtils.getProjectRoot()
+                    .apiClients()
+                    .withId(apiClient.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(queriedApiClient);
             Assert.assertEquals(queriedApiClient.getId(), apiClient.getId());
@@ -32,8 +36,12 @@ public class ApiClientIntegrationTests {
     @Test
     public void query() {
         ApiClientFixtures.withApiClient(apiClient -> {
-            ApiClientPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().apiClients().get().withWhere(
-                "id=" + "\"" + apiClient.getId() + "\"").executeBlocking().getBody();
+            ApiClientPagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+                    .apiClients()
+                    .get()
+                    .withWhere("id=" + "\"" + apiClient.getId() + "\"")
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(response);
             Assert.assertEquals(response.getResults().get(0).getId(), apiClient.getId());

@@ -34,7 +34,7 @@ public class ErrorMiddlewareTest {
     @Test
     @UseDataProvider("exceptions")
     public void testError(int statusCode, Class<ApiHttpException> exceptionClass) {
-        ErrorMiddleware middleware = new ErrorMiddleware();
+        ErrorMiddleware middleware = ErrorMiddleware.of(ResponseSerializer.of());
 
         final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
             "".getBytes());
@@ -42,8 +42,8 @@ public class ErrorMiddlewareTest {
         Assertions.assertThatExceptionOfType(exceptionClass).isThrownBy(() -> {
             blockingWait(
                 middleware.invoke(request,
-                    request1 -> CompletableFuture.completedFuture(
-                        new ApiHttpResponse<>(statusCode, new ApiHttpHeaders(), "".getBytes()))),
+                    request1 -> CompletableFuture
+                            .completedFuture(new ApiHttpResponse<>(statusCode, new ApiHttpHeaders(), "".getBytes()))),
                 Duration.ofSeconds(1));
         }).matches(e -> e.getStatusCode() == statusCode);
     }

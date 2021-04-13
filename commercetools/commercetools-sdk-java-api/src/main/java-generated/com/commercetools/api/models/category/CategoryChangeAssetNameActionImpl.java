@@ -76,8 +76,11 @@ public final class CategoryChangeAssetNameActionImpl implements CategoryChangeAs
 
         CategoryChangeAssetNameActionImpl that = (CategoryChangeAssetNameActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(assetId, that.assetId).append(assetKey,
-            that.assetKey).append(name, that.name).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(name, that.name)
+                .isEquals();
     }
 
     @Override

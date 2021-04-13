@@ -145,16 +145,28 @@ public final class MyPaymentImpl implements MyPayment {
 
         MyPaymentImpl that = (MyPaymentImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(customer,
-            that.customer).append(anonymousId, that.anonymousId).append(amountPlanned, that.amountPlanned).append(
-                paymentMethodInfo, that.paymentMethodInfo).append(transactions, that.transactions).append(custom,
-                    that.custom).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(customer, that.customer)
+                .append(anonymousId, that.anonymousId)
+                .append(amountPlanned, that.amountPlanned)
+                .append(paymentMethodInfo, that.paymentMethodInfo)
+                .append(transactions, that.transactions)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(customer).append(anonymousId).append(
-            amountPlanned).append(paymentMethodInfo).append(transactions).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(customer)
+                .append(anonymousId)
+                .append(amountPlanned)
+                .append(paymentMethodInfo)
+                .append(transactions)
+                .append(custom)
+                .toHashCode();
     }
 
 }

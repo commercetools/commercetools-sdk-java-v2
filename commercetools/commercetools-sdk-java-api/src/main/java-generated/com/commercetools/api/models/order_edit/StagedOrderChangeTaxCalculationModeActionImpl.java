@@ -53,8 +53,9 @@ public final class StagedOrderChangeTaxCalculationModeActionImpl implements Stag
 
         StagedOrderChangeTaxCalculationModeActionImpl that = (StagedOrderChangeTaxCalculationModeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(taxCalculationMode,
-            that.taxCalculationMode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(taxCalculationMode, that.taxCalculationMode)
+                .isEquals();
     }
 
     @Override

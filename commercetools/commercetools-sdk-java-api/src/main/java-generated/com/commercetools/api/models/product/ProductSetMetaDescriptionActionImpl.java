@@ -65,8 +65,10 @@ public final class ProductSetMetaDescriptionActionImpl implements ProductSetMeta
 
         ProductSetMetaDescriptionActionImpl that = (ProductSetMetaDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(metaDescription, that.metaDescription).append(
-            staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(metaDescription, that.metaDescription)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

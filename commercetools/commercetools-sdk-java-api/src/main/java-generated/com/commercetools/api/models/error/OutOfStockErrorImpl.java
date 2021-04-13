@@ -84,8 +84,11 @@ public final class OutOfStockErrorImpl implements OutOfStockError {
 
         OutOfStockErrorImpl that = (OutOfStockErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(lineItems,
-            that.lineItems).append(skus, that.skus).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(lineItems, that.lineItems)
+                .append(skus, that.skus)
+                .isEquals();
     }
 
     @Override

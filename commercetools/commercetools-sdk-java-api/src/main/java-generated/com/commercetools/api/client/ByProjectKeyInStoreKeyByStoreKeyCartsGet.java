@@ -53,13 +53,13 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsGet
     }
 
     @Override
-    public ApiHttpResponse<java.lang.Object> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<java.lang.Object> executeBlocking(final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), java.lang.Object.class);
+    public CompletableFuture<ApiHttpResponse<java.lang.Object>> execute(final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), java.lang.Object.class);
     }
 
     public String getProjectKey() {

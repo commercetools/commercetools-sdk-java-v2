@@ -9,23 +9,27 @@ import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringImpl;
 
+import io.vrap.rmf.base.client.ApiHttpClient;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 public class CommercetoolsTestUtils {
 
+    private static final ApiHttpClient client;
     private static final ByProjectKeyRequestBuilder projectRoot;
 
     static {
         String logLevel = System.getenv("CTP_JVM_SDK_LOG_LEVEL");
         if ("OFF".equals(logLevel)) {
-            projectRoot = ApiFactory.createForProject(getProjectKey(),
+            client = ApiFactory.defaultClient(
                 ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                 ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+            projectRoot = ApiFactory.createForProject(getProjectKey(), () -> client);
         }
         else {
-            projectRoot = ApiFactory.createForProject(getProjectKey(),
+            client = ApiFactory.defaultClient(
                 ClientCredentials.of().withClientId(getClientId()).withClientSecret(getClientSecret()).build(),
                 ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
+            projectRoot = ApiFactory.createForProject(getProjectKey(), () -> client);
         }
     }
 
@@ -61,5 +65,9 @@ public class CommercetoolsTestUtils {
 
     public static ByProjectKeyRequestBuilder getProjectRoot() {
         return projectRoot;
+    }
+
+    public static ApiHttpClient getClient() {
+        return client;
     }
 }

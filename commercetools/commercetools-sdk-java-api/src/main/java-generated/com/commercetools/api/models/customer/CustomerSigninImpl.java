@@ -119,16 +119,26 @@ public final class CustomerSigninImpl implements CustomerSignin {
 
         CustomerSigninImpl that = (CustomerSigninImpl) o;
 
-        return new EqualsBuilder().append(email, that.email).append(password, that.password).append(anonymousCartId,
-            that.anonymousCartId).append(anonymousCart, that.anonymousCart).append(anonymousCartSignInMode,
-                that.anonymousCartSignInMode).append(anonymousId, that.anonymousId).append(updateProductData,
-                    that.updateProductData).isEquals();
+        return new EqualsBuilder().append(email, that.email)
+                .append(password, that.password)
+                .append(anonymousCartId, that.anonymousCartId)
+                .append(anonymousCart, that.anonymousCart)
+                .append(anonymousCartSignInMode, that.anonymousCartSignInMode)
+                .append(anonymousId, that.anonymousId)
+                .append(updateProductData, that.updateProductData)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(email).append(password).append(anonymousCartId).append(
-            anonymousCart).append(anonymousCartSignInMode).append(anonymousId).append(updateProductData).toHashCode();
+        return new HashCodeBuilder(17, 37).append(email)
+                .append(password)
+                .append(anonymousCartId)
+                .append(anonymousCart)
+                .append(anonymousCartSignInMode)
+                .append(anonymousId)
+                .append(updateProductData)
+                .toHashCode();
     }
 
 }

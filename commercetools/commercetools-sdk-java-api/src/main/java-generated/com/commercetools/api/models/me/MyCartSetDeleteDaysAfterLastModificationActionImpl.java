@@ -54,8 +54,9 @@ public final class MyCartSetDeleteDaysAfterLastModificationActionImpl
 
         MyCartSetDeleteDaysAfterLastModificationActionImpl that = (MyCartSetDeleteDaysAfterLastModificationActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(deleteDaysAfterLastModification,
-            that.deleteDaysAfterLastModification).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .isEquals();
     }
 
     @Override

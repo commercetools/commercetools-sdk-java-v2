@@ -29,12 +29,17 @@ public class ChannelFixtures {
     }
 
     public static Channel createChannel() {
-        ChannelDraft channelDraft = ChannelDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).roles(
-            Arrays.asList(ChannelRoleEnum.INVENTORY_SUPPLY)).geoLocation(
-                GeoJsonPointBuilder.of().coordinates(Arrays.asList(13.0, 51.0)).build()).build();
+        ChannelDraft channelDraft = ChannelDraftBuilder.of()
+                .key(CommercetoolsTestUtils.randomKey())
+                .roles(Arrays.asList(ChannelRoleEnum.INVENTORY_SUPPLY))
+                .geoLocation(GeoJsonPointBuilder.of().coordinates(Arrays.asList(13.0, 51.0)).build())
+                .build();
 
-        Channel channel = CommercetoolsTestUtils.getProjectRoot().channels().post(
-            channelDraft).executeBlocking().getBody();
+        Channel channel = CommercetoolsTestUtils.getProjectRoot()
+                .channels()
+                .post(channelDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(channel);
         Assert.assertEquals(channelDraft.getKey(), channel.getKey());
@@ -43,8 +48,13 @@ public class ChannelFixtures {
     }
 
     public static Channel deleteChannel(final String id, final Long version) {
-        Channel channel = CommercetoolsTestUtils.getProjectRoot().channels().withId(id).delete().withVersion(
-            version).executeBlocking().getBody();
+        Channel channel = CommercetoolsTestUtils.getProjectRoot()
+                .channels()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(channel);
         Assert.assertEquals(channel.getId(), id);

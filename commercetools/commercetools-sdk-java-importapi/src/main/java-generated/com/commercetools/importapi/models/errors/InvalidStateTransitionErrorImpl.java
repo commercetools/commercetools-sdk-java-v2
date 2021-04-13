@@ -85,14 +85,20 @@ public final class InvalidStateTransitionErrorImpl implements InvalidStateTransi
 
         InvalidStateTransitionErrorImpl that = (InvalidStateTransitionErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(currentState,
-            that.currentState).append(newState, that.newState).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(currentState, that.currentState)
+                .append(newState, that.newState)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(currentState).append(
-            newState).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(currentState)
+                .append(newState)
+                .toHashCode();
     }
 
 }

@@ -14,7 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 public class ByProjectKeyByResourceTypeByIDGet extends
-        ApiMethod<ByProjectKeyByResourceTypeByIDGet, com.commercetools.history.models.ChangeHistoryPagedQueryResponse> {
+        ApiMethod<ByProjectKeyByResourceTypeByIDGet, com.commercetools.history.models.RecordPagedQueryResponse> {
 
     private String projectKey;
     private String resourceType;
@@ -47,15 +47,16 @@ public class ByProjectKeyByResourceTypeByIDGet extends
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.history.models.ChangeHistoryPagedQueryResponse> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse> executeBlocking(
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.history.models.ChangeHistoryPagedQueryResponse>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
-            com.commercetools.history.models.ChangeHistoryPagedQueryResponse.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.history.models.RecordPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
+            com.commercetools.history.models.RecordPagedQueryResponse.class);
     }
 
     public String getProjectKey() {
@@ -88,6 +89,10 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     public List<String> getUserId() {
         return this.getQueryParam("userId");
+    }
+
+    public List<String> getType() {
+        return this.getQueryParam("type");
     }
 
     public List<String> getClientId() {
@@ -160,6 +165,14 @@ public class ByProjectKeyByResourceTypeByIDGet extends
 
     public ByProjectKeyByResourceTypeByIDGet addUserId(final String userId) {
         return copy().addQueryParam("userId", userId);
+    }
+
+    public ByProjectKeyByResourceTypeByIDGet withType(final String type) {
+        return copy().withQueryParam("type", type);
+    }
+
+    public ByProjectKeyByResourceTypeByIDGet addType(final String type) {
+        return copy().addQueryParam("type", type);
     }
 
     public ByProjectKeyByResourceTypeByIDGet withClientId(final String clientId) {

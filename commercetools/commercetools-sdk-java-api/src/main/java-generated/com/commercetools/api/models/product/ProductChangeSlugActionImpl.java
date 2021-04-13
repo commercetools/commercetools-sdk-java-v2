@@ -69,8 +69,10 @@ public final class ProductChangeSlugActionImpl implements ProductChangeSlugActio
 
         ProductChangeSlugActionImpl that = (ProductChangeSlugActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(slug, that.slug).append(staged,
-            that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(slug, that.slug)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

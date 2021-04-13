@@ -84,8 +84,11 @@ public final class DeliveryItemsUpdatedMessagePayloadImpl implements DeliveryIte
 
         DeliveryItemsUpdatedMessagePayloadImpl that = (DeliveryItemsUpdatedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(deliveryId, that.deliveryId).append(items,
-            that.items).append(oldItems, that.oldItems).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(deliveryId, that.deliveryId)
+                .append(items, that.items)
+                .append(oldItems, that.oldItems)
+                .isEquals();
     }
 
     @Override

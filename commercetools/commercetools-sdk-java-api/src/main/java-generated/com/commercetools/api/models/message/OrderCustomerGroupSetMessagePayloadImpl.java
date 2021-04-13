@@ -67,8 +67,10 @@ public final class OrderCustomerGroupSetMessagePayloadImpl implements OrderCusto
 
         OrderCustomerGroupSetMessagePayloadImpl that = (OrderCustomerGroupSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(customerGroup, that.customerGroup).append(
-            oldCustomerGroup, that.oldCustomerGroup).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(customerGroup, that.customerGroup)
+                .append(oldCustomerGroup, that.oldCustomerGroup)
+                .isEquals();
     }
 
     @Override

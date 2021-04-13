@@ -76,14 +76,20 @@ public final class CategorySetAssetDescriptionActionImpl implements CategorySetA
 
         CategorySetAssetDescriptionActionImpl that = (CategorySetAssetDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(assetId, that.assetId).append(assetKey,
-            that.assetKey).append(description, that.description).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .append(description, that.description)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(assetId).append(assetKey).append(
-            description).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(assetId)
+                .append(assetKey)
+                .append(description)
+                .toHashCode();
     }
 
 }

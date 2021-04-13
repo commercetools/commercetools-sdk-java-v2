@@ -4,5 +4,5 @@ package io.vrap.rmf.base.client.http;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 
 public interface InternalLoggerFactory {
-    InternalLogger createFor(ApiHttpRequest request, String topic);
+    InternalLogger createFor(final ApiHttpRequest request, final String topic);
 }

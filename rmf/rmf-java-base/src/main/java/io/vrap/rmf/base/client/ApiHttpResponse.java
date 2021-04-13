@@ -77,8 +77,10 @@ public class ApiHttpResponse<U> extends Base {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this).append("statusCode", statusCode).append("headers", headers).append(
-            "textInterpretedBody", getSecuredBody()).toString();
+        return new ToStringBuilder(this).append("statusCode", statusCode)
+                .append("headers", headers)
+                .append("textInterpretedBody", getSecuredBody())
+                .toString();
     }
 
     static String tryToFilter(final String input) {

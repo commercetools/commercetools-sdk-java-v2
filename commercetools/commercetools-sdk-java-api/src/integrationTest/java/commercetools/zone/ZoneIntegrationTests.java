@@ -24,8 +24,12 @@ public class ZoneIntegrationTests {
     @Test
     public void getById() {
         ZoneFixtures.withZone(zone -> {
-            Zone queriedZone = CommercetoolsTestUtils.getProjectRoot().zones().withId(
-                zone.getId()).get().executeBlocking().getBody();
+            Zone queriedZone = CommercetoolsTestUtils.getProjectRoot()
+                    .zones()
+                    .withId(zone.getId())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(queriedZone);
             Assert.assertEquals(zone.getId(), queriedZone.getId());
@@ -35,8 +39,12 @@ public class ZoneIntegrationTests {
     @Test
     public void getByKey() {
         ZoneFixtures.withZone(zone -> {
-            Zone queriedZone = CommercetoolsTestUtils.getProjectRoot().zones().withKey(
-                zone.getKey()).get().executeBlocking().getBody();
+            Zone queriedZone = CommercetoolsTestUtils.getProjectRoot()
+                    .zones()
+                    .withKey(zone.getKey())
+                    .get()
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(queriedZone);
             Assert.assertEquals(zone.getId(), queriedZone.getId());
@@ -46,8 +54,12 @@ public class ZoneIntegrationTests {
     @Test
     public void query() {
         ZoneFixtures.withZone(zone -> {
-            ZonePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().zones().get().withWhere(
-                "id=" + "\"" + zone.getId() + "\"").executeBlocking().getBody();
+            ZonePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+                    .zones()
+                    .get()
+                    .withWhere("id=" + "\"" + zone.getId() + "\"")
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(response);
             Assert.assertEquals(response.getResults().get(0).getId(), zone.getId());
@@ -61,9 +73,12 @@ public class ZoneIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ZoneSetKeyActionBuilder.of().key(newKey).build());
 
-            Zone updatedZone = CommercetoolsTestUtils.getProjectRoot().zones().withId(zone.getId()).post(
-                ZoneUpdateBuilder.of().actions(updateActions).version(
-                    zone.getVersion()).build()).executeBlocking().getBody();
+            Zone updatedZone = CommercetoolsTestUtils.getProjectRoot()
+                    .zones()
+                    .withId(zone.getId())
+                    .post(ZoneUpdateBuilder.of().actions(updateActions).version(zone.getVersion()).build())
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(updatedZone);
             Assert.assertEquals(updatedZone.getKey(), newKey);
@@ -79,9 +94,12 @@ public class ZoneIntegrationTests {
             String newKey = CommercetoolsTestUtils.randomKey();
             updateActions.add(ZoneSetKeyActionBuilder.of().key(newKey).build());
 
-            Zone updatedZone = CommercetoolsTestUtils.getProjectRoot().zones().withKey(zone.getKey()).post(
-                ZoneUpdateBuilder.of().actions(updateActions).version(
-                    zone.getVersion()).build()).executeBlocking().getBody();
+            Zone updatedZone = CommercetoolsTestUtils.getProjectRoot()
+                    .zones()
+                    .withKey(zone.getKey())
+                    .post(ZoneUpdateBuilder.of().actions(updateActions).version(zone.getVersion()).build())
+                    .executeBlocking()
+                    .getBody();
 
             Assert.assertNotNull(updatedZone);
             Assert.assertEquals(updatedZone.getKey(), newKey);

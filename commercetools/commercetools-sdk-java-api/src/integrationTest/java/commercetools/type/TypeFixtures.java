@@ -25,13 +25,18 @@ public class TypeFixtures {
     }
 
     public static Type createType() {
-        TypeDraft typeDraft = TypeDraftBuilder.of().key(CommercetoolsTestUtils.randomKey()).name(
-            CommercetoolsTestUtils.randomLocalizedString()).resourceTypeIds(
-                Arrays.asList(ResourceTypeId.ASSET)).fieldDefinitions(
-                    Arrays.asList(FieldDefinitionBuilder.of().type(CustomFieldStringTypeBuilder.of().build()).name(
-                        CommercetoolsTestUtils.randomString()).label(
-                            CommercetoolsTestUtils.randomLocalizedString()).required(false).inputHint(
-                                TypeTextInputHint.SINGLE_LINE).build())).build();
+        TypeDraft typeDraft = TypeDraftBuilder.of()
+                .key(CommercetoolsTestUtils.randomKey())
+                .name(CommercetoolsTestUtils.randomLocalizedString())
+                .resourceTypeIds(Arrays.asList(ResourceTypeId.ASSET))
+                .fieldDefinitions(Arrays.asList(FieldDefinitionBuilder.of()
+                        .type(CustomFieldStringTypeBuilder.of().build())
+                        .name(CommercetoolsTestUtils.randomString())
+                        .label(CommercetoolsTestUtils.randomLocalizedString())
+                        .required(false)
+                        .inputHint(TypeTextInputHint.SINGLE_LINE)
+                        .build()))
+                .build();
 
         Type type = CommercetoolsTestUtils.getProjectRoot().types().post(typeDraft).executeBlocking().getBody();
 
@@ -42,8 +47,13 @@ public class TypeFixtures {
     }
 
     public static Type deleteType(final String id, final Long version) {
-        Type type = CommercetoolsTestUtils.getProjectRoot().types().withId(id).delete().withVersion(
-            version).executeBlocking().getBody();
+        Type type = CommercetoolsTestUtils.getProjectRoot()
+                .types()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(type);
         Assert.assertEquals(type.getId(), id);

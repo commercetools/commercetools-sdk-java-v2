@@ -64,8 +64,10 @@ public final class ProductTypeSetInputTipActionImpl implements ProductTypeSetInp
 
         ProductTypeSetInputTipActionImpl that = (ProductTypeSetInputTipActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(
-            inputTip, that.inputTip).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(inputTip, that.inputTip)
+                .isEquals();
     }
 
     @Override

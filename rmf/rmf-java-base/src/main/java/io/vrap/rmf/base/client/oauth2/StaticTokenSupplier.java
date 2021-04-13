@@ -9,7 +9,7 @@ public class StaticTokenSupplier implements TokenSupplier {
 
     private final AuthenticationToken token;
 
-    public StaticTokenSupplier(AuthenticationToken token) {
+    public StaticTokenSupplier(final AuthenticationToken token) {
         this.token = token;
     }
 

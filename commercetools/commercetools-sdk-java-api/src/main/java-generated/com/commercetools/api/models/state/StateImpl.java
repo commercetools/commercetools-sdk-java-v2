@@ -235,19 +235,40 @@ public final class StateImpl implements State {
 
         StateImpl that = (StateImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(key, that.key).append(type,
-                    that.type).append(name, that.name).append(description, that.description).append(initial,
-                        that.initial).append(builtIn, that.builtIn).append(roles, that.roles).append(transitions,
-                            that.transitions).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(key, that.key)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(initial, that.initial)
+                .append(builtIn, that.builtIn)
+                .append(roles, that.roles)
+                .append(transitions, that.transitions)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(key).append(type).append(name).append(description).append(
-                initial).append(builtIn).append(roles).append(transitions).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(key)
+                .append(type)
+                .append(name)
+                .append(description)
+                .append(initial)
+                .append(builtIn)
+                .append(roles)
+                .append(transitions)
+                .toHashCode();
     }
 
 }

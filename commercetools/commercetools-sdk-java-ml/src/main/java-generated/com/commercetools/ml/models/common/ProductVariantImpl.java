@@ -79,8 +79,10 @@ public final class ProductVariantImpl implements ProductVariant {
 
         ProductVariantImpl that = (ProductVariantImpl) o;
 
-        return new EqualsBuilder().append(product, that.product).append(staged, that.staged).append(variantId,
-            that.variantId).isEquals();
+        return new EqualsBuilder().append(product, that.product)
+                .append(staged, that.staged)
+                .append(variantId, that.variantId)
+                .isEquals();
     }
 
     @Override

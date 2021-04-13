@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 public final class Utils {
 
-    public static <U, V> Function<U, V> wrapToCompletionException(ExceptionalFunction<U, V> exceptionalFunction) {
+    public static <U, V> Function<U, V> wrapToCompletionException(final ExceptionalFunction<U, V> exceptionalFunction) {
         return u -> {
             try {
                 return exceptionalFunction.apply(u);
@@ -22,21 +22,22 @@ public final class Utils {
         };
     }
 
-    public static String bytesToString(byte[] input) {
+    public static String bytesToString(final byte[] input) {
         if (input == null) {
             return null;
         }
         return new String(input);
     }
 
-    public static String bytesToUTF8String(byte[] input) {
+    public static String bytesToUTF8String(final byte[] input) {
         if (input == null) {
             return null;
         }
         return new String(input, StandardCharsets.UTF_8);
     }
 
-    public static <I, O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, Class<O> outputType) {
+    public static <I, O> ApiHttpResponse<O> convertResponse(final ApiHttpResponse<byte[]> response,
+            final Class<O> outputType) {
         try {
             if (response.getBody() == null) {
                 return (ApiHttpResponse<O>) response;

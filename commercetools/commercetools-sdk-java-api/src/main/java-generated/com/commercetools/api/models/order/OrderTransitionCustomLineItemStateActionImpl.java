@@ -100,15 +100,24 @@ public final class OrderTransitionCustomLineItemStateActionImpl implements Order
 
         OrderTransitionCustomLineItemStateActionImpl that = (OrderTransitionCustomLineItemStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            quantity, that.quantity).append(fromState, that.fromState).append(toState, that.toState).append(
-                actualTransitionDate, that.actualTransitionDate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(quantity, that.quantity)
+                .append(fromState, that.fromState)
+                .append(toState, that.toState)
+                .append(actualTransitionDate, that.actualTransitionDate)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(quantity).append(
-            fromState).append(toState).append(actualTransitionDate).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(quantity)
+                .append(fromState)
+                .append(toState)
+                .append(actualTransitionDate)
+                .toHashCode();
     }
 
 }

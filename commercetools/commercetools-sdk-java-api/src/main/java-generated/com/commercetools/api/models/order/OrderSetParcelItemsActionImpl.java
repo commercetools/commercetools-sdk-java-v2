@@ -68,8 +68,10 @@ public final class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsA
 
         OrderSetParcelItemsActionImpl that = (OrderSetParcelItemsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(parcelId, that.parcelId).append(items,
-            that.items).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override

@@ -64,8 +64,10 @@ public final class ReferenceExistsErrorImpl implements ReferenceExistsError {
 
         ReferenceExistsErrorImpl that = (ReferenceExistsErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(referencedBy,
-            that.referencedBy).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(referencedBy, that.referencedBy)
+                .isEquals();
     }
 
     @Override

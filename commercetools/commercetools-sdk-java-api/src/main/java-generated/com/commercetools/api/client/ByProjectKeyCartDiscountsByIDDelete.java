@@ -51,14 +51,15 @@ public class ByProjectKeyCartDiscountsByIDDelete
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount> executeBlocking(
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
-            com.commercetools.api.models.cart_discount.CartDiscount.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart_discount.CartDiscount>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.cart_discount.CartDiscount.class);
     }
 
     public String getProjectKey() {

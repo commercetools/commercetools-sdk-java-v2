@@ -64,8 +64,10 @@ public final class DuplicateVariantValuesErrorImpl implements DuplicateVariantVa
 
         DuplicateVariantValuesErrorImpl that = (DuplicateVariantValuesErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(variantValues,
-            that.variantValues).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(variantValues, that.variantValues)
+                .isEquals();
     }
 
     @Override

@@ -88,16 +88,22 @@ public final class AttributeDefinitionAlreadyExistsErrorImpl implements Attribut
 
         AttributeDefinitionAlreadyExistsErrorImpl that = (AttributeDefinitionAlreadyExistsErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(
-            conflictingProductTypeId, that.conflictingProductTypeId).append(conflictingProductTypeName,
-                that.conflictingProductTypeName).append(conflictingAttributeName,
-                    that.conflictingAttributeName).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(conflictingProductTypeId, that.conflictingProductTypeId)
+                .append(conflictingProductTypeName, that.conflictingProductTypeName)
+                .append(conflictingAttributeName, that.conflictingAttributeName)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(conflictingProductTypeId).append(
-            conflictingProductTypeName).append(conflictingAttributeName).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(conflictingProductTypeId)
+                .append(conflictingProductTypeName)
+                .append(conflictingAttributeName)
+                .toHashCode();
     }
 
 }

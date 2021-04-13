@@ -249,23 +249,42 @@ public final class MyCartDraftImpl implements MyCartDraft {
 
         MyCartDraftImpl that = (MyCartDraftImpl) o;
 
-        return new EqualsBuilder().append(currency, that.currency).append(customerEmail, that.customerEmail).append(
-            country, that.country).append(inventoryMode, that.inventoryMode).append(lineItems, that.lineItems).append(
-                shippingAddress, that.shippingAddress).append(billingAddress, that.billingAddress).append(
-                    shippingMethod, that.shippingMethod).append(custom, that.custom).append(locale, that.locale).append(
-                        taxMode, that.taxMode).append(deleteDaysAfterLastModification,
-                            that.deleteDaysAfterLastModification).append(itemShippingAddresses,
-                                that.itemShippingAddresses).append(store, that.store).append(discountCodes,
-                                    that.discountCodes).isEquals();
+        return new EqualsBuilder().append(currency, that.currency)
+                .append(customerEmail, that.customerEmail)
+                .append(country, that.country)
+                .append(inventoryMode, that.inventoryMode)
+                .append(lineItems, that.lineItems)
+                .append(shippingAddress, that.shippingAddress)
+                .append(billingAddress, that.billingAddress)
+                .append(shippingMethod, that.shippingMethod)
+                .append(custom, that.custom)
+                .append(locale, that.locale)
+                .append(taxMode, that.taxMode)
+                .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
+                .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(store, that.store)
+                .append(discountCodes, that.discountCodes)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(currency).append(customerEmail).append(country).append(
-            inventoryMode).append(lineItems).append(shippingAddress).append(billingAddress).append(
-                shippingMethod).append(custom).append(locale).append(taxMode).append(
-                    deleteDaysAfterLastModification).append(itemShippingAddresses).append(store).append(
-                        discountCodes).toHashCode();
+        return new HashCodeBuilder(17, 37).append(currency)
+                .append(customerEmail)
+                .append(country)
+                .append(inventoryMode)
+                .append(lineItems)
+                .append(shippingAddress)
+                .append(billingAddress)
+                .append(shippingMethod)
+                .append(custom)
+                .append(locale)
+                .append(taxMode)
+                .append(deleteDaysAfterLastModification)
+                .append(itemShippingAddresses)
+                .append(store)
+                .append(discountCodes)
+                .toHashCode();
     }
 
 }

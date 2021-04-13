@@ -30,9 +30,11 @@ import io.vrap.rmf.base.client.utils.Utils;
 @Deprecated
 public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
-    private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder().connectTimeout(120,
-        TimeUnit.SECONDS).writeTimeout(120, TimeUnit.SECONDS).readTimeout(120, TimeUnit.SECONDS).addInterceptor(
-            new UnzippingInterceptor());
+    private final Supplier<OkHttpClient.Builder> clientBuilder = () -> new OkHttpClient.Builder()
+            .connectTimeout(120, TimeUnit.SECONDS)
+            .writeTimeout(120, TimeUnit.SECONDS)
+            .readTimeout(120, TimeUnit.SECONDS)
+            .addInterceptor(new UnzippingInterceptor());
 
     private final OkHttpClient okHttpClient;
 
@@ -73,9 +75,12 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
     }
 
     private static ApiHttpResponse<byte[]> toResponse(final Response response) {
-        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(response.headers().toMultimap().entrySet().stream().flatMap(
-            e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value))).collect(
-                Collectors.toList()));
+        ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(response.headers()
+                .toMultimap()
+                .entrySet()
+                .stream()
+                .flatMap(e -> e.getValue().stream().map(value -> ApiHttpHeaders.headerEntry(e.getKey(), value)))
+                .collect(Collectors.toList()));
 
         ApiHttpResponse<byte[]> apiHttpResponse = new ApiHttpResponse<>(response.code(), apiHttpHeaders,
             Optional.ofNullable(response.body()).map(Utils.wrapToCompletionException(ResponseBody::bytes)).orElse(null),
@@ -101,10 +106,12 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
 
         //default media type is JSON, if other media type is set as a header, use it
         MediaType mediaType = JSON;
-        if (apiHttpRequest.getHeaders().getHeaders().stream().anyMatch(
-            s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))) {
-            mediaType = MediaType.get(
-                Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
+        if (apiHttpRequest.getHeaders()
+                .getHeaders()
+                .stream()
+                .anyMatch(s -> s.getKey().equalsIgnoreCase(CONTENT_TYPE))) {
+            mediaType = MediaType
+                    .get(Objects.requireNonNull(apiHttpRequest.getHeaders().getFirst(ApiHttpHeaders.CONTENT_TYPE)));
         }
 
         final RequestBody body = apiHttpRequest.getBody() == null ? null
@@ -164,11 +171,16 @@ public class VrapOkHttpClient implements VrapHttpClient, AutoCloseable {
             }
 
             GzipSource gzipSource = new GzipSource(responseBody.source());
-            Headers strippedHeaders = response.headers().newBuilder().removeAll("Content-Encoding").removeAll(
-                "Content-Length").build();
+            Headers strippedHeaders = response.headers()
+                    .newBuilder()
+                    .removeAll("Content-Encoding")
+                    .removeAll("Content-Length")
+                    .build();
             String contentType = response.header("Content-Type");
-            return response.newBuilder().headers(strippedHeaders).body(
-                new RealResponseBody(contentType, -1L, Okio.buffer(gzipSource))).build();
+            return response.newBuilder()
+                    .headers(strippedHeaders)
+                    .body(new RealResponseBody(contentType, -1L, Okio.buffer(gzipSource)))
+                    .build();
         }
     }
 }

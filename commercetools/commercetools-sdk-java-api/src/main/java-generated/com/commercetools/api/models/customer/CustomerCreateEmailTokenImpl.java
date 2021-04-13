@@ -67,8 +67,10 @@ public final class CustomerCreateEmailTokenImpl implements CustomerCreateEmailTo
 
         CustomerCreateEmailTokenImpl that = (CustomerCreateEmailTokenImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(ttlMinutes,
-            that.ttlMinutes).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(ttlMinutes, that.ttlMinutes)
+                .isEquals();
     }
 
     @Override

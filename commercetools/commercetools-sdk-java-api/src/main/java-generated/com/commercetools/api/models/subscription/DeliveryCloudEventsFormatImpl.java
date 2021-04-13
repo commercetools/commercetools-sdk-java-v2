@@ -52,8 +52,9 @@ public final class DeliveryCloudEventsFormatImpl implements DeliveryCloudEventsF
 
         DeliveryCloudEventsFormatImpl that = (DeliveryCloudEventsFormatImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(cloudEventsVersion,
-            that.cloudEventsVersion).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(cloudEventsVersion, that.cloudEventsVersion)
+                .isEquals();
     }
 
     @Override

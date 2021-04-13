@@ -88,14 +88,22 @@ public final class ProductAddExternalImageActionImpl implements ProductAddExtern
 
         ProductAddExternalImageActionImpl that = (ProductAddExternalImageActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(variantId, that.variantId).append(sku,
-            that.sku).append(image, that.image).append(staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(image, that.image)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(variantId).append(sku).append(image).append(
-            staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(variantId)
+                .append(sku)
+                .append(image)
+                .append(staged)
+                .toHashCode();
     }
 
 }

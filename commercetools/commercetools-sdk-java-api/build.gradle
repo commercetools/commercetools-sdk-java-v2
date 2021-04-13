@@ -17,12 +17,7 @@ dependencies {
     testImplementation 'org.skyscreamer:jsonassert:1.5.0'
     testImplementation project(':commercetools:commercetools-http-client')
     testImplementation commons.io
-
-    itestImplementation project(':commercetools:commercetools-http-client')
-    itestImplementation "junit:junit:${versions.junit}"
-    itestImplementation "ch.qos.logback:logback-classic:${versions.logback}"
-    itestImplementation "org.assertj:assertj-core:${versions.assertJ}"
-    itestImplementation "com.google.code.gson:gson:${versions.gson}"
+    testImplementation "com.google.code.gson:gson:${versions.gson}"
 }
 
 sourceSets.main.java.srcDirs += "src/main/java-generated"

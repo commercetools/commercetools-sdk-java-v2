@@ -76,8 +76,11 @@ public final class MyShoppingListSetLineItemCustomFieldActionImpl
 
         MyShoppingListSetLineItemCustomFieldActionImpl that = (MyShoppingListSetLineItemCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(name,
-            that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

@@ -19,11 +19,11 @@ public final class ShippingMethodSetLocalizedDescriptionActionImpl
 
     private String action;
 
-    private String localizedDescription;
+    private com.commercetools.api.models.common.LocalizedString localizedDescription;
 
     @JsonCreator
     ShippingMethodSetLocalizedDescriptionActionImpl(
-            @JsonProperty("localizedDescription") final String localizedDescription) {
+            @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
         this.action = SET_LOCALIZED_DESCRIPTION;
     }
@@ -36,11 +36,12 @@ public final class ShippingMethodSetLocalizedDescriptionActionImpl
         return this.action;
     }
 
-    public String getLocalizedDescription() {
+    public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
         return this.localizedDescription;
     }
 
-    public void setLocalizedDescription(final String localizedDescription) {
+    public void setLocalizedDescription(
+            final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
     }
 
@@ -54,8 +55,9 @@ public final class ShippingMethodSetLocalizedDescriptionActionImpl
 
         ShippingMethodSetLocalizedDescriptionActionImpl that = (ShippingMethodSetLocalizedDescriptionActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(localizedDescription,
-            that.localizedDescription).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(localizedDescription, that.localizedDescription)
+                .isEquals();
     }
 
     @Override

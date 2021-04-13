@@ -65,8 +65,10 @@ public final class ShippingMethodAddShippingRateActionImpl implements ShippingMe
 
         ShippingMethodAddShippingRateActionImpl that = (ShippingMethodAddShippingRateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(zone, that.zone).append(shippingRate,
-            that.shippingRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(zone, that.zone)
+                .append(shippingRate, that.shippingRate)
+                .isEquals();
     }
 
     @Override

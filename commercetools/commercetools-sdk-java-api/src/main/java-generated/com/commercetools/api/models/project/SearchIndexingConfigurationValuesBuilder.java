@@ -11,20 +11,49 @@ import io.vrap.rmf.base.client.utils.Generated;
 public final class SearchIndexingConfigurationValuesBuilder {
 
     @Nullable
-    private String status;
+    private com.commercetools.api.models.project.SearchIndexingConfigurationStatus status;
 
-    public SearchIndexingConfigurationValuesBuilder status(@Nullable final String status) {
+    @Nullable
+    private java.time.ZonedDateTime lastModifiedAt;
+
+    @Nullable
+    private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
+
+    public SearchIndexingConfigurationValuesBuilder status(
+            @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status) {
         this.status = status;
         return this;
     }
 
+    public SearchIndexingConfigurationValuesBuilder lastModifiedAt(
+            @Nullable final java.time.ZonedDateTime lastModifiedAt) {
+        this.lastModifiedAt = lastModifiedAt;
+        return this;
+    }
+
+    public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
+            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
+        return this;
+    }
+
     @Nullable
-    public String getStatus() {
+    public com.commercetools.api.models.project.SearchIndexingConfigurationStatus getStatus() {
         return this.status;
     }
 
+    @Nullable
+    public java.time.ZonedDateTime getLastModifiedAt() {
+        return this.lastModifiedAt;
+    }
+
+    @Nullable
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+        return this.lastModifiedBy;
+    }
+
     public SearchIndexingConfigurationValues build() {
-        return new SearchIndexingConfigurationValuesImpl(status);
+        return new SearchIndexingConfigurationValuesImpl(status, lastModifiedAt, lastModifiedBy);
     }
 
     public static SearchIndexingConfigurationValuesBuilder of() {
@@ -34,6 +63,8 @@ public final class SearchIndexingConfigurationValuesBuilder {
     public static SearchIndexingConfigurationValuesBuilder of(final SearchIndexingConfigurationValues template) {
         SearchIndexingConfigurationValuesBuilder builder = new SearchIndexingConfigurationValuesBuilder();
         builder.status = template.getStatus();
+        builder.lastModifiedAt = template.getLastModifiedAt();
+        builder.lastModifiedBy = template.getLastModifiedBy();
         return builder;
     }
 

@@ -64,8 +64,10 @@ public final class ProductTypeChangeInputHintActionImpl implements ProductTypeCh
 
         ProductTypeChangeInputHintActionImpl that = (ProductTypeChangeInputHintActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(
-            newValue, that.newValue).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(newValue, that.newValue)
+                .isEquals();
     }
 
     @Override

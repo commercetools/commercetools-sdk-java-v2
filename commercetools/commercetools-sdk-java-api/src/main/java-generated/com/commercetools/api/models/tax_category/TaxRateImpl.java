@@ -137,15 +137,26 @@ public final class TaxRateImpl implements TaxRate {
 
         TaxRateImpl that = (TaxRateImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(name, that.name).append(amount, that.amount).append(
-            includedInPrice, that.includedInPrice).append(country, that.country).append(state, that.state).append(
-                subRates, that.subRates).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(name, that.name)
+                .append(amount, that.amount)
+                .append(includedInPrice, that.includedInPrice)
+                .append(country, that.country)
+                .append(state, that.state)
+                .append(subRates, that.subRates)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(name).append(amount).append(includedInPrice).append(
-            country).append(state).append(subRates).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(name)
+                .append(amount)
+                .append(includedInPrice)
+                .append(country)
+                .append(state)
+                .append(subRates)
+                .toHashCode();
     }
 
 }

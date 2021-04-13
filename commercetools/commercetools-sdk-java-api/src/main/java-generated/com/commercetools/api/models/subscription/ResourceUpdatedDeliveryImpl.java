@@ -112,16 +112,26 @@ public final class ResourceUpdatedDeliveryImpl implements ResourceUpdatedDeliver
 
         ResourceUpdatedDeliveryImpl that = (ResourceUpdatedDeliveryImpl) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey).append(notificationType,
-            that.notificationType).append(resource, that.resource).append(resourceUserProvidedIdentifiers,
-                that.resourceUserProvidedIdentifiers).append(version, that.version).append(oldVersion,
-                    that.oldVersion).append(modifiedAt, that.modifiedAt).isEquals();
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(version, that.version)
+                .append(oldVersion, that.oldVersion)
+                .append(modifiedAt, that.modifiedAt)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(notificationType).append(resource).append(
-            resourceUserProvidedIdentifiers).append(version).append(oldVersion).append(modifiedAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(notificationType)
+                .append(resource)
+                .append(resourceUserProvidedIdentifiers)
+                .append(version)
+                .append(oldVersion)
+                .append(modifiedAt)
+                .toHashCode();
     }
 
 }

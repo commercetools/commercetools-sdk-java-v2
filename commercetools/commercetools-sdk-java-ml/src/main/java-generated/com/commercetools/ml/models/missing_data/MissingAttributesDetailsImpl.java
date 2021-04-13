@@ -77,14 +77,18 @@ public final class MissingAttributesDetailsImpl implements MissingAttributesDeta
 
         MissingAttributesDetailsImpl that = (MissingAttributesDetailsImpl) o;
 
-        return new EqualsBuilder().append(total, that.total).append(missingAttributeNames,
-            that.missingAttributeNames).append(missingAttributeValues, that.missingAttributeValues).isEquals();
+        return new EqualsBuilder().append(total, that.total)
+                .append(missingAttributeNames, that.missingAttributeNames)
+                .append(missingAttributeValues, that.missingAttributeValues)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(total).append(missingAttributeNames).append(
-            missingAttributeValues).toHashCode();
+        return new HashCodeBuilder(17, 37).append(total)
+                .append(missingAttributeNames)
+                .append(missingAttributeValues)
+                .toHashCode();
     }
 
 }

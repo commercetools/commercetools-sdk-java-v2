@@ -113,16 +113,26 @@ public final class ResourceDeletedDeliveryImpl implements ResourceDeletedDeliver
 
         ResourceDeletedDeliveryImpl that = (ResourceDeletedDeliveryImpl) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey).append(notificationType,
-            that.notificationType).append(resource, that.resource).append(resourceUserProvidedIdentifiers,
-                that.resourceUserProvidedIdentifiers).append(version, that.version).append(modifiedAt,
-                    that.modifiedAt).append(dataErasure, that.dataErasure).isEquals();
+        return new EqualsBuilder().append(projectKey, that.projectKey)
+                .append(notificationType, that.notificationType)
+                .append(resource, that.resource)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(version, that.version)
+                .append(modifiedAt, that.modifiedAt)
+                .append(dataErasure, that.dataErasure)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey).append(notificationType).append(resource).append(
-            resourceUserProvidedIdentifiers).append(version).append(modifiedAt).append(dataErasure).toHashCode();
+        return new HashCodeBuilder(17, 37).append(projectKey)
+                .append(notificationType)
+                .append(resource)
+                .append(resourceUserProvidedIdentifiers)
+                .append(version)
+                .append(modifiedAt)
+                .append(dataErasure)
+                .toHashCode();
     }
 
 }

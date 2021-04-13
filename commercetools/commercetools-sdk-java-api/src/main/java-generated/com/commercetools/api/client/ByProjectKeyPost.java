@@ -55,13 +55,15 @@ public class ByProjectKeyPost extends ApiMethod<ByProjectKeyPost, com.commerceto
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.project.Project> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.project.Project> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.project.Project>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.project.Project.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.project.Project>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.project.Project.class);
     }
 
     public String getProjectKey() {

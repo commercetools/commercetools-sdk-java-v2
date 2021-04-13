@@ -77,8 +77,10 @@ public final class MissingPricesTaskStatusImpl implements MissingPricesTaskStatu
 
         MissingPricesTaskStatusImpl that = (MissingPricesTaskStatusImpl) o;
 
-        return new EqualsBuilder().append(state, that.state).append(expires, that.expires).append(result,
-            that.result).isEquals();
+        return new EqualsBuilder().append(state, that.state)
+                .append(expires, that.expires)
+                .append(result, that.result)
+                .isEquals();
     }
 
     @Override

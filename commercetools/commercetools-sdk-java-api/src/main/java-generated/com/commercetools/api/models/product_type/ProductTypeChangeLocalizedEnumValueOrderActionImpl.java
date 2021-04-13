@@ -70,8 +70,10 @@ public final class ProductTypeChangeLocalizedEnumValueOrderActionImpl
 
         ProductTypeChangeLocalizedEnumValueOrderActionImpl that = (ProductTypeChangeLocalizedEnumValueOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(values,
-            that.values).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(values, that.values)
+                .isEquals();
     }
 
     @Override

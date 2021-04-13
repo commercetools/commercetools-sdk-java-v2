@@ -76,8 +76,11 @@ public final class ExtensionAWSLambdaDestinationImpl implements ExtensionAWSLamb
 
         ExtensionAWSLambdaDestinationImpl that = (ExtensionAWSLambdaDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(arn, that.arn).append(accessKey,
-            that.accessKey).append(accessSecret, that.accessSecret).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(arn, that.arn)
+                .append(accessKey, that.accessKey)
+                .append(accessSecret, that.accessSecret)
+                .isEquals();
     }
 
     @Override

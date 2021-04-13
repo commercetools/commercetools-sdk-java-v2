@@ -25,9 +25,12 @@ public class FacetResultsAccessor extends Accessor<FacetResults> {
 
     @Nullable
     public static Map<String, FacetResult> asFacetResultMap(FacetResults value) {
-        return Optional.ofNullable(value.values()).map(values -> values.entrySet().stream().collect(Collectors.toMap(
-            Map.Entry::getKey,
-            entry -> JsonUtils.getConfiguredObjectMapper().convertValue(entry.getValue(), FacetResult.class)))).orElse(
-                null);
+        return Optional.ofNullable(value.values())
+                .map(values -> values.entrySet()
+                        .stream()
+                        .collect(Collectors.toMap(Map.Entry::getKey,
+                            entry -> JsonUtils.getConfiguredObjectMapper()
+                                    .convertValue(entry.getValue(), FacetResult.class))))
+                .orElse(null);
     }
 }

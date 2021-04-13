@@ -65,8 +65,10 @@ public final class ShippingMethodRemoveShippingRateActionImpl implements Shippin
 
         ShippingMethodRemoveShippingRateActionImpl that = (ShippingMethodRemoveShippingRateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(zone, that.zone).append(shippingRate,
-            that.shippingRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(zone, that.zone)
+                .append(shippingRate, that.shippingRate)
+                .isEquals();
     }
 
     @Override

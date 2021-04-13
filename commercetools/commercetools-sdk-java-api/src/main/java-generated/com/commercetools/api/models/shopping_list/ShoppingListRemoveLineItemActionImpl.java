@@ -64,8 +64,10 @@ public final class ShoppingListRemoveLineItemActionImpl implements ShoppingListR
 
         ShoppingListRemoveLineItemActionImpl that = (ShoppingListRemoveLineItemActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(quantity,
-            that.quantity).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

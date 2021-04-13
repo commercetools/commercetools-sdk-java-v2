@@ -27,26 +27,42 @@ public class CartDiscountFixtures {
     }
 
     public static CartDiscount createCartDiscount() {
-        CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueRelativeDraftBuilder.of().permyriad(
-            10L).build();
+        CartDiscountValueDraft cartDiscountValueDraft = CartDiscountValueRelativeDraftBuilder.of()
+                .permyriad(10L)
+                .build();
 
-        List<CartDiscount> cartDiscounts = CommercetoolsTestUtils.getProjectRoot().cartDiscounts().get().withWhere(
-            "sortOrder=\"0.41\"").executeBlocking().getBody().getResults();
+        List<CartDiscount> cartDiscounts = CommercetoolsTestUtils.getProjectRoot()
+                .cartDiscounts()
+                .get()
+                .withWhere("sortOrder=\"0.41\"")
+                .executeBlocking()
+                .getBody()
+                .getResults();
 
         if (!cartDiscounts.isEmpty() && cartDiscounts.get(0) != null) {
             deleteCartDiscount(cartDiscounts.get(0).getId(), cartDiscounts.get(0).getVersion());
         }
 
-        CartDiscountDraft cartDiscountDraft = CartDiscountDraftBuilder.of().name(
-            CommercetoolsTestUtils.randomLocalizedString()).key(CommercetoolsTestUtils.randomKey()).description(
-                CommercetoolsTestUtils.randomLocalizedString()).value(cartDiscountValueDraft).cartPredicate(
-                    "country=\"DE\"").target(CartDiscountShippingCostTargetBuilder.of().build()).sortOrder(
-                        "0.41").isActive(false).validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS)).validUntil(
-                            ZonedDateTime.now().plus(3, ChronoUnit.HOURS)).requiresDiscountCode(true).stackingMode(
-                                StackingMode.STACKING).build();
+        CartDiscountDraft cartDiscountDraft = CartDiscountDraftBuilder.of()
+                .name(CommercetoolsTestUtils.randomLocalizedString())
+                .key(CommercetoolsTestUtils.randomKey())
+                .description(CommercetoolsTestUtils.randomLocalizedString())
+                .value(cartDiscountValueDraft)
+                .cartPredicate("country=\"DE\"")
+                .target(CartDiscountShippingCostTargetBuilder.of().build())
+                .sortOrder("0.41")
+                .isActive(false)
+                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
+                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
+                .requiresDiscountCode(true)
+                .stackingMode(StackingMode.STACKING)
+                .build();
 
-        CartDiscount cartDiscount = CommercetoolsTestUtils.getProjectRoot().cartDiscounts().post(
-            cartDiscountDraft).executeBlocking().getBody();
+        CartDiscount cartDiscount = CommercetoolsTestUtils.getProjectRoot()
+                .cartDiscounts()
+                .post(cartDiscountDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(cartDiscount);
         Assert.assertEquals(cartDiscountDraft.getKey(), cartDiscount.getKey());
@@ -55,8 +71,13 @@ public class CartDiscountFixtures {
     }
 
     public static CartDiscount deleteCartDiscount(final String id, final Long version) {
-        CartDiscount deletedCartDiscount = CommercetoolsTestUtils.getProjectRoot().cartDiscounts().withId(
-            id).delete().withVersion(version).executeBlocking().getBody();
+        CartDiscount deletedCartDiscount = CommercetoolsTestUtils.getProjectRoot()
+                .cartDiscounts()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(deletedCartDiscount);
 

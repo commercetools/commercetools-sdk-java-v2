@@ -1,0 +1,87 @@
+package com.commercetools.api.models.me;
+
+import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartChangeLineItemQuantityActionImpl;
+
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.*;
+import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+@JsonDeserialize(as = MyCartChangeLineItemQuantityActionImpl.class)
+public interface MyCartChangeLineItemQuantityAction extends MyCartUpdateAction {
+
+    String CHANGE_LINE_ITEM_QUANTITY = "changeLineItemQuantity";
+
+    
+    @NotNull
+    @JsonProperty("lineItemId")
+    public String getLineItemId();
+    
+    @NotNull
+    @JsonProperty("quantity")
+    public Long getQuantity();
+    
+    @Valid
+    @JsonProperty("externalPrice")
+    public Money getExternalPrice();
+    
+    @Valid
+    @JsonProperty("externalTotalPrice")
+    public ExternalLineItemTotalPrice getExternalTotalPrice();
+
+    
+    public void setLineItemId(final String lineItemId);
+    
+    
+    
+    public void setQuantity(final Long quantity);
+    
+    
+    
+    public void setExternalPrice(final Money externalPrice);
+    
+    
+    
+    public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
+    
+
+    public static MyCartChangeLineItemQuantityAction of(){
+        return new MyCartChangeLineItemQuantityActionImpl();
+    }
+    
+
+    public static MyCartChangeLineItemQuantityAction of(final MyCartChangeLineItemQuantityAction template) {
+        MyCartChangeLineItemQuantityActionImpl instance = new MyCartChangeLineItemQuantityActionImpl();
+        instance.setLineItemId(template.getLineItemId());
+        instance.setQuantity(template.getQuantity());
+        instance.setExternalPrice(template.getExternalPrice());
+        instance.setExternalTotalPrice(template.getExternalTotalPrice());
+        return instance;
+    }
+
+    public static MyCartChangeLineItemQuantityActionBuilder builder(){
+        return MyCartChangeLineItemQuantityActionBuilder.of();
+    }
+    
+    public static MyCartChangeLineItemQuantityActionBuilder builder(final MyCartChangeLineItemQuantityAction template){
+        return MyCartChangeLineItemQuantityActionBuilder.of(template);
+    }
+    
+
+    default <T> T withMyCartChangeLineItemQuantityAction(Function<MyCartChangeLineItemQuantityAction, T> helper) {
+        return helper.apply(this);
+    }
+}

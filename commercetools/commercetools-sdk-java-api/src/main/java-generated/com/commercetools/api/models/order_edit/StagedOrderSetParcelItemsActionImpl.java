@@ -68,8 +68,10 @@ public final class StagedOrderSetParcelItemsActionImpl implements StagedOrderSet
 
         StagedOrderSetParcelItemsActionImpl that = (StagedOrderSetParcelItemsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(parcelId, that.parcelId).append(items,
-            that.items).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(parcelId, that.parcelId)
+                .append(items, that.items)
+                .isEquals();
     }
 
     @Override

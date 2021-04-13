@@ -172,19 +172,36 @@ public final class CustomerAddressAddedMessageImpl implements CustomerAddressAdd
 
         CustomerAddressAddedMessageImpl that = (CustomerAddressAddedMessageImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(sequenceNumber,
-                    that.sequenceNumber).append(resource, that.resource).append(resourceVersion,
-                        that.resourceVersion).append(type, that.type).append(resourceUserProvidedIdentifiers,
-                            that.resourceUserProvidedIdentifiers).append(address, that.address).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(address, that.address)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(sequenceNumber).append(resource).append(resourceVersion).append(
-                type).append(resourceUserProvidedIdentifiers).append(address).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(sequenceNumber)
+                .append(resource)
+                .append(resourceVersion)
+                .append(type)
+                .append(resourceUserProvidedIdentifiers)
+                .append(address)
+                .toHashCode();
     }
 
 }

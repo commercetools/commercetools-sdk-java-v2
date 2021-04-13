@@ -79,9 +79,9 @@ public class ResourceByProjectKeyOrdersEditsTest {
                    .orders()
                    .edits()
                    .get()
-                   .withLimit(1),
+                   .withLimit(5),
                    "get",
-                   "test_projectKey/orders/edits?limit=1",
+                   "test_projectKey/orders/edits?limit=5",
                },
                new Object[] {           
                    apiRoot
@@ -89,9 +89,9 @@ public class ResourceByProjectKeyOrdersEditsTest {
                    .orders()
                    .edits()
                    .get()
-                   .withOffset(5),
+                   .withOffset(9),
                    "get",
-                   "test_projectKey/orders/edits?offset=5",
+                   "test_projectKey/orders/edits?offset=9",
                },
                new Object[] {           
                    apiRoot

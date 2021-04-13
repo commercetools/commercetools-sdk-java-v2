@@ -78,9 +78,9 @@ public class ResourceByProjectKeyCustomObjectsByContainerByKeyTest {
                    .customObjects()
                    .withContainerAndKey("test_container", "test_key")
                    .delete()
-                   .withVersion(5L),
+                   .withVersion(8L),
                    "delete",
-                   "test_projectKey/custom-objects/test_container/test_key?version=5L",
+                   "test_projectKey/custom-objects/test_container/test_key?version=8L",
                },
                new Object[] {           
                    apiRoot

@@ -76,18 +76,18 @@ public class ResourceByProjectKeyShoppingListsTest {
                    .withProjectKey("test_projectKey")
                    .shoppingLists()
                    .get()
-                   .withLimit(7),
+                   .withLimit(8),
                    "get",
-                   "test_projectKey/shopping-lists?limit=7",
+                   "test_projectKey/shopping-lists?limit=8",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .shoppingLists()
                    .get()
-                   .withOffset(2),
+                   .withOffset(8),
                    "get",
-                   "test_projectKey/shopping-lists?offset=2",
+                   "test_projectKey/shopping-lists?offset=8",
                },
                new Object[] {           
                    apiRoot

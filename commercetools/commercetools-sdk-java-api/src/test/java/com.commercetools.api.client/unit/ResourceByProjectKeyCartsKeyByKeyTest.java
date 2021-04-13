@@ -107,9 +107,9 @@ public class ResourceByProjectKeyCartsKeyByKeyTest {
                    .carts()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(4L),
+                   .withVersion(2L),
                    "delete",
-                   "test_projectKey/carts/key=test_key?version=4L",
+                   "test_projectKey/carts/key=test_key?version=2L",
                },
                new Object[] {           
                    apiRoot

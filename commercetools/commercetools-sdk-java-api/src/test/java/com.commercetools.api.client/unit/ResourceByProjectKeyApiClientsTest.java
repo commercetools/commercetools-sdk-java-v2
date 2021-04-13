@@ -76,18 +76,18 @@ public class ResourceByProjectKeyApiClientsTest {
                    .withProjectKey("test_projectKey")
                    .apiClients()
                    .get()
-                   .withLimit(5),
+                   .withLimit(3),
                    "get",
-                   "test_projectKey/api-clients?limit=5",
+                   "test_projectKey/api-clients?limit=3",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .apiClients()
                    .get()
-                   .withOffset(8),
+                   .withOffset(7),
                    "get",
-                   "test_projectKey/api-clients?offset=8",
+                   "test_projectKey/api-clients?offset=7",
                },
                new Object[] {           
                    apiRoot

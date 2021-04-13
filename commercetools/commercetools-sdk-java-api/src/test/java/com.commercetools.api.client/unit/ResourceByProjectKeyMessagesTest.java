@@ -76,18 +76,18 @@ public class ResourceByProjectKeyMessagesTest {
                    .withProjectKey("test_projectKey")
                    .messages()
                    .get()
-                   .withLimit(1),
+                   .withLimit(4),
                    "get",
-                   "test_projectKey/messages?limit=1",
+                   "test_projectKey/messages?limit=4",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .messages()
                    .get()
-                   .withOffset(8),
+                   .withOffset(9),
                    "get",
-                   "test_projectKey/messages?offset=8",
+                   "test_projectKey/messages?offset=9",
                },
                new Object[] {           
                    apiRoot

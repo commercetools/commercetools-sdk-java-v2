@@ -102,14 +102,22 @@ public final class SubscriptionDraftImpl implements SubscriptionDraft {
 
         SubscriptionDraftImpl that = (SubscriptionDraftImpl) o;
 
-        return new EqualsBuilder().append(changes, that.changes).append(destination, that.destination).append(key,
-            that.key).append(messages, that.messages).append(format, that.format).isEquals();
+        return new EqualsBuilder().append(changes, that.changes)
+                .append(destination, that.destination)
+                .append(key, that.key)
+                .append(messages, that.messages)
+                .append(format, that.format)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(changes).append(destination).append(key).append(messages).append(
-            format).toHashCode();
+        return new HashCodeBuilder(17, 37).append(changes)
+                .append(destination)
+                .append(key)
+                .append(messages)
+                .append(format)
+                .toHashCode();
     }
 
 }

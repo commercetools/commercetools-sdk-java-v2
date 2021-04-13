@@ -71,8 +71,10 @@ public final class CategorySetCustomTypeActionImpl implements CategorySetCustomT
 
         CategorySetCustomTypeActionImpl that = (CategorySetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

@@ -64,8 +64,10 @@ public final class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuA
 
         ProductLegacySetSkuActionImpl that = (ProductLegacySetSkuActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(sku, that.sku).append(variantId,
-            that.variantId).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(sku, that.sku)
+                .append(variantId, that.variantId)
+                .isEquals();
     }
 
     @Override

@@ -9,7 +9,7 @@ import io.vrap.rmf.base.client.ApiHttpResponse;
 
 public interface Middleware {
 
-    CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
-            Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next);
+    CompletableFuture<ApiHttpResponse<byte[]>> invoke(final ApiHttpRequest request,
+            final Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next);
 
 }

@@ -76,18 +76,18 @@ public class ResourceByProjectKeyExtensionsTest {
                    .withProjectKey("test_projectKey")
                    .extensions()
                    .get()
-                   .withLimit(7),
+                   .withLimit(9),
                    "get",
-                   "test_projectKey/extensions?limit=7",
+                   "test_projectKey/extensions?limit=9",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .extensions()
                    .get()
-                   .withOffset(8),
+                   .withOffset(3),
                    "get",
-                   "test_projectKey/extensions?offset=8",
+                   "test_projectKey/extensions?offset=3",
                },
                new Object[] {           
                    apiRoot

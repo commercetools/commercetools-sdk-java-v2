@@ -73,8 +73,10 @@ public final class OrderEditUpdateImpl implements OrderEditUpdate {
 
         OrderEditUpdateImpl that = (OrderEditUpdateImpl) o;
 
-        return new EqualsBuilder().append(version, that.version).append(actions, that.actions).append(dryRun,
-            that.dryRun).isEquals();
+        return new EqualsBuilder().append(version, that.version)
+                .append(actions, that.actions)
+                .append(dryRun, that.dryRun)
+                .isEquals();
     }
 
     @Override

@@ -97,9 +97,9 @@ public class ResourceByProjectKeyInventoryByIDTest {
                    .inventory()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(1L),
+                   .withVersion(3L),
                    "delete",
-                   "test_projectKey/inventory/test_ID?version=1L",
+                   "test_projectKey/inventory/test_ID?version=3L",
                },
                new Object[] {           
                    apiRoot

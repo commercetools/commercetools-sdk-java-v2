@@ -64,8 +64,10 @@ public final class PaymentChangeTransactionTimestampActionImpl implements Paymen
 
         PaymentChangeTransactionTimestampActionImpl that = (PaymentChangeTransactionTimestampActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(transactionId, that.transactionId).append(
-            timestamp, that.timestamp).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(transactionId, that.transactionId)
+                .append(timestamp, that.timestamp)
+                .isEquals();
     }
 
     @Override

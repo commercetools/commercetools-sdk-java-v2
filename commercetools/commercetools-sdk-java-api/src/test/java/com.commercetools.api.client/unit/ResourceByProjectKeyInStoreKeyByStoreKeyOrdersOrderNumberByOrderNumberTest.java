@@ -113,9 +113,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNum
                    .orders()
                    .withOrderNumber("test_orderNumber")
                    .delete()
-                   .withVersion(4L),
+                   .withVersion(3L),
                    "delete",
-                   "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?version=4L",
+                   "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?version=3L",
                },
                new Object[] {           
                    apiRoot

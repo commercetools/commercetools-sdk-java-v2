@@ -80,8 +80,11 @@ public final class PriceChangedErrorImpl implements PriceChangedError {
 
         PriceChangedErrorImpl that = (PriceChangedErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(lineItems,
-            that.lineItems).append(shipping, that.shipping).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(lineItems, that.lineItems)
+                .append(shipping, that.shipping)
+                .isEquals();
     }
 
     @Override

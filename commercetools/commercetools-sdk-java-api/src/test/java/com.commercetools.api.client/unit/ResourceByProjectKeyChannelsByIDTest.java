@@ -97,9 +97,9 @@ public class ResourceByProjectKeyChannelsByIDTest {
                    .channels()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(7L),
+                   .withVersion(4L),
                    "delete",
-                   "test_projectKey/channels/test_ID?version=7L",
+                   "test_projectKey/channels/test_ID?version=4L",
                },
                new Object[] {           
                    apiRoot

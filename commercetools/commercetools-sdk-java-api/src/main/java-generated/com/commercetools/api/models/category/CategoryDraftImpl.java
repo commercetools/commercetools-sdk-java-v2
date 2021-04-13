@@ -200,18 +200,36 @@ public final class CategoryDraftImpl implements CategoryDraft {
 
         CategoryDraftImpl that = (CategoryDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(slug, that.slug).append(description,
-            that.description).append(parent, that.parent).append(orderHint, that.orderHint).append(externalId,
-                that.externalId).append(metaTitle, that.metaTitle).append(metaDescription, that.metaDescription).append(
-                    metaKeywords, that.metaKeywords).append(custom, that.custom).append(assets, that.assets).append(key,
-                        that.key).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(parent, that.parent)
+                .append(orderHint, that.orderHint)
+                .append(externalId, that.externalId)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(custom, that.custom)
+                .append(assets, that.assets)
+                .append(key, that.key)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(slug).append(description).append(parent).append(
-            orderHint).append(externalId).append(metaTitle).append(metaDescription).append(metaKeywords).append(
-                custom).append(assets).append(key).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(slug)
+                .append(description)
+                .append(parent)
+                .append(orderHint)
+                .append(externalId)
+                .append(metaTitle)
+                .append(metaDescription)
+                .append(metaKeywords)
+                .append(custom)
+                .append(assets)
+                .append(key)
+                .toHashCode();
     }
 
 }

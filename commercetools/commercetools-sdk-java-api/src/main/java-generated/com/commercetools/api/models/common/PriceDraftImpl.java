@@ -148,16 +148,30 @@ public final class PriceDraftImpl implements PriceDraft {
 
         PriceDraftImpl that = (PriceDraftImpl) o;
 
-        return new EqualsBuilder().append(value, that.value).append(country, that.country).append(customerGroup,
-            that.customerGroup).append(channel, that.channel).append(validFrom, that.validFrom).append(validUntil,
-                that.validUntil).append(custom, that.custom).append(tiers, that.tiers).append(discounted,
-                    that.discounted).isEquals();
+        return new EqualsBuilder().append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(custom, that.custom)
+                .append(tiers, that.tiers)
+                .append(discounted, that.discounted)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(value).append(country).append(customerGroup).append(channel).append(
-            validFrom).append(validUntil).append(custom).append(tiers).append(discounted).toHashCode();
+        return new HashCodeBuilder(17, 37).append(value)
+                .append(country)
+                .append(customerGroup)
+                .append(channel)
+                .append(validFrom)
+                .append(validUntil)
+                .append(custom)
+                .append(tiers)
+                .append(discounted)
+                .toHashCode();
     }
 
 }

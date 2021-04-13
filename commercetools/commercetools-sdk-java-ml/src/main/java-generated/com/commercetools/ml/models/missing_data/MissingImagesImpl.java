@@ -73,8 +73,10 @@ public final class MissingImagesImpl implements MissingImages {
 
         MissingImagesImpl that = (MissingImagesImpl) o;
 
-        return new EqualsBuilder().append(product, that.product).append(variantId, that.variantId).append(imageCount,
-            that.imageCount).isEquals();
+        return new EqualsBuilder().append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(imageCount, that.imageCount)
+                .isEquals();
     }
 
     @Override

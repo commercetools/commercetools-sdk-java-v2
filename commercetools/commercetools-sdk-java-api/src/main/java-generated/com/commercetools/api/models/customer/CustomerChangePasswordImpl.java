@@ -79,14 +79,20 @@ public final class CustomerChangePasswordImpl implements CustomerChangePassword 
 
         CustomerChangePasswordImpl that = (CustomerChangePasswordImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(currentPassword,
-            that.currentPassword).append(newPassword, that.newPassword).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(currentPassword, that.currentPassword)
+                .append(newPassword, that.newPassword)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(currentPassword).append(
-            newPassword).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(currentPassword)
+                .append(newPassword)
+                .toHashCode();
     }
 
 }

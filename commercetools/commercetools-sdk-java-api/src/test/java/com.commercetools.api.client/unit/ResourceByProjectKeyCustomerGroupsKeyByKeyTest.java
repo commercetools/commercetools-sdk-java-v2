@@ -97,9 +97,9 @@ public class ResourceByProjectKeyCustomerGroupsKeyByKeyTest {
                    .customerGroups()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(5L),
+                   .withVersion(3L),
                    "delete",
-                   "test_projectKey/customer-groups/key=test_key?version=5L",
+                   "test_projectKey/customer-groups/key=test_key?version=3L",
                },
                new Object[] {           
                    apiRoot

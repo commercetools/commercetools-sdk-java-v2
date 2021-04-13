@@ -76,9 +76,9 @@ public class ResourceByProjectKeyCustomersTest {
                    .withProjectKey("test_projectKey")
                    .customers()
                    .get()
-                   .withLimit(6),
+                   .withLimit(8),
                    "get",
-                   "test_projectKey/customers?limit=6",
+                   "test_projectKey/customers?limit=8",
                },
                new Object[] {           
                    apiRoot

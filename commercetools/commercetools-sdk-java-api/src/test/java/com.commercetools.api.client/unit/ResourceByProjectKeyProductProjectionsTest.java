@@ -139,18 +139,18 @@ public class ResourceByProjectKeyProductProjectionsTest {
                    .withProjectKey("test_projectKey")
                    .productProjections()
                    .get()
-                   .withLimit(5),
+                   .withLimit(7),
                    "get",
-                   "test_projectKey/product-projections?limit=5",
+                   "test_projectKey/product-projections?limit=7",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .productProjections()
                    .get()
-                   .withOffset(5),
+                   .withOffset(6),
                    "get",
-                   "test_projectKey/product-projections?offset=5",
+                   "test_projectKey/product-projections?offset=6",
                },
                new Object[] {           
                    apiRoot

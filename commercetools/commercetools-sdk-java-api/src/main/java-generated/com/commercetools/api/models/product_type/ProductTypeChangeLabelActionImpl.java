@@ -64,8 +64,10 @@ public final class ProductTypeChangeLabelActionImpl implements ProductTypeChange
 
         ProductTypeChangeLabelActionImpl that = (ProductTypeChangeLabelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(label,
-            that.label).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(label, that.label)
+                .isEquals();
     }
 
     @Override

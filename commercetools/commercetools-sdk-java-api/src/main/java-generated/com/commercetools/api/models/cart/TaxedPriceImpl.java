@@ -75,8 +75,10 @@ public final class TaxedPriceImpl implements TaxedPrice {
 
         TaxedPriceImpl that = (TaxedPriceImpl) o;
 
-        return new EqualsBuilder().append(totalNet, that.totalNet).append(totalGross, that.totalGross).append(
-            taxPortions, that.taxPortions).isEquals();
+        return new EqualsBuilder().append(totalNet, that.totalNet)
+                .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
+                .isEquals();
     }
 
     @Override

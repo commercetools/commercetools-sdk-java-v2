@@ -72,8 +72,10 @@ public final class ReviewSetCustomTypeActionImpl implements ReviewSetCustomTypeA
 
         ReviewSetCustomTypeActionImpl that = (ReviewSetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

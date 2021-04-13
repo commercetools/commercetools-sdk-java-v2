@@ -87,14 +87,22 @@ public final class ProductSetProductPriceCustomFieldActionImpl implements Produc
 
         ProductSetProductPriceCustomFieldActionImpl that = (ProductSetProductPriceCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(priceId, that.priceId).append(staged,
-            that.staged).append(name, that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(priceId, that.priceId)
+                .append(staged, that.staged)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(priceId).append(staged).append(name).append(
-            value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(priceId)
+                .append(staged)
+                .append(name)
+                .append(value)
+                .toHashCode();
     }
 
 }

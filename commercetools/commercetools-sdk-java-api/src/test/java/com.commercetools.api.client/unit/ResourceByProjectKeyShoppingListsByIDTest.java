@@ -107,9 +107,9 @@ public class ResourceByProjectKeyShoppingListsByIDTest {
                    .shoppingLists()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(8L),
+                   .withVersion(6L),
                    "delete",
-                   "test_projectKey/shopping-lists/test_ID?version=8L",
+                   "test_projectKey/shopping-lists/test_ID?version=6L",
                },
                new Object[] {           
                    apiRoot

@@ -113,15 +113,26 @@ public final class ReviewStateTransitionMessagePayloadImpl implements ReviewStat
 
         ReviewStateTransitionMessagePayloadImpl that = (ReviewStateTransitionMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(oldState, that.oldState).append(newState,
-            that.newState).append(oldIncludedInStatistics, that.oldIncludedInStatistics).append(newIncludedInStatistics,
-                that.newIncludedInStatistics).append(target, that.target).append(force, that.force).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(oldState, that.oldState)
+                .append(newState, that.newState)
+                .append(oldIncludedInStatistics, that.oldIncludedInStatistics)
+                .append(newIncludedInStatistics, that.newIncludedInStatistics)
+                .append(target, that.target)
+                .append(force, that.force)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(oldState).append(newState).append(
-            oldIncludedInStatistics).append(newIncludedInStatistics).append(target).append(force).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(oldState)
+                .append(newState)
+                .append(oldIncludedInStatistics)
+                .append(newIncludedInStatistics)
+                .append(target)
+                .append(force)
+                .toHashCode();
     }
 
 }

@@ -24,7 +24,7 @@ public class OAuthMiddlewareTest {
         AuthenticationToken token = new AuthenticationToken();
         token.setAccessToken("12345");
 
-        OAuthMiddleware middleware = new OAuthMiddleware(new OAuthHandler(new StaticTokenSupplier(token)));
+        OAuthMiddleware middleware = new OAuthMiddlewareImpl(new OAuthHandler(new StaticTokenSupplier(token)));
 
         final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
             "".getBytes());
@@ -42,7 +42,7 @@ public class OAuthMiddlewareTest {
         AuthenticationToken token = new AuthenticationToken();
         token.setAccessToken("12345");
 
-        OAuthMiddleware middleware = new OAuthMiddleware(new OAuthHandler(new StaticTokenSupplier(token)));
+        OAuthMiddleware middleware = new OAuthMiddlewareImpl(new OAuthHandler(new StaticTokenSupplier(token)));
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -60,7 +60,7 @@ public class OAuthMiddlewareTest {
         AuthenticationToken token = new AuthenticationToken();
         token.setAccessToken("12345");
 
-        OAuthMiddleware middleware = new OAuthMiddleware(new OAuthHandler(new StaticTokenSupplier(token)));
+        OAuthMiddleware middleware = new OAuthMiddlewareImpl(new OAuthHandler(new StaticTokenSupplier(token)));
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();
@@ -81,7 +81,7 @@ public class OAuthMiddlewareTest {
         AuthenticationToken token = new AuthenticationToken();
         token.setAccessToken("12345");
 
-        OAuthMiddleware middleware = new OAuthMiddleware(new OAuthHandler(new StaticTokenSupplier(token)));
+        OAuthMiddleware middleware = new OAuthMiddlewareImpl(new OAuthHandler(new StaticTokenSupplier(token)));
 
         final ApiHttpRequest request = new ApiHttpRequest();
         AtomicInteger count = new AtomicInteger();

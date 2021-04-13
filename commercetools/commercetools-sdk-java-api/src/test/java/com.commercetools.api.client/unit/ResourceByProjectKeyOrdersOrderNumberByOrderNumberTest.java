@@ -107,9 +107,9 @@ public class ResourceByProjectKeyOrdersOrderNumberByOrderNumberTest {
                    .orders()
                    .withOrderNumber("test_orderNumber")
                    .delete()
-                   .withVersion(5L),
+                   .withVersion(9L),
                    "delete",
-                   "test_projectKey/orders/order-number=test_orderNumber?version=5L",
+                   "test_projectKey/orders/order-number=test_orderNumber?version=9L",
                },
                new Object[] {           
                    apiRoot

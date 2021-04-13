@@ -65,8 +65,10 @@ public final class OrderEditAppliedMessagePayloadImpl implements OrderEditApplie
 
         OrderEditAppliedMessagePayloadImpl that = (OrderEditAppliedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(edit, that.edit).append(result,
-            that.result).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(edit, that.edit)
+                .append(result, that.result)
+                .isEquals();
     }
 
     @Override

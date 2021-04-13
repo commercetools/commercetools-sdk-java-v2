@@ -134,17 +134,26 @@ public final class MissingAttributesImpl implements MissingAttributes {
 
         MissingAttributesImpl that = (MissingAttributesImpl) o;
 
-        return new EqualsBuilder().append(product, that.product).append(productType, that.productType).append(variantId,
-            that.variantId).append(missingAttributeValues, that.missingAttributeValues).append(missingAttributeNames,
-                that.missingAttributeNames).append(attributeCount, that.attributeCount).append(attributeCoverage,
-                    that.attributeCoverage).isEquals();
+        return new EqualsBuilder().append(product, that.product)
+                .append(productType, that.productType)
+                .append(variantId, that.variantId)
+                .append(missingAttributeValues, that.missingAttributeValues)
+                .append(missingAttributeNames, that.missingAttributeNames)
+                .append(attributeCount, that.attributeCount)
+                .append(attributeCoverage, that.attributeCoverage)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(product).append(productType).append(variantId).append(
-            missingAttributeValues).append(missingAttributeNames).append(attributeCount).append(
-                attributeCoverage).toHashCode();
+        return new HashCodeBuilder(17, 37).append(product)
+                .append(productType)
+                .append(variantId)
+                .append(missingAttributeValues)
+                .append(missingAttributeNames)
+                .append(attributeCount)
+                .append(attributeCoverage)
+                .toHashCode();
     }
 
 }

@@ -107,9 +107,9 @@ public class ResourceByProjectKeyReviewsKeyByKeyTest {
                    .reviews()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(3L),
+                   .withVersion(6L),
                    "delete",
-                   "test_projectKey/reviews/key=test_key?version=3L",
+                   "test_projectKey/reviews/key=test_key?version=6L",
                },
                new Object[] {           
                    apiRoot

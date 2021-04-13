@@ -79,9 +79,9 @@ public class ResourceByProjectKeyMeShoppingListsTest {
                    .me()
                    .shoppingLists()
                    .get()
-                   .withLimit(2),
+                   .withLimit(5),
                    "get",
-                   "test_projectKey/me/shopping-lists?limit=2",
+                   "test_projectKey/me/shopping-lists?limit=5",
                },
                new Object[] {           
                    apiRoot
@@ -89,9 +89,9 @@ public class ResourceByProjectKeyMeShoppingListsTest {
                    .me()
                    .shoppingLists()
                    .get()
-                   .withOffset(4),
+                   .withOffset(3),
                    "get",
-                   "test_projectKey/me/shopping-lists?offset=4",
+                   "test_projectKey/me/shopping-lists?offset=3",
                },
                new Object[] {           
                    apiRoot

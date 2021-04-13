@@ -75,8 +75,11 @@ public final class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChan
 
         ProductTypeChangeEnumKeyActionImpl that = (ProductTypeChangeEnumKeyActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(attributeName, that.attributeName).append(key,
-            that.key).append(newKey, that.newKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(attributeName, that.attributeName)
+                .append(key, that.key)
+                .append(newKey, that.newKey)
+                .isEquals();
     }
 
     @Override

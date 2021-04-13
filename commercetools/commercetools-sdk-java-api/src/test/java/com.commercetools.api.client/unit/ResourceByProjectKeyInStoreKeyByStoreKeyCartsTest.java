@@ -99,9 +99,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyCartsTest {
                    .inStoreKeyWithStoreKeyValue("test_storeKey")
                    .carts()
                    .get()
-                   .withOffset(1),
+                   .withOffset(5),
                    "get",
-                   "test_projectKey/in-store/key=test_storeKey/carts?offset=1",
+                   "test_projectKey/in-store/key=test_storeKey/carts?offset=5",
                },
                new Object[] {           
                    apiRoot

@@ -76,18 +76,18 @@ public class ResourceByProjectKeyCartDiscountsTest {
                    .withProjectKey("test_projectKey")
                    .cartDiscounts()
                    .get()
-                   .withLimit(5),
+                   .withLimit(4),
                    "get",
-                   "test_projectKey/cart-discounts?limit=5",
+                   "test_projectKey/cart-discounts?limit=4",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .cartDiscounts()
                    .get()
-                   .withOffset(7),
+                   .withOffset(4),
                    "get",
-                   "test_projectKey/cart-discounts?offset=7",
+                   "test_projectKey/cart-discounts?offset=4",
                },
                new Object[] {           
                    apiRoot

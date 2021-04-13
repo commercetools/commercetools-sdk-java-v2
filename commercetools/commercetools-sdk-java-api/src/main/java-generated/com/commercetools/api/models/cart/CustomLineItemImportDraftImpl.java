@@ -155,16 +155,30 @@ public final class CustomLineItemImportDraftImpl implements CustomLineItemImport
 
         CustomLineItemImportDraftImpl that = (CustomLineItemImportDraftImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(quantity, that.quantity).append(money,
-            that.money).append(slug, that.slug).append(state, that.state).append(taxRate, that.taxRate).append(
-                taxCategory, that.taxCategory).append(custom, that.custom).append(shippingDetails,
-                    that.shippingDetails).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(quantity, that.quantity)
+                .append(money, that.money)
+                .append(slug, that.slug)
+                .append(state, that.state)
+                .append(taxRate, that.taxRate)
+                .append(taxCategory, that.taxCategory)
+                .append(custom, that.custom)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(quantity).append(money).append(slug).append(
-            state).append(taxRate).append(taxCategory).append(custom).append(shippingDetails).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(quantity)
+                .append(money)
+                .append(slug)
+                .append(state)
+                .append(taxRate)
+                .append(taxCategory)
+                .append(custom)
+                .append(shippingDetails)
+                .toHashCode();
     }
 
 }

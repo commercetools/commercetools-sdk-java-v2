@@ -34,21 +34,29 @@ public class DiscountCodeFixtures {
 
     public static DiscountCode createDiscountCode() {
         CartDiscount cartDiscount = CartDiscountFixtures.createCartDiscount();
-        CartDiscountResourceIdentifier cartDiscountReference = CartDiscountResourceIdentifierBuilder.of().id(
-            cartDiscount.getId()).build();
+        CartDiscountResourceIdentifier cartDiscountReference = CartDiscountResourceIdentifierBuilder.of()
+                .id(cartDiscount.getId())
+                .build();
 
-        DiscountCodeDraft discountCodeDraft = DiscountCodeDraftBuilder.of().name(
-            CommercetoolsTestUtils.randomLocalizedString()).description(
-                CommercetoolsTestUtils.randomLocalizedString()).code(
-                    CommercetoolsTestUtils.randomString()).cartDiscounts(
-                        Arrays.asList(cartDiscountReference)).cartPredicate("country=\"DE\"").groups(
-                            Arrays.asList("group-one")).isActive(false).validFrom(
-                                ZonedDateTime.now().plus(1, ChronoUnit.HOURS)).validUntil(
-                                    ZonedDateTime.now().plus(3, ChronoUnit.HOURS)).maxApplications(
-                                        2L).maxApplicationsPerCustomer(1L).build();
+        DiscountCodeDraft discountCodeDraft = DiscountCodeDraftBuilder.of()
+                .name(CommercetoolsTestUtils.randomLocalizedString())
+                .description(CommercetoolsTestUtils.randomLocalizedString())
+                .code(CommercetoolsTestUtils.randomString())
+                .cartDiscounts(Arrays.asList(cartDiscountReference))
+                .cartPredicate("country=\"DE\"")
+                .groups(Arrays.asList("group-one"))
+                .isActive(false)
+                .validFrom(ZonedDateTime.now().plus(1, ChronoUnit.HOURS))
+                .validUntil(ZonedDateTime.now().plus(3, ChronoUnit.HOURS))
+                .maxApplications(2L)
+                .maxApplicationsPerCustomer(1L)
+                .build();
 
-        DiscountCode discountCode = CommercetoolsTestUtils.getProjectRoot().discountCodes().post(
-            discountCodeDraft).executeBlocking().getBody();
+        DiscountCode discountCode = CommercetoolsTestUtils.getProjectRoot()
+                .discountCodes()
+                .post(discountCodeDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(discountCode);
         Assert.assertEquals(discountCodeDraft.getCode(), discountCode.getCode());
@@ -57,8 +65,14 @@ public class DiscountCodeFixtures {
     }
 
     public static DiscountCode deleteDiscountCode(final String id, final Long version) {
-        DiscountCode discountCode = CommercetoolsTestUtils.getProjectRoot().discountCodes().withId(
-            id).delete().withExpand("cartDiscounts[*]").withVersion(version).executeBlocking().getBody();
+        DiscountCode discountCode = CommercetoolsTestUtils.getProjectRoot()
+                .discountCodes()
+                .withId(id)
+                .delete()
+                .withExpand("cartDiscounts[*]")
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         discountCode.getCartDiscounts().forEach(cartDiscountReference -> {
             CartDiscountFixtures.deleteCartDiscount(cartDiscountReference.getId(),

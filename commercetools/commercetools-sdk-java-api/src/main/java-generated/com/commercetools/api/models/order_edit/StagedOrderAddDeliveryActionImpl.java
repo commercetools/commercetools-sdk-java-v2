@@ -85,8 +85,11 @@ public final class StagedOrderAddDeliveryActionImpl implements StagedOrderAddDel
 
         StagedOrderAddDeliveryActionImpl that = (StagedOrderAddDeliveryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(items, that.items).append(address,
-            that.address).append(parcels, that.parcels).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(items, that.items)
+                .append(address, that.address)
+                .append(parcels, that.parcels)
+                .isEquals();
     }
 
     @Override

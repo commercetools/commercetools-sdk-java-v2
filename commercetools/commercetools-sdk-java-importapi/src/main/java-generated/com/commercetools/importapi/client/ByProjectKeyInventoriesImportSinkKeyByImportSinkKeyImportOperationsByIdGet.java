@@ -55,13 +55,14 @@ public class ByProjectKeyInventoriesImportSinkKeyByImportSinkKeyImportOperations
 
     @Override
     public ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
+    public CompletableFuture<ApiHttpResponse<com.commercetools.importapi.models.importoperations.ImportOperation>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
             com.commercetools.importapi.models.importoperations.ImportOperation.class);
     }
 

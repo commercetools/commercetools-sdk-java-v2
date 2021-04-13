@@ -15,7 +15,7 @@ public final class ModifiedByBuilder {
     private String type;
 
     @Nullable
-    private com.commercetools.history.models.Reference customer;
+    private com.commercetools.history.models.common.Reference customer;
 
     @Nullable
     private String anonymousId;
@@ -35,7 +35,7 @@ public final class ModifiedByBuilder {
         return this;
     }
 
-    public ModifiedByBuilder customer(@Nullable final com.commercetools.history.models.Reference customer) {
+    public ModifiedByBuilder customer(@Nullable final com.commercetools.history.models.common.Reference customer) {
         this.customer = customer;
         return this;
     }
@@ -64,7 +64,7 @@ public final class ModifiedByBuilder {
     }
 
     @Nullable
-    public com.commercetools.history.models.Reference getCustomer() {
+    public com.commercetools.history.models.common.Reference getCustomer() {
         return this.customer;
     }
 

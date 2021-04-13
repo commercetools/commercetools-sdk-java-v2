@@ -65,8 +65,10 @@ public final class MyShoppingListChangeLineItemQuantityActionImpl
 
         MyShoppingListChangeLineItemQuantityActionImpl that = (MyShoppingListChangeLineItemQuantityActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(quantity,
-            that.quantity).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

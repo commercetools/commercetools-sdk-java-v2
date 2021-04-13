@@ -80,14 +80,20 @@ public final class ProductPublishedMessagePayloadImpl implements ProductPublishe
 
         ProductPublishedMessagePayloadImpl that = (ProductPublishedMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(removedImageUrls, that.removedImageUrls).append(
-            productProjection, that.productProjection).append(scope, that.scope).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(removedImageUrls, that.removedImageUrls)
+                .append(productProjection, that.productProjection)
+                .append(scope, that.scope)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(removedImageUrls).append(productProjection).append(
-            scope).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(removedImageUrls)
+                .append(productProjection)
+                .append(scope)
+                .toHashCode();
     }
 
 }

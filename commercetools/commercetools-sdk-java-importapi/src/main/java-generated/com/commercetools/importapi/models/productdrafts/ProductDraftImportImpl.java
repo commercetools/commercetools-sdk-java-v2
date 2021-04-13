@@ -308,20 +308,42 @@ public final class ProductDraftImportImpl implements ProductDraftImport {
 
         ProductDraftImportImpl that = (ProductDraftImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(productType, that.productType).append(name,
-            that.name).append(slug, that.slug).append(description, that.description).append(categories,
-                that.categories).append(metaTitle, that.metaTitle).append(metaDescription, that.metaDescription).append(
-                    metaKeywords, that.metaKeywords).append(masterVariant, that.masterVariant).append(variants,
-                        that.variants).append(taxCategory, that.taxCategory).append(searchKeywords,
-                            that.searchKeywords).append(state, that.state).append(publish, that.publish).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(productType, that.productType)
+                .append(name, that.name)
+                .append(slug, that.slug)
+                .append(description, that.description)
+                .append(categories, that.categories)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(taxCategory, that.taxCategory)
+                .append(searchKeywords, that.searchKeywords)
+                .append(state, that.state)
+                .append(publish, that.publish)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(productType).append(name).append(slug).append(
-            description).append(categories).append(metaTitle).append(metaDescription).append(metaKeywords).append(
-                masterVariant).append(variants).append(taxCategory).append(searchKeywords).append(state).append(
-                    publish).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(productType)
+                .append(name)
+                .append(slug)
+                .append(description)
+                .append(categories)
+                .append(metaTitle)
+                .append(metaDescription)
+                .append(metaKeywords)
+                .append(masterVariant)
+                .append(variants)
+                .append(taxCategory)
+                .append(searchKeywords)
+                .append(state)
+                .append(publish)
+                .toHashCode();
     }
 
 }

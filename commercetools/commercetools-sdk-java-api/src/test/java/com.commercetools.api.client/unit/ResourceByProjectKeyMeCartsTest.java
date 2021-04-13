@@ -79,9 +79,9 @@ public class ResourceByProjectKeyMeCartsTest {
                    .me()
                    .carts()
                    .get()
-                   .withLimit(2),
+                   .withLimit(1),
                    "get",
-                   "test_projectKey/me/carts?limit=2",
+                   "test_projectKey/me/carts?limit=1",
                },
                new Object[] {           
                    apiRoot

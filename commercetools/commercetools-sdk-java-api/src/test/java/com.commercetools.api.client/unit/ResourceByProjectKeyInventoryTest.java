@@ -76,9 +76,9 @@ public class ResourceByProjectKeyInventoryTest {
                    .withProjectKey("test_projectKey")
                    .inventory()
                    .get()
-                   .withLimit(6),
+                   .withLimit(5),
                    "get",
-                   "test_projectKey/inventory?limit=6",
+                   "test_projectKey/inventory?limit=5",
                },
                new Object[] {           
                    apiRoot

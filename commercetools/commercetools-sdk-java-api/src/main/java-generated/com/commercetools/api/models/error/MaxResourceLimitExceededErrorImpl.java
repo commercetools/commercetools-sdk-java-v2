@@ -64,8 +64,10 @@ public final class MaxResourceLimitExceededErrorImpl implements MaxResourceLimit
 
         MaxResourceLimitExceededErrorImpl that = (MaxResourceLimitExceededErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(exceededResource,
-            that.exceededResource).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(exceededResource, that.exceededResource)
+                .isEquals();
     }
 
     @Override

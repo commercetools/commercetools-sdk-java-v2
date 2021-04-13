@@ -15,6 +15,10 @@ public class ApiRoot implements Closeable {
         this.apiHttpClient = apiHttpClient;
     }
 
+    public static ApiRoot of() {
+        return new ApiRoot(null);
+    }
+
     public static ApiRoot fromClient(final ApiHttpClient apiHttpClient) {
         return new ApiRoot(apiHttpClient);
     }
@@ -25,6 +29,9 @@ public class ApiRoot implements Closeable {
 
     @Override
     public void close() {
+        if (apiHttpClient == null) {
+            return;
+        }
         try {
             apiHttpClient.close();
         }

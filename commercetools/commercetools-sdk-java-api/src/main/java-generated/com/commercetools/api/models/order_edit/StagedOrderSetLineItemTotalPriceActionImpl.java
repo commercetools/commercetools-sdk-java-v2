@@ -65,8 +65,10 @@ public final class StagedOrderSetLineItemTotalPriceActionImpl implements StagedO
 
         StagedOrderSetLineItemTotalPriceActionImpl that = (StagedOrderSetLineItemTotalPriceActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(
-            externalTotalPrice, that.externalTotalPrice).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .isEquals();
     }
 
     @Override

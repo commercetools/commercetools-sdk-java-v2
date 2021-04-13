@@ -2,9 +2,13 @@
 package com.commercetools.api.models.project;
 
 import java.time.*;
+import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.validation.Valid;
+
+import com.commercetools.api.models.common.LastModifiedBy;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -19,9 +23,20 @@ public interface SearchIndexingConfigurationValues {
     */
 
     @JsonProperty("status")
-    public String getStatus();
+    public SearchIndexingConfigurationStatus getStatus();
 
-    public void setStatus(final String status);
+    @JsonProperty("lastModifiedAt")
+    public ZonedDateTime getLastModifiedAt();
+
+    @Valid
+    @JsonProperty("lastModifiedBy")
+    public LastModifiedBy getLastModifiedBy();
+
+    public void setStatus(final SearchIndexingConfigurationStatus status);
+
+    public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     public static SearchIndexingConfigurationValues of() {
         return new SearchIndexingConfigurationValuesImpl();
@@ -30,6 +45,8 @@ public interface SearchIndexingConfigurationValues {
     public static SearchIndexingConfigurationValues of(final SearchIndexingConfigurationValues template) {
         SearchIndexingConfigurationValuesImpl instance = new SearchIndexingConfigurationValuesImpl();
         instance.setStatus(template.getStatus());
+        instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setLastModifiedBy(template.getLastModifiedBy());
         return instance;
     }
 

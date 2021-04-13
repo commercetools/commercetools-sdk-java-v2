@@ -76,18 +76,18 @@ public class ResourceByProjectKeyReviewsTest {
                    .withProjectKey("test_projectKey")
                    .reviews()
                    .get()
-                   .withLimit(6),
+                   .withLimit(2),
                    "get",
-                   "test_projectKey/reviews?limit=6",
+                   "test_projectKey/reviews?limit=2",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .reviews()
                    .get()
-                   .withOffset(8),
+                   .withOffset(2),
                    "get",
-                   "test_projectKey/reviews?offset=8",
+                   "test_projectKey/reviews?offset=2",
                },
                new Object[] {           
                    apiRoot

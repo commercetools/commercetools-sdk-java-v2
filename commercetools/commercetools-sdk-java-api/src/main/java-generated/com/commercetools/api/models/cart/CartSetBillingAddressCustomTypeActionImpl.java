@@ -65,8 +65,10 @@ public final class CartSetBillingAddressCustomTypeActionImpl implements CartSetB
 
         CartSetBillingAddressCustomTypeActionImpl that = (CartSetBillingAddressCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

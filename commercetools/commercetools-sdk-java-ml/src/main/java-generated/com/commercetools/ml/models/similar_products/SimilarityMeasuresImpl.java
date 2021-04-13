@@ -108,14 +108,22 @@ public final class SimilarityMeasuresImpl implements SimilarityMeasures {
 
         SimilarityMeasuresImpl that = (SimilarityMeasuresImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(description, that.description).append(attribute,
-            that.attribute).append(variantCount, that.variantCount).append(price, that.price).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(description, that.description)
+                .append(attribute, that.attribute)
+                .append(variantCount, that.variantCount)
+                .append(price, that.price)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(description).append(attribute).append(
-            variantCount).append(price).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(description)
+                .append(attribute)
+                .append(variantCount)
+                .append(price)
+                .toHashCode();
     }
 
 }

@@ -97,9 +97,9 @@ public class ResourceByProjectKeyTaxCategoriesByIDTest {
                    .taxCategories()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(7L),
+                   .withVersion(5L),
                    "delete",
-                   "test_projectKey/tax-categories/test_ID?version=7L",
+                   "test_projectKey/tax-categories/test_ID?version=5L",
                },
                new Object[] {           
                    apiRoot

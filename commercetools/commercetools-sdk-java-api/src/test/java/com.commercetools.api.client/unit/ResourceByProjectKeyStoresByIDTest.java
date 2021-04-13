@@ -97,9 +97,9 @@ public class ResourceByProjectKeyStoresByIDTest {
                    .stores()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(8L),
+                   .withVersion(7L),
                    "delete",
-                   "test_projectKey/stores/test_ID?version=8L",
+                   "test_projectKey/stores/test_ID?version=7L",
                },
                new Object[] {           
                    apiRoot

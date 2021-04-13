@@ -17,7 +17,11 @@ public class MessageIntegrationTests {
         Product product = ProductFixtures.createProduct();
         ProductFixtures.deleteProductById(product.getId(), product.getVersion());
 
-        MessagePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().messages().get().executeBlocking().getBody();
+        MessagePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+                .messages()
+                .get()
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(response);
         Assert.assertFalse(response.getResults().isEmpty());
@@ -28,11 +32,19 @@ public class MessageIntegrationTests {
         Product product = ProductFixtures.createProduct();
         ProductFixtures.deleteProductById(product.getId(), product.getVersion());
 
-        MessagePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot().messages().get().executeBlocking().getBody();
+        MessagePagedQueryResponse response = CommercetoolsTestUtils.getProjectRoot()
+                .messages()
+                .get()
+                .executeBlocking()
+                .getBody();
 
         String messageId = response.getResults().get(0).getId();
-        Message message = CommercetoolsTestUtils.getProjectRoot().messages().withId(
-            messageId).get().executeBlocking().getBody();
+        Message message = CommercetoolsTestUtils.getProjectRoot()
+                .messages()
+                .withId(messageId)
+                .get()
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(message);
         Assert.assertEquals(message.getId(), messageId);

@@ -76,18 +76,18 @@ public class ResourceByProjectKeyZonesTest {
                    .withProjectKey("test_projectKey")
                    .zones()
                    .get()
-                   .withLimit(7),
+                   .withLimit(5),
                    "get",
-                   "test_projectKey/zones?limit=7",
+                   "test_projectKey/zones?limit=5",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .zones()
                    .get()
-                   .withOffset(1),
+                   .withOffset(9),
                    "get",
-                   "test_projectKey/zones?offset=1",
+                   "test_projectKey/zones?offset=9",
                },
                new Object[] {           
                    apiRoot

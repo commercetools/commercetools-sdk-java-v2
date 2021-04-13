@@ -65,8 +65,10 @@ public final class CartSetLineItemDistributionChannelActionImpl implements CartS
 
         CartSetLineItemDistributionChannelActionImpl that = (CartSetLineItemDistributionChannelActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(
-            distributionChannel, that.distributionChannel).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(distributionChannel, that.distributionChannel)
+                .isEquals();
     }
 
     @Override

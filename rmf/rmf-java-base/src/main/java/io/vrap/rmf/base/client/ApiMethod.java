@@ -15,7 +15,8 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implements RequestCommand<TResult> {
+public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult>
+        implements RequestCommand<TResult>, ClientRequestCommand<TResult> {
     public static class ParamEntry<K, V> implements Map.Entry<K, V> {
         protected final K key;
         protected V value;
@@ -67,6 +68,13 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
 
     public ApiMethod(final ApiHttpClient apiHttpClient) {
         this.apiHttpClient = apiHttpClient;
+    }
+
+    public ApiMethod(final ApiHttpClient apiHttpClient, ApiHttpHeaders headers,
+            List<ParamEntry<String, String>> queryParams) {
+        this.apiHttpClient = apiHttpClient;
+        this.headers = headers;
+        this.queryParams = new ArrayList<>(queryParams);
     }
 
     public ApiMethod(final ApiMethod<T, TResult> apiMethod) {
@@ -156,8 +164,9 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
      */
     public T withoutQueryParam(final String key) {
         T c = copy();
-        ((ApiMethod<T, TResult>) c).queryParams = ((ApiMethod<T, TResult>) c).queryParams.stream().filter(
-            e -> !e.getKey().equalsIgnoreCase(key)).collect(Collectors.toList());
+        ((ApiMethod<T, TResult>) c).queryParams = ((ApiMethod<T, TResult>) c).queryParams.stream()
+                .filter(e -> !e.getKey().equalsIgnoreCase(key))
+                .collect(Collectors.toList());
         return c;
     }
 
@@ -184,23 +193,42 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> implem
         return this.queryParams.stream().map(ParamEntry::toUriString).collect(Collectors.toList());
     }
 
+    public String getQueryParamUriString() {
+        return this.queryParams.stream().map(ParamEntry::toUriString).collect(Collectors.joining("&"));
+    }
+
     @Nullable
     public String getFirstQueryParam(final String key) {
-        return this.queryParams.stream().filter(e -> e.getKey().equals(key)).map(
-            Map.Entry::getValue).findFirst().orElse(null);
+        return this.queryParams.stream()
+                .filter(e -> e.getKey().equals(key))
+                .map(Map.Entry::getValue)
+                .findFirst()
+                .orElse(null);
     }
 
     protected abstract T copy();
 
     public abstract ApiHttpRequest createHttpRequest();
 
-    public abstract CompletableFuture<ApiHttpResponse<TResult>> execute();
+    public CompletableFuture<ApiHttpResponse<TResult>> execute() {
+        return execute(apiHttpClient());
+    }
+
+    public abstract CompletableFuture<ApiHttpResponse<TResult>> execute(ApiHttpClient client);
 
     public ApiHttpResponse<TResult> executeBlocking() {
-        return executeBlocking(Duration.ofSeconds(120));
+        return executeBlocking(apiHttpClient(), Duration.ofSeconds(120));
     };
 
-    public abstract ApiHttpResponse<TResult> executeBlocking(Duration timeout);
+    public ApiHttpResponse<TResult> executeBlocking(ApiHttpClient client) {
+        return executeBlocking(client, Duration.ofSeconds(120));
+    };
+
+    public ApiHttpResponse<TResult> executeBlocking(Duration timeout) {
+        return executeBlocking(apiHttpClient(), timeout);
+    }
+
+    public abstract ApiHttpResponse<TResult> executeBlocking(ApiHttpClient client, Duration timeout);
 
     public CompletableFuture<ApiHttpResponse<byte[]>> send() {
         return apiHttpClient.execute(createHttpRequest());

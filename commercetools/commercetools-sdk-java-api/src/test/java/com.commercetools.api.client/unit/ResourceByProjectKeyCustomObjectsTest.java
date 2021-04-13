@@ -76,18 +76,18 @@ public class ResourceByProjectKeyCustomObjectsTest {
                    .withProjectKey("test_projectKey")
                    .customObjects()
                    .get()
-                   .withLimit(7),
+                   .withLimit(2),
                    "get",
-                   "test_projectKey/custom-objects?limit=7",
+                   "test_projectKey/custom-objects?limit=2",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .customObjects()
                    .get()
-                   .withOffset(6),
+                   .withOffset(4),
                    "get",
-                   "test_projectKey/custom-objects?offset=6",
+                   "test_projectKey/custom-objects?offset=4",
                },
                new Object[] {           
                    apiRoot

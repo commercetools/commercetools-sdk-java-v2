@@ -66,8 +66,10 @@ public final class MyCartSetShippingMethodActionImpl implements MyCartSetShippin
 
         MyCartSetShippingMethodActionImpl that = (MyCartSetShippingMethodActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shippingMethod, that.shippingMethod).append(
-            externalTaxRate, that.externalTaxRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shippingMethod, that.shippingMethod)
+                .append(externalTaxRate, that.externalTaxRate)
+                .isEquals();
     }
 
     @Override

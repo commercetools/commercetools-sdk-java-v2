@@ -130,15 +130,26 @@ public final class InventoryImportImpl implements InventoryImport {
 
         InventoryImportImpl that = (InventoryImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(sku, that.sku).append(quantityOnStock,
-            that.quantityOnStock).append(restockableInDays, that.restockableInDays).append(expectedDelivery,
-                that.expectedDelivery).append(supplyChannel, that.supplyChannel).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(sku, that.sku)
+                .append(quantityOnStock, that.quantityOnStock)
+                .append(restockableInDays, that.restockableInDays)
+                .append(expectedDelivery, that.expectedDelivery)
+                .append(supplyChannel, that.supplyChannel)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(sku).append(quantityOnStock).append(
-            restockableInDays).append(expectedDelivery).append(supplyChannel).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(sku)
+                .append(quantityOnStock)
+                .append(restockableInDays)
+                .append(expectedDelivery)
+                .append(supplyChannel)
+                .append(custom)
+                .toHashCode();
     }
 
 }

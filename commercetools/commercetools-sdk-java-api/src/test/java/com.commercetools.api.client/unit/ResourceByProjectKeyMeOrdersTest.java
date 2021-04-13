@@ -79,9 +79,9 @@ public class ResourceByProjectKeyMeOrdersTest {
                    .me()
                    .orders()
                    .get()
-                   .withLimit(3),
+                   .withLimit(6),
                    "get",
-                   "test_projectKey/me/orders?limit=3",
+                   "test_projectKey/me/orders?limit=6",
                },
                new Object[] {           
                    apiRoot

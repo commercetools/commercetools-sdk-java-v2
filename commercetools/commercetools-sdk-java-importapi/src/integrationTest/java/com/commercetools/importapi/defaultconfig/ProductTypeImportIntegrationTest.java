@@ -28,25 +28,40 @@ public class ProductTypeImportIntegrationTest {
     @Test
     public void createAndDelete() throws InterruptedException {
         String importSinkKey = ImportApiTestUtils.randomKey();
-        ImportSinkDraft importSinkDraft = ImportSinkDraftBuilder.of().key(importSinkKey).resourceType(
-            ImportResourceType.PRODUCT_TYPE).build();
+        ImportSinkDraft importSinkDraft = ImportSinkDraftBuilder.of()
+                .key(importSinkKey)
+                .resourceType(ImportResourceType.PRODUCT_TYPE)
+                .build();
 
-        ImportSink importSink = ImportApiTestUtils.getProjectRoot().importSinks().post(
-            importSinkDraft).executeBlocking().getBody();
+        ImportSink importSink = ImportApiTestUtils.getProjectRoot()
+                .importSinks()
+                .post(importSinkDraft)
+                .executeBlocking()
+                .getBody();
 
         assertThat(importSink).isNotNull();
 
         String name = randomKey();
 
-        ProductTypeImportRequest importRequest = ProductTypeImportRequestBuilder.of().resources(
-            Collections.singletonList(
-                ProductTypeImportBuilder.of().key(name).name(name).description(name).build())).build();
-        ImportApiTestUtils.getProjectRoot().productTypes().importSinkKeyWithImportSinkKeyValue(importSinkKey).post(
-            importRequest).executeBlocking().getBody();
+        ProductTypeImportRequest importRequest = ProductTypeImportRequestBuilder.of()
+                .resources(Collections
+                        .singletonList(ProductTypeImportBuilder.of().key(name).name(name).description(name).build()))
+                .build();
+        ImportApiTestUtils.getProjectRoot()
+                .productTypes()
+                .importSinkKeyWithImportSinkKeyValue(importSinkKey)
+                .post(importRequest)
+                .executeBlocking()
+                .getBody();
 
         assertEventually(Duration.ofSeconds(240), Duration.ofMillis(1000), () -> {
-            ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot().productTypes().importSinkKeyWithImportSinkKeyValue(
-                importSinkKey).importOperations().get().executeBlocking().getBody();
+            ImportOperationPagedResponse operationPagedResponse = ImportApiTestUtils.getProjectRoot()
+                    .productTypes()
+                    .importSinkKeyWithImportSinkKeyValue(importSinkKey)
+                    .importOperations()
+                    .get()
+                    .executeBlocking()
+                    .getBody();
 
             assertThat(operationPagedResponse).isNotNull();
             List<ImportOperation> results = operationPagedResponse.getResults();
@@ -54,8 +69,12 @@ public class ProductTypeImportIntegrationTest {
             assertThat(results.get(0).getState()).isEqualTo(ProcessingState.IMPORTED);
         });
 
-        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot().importSinks().withImportSinkKeyValue(
-            importSink.getKey()).delete().executeBlocking().getBody();
+        ImportSink deletedImportSink = ImportApiTestUtils.getProjectRoot()
+                .importSinks()
+                .withImportSinkKeyValue(importSink.getKey())
+                .delete()
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(deletedImportSink);
         Assert.assertEquals(importSink.getKey(), deletedImportSink.getKey());

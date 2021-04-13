@@ -76,18 +76,18 @@ public class ResourceByProjectKeyOrdersTest {
                    .withProjectKey("test_projectKey")
                    .orders()
                    .get()
-                   .withLimit(2),
+                   .withLimit(8),
                    "get",
-                   "test_projectKey/orders?limit=2",
+                   "test_projectKey/orders?limit=8",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .orders()
                    .get()
-                   .withOffset(5),
+                   .withOffset(4),
                    "get",
-                   "test_projectKey/orders?offset=5",
+                   "test_projectKey/orders?offset=4",
                },
                new Object[] {           
                    apiRoot

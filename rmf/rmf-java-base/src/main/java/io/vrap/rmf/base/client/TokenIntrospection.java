@@ -17,7 +17,7 @@ public class TokenIntrospection {
         return active;
     }
 
-    public void setActive(boolean active) {
+    public void setActive(final boolean active) {
         this.active = active;
     }
 
@@ -25,7 +25,7 @@ public class TokenIntrospection {
         return scope;
     }
 
-    public void setScope(String scope) {
+    public void setScope(final String scope) {
         this.scope = scope;
     }
 
@@ -33,7 +33,7 @@ public class TokenIntrospection {
         return exp;
     }
 
-    public void setExp(Long exp) {
+    public void setExp(final Long exp) {
         this.exp = exp;
     }
 }

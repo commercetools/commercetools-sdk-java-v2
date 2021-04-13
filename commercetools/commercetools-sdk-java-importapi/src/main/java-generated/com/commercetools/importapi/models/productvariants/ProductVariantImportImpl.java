@@ -171,15 +171,28 @@ public final class ProductVariantImportImpl implements ProductVariantImport {
 
         ProductVariantImportImpl that = (ProductVariantImportImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(sku, that.sku).append(isMasterVariant,
-            that.isMasterVariant).append(attributes, that.attributes).append(images, that.images).append(assets,
-                that.assets).append(publish, that.publish).append(product, that.product).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(sku, that.sku)
+                .append(isMasterVariant, that.isMasterVariant)
+                .append(attributes, that.attributes)
+                .append(images, that.images)
+                .append(assets, that.assets)
+                .append(publish, that.publish)
+                .append(product, that.product)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(sku).append(isMasterVariant).append(attributes).append(
-            images).append(assets).append(publish).append(product).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(sku)
+                .append(isMasterVariant)
+                .append(attributes)
+                .append(images)
+                .append(assets)
+                .append(publish)
+                .append(product)
+                .toHashCode();
     }
 
 }

@@ -102,15 +102,24 @@ public final class CartRemoveLineItemActionImpl implements CartRemoveLineItemAct
 
         CartRemoveLineItemActionImpl that = (CartRemoveLineItemActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(quantity,
-            that.quantity).append(externalPrice, that.externalPrice).append(externalTotalPrice,
-                that.externalTotalPrice).append(shippingDetailsToRemove, that.shippingDetailsToRemove).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(quantity, that.quantity)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(shippingDetailsToRemove, that.shippingDetailsToRemove)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(quantity).append(
-            externalPrice).append(externalTotalPrice).append(shippingDetailsToRemove).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(quantity)
+                .append(externalPrice)
+                .append(externalTotalPrice)
+                .append(shippingDetailsToRemove)
+                .toHashCode();
     }
 
 }

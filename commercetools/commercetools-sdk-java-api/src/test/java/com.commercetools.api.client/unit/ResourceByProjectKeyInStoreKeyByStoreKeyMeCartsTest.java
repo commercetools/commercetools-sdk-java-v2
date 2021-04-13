@@ -82,9 +82,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyMeCartsTest {
                    .me()
                    .carts()
                    .get()
-                   .withLimit(7),
+                   .withLimit(5),
                    "get",
-                   "test_projectKey/in-store/key=test_storeKey/me/carts?limit=7",
+                   "test_projectKey/in-store/key=test_storeKey/me/carts?limit=5",
                },
                new Object[] {           
                    apiRoot

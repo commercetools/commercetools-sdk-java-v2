@@ -185,20 +185,38 @@ public final class MyCartAddLineItemActionImpl implements MyCartAddLineItemActio
 
         MyCartAddLineItemActionImpl that = (MyCartAddLineItemActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(custom, that.custom).append(distributionChannel,
-            that.distributionChannel).append(externalTaxRate, that.externalTaxRate).append(productId,
-                that.productId).append(variantId, that.variantId).append(sku, that.sku).append(quantity,
-                    that.quantity).append(supplyChannel, that.supplyChannel).append(externalPrice,
-                        that.externalPrice).append(externalTotalPrice, that.externalTotalPrice).append(shippingDetails,
-                            that.shippingDetails).append(addedAt, that.addedAt).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(custom, that.custom)
+                .append(distributionChannel, that.distributionChannel)
+                .append(externalTaxRate, that.externalTaxRate)
+                .append(productId, that.productId)
+                .append(variantId, that.variantId)
+                .append(sku, that.sku)
+                .append(quantity, that.quantity)
+                .append(supplyChannel, that.supplyChannel)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .append(shippingDetails, that.shippingDetails)
+                .append(addedAt, that.addedAt)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(custom).append(distributionChannel).append(
-            externalTaxRate).append(productId).append(variantId).append(sku).append(quantity).append(
-                supplyChannel).append(externalPrice).append(externalTotalPrice).append(shippingDetails).append(
-                    addedAt).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(custom)
+                .append(distributionChannel)
+                .append(externalTaxRate)
+                .append(productId)
+                .append(variantId)
+                .append(sku)
+                .append(quantity)
+                .append(supplyChannel)
+                .append(externalPrice)
+                .append(externalTotalPrice)
+                .append(shippingDetails)
+                .append(addedAt)
+                .toHashCode();
     }
 
 }

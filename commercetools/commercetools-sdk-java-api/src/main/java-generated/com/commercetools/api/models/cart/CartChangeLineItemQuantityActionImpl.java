@@ -89,15 +89,22 @@ public final class CartChangeLineItemQuantityActionImpl implements CartChangeLin
 
         CartChangeLineItemQuantityActionImpl that = (CartChangeLineItemQuantityActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(quantity,
-            that.quantity).append(externalPrice, that.externalPrice).append(externalTotalPrice,
-                that.externalTotalPrice).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(quantity, that.quantity)
+                .append(externalPrice, that.externalPrice)
+                .append(externalTotalPrice, that.externalTotalPrice)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(lineItemId).append(quantity).append(
-            externalPrice).append(externalTotalPrice).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(lineItemId)
+                .append(quantity)
+                .append(externalPrice)
+                .append(externalTotalPrice)
+                .toHashCode();
     }
 
 }

@@ -67,8 +67,10 @@ public final class CustomerResetPasswordImpl implements CustomerResetPassword {
 
         CustomerResetPasswordImpl that = (CustomerResetPasswordImpl) o;
 
-        return new EqualsBuilder().append(tokenValue, that.tokenValue).append(newPassword, that.newPassword).append(
-            version, that.version).isEquals();
+        return new EqualsBuilder().append(tokenValue, that.tokenValue)
+                .append(newPassword, that.newPassword)
+                .append(version, that.version)
+                .isEquals();
     }
 
     @Override

@@ -99,9 +99,9 @@ public class ResourceByProjectKeyProductProjectionsSuggestTest {
                    .productProjections()
                    .suggest()
                    .get()
-                   .withLimit(4),
+                   .withLimit(5),
                    "get",
-                   "test_projectKey/product-projections/suggest?limit=4",
+                   "test_projectKey/product-projections/suggest?limit=5",
                },
                new Object[] {           
                    apiRoot
@@ -109,9 +109,9 @@ public class ResourceByProjectKeyProductProjectionsSuggestTest {
                    .productProjections()
                    .suggest()
                    .get()
-                   .withOffset(4),
+                   .withOffset(6),
                    "get",
-                   "test_projectKey/product-projections/suggest?offset=4",
+                   "test_projectKey/product-projections/suggest?offset=6",
                },
                new Object[] {           
                    apiRoot

@@ -56,8 +56,9 @@ public final class MessageConfigurationImpl implements MessageConfiguration {
 
         MessageConfigurationImpl that = (MessageConfigurationImpl) o;
 
-        return new EqualsBuilder().append(enabled, that.enabled).append(deleteDaysAfterCreation,
-            that.deleteDaysAfterCreation).isEquals();
+        return new EqualsBuilder().append(enabled, that.enabled)
+                .append(deleteDaysAfterCreation, that.deleteDaysAfterCreation)
+                .isEquals();
     }
 
     @Override

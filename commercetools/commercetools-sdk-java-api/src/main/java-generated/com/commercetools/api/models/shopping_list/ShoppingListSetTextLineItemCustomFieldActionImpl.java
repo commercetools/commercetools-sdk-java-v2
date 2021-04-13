@@ -76,14 +76,20 @@ public final class ShoppingListSetTextLineItemCustomFieldActionImpl
 
         ShoppingListSetTextLineItemCustomFieldActionImpl that = (ShoppingListSetTextLineItemCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(textLineItemId, that.textLineItemId).append(name,
-            that.name).append(value, that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(textLineItemId, that.textLineItemId)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(textLineItemId).append(name).append(
-            value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(textLineItemId)
+                .append(name)
+                .append(value)
+                .toHashCode();
     }
 
 }

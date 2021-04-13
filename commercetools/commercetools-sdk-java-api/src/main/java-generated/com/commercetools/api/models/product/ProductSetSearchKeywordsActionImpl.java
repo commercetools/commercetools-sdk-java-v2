@@ -65,8 +65,10 @@ public final class ProductSetSearchKeywordsActionImpl implements ProductSetSearc
 
         ProductSetSearchKeywordsActionImpl that = (ProductSetSearchKeywordsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(searchKeywords, that.searchKeywords).append(
-            staged, that.staged).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(searchKeywords, that.searchKeywords)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

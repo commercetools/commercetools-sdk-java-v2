@@ -76,18 +76,18 @@ public class ResourceByProjectKeyShippingMethodsTest {
                    .withProjectKey("test_projectKey")
                    .shippingMethods()
                    .get()
-                   .withLimit(2),
+                   .withLimit(5),
                    "get",
-                   "test_projectKey/shipping-methods?limit=2",
+                   "test_projectKey/shipping-methods?limit=5",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .shippingMethods()
                    .get()
-                   .withOffset(2),
+                   .withOffset(4),
                    "get",
-                   "test_projectKey/shipping-methods?offset=2",
+                   "test_projectKey/shipping-methods?offset=4",
                },
                new Object[] {           
                    apiRoot

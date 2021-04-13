@@ -65,8 +65,10 @@ public final class PaymentStatusInterfaceCodeSetMessagePayloadImpl
 
         PaymentStatusInterfaceCodeSetMessagePayloadImpl that = (PaymentStatusInterfaceCodeSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(paymentId, that.paymentId).append(interfaceCode,
-            that.interfaceCode).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(paymentId, that.paymentId)
+                .append(interfaceCode, that.interfaceCode)
+                .isEquals();
     }
 
     @Override

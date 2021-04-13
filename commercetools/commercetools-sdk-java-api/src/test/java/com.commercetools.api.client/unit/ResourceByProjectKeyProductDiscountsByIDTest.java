@@ -97,9 +97,9 @@ public class ResourceByProjectKeyProductDiscountsByIDTest {
                    .productDiscounts()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(4L),
+                   .withVersion(5L),
                    "delete",
-                   "test_projectKey/product-discounts/test_ID?version=4L",
+                   "test_projectKey/product-discounts/test_ID?version=5L",
                },
                new Object[] {           
                    apiRoot

@@ -87,14 +87,22 @@ public final class SqsDestinationImpl implements SqsDestination {
 
         SqsDestinationImpl that = (SqsDestinationImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(accessKey, that.accessKey).append(accessSecret,
-            that.accessSecret).append(queueUrl, that.queueUrl).append(region, that.region).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(accessKey, that.accessKey)
+                .append(accessSecret, that.accessSecret)
+                .append(queueUrl, that.queueUrl)
+                .append(region, that.region)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(accessKey).append(accessSecret).append(queueUrl).append(
-            region).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(accessKey)
+                .append(accessSecret)
+                .append(queueUrl)
+                .append(region)
+                .toHashCode();
     }
 
 }

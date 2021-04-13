@@ -160,16 +160,32 @@ public final class QueryPriceImpl implements QueryPrice {
 
         QueryPriceImpl that = (QueryPriceImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(value, that.value).append(country, that.country).append(
-            customerGroup, that.customerGroup).append(channel, that.channel).append(validFrom, that.validFrom).append(
-                validUntil, that.validUntil).append(discounted, that.discounted).append(custom, that.custom).append(
-                    tiers, that.tiers).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(value, that.value)
+                .append(country, that.country)
+                .append(customerGroup, that.customerGroup)
+                .append(channel, that.channel)
+                .append(validFrom, that.validFrom)
+                .append(validUntil, that.validUntil)
+                .append(discounted, that.discounted)
+                .append(custom, that.custom)
+                .append(tiers, that.tiers)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(value).append(country).append(customerGroup).append(
-            channel).append(validFrom).append(validUntil).append(discounted).append(custom).append(tiers).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(value)
+                .append(country)
+                .append(customerGroup)
+                .append(channel)
+                .append(validFrom)
+                .append(validUntil)
+                .append(discounted)
+                .append(custom)
+                .append(tiers)
+                .toHashCode();
     }
 
 }

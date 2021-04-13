@@ -9,8 +9,13 @@ import org.junit.Assert;
 
 public class OrdersFixtures {
     public static Order deleteOrder(final String id, final Long version) {
-        Order order = CommercetoolsTestUtils.getProjectRoot().orders().withId(id).delete().withVersion(
-            version).executeBlocking().getBody();
+        Order order = CommercetoolsTestUtils.getProjectRoot()
+                .orders()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(order);
         Assert.assertEquals(order.getId(), id);
@@ -19,8 +24,14 @@ public class OrdersFixtures {
     }
 
     public static OrderEdit deleteOrderEdit(final String id, final Long version) {
-        OrderEdit orderEdit = CommercetoolsTestUtils.getProjectRoot().orders().edits().withId(id).delete().withVersion(
-            version).executeBlocking().getBody();
+        OrderEdit orderEdit = CommercetoolsTestUtils.getProjectRoot()
+                .orders()
+                .edits()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(orderEdit);
         Assert.assertEquals(orderEdit.getId(), id);

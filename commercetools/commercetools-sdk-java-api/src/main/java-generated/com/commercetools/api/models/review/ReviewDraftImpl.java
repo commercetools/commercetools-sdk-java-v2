@@ -194,17 +194,34 @@ public final class ReviewDraftImpl implements ReviewDraft {
 
         ReviewDraftImpl that = (ReviewDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(uniquenessValue, that.uniquenessValue).append(locale,
-            that.locale).append(authorName, that.authorName).append(title, that.title).append(text, that.text).append(
-                target, that.target).append(state, that.state).append(rating, that.rating).append(customer,
-                    that.customer).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(uniquenessValue, that.uniquenessValue)
+                .append(locale, that.locale)
+                .append(authorName, that.authorName)
+                .append(title, that.title)
+                .append(text, that.text)
+                .append(target, that.target)
+                .append(state, that.state)
+                .append(rating, that.rating)
+                .append(customer, that.customer)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(uniquenessValue).append(locale).append(authorName).append(
-            title).append(text).append(target).append(state).append(rating).append(customer).append(
-                custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(uniquenessValue)
+                .append(locale)
+                .append(authorName)
+                .append(title)
+                .append(text)
+                .append(target)
+                .append(state)
+                .append(rating)
+                .append(customer)
+                .append(custom)
+                .toHashCode();
     }
 
 }

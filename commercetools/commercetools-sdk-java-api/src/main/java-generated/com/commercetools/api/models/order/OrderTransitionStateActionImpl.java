@@ -65,8 +65,10 @@ public final class OrderTransitionStateActionImpl implements OrderTransitionStat
 
         OrderTransitionStateActionImpl that = (OrderTransitionStateActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(state, that.state).append(force,
-            that.force).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(state, that.state)
+                .append(force, that.force)
+                .isEquals();
     }
 
     @Override

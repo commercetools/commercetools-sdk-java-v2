@@ -126,15 +126,24 @@ public final class OrderEditDraftImpl implements OrderEditDraft {
 
         OrderEditDraftImpl that = (OrderEditDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(resource, that.resource).append(stagedActions,
-            that.stagedActions).append(custom, that.custom).append(comment, that.comment).append(dryRun,
-                that.dryRun).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(resource, that.resource)
+                .append(stagedActions, that.stagedActions)
+                .append(custom, that.custom)
+                .append(comment, that.comment)
+                .append(dryRun, that.dryRun)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(resource).append(stagedActions).append(custom).append(
-            comment).append(dryRun).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(resource)
+                .append(stagedActions)
+                .append(custom)
+                .append(comment)
+                .append(dryRun)
+                .toHashCode();
     }
 
 }

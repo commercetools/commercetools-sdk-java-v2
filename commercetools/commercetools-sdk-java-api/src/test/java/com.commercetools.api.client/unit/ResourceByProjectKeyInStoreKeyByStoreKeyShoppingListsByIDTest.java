@@ -113,9 +113,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDTest {
                    .shoppingLists()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(9L),
+                   .withVersion(1L),
                    "delete",
-                   "test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?version=9L",
+                   "test_projectKey/in-store/key=test_storeKey/shopping-lists/test_ID?version=1L",
                },
                new Object[] {           
                    apiRoot

@@ -102,9 +102,9 @@ public class ResourceByProjectKeyOrdersEditsByIDTest {
                    .edits()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(3L),
+                   .withVersion(4L),
                    "delete",
-                   "test_projectKey/orders/edits/test_ID?version=3L",
+                   "test_projectKey/orders/edits/test_ID?version=4L",
                },
                new Object[] {           
                    apiRoot

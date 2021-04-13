@@ -97,9 +97,9 @@ public class ResourceByProjectKeyStatesByIDTest {
                    .states()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(7L),
+                   .withVersion(8L),
                    "delete",
-                   "test_projectKey/states/test_ID?version=7L",
+                   "test_projectKey/states/test_ID?version=8L",
                },
                new Object[] {           
                    apiRoot

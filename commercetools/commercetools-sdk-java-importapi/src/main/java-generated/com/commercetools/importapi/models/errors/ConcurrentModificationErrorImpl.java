@@ -105,15 +105,22 @@ public final class ConcurrentModificationErrorImpl implements ConcurrentModifica
 
         ConcurrentModificationErrorImpl that = (ConcurrentModificationErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(specifiedVersion,
-            that.specifiedVersion).append(currentVersion, that.currentVersion).append(conflictedResource,
-                that.conflictedResource).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(specifiedVersion, that.specifiedVersion)
+                .append(currentVersion, that.currentVersion)
+                .append(conflictedResource, that.conflictedResource)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(specifiedVersion).append(
-            currentVersion).append(conflictedResource).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(specifiedVersion)
+                .append(currentVersion)
+                .append(conflictedResource)
+                .toHashCode();
     }
 
 }

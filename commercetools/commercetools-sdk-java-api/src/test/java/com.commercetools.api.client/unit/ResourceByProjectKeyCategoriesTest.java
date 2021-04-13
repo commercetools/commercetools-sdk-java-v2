@@ -85,9 +85,9 @@ public class ResourceByProjectKeyCategoriesTest {
                    .withProjectKey("test_projectKey")
                    .categories()
                    .get()
-                   .withOffset(7),
+                   .withOffset(2),
                    "get",
-                   "test_projectKey/categories?offset=7",
+                   "test_projectKey/categories?offset=2",
                },
                new Object[] {           
                    apiRoot

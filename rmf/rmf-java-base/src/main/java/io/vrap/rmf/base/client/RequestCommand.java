@@ -9,5 +9,5 @@ public interface RequestCommand<TResult> {
 
     ApiHttpResponse<TResult> executeBlocking();
 
-    ApiHttpResponse<TResult> executeBlocking(Duration timeout);
+    ApiHttpResponse<TResult> executeBlocking(final Duration timeout);
 }

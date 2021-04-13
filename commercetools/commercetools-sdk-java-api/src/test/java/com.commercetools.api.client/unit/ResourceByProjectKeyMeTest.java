@@ -67,18 +67,18 @@ public class ResourceByProjectKeyMeTest {
                    .withProjectKey("test_projectKey")
                    .me()
                    .get()
-                   .withLimit(2),
+                   .withLimit(9),
                    "get",
-                   "test_projectKey/me?limit=2",
+                   "test_projectKey/me?limit=9",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .me()
                    .get()
-                   .withOffset(3),
+                   .withOffset(9),
                    "get",
-                   "test_projectKey/me?offset=3",
+                   "test_projectKey/me?offset=9",
                },
                new Object[] {           
                    apiRoot

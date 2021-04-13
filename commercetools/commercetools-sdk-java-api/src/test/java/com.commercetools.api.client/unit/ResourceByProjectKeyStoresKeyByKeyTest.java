@@ -97,9 +97,9 @@ public class ResourceByProjectKeyStoresKeyByKeyTest {
                    .stores()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(8L),
+                   .withVersion(9L),
                    "delete",
-                   "test_projectKey/stores/key=test_key?version=8L",
+                   "test_projectKey/stores/key=test_key?version=9L",
                },
                new Object[] {           
                    apiRoot

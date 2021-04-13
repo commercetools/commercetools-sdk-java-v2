@@ -79,9 +79,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyShoppingListsTest {
                    .inStoreKeyWithStoreKeyValue("test_storeKey")
                    .shoppingLists()
                    .get()
-                   .withLimit(3),
+                   .withLimit(1),
                    "get",
-                   "test_projectKey/in-store/key=test_storeKey/shopping-lists?limit=3",
+                   "test_projectKey/in-store/key=test_storeKey/shopping-lists?limit=1",
                },
                new Object[] {           
                    apiRoot
@@ -89,9 +89,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyShoppingListsTest {
                    .inStoreKeyWithStoreKeyValue("test_storeKey")
                    .shoppingLists()
                    .get()
-                   .withOffset(9),
+                   .withOffset(8),
                    "get",
-                   "test_projectKey/in-store/key=test_storeKey/shopping-lists?offset=9",
+                   "test_projectKey/in-store/key=test_storeKey/shopping-lists?offset=8",
                },
                new Object[] {           
                    apiRoot

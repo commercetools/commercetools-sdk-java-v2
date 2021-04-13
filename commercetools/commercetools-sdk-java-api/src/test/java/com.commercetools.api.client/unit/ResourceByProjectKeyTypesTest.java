@@ -76,9 +76,9 @@ public class ResourceByProjectKeyTypesTest {
                    .withProjectKey("test_projectKey")
                    .types()
                    .get()
-                   .withLimit(5),
+                   .withLimit(1),
                    "get",
-                   "test_projectKey/types?limit=5",
+                   "test_projectKey/types?limit=1",
                },
                new Object[] {           
                    apiRoot

@@ -8,6 +8,9 @@ import java.util.function.Function;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
+import com.commercetools.history.models.change.Change;
+import com.commercetools.history.models.common.Reference;
+import com.commercetools.history.models.label.Label;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -15,7 +18,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
 *  <p>A Record captures the differences in a resource between one version and the next.
-*  (Reall that the version number is not always incremented by one; see <a href="/general-concepts#optimistic-concurrency-control">Optimistic Concurrency Control</a>.)</p>
+*  (Recall that the version number is not always incremented by one; see <a href="/general-concepts#optimistic-concurrency-control">Optimistic Concurrency Control</a>.)</p>
 */
 @Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
 @JsonDeserialize(as = RecordImpl.class)
@@ -43,7 +46,7 @@ public interface Record {
     public String getType();
 
     /**
-    *  <p>Information about the user or the client who performed the change.</p>
+    *  <p>Information about the user or the API client who performed the change.</p>
     */
     @NotNull
     @Valid
@@ -75,7 +78,7 @@ public interface Record {
 
     /**
     *  <p>Shows the differences in the resource between <code>previousVersion</code> and <code>version</code>.
-    *  The value is not designed to represent the actual array of update actions that was sent to the platform nor is limited to update actions (see, for example, <a href="/general-concepts#optimistic-concurrency-control">Optimistic  Concurrency Control</a>).</p>
+    *  The value is not identical to the actual array of update actions that was sent to the platform and is not limited to update actions (see, for example, <a href="/general-concepts#optimistic-concurrency-control">Optimistic  Concurrency Control</a>).</p>
     */
     @NotNull
     @Valid
@@ -91,7 +94,8 @@ public interface Record {
     public Reference getResource();
 
     /**
-    *  <p><code>true</code> if no change was detected.</p>
+    *  <p><code>true</code> if no change was detected.
+    *  The version number of the resource can be increased even without any change in the resource.</p>
     */
     @NotNull
     @JsonProperty("withoutChanges")

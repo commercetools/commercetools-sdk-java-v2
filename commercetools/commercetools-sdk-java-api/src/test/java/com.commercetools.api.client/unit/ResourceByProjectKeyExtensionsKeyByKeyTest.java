@@ -97,9 +97,9 @@ public class ResourceByProjectKeyExtensionsKeyByKeyTest {
                    .extensions()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(1L),
+                   .withVersion(5L),
                    "delete",
-                   "test_projectKey/extensions/key=test_key?version=1L",
+                   "test_projectKey/extensions/key=test_key?version=5L",
                },
                new Object[] {           
                    apiRoot

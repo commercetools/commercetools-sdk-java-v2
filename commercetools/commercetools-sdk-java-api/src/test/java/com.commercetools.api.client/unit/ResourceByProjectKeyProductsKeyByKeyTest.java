@@ -277,9 +277,9 @@ public class ResourceByProjectKeyProductsKeyByKeyTest {
                    .products()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(4L),
+                   .withVersion(9L),
                    "delete",
-                   "test_projectKey/products/key=test_key?version=4L",
+                   "test_projectKey/products/key=test_key?version=9L",
                },
                new Object[] {           
                    apiRoot

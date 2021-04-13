@@ -64,8 +64,10 @@ public final class CartSetLineItemTaxAmountActionImpl implements CartSetLineItem
 
         CartSetLineItemTaxAmountActionImpl that = (CartSetLineItemTaxAmountActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(
-            externalTaxAmount, that.externalTaxAmount).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .isEquals();
     }
 
     @Override

@@ -76,18 +76,18 @@ public class ResourceByProjectKeyProductTypesTest {
                    .withProjectKey("test_projectKey")
                    .productTypes()
                    .get()
-                   .withLimit(7),
+                   .withLimit(2),
                    "get",
-                   "test_projectKey/product-types?limit=7",
+                   "test_projectKey/product-types?limit=2",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .productTypes()
                    .get()
-                   .withOffset(5),
+                   .withOffset(1),
                    "get",
-                   "test_projectKey/product-types?offset=5",
+                   "test_projectKey/product-types?offset=1",
                },
                new Object[] {           
                    apiRoot

@@ -174,18 +174,34 @@ public final class ProductDataImpl implements ProductData {
 
         ProductDataImpl that = (ProductDataImpl) o;
 
-        return new EqualsBuilder().append(name, that.name).append(categories, that.categories).append(
-            categoryOrderHints, that.categoryOrderHints).append(description, that.description).append(slug,
-                that.slug).append(metaTitle, that.metaTitle).append(metaDescription, that.metaDescription).append(
-                    metaKeywords, that.metaKeywords).append(masterVariant, that.masterVariant).append(variants,
-                        that.variants).append(searchKeywords, that.searchKeywords).isEquals();
+        return new EqualsBuilder().append(name, that.name)
+                .append(categories, that.categories)
+                .append(categoryOrderHints, that.categoryOrderHints)
+                .append(description, that.description)
+                .append(slug, that.slug)
+                .append(metaTitle, that.metaTitle)
+                .append(metaDescription, that.metaDescription)
+                .append(metaKeywords, that.metaKeywords)
+                .append(masterVariant, that.masterVariant)
+                .append(variants, that.variants)
+                .append(searchKeywords, that.searchKeywords)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(name).append(categories).append(categoryOrderHints).append(
-            description).append(slug).append(metaTitle).append(metaDescription).append(metaKeywords).append(
-                masterVariant).append(variants).append(searchKeywords).toHashCode();
+        return new HashCodeBuilder(17, 37).append(name)
+                .append(categories)
+                .append(categoryOrderHints)
+                .append(description)
+                .append(slug)
+                .append(metaTitle)
+                .append(metaDescription)
+                .append(metaKeywords)
+                .append(masterVariant)
+                .append(variants)
+                .append(searchKeywords)
+                .toHashCode();
     }
 
 }

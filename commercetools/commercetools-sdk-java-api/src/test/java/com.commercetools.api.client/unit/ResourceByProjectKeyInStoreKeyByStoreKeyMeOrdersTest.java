@@ -82,9 +82,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                    .me()
                    .orders()
                    .get()
-                   .withLimit(3),
+                   .withLimit(6),
                    "get",
-                   "test_projectKey/in-store/key=test_storeKey/me/orders?limit=3",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?limit=6",
                },
                new Object[] {           
                    apiRoot
@@ -93,9 +93,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                    .me()
                    .orders()
                    .get()
-                   .withOffset(3),
+                   .withOffset(6),
                    "get",
-                   "test_projectKey/in-store/key=test_storeKey/me/orders?offset=3",
+                   "test_projectKey/in-store/key=test_storeKey/me/orders?offset=6",
                },
                new Object[] {           
                    apiRoot

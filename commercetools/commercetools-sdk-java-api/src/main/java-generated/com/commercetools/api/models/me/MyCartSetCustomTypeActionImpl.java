@@ -65,8 +65,10 @@ public final class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeA
 
         MyCartSetCustomTypeActionImpl that = (MyCartSetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

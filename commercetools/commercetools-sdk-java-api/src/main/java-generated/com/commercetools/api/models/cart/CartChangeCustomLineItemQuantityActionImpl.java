@@ -64,8 +64,10 @@ public final class CartChangeCustomLineItemQuantityActionImpl implements CartCha
 
         CartChangeCustomLineItemQuantityActionImpl that = (CartChangeCustomLineItemQuantityActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            quantity, that.quantity).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(quantity, that.quantity)
+                .isEquals();
     }
 
     @Override

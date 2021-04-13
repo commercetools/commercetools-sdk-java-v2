@@ -25,16 +25,26 @@ public class TaxCategoryFixtures {
     }
 
     public static TaxCategory createTaxCategory() {
-        TaxCategoryDraft taxCategoryDraft = TaxCategoryDraftBuilder.of().name(
-            CommercetoolsTestUtils.randomString()).key(CommercetoolsTestUtils.randomKey()).description(
-                CommercetoolsTestUtils.randomString()).rates(
-                    Arrays.asList(TaxRateDraftBuilder.of().name(CommercetoolsTestUtils.randomString()).amount(
-                        0.19).includedInPrice(true).country("DE").state("Berlin").subRates(
-                            Arrays.asList(SubRateBuilder.of().name(CommercetoolsTestUtils.randomString()).amount(
-                                0.19).build())).build())).build();
+        TaxCategoryDraft taxCategoryDraft = TaxCategoryDraftBuilder.of()
+                .name(CommercetoolsTestUtils.randomString())
+                .key(CommercetoolsTestUtils.randomKey())
+                .description(CommercetoolsTestUtils.randomString())
+                .rates(Arrays.asList(TaxRateDraftBuilder.of()
+                        .name(CommercetoolsTestUtils.randomString())
+                        .amount(0.19)
+                        .includedInPrice(true)
+                        .country("DE")
+                        .state("Berlin")
+                        .subRates(Arrays.asList(
+                            SubRateBuilder.of().name(CommercetoolsTestUtils.randomString()).amount(0.19).build()))
+                        .build()))
+                .build();
 
-        TaxCategory taxCategory = CommercetoolsTestUtils.getProjectRoot().taxCategories().post(
-            taxCategoryDraft).executeBlocking().getBody();
+        TaxCategory taxCategory = CommercetoolsTestUtils.getProjectRoot()
+                .taxCategories()
+                .post(taxCategoryDraft)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(taxCategory);
         Assert.assertEquals(taxCategoryDraft.getName(), taxCategory.getName());
@@ -44,8 +54,13 @@ public class TaxCategoryFixtures {
     }
 
     public static TaxCategory deleteTaxCategory(final String id, final Long version) {
-        TaxCategory deletedTaxCategory = CommercetoolsTestUtils.getProjectRoot().taxCategories().withId(
-            id).delete().withVersion(version).executeBlocking().getBody();
+        TaxCategory deletedTaxCategory = CommercetoolsTestUtils.getProjectRoot()
+                .taxCategories()
+                .withId(id)
+                .delete()
+                .withVersion(version)
+                .executeBlocking()
+                .getBody();
 
         Assert.assertNotNull(deletedTaxCategory);
         Assert.assertEquals(deletedTaxCategory.getId(), id);

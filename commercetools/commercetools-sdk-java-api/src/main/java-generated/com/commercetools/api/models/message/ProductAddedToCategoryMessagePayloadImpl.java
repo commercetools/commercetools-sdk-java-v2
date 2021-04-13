@@ -65,8 +65,10 @@ public final class ProductAddedToCategoryMessagePayloadImpl implements ProductAd
 
         ProductAddedToCategoryMessagePayloadImpl that = (ProductAddedToCategoryMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(category, that.category).append(staged,
-            that.staged).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(category, that.category)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override

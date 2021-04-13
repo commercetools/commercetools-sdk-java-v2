@@ -73,14 +73,18 @@ public final class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxA
 
         CartSetCartTotalTaxActionImpl that = (CartSetCartTotalTaxActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(externalTotalGross,
-            that.externalTotalGross).append(externalTaxPortions, that.externalTaxPortions).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(externalTotalGross, that.externalTotalGross)
+                .append(externalTaxPortions, that.externalTaxPortions)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(externalTotalGross).append(
-            externalTaxPortions).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(externalTotalGross)
+                .append(externalTaxPortions)
+                .toHashCode();
     }
 
 }

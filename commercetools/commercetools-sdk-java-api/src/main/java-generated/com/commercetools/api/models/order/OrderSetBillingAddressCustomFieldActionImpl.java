@@ -64,8 +64,10 @@ public final class OrderSetBillingAddressCustomFieldActionImpl implements OrderS
 
         OrderSetBillingAddressCustomFieldActionImpl that = (OrderSetBillingAddressCustomFieldActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(name, that.name).append(value,
-            that.value).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(name, that.name)
+                .append(value, that.value)
+                .isEquals();
     }
 
     @Override

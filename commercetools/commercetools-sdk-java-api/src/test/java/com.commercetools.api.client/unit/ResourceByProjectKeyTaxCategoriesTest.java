@@ -76,18 +76,18 @@ public class ResourceByProjectKeyTaxCategoriesTest {
                    .withProjectKey("test_projectKey")
                    .taxCategories()
                    .get()
-                   .withLimit(8),
+                   .withLimit(1),
                    "get",
-                   "test_projectKey/tax-categories?limit=8",
+                   "test_projectKey/tax-categories?limit=1",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .taxCategories()
                    .get()
-                   .withOffset(3),
+                   .withOffset(6),
                    "get",
-                   "test_projectKey/tax-categories?offset=3",
+                   "test_projectKey/tax-categories?offset=6",
                },
                new Object[] {           
                    apiRoot

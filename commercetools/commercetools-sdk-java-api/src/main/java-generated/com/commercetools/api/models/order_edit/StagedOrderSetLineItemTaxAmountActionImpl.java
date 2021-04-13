@@ -64,8 +64,10 @@ public final class StagedOrderSetLineItemTaxAmountActionImpl implements StagedOr
 
         StagedOrderSetLineItemTaxAmountActionImpl that = (StagedOrderSetLineItemTaxAmountActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(
-            externalTaxAmount, that.externalTaxAmount).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .isEquals();
     }
 
     @Override

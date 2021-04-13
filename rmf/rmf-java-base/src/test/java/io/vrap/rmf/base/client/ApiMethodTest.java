@@ -36,6 +36,11 @@ public class ApiMethodTest {
         }
 
         @Override
+        public CompletableFuture<ApiHttpResponse<Object>> execute(ApiHttpClient client) {
+            return null;
+        }
+
+        @Override
         public ApiHttpResponse<Object> executeBlocking() {
             return null;
         }
@@ -44,10 +49,15 @@ public class ApiMethodTest {
         public ApiHttpResponse<Object> executeBlocking(Duration timeout) {
             return null;
         }
+
+        @Override
+        public ApiHttpResponse<Object> executeBlocking(ApiHttpClient client, Duration timeout) {
+            return null;
+        }
     }
 
     private ApiHttpClient createClient() {
-        return ApiHttpClient.of("", null);
+        return ApiHttpClient.of("", null, ResponseSerializer.of());
     }
 
     @Test
@@ -82,8 +92,8 @@ public class ApiMethodTest {
     public void testImmutableWithQueryParams() {
         TestApiMethod method = new TestApiMethod(createClient()).withQueryParam("foo", "bar");
 
-        TestApiMethod newMethod = method.withQueryParams(
-            Lists.newArrayList(new ApiMethod.ParamEntry<>("fooz", "barz")));
+        TestApiMethod newMethod = method
+                .withQueryParams(Lists.newArrayList(new ApiMethod.ParamEntry<>("fooz", "barz")));
 
         Assert.assertEquals(1, method.getQueryParams().size());
         Assert.assertEquals(1, newMethod.getQueryParams().size());

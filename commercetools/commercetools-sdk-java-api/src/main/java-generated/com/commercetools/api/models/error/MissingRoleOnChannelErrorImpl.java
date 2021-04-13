@@ -76,14 +76,20 @@ public final class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannel
 
         MissingRoleOnChannelErrorImpl that = (MissingRoleOnChannelErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(channel,
-            that.channel).append(missingRole, that.missingRole).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(channel, that.channel)
+                .append(missingRole, that.missingRole)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(channel).append(
-            missingRole).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(channel)
+                .append(missingRole)
+                .toHashCode();
     }
 
 }

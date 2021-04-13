@@ -76,18 +76,18 @@ public class ResourceByProjectKeySubscriptionsTest {
                    .withProjectKey("test_projectKey")
                    .subscriptions()
                    .get()
-                   .withLimit(7),
+                   .withLimit(2),
                    "get",
-                   "test_projectKey/subscriptions?limit=7",
+                   "test_projectKey/subscriptions?limit=2",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .subscriptions()
                    .get()
-                   .withOffset(1),
+                   .withOffset(4),
                    "get",
-                   "test_projectKey/subscriptions?offset=1",
+                   "test_projectKey/subscriptions?offset=4",
                },
                new Object[] {           
                    apiRoot

@@ -54,8 +54,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost extends
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(
-                customerCreatePasswordResetToken);
+            final byte[] body = apiHttpClient().getSerializerService()
+                    .toJsonByteArray(customerCreatePasswordResetToken);
             return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
         }
         catch (Exception e) {
@@ -66,14 +66,15 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordTokenPost extends
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken> executeBlocking(
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
-            com.commercetools.api.models.customer.CustomerToken.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.customer.CustomerToken>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.customer.CustomerToken.class);
     }
 
     public String getProjectKey() {

@@ -54,8 +54,9 @@ public final class CartDiscountChangeRequiresDiscountCodeActionImpl
 
         CartDiscountChangeRequiresDiscountCodeActionImpl that = (CartDiscountChangeRequiresDiscountCodeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(requiresDiscountCode,
-            that.requiresDiscountCode).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(requiresDiscountCode, that.requiresDiscountCode)
+                .isEquals();
     }
 
     @Override

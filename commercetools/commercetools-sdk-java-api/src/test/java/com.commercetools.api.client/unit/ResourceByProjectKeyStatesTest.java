@@ -76,18 +76,18 @@ public class ResourceByProjectKeyStatesTest {
                    .withProjectKey("test_projectKey")
                    .states()
                    .get()
-                   .withLimit(2),
+                   .withLimit(1),
                    "get",
-                   "test_projectKey/states?limit=2",
+                   "test_projectKey/states?limit=1",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .states()
                    .get()
-                   .withOffset(7),
+                   .withOffset(5),
                    "get",
-                   "test_projectKey/states?offset=7",
+                   "test_projectKey/states?offset=5",
                },
                new Object[] {           
                    apiRoot

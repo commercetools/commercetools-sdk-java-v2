@@ -76,18 +76,18 @@ public class ResourceByProjectKeyCustomerGroupsTest {
                    .withProjectKey("test_projectKey")
                    .customerGroups()
                    .get()
-                   .withLimit(3),
+                   .withLimit(9),
                    "get",
-                   "test_projectKey/customer-groups?limit=3",
+                   "test_projectKey/customer-groups?limit=9",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .customerGroups()
                    .get()
-                   .withOffset(6),
+                   .withOffset(4),
                    "get",
-                   "test_projectKey/customer-groups?offset=6",
+                   "test_projectKey/customer-groups?offset=4",
                },
                new Object[] {           
                    apiRoot

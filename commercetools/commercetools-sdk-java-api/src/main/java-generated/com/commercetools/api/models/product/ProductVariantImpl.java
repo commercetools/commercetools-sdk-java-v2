@@ -191,18 +191,36 @@ public final class ProductVariantImpl implements ProductVariant {
 
         ProductVariantImpl that = (ProductVariantImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(sku, that.sku).append(key, that.key).append(prices,
-            that.prices).append(attributes, that.attributes).append(price, that.price).append(images,
-                that.images).append(assets, that.assets).append(availability, that.availability).append(
-                    isMatchingVariant, that.isMatchingVariant).append(scopedPrice, that.scopedPrice).append(
-                        scopedPriceDiscounted, that.scopedPriceDiscounted).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(sku, that.sku)
+                .append(key, that.key)
+                .append(prices, that.prices)
+                .append(attributes, that.attributes)
+                .append(price, that.price)
+                .append(images, that.images)
+                .append(assets, that.assets)
+                .append(availability, that.availability)
+                .append(isMatchingVariant, that.isMatchingVariant)
+                .append(scopedPrice, that.scopedPrice)
+                .append(scopedPriceDiscounted, that.scopedPriceDiscounted)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(sku).append(key).append(prices).append(attributes).append(
-            price).append(images).append(assets).append(availability).append(isMatchingVariant).append(
-                scopedPrice).append(scopedPriceDiscounted).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(sku)
+                .append(key)
+                .append(prices)
+                .append(attributes)
+                .append(price)
+                .append(images)
+                .append(assets)
+                .append(availability)
+                .append(isMatchingVariant)
+                .append(scopedPrice)
+                .append(scopedPriceDiscounted)
+                .toHashCode();
     }
 
 }

@@ -102,9 +102,9 @@ public class ResourceByProjectKeyMeCartsByIDTest {
                    .carts()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(4L),
+                   .withVersion(5L),
                    "delete",
-                   "test_projectKey/me/carts/test_ID?version=4L",
+                   "test_projectKey/me/carts/test_ID?version=5L",
                },
                new Object[] {           
                    apiRoot

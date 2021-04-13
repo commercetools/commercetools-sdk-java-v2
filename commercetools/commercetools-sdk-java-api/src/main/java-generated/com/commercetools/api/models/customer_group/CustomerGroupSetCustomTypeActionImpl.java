@@ -72,8 +72,10 @@ public final class CustomerGroupSetCustomTypeActionImpl implements CustomerGroup
 
         CustomerGroupSetCustomTypeActionImpl that = (CustomerGroupSetCustomTypeActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(type, that.type).append(fields,
-            that.fields).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(type, that.type)
+                .append(fields, that.fields)
+                .isEquals();
     }
 
     @Override

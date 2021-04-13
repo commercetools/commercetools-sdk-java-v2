@@ -134,15 +134,24 @@ public final class StoreDraftImpl implements StoreDraft {
 
         StoreDraftImpl that = (StoreDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(name, that.name).append(languages,
-            that.languages).append(distributionChannels, that.distributionChannels).append(supplyChannels,
-                that.supplyChannels).append(custom, that.custom).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(name, that.name)
+                .append(languages, that.languages)
+                .append(distributionChannels, that.distributionChannels)
+                .append(supplyChannels, that.supplyChannels)
+                .append(custom, that.custom)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(name).append(languages).append(
-            distributionChannels).append(supplyChannels).append(custom).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(name)
+                .append(languages)
+                .append(distributionChannels)
+                .append(supplyChannels)
+                .append(custom)
+                .toHashCode();
     }
 
 }

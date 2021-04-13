@@ -89,15 +89,22 @@ public final class DuplicateFieldWithConflictingResourceErrorImpl
 
         DuplicateFieldWithConflictingResourceErrorImpl that = (DuplicateFieldWithConflictingResourceErrorImpl) o;
 
-        return new EqualsBuilder().append(code, that.code).append(message, that.message).append(field,
-            that.field).append(duplicateValue, that.duplicateValue).append(conflictingResource,
-                that.conflictingResource).isEquals();
+        return new EqualsBuilder().append(code, that.code)
+                .append(message, that.message)
+                .append(field, that.field)
+                .append(duplicateValue, that.duplicateValue)
+                .append(conflictingResource, that.conflictingResource)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(code).append(message).append(field).append(duplicateValue).append(
-            conflictingResource).toHashCode();
+        return new HashCodeBuilder(17, 37).append(code)
+                .append(message)
+                .append(field)
+                .append(duplicateValue)
+                .append(conflictingResource)
+                .toHashCode();
     }
 
 }

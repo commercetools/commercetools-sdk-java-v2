@@ -52,13 +52,14 @@ public class ByProjectKeyProductDiscountsGet extends
 
     @Override
     public ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse> executeBlocking(
-            Duration timeout) {
-        return blockingWait(execute(), timeout);
+            final ApiHttpClient client, Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(),
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(),
             com.commercetools.api.models.product_discount.ProductDiscountPagedQueryResponse.class);
     }
 

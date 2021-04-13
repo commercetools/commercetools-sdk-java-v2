@@ -74,8 +74,10 @@ public final class PaymentStatusImpl implements PaymentStatus {
 
         PaymentStatusImpl that = (PaymentStatusImpl) o;
 
-        return new EqualsBuilder().append(interfaceCode, that.interfaceCode).append(interfaceText,
-            that.interfaceText).append(state, that.state).isEquals();
+        return new EqualsBuilder().append(interfaceCode, that.interfaceCode)
+                .append(interfaceText, that.interfaceText)
+                .append(state, that.state)
+                .isEquals();
     }
 
     @Override

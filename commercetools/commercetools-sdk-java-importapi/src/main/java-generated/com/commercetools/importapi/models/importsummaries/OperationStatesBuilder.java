@@ -16,10 +16,6 @@ public final class OperationStatesBuilder {
 
     private Long Imported;
 
-    private Long Delete;
-
-    private Long Deleted;
-
     private Long Rejected;
 
     public OperationStatesBuilder ValidationFailed(final Long ValidationFailed) {
@@ -39,16 +35,6 @@ public final class OperationStatesBuilder {
 
     public OperationStatesBuilder Imported(final Long Imported) {
         this.Imported = Imported;
-        return this;
-    }
-
-    public OperationStatesBuilder Delete(final Long Delete) {
-        this.Delete = Delete;
-        return this;
-    }
-
-    public OperationStatesBuilder Deleted(final Long Deleted) {
-        this.Deleted = Deleted;
         return this;
     }
 
@@ -73,21 +59,12 @@ public final class OperationStatesBuilder {
         return this.Imported;
     }
 
-    public Long getDelete() {
-        return this.Delete;
-    }
-
-    public Long getDeleted() {
-        return this.Deleted;
-    }
-
     public Long getRejected() {
         return this.Rejected;
     }
 
     public OperationStates build() {
-        return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Delete, Deleted,
-            Rejected);
+        return new OperationStatesImpl(ValidationFailed, Unresolved, WaitForMasterVariant, Imported, Rejected);
     }
 
     public static OperationStatesBuilder of() {
@@ -100,8 +77,6 @@ public final class OperationStatesBuilder {
         builder.Unresolved = template.getUnresolved();
         builder.WaitForMasterVariant = template.getWaitForMasterVariant();
         builder.Imported = template.getImported();
-        builder.Delete = template.getDelete();
-        builder.Deleted = template.getDeleted();
         builder.Rejected = template.getRejected();
         return builder;
     }

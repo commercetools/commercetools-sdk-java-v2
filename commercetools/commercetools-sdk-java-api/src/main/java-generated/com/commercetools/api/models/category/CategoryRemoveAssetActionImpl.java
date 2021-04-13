@@ -64,8 +64,10 @@ public final class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetA
 
         CategoryRemoveAssetActionImpl that = (CategoryRemoveAssetActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(assetId, that.assetId).append(assetKey,
-            that.assetKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(assetId, that.assetId)
+                .append(assetKey, that.assetKey)
+                .isEquals();
     }
 
     @Override

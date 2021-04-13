@@ -96,15 +96,22 @@ public final class CartDiscountValueGiftLineItemDraftImpl implements CartDiscoun
 
         CartDiscountValueGiftLineItemDraftImpl that = (CartDiscountValueGiftLineItemDraftImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(product, that.product).append(variantId,
-            that.variantId).append(supplyChannel, that.supplyChannel).append(distributionChannel,
-                that.distributionChannel).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(product, that.product)
+                .append(variantId, that.variantId)
+                .append(supplyChannel, that.supplyChannel)
+                .append(distributionChannel, that.distributionChannel)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(product).append(variantId).append(supplyChannel).append(
-            distributionChannel).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(product)
+                .append(variantId)
+                .append(supplyChannel)
+                .append(distributionChannel)
+                .toHashCode();
     }
 
 }

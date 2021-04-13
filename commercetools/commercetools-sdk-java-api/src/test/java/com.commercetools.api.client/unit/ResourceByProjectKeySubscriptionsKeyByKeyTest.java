@@ -97,9 +97,9 @@ public class ResourceByProjectKeySubscriptionsKeyByKeyTest {
                    .subscriptions()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(8L),
+                   .withVersion(3L),
                    "delete",
-                   "test_projectKey/subscriptions/key=test_key?version=8L",
+                   "test_projectKey/subscriptions/key=test_key?version=3L",
                },
                new Object[] {           
                    apiRoot

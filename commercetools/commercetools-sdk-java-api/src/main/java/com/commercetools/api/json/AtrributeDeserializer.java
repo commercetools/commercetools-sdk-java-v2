@@ -24,10 +24,20 @@ import com.fasterxml.jackson.databind.node.JsonNodeType;
 public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
 
     private static Pattern p = Pattern.compile("^[0-9]");
-    private static Pattern dateTime = Pattern.compile(
-        "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
+    private static Pattern dateTime = Pattern
+            .compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
     private static Pattern date = Pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}");
     private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}[.][0-9]{1,6}");
+
+    private final boolean deserializeAsDate;
+
+    public AtrributeDeserializer(boolean deserializeAsDateString) {
+        this.deserializeAsDate = !deserializeAsDateString;
+    }
+
+    public AtrributeDeserializer() {
+        this.deserializeAsDate = true;
+    }
 
     @Override
     public AttributeImpl deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
@@ -38,8 +48,8 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
         AttributeBuilder builder = Attribute.builder();
         builder.name(node.get("name").asText());
 
-        return (AttributeImpl) builder.value(
-            p.getCodec().treeAsTokens(valueNode).readValueAs(typeRef(valueNode))).build();
+        return (AttributeImpl) builder.value(p.getCodec().treeAsTokens(valueNode).readValueAs(typeRef(valueNode)))
+                .build();
     }
 
     private TypeReference<?> typeRef(JsonNode valueNode) {
@@ -49,22 +59,28 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 return new TypeReference<Boolean>() {
                 };
             case NUMBER:
+                if (valueNode.isInt() || valueNode.isLong()) {
+                    return new TypeReference<Long>() {
+                    };
+                }
                 return new TypeReference<Double>() {
                 };
             case STRING:
-                String val = valueNode.asText();
-                if (p.matcher(val).find()) {
-                    if (dateTime.matcher(val).find()) {
-                        return new TypeReference<ZonedDateTime>() {
-                        };
-                    }
-                    if (date.matcher(val).matches()) {
-                        return new TypeReference<LocalDate>() {
-                        };
-                    }
-                    if (time.matcher(val).matches()) {
-                        return new TypeReference<LocalTime>() {
-                        };
+                if (deserializeAsDate) {
+                    String val = valueNode.asText();
+                    if (p.matcher(val).find()) {
+                        if (dateTime.matcher(val).find()) {
+                            return new TypeReference<ZonedDateTime>() {
+                            };
+                        }
+                        if (date.matcher(val).matches()) {
+                            return new TypeReference<LocalDate>() {
+                            };
+                        }
+                        if (time.matcher(val).matches()) {
+                            return new TypeReference<LocalTime>() {
+                            };
+                        }
                     }
                 }
                 return new TypeReference<String>() {
@@ -110,6 +126,9 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                         };
                     case NUMBER:
                         return new TypeReference<List<Double>>() {
+                        };
+                    case LONG:
+                        return new TypeReference<List<Long>>() {
                         };
                     case BOOLEAN:
                         return new TypeReference<List<Boolean>>() {
@@ -170,18 +189,23 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
                 }
                 return ElemType.LOCALIZED_STRING;
             case NUMBER:
+                if (valueNode.isInt() || valueNode.isLong()) {
+                    return ElemType.LONG;
+                }
                 return ElemType.NUMBER;
             case STRING:
-                String val = valueNode.asText();
-                if (p.matcher(val).find()) {
-                    if (dateTime.matcher(val).find()) {
-                        return ElemType.DATETIME;
-                    }
-                    if (date.matcher(val).matches()) {
-                        return ElemType.DATE;
-                    }
-                    if (time.matcher(val).matches()) {
-                        return ElemType.TIME;
+                if (deserializeAsDate) {
+                    String val = valueNode.asText();
+                    if (p.matcher(val).find()) {
+                        if (dateTime.matcher(val).find()) {
+                            return ElemType.DATETIME;
+                        }
+                        if (date.matcher(val).matches()) {
+                            return ElemType.DATE;
+                        }
+                        if (time.matcher(val).matches()) {
+                            return ElemType.TIME;
+                        }
                     }
                 }
                 return ElemType.STRING;
@@ -200,6 +224,7 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
         DATETIME,
         TIME,
         NUMBER,
+        LONG,
         BOOLEAN,
         ENUM,
         LOCALIZED_ENUM,

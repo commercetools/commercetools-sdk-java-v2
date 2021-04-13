@@ -125,15 +125,26 @@ public final class StateDraftImpl implements StateDraft {
 
         StateDraftImpl that = (StateDraftImpl) o;
 
-        return new EqualsBuilder().append(key, that.key).append(type, that.type).append(name, that.name).append(
-            description, that.description).append(initial, that.initial).append(roles, that.roles).append(transitions,
-                that.transitions).isEquals();
+        return new EqualsBuilder().append(key, that.key)
+                .append(type, that.type)
+                .append(name, that.name)
+                .append(description, that.description)
+                .append(initial, that.initial)
+                .append(roles, that.roles)
+                .append(transitions, that.transitions)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(type).append(name).append(description).append(
-            initial).append(roles).append(transitions).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key)
+                .append(type)
+                .append(name)
+                .append(description)
+                .append(initial)
+                .append(roles)
+                .append(transitions)
+                .toHashCode();
     }
 
 }

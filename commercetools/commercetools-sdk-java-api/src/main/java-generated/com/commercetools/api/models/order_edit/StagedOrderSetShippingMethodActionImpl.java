@@ -66,8 +66,10 @@ public final class StagedOrderSetShippingMethodActionImpl implements StagedOrder
 
         StagedOrderSetShippingMethodActionImpl that = (StagedOrderSetShippingMethodActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(shippingMethod, that.shippingMethod).append(
-            externalTaxRate, that.externalTaxRate).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(shippingMethod, that.shippingMethod)
+                .append(externalTaxRate, that.externalTaxRate)
+                .isEquals();
     }
 
     @Override

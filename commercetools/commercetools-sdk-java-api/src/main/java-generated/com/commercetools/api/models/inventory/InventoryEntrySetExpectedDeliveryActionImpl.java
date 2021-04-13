@@ -53,8 +53,9 @@ public final class InventoryEntrySetExpectedDeliveryActionImpl implements Invent
 
         InventoryEntrySetExpectedDeliveryActionImpl that = (InventoryEntrySetExpectedDeliveryActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(expectedDelivery,
-            that.expectedDelivery).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(expectedDelivery, that.expectedDelivery)
+                .isEquals();
     }
 
     @Override

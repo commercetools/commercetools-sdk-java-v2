@@ -76,18 +76,18 @@ public class ResourceByProjectKeyPaymentsTest {
                    .withProjectKey("test_projectKey")
                    .payments()
                    .get()
-                   .withLimit(3),
+                   .withLimit(1),
                    "get",
-                   "test_projectKey/payments?limit=3",
+                   "test_projectKey/payments?limit=1",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .payments()
                    .get()
-                   .withOffset(5),
+                   .withOffset(6),
                    "get",
-                   "test_projectKey/payments?offset=5",
+                   "test_projectKey/payments?offset=6",
                },
                new Object[] {           
                    apiRoot

@@ -70,8 +70,10 @@ public final class MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
 
         MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl that = (MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(targetsDelta,
-            that.targetsDelta).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(targetsDelta, that.targetsDelta)
+                .isEquals();
     }
 
     @Override

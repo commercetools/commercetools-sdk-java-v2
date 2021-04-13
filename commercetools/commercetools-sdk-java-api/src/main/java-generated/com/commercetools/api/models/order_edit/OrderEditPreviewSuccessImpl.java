@@ -70,8 +70,10 @@ public final class OrderEditPreviewSuccessImpl implements OrderEditPreviewSucces
 
         OrderEditPreviewSuccessImpl that = (OrderEditPreviewSuccessImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(preview, that.preview).append(messagePayloads,
-            that.messagePayloads).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(preview, that.preview)
+                .append(messagePayloads, that.messagePayloads)
+                .isEquals();
     }
 
     @Override

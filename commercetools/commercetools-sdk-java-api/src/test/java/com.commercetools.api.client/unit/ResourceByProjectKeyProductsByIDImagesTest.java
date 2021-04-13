@@ -71,9 +71,9 @@ public class ResourceByProjectKeyProductsByIDImagesTest {
                    .withId("test_ID")
                    .images()
                    .post(null)
-                   .withVariant(0.13129532),
+                   .withVariant(0.24734843),
                    "post",
-                   "test_projectKey/products/test_ID/images?variant=0.13129532",
+                   "test_projectKey/products/test_ID/images?variant=0.24734843",
                },
                new Object[] {           
                    apiRoot

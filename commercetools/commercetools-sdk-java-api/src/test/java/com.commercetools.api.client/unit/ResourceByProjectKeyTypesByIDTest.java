@@ -97,9 +97,9 @@ public class ResourceByProjectKeyTypesByIDTest {
                    .types()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(2L),
+                   .withVersion(3L),
                    "delete",
-                   "test_projectKey/types/test_ID?version=2L",
+                   "test_projectKey/types/test_ID?version=3L",
                },
                new Object[] {           
                    apiRoot

@@ -78,9 +78,9 @@ public class ResourceByProjectKeyProductProjectionsSearchTest {
                    .productProjections()
                    .search()
                    .get()
-                   .withFuzzyLevel(0.44187194),
+                   .withFuzzyLevel(0.67911),
                    "get",
-                   "test_projectKey/product-projections/search?fuzzyLevel=0.44187194",
+                   "test_projectKey/product-projections/search?fuzzyLevel=0.67911",
                },
                new Object[] {           
                    apiRoot
@@ -168,9 +168,9 @@ public class ResourceByProjectKeyProductProjectionsSearchTest {
                    .productProjections()
                    .search()
                    .get()
-                   .withLimit(3),
+                   .withLimit(6),
                    "get",
-                   "test_projectKey/product-projections/search?limit=3",
+                   "test_projectKey/product-projections/search?limit=6",
                },
                new Object[] {           
                    apiRoot
@@ -178,9 +178,9 @@ public class ResourceByProjectKeyProductProjectionsSearchTest {
                    .productProjections()
                    .search()
                    .get()
-                   .withOffset(3),
+                   .withOffset(9),
                    "get",
-                   "test_projectKey/product-projections/search?offset=3",
+                   "test_projectKey/product-projections/search?offset=9",
                },
                new Object[] {           
                    apiRoot

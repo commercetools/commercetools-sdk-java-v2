@@ -64,8 +64,10 @@ public final class MyCartSetLineItemShippingDetailsActionImpl implements MyCartS
 
         MyCartSetLineItemShippingDetailsActionImpl that = (MyCartSetLineItemShippingDetailsActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(lineItemId, that.lineItemId).append(
-            shippingDetails, that.shippingDetails).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(lineItemId, that.lineItemId)
+                .append(shippingDetails, that.shippingDetails)
+                .isEquals();
     }
 
     @Override

@@ -97,9 +97,9 @@ public class ResourceByProjectKeyZonesKeyByKeyTest {
                    .zones()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(1L),
+                   .withVersion(6L),
                    "delete",
-                   "test_projectKey/zones/key=test_key?version=1L",
+                   "test_projectKey/zones/key=test_key?version=6L",
                },
                new Object[] {           
                    apiRoot

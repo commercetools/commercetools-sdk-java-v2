@@ -98,8 +98,11 @@ public final class ImportSinkPagedResponseImpl implements ImportSinkPagedRespons
 
         ImportSinkPagedResponseImpl that = (ImportSinkPagedResponseImpl) o;
 
-        return new EqualsBuilder().append(limit, that.limit).append(offset, that.offset).append(count,
-            that.count).append(results, that.results).isEquals();
+        return new EqualsBuilder().append(limit, that.limit)
+                .append(offset, that.offset)
+                .append(count, that.count)
+                .append(results, that.results)
+                .isEquals();
     }
 
     @Override

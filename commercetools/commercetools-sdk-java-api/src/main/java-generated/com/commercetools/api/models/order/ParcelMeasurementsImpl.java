@@ -80,15 +80,20 @@ public final class ParcelMeasurementsImpl implements ParcelMeasurements {
 
         ParcelMeasurementsImpl that = (ParcelMeasurementsImpl) o;
 
-        return new EqualsBuilder().append(heightInMillimeter, that.heightInMillimeter).append(lengthInMillimeter,
-            that.lengthInMillimeter).append(widthInMillimeter, that.widthInMillimeter).append(weightInGram,
-                that.weightInGram).isEquals();
+        return new EqualsBuilder().append(heightInMillimeter, that.heightInMillimeter)
+                .append(lengthInMillimeter, that.lengthInMillimeter)
+                .append(widthInMillimeter, that.widthInMillimeter)
+                .append(weightInGram, that.weightInGram)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(heightInMillimeter).append(lengthInMillimeter).append(
-            widthInMillimeter).append(weightInGram).toHashCode();
+        return new HashCodeBuilder(17, 37).append(heightInMillimeter)
+                .append(lengthInMillimeter)
+                .append(widthInMillimeter)
+                .append(weightInGram)
+                .toHashCode();
     }
 
 }

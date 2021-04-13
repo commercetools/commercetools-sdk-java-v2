@@ -77,14 +77,18 @@ public final class AttributeCountImpl implements AttributeCount {
 
         AttributeCountImpl that = (AttributeCountImpl) o;
 
-        return new EqualsBuilder().append(productTypeAttributes, that.productTypeAttributes).append(variantAttributes,
-            that.variantAttributes).append(missingAttributeValues, that.missingAttributeValues).isEquals();
+        return new EqualsBuilder().append(productTypeAttributes, that.productTypeAttributes)
+                .append(variantAttributes, that.variantAttributes)
+                .append(missingAttributeValues, that.missingAttributeValues)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(productTypeAttributes).append(variantAttributes).append(
-            missingAttributeValues).toHashCode();
+        return new HashCodeBuilder(17, 37).append(productTypeAttributes)
+                .append(variantAttributes)
+                .append(missingAttributeValues)
+                .toHashCode();
     }
 
 }

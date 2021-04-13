@@ -97,9 +97,9 @@ public class ResourceByProjectKeyShippingMethodsKeyByKeyTest {
                    .shippingMethods()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(4L),
+                   .withVersion(2L),
                    "delete",
-                   "test_projectKey/shipping-methods/key=test_key?version=4L",
+                   "test_projectKey/shipping-methods/key=test_key?version=2L",
                },
                new Object[] {           
                    apiRoot

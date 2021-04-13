@@ -94,15 +94,22 @@ public final class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLi
 
         OrderLineItemDiscountSetMessagePayloadImpl that = (OrderLineItemDiscountSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(lineItemId, that.lineItemId).append(
-            discountedPricePerQuantity, that.discountedPricePerQuantity).append(totalPrice, that.totalPrice).append(
-                taxedPrice, that.taxedPrice).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(lineItemId, that.lineItemId)
+                .append(discountedPricePerQuantity, that.discountedPricePerQuantity)
+                .append(totalPrice, that.totalPrice)
+                .append(taxedPrice, that.taxedPrice)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(lineItemId).append(discountedPricePerQuantity).append(
-            totalPrice).append(taxedPrice).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(lineItemId)
+                .append(discountedPricePerQuantity)
+                .append(totalPrice)
+                .append(taxedPrice)
+                .toHashCode();
     }
 
 }

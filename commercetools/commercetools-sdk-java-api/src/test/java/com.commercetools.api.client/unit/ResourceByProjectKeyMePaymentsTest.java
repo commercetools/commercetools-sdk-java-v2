@@ -79,9 +79,9 @@ public class ResourceByProjectKeyMePaymentsTest {
                    .me()
                    .payments()
                    .get()
-                   .withLimit(7),
+                   .withLimit(4),
                    "get",
-                   "test_projectKey/me/payments?limit=7",
+                   "test_projectKey/me/payments?limit=4",
                },
                new Object[] {           
                    apiRoot
@@ -89,9 +89,9 @@ public class ResourceByProjectKeyMePaymentsTest {
                    .me()
                    .payments()
                    .get()
-                   .withOffset(4),
+                   .withOffset(8),
                    "get",
-                   "test_projectKey/me/payments?offset=4",
+                   "test_projectKey/me/payments?offset=8",
                },
                new Object[] {           
                    apiRoot

@@ -65,14 +65,18 @@ public final class StagedOrderSetCustomLineItemTaxAmountActionImpl
 
         StagedOrderSetCustomLineItemTaxAmountActionImpl that = (StagedOrderSetCustomLineItemTaxAmountActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            externalTaxAmount, that.externalTaxAmount).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(externalTaxAmount, that.externalTaxAmount)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customLineItemId).append(
-            externalTaxAmount).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(customLineItemId)
+                .append(externalTaxAmount)
+                .toHashCode();
     }
 
 }

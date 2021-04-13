@@ -64,8 +64,10 @@ public final class CustomerAddBillingAddressIdActionImpl implements CustomerAddB
 
         CustomerAddBillingAddressIdActionImpl that = (CustomerAddBillingAddressIdActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(addressId, that.addressId).append(addressKey,
-            that.addressKey).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(addressId, that.addressId)
+                .append(addressKey, that.addressKey)
+                .isEquals();
     }
 
     @Override

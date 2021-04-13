@@ -107,9 +107,9 @@ public class ResourceByProjectKeyInStoreKeyByStoreKeyMeCartsByIDTest {
                    .carts()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(7L),
+                   .withVersion(5L),
                    "delete",
-                   "test_projectKey/in-store/key=test_storeKey/me/carts/test_ID?version=7L",
+                   "test_projectKey/in-store/key=test_storeKey/me/carts/test_ID?version=5L",
                },
                new Object[] {           
                    apiRoot

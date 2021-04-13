@@ -103,15 +103,24 @@ public final class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPr
 
         ProductPriceDiscountsSetUpdatedPriceImpl that = (ProductPriceDiscountsSetUpdatedPriceImpl) o;
 
-        return new EqualsBuilder().append(variantId, that.variantId).append(variantKey, that.variantKey).append(sku,
-            that.sku).append(priceId, that.priceId).append(discounted, that.discounted).append(staged,
-                that.staged).isEquals();
+        return new EqualsBuilder().append(variantId, that.variantId)
+                .append(variantKey, that.variantKey)
+                .append(sku, that.sku)
+                .append(priceId, that.priceId)
+                .append(discounted, that.discounted)
+                .append(staged, that.staged)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(variantId).append(variantKey).append(sku).append(priceId).append(
-            discounted).append(staged).toHashCode();
+        return new HashCodeBuilder(17, 37).append(variantId)
+                .append(variantKey)
+                .append(sku)
+                .append(priceId)
+                .append(discounted)
+                .append(staged)
+                .toHashCode();
     }
 
 }

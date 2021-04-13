@@ -97,9 +97,9 @@ public class ResourceByProjectKeyStatesKeyByKeyTest {
                    .states()
                    .withKey("test_key")
                    .delete()
-                   .withVersion(1L),
+                   .withVersion(9L),
                    "delete",
-                   "test_projectKey/states/key=test_key?version=1L",
+                   "test_projectKey/states/key=test_key?version=9L",
                },
                new Object[] {           
                    apiRoot

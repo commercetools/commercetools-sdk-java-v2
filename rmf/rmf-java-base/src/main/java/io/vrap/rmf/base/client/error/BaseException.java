@@ -5,19 +5,20 @@ public class BaseException extends RuntimeException {
     public BaseException() {
     }
 
-    public BaseException(String message) {
+    public BaseException(final String message) {
         super(message);
     }
 
-    public BaseException(String message, Throwable cause) {
+    public BaseException(final String message, final Throwable cause) {
         super(message, cause);
     }
 
-    public BaseException(Throwable cause) {
+    public BaseException(final Throwable cause) {
         super(cause);
     }
 
-    public BaseException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+    public BaseException(final String message, final Throwable cause, final boolean enableSuppression,
+            final boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
 }

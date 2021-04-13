@@ -196,21 +196,40 @@ public final class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackin
 
         ParcelTrackingDataUpdatedMessageImpl that = (ParcelTrackingDataUpdatedMessageImpl) o;
 
-        return new EqualsBuilder().append(id, that.id).append(version, that.version).append(createdAt,
-            that.createdAt).append(lastModifiedAt, that.lastModifiedAt).append(lastModifiedBy,
-                that.lastModifiedBy).append(createdBy, that.createdBy).append(sequenceNumber,
-                    that.sequenceNumber).append(resource, that.resource).append(resourceVersion,
-                        that.resourceVersion).append(type, that.type).append(resourceUserProvidedIdentifiers,
-                            that.resourceUserProvidedIdentifiers).append(deliveryId, that.deliveryId).append(parcelId,
-                                that.parcelId).append(trackingData, that.trackingData).isEquals();
+        return new EqualsBuilder().append(id, that.id)
+                .append(version, that.version)
+                .append(createdAt, that.createdAt)
+                .append(lastModifiedAt, that.lastModifiedAt)
+                .append(lastModifiedBy, that.lastModifiedBy)
+                .append(createdBy, that.createdBy)
+                .append(sequenceNumber, that.sequenceNumber)
+                .append(resource, that.resource)
+                .append(resourceVersion, that.resourceVersion)
+                .append(type, that.type)
+                .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(deliveryId, that.deliveryId)
+                .append(parcelId, that.parcelId)
+                .append(trackingData, that.trackingData)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(createdAt).append(lastModifiedAt).append(
-            lastModifiedBy).append(createdBy).append(sequenceNumber).append(resource).append(resourceVersion).append(
-                type).append(resourceUserProvidedIdentifiers).append(deliveryId).append(parcelId).append(
-                    trackingData).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(createdAt)
+                .append(lastModifiedAt)
+                .append(lastModifiedBy)
+                .append(createdBy)
+                .append(sequenceNumber)
+                .append(resource)
+                .append(resourceVersion)
+                .append(type)
+                .append(resourceUserProvidedIdentifiers)
+                .append(deliveryId)
+                .append(parcelId)
+                .append(trackingData)
+                .toHashCode();
     }
 
 }

@@ -76,18 +76,18 @@ public class ResourceByProjectKeyChannelsTest {
                    .withProjectKey("test_projectKey")
                    .channels()
                    .get()
-                   .withLimit(6),
+                   .withLimit(5),
                    "get",
-                   "test_projectKey/channels?limit=6",
+                   "test_projectKey/channels?limit=5",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .channels()
                    .get()
-                   .withOffset(6),
+                   .withOffset(5),
                    "get",
-                   "test_projectKey/channels?offset=6",
+                   "test_projectKey/channels?offset=5",
                },
                new Object[] {           
                    apiRoot

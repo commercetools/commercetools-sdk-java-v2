@@ -49,13 +49,15 @@ public class ByProjectKeyZonesByIDGet
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(Duration timeout) {
-        return blockingWait(execute(), timeout);
+    public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(final ApiHttpClient client,
+            Duration timeout) {
+        return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.Zone>> execute() {
-        return apiHttpClient().execute(this.createHttpRequest(), com.commercetools.api.models.zone.Zone.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.Zone>> execute(
+            final ApiHttpClient client) {
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.zone.Zone.class);
     }
 
     public String getProjectKey() {

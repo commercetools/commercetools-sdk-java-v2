@@ -68,8 +68,10 @@ public final class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeCh
 
         TypeChangeLocalizedEnumValueOrderActionImpl that = (TypeChangeLocalizedEnumValueOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(fieldName, that.fieldName).append(keys,
-            that.keys).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(keys, that.keys)
+                .isEquals();
     }
 
     @Override

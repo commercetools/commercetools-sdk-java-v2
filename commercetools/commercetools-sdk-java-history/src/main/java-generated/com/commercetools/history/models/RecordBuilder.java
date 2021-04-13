@@ -18,13 +18,13 @@ public final class RecordBuilder {
 
     private String modifiedAt;
 
-    private com.commercetools.history.models.Label label;
+    private com.commercetools.history.models.label.Label label;
 
-    private com.commercetools.history.models.Label previousLabel;
+    private com.commercetools.history.models.label.Label previousLabel;
 
-    private java.util.List<com.commercetools.history.models.Change> changes;
+    private java.util.List<com.commercetools.history.models.change.Change> changes;
 
-    private com.commercetools.history.models.Reference resource;
+    private com.commercetools.history.models.common.Reference resource;
 
     private Boolean withoutChanges;
 
@@ -53,27 +53,27 @@ public final class RecordBuilder {
         return this;
     }
 
-    public RecordBuilder label(final com.commercetools.history.models.Label label) {
+    public RecordBuilder label(final com.commercetools.history.models.label.Label label) {
         this.label = label;
         return this;
     }
 
-    public RecordBuilder previousLabel(final com.commercetools.history.models.Label previousLabel) {
+    public RecordBuilder previousLabel(final com.commercetools.history.models.label.Label previousLabel) {
         this.previousLabel = previousLabel;
         return this;
     }
 
-    public RecordBuilder changes(final com.commercetools.history.models.Change... changes) {
+    public RecordBuilder changes(final com.commercetools.history.models.change.Change... changes) {
         this.changes = new ArrayList<>(Arrays.asList(changes));
         return this;
     }
 
-    public RecordBuilder changes(final java.util.List<com.commercetools.history.models.Change> changes) {
+    public RecordBuilder changes(final java.util.List<com.commercetools.history.models.change.Change> changes) {
         this.changes = changes;
         return this;
     }
 
-    public RecordBuilder resource(final com.commercetools.history.models.Reference resource) {
+    public RecordBuilder resource(final com.commercetools.history.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
@@ -103,19 +103,19 @@ public final class RecordBuilder {
         return this.modifiedAt;
     }
 
-    public com.commercetools.history.models.Label getLabel() {
+    public com.commercetools.history.models.label.Label getLabel() {
         return this.label;
     }
 
-    public com.commercetools.history.models.Label getPreviousLabel() {
+    public com.commercetools.history.models.label.Label getPreviousLabel() {
         return this.previousLabel;
     }
 
-    public java.util.List<com.commercetools.history.models.Change> getChanges() {
+    public java.util.List<com.commercetools.history.models.change.Change> getChanges() {
         return this.changes;
     }
 
-    public com.commercetools.history.models.Reference getResource() {
+    public com.commercetools.history.models.common.Reference getResource() {
         return this.resource;
     }
 

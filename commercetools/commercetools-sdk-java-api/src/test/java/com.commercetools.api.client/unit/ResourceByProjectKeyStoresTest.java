@@ -76,18 +76,18 @@ public class ResourceByProjectKeyStoresTest {
                    .withProjectKey("test_projectKey")
                    .stores()
                    .get()
-                   .withLimit(1),
+                   .withLimit(3),
                    "get",
-                   "test_projectKey/stores?limit=1",
+                   "test_projectKey/stores?limit=3",
                },
                new Object[] {           
                    apiRoot
                    .withProjectKey("test_projectKey")
                    .stores()
                    .get()
-                   .withOffset(5),
+                   .withOffset(3),
                    "get",
-                   "test_projectKey/stores?offset=5",
+                   "test_projectKey/stores?offset=3",
                },
                new Object[] {           
                    apiRoot

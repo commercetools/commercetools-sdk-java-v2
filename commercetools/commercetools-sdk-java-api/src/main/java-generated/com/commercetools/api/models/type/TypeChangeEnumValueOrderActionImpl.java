@@ -68,8 +68,10 @@ public final class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumV
 
         TypeChangeEnumValueOrderActionImpl that = (TypeChangeEnumValueOrderActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(fieldName, that.fieldName).append(keys,
-            that.keys).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(fieldName, that.fieldName)
+                .append(keys, that.keys)
+                .isEquals();
     }
 
     @Override

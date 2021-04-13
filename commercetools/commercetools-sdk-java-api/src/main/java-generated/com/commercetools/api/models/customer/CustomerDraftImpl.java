@@ -414,31 +414,64 @@ public final class CustomerDraftImpl implements CustomerDraft {
 
         CustomerDraftImpl that = (CustomerDraftImpl) o;
 
-        return new EqualsBuilder().append(customerNumber, that.customerNumber).append(email, that.email).append(
-            password, that.password).append(firstName, that.firstName).append(lastName, that.lastName).append(
-                middleName, that.middleName).append(title, that.title).append(anonymousCartId,
-                    that.anonymousCartId).append(anonymousCart, that.anonymousCart).append(anonymousId,
-                        that.anonymousId).append(dateOfBirth, that.dateOfBirth).append(companyName,
-                            that.companyName).append(vatId, that.vatId).append(addresses, that.addresses).append(
-                                defaultShippingAddress, that.defaultShippingAddress).append(shippingAddresses,
-                                    that.shippingAddresses).append(defaultBillingAddress,
-                                        that.defaultBillingAddress).append(billingAddresses,
-                                            that.billingAddresses).append(isEmailVerified, that.isEmailVerified).append(
-                                                externalId, that.externalId).append(customerGroup,
-                                                    that.customerGroup).append(custom, that.custom).append(locale,
-                                                        that.locale).append(salutation, that.salutation).append(key,
-                                                            that.key).append(stores, that.stores).isEquals();
+        return new EqualsBuilder().append(customerNumber, that.customerNumber)
+                .append(email, that.email)
+                .append(password, that.password)
+                .append(firstName, that.firstName)
+                .append(lastName, that.lastName)
+                .append(middleName, that.middleName)
+                .append(title, that.title)
+                .append(anonymousCartId, that.anonymousCartId)
+                .append(anonymousCart, that.anonymousCart)
+                .append(anonymousId, that.anonymousId)
+                .append(dateOfBirth, that.dateOfBirth)
+                .append(companyName, that.companyName)
+                .append(vatId, that.vatId)
+                .append(addresses, that.addresses)
+                .append(defaultShippingAddress, that.defaultShippingAddress)
+                .append(shippingAddresses, that.shippingAddresses)
+                .append(defaultBillingAddress, that.defaultBillingAddress)
+                .append(billingAddresses, that.billingAddresses)
+                .append(isEmailVerified, that.isEmailVerified)
+                .append(externalId, that.externalId)
+                .append(customerGroup, that.customerGroup)
+                .append(custom, that.custom)
+                .append(locale, that.locale)
+                .append(salutation, that.salutation)
+                .append(key, that.key)
+                .append(stores, that.stores)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(customerNumber).append(email).append(password).append(
-            firstName).append(lastName).append(middleName).append(title).append(anonymousCartId).append(
-                anonymousCart).append(anonymousId).append(dateOfBirth).append(companyName).append(vatId).append(
-                    addresses).append(defaultShippingAddress).append(shippingAddresses).append(
-                        defaultBillingAddress).append(billingAddresses).append(isEmailVerified).append(
-                            externalId).append(customerGroup).append(custom).append(locale).append(salutation).append(
-                                key).append(stores).toHashCode();
+        return new HashCodeBuilder(17, 37).append(customerNumber)
+                .append(email)
+                .append(password)
+                .append(firstName)
+                .append(lastName)
+                .append(middleName)
+                .append(title)
+                .append(anonymousCartId)
+                .append(anonymousCart)
+                .append(anonymousId)
+                .append(dateOfBirth)
+                .append(companyName)
+                .append(vatId)
+                .append(addresses)
+                .append(defaultShippingAddress)
+                .append(shippingAddresses)
+                .append(defaultBillingAddress)
+                .append(billingAddresses)
+                .append(isEmailVerified)
+                .append(externalId)
+                .append(customerGroup)
+                .append(custom)
+                .append(locale)
+                .append(salutation)
+                .append(key)
+                .append(stores)
+                .toHashCode();
     }
 
 }

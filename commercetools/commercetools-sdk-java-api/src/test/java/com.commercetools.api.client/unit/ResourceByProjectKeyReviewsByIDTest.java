@@ -107,9 +107,9 @@ public class ResourceByProjectKeyReviewsByIDTest {
                    .reviews()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(5L),
+                   .withVersion(4L),
                    "delete",
-                   "test_projectKey/reviews/test_ID?version=5L",
+                   "test_projectKey/reviews/test_ID?version=4L",
                },
                new Object[] {           
                    apiRoot

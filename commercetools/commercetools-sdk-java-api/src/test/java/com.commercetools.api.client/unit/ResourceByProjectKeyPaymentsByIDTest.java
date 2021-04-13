@@ -107,9 +107,9 @@ public class ResourceByProjectKeyPaymentsByIDTest {
                    .payments()
                    .withId("test_ID")
                    .delete()
-                   .withVersion(3L),
+                   .withVersion(5L),
                    "delete",
-                   "test_projectKey/payments/test_ID?version=3L",
+                   "test_projectKey/payments/test_ID?version=5L",
                },
                new Object[] {           
                    apiRoot

@@ -65,8 +65,10 @@ public final class StagedOrderChangeCustomLineItemMoneyActionImpl
 
         StagedOrderChangeCustomLineItemMoneyActionImpl that = (StagedOrderChangeCustomLineItemMoneyActionImpl) o;
 
-        return new EqualsBuilder().append(action, that.action).append(customLineItemId, that.customLineItemId).append(
-            money, that.money).isEquals();
+        return new EqualsBuilder().append(action, that.action)
+                .append(customLineItemId, that.customLineItemId)
+                .append(money, that.money)
+                .isEquals();
     }
 
     @Override

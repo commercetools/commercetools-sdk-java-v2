@@ -88,15 +88,22 @@ public final class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetM
 
         ReviewRatingSetMessagePayloadImpl that = (ReviewRatingSetMessagePayloadImpl) o;
 
-        return new EqualsBuilder().append(type, that.type).append(oldRating, that.oldRating).append(newRating,
-            that.newRating).append(includedInStatistics, that.includedInStatistics).append(target,
-                that.target).isEquals();
+        return new EqualsBuilder().append(type, that.type)
+                .append(oldRating, that.oldRating)
+                .append(newRating, that.newRating)
+                .append(includedInStatistics, that.includedInStatistics)
+                .append(target, that.target)
+                .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(oldRating).append(newRating).append(
-            includedInStatistics).append(target).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(oldRating)
+                .append(newRating)
+                .append(includedInStatistics)
+                .append(target)
+                .toHashCode();
     }
 
 }

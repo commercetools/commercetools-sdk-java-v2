@@ -40,13 +40,7 @@ public class ByProjectKeyTypesByIDTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,32 +52,43 @@ public class ByProjectKeyTypesByIDTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .withId("test_ID")
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/types/test_ID?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").types().withId("test_ID").get().withExpand("expand"),
-                        "get", "test_projectKey/types/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().withId("test_ID").get(), "get",
-                        "test_projectKey/types/test_ID", },
+                        apiRoot.withProjectKey("test_projectKey").types().withId("test_ID").get().createHttpRequest(),
+                        "get", "/test_projectKey/types/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .types()
                         .withId("test_ID")
                         .post(null)
-                        .withExpand("expand"), "post", "test_projectKey/types/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().withId("test_ID").post(null), "post",
-                        "test_projectKey/types/test_ID", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").types().withId("test_ID").delete().withVersion(7L),
-                        "delete", "test_projectKey/types/test_ID?version=7L", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/types/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .withId("test_ID")
+                        .post(null)
+                        .createHttpRequest(), "post", "/test_projectKey/types/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .types()
                         .withId("test_ID")
                         .delete()
-                        .withExpand("expand"), "delete", "test_projectKey/types/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().withId("test_ID").delete(), "delete",
-                        "test_projectKey/types/test_ID", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                        .withVersion(4L)
+                        .createHttpRequest(), "delete", "/test_projectKey/types/test_ID?version=4L", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .withId("test_ID")
+                        .delete()
+                        .withExpand("expand")
+                        .createHttpRequest(), "delete", "/test_projectKey/types/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .withId("test_ID")
+                        .delete()
+                        .createHttpRequest(), "delete", "/test_projectKey/types/test_ID", } };
     }
 
     private Object[] executeMethodParameters() {

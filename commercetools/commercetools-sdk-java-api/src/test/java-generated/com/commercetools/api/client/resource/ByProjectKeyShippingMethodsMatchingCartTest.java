@@ -40,13 +40,7 @@ public class ByProjectKeyShippingMethodsMatchingCartTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,22 +51,28 @@ public class ByProjectKeyShippingMethodsMatchingCartTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCart().get().withCartId("cartId"),
-                "get", "test_projectKey/shipping-methods/matching-cart?cartId=cartId", },
+        return new Object[] {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .matchingCart()
                                 .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/shipping-methods/matching-cart?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCart().get(), "get",
-                        "test_projectKey/shipping-methods/matching-cart", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withCartId("cartId")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-cart?cartId=cartId", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingCart()
+                                .get()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-cart?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingCart()
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods/matching-cart", } };
     }
 
     private Object[] executeMethodParameters() {

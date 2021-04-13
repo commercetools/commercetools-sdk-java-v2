@@ -40,13 +40,7 @@ public class ByProjectKeyProductsKeyByKeyTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,159 +57,186 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .products()
                                 .withKey("test_key")
                                 .get()
-                                .withPriceCurrency("priceCurrency"),
-                        "get", "test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
+                                .withPriceCurrency("priceCurrency")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .get()
-                                .withPriceCountry("priceCountry"),
-                        "get", "test_projectKey/products/key=test_key?priceCountry=priceCountry", },
+                                .withPriceCountry("priceCountry")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/products/key=test_key?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .get()
-                                .withPriceCustomerGroup("priceCustomerGroup"),
-                        "get", "test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                                .withPriceCustomerGroup("priceCustomerGroup")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .get()
-                                .withPriceChannel("priceChannel"),
-                        "get", "test_projectKey/products/key=test_key?priceChannel=priceChannel", },
+                                .withPriceChannel("priceChannel")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/products/key=test_key?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .get()
-                                .withLocaleProjection("localeProjection"),
-                        "get", "test_projectKey/products/key=test_key?localeProjection=localeProjection", },
+                                .withLocaleProjection("localeProjection")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/products/key=test_key?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .get()
-                                .withStoreProjection("storeProjection"),
-                        "get", "test_projectKey/products/key=test_key?storeProjection=storeProjection", },
+                                .withStoreProjection("storeProjection")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/products/key=test_key?storeProjection=storeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .get()
-                        .withExpand("expand"), "get", "test_projectKey/products/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().withKey("test_key").get(), "get",
-                        "test_projectKey/products/key=test_key", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/products/key=test_key?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withKey("test_key")
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/products/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .post(null)
-                                .withPriceCurrency("priceCurrency"),
-                        "post", "test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
+                                .withPriceCurrency("priceCurrency")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .post(null)
-                                .withPriceCountry("priceCountry"),
-                        "post", "test_projectKey/products/key=test_key?priceCountry=priceCountry", },
+                                .withPriceCountry("priceCountry")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/products/key=test_key?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .post(null)
-                                .withPriceCustomerGroup("priceCustomerGroup"),
-                        "post", "test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                                .withPriceCustomerGroup("priceCustomerGroup")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .post(null)
-                                .withPriceChannel("priceChannel"),
-                        "post", "test_projectKey/products/key=test_key?priceChannel=priceChannel", },
+                                .withPriceChannel("priceChannel")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/products/key=test_key?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .post(null)
-                                .withLocaleProjection("localeProjection"),
-                        "post", "test_projectKey/products/key=test_key?localeProjection=localeProjection", },
+                                .withLocaleProjection("localeProjection")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/products/key=test_key?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .post(null)
-                                .withStoreProjection("storeProjection"),
-                        "post", "test_projectKey/products/key=test_key?storeProjection=storeProjection", },
+                                .withStoreProjection("storeProjection")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/products/key=test_key?storeProjection=storeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .post(null)
-                        .withExpand("expand"), "post", "test_projectKey/products/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().withKey("test_key").post(null),
-                        "post", "test_projectKey/products/key=test_key", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/products/key=test_key?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withKey("test_key")
+                        .post(null)
+                        .createHttpRequest(), "post", "/test_projectKey/products/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .delete()
-                                .withPriceCurrency("priceCurrency"),
-                        "delete", "test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
+                                .withPriceCurrency("priceCurrency")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/products/key=test_key?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .delete()
-                                .withPriceCountry("priceCountry"),
-                        "delete", "test_projectKey/products/key=test_key?priceCountry=priceCountry", },
+                                .withPriceCountry("priceCountry")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/products/key=test_key?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .delete()
-                                .withPriceCustomerGroup("priceCustomerGroup"),
-                        "delete", "test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                                .withPriceCustomerGroup("priceCustomerGroup")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .delete()
-                                .withPriceChannel("priceChannel"),
-                        "delete", "test_projectKey/products/key=test_key?priceChannel=priceChannel", },
+                                .withPriceChannel("priceChannel")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/products/key=test_key?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .delete()
-                                .withLocaleProjection("localeProjection"),
-                        "delete", "test_projectKey/products/key=test_key?localeProjection=localeProjection", },
+                                .withLocaleProjection("localeProjection")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/products/key=test_key?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .delete()
-                                .withStoreProjection("storeProjection"),
-                        "delete", "test_projectKey/products/key=test_key?storeProjection=storeProjection", },
+                                .withStoreProjection("storeProjection")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/products/key=test_key?storeProjection=storeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
                         .delete()
-                        .withVersion(6L), "delete", "test_projectKey/products/key=test_key?version=6L", },
+                        .withVersion(9L)
+                        .createHttpRequest(), "delete", "/test_projectKey/products/key=test_key?version=9L", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withKey("test_key")
                                 .delete()
-                                .withExpand("expand"),
-                        "delete", "test_projectKey/products/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products().withKey("test_key").delete(),
-                        "delete", "test_projectKey/products/key=test_key", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/products/key=test_key?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withKey("test_key")
+                        .delete()
+                        .createHttpRequest(), "delete", "/test_projectKey/products/key=test_key", } };
     }
 
     private Object[] executeMethodParameters() {

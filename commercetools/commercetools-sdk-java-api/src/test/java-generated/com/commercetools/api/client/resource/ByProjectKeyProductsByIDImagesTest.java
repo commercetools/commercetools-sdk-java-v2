@@ -40,13 +40,7 @@ public class ByProjectKeyProductsByIDImagesTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -64,35 +58,38 @@ public class ByProjectKeyProductsByIDImagesTest {
                                 .withId("test_ID")
                                 .images()
                                 .post(null)
-                                .withFilename("filename"),
-                        "post", "test_projectKey/products/test_ID/images?filename=filename", },
+                                .withFilename("filename")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/products/test_ID/images?filename=filename", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
                                 .withId("test_ID")
                                 .images()
                                 .post(null)
-                                .withVariant(0.47301662),
-                        "post", "test_projectKey/products/test_ID/images?variant=0.47301662", },
+                                .withVariant(0.91149575)
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/products/test_ID/images?variant=0.91149575", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .images()
                         .post(null)
-                        .withSku("sku"), "post", "test_projectKey/products/test_ID/images?sku=sku", },
+                        .withSku("sku")
+                        .createHttpRequest(), "post", "/test_projectKey/products/test_ID/images?sku=sku", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")
                         .images()
                         .post(null)
-                        .withStaged(true), "post", "test_projectKey/products/test_ID/images?staged=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").products().withId("test_ID").images().post(null),
-                        "post", "test_projectKey/products/test_ID/images", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                        .withStaged(true)
+                        .createHttpRequest(), "post", "/test_projectKey/products/test_ID/images?staged=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withId("test_ID")
+                        .images()
+                        .post(null)
+                        .createHttpRequest(), "post", "/test_projectKey/products/test_ID/images", } };
     }
 
     private Object[] executeMethodParameters() {

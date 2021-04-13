@@ -40,13 +40,7 @@ public class ByProjectKeyTaxCategoriesTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,39 +52,52 @@ public class ByProjectKeyTaxCategoriesTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get().withExpand("expand"),
-                        "get", "test_projectKey/tax-categories?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get().withSort("sort"), "get",
-                        "test_projectKey/tax-categories?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get().withLimit(1), "get",
-                        "test_projectKey/tax-categories?limit=1", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get().withOffset(3), "get",
-                        "test_projectKey/tax-categories?offset=3", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get().withWithTotal(true),
-                        "get", "test_projectKey/tax-categories?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get().withWhere("where"),
-                        "get", "test_projectKey/tax-categories?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .get()
+                        .withLimit(2)
+                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?limit=2", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .get()
+                        .withOffset(4)
+                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?offset=4", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .taxCategories()
                                 .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/tax-categories?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get(), "get",
-                        "test_projectKey/tax-categories", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").taxCategories().post(null).withExpand("expand"),
-                        "post", "test_projectKey/tax-categories?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().post(null), "post",
-                        "test_projectKey/tax-categories", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().withKey("test_key"),
-                        "test_projectKey/tax-categories/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().withId("test_ID"),
-                        "test_projectKey/tax-categories/test_ID", } };
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/tax-categories?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().get().createHttpRequest(),
+                        "get", "/test_projectKey/tax-categories", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .taxCategories()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/tax-categories?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/tax-categories", } };
     }
 
     private Object[] executeMethodParameters() {

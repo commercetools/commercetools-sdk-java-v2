@@ -40,13 +40,7 @@ public class ByProjectKeyOrdersEditsByIDTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,41 +51,55 @@ public class ByProjectKeyOrdersEditsByIDTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").get().withExpand("expand"),
-                "get", "test_projectKey/orders/edits/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").get(),
-                        "get", "test_projectKey/orders/edits/test_ID", },
+        return new Object[] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .withId("test_ID")
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/orders/edits/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .withId("test_ID")
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/orders/edits/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .withId("test_ID")
                         .post(null)
-                        .withExpand("expand"), "post", "test_projectKey/orders/edits/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").post(null),
-                        "post", "test_projectKey/orders/edits/test_ID", },
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/orders/edits/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .withId("test_ID")
+                        .post(null)
+                        .createHttpRequest(), "post", "/test_projectKey/orders/edits/test_ID", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(2L), "delete", "test_projectKey/orders/edits/test_ID?version=2L", },
+                        .withVersion(5L)
+                        .createHttpRequest(), "delete", "/test_projectKey/orders/edits/test_ID?version=5L", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()
                                 .edits()
                                 .withId("test_ID")
                                 .delete()
-                                .withExpand("expand"),
-                        "delete", "test_projectKey/orders/edits/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").delete(),
-                        "delete", "test_projectKey/orders/edits/test_ID", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits().withId("test_ID").apply(),
-                        "test_projectKey/orders/edits/test_ID/apply", } };
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/orders/edits/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .edits()
+                        .withId("test_ID")
+                        .delete()
+                        .createHttpRequest(), "delete", "/test_projectKey/orders/edits/test_ID", } };
     }
 
     private Object[] executeMethodParameters() {

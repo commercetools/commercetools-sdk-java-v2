@@ -40,13 +40,7 @@ public class ByProjectKeyMessagesTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,32 +51,35 @@ public class ByProjectKeyMessagesTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get().withExpand("expand"), "get",
-                        "test_projectKey/messages?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get().withSort("sort"), "get",
-                        "test_projectKey/messages?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get().withLimit(7), "get",
-                        "test_projectKey/messages?limit=7", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get().withOffset(5), "get",
-                        "test_projectKey/messages?offset=5", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get().withWithTotal(true), "get",
-                        "test_projectKey/messages?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get().withWhere("where"), "get",
-                        "test_projectKey/messages?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").messages().get().withExpand("expand").createHttpRequest(),
+                "get", "/test_projectKey/messages?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .messages()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/messages?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get(), "get",
-                        "test_projectKey/messages", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] { new Object[] { apiRoot.withProjectKey("test_projectKey").messages().withId("test_ID"),
-                "test_projectKey/messages/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").messages().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/messages?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").messages().get().withLimit(1).createHttpRequest(),
+                        "get", "/test_projectKey/messages?limit=1", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").messages().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/messages?offset=3", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .messages()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/messages?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .messages()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/messages?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .messages()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/messages?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").messages().get().createHttpRequest(), "get",
+                        "/test_projectKey/messages", } };
     }
 
     private Object[] executeMethodParameters() {

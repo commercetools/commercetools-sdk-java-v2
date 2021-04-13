@@ -40,13 +40,7 @@ public class ByProjectKeyMeActiveCartTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,12 +51,9 @@ public class ByProjectKeyMeActiveCartTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] { new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get(), "get",
-                "test_projectKey/me/active-cart", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+        return new Object[] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().activeCart().get().createHttpRequest(),
+                        "get", "/test_projectKey/me/active-cart", } };
     }
 
     private Object[] executeMethodParameters() {

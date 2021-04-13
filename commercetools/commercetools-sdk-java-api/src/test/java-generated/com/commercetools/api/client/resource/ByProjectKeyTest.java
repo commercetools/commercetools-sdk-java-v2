@@ -40,13 +40,7 @@ public class ByProjectKeyTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,55 +52,10 @@ public class ByProjectKeyTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").get(), "get", "test_projectKey", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").post(null), "post", "test_projectKey", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").categories(), "test_projectKey/categories", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts(), "test_projectKey/carts", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").cartDiscounts(),
-                        "test_projectKey/cart-discounts", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels(), "test_projectKey/channels", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customers(), "test_projectKey/customers", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups(),
-                        "test_projectKey/customer-groups", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects(),
-                        "test_projectKey/custom-objects", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes(),
-                        "test_projectKey/discount-codes", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").graphql(), "test_projectKey/graphql", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").inventory(), "test_projectKey/inventory", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").login(), "test_projectKey/login", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").messages(), "test_projectKey/messages", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders(), "test_projectKey/orders", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").payments(), "test_projectKey/payments", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").products(), "test_projectKey/products", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productDiscounts(),
-                        "test_projectKey/product-discounts", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections(),
-                        "test_projectKey/product-projections", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes(),
-                        "test_projectKey/product-types", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews(), "test_projectKey/reviews", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods(),
-                        "test_projectKey/shipping-methods", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists(),
-                        "test_projectKey/shopping-lists", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states(), "test_projectKey/states", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions(),
-                        "test_projectKey/subscriptions", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").taxCategories(),
-                        "test_projectKey/tax-categories", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types(), "test_projectKey/types", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones(), "test_projectKey/zones", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me(), "test_projectKey/me", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").extensions(), "test_projectKey/extensions", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients(), "test_projectKey/api-clients", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores(), "test_projectKey/stores", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").inStoreKeyWithStoreKeyValue("test_storeKey"),
-                        "test_projectKey/in-store/key=test_storeKey", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey").get().createHttpRequest(), "get",
+                        "/test_projectKey", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").post(null).createHttpRequest(), "post",
+                        "/test_projectKey", } };
     }
 
     private Object[] executeMethodParameters() {

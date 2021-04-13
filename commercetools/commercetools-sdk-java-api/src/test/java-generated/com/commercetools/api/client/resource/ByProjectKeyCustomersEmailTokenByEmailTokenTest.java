@@ -40,13 +40,7 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,15 +57,16 @@ public class ByProjectKeyCustomersEmailTokenByEmailTokenTest {
                                 .customers()
                                 .withEmailToken("test_emailToken")
                                 .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/customers/email-token=test_emailToken?expand=expand", },
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/customers/email-token=test_emailToken?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customers().withEmailToken("test_emailToken").get(),
-                        "get", "test_projectKey/customers/email-token=test_emailToken", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                        apiRoot.withProjectKey("test_projectKey")
+                                .customers()
+                                .withEmailToken("test_emailToken")
+                                .get()
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/customers/email-token=test_emailToken", } };
     }
 
     private Object[] executeMethodParameters() {

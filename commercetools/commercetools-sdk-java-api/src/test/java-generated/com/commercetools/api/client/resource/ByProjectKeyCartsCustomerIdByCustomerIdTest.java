@@ -40,13 +40,7 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,15 +57,14 @@ public class ByProjectKeyCartsCustomerIdByCustomerIdTest {
                                 .carts()
                                 .withCustomerId("test_customerId")
                                 .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/carts/customer-id=test_customerId?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").carts().withCustomerId("test_customerId").get(),
-                        "get", "test_projectKey/carts/customer-id=test_customerId", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/carts/customer-id=test_customerId?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .withCustomerId("test_customerId")
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/carts/customer-id=test_customerId", } };
     }
 
     private Object[] executeMethodParameters() {

@@ -40,13 +40,7 @@ public class ByProjectKeyMePasswordTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,13 +51,9 @@ public class ByProjectKeyMePasswordTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] { new Object[] { apiRoot.withProjectKey("test_projectKey").me().password().post(null),
-                "post", "test_projectKey/me/password", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] { new Object[] { apiRoot.withProjectKey("test_projectKey").me().password().reset(),
-                "test_projectKey/me/password/reset", } };
+        return new Object[] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().password().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/me/password", } };
     }
 
     private Object[] executeMethodParameters() {

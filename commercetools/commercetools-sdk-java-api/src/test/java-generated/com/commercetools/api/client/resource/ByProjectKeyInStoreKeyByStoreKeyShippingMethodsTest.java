@@ -36,15 +36,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsTest {
         return new Object[] {};
     }
 
-    private Object[] resourcesParameters() {
-        return new Object[] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .shippingMethods()
-                        .matchingCart(),
-                "test_projectKey/in-store/key=test_storeKey/shipping-methods/matching-cart", } };
-    }
-
     private Object[] executeMethodParameters() {
         return new Object[] {};
     }

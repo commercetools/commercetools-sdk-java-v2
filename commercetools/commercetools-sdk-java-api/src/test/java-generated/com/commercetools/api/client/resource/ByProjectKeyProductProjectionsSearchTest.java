@@ -40,13 +40,7 @@ public class ByProjectKeyProductProjectionsSearchTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,133 +51,168 @@ public class ByProjectKeyProductProjectionsSearchTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().search().post(null),
-                        "post", "test_projectKey/product-projections/search", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().search().get().withFuzzy(true),
-                        "get", "test_projectKey/product-projections/search?fuzzy=true", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").productProjections().search().post(null).createHttpRequest(),
+                "post", "/test_projectKey/product-projections/search", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withFuzzyLevel(0.031194985),
-                        "get", "test_projectKey/product-projections/search?fuzzyLevel=0.031194985", },
+                                .withFuzzy(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?fuzzy=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withMarkMatchingVariants(true),
-                        "get", "test_projectKey/product-projections/search?markMatchingVariants=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().search().get().withStaged(true),
-                        "get", "test_projectKey/product-projections/search?staged=true", },
+                                .withFuzzyLevel(0.40837085)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?fuzzyLevel=0.40837085", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withFilter("filter"),
-                        "get", "test_projectKey/product-projections/search?filter=filter", },
+                                .withMarkMatchingVariants(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?markMatchingVariants=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withFilterFacets("filter.facets"),
-                        "get", "test_projectKey/product-projections/search?filter.facets=filter.facets", },
+                                .withStaged(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?staged=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withFilterQuery("filter.query"),
-                        "get", "test_projectKey/product-projections/search?filter.query=filter.query", },
+                                .withFilter("filter")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?filter=filter", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .search()
+                                .get()
+                                .withFilterFacets("filter.facets")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?filter.facets=filter.facets", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .search()
+                                .get()
+                                .withFilterQuery("filter.query")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?filter.query=filter.query", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .search()
+                                .get()
+                                .withFacet("facet")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?facet=facet", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .search()
+                                .get()
+                                .withText("locale", "text.locale")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?text.locale=text.locale", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .search()
                         .get()
-                        .withFacet("facet"), "get", "test_projectKey/product-projections/search?facet=facet", },
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/search?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .search()
+                        .get()
+                        .withLimit(5)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/search?limit=5", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .search()
+                        .get()
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/search?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withText("locale", "text.locale"),
-                        "get", "test_projectKey/product-projections/search?text.locale=text.locale", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().search().get().withSort("sort"),
-                        "get", "test_projectKey/product-projections/search?sort=sort", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().search().get().withLimit(6),
-                        "get", "test_projectKey/product-projections/search?limit=6", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().search().get().withOffset(2),
-                        "get", "test_projectKey/product-projections/search?offset=2", },
+                                .withWithTotal(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?withTotal=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withWithTotal(true),
-                        "get", "test_projectKey/product-projections/search?withTotal=true", },
+                                .withPriceCurrency("priceCurrency")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withPriceCurrency("priceCurrency"),
-                        "get", "test_projectKey/product-projections/search?priceCurrency=priceCurrency", },
+                                .withPriceCountry("priceCountry")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withPriceCountry("priceCountry"),
-                        "get", "test_projectKey/product-projections/search?priceCountry=priceCountry", },
+                                .withPriceCustomerGroup("priceCustomerGroup")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withPriceCustomerGroup("priceCustomerGroup"),
-                        "get", "test_projectKey/product-projections/search?priceCustomerGroup=priceCustomerGroup", },
+                                .withPriceChannel("priceChannel")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withPriceChannel("priceChannel"),
-                        "get", "test_projectKey/product-projections/search?priceChannel=priceChannel", },
+                                .withLocaleProjection("localeProjection")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withLocaleProjection("localeProjection"),
-                        "get", "test_projectKey/product-projections/search?localeProjection=localeProjection", },
+                                .withStoreProjection("storeProjection")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?storeProjection=storeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .search()
                                 .get()
-                                .withStoreProjection("storeProjection"),
-                        "get", "test_projectKey/product-projections/search?storeProjection=storeProjection", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .productProjections()
-                                .search()
-                                .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/product-projections/search?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().search().get(), "get",
-                        "test_projectKey/product-projections/search", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/search?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .search()
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/search", } };
     }
 
     private Object[] executeMethodParameters() {

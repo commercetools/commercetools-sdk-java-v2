@@ -40,13 +40,7 @@ public class ByProjectKeyProductDiscountsMatchingTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,13 +51,9 @@ public class ByProjectKeyProductDiscountsMatchingTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productDiscounts().matching().post(null),
-                        "post", "test_projectKey/product-discounts/matching", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").productDiscounts().matching().post(null).createHttpRequest(),
+                "post", "/test_projectKey/product-discounts/matching", } };
     }
 
     private Object[] executeMethodParameters() {

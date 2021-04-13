@@ -40,13 +40,7 @@ public class ByProjectKeyReviewsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,39 +51,42 @@ public class ByProjectKeyReviewsTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get().withExpand("expand"), "get",
-                        "test_projectKey/reviews?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get().withSort("sort"), "get",
-                        "test_projectKey/reviews?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get().withLimit(4), "get",
-                        "test_projectKey/reviews?limit=4", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get().withOffset(3), "get",
-                        "test_projectKey/reviews?offset=3", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get().withWithTotal(true), "get",
-                        "test_projectKey/reviews?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get().withWhere("where"), "get",
-                        "test_projectKey/reviews?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").reviews().get().withExpand("expand").createHttpRequest(),
+                "get", "/test_projectKey/reviews?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .reviews()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/reviews?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get(), "get",
-                        "test_projectKey/reviews", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().post(null).withExpand("expand"),
-                        "post", "test_projectKey/reviews?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().post(null), "post",
-                        "test_projectKey/reviews", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().withKey("test_key"),
-                        "test_projectKey/reviews/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().withId("test_ID"),
-                        "test_projectKey/reviews/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").reviews().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/reviews?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").reviews().get().withLimit(3).createHttpRequest(),
+                        "get", "/test_projectKey/reviews?limit=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").reviews().get().withOffset(8).createHttpRequest(),
+                        "get", "/test_projectKey/reviews?offset=8", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/reviews?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/reviews?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/reviews?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().get().createHttpRequest(), "get",
+                        "/test_projectKey/reviews", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .reviews()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/reviews?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").reviews().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/reviews", } };
     }
 
     private Object[] executeMethodParameters() {

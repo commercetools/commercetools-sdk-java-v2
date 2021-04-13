@@ -40,13 +40,7 @@ public class ByProjectKeyCustomerGroupsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,39 +52,53 @@ public class ByProjectKeyCustomerGroupsTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withExpand("expand"),
-                        "get", "test_projectKey/customer-groups?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withSort("sort"), "get",
-                        "test_projectKey/customer-groups?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withLimit(5), "get",
-                        "test_projectKey/customer-groups?limit=5", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withOffset(6), "get",
-                        "test_projectKey/customer-groups?offset=6", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withWithTotal(true),
-                        "get", "test_projectKey/customer-groups?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().withWhere("where"),
-                        "get", "test_projectKey/customer-groups?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .get()
+                        .withLimit(3)
+                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?limit=3", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .get()
+                        .withOffset(7)
+                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?offset=7", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()
                                 .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/customer-groups?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get(), "get",
-                        "test_projectKey/customer-groups", },
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/customer-groups?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().get().createHttpRequest(),
+                        "get", "/test_projectKey/customer-groups", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/customer-groups?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customerGroups().post(null).withExpand("expand"),
-                        "post", "test_projectKey/customer-groups?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().post(null), "post",
-                        "test_projectKey/customer-groups", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().withKey("test_key"),
-                        "test_projectKey/customer-groups/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customerGroups().withId("test_ID"),
-                        "test_projectKey/customer-groups/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").customerGroups().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/customer-groups", } };
     }
 
     private Object[] executeMethodParameters() {

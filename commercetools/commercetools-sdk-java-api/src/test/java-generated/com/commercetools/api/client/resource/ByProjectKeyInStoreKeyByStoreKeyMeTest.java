@@ -36,20 +36,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeTest {
         return new Object[] {};
     }
 
-    private Object[] resourcesParameters() {
-        return new Object[] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").inStoreKeyWithStoreKeyValue("test_storeKey").me().carts(),
-                "test_projectKey/in-store/key=test_storeKey/me/carts", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .orders(), "test_projectKey/in-store/key=test_storeKey/me/orders", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .activeCart(), "test_projectKey/in-store/key=test_storeKey/me/active-cart", } };
-    }
-
     private Object[] executeMethodParameters() {
         return new Object[] {};
     }

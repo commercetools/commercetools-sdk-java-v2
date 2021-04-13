@@ -40,13 +40,7 @@ public class ByProjectKeyTypesTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,39 +51,37 @@ public class ByProjectKeyTypesTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().withExpand("expand"), "get",
-                        "test_projectKey/types?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().withSort("sort"), "get",
-                        "test_projectKey/types?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().withLimit(9), "get",
-                        "test_projectKey/types?limit=9", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().withOffset(4), "get",
-                        "test_projectKey/types?offset=4", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().withWithTotal(true), "get",
-                        "test_projectKey/types?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().withWhere("where"), "get",
-                        "test_projectKey/types?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").types().get().withExpand("expand").createHttpRequest(), "get",
+                "/test_projectKey/types?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .types()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/types?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get(), "get",
-                        "test_projectKey/types", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().post(null).withExpand("expand"),
-                        "post", "test_projectKey/types?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().post(null), "post",
-                        "test_projectKey/types", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().withKey("test_key"),
-                        "test_projectKey/types/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").types().withId("test_ID"),
-                        "test_projectKey/types/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").types().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/types?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().withLimit(2).createHttpRequest(),
+                        "get", "/test_projectKey/types?limit=2", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").types().get().withOffset(8).createHttpRequest(),
+                        "get", "/test_projectKey/types?offset=8", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").types().get().withWithTotal(true).createHttpRequest(),
+                        "get", "/test_projectKey/types?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").types().get().withWhere("where").createHttpRequest(),
+                        "get", "/test_projectKey/types?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/types?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").types().get().createHttpRequest(), "get",
+                        "/test_projectKey/types", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .types()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/types?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").types().post(null).createHttpRequest(), "post",
+                        "/test_projectKey/types", } };
     }
 
     private Object[] executeMethodParameters() {

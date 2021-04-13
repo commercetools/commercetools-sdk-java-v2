@@ -40,13 +40,7 @@ public class ByProjectKeyMeOrdersByIDTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,15 +51,20 @@ public class ByProjectKeyMeOrdersByIDTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").me().orders().withId("test_ID").get().withExpand("expand"),
-                "get", "test_projectKey/me/orders/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().orders().withId("test_ID").get(), "get",
-                        "test_projectKey/me/orders/test_ID", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+        return new Object[] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .orders()
+                        .withId("test_ID")
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/me/orders/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .orders()
+                        .withId("test_ID")
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/me/orders/test_ID", } };
     }
 
     private Object[] executeMethodParameters() {

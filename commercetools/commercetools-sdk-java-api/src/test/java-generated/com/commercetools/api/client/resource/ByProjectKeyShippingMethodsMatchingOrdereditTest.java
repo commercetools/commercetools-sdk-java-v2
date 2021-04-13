@@ -40,13 +40,7 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,28 +57,32 @@ public class ByProjectKeyShippingMethodsMatchingOrdereditTest {
                                 .shippingMethods()
                                 .matchingOrderedit()
                                 .get()
-                                .withOrderEditId("orderEditId"),
-                        "get", "test_projectKey/shipping-methods/matching-orderedit?orderEditId=orderEditId", },
+                                .withOrderEditId("orderEditId")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-orderedit?orderEditId=orderEditId", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .matchingOrderedit()
                                 .get()
-                                .withCountry("country"),
-                        "get", "test_projectKey/shipping-methods/matching-orderedit?country=country", },
+                                .withCountry("country")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-orderedit?country=country", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .matchingOrderedit()
                                 .get()
-                                .withState("state"),
-                        "get", "test_projectKey/shipping-methods/matching-orderedit?state=state", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingOrderedit().get(),
-                        "get", "test_projectKey/shipping-methods/matching-orderedit", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withState("state")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-orderedit?state=state", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .matchingOrderedit()
+                                .get()
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-orderedit", } };
     }
 
     private Object[] executeMethodParameters() {

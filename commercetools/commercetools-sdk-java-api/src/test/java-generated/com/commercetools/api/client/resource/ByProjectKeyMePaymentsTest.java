@@ -40,13 +40,7 @@ public class ByProjectKeyMePaymentsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,40 +52,58 @@ public class ByProjectKeyMePaymentsTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withExpand("expand"),
-                        "get", "test_projectKey/me/payments?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withSort("sort"), "get",
-                        "test_projectKey/me/payments?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withLimit(6), "get",
-                        "test_projectKey/me/payments?limit=6", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withOffset(4), "get",
-                        "test_projectKey/me/payments?offset=4", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withWithTotal(true),
-                        "get", "test_projectKey/me/payments?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().withWhere("where"),
-                        "get", "test_projectKey/me/payments?where=where", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .payments()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/me/payments?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get(), "get",
-                        "test_projectKey/me/payments", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().payments().post(null).withExpand("expand"),
-                        "post", "test_projectKey/me/payments?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().post(null), "post",
-                        "test_projectKey/me/payments", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().withKey("test_key"),
-                        "test_projectKey/me/payments/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().withId("test_ID"),
-                        "test_projectKey/me/payments/test_ID", } };
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
+                        .get()
+                        .withLimit(8)
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?limit=8", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
+                        .get()
+                        .withOffset(6)
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?offset=6", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().get().createHttpRequest(),
+                        "get", "/test_projectKey/me/payments", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .me()
+                        .payments()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/me/payments?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().payments().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/me/payments", } };
     }
 
     private Object[] executeMethodParameters() {

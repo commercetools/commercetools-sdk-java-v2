@@ -40,13 +40,7 @@ public class ByProjectKeyStoresTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,39 +51,40 @@ public class ByProjectKeyStoresTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().get().withExpand("expand"), "get",
-                        "test_projectKey/stores?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().get().withSort("sort"), "get",
-                        "test_projectKey/stores?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().get().withLimit(6), "get",
-                        "test_projectKey/stores?limit=6", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().get().withOffset(5), "get",
-                        "test_projectKey/stores?offset=5", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().get().withWithTotal(true), "get",
-                        "test_projectKey/stores?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().get().withWhere("where"), "get",
-                        "test_projectKey/stores?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").stores().get().withExpand("expand").createHttpRequest(),
+                "get", "/test_projectKey/stores?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .stores()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/stores?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().get(), "get",
-                        "test_projectKey/stores", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().post(null).withExpand("expand"),
-                        "post", "test_projectKey/stores?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().post(null), "post",
-                        "test_projectKey/stores", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().withKey("test_key"),
-                        "test_projectKey/stores/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().withId("test_ID"),
-                        "test_projectKey/stores/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").stores().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/stores?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").stores().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/stores?limit=7", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").stores().get().withOffset(4).createHttpRequest(),
+                        "get", "/test_projectKey/stores?offset=4", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stores()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/stores?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").stores().get().withWhere("where").createHttpRequest(),
+                        "get", "/test_projectKey/stores?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stores()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/stores?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().get().createHttpRequest(), "get",
+                        "/test_projectKey/stores", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .stores()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/stores?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").stores().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/stores", } };
     }
 
     private Object[] executeMethodParameters() {

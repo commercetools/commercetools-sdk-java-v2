@@ -40,13 +40,7 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,44 +57,56 @@ public class ByProjectKeyShoppingListsKeyByKeyTest {
                                 .shoppingLists()
                                 .withKey("test_key")
                                 .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/shopping-lists/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists().withKey("test_key").get(),
-                        "get", "test_projectKey/shopping-lists/key=test_key", },
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .withKey("test_key")
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/shopping-lists/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
                                 .withKey("test_key")
                                 .post(null)
-                                .withExpand("expand"),
-                        "post", "test_projectKey/shopping-lists/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists().withKey("test_key").post(null),
-                        "post", "test_projectKey/shopping-lists/key=test_key", },
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shoppingLists()
+                        .withKey("test_key")
+                        .post(null)
+                        .createHttpRequest(), "post", "/test_projectKey/shopping-lists/key=test_key", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shoppingLists()
                                 .withKey("test_key")
                                 .delete()
-                                .withDataErasure(true),
-                        "delete", "test_projectKey/shopping-lists/key=test_key?dataErasure=true", },
+                                .withDataErasure(true)
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/shopping-lists/key=test_key?dataErasure=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shoppingLists()
+                                .withKey("test_key")
+                                .delete()
+                                .withVersion(1L)
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/shopping-lists/key=test_key?version=1L", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shoppingLists()
+                                .withKey("test_key")
+                                .delete()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/shopping-lists/key=test_key?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .withKey("test_key")
                         .delete()
-                        .withVersion(6L), "delete", "test_projectKey/shopping-lists/key=test_key?version=6L", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .shoppingLists()
-                                .withKey("test_key")
-                                .delete()
-                                .withExpand("expand"),
-                        "delete", "test_projectKey/shopping-lists/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shoppingLists().withKey("test_key").delete(),
-                        "delete", "test_projectKey/shopping-lists/key=test_key", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                        .createHttpRequest(), "delete", "/test_projectKey/shopping-lists/key=test_key", } };
     }
 
     private Object[] executeMethodParameters() {

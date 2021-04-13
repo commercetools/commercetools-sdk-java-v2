@@ -40,13 +40,7 @@ public class ByProjectKeyApiClientsByIDTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,15 +51,14 @@ public class ByProjectKeyApiClientsByIDTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().withId("test_ID").get(), "get",
-                        "test_projectKey/api-clients/test_ID", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().withId("test_ID").delete(),
-                        "delete", "test_projectKey/api-clients/test_ID", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").apiClients().withId("test_ID").get().createHttpRequest(),
+                "get", "/test_projectKey/api-clients/test_ID", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .withId("test_ID")
+                        .delete()
+                        .createHttpRequest(), "delete", "/test_projectKey/api-clients/test_ID", } };
     }
 
     private Object[] executeMethodParameters() {

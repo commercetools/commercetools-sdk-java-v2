@@ -40,13 +40,7 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,35 +57,38 @@ public class ByProjectKeyShippingMethodsMatchingLocationTest {
                                 .shippingMethods()
                                 .matchingLocation()
                                 .get()
-                                .withCountry("country"),
-                        "get", "test_projectKey/shipping-methods/matching-location?country=country", },
+                                .withCountry("country")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-location?country=country", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .matchingLocation()
                                 .get()
-                                .withState("state"),
-                        "get", "test_projectKey/shipping-methods/matching-location?state=state", },
+                                .withState("state")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-location?state=state", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .matchingLocation()
                                 .get()
-                                .withCurrency("currency"),
-                        "get", "test_projectKey/shipping-methods/matching-location?currency=currency", },
+                                .withCurrency("currency")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-location?currency=currency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .matchingLocation()
                                 .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/shipping-methods/matching-location?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingLocation().get(),
-                        "get", "test_projectKey/shipping-methods/matching-location", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/matching-location?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .matchingLocation()
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods/matching-location", } };
     }
 
     private Object[] executeMethodParameters() {

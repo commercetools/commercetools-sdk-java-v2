@@ -40,13 +40,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberTest 
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,71 +57,75 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberTest 
                         .orders()
                         .withOrderNumber("test_orderNumber")
                         .get()
-                        .withExpand("expand"),
+                        .withExpand("expand")
+                        .createHttpRequest(),
                 "get",
-                "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?expand=expand", },
+                "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
-                                .get(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber", },
+                                .get()
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
                                 .post(null)
-                                .withExpand("expand"),
+                                .withExpand("expand")
+                                .createHttpRequest(),
                         "post",
-                        "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?expand=expand", },
+                        "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
-                                .post(null),
-                        "post", "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .orders()
-                                .withOrderNumber("test_orderNumber")
-                                .delete()
-                                .withDataErasure(true),
-                        "delete",
-                        "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?dataErasure=true", },
+                                .post(null)
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
                                 .delete()
-                                .withVersion(4L),
+                                .withDataErasure(true)
+                                .createHttpRequest(),
                         "delete",
-                        "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?version=4L", },
+                        "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?dataErasure=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
                                 .delete()
-                                .withExpand("expand"),
+                                .withVersion(1L)
+                                .createHttpRequest(),
                         "delete",
-                        "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?expand=expand", },
+                        "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?version=1L", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
-                                .delete(),
+                                .delete()
+                                .withExpand("expand")
+                                .createHttpRequest(),
                         "delete",
-                        "test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                        "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .orders()
+                                .withOrderNumber("test_orderNumber")
+                                .delete()
+                                .createHttpRequest(),
+                        "delete",
+                        "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber", } };
     }
 
     private Object[] executeMethodParameters() {

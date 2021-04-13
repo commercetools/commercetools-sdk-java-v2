@@ -40,13 +40,7 @@ public class ByProjectKeyCartsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,44 +52,44 @@ public class ByProjectKeyCartsTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withCustomerId("customerId"),
-                        "get", "test_projectKey/carts?customerId=customerId", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withExpand("expand"), "get",
-                        "test_projectKey/carts?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withSort("sort"), "get",
-                        "test_projectKey/carts?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withLimit(8), "get",
-                        "test_projectKey/carts?limit=8", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withOffset(1), "get",
-                        "test_projectKey/carts?offset=1", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withWithTotal(true), "get",
-                        "test_projectKey/carts?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withWhere("where"), "get",
-                        "test_projectKey/carts?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .get()
+                        .withCustomerId("customerId")
+                        .createHttpRequest(), "get", "/test_projectKey/carts?customerId=customerId", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/carts?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .carts()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/carts?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get(), "get",
-                        "test_projectKey/carts", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().post(null).withExpand("expand"),
-                        "post", "test_projectKey/carts?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().post(null), "post",
-                        "test_projectKey/carts", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().replicate(),
-                        "test_projectKey/carts/replicate", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().withCustomerId("test_customerId"),
-                        "test_projectKey/carts/customer-id=test_customerId", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().withKey("test_key"),
-                        "test_projectKey/carts/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().withId("test_ID"),
-                        "test_projectKey/carts/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").carts().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/carts?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withLimit(8).createHttpRequest(),
+                        "get", "/test_projectKey/carts?limit=8", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").carts().get().withOffset(9).createHttpRequest(),
+                        "get", "/test_projectKey/carts?offset=9", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").carts().get().withWithTotal(true).createHttpRequest(),
+                        "get", "/test_projectKey/carts?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").carts().get().withWhere("where").createHttpRequest(),
+                        "get", "/test_projectKey/carts?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/carts?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().createHttpRequest(), "get",
+                        "/test_projectKey/carts", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .carts()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/carts?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().post(null).createHttpRequest(), "post",
+                        "/test_projectKey/carts", } };
     }
 
     private Object[] executeMethodParameters() {

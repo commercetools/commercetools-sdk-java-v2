@@ -40,13 +40,7 @@ public class ByProjectKeyProductProjectionsSuggestTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -59,41 +53,63 @@ public class ByProjectKeyProductProjectionsSuggestTest {
     private Object[] requestWithMethodParameters() {
         return new Object[] {
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get().withFuzzy(true),
-                        "get", "test_projectKey/product-projections/suggest?fuzzy=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get().withStaged(true),
-                        "get", "test_projectKey/product-projections/suggest?staged=true", },
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .suggest()
+                                .get()
+                                .withFuzzy(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/suggest?fuzzy=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .suggest()
                                 .get()
-                                .withSearchKeywords("locale", "searchKeywords.locale"),
+                                .withStaged(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/suggest?staged=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .suggest()
+                                .get()
+                                .withSearchKeywords("locale", "searchKeywords.locale")
+                                .createHttpRequest(),
                         "get",
-                        "test_projectKey/product-projections/suggest?searchKeywords.locale=searchKeywords.locale", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get().withSort("sort"),
-                        "get", "test_projectKey/product-projections/suggest?sort=sort", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get().withLimit(1),
-                        "get", "test_projectKey/product-projections/suggest?limit=1", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get().withOffset(2),
-                        "get", "test_projectKey/product-projections/suggest?offset=2", },
+                        "/test_projectKey/product-projections/suggest?searchKeywords.locale=searchKeywords.locale", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .suggest()
                                 .get()
-                                .withWithTotal(true),
-                        "get", "test_projectKey/product-projections/suggest?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get(), "get",
-                        "test_projectKey/product-projections/suggest", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withSort("sort")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/suggest?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .suggest()
+                        .get()
+                        .withLimit(4)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/suggest?limit=4", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .suggest()
+                        .get()
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/suggest?offset=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .suggest()
+                                .get()
+                                .withWithTotal(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/suggest?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .suggest()
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/suggest", } };
     }
 
     private Object[] executeMethodParameters() {

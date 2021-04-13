@@ -40,13 +40,7 @@ public class ByProjectKeyDiscountCodesTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,37 +52,52 @@ public class ByProjectKeyDiscountCodesTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get().withExpand("expand"),
-                        "get", "test_projectKey/discount-codes?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get().withSort("sort"), "get",
-                        "test_projectKey/discount-codes?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get().withLimit(8), "get",
-                        "test_projectKey/discount-codes?limit=8", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get().withOffset(9), "get",
-                        "test_projectKey/discount-codes?offset=9", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get().withWithTotal(true),
-                        "get", "test_projectKey/discount-codes?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get().withWhere("where"),
-                        "get", "test_projectKey/discount-codes?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .get()
+                        .withLimit(4)
+                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?limit=4", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .get()
+                        .withOffset(2)
+                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?offset=2", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .discountCodes()
                                 .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/discount-codes?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get(), "get",
-                        "test_projectKey/discount-codes", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").discountCodes().post(null).withExpand("expand"),
-                        "post", "test_projectKey/discount-codes?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().post(null), "post",
-                        "test_projectKey/discount-codes", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().withId("test_ID"),
-                        "test_projectKey/discount-codes/test_ID", } };
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/discount-codes?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().get().createHttpRequest(),
+                        "get", "/test_projectKey/discount-codes", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .discountCodes()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/discount-codes?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").discountCodes().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/discount-codes", } };
     }
 
     private Object[] executeMethodParameters() {

@@ -40,13 +40,7 @@ public class ByProjectKeyOrdersTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,43 +51,40 @@ public class ByProjectKeyOrdersTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().get().withExpand("expand"), "get",
-                        "test_projectKey/orders?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().get().withSort("sort"), "get",
-                        "test_projectKey/orders?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().get().withLimit(8), "get",
-                        "test_projectKey/orders?limit=8", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().get().withOffset(2), "get",
-                        "test_projectKey/orders?offset=2", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().get().withWithTotal(true), "get",
-                        "test_projectKey/orders?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().get().withWhere("where"), "get",
-                        "test_projectKey/orders?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").orders().get().withExpand("expand").createHttpRequest(),
+                "get", "/test_projectKey/orders?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .orders()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/orders?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().get(), "get",
-                        "test_projectKey/orders", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().post(null).withExpand("expand"),
-                        "post", "test_projectKey/orders?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().post(null), "post",
-                        "test_projectKey/orders", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().importOrder(),
-                        "test_projectKey/orders/import", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().withOrderNumber("test_orderNumber"),
-                        "test_projectKey/orders/order-number=test_orderNumber", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().edits(),
-                        "test_projectKey/orders/edits", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().withId("test_ID"),
-                        "test_projectKey/orders/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").orders().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/orders?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").orders().get().withLimit(9).createHttpRequest(),
+                        "get", "/test_projectKey/orders?limit=9", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").orders().get().withOffset(2).createHttpRequest(),
+                        "get", "/test_projectKey/orders?offset=2", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/orders?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").orders().get().withWhere("where").createHttpRequest(),
+                        "get", "/test_projectKey/orders?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/orders?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().get().createHttpRequest(), "get",
+                        "/test_projectKey/orders", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .orders()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/orders?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").orders().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/orders", } };
     }
 
     private Object[] executeMethodParameters() {

@@ -40,13 +40,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -64,80 +58,86 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeCartsTest {
                                 .me()
                                 .carts()
                                 .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/carts?expand=expand", },
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/carts?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .me()
                                 .carts()
                                 .get()
-                                .withSort("sort"),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/carts?sort=sort", },
+                                .withSort("sort")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/carts?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .me()
+                                .carts()
+                                .get()
+                                .withLimit(3)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/carts?limit=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .me()
+                                .carts()
+                                .get()
+                                .withOffset(8)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/carts?offset=8", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .me()
+                                .carts()
+                                .get()
+                                .withWithTotal(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/carts?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .me()
+                                .carts()
+                                .get()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/carts?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .me()
+                                .carts()
+                                .get()
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/carts?var.varName=var.varName", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .me()
                         .carts()
                         .get()
-                        .withLimit(6), "get", "test_projectKey/in-store/key=test_storeKey/me/carts?limit=6", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .carts()
-                                .get()
-                                .withOffset(6),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/carts?offset=6", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .carts()
-                                .get()
-                                .withWithTotal(true),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/carts?withTotal=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .carts()
-                                .get()
-                                .withWhere("where"),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/carts?where=where", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .me()
-                                .carts()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/in-store/key=test_storeKey/me/carts?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .carts()
-                        .get(), "get", "test_projectKey/in-store/key=test_storeKey/me/carts", },
+                        .createHttpRequest(), "get", "/test_projectKey/in-store/key=test_storeKey/me/carts", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .me()
                                 .carts()
                                 .post(null)
-                                .withExpand("expand"),
-                        "post", "test_projectKey/in-store/key=test_storeKey/me/carts?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .me()
-                        .carts()
-                        .post(null), "post", "test_projectKey/in-store/key=test_storeKey/me/carts", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] { new Object[] { apiRoot.withProjectKey("test_projectKey")
-                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                .me()
-                .carts()
-                .withId("test_ID"), "test_projectKey/in-store/key=test_storeKey/me/carts/test_ID", } };
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/in-store/key=test_storeKey/me/carts?expand=expand", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .me()
+                                .carts()
+                                .post(null)
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/in-store/key=test_storeKey/me/carts", } };
     }
 
     private Object[] executeMethodParameters() {

@@ -40,13 +40,7 @@ public class ByProjectKeyChannelsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,36 +51,42 @@ public class ByProjectKeyChannelsTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get().withExpand("expand"), "get",
-                        "test_projectKey/channels?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get().withSort("sort"), "get",
-                        "test_projectKey/channels?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get().withLimit(5), "get",
-                        "test_projectKey/channels?limit=5", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get().withOffset(5), "get",
-                        "test_projectKey/channels?offset=5", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get().withWithTotal(true), "get",
-                        "test_projectKey/channels?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get().withWhere("where"), "get",
-                        "test_projectKey/channels?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").channels().get().withExpand("expand").createHttpRequest(),
+                "get", "/test_projectKey/channels?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .channels()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/channels?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get(), "get",
-                        "test_projectKey/channels", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().post(null).withExpand("expand"),
-                        "post", "test_projectKey/channels?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().post(null), "post",
-                        "test_projectKey/channels", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] { new Object[] { apiRoot.withProjectKey("test_projectKey").channels().withId("test_ID"),
-                "test_projectKey/channels/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").channels().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/channels?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").channels().get().withLimit(3).createHttpRequest(),
+                        "get", "/test_projectKey/channels?limit=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").channels().get().withOffset(5).createHttpRequest(),
+                        "get", "/test_projectKey/channels?offset=5", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/channels?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/channels?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/channels?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().get().createHttpRequest(), "get",
+                        "/test_projectKey/channels", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .channels()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/channels?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").channels().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/channels", } };
     }
 
     private Object[] executeMethodParameters() {

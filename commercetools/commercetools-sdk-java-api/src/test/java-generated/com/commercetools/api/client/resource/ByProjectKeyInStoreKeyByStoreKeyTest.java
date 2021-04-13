@@ -36,31 +36,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyTest {
         return new Object[] {};
     }
 
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").inStoreKeyWithStoreKeyValue("test_storeKey").carts(),
-                        "test_projectKey/in-store/key=test_storeKey/carts", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").inStoreKeyWithStoreKeyValue("test_storeKey").orders(),
-                        "test_projectKey/in-store/key=test_storeKey/orders", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").inStoreKeyWithStoreKeyValue("test_storeKey").me(),
-                        "test_projectKey/in-store/key=test_storeKey/me", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .customers(), "test_projectKey/in-store/key=test_storeKey/customers", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").inStoreKeyWithStoreKeyValue("test_storeKey").login(),
-                        "test_projectKey/in-store/key=test_storeKey/login", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .shippingMethods(), "test_projectKey/in-store/key=test_storeKey/shipping-methods", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .inStoreKeyWithStoreKeyValue("test_storeKey")
-                        .shoppingLists(), "test_projectKey/in-store/key=test_storeKey/shopping-lists", } };
-    }
-
     private Object[] executeMethodParameters() {
         return new Object[] {};
     }

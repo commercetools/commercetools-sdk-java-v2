@@ -40,13 +40,7 @@ public class ByProjectKeyCustomObjectsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,43 +52,52 @@ public class ByProjectKeyCustomObjectsTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get().withExpand("expand"),
-                        "get", "test_projectKey/custom-objects?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get().withSort("sort"), "get",
-                        "test_projectKey/custom-objects?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get().withLimit(6), "get",
-                        "test_projectKey/custom-objects?limit=6", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get().withOffset(4), "get",
-                        "test_projectKey/custom-objects?offset=4", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get().withWithTotal(true),
-                        "get", "test_projectKey/custom-objects?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get().withWhere("where"),
-                        "get", "test_projectKey/custom-objects?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .get()
+                        .withLimit(3)
+                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?limit=3", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .get()
+                        .withOffset(9)
+                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?offset=9", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()
                                 .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/custom-objects?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get(), "get",
-                        "test_projectKey/custom-objects", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customObjects().post(null).withExpand("expand"),
-                        "post", "test_projectKey/custom-objects?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().post(null), "post",
-                        "test_projectKey/custom-objects", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .customObjects()
-                                .withContainerAndKey("test_container", "test_key"),
-                        "test_projectKey/custom-objects/test_container/test_key", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customObjects().withContainer("test_container"),
-                        "test_projectKey/custom-objects/test_container", } };
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/custom-objects?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().get().createHttpRequest(),
+                        "get", "/test_projectKey/custom-objects", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customObjects()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/custom-objects?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").customObjects().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/custom-objects", } };
     }
 
     private Object[] executeMethodParameters() {

@@ -40,13 +40,7 @@ public class ByProjectKeySubscriptionsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,39 +52,52 @@ public class ByProjectKeySubscriptionsTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withExpand("expand"),
-                        "get", "test_projectKey/subscriptions?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withSort("sort"), "get",
-                        "test_projectKey/subscriptions?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withLimit(1), "get",
-                        "test_projectKey/subscriptions?limit=1", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withOffset(5), "get",
-                        "test_projectKey/subscriptions?offset=5", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withWithTotal(true),
-                        "get", "test_projectKey/subscriptions?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().withWhere("where"),
-                        "get", "test_projectKey/subscriptions?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .get()
+                        .withLimit(3)
+                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?limit=3", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .get()
+                        .withOffset(8)
+                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?offset=8", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .subscriptions()
                                 .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/subscriptions?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get(), "get",
-                        "test_projectKey/subscriptions", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").subscriptions().post(null).withExpand("expand"),
-                        "post", "test_projectKey/subscriptions?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().post(null), "post",
-                        "test_projectKey/subscriptions", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().withKey("test_key"),
-                        "test_projectKey/subscriptions/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().withId("test_ID"),
-                        "test_projectKey/subscriptions/test_ID", } };
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/subscriptions?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().get().createHttpRequest(),
+                        "get", "/test_projectKey/subscriptions", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .subscriptions()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/subscriptions?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").subscriptions().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/subscriptions", } };
     }
 
     private Object[] executeMethodParameters() {

@@ -40,13 +40,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenTest
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,20 +57,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenTest
                         .customers()
                         .withEmailToken("test_emailToken")
                         .get()
-                        .withExpand("expand"),
+                        .withExpand("expand")
+                        .createHttpRequest(),
                 "get",
-                "test_projectKey/in-store/key=test_storeKey/customers/email-token=test_emailToken?expand=expand", },
+                "/test_projectKey/in-store/key=test_storeKey/customers/email-token=test_emailToken?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .customers()
                                 .withEmailToken("test_emailToken")
-                                .get(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/customers/email-token=test_emailToken", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .get()
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/customers/email-token=test_emailToken", } };
     }
 
     private Object[] executeMethodParameters() {

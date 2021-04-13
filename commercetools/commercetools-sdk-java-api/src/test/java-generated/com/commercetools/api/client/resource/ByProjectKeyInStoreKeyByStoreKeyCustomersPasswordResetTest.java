@@ -40,13 +40,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,18 +51,14 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersPasswordResetTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .customers()
-                                .passwordReset()
-                                .post(null),
-                        "post", "test_projectKey/in-store/key=test_storeKey/customers/password/reset", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .customers()
+                        .passwordReset()
+                        .post(null)
+                        .createHttpRequest(),
+                "post", "/test_projectKey/in-store/key=test_storeKey/customers/password/reset", } };
     }
 
     private Object[] executeMethodParameters() {

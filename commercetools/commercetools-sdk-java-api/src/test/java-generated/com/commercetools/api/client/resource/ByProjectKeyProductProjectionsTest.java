@@ -40,13 +40,7 @@ public class ByProjectKeyProductProjectionsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,77 +52,92 @@ public class ByProjectKeyProductProjectionsTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().withStaged(true),
-                        "get", "test_projectKey/product-projections?staged=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .get()
+                        .withStaged(true)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?staged=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .get()
-                                .withPriceCurrency("priceCurrency"),
-                        "get", "test_projectKey/product-projections?priceCurrency=priceCurrency", },
+                                .withPriceCurrency("priceCurrency")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .get()
-                                .withPriceCountry("priceCountry"),
-                        "get", "test_projectKey/product-projections?priceCountry=priceCountry", },
+                                .withPriceCountry("priceCountry")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .get()
-                                .withPriceCustomerGroup("priceCustomerGroup"),
-                        "get", "test_projectKey/product-projections?priceCustomerGroup=priceCustomerGroup", },
+                                .withPriceCustomerGroup("priceCustomerGroup")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .get()
-                                .withPriceChannel("priceChannel"),
-                        "get", "test_projectKey/product-projections?priceChannel=priceChannel", },
+                                .withPriceChannel("priceChannel")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .get()
-                                .withLocaleProjection("localeProjection"),
-                        "get", "test_projectKey/product-projections?localeProjection=localeProjection", },
+                                .withLocaleProjection("localeProjection")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .get()
-                                .withStoreProjection("storeProjection"),
-                        "get", "test_projectKey/product-projections?storeProjection=storeProjection", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().get().withExpand("expand"),
-                        "get", "test_projectKey/product-projections?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().withSort("sort"),
-                        "get", "test_projectKey/product-projections?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().withLimit(8), "get",
-                        "test_projectKey/product-projections?limit=8", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().withOffset(9),
-                        "get", "test_projectKey/product-projections?offset=9", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().withWithTotal(true),
-                        "get", "test_projectKey/product-projections?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().withWhere("where"),
-                        "get", "test_projectKey/product-projections?where=where", },
+                                .withStoreProjection("storeProjection")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections?storeProjection=storeProjection", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .get()
+                        .withLimit(5)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?limit=5", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .get()
+                        .withOffset(6)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?offset=6", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/product-projections?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get(), "get",
-                        "test_projectKey/product-projections", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().search(),
-                        "test_projectKey/product-projections/search", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().suggest(),
-                        "test_projectKey/product-projections/suggest", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().withKey("test_key"),
-                        "test_projectKey/product-projections/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().withId("test_ID"),
-                        "test_projectKey/product-projections/test_ID", } };
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().get().createHttpRequest(),
+                        "get", "/test_projectKey/product-projections", } };
     }
 
     private Object[] executeMethodParameters() {

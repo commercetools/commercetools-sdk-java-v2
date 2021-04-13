@@ -40,13 +40,7 @@ public class ByProjectKeyApiClientsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,36 +51,44 @@ public class ByProjectKeyApiClientsTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get().withExpand("expand"), "get",
-                        "test_projectKey/api-clients?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get().withSort("sort"), "get",
-                        "test_projectKey/api-clients?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get().withLimit(2), "get",
-                        "test_projectKey/api-clients?limit=2", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get().withOffset(3), "get",
-                        "test_projectKey/api-clients?offset=3", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get().withWithTotal(true), "get",
-                        "test_projectKey/api-clients?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get().withWhere("where"), "get",
-                        "test_projectKey/api-clients?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").apiClients().get().withExpand("expand").createHttpRequest(),
+                "get", "/test_projectKey/api-clients?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/api-clients?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .apiClients()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/api-clients?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get(), "get",
-                        "test_projectKey/api-clients", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().post(null).withExpand("expand"),
-                        "post", "test_projectKey/api-clients?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().post(null), "post",
-                        "test_projectKey/api-clients", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] { new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().withId("test_ID"),
-                "test_projectKey/api-clients/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").apiClients().get().withLimit(3).createHttpRequest(),
+                        "get", "/test_projectKey/api-clients?limit=3", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").apiClients().get().withOffset(1).createHttpRequest(),
+                        "get", "/test_projectKey/api-clients?offset=1", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/api-clients?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/api-clients?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/api-clients?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().get().createHttpRequest(), "get",
+                        "/test_projectKey/api-clients", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .apiClients()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/api-clients?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").apiClients().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/api-clients", } };
     }
 
     private Object[] executeMethodParameters() {

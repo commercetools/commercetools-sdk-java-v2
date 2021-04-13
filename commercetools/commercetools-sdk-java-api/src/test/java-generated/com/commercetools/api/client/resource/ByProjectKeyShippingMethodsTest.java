@@ -40,13 +40,7 @@ public class ByProjectKeyShippingMethodsTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -58,45 +52,53 @@ public class ByProjectKeyShippingMethodsTest {
 
     private Object[] requestWithMethodParameters() {
         return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get().withExpand("expand"),
-                        "get", "test_projectKey/shipping-methods?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get().withSort("sort"),
-                        "get", "test_projectKey/shipping-methods?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get().withLimit(5), "get",
-                        "test_projectKey/shipping-methods?limit=5", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get().withOffset(7), "get",
-                        "test_projectKey/shipping-methods?offset=7", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get().withWithTotal(true),
-                        "get", "test_projectKey/shipping-methods?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get().withWhere("where"),
-                        "get", "test_projectKey/shipping-methods?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .get()
+                        .withLimit(4)
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?limit=4", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .get()
+                        .withOffset(5)
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?offset=5", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/shipping-methods?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get(), "get",
-                        "test_projectKey/shipping-methods", },
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().get().createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/shipping-methods?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").shippingMethods().post(null).withExpand("expand"),
-                        "post", "test_projectKey/shipping-methods?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().post(null), "post",
-                        "test_projectKey/shipping-methods", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().withKey("test_key"),
-                        "test_projectKey/shipping-methods/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingCart(),
-                        "test_projectKey/shipping-methods/matching-cart", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingOrderedit(),
-                        "test_projectKey/shipping-methods/matching-orderedit", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().matchingLocation(),
-                        "test_projectKey/shipping-methods/matching-location", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().withId("test_ID"),
-                        "test_projectKey/shipping-methods/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").shippingMethods().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/shipping-methods", } };
     }
 
     private Object[] executeMethodParameters() {

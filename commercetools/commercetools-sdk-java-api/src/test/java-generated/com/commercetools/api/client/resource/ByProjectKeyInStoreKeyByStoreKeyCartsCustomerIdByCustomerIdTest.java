@@ -40,13 +40,7 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,27 +51,23 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .carts()
+                        .withCustomerId("test_customerId")
+                        .get()
+                        .withExpand("expand")
+                        .createHttpRequest(),
+                "get", "/test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId?expand=expand", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .carts()
                                 .withCustomerId("test_customerId")
                                 .get()
-                                .withExpand("expand"),
-                        "get",
-                        "test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId?expand=expand", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .inStoreKeyWithStoreKeyValue("test_storeKey")
-                                .carts()
-                                .withCustomerId("test_customerId")
-                                .get(),
-                        "get", "test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/in-store/key=test_storeKey/carts/customer-id=test_customerId", } };
     }
 
     private Object[] executeMethodParameters() {

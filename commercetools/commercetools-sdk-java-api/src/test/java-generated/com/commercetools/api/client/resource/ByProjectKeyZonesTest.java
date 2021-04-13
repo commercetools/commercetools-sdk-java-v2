@@ -40,13 +40,7 @@ public class ByProjectKeyZonesTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,39 +51,37 @@ public class ByProjectKeyZonesTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withExpand("expand"), "get",
-                        "test_projectKey/zones?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withSort("sort"), "get",
-                        "test_projectKey/zones?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withLimit(6), "get",
-                        "test_projectKey/zones?limit=6", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withOffset(1), "get",
-                        "test_projectKey/zones?offset=1", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withWithTotal(true), "get",
-                        "test_projectKey/zones?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withWhere("where"), "get",
-                        "test_projectKey/zones?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").zones().get().withExpand("expand").createHttpRequest(), "get",
+                "/test_projectKey/zones?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .zones()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/zones?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get(), "get",
-                        "test_projectKey/zones", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().post(null).withExpand("expand"),
-                        "post", "test_projectKey/zones?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().post(null), "post",
-                        "test_projectKey/zones", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().withKey("test_key"),
-                        "test_projectKey/zones/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().withId("test_ID"),
-                        "test_projectKey/zones/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").zones().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/zones?sort=sort", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withLimit(4).createHttpRequest(),
+                        "get", "/test_projectKey/zones?limit=4", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").zones().get().withOffset(5).createHttpRequest(),
+                        "get", "/test_projectKey/zones?offset=5", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").zones().get().withWithTotal(true).createHttpRequest(),
+                        "get", "/test_projectKey/zones?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").zones().get().withWhere("where").createHttpRequest(),
+                        "get", "/test_projectKey/zones?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .zones()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/zones?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().createHttpRequest(), "get",
+                        "/test_projectKey/zones", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .zones()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/zones?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().post(null).createHttpRequest(), "post",
+                        "/test_projectKey/zones", } };
     }
 
     private Object[] executeMethodParameters() {

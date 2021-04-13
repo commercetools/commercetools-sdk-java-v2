@@ -40,13 +40,7 @@ public class ByProjectKeyProductTypesTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,39 +51,48 @@ public class ByProjectKeyProductTypesTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get().withExpand("expand"),
-                        "get", "test_projectKey/product-types?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get().withSort("sort"), "get",
-                        "test_projectKey/product-types?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get().withLimit(3), "get",
-                        "test_projectKey/product-types?limit=3", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get().withOffset(2), "get",
-                        "test_projectKey/product-types?offset=2", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get().withWithTotal(true),
-                        "get", "test_projectKey/product-types?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get().withWhere("where"), "get",
-                        "test_projectKey/product-types?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").productTypes().get().withExpand("expand").createHttpRequest(),
+                "get", "/test_projectKey/product-types?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .get()
+                        .withSort("sort")
+                        .createHttpRequest(), "get", "/test_projectKey/product-types?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productTypes().get().withLimit(5).createHttpRequest(),
+                        "get", "/test_projectKey/product-types?limit=5", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .get()
+                        .withOffset(8)
+                        .createHttpRequest(), "get", "/test_projectKey/product-types?offset=8", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/product-types?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .get()
+                        .withWhere("where")
+                        .createHttpRequest(), "get", "/test_projectKey/product-types?where=where", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productTypes()
                                 .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/product-types?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get(), "get",
-                        "test_projectKey/product-types", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().post(null).withExpand("expand"),
-                        "post", "test_projectKey/product-types?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().post(null), "post",
-                        "test_projectKey/product-types", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().withKey("test_key"),
-                        "test_projectKey/product-types/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().withId("test_ID"),
-                        "test_projectKey/product-types/test_ID", } };
+                                .withPredicateVar("varName", "var.varName")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-types?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().get().createHttpRequest(),
+                        "get", "/test_projectKey/product-types", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTypes()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/product-types?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTypes().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/product-types", } };
     }
 
     private Object[] executeMethodParameters() {

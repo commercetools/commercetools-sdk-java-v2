@@ -40,13 +40,7 @@ public class ByProjectKeyStatesTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -57,39 +51,40 @@ public class ByProjectKeyStatesTest {
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().get().withExpand("expand"), "get",
-                        "test_projectKey/states?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().get().withSort("sort"), "get",
-                        "test_projectKey/states?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().get().withLimit(6), "get",
-                        "test_projectKey/states?limit=6", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().get().withOffset(4), "get",
-                        "test_projectKey/states?offset=4", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().get().withWithTotal(true), "get",
-                        "test_projectKey/states?withTotal=true", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().get().withWhere("where"), "get",
-                        "test_projectKey/states?where=where", },
+        return new Object[] { new Object[] {
+                apiRoot.withProjectKey("test_projectKey").states().get().withExpand("expand").createHttpRequest(),
+                "get", "/test_projectKey/states?expand=expand", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .states()
-                                .get()
-                                .withPredicateVar("varName", "var.varName"),
-                        "get", "test_projectKey/states?var.varName=var.varName", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().get(), "get",
-                        "test_projectKey/states", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().post(null).withExpand("expand"),
-                        "post", "test_projectKey/states?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().post(null), "post",
-                        "test_projectKey/states", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().withKey("test_key"),
-                        "test_projectKey/states/key=test_key", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").states().withId("test_ID"),
-                        "test_projectKey/states/test_ID", } };
+                        apiRoot.withProjectKey("test_projectKey").states().get().withSort("sort").createHttpRequest(),
+                        "get", "/test_projectKey/states?sort=sort", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").states().get().withLimit(8).createHttpRequest(),
+                        "get", "/test_projectKey/states?limit=8", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").states().get().withOffset(9).createHttpRequest(),
+                        "get", "/test_projectKey/states?offset=9", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
+                        .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "/test_projectKey/states?withTotal=true", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").states().get().withWhere("where").createHttpRequest(),
+                        "get", "/test_projectKey/states?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
+                        .get()
+                        .withPredicateVar("varName", "var.varName")
+                        .createHttpRequest(), "get", "/test_projectKey/states?var.varName=var.varName", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").states().get().createHttpRequest(), "get",
+                        "/test_projectKey/states", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .states()
+                        .post(null)
+                        .withExpand("expand")
+                        .createHttpRequest(), "post", "/test_projectKey/states?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").states().post(null).createHttpRequest(),
+                        "post", "/test_projectKey/states", } };
     }
 
     private Object[] executeMethodParameters() {

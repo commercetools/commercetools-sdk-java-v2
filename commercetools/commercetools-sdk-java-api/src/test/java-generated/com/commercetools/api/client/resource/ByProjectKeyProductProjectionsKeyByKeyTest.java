@@ -40,13 +40,7 @@ public class ByProjectKeyProductProjectionsKeyByKeyTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,64 +57,71 @@ public class ByProjectKeyProductProjectionsKeyByKeyTest {
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
-                                .withStaged(true),
-                        "get", "test_projectKey/product-projections/key=test_key?staged=true", },
+                                .withStaged(true)
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/key=test_key?staged=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
-                                .withPriceCurrency("priceCurrency"),
-                        "get", "test_projectKey/product-projections/key=test_key?priceCurrency=priceCurrency", },
+                                .withPriceCurrency("priceCurrency")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/key=test_key?priceCurrency=priceCurrency", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
-                                .withPriceCountry("priceCountry"),
-                        "get", "test_projectKey/product-projections/key=test_key?priceCountry=priceCountry", },
+                                .withPriceCountry("priceCountry")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/key=test_key?priceCountry=priceCountry", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
-                                .withPriceCustomerGroup("priceCustomerGroup"),
+                                .withPriceCustomerGroup("priceCustomerGroup")
+                                .createHttpRequest(),
                         "get",
-                        "test_projectKey/product-projections/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                        "/test_projectKey/product-projections/key=test_key?priceCustomerGroup=priceCustomerGroup", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
-                                .withPriceChannel("priceChannel"),
-                        "get", "test_projectKey/product-projections/key=test_key?priceChannel=priceChannel", },
+                                .withPriceChannel("priceChannel")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/key=test_key?priceChannel=priceChannel", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
-                                .withLocaleProjection("localeProjection"),
-                        "get", "test_projectKey/product-projections/key=test_key?localeProjection=localeProjection", },
+                                .withLocaleProjection("localeProjection")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/key=test_key?localeProjection=localeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
-                                .withStoreProjection("storeProjection"),
-                        "get", "test_projectKey/product-projections/key=test_key?storeProjection=storeProjection", },
+                                .withStoreProjection("storeProjection")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/key=test_key?storeProjection=storeProjection", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/product-projections/key=test_key?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").productProjections().withKey("test_key").get(),
-                        "get", "test_projectKey/product-projections/key=test_key", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/product-projections/key=test_key?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/key=test_key", } };
     }
 
     private Object[] executeMethodParameters() {

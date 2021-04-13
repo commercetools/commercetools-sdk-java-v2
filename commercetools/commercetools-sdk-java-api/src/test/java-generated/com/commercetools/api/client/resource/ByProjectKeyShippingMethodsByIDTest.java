@@ -40,13 +40,7 @@ public class ByProjectKeyShippingMethodsByIDTest {
     @Test
     @Parameters(method = "requestWithMethodParameters")
     public void withMethods(ApiHttpRequest request, String httpMethod, String uri) {
-        Assert.assertEquals(httpMethod, request.getMethod().toString());
-        Assert.assertEquals(uri, request.getUri().toString());
-    }
-
-    @Test
-    @Parameters(method = "resourcesParameters")
-    public void resources(ApiHttpRequest request, String uri) {
+        Assert.assertEquals(httpMethod, request.getMethod().name().toLowerCase());
         Assert.assertEquals(uri, request.getUri().toString());
     }
 
@@ -63,37 +57,48 @@ public class ByProjectKeyShippingMethodsByIDTest {
                                 .shippingMethods()
                                 .withId("test_ID")
                                 .get()
-                                .withExpand("expand"),
-                        "get", "test_projectKey/shipping-methods/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().withId("test_ID").get(),
-                        "get", "test_projectKey/shipping-methods/test_ID", },
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "get", "/test_projectKey/shipping-methods/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .withId("test_ID")
+                        .get()
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .withId("test_ID")
                                 .post(null)
-                                .withExpand("expand"),
-                        "post", "test_projectKey/shipping-methods/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().withId("test_ID").post(null),
-                        "post", "test_projectKey/shipping-methods/test_ID", },
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "post", "/test_projectKey/shipping-methods/test_ID?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .withId("test_ID")
-                        .delete()
-                        .withVersion(5L), "delete", "test_projectKey/shipping-methods/test_ID?version=5L", },
+                        .post(null)
+                        .createHttpRequest(), "post", "/test_projectKey/shipping-methods/test_ID", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()
                                 .withId("test_ID")
                                 .delete()
-                                .withExpand("expand"),
-                        "delete", "test_projectKey/shipping-methods/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").shippingMethods().withId("test_ID").delete(),
-                        "delete", "test_projectKey/shipping-methods/test_ID", } };
-    }
-
-    private Object[] resourcesParameters() {
-        return new Object[] {};
+                                .withVersion(7L)
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/shipping-methods/test_ID?version=7L", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .shippingMethods()
+                                .withId("test_ID")
+                                .delete()
+                                .withExpand("expand")
+                                .createHttpRequest(),
+                        "delete", "/test_projectKey/shipping-methods/test_ID?expand=expand", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .shippingMethods()
+                        .withId("test_ID")
+                        .delete()
+                        .createHttpRequest(), "delete", "/test_projectKey/shipping-methods/test_ID", } };
     }
 
     private Object[] executeMethodParameters() {

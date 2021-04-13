@@ -31,7 +31,7 @@ public interface MyLineItemDraft {
 
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     /**
     *  <p>When the line item was added to the cart. Optional for backwards
@@ -79,7 +79,7 @@ public interface MyLineItemDraft {
 
     public void setVariantId(final Long variantId);
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     public void setAddedAt(final ZonedDateTime addedAt);
 

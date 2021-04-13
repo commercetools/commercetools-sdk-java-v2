@@ -14,7 +14,7 @@ public final class MyLineItemDraftBuilder {
 
     private Long variantId;
 
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private java.time.ZonedDateTime addedAt;
@@ -44,7 +44,7 @@ public final class MyLineItemDraftBuilder {
         return this;
     }
 
-    public MyLineItemDraftBuilder quantity(final Double quantity) {
+    public MyLineItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -90,7 +90,7 @@ public final class MyLineItemDraftBuilder {
         return this.variantId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

@@ -20,7 +20,7 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
 
     private Long variantId;
 
-    private Double quantity;
+    private Long quantity;
 
     private java.time.ZonedDateTime addedAt;
 
@@ -36,7 +36,7 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
 
     @JsonCreator
     MyLineItemDraftImpl(@JsonProperty("productId") final String productId,
-            @JsonProperty("variantId") final Long variantId, @JsonProperty("quantity") final Double quantity,
+            @JsonProperty("variantId") final Long variantId, @JsonProperty("quantity") final Long quantity,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
@@ -65,7 +65,7 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
         return this.variantId;
     }
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 
@@ -120,7 +120,7 @@ public final class MyLineItemDraftImpl implements MyLineItemDraft {
         this.variantId = variantId;
     }
 
-    public void setQuantity(final Double quantity) {
+    public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
 

@@ -67,9 +67,9 @@ public class ByProjectKeyProductsByIDImagesTest {
                                 .withId("test_ID")
                                 .images()
                                 .post(null)
-                                .withVariant(0.91149575)
+                                .withVariant(0.8538737)
                                 .createHttpRequest(),
-                        "post", "/test_projectKey/products/test_ID/images?variant=0.91149575", },
+                        "post", "/test_projectKey/products/test_ID/images?variant=0.8538737", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")

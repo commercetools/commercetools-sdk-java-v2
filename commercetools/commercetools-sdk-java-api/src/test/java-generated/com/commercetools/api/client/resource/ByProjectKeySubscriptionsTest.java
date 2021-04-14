@@ -65,13 +65,13 @@ public class ByProjectKeySubscriptionsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()
-                        .withLimit(3)
-                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?limit=3", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()
-                        .withOffset(8)
-                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?offset=8", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/subscriptions?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .subscriptions()
                         .get()

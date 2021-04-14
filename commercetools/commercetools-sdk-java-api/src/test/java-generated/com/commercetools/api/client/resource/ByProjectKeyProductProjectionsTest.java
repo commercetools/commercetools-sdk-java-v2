@@ -112,13 +112,13 @@ public class ByProjectKeyProductProjectionsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .get()
-                        .withLimit(5)
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections?limit=5", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .get()
-                        .withOffset(6)
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections?offset=6", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .get()

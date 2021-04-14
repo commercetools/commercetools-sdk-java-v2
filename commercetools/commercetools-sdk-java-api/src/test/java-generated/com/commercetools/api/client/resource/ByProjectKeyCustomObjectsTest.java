@@ -65,13 +65,13 @@ public class ByProjectKeyCustomObjectsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .get()
-                        .withLimit(3)
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?limit=3", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .get()
-                        .withOffset(9)
-                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?offset=9", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/custom-objects?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customObjects()
                         .get()

@@ -78,8 +78,8 @@ public class ByProjectKeyCategoriesByIDTest {
                         .categories()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(9L)
-                        .createHttpRequest(), "delete", "/test_projectKey/categories/test_ID?version=9L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/categories/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .categories()
                         .withId("test_ID")

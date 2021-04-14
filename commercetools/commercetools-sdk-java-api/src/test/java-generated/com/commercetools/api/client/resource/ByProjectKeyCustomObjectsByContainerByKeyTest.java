@@ -72,9 +72,9 @@ public class ByProjectKeyCustomObjectsByContainerByKeyTest {
                                 .customObjects()
                                 .withContainerAndKey("test_container", "test_key")
                                 .delete()
-                                .withVersion(6L)
+                                .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/custom-objects/test_container/test_key?version=6L", },
+                        "delete", "/test_projectKey/custom-objects/test_container/test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customObjects()

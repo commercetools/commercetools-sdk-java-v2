@@ -60,13 +60,13 @@ public class ByProjectKeyProductTypesTest {
                         .withSort("sort")
                         .createHttpRequest(), "get", "/test_projectKey/product-types?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productTypes().get().withLimit(5).createHttpRequest(),
-                        "get", "/test_projectKey/product-types?limit=5", },
+                        apiRoot.withProjectKey("test_projectKey").productTypes().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/product-types?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .get()
-                        .withOffset(8)
-                        .createHttpRequest(), "get", "/test_projectKey/product-types?offset=8", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/product-types?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTypes()
                         .get()

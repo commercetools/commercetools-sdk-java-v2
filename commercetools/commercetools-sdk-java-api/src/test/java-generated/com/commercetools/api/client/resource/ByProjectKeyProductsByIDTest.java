@@ -222,8 +222,8 @@ public class ByProjectKeyProductsByIDTest {
                         .products()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(7L)
-                        .createHttpRequest(), "delete", "/test_projectKey/products/test_ID?version=7L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/products/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withId("test_ID")

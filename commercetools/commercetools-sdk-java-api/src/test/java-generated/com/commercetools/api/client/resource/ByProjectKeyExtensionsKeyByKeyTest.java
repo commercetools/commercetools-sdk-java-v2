@@ -78,14 +78,12 @@ public class ByProjectKeyExtensionsKeyByKeyTest {
                         .withKey("test_key")
                         .post(null)
                         .createHttpRequest(), "post", "/test_projectKey/extensions/key=test_key", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .extensions()
-                                .withKey("test_key")
-                                .delete()
-                                .withVersion(7L)
-                                .createHttpRequest(),
-                        "delete", "/test_projectKey/extensions/key=test_key?version=7L", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .extensions()
+                        .withKey("test_key")
+                        .delete()
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/extensions/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .extensions()

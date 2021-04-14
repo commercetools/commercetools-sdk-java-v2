@@ -83,9 +83,9 @@ public class ByProjectKeyProductTypesKeyByKeyTest {
                                 .productTypes()
                                 .withKey("test_key")
                                 .delete()
-                                .withVersion(5L)
+                                .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/product-types/key=test_key?version=5L", },
+                        "delete", "/test_projectKey/product-types/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productTypes()

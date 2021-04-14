@@ -111,27 +111,27 @@ public class ByProjectKeyDiscountCodesGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyDiscountCodesGet withLimit(final Integer limit) {
+    public ByProjectKeyDiscountCodesGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyDiscountCodesGet addLimit(final Integer limit) {
+    public ByProjectKeyDiscountCodesGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyDiscountCodesGet withOffset(final Integer offset) {
+    public ByProjectKeyDiscountCodesGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyDiscountCodesGet addOffset(final Integer offset) {
+    public ByProjectKeyDiscountCodesGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyDiscountCodesGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyDiscountCodesGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyDiscountCodesGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyDiscountCodesGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

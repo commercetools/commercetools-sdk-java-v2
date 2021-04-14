@@ -55,10 +55,10 @@ public class ByProjectKeyMeTest {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().get().withSort("sort").createHttpRequest(),
                         "get", "/test_projectKey/me?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().get().withLimit(2).createHttpRequest(),
-                        "get", "/test_projectKey/me?limit=2", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").me().get().withOffset(8).createHttpRequest(),
-                        "get", "/test_projectKey/me?offset=8", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/me?limit=7", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").me().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/me?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").me().get().withWithTotal(true).createHttpRequest(),
                         "get", "/test_projectKey/me?withTotal=true", },
@@ -78,8 +78,8 @@ public class ByProjectKeyMeTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().post(null).createHttpRequest(), "post",
                         "/test_projectKey/me", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().delete().withVersion(3L).createHttpRequest(),
-                        "delete", "/test_projectKey/me?version=3L", },
+                        apiRoot.withProjectKey("test_projectKey").me().delete().withVersion(2).createHttpRequest(),
+                        "delete", "/test_projectKey/me?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").me().delete().createHttpRequest(), "delete",
                         "/test_projectKey/me", } };
     }

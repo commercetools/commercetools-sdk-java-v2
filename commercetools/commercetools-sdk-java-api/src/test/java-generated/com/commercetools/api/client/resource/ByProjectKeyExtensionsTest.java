@@ -60,11 +60,11 @@ public class ByProjectKeyExtensionsTest {
                         .withSort("sort")
                         .createHttpRequest(), "get", "/test_projectKey/extensions?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").extensions().get().withLimit(4).createHttpRequest(),
-                        "get", "/test_projectKey/extensions?limit=4", },
+                        apiRoot.withProjectKey("test_projectKey").extensions().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/extensions?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").extensions().get().withOffset(4).createHttpRequest(),
-                        "get", "/test_projectKey/extensions?offset=4", },
+                        apiRoot.withProjectKey("test_projectKey").extensions().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/extensions?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .extensions()
                         .get()

@@ -92,19 +92,19 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberDelete
         this.orderNumber = orderNumber;
     }
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withVersion(final Long version) {
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addVersion(final Long version) {
+    public ByProjectKeyOrdersOrderNumberByOrderNumberDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

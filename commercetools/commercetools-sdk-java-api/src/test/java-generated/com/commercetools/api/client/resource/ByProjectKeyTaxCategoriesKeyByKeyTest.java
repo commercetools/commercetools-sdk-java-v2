@@ -83,9 +83,9 @@ public class ByProjectKeyTaxCategoriesKeyByKeyTest {
                                 .taxCategories()
                                 .withKey("test_key")
                                 .delete()
-                                .withVersion(6L)
+                                .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/tax-categories/key=test_key?version=6L", },
+                        "delete", "/test_projectKey/tax-categories/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .taxCategories()

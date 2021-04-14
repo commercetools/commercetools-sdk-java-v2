@@ -121,27 +121,27 @@ public class ByProjectKeyCartsGet
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyCartsGet withLimit(final Integer limit) {
+    public ByProjectKeyCartsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyCartsGet addLimit(final Integer limit) {
+    public ByProjectKeyCartsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyCartsGet withOffset(final Integer offset) {
+    public ByProjectKeyCartsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyCartsGet addOffset(final Integer offset) {
+    public ByProjectKeyCartsGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyCartsGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyCartsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyCartsGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyCartsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

@@ -78,14 +78,12 @@ public class ByProjectKeyCustomerGroupsByIDTest {
                         .withId("test_ID")
                         .post(null)
                         .createHttpRequest(), "post", "/test_projectKey/customer-groups/test_ID", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .customerGroups()
-                                .withId("test_ID")
-                                .delete()
-                                .withVersion(5L)
-                                .createHttpRequest(),
-                        "delete", "/test_projectKey/customer-groups/test_ID?version=5L", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .customerGroups()
+                        .withId("test_ID")
+                        .delete()
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/customer-groups/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customerGroups()

@@ -86,11 +86,11 @@ public class ByProjectKeyCartDiscountsKeyByKeyDelete extends
         this.key = key;
     }
 
-    public ByProjectKeyCartDiscountsKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyCartDiscountsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyCartDiscountsKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyCartDiscountsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

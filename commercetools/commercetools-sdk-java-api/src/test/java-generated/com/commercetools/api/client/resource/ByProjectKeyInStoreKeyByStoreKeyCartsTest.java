@@ -81,9 +81,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .carts()
                                 .get()
-                                .withLimit(6)
+                                .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/carts?limit=6", },
+                        "get", "/test_projectKey/in-store/key=test_storeKey/carts?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")

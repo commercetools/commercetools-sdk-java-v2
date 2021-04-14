@@ -101,9 +101,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyTest {
                                 .carts()
                                 .withKey("test_key")
                                 .delete()
-                                .withVersion(2L)
+                                .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/in-store/key=test_storeKey/carts/key=test_key?version=2L", },
+                        "delete", "/test_projectKey/in-store/key=test_storeKey/carts/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")

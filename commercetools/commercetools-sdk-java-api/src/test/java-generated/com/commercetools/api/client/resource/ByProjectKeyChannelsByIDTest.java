@@ -78,8 +78,8 @@ public class ByProjectKeyChannelsByIDTest {
                         .channels()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(3L)
-                        .createHttpRequest(), "delete", "/test_projectKey/channels/test_ID?version=3L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/channels/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .withId("test_ID")

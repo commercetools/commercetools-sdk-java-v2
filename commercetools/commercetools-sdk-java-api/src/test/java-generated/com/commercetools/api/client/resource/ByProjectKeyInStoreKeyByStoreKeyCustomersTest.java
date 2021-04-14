@@ -73,9 +73,9 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .customers()
                                 .get()
-                                .withLimit(6)
+                                .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/customers?limit=6", },
+                        "get", "/test_projectKey/in-store/key=test_storeKey/customers?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")

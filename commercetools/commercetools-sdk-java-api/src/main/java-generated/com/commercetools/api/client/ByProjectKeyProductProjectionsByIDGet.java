@@ -111,11 +111,11 @@ public class ByProjectKeyProductProjectionsByIDGet
         this.ID = ID;
     }
 
-    public ByProjectKeyProductProjectionsByIDGet withStaged(final Boolean staged) {
+    public ByProjectKeyProductProjectionsByIDGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
-    public ByProjectKeyProductProjectionsByIDGet addStaged(final Boolean staged) {
+    public ByProjectKeyProductProjectionsByIDGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 

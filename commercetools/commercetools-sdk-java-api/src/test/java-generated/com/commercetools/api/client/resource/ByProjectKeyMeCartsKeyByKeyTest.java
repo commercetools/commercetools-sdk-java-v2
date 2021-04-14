@@ -83,8 +83,8 @@ public class ByProjectKeyMeCartsKeyByKeyTest {
                         .carts()
                         .withKey("test_key")
                         .delete()
-                        .withVersion(7L)
-                        .createHttpRequest(), "delete", "/test_projectKey/me/carts/key=test_key?version=7L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/me/carts/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .me()

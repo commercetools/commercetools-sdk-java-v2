@@ -60,8 +60,8 @@ public class ByProjectKeyCategoriesTest {
                         .withSort("sort")
                         .createHttpRequest(), "get", "/test_projectKey/categories?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").categories().get().withLimit(2).createHttpRequest(),
-                        "get", "/test_projectKey/categories?limit=2", },
+                        apiRoot.withProjectKey("test_projectKey").categories().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/categories?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").categories().get().withOffset(3).createHttpRequest(),
                         "get", "/test_projectKey/categories?offset=3", },

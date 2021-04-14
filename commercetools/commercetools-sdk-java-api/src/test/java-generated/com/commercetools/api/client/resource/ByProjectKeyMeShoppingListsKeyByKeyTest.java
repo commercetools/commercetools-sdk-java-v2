@@ -88,9 +88,9 @@ public class ByProjectKeyMeShoppingListsKeyByKeyTest {
                                 .shoppingLists()
                                 .withKey("test_key")
                                 .delete()
-                                .withVersion(8L)
+                                .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/me/shopping-lists/key=test_key?version=8L", },
+                        "delete", "/test_projectKey/me/shopping-lists/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .me()

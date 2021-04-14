@@ -86,11 +86,11 @@ public class ByProjectKeyInventoryByIDDelete
         this.ID = ID;
     }
 
-    public ByProjectKeyInventoryByIDDelete withVersion(final Long version) {
+    public ByProjectKeyInventoryByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyInventoryByIDDelete addVersion(final Long version) {
+    public ByProjectKeyInventoryByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

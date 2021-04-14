@@ -60,11 +60,11 @@ public class ByProjectKeyInventoryTest {
                         .withSort("sort")
                         .createHttpRequest(), "get", "/test_projectKey/inventory?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").inventory().get().withLimit(1).createHttpRequest(),
-                        "get", "/test_projectKey/inventory?limit=1", },
+                        apiRoot.withProjectKey("test_projectKey").inventory().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/inventory?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").inventory().get().withOffset(7).createHttpRequest(),
-                        "get", "/test_projectKey/inventory?offset=7", },
+                        apiRoot.withProjectKey("test_projectKey").inventory().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/inventory?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inventory()
                         .get()

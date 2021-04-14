@@ -86,11 +86,11 @@ public class ByProjectKeyMeCartsByIDDelete
         this.ID = ID;
     }
 
-    public ByProjectKeyMeCartsByIDDelete withVersion(final Long version) {
+    public ByProjectKeyMeCartsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyMeCartsByIDDelete addVersion(final Long version) {
+    public ByProjectKeyMeCartsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

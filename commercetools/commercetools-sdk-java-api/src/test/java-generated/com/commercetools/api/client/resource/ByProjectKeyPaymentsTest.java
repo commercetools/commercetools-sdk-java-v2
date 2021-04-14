@@ -58,11 +58,11 @@ public class ByProjectKeyPaymentsTest {
                         apiRoot.withProjectKey("test_projectKey").payments().get().withSort("sort").createHttpRequest(),
                         "get", "/test_projectKey/payments?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").payments().get().withLimit(5).createHttpRequest(),
-                        "get", "/test_projectKey/payments?limit=5", },
+                        apiRoot.withProjectKey("test_projectKey").payments().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/payments?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").payments().get().withOffset(7).createHttpRequest(),
-                        "get", "/test_projectKey/payments?offset=7", },
+                        apiRoot.withProjectKey("test_projectKey").payments().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/payments?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .payments()
                         .get()

@@ -68,14 +68,14 @@ public class ByProjectKeyOrdersEditsTest {
                         .orders()
                         .edits()
                         .get()
-                        .withLimit(8)
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?limit=8", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()
                         .get()
-                        .withOffset(1)
-                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?offset=1", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/orders/edits?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .edits()

@@ -13,9 +13,9 @@ public interface PagingTrait<T> {
 
     List<String> getWithTotal();
 
-    T withLimit(final Integer limit);
+    T withLimit(final int limit);
 
-    T withOffset(final Integer offset);
+    T withOffset(final int offset);
 
-    T withWithTotal(final Boolean withTotal);
+    T withWithTotal(final boolean withTotal);
 }

@@ -68,14 +68,14 @@ public class ByProjectKeyMePaymentsTest {
                         .me()
                         .payments()
                         .get()
-                        .withLimit(8)
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?limit=8", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()
                         .get()
-                        .withOffset(6)
-                        .createHttpRequest(), "get", "/test_projectKey/me/payments?offset=6", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/me/payments?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .payments()

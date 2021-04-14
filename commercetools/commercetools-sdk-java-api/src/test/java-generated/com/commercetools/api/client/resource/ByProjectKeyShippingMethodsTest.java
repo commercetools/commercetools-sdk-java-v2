@@ -65,13 +65,13 @@ public class ByProjectKeyShippingMethodsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .get()
-                        .withLimit(4)
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?limit=4", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .get()
-                        .withOffset(5)
-                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?offset=5", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/shipping-methods?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shippingMethods()
                         .get()

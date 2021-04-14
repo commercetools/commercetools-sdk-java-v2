@@ -83,9 +83,9 @@ public class ByProjectKeyShippingMethodsKeyByKeyTest {
                                 .shippingMethods()
                                 .withKey("test_key")
                                 .delete()
-                                .withVersion(8L)
+                                .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/shipping-methods/key=test_key?version=8L", },
+                        "delete", "/test_projectKey/shipping-methods/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .shippingMethods()

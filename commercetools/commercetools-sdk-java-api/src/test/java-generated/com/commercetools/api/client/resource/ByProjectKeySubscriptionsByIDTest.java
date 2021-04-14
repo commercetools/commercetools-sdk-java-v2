@@ -78,8 +78,8 @@ public class ByProjectKeySubscriptionsByIDTest {
                         .subscriptions()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(4L)
-                        .createHttpRequest(), "delete", "/test_projectKey/subscriptions/test_ID?version=4L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/subscriptions/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .subscriptions()

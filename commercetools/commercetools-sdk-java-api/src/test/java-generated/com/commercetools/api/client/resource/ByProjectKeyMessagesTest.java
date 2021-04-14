@@ -58,8 +58,8 @@ public class ByProjectKeyMessagesTest {
                         apiRoot.withProjectKey("test_projectKey").messages().get().withSort("sort").createHttpRequest(),
                         "get", "/test_projectKey/messages?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").messages().get().withLimit(1).createHttpRequest(),
-                        "get", "/test_projectKey/messages?limit=1", },
+                        apiRoot.withProjectKey("test_projectKey").messages().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/messages?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").messages().get().withOffset(3).createHttpRequest(),
                         "get", "/test_projectKey/messages?offset=3", },

@@ -87,11 +87,11 @@ public class ByProjectKeyCustomerGroupsKeyByKeyDelete extends
         this.key = key;
     }
 
-    public ByProjectKeyCustomerGroupsKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyCustomerGroupsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyCustomerGroupsKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyCustomerGroupsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

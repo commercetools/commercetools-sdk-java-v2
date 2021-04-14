@@ -65,13 +65,13 @@ public class ByProjectKeyTaxCategoriesTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .get()
-                        .withLimit(2)
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?limit=2", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .get()
-                        .withOffset(4)
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?offset=4", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/tax-categories?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .taxCategories()
                         .get()

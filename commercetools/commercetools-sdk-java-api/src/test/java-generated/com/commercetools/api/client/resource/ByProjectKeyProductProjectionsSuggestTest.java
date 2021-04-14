@@ -89,8 +89,8 @@ public class ByProjectKeyProductProjectionsSuggestTest {
                         .productProjections()
                         .suggest()
                         .get()
-                        .withLimit(4)
-                        .createHttpRequest(), "get", "/test_projectKey/product-projections/suggest?limit=4", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/product-projections/suggest?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .suggest()

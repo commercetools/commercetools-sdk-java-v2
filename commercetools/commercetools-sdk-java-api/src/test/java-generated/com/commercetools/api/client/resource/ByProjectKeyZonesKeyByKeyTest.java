@@ -76,8 +76,8 @@ public class ByProjectKeyZonesKeyByKeyTest {
                         .zones()
                         .withKey("test_key")
                         .delete()
-                        .withVersion(9L)
-                        .createHttpRequest(), "delete", "/test_projectKey/zones/key=test_key?version=9L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/zones/key=test_key?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .zones()
                         .withKey("test_key")

@@ -93,9 +93,9 @@ public class ByProjectKeyOrdersOrderNumberByOrderNumberTest {
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
                                 .delete()
-                                .withVersion(2L)
+                                .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/orders/order-number=test_orderNumber?version=2L", },
+                        "delete", "/test_projectKey/orders/order-number=test_orderNumber?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .orders()

@@ -78,14 +78,12 @@ public class ByProjectKeyCategoriesKeyByKeyTest {
                         .withKey("test_key")
                         .post(null)
                         .createHttpRequest(), "post", "/test_projectKey/categories/key=test_key", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .categories()
-                                .withKey("test_key")
-                                .delete()
-                                .withVersion(2L)
-                                .createHttpRequest(),
-                        "delete", "/test_projectKey/categories/key=test_key?version=2L", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .categories()
+                        .withKey("test_key")
+                        .delete()
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/categories/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .categories()

@@ -57,11 +57,11 @@ public class ByProjectKeyZonesTest {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").zones().get().withSort("sort").createHttpRequest(),
                         "get", "/test_projectKey/zones?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withLimit(4).createHttpRequest(),
-                        "get", "/test_projectKey/zones?limit=4", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").zones().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/zones?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").zones().get().withOffset(5).createHttpRequest(),
-                        "get", "/test_projectKey/zones?offset=5", },
+                        apiRoot.withProjectKey("test_projectKey").zones().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/zones?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").zones().get().withWithTotal(true).createHttpRequest(),
                         "get", "/test_projectKey/zones?withTotal=true", },

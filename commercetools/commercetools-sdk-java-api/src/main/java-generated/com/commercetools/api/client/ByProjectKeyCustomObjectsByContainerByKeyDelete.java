@@ -103,19 +103,19 @@ public class ByProjectKeyCustomObjectsByContainerByKeyDelete extends
         this.key = key;
     }
 
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete withDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete withDataErasure(final boolean dataErasure) {
         return copy().withQueryParam("dataErasure", dataErasure);
     }
 
-    public ByProjectKeyCustomObjectsByContainerByKeyDelete addDataErasure(final Boolean dataErasure) {
+    public ByProjectKeyCustomObjectsByContainerByKeyDelete addDataErasure(final boolean dataErasure) {
         return copy().addQueryParam("dataErasure", dataErasure);
     }
 

@@ -103,10 +103,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberTest 
                                 .orders()
                                 .withOrderNumber("test_orderNumber")
                                 .delete()
-                                .withVersion(1L)
+                                .withVersion(2)
                                 .createHttpRequest(),
                         "delete",
-                        "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?version=1L", },
+                        "/test_projectKey/in-store/key=test_storeKey/orders/order-number=test_orderNumber?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")

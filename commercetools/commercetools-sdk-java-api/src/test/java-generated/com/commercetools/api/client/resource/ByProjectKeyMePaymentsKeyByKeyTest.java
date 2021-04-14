@@ -88,9 +88,9 @@ public class ByProjectKeyMePaymentsKeyByKeyTest {
                                 .payments()
                                 .withKey("test_key")
                                 .delete()
-                                .withVersion(9L)
+                                .withVersion(2)
                                 .createHttpRequest(),
-                        "delete", "/test_projectKey/me/payments/key=test_key?version=9L", },
+                        "delete", "/test_projectKey/me/payments/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .me()

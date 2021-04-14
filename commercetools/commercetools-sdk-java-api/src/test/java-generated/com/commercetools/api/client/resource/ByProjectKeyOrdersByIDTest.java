@@ -82,8 +82,8 @@ public class ByProjectKeyOrdersByIDTest {
                         .orders()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(8L)
-                        .createHttpRequest(), "delete", "/test_projectKey/orders/test_ID?version=8L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/orders/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .orders()
                         .withId("test_ID")

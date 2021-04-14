@@ -82,8 +82,8 @@ public class ByProjectKeyReviewsByIDTest {
                         .reviews()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(4L)
-                        .createHttpRequest(), "delete", "/test_projectKey/reviews/test_ID?version=4L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/reviews/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .reviews()
                         .withId("test_ID")

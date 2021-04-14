@@ -73,17 +73,17 @@ public class ByProjectKeyInStoreKeyByStoreKeyShoppingListsTest {
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
                                 .get()
-                                .withLimit(9)
+                                .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/shopping-lists?limit=9", },
+                        "get", "/test_projectKey/in-store/key=test_storeKey/shopping-lists?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .shoppingLists()
                                 .get()
-                                .withOffset(5)
+                                .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/shopping-lists?offset=5", },
+                        "get", "/test_projectKey/in-store/key=test_storeKey/shopping-lists?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")

@@ -76,18 +76,18 @@ public class ByProjectKeyInStoreKeyByStoreKeyMeOrdersTest {
                                 .me()
                                 .orders()
                                 .get()
-                                .withLimit(9)
+                                .withLimit(7)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?limit=9", },
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?limit=7", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")
                                 .me()
                                 .orders()
                                 .get()
-                                .withOffset(1)
+                                .withOffset(3)
                                 .createHttpRequest(),
-                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?offset=1", },
+                        "get", "/test_projectKey/in-store/key=test_storeKey/me/orders?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .inStoreKeyWithStoreKeyValue("test_storeKey")

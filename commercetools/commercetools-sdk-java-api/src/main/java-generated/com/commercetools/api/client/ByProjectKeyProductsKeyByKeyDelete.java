@@ -159,11 +159,11 @@ public class ByProjectKeyProductsKeyByKeyDelete
         return copy().addQueryParam("storeProjection", storeProjection);
     }
 
-    public ByProjectKeyProductsKeyByKeyDelete withVersion(final Long version) {
+    public ByProjectKeyProductsKeyByKeyDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyProductsKeyByKeyDelete addVersion(final Long version) {
+    public ByProjectKeyProductsKeyByKeyDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

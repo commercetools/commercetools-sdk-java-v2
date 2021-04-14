@@ -88,8 +88,8 @@ public class ByProjectKeyDiscountCodesByIDTest {
                         .discountCodes()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(7L)
-                        .createHttpRequest(), "delete", "/test_projectKey/discount-codes/test_ID?version=7L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/discount-codes/test_ID?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .discountCodes()

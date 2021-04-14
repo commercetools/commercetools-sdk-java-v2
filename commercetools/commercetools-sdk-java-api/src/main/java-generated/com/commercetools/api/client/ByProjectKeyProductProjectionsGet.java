@@ -126,11 +126,11 @@ public class ByProjectKeyProductProjectionsGet extends
         this.projectKey = projectKey;
     }
 
-    public ByProjectKeyProductProjectionsGet withStaged(final Boolean staged) {
+    public ByProjectKeyProductProjectionsGet withStaged(final boolean staged) {
         return copy().withQueryParam("staged", staged);
     }
 
-    public ByProjectKeyProductProjectionsGet addStaged(final Boolean staged) {
+    public ByProjectKeyProductProjectionsGet addStaged(final boolean staged) {
         return copy().addQueryParam("staged", staged);
     }
 
@@ -198,27 +198,27 @@ public class ByProjectKeyProductProjectionsGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyProductProjectionsGet withLimit(final Integer limit) {
+    public ByProjectKeyProductProjectionsGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyProductProjectionsGet addLimit(final Integer limit) {
+    public ByProjectKeyProductProjectionsGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyProductProjectionsGet withOffset(final Integer offset) {
+    public ByProjectKeyProductProjectionsGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyProductProjectionsGet addOffset(final Integer offset) {
+    public ByProjectKeyProductProjectionsGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyProductProjectionsGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyProductProjectionsGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyProductProjectionsGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyProductProjectionsGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

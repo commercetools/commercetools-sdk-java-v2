@@ -65,13 +65,13 @@ public class ByProjectKeyShoppingListsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .get()
-                        .withLimit(4)
-                        .createHttpRequest(), "get", "/test_projectKey/shopping-lists?limit=4", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/shopping-lists?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .get()
-                        .withOffset(1)
-                        .createHttpRequest(), "get", "/test_projectKey/shopping-lists?offset=1", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/shopping-lists?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .shoppingLists()
                         .get()

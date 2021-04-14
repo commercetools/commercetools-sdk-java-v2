@@ -65,13 +65,13 @@ public class ByProjectKeyCustomerGroupsTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()
-                        .withLimit(3)
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?limit=3", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()
-                        .withOffset(7)
-                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?offset=7", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/customer-groups?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customerGroups()
                         .get()

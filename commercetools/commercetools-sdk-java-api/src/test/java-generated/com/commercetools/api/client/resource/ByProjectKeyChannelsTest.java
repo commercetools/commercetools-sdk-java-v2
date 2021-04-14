@@ -58,11 +58,11 @@ public class ByProjectKeyChannelsTest {
                         apiRoot.withProjectKey("test_projectKey").channels().get().withSort("sort").createHttpRequest(),
                         "get", "/test_projectKey/channels?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").channels().get().withLimit(3).createHttpRequest(),
-                        "get", "/test_projectKey/channels?limit=3", },
+                        apiRoot.withProjectKey("test_projectKey").channels().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/channels?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").channels().get().withOffset(5).createHttpRequest(),
-                        "get", "/test_projectKey/channels?offset=5", },
+                        apiRoot.withProjectKey("test_projectKey").channels().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/channels?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .channels()
                         .get()

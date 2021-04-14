@@ -78,8 +78,8 @@ public class ByProjectKeyStatesKeyByKeyTest {
                         .states()
                         .withKey("test_key")
                         .delete()
-                        .withVersion(2L)
-                        .createHttpRequest(), "delete", "/test_projectKey/states/key=test_key?version=2L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/states/key=test_key?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withKey("test_key")

@@ -88,8 +88,8 @@ public class ByProjectKeyCustomersKeyByKeyTest {
                         .customers()
                         .withKey("test_key")
                         .delete()
-                        .withVersion(2L)
-                        .createHttpRequest(), "delete", "/test_projectKey/customers/key=test_key?version=2L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/customers/key=test_key?version=2", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .customers()

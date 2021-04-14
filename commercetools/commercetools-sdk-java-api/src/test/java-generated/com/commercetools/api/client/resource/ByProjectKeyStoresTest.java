@@ -61,8 +61,8 @@ public class ByProjectKeyStoresTest {
                         apiRoot.withProjectKey("test_projectKey").stores().get().withLimit(7).createHttpRequest(),
                         "get", "/test_projectKey/stores?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").stores().get().withOffset(4).createHttpRequest(),
-                        "get", "/test_projectKey/stores?offset=4", },
+                        apiRoot.withProjectKey("test_projectKey").stores().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/stores?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .stores()
                         .get()

@@ -83,8 +83,8 @@ public class ByProjectKeyMeCartsByIDTest {
                         .carts()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(6L)
-                        .createHttpRequest(), "delete", "/test_projectKey/me/carts/test_ID?version=6L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/me/carts/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .me()
                         .carts()

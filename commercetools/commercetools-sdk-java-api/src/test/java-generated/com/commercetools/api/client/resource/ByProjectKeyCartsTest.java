@@ -65,11 +65,11 @@ public class ByProjectKeyCartsTest {
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").carts().get().withSort("sort").createHttpRequest(),
                         "get", "/test_projectKey/carts?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withLimit(8).createHttpRequest(),
-                        "get", "/test_projectKey/carts?limit=8", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").carts().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/carts?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").carts().get().withOffset(9).createHttpRequest(),
-                        "get", "/test_projectKey/carts?offset=9", },
+                        apiRoot.withProjectKey("test_projectKey").carts().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/carts?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").carts().get().withWithTotal(true).createHttpRequest(),
                         "get", "/test_projectKey/carts?withTotal=true", },

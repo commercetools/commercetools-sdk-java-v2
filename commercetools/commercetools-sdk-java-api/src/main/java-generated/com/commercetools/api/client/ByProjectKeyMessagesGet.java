@@ -110,27 +110,27 @@ public class ByProjectKeyMessagesGet extends
         return copy().addQueryParam("sort", sort);
     }
 
-    public ByProjectKeyMessagesGet withLimit(final Integer limit) {
+    public ByProjectKeyMessagesGet withLimit(final int limit) {
         return copy().withQueryParam("limit", limit);
     }
 
-    public ByProjectKeyMessagesGet addLimit(final Integer limit) {
+    public ByProjectKeyMessagesGet addLimit(final int limit) {
         return copy().addQueryParam("limit", limit);
     }
 
-    public ByProjectKeyMessagesGet withOffset(final Integer offset) {
+    public ByProjectKeyMessagesGet withOffset(final int offset) {
         return copy().withQueryParam("offset", offset);
     }
 
-    public ByProjectKeyMessagesGet addOffset(final Integer offset) {
+    public ByProjectKeyMessagesGet addOffset(final int offset) {
         return copy().addQueryParam("offset", offset);
     }
 
-    public ByProjectKeyMessagesGet withWithTotal(final Boolean withTotal) {
+    public ByProjectKeyMessagesGet withWithTotal(final boolean withTotal) {
         return copy().withQueryParam("withTotal", withTotal);
     }
 
-    public ByProjectKeyMessagesGet addWithTotal(final Boolean withTotal) {
+    public ByProjectKeyMessagesGet addWithTotal(final boolean withTotal) {
         return copy().addQueryParam("withTotal", withTotal);
     }
 

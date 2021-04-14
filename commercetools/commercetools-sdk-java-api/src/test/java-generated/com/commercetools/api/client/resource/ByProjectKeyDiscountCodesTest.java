@@ -65,13 +65,13 @@ public class ByProjectKeyDiscountCodesTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .get()
-                        .withLimit(4)
-                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?limit=4", },
+                        .withLimit(7)
+                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?limit=7", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .get()
-                        .withOffset(2)
-                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?offset=2", },
+                        .withOffset(3)
+                        .createHttpRequest(), "get", "/test_projectKey/discount-codes?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .discountCodes()
                         .get()

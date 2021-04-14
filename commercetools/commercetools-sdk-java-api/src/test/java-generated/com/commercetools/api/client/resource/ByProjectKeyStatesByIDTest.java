@@ -76,8 +76,8 @@ public class ByProjectKeyStatesByIDTest {
                         .states()
                         .withId("test_ID")
                         .delete()
-                        .withVersion(9L)
-                        .createHttpRequest(), "delete", "/test_projectKey/states/test_ID?version=9L", },
+                        .withVersion(2)
+                        .createHttpRequest(), "delete", "/test_projectKey/states/test_ID?version=2", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .states()
                         .withId("test_ID")

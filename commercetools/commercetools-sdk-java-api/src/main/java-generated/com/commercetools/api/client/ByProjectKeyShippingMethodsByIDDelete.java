@@ -87,11 +87,11 @@ public class ByProjectKeyShippingMethodsByIDDelete extends
         this.ID = ID;
     }
 
-    public ByProjectKeyShippingMethodsByIDDelete withVersion(final Long version) {
+    public ByProjectKeyShippingMethodsByIDDelete withVersion(final long version) {
         return copy().withQueryParam("version", version);
     }
 
-    public ByProjectKeyShippingMethodsByIDDelete addVersion(final Long version) {
+    public ByProjectKeyShippingMethodsByIDDelete addVersion(final long version) {
         return copy().addQueryParam("version", version);
     }
 

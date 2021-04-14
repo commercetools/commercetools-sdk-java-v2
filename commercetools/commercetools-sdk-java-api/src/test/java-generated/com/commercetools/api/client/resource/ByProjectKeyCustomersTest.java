@@ -60,11 +60,11 @@ public class ByProjectKeyCustomersTest {
                         .withSort("sort")
                         .createHttpRequest(), "get", "/test_projectKey/customers?sort=sort", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customers().get().withLimit(1).createHttpRequest(),
-                        "get", "/test_projectKey/customers?limit=1", },
+                        apiRoot.withProjectKey("test_projectKey").customers().get().withLimit(7).createHttpRequest(),
+                        "get", "/test_projectKey/customers?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").customers().get().withOffset(7).createHttpRequest(),
-                        "get", "/test_projectKey/customers?offset=7", },
+                        apiRoot.withProjectKey("test_projectKey").customers().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/customers?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .customers()
                         .get()

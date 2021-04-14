@@ -100,8 +100,8 @@ public class ByProjectKeyProductsTest {
                         apiRoot.withProjectKey("test_projectKey").products().get().withLimit(7).createHttpRequest(),
                         "get", "/test_projectKey/products?limit=7", },
                 new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").products().get().withOffset(4).createHttpRequest(),
-                        "get", "/test_projectKey/products?offset=4", },
+                        apiRoot.withProjectKey("test_projectKey").products().get().withOffset(3).createHttpRequest(),
+                        "get", "/test_projectKey/products?offset=3", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .get()

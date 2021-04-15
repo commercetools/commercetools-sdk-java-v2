@@ -1,35 +1,43 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.order.Delivery;
+import com.commercetools.api.models.message.DeliveryRemovedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryRemovedMessageImpl.class)
 public interface DeliveryRemovedMessage extends Message {
 
     String DELIVERY_REMOVED = "DeliveryRemoved";
 
+    
     @NotNull
     @Valid
     @JsonProperty("delivery")
     public Delivery getDelivery();
 
+    
     public void setDelivery(final Delivery delivery);
+    
 
-    public static DeliveryRemovedMessage of() {
+    public static DeliveryRemovedMessage of(){
         return new DeliveryRemovedMessageImpl();
     }
+    
 
     public static DeliveryRemovedMessage of(final DeliveryRemovedMessage template) {
         DeliveryRemovedMessageImpl instance = new DeliveryRemovedMessageImpl();
@@ -47,13 +55,14 @@ public interface DeliveryRemovedMessage extends Message {
         return instance;
     }
 
-    public static DeliveryRemovedMessageBuilder builder() {
+    public static DeliveryRemovedMessageBuilder builder(){
         return DeliveryRemovedMessageBuilder.of();
     }
-
-    public static DeliveryRemovedMessageBuilder builder(final DeliveryRemovedMessage template) {
+    
+    public static DeliveryRemovedMessageBuilder builder(final DeliveryRemovedMessage template){
         return DeliveryRemovedMessageBuilder.of(template);
     }
+    
 
     default <T> T withDeliveryRemovedMessage(Function<DeliveryRemovedMessage, T> helper) {
         return helper.apply(this);

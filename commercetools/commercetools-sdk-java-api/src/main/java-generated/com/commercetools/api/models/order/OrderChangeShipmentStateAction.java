@@ -1,29 +1,42 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ShipmentState;
+import com.commercetools.api.models.order.OrderChangeShipmentStateActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = OrderChangeShipmentStateActionImpl.class)
 public interface OrderChangeShipmentStateAction extends OrderUpdateAction {
 
     String CHANGE_SHIPMENT_STATE = "changeShipmentState";
 
+    
+    
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
 
+    
     public void setShipmentState(final ShipmentState shipmentState);
+    
 
-    public static OrderChangeShipmentStateAction of() {
+    public static OrderChangeShipmentStateAction of(){
         return new OrderChangeShipmentStateActionImpl();
     }
+    
 
     public static OrderChangeShipmentStateAction of(final OrderChangeShipmentStateAction template) {
         OrderChangeShipmentStateActionImpl instance = new OrderChangeShipmentStateActionImpl();
@@ -31,13 +44,14 @@ public interface OrderChangeShipmentStateAction extends OrderUpdateAction {
         return instance;
     }
 
-    public static OrderChangeShipmentStateActionBuilder builder() {
+    public static OrderChangeShipmentStateActionBuilder builder(){
         return OrderChangeShipmentStateActionBuilder.of();
     }
-
-    public static OrderChangeShipmentStateActionBuilder builder(final OrderChangeShipmentStateAction template) {
+    
+    public static OrderChangeShipmentStateActionBuilder builder(final OrderChangeShipmentStateAction template){
         return OrderChangeShipmentStateActionBuilder.of(template);
     }
+    
 
     default <T> T withOrderChangeShipmentStateAction(Function<OrderChangeShipmentStateAction, T> helper) {
         return helper.apply(this);

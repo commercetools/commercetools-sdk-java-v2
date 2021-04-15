@@ -1,54 +1,69 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditUpdate;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderEditUpdateBuilder {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions;
-
+    
+    
     @Nullable
     private Boolean dryRun;
 
-    public OrderEditUpdateBuilder version(final Long version) {
+    
+    public OrderEditUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
-    public OrderEditUpdateBuilder actions(
-            final com.commercetools.api.models.order_edit.OrderEditUpdateAction... actions) {
+    
+    
+    public OrderEditUpdateBuilder actions( final com.commercetools.api.models.order_edit.OrderEditUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
-    public OrderEditUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions) {
+    
+    
+    public OrderEditUpdateBuilder actions( final java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
-
+    
+    
     public OrderEditUpdateBuilder dryRun(@Nullable final Boolean dryRun) {
         this.dryRun = dryRun;
         return this;
     }
 
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
-    public java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> getActions() {
+    
+    
+    
+    public java.util.List<com.commercetools.api.models.order_edit.OrderEditUpdateAction> getActions(){
         return this.actions;
     }
-
+    
+    
     @Nullable
-    public Boolean getDryRun() {
+    public Boolean getDryRun(){
         return this.dryRun;
     }
 

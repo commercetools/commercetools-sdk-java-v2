@@ -1,206 +1,273 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.shipping_method.ZoneRate;
+import com.commercetools.api.models.tax_category.TaxCategoryReference;
+import com.commercetools.api.models.type.CustomFields;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.shipping_method.ShippingMethod;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ShippingMethodBuilder {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private String description;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString localizedDescription;
-
+    
+    
+    
     private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates;
-
+    
+    
+    
     private Boolean isDefault;
-
+    
+    
     @Nullable
     private String predicate;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
-    public ShippingMethodBuilder id(final String id) {
+    
+    public ShippingMethodBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
-    public ShippingMethodBuilder version(final Long version) {
+    
+    
+    public ShippingMethodBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
-    public ShippingMethodBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public ShippingMethodBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
-    public ShippingMethodBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public ShippingMethodBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
-    public ShippingMethodBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public ShippingMethodBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
     public ShippingMethodBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
+    
+    
     public ShippingMethodBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
-    public ShippingMethodBuilder name(final String name) {
+    
+    
+    public ShippingMethodBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
     public ShippingMethodBuilder description(@Nullable final String description) {
         this.description = description;
         return this;
     }
-
-    public ShippingMethodBuilder localizedDescription(
-            @Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
+    
+    
+    public ShippingMethodBuilder localizedDescription(@Nullable final com.commercetools.api.models.common.LocalizedString localizedDescription) {
         this.localizedDescription = localizedDescription;
         return this;
     }
-
-    public ShippingMethodBuilder taxCategory(
-            final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
+    
+    
+    public ShippingMethodBuilder taxCategory( final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory) {
         this.taxCategory = taxCategory;
         return this;
     }
-
-    public ShippingMethodBuilder zoneRates(final com.commercetools.api.models.shipping_method.ZoneRate... zoneRates) {
+    
+    
+    public ShippingMethodBuilder zoneRates( final com.commercetools.api.models.shipping_method.ZoneRate ...zoneRates) {
         this.zoneRates = new ArrayList<>(Arrays.asList(zoneRates));
         return this;
     }
-
-    public ShippingMethodBuilder zoneRates(
-            final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates) {
+    
+    
+    public ShippingMethodBuilder zoneRates( final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates) {
         this.zoneRates = zoneRates;
         return this;
     }
-
-    public ShippingMethodBuilder isDefault(final Boolean isDefault) {
+    
+    
+    public ShippingMethodBuilder isDefault( final Boolean isDefault) {
         this.isDefault = isDefault;
         return this;
     }
-
+    
+    
     public ShippingMethodBuilder predicate(@Nullable final String predicate) {
         this.predicate = predicate;
         return this;
     }
-
+    
+    
     public ShippingMethodBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
         return this;
     }
 
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
-    public Long getVersion() {
+    
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
+    
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
-    public String getName() {
+    
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
+    
     @Nullable
-    public String getDescription() {
+    public String getDescription(){
         return this.description;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getLocalizedDescription() {
+    public com.commercetools.api.models.common.LocalizedString getLocalizedDescription(){
         return this.localizedDescription;
     }
-
-    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory() {
+    
+    
+    
+    public com.commercetools.api.models.tax_category.TaxCategoryReference getTaxCategory(){
         return this.taxCategory;
     }
-
-    public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates() {
+    
+    
+    
+    public java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> getZoneRates(){
         return this.zoneRates;
     }
-
-    public Boolean getIsDefault() {
+    
+    
+    
+    public Boolean getIsDefault(){
         return this.isDefault;
     }
-
+    
+    
     @Nullable
-    public String getPredicate() {
+    public String getPredicate(){
         return this.predicate;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFields getCustom() {
+    public com.commercetools.api.models.type.CustomFields getCustom(){
         return this.custom;
     }
 
     public ShippingMethod build() {
-        return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+        return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
     }
 
     public static ShippingMethodBuilder of() {

@@ -1,47 +1,63 @@
-
 package com.commercetools.api.models.api_client;
 
-import java.util.*;
 
+import com.commercetools.api.models.api_client.ApiClientDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ApiClientDraftBuilder {
 
+    
+    
     private String name;
-
+    
+    
+    
     private String scope;
-
+    
+    
     @Nullable
     private Long deleteDaysAfterCreation;
 
-    public ApiClientDraftBuilder name(final String name) {
+    
+    public ApiClientDraftBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
-    public ApiClientDraftBuilder scope(final String scope) {
+    
+    
+    public ApiClientDraftBuilder scope( final String scope) {
         this.scope = scope;
         return this;
     }
-
+    
+    
     public ApiClientDraftBuilder deleteDaysAfterCreation(@Nullable final Long deleteDaysAfterCreation) {
         this.deleteDaysAfterCreation = deleteDaysAfterCreation;
         return this;
     }
 
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
-    public String getScope() {
+    
+    
+    
+    public String getScope(){
         return this.scope;
     }
-
+    
+    
     @Nullable
-    public Long getDeleteDaysAfterCreation() {
+    public Long getDeleteDaysAfterCreation(){
         return this.deleteDaysAfterCreation;
     }
 

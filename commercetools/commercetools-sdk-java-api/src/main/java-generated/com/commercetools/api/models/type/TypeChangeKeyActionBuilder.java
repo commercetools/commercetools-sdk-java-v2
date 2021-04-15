@@ -1,21 +1,31 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeKeyAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class TypeChangeKeyActionBuilder {
 
+    
+    
     private String key;
 
-    public TypeChangeKeyActionBuilder key(final String key) {
+    
+    public TypeChangeKeyActionBuilder key( final String key) {
         this.key = key;
         return this;
     }
 
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
 

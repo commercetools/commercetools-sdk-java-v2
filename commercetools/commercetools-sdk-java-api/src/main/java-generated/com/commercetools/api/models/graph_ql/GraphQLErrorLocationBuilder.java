@@ -1,32 +1,47 @@
-
 package com.commercetools.api.models.graph_ql;
 
-import java.util.*;
 
+import com.commercetools.api.models.graph_ql.GraphQLErrorLocation;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class GraphQLErrorLocationBuilder {
 
+    
+    
     private Integer line;
-
+    
+    
+    
     private Integer column;
 
-    public GraphQLErrorLocationBuilder line(final Integer line) {
+    
+    public GraphQLErrorLocationBuilder line( final Integer line) {
         this.line = line;
         return this;
     }
-
-    public GraphQLErrorLocationBuilder column(final Integer column) {
+    
+    
+    public GraphQLErrorLocationBuilder column( final Integer column) {
         this.column = column;
         return this;
     }
 
-    public Integer getLine() {
+    
+    
+    public Integer getLine(){
         return this.line;
     }
-
-    public Integer getColumn() {
+    
+    
+    
+    public Integer getColumn(){
         return this.column;
     }
 

@@ -1,38 +1,53 @@
-
 package com.commercetools.api.models.project;
 
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProjectUpdateBuilder {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions;
 
-    public ProjectUpdateBuilder version(final Long version) {
+    
+    public ProjectUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
-    public ProjectUpdateBuilder actions(final com.commercetools.api.models.project.ProjectUpdateAction... actions) {
+    
+    
+    public ProjectUpdateBuilder actions( final com.commercetools.api.models.project.ProjectUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
-    public ProjectUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions) {
+    
+    
+    public ProjectUpdateBuilder actions( final java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
-    public java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> getActions() {
+    
+    
+    
+    public java.util.List<com.commercetools.api.models.project.ProjectUpdateAction> getActions(){
         return this.actions;
     }
 

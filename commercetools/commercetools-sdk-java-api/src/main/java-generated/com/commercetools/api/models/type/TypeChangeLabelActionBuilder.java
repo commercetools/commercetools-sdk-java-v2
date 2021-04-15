@@ -1,32 +1,48 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.TypeUpdateAction;
+import com.commercetools.api.models.type.TypeChangeLabelAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class TypeChangeLabelActionBuilder {
 
+    
+    
     private String fieldName;
-
+    
+    
+    
     private com.commercetools.api.models.common.LocalizedString label;
 
-    public TypeChangeLabelActionBuilder fieldName(final String fieldName) {
+    
+    public TypeChangeLabelActionBuilder fieldName( final String fieldName) {
         this.fieldName = fieldName;
         return this;
     }
-
-    public TypeChangeLabelActionBuilder label(final com.commercetools.api.models.common.LocalizedString label) {
+    
+    
+    public TypeChangeLabelActionBuilder label( final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
 
-    public String getFieldName() {
+    
+    
+    public String getFieldName(){
         return this.fieldName;
     }
-
-    public com.commercetools.api.models.common.LocalizedString getLabel() {
+    
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getLabel(){
         return this.label;
     }
 

@@ -1,47 +1,65 @@
-
 package com.commercetools.api.models.shipping_method;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.shipping_method.ShippingRatePriceTier;
+import com.commercetools.api.models.shipping_method.ShippingRateTierType;
+import com.commercetools.api.models.shipping_method.CartValueTier;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CartValueTierBuilder {
 
+    
+    
     private Long minimumCentAmount;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money price;
-
+    
+    
     @Nullable
     private Boolean isMatching;
 
-    public CartValueTierBuilder minimumCentAmount(final Long minimumCentAmount) {
+    
+    public CartValueTierBuilder minimumCentAmount( final Long minimumCentAmount) {
         this.minimumCentAmount = minimumCentAmount;
         return this;
     }
-
-    public CartValueTierBuilder price(final com.commercetools.api.models.common.Money price) {
+    
+    
+    public CartValueTierBuilder price( final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
-
+    
+    
     public CartValueTierBuilder isMatching(@Nullable final Boolean isMatching) {
         this.isMatching = isMatching;
         return this;
     }
 
-    public Long getMinimumCentAmount() {
+    
+    
+    public Long getMinimumCentAmount(){
         return this.minimumCentAmount;
     }
-
-    public com.commercetools.api.models.common.Money getPrice() {
+    
+    
+    
+    public com.commercetools.api.models.common.Money getPrice(){
         return this.price;
     }
-
+    
+    
     @Nullable
-    public Boolean getIsMatching() {
+    public Boolean getIsMatching(){
         return this.isMatching;
     }
 

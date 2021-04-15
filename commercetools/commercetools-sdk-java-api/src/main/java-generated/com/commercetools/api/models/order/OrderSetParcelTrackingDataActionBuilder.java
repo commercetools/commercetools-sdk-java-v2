@@ -1,37 +1,48 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.TrackingData;
+import com.commercetools.api.models.order.OrderSetParcelTrackingDataAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderSetParcelTrackingDataActionBuilder {
 
+    
+    
     private String parcelId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.TrackingData trackingData;
 
-    public OrderSetParcelTrackingDataActionBuilder parcelId(final String parcelId) {
+    
+    public OrderSetParcelTrackingDataActionBuilder parcelId( final String parcelId) {
         this.parcelId = parcelId;
         return this;
     }
-
-    public OrderSetParcelTrackingDataActionBuilder trackingData(
-            @Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
+    
+    
+    public OrderSetParcelTrackingDataActionBuilder trackingData(@Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
         this.trackingData = trackingData;
         return this;
     }
 
-    public String getParcelId() {
+    
+    
+    public String getParcelId(){
         return this.parcelId;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.order.TrackingData getTrackingData() {
+    public com.commercetools.api.models.order.TrackingData getTrackingData(){
         return this.trackingData;
     }
 

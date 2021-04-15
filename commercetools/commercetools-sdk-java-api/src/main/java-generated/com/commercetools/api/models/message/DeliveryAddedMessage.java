@@ -1,35 +1,43 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.order.Delivery;
+import com.commercetools.api.models.message.DeliveryAddedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = DeliveryAddedMessageImpl.class)
 public interface DeliveryAddedMessage extends Message {
 
     String DELIVERY_ADDED = "DeliveryAdded";
 
+    
     @NotNull
     @Valid
     @JsonProperty("delivery")
     public Delivery getDelivery();
 
+    
     public void setDelivery(final Delivery delivery);
+    
 
-    public static DeliveryAddedMessage of() {
+    public static DeliveryAddedMessage of(){
         return new DeliveryAddedMessageImpl();
     }
+    
 
     public static DeliveryAddedMessage of(final DeliveryAddedMessage template) {
         DeliveryAddedMessageImpl instance = new DeliveryAddedMessageImpl();
@@ -47,13 +55,14 @@ public interface DeliveryAddedMessage extends Message {
         return instance;
     }
 
-    public static DeliveryAddedMessageBuilder builder() {
+    public static DeliveryAddedMessageBuilder builder(){
         return DeliveryAddedMessageBuilder.of();
     }
-
-    public static DeliveryAddedMessageBuilder builder(final DeliveryAddedMessage template) {
+    
+    public static DeliveryAddedMessageBuilder builder(final DeliveryAddedMessage template){
         return DeliveryAddedMessageBuilder.of(template);
     }
+    
 
     default <T> T withDeliveryAddedMessage(Function<DeliveryAddedMessage, T> helper) {
         return helper.apply(this);

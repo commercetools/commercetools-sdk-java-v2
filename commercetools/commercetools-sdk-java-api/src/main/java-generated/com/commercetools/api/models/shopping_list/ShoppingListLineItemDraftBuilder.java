@@ -1,91 +1,112 @@
-
 package com.commercetools.api.models.shopping_list;
 
-import java.util.*;
-
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ShoppingListLineItemDraftBuilder {
 
+    
     @Nullable
     private java.time.ZonedDateTime addedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
     @Nullable
     private String productId;
-
+    
+    
     @Nullable
     private Integer quantity;
-
+    
+    
     @Nullable
     private Long variantId;
 
+    
     public ShoppingListLineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
-
-    public ShoppingListLineItemDraftBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public ShoppingListLineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-
+    
+    
     public ShoppingListLineItemDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
     public ShoppingListLineItemDraftBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
-
+    
+    
     public ShoppingListLineItemDraftBuilder quantity(@Nullable final Integer quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
     public ShoppingListLineItemDraftBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
 
+    
     @Nullable
-    public java.time.ZonedDateTime getAddedAt() {
+    public java.time.ZonedDateTime getAddedAt(){
         return this.addedAt;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
-
+    
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
+    
     @Nullable
-    public String getProductId() {
+    public String getProductId(){
         return this.productId;
     }
-
+    
+    
     @Nullable
-    public Integer getQuantity() {
+    public Integer getQuantity(){
         return this.quantity;
     }
-
+    
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
 

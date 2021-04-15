@@ -1,118 +1,139 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
+import com.commercetools.api.models.common.DiscountedPrice;
+import com.commercetools.api.models.message.MessagePayload;
 import io.vrap.rmf.base.client.utils.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public final class ProductPriceExternalDiscountSetMessagePayloadImpl
-        implements ProductPriceExternalDiscountSetMessagePayload {
 
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public final class ProductPriceExternalDiscountSetMessagePayloadImpl implements ProductPriceExternalDiscountSetMessagePayload {
+
+    
     private String type;
-
+    
+    
     private Integer variantId;
-
+    
+    
     private String variantKey;
-
+    
+    
     private String sku;
-
+    
+    
     private String priceId;
-
+    
+    
     private com.commercetools.api.models.common.DiscountedPrice discounted;
-
+    
+    
     private Boolean staged;
 
     @JsonCreator
-    ProductPriceExternalDiscountSetMessagePayloadImpl(@JsonProperty("variantId") final Integer variantId,
-            @JsonProperty("variantKey") final String variantKey, @JsonProperty("sku") final String sku,
-            @JsonProperty("priceId") final String priceId,
-            @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted,
-            @JsonProperty("staged") final Boolean staged) {
+    ProductPriceExternalDiscountSetMessagePayloadImpl(@JsonProperty("variantId") final Integer variantId, @JsonProperty("variantKey") final String variantKey, @JsonProperty("sku") final String sku, @JsonProperty("priceId") final String priceId, @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted, @JsonProperty("staged") final Boolean staged) {
         this.variantId = variantId;
         this.variantKey = variantKey;
         this.sku = sku;
         this.priceId = priceId;
         this.discounted = discounted;
         this.staged = staged;
-        this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
+        this.type =  PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
-
     public ProductPriceExternalDiscountSetMessagePayloadImpl() {
-        this.type = PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
+        this.type =  PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET;
     }
 
-    public String getType() {
+    
+    public String getType(){
         return this.type;
     }
-
-    public Integer getVariantId() {
+    
+    
+    public Integer getVariantId(){
         return this.variantId;
     }
-
-    public String getVariantKey() {
+    
+    
+    public String getVariantKey(){
         return this.variantKey;
     }
-
-    public String getSku() {
+    
+    
+    public String getSku(){
         return this.sku;
     }
-
-    public String getPriceId() {
+    
+    
+    public String getPriceId(){
         return this.priceId;
     }
-
-    public com.commercetools.api.models.common.DiscountedPrice getDiscounted() {
+    
+    
+    public com.commercetools.api.models.common.DiscountedPrice getDiscounted(){
         return this.discounted;
     }
-
-    public Boolean getStaged() {
+    
+    
+    public Boolean getStaged(){
         return this.staged;
     }
 
-    public void setVariantId(final Integer variantId) {
+    
+    public void setVariantId(final Integer variantId){
         this.variantId = variantId;
     }
-
-    public void setVariantKey(final String variantKey) {
+    
+    
+    public void setVariantKey(final String variantKey){
         this.variantKey = variantKey;
     }
-
-    public void setSku(final String sku) {
+    
+    
+    public void setSku(final String sku){
         this.sku = sku;
     }
-
-    public void setPriceId(final String priceId) {
+    
+    
+    public void setPriceId(final String priceId){
         this.priceId = priceId;
     }
-
-    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted) {
+    
+    
+    public void setDiscounted(final com.commercetools.api.models.common.DiscountedPrice discounted){
         this.discounted = discounted;
     }
-
-    public void setStaged(final Boolean staged) {
+    
+    
+    public void setStaged(final Boolean staged){
         this.staged = staged;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ProductPriceExternalDiscountSetMessagePayloadImpl that = (ProductPriceExternalDiscountSetMessagePayloadImpl) o;
-
-        return new EqualsBuilder().append(type, that.type)
+    
+        return new EqualsBuilder()
+                .append(type, that.type)
                 .append(variantId, that.variantId)
                 .append(variantKey, that.variantKey)
                 .append(sku, that.sku)
@@ -121,17 +142,18 @@ public final class ProductPriceExternalDiscountSetMessagePayloadImpl
                 .append(staged, that.staged)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type)
-                .append(variantId)
-                .append(variantKey)
-                .append(sku)
-                .append(priceId)
-                .append(discounted)
-                .append(staged)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(type)
+            .append(variantId)
+            .append(variantKey)
+            .append(sku)
+            .append(priceId)
+            .append(discounted)
+            .append(staged)
+            .toHashCode();
     }
 
 }

@@ -1,26 +1,31 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.me.MyShoppingListSetDeleteDaysAfterLastModificationAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder {
 
+    
     @Nullable
     private Long deleteDaysAfterLastModification;
 
-    public MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+    
+    public MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
 
+    
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Long getDeleteDaysAfterLastModification(){
         return this.deleteDaysAfterLastModification;
     }
 
@@ -32,8 +37,7 @@ public final class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
         return new MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
     }
 
-    public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder of(
-            final MyShoppingListSetDeleteDaysAfterLastModificationAction template) {
+    public static MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder of(final MyShoppingListSetDeleteDaysAfterLastModificationAction template) {
         MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder builder = new MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         return builder;

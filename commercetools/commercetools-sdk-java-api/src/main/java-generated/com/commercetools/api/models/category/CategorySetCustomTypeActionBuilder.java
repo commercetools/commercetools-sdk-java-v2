@@ -1,40 +1,49 @@
-
 package com.commercetools.api.models.category;
 
-import java.util.*;
-
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.category.CategorySetCustomTypeAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CategorySetCustomTypeActionBuilder {
 
+    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    public CategorySetCustomTypeActionBuilder type(
-            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    
+    public CategorySetCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-
-    public CategorySetCustomTypeActionBuilder fields(
-            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+    
+    
+    public CategorySetCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
 
+    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
         return this.type;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
 

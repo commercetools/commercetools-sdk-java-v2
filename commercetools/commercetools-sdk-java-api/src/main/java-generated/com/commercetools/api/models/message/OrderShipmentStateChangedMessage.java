@@ -1,38 +1,50 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.order.ShipmentState;
+import com.commercetools.api.models.message.OrderShipmentStateChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = OrderShipmentStateChangedMessageImpl.class)
 public interface OrderShipmentStateChangedMessage extends Message {
 
     String ORDER_SHIPMENT_STATE_CHANGED = "OrderShipmentStateChanged";
 
+    
     @NotNull
     @JsonProperty("shipmentState")
     public ShipmentState getShipmentState();
-
+    
+    
     @JsonProperty("oldShipmentState")
     public ShipmentState getOldShipmentState();
 
+    
     public void setShipmentState(final ShipmentState shipmentState);
-
+    
+    
+    
     public void setOldShipmentState(final ShipmentState oldShipmentState);
+    
 
-    public static OrderShipmentStateChangedMessage of() {
+    public static OrderShipmentStateChangedMessage of(){
         return new OrderShipmentStateChangedMessageImpl();
     }
+    
 
     public static OrderShipmentStateChangedMessage of(final OrderShipmentStateChangedMessage template) {
         OrderShipmentStateChangedMessageImpl instance = new OrderShipmentStateChangedMessageImpl();
@@ -51,13 +63,14 @@ public interface OrderShipmentStateChangedMessage extends Message {
         return instance;
     }
 
-    public static OrderShipmentStateChangedMessageBuilder builder() {
+    public static OrderShipmentStateChangedMessageBuilder builder(){
         return OrderShipmentStateChangedMessageBuilder.of();
     }
-
-    public static OrderShipmentStateChangedMessageBuilder builder(final OrderShipmentStateChangedMessage template) {
+    
+    public static OrderShipmentStateChangedMessageBuilder builder(final OrderShipmentStateChangedMessage template){
         return OrderShipmentStateChangedMessageBuilder.of(template);
     }
+    
 
     default <T> T withOrderShipmentStateChangedMessage(Function<OrderShipmentStateChangedMessage, T> helper) {
         return helper.apply(this);

@@ -1,31 +1,33 @@
-
 package com.commercetools.api.models.common;
-
-import java.util.Arrays;
-import java.util.Optional;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
-
+import java.lang.String;
+import java.util.Arrays;
+import java.util.Optional;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public interface MoneyType {
 
+    
     MoneyType CENT_PRECISION = MoneyTypeEnum.CENT_PRECISION;
-
+    
     MoneyType HIGH_PRECISION = MoneyTypeEnum.HIGH_PRECISION;
-
+    
     enum MoneyTypeEnum implements MoneyType {
         CENT_PRECISION("centPrecision"),
-
+        
         HIGH_PRECISION("highPrecision");
         private final String jsonName;
 
         private MoneyTypeEnum(final String jsonName) {
             this.jsonName = jsonName;
         }
-
         public String getJsonName() {
             return jsonName;
         }
@@ -33,7 +35,6 @@ public interface MoneyType {
 
     @JsonValue
     String getJsonName();
-
     String name();
 
     @JsonCreator
@@ -54,7 +55,7 @@ public interface MoneyType {
     public static Optional<MoneyType> findEnumViaJsonName(String jsonName) {
         return Arrays.stream(values()).filter(t -> t.getJsonName().equals(jsonName)).findFirst();
     }
-
+    
     public static MoneyType[] values() {
         return MoneyTypeEnum.values();
     }

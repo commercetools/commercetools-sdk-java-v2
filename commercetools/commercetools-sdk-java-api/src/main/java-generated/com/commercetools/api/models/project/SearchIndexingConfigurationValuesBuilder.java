@@ -1,54 +1,65 @@
-
 package com.commercetools.api.models.project;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.project.SearchIndexingConfigurationStatus;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.project.SearchIndexingConfigurationValues;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class SearchIndexingConfigurationValuesBuilder {
 
+    
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationStatus status;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
 
-    public SearchIndexingConfigurationValuesBuilder status(
-            @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status) {
+    
+    public SearchIndexingConfigurationValuesBuilder status(@Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationStatus status) {
         this.status = status;
         return this;
     }
-
-    public SearchIndexingConfigurationValuesBuilder lastModifiedAt(
-            @Nullable final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public SearchIndexingConfigurationValuesBuilder lastModifiedAt(@Nullable final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
-    public SearchIndexingConfigurationValuesBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public SearchIndexingConfigurationValuesBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
 
+    
     @Nullable
-    public com.commercetools.api.models.project.SearchIndexingConfigurationStatus getStatus() {
+    public com.commercetools.api.models.project.SearchIndexingConfigurationStatus getStatus(){
         return this.status;
     }
-
+    
+    
     @Nullable
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
 

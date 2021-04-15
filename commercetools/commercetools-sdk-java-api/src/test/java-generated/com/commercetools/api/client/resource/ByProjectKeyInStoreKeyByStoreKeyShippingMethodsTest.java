@@ -1,42 +1,48 @@
-
 package com.commercetools.api.client.resource;
 
-import junitparams.JUnitParamsRunner;
-
-import com.commercetools.api.client.*;
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.ApiServerException;
+import io.vrap.rmf.base.client.error.ApiClientException;
+import io.vrap.rmf.base.client.VrapHttpClient;
 import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.defaultconfig.ApiFactory;
-import com.commercetools.api.defaultconfig.ServiceRegion;
-
-import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.utils.Generated;
-
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+import org.junit.Assert;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
+import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import org.assertj.core.api.Assertions;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.CompletableFuture;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @RunWith(JUnitParamsRunner.class)
 public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsTest {
-    private final ApiHttpClient apiHttpClientMock = Mockito.mock(ApiHttpClient.class);
+    private final VrapHttpClient httpClientMock = Mockito.mock(VrapHttpClient.class);
     private final String projectKey = "test_projectKey";
-    private final ApiRoot apiRoot = createClient();
+    private final ApiRoot apiRoot = ApiRoot.of();
+    private final ApiHttpClient client = ClientBuilder.of(httpClientMock).defaultClient("").build();
 
-    private ApiRoot createClient() {
-        return ApiFactory.create(
-            ClientCredentials.of()
-                    .withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-    }
+
+
+
+
+
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {};
+       return new Object [] {
+       };
     }
 
     private Object[] executeMethodParameters() {
-        return new Object[] {};
+       return new Object [] {
+       };
     }
 }

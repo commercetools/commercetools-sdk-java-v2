@@ -1,51 +1,65 @@
-
 package com.commercetools.api.models.order_edit;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.type.FieldContainer;
+import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomTypeAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class StagedOrderSetCustomLineItemCustomTypeActionBuilder {
 
+    
+    
     private String customLineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.TypeResourceIdentifier type;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.FieldContainer fields;
 
-    public StagedOrderSetCustomLineItemCustomTypeActionBuilder customLineItemId(final String customLineItemId) {
+    
+    public StagedOrderSetCustomLineItemCustomTypeActionBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-
-    public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(
-            @Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
+    
+    
+    public StagedOrderSetCustomLineItemCustomTypeActionBuilder type(@Nullable final com.commercetools.api.models.type.TypeResourceIdentifier type) {
         this.type = type;
         return this;
     }
-
-    public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(
-            @Nullable final com.commercetools.api.models.type.FieldContainer fields) {
+    
+    
+    public StagedOrderSetCustomLineItemCustomTypeActionBuilder fields(@Nullable final com.commercetools.api.models.type.FieldContainer fields) {
         this.fields = fields;
         return this;
     }
 
-    public String getCustomLineItemId() {
+    
+    
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.type.TypeResourceIdentifier getType() {
+    public com.commercetools.api.models.type.TypeResourceIdentifier getType(){
         return this.type;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.type.FieldContainer getFields() {
+    public com.commercetools.api.models.type.FieldContainer getFields(){
         return this.fields;
     }
 
@@ -57,8 +71,7 @@ public final class StagedOrderSetCustomLineItemCustomTypeActionBuilder {
         return new StagedOrderSetCustomLineItemCustomTypeActionBuilder();
     }
 
-    public static StagedOrderSetCustomLineItemCustomTypeActionBuilder of(
-            final StagedOrderSetCustomLineItemCustomTypeAction template) {
+    public static StagedOrderSetCustomLineItemCustomTypeActionBuilder of(final StagedOrderSetCustomLineItemCustomTypeAction template) {
         StagedOrderSetCustomLineItemCustomTypeActionBuilder builder = new StagedOrderSetCustomLineItemCustomTypeActionBuilder();
         builder.customLineItemId = template.getCustomLineItemId();
         builder.type = template.getType();

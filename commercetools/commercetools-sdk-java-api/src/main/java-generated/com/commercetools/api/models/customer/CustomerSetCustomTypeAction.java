@@ -1,20 +1,25 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.customer.CustomerSetCustomTypeActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerSetCustomTypeActionImpl.class)
 public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
 
@@ -26,7 +31,6 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
     /**
     *  <p>A valid JSON object, based on the FieldDefinitions of the Type.
     *  Sets the custom fields to this value.</p>
@@ -35,13 +39,18 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
+    
     public void setFields(final FieldContainer fields);
+    
 
-    public static CustomerSetCustomTypeAction of() {
+    public static CustomerSetCustomTypeAction of(){
         return new CustomerSetCustomTypeActionImpl();
     }
+    
 
     public static CustomerSetCustomTypeAction of(final CustomerSetCustomTypeAction template) {
         CustomerSetCustomTypeActionImpl instance = new CustomerSetCustomTypeActionImpl();
@@ -50,13 +59,14 @@ public interface CustomerSetCustomTypeAction extends CustomerUpdateAction {
         return instance;
     }
 
-    public static CustomerSetCustomTypeActionBuilder builder() {
+    public static CustomerSetCustomTypeActionBuilder builder(){
         return CustomerSetCustomTypeActionBuilder.of();
     }
-
-    public static CustomerSetCustomTypeActionBuilder builder(final CustomerSetCustomTypeAction template) {
+    
+    public static CustomerSetCustomTypeActionBuilder builder(final CustomerSetCustomTypeAction template){
         return CustomerSetCustomTypeActionBuilder.of(template);
     }
+    
 
     default <T> T withCustomerSetCustomTypeAction(Function<CustomerSetCustomTypeAction, T> helper) {
         return helper.apply(this);

@@ -1,38 +1,50 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.order.PaymentState;
+import com.commercetools.api.models.message.OrderPaymentStateChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = OrderPaymentStateChangedMessageImpl.class)
 public interface OrderPaymentStateChangedMessage extends Message {
 
     String ORDER_PAYMENT_STATE_CHANGED = "OrderPaymentStateChanged";
 
+    
     @NotNull
     @JsonProperty("paymentState")
     public PaymentState getPaymentState();
-
+    
+    
     @JsonProperty("oldPaymentState")
     public PaymentState getOldPaymentState();
 
+    
     public void setPaymentState(final PaymentState paymentState);
-
+    
+    
+    
     public void setOldPaymentState(final PaymentState oldPaymentState);
+    
 
-    public static OrderPaymentStateChangedMessage of() {
+    public static OrderPaymentStateChangedMessage of(){
         return new OrderPaymentStateChangedMessageImpl();
     }
+    
 
     public static OrderPaymentStateChangedMessage of(final OrderPaymentStateChangedMessage template) {
         OrderPaymentStateChangedMessageImpl instance = new OrderPaymentStateChangedMessageImpl();
@@ -51,13 +63,14 @@ public interface OrderPaymentStateChangedMessage extends Message {
         return instance;
     }
 
-    public static OrderPaymentStateChangedMessageBuilder builder() {
+    public static OrderPaymentStateChangedMessageBuilder builder(){
         return OrderPaymentStateChangedMessageBuilder.of();
     }
-
-    public static OrderPaymentStateChangedMessageBuilder builder(final OrderPaymentStateChangedMessage template) {
+    
+    public static OrderPaymentStateChangedMessageBuilder builder(final OrderPaymentStateChangedMessage template){
         return OrderPaymentStateChangedMessageBuilder.of(template);
     }
+    
 
     default <T> T withOrderPaymentStateChangedMessage(Function<OrderPaymentStateChangedMessage, T> helper) {
         return helper.apply(this);

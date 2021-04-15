@@ -1,12 +1,20 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.AttributeLocalizableTextType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class AttributeLocalizableTextTypeBuilder {
+
+
+
 
     public AttributeLocalizableTextType build() {
         return new AttributeLocalizableTextTypeImpl();

@@ -1,122 +1,168 @@
-
 package com.commercetools.api.models.custom_object;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CreatedBy;
+import com.commercetools.api.models.common.LastModifiedBy;
+import java.lang.Object;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.custom_object.CustomObject;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CustomObjectBuilder {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long version;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
-
+    
+    
+    
     private String container;
-
+    
+    
+    
     private String key;
-
+    
+    
+    
     private java.lang.Object value;
 
-    public CustomObjectBuilder id(final String id) {
+    
+    public CustomObjectBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
-    public CustomObjectBuilder version(final Long version) {
+    
+    
+    public CustomObjectBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
-    public CustomObjectBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public CustomObjectBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
-    public CustomObjectBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public CustomObjectBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
-    public CustomObjectBuilder lastModifiedBy(
-            @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
+    
+    
+    public CustomObjectBuilder lastModifiedBy(@Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
     }
-
+    
+    
     public CustomObjectBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
     }
-
-    public CustomObjectBuilder container(final String container) {
+    
+    
+    public CustomObjectBuilder container( final String container) {
         this.container = container;
         return this;
     }
-
-    public CustomObjectBuilder key(final String key) {
+    
+    
+    public CustomObjectBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
-    public CustomObjectBuilder value(final java.lang.Object value) {
+    
+    
+    public CustomObjectBuilder value( final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
-    public Long getVersion() {
+    
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
+    public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy(){
         return this.lastModifiedBy;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
+    public com.commercetools.api.models.common.CreatedBy getCreatedBy(){
         return this.createdBy;
     }
-
-    public String getContainer() {
+    
+    
+    
+    public String getContainer(){
         return this.container;
     }
-
-    public String getKey() {
+    
+    
+    
+    public String getKey(){
         return this.key;
     }
-
-    public java.lang.Object getValue() {
+    
+    
+    
+    public java.lang.Object getValue(){
         return this.value;
     }
 
     public CustomObject build() {
-        return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key,
-            value);
+        return new CustomObjectImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, container, key, value);
     }
 
     public static CustomObjectBuilder of() {

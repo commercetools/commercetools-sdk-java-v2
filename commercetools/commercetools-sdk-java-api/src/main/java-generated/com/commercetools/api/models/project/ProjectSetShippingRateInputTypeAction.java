@@ -1,18 +1,24 @@
-
 package com.commercetools.api.models.project;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ShippingRateInputType;
+import com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ProjectSetShippingRateInputTypeActionImpl.class)
 public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateAction {
 
@@ -25,11 +31,14 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
     @JsonProperty("shippingRateInputType")
     public ShippingRateInputType getShippingRateInputType();
 
+    
     public void setShippingRateInputType(final ShippingRateInputType shippingRateInputType);
+    
 
-    public static ProjectSetShippingRateInputTypeAction of() {
+    public static ProjectSetShippingRateInputTypeAction of(){
         return new ProjectSetShippingRateInputTypeActionImpl();
     }
+    
 
     public static ProjectSetShippingRateInputTypeAction of(final ProjectSetShippingRateInputTypeAction template) {
         ProjectSetShippingRateInputTypeActionImpl instance = new ProjectSetShippingRateInputTypeActionImpl();
@@ -37,14 +46,14 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
         return instance;
     }
 
-    public static ProjectSetShippingRateInputTypeActionBuilder builder() {
+    public static ProjectSetShippingRateInputTypeActionBuilder builder(){
         return ProjectSetShippingRateInputTypeActionBuilder.of();
     }
-
-    public static ProjectSetShippingRateInputTypeActionBuilder builder(
-            final ProjectSetShippingRateInputTypeAction template) {
+    
+    public static ProjectSetShippingRateInputTypeActionBuilder builder(final ProjectSetShippingRateInputTypeAction template){
         return ProjectSetShippingRateInputTypeActionBuilder.of(template);
     }
+    
 
     default <T> T withProjectSetShippingRateInputTypeAction(Function<ProjectSetShippingRateInputTypeAction, T> helper) {
         return helper.apply(this);

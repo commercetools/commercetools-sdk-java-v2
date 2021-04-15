@@ -1,26 +1,32 @@
-
 package com.commercetools.api.models.type;
-
-import java.time.*;
-import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.type.FieldDefinition;
+import com.commercetools.api.models.type.ResourceTypeId;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.type.TypeImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = TypeImpl.class)
 public interface Type extends BaseResource, com.commercetools.api.models.DomainResource<Type> {
+
 
     /**
     *  <p>The unique ID of the type.</p>
@@ -28,36 +34,32 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
     @NotNull
     @JsonProperty("id")
     public String getId();
-
     /**
     *  <p>The current version of the type.</p>
     */
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
+    
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
+    
     @NotNull
     @JsonProperty("lastModifiedAt")
     public ZonedDateTime getLastModifiedAt();
-
     /**
     *  <p>Present on resources updated after 1/02/2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("lastModifiedBy")
     public LastModifiedBy getLastModifiedBy();
-
     /**
     *  <p>Present on resources created after 1/02/2019 except for events not tracked.</p>
     */
     @Valid
     @JsonProperty("createdBy")
     public CreatedBy getCreatedBy();
-
     /**
     *  <p>Identifier for the type (max.
     *  256 characters).</p>
@@ -65,59 +67,77 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
     @NotNull
     @JsonProperty("key")
     public String getKey();
-
+    
     @NotNull
     @Valid
     @JsonProperty("name")
     public LocalizedString getName();
-
+    
     @Valid
     @JsonProperty("description")
     public LocalizedString getDescription();
-
     /**
     *  <p>Defines for which resource(s) the type is valid.</p>
     */
     @NotNull
     @JsonProperty("resourceTypeIds")
     public List<ResourceTypeId> getResourceTypeIds();
-
+    
     @NotNull
     @Valid
     @JsonProperty("fieldDefinitions")
     public List<FieldDefinition> getFieldDefinitions();
 
+    
     public void setId(final String id);
-
+    
+    
+    
     public void setVersion(final Long version);
-
+    
+    
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
+    
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
-
+    
+    
+    
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
-
+    
+    
+    
     public void setCreatedBy(final CreatedBy createdBy);
-
+    
+    
+    
     public void setKey(final String key);
-
+    
+    
+    
     public void setName(final LocalizedString name);
-
+    
+    
+    
     public void setDescription(final LocalizedString description);
-
+    
+    
+    
     @JsonIgnore
-    public void setResourceTypeIds(final ResourceTypeId... resourceTypeIds);
-
+    public void setResourceTypeIds(final ResourceTypeId ...resourceTypeIds);
     public void setResourceTypeIds(final List<ResourceTypeId> resourceTypeIds);
-
+    
+    
     @JsonIgnore
-    public void setFieldDefinitions(final FieldDefinition... fieldDefinitions);
-
+    public void setFieldDefinitions(final FieldDefinition ...fieldDefinitions);
     public void setFieldDefinitions(final List<FieldDefinition> fieldDefinitions);
 
-    public static Type of() {
+    public static Type of(){
         return new TypeImpl();
     }
+    
 
     public static Type of(final Type template) {
         TypeImpl instance = new TypeImpl();
@@ -135,13 +155,14 @@ public interface Type extends BaseResource, com.commercetools.api.models.DomainR
         return instance;
     }
 
-    public static TypeBuilder builder() {
+    public static TypeBuilder builder(){
         return TypeBuilder.of();
     }
-
-    public static TypeBuilder builder(final Type template) {
+    
+    public static TypeBuilder builder(final Type template){
         return TypeBuilder.of(template);
     }
+    
 
     default <T> T withType(Function<Type, T> helper) {
         return helper.apply(this);

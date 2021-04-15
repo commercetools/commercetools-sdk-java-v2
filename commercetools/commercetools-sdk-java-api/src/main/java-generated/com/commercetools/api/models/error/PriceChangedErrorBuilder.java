@@ -1,48 +1,69 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.PriceChangedError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class PriceChangedErrorBuilder {
 
+    
+    
     private String message;
-
+    
+    
+    
     private java.util.List<String> lineItems;
-
+    
+    
+    
     private Boolean shipping;
 
-    public PriceChangedErrorBuilder message(final String message) {
+    
+    public PriceChangedErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
-    public PriceChangedErrorBuilder lineItems(final String... lineItems) {
+    
+    
+    public PriceChangedErrorBuilder lineItems( final String ...lineItems) {
         this.lineItems = new ArrayList<>(Arrays.asList(lineItems));
         return this;
     }
-
-    public PriceChangedErrorBuilder lineItems(final java.util.List<String> lineItems) {
+    
+    
+    public PriceChangedErrorBuilder lineItems( final java.util.List<String> lineItems) {
         this.lineItems = lineItems;
         return this;
     }
-
-    public PriceChangedErrorBuilder shipping(final Boolean shipping) {
+    
+    
+    public PriceChangedErrorBuilder shipping( final Boolean shipping) {
         this.shipping = shipping;
         return this;
     }
 
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
-    public java.util.List<String> getLineItems() {
+    
+    
+    
+    public java.util.List<String> getLineItems(){
         return this.lineItems;
     }
-
-    public Boolean getShipping() {
+    
+    
+    
+    public Boolean getShipping(){
         return this.shipping;
     }
 

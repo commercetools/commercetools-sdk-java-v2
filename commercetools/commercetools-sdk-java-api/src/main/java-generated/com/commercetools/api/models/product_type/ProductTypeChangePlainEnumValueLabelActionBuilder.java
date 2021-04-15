@@ -1,33 +1,48 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributePlainEnumValue;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductTypeChangePlainEnumValueLabelActionBuilder {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private com.commercetools.api.models.product_type.AttributePlainEnumValue newValue;
 
-    public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeChangePlainEnumValueLabelActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
-    public ProductTypeChangePlainEnumValueLabelActionBuilder newValue(
-            final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {
+    
+    
+    public ProductTypeChangePlainEnumValueLabelActionBuilder newValue( final com.commercetools.api.models.product_type.AttributePlainEnumValue newValue) {
         this.newValue = newValue;
         return this;
     }
 
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
-    public com.commercetools.api.models.product_type.AttributePlainEnumValue getNewValue() {
+    
+    
+    
+    public com.commercetools.api.models.product_type.AttributePlainEnumValue getNewValue(){
         return this.newValue;
     }
 
@@ -39,8 +54,7 @@ public final class ProductTypeChangePlainEnumValueLabelActionBuilder {
         return new ProductTypeChangePlainEnumValueLabelActionBuilder();
     }
 
-    public static ProductTypeChangePlainEnumValueLabelActionBuilder of(
-            final ProductTypeChangePlainEnumValueLabelAction template) {
+    public static ProductTypeChangePlainEnumValueLabelActionBuilder of(final ProductTypeChangePlainEnumValueLabelAction template) {
         ProductTypeChangePlainEnumValueLabelActionBuilder builder = new ProductTypeChangePlainEnumValueLabelActionBuilder();
         builder.attributeName = template.getAttributeName();
         builder.newValue = template.getNewValue();

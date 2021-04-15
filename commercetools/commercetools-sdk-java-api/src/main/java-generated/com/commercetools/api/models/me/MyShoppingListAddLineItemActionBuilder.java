@@ -1,91 +1,113 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.me.MyShoppingListAddLineItemAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class MyShoppingListAddLineItemActionBuilder {
 
+    
     @Nullable
     private String sku;
-
+    
+    
     @Nullable
     private String productId;
-
+    
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private Long quantity;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime addedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    
     public MyShoppingListAddLineItemActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
     public MyShoppingListAddLineItemActionBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
-
+    
+    
     public MyShoppingListAddLineItemActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
     public MyShoppingListAddLineItemActionBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
     public MyShoppingListAddLineItemActionBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
-
-    public MyShoppingListAddLineItemActionBuilder custom(
-            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+    
+    
+    public MyShoppingListAddLineItemActionBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
 
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
+    
     @Nullable
-    public String getProductId() {
+    public String getProductId(){
         return this.productId;
     }
-
+    
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
+    
     @Nullable
-    public Long getQuantity() {
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
+    
     @Nullable
-    public java.time.ZonedDateTime getAddedAt() {
+    public java.time.ZonedDateTime getAddedAt(){
         return this.addedAt;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
 

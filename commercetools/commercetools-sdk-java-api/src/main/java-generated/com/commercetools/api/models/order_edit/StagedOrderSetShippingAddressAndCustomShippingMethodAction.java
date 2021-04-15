@@ -1,67 +1,81 @@
-
 package com.commercetools.api.models.order_edit;
-
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.ExternalTaxRateDraft;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl.class)
 public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction extends StagedOrderUpdateAction {
 
     String SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD = "setShippingAddressAndCustomShippingMethod";
 
+    
     @NotNull
     @Valid
     @JsonProperty("address")
     public Address getAddress();
-
+    
     @NotNull
     @JsonProperty("shippingMethodName")
     public String getShippingMethodName();
-
+    
     @NotNull
     @Valid
     @JsonProperty("shippingRate")
     public ShippingRateDraft getShippingRate();
-
+    
     @Valid
     @JsonProperty("taxCategory")
     public TaxCategoryResourceIdentifier getTaxCategory();
-
+    
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
 
+    
     public void setAddress(final Address address);
-
+    
+    
+    
     public void setShippingMethodName(final String shippingMethodName);
-
+    
+    
+    
     public void setShippingRate(final ShippingRateDraft shippingRate);
-
+    
+    
+    
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
-
+    
+    
+    
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+    
 
-    public static StagedOrderSetShippingAddressAndCustomShippingMethodAction of() {
+    public static StagedOrderSetShippingAddressAndCustomShippingMethodAction of(){
         return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl();
     }
+    
 
-    public static StagedOrderSetShippingAddressAndCustomShippingMethodAction of(
-            final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {
+    public static StagedOrderSetShippingAddressAndCustomShippingMethodAction of(final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {
         StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl instance = new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl();
         instance.setAddress(template.getAddress());
         instance.setShippingMethodName(template.getShippingMethodName());
@@ -71,17 +85,16 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
         return instance;
     }
 
-    public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder() {
+    public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder(){
         return StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder.of();
     }
-
-    public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder(
-            final StagedOrderSetShippingAddressAndCustomShippingMethodAction template) {
+    
+    public static StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder(final StagedOrderSetShippingAddressAndCustomShippingMethodAction template){
         return StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder.of(template);
     }
+    
 
-    default <T> T withStagedOrderSetShippingAddressAndCustomShippingMethodAction(
-            Function<StagedOrderSetShippingAddressAndCustomShippingMethodAction, T> helper) {
+    default <T> T withStagedOrderSetShippingAddressAndCustomShippingMethodAction(Function<StagedOrderSetShippingAddressAndCustomShippingMethodAction, T> helper) {
         return helper.apply(this);
     }
 }

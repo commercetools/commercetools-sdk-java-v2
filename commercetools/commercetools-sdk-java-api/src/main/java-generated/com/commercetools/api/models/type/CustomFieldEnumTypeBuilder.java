@@ -1,27 +1,38 @@
-
 package com.commercetools.api.models.type;
 
+import com.commercetools.api.models.type.CustomFieldEnumValue;
+import com.commercetools.api.models.type.FieldType;
+import com.commercetools.api.models.type.CustomFieldEnumType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CustomFieldEnumTypeBuilder {
 
+    
+    
     private java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values;
 
-    public CustomFieldEnumTypeBuilder values(final com.commercetools.api.models.type.CustomFieldEnumValue... values) {
+    
+    public CustomFieldEnumTypeBuilder values( final com.commercetools.api.models.type.CustomFieldEnumValue ...values) {
         this.values = new ArrayList<>(Arrays.asList(values));
         return this;
     }
-
-    public CustomFieldEnumTypeBuilder values(
-            final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
+    
+    
+    public CustomFieldEnumTypeBuilder values( final java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> values) {
         this.values = values;
         return this;
     }
 
-    public java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> getValues() {
+    
+    
+    public java.util.List<com.commercetools.api.models.type.CustomFieldEnumValue> getValues(){
         return this.values;
     }
 

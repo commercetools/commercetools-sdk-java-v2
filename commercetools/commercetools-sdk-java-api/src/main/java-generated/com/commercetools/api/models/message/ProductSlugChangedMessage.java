@@ -1,41 +1,51 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.ProductSlugChangedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSlugChangedMessageImpl.class)
 public interface ProductSlugChangedMessage extends Message {
 
     String PRODUCT_SLUG_CHANGED = "ProductSlugChanged";
 
+    
     @NotNull
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
+    
     @Valid
     @JsonProperty("oldSlug")
     public LocalizedString getOldSlug();
 
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
+    
     public void setOldSlug(final LocalizedString oldSlug);
+    
 
-    public static ProductSlugChangedMessage of() {
+    public static ProductSlugChangedMessage of(){
         return new ProductSlugChangedMessageImpl();
     }
+    
 
     public static ProductSlugChangedMessage of(final ProductSlugChangedMessage template) {
         ProductSlugChangedMessageImpl instance = new ProductSlugChangedMessageImpl();
@@ -54,13 +64,14 @@ public interface ProductSlugChangedMessage extends Message {
         return instance;
     }
 
-    public static ProductSlugChangedMessageBuilder builder() {
+    public static ProductSlugChangedMessageBuilder builder(){
         return ProductSlugChangedMessageBuilder.of();
     }
-
-    public static ProductSlugChangedMessageBuilder builder(final ProductSlugChangedMessage template) {
+    
+    public static ProductSlugChangedMessageBuilder builder(final ProductSlugChangedMessage template){
         return ProductSlugChangedMessageBuilder.of(template);
     }
+    
 
     default <T> T withProductSlugChangedMessage(Function<ProductSlugChangedMessage, T> helper) {
         return helper.apply(this);

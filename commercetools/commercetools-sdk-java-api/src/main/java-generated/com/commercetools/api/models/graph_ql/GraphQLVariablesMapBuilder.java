@@ -1,20 +1,29 @@
-
 package com.commercetools.api.models.graph_ql;
 
+import java.lang.Object;
+import com.commercetools.api.models.graph_ql.GraphQLVariablesMap;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class GraphQLVariablesMapBuilder {
 
+    
+    
     private Map<String, java.lang.Object> values;
 
-    public GraphQLVariablesMapBuilder values(final Map<String, java.lang.Object> values) {
+    
+    public GraphQLVariablesMapBuilder values( final Map<String, java.lang.Object> values){
         this.values = values;
         return this;
     }
-
+    
+    
     public GraphQLVariablesMapBuilder addValue(final String key, final java.lang.Object value) {
         if (this.values == null) {
             values = new HashMap<>();
@@ -22,8 +31,11 @@ public final class GraphQLVariablesMapBuilder {
         values.put(key, value);
         return this;
     }
+    
 
-    public Map<String, java.lang.Object> getValues() {
+    
+    
+    public Map<String, java.lang.Object> getValues(){
         return this.values;
     }
 

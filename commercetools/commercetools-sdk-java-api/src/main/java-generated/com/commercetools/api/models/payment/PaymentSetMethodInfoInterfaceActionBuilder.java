@@ -1,21 +1,31 @@
-
 package com.commercetools.api.models.payment;
 
+import com.commercetools.api.models.payment.PaymentUpdateAction;
+import com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class PaymentSetMethodInfoInterfaceActionBuilder {
 
+    
+    
     private String _interface;
 
-    public PaymentSetMethodInfoInterfaceActionBuilder _interface(final String _interface) {
+    
+    public PaymentSetMethodInfoInterfaceActionBuilder _interface( final String _interface) {
         this._interface = _interface;
         return this;
     }
 
-    public String getInterface() {
+    
+    
+    public String getInterface(){
         return this._interface;
     }
 

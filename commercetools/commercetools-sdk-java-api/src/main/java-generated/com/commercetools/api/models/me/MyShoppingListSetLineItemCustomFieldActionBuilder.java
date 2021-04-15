@@ -1,47 +1,64 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyShoppingListUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.me.MyShoppingListSetLineItemCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class MyShoppingListSetLineItemCustomFieldActionBuilder {
 
+    
+    
     private String lineItemId;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
-    public MyShoppingListSetLineItemCustomFieldActionBuilder lineItemId(final String lineItemId) {
+    
+    public MyShoppingListSetLineItemCustomFieldActionBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
-    public MyShoppingListSetLineItemCustomFieldActionBuilder name(final String name) {
+    
+    
+    public MyShoppingListSetLineItemCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
     public MyShoppingListSetLineItemCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
-    public String getName() {
+    
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -53,8 +70,7 @@ public final class MyShoppingListSetLineItemCustomFieldActionBuilder {
         return new MyShoppingListSetLineItemCustomFieldActionBuilder();
     }
 
-    public static MyShoppingListSetLineItemCustomFieldActionBuilder of(
-            final MyShoppingListSetLineItemCustomFieldAction template) {
+    public static MyShoppingListSetLineItemCustomFieldActionBuilder of(final MyShoppingListSetLineItemCustomFieldAction template) {
         MyShoppingListSetLineItemCustomFieldActionBuilder builder = new MyShoppingListSetLineItemCustomFieldActionBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.name = template.getName();

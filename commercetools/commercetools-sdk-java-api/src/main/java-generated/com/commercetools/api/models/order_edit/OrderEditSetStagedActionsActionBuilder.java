@@ -1,28 +1,38 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditUpdateAction;
+import com.commercetools.api.models.order_edit.OrderEditSetStagedActionsAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderEditSetStagedActionsActionBuilder {
 
+    
+    
     private java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions;
 
-    public OrderEditSetStagedActionsActionBuilder stagedActions(
-            final com.commercetools.api.models.order.StagedOrderUpdateAction... stagedActions) {
+    
+    public OrderEditSetStagedActionsActionBuilder stagedActions( final com.commercetools.api.models.order.StagedOrderUpdateAction ...stagedActions) {
         this.stagedActions = new ArrayList<>(Arrays.asList(stagedActions));
         return this;
     }
-
-    public OrderEditSetStagedActionsActionBuilder stagedActions(
-            final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
+    
+    
+    public OrderEditSetStagedActionsActionBuilder stagedActions( final java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> stagedActions) {
         this.stagedActions = stagedActions;
         return this;
     }
 
-    public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions() {
+    
+    
+    public java.util.List<com.commercetools.api.models.order.StagedOrderUpdateAction> getStagedActions(){
         return this.stagedActions;
     }
 

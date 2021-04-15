@@ -1,36 +1,48 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.cart.CartSetBillingAddressCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CartSetBillingAddressCustomFieldActionBuilder {
 
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
-    public CartSetBillingAddressCustomFieldActionBuilder name(final String name) {
+    
+    public CartSetBillingAddressCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
     public CartSetBillingAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -42,8 +54,7 @@ public final class CartSetBillingAddressCustomFieldActionBuilder {
         return new CartSetBillingAddressCustomFieldActionBuilder();
     }
 
-    public static CartSetBillingAddressCustomFieldActionBuilder of(
-            final CartSetBillingAddressCustomFieldAction template) {
+    public static CartSetBillingAddressCustomFieldActionBuilder of(final CartSetBillingAddressCustomFieldAction template) {
         CartSetBillingAddressCustomFieldActionBuilder builder = new CartSetBillingAddressCustomFieldActionBuilder();
         builder.name = template.getName();
         builder.value = template.getValue();

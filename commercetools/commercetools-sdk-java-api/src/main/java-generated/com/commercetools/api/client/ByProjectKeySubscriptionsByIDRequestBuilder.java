@@ -1,18 +1,24 @@
-
 package com.commercetools.api.client;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public class ByProjectKeySubscriptionsByIDRequestBuilder {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
     private final String ID;
+    
 
-    public ByProjectKeySubscriptionsByIDRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey,
-            final String ID) {
+    public ByProjectKeySubscriptionsByIDRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey,final String ID) {
         this.apiHttpClient = apiHttpClient;
         this.projectKey = projectKey;
         this.ID = ID;
@@ -21,12 +27,11 @@ public class ByProjectKeySubscriptionsByIDRequestBuilder {
     public ByProjectKeySubscriptionsByIDGet get() {
         return new ByProjectKeySubscriptionsByIDGet(apiHttpClient, projectKey, ID);
     }
-
-    public ByProjectKeySubscriptionsByIDPost post(
-            com.commercetools.api.models.subscription.SubscriptionUpdate subscriptionUpdate) {
+    
+    public ByProjectKeySubscriptionsByIDPost post(com.commercetools.api.models.subscription.SubscriptionUpdate subscriptionUpdate) {
         return new ByProjectKeySubscriptionsByIDPost(apiHttpClient, projectKey, ID, subscriptionUpdate);
     }
-
+    
     public ByProjectKeySubscriptionsByIDDelete delete() {
         return new ByProjectKeySubscriptionsByIDDelete(apiHttpClient, projectKey, ID);
     }

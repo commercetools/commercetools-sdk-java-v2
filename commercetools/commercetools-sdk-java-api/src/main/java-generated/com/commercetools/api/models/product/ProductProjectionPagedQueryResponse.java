@@ -1,59 +1,74 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductProjection;
+import com.commercetools.api.models.product.ProductProjectionPagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ProductProjectionPagedQueryResponseImpl.class)
-public interface ProductProjectionPagedQueryResponse
-        extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection> {
+public interface ProductProjectionPagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection> {
 
+
+    
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
+    
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
+    
+    
     @JsonProperty("total")
     public Long getTotal();
-
+    
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
+    
     @NotNull
     @Valid
     @JsonProperty("results")
     public List<ProductProjection> getResults();
 
+    
     public void setLimit(final Long limit);
-
+    
+    
+    
     public void setCount(final Long count);
-
+    
+    
+    
     public void setTotal(final Long total);
-
+    
+    
+    
     public void setOffset(final Long offset);
-
+    
+    
+    
     @JsonIgnore
-    public void setResults(final ProductProjection... results);
-
+    public void setResults(final ProductProjection ...results);
     public void setResults(final List<ProductProjection> results);
 
-    public static ProductProjectionPagedQueryResponse of() {
+    public static ProductProjectionPagedQueryResponse of(){
         return new ProductProjectionPagedQueryResponseImpl();
     }
+    
 
     public static ProductProjectionPagedQueryResponse of(final ProductProjectionPagedQueryResponse template) {
         ProductProjectionPagedQueryResponseImpl instance = new ProductProjectionPagedQueryResponseImpl();
@@ -65,14 +80,14 @@ public interface ProductProjectionPagedQueryResponse
         return instance;
     }
 
-    public static ProductProjectionPagedQueryResponseBuilder builder() {
+    public static ProductProjectionPagedQueryResponseBuilder builder(){
         return ProductProjectionPagedQueryResponseBuilder.of();
     }
-
-    public static ProductProjectionPagedQueryResponseBuilder builder(
-            final ProductProjectionPagedQueryResponse template) {
+    
+    public static ProductProjectionPagedQueryResponseBuilder builder(final ProductProjectionPagedQueryResponse template){
         return ProductProjectionPagedQueryResponseBuilder.of(template);
     }
+    
 
     default <T> T withProductProjectionPagedQueryResponse(Function<ProductProjectionPagedQueryResponse, T> helper) {
         return helper.apply(this);

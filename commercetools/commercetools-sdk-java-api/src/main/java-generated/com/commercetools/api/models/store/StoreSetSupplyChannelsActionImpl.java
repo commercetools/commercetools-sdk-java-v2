@@ -1,70 +1,84 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.store.StoreUpdateAction;
 import io.vrap.rmf.base.client.utils.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsAction {
 
+    
     private String action;
-
+    
+    
     private java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels;
 
     @JsonCreator
-    StoreSetSupplyChannelsActionImpl(
-            @JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
+    StoreSetSupplyChannelsActionImpl(@JsonProperty("supplyChannels") final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
         this.supplyChannels = supplyChannels;
-        this.action = SET_SUPPLY_CHANNELS;
+        this.action =  SET_SUPPLY_CHANNELS;
     }
-
     public StoreSetSupplyChannelsActionImpl() {
-        this.action = SET_SUPPLY_CHANNELS;
+        this.action =  SET_SUPPLY_CHANNELS;
     }
 
-    public String getAction() {
+    
+    public String getAction(){
         return this.action;
     }
-
-    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels() {
+    
+    
+    public java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> getSupplyChannels(){
         return this.supplyChannels;
     }
 
-    public void setSupplyChannels(
-            final com.commercetools.api.models.channel.ChannelResourceIdentifier... supplyChannels) {
-        this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
+    
+    public void setSupplyChannels(final com.commercetools.api.models.channel.ChannelResourceIdentifier ...supplyChannels){
+       this.supplyChannels = new ArrayList<>(Arrays.asList(supplyChannels));
     }
-
-    public void setSupplyChannels(
-            final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels) {
-        this.supplyChannels = supplyChannels;
+    
+    
+    public void setSupplyChannels(final java.util.List<com.commercetools.api.models.channel.ChannelResourceIdentifier> supplyChannels){
+       this.supplyChannels = supplyChannels;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         StoreSetSupplyChannelsActionImpl that = (StoreSetSupplyChannelsActionImpl) o;
-
-        return new EqualsBuilder().append(action, that.action).append(supplyChannels, that.supplyChannels).isEquals();
+    
+        return new EqualsBuilder()
+                .append(action, that.action)
+                .append(supplyChannels, that.supplyChannels)
+                .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(supplyChannels).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(action)
+            .append(supplyChannels)
+            .toHashCode();
     }
 
 }

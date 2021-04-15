@@ -1,25 +1,31 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductSetKeyActionBuilder {
 
+    
     @Nullable
     private String key;
 
+    
     public ProductSetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 

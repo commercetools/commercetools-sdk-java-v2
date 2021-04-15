@@ -1,30 +1,45 @@
-
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
+
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Gets the full representation of a product by ID.</p>
 */
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductsByIDGet
-        extends ApiMethod<ByProjectKeyProductsByIDGet, com.commercetools.api.models.product.Product>
-        implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsByIDGet>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsByIDGet>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductsByIDGet> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public class ByProjectKeyProductsByIDGet extends ApiMethod<ByProjectKeyProductsByIDGet, com.commercetools.api.models.product.Product> implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsByIDGet>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsByIDGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsByIDGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductsByIDGet> {
 
+    
     private String projectKey;
     private String ID;
+    
 
     public ByProjectKeyProductsByIDGet(final ApiHttpClient apiHttpClient, String projectKey, String ID) {
         super(apiHttpClient);
@@ -42,127 +57,119 @@ public class ByProjectKeyProductsByIDGet
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/products/%s", this.projectKey, this.ID);
-        if (!params.isEmpty()) {
+        if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-
+        
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product.Product> executeBlocking(final ApiHttpClient client,
-            Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.product.Product> executeBlocking(final ApiHttpClient client, Duration timeout){
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> execute(final ApiHttpClient client){
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.product.Product.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    public String getID() {
-        return this.ID;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getID() {return this.ID;}
 
     public List<String> getPriceCurrency() {
         return this.getQueryParam("priceCurrency");
     }
-
+    
     public List<String> getPriceCountry() {
         return this.getQueryParam("priceCountry");
     }
-
+    
     public List<String> getPriceCustomerGroup() {
         return this.getQueryParam("priceCustomerGroup");
     }
-
+    
     public List<String> getPriceChannel() {
         return this.getQueryParam("priceChannel");
     }
-
+    
     public List<String> getLocaleProjection() {
         return this.getQueryParam("localeProjection");
     }
-
+    
     public List<String> getStoreProjection() {
         return this.getQueryParam("storeProjection");
     }
-
+    
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setID(final String ID) { this.ID = ID; }
 
-    public void setID(final String ID) {
-        this.ID = ID;
-    }
-
-    public ByProjectKeyProductsByIDGet withPriceCurrency(final String priceCurrency) {
+    public ByProjectKeyProductsByIDGet withPriceCurrency(final String priceCurrency){
         return copy().withQueryParam("priceCurrency", priceCurrency);
     }
-
-    public ByProjectKeyProductsByIDGet addPriceCurrency(final String priceCurrency) {
+    
+    public ByProjectKeyProductsByIDGet addPriceCurrency(final String priceCurrency){
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
-
-    public ByProjectKeyProductsByIDGet withPriceCountry(final String priceCountry) {
+    
+    public ByProjectKeyProductsByIDGet withPriceCountry(final String priceCountry){
         return copy().withQueryParam("priceCountry", priceCountry);
     }
-
-    public ByProjectKeyProductsByIDGet addPriceCountry(final String priceCountry) {
+    
+    public ByProjectKeyProductsByIDGet addPriceCountry(final String priceCountry){
         return copy().addQueryParam("priceCountry", priceCountry);
     }
-
-    public ByProjectKeyProductsByIDGet withPriceCustomerGroup(final String priceCustomerGroup) {
+    
+    public ByProjectKeyProductsByIDGet withPriceCustomerGroup(final String priceCustomerGroup){
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
-
-    public ByProjectKeyProductsByIDGet addPriceCustomerGroup(final String priceCustomerGroup) {
+    
+    public ByProjectKeyProductsByIDGet addPriceCustomerGroup(final String priceCustomerGroup){
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
-
-    public ByProjectKeyProductsByIDGet withPriceChannel(final String priceChannel) {
+    
+    public ByProjectKeyProductsByIDGet withPriceChannel(final String priceChannel){
         return copy().withQueryParam("priceChannel", priceChannel);
     }
-
-    public ByProjectKeyProductsByIDGet addPriceChannel(final String priceChannel) {
+    
+    public ByProjectKeyProductsByIDGet addPriceChannel(final String priceChannel){
         return copy().addQueryParam("priceChannel", priceChannel);
     }
-
-    public ByProjectKeyProductsByIDGet withLocaleProjection(final String localeProjection) {
+    
+    public ByProjectKeyProductsByIDGet withLocaleProjection(final String localeProjection){
         return copy().withQueryParam("localeProjection", localeProjection);
     }
-
-    public ByProjectKeyProductsByIDGet addLocaleProjection(final String localeProjection) {
+    
+    public ByProjectKeyProductsByIDGet addLocaleProjection(final String localeProjection){
         return copy().addQueryParam("localeProjection", localeProjection);
     }
-
-    public ByProjectKeyProductsByIDGet withStoreProjection(final String storeProjection) {
+    
+    public ByProjectKeyProductsByIDGet withStoreProjection(final String storeProjection){
         return copy().withQueryParam("storeProjection", storeProjection);
     }
-
-    public ByProjectKeyProductsByIDGet addStoreProjection(final String storeProjection) {
+    
+    public ByProjectKeyProductsByIDGet addStoreProjection(final String storeProjection){
         return copy().addQueryParam("storeProjection", storeProjection);
     }
-
-    public ByProjectKeyProductsByIDGet withExpand(final String expand) {
+    
+    public ByProjectKeyProductsByIDGet withExpand(final String expand){
         return copy().withQueryParam("expand", expand);
     }
-
-    public ByProjectKeyProductsByIDGet addExpand(final String expand) {
+    
+    public ByProjectKeyProductsByIDGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 
+    
+
     @Override
-    protected ByProjectKeyProductsByIDGet copy() {
+    protected ByProjectKeyProductsByIDGet copy()
+    {
         return new ByProjectKeyProductsByIDGet(this);
     }
 }

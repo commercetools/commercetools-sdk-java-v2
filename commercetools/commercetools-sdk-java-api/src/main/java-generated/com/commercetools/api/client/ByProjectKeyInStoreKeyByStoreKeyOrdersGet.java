@@ -1,35 +1,47 @@
-
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
+
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Queries orders in a specific Store. The {storeKey} path parameter maps to a Store's key.</p>
 */
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse>
-        implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
-        com.commercetools.api.client.SortableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
-        com.commercetools.api.client.PagingTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
-        com.commercetools.api.client.QueryTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyOrdersGet, com.commercetools.api.models.order.OrderPagedQueryResponse> implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>, com.commercetools.api.client.SortableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>, com.commercetools.api.client.PagingTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>, com.commercetools.api.client.QueryTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyOrdersGet> {
 
+    
     private String projectKey;
     private String storeKey;
+    
 
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet(final ApiHttpClient apiHttpClient, String projectKey,
-            String storeKey) {
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
@@ -45,124 +57,115 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersGet extends
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/in-store/key=%s/orders", this.projectKey, this.storeKey);
-        if (!params.isEmpty()) {
+        if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-
+        
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.order.OrderPagedQueryResponse> executeBlocking(
-            final ApiHttpClient client, Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.order.OrderPagedQueryResponse> executeBlocking(final ApiHttpClient client, Duration timeout){
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.OrderPagedQueryResponse>> execute(
-            final ApiHttpClient client) {
-        return client.execute(this.createHttpRequest(),
-            com.commercetools.api.models.order.OrderPagedQueryResponse.class);
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.order.OrderPagedQueryResponse>> execute(final ApiHttpClient client){
+        return client.execute(this.createHttpRequest(), com.commercetools.api.models.order.OrderPagedQueryResponse.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    public String getStoreKey() {
-        return this.storeKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getStoreKey() {return this.storeKey;}
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
-
+    
     public List<String> getSort() {
         return this.getQueryParam("sort");
     }
-
+    
     public List<String> getLimit() {
         return this.getQueryParam("limit");
     }
-
+    
     public List<String> getOffset() {
         return this.getQueryParam("offset");
     }
-
+    
     public List<String> getWithTotal() {
         return this.getQueryParam("withTotal");
     }
-
+    
     public List<String> getWhere() {
         return this.getQueryParam("where");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
 
-    public void setStoreKey(final String storeKey) {
-        this.storeKey = storeKey;
-    }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withExpand(final String expand) {
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withExpand(final String expand){
         return copy().withQueryParam("expand", expand);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addExpand(final String expand) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withSort(final String sort) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withSort(final String sort){
         return copy().withQueryParam("sort", sort);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addSort(final String sort) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addSort(final String sort){
         return copy().addQueryParam("sort", sort);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withLimit(final int limit) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withLimit(final int limit){
         return copy().withQueryParam("limit", limit);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addLimit(final int limit) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addLimit(final int limit){
         return copy().addQueryParam("limit", limit);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withOffset(final int offset) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withOffset(final int offset){
         return copy().withQueryParam("offset", offset);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addOffset(final int offset) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addOffset(final int offset){
         return copy().addQueryParam("offset", offset);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWithTotal(final boolean withTotal) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWithTotal(final boolean withTotal){
         return copy().withQueryParam("withTotal", withTotal);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWithTotal(final boolean withTotal) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWithTotal(final boolean withTotal){
         return copy().addQueryParam("withTotal", withTotal);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWhere(final String where) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withWhere(final String where){
         return copy().withQueryParam("where", where);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWhere(final String where) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addWhere(final String where){
         return copy().addQueryParam("where", where);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withPredicateVar(final String varName, final String predicateVar) {
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet withPredicateVar(final String varName, final String predicateVar){
         return copy().withQueryParam(String.format("var.%s", varName), predicateVar);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addPredicateVar(final String varName, final String predicateVar) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersGet addPredicateVar(final String varName, final String predicateVar){
         return copy().addQueryParam(String.format("var.%s", varName), predicateVar);
     }
+    
+    
 
     @Override
-    protected ByProjectKeyInStoreKeyByStoreKeyOrdersGet copy() {
+    protected ByProjectKeyInStoreKeyByStoreKeyOrdersGet copy()
+    {
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersGet(this);
     }
 }

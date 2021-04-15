@@ -1,47 +1,64 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.PriceDraft;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangePriceAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductChangePriceActionBuilder {
 
+    
+    
     private String priceId;
-
+    
+    
+    
     private com.commercetools.api.models.common.PriceDraft price;
-
+    
+    
     @Nullable
     private Boolean staged;
 
-    public ProductChangePriceActionBuilder priceId(final String priceId) {
+    
+    public ProductChangePriceActionBuilder priceId( final String priceId) {
         this.priceId = priceId;
         return this;
     }
-
-    public ProductChangePriceActionBuilder price(final com.commercetools.api.models.common.PriceDraft price) {
+    
+    
+    public ProductChangePriceActionBuilder price( final com.commercetools.api.models.common.PriceDraft price) {
         this.price = price;
         return this;
     }
-
+    
+    
     public ProductChangePriceActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
-    public String getPriceId() {
+    
+    
+    public String getPriceId(){
         return this.priceId;
     }
-
-    public com.commercetools.api.models.common.PriceDraft getPrice() {
+    
+    
+    
+    public com.commercetools.api.models.common.PriceDraft getPrice(){
         return this.price;
     }
-
+    
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 

@@ -1,16 +1,31 @@
-
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
+
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Retrieves the active cart of the customer that has been modified most recently in a specific Store.
@@ -20,28 +35,26 @@ import io.vrap.rmf.base.client.utils.Generated;
 *  <p>The cart may not contain up-to-date prices, discounts etc. If you want to ensure they're up-to-date,
 *  send an Update request with the Recalculate update action instead.</p>
 */
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet extends
-        ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet, com.commercetools.api.models.cart.Cart>
-        implements
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet extends ApiMethod<ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet, com.commercetools.api.models.cart.Cart> implements com.commercetools.api.client.ExpandableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet> {
 
+    
     private String projectKey;
     private String storeKey;
     private String customerId;
+    
 
-    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(final ApiHttpClient apiHttpClient,
-            String projectKey, String storeKey, String customerId) {
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(final ApiHttpClient apiHttpClient, String projectKey, String storeKey, String customerId) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.storeKey = storeKey;
         this.customerId = customerId;
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(
-            ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet t) {
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet t) {
         super(t);
         this.projectKey = t.projectKey;
         this.storeKey = t.storeKey;
@@ -51,65 +64,51 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
     @Override
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("/%s/in-store/key=%s/carts/customer-id=%s", this.projectKey,
-            this.storeKey, this.customerId);
-        if (!params.isEmpty()) {
+        String httpRequestPath = String.format("/%s/in-store/key=%s/carts/customer-id=%s", this.projectKey, this.storeKey, this.customerId);
+        if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-
+        
         return new ApiHttpRequest(ApiHttpMethod.GET, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(final ApiHttpClient client,
-            Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.cart.Cart> executeBlocking(final ApiHttpClient client, Duration timeout){
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.cart.Cart>> execute(final ApiHttpClient client){
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.cart.Cart.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    public String getStoreKey() {
-        return this.storeKey;
-    }
-
-    public String getCustomerId() {
-        return this.customerId;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getStoreKey() {return this.storeKey;}
+    public String getCustomerId() {return this.customerId;}
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setStoreKey(final String storeKey) { this.storeKey = storeKey; }
+    
+    public void setCustomerId(final String customerId) { this.customerId = customerId; }
 
-    public void setStoreKey(final String storeKey) {
-        this.storeKey = storeKey;
-    }
-
-    public void setCustomerId(final String customerId) {
-        this.customerId = customerId;
-    }
-
-    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand) {
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet withExpand(final String expand){
         return copy().withQueryParam("expand", expand);
     }
-
-    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet addExpand(final String expand) {
+    
+    public ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 
+    
+
     @Override
-    protected ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet copy() {
+    protected ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet copy()
+    {
         return new ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet(this);
     }
 }

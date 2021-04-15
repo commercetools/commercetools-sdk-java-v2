@@ -1,39 +1,50 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.TrackingData;
+import com.commercetools.api.models.order.OrderSetParcelTrackingDataActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = OrderSetParcelTrackingDataActionImpl.class)
 public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
 
     String SET_PARCEL_TRACKING_DATA = "setParcelTrackingData";
 
+    
     @NotNull
     @JsonProperty("parcelId")
     public String getParcelId();
-
+    
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
 
+    
     public void setParcelId(final String parcelId);
-
+    
+    
+    
     public void setTrackingData(final TrackingData trackingData);
+    
 
-    public static OrderSetParcelTrackingDataAction of() {
+    public static OrderSetParcelTrackingDataAction of(){
         return new OrderSetParcelTrackingDataActionImpl();
     }
+    
 
     public static OrderSetParcelTrackingDataAction of(final OrderSetParcelTrackingDataAction template) {
         OrderSetParcelTrackingDataActionImpl instance = new OrderSetParcelTrackingDataActionImpl();
@@ -42,13 +53,14 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
         return instance;
     }
 
-    public static OrderSetParcelTrackingDataActionBuilder builder() {
+    public static OrderSetParcelTrackingDataActionBuilder builder(){
         return OrderSetParcelTrackingDataActionBuilder.of();
     }
-
-    public static OrderSetParcelTrackingDataActionBuilder builder(final OrderSetParcelTrackingDataAction template) {
+    
+    public static OrderSetParcelTrackingDataActionBuilder builder(final OrderSetParcelTrackingDataAction template){
         return OrderSetParcelTrackingDataActionBuilder.of(template);
     }
+    
 
     default <T> T withOrderSetParcelTrackingDataAction(Function<OrderSetParcelTrackingDataAction, T> helper) {
         return helper.apply(this);

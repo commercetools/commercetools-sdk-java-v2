@@ -1,36 +1,48 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.order.OrderSetShippingAddressCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderSetShippingAddressCustomFieldActionBuilder {
 
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
-    public OrderSetShippingAddressCustomFieldActionBuilder name(final String name) {
+    
+    public OrderSetShippingAddressCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
     public OrderSetShippingAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -42,8 +54,7 @@ public final class OrderSetShippingAddressCustomFieldActionBuilder {
         return new OrderSetShippingAddressCustomFieldActionBuilder();
     }
 
-    public static OrderSetShippingAddressCustomFieldActionBuilder of(
-            final OrderSetShippingAddressCustomFieldAction template) {
+    public static OrderSetShippingAddressCustomFieldActionBuilder of(final OrderSetShippingAddressCustomFieldAction template) {
         OrderSetShippingAddressCustomFieldActionBuilder builder = new OrderSetShippingAddressCustomFieldActionBuilder();
         builder.name = template.getName();
         builder.value = template.getValue();

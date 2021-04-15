@@ -1,32 +1,47 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ExternalLineItemTotalPriceBuilder {
 
+    
+    
     private com.commercetools.api.models.common.Money price;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money totalPrice;
 
-    public ExternalLineItemTotalPriceBuilder price(final com.commercetools.api.models.common.Money price) {
+    
+    public ExternalLineItemTotalPriceBuilder price( final com.commercetools.api.models.common.Money price) {
         this.price = price;
         return this;
     }
-
-    public ExternalLineItemTotalPriceBuilder totalPrice(final com.commercetools.api.models.common.Money totalPrice) {
+    
+    
+    public ExternalLineItemTotalPriceBuilder totalPrice( final com.commercetools.api.models.common.Money totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
 
-    public com.commercetools.api.models.common.Money getPrice() {
+    
+    
+    public com.commercetools.api.models.common.Money getPrice(){
         return this.price;
     }
-
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    
+    
+    
+    public com.commercetools.api.models.common.Money getTotalPrice(){
         return this.totalPrice;
     }
 

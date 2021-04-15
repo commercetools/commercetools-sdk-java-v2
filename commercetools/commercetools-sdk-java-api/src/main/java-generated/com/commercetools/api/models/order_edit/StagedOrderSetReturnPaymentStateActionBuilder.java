@@ -1,33 +1,48 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.ReturnPaymentState;
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetReturnPaymentStateAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class StagedOrderSetReturnPaymentStateActionBuilder {
 
+    
+    
     private String returnItemId;
-
+    
+    
+    
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
 
-    public StagedOrderSetReturnPaymentStateActionBuilder returnItemId(final String returnItemId) {
+    
+    public StagedOrderSetReturnPaymentStateActionBuilder returnItemId( final String returnItemId) {
         this.returnItemId = returnItemId;
         return this;
     }
-
-    public StagedOrderSetReturnPaymentStateActionBuilder paymentState(
-            final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
+    
+    
+    public StagedOrderSetReturnPaymentStateActionBuilder paymentState( final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
 
-    public String getReturnItemId() {
+    
+    
+    public String getReturnItemId(){
         return this.returnItemId;
     }
-
-    public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
+    
+    
+    
+    public com.commercetools.api.models.order.ReturnPaymentState getPaymentState(){
         return this.paymentState;
     }
 
@@ -39,8 +54,7 @@ public final class StagedOrderSetReturnPaymentStateActionBuilder {
         return new StagedOrderSetReturnPaymentStateActionBuilder();
     }
 
-    public static StagedOrderSetReturnPaymentStateActionBuilder of(
-            final StagedOrderSetReturnPaymentStateAction template) {
+    public static StagedOrderSetReturnPaymentStateActionBuilder of(final StagedOrderSetReturnPaymentStateAction template) {
         StagedOrderSetReturnPaymentStateActionBuilder builder = new StagedOrderSetReturnPaymentStateActionBuilder();
         builder.returnItemId = template.getReturnItemId();
         builder.paymentState = template.getPaymentState();

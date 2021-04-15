@@ -1,43 +1,63 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.SnsDestination;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class SnsDestinationBuilder {
 
+    
+    
     private String accessKey;
-
+    
+    
+    
     private String accessSecret;
-
+    
+    
+    
     private String topicArn;
 
-    public SnsDestinationBuilder accessKey(final String accessKey) {
+    
+    public SnsDestinationBuilder accessKey( final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
-
-    public SnsDestinationBuilder accessSecret(final String accessSecret) {
+    
+    
+    public SnsDestinationBuilder accessSecret( final String accessSecret) {
         this.accessSecret = accessSecret;
         return this;
     }
-
-    public SnsDestinationBuilder topicArn(final String topicArn) {
+    
+    
+    public SnsDestinationBuilder topicArn( final String topicArn) {
         this.topicArn = topicArn;
         return this;
     }
 
-    public String getAccessKey() {
+    
+    
+    public String getAccessKey(){
         return this.accessKey;
     }
-
-    public String getAccessSecret() {
+    
+    
+    
+    public String getAccessSecret(){
         return this.accessSecret;
     }
-
-    public String getTopicArn() {
+    
+    
+    
+    public String getTopicArn(){
         return this.topicArn;
     }
 

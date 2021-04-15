@@ -1,36 +1,49 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartReference;
+import com.commercetools.api.models.order.OrderReference;
+import java.lang.Object;
+import com.commercetools.api.models.cart.ReplicaCartDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ReplicaCartDraftBuilder {
 
+    
+    
     private java.lang.Object reference;
-
+    
+    
     @Nullable
     private String key;
 
-    public ReplicaCartDraftBuilder reference(final java.lang.Object reference) {
+    
+    public ReplicaCartDraftBuilder reference( final java.lang.Object reference) {
         this.reference = reference;
         return this;
     }
-
+    
+    
     public ReplicaCartDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
-    public java.lang.Object getReference() {
+    
+    
+    public java.lang.Object getReference(){
         return this.reference;
     }
-
+    
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 

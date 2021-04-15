@@ -1,36 +1,49 @@
-
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
+
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>To create a new product, send a representation that is going to become the initial staged representation
 *  of the new product in the master catalog. If price selection query parameters are provided,
 *  the selected prices will be added to the response.</p>
 */
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyProductsPost
-        extends ApiMethod<ByProjectKeyProductsPost, com.commercetools.api.models.product.Product>
-        implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsPost>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductsPost> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public class ByProjectKeyProductsPost extends ApiMethod<ByProjectKeyProductsPost, com.commercetools.api.models.product.Product> implements com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductsPost>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductsPost>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductsPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyProductsPost> {
 
+    
     private String projectKey;
-
+    
     private com.commercetools.api.models.product.ProductDraft productDraft;
 
-    public ByProjectKeyProductsPost(final ApiHttpClient apiHttpClient, String projectKey,
-            com.commercetools.api.models.product.ProductDraft productDraft) {
+    public ByProjectKeyProductsPost(final ApiHttpClient apiHttpClient, String projectKey, com.commercetools.api.models.product.ProductDraft productDraft) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.productDraft = productDraft;
@@ -46,126 +59,122 @@ public class ByProjectKeyProductsPost
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/products", this.projectKey);
-        if (!params.isEmpty()) {
+        if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(productDraft);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(productDraft);
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+    } catch(Exception e) {
+        e.printStackTrace();
+    }
+    
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.product.Product> executeBlocking(final ApiHttpClient client,
-            Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.product.Product> executeBlocking(final ApiHttpClient client, Duration timeout){
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.product.Product>> execute(final ApiHttpClient client){
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.product.Product.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
 
     public List<String> getPriceCurrency() {
         return this.getQueryParam("priceCurrency");
     }
-
+    
     public List<String> getPriceCountry() {
         return this.getQueryParam("priceCountry");
     }
-
+    
     public List<String> getPriceCustomerGroup() {
         return this.getQueryParam("priceCustomerGroup");
     }
-
+    
     public List<String> getPriceChannel() {
         return this.getQueryParam("priceChannel");
     }
-
+    
     public List<String> getLocaleProjection() {
         return this.getQueryParam("localeProjection");
     }
-
+    
     public List<String> getStoreProjection() {
         return this.getQueryParam("storeProjection");
     }
-
+    
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
-    public ByProjectKeyProductsPost withPriceCurrency(final String priceCurrency) {
+    public ByProjectKeyProductsPost withPriceCurrency(final String priceCurrency){
         return copy().withQueryParam("priceCurrency", priceCurrency);
     }
-
-    public ByProjectKeyProductsPost addPriceCurrency(final String priceCurrency) {
+    
+    public ByProjectKeyProductsPost addPriceCurrency(final String priceCurrency){
         return copy().addQueryParam("priceCurrency", priceCurrency);
     }
-
-    public ByProjectKeyProductsPost withPriceCountry(final String priceCountry) {
+    
+    public ByProjectKeyProductsPost withPriceCountry(final String priceCountry){
         return copy().withQueryParam("priceCountry", priceCountry);
     }
-
-    public ByProjectKeyProductsPost addPriceCountry(final String priceCountry) {
+    
+    public ByProjectKeyProductsPost addPriceCountry(final String priceCountry){
         return copy().addQueryParam("priceCountry", priceCountry);
     }
-
-    public ByProjectKeyProductsPost withPriceCustomerGroup(final String priceCustomerGroup) {
+    
+    public ByProjectKeyProductsPost withPriceCustomerGroup(final String priceCustomerGroup){
         return copy().withQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
-
-    public ByProjectKeyProductsPost addPriceCustomerGroup(final String priceCustomerGroup) {
+    
+    public ByProjectKeyProductsPost addPriceCustomerGroup(final String priceCustomerGroup){
         return copy().addQueryParam("priceCustomerGroup", priceCustomerGroup);
     }
-
-    public ByProjectKeyProductsPost withPriceChannel(final String priceChannel) {
+    
+    public ByProjectKeyProductsPost withPriceChannel(final String priceChannel){
         return copy().withQueryParam("priceChannel", priceChannel);
     }
-
-    public ByProjectKeyProductsPost addPriceChannel(final String priceChannel) {
+    
+    public ByProjectKeyProductsPost addPriceChannel(final String priceChannel){
         return copy().addQueryParam("priceChannel", priceChannel);
     }
-
-    public ByProjectKeyProductsPost withLocaleProjection(final String localeProjection) {
+    
+    public ByProjectKeyProductsPost withLocaleProjection(final String localeProjection){
         return copy().withQueryParam("localeProjection", localeProjection);
     }
-
-    public ByProjectKeyProductsPost addLocaleProjection(final String localeProjection) {
+    
+    public ByProjectKeyProductsPost addLocaleProjection(final String localeProjection){
         return copy().addQueryParam("localeProjection", localeProjection);
     }
-
-    public ByProjectKeyProductsPost withStoreProjection(final String storeProjection) {
+    
+    public ByProjectKeyProductsPost withStoreProjection(final String storeProjection){
         return copy().withQueryParam("storeProjection", storeProjection);
     }
-
-    public ByProjectKeyProductsPost addStoreProjection(final String storeProjection) {
+    
+    public ByProjectKeyProductsPost addStoreProjection(final String storeProjection){
         return copy().addQueryParam("storeProjection", storeProjection);
     }
-
-    public ByProjectKeyProductsPost withExpand(final String expand) {
+    
+    public ByProjectKeyProductsPost withExpand(final String expand){
         return copy().withQueryParam("expand", expand);
     }
-
-    public ByProjectKeyProductsPost addExpand(final String expand) {
+    
+    public ByProjectKeyProductsPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 
+    
+
     @Override
-    protected ByProjectKeyProductsPost copy() {
+    protected ByProjectKeyProductsPost copy()
+    {
         return new ByProjectKeyProductsPost(this);
     }
 }

@@ -1,41 +1,50 @@
-
 package com.commercetools.api.models.review;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.review.ReviewUpdateAction;
+import com.commercetools.api.models.review.ReviewUpdateImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ReviewUpdateImpl.class)
 public interface ReviewUpdate extends com.commercetools.api.models.ResourceUpdate<ReviewUpdate, ReviewUpdateAction> {
 
+
+    
     @NotNull
     @JsonProperty("version")
     public Long getVersion();
-
+    
     @NotNull
     @Valid
     @JsonProperty("actions")
     public List<ReviewUpdateAction> getActions();
 
+    
     public void setVersion(final Long version);
-
+    
+    
+    
     @JsonIgnore
-    public void setActions(final ReviewUpdateAction... actions);
-
+    public void setActions(final ReviewUpdateAction ...actions);
     public void setActions(final List<ReviewUpdateAction> actions);
 
-    public static ReviewUpdate of() {
+    public static ReviewUpdate of(){
         return new ReviewUpdateImpl();
     }
+    
 
     public static ReviewUpdate of(final ReviewUpdate template) {
         ReviewUpdateImpl instance = new ReviewUpdateImpl();
@@ -44,13 +53,14 @@ public interface ReviewUpdate extends com.commercetools.api.models.ResourceUpdat
         return instance;
     }
 
-    public static ReviewUpdateBuilder builder() {
+    public static ReviewUpdateBuilder builder(){
         return ReviewUpdateBuilder.of();
     }
-
-    public static ReviewUpdateBuilder builder(final ReviewUpdate template) {
+    
+    public static ReviewUpdateBuilder builder(final ReviewUpdate template){
         return ReviewUpdateBuilder.of(template);
     }
+    
 
     default <T> T withReviewUpdate(Function<ReviewUpdate, T> helper) {
         return helper.apply(this);

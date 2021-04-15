@@ -1,47 +1,63 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
 
+import com.commercetools.api.models.customer.CustomerCreateEmailToken;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CustomerCreateEmailTokenBuilder {
 
+    
+    
     private String id;
-
+    
+    
     @Nullable
     private Long version;
-
+    
+    
+    
     private Long ttlMinutes;
 
-    public CustomerCreateEmailTokenBuilder id(final String id) {
+    
+    public CustomerCreateEmailTokenBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
+    
+    
     public CustomerCreateEmailTokenBuilder version(@Nullable final Long version) {
         this.version = version;
         return this;
     }
-
-    public CustomerCreateEmailTokenBuilder ttlMinutes(final Long ttlMinutes) {
+    
+    
+    public CustomerCreateEmailTokenBuilder ttlMinutes( final Long ttlMinutes) {
         this.ttlMinutes = ttlMinutes;
         return this;
     }
 
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
+    
+    
     @Nullable
-    public Long getVersion() {
+    public Long getVersion(){
         return this.version;
     }
-
-    public Long getTtlMinutes() {
+    
+    
+    
+    public Long getTtlMinutes(){
         return this.ttlMinutes;
     }
 

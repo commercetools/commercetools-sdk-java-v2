@@ -1,88 +1,103 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
-
+import com.commercetools.api.models.channel.ChannelReference;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class SyncInfoImpl implements SyncInfo {
 
+    
     private com.commercetools.api.models.channel.ChannelReference channel;
-
+    
+    
     private String externalId;
-
+    
+    
     private java.time.ZonedDateTime syncedAt;
 
     @JsonCreator
-    SyncInfoImpl(@JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel,
-            @JsonProperty("externalId") final String externalId,
-            @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
+    SyncInfoImpl(@JsonProperty("channel") final com.commercetools.api.models.channel.ChannelReference channel, @JsonProperty("externalId") final String externalId, @JsonProperty("syncedAt") final java.time.ZonedDateTime syncedAt) {
         this.channel = channel;
         this.externalId = externalId;
         this.syncedAt = syncedAt;
     }
-
     public SyncInfoImpl() {
     }
 
     /**
     *  <p>Connection to a particular synchronization destination.</p>
     */
-    public com.commercetools.api.models.channel.ChannelReference getChannel() {
+    public com.commercetools.api.models.channel.ChannelReference getChannel(){
         return this.channel;
     }
-
+    
     /**
     *  <p>Can be used to reference an external order instance, file etc.</p>
     */
-    public String getExternalId() {
+    public String getExternalId(){
         return this.externalId;
     }
-
-    public java.time.ZonedDateTime getSyncedAt() {
+    
+    
+    public java.time.ZonedDateTime getSyncedAt(){
         return this.syncedAt;
     }
 
-    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel) {
+    
+    public void setChannel(final com.commercetools.api.models.channel.ChannelReference channel){
         this.channel = channel;
     }
-
-    public void setExternalId(final String externalId) {
+    
+    
+    public void setExternalId(final String externalId){
         this.externalId = externalId;
     }
-
-    public void setSyncedAt(final java.time.ZonedDateTime syncedAt) {
+    
+    
+    public void setSyncedAt(final java.time.ZonedDateTime syncedAt){
         this.syncedAt = syncedAt;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         SyncInfoImpl that = (SyncInfoImpl) o;
-
-        return new EqualsBuilder().append(channel, that.channel)
+    
+        return new EqualsBuilder()
+                .append(channel, that.channel)
                 .append(externalId, that.externalId)
                 .append(syncedAt, that.syncedAt)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(channel).append(externalId).append(syncedAt).toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(channel)
+            .append(externalId)
+            .append(syncedAt)
+            .toHashCode();
     }
 
 }

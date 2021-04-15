@@ -1,35 +1,43 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.order.Order;
+import com.commercetools.api.models.message.OrderImportedMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = OrderImportedMessageImpl.class)
 public interface OrderImportedMessage extends Message {
 
     String ORDER_IMPORTED = "OrderImported";
 
+    
     @NotNull
     @Valid
     @JsonProperty("order")
     public Order getOrder();
 
+    
     public void setOrder(final Order order);
+    
 
-    public static OrderImportedMessage of() {
+    public static OrderImportedMessage of(){
         return new OrderImportedMessageImpl();
     }
+    
 
     public static OrderImportedMessage of(final OrderImportedMessage template) {
         OrderImportedMessageImpl instance = new OrderImportedMessageImpl();
@@ -47,13 +55,14 @@ public interface OrderImportedMessage extends Message {
         return instance;
     }
 
-    public static OrderImportedMessageBuilder builder() {
+    public static OrderImportedMessageBuilder builder(){
         return OrderImportedMessageBuilder.of();
     }
-
-    public static OrderImportedMessageBuilder builder(final OrderImportedMessage template) {
+    
+    public static OrderImportedMessageBuilder builder(final OrderImportedMessage template){
         return OrderImportedMessageBuilder.of(template);
     }
+    
 
     default <T> T withOrderImportedMessage(Function<OrderImportedMessage, T> helper) {
         return helper.apply(this);

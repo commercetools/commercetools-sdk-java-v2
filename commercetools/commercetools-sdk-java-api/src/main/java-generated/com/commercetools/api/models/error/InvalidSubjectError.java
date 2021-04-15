@@ -1,24 +1,34 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.InvalidSubjectErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = InvalidSubjectErrorImpl.class)
 public interface InvalidSubjectError extends ErrorObject {
 
     String INVALID_SUBJECT = "InvalidSubject";
 
-    public static InvalidSubjectError of() {
+
+
+    public static InvalidSubjectError of(){
         return new InvalidSubjectErrorImpl();
     }
+    
 
     public static InvalidSubjectError of(final InvalidSubjectError template) {
         InvalidSubjectErrorImpl instance = new InvalidSubjectErrorImpl();
@@ -26,13 +36,14 @@ public interface InvalidSubjectError extends ErrorObject {
         return instance;
     }
 
-    public static InvalidSubjectErrorBuilder builder() {
+    public static InvalidSubjectErrorBuilder builder(){
         return InvalidSubjectErrorBuilder.of();
     }
-
-    public static InvalidSubjectErrorBuilder builder(final InvalidSubjectError template) {
+    
+    public static InvalidSubjectErrorBuilder builder(final InvalidSubjectError template){
         return InvalidSubjectErrorBuilder.of(template);
     }
+    
 
     default <T> T withInvalidSubjectError(Function<InvalidSubjectError, T> helper) {
         return helper.apply(this);

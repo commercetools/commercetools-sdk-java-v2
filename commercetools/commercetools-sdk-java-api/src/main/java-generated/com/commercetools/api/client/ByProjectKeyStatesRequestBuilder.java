@@ -1,16 +1,23 @@
-
 package com.commercetools.api.client;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiMethod;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public class ByProjectKeyStatesRequestBuilder {
 
     private final ApiHttpClient apiHttpClient;
     private final String projectKey;
+    
 
-    public ByProjectKeyStatesRequestBuilder(final ApiHttpClient apiHttpClient, final String projectKey) {
+    public ByProjectKeyStatesRequestBuilder (final ApiHttpClient apiHttpClient,final String projectKey) {
         this.apiHttpClient = apiHttpClient;
         this.projectKey = projectKey;
     }
@@ -18,7 +25,7 @@ public class ByProjectKeyStatesRequestBuilder {
     public ByProjectKeyStatesGet get() {
         return new ByProjectKeyStatesGet(apiHttpClient, projectKey);
     }
-
+    
     public ByProjectKeyStatesPost post(com.commercetools.api.models.state.StateDraft stateDraft) {
         return new ByProjectKeyStatesPost(apiHttpClient, projectKey, stateDraft);
     }
@@ -26,7 +33,6 @@ public class ByProjectKeyStatesRequestBuilder {
     public ByProjectKeyStatesKeyByKeyRequestBuilder withKey(String key) {
         return new ByProjectKeyStatesKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
     }
-
     public ByProjectKeyStatesByIDRequestBuilder withId(String ID) {
         return new ByProjectKeyStatesByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }

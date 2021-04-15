@@ -1,58 +1,76 @@
-
 package com.commercetools.api.models.error;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.PriceDraft;
+import com.commercetools.api.models.product.Attribute;
+import com.commercetools.api.models.error.VariantValues;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class VariantValuesBuilder {
 
+    
     @Nullable
     private String sku;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.common.PriceDraft> prices;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
+    
     public VariantValuesBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
-    public VariantValuesBuilder prices(final com.commercetools.api.models.common.PriceDraft... prices) {
+    
+    
+    public VariantValuesBuilder prices( final com.commercetools.api.models.common.PriceDraft ...prices) {
         this.prices = new ArrayList<>(Arrays.asList(prices));
         return this;
     }
-
-    public VariantValuesBuilder prices(final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
+    
+    
+    public VariantValuesBuilder prices( final java.util.List<com.commercetools.api.models.common.PriceDraft> prices) {
         this.prices = prices;
         return this;
     }
-
-    public VariantValuesBuilder attributes(final com.commercetools.api.models.product.Attribute... attributes) {
+    
+    
+    public VariantValuesBuilder attributes( final com.commercetools.api.models.product.Attribute ...attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-
-    public VariantValuesBuilder attributes(
-            final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+    
+    
+    public VariantValuesBuilder attributes( final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.attributes = attributes;
         return this;
     }
 
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
-    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices() {
+    
+    
+    
+    public java.util.List<com.commercetools.api.models.common.PriceDraft> getPrices(){
         return this.prices;
     }
-
-    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+    
+    
+    
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes(){
         return this.attributes;
     }
 

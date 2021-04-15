@@ -1,32 +1,38 @@
-
 package com.commercetools.api.models.state;
 
-import java.util.*;
-
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateSetTransitionsAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class StateSetTransitionsActionBuilder {
 
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions;
 
-    public StateSetTransitionsActionBuilder transitions(
-            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier... transitions) {
+    
+    public StateSetTransitionsActionBuilder transitions(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier ...transitions) {
         this.transitions = new ArrayList<>(Arrays.asList(transitions));
         return this;
     }
-
-    public StateSetTransitionsActionBuilder transitions(
-            @Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
+    
+    
+    public StateSetTransitionsActionBuilder transitions(@Nullable final java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> transitions) {
         this.transitions = transitions;
         return this;
     }
 
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions() {
+    public java.util.List<com.commercetools.api.models.state.StateResourceIdentifier> getTransitions(){
         return this.transitions;
     }
 

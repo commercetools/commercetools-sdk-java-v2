@@ -1,26 +1,32 @@
-
 package com.commercetools.api.models.project;
 
-import java.util.*;
-
+import com.commercetools.api.models.project.CartsConfiguration;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectChangeCartsConfiguration;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProjectChangeCartsConfigurationBuilder {
 
+    
     @Nullable
     private com.commercetools.api.models.project.CartsConfiguration cartsConfiguration;
 
-    public ProjectChangeCartsConfigurationBuilder cartsConfiguration(
-            @Nullable final com.commercetools.api.models.project.CartsConfiguration cartsConfiguration) {
+    
+    public ProjectChangeCartsConfigurationBuilder cartsConfiguration(@Nullable final com.commercetools.api.models.project.CartsConfiguration cartsConfiguration) {
         this.cartsConfiguration = cartsConfiguration;
         return this;
     }
 
+    
     @Nullable
-    public com.commercetools.api.models.project.CartsConfiguration getCartsConfiguration() {
+    public com.commercetools.api.models.project.CartsConfiguration getCartsConfiguration(){
         return this.cartsConfiguration;
     }
 

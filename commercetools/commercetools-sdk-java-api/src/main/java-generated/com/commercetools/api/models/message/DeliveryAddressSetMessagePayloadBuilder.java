@@ -1,51 +1,64 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.Address;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.DeliveryAddressSetMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class DeliveryAddressSetMessagePayloadBuilder {
 
+    
+    
     private String deliveryId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Address address;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Address oldAddress;
 
-    public DeliveryAddressSetMessagePayloadBuilder deliveryId(final String deliveryId) {
+    
+    public DeliveryAddressSetMessagePayloadBuilder deliveryId( final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
-    public DeliveryAddressSetMessagePayloadBuilder address(
-            @Nullable final com.commercetools.api.models.common.Address address) {
+    
+    
+    public DeliveryAddressSetMessagePayloadBuilder address(@Nullable final com.commercetools.api.models.common.Address address) {
         this.address = address;
         return this;
     }
-
-    public DeliveryAddressSetMessagePayloadBuilder oldAddress(
-            @Nullable final com.commercetools.api.models.common.Address oldAddress) {
+    
+    
+    public DeliveryAddressSetMessagePayloadBuilder oldAddress(@Nullable final com.commercetools.api.models.common.Address oldAddress) {
         this.oldAddress = oldAddress;
         return this;
     }
 
-    public String getDeliveryId() {
+    
+    
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.Address getAddress() {
+    public com.commercetools.api.models.common.Address getAddress(){
         return this.address;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.Address getOldAddress() {
+    public com.commercetools.api.models.common.Address getOldAddress(){
         return this.oldAddress;
     }
 

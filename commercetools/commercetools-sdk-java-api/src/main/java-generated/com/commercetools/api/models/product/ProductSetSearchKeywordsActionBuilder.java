@@ -1,37 +1,48 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.SearchKeywords;
+import com.commercetools.api.models.product.ProductSetSearchKeywordsAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductSetSearchKeywordsActionBuilder {
 
+    
+    
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
-
+    
+    
     @Nullable
     private Boolean staged;
 
-    public ProductSetSearchKeywordsActionBuilder searchKeywords(
-            final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
+    
+    public ProductSetSearchKeywordsActionBuilder searchKeywords( final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
         return this;
     }
-
+    
+    
     public ProductSetSearchKeywordsActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
-    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
+    
+    
+    public com.commercetools.api.models.product.SearchKeywords getSearchKeywords(){
         return this.searchKeywords;
     }
-
+    
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 

@@ -1,71 +1,88 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.ParcelMeasurements;
+import com.commercetools.api.models.order.TrackingData;
+import com.commercetools.api.models.order.OrderAddParcelToDeliveryAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderAddParcelToDeliveryActionBuilder {
 
+    
+    
     private String deliveryId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.ParcelMeasurements measurements;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.TrackingData trackingData;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.order.DeliveryItem> items;
 
-    public OrderAddParcelToDeliveryActionBuilder deliveryId(final String deliveryId) {
+    
+    public OrderAddParcelToDeliveryActionBuilder deliveryId( final String deliveryId) {
         this.deliveryId = deliveryId;
         return this;
     }
-
-    public OrderAddParcelToDeliveryActionBuilder measurements(
-            @Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
+    
+    
+    public OrderAddParcelToDeliveryActionBuilder measurements(@Nullable final com.commercetools.api.models.order.ParcelMeasurements measurements) {
         this.measurements = measurements;
         return this;
     }
-
-    public OrderAddParcelToDeliveryActionBuilder trackingData(
-            @Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
+    
+    
+    public OrderAddParcelToDeliveryActionBuilder trackingData(@Nullable final com.commercetools.api.models.order.TrackingData trackingData) {
         this.trackingData = trackingData;
         return this;
     }
-
-    public OrderAddParcelToDeliveryActionBuilder items(
-            @Nullable final com.commercetools.api.models.order.DeliveryItem... items) {
+    
+    
+    public OrderAddParcelToDeliveryActionBuilder items(@Nullable final com.commercetools.api.models.order.DeliveryItem ...items) {
         this.items = new ArrayList<>(Arrays.asList(items));
         return this;
     }
-
-    public OrderAddParcelToDeliveryActionBuilder items(
-            @Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
+    
+    
+    public OrderAddParcelToDeliveryActionBuilder items(@Nullable final java.util.List<com.commercetools.api.models.order.DeliveryItem> items) {
         this.items = items;
         return this;
     }
 
-    public String getDeliveryId() {
+    
+    
+    public String getDeliveryId(){
         return this.deliveryId;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.order.ParcelMeasurements getMeasurements() {
+    public com.commercetools.api.models.order.ParcelMeasurements getMeasurements(){
         return this.measurements;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.order.TrackingData getTrackingData() {
+    public com.commercetools.api.models.order.TrackingData getTrackingData(){
         return this.trackingData;
     }
-
+    
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems() {
+    public java.util.List<com.commercetools.api.models.order.DeliveryItem> getItems(){
         return this.items;
     }
 

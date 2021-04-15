@@ -1,25 +1,31 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.me.MyCartUpdateAction;
+import com.commercetools.api.models.me.MyCartSetCountryAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class MyCartSetCountryActionBuilder {
 
+    
     @Nullable
     private String country;
 
+    
     public MyCartSetCountryActionBuilder country(@Nullable final String country) {
         this.country = country;
         return this;
     }
 
+    
     @Nullable
-    public String getCountry() {
+    public String getCountry(){
         return this.country;
     }
 

@@ -1,21 +1,31 @@
-
 package com.commercetools.api.models.order_edit;
 
+import com.commercetools.api.models.order.StagedOrderUpdateAction;
+import com.commercetools.api.models.order_edit.StagedOrderRemoveItemShippingAddressAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class StagedOrderRemoveItemShippingAddressActionBuilder {
 
+    
+    
     private String addressKey;
 
-    public StagedOrderRemoveItemShippingAddressActionBuilder addressKey(final String addressKey) {
+    
+    public StagedOrderRemoveItemShippingAddressActionBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
 
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
 
@@ -27,8 +37,7 @@ public final class StagedOrderRemoveItemShippingAddressActionBuilder {
         return new StagedOrderRemoveItemShippingAddressActionBuilder();
     }
 
-    public static StagedOrderRemoveItemShippingAddressActionBuilder of(
-            final StagedOrderRemoveItemShippingAddressAction template) {
+    public static StagedOrderRemoveItemShippingAddressActionBuilder of(final StagedOrderRemoveItemShippingAddressAction template) {
         StagedOrderRemoveItemShippingAddressActionBuilder builder = new StagedOrderRemoveItemShippingAddressActionBuilder();
         builder.addressKey = template.getAddressKey();
         return builder;

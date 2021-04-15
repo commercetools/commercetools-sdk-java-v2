@@ -1,33 +1,47 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.DiscountedLineItemPrice;
+import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class DiscountedLineItemPriceForQuantityBuilder {
 
+    
+    
     private Double quantity;
-
+    
+    
+    
     private com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice;
 
-    public DiscountedLineItemPriceForQuantityBuilder quantity(final Double quantity) {
+    
+    public DiscountedLineItemPriceForQuantityBuilder quantity( final Double quantity) {
         this.quantity = quantity;
         return this;
     }
-
-    public DiscountedLineItemPriceForQuantityBuilder discountedPrice(
-            final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice) {
+    
+    
+    public DiscountedLineItemPriceForQuantityBuilder discountedPrice( final com.commercetools.api.models.cart.DiscountedLineItemPrice discountedPrice) {
         this.discountedPrice = discountedPrice;
         return this;
     }
 
-    public Double getQuantity() {
+    
+    
+    public Double getQuantity(){
         return this.quantity;
     }
-
-    public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice() {
+    
+    
+    
+    public com.commercetools.api.models.cart.DiscountedLineItemPrice getDiscountedPrice(){
         return this.discountedPrice;
     }
 

@@ -1,41 +1,51 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.cart.LineItem;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.OrderLineItemAddedMessagePayloadImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = OrderLineItemAddedMessagePayloadImpl.class)
 public interface OrderLineItemAddedMessagePayload extends MessagePayload {
 
     String ORDER_LINE_ITEM_ADDED = "OrderLineItemAdded";
 
+    
     @NotNull
     @Valid
     @JsonProperty("lineItem")
     public LineItem getLineItem();
-
+    
     @NotNull
     @JsonProperty("addedQuantity")
     public Long getAddedQuantity();
 
+    
     public void setLineItem(final LineItem lineItem);
-
+    
+    
+    
     public void setAddedQuantity(final Long addedQuantity);
+    
 
-    public static OrderLineItemAddedMessagePayload of() {
+    public static OrderLineItemAddedMessagePayload of(){
         return new OrderLineItemAddedMessagePayloadImpl();
     }
+    
 
     public static OrderLineItemAddedMessagePayload of(final OrderLineItemAddedMessagePayload template) {
         OrderLineItemAddedMessagePayloadImpl instance = new OrderLineItemAddedMessagePayloadImpl();
@@ -44,13 +54,14 @@ public interface OrderLineItemAddedMessagePayload extends MessagePayload {
         return instance;
     }
 
-    public static OrderLineItemAddedMessagePayloadBuilder builder() {
+    public static OrderLineItemAddedMessagePayloadBuilder builder(){
         return OrderLineItemAddedMessagePayloadBuilder.of();
     }
-
-    public static OrderLineItemAddedMessagePayloadBuilder builder(final OrderLineItemAddedMessagePayload template) {
+    
+    public static OrderLineItemAddedMessagePayloadBuilder builder(final OrderLineItemAddedMessagePayload template){
         return OrderLineItemAddedMessagePayloadBuilder.of(template);
     }
+    
 
     default <T> T withOrderLineItemAddedMessagePayload(Function<OrderLineItemAddedMessagePayload, T> helper) {
         return helper.apply(this);

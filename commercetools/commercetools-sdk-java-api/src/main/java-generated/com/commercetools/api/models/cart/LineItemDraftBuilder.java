@@ -1,179 +1,218 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.ExternalLineItemTotalPrice;
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
+import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.cart.LineItemDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class LineItemDraftBuilder {
 
+    
     @Nullable
     private String productId;
-
+    
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
     @Nullable
     private Long quantity;
-
+    
+    
     @Nullable
     private java.time.ZonedDateTime addedAt;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.Money externalPrice;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    
     public LineItemDraftBuilder productId(@Nullable final String productId) {
         this.productId = productId;
         return this;
     }
-
+    
+    
     public LineItemDraftBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
     public LineItemDraftBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
     public LineItemDraftBuilder quantity(@Nullable final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
     public LineItemDraftBuilder addedAt(@Nullable final java.time.ZonedDateTime addedAt) {
         this.addedAt = addedAt;
         return this;
     }
-
-    public LineItemDraftBuilder supplyChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
+    
+    
+    public LineItemDraftBuilder supplyChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel) {
         this.supplyChannel = supplyChannel;
         return this;
     }
-
-    public LineItemDraftBuilder distributionChannel(
-            @Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
+    
+    
+    public LineItemDraftBuilder distributionChannel(@Nullable final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel) {
         this.distributionChannel = distributionChannel;
         return this;
     }
-
-    public LineItemDraftBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+    
+    
+    public LineItemDraftBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
-
+    
+    
     public LineItemDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-
+    
+    
     public LineItemDraftBuilder externalPrice(@Nullable final com.commercetools.api.models.common.Money externalPrice) {
         this.externalPrice = externalPrice;
         return this;
     }
-
-    public LineItemDraftBuilder externalTotalPrice(
-            @Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
+    
+    
+    public LineItemDraftBuilder externalTotalPrice(@Nullable final com.commercetools.api.models.cart.ExternalLineItemTotalPrice externalTotalPrice) {
         this.externalTotalPrice = externalTotalPrice;
         return this;
     }
-
-    public LineItemDraftBuilder shippingDetails(
-            @Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
+    
+    
+    public LineItemDraftBuilder shippingDetails(@Nullable final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails) {
         this.shippingDetails = shippingDetails;
         return this;
     }
 
+    
     @Nullable
-    public String getProductId() {
+    public String getProductId(){
         return this.productId;
     }
-
+    
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
+    
     @Nullable
-    public Long getQuantity() {
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
+    
     @Nullable
-    public java.time.ZonedDateTime getAddedAt() {
+    public java.time.ZonedDateTime getAddedAt(){
         return this.addedAt;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getSupplyChannel(){
         return this.supplyChannel;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel() {
+    public com.commercetools.api.models.channel.ChannelResourceIdentifier getDistributionChannel(){
         return this.distributionChannel;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
         return this.externalTaxRate;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.Money getExternalPrice() {
+    public com.commercetools.api.models.common.Money getExternalPrice(){
         return this.externalPrice;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice() {
+    public com.commercetools.api.models.cart.ExternalLineItemTotalPrice getExternalTotalPrice(){
         return this.externalTotalPrice;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails() {
+    public com.commercetools.api.models.cart.ItemShippingDetailsDraft getShippingDetails(){
         return this.shippingDetails;
     }
 
     public LineItemDraft build() {
-        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel,
-            externalTaxRate, custom, externalPrice, externalTotalPrice, shippingDetails);
+        return new LineItemDraftImpl(productId, variantId, sku, quantity, addedAt, supplyChannel, distributionChannel, externalTaxRate, custom, externalPrice, externalTotalPrice, shippingDetails);
     }
 
     public static LineItemDraftBuilder of() {

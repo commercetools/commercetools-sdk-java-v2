@@ -1,39 +1,50 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-
 import com.commercetools.api.models.cart.ShippingInfo;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.OrderShippingInfoSetMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = OrderShippingInfoSetMessageImpl.class)
 public interface OrderShippingInfoSetMessage extends Message {
 
     String ORDER_SHIPPING_INFO_SET = "OrderShippingInfoSet";
 
+    
     @Valid
     @JsonProperty("shippingInfo")
     public ShippingInfo getShippingInfo();
-
+    
     @Valid
     @JsonProperty("oldShippingInfo")
     public ShippingInfo getOldShippingInfo();
 
+    
     public void setShippingInfo(final ShippingInfo shippingInfo);
-
+    
+    
+    
     public void setOldShippingInfo(final ShippingInfo oldShippingInfo);
+    
 
-    public static OrderShippingInfoSetMessage of() {
+    public static OrderShippingInfoSetMessage of(){
         return new OrderShippingInfoSetMessageImpl();
     }
+    
 
     public static OrderShippingInfoSetMessage of(final OrderShippingInfoSetMessage template) {
         OrderShippingInfoSetMessageImpl instance = new OrderShippingInfoSetMessageImpl();
@@ -52,13 +63,14 @@ public interface OrderShippingInfoSetMessage extends Message {
         return instance;
     }
 
-    public static OrderShippingInfoSetMessageBuilder builder() {
+    public static OrderShippingInfoSetMessageBuilder builder(){
         return OrderShippingInfoSetMessageBuilder.of();
     }
-
-    public static OrderShippingInfoSetMessageBuilder builder(final OrderShippingInfoSetMessage template) {
+    
+    public static OrderShippingInfoSetMessageBuilder builder(final OrderShippingInfoSetMessage template){
         return OrderShippingInfoSetMessageBuilder.of(template);
     }
+    
 
     default <T> T withOrderShippingInfoSetMessage(Function<OrderShippingInfoSetMessage, T> helper) {
         return helper.apply(this);

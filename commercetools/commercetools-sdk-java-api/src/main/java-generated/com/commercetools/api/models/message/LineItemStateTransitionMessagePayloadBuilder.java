@@ -1,67 +1,97 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.state.StateReference;
+import java.time.ZonedDateTime;
+import com.commercetools.api.models.message.LineItemStateTransitionMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class LineItemStateTransitionMessagePayloadBuilder {
 
+    
+    
     private String lineItemId;
-
+    
+    
+    
     private java.time.ZonedDateTime transitionDate;
-
+    
+    
+    
     private Long quantity;
-
+    
+    
+    
     private com.commercetools.api.models.state.StateReference fromState;
-
+    
+    
+    
     private com.commercetools.api.models.state.StateReference toState;
 
-    public LineItemStateTransitionMessagePayloadBuilder lineItemId(final String lineItemId) {
+    
+    public LineItemStateTransitionMessagePayloadBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
-    public LineItemStateTransitionMessagePayloadBuilder transitionDate(final java.time.ZonedDateTime transitionDate) {
+    
+    
+    public LineItemStateTransitionMessagePayloadBuilder transitionDate( final java.time.ZonedDateTime transitionDate) {
         this.transitionDate = transitionDate;
         return this;
     }
-
-    public LineItemStateTransitionMessagePayloadBuilder quantity(final Long quantity) {
+    
+    
+    public LineItemStateTransitionMessagePayloadBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
-    public LineItemStateTransitionMessagePayloadBuilder fromState(
-            final com.commercetools.api.models.state.StateReference fromState) {
+    
+    
+    public LineItemStateTransitionMessagePayloadBuilder fromState( final com.commercetools.api.models.state.StateReference fromState) {
         this.fromState = fromState;
         return this;
     }
-
-    public LineItemStateTransitionMessagePayloadBuilder toState(
-            final com.commercetools.api.models.state.StateReference toState) {
+    
+    
+    public LineItemStateTransitionMessagePayloadBuilder toState( final com.commercetools.api.models.state.StateReference toState) {
         this.toState = toState;
         return this;
     }
 
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
-    public java.time.ZonedDateTime getTransitionDate() {
+    
+    
+    
+    public java.time.ZonedDateTime getTransitionDate(){
         return this.transitionDate;
     }
-
-    public Long getQuantity() {
+    
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
-    public com.commercetools.api.models.state.StateReference getFromState() {
+    
+    
+    
+    public com.commercetools.api.models.state.StateReference getFromState(){
         return this.fromState;
     }
-
-    public com.commercetools.api.models.state.StateReference getToState() {
+    
+    
+    
+    public com.commercetools.api.models.state.StateReference getToState(){
         return this.toState;
     }
 
@@ -73,8 +103,7 @@ public final class LineItemStateTransitionMessagePayloadBuilder {
         return new LineItemStateTransitionMessagePayloadBuilder();
     }
 
-    public static LineItemStateTransitionMessagePayloadBuilder of(
-            final LineItemStateTransitionMessagePayload template) {
+    public static LineItemStateTransitionMessagePayloadBuilder of(final LineItemStateTransitionMessagePayload template) {
         LineItemStateTransitionMessagePayloadBuilder builder = new LineItemStateTransitionMessagePayloadBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.transitionDate = template.getTransitionDate();

@@ -1,30 +1,37 @@
-
 package com.commercetools.api.models.store;
 
-import java.util.*;
-
+import com.commercetools.api.models.store.StoreUpdateAction;
+import com.commercetools.api.models.store.StoreSetLanguagesAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class StoreSetLanguagesActionBuilder {
 
+    
     @Nullable
     private java.util.List<String> languages;
 
-    public StoreSetLanguagesActionBuilder languages(@Nullable final String... languages) {
+    
+    public StoreSetLanguagesActionBuilder languages(@Nullable final String ...languages) {
         this.languages = new ArrayList<>(Arrays.asList(languages));
         return this;
     }
-
+    
+    
     public StoreSetLanguagesActionBuilder languages(@Nullable final java.util.List<String> languages) {
         this.languages = languages;
         return this;
     }
 
+    
     @Nullable
-    public java.util.List<String> getLanguages() {
+    public java.util.List<String> getLanguages(){
         return this.languages;
     }
 

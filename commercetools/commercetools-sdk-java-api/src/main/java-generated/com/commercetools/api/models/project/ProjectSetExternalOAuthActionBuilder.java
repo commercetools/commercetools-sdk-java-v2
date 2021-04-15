@@ -1,26 +1,32 @@
-
 package com.commercetools.api.models.project;
 
-import java.util.*;
-
+import com.commercetools.api.models.project.ExternalOAuth;
+import com.commercetools.api.models.project.ProjectUpdateAction;
+import com.commercetools.api.models.project.ProjectSetExternalOAuthAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProjectSetExternalOAuthActionBuilder {
 
+    
     @Nullable
     private com.commercetools.api.models.project.ExternalOAuth externalOAuth;
 
-    public ProjectSetExternalOAuthActionBuilder externalOAuth(
-            @Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
+    
+    public ProjectSetExternalOAuthActionBuilder externalOAuth(@Nullable final com.commercetools.api.models.project.ExternalOAuth externalOAuth) {
         this.externalOAuth = externalOAuth;
         return this;
     }
 
+    
     @Nullable
-    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth() {
+    public com.commercetools.api.models.project.ExternalOAuth getExternalOAuth(){
         return this.externalOAuth;
     }
 

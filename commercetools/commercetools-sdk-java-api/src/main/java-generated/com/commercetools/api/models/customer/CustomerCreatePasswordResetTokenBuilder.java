@@ -1,36 +1,47 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
 
+import com.commercetools.api.models.customer.CustomerCreatePasswordResetToken;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CustomerCreatePasswordResetTokenBuilder {
 
+    
+    
     private String email;
-
+    
+    
     @Nullable
     private Long ttlMinutes;
 
-    public CustomerCreatePasswordResetTokenBuilder email(final String email) {
+    
+    public CustomerCreatePasswordResetTokenBuilder email( final String email) {
         this.email = email;
         return this;
     }
-
+    
+    
     public CustomerCreatePasswordResetTokenBuilder ttlMinutes(@Nullable final Long ttlMinutes) {
         this.ttlMinutes = ttlMinutes;
         return this;
     }
 
-    public String getEmail() {
+    
+    
+    public String getEmail(){
         return this.email;
     }
-
+    
+    
     @Nullable
-    public Long getTtlMinutes() {
+    public Long getTtlMinutes(){
         return this.ttlMinutes;
     }
 

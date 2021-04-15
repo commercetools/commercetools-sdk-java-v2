@@ -1,32 +1,55 @@
-
 package com.commercetools.api.models.common;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.common.CentPrecisionMoneyDraft;
+import com.commercetools.api.models.common.HighPrecisionMoneyDraft;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.MoneyType;
 
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
 @JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyDraftImpl.class, name = CentPrecisionMoneyDraft.CENT_PRECISION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyDraftImpl.class, name = HighPrecisionMoneyDraft.HIGH_PRECISION) })
-@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyDraftImpl.class, visible = true)
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+   @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyDraftImpl.class, name = CentPrecisionMoneyDraft.CENT_PRECISION),
+   @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyDraftImpl.class, name = HighPrecisionMoneyDraft.HIGH_PRECISION)
+})
+@JsonTypeInfo(
+    use = JsonTypeInfo.Id.NAME,
+    include = JsonTypeInfo.As.EXISTING_PROPERTY,
+    property = "type",
+    defaultImpl = TypedMoneyDraftImpl.class,
+    visible = true
+)
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public interface TypedMoneyDraft extends Money {
 
+
+    
     @NotNull
     @JsonProperty("type")
     public MoneyType getType();
-
+    
+    
     @JsonProperty("fractionDigits")
     public Integer getFractionDigits();
 
+    
     public void setFractionDigits(final Integer fractionDigits);
+    
+
+
+
 
     default <T> T withTypedMoneyDraft(Function<TypedMoneyDraft, T> helper) {
         return helper.apply(this);

@@ -1,21 +1,31 @@
-
 package com.commercetools.api.models.state;
 
+import com.commercetools.api.models.state.StateUpdateAction;
+import com.commercetools.api.models.state.StateChangeKeyAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class StateChangeKeyActionBuilder {
 
+    
+    
     private String key;
 
-    public StateChangeKeyActionBuilder key(final String key) {
+    
+    public StateChangeKeyActionBuilder key( final String key) {
         this.key = key;
         return this;
     }
 
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
 

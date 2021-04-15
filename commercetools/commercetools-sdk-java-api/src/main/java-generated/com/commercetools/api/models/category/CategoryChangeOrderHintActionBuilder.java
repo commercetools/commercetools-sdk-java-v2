@@ -1,21 +1,31 @@
-
 package com.commercetools.api.models.category;
 
+import com.commercetools.api.models.category.CategoryUpdateAction;
+import com.commercetools.api.models.category.CategoryChangeOrderHintAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CategoryChangeOrderHintActionBuilder {
 
+    
+    
     private String orderHint;
 
-    public CategoryChangeOrderHintActionBuilder orderHint(final String orderHint) {
+    
+    public CategoryChangeOrderHintActionBuilder orderHint( final String orderHint) {
         this.orderHint = orderHint;
         return this;
     }
 
-    public String getOrderHint() {
+    
+    
+    public String getOrderHint(){
         return this.orderHint;
     }
 

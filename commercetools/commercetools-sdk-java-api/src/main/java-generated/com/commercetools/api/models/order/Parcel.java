@@ -1,39 +1,46 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
+import com.commercetools.api.models.order.DeliveryItem;
+import com.commercetools.api.models.order.ParcelMeasurements;
+import com.commercetools.api.models.order.TrackingData;
 import java.time.ZonedDateTime;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.order.ParcelImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ParcelImpl.class)
-public interface Parcel {
+public interface Parcel  {
 
+
+    
     @NotNull
     @JsonProperty("id")
     public String getId();
-
+    
     @NotNull
     @JsonProperty("createdAt")
     public ZonedDateTime getCreatedAt();
-
+    
     @Valid
     @JsonProperty("measurements")
     public ParcelMeasurements getMeasurements();
-
+    
     @Valid
     @JsonProperty("trackingData")
     public TrackingData getTrackingData();
-
     /**
     *  <p>The delivery items contained in this parcel.</p>
     */
@@ -41,22 +48,31 @@ public interface Parcel {
     @JsonProperty("items")
     public List<DeliveryItem> getItems();
 
+    
     public void setId(final String id);
-
+    
+    
+    
     public void setCreatedAt(final ZonedDateTime createdAt);
-
+    
+    
+    
     public void setMeasurements(final ParcelMeasurements measurements);
-
+    
+    
+    
     public void setTrackingData(final TrackingData trackingData);
-
+    
+    
+    
     @JsonIgnore
-    public void setItems(final DeliveryItem... items);
-
+    public void setItems(final DeliveryItem ...items);
     public void setItems(final List<DeliveryItem> items);
 
-    public static Parcel of() {
+    public static Parcel of(){
         return new ParcelImpl();
     }
+    
 
     public static Parcel of(final Parcel template) {
         ParcelImpl instance = new ParcelImpl();
@@ -68,13 +84,14 @@ public interface Parcel {
         return instance;
     }
 
-    public static ParcelBuilder builder() {
+    public static ParcelBuilder builder(){
         return ParcelBuilder.of();
     }
-
-    public static ParcelBuilder builder(final Parcel template) {
+    
+    public static ParcelBuilder builder(final Parcel template){
         return ParcelBuilder.of(template);
     }
+    
 
     default <T> T withParcel(Function<Parcel, T> helper) {
         return helper.apply(this);

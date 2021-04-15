@@ -1,67 +1,85 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.util.*;
-
+import com.commercetools.api.models.product_type.AttributeDefinitionDraft;
+import com.commercetools.api.models.product_type.ProductTypeDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductTypeDraftBuilder {
 
+    
     @Nullable
     private String key;
-
+    
+    
+    
     private String name;
-
+    
+    
+    
     private String description;
-
+    
+    
     @Nullable
     private java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes;
 
+    
     public ProductTypeDraftBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
-
-    public ProductTypeDraftBuilder name(final String name) {
+    
+    
+    public ProductTypeDraftBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
-    public ProductTypeDraftBuilder description(final String description) {
+    
+    
+    public ProductTypeDraftBuilder description( final String description) {
         this.description = description;
         return this;
     }
-
-    public ProductTypeDraftBuilder attributes(
-            @Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft... attributes) {
+    
+    
+    public ProductTypeDraftBuilder attributes(@Nullable final com.commercetools.api.models.product_type.AttributeDefinitionDraft ...attributes) {
         this.attributes = new ArrayList<>(Arrays.asList(attributes));
         return this;
     }
-
-    public ProductTypeDraftBuilder attributes(
-            @Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes) {
+    
+    
+    public ProductTypeDraftBuilder attributes(@Nullable final java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> attributes) {
         this.attributes = attributes;
         return this;
     }
 
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
-
-    public String getName() {
+    
+    
+    
+    public String getName(){
         return this.name;
     }
-
-    public String getDescription() {
+    
+    
+    
+    public String getDescription(){
         return this.description;
     }
-
+    
+    
     @Nullable
-    public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes() {
+    public java.util.List<com.commercetools.api.models.product_type.AttributeDefinitionDraft> getAttributes(){
         return this.attributes;
     }
 

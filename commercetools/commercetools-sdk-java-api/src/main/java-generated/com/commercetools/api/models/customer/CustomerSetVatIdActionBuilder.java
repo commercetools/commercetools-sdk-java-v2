@@ -1,25 +1,31 @@
-
 package com.commercetools.api.models.customer;
 
-import java.util.*;
-
+import com.commercetools.api.models.customer.CustomerUpdateAction;
+import com.commercetools.api.models.customer.CustomerSetVatIdAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CustomerSetVatIdActionBuilder {
 
+    
     @Nullable
     private String vatId;
 
+    
     public CustomerSetVatIdActionBuilder vatId(@Nullable final String vatId) {
         this.vatId = vatId;
         return this;
     }
 
+    
     @Nullable
-    public String getVatId() {
+    public String getVatId(){
         return this.vatId;
     }
 

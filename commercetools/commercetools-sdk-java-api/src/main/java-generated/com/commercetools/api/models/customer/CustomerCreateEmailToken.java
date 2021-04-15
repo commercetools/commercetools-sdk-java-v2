@@ -1,41 +1,56 @@
-
 package com.commercetools.api.models.customer;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.customer.CustomerCreateEmailTokenImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = CustomerCreateEmailTokenImpl.class)
-public interface CustomerCreateEmailToken {
+public interface CustomerCreateEmailToken  {
 
+
+    
     @NotNull
     @JsonProperty("id")
     public String getId();
-
+    
+    
     @JsonProperty("version")
     public Long getVersion();
-
+    
     @NotNull
     @JsonProperty("ttlMinutes")
     public Long getTtlMinutes();
 
+    
     public void setId(final String id);
-
+    
+    
+    
     public void setVersion(final Long version);
-
+    
+    
+    
     public void setTtlMinutes(final Long ttlMinutes);
+    
 
-    public static CustomerCreateEmailToken of() {
+    public static CustomerCreateEmailToken of(){
         return new CustomerCreateEmailTokenImpl();
     }
+    
 
     public static CustomerCreateEmailToken of(final CustomerCreateEmailToken template) {
         CustomerCreateEmailTokenImpl instance = new CustomerCreateEmailTokenImpl();
@@ -45,13 +60,14 @@ public interface CustomerCreateEmailToken {
         return instance;
     }
 
-    public static CustomerCreateEmailTokenBuilder builder() {
+    public static CustomerCreateEmailTokenBuilder builder(){
         return CustomerCreateEmailTokenBuilder.of();
     }
-
-    public static CustomerCreateEmailTokenBuilder builder(final CustomerCreateEmailToken template) {
+    
+    public static CustomerCreateEmailTokenBuilder builder(final CustomerCreateEmailToken template){
         return CustomerCreateEmailTokenBuilder.of(template);
     }
+    
 
     default <T> T withCustomerCreateEmailToken(Function<CustomerCreateEmailToken, T> helper) {
         return helper.apply(this);

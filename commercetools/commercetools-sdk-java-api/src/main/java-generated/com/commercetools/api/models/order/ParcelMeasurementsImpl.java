@@ -1,99 +1,114 @@
-
 package com.commercetools.api.models.order;
 
-import java.time.*;
-import java.util.*;
-
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.annotation.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ParcelMeasurementsImpl implements ParcelMeasurements {
 
+    
     private Double heightInMillimeter;
-
+    
+    
     private Double lengthInMillimeter;
-
+    
+    
     private Double widthInMillimeter;
-
+    
+    
     private Double weightInGram;
 
     @JsonCreator
-    ParcelMeasurementsImpl(@JsonProperty("heightInMillimeter") final Double heightInMillimeter,
-            @JsonProperty("lengthInMillimeter") final Double lengthInMillimeter,
-            @JsonProperty("widthInMillimeter") final Double widthInMillimeter,
-            @JsonProperty("weightInGram") final Double weightInGram) {
+    ParcelMeasurementsImpl(@JsonProperty("heightInMillimeter") final Double heightInMillimeter, @JsonProperty("lengthInMillimeter") final Double lengthInMillimeter, @JsonProperty("widthInMillimeter") final Double widthInMillimeter, @JsonProperty("weightInGram") final Double weightInGram) {
         this.heightInMillimeter = heightInMillimeter;
         this.lengthInMillimeter = lengthInMillimeter;
         this.widthInMillimeter = widthInMillimeter;
         this.weightInGram = weightInGram;
     }
-
     public ParcelMeasurementsImpl() {
     }
 
-    public Double getHeightInMillimeter() {
+    
+    public Double getHeightInMillimeter(){
         return this.heightInMillimeter;
     }
-
-    public Double getLengthInMillimeter() {
+    
+    
+    public Double getLengthInMillimeter(){
         return this.lengthInMillimeter;
     }
-
-    public Double getWidthInMillimeter() {
+    
+    
+    public Double getWidthInMillimeter(){
         return this.widthInMillimeter;
     }
-
-    public Double getWeightInGram() {
+    
+    
+    public Double getWeightInGram(){
         return this.weightInGram;
     }
 
-    public void setHeightInMillimeter(final Double heightInMillimeter) {
+    
+    public void setHeightInMillimeter(final Double heightInMillimeter){
         this.heightInMillimeter = heightInMillimeter;
     }
-
-    public void setLengthInMillimeter(final Double lengthInMillimeter) {
+    
+    
+    public void setLengthInMillimeter(final Double lengthInMillimeter){
         this.lengthInMillimeter = lengthInMillimeter;
     }
-
-    public void setWidthInMillimeter(final Double widthInMillimeter) {
+    
+    
+    public void setWidthInMillimeter(final Double widthInMillimeter){
         this.widthInMillimeter = widthInMillimeter;
     }
-
-    public void setWeightInGram(final Double weightInGram) {
+    
+    
+    public void setWeightInGram(final Double weightInGram){
         this.weightInGram = weightInGram;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o)
-            return true;
-
-        if (o == null || getClass() != o.getClass())
-            return false;
-
+        if (this == o) return true;
+    
+        if (o == null || getClass() != o.getClass()) return false;
+    
         ParcelMeasurementsImpl that = (ParcelMeasurementsImpl) o;
-
-        return new EqualsBuilder().append(heightInMillimeter, that.heightInMillimeter)
+    
+        return new EqualsBuilder()
+                .append(heightInMillimeter, that.heightInMillimeter)
                 .append(lengthInMillimeter, that.lengthInMillimeter)
                 .append(widthInMillimeter, that.widthInMillimeter)
                 .append(weightInGram, that.weightInGram)
                 .isEquals();
     }
-
+    
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(heightInMillimeter)
-                .append(lengthInMillimeter)
-                .append(widthInMillimeter)
-                .append(weightInGram)
-                .toHashCode();
+        return new HashCodeBuilder(17, 37)
+            .append(heightInMillimeter)
+            .append(lengthInMillimeter)
+            .append(widthInMillimeter)
+            .append(weightInGram)
+            .toHashCode();
     }
 
 }

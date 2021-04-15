@@ -1,24 +1,34 @@
-
 package com.commercetools.api.models.error;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.GeneralErrorImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = GeneralErrorImpl.class)
 public interface GeneralError extends ErrorObject {
 
     String GENERAL = "General";
 
-    public static GeneralError of() {
+
+
+    public static GeneralError of(){
         return new GeneralErrorImpl();
     }
+    
 
     public static GeneralError of(final GeneralError template) {
         GeneralErrorImpl instance = new GeneralErrorImpl();
@@ -26,13 +36,14 @@ public interface GeneralError extends ErrorObject {
         return instance;
     }
 
-    public static GeneralErrorBuilder builder() {
+    public static GeneralErrorBuilder builder(){
         return GeneralErrorBuilder.of();
     }
-
-    public static GeneralErrorBuilder builder(final GeneralError template) {
+    
+    public static GeneralErrorBuilder builder(final GeneralError template){
         return GeneralErrorBuilder.of(template);
     }
+    
 
     default <T> T withGeneralError(Function<GeneralError, T> helper) {
         return helper.apply(this);

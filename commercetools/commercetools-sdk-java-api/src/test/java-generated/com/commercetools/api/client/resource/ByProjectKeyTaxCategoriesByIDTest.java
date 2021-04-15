@@ -1,41 +1,34 @@
-
 package com.commercetools.api.client.resource;
 
+import io.vrap.rmf.base.client.*;
+import io.vrap.rmf.base.client.error.ApiServerException;
+import io.vrap.rmf.base.client.error.ApiClientException;
+import io.vrap.rmf.base.client.VrapHttpClient;
+import com.commercetools.api.client.ApiRoot;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
-
-import com.commercetools.api.client.*;
-import com.commercetools.api.client.ApiRoot;
-import com.commercetools.api.defaultconfig.ApiFactory;
-import com.commercetools.api.defaultconfig.ServiceRegion;
-
-import io.vrap.rmf.base.client.ApiHttpClient;
-import io.vrap.rmf.base.client.ApiHttpMethod;
-import io.vrap.rmf.base.client.ApiHttpRequest;
-import io.vrap.rmf.base.client.oauth2.ClientCredentials;
-import io.vrap.rmf.base.client.utils.Generated;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
+import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.ApiHttpClient;
+import io.vrap.rmf.base.client.ApiHttpRequest;
+import org.assertj.core.api.Assertions;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.CompletableFuture;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @RunWith(JUnitParamsRunner.class)
 public class ByProjectKeyTaxCategoriesByIDTest {
-    private final ApiHttpClient apiHttpClientMock = Mockito.mock(ApiHttpClient.class);
+    private final VrapHttpClient httpClientMock = Mockito.mock(VrapHttpClient.class);
     private final String projectKey = "test_projectKey";
-    private final ApiRoot apiRoot = createClient();
-
-    private ApiRoot createClient() {
-        return ApiFactory.create(
-            ClientCredentials.of()
-                    .withClientId("your-client-id")
-                    .withClientSecret("your-client-secret")
-                    .withScopes("your-scopes")
-                    .build(),
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), ServiceRegion.GCP_EUROPE_WEST1.getApiUrl());
-    }
+    private final ApiRoot apiRoot = ApiRoot.of();
+    private final ApiHttpClient client = ClientBuilder.of(httpClientMock).defaultClient("").build();
 
     @Test
     @Parameters(method = "requestWithMethodParameters")
@@ -46,162 +39,158 @@ public class ByProjectKeyTaxCategoriesByIDTest {
 
     @Test
     @Parameters(method = "executeMethodParameters")
-    public void executeWithNullPointerException(ApiHttpRequest httpRequest) throws Exception {
-        Mockito.when(apiHttpClientMock.execute(httpRequest)).thenThrow(NullPointerException.class);
+    public void executeServerException(ClientRequestCommand<?> httpRequest) throws Exception{
+        Mockito.when(httpClientMock.execute(Mockito.any())).thenReturn(CompletableFuture.completedFuture(
+                       new ApiHttpResponse<>(500, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
+
+        Assertions.assertThatThrownBy(
+               () -> client.execute(httpRequest).get()).hasCauseInstanceOf(ApiServerException.class); 
+    }
+
+    @Test
+    @Parameters(method = "executeMethodParameters")
+    public void executeClientException(ClientRequestCommand<?> httpRequest) throws Exception{
+        Mockito.when(httpClientMock.execute(Mockito.any())).thenReturn(CompletableFuture.completedFuture(
+                       new ApiHttpResponse<>(400, null, "".getBytes(StandardCharsets.UTF_8), "Oops!")));
+
+        Assertions.assertThatThrownBy(
+           () -> client.execute(httpRequest).get()).hasCauseInstanceOf(ApiClientException.class);
     }
 
     private Object[] requestWithMethodParameters() {
-        return new Object[] {
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .taxCategories()
-                        .withId("test_ID")
-                        .get()
-                        .withExpand("expand")
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .taxCategories()
-                        .withId("test_ID")
-                        .get()
-                        .createHttpRequest(), "get", "/test_projectKey/tax-categories/test_ID", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .taxCategories()
-                                .withId("test_ID")
-                                .post(null)
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "post", "/test_projectKey/tax-categories/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .taxCategories()
-                        .withId("test_ID")
-                        .post(null)
-                        .createHttpRequest(), "post", "/test_projectKey/tax-categories/test_ID", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .taxCategories()
-                        .withId("test_ID")
-                        .delete()
-                        .withVersion(2)
-                        .createHttpRequest(), "delete", "/test_projectKey/tax-categories/test_ID?version=2", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .taxCategories()
-                                .withId("test_ID")
-                                .delete()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "delete", "/test_projectKey/tax-categories/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .taxCategories()
-                        .withId("test_ID")
-                        .delete()
-                        .createHttpRequest(), "delete", "/test_projectKey/tax-categories/test_ID", } };
+       return new Object [] {
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .get()
+                   .withExpand("expand")
+                   .createHttpRequest(),
+                   "get",
+                   "/test_projectKey/tax-categories/test_ID?expand=expand",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .get()
+                   .createHttpRequest(),
+                   "get",
+                   "/test_projectKey/tax-categories/test_ID",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .post(null)
+                   .withExpand("expand")
+                   .createHttpRequest(),
+                   "post",
+                   "/test_projectKey/tax-categories/test_ID?expand=expand",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .post(null)
+                   .createHttpRequest(),
+                   "post",
+                   "/test_projectKey/tax-categories/test_ID",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .delete()
+                   .withVersion(2)
+                   .createHttpRequest(),
+                   "delete",
+                   "/test_projectKey/tax-categories/test_ID?version=2",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .delete()
+                   .withExpand("expand")
+                   .createHttpRequest(),
+                   "delete",
+                   "/test_projectKey/tax-categories/test_ID?expand=expand",
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .delete()
+                   .createHttpRequest(),
+                   "delete",
+                   "/test_projectKey/tax-categories/test_ID",
+               }
+       };
     }
 
     private Object[] executeMethodParameters() {
-        return new Object[] {
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET,
-                    new ByProjectKeyTaxCategoriesByIDGet(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET,
-                    new ByProjectKeyTaxCategoriesByIDGet(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET,
-                    new ByProjectKeyTaxCategoriesByIDGet(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET,
-                    new ByProjectKeyTaxCategoriesByIDGet(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET,
-                    new ByProjectKeyTaxCategoriesByIDGet(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET,
-                    new ByProjectKeyTaxCategoriesByIDGet(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET,
-                    new ByProjectKeyTaxCategoriesByIDGet(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.GET,
-                    new ByProjectKeyTaxCategoriesByIDGet(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.POST,
-                    new ByProjectKeyTaxCategoriesByIDPost(apiHttpClientMock, projectKey, null, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) },
-                new Object[] { new ApiHttpRequest(ApiHttpMethod.DELETE,
-                    new ByProjectKeyTaxCategoriesByIDDelete(apiHttpClientMock, projectKey, null).createHttpRequest()
-                            .getUri(),
-                    null, null) } };
+       return new Object [] {
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .get()
+                   .withExpand("expand"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .get(),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .post(null)
+                   .withExpand("expand"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .post(null),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .delete()
+                   .withVersion(2),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .delete()
+                   .withExpand("expand"),
+               },
+               new Object[] {           
+                   apiRoot
+                   .withProjectKey("test_projectKey")
+                   .taxCategories()
+                   .withId("test_ID")
+                   .delete(),
+               }
+       };
     }
 }

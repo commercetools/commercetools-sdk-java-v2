@@ -1,46 +1,60 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.product.ProductSetAttributeInAllVariantsActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ProductSetAttributeInAllVariantsActionImpl.class)
 public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAction {
 
     String SET_ATTRIBUTE_IN_ALL_VARIANTS = "setAttributeInAllVariants";
 
+    
     @NotNull
     @JsonProperty("name")
     public String getName();
-
     /**
     *  <p>The same update behavior as for Set Attribute applies.</p>
     */
-
+    
     @JsonProperty("value")
     public Object getValue();
-
+    
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    
     public void setName(final String name);
-
+    
+    
+    
     public void setValue(final Object value);
-
+    
+    
+    
     public void setStaged(final Boolean staged);
+    
 
-    public static ProductSetAttributeInAllVariantsAction of() {
+    public static ProductSetAttributeInAllVariantsAction of(){
         return new ProductSetAttributeInAllVariantsActionImpl();
     }
+    
 
     public static ProductSetAttributeInAllVariantsAction of(final ProductSetAttributeInAllVariantsAction template) {
         ProductSetAttributeInAllVariantsActionImpl instance = new ProductSetAttributeInAllVariantsActionImpl();
@@ -50,17 +64,16 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
         return instance;
     }
 
-    public static ProductSetAttributeInAllVariantsActionBuilder builder() {
+    public static ProductSetAttributeInAllVariantsActionBuilder builder(){
         return ProductSetAttributeInAllVariantsActionBuilder.of();
     }
-
-    public static ProductSetAttributeInAllVariantsActionBuilder builder(
-            final ProductSetAttributeInAllVariantsAction template) {
+    
+    public static ProductSetAttributeInAllVariantsActionBuilder builder(final ProductSetAttributeInAllVariantsAction template){
         return ProductSetAttributeInAllVariantsActionBuilder.of(template);
     }
+    
 
-    default <T> T withProductSetAttributeInAllVariantsAction(
-            Function<ProductSetAttributeInAllVariantsAction, T> helper) {
+    default <T> T withProductSetAttributeInAllVariantsAction(Function<ProductSetAttributeInAllVariantsAction, T> helper) {
         return helper.apply(this);
     }
 }

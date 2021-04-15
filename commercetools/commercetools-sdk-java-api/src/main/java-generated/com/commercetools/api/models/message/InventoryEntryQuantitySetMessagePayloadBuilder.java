@@ -1,68 +1,91 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class InventoryEntryQuantitySetMessagePayloadBuilder {
 
+    
+    
     private Long oldQuantityOnStock;
-
+    
+    
+    
     private Long newQuantityOnStock;
-
+    
+    
+    
     private Long oldAvailableQuantity;
-
+    
+    
+    
     private Long newAvailableQuantity;
 
-    public InventoryEntryQuantitySetMessagePayloadBuilder oldQuantityOnStock(final Long oldQuantityOnStock) {
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder oldQuantityOnStock( final Long oldQuantityOnStock) {
         this.oldQuantityOnStock = oldQuantityOnStock;
         return this;
     }
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder newQuantityOnStock(final Long newQuantityOnStock) {
+    
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder newQuantityOnStock( final Long newQuantityOnStock) {
         this.newQuantityOnStock = newQuantityOnStock;
         return this;
     }
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder oldAvailableQuantity(final Long oldAvailableQuantity) {
+    
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder oldAvailableQuantity( final Long oldAvailableQuantity) {
         this.oldAvailableQuantity = oldAvailableQuantity;
         return this;
     }
-
-    public InventoryEntryQuantitySetMessagePayloadBuilder newAvailableQuantity(final Long newAvailableQuantity) {
+    
+    
+    public InventoryEntryQuantitySetMessagePayloadBuilder newAvailableQuantity( final Long newAvailableQuantity) {
         this.newAvailableQuantity = newAvailableQuantity;
         return this;
     }
 
-    public Long getOldQuantityOnStock() {
+    
+    
+    public Long getOldQuantityOnStock(){
         return this.oldQuantityOnStock;
     }
-
-    public Long getNewQuantityOnStock() {
+    
+    
+    
+    public Long getNewQuantityOnStock(){
         return this.newQuantityOnStock;
     }
-
-    public Long getOldAvailableQuantity() {
+    
+    
+    
+    public Long getOldAvailableQuantity(){
         return this.oldAvailableQuantity;
     }
-
-    public Long getNewAvailableQuantity() {
+    
+    
+    
+    public Long getNewAvailableQuantity(){
         return this.newAvailableQuantity;
     }
 
     public InventoryEntryQuantitySetMessagePayload build() {
-        return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock,
-            oldAvailableQuantity, newAvailableQuantity);
+        return new InventoryEntryQuantitySetMessagePayloadImpl(oldQuantityOnStock, newQuantityOnStock, oldAvailableQuantity, newAvailableQuantity);
     }
 
     public static InventoryEntryQuantitySetMessagePayloadBuilder of() {
         return new InventoryEntryQuantitySetMessagePayloadBuilder();
     }
 
-    public static InventoryEntryQuantitySetMessagePayloadBuilder of(
-            final InventoryEntryQuantitySetMessagePayload template) {
+    public static InventoryEntryQuantitySetMessagePayloadBuilder of(final InventoryEntryQuantitySetMessagePayload template) {
         InventoryEntryQuantitySetMessagePayloadBuilder builder = new InventoryEntryQuantitySetMessagePayloadBuilder();
         builder.oldQuantityOnStock = template.getOldQuantityOnStock();
         builder.newQuantityOnStock = template.getNewQuantityOnStock();

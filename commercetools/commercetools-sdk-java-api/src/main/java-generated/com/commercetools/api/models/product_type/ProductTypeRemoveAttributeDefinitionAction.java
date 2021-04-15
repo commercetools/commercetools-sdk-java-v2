@@ -1,18 +1,23 @@
-
 package com.commercetools.api.models.product_type;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionActionImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)
 public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {
 
@@ -25,30 +30,31 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
     @JsonProperty("name")
     public String getName();
 
+    
     public void setName(final String name);
+    
 
-    public static ProductTypeRemoveAttributeDefinitionAction of() {
+    public static ProductTypeRemoveAttributeDefinitionAction of(){
         return new ProductTypeRemoveAttributeDefinitionActionImpl();
     }
+    
 
-    public static ProductTypeRemoveAttributeDefinitionAction of(
-            final ProductTypeRemoveAttributeDefinitionAction template) {
+    public static ProductTypeRemoveAttributeDefinitionAction of(final ProductTypeRemoveAttributeDefinitionAction template) {
         ProductTypeRemoveAttributeDefinitionActionImpl instance = new ProductTypeRemoveAttributeDefinitionActionImpl();
         instance.setName(template.getName());
         return instance;
     }
 
-    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder() {
+    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(){
         return ProductTypeRemoveAttributeDefinitionActionBuilder.of();
     }
-
-    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(
-            final ProductTypeRemoveAttributeDefinitionAction template) {
+    
+    public static ProductTypeRemoveAttributeDefinitionActionBuilder builder(final ProductTypeRemoveAttributeDefinitionAction template){
         return ProductTypeRemoveAttributeDefinitionActionBuilder.of(template);
     }
+    
 
-    default <T> T withProductTypeRemoveAttributeDefinitionAction(
-            Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
+    default <T> T withProductTypeRemoveAttributeDefinitionAction(Function<ProductTypeRemoveAttributeDefinitionAction, T> helper) {
         return helper.apply(this);
     }
 }

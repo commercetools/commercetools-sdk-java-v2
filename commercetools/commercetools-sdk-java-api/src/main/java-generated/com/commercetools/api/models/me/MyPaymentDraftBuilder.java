@@ -1,64 +1,82 @@
-
 package com.commercetools.api.models.me;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.me.MyTransactionDraft;
+import com.commercetools.api.models.payment.PaymentMethodInfo;
+import com.commercetools.api.models.type.CustomFieldsDraft;
+import com.commercetools.api.models.me.MyPaymentDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class MyPaymentDraftBuilder {
 
+    
+    
     private com.commercetools.api.models.common.Money amountPlanned;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.me.MyTransactionDraft transaction;
 
-    public MyPaymentDraftBuilder amountPlanned(final com.commercetools.api.models.common.Money amountPlanned) {
+    
+    public MyPaymentDraftBuilder amountPlanned( final com.commercetools.api.models.common.Money amountPlanned) {
         this.amountPlanned = amountPlanned;
         return this;
     }
-
-    public MyPaymentDraftBuilder paymentMethodInfo(
-            @Nullable final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
+    
+    
+    public MyPaymentDraftBuilder paymentMethodInfo(@Nullable final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
         return this;
     }
-
+    
+    
     public MyPaymentDraftBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
         return this;
     }
-
-    public MyPaymentDraftBuilder transaction(
-            @Nullable final com.commercetools.api.models.me.MyTransactionDraft transaction) {
+    
+    
+    public MyPaymentDraftBuilder transaction(@Nullable final com.commercetools.api.models.me.MyTransactionDraft transaction) {
         this.transaction = transaction;
         return this;
     }
 
-    public com.commercetools.api.models.common.Money getAmountPlanned() {
+    
+    
+    public com.commercetools.api.models.common.Money getAmountPlanned(){
         return this.amountPlanned;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
+    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo(){
         return this.paymentMethodInfo;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom(){
         return this.custom;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.me.MyTransactionDraft getTransaction() {
+    public com.commercetools.api.models.me.MyTransactionDraft getTransaction(){
         return this.transaction;
     }
 

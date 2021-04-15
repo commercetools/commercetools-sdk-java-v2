@@ -1,32 +1,47 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.AzureEventGridDestination;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class AzureEventGridDestinationBuilder {
 
+    
+    
     private String uri;
-
+    
+    
+    
     private String accessKey;
 
-    public AzureEventGridDestinationBuilder uri(final String uri) {
+    
+    public AzureEventGridDestinationBuilder uri( final String uri) {
         this.uri = uri;
         return this;
     }
-
-    public AzureEventGridDestinationBuilder accessKey(final String accessKey) {
+    
+    
+    public AzureEventGridDestinationBuilder accessKey( final String accessKey) {
         this.accessKey = accessKey;
         return this;
     }
 
-    public String getUri() {
+    
+    
+    public String getUri(){
         return this.uri;
     }
-
-    public String getAccessKey() {
+    
+    
+    
+    public String getAccessKey(){
         return this.accessKey;
     }
 

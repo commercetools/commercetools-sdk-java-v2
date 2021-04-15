@@ -1,21 +1,31 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ObjectNotFoundError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ObjectNotFoundErrorBuilder {
 
+    
+    
     private String message;
 
-    public ObjectNotFoundErrorBuilder message(final String message) {
+    
+    public ObjectNotFoundErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
 
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
 

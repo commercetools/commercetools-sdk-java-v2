@@ -1,58 +1,79 @@
-
 package com.commercetools.api.models.custom_object;
 
-import java.util.*;
-
+import java.lang.Object;
+import com.commercetools.api.models.custom_object.CustomObjectDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CustomObjectDraftBuilder {
 
+    
+    
     private String container;
-
+    
+    
+    
     private String key;
-
+    
+    
+    
     private java.lang.Object value;
-
+    
+    
     @Nullable
     private Long version;
 
-    public CustomObjectDraftBuilder container(final String container) {
+    
+    public CustomObjectDraftBuilder container( final String container) {
         this.container = container;
         return this;
     }
-
-    public CustomObjectDraftBuilder key(final String key) {
+    
+    
+    public CustomObjectDraftBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
-    public CustomObjectDraftBuilder value(final java.lang.Object value) {
+    
+    
+    public CustomObjectDraftBuilder value( final java.lang.Object value) {
         this.value = value;
         return this;
     }
-
+    
+    
     public CustomObjectDraftBuilder version(@Nullable final Long version) {
         this.version = version;
         return this;
     }
 
-    public String getContainer() {
+    
+    
+    public String getContainer(){
         return this.container;
     }
-
-    public String getKey() {
+    
+    
+    
+    public String getKey(){
         return this.key;
     }
-
-    public java.lang.Object getValue() {
+    
+    
+    
+    public java.lang.Object getValue(){
         return this.value;
     }
-
+    
+    
     @Nullable
-    public Long getVersion() {
+    public Long getVersion(){
         return this.version;
     }
 

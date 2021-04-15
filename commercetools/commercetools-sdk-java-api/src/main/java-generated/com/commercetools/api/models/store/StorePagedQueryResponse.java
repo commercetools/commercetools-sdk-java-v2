@@ -1,58 +1,74 @@
-
 package com.commercetools.api.models.store;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.store.Store;
+import com.commercetools.api.models.store.StorePagedQueryResponseImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = StorePagedQueryResponseImpl.class)
 public interface StorePagedQueryResponse extends com.commercetools.api.models.ResourcePagedQueryResponse<Store> {
 
+
+    
     @NotNull
     @JsonProperty("limit")
     public Long getLimit();
-
+    
     @NotNull
     @JsonProperty("count")
     public Long getCount();
-
+    
+    
     @JsonProperty("total")
     public Long getTotal();
-
+    
     @NotNull
     @JsonProperty("offset")
     public Long getOffset();
-
+    
     @NotNull
     @Valid
     @JsonProperty("results")
     public List<Store> getResults();
 
+    
     public void setLimit(final Long limit);
-
+    
+    
+    
     public void setCount(final Long count);
-
+    
+    
+    
     public void setTotal(final Long total);
-
+    
+    
+    
     public void setOffset(final Long offset);
-
+    
+    
+    
     @JsonIgnore
-    public void setResults(final Store... results);
-
+    public void setResults(final Store ...results);
     public void setResults(final List<Store> results);
 
-    public static StorePagedQueryResponse of() {
+    public static StorePagedQueryResponse of(){
         return new StorePagedQueryResponseImpl();
     }
+    
 
     public static StorePagedQueryResponse of(final StorePagedQueryResponse template) {
         StorePagedQueryResponseImpl instance = new StorePagedQueryResponseImpl();
@@ -64,13 +80,14 @@ public interface StorePagedQueryResponse extends com.commercetools.api.models.Re
         return instance;
     }
 
-    public static StorePagedQueryResponseBuilder builder() {
+    public static StorePagedQueryResponseBuilder builder(){
         return StorePagedQueryResponseBuilder.of();
     }
-
-    public static StorePagedQueryResponseBuilder builder(final StorePagedQueryResponse template) {
+    
+    public static StorePagedQueryResponseBuilder builder(final StorePagedQueryResponse template){
         return StorePagedQueryResponseBuilder.of(template);
     }
+    
 
     default <T> T withStorePagedQueryResponse(Function<StorePagedQueryResponse, T> helper) {
         return helper.apply(this);

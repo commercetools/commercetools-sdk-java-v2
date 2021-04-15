@@ -1,28 +1,44 @@
-
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
+
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Delete my Customer</p>
 */
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete, com.commercetools.api.models.me.MyCustomer>
-        implements com.commercetools.api.client.VersionedTrait<ByProjectKeyMeDelete>,
-        com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeDelete>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeDelete>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeDelete> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete, com.commercetools.api.models.me.MyCustomer> implements com.commercetools.api.client.VersionedTrait<ByProjectKeyMeDelete>, com.commercetools.api.client.ConflictingTrait<ByProjectKeyMeDelete>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeDelete>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeDelete> {
 
+    
     private String projectKey;
+    
 
     public ByProjectKeyMeDelete(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
@@ -38,47 +54,44 @@ public class ByProjectKeyMeDelete extends ApiMethod<ByProjectKeyMeDelete, com.co
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me", this.projectKey);
-        if (!params.isEmpty()) {
+        if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-
+        
         return new ApiHttpRequest(ApiHttpMethod.DELETE, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(final ApiHttpClient client,
-            Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.me.MyCustomer> executeBlocking(final ApiHttpClient client, Duration timeout){
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.me.MyCustomer>> execute(final ApiHttpClient client){
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.me.MyCustomer.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
 
     public List<String> getVersion() {
         return this.getQueryParam("version");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
 
-    public ByProjectKeyMeDelete withVersion(final long version) {
+    public ByProjectKeyMeDelete withVersion(final long version){
         return copy().withQueryParam("version", version);
     }
-
-    public ByProjectKeyMeDelete addVersion(final long version) {
+    
+    public ByProjectKeyMeDelete addVersion(final long version){
         return copy().addQueryParam("version", version);
     }
 
+    
+
     @Override
-    protected ByProjectKeyMeDelete copy() {
+    protected ByProjectKeyMeDelete copy()
+    {
         return new ByProjectKeyMeDelete(this);
     }
 }

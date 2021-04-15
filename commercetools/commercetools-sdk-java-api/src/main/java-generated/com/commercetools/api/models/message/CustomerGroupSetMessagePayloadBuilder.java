@@ -1,22 +1,32 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.CustomerGroupSetMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CustomerGroupSetMessagePayloadBuilder {
 
+    
+    
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
-    public CustomerGroupSetMessagePayloadBuilder customerGroup(
-            final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
+    
+    public CustomerGroupSetMessagePayloadBuilder customerGroup( final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup) {
         this.customerGroup = customerGroup;
         return this;
     }
 
-    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
+    
+    
+    public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup(){
         return this.customerGroup;
     }
 

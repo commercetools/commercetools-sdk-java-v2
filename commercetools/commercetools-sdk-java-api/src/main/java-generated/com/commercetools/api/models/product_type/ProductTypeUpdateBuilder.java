@@ -1,39 +1,53 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeUpdate;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductTypeUpdateBuilder {
 
+    
+    
     private Long version;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions;
 
-    public ProductTypeUpdateBuilder version(final Long version) {
+    
+    public ProductTypeUpdateBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
-    public ProductTypeUpdateBuilder actions(
-            final com.commercetools.api.models.product_type.ProductTypeUpdateAction... actions) {
+    
+    
+    public ProductTypeUpdateBuilder actions( final com.commercetools.api.models.product_type.ProductTypeUpdateAction ...actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
         return this;
     }
-
-    public ProductTypeUpdateBuilder actions(
-            final java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions) {
+    
+    
+    public ProductTypeUpdateBuilder actions( final java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> actions) {
         this.actions = actions;
         return this;
     }
 
-    public Long getVersion() {
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
-    public java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> getActions() {
+    
+    
+    
+    public java.util.List<com.commercetools.api.models.product_type.ProductTypeUpdateAction> getActions(){
         return this.actions;
     }
 

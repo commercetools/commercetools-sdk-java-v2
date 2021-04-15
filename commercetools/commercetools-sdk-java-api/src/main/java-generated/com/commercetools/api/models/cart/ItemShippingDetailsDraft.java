@@ -1,21 +1,26 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.ItemShippingTarget;
+import com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ItemShippingDetailsDraftImpl.class)
-public interface ItemShippingDetailsDraft {
+public interface ItemShippingDetailsDraft  {
+
 
     /**
     *  <p>Used to capture one or more (custom) line item specific shipping addresses.
@@ -28,14 +33,15 @@ public interface ItemShippingDetailsDraft {
     @JsonProperty("targets")
     public List<ItemShippingTarget> getTargets();
 
+    
     @JsonIgnore
-    public void setTargets(final ItemShippingTarget... targets);
-
+    public void setTargets(final ItemShippingTarget ...targets);
     public void setTargets(final List<ItemShippingTarget> targets);
 
-    public static ItemShippingDetailsDraft of() {
+    public static ItemShippingDetailsDraft of(){
         return new ItemShippingDetailsDraftImpl();
     }
+    
 
     public static ItemShippingDetailsDraft of(final ItemShippingDetailsDraft template) {
         ItemShippingDetailsDraftImpl instance = new ItemShippingDetailsDraftImpl();
@@ -43,13 +49,14 @@ public interface ItemShippingDetailsDraft {
         return instance;
     }
 
-    public static ItemShippingDetailsDraftBuilder builder() {
+    public static ItemShippingDetailsDraftBuilder builder(){
         return ItemShippingDetailsDraftBuilder.of();
     }
-
-    public static ItemShippingDetailsDraftBuilder builder(final ItemShippingDetailsDraft template) {
+    
+    public static ItemShippingDetailsDraftBuilder builder(final ItemShippingDetailsDraft template){
         return ItemShippingDetailsDraftBuilder.of(template);
     }
+    
 
     default <T> T withItemShippingDetailsDraft(Function<ItemShippingDetailsDraft, T> helper) {
         return helper.apply(this);

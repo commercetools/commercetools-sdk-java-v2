@@ -1,27 +1,37 @@
-
 package com.commercetools.api.models.message;
 
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.ProductRevertedStagedChangesMessagePayload;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductRevertedStagedChangesMessagePayloadBuilder {
 
+    
+    
     private java.util.List<String> removedImageUrls;
 
-    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(final String... removedImageUrls) {
+    
+    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls( final String ...removedImageUrls) {
         this.removedImageUrls = new ArrayList<>(Arrays.asList(removedImageUrls));
         return this;
     }
-
-    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls(
-            final java.util.List<String> removedImageUrls) {
+    
+    
+    public ProductRevertedStagedChangesMessagePayloadBuilder removedImageUrls( final java.util.List<String> removedImageUrls) {
         this.removedImageUrls = removedImageUrls;
         return this;
     }
 
-    public java.util.List<String> getRemovedImageUrls() {
+    
+    
+    public java.util.List<String> getRemovedImageUrls(){
         return this.removedImageUrls;
     }
 
@@ -33,8 +43,7 @@ public final class ProductRevertedStagedChangesMessagePayloadBuilder {
         return new ProductRevertedStagedChangesMessagePayloadBuilder();
     }
 
-    public static ProductRevertedStagedChangesMessagePayloadBuilder of(
-            final ProductRevertedStagedChangesMessagePayload template) {
+    public static ProductRevertedStagedChangesMessagePayloadBuilder of(final ProductRevertedStagedChangesMessagePayload template) {
         ProductRevertedStagedChangesMessagePayloadBuilder builder = new ProductRevertedStagedChangesMessagePayloadBuilder();
         builder.removedImageUrls = template.getRemovedImageUrls();
         return builder;

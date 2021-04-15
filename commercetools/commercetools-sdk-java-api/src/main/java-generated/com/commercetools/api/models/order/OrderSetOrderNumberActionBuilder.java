@@ -1,25 +1,31 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import com.commercetools.api.models.order.OrderSetOrderNumberAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderSetOrderNumberActionBuilder {
 
+    
     @Nullable
     private String orderNumber;
 
+    
     public OrderSetOrderNumberActionBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
 
+    
     @Nullable
-    public String getOrderNumber() {
+    public String getOrderNumber(){
         return this.orderNumber;
     }
 

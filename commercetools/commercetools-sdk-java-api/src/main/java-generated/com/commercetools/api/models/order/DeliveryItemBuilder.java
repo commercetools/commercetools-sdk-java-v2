@@ -1,32 +1,47 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
 
+import com.commercetools.api.models.order.DeliveryItem;
+import javax.annotation.Nullable;
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class DeliveryItemBuilder {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long quantity;
 
-    public DeliveryItemBuilder id(final String id) {
+    
+    public DeliveryItemBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
-    public DeliveryItemBuilder quantity(final Long quantity) {
+    
+    
+    public DeliveryItemBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
 
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
-    public Long getQuantity() {
+    
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
 

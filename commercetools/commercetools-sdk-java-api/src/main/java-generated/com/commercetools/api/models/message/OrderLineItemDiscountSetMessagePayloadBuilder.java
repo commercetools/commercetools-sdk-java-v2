@@ -1,81 +1,100 @@
-
 package com.commercetools.api.models.message;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
+import com.commercetools.api.models.cart.TaxedItemPrice;
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.message.MessagePayload;
+import com.commercetools.api.models.message.OrderLineItemDiscountSetMessagePayload;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderLineItemDiscountSetMessagePayloadBuilder {
 
+    
+    
     private String lineItemId;
-
+    
+    
+    
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money totalPrice;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
-    public OrderLineItemDiscountSetMessagePayloadBuilder lineItemId(final String lineItemId) {
+    
+    public OrderLineItemDiscountSetMessagePayloadBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
-
-    public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
-            final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity... discountedPricePerQuantity) {
+    
+    
+    public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity( final com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity ...discountedPricePerQuantity) {
         this.discountedPricePerQuantity = new ArrayList<>(Arrays.asList(discountedPricePerQuantity));
         return this;
     }
-
-    public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity(
-            final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
+    
+    
+    public OrderLineItemDiscountSetMessagePayloadBuilder discountedPricePerQuantity( final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity) {
         this.discountedPricePerQuantity = discountedPricePerQuantity;
         return this;
     }
-
-    public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
-            final com.commercetools.api.models.common.Money totalPrice) {
+    
+    
+    public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice( final com.commercetools.api.models.common.Money totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
-
-    public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(
-            @Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
+    
+    
+    public OrderLineItemDiscountSetMessagePayloadBuilder taxedPrice(@Nullable final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice) {
         this.taxedPrice = taxedPrice;
         return this;
     }
 
-    public String getLineItemId() {
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
-
-    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity() {
+    
+    
+    
+    public java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> getDiscountedPricePerQuantity(){
         return this.discountedPricePerQuantity;
     }
-
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    
+    
+    
+    public com.commercetools.api.models.common.Money getTotalPrice(){
         return this.totalPrice;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice() {
+    public com.commercetools.api.models.cart.TaxedItemPrice getTaxedPrice(){
         return this.taxedPrice;
     }
 
     public OrderLineItemDiscountSetMessagePayload build() {
-        return new OrderLineItemDiscountSetMessagePayloadImpl(lineItemId, discountedPricePerQuantity, totalPrice,
-            taxedPrice);
+        return new OrderLineItemDiscountSetMessagePayloadImpl(lineItemId, discountedPricePerQuantity, totalPrice, taxedPrice);
     }
 
     public static OrderLineItemDiscountSetMessagePayloadBuilder of() {
         return new OrderLineItemDiscountSetMessagePayloadBuilder();
     }
 
-    public static OrderLineItemDiscountSetMessagePayloadBuilder of(
-            final OrderLineItemDiscountSetMessagePayload template) {
+    public static OrderLineItemDiscountSetMessagePayloadBuilder of(final OrderLineItemDiscountSetMessagePayload template) {
         OrderLineItemDiscountSetMessagePayloadBuilder builder = new OrderLineItemDiscountSetMessagePayloadBuilder();
         builder.lineItemId = template.getLineItemId();
         builder.discountedPricePerQuantity = template.getDiscountedPricePerQuantity();

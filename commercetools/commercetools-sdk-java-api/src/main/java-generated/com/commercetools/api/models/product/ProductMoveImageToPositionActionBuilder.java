@@ -1,73 +1,95 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductMoveImageToPositionAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductMoveImageToPositionActionBuilder {
 
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
+    
     private String imageUrl;
-
+    
+    
+    
     private Long position;
-
+    
+    
     @Nullable
     private Boolean staged;
 
+    
     public ProductMoveImageToPositionActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
     public ProductMoveImageToPositionActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
-    public ProductMoveImageToPositionActionBuilder imageUrl(final String imageUrl) {
+    
+    
+    public ProductMoveImageToPositionActionBuilder imageUrl( final String imageUrl) {
         this.imageUrl = imageUrl;
         return this;
     }
-
-    public ProductMoveImageToPositionActionBuilder position(final Long position) {
+    
+    
+    public ProductMoveImageToPositionActionBuilder position( final Long position) {
         this.position = position;
         return this;
     }
-
+    
+    
     public ProductMoveImageToPositionActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
-    public String getImageUrl() {
+    
+    
+    
+    public String getImageUrl(){
         return this.imageUrl;
     }
-
-    public Long getPosition() {
+    
+    
+    
+    public Long getPosition(){
         return this.position;
     }
-
+    
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 

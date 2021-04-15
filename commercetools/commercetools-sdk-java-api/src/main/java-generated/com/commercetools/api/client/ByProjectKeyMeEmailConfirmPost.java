@@ -1,24 +1,41 @@
-
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyMeEmailConfirmPost
-        extends ApiMethod<ByProjectKeyMeEmailConfirmPost, com.fasterxml.jackson.databind.JsonNode>
-        implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeEmailConfirmPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeEmailConfirmPost> {
+import javax.annotation.Nullable;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
+
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public class ByProjectKeyMeEmailConfirmPost extends ApiMethod<ByProjectKeyMeEmailConfirmPost, com.fasterxml.jackson.databind.JsonNode> implements com.commercetools.api.client.ErrorableTrait<ByProjectKeyMeEmailConfirmPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyMeEmailConfirmPost> {
+
+    
     private String projectKey;
+    
 
     public ByProjectKeyMeEmailConfirmPost(final ApiHttpClient apiHttpClient, String projectKey) {
         super(apiHttpClient);
@@ -34,35 +51,34 @@ public class ByProjectKeyMeEmailConfirmPost
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/me/email/confirm", this.projectKey);
-        if (!params.isEmpty()) {
+        if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
-
+        
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client,
-            Duration timeout) {
+    public ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode> executeBlocking(final ApiHttpClient client, Duration timeout){
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.fasterxml.jackson.databind.JsonNode>> execute(final ApiHttpClient client){
         return client.execute(this.createHttpRequest(), com.fasterxml.jackson.databind.JsonNode.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
+    public String getProjectKey() {return this.projectKey;}
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+
+
+    
 
     @Override
-    protected ByProjectKeyMeEmailConfirmPost copy() {
+    protected ByProjectKeyMeEmailConfirmPost copy()
+    {
         return new ByProjectKeyMeEmailConfirmPost(this);
     }
 }

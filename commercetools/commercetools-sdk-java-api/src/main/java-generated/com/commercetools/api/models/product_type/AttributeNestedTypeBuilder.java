@@ -1,22 +1,32 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.AttributeType;
+import com.commercetools.api.models.product_type.ProductTypeReference;
+import com.commercetools.api.models.product_type.AttributeNestedType;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class AttributeNestedTypeBuilder {
 
+    
+    
     private com.commercetools.api.models.product_type.ProductTypeReference typeReference;
 
-    public AttributeNestedTypeBuilder typeReference(
-            final com.commercetools.api.models.product_type.ProductTypeReference typeReference) {
+    
+    public AttributeNestedTypeBuilder typeReference( final com.commercetools.api.models.product_type.ProductTypeReference typeReference) {
         this.typeReference = typeReference;
         return this;
     }
 
-    public com.commercetools.api.models.product_type.ProductTypeReference getTypeReference() {
+    
+    
+    public com.commercetools.api.models.product_type.ProductTypeReference getTypeReference(){
         return this.typeReference;
     }
 

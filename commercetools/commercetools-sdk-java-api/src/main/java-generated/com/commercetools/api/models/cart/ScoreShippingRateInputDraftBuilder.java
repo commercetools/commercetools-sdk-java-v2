@@ -1,21 +1,31 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.ShippingRateInputDraft;
+import com.commercetools.api.models.cart.ScoreShippingRateInputDraft;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ScoreShippingRateInputDraftBuilder {
 
+    
+    
     private Double score;
 
-    public ScoreShippingRateInputDraftBuilder score(final Double score) {
+    
+    public ScoreShippingRateInputDraftBuilder score( final Double score) {
         this.score = score;
         return this;
     }
 
-    public Double getScore() {
+    
+    
+    public Double getScore(){
         return this.score;
     }
 

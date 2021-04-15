@@ -1,25 +1,31 @@
-
 package com.commercetools.api.models.tax_category;
 
-import java.util.*;
-
+import com.commercetools.api.models.tax_category.TaxCategoryUpdateAction;
+import com.commercetools.api.models.tax_category.TaxCategorySetKeyAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class TaxCategorySetKeyActionBuilder {
 
+    
     @Nullable
     private String key;
 
+    
     public TaxCategorySetKeyActionBuilder key(@Nullable final String key) {
         this.key = key;
         return this;
     }
 
+    
     @Nullable
-    public String getKey() {
+    public String getKey(){
         return this.key;
     }
 

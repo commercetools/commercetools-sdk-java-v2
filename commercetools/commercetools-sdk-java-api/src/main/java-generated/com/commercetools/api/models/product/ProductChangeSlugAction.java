@@ -1,20 +1,24 @@
-
 package com.commercetools.api.models.product;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangeSlugActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ProductChangeSlugActionImpl.class)
 public interface ProductChangeSlugAction extends ProductUpdateAction {
 
@@ -29,17 +33,23 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
     @Valid
     @JsonProperty("slug")
     public LocalizedString getSlug();
-
+    
+    
     @JsonProperty("staged")
     public Boolean getStaged();
 
+    
     public void setSlug(final LocalizedString slug);
-
+    
+    
+    
     public void setStaged(final Boolean staged);
+    
 
-    public static ProductChangeSlugAction of() {
+    public static ProductChangeSlugAction of(){
         return new ProductChangeSlugActionImpl();
     }
+    
 
     public static ProductChangeSlugAction of(final ProductChangeSlugAction template) {
         ProductChangeSlugActionImpl instance = new ProductChangeSlugActionImpl();
@@ -48,13 +58,14 @@ public interface ProductChangeSlugAction extends ProductUpdateAction {
         return instance;
     }
 
-    public static ProductChangeSlugActionBuilder builder() {
+    public static ProductChangeSlugActionBuilder builder(){
         return ProductChangeSlugActionBuilder.of();
     }
-
-    public static ProductChangeSlugActionBuilder builder(final ProductChangeSlugAction template) {
+    
+    public static ProductChangeSlugActionBuilder builder(final ProductChangeSlugAction template){
         return ProductChangeSlugActionBuilder.of(template);
     }
+    
 
     default <T> T withProductChangeSlugAction(Function<ProductChangeSlugAction, T> helper) {
         return helper.apply(this);

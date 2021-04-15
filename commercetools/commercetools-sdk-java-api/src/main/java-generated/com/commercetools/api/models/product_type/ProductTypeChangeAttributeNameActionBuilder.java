@@ -1,32 +1,47 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductTypeChangeAttributeNameActionBuilder {
 
+    
+    
     private String attributeName;
-
+    
+    
+    
     private String newAttributeName;
 
-    public ProductTypeChangeAttributeNameActionBuilder attributeName(final String attributeName) {
+    
+    public ProductTypeChangeAttributeNameActionBuilder attributeName( final String attributeName) {
         this.attributeName = attributeName;
         return this;
     }
-
-    public ProductTypeChangeAttributeNameActionBuilder newAttributeName(final String newAttributeName) {
+    
+    
+    public ProductTypeChangeAttributeNameActionBuilder newAttributeName( final String newAttributeName) {
         this.newAttributeName = newAttributeName;
         return this;
     }
 
-    public String getAttributeName() {
+    
+    
+    public String getAttributeName(){
         return this.attributeName;
     }
-
-    public String getNewAttributeName() {
+    
+    
+    
+    public String getNewAttributeName(){
         return this.newAttributeName;
     }
 

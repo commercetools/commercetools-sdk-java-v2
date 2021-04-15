@@ -1,32 +1,47 @@
-
 package com.commercetools.api.models.order;
 
+import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.order.TaxedItemPriceDraft;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class TaxedItemPriceDraftBuilder {
 
+    
+    
     private com.commercetools.api.models.common.Money totalNet;
-
+    
+    
+    
     private com.commercetools.api.models.common.Money totalGross;
 
-    public TaxedItemPriceDraftBuilder totalNet(final com.commercetools.api.models.common.Money totalNet) {
+    
+    public TaxedItemPriceDraftBuilder totalNet( final com.commercetools.api.models.common.Money totalNet) {
         this.totalNet = totalNet;
         return this;
     }
-
-    public TaxedItemPriceDraftBuilder totalGross(final com.commercetools.api.models.common.Money totalGross) {
+    
+    
+    public TaxedItemPriceDraftBuilder totalGross( final com.commercetools.api.models.common.Money totalGross) {
         this.totalGross = totalGross;
         return this;
     }
 
-    public com.commercetools.api.models.common.Money getTotalNet() {
+    
+    
+    public com.commercetools.api.models.common.Money getTotalNet(){
         return this.totalNet;
     }
-
-    public com.commercetools.api.models.common.Money getTotalGross() {
+    
+    
+    
+    public com.commercetools.api.models.common.Money getTotalGross(){
         return this.totalGross;
     }
 

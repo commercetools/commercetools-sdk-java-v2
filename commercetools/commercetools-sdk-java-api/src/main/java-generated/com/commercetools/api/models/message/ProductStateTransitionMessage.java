@@ -1,41 +1,51 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.message.Message;
 import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.message.ProductStateTransitionMessageImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ProductStateTransitionMessageImpl.class)
 public interface ProductStateTransitionMessage extends Message {
 
     String PRODUCT_STATE_TRANSITION = "ProductStateTransition";
 
+    
     @NotNull
     @Valid
     @JsonProperty("state")
     public StateReference getState();
-
+    
     @NotNull
     @JsonProperty("force")
     public Boolean getForce();
 
+    
     public void setState(final StateReference state);
-
+    
+    
+    
     public void setForce(final Boolean force);
+    
 
-    public static ProductStateTransitionMessage of() {
+    public static ProductStateTransitionMessage of(){
         return new ProductStateTransitionMessageImpl();
     }
+    
 
     public static ProductStateTransitionMessage of(final ProductStateTransitionMessage template) {
         ProductStateTransitionMessageImpl instance = new ProductStateTransitionMessageImpl();
@@ -54,13 +64,14 @@ public interface ProductStateTransitionMessage extends Message {
         return instance;
     }
 
-    public static ProductStateTransitionMessageBuilder builder() {
+    public static ProductStateTransitionMessageBuilder builder(){
         return ProductStateTransitionMessageBuilder.of();
     }
-
-    public static ProductStateTransitionMessageBuilder builder(final ProductStateTransitionMessage template) {
+    
+    public static ProductStateTransitionMessageBuilder builder(final ProductStateTransitionMessage template){
         return ProductStateTransitionMessageBuilder.of(template);
     }
+    
 
     default <T> T withProductStateTransitionMessage(Function<ProductStateTransitionMessage, T> helper) {
         return helper.apply(this);

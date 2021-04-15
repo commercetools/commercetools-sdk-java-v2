@@ -1,37 +1,48 @@
-
 package com.commercetools.api.models.cart;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartUpdateAction;
+import com.commercetools.api.models.cart.ExternalTaxRateDraft;
+import com.commercetools.api.models.cart.CartSetCustomLineItemTaxRateAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class CartSetCustomLineItemTaxRateActionBuilder {
 
+    
+    
     private String customLineItemId;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
-    public CartSetCustomLineItemTaxRateActionBuilder customLineItemId(final String customLineItemId) {
+    
+    public CartSetCustomLineItemTaxRateActionBuilder customLineItemId( final String customLineItemId) {
         this.customLineItemId = customLineItemId;
         return this;
     }
-
-    public CartSetCustomLineItemTaxRateActionBuilder externalTaxRate(
-            @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+    
+    
+    public CartSetCustomLineItemTaxRateActionBuilder externalTaxRate(@Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
     }
 
-    public String getCustomLineItemId() {
+    
+    
+    public String getCustomLineItemId(){
         return this.customLineItemId;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
+    public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate(){
         return this.externalTaxRate;
     }
 

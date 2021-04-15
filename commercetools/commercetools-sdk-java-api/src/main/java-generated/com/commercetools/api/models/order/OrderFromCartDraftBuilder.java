@@ -1,36 +1,51 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.cart.CartResourceIdentifier;
+import com.commercetools.api.models.order.OrderState;
+import com.commercetools.api.models.order.PaymentState;
+import com.commercetools.api.models.order.ShipmentState;
+import com.commercetools.api.models.state.StateResourceIdentifier;
+import com.commercetools.api.models.order.OrderFromCartDraft;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderFromCartDraftBuilder {
 
     @Deprecated
     @Nullable
     private String id;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.cart.CartResourceIdentifier cart;
-
+    
+    
+    
     private Long version;
-
+    
+    
     @Nullable
     private String orderNumber;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.PaymentState paymentState;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.ShipmentState shipmentState;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.order.OrderState orderState;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
@@ -39,90 +54,99 @@ public final class OrderFromCartDraftBuilder {
         this.id = id;
         return this;
     }
-
-    public OrderFromCartDraftBuilder cart(
-            @Nullable final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
+    
+    
+    public OrderFromCartDraftBuilder cart(@Nullable final com.commercetools.api.models.cart.CartResourceIdentifier cart) {
         this.cart = cart;
         return this;
     }
-
-    public OrderFromCartDraftBuilder version(final Long version) {
+    
+    
+    public OrderFromCartDraftBuilder version( final Long version) {
         this.version = version;
         return this;
     }
-
+    
+    
     public OrderFromCartDraftBuilder orderNumber(@Nullable final String orderNumber) {
         this.orderNumber = orderNumber;
         return this;
     }
-
-    public OrderFromCartDraftBuilder paymentState(
-            @Nullable final com.commercetools.api.models.order.PaymentState paymentState) {
+    
+    
+    public OrderFromCartDraftBuilder paymentState(@Nullable final com.commercetools.api.models.order.PaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
-
-    public OrderFromCartDraftBuilder shipmentState(
-            @Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {
+    
+    
+    public OrderFromCartDraftBuilder shipmentState(@Nullable final com.commercetools.api.models.order.ShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
-
-    public OrderFromCartDraftBuilder orderState(
-            @Nullable final com.commercetools.api.models.order.OrderState orderState) {
+    
+    
+    public OrderFromCartDraftBuilder orderState(@Nullable final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
         return this;
     }
-
-    public OrderFromCartDraftBuilder state(
-            @Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
+    
+    
+    public OrderFromCartDraftBuilder state(@Nullable final com.commercetools.api.models.state.StateResourceIdentifier state) {
         this.state = state;
         return this;
     }
 
     @Deprecated
     @Nullable
-    public String getId() {
+    public String getId(){
         return this.id;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {
+    public com.commercetools.api.models.cart.CartResourceIdentifier getCart(){
         return this.cart;
     }
-
-    public Long getVersion() {
+    
+    
+    
+    public Long getVersion(){
         return this.version;
     }
-
+    
+    
     @Nullable
-    public String getOrderNumber() {
+    public String getOrderNumber(){
         return this.orderNumber;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.order.PaymentState getPaymentState() {
+    public com.commercetools.api.models.order.PaymentState getPaymentState(){
         return this.paymentState;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.order.ShipmentState getShipmentState() {
+    public com.commercetools.api.models.order.ShipmentState getShipmentState(){
         return this.shipmentState;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.order.OrderState getOrderState() {
+    public com.commercetools.api.models.order.OrderState getOrderState(){
         return this.orderState;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.state.StateResourceIdentifier getState() {
+    public com.commercetools.api.models.state.StateResourceIdentifier getState(){
         return this.state;
     }
 
     public OrderFromCartDraft build() {
-        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState,
-            state);
+        return new OrderFromCartDraftImpl(id, cart, version, orderNumber, paymentState, shipmentState, orderState, state);
     }
 
     public static OrderFromCartDraftBuilder of() {

@@ -1,20 +1,26 @@
-
 package com.commercetools.api.models.cart;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
 
-import javax.validation.constraints.NotNull;
+import com.commercetools.api.models.cart.ItemShippingTargetImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = ItemShippingTargetImpl.class)
-public interface ItemShippingTarget {
+public interface ItemShippingTarget  {
+
 
     /**
     *  <p>The key of the address in the cart's <code>itemShippingAddresses</code></p>
@@ -22,7 +28,6 @@ public interface ItemShippingTarget {
     @NotNull
     @JsonProperty("addressKey")
     public String getAddressKey();
-
     /**
     *  <p>The quantity of items that should go to the address with the specified <code>addressKey</code>.
     *  Only positive values are allowed.
@@ -32,13 +37,18 @@ public interface ItemShippingTarget {
     @JsonProperty("quantity")
     public Double getQuantity();
 
+    
     public void setAddressKey(final String addressKey);
-
+    
+    
+    
     public void setQuantity(final Double quantity);
+    
 
-    public static ItemShippingTarget of() {
+    public static ItemShippingTarget of(){
         return new ItemShippingTargetImpl();
     }
+    
 
     public static ItemShippingTarget of(final ItemShippingTarget template) {
         ItemShippingTargetImpl instance = new ItemShippingTargetImpl();
@@ -47,13 +57,14 @@ public interface ItemShippingTarget {
         return instance;
     }
 
-    public static ItemShippingTargetBuilder builder() {
+    public static ItemShippingTargetBuilder builder(){
         return ItemShippingTargetBuilder.of();
     }
-
-    public static ItemShippingTargetBuilder builder(final ItemShippingTarget template) {
+    
+    public static ItemShippingTargetBuilder builder(final ItemShippingTarget template){
         return ItemShippingTargetBuilder.of(template);
     }
+    
 
     default <T> T withItemShippingTarget(Function<ItemShippingTarget, T> helper) {
         return helper.apply(this);

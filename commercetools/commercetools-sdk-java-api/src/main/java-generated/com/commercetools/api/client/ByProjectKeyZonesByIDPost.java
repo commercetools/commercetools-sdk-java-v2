@@ -1,35 +1,48 @@
-
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
+
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Update Zone by ID</p>
 */
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyZonesByIDPost
-        extends ApiMethod<ByProjectKeyZonesByIDPost, com.commercetools.api.models.zone.Zone>
-        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyZonesByIDPost>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesByIDPost> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public class ByProjectKeyZonesByIDPost extends ApiMethod<ByProjectKeyZonesByIDPost, com.commercetools.api.models.zone.Zone> implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyZonesByIDPost>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyZonesByIDPost>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyZonesByIDPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyZonesByIDPost> {
 
+    
     private String projectKey;
     private String ID;
-
+    
     private com.commercetools.api.models.zone.ZoneUpdate zoneUpdate;
 
-    public ByProjectKeyZonesByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID,
-            com.commercetools.api.models.zone.ZoneUpdate zoneUpdate) {
+    public ByProjectKeyZonesByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.zone.ZoneUpdate zoneUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
@@ -47,62 +60,53 @@ public class ByProjectKeyZonesByIDPost
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/zones/%s", this.projectKey, this.ID);
-        if (!params.isEmpty()) {
+        if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(zoneUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(zoneUpdate);
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+    } catch(Exception e) {
+        e.printStackTrace();
+    }
+    
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(final ApiHttpClient client,
-            Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.zone.Zone> executeBlocking(final ApiHttpClient client, Duration timeout){
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.Zone>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.zone.Zone>> execute(final ApiHttpClient client){
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.zone.Zone.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    public String getID() {
-        return this.ID;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getID() {return this.ID;}
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setID(final String ID) { this.ID = ID; }
 
-    public void setID(final String ID) {
-        this.ID = ID;
-    }
-
-    public ByProjectKeyZonesByIDPost withExpand(final String expand) {
+    public ByProjectKeyZonesByIDPost withExpand(final String expand){
         return copy().withQueryParam("expand", expand);
     }
-
-    public ByProjectKeyZonesByIDPost addExpand(final String expand) {
+    
+    public ByProjectKeyZonesByIDPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 
+    
+
     @Override
-    protected ByProjectKeyZonesByIDPost copy() {
+    protected ByProjectKeyZonesByIDPost copy()
+    {
         return new ByProjectKeyZonesByIDPost(this);
     }
 }

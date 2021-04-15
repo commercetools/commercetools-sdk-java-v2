@@ -1,91 +1,112 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductSetAssetDescriptionAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductSetAssetDescriptionActionBuilder {
 
+    
     @Nullable
     private Long variantId;
-
+    
+    
     @Nullable
     private String sku;
-
+    
+    
     @Nullable
     private Boolean staged;
-
+    
+    
     @Nullable
     private String assetId;
-
+    
+    
     @Nullable
     private String assetKey;
-
+    
+    
     @Nullable
     private com.commercetools.api.models.common.LocalizedString description;
 
+    
     public ProductSetAssetDescriptionActionBuilder variantId(@Nullable final Long variantId) {
         this.variantId = variantId;
         return this;
     }
-
+    
+    
     public ProductSetAssetDescriptionActionBuilder sku(@Nullable final String sku) {
         this.sku = sku;
         return this;
     }
-
+    
+    
     public ProductSetAssetDescriptionActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
-
+    
+    
     public ProductSetAssetDescriptionActionBuilder assetId(@Nullable final String assetId) {
         this.assetId = assetId;
         return this;
     }
-
+    
+    
     public ProductSetAssetDescriptionActionBuilder assetKey(@Nullable final String assetKey) {
         this.assetKey = assetKey;
         return this;
     }
-
-    public ProductSetAssetDescriptionActionBuilder description(
-            @Nullable final com.commercetools.api.models.common.LocalizedString description) {
+    
+    
+    public ProductSetAssetDescriptionActionBuilder description(@Nullable final com.commercetools.api.models.common.LocalizedString description) {
         this.description = description;
         return this;
     }
 
+    
     @Nullable
-    public Long getVariantId() {
+    public Long getVariantId(){
         return this.variantId;
     }
-
+    
+    
     @Nullable
-    public String getSku() {
+    public String getSku(){
         return this.sku;
     }
-
+    
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
-
+    
+    
     @Nullable
-    public String getAssetId() {
+    public String getAssetId(){
         return this.assetId;
     }
-
+    
+    
     @Nullable
-    public String getAssetKey() {
+    public String getAssetKey(){
         return this.assetKey;
     }
-
+    
+    
     @Nullable
-    public com.commercetools.api.models.common.LocalizedString getDescription() {
+    public com.commercetools.api.models.common.LocalizedString getDescription(){
         return this.description;
     }
 

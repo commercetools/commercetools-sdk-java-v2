@@ -1,32 +1,47 @@
-
 package com.commercetools.api.models.subscription;
 
+import com.commercetools.api.models.subscription.Destination;
+import com.commercetools.api.models.subscription.GoogleCloudPubSubDestination;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class GoogleCloudPubSubDestinationBuilder {
 
+    
+    
     private String projectId;
-
+    
+    
+    
     private String topic;
 
-    public GoogleCloudPubSubDestinationBuilder projectId(final String projectId) {
+    
+    public GoogleCloudPubSubDestinationBuilder projectId( final String projectId) {
         this.projectId = projectId;
         return this;
     }
-
-    public GoogleCloudPubSubDestinationBuilder topic(final String topic) {
+    
+    
+    public GoogleCloudPubSubDestinationBuilder topic( final String topic) {
         this.topic = topic;
         return this;
     }
 
-    public String getProjectId() {
+    
+    
+    public String getProjectId(){
         return this.projectId;
     }
-
-    public String getTopic() {
+    
+    
+    
+    public String getTopic(){
         return this.topic;
     }
 

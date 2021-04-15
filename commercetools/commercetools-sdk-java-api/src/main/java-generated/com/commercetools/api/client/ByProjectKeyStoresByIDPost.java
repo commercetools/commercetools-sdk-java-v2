@@ -1,35 +1,48 @@
-
 package com.commercetools.api.client;
 
-import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
+import io.vrap.rmf.base.client.utils.Utils;
+
+import java.io.InputStream;
+import java.io.IOException;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.stream.Collectors;
 import java.util.concurrent.CompletableFuture;
-
-import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Generated;
+
+import javax.annotation.Nullable;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import io.vrap.rmf.base.client.*;
+
+
+import static io.vrap.rmf.base.client.utils.ClientUtils.blockingWait;
 
 /**
 *  <p>Update Store by ID</p>
 */
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
-public class ByProjectKeyStoresByIDPost
-        extends ApiMethod<ByProjectKeyStoresByIDPost, com.commercetools.api.models.store.Store>
-        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStoresByIDPost>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyStoresByIDPost>,
-        com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresByIDPost>,
-        com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStoresByIDPost> {
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
+public class ByProjectKeyStoresByIDPost extends ApiMethod<ByProjectKeyStoresByIDPost, com.commercetools.api.models.store.Store> implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyStoresByIDPost>, com.commercetools.api.client.ExpandableTrait<ByProjectKeyStoresByIDPost>, com.commercetools.api.client.ErrorableTrait<ByProjectKeyStoresByIDPost>, com.commercetools.api.client.DeprecatableTrait<ByProjectKeyStoresByIDPost> {
 
+    
     private String projectKey;
     private String ID;
-
+    
     private com.commercetools.api.models.store.StoreUpdate storeUpdate;
 
-    public ByProjectKeyStoresByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID,
-            com.commercetools.api.models.store.StoreUpdate storeUpdate) {
+    public ByProjectKeyStoresByIDPost(final ApiHttpClient apiHttpClient, String projectKey, String ID, com.commercetools.api.models.store.StoreUpdate storeUpdate) {
         super(apiHttpClient);
         this.projectKey = projectKey;
         this.ID = ID;
@@ -47,62 +60,53 @@ public class ByProjectKeyStoresByIDPost
     public ApiHttpRequest createHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
         String httpRequestPath = String.format("/%s/stores/%s", this.projectKey, this.ID);
-        if (!params.isEmpty()) {
+        if(!params.isEmpty()){
             httpRequestPath += "?" + String.join("&", params);
         }
         try {
-            final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(storeUpdate);
-            return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        final byte[] body = apiHttpClient().getSerializerService().toJsonByteArray(storeUpdate);
+        return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), body);
+    } catch(Exception e) {
+        e.printStackTrace();
+    }
+    
         return new ApiHttpRequest(ApiHttpMethod.POST, URI.create(httpRequestPath), getHeaders(), null);
     }
 
     @Override
-    public ApiHttpResponse<com.commercetools.api.models.store.Store> executeBlocking(final ApiHttpClient client,
-            Duration timeout) {
+    public ApiHttpResponse<com.commercetools.api.models.store.Store> executeBlocking(final ApiHttpClient client, Duration timeout){
         return blockingWait(execute(client), timeout);
     }
 
     @Override
-    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.Store>> execute(
-            final ApiHttpClient client) {
+    public CompletableFuture<ApiHttpResponse<com.commercetools.api.models.store.Store>> execute(final ApiHttpClient client){
         return client.execute(this.createHttpRequest(), com.commercetools.api.models.store.Store.class);
     }
 
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    public String getID() {
-        return this.ID;
-    }
+    public String getProjectKey() {return this.projectKey;}
+    public String getID() {return this.ID;}
 
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
 
-    public void setProjectKey(final String projectKey) {
-        this.projectKey = projectKey;
-    }
+    public void setProjectKey(final String projectKey) { this.projectKey = projectKey; }
+    
+    public void setID(final String ID) { this.ID = ID; }
 
-    public void setID(final String ID) {
-        this.ID = ID;
-    }
-
-    public ByProjectKeyStoresByIDPost withExpand(final String expand) {
+    public ByProjectKeyStoresByIDPost withExpand(final String expand){
         return copy().withQueryParam("expand", expand);
     }
-
-    public ByProjectKeyStoresByIDPost addExpand(final String expand) {
+    
+    public ByProjectKeyStoresByIDPost addExpand(final String expand){
         return copy().addQueryParam("expand", expand);
     }
 
+    
+
     @Override
-    protected ByProjectKeyStoresByIDPost copy() {
+    protected ByProjectKeyStoresByIDPost copy()
+    {
         return new ByProjectKeyStoresByIDPost(this);
     }
 }

@@ -1,42 +1,52 @@
-
 package com.commercetools.api.models.payment;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
+import com.commercetools.api.models.payment.PaymentUpdateAction;
 import com.commercetools.api.models.type.FieldContainer;
 import com.commercetools.api.models.type.TypeResourceIdentifier;
+import com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionImpl;
+
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = PaymentAddInterfaceInteractionActionImpl.class)
 public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateAction {
 
     String ADD_INTERFACE_INTERACTION = "addInterfaceInteraction";
 
+    
     @NotNull
     @Valid
     @JsonProperty("type")
     public TypeResourceIdentifier getType();
-
+    
     @Valid
     @JsonProperty("fields")
     public FieldContainer getFields();
 
+    
     public void setType(final TypeResourceIdentifier type);
-
+    
+    
+    
     public void setFields(final FieldContainer fields);
+    
 
-    public static PaymentAddInterfaceInteractionAction of() {
+    public static PaymentAddInterfaceInteractionAction of(){
         return new PaymentAddInterfaceInteractionActionImpl();
     }
+    
 
     public static PaymentAddInterfaceInteractionAction of(final PaymentAddInterfaceInteractionAction template) {
         PaymentAddInterfaceInteractionActionImpl instance = new PaymentAddInterfaceInteractionActionImpl();
@@ -45,14 +55,14 @@ public interface PaymentAddInterfaceInteractionAction extends PaymentUpdateActio
         return instance;
     }
 
-    public static PaymentAddInterfaceInteractionActionBuilder builder() {
+    public static PaymentAddInterfaceInteractionActionBuilder builder(){
         return PaymentAddInterfaceInteractionActionBuilder.of();
     }
-
-    public static PaymentAddInterfaceInteractionActionBuilder builder(
-            final PaymentAddInterfaceInteractionAction template) {
+    
+    public static PaymentAddInterfaceInteractionActionBuilder builder(final PaymentAddInterfaceInteractionAction template){
         return PaymentAddInterfaceInteractionActionBuilder.of(template);
     }
+    
 
     default <T> T withPaymentAddInterfaceInteractionAction(Function<PaymentAddInterfaceInteractionAction, T> helper) {
         return helper.apply(this);

@@ -1,110 +1,148 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.ReturnItem;
+import com.commercetools.api.models.order.LineItemReturnItem;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class LineItemReturnItemBuilder {
 
+    
+    
     private String id;
-
+    
+    
+    
     private Long quantity;
-
+    
+    
     @Nullable
     private String comment;
-
+    
+    
+    
     private com.commercetools.api.models.order.ReturnShipmentState shipmentState;
-
+    
+    
+    
     private com.commercetools.api.models.order.ReturnPaymentState paymentState;
-
+    
+    
+    
     private java.time.ZonedDateTime lastModifiedAt;
-
+    
+    
+    
     private java.time.ZonedDateTime createdAt;
-
+    
+    
+    
     private String lineItemId;
 
-    public LineItemReturnItemBuilder id(final String id) {
+    
+    public LineItemReturnItemBuilder id( final String id) {
         this.id = id;
         return this;
     }
-
-    public LineItemReturnItemBuilder quantity(final Long quantity) {
+    
+    
+    public LineItemReturnItemBuilder quantity( final Long quantity) {
         this.quantity = quantity;
         return this;
     }
-
+    
+    
     public LineItemReturnItemBuilder comment(@Nullable final String comment) {
         this.comment = comment;
         return this;
     }
-
-    public LineItemReturnItemBuilder shipmentState(
-            final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
+    
+    
+    public LineItemReturnItemBuilder shipmentState( final com.commercetools.api.models.order.ReturnShipmentState shipmentState) {
         this.shipmentState = shipmentState;
         return this;
     }
-
-    public LineItemReturnItemBuilder paymentState(
-            final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
+    
+    
+    public LineItemReturnItemBuilder paymentState( final com.commercetools.api.models.order.ReturnPaymentState paymentState) {
         this.paymentState = paymentState;
         return this;
     }
-
-    public LineItemReturnItemBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    
+    
+    public LineItemReturnItemBuilder lastModifiedAt( final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
-
-    public LineItemReturnItemBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    
+    
+    public LineItemReturnItemBuilder createdAt( final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
-
-    public LineItemReturnItemBuilder lineItemId(final String lineItemId) {
+    
+    
+    public LineItemReturnItemBuilder lineItemId( final String lineItemId) {
         this.lineItemId = lineItemId;
         return this;
     }
 
-    public String getId() {
+    
+    
+    public String getId(){
         return this.id;
     }
-
-    public Long getQuantity() {
+    
+    
+    
+    public Long getQuantity(){
         return this.quantity;
     }
-
+    
+    
     @Nullable
-    public String getComment() {
+    public String getComment(){
         return this.comment;
     }
-
-    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState() {
+    
+    
+    
+    public com.commercetools.api.models.order.ReturnShipmentState getShipmentState(){
         return this.shipmentState;
     }
-
-    public com.commercetools.api.models.order.ReturnPaymentState getPaymentState() {
+    
+    
+    
+    public com.commercetools.api.models.order.ReturnPaymentState getPaymentState(){
         return this.paymentState;
     }
-
-    public java.time.ZonedDateTime getLastModifiedAt() {
+    
+    
+    
+    public java.time.ZonedDateTime getLastModifiedAt(){
         return this.lastModifiedAt;
     }
-
-    public java.time.ZonedDateTime getCreatedAt() {
+    
+    
+    
+    public java.time.ZonedDateTime getCreatedAt(){
         return this.createdAt;
     }
-
-    public String getLineItemId() {
+    
+    
+    
+    public String getLineItemId(){
         return this.lineItemId;
     }
 
     public LineItemReturnItem build() {
-        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt, createdAt,
-            lineItemId);
+        return new LineItemReturnItemImpl(id, quantity, comment, shipmentState, paymentState, lastModifiedAt, createdAt, lineItemId);
     }
 
     public static LineItemReturnItemBuilder of() {

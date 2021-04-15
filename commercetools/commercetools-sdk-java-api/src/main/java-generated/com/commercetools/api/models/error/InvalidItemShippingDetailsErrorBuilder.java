@@ -1,43 +1,63 @@
-
 package com.commercetools.api.models.error;
 
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.InvalidItemShippingDetailsError;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class InvalidItemShippingDetailsErrorBuilder {
 
+    
+    
     private String message;
-
+    
+    
+    
     private String subject;
-
+    
+    
+    
     private String itemId;
 
-    public InvalidItemShippingDetailsErrorBuilder message(final String message) {
+    
+    public InvalidItemShippingDetailsErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
-    public InvalidItemShippingDetailsErrorBuilder subject(final String subject) {
+    
+    
+    public InvalidItemShippingDetailsErrorBuilder subject( final String subject) {
         this.subject = subject;
         return this;
     }
-
-    public InvalidItemShippingDetailsErrorBuilder itemId(final String itemId) {
+    
+    
+    public InvalidItemShippingDetailsErrorBuilder itemId( final String itemId) {
         this.itemId = itemId;
         return this;
     }
 
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
-    public String getSubject() {
+    
+    
+    
+    public String getSubject(){
         return this.subject;
     }
-
-    public String getItemId() {
+    
+    
+    
+    public String getItemId(){
         return this.itemId;
     }
 

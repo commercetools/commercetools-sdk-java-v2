@@ -1,47 +1,64 @@
-
 package com.commercetools.api.models.order;
 
-import java.util.*;
-
+import com.commercetools.api.models.order.OrderUpdateAction;
+import java.lang.Object;
+import com.commercetools.api.models.order.OrderSetItemShippingAddressCustomFieldAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class OrderSetItemShippingAddressCustomFieldActionBuilder {
 
+    
+    
     private String addressKey;
-
+    
+    
+    
     private String name;
-
+    
+    
     @Nullable
     private java.lang.Object value;
 
-    public OrderSetItemShippingAddressCustomFieldActionBuilder addressKey(final String addressKey) {
+    
+    public OrderSetItemShippingAddressCustomFieldActionBuilder addressKey( final String addressKey) {
         this.addressKey = addressKey;
         return this;
     }
-
-    public OrderSetItemShippingAddressCustomFieldActionBuilder name(final String name) {
+    
+    
+    public OrderSetItemShippingAddressCustomFieldActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
-
+    
+    
     public OrderSetItemShippingAddressCustomFieldActionBuilder value(@Nullable final java.lang.Object value) {
         this.value = value;
         return this;
     }
 
-    public String getAddressKey() {
+    
+    
+    public String getAddressKey(){
         return this.addressKey;
     }
-
-    public String getName() {
+    
+    
+    
+    public String getName(){
         return this.name;
     }
-
+    
+    
     @Nullable
-    public java.lang.Object getValue() {
+    public java.lang.Object getValue(){
         return this.value;
     }
 
@@ -53,8 +70,7 @@ public final class OrderSetItemShippingAddressCustomFieldActionBuilder {
         return new OrderSetItemShippingAddressCustomFieldActionBuilder();
     }
 
-    public static OrderSetItemShippingAddressCustomFieldActionBuilder of(
-            final OrderSetItemShippingAddressCustomFieldAction template) {
+    public static OrderSetItemShippingAddressCustomFieldActionBuilder of(final OrderSetItemShippingAddressCustomFieldAction template) {
         OrderSetItemShippingAddressCustomFieldActionBuilder builder = new OrderSetItemShippingAddressCustomFieldActionBuilder();
         builder.addressKey = template.getAddressKey();
         builder.name = template.getName();

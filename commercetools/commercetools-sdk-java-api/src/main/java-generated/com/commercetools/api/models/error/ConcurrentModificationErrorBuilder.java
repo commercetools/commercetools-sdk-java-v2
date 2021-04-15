@@ -1,36 +1,47 @@
-
 package com.commercetools.api.models.error;
 
-import java.util.*;
-
+import com.commercetools.api.models.error.ErrorObject;
+import com.commercetools.api.models.error.ConcurrentModificationError;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ConcurrentModificationErrorBuilder {
 
+    
+    
     private String message;
-
+    
+    
     @Nullable
     private Long currentVersion;
 
-    public ConcurrentModificationErrorBuilder message(final String message) {
+    
+    public ConcurrentModificationErrorBuilder message( final String message) {
         this.message = message;
         return this;
     }
-
+    
+    
     public ConcurrentModificationErrorBuilder currentVersion(@Nullable final Long currentVersion) {
         this.currentVersion = currentVersion;
         return this;
     }
 
-    public String getMessage() {
+    
+    
+    public String getMessage(){
         return this.message;
     }
-
+    
+    
     @Nullable
-    public Long getCurrentVersion() {
+    public Long getCurrentVersion(){
         return this.currentVersion;
     }
 

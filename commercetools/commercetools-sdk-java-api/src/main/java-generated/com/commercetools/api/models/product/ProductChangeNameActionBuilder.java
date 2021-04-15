@@ -1,36 +1,48 @@
-
 package com.commercetools.api.models.product;
 
-import java.util.*;
-
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.product.ProductUpdateAction;
+import com.commercetools.api.models.product.ProductChangeNameAction;
 import javax.annotation.Nullable;
-
+import java.util.*;
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductChangeNameActionBuilder {
 
+    
+    
     private com.commercetools.api.models.common.LocalizedString name;
-
+    
+    
     @Nullable
     private Boolean staged;
 
-    public ProductChangeNameActionBuilder name(final com.commercetools.api.models.common.LocalizedString name) {
+    
+    public ProductChangeNameActionBuilder name( final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
         return this;
     }
-
+    
+    
     public ProductChangeNameActionBuilder staged(@Nullable final Boolean staged) {
         this.staged = staged;
         return this;
     }
 
-    public com.commercetools.api.models.common.LocalizedString getName() {
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getName(){
         return this.name;
     }
-
+    
+    
     @Nullable
-    public Boolean getStaged() {
+    public Boolean getStaged(){
         return this.staged;
     }
 

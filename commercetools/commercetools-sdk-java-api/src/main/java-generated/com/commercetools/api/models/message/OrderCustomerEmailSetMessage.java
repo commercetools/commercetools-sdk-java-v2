@@ -1,34 +1,49 @@
-
 package com.commercetools.api.models.message;
 
-import java.time.*;
-import java.util.*;
-import java.util.function.Function;
+import com.commercetools.api.models.message.Message;
+import com.commercetools.api.models.message.OrderCustomerEmailSetMessageImpl;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
-
 import io.vrap.rmf.base.client.utils.Generated;
+import io.vrap.rmf.base.client.Accessor;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+import java.util.*;
+import java.time.*;
+import java.util.function.Function;
+import java.io.IOException;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 @JsonDeserialize(as = OrderCustomerEmailSetMessageImpl.class)
 public interface OrderCustomerEmailSetMessage extends Message {
 
     String ORDER_CUSTOMER_EMAIL_SET = "OrderCustomerEmailSet";
 
+    
+    
     @JsonProperty("email")
     public String getEmail();
-
+    
+    
     @JsonProperty("oldEmail")
     public String getOldEmail();
 
+    
     public void setEmail(final String email);
-
+    
+    
+    
     public void setOldEmail(final String oldEmail);
+    
 
-    public static OrderCustomerEmailSetMessage of() {
+    public static OrderCustomerEmailSetMessage of(){
         return new OrderCustomerEmailSetMessageImpl();
     }
+    
 
     public static OrderCustomerEmailSetMessage of(final OrderCustomerEmailSetMessage template) {
         OrderCustomerEmailSetMessageImpl instance = new OrderCustomerEmailSetMessageImpl();
@@ -47,13 +62,14 @@ public interface OrderCustomerEmailSetMessage extends Message {
         return instance;
     }
 
-    public static OrderCustomerEmailSetMessageBuilder builder() {
+    public static OrderCustomerEmailSetMessageBuilder builder(){
         return OrderCustomerEmailSetMessageBuilder.of();
     }
-
-    public static OrderCustomerEmailSetMessageBuilder builder(final OrderCustomerEmailSetMessage template) {
+    
+    public static OrderCustomerEmailSetMessageBuilder builder(final OrderCustomerEmailSetMessage template){
         return OrderCustomerEmailSetMessageBuilder.of(template);
     }
+    
 
     default <T> T withOrderCustomerEmailSetMessage(Function<OrderCustomerEmailSetMessage, T> helper) {
         return helper.apply(this);

@@ -1,33 +1,48 @@
-
 package com.commercetools.api.models.cart;
 
+import com.commercetools.api.models.cart.ShippingRateInput;
+import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.cart.ClassificationShippingRateInput;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ClassificationShippingRateInputBuilder {
 
+    
+    
     private String key;
-
+    
+    
+    
     private com.commercetools.api.models.common.LocalizedString label;
 
-    public ClassificationShippingRateInputBuilder key(final String key) {
+    
+    public ClassificationShippingRateInputBuilder key( final String key) {
         this.key = key;
         return this;
     }
-
-    public ClassificationShippingRateInputBuilder label(
-            final com.commercetools.api.models.common.LocalizedString label) {
+    
+    
+    public ClassificationShippingRateInputBuilder label( final com.commercetools.api.models.common.LocalizedString label) {
         this.label = label;
         return this;
     }
 
-    public String getKey() {
+    
+    
+    public String getKey(){
         return this.key;
     }
-
-    public com.commercetools.api.models.common.LocalizedString getLabel() {
+    
+    
+    
+    public com.commercetools.api.models.common.LocalizedString getLabel(){
         return this.label;
     }
 

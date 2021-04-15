@@ -1,21 +1,31 @@
-
 package com.commercetools.api.models.product_type;
 
+import com.commercetools.api.models.product_type.ProductTypeUpdateAction;
+import com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionAction;
+import javax.annotation.Nullable;
 import java.util.*;
-
+import java.time.ZonedDateTime;
 import io.vrap.rmf.base.client.utils.Generated;
 
-@Generated(value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator", comments = "https://github.com/vrapio/rmf-codegen")
+@Generated(
+    value = "io.vrap.rmf.codegen.rendring.CoreCodeGenerator",
+    comments = "https://github.com/vrapio/rmf-codegen"
+)
 public final class ProductTypeRemoveAttributeDefinitionActionBuilder {
 
+    
+    
     private String name;
 
-    public ProductTypeRemoveAttributeDefinitionActionBuilder name(final String name) {
+    
+    public ProductTypeRemoveAttributeDefinitionActionBuilder name( final String name) {
         this.name = name;
         return this;
     }
 
-    public String getName() {
+    
+    
+    public String getName(){
         return this.name;
     }
 
@@ -27,8 +37,7 @@ public final class ProductTypeRemoveAttributeDefinitionActionBuilder {
         return new ProductTypeRemoveAttributeDefinitionActionBuilder();
     }
 
-    public static ProductTypeRemoveAttributeDefinitionActionBuilder of(
-            final ProductTypeRemoveAttributeDefinitionAction template) {
+    public static ProductTypeRemoveAttributeDefinitionActionBuilder of(final ProductTypeRemoveAttributeDefinitionAction template) {
         ProductTypeRemoveAttributeDefinitionActionBuilder builder = new ProductTypeRemoveAttributeDefinitionActionBuilder();
         builder.name = template.getName();
         return builder;

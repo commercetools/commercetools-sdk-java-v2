@@ -16,7 +16,7 @@ plugins {
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    id "com.diffplug.spotless" version "5.9.0"
+    id "com.diffplug.spotless" version "5.12.1"
 
     id 'io.github.gradle-nexus.publish-plugin' version '1.0.0'
 }

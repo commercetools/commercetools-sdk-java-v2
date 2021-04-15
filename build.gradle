@@ -75,7 +75,7 @@ ext {
             slf4j: "1.7.30",
             logback: "1.2.3",
             findbugs: "3.0.2",
-            jackson: "2.12.2",
+            jackson: "2.12.3",
             junit: "4.12",
             validation: "2.0.1.Final",
             assertJ: "3.8.0",
